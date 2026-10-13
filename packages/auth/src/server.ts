@@ -53,6 +53,7 @@ import { generateMagicTokenForInvite } from "./lib/generate-magic-token";
 import { getActivationVariant } from "./lib/lifecycle";
 import { loadCustomSessionData } from "./lib/load-custom-session-data";
 import { invitationRateLimit } from "./lib/rate-limit";
+import { rejectRecentlyRotatedRefreshToken } from "./lib/refresh-token-reuse-grace";
 import { resend } from "./lib/resend";
 import {
 	resolveSessionOrganizationState,
@@ -144,6 +145,7 @@ export const auth = betterAuth({
 	user: userOptions,
 	hooks: {
 		before: createAuthMiddleware(async (ctx) => {
+			await rejectRecentlyRotatedRefreshToken(ctx);
 			// See the oneTimeToken() comment above: the plugin is always registered,
 			// so this is what actually keeps it dev-only.
 			if (
