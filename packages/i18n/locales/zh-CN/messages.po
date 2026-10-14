@@ -2045,6 +2045,9 @@ msgstr "全部在当前标签页"
 msgid "All in current tab (split panes)"
 msgstr "全部在当前标签页（分屏窗格）"
 
+msgid "All labels"
+msgstr "所有标签"
+
 msgid "All models"
 msgstr "所有模型"
 
@@ -2920,6 +2923,9 @@ msgstr "账单"
 
 msgid "Billing details"
 msgstr "账单信息"
+
+msgid "Billing refused to start a cloud workspace: the organization needs a paid plan, or it reached its cloud usage limit. Upgrade or raise the limit in Settings > Billing, or run the automation on a device."
+msgstr "账单原因导致无法启动云端工作区：组织需要付费方案，或已达到云端用量上限。请在“设置 > 账单”中升级或提高上限，或在设备上运行该自动化。"
 
 msgid "Binary"
 msgstr "二进制"
@@ -3948,6 +3954,9 @@ msgstr "云工作区"
 msgid "Cloud workspaces ignore this variable. Agents sign in under Settings › Agents instead."
 msgstr "云工作区会忽略此变量。智能体改为在「设置 › 智能体」中登录。"
 
+msgid "Cloud workspaces need a paid plan. Upgrade in Settings, Billing to start one."
+msgstr "云端工作区需要付费方案。请在“设置”中的“账单”升级后启动。"
+
 msgid "Cloud workspaces will stop running {agentLabel} with it."
 msgstr "云工作区将不再用它运行{agentLabel}。"
 
@@ -4917,9 +4926,6 @@ msgstr "无法停止"
 
 msgid "Could not stop the agent"
 msgstr "无法停止智能体"
-
-msgid "Could not stop the task"
-msgstr "无法停止任务"
 
 msgid "Could not stop watching"
 msgstr "无法停止关注"
@@ -9058,6 +9064,10 @@ msgstr "知识"
 msgid "Label"
 msgstr "名称"
 
+msgctxt "task label filter"
+msgid "Label"
+msgstr "标签"
+
 msgid "Label change"
 msgstr "标签变更"
 
@@ -10692,6 +10702,9 @@ msgstr "没有已知的创建者"
 msgid "No labels"
 msgstr "无标签"
 
+msgid "No labels found."
+msgstr "未找到标签。"
+
 msgid "No lead"
 msgstr "无负责人"
 
@@ -11442,6 +11455,9 @@ msgstr "打开 App Store"
 
 msgid "Open as comment pane"
 msgstr "作为评论面板打开"
+
+msgid "Open billing"
+msgstr "打开账单"
 
 msgid "Open branch on GitHub"
 msgstr "在GitHub上打开分支"
@@ -12348,6 +12364,9 @@ msgstr "方案"
 msgid "Plan restored"
 msgstr "方案已恢复"
 
+msgid "Plan updated"
+msgstr "方案已更新"
+
 msgctxt "project state"
 msgid "Planned"
 msgstr "已计划"
@@ -12944,6 +12963,9 @@ msgstr "为智能体排队安排工作"
 
 msgid "Queued"
 msgstr "排队中"
+
+msgid "Queued messages"
+msgstr "排队中的消息"
 
 msgid "Queued to Merge"
 msgstr "排队等待合并"
@@ -14135,9 +14157,6 @@ msgstr "使用此配置文件运行中的智能体将失去访问权限。"
 msgid "Running bun test…"
 msgstr "正在运行bun test…"
 
-msgid "Running in the background"
-msgstr "正在后台运行"
-
 msgid "Running now"
 msgstr "正在运行"
 
@@ -14410,6 +14429,9 @@ msgstr "在{frameTitle}中搜索…"
 
 msgid "Search issues..."
 msgstr "搜索议题..."
+
+msgid "Search labels..."
+msgstr "搜索标签..."
 
 msgid "Search Linear"
 msgstr "搜索Linear"
@@ -14746,6 +14768,9 @@ msgstr "发送按键、管理窗口并控制其他应用程序。"
 
 msgid "Send message"
 msgstr "发送消息"
+
+msgid "Send now"
+msgstr "立即发送"
 
 msgid "Send reply"
 msgstr "发送回复"
@@ -15847,6 +15872,9 @@ msgstr "已停止"
 
 msgid "Stopping the agent in {what}"
 msgstr "正在停止 {what} 中的代理"
+
+msgid "Stops the agent and sends this now"
+msgstr "停止智能体并立即发送此消息"
 
 msgid "Strikethrough"
 msgstr "删除线"
@@ -17032,6 +17060,9 @@ msgstr "这将关闭所选工作区及其终端。项目的文件和分支保持
 
 msgid "This closes the workspace and its terminals. The project's files, branches and other workspaces stay as they are."
 msgstr "这将关闭该工作区及其终端。项目的文件、分支和其他工作区保持不变。"
+
+msgid "This cloud workspace can't start"
+msgstr "无法启动此云端工作区"
 
 msgid "This cloud workspace is waking up, which can take up to 30 seconds after it has been idle."
 msgstr "正在唤醒此云工作区。如果它已闲置一段时间，可能需要最多 30 秒。"
@@ -19103,6 +19134,12 @@ msgstr "你的姓名"
 
 msgid "Your name <0>(if we use your prompt, we'll credit you in the changelog)</0>"
 msgstr "你的名字 <0>（若我们采用你的提示词，会在更新日志中署名致谢）</0>"
+
+msgid "Your organization has reached its cloud usage limit. Raise the limit or upgrade in Settings, Billing to start this workspace."
+msgstr "你的组织已达到云端用量上限。请在“设置”中的“账单”提高上限或升级，以启动此工作区。"
+
+msgid "Your organization reached its cloud usage limit. This workspace stops in a few minutes unless the limit is raised."
+msgstr "你的组织已达到云端用量上限。除非提高上限，此工作区将在几分钟后停止。"
 
 msgid "Your own accounts. Your organization's integrations let Superset reach its tools; connecting yours makes the work Superset does for you show up as you."
 msgstr "你自己的账户。组织的集成让 Superset 访问其工具；连接你自己的账户后，Superset 为你完成的工作会以你的名义显示。"

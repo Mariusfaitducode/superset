@@ -2045,6 +2045,9 @@ msgstr "Vše v aktuální kartě"
 msgid "All in current tab (split panes)"
 msgstr "Vše v aktuální kartě (rozdělené panely)"
 
+msgid "All labels"
+msgstr "Všechny štítky"
+
 msgid "All models"
 msgstr "Všechny modely"
 
@@ -2920,6 +2923,9 @@ msgstr "Fakturace"
 
 msgid "Billing details"
 msgstr "Fakturační údaje"
+
+msgid "Billing refused to start a cloud workspace: the organization needs a paid plan, or it reached its cloud usage limit. Upgrade or raise the limit in Settings > Billing, or run the automation on a device."
+msgstr "Fakturace zabránila spuštění cloudového pracovního prostoru: organizace potřebuje placený tarif, nebo dosáhla limitu využití cloudu. Přejděte na vyšší tarif nebo zvyšte limit v Nastavení > Fakturace, případně spusťte automatizaci na zařízení."
 
 msgid "Binary"
 msgstr "Binární"
@@ -3948,6 +3954,9 @@ msgstr "Cloudové pracovní prostory"
 msgid "Cloud workspaces ignore this variable. Agents sign in under Settings › Agents instead."
 msgstr "Cloudové pracovní prostory tuto proměnnou ignorují. Agenti se místo toho přihlašují v Nastavení › Agenti."
 
+msgid "Cloud workspaces need a paid plan. Upgrade in Settings, Billing to start one."
+msgstr "Cloudové pracovní prostory vyžadují placený tarif. Pro spuštění přejděte na vyšší tarif v Nastavení, Fakturace."
+
 msgid "Cloud workspaces will stop running {agentLabel} with it."
 msgstr "Cloudové workspacy s tím přestanou spouštět {agentLabel}."
 
@@ -4917,9 +4926,6 @@ msgstr "Nepodařilo se ho zastavit"
 
 msgid "Could not stop the agent"
 msgstr "Agenta se nepodařilo zastavit"
-
-msgid "Could not stop the task"
-msgstr "Úlohu se nepodařilo zastavit"
 
 msgid "Could not stop watching"
 msgstr "Nepodařilo se přestat sledovat"
@@ -9058,6 +9064,10 @@ msgstr "Znalosti"
 msgid "Label"
 msgstr "Popisek"
 
+msgctxt "task label filter"
+msgid "Label"
+msgstr "Štítek"
+
 msgid "Label change"
 msgstr "Změna štítku"
 
@@ -10692,6 +10702,9 @@ msgstr "Žádní známí autoři"
 msgid "No labels"
 msgstr "Žádné štítky"
 
+msgid "No labels found."
+msgstr "Nebyly nalezeny žádné štítky."
+
 msgid "No lead"
 msgstr "Bez vedoucího"
 
@@ -11442,6 +11455,9 @@ msgstr "Otevřít App Store"
 
 msgid "Open as comment pane"
 msgstr "Otevřít jako panel komentářů"
+
+msgid "Open billing"
+msgstr "Otevřít fakturaci"
 
 msgid "Open branch on GitHub"
 msgstr "Otevřít větev na GitHubu"
@@ -12348,6 +12364,9 @@ msgstr "Tarif"
 msgid "Plan restored"
 msgstr "Tarif obnoven"
 
+msgid "Plan updated"
+msgstr "Tarif byl aktualizován"
+
 msgctxt "project state"
 msgid "Planned"
 msgstr "Plánováno"
@@ -12944,6 +12963,9 @@ msgstr "Fronta práce pro agenty"
 
 msgid "Queued"
 msgstr "Ve frontě"
+
+msgid "Queued messages"
+msgstr "Zprávy ve frontě"
 
 msgid "Queued to Merge"
 msgstr "Ve frontě na sloučení"
@@ -14135,9 +14157,6 @@ msgstr "Běžící agenti na tomto profilu ztratí přístup."
 msgid "Running bun test…"
 msgstr "Spouštím bun test…"
 
-msgid "Running in the background"
-msgstr "Běží na pozadí"
-
 msgid "Running now"
 msgstr "Spouštím"
 
@@ -14410,6 +14429,9 @@ msgstr "Hledat v {frameTitle}…"
 
 msgid "Search issues..."
 msgstr "Hledat issues..."
+
+msgid "Search labels..."
+msgstr "Hledat štítky..."
 
 msgid "Search Linear"
 msgstr "Hledat v Linearu"
@@ -14746,6 +14768,9 @@ msgstr "Posílat stisky kláves, spravovat okna a ovládat další aplikace."
 
 msgid "Send message"
 msgstr "Odeslat zprávu"
+
+msgid "Send now"
+msgstr "Odeslat hned"
 
 msgid "Send reply"
 msgstr "Odeslat odpověď"
@@ -15847,6 +15872,9 @@ msgstr "Zastaveno"
 
 msgid "Stopping the agent in {what}"
 msgstr "Zastavuje se agent v {what}"
+
+msgid "Stops the agent and sends this now"
+msgstr "Zastaví agenta a odešle toto hned"
 
 msgid "Strikethrough"
 msgstr "Přeškrtnuté"
@@ -17032,6 +17060,9 @@ msgstr "Tím se zavřou vybrané pracovní prostory a jejich terminály. Soubory
 
 msgid "This closes the workspace and its terminals. The project's files, branches and other workspaces stay as they are."
 msgstr "Tím se zavře pracovní prostor a jeho terminály. Soubory, větve a ostatní pracovní prostory projektu zůstanou beze změny."
+
+msgid "This cloud workspace can't start"
+msgstr "Tento cloudový pracovní prostor nelze spustit"
 
 msgid "This cloud workspace is waking up, which can take up to 30 seconds after it has been idle."
 msgstr "Tento cloudový workspace se probouzí, což může po nečinnosti trvat až 30 sekund."
@@ -19103,6 +19134,12 @@ msgstr "Vaše jméno"
 
 msgid "Your name <0>(if we use your prompt, we'll credit you in the changelog)</0>"
 msgstr "Vaše jméno <0>(pokud váš prompt použijeme, uvedeme vás v changelogu)</0>"
+
+msgid "Your organization has reached its cloud usage limit. Raise the limit or upgrade in Settings, Billing to start this workspace."
+msgstr "Vaše organizace dosáhla limitu využití cloudu. Pro spuštění tohoto pracovního prostoru zvyšte limit nebo přejděte na vyšší tarif v Nastavení, Fakturace."
+
+msgid "Your organization reached its cloud usage limit. This workspace stops in a few minutes unless the limit is raised."
+msgstr "Vaše organizace dosáhla limitu využití cloudu. Tento pracovní prostor se za několik minut zastaví, pokud limit nezvýšíte."
 
 msgid "Your own accounts. Your organization's integrations let Superset reach its tools; connecting yours makes the work Superset does for you show up as you."
 msgstr "Vaše vlastní účty. Integrace vaší organizace umožňují Supersetu přístup k jejím nástrojům; když připojíte své účty, práce, kterou pro vás Superset udělá, se zobrazí pod vaším jménem."

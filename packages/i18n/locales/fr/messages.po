@@ -2045,6 +2045,9 @@ msgstr "Tout dans l'onglet actuel"
 msgid "All in current tab (split panes)"
 msgstr "Tout dans l'onglet actuel (volets fractionnés)"
 
+msgid "All labels"
+msgstr "Toutes les étiquettes"
+
 msgid "All models"
 msgstr "Tous les modèles"
 
@@ -2920,6 +2923,9 @@ msgstr "Facturation"
 
 msgid "Billing details"
 msgstr "Informations de facturation"
+
+msgid "Billing refused to start a cloud workspace: the organization needs a paid plan, or it reached its cloud usage limit. Upgrade or raise the limit in Settings > Billing, or run the automation on a device."
+msgstr "La facturation a empêché le démarrage d'un espace de travail cloud : l'organisation a besoin d'un forfait payant, ou elle a atteint sa limite d'utilisation du cloud. Passez à un forfait supérieur ou relevez la limite dans Paramètres > Facturation, ou exécutez l'automatisation sur un appareil."
 
 msgid "Binary"
 msgstr "Binaire"
@@ -3948,6 +3954,9 @@ msgstr "Espaces de travail cloud"
 msgid "Cloud workspaces ignore this variable. Agents sign in under Settings › Agents instead."
 msgstr "Les espaces de travail cloud ignorent cette variable. Les agents se connectent plutôt dans Paramètres › Agents."
 
+msgid "Cloud workspaces need a paid plan. Upgrade in Settings, Billing to start one."
+msgstr "Les espaces de travail cloud nécessitent un forfait payant. Passez à un forfait supérieur dans Paramètres, Facturation pour en démarrer un."
+
 msgid "Cloud workspaces will stop running {agentLabel} with it."
 msgstr "Les espaces de travail cloud cesseront d'exécuter {agentLabel} avec."
 
@@ -4917,9 +4926,6 @@ msgstr "Impossible de l'arrêter"
 
 msgid "Could not stop the agent"
 msgstr "Impossible d'arrêter l'agent"
-
-msgid "Could not stop the task"
-msgstr "Impossible d'arrêter la tâche"
 
 msgid "Could not stop watching"
 msgstr "Impossible d'arrêter la surveillance"
@@ -9058,6 +9064,10 @@ msgstr "Connaissances"
 msgid "Label"
 msgstr "Libellé"
 
+msgctxt "task label filter"
+msgid "Label"
+msgstr "Étiquette"
+
 msgid "Label change"
 msgstr "Changement de label"
 
@@ -10692,6 +10702,9 @@ msgstr "Aucun créateur connu"
 msgid "No labels"
 msgstr "Aucun label"
 
+msgid "No labels found."
+msgstr "Aucune étiquette trouvée."
+
 msgid "No lead"
 msgstr "Aucun responsable"
 
@@ -11442,6 +11455,9 @@ msgstr "Ouvrir l’App Store"
 
 msgid "Open as comment pane"
 msgstr "Ouvrir comme panneau de commentaires"
+
+msgid "Open billing"
+msgstr "Ouvrir la facturation"
 
 msgid "Open branch on GitHub"
 msgstr "Ouvrir la branche sur GitHub"
@@ -12348,6 +12364,9 @@ msgstr "Forfait"
 msgid "Plan restored"
 msgstr "Forfait rétabli"
 
+msgid "Plan updated"
+msgstr "Forfait mis à jour"
+
 msgctxt "project state"
 msgid "Planned"
 msgstr "Planifié"
@@ -12944,6 +12963,9 @@ msgstr "Mettre du travail en file d'attente pour les agents"
 
 msgid "Queued"
 msgstr "En file d'attente"
+
+msgid "Queued messages"
+msgstr "Messages en file d'attente"
 
 msgid "Queued to Merge"
 msgstr "En file d'attente pour la fusion"
@@ -14135,9 +14157,6 @@ msgstr "Les agents en cours sur ce profil perdent l'accès."
 msgid "Running bun test…"
 msgstr "Exécution de bun test…"
 
-msgid "Running in the background"
-msgstr "En arrière-plan"
-
 msgid "Running now"
 msgstr "Exécution en cours"
 
@@ -14410,6 +14429,9 @@ msgstr "Rechercher dans {frameTitle}…"
 
 msgid "Search issues..."
 msgstr "Rechercher des issues..."
+
+msgid "Search labels..."
+msgstr "Rechercher des étiquettes..."
 
 msgid "Search Linear"
 msgstr "Rechercher dans Linear"
@@ -14746,6 +14768,9 @@ msgstr "Envoyer des frappes clavier, gérer les fenêtres et contrôler d'autres
 
 msgid "Send message"
 msgstr "Envoyer le message"
+
+msgid "Send now"
+msgstr "Envoyer maintenant"
 
 msgid "Send reply"
 msgstr "Envoyer la réponse"
@@ -15847,6 +15872,9 @@ msgstr "Arrêté"
 
 msgid "Stopping the agent in {what}"
 msgstr "Arrêt de l’agent dans {what}"
+
+msgid "Stops the agent and sends this now"
+msgstr "Arrête l'agent et envoie ceci maintenant"
 
 msgid "Strikethrough"
 msgstr "Barré"
@@ -17032,6 +17060,9 @@ msgstr "Cela ferme les espaces de travail sélectionnés et leurs terminaux. Les
 
 msgid "This closes the workspace and its terminals. The project's files, branches and other workspaces stay as they are."
 msgstr "Cela ferme l'espace de travail et ses terminaux. Les fichiers, les branches et les autres espaces de travail du projet restent tels quels."
+
+msgid "This cloud workspace can't start"
+msgstr "Impossible de démarrer cet espace de travail cloud"
 
 msgid "This cloud workspace is waking up, which can take up to 30 seconds after it has been idle."
 msgstr "Cet espace de travail cloud est en train de se réveiller, ce qui peut prendre jusqu’à 30 secondes après une période d’inactivité."
@@ -19103,6 +19134,12 @@ msgstr "Votre nom"
 
 msgid "Your name <0>(if we use your prompt, we'll credit you in the changelog)</0>"
 msgstr "Votre nom <0>(si nous utilisons votre prompt, nous vous créditerons dans le changelog)</0>"
+
+msgid "Your organization has reached its cloud usage limit. Raise the limit or upgrade in Settings, Billing to start this workspace."
+msgstr "Votre organisation a atteint sa limite d'utilisation du cloud. Relevez la limite ou passez à un forfait supérieur dans Paramètres, Facturation pour démarrer cet espace de travail."
+
+msgid "Your organization reached its cloud usage limit. This workspace stops in a few minutes unless the limit is raised."
+msgstr "Votre organisation a atteint sa limite d'utilisation du cloud. Cet espace de travail s'arrêtera dans quelques minutes si la limite n'est pas relevée."
 
 msgid "Your own accounts. Your organization's integrations let Superset reach its tools; connecting yours makes the work Superset does for you show up as you."
 msgstr "Vos propres comptes. Les intégrations de votre organisation permettent à Superset d'accéder à ses outils ; connecter les vôtres fait apparaître à votre nom le travail que Superset fait pour vous."

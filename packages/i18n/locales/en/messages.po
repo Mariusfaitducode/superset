@@ -2045,6 +2045,9 @@ msgstr "All in current tab"
 msgid "All in current tab (split panes)"
 msgstr "All in current tab (split panes)"
 
+msgid "All labels"
+msgstr "All labels"
+
 msgid "All models"
 msgstr "All models"
 
@@ -2920,6 +2923,9 @@ msgstr "Billing"
 
 msgid "Billing details"
 msgstr "Billing details"
+
+msgid "Billing refused to start a cloud workspace: the organization needs a paid plan, or it reached its cloud usage limit. Upgrade or raise the limit in Settings > Billing, or run the automation on a device."
+msgstr "Billing refused to start a cloud workspace: the organization needs a paid plan, or it reached its cloud usage limit. Upgrade or raise the limit in Settings > Billing, or run the automation on a device."
 
 msgid "Binary"
 msgstr "Binary"
@@ -3948,6 +3954,9 @@ msgstr "Cloud workspaces"
 msgid "Cloud workspaces ignore this variable. Agents sign in under Settings › Agents instead."
 msgstr "Cloud workspaces ignore this variable. Agents sign in under Settings › Agents instead."
 
+msgid "Cloud workspaces need a paid plan. Upgrade in Settings, Billing to start one."
+msgstr "Cloud workspaces need a paid plan. Upgrade in Settings, Billing to start one."
+
 msgid "Cloud workspaces will stop running {agentLabel} with it."
 msgstr "Cloud workspaces will stop running {agentLabel} with it."
 
@@ -4917,9 +4926,6 @@ msgstr "Could not stop it"
 
 msgid "Could not stop the agent"
 msgstr "Could not stop the agent"
-
-msgid "Could not stop the task"
-msgstr "Could not stop the task"
 
 msgid "Could not stop watching"
 msgstr "Could not stop watching"
@@ -9058,6 +9064,10 @@ msgstr "Knowledge"
 msgid "Label"
 msgstr "Label"
 
+msgctxt "task label filter"
+msgid "Label"
+msgstr "Label"
+
 msgid "Label change"
 msgstr "Label change"
 
@@ -10692,6 +10702,9 @@ msgstr "No known creators"
 msgid "No labels"
 msgstr "No labels"
 
+msgid "No labels found."
+msgstr "No labels found."
+
 msgid "No lead"
 msgstr "No lead"
 
@@ -11442,6 +11455,9 @@ msgstr "Open App Store"
 
 msgid "Open as comment pane"
 msgstr "Open as comment pane"
+
+msgid "Open billing"
+msgstr "Open billing"
 
 msgid "Open branch on GitHub"
 msgstr "Open branch on GitHub"
@@ -12348,6 +12364,9 @@ msgstr "Plan"
 msgid "Plan restored"
 msgstr "Plan restored"
 
+msgid "Plan updated"
+msgstr "Plan updated"
+
 msgctxt "project state"
 msgid "Planned"
 msgstr "Planned"
@@ -12944,6 +12963,9 @@ msgstr "Queue work for agents"
 
 msgid "Queued"
 msgstr "Queued"
+
+msgid "Queued messages"
+msgstr "Queued messages"
 
 msgid "Queued to Merge"
 msgstr "Queued to Merge"
@@ -14135,9 +14157,6 @@ msgstr "Running agents on this profile lose access."
 msgid "Running bun test…"
 msgstr "Running bun test…"
 
-msgid "Running in the background"
-msgstr "Running in the background"
-
 msgid "Running now"
 msgstr "Running now"
 
@@ -14410,6 +14429,9 @@ msgstr "Search in {frameTitle}…"
 
 msgid "Search issues..."
 msgstr "Search issues..."
+
+msgid "Search labels..."
+msgstr "Search labels..."
 
 msgid "Search Linear"
 msgstr "Search Linear"
@@ -14746,6 +14768,9 @@ msgstr "Send keystrokes, manage windows, and control other applications."
 
 msgid "Send message"
 msgstr "Send message"
+
+msgid "Send now"
+msgstr "Send now"
 
 msgid "Send reply"
 msgstr "Send reply"
@@ -15847,6 +15872,9 @@ msgstr "Stopped"
 
 msgid "Stopping the agent in {what}"
 msgstr "Stopping the agent in {what}"
+
+msgid "Stops the agent and sends this now"
+msgstr "Stops the agent and sends this now"
 
 msgid "Strikethrough"
 msgstr "Strikethrough"
@@ -17032,6 +17060,9 @@ msgstr "This closes the selected workspaces and their terminals. The project's f
 
 msgid "This closes the workspace and its terminals. The project's files, branches and other workspaces stay as they are."
 msgstr "This closes the workspace and its terminals. The project's files, branches and other workspaces stay as they are."
+
+msgid "This cloud workspace can't start"
+msgstr "This cloud workspace can't start"
 
 msgid "This cloud workspace is waking up, which can take up to 30 seconds after it has been idle."
 msgstr "This cloud workspace is waking up, which can take up to 30 seconds after it has been idle."
@@ -19103,6 +19134,12 @@ msgstr "Your name"
 
 msgid "Your name <0>(if we use your prompt, we'll credit you in the changelog)</0>"
 msgstr "Your name <0>(if we use your prompt, we'll credit you in the changelog)</0>"
+
+msgid "Your organization has reached its cloud usage limit. Raise the limit or upgrade in Settings, Billing to start this workspace."
+msgstr "Your organization has reached its cloud usage limit. Raise the limit or upgrade in Settings, Billing to start this workspace."
+
+msgid "Your organization reached its cloud usage limit. This workspace stops in a few minutes unless the limit is raised."
+msgstr "Your organization reached its cloud usage limit. This workspace stops in a few minutes unless the limit is raised."
 
 msgid "Your own accounts. Your organization's integrations let Superset reach its tools; connecting yours makes the work Superset does for you show up as you."
 msgstr "Your own accounts. Your organization's integrations let Superset reach its tools; connecting yours makes the work Superset does for you show up as you."

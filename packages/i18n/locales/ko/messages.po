@@ -2045,6 +2045,9 @@ msgstr "모두 현재 탭에서"
 msgid "All in current tab (split panes)"
 msgstr "모두 현재 탭에서 (분할 패널)"
 
+msgid "All labels"
+msgstr "모든 레이블"
+
 msgid "All models"
 msgstr "모든 모델"
 
@@ -2920,6 +2923,9 @@ msgstr "결제"
 
 msgid "Billing details"
 msgstr "결제 정보"
+
+msgid "Billing refused to start a cloud workspace: the organization needs a paid plan, or it reached its cloud usage limit. Upgrade or raise the limit in Settings > Billing, or run the automation on a device."
+msgstr "결제 문제로 클라우드 워크스페이스를 시작할 수 없습니다. 조직에 유료 플랜이 필요하거나 클라우드 사용 한도에 도달했습니다. 설정 > 결제에서 업그레이드하거나 한도를 올리거나, 자동화를 기기에서 실행하세요."
 
 msgid "Binary"
 msgstr "바이너리"
@@ -3948,6 +3954,9 @@ msgstr "클라우드 워크스페이스"
 msgid "Cloud workspaces ignore this variable. Agents sign in under Settings › Agents instead."
 msgstr "클라우드 워크스페이스는 이 변수를 무시합니다. 에이전트는 대신 설정 › 에이전트에서 로그인합니다."
 
+msgid "Cloud workspaces need a paid plan. Upgrade in Settings, Billing to start one."
+msgstr "클라우드 워크스페이스에는 유료 플랜이 필요합니다. 설정의 결제에서 업그레이드하면 시작할 수 있습니다."
+
 msgid "Cloud workspaces will stop running {agentLabel} with it."
 msgstr "클라우드 워크스페이스에서 더 이상 이것으로 {agentLabel}을(를) 실행하지 않습니다."
 
@@ -4917,9 +4926,6 @@ msgstr "중지할 수 없습니다"
 
 msgid "Could not stop the agent"
 msgstr "에이전트를 중지할 수 없습니다"
-
-msgid "Could not stop the task"
-msgstr "작업을 중지할 수 없습니다"
 
 msgid "Could not stop watching"
 msgstr "감시를 중지할 수 없습니다"
@@ -9058,6 +9064,10 @@ msgstr "지식"
 msgid "Label"
 msgstr "레이블"
 
+msgctxt "task label filter"
+msgid "Label"
+msgstr "레이블"
+
 msgid "Label change"
 msgstr "라벨 변경"
 
@@ -10692,6 +10702,9 @@ msgstr "알려진 만든 사람이 없습니다"
 msgid "No labels"
 msgstr "레이블 없음"
 
+msgid "No labels found."
+msgstr "레이블을 찾을 수 없습니다."
+
 msgid "No lead"
 msgstr "리드 없음"
 
@@ -11442,6 +11455,9 @@ msgstr "App Store 열기"
 
 msgid "Open as comment pane"
 msgstr "코멘트 패널으로 열기"
+
+msgid "Open billing"
+msgstr "결제 열기"
 
 msgid "Open branch on GitHub"
 msgstr "GitHub에서 브랜치 열기"
@@ -12348,6 +12364,9 @@ msgstr "플랜"
 msgid "Plan restored"
 msgstr "플랜이 복원되었습니다"
 
+msgid "Plan updated"
+msgstr "플랜이 업데이트되었습니다"
+
 msgctxt "project state"
 msgid "Planned"
 msgstr "계획됨"
@@ -12944,6 +12963,9 @@ msgstr "에이전트 작업 대기열에 추가"
 
 msgid "Queued"
 msgstr "대기열"
+
+msgid "Queued messages"
+msgstr "대기 중인 메시지"
 
 msgid "Queued to Merge"
 msgstr "머지 대기열에 있음"
@@ -14135,9 +14157,6 @@ msgstr "이 프로필에서 실행 중인 에이전트는 접근 권한을 잃�
 msgid "Running bun test…"
 msgstr "bun test 실행 중…"
 
-msgid "Running in the background"
-msgstr "백그라운드에서 실행 중"
-
 msgid "Running now"
 msgstr "지금 실행 중"
 
@@ -14410,6 +14429,9 @@ msgstr "{frameTitle}에서 검색…"
 
 msgid "Search issues..."
 msgstr "이슈 검색..."
+
+msgid "Search labels..."
+msgstr "레이블 검색..."
 
 msgid "Search Linear"
 msgstr "Linear 검색"
@@ -14746,6 +14768,9 @@ msgstr "키 입력을 보내고, 창을 관리하고, 다른 애플리케이션�
 
 msgid "Send message"
 msgstr "메시지 보내기"
+
+msgid "Send now"
+msgstr "지금 보내기"
 
 msgid "Send reply"
 msgstr "답글 보내기"
@@ -15847,6 +15872,9 @@ msgstr "중지됨"
 
 msgid "Stopping the agent in {what}"
 msgstr "{what}의 에이전트 중지 중"
+
+msgid "Stops the agent and sends this now"
+msgstr "에이전트를 중지하고 지금 이 메시지를 보냅니다"
 
 msgid "Strikethrough"
 msgstr "취소선"
@@ -17032,6 +17060,9 @@ msgstr "선택한 워크스페이스와 해당 터미널을 닫습니다. 프로
 
 msgid "This closes the workspace and its terminals. The project's files, branches and other workspaces stay as they are."
 msgstr "워크스페이스와 해당 터미널을 닫습니다. 프로젝트의 파일, 브랜치, 다른 워크스페이스는 그대로 유지됩니다."
+
+msgid "This cloud workspace can't start"
+msgstr "이 클라우드 워크스페이스를 시작할 수 없습니다"
 
 msgid "This cloud workspace is waking up, which can take up to 30 seconds after it has been idle."
 msgstr "이 클라우드 워크스페이스를 깨우는 중입니다. 한동안 사용하지 않았다면 최대 30초가 걸릴 수 있습니다."
@@ -19103,6 +19134,12 @@ msgstr "이름"
 
 msgid "Your name <0>(if we use your prompt, we'll credit you in the changelog)</0>"
 msgstr "이름 <0>(프롬프트를 채택하면 변경 로그에 이름을 남겨 드립니다)</0>"
+
+msgid "Your organization has reached its cloud usage limit. Raise the limit or upgrade in Settings, Billing to start this workspace."
+msgstr "조직이 클라우드 사용 한도에 도달했습니다. 이 워크스페이스를 시작하려면 설정의 결제에서 한도를 올리거나 업그레이드하세요."
+
+msgid "Your organization reached its cloud usage limit. This workspace stops in a few minutes unless the limit is raised."
+msgstr "조직이 클라우드 사용 한도에 도달했습니다. 한도를 올리지 않으면 이 워크스페이스는 몇 분 후에 중지됩니다."
 
 msgid "Your own accounts. Your organization's integrations let Superset reach its tools; connecting yours makes the work Superset does for you show up as you."
 msgstr "본인의 계정입니다. 조직의 통합은 Superset이 해당 도구에 접근하게 하며, 본인 계정을 연결하면 Superset이 대신 한 작업이 본인 이름으로 표시됩니다."
