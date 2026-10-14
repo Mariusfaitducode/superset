@@ -20,10 +20,10 @@ import {
 	ensureDefaultMarketplace,
 	installPlugin,
 	listAvailable,
-	recordToolsOnlyPlugin,
 } from "../../../lib/plugins/install";
 import { pluginConnector } from "../../../lib/plugins/marketplace";
 import { syncPluginMcpServers } from "../../../lib/plugins/mcp-servers";
+import { installOrganizationPlugin } from "../../../lib/plugins/organization";
 
 const ORGANIZATION = "organization";
 
@@ -101,7 +101,7 @@ export default command({
 			ReturnType<typeof ctx.api.plugins.install.mutate>
 		> | null = null;
 		let accountError: string | null = null;
-		let local: Awaited<ReturnType<typeof recordToolsOnlyPlugin>>;
+		let local: Awaited<ReturnType<typeof installPlugin>>;
 		let slug: string | undefined;
 
 		if (organization) {
@@ -109,31 +109,23 @@ export default command({
 				name,
 				marketplace: organization.marketplace,
 			});
-			local = await recordToolsOnlyPlugin({
-				name,
-				marketplace: organization.marketplace,
-				version: account.version,
-			});
+			local = await installOrganizationPlugin(ctx.api, name);
 			slug = account.connector ?? undefined;
 		} else {
-			const installed = await installPlugin(name, marketplace, {
+			local = await installPlugin(name, marketplace, {
 				update: Boolean(options.update),
 			});
-			local = installed;
 			try {
 				account = await ctx.api.plugins.install.mutate({
 					name,
-					marketplace: installed.marketplace,
+					marketplace: local.marketplace,
 				});
 			} catch (error) {
 				accountError = error instanceof Error ? error.message : String(error);
 			}
 			slug = pluginConnector(
 				JSON.parse(
-					fs.readFileSync(
-						path.join(installed.installPath, "plugin.json"),
-						"utf8",
-					),
+					fs.readFileSync(path.join(local.installPath, "plugin.json"), "utf8"),
 				),
 			);
 		}
