@@ -10040,9 +10040,6 @@ msgstr "Merge commit"
 msgid "Merge failed: {0}"
 msgstr "Merge thất bại: {0}"
 
-msgid "Merge into center"
-msgstr "Gộp vào giữa"
-
 msgid "Merge pull request"
 msgstr "Merge pull request"
 
@@ -10290,9 +10287,6 @@ msgstr "Gần như suốt lịch sử phần mềm"
 msgid "Move {count} to Group"
 msgstr "Chuyển {count} vào nhóm"
 
-msgid "Move to Center"
-msgstr "Chuyển vào giữa"
-
 msgid "Move to group"
 msgstr "Chuyển vào nhóm"
 
@@ -10458,6 +10452,9 @@ msgstr "Trình duyệt mới"
 
 msgid "new challengers"
 msgstr "đối thủ mới"
+
+msgid "New Chat"
+msgstr "Chat mới"
 
 msgid "New cloud workspace"
 msgstr "Workspace cloud mới"
