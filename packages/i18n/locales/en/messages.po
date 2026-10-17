@@ -5208,6 +5208,9 @@ msgstr "Couldn't restore \"{workspaceName}\""
 msgid "Couldn't restore the files"
 msgstr "Couldn't restore the files"
 
+msgid "Couldn't rewind the chat"
+msgstr "Couldn't rewind the chat"
+
 msgid "Couldn't save"
 msgstr "Couldn't save"
 
