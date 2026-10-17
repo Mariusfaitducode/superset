@@ -923,6 +923,9 @@ msgstr "{level} · {gate} · {statusLabel}"
 msgid "{level} {gate}: {statusLabel}"
 msgstr "{level} {gate}: {statusLabel}"
 
+msgid "{lines, plural, one {# line} other {# lines}}"
+msgstr "{lines, plural, other {# dòng}}"
+
 msgid "{localHostName} (this device)"
 msgstr "{localHostName} (thiết bị này)"
 
@@ -964,9 +967,15 @@ msgstr "{name} là tích hợp sẵn nên không thể gỡ"
 msgid "serverError.plugins.marketplaceReserved"
 msgstr "{name} là tích hợp sẵn nên không thể thay thế"
 
+msgid "{name} is installed"
+msgstr "Đã cài {name}"
+
 #. js-lingui-explicit-id
 msgid "serverError.plugins.marketplaceNotAdded"
 msgstr "{name} chưa được thêm"
+
+msgid "{name} plugin"
+msgstr "Plugin {name}"
 
 msgid "{noun, select, person {Specify at least one person, or choose {choice}.} sender {Specify at least one sender, or choose {choice}.} other {Specify at least one entry, or choose {choice}.}}"
 msgstr "{noun, select, person {Hãy chỉ định ít nhất một người, hoặc chọn {choice}.} sender {Hãy chỉ định ít nhất một người gửi, hoặc chọn {choice}.} other {Hãy chỉ định ít nhất một mục, hoặc chọn {choice}.}}"
@@ -3555,6 +3564,9 @@ msgstr "Đang kiểm tra môi trường…"
 msgid "Checking host…"
 msgstr "Đang kiểm tra host…"
 
+msgid "Checking MCP servers…"
+msgstr "Đang kiểm tra server MCP…"
+
 msgid "Checking out a PR requires a project"
 msgstr "Checkout một PR cần có dự án"
 
@@ -3627,6 +3639,9 @@ msgstr "Chọn agent"
 msgid "Choose an existing repo folder"
 msgstr "Chọn một thư mục repo có sẵn"
 
+msgid "Choose an MCP server"
+msgstr "Chọn một server MCP"
+
 msgid "Choose app"
 msgstr "Chọn ứng dụng"
 
@@ -3638,6 +3653,9 @@ msgstr "Chọn cách chế độ xem thay đổi mở từ thanh trên cùng"
 
 msgid "Choose how to open file paths when Cmd+clicking in the terminal"
 msgstr "Chọn cách mở đường dẫn tệp khi Cmd+nhấp trong terminal"
+
+msgid "Choose MCP servers for this message"
+msgstr "Chọn server MCP cho tin nhắn này"
 
 msgid "Choose what to clear from the in-app browser."
 msgstr "Chọn thứ cần xóa khỏi trình duyệt trong ứng dụng."
@@ -4273,6 +4291,9 @@ msgstr "Chọn agent nào xuất hiện trong trình khởi chạy và cách d�
 
 msgid "Configure workspace run command"
 msgstr "Cấu hình lệnh chạy của workspace"
+
+msgid "Configured for {agent}"
+msgstr "Đã cấu hình cho {agent}"
 
 msgid "Confirm before quitting"
 msgstr "Xác nhận trước khi thoát"
@@ -4932,6 +4953,9 @@ msgstr "Không kết nối được tới máy của workspace này"
 msgid "Could not reactivate"
 msgstr "Không thể kích hoạt lại"
 
+msgid "Could not read MCP servers."
+msgstr "Không đọc được các server MCP."
+
 msgid "Could not read selected file"
 msgstr "Không thể đọc tệp đã chọn"
 
@@ -5079,6 +5103,9 @@ msgstr "Không xóa xong các workspace"
 
 msgid "Couldn't hand this to an agent"
 msgstr "Không thể giao việc này cho agent"
+
+msgid "Couldn't load {filename}"
+msgstr "Không thể tải {filename}"
 
 #. placeholder {0}: configsQuery.error instanceof Error ? configsQuery.error.message : hostServiceUnavailableMessage
 msgid "Couldn't load agent settings: {0}"
@@ -6120,6 +6147,9 @@ msgstr "Tắt skill"
 
 msgid "Disabled"
 msgstr "Đã tắt"
+
+msgid "Disabled in agent config"
+msgstr "Đã tắt trong cấu hình agent"
 
 msgid "Disabled toggle"
 msgstr "Công tắc đã tắt"
@@ -8285,6 +8315,9 @@ msgstr "Ẩn bình luận review"
 msgid "Hide sessions"
 msgstr "Ẩn phiên"
 
+msgid "Hide text"
+msgstr "Ẩn văn bản"
+
 msgid "Hide unchanged regions"
 msgstr "Ẩn các vùng không đổi"
 
@@ -8704,6 +8737,9 @@ msgstr "Trong ứng dụng Superset trên máy tính, mở Cài đặt → Truy 
 msgid "In under a year, more than 130,000 developers across 176 countries have run Superset and created over 1.5 million agent workspaces. Japan is its second-largest market after the US, with over 12,000 developers, and Asia as a whole now accounts for more users than the US."
 msgstr "Chưa đầy một năm, hơn 130.000 nhà phát triển tại 176 quốc gia đã chạy Superset và tạo hơn 1,5 triệu workspace agent. Nhật Bản là thị trường lớn thứ hai sau Mỹ, với hơn 12.000 nhà phát triển, và châu Á nói chung hiện có nhiều người dùng hơn Mỹ."
 
+msgid "In your next chat"
+msgstr "Trong cuộc trò chuyện sau"
+
 msgid "In your terminal"
 msgstr "Trong terminal của bạn"
 
@@ -9063,6 +9099,9 @@ msgstr "Nhánh riêng và bản sao tệp riêng"
 
 msgid "Its replies go with it."
 msgstr "Các câu trả lời cũng bị xóa theo."
+
+msgid "Its tools reach the agent in your next chat."
+msgstr "Công cụ của nó sẽ có cho agent trong cuộc trò chuyện sau."
 
 msgid "Its workspaces and terminals are unavailable until it restarts — use the Superset tray menu > Host Service > Restart."
 msgstr "Các workspace và terminal của nó không khả dụng cho đến khi khởi động lại — dùng menu khay Superset > Host Service > Restart."
@@ -9696,6 +9735,10 @@ msgstr "Đang tải..."
 msgid "Loading…"
 msgstr "Đang tải…"
 
+msgctxt "MCP server scope"
+msgid "local"
+msgstr "cục bộ"
+
 msgid "Local"
 msgstr "Cục bộ"
 
@@ -9863,6 +9906,9 @@ msgstr "Quản lý gói"
 msgid "Manage plan on the web"
 msgstr "Quản lý gói trên web"
 
+msgid "Manage plugins…"
+msgstr "Quản lý plugin…"
+
 msgid "Manage sessions"
 msgstr "Quản lý phiên"
 
@@ -9961,6 +10007,9 @@ msgstr "Server MCP"
 
 msgid "MCP Server Commands"
 msgstr "Lệnh server MCP"
+
+msgid "MCP servers"
+msgstr "Server MCP"
 
 msgid "Measured over the trailing 30 days"
 msgstr "Đo trong 30 ngày gần nhất"
@@ -10576,6 +10625,9 @@ msgstr "Bình luận tiếp theo"
 msgid "Next file"
 msgstr "Tệp tiếp theo"
 
+msgid "Next image"
+msgstr "Ảnh tiếp theo"
+
 msgid "Next match"
 msgstr "Kết quả kế tiếp"
 
@@ -10912,6 +10964,9 @@ msgstr "Không có kết quả khớp"
 msgid "No matching files"
 msgstr "Không có tệp phù hợp"
 
+msgid "No matching MCP servers"
+msgstr "Không có server MCP phù hợp"
+
 msgid "No matching models"
 msgstr "Không có mô hình phù hợp"
 
@@ -10923,6 +10978,9 @@ msgstr "Không có trang phù hợp"
 
 msgid "No matching repositories."
 msgstr "Không có repository nào khớp."
+
+msgid "No MCP servers found"
+msgstr "Không tìm thấy server MCP"
 
 msgid "No members yet"
 msgstr "Chưa có thành viên nào"
@@ -12828,6 +12886,9 @@ msgstr "Bình luận trước"
 msgid "Previous file"
 msgstr "Tệp trước"
 
+msgid "Previous image"
+msgstr "Ảnh trước"
+
 msgid "Previous match"
 msgstr "Kết quả trước"
 
@@ -12933,6 +12994,10 @@ msgstr "Tiến độ"
 msgid "Progress · Spinner"
 msgstr "Progress · Spinner"
 
+msgctxt "MCP server scope"
+msgid "project"
+msgstr "dự án"
+
 msgid "Project"
 msgstr "Dự án"
 
@@ -12965,6 +13030,9 @@ msgstr "Không tìm thấy dự án."
 
 msgid "Project not set up on this host"
 msgstr "Dự án chưa được thiết lập trên host này"
+
+msgid "Project not trusted in Codex"
+msgstr "Dự án chưa được tin cậy trong Codex"
 
 msgid "Project ready — open it from the sidebar."
 msgstr "Dự án đã sẵn sàng — mở nó từ thanh bên."
@@ -13295,6 +13363,9 @@ msgstr "Đọc log deployment và build"
 msgid "Read it on your phone"
 msgstr "Đọc trên điện thoại"
 
+msgid "Read MCP servers again"
+msgstr "Đọc lại các server MCP"
+
 msgid "Read the changelog"
 msgstr "Đọc changelog"
 
@@ -13620,6 +13691,9 @@ msgstr "Xóa nhắc đến"
 
 msgid "Remove mention {path}"
 msgstr "Xóa nhắc đến {path}"
+
+msgid "Remove pasted text"
+msgstr "Xóa văn bản đã dán"
 
 msgid "Remove PR Link"
 msgstr "Gỡ liên kết PR"
@@ -14709,6 +14783,9 @@ msgstr "Tìm trong Linear"
 msgid "Search Linear…"
 msgstr "Tìm trong Linear…"
 
+msgid "Search MCP servers…"
+msgstr "Tìm server MCP…"
+
 msgid "Search models"
 msgstr "Tìm mô hình"
 
@@ -15383,6 +15460,9 @@ msgstr "Hiện trên biểu đồ"
 msgid "Show in folder"
 msgstr "Hiện trong thư mục"
 
+msgid "Show in text field"
+msgstr "Hiển thị trong ô nhập"
+
 msgid "Show items in all states"
 msgstr "Hiện mục ở mọi trạng thái"
 
@@ -15445,6 +15525,9 @@ msgstr "Hiện phiên"
 
 msgid "Show status and send notifications for this agent."
 msgstr "Hiển thị trạng thái và gửi thông báo cho agent này."
+
+msgid "Show text"
+msgstr "Hiện văn bản"
 
 msgid "Show the triggering payload"
 msgstr "Hiển thị payload kích hoạt"
@@ -18502,6 +18585,10 @@ msgstr "Dùng khi hệ thống ở chế độ tối."
 
 msgid "Used when your system is in light mode."
 msgstr "Dùng khi hệ thống ở chế độ sáng."
+
+msgctxt "MCP server scope"
+msgid "user"
+msgstr "người dùng"
 
 msgid "User already has access to this host"
 msgstr "Người dùng đã có quyền truy cập host này"

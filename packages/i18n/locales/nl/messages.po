@@ -923,6 +923,9 @@ msgstr "{level} · {gate} · {statusLabel}"
 msgid "{level} {gate}: {statusLabel}"
 msgstr "{level} {gate}: {statusLabel}"
 
+msgid "{lines, plural, one {# line} other {# lines}}"
+msgstr "{lines, plural, one {# regel} other {# regels}}"
+
 msgid "{localHostName} (this device)"
 msgstr "{localHostName} (dit apparaat)"
 
@@ -964,9 +967,15 @@ msgstr "{name} is ingebouwd en kan niet worden verwijderd"
 msgid "serverError.plugins.marketplaceReserved"
 msgstr "{name} is ingebouwd en kan niet worden vervangen"
 
+msgid "{name} is installed"
+msgstr "{name} is geïnstalleerd"
+
 #. js-lingui-explicit-id
 msgid "serverError.plugins.marketplaceNotAdded"
 msgstr "{name} is niet toegevoegd"
+
+msgid "{name} plugin"
+msgstr "Plug-in {name}"
 
 msgid "{noun, select, person {Specify at least one person, or choose {choice}.} sender {Specify at least one sender, or choose {choice}.} other {Specify at least one entry, or choose {choice}.}}"
 msgstr "{noun, select, person {Geef minstens één persoon op, of kies {choice}.} sender {Geef minstens één afzender op, of kies {choice}.} other {Geef minstens één item op, of kies {choice}.}}"
@@ -3555,6 +3564,9 @@ msgstr "Omgevingen controleren…"
 msgid "Checking host…"
 msgstr "Host controleren…"
 
+msgid "Checking MCP servers…"
+msgstr "MCP-servers controleren…"
+
 msgid "Checking out a PR requires a project"
 msgstr "Een PR uitchecken vereist een project"
 
@@ -3627,6 +3639,9 @@ msgstr "Kies agent"
 msgid "Choose an existing repo folder"
 msgstr "Kies een bestaande repo-map"
 
+msgid "Choose an MCP server"
+msgstr "Kies een MCP-server"
+
 msgid "Choose app"
 msgstr "Kies app"
 
@@ -3638,6 +3653,9 @@ msgstr "Kies hoe de weergave Wijzigingen vanuit de bovenbalk wordt geopend"
 
 msgid "Choose how to open file paths when Cmd+clicking in the terminal"
 msgstr "Kies hoe bestandspaden openen bij Cmd+klik in de terminal"
+
+msgid "Choose MCP servers for this message"
+msgstr "Kies MCP-servers voor dit bericht"
 
 msgid "Choose what to clear from the in-app browser."
 msgstr "Kies wat je uit de ingebouwde browser wilt wissen."
@@ -4273,6 +4291,9 @@ msgstr "Bepaal welke agents in launchers verschijnen en hoe hun starts worden op
 
 msgid "Configure workspace run command"
 msgstr "Run-commando van werkruimte configureren"
+
+msgid "Configured for {agent}"
+msgstr "Ingesteld voor {agent}"
 
 msgid "Confirm before quitting"
 msgstr "Bevestigen voor afsluiten"
@@ -4932,6 +4953,9 @@ msgstr "Kan de machine van deze werkruimte niet bereiken"
 msgid "Could not reactivate"
 msgstr "Reactiveren mislukt"
 
+msgid "Could not read MCP servers."
+msgstr "Kan MCP-servers niet lezen."
+
 msgid "Could not read selected file"
 msgstr "Kan het gekozen bestand niet lezen"
 
@@ -5079,6 +5103,9 @@ msgstr "Kon het verwijderen van werkruimtes niet afronden"
 
 msgid "Couldn't hand this to an agent"
 msgstr "Kon dit niet aan een agent overdragen"
+
+msgid "Couldn't load {filename}"
+msgstr "Kan {filename} niet laden"
 
 #. placeholder {0}: configsQuery.error instanceof Error ? configsQuery.error.message : hostServiceUnavailableMessage
 msgid "Couldn't load agent settings: {0}"
@@ -6120,6 +6147,9 @@ msgstr "Skill uitschakelen"
 
 msgid "Disabled"
 msgstr "Uitgeschakeld"
+
+msgid "Disabled in agent config"
+msgstr "Uitgeschakeld in de agentconfiguratie"
 
 msgid "Disabled toggle"
 msgstr "Uitgeschakelde toggle"
@@ -8285,6 +8315,9 @@ msgstr "Reviewopmerkingen verbergen"
 msgid "Hide sessions"
 msgstr "Sessies verbergen"
 
+msgid "Hide text"
+msgstr "Tekst verbergen"
+
 msgid "Hide unchanged regions"
 msgstr "Ongewijzigde stukken verbergen"
 
@@ -8704,6 +8737,9 @@ msgstr "Open in de Superset-desktopapp Instellingen → Externe toegang en zet �
 msgid "In under a year, more than 130,000 developers across 176 countries have run Superset and created over 1.5 million agent workspaces. Japan is its second-largest market after the US, with over 12,000 developers, and Asia as a whole now accounts for more users than the US."
 msgstr "In minder dan een jaar hebben meer dan 130.000 ontwikkelaars in 176 landen Superset gebruikt en meer dan 1,5 miljoen agent-werkruimtes aangemaakt. Japan is na de VS de op één na grootste markt, met meer dan 12.000 ontwikkelaars, en Azië als geheel telt inmiddels meer gebruikers dan de VS."
 
+msgid "In your next chat"
+msgstr "In je volgende chat"
+
 msgid "In your terminal"
 msgstr "In je terminal"
 
@@ -9063,6 +9099,9 @@ msgstr "Een eigen branch en een eigen kopie van de bestanden"
 
 msgid "Its replies go with it."
 msgstr "De antwoorden worden ook verwijderd."
+
+msgid "Its tools reach the agent in your next chat."
+msgstr "De tools zijn in je volgende chat beschikbaar voor de agent."
 
 msgid "Its workspaces and terminals are unavailable until it restarts — use the Superset tray menu > Host Service > Restart."
 msgstr "De werkruimtes en terminals zijn niet beschikbaar tot de service opnieuw start — gebruik het Superset-menu in de menubalk > Hostservice > Opnieuw starten."
@@ -9696,6 +9735,10 @@ msgstr "Laden..."
 msgid "Loading…"
 msgstr "Laden…"
 
+msgctxt "MCP server scope"
+msgid "local"
+msgstr "lokaal"
+
 msgid "Local"
 msgstr "Lokaal"
 
@@ -9863,6 +9906,9 @@ msgstr "Plan beheren"
 msgid "Manage plan on the web"
 msgstr "Plan beheren op het web"
 
+msgid "Manage plugins…"
+msgstr "Plug-ins beheren…"
+
 msgid "Manage sessions"
 msgstr "Sessies beheren"
 
@@ -9961,6 +10007,9 @@ msgstr "MCP-server"
 
 msgid "MCP Server Commands"
 msgstr "MCP-servercommando's"
+
+msgid "MCP servers"
+msgstr "MCP-servers"
 
 msgid "Measured over the trailing 30 days"
 msgstr "Gemeten over de laatste 30 dagen"
@@ -10576,6 +10625,9 @@ msgstr "Volgende opmerking"
 msgid "Next file"
 msgstr "Volgend bestand"
 
+msgid "Next image"
+msgstr "Volgende afbeelding"
+
 msgid "Next match"
 msgstr "Volgende overeenkomst"
 
@@ -10912,6 +10964,9 @@ msgstr "Geen overeenkomsten"
 msgid "No matching files"
 msgstr "Geen overeenkomende bestanden"
 
+msgid "No matching MCP servers"
+msgstr "Geen overeenkomende MCP-servers"
+
 msgid "No matching models"
 msgstr "Geen overeenkomende modellen"
 
@@ -10923,6 +10978,9 @@ msgstr "Geen overeenkomende pagina's"
 
 msgid "No matching repositories."
 msgstr "Geen overeenkomende repository's."
+
+msgid "No MCP servers found"
+msgstr "Geen MCP-servers gevonden"
 
 msgid "No members yet"
 msgstr "Nog geen leden"
@@ -12828,6 +12886,9 @@ msgstr "Vorige opmerking"
 msgid "Previous file"
 msgstr "Vorig bestand"
 
+msgid "Previous image"
+msgstr "Vorige afbeelding"
+
 msgid "Previous match"
 msgstr "Vorige overeenkomst"
 
@@ -12933,6 +12994,10 @@ msgstr "Voortgang"
 msgid "Progress · Spinner"
 msgstr "Voortgang · Spinner"
 
+msgctxt "MCP server scope"
+msgid "project"
+msgstr "project"
+
 msgid "Project"
 msgstr "Project"
 
@@ -12965,6 +13030,9 @@ msgstr "Project niet gevonden."
 
 msgid "Project not set up on this host"
 msgstr "Project is niet ingesteld op deze host"
+
+msgid "Project not trusted in Codex"
+msgstr "Project niet vertrouwd in Codex"
 
 msgid "Project ready — open it from the sidebar."
 msgstr "Project klaar — open het via de zijbalk."
@@ -13295,6 +13363,9 @@ msgstr "Lees deployment- en buildlogs"
 msgid "Read it on your phone"
 msgstr "Lees het op je telefoon"
 
+msgid "Read MCP servers again"
+msgstr "MCP-servers opnieuw lezen"
+
 msgid "Read the changelog"
 msgstr "Lees de changelog"
 
@@ -13620,6 +13691,9 @@ msgstr "Vermelding verwijderen"
 
 msgid "Remove mention {path}"
 msgstr "Vermelding {path} verwijderen"
+
+msgid "Remove pasted text"
+msgstr "Geplakte tekst verwijderen"
 
 msgid "Remove PR Link"
 msgstr "PR-koppeling verwijderen"
@@ -14709,6 +14783,9 @@ msgstr "Linear doorzoeken"
 msgid "Search Linear…"
 msgstr "Linear doorzoeken…"
 
+msgid "Search MCP servers…"
+msgstr "MCP-servers zoeken…"
+
 msgid "Search models"
 msgstr "Modellen zoeken"
 
@@ -15383,6 +15460,9 @@ msgstr "Tonen in grafiek"
 msgid "Show in folder"
 msgstr "Tonen in map"
 
+msgid "Show in text field"
+msgstr "In tekstveld tonen"
+
 msgid "Show items in all states"
 msgstr "Items in alle statussen tonen"
 
@@ -15445,6 +15525,9 @@ msgstr "Sessies tonen"
 
 msgid "Show status and send notifications for this agent."
 msgstr "Status tonen en meldingen sturen voor deze agent."
+
+msgid "Show text"
+msgstr "Tekst tonen"
 
 msgid "Show the triggering payload"
 msgstr "Activerende payload tonen"
@@ -18502,6 +18585,10 @@ msgstr "Gebruikt wanneer je systeem in donkere modus staat."
 
 msgid "Used when your system is in light mode."
 msgstr "Gebruikt wanneer je systeem in lichte modus staat."
+
+msgctxt "MCP server scope"
+msgid "user"
+msgstr "gebruiker"
 
 msgid "User already has access to this host"
 msgstr "Gebruiker heeft al toegang tot deze host"

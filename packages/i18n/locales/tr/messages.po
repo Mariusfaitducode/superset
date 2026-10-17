@@ -923,6 +923,9 @@ msgstr "{level} · {gate} · {statusLabel}"
 msgid "{level} {gate}: {statusLabel}"
 msgstr "{level} {gate}: {statusLabel}"
 
+msgid "{lines, plural, one {# line} other {# lines}}"
+msgstr "{lines, plural, one {# satır} other {# satır}}"
+
 msgid "{localHostName} (this device)"
 msgstr "{localHostName} (bu cihaz)"
 
@@ -964,9 +967,15 @@ msgstr "{name} yerleşiktir ve kaldırılamaz"
 msgid "serverError.plugins.marketplaceReserved"
 msgstr "{name} yerleşiktir ve değiştirilemez"
 
+msgid "{name} is installed"
+msgstr "{name} yüklendi"
+
 #. js-lingui-explicit-id
 msgid "serverError.plugins.marketplaceNotAdded"
 msgstr "{name} eklenmedi"
+
+msgid "{name} plugin"
+msgstr "{name} eklentisi"
 
 msgid "{noun, select, person {Specify at least one person, or choose {choice}.} sender {Specify at least one sender, or choose {choice}.} other {Specify at least one entry, or choose {choice}.}}"
 msgstr "{noun, select, person {En az bir kişi belirtin veya {choice} seçeneğini seçin.} sender {En az bir gönderen belirtin veya {choice} seçeneğini seçin.} other {En az bir öğe belirtin veya {choice} seçeneğini seçin.}}"
@@ -3555,6 +3564,9 @@ msgstr "Ortamlar kontrol ediliyor…"
 msgid "Checking host…"
 msgstr "Host denetleniyor…"
 
+msgid "Checking MCP servers…"
+msgstr "MCP sunucuları denetleniyor…"
+
 msgid "Checking out a PR requires a project"
 msgstr "Bir PR'ı checkout etmek proje gerektirir"
 
@@ -3627,6 +3639,9 @@ msgstr "Ajan seçin"
 msgid "Choose an existing repo folder"
 msgstr "Mevcut bir depo klasörü seçin"
 
+msgid "Choose an MCP server"
+msgstr "Bir MCP sunucusu seçin"
+
 msgid "Choose app"
 msgstr "Uygulama seç"
 
@@ -3638,6 +3653,9 @@ msgstr "Değişiklikler görünümünün üst çubuktan nasıl açılacağını 
 
 msgid "Choose how to open file paths when Cmd+clicking in the terminal"
 msgstr "Terminalde Cmd+tıkladığınızda dosya yollarının nasıl açılacağını seçin"
+
+msgid "Choose MCP servers for this message"
+msgstr "Bu ileti için MCP sunucularını seçin"
 
 msgid "Choose what to clear from the in-app browser."
 msgstr "Uygulama içi tarayıcıdan neyin temizleneceğini seçin."
@@ -4273,6 +4291,9 @@ msgstr "Başlatıcılarda hangi ajanların görüneceğini ve başlatmalarının
 
 msgid "Configure workspace run command"
 msgstr "Çalışma alanı çalıştırma komutunu yapılandır"
+
+msgid "Configured for {agent}"
+msgstr "{agent} için yapılandırıldı"
 
 msgid "Confirm before quitting"
 msgstr "Çıkmadan önce onay iste"
@@ -4932,6 +4953,9 @@ msgstr "Bu çalışma alanının makinesine erişilemedi"
 msgid "Could not reactivate"
 msgstr "Yeniden etkinleştirilemedi"
 
+msgid "Could not read MCP servers."
+msgstr "MCP sunucuları okunamadı."
+
 msgid "Could not read selected file"
 msgstr "Seçilen dosya okunamadı"
 
@@ -5079,6 +5103,9 @@ msgstr "Çalışma alanlarını silme işlemi tamamlanamadı"
 
 msgid "Couldn't hand this to an agent"
 msgstr "Bu bir ajana devredilemedi"
+
+msgid "Couldn't load {filename}"
+msgstr "{filename} yüklenemedi"
 
 #. placeholder {0}: configsQuery.error instanceof Error ? configsQuery.error.message : hostServiceUnavailableMessage
 msgid "Couldn't load agent settings: {0}"
@@ -6120,6 +6147,9 @@ msgstr "Beceriyi devre dışı bırak"
 
 msgid "Disabled"
 msgstr "Devre dışı"
+
+msgid "Disabled in agent config"
+msgstr "Ajan yapılandırmasında devre dışı"
 
 msgid "Disabled toggle"
 msgstr "Devre dışı anahtar"
@@ -8285,6 +8315,9 @@ msgstr "İnceleme yorumlarını gizle"
 msgid "Hide sessions"
 msgstr "Oturumları gizle"
 
+msgid "Hide text"
+msgstr "Metni gizle"
+
 msgid "Hide unchanged regions"
 msgstr "Değişmeyen bölgeleri gizle"
 
@@ -8704,6 +8737,9 @@ msgstr "Superset masaüstü uygulamasında Ayarlar → Uzaktan erişim bölümü
 msgid "In under a year, more than 130,000 developers across 176 countries have run Superset and created over 1.5 million agent workspaces. Japan is its second-largest market after the US, with over 12,000 developers, and Asia as a whole now accounts for more users than the US."
 msgstr "Bir yıldan kısa sürede 176 ülkeden 130.000'den fazla geliştirici Superset'i çalıştırdı ve 1,5 milyondan fazla ajan çalışma alanı oluşturdu. Japonya, 12.000'den fazla geliştiriciyle ABD'den sonra ikinci büyük pazardır ve Asya genelindeki kullanıcı sayısı artık ABD'yi geçti."
 
+msgid "In your next chat"
+msgstr "Sonraki sohbetinizde"
+
 msgid "In your terminal"
 msgstr "Terminalinizde"
 
@@ -9063,6 +9099,9 @@ msgstr "Kendi dalı ve dosyaların kendi kopyası"
 
 msgid "Its replies go with it."
 msgstr "Yanıtları da silinir."
+
+msgid "Its tools reach the agent in your next chat."
+msgstr "Araçları sonraki sohbetinizde ajana ulaşır."
 
 msgid "Its workspaces and terminals are unavailable until it restarts — use the Superset tray menu > Host Service > Restart."
 msgstr "Yeniden başlayana kadar çalışma alanları ve terminalleri kullanılamaz — Superset tepsi menüsünde Host hizmeti > Yeniden başlat yolunu kullanın."
@@ -9696,6 +9735,10 @@ msgstr "Yükleniyor..."
 msgid "Loading…"
 msgstr "Yükleniyor…"
 
+msgctxt "MCP server scope"
+msgid "local"
+msgstr "yerel"
+
 msgid "Local"
 msgstr "Yerel"
 
@@ -9863,6 +9906,9 @@ msgstr "Planı yönet"
 msgid "Manage plan on the web"
 msgstr "Planı web'den yönet"
 
+msgid "Manage plugins…"
+msgstr "Eklentileri yönet…"
+
 msgid "Manage sessions"
 msgstr "Oturumları yönet"
 
@@ -9961,6 +10007,9 @@ msgstr "MCP sunucusu"
 
 msgid "MCP Server Commands"
 msgstr "MCP sunucusu komutları"
+
+msgid "MCP servers"
+msgstr "MCP sunucuları"
 
 msgid "Measured over the trailing 30 days"
 msgstr "Son 30 gün üzerinden ölçülür"
@@ -10576,6 +10625,9 @@ msgstr "Sonraki yorum"
 msgid "Next file"
 msgstr "Sonraki dosya"
 
+msgid "Next image"
+msgstr "Sonraki görsel"
+
 msgid "Next match"
 msgstr "Sonraki eşleşme"
 
@@ -10912,6 +10964,9 @@ msgstr "Eşleşme yok"
 msgid "No matching files"
 msgstr "Eşleşen dosya yok"
 
+msgid "No matching MCP servers"
+msgstr "Eşleşen MCP sunucusu yok"
+
 msgid "No matching models"
 msgstr "Eşleşen model yok"
 
@@ -10923,6 +10978,9 @@ msgstr "Eşleşen sayfa yok"
 
 msgid "No matching repositories."
 msgstr "Eşleşen depo yok."
+
+msgid "No MCP servers found"
+msgstr "MCP sunucusu bulunamadı"
 
 msgid "No members yet"
 msgstr "Henüz üye yok"
@@ -12828,6 +12886,9 @@ msgstr "Önceki yorum"
 msgid "Previous file"
 msgstr "Önceki dosya"
 
+msgid "Previous image"
+msgstr "Önceki görsel"
+
 msgid "Previous match"
 msgstr "Önceki eşleşme"
 
@@ -12933,6 +12994,10 @@ msgstr "İlerleme"
 msgid "Progress · Spinner"
 msgstr "İlerleme · Spinner"
 
+msgctxt "MCP server scope"
+msgid "project"
+msgstr "proje"
+
 msgid "Project"
 msgstr "Proje"
 
@@ -12965,6 +13030,9 @@ msgstr "Proje bulunamadı."
 
 msgid "Project not set up on this host"
 msgstr "Proje bu host'ta kurulu değil"
+
+msgid "Project not trusted in Codex"
+msgstr "Proje Codex'te güvenilir değil"
 
 msgid "Project ready — open it from the sidebar."
 msgstr "Proje hazır — kenar çubuğundan açın."
@@ -13295,6 +13363,9 @@ msgstr "Dağıtım ve derleme günlüklerini okuyun"
 msgid "Read it on your phone"
 msgstr "Telefonunuzda okuyun"
 
+msgid "Read MCP servers again"
+msgstr "MCP sunucularını yeniden oku"
+
 msgid "Read the changelog"
 msgstr "Değişiklik günlüğünü oku"
 
@@ -13620,6 +13691,9 @@ msgstr "Bahsi kaldır"
 
 msgid "Remove mention {path}"
 msgstr "{path} bahsini kaldır"
+
+msgid "Remove pasted text"
+msgstr "Yapıştırılan metni kaldır"
 
 msgid "Remove PR Link"
 msgstr "PR bağlantısını kaldır"
@@ -14709,6 +14783,9 @@ msgstr "Linear'da ara"
 msgid "Search Linear…"
 msgstr "Linear'da ara…"
 
+msgid "Search MCP servers…"
+msgstr "MCP sunucularında ara…"
+
 msgid "Search models"
 msgstr "Model ara"
 
@@ -15383,6 +15460,9 @@ msgstr "Grafikte göster"
 msgid "Show in folder"
 msgstr "Klasörde göster"
 
+msgid "Show in text field"
+msgstr "Metin alanında göster"
+
 msgid "Show items in all states"
 msgstr "Tüm durumlardaki öğeleri göster"
 
@@ -15445,6 +15525,9 @@ msgstr "Oturumları göster"
 
 msgid "Show status and send notifications for this agent."
 msgstr "Bu ajan için durum göster ve bildirim gönder."
+
+msgid "Show text"
+msgstr "Metni göster"
 
 msgid "Show the triggering payload"
 msgstr "Tetikleyen yükü göster"
@@ -18502,6 +18585,10 @@ msgstr "Sisteminiz koyu moddayken kullanılır."
 
 msgid "Used when your system is in light mode."
 msgstr "Sisteminiz açık moddayken kullanılır."
+
+msgctxt "MCP server scope"
+msgid "user"
+msgstr "kullanıcı"
 
 msgid "User already has access to this host"
 msgstr "Kullanıcının bu host'a zaten erişimi var"
