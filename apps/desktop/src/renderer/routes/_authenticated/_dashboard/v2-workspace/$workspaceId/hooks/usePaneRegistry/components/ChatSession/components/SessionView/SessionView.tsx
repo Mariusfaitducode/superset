@@ -75,6 +75,7 @@ export function SessionView({
 	onPendingPromptsSent,
 	onFork,
 	onRewind,
+	rewindNotes,
 	onSessionState,
 	openFile,
 	openPage,
@@ -107,6 +108,8 @@ export function SessionView({
 	onFork?: ((target: ChatForkTarget, transcript: string) => void) | undefined;
 	canForkToWorktree?: boolean;
 	onRewind?: (request: ChatRewindRequest) => void;
+	/** Shown in the rewind picker when this agent or host cannot rewind fully. */
+	rewindNotes?: string[];
 	/** Names the speaker in a handed-over transcript. */
 	agentLabel?: string;
 	/** The transcript goes with the switch: the next agent cannot load this session. */
@@ -303,6 +306,7 @@ export function SessionView({
 		() =>
 			onRewind && {
 				points,
+				notes: rewindNotes ?? [],
 				onPick: (point: { itemId: string; text: string }) => {
 					if (runningTurnId) {
 						toast.error(t({ message: "Stop the agent before you rewind" }));
@@ -320,7 +324,7 @@ export function SessionView({
 					});
 				},
 			},
-		[onRewind, points, runningTurnId, agentLabel, t],
+		[onRewind, rewindNotes, points, runningTurnId, agentLabel, t],
 	);
 	const holdPrompt = held?.onQueue;
 	const onSend = useCallback(
