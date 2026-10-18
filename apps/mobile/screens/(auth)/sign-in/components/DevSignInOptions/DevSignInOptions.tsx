@@ -1,6 +1,6 @@
 import { useLingui } from "@lingui/react/macro";
 import { prompt } from "@superset/alert-prompt";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { View } from "react-native";
 import { Button } from "@/components/ui/button";
 import { Text } from "@/components/ui/text";
@@ -11,6 +11,8 @@ import { errorCopy } from "@/lib/errors";
 const DEV_EMAIL = "admin@local.test";
 const DEV_PASSWORD = "supersetdev";
 const DEV_NAME = "Local Admin";
+
+let autoSignInAttempted = false;
 
 /**
  * Dev-only sign-in helpers: an auto sign-in for a real local/sandbox setup
@@ -23,7 +25,6 @@ export function DevSignInOptions() {
 	const { t } = useLingui();
 	const [isLoading, setIsLoading] = useState(false);
 	const [error, setError] = useState<string | null>(null);
-	const autoSignInAttempted = useRef(false);
 
 	const signInWithEmail = async (email: string, password: string) => {
 		setIsLoading(true);
@@ -65,8 +66,8 @@ export function DevSignInOptions() {
 	// there's nothing setup-specific past this call.
 	useEffect(() => {
 		const token = env.EXPO_PUBLIC_DEV_ONE_TIME_TOKEN;
-		if (!token || autoSignInAttempted.current) return;
-		autoSignInAttempted.current = true;
+		if (!token || autoSignInAttempted) return;
+		autoSignInAttempted = true;
 		setIsLoading(true);
 		authClient.oneTimeToken
 			.verify({ token })

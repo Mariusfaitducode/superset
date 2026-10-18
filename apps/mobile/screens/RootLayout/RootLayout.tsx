@@ -29,6 +29,13 @@ import { PostHogUserIdentifier } from "./components/PostHogUserIdentifier";
 import { VersionGate } from "./components/VersionGate";
 import { PostHogProvider } from "./providers/PostHogProvider";
 
+// A require, not an import, so release bundles leave the module out entirely.
+const DevSignInLinkHandler = __DEV__
+	? (
+			require("./components/DevSignInLinkHandler") as typeof import("./components/DevSignInLinkHandler")
+		).DevSignInLinkHandler
+	: null;
+
 // What Home's first paint waits on, kept so a returning launch opens on rows.
 // Full prefixes, not just queryKey[0]: ["cloud", "sandbox-access"] is a
 // credential and must not reach disk. Decoration and terminal lists are live.
@@ -132,6 +139,7 @@ export function RootLayout() {
 									</Stack>
 								</VersionGate>
 								<PostHogUserIdentifier />
+								{DevSignInLinkHandler && <DevSignInLinkHandler />}
 								<PortalHost />
 							</ThemeProvider>
 						</I18nProvider>
