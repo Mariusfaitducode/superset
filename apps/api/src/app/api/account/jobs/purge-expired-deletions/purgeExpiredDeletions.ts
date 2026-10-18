@@ -30,10 +30,7 @@ type Outcome =
 	| { status: "sole owner"; organizationId: string };
 
 export interface PurgeExpiredDeletionsResult {
-	dryRun: boolean;
 	purged: string[];
-	/** Dry run only: the accounts a real run would have purged. */
-	wouldPurge: string[];
 	skipped: Array<{ userId: string; organizationId: string }>;
 	failed: string[];
 	heldByAnotherRun: boolean;
@@ -49,15 +46,11 @@ export interface PurgeExpiredDeletionsResult {
  * email. Each account is claimed under the job lock and re-read there, so a
  * run that overlaps or repeats another purges nothing twice, and one failing
  * account is logged and skipped rather than ending the run.
- *
- * A dry run makes the same selection and sole-owner checks but writes nothing.
  */
 export async function purgeExpiredDeletions({
 	now,
-	dryRun,
 }: {
 	now: () => number;
-	dryRun: boolean;
 }): Promise<PurgeExpiredDeletionsResult> {
 	const cutoff = new Date(now() - ACCOUNT_DELETION_GRACE_DAYS * DAY_MS);
 	const expired = await db
@@ -68,59 +61,46 @@ export async function purgeExpiredDeletions({
 
 	const deadline = now() + TIME_BUDGET_MS;
 	const result: PurgeExpiredDeletionsResult = {
-		dryRun,
 		purged: [],
-		wouldPurge: [],
 		skipped: [],
 		failed: [],
 		heldByAnotherRun: false,
 		outOfTime: false,
 	};
-	const log = dryRun
-		? "[account/purge-expired-deletions] (dry run)"
-		: "[account/purge-expired-deletions]";
+	const log = "[account/purge-expired-deletions]";
 
 	for (const { id } of expired) {
-		const attempts =
-			result.purged.length + result.wouldPurge.length + result.failed.length;
-		if (attempts >= MAX_ATTEMPTS_PER_RUN) break;
+		if (result.purged.length + result.failed.length >= MAX_ATTEMPTS_PER_RUN)
+			break;
 		if (now() > deadline) {
 			result.outOfTime = true;
 			break;
 		}
 		try {
-			let outcome: Outcome;
-			if (dryRun) {
-				const organizationId = await findOrganizationSolelyOwnedBy(id);
-				outcome = organizationId
-					? { status: "sole owner", organizationId }
-					: { status: "purged" };
-			} else {
-				const attempt = await singleFlight(
-					"account.purge-expired-deletions",
-					async (tx): Promise<Outcome> => {
-						const [current] = await tx
-							.select({ deletedAt: users.deletedAt })
-							.from(users)
-							.where(eq(users.id, id));
-						if (!current || current.deletedAt)
-							return { status: "already purged" };
-						const organizationId = await findOrganizationSolelyOwnedBy(id);
-						if (organizationId) return { status: "sole owner", organizationId };
-						await purgeAccount(id);
-						return { status: "purged" };
-					},
-				);
-				if (!attempt.ran) {
-					result.heldByAnotherRun = true;
-					break;
-				}
-				outcome = attempt.result;
+			const attempt = await singleFlight(
+				"account.purge-expired-deletions",
+				async (tx): Promise<Outcome> => {
+					const [current] = await tx
+						.select({ deletedAt: users.deletedAt })
+						.from(users)
+						.where(eq(users.id, id));
+					if (!current || current.deletedAt)
+						return { status: "already purged" };
+					const organizationId = await findOrganizationSolelyOwnedBy(id);
+					if (organizationId) return { status: "sole owner", organizationId };
+					await purgeAccount(id);
+					return { status: "purged" };
+				},
+			);
+			if (!attempt.ran) {
+				result.heldByAnotherRun = true;
+				break;
 			}
+			const outcome = attempt.result;
 
 			if (outcome.status === "purged") {
-				(dryRun ? result.wouldPurge : result.purged).push(id);
-				console.info(`${log} ${id} ${dryRun ? "would be purged" : "purged"}`);
+				result.purged.push(id);
+				console.info(`${log} ${id} purged`);
 			}
 			if (outcome.status === "already purged") {
 				console.info(`${log} ${id} already purged`);

@@ -81,7 +81,7 @@ stub(accountPurge, {
 const { purgeExpiredDeletions } = await import("./purgeExpiredDeletions");
 
 let now: () => number;
-const run = (dryRun = false) => purgeExpiredDeletions({ now, dryRun });
+const run = () => purgeExpiredDeletions({ now });
 
 let warn: ReturnType<typeof spyOn>;
 let error: ReturnType<typeof spyOn>;
@@ -120,9 +120,7 @@ describe("purgeExpiredDeletions", () => {
 		];
 
 		expect(await run()).toEqual({
-			dryRun: false,
 			purged: ["expired", "expired-today"],
-			wouldPurge: [],
 			skipped: [],
 			failed: [],
 			heldByAnotherRun: false,
@@ -227,36 +225,5 @@ describe("purgeExpiredDeletions", () => {
 
 		expect(await run()).toMatchObject({ purged: [], heldByAnotherRun: true });
 		expect(purges).toEqual([]);
-	});
-	test("a dry run reports who would be purged and purges no one", async () => {
-		fakeUsers = [
-			{ id: "expired", deletionRequestedAt: daysAgo(31), deletedAt: null },
-			{ id: "owner", deletionRequestedAt: daysAgo(40), deletedAt: null },
-			{ id: "in-window", deletionRequestedAt: daysAgo(10), deletedAt: null },
-		];
-		soleOwnerOf.set("owner", "org-shared");
-		lockHeld = true;
-
-		expect(await run(true)).toEqual({
-			dryRun: true,
-			purged: [],
-			wouldPurge: ["expired"],
-			skipped: [{ userId: "owner", organizationId: "org-shared" }],
-			failed: [],
-			heldByAnotherRun: false,
-			outOfTime: false,
-		});
-		expect(purges).toEqual([]);
-		expect(userById("expired")?.deletedAt).toBeNull();
-	});
-
-	test("a real run after a dry run purges exactly what the dry run reported", async () => {
-		fakeUsers = [
-			{ id: "a", deletionRequestedAt: daysAgo(31), deletedAt: null },
-			{ id: "b", deletionRequestedAt: daysAgo(45), deletedAt: null },
-		];
-
-		const report = await run(true);
-		expect((await run()).purged).toEqual(report.wouldPurge);
 	});
 });
