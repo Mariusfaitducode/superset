@@ -32,9 +32,9 @@ export const HOST_SERVICE_PORT = SANDBOX_PORTS.hostService;
  * reports `working` (`extendSandbox`) is extended before it gets there, so
  * this is really the idle stop.
  */
-const SESSION_TIMEOUT_MS = 4 * 60 * 60 * 1000;
+const SESSION_TIMEOUT_MS = 60 * 60 * 1000;
 /** Above the 10-minute client keepalive and the box's 15-minute working heartbeat. */
-const EXTEND_BELOW_MS = 60 * 60 * 1000;
+const EXTEND_BELOW_MS = 30 * 60 * 1000;
 const WORKSPACE_SNAPSHOT_EXPIRATION_MS = 30 * 24 * 60 * 60 * 1000;
 /** 2 GB of memory per vCPU; disk is 64 GB regardless. */
 export const IMAGE_SANDBOX_VCPUS = 8;
