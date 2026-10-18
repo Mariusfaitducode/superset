@@ -22,6 +22,9 @@ minimumReleaseAge = 259200
 # SDKs they depend on. The adapter pins are exact.
 # @expo/hub-client: Expo publishes it alongside expo-device-hub, which the
 # Mobile pane pins to the matching release. Exact pin.
+# electron: 44.8.0+ carries the fix for sessions failing every request with
+# net::ERR_FAILED after the Network Service restarts (electron#54908), which
+# left the auto-updater stuck until relaunch. Exact pin; remove after 2026-10-20.
 minimumReleaseAgeExcludes = [
   "@agentclientprotocol/claude-agent-acp",
   "@agentclientprotocol/codex-acp",
@@ -37,6 +40,7 @@ minimumReleaseAgeExcludes = [
   "@anthropic-ai/claude-agent-sdk-win32-x64",
   "@openai/codex",
   "@vercel/sandbox",
+  "electron",
   "@expo/hub-client",
   "@expo/ui",
   "@pierre/diffs",
