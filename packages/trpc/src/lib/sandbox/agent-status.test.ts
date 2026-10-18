@@ -87,15 +87,28 @@ describe("reportSandboxAgentStatus", () => {
 		expect(extended).toEqual([]);
 	});
 
-	test("a repeated status writes nothing and nudges nobody, and still extends", async () => {
+	test("a repeated report writes nothing and nudges nobody, and still extends", async () => {
 		row = {
 			...(row as Row),
 			agentStatus: "working",
 			agentStatusAt: new Date(NOW - 60_000),
 		};
-		await report("working", NOW);
+		await report("working", NOW - 60_000);
 		expect(writes).toEqual([]);
 		expect(nudges).toBe(0);
+		expect(extended).toEqual(["sbx"]);
+	});
+
+	test("a box that booted again replaces the working its last session left", async () => {
+		row = {
+			...(row as Row),
+			agentStatus: "working",
+			agentStatusAt: new Date(NOW - WORKING_KEEPALIVE_CAP_MS - 1),
+		};
+		await report("working", NOW);
+		expect(writes).toEqual([
+			{ agentStatus: "working", agentStatusAt: new Date(NOW) },
+		]);
 		expect(extended).toEqual(["sbx"]);
 	});
 
@@ -113,7 +126,7 @@ describe("reportSandboxAgentStatus", () => {
 			agentStatus: "working",
 			agentStatusAt: new Date(NOW - WORKING_KEEPALIVE_CAP_MS - 1),
 		};
-		await report("working");
+		await report("working", NOW - WORKING_KEEPALIVE_CAP_MS - 1);
 		expect(extended).toEqual([]);
 	});
 

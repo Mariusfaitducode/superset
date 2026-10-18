@@ -47,8 +47,11 @@ export async function reportSandboxAgentStatus(
 		},
 	});
 	if (!row) return "unknown";
-	// The box repeats `working` as a keepalive; the timestamp is when it started.
-	if (row.agentStatus !== args.status) {
+	// The box repeats `working` with the same `at` as a keepalive. A box that
+	// booted again sends a new `at`, which replaces a status its last session left.
+	const repeated =
+		row.agentStatus === args.status && row.agentStatusAt?.getTime() === args.at;
+	if (!repeated) {
 		await db
 			.update(cloudWorkspaces)
 			.set({ agentStatus: args.status, agentStatusAt: new Date(args.at) })
@@ -60,11 +63,7 @@ export async function reportSandboxAgentStatus(
 			agentStatusAt: args.at,
 		});
 	}
-	const workingSince =
-		row.agentStatus === "working" ? row.agentStatusAt?.getTime() : undefined;
-	const hung =
-		workingSince !== undefined &&
-		deps.now() - workingSince > WORKING_KEEPALIVE_CAP_MS;
+	const hung = deps.now() - args.at > WORKING_KEEPALIVE_CAP_MS;
 	if (args.status === "working" && row.status === "ready" && !hung) {
 		await deps
 			.extend(row.providerSandboxId)

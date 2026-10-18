@@ -71,8 +71,8 @@ terminals, from the same lifecycle events — to
 `POST /api/cloud-workspaces/:id/agent-status` with its host secret, coalesced
 and capped at one report per five seconds (`sandbox-agent-status` in
 host-service). `working` is also repeated every fifteen minutes as the box's
-keepalive (see Lifecycle); a repeat with an unchanged status writes and
-nudges nothing. The row keeps the last value (`agent_status`,
+keepalive (see Lifecycle) with the `at` of the change, and a repeat of the
+stored status and `at` writes and nudges nothing. The row keeps the last value (`agent_status`,
 `agent_status_at`, when that status began) so a cold client sees it at once, and the realtime nudge
 carries it so open clients patch their cache rather than refetch the list.
 A closed box's dot is therefore at most a few seconds behind; the open box's
