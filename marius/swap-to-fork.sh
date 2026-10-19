@@ -13,7 +13,13 @@ echo "== $(date) swap to $NEW_APP (backup: $BACKUP)"
 
 [ -d "$NEW_APP" ] || { echo "missing $NEW_APP"; exit 1; }
 
-main_running() { pgrep -f '/Applications/Superset.app/Contents/MacOS/Superset$' >/dev/null; }
+main_running() { ps -axo args= | awk '$0=="/Applications/Superset.app/Contents/MacOS/Superset"{f=1} END{exit !f}'; }
+
+# An official update staged by Squirrel installs itself over /Applications/Superset.app
+# when the app quits; drop it first or it overwrites the fork build.
+launchctl remove com.superset.desktop.ShipIt 2>/dev/null || true
+SHIPIT="$HOME/Library/Caches/com.superset.desktop.ShipIt"
+[ -d "$SHIPIT" ] && mv "$SHIPIT" "$BACKUP/ShipIt-staged-$(date +%s)" && echo "staged official update moved aside"
 
 osascript -e 'tell application "Superset" to quit' || true
 # Superset may ask to confirm quitting while agents run; give the user time to answer.
