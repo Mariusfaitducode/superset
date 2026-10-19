@@ -126,8 +126,10 @@ function releaseDownloadPromise(result: UpdateCheckResult | null): void {
 // hours later. The desktop copies the user's login-shell environment into
 // process.env, so a shell export reaches Squirrel too. Honour the variable the
 // way Squirrel does and skip the check.
+// Personal fork build: an official update would replace this build with upstream's,
+// so updates come from rebasing the fork instead.
 function isUpdateCheckDisabledByEnvironment(): boolean {
-	return PLATFORM.IS_MAC && process.env.DISABLE_UPDATE_CHECK !== undefined;
+	return true;
 }
 
 let currentStatus: AutoUpdateStatus = AUTO_UPDATE_STATUS.IDLE;
