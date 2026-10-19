@@ -1680,6 +1680,9 @@ msgstr "Pull request'leri görmek için bir proje ekleyin."
 msgid "Add a short summary…"
 msgstr "Kısa bir özet ekleyin…"
 
+msgid "Add a to-do…"
+msgstr "Yapılacak ekle…"
+
 msgid "Add account"
 msgstr "Hesap ekle"
 
@@ -3742,6 +3745,9 @@ msgctxt "Liquid Glass style"
 msgid "Clear"
 msgstr "Şeffaf"
 
+msgid "Clear {doneCount} done"
+msgstr "{doneCount} tamamlananı temizle"
+
 msgid "Clear all"
 msgstr "Tümünü temizle"
 
@@ -3858,6 +3864,9 @@ msgstr "Pull request'i açmak için etikete tıklayın"
 
 msgid "Click to copy the session ID (resume with `claude --resume <id>`)."
 msgstr "Oturum kimliğini kopyalamak için tıklayın (`claude --resume <id>` ile sürdürün)."
+
+msgid "Click to edit"
+msgstr "Düzenlemek için tıklayın"
 
 msgid "Click to open on GitHub"
 msgstr "GitHub'da açmak için tıklayın"
@@ -5933,6 +5942,9 @@ msgstr "Bu çalışma alanı silinsin mi?"
 msgid "Delete thread"
 msgstr "Konuyu sil"
 
+msgid "Delete to-do"
+msgstr "Yapılacağı sil"
+
 msgid "Delete without checking"
 msgstr "Denetlemeden sil"
 
@@ -7720,6 +7732,9 @@ msgstr "İncelemeyi bitir"
 
 msgid "Finished"
 msgstr "Tamamlandı"
+
+msgid "Finished — not opened yet"
+msgstr "Bitti — henüz açılmadı"
 
 msgid "finished · worked for 7s"
 msgstr "bitti · 7 sn çalıştı"
@@ -10011,6 +10026,12 @@ msgstr "Elle"
 msgid "Manual order"
 msgstr "Manuel sıralama"
 
+msgid "Mark as done"
+msgstr "Tamamlandı olarak işaretle"
+
+msgid "Mark as not done"
+msgstr "Tamamlanmadı olarak işaretle"
+
 msgid "Mark as not viewed"
 msgstr "Görülmedi olarak işaretle"
 
@@ -10545,6 +10566,9 @@ msgstr "Güncelleme gerekli"
 msgctxt "agent status"
 msgid "Needs you"
 msgstr "Seni bekliyor"
+
+msgid "Needs your approval"
+msgstr "Onayınızı bekliyor"
 
 msgid "Nerd Fonts"
 msgstr "Nerd Fonts"
@@ -16376,6 +16400,9 @@ msgstr "durduruldu"
 msgid "Stopped"
 msgstr "Durduruldu"
 
+msgid "Stopped on an error"
+msgstr "Bir hata nedeniyle durdu"
+
 msgid "Stopping the agent in {what}"
 msgstr "{what} içindeki ajan durduruluyor"
 
@@ -17923,6 +17950,9 @@ msgstr "Bir ajan konuşmasını sürdürmek için klasöründe şunu çalıştı
 msgid "To resume another agent conversation, run this in its folder:"
 msgstr "Başka bir ajan konuşmasını sürdürmek için klasöründe şunu çalıştırın:"
 
+msgid "To-dos"
+msgstr "Yapılacaklar"
+
 msgid "Toast (Sonner)"
 msgstr "Bildirim (Sonner)"
 
@@ -18930,6 +18960,9 @@ msgstr "Alt ajanın ilk mesajı bekleniyor…"
 
 msgid "Waiting for your input"
 msgstr "Girdinizi bekliyor"
+
+msgid "Waiting for your reply"
+msgstr "Yanıtınızı bekliyor"
 
 msgid "Waking up workspace"
 msgstr "Çalışma alanı uyandırılıyor"

@@ -1680,6 +1680,9 @@ msgstr "Añade un proyecto para ver pull requests."
 msgid "Add a short summary…"
 msgstr "Añade un breve resumen…"
 
+msgid "Add a to-do…"
+msgstr "Añadir una tarea…"
+
 msgid "Add account"
 msgstr "Añadir cuenta"
 
@@ -3742,6 +3745,9 @@ msgctxt "Liquid Glass style"
 msgid "Clear"
 msgstr "Transparente"
 
+msgid "Clear {doneCount} done"
+msgstr "Borrar {doneCount} hechas"
+
 msgid "Clear all"
 msgstr "Borrar todo"
 
@@ -3858,6 +3864,9 @@ msgstr "Haz clic en el chip para abrir la pull request"
 
 msgid "Click to copy the session ID (resume with `claude --resume <id>`)."
 msgstr "Haz clic para copiar el ID de la sesión (retómala con `claude --resume <id>`)."
+
+msgid "Click to edit"
+msgstr "Haz clic para editar"
 
 msgid "Click to open on GitHub"
 msgstr "Haz clic para abrir en GitHub"
@@ -5933,6 +5942,9 @@ msgstr "¿Eliminar este espacio de trabajo?"
 msgid "Delete thread"
 msgstr "Eliminar el hilo"
 
+msgid "Delete to-do"
+msgstr "Eliminar tarea"
+
 msgid "Delete without checking"
 msgstr "Eliminar sin comprobar"
 
@@ -7720,6 +7732,9 @@ msgstr "Finalizar revisión"
 
 msgid "Finished"
 msgstr "Finalizado"
+
+msgid "Finished — not opened yet"
+msgstr "Terminado — aún sin abrir"
 
 msgid "finished · worked for 7s"
 msgstr "finalizado · trabajó 7 s"
@@ -10011,6 +10026,12 @@ msgstr "Manual"
 msgid "Manual order"
 msgstr "Orden manual"
 
+msgid "Mark as done"
+msgstr "Marcar como hecha"
+
+msgid "Mark as not done"
+msgstr "Marcar como pendiente"
+
 msgid "Mark as not viewed"
 msgstr "Marcar como no visto"
 
@@ -10545,6 +10566,9 @@ msgstr "Requiere actualización"
 msgctxt "agent status"
 msgid "Needs you"
 msgstr "Te necesita"
+
+msgid "Needs your approval"
+msgstr "Necesita tu aprobación"
 
 msgid "Nerd Fonts"
 msgstr "Nerd Fonts"
@@ -16376,6 +16400,9 @@ msgstr "detenido"
 msgid "Stopped"
 msgstr "Detenido"
 
+msgid "Stopped on an error"
+msgstr "Detenido por un error"
+
 msgid "Stopping the agent in {what}"
 msgstr "Deteniendo el agente en {what}"
 
@@ -17923,6 +17950,9 @@ msgstr "Para reanudar una conversación con un agente, ejecuta esto en su carpet
 msgid "To resume another agent conversation, run this in its folder:"
 msgstr "Para reanudar otra conversación con un agente, ejecuta esto en su carpeta:"
 
+msgid "To-dos"
+msgstr "Tareas"
+
 msgid "Toast (Sonner)"
 msgstr "Toast (Sonner)"
 
@@ -18929,6 +18959,9 @@ msgid "Waiting for the subagent's first message…"
 msgstr "Esperando el primer mensaje del subagente…"
 
 msgid "Waiting for your input"
+msgstr "Esperando tu respuesta"
+
+msgid "Waiting for your reply"
 msgstr "Esperando tu respuesta"
 
 msgid "Waking up workspace"

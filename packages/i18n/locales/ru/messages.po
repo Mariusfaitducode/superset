@@ -1680,6 +1680,9 @@ msgstr "Добавьте проект, чтобы видеть пул-рекве
 msgid "Add a short summary…"
 msgstr "Добавьте краткое описание…"
 
+msgid "Add a to-do…"
+msgstr "Добавить задачу…"
+
 msgid "Add account"
 msgstr "Добавить аккаунт"
 
@@ -3742,6 +3745,9 @@ msgctxt "Liquid Glass style"
 msgid "Clear"
 msgstr "Прозрачный"
 
+msgid "Clear {doneCount} done"
+msgstr "Удалить выполненные ({doneCount})"
+
 msgid "Clear all"
 msgstr "Очистить всё"
 
@@ -3858,6 +3864,9 @@ msgstr "Нажмите на чип, чтобы открыть пул-рекве�
 
 msgid "Click to copy the session ID (resume with `claude --resume <id>`)."
 msgstr "Нажмите, чтобы скопировать ID сессии (возобновление: `claude --resume <id>`)."
+
+msgid "Click to edit"
+msgstr "Нажмите, чтобы изменить"
 
 msgid "Click to open on GitHub"
 msgstr "Нажмите, чтобы открыть на GitHub"
@@ -5933,6 +5942,9 @@ msgstr "Удалить эту рабочую область?"
 msgid "Delete thread"
 msgstr "Удалить ветку"
 
+msgid "Delete to-do"
+msgstr "Удалить задачу"
+
 msgid "Delete without checking"
 msgstr "Удалить без проверки"
 
@@ -7720,6 +7732,9 @@ msgstr "Завершить ревью"
 
 msgid "Finished"
 msgstr "Завершено"
+
+msgid "Finished — not opened yet"
+msgstr "Готово — ещё не открыто"
 
 msgid "finished · worked for 7s"
 msgstr "завершил · работал 7 с"
@@ -10011,6 +10026,12 @@ msgstr "Вручную"
 msgid "Manual order"
 msgstr "Ручной порядок"
 
+msgid "Mark as done"
+msgstr "Отметить как выполненное"
+
+msgid "Mark as not done"
+msgstr "Отметить как невыполненное"
+
 msgid "Mark as not viewed"
 msgstr "Отметить как непросмотренный"
 
@@ -10545,6 +10566,9 @@ msgstr "Нужно обновить"
 msgctxt "agent status"
 msgid "Needs you"
 msgstr "Ждёт вас"
+
+msgid "Needs your approval"
+msgstr "Нужно ваше одобрение"
 
 msgid "Nerd Fonts"
 msgstr "Nerd Fonts"
@@ -16376,6 +16400,9 @@ msgstr "остановлена"
 msgid "Stopped"
 msgstr "Остановлено"
 
+msgid "Stopped on an error"
+msgstr "Остановлено из-за ошибки"
+
 msgid "Stopping the agent in {what}"
 msgstr "Остановка агента в {what}"
 
@@ -17923,6 +17950,9 @@ msgstr "Чтобы возобновить разговор с агентом, в
 msgid "To resume another agent conversation, run this in its folder:"
 msgstr "Чтобы возобновить другой разговор с агентом, выполните это в его папке:"
 
+msgid "To-dos"
+msgstr "Задачи"
+
 msgid "Toast (Sonner)"
 msgstr "Тост (Sonner)"
 
@@ -18929,6 +18959,9 @@ msgid "Waiting for the subagent's first message…"
 msgstr "Ожидание первого сообщения субагента…"
 
 msgid "Waiting for your input"
+msgstr "Ждёт вашего ответа"
+
+msgid "Waiting for your reply"
 msgstr "Ждёт вашего ответа"
 
 msgid "Waking up workspace"

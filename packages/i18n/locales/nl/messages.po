@@ -1680,6 +1680,9 @@ msgstr "Voeg een project toe om pull requests te zien."
 msgid "Add a short summary…"
 msgstr "Voeg een korte samenvatting toe…"
 
+msgid "Add a to-do…"
+msgstr "To-do toevoegen…"
+
 msgid "Add account"
 msgstr "Account toevoegen"
 
@@ -3742,6 +3745,9 @@ msgctxt "Liquid Glass style"
 msgid "Clear"
 msgstr "Helder"
 
+msgid "Clear {doneCount} done"
+msgstr "{doneCount} afgeronde wissen"
+
 msgid "Clear all"
 msgstr "Alles wissen"
 
@@ -3858,6 +3864,9 @@ msgstr "Klik op de chip om de pull request te openen"
 
 msgid "Click to copy the session ID (resume with `claude --resume <id>`)."
 msgstr "Klik om de sessie-ID te kopiëren (hervatten met `claude --resume <id>`)."
+
+msgid "Click to edit"
+msgstr "Klik om te bewerken"
 
 msgid "Click to open on GitHub"
 msgstr "Klik om te openen op GitHub"
@@ -5933,6 +5942,9 @@ msgstr "Deze werkruimte verwijderen?"
 msgid "Delete thread"
 msgstr "Thread verwijderen"
 
+msgid "Delete to-do"
+msgstr "To-do verwijderen"
+
 msgid "Delete without checking"
 msgstr "Verwijderen zonder controle"
 
@@ -7720,6 +7732,9 @@ msgstr "Review afronden"
 
 msgid "Finished"
 msgstr "Voltooid"
+
+msgid "Finished — not opened yet"
+msgstr "Klaar — nog niet geopend"
 
 msgid "finished · worked for 7s"
 msgstr "klaar · 7s gewerkt"
@@ -10011,6 +10026,12 @@ msgstr "Handmatig"
 msgid "Manual order"
 msgstr "Handmatige volgorde"
 
+msgid "Mark as done"
+msgstr "Markeren als klaar"
+
+msgid "Mark as not done"
+msgstr "Markeren als niet klaar"
+
 msgid "Mark as not viewed"
 msgstr "Markeren als niet bekeken"
 
@@ -10545,6 +10566,9 @@ msgstr "Update nodig"
 msgctxt "agent status"
 msgid "Needs you"
 msgstr "Wacht op jou"
+
+msgid "Needs your approval"
+msgstr "Wacht op je goedkeuring"
 
 msgid "Nerd Fonts"
 msgstr "Nerd Fonts"
@@ -16376,6 +16400,9 @@ msgstr "gestopt"
 msgid "Stopped"
 msgstr "Gestopt"
 
+msgid "Stopped on an error"
+msgstr "Gestopt door een fout"
+
 msgid "Stopping the agent in {what}"
 msgstr "Agent in {what} wordt gestopt"
 
@@ -17923,6 +17950,9 @@ msgstr "Voer dit uit in de map om een agentgesprek te hervatten:"
 msgid "To resume another agent conversation, run this in its folder:"
 msgstr "Voer dit uit in de map om een ander agentgesprek te hervatten:"
 
+msgid "To-dos"
+msgstr "To-do's"
+
 msgid "Toast (Sonner)"
 msgstr "Toast (Sonner)"
 
@@ -18930,6 +18960,9 @@ msgstr "Wachten op het eerste bericht van de subagent…"
 
 msgid "Waiting for your input"
 msgstr "Wacht op je invoer"
+
+msgid "Waiting for your reply"
+msgstr "Wacht op je antwoord"
 
 msgid "Waking up workspace"
 msgstr "Werkruimte wordt gewekt"

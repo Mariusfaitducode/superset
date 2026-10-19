@@ -1680,6 +1680,9 @@ msgstr "Add a project to see pull requests."
 msgid "Add a short summary…"
 msgstr "Add a short summary…"
 
+msgid "Add a to-do…"
+msgstr "Add a to-do…"
+
 msgid "Add account"
 msgstr "Add account"
 
@@ -3742,6 +3745,9 @@ msgctxt "Liquid Glass style"
 msgid "Clear"
 msgstr "Clear"
 
+msgid "Clear {doneCount} done"
+msgstr "Clear {doneCount} done"
+
 msgid "Clear all"
 msgstr "Clear all"
 
@@ -3858,6 +3864,9 @@ msgstr "Click the chip to open the pull request"
 
 msgid "Click to copy the session ID (resume with `claude --resume <id>`)."
 msgstr "Click to copy the session ID (resume with `claude --resume <id>`)."
+
+msgid "Click to edit"
+msgstr "Click to edit"
 
 msgid "Click to open on GitHub"
 msgstr "Click to open on GitHub"
@@ -5933,6 +5942,9 @@ msgstr "Delete this workspace?"
 msgid "Delete thread"
 msgstr "Delete thread"
 
+msgid "Delete to-do"
+msgstr "Delete to-do"
+
 msgid "Delete without checking"
 msgstr "Delete without checking"
 
@@ -7720,6 +7732,9 @@ msgstr "Finish review"
 
 msgid "Finished"
 msgstr "Finished"
+
+msgid "Finished — not opened yet"
+msgstr "Finished — not opened yet"
 
 msgid "finished · worked for 7s"
 msgstr "finished · worked for 7s"
@@ -10011,6 +10026,12 @@ msgstr "Manual"
 msgid "Manual order"
 msgstr "Manual order"
 
+msgid "Mark as done"
+msgstr "Mark as done"
+
+msgid "Mark as not done"
+msgstr "Mark as not done"
+
 msgid "Mark as not viewed"
 msgstr "Mark as not viewed"
 
@@ -10545,6 +10566,9 @@ msgstr "Needs update"
 msgctxt "agent status"
 msgid "Needs you"
 msgstr "Needs you"
+
+msgid "Needs your approval"
+msgstr "Needs your approval"
 
 msgid "Nerd Fonts"
 msgstr "Nerd Fonts"
@@ -16376,6 +16400,9 @@ msgstr "stopped"
 msgid "Stopped"
 msgstr "Stopped"
 
+msgid "Stopped on an error"
+msgstr "Stopped on an error"
+
 msgid "Stopping the agent in {what}"
 msgstr "Stopping the agent in {what}"
 
@@ -17923,6 +17950,9 @@ msgstr "To resume an agent conversation, run this in its folder:"
 msgid "To resume another agent conversation, run this in its folder:"
 msgstr "To resume another agent conversation, run this in its folder:"
 
+msgid "To-dos"
+msgstr "To-dos"
+
 msgid "Toast (Sonner)"
 msgstr "Toast (Sonner)"
 
@@ -18930,6 +18960,9 @@ msgstr "Waiting for the subagent's first message…"
 
 msgid "Waiting for your input"
 msgstr "Waiting for your input"
+
+msgid "Waiting for your reply"
+msgstr "Waiting for your reply"
 
 msgid "Waking up workspace"
 msgstr "Waking up workspace"
