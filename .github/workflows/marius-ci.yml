@@ -99,10 +99,7 @@ jobs:
           npm install --no-save --prefix "$RUNNER_TEMP/bun-canary" bun@1.4.2-canary.20261007.1
           echo "$RUNNER_TEMP/bun-canary/node_modules/.bin" >> "$GITHUB_PATH"
 
-      - name: Test desktop
-        working-directory: apps/desktop
-        run: timeout --kill-after=15 600 bun test
-
-      - name: Test host-service
-        working-directory: packages/host-service
-        run: timeout --kill-after=15 600 bun test
+      # Through turbo, like upstream: the tests import the compiled i18n
+      # catalogs, which turbo builds first.
+      - name: Test
+        run: timeout --kill-after=15 900 bun x turbo test --filter=@superset/desktop --filter=@superset/host-service --concurrency=2 --log-order=stream
