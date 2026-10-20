@@ -1155,6 +1155,12 @@ msgstr "{updatedLabel} восстановлен к значениям по ум�
 msgid "{uploading, plural, one {Uploading # file…} other {Uploading # files…}}"
 msgstr "{uploading, plural, one {Загрузка # файла…} few {Загрузка # файлов…} many {Загрузка # файлов…} other {Загрузка # файла…}}"
 
+msgid "{used} of {max} tokens"
+msgstr "{used} из {max} токенов"
+
+msgid "{used} tokens"
+msgstr "{used} токенов"
+
 msgid "{used} used"
 msgstr "Использовано {used}"
 
@@ -3325,6 +3331,9 @@ msgstr "Кешированные изображения и файлы"
 msgid "Cached input"
 msgstr "Кешированный ввод"
 
+msgid "Cached input tokens"
+msgstr "Кешированные входные токены"
+
 msgid "Calendar"
 msgstr "Календарь"
 
@@ -4603,6 +4612,12 @@ msgstr "Контекст"
 
 msgid "Context Menu"
 msgstr "Контекстное меню"
+
+msgid "Context used: {compact}"
+msgstr "Использовано контекста: {compact}"
+
+msgid "Context window"
+msgstr "Контекстное окно"
 
 msgid "Continue"
 msgstr "Продолжить"
@@ -6830,6 +6845,9 @@ msgstr "esc — закрыть"
 msgid "esc to exit"
 msgstr "esc — выход"
 
+msgid "Estimated cost"
+msgstr "Оценочная стоимость"
+
 msgid "Event log"
 msgstr "Журнал событий"
 
@@ -8893,6 +8911,9 @@ msgstr "Группа полей"
 
 msgid "Input OTP"
 msgstr "Поле OTP"
+
+msgid "Input tokens"
+msgstr "Входные токены"
 
 msgid "input, cache and output tokens"
 msgstr "токены ввода, кеша и вывода"
@@ -12393,6 +12414,9 @@ msgstr "Результат · объединённых PR в неделю"
 
 msgid "Output Schema"
 msgstr "Схема вывода"
+
+msgid "Output tokens"
+msgstr "Выходные токены"
 
 msgid "Output truncated"
 msgstr "Вывод обрезан"
@@ -18267,6 +18291,9 @@ msgstr "Превращайте обсуждения в Slack в задачи, з
 
 msgid "turn the onboarding findings into a page"
 msgstr "сделай страницу из выводов по онбордингу"
+
+msgid "Turns"
+msgstr "Ходы"
 
 msgid "Two Hands"
 msgstr "Две руки"

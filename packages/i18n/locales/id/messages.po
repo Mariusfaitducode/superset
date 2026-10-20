@@ -1155,6 +1155,12 @@ msgstr "{updatedLabel} dipulihkan ke setelan bawaan"
 msgid "{uploading, plural, one {Uploading # file…} other {Uploading # files…}}"
 msgstr "{uploading, plural, other {Mengunggah # file…}}"
 
+msgid "{used} of {max} tokens"
+msgstr "{used} dari {max} token"
+
+msgid "{used} tokens"
+msgstr "{used} token"
+
 msgid "{used} used"
 msgstr "{used} terpakai"
 
@@ -3325,6 +3331,9 @@ msgstr "Gambar dan file ter-cache"
 msgid "Cached input"
 msgstr "Input ter-cache"
 
+msgid "Cached input tokens"
+msgstr "Token input ter-cache"
+
 msgid "Calendar"
 msgstr "Kalender"
 
@@ -4603,6 +4612,12 @@ msgstr "Konteks"
 
 msgid "Context Menu"
 msgstr "Menu Konteks"
+
+msgid "Context used: {compact}"
+msgstr "Konteks terpakai: {compact}"
+
+msgid "Context window"
+msgstr "Jendela konteks"
 
 msgid "Continue"
 msgstr "Lanjutkan"
@@ -6830,6 +6845,9 @@ msgstr "esc untuk menutup"
 msgid "esc to exit"
 msgstr "esc untuk keluar"
 
+msgid "Estimated cost"
+msgstr "Perkiraan biaya"
+
 msgid "Event log"
 msgstr "Log peristiwa"
 
@@ -8893,6 +8911,9 @@ msgstr "Input Group"
 
 msgid "Input OTP"
 msgstr "Input OTP"
+
+msgid "Input tokens"
+msgstr "Token input"
 
 msgid "input, cache and output tokens"
 msgstr "token input, cache, dan output"
@@ -12393,6 +12414,9 @@ msgstr "Hasil · PR yang digabungkan per minggu"
 
 msgid "Output Schema"
 msgstr "Skema Output"
+
+msgid "Output tokens"
+msgstr "Token output"
 
 msgid "Output truncated"
 msgstr "Output dipotong"
@@ -18267,6 +18291,9 @@ msgstr "Ubah percakapan Slack menjadi tugas, jalankan agen dari workspace Anda, 
 
 msgid "turn the onboarding findings into a page"
 msgstr "ubah temuan onboarding menjadi halaman"
+
+msgid "Turns"
+msgstr "Giliran"
 
 msgid "Two Hands"
 msgstr "Dua tangan"

@@ -1155,6 +1155,12 @@ msgstr "{updatedLabel} teruggezet naar standaardwaarden"
 msgid "{uploading, plural, one {Uploading # file…} other {Uploading # files…}}"
 msgstr "{uploading, plural, one {# bestand uploaden…} other {# bestanden uploaden…}}"
 
+msgid "{used} of {max} tokens"
+msgstr "{used} van {max} tokens"
+
+msgid "{used} tokens"
+msgstr "{used} tokens"
+
 msgid "{used} used"
 msgstr "{used} gebruikt"
 
@@ -3325,6 +3331,9 @@ msgstr "Afbeeldingen en bestanden in de cache"
 msgid "Cached input"
 msgstr "Gecachete input"
 
+msgid "Cached input tokens"
+msgstr "Gecachete inputtokens"
+
 msgid "Calendar"
 msgstr "Agenda"
 
@@ -4603,6 +4612,12 @@ msgstr "Context"
 
 msgid "Context Menu"
 msgstr "Contextmenu"
+
+msgid "Context used: {compact}"
+msgstr "Gebruikte context: {compact}"
+
+msgid "Context window"
+msgstr "Contextvenster"
 
 msgid "Continue"
 msgstr "Doorgaan"
@@ -6830,6 +6845,9 @@ msgstr "esc om te sluiten"
 msgid "esc to exit"
 msgstr "esc om te verlaten"
 
+msgid "Estimated cost"
+msgstr "Geschatte kosten"
+
 msgid "Event log"
 msgstr "Gebeurtenislog"
 
@@ -8893,6 +8911,9 @@ msgstr "Input Group"
 
 msgid "Input OTP"
 msgstr "Input OTP"
+
+msgid "Input tokens"
+msgstr "Inputtokens"
 
 msgid "input, cache and output tokens"
 msgstr "input-, cache- en outputtokens"
@@ -12393,6 +12414,9 @@ msgstr "Productie · samengevoegde PR’s per week"
 
 msgid "Output Schema"
 msgstr "Outputschema"
+
+msgid "Output tokens"
+msgstr "Outputtokens"
 
 msgid "Output truncated"
 msgstr "Uitvoer afgekapt"
@@ -18267,6 +18291,9 @@ msgstr "Zet Slack-gesprekken om in taken, laat agents draaien vanuit je werkruim
 
 msgid "turn the onboarding findings into a page"
 msgstr "maak van de onboarding-bevindingen een pagina"
+
+msgid "Turns"
+msgstr "Beurten"
 
 msgid "Two Hands"
 msgstr "Twee handen"

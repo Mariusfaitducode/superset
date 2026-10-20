@@ -1155,6 +1155,12 @@ msgstr "{updatedLabel}已恢复为默认值"
 msgid "{uploading, plural, one {Uploading # file…} other {Uploading # files…}}"
 msgstr "{uploading, plural, other {正在上传 # 个文件…}}"
 
+msgid "{used} of {max} tokens"
+msgstr "{used} / {max} Token"
+
+msgid "{used} tokens"
+msgstr "{used} Token"
+
 msgid "{used} used"
 msgstr "已使用 {used}"
 
@@ -3325,6 +3331,9 @@ msgstr "缓存的图片和文件"
 msgid "Cached input"
 msgstr "缓存输入"
 
+msgid "Cached input tokens"
+msgstr "缓存输入 Token"
+
 msgid "Calendar"
 msgstr "日历"
 
@@ -4603,6 +4612,12 @@ msgstr "上下文"
 
 msgid "Context Menu"
 msgstr "右键菜单"
+
+msgid "Context used: {compact}"
+msgstr "已用上下文：{compact}"
+
+msgid "Context window"
+msgstr "上下文窗口"
 
 msgid "Continue"
 msgstr "继续"
@@ -6830,6 +6845,9 @@ msgstr "按esc关闭"
 msgid "esc to exit"
 msgstr "esc退出"
 
+msgid "Estimated cost"
+msgstr "预估费用"
+
 msgid "Event log"
 msgstr "事件日志"
 
@@ -8893,6 +8911,9 @@ msgstr "输入框组"
 
 msgid "Input OTP"
 msgstr "验证码输入框"
+
+msgid "Input tokens"
+msgstr "输入 Token"
 
 msgid "input, cache and output tokens"
 msgstr "输入、缓存和输出token"
@@ -12393,6 +12414,9 @@ msgstr "产出 · 每周合并的 PR 数"
 
 msgid "Output Schema"
 msgstr "输出结构"
+
+msgid "Output tokens"
+msgstr "输出 Token"
 
 msgid "Output truncated"
 msgstr "输出已截断"
@@ -18267,6 +18291,9 @@ msgstr "把Slack对话变成任务，从工作区运行智能体，让队友在�
 
 msgid "turn the onboarding findings into a page"
 msgstr "把新手引导的调研结果做成页面"
+
+msgid "Turns"
+msgstr "轮次"
 
 msgid "Two Hands"
 msgstr "双手齐开"

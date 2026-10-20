@@ -2,6 +2,8 @@
 // which can run to hundreds of megabytes; the read and the JSON.parse of
 // every line must stay off the host-service event loop.
 
+import { readHarnessSessionStats } from "../../terminal-agents/harness-sessions/stats/read.ts";
+import type { SessionStatsCursor } from "../../terminal-agents/harness-sessions/stats/types.ts";
 import {
 	type HarnessTranscript,
 	readHarnessTranscript,
@@ -17,4 +19,12 @@ export const harnessTranscriptTask = defineWorkerTask<
 	handler: async ({ ref, maxChars }) => readHarnessTranscript(ref, maxChars),
 });
 
-export const harnessTasks = [harnessTranscriptTask];
+export const harnessSessionStatsTask = defineWorkerTask<
+	{ ref: HarnessSessionRef; previous: SessionStatsCursor | null },
+	SessionStatsCursor | null
+>({
+	type: "harness/readSessionStats",
+	handler: ({ ref, previous }) => readHarnessSessionStats(ref, previous),
+});
+
+export const harnessTasks = [harnessTranscriptTask, harnessSessionStatsTask];

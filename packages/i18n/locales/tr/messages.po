@@ -1155,6 +1155,12 @@ msgstr "{updatedLabel} varsayılanlara geri yüklendi"
 msgid "{uploading, plural, one {Uploading # file…} other {Uploading # files…}}"
 msgstr "{uploading, plural, other {# dosya yükleniyor…}}"
 
+msgid "{used} of {max} tokens"
+msgstr "{used} / {max} token"
+
+msgid "{used} tokens"
+msgstr "{used} token"
+
 msgid "{used} used"
 msgstr "{used} kullanıldı"
 
@@ -3325,6 +3331,9 @@ msgstr "Önbelleğe alınmış görseller ve dosyalar"
 msgid "Cached input"
 msgstr "Önbellekli girdi"
 
+msgid "Cached input tokens"
+msgstr "Önbellekli girdi tokenları"
+
 msgid "Calendar"
 msgstr "Takvim"
 
@@ -4603,6 +4612,12 @@ msgstr "Bağlam"
 
 msgid "Context Menu"
 msgstr "Bağlam menüsü"
+
+msgid "Context used: {compact}"
+msgstr "Kullanılan bağlam: {compact}"
+
+msgid "Context window"
+msgstr "Bağlam penceresi"
 
 msgid "Continue"
 msgstr "Devam et"
@@ -6830,6 +6845,9 @@ msgstr "kapatmak için esc"
 msgid "esc to exit"
 msgstr "çıkmak için esc"
 
+msgid "Estimated cost"
+msgstr "Tahmini maliyet"
+
 msgid "Event log"
 msgstr "Olay günlüğü"
 
@@ -8893,6 +8911,9 @@ msgstr "Giriş grubu"
 
 msgid "Input OTP"
 msgstr "OTP girişi"
+
+msgid "Input tokens"
+msgstr "Girdi tokenları"
 
 msgid "input, cache and output tokens"
 msgstr "girdi, önbellek ve çıktı token'ları"
@@ -12393,6 +12414,9 @@ msgstr "Çıktı · haftada birleştirilen PR"
 
 msgid "Output Schema"
 msgstr "Çıktı şeması"
+
+msgid "Output tokens"
+msgstr "Çıktı tokenları"
 
 msgid "Output truncated"
 msgstr "Çıktı kısaltıldı"
@@ -18267,6 +18291,9 @@ msgstr "Slack konuşmalarını göreve dönüştürün, çalışma alanınızdan
 
 msgid "turn the onboarding findings into a page"
 msgstr "onboarding bulgularını bir sayfaya dönüştür"
+
+msgid "Turns"
+msgstr "Turlar"
 
 msgid "Two Hands"
 msgstr "İki el"

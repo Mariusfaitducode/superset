@@ -1155,6 +1155,12 @@ msgstr "{updatedLabel} obnoveno na výchozí"
 msgid "{uploading, plural, one {Uploading # file…} other {Uploading # files…}}"
 msgstr "{uploading, plural, one {Nahrává se # soubor…} few {Nahrávají se # soubory…} many {Nahrává se # souboru…} other {Nahrává se # souborů…}}"
 
+msgid "{used} of {max} tokens"
+msgstr "{used} z {max} tokenů"
+
+msgid "{used} tokens"
+msgstr "{used} tokenů"
+
 msgid "{used} used"
 msgstr "Využito {used}"
 
@@ -3325,6 +3331,9 @@ msgstr "Obrázky a soubory v mezipaměti"
 msgid "Cached input"
 msgstr "Vstup z cache"
 
+msgid "Cached input tokens"
+msgstr "Tokeny vstupu z cache"
+
 msgid "Calendar"
 msgstr "Kalendář"
 
@@ -4603,6 +4612,12 @@ msgstr "Kontext"
 
 msgid "Context Menu"
 msgstr "Kontextová nabídka"
+
+msgid "Context used: {compact}"
+msgstr "Využitý kontext: {compact}"
+
+msgid "Context window"
+msgstr "Kontextové okno"
 
 msgid "Continue"
 msgstr "Pokračovat"
@@ -6830,6 +6845,9 @@ msgstr "esc zavře"
 msgid "esc to exit"
 msgstr "esc pro ukončení"
 
+msgid "Estimated cost"
+msgstr "Odhadované náklady"
+
 msgid "Event log"
 msgstr "Protokol událostí"
 
@@ -8893,6 +8911,9 @@ msgstr "Skupina vstupů"
 
 msgid "Input OTP"
 msgstr "Vstup OTP"
+
+msgid "Input tokens"
+msgstr "Vstupní tokeny"
 
 msgid "input, cache and output tokens"
 msgstr "vstupní tokeny, tokeny cache a výstupní tokeny"
@@ -12393,6 +12414,9 @@ msgstr "Výstup · sloučené PR za týden"
 
 msgid "Output Schema"
 msgstr "Výstupní schéma"
+
+msgid "Output tokens"
+msgstr "Výstupní tokeny"
 
 msgid "Output truncated"
 msgstr "Výstup zkrácen"
@@ -18267,6 +18291,9 @@ msgstr "Proměňte konverzace ve Slacku v úkoly, spouštějte agenty ze svého 
 
 msgid "turn the onboarding findings into a page"
 msgstr "udělej z poznatků o onboardingu stránku"
+
+msgid "Turns"
+msgstr "Kola"
 
 msgid "Two Hands"
 msgstr "Obě ruce"

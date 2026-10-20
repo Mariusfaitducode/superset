@@ -1155,6 +1155,12 @@ msgstr "{updatedLabel} auf Standardwerte zurückgesetzt"
 msgid "{uploading, plural, one {Uploading # file…} other {Uploading # files…}}"
 msgstr "{uploading, plural, one {# Datei wird hochgeladen…} other {# Dateien werden hochgeladen…}}"
 
+msgid "{used} of {max} tokens"
+msgstr "{used} von {max} Tokens"
+
+msgid "{used} tokens"
+msgstr "{used} Tokens"
+
 msgid "{used} used"
 msgstr "{used} verbraucht"
 
@@ -3325,6 +3331,9 @@ msgstr "Bilder und Dateien im Cache"
 msgid "Cached input"
 msgstr "Zwischengespeicherte Eingabe"
 
+msgid "Cached input tokens"
+msgstr "Zwischengespeicherte Eingabe-Tokens"
+
 msgid "Calendar"
 msgstr "Kalender"
 
@@ -4603,6 +4612,12 @@ msgstr "Kontext"
 
 msgid "Context Menu"
 msgstr "Kontextmenü"
+
+msgid "Context used: {compact}"
+msgstr "Genutzter Kontext: {compact}"
+
+msgid "Context window"
+msgstr "Kontextfenster"
 
 msgid "Continue"
 msgstr "Weiter"
@@ -6830,6 +6845,9 @@ msgstr "esc zum Schließen"
 msgid "esc to exit"
 msgstr "esc zum Beenden"
 
+msgid "Estimated cost"
+msgstr "Geschätzte Kosten"
+
 msgid "Event log"
 msgstr "Ereignisprotokoll"
 
@@ -8893,6 +8911,9 @@ msgstr "Eingabegruppe"
 
 msgid "Input OTP"
 msgstr "OTP-Eingabe"
+
+msgid "Input tokens"
+msgstr "Eingabe-Tokens"
 
 msgid "input, cache and output tokens"
 msgstr "Eingabe-, Cache- und Ausgabe-Tokens"
@@ -12393,6 +12414,9 @@ msgstr "Ausgabe · gemergte PRs pro Woche"
 
 msgid "Output Schema"
 msgstr "Ausgabeschema"
+
+msgid "Output tokens"
+msgstr "Ausgabe-Tokens"
 
 msgid "Output truncated"
 msgstr "Ausgabe gekürzt"
@@ -18267,6 +18291,9 @@ msgstr "Mach aus Slack-Unterhaltungen Aufgaben, starte Agenten aus deinem Arbeit
 
 msgid "turn the onboarding findings into a page"
 msgstr "mach aus den Onboarding-Ergebnissen eine Seite"
+
+msgid "Turns"
+msgstr "Runden"
 
 msgid "Two Hands"
 msgstr "Beidhändig"

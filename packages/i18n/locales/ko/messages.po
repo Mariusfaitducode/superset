@@ -1155,6 +1155,12 @@ msgstr "{updatedLabel}이(가) 기본값으로 복원되었습니다"
 msgid "{uploading, plural, one {Uploading # file…} other {Uploading # files…}}"
 msgstr "{uploading, plural, other {파일 #개 업로드 중…}}"
 
+msgid "{used} of {max} tokens"
+msgstr "{used} / {max} 토큰"
+
+msgid "{used} tokens"
+msgstr "{used} 토큰"
+
 msgid "{used} used"
 msgstr "{used} 사용됨"
 
@@ -3325,6 +3331,9 @@ msgstr "캐시된 이미지 및 파일"
 msgid "Cached input"
 msgstr "캐시된 입력"
 
+msgid "Cached input tokens"
+msgstr "캐시된 입력 토큰"
+
 msgid "Calendar"
 msgstr "캘린더"
 
@@ -4603,6 +4612,12 @@ msgstr "컨텍스트"
 
 msgid "Context Menu"
 msgstr "컨텍스트 메뉴"
+
+msgid "Context used: {compact}"
+msgstr "사용한 컨텍스트: {compact}"
+
+msgid "Context window"
+msgstr "컨텍스트 윈도우"
 
 msgid "Continue"
 msgstr "계속"
@@ -6830,6 +6845,9 @@ msgstr "esc로 닫기"
 msgid "esc to exit"
 msgstr "esc로 종료"
 
+msgid "Estimated cost"
+msgstr "예상 비용"
+
 msgid "Event log"
 msgstr "이벤트 로그"
 
@@ -8893,6 +8911,9 @@ msgstr "입력 그룹"
 
 msgid "Input OTP"
 msgstr "OTP 입력"
+
+msgid "Input tokens"
+msgstr "입력 토큰"
 
 msgid "input, cache and output tokens"
 msgstr "입력, 캐시, 출력 토큰"
@@ -12393,6 +12414,9 @@ msgstr "산출 · 주당 병합된 PR"
 
 msgid "Output Schema"
 msgstr "출력 스키마"
+
+msgid "Output tokens"
+msgstr "출력 토큰"
 
 msgid "Output truncated"
 msgstr "출력이 잘렸습니다"
@@ -18267,6 +18291,9 @@ msgstr "Slack 대화를 작업으로 바꾸고, 워크스페이스에서 에이�
 
 msgid "turn the onboarding findings into a page"
 msgstr "온보딩 조사 결과를 페이지로 만들어 줘"
+
+msgid "Turns"
+msgstr "턴 수"
 
 msgid "Two Hands"
 msgstr "양손"

@@ -1155,6 +1155,12 @@ msgstr "{updatedLabel}をデフォルトに復元しました"
 msgid "{uploading, plural, one {Uploading # file…} other {Uploading # files…}}"
 msgstr "{uploading, plural, other {# 件のファイルをアップロード中…}}"
 
+msgid "{used} of {max} tokens"
+msgstr "{used} / {max} トークン"
+
+msgid "{used} tokens"
+msgstr "{used} トークン"
+
 msgid "{used} used"
 msgstr "{used} 使用済み"
 
@@ -3325,6 +3331,9 @@ msgstr "キャッシュされた画像とファイル"
 msgid "Cached input"
 msgstr "キャッシュ入力"
 
+msgid "Cached input tokens"
+msgstr "キャッシュ入力トークン"
+
 msgid "Calendar"
 msgstr "Calendar"
 
@@ -4603,6 +4612,12 @@ msgstr "Context"
 
 msgid "Context Menu"
 msgstr "Context Menu"
+
+msgid "Context used: {compact}"
+msgstr "使用中のコンテキスト: {compact}"
+
+msgid "Context window"
+msgstr "コンテキストウィンドウ"
 
 msgid "Continue"
 msgstr "続行"
@@ -6830,6 +6845,9 @@ msgstr "escで閉じる"
 msgid "esc to exit"
 msgstr "escで終了"
 
+msgid "Estimated cost"
+msgstr "推定コスト"
+
 msgid "Event log"
 msgstr "イベントログ"
 
@@ -8893,6 +8911,9 @@ msgstr "Input Group"
 
 msgid "Input OTP"
 msgstr "Input OTP"
+
+msgid "Input tokens"
+msgstr "入力トークン"
 
 msgid "input, cache and output tokens"
 msgstr "入力・キャッシュ・出力トークン"
@@ -12393,6 +12414,9 @@ msgstr "成果 · 週あたりのマージ済みPR数"
 
 msgid "Output Schema"
 msgstr "出力スキーマ"
+
+msgid "Output tokens"
+msgstr "出力トークン"
 
 msgid "Output truncated"
 msgstr "出力は省略されました"
@@ -18267,6 +18291,9 @@ msgstr "Slackの会話をタスクに変え、ワークスペースからエー�
 
 msgid "turn the onboarding findings into a page"
 msgstr "オンボーディングの調査結果をページにして"
+
+msgid "Turns"
+msgstr "ターン数"
 
 msgid "Two Hands"
 msgstr "両手"

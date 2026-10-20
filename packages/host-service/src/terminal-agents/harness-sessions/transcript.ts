@@ -60,6 +60,37 @@ export interface HarnessTranscript {
 	harness: string;
 }
 
+export interface LocatedHarnessSession {
+	agentId: AgentIdentityId;
+	files: HarnessSessionFiles;
+	sessionId: string;
+	path: string | null;
+	reported: boolean;
+}
+
+/**
+ * The session's file in its harness's store, trusting a reported path only
+ * when it names the session. Null when the harness keeps no session files or
+ * the ref carries no usable session id. Throws when the store is unreadable.
+ */
+export function locateHarnessSessionFile(
+	ref: HarnessSessionRef,
+): LocatedHarnessSession | null {
+	const resolved = toSessionQuery(ref);
+	const agentId = resolved?.agentId as AgentIdentityId | undefined;
+	const files = agentId && HARNESS_SESSION_FILES[agentId];
+	if (!resolved || !agentId || !files) return null;
+	const { query } = resolved;
+	const reported = reportedSessionFile(ref.reportedPath, query.sessionId);
+	return {
+		agentId,
+		files,
+		sessionId: query.sessionId,
+		path: reported ?? files.locate(query),
+		reported: reported !== null,
+	};
+}
+
 /**
  * The harness's own transcript for a session, oldest turns dropped first
  * when it exceeds `maxChars`. Null when the harness keeps none, the session
@@ -69,37 +100,31 @@ export function readHarnessTranscript(
 	ref: HarnessSessionRef,
 	maxChars: number,
 ): HarnessTranscript | null {
-	const resolved = toSessionQuery(ref);
-	const files =
-		resolved && HARNESS_SESSION_FILES[resolved.agentId as AgentIdentityId];
-	const parseTurns = files?.parseTurns;
-	if (!resolved || !files || !parseTurns) return null;
-	const { query } = resolved;
-
-	let reported: string | null;
-	let path: string | null;
+	let located: LocatedHarnessSession | null;
 	try {
-		reported = reportedSessionFile(ref.reportedPath, query.sessionId);
-		path = reported ?? files.locate(query);
+		located = locateHarnessSessionFile(ref);
 	} catch (error) {
 		// An unreadable store must not fail the handoff; the stream answers.
 		console.warn(
-			`[harness-sessions] could not look up ${ref.agentId} session ${query.sessionId}:`,
+			`[harness-sessions] could not look up ${ref.agentId} session ${ref.sessionId}:`,
 			error,
 		);
 		return null;
 	}
+	const parseTurns = located?.files.parseTurns;
+	if (!located || !parseTurns) return null;
+	const { path, sessionId } = located;
 	if (!path) {
 		// A bound session with no file anywhere means the harness moved its
 		// store: the handoff silently degrades to the terminal's last moments.
 		console.warn(
-			`[harness-sessions] no transcript for ${ref.agentId} session ${query.sessionId}; falling back to the terminal stream`,
+			`[harness-sessions] no transcript for ${ref.agentId} session ${sessionId}; falling back to the terminal stream`,
 		);
 		return null;
 	}
-	if (!reported) {
+	if (!located.reported) {
 		console.info(
-			`[harness-sessions] ${ref.agentId} session ${query.sessionId} found without a reported path`,
+			`[harness-sessions] ${ref.agentId} session ${sessionId} found without a reported path`,
 		);
 	}
 	const text = readTurnsFromTail(path, maxChars, parseTurns);

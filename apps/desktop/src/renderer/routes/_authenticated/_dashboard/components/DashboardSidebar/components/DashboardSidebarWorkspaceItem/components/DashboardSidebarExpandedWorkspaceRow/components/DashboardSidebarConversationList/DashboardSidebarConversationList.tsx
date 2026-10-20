@@ -16,6 +16,7 @@ import {
 import { useSidebarPreference } from "renderer/stores/sidebar-preferences";
 import { useIsTerminalVisible } from "renderer/stores/visible-terminals";
 import type { DashboardSidebarWorkspaceIndentation } from "../../../../../../types";
+import { ConversationStats } from "./components/ConversationStats";
 import { ConversationTodos } from "./components/ConversationTodos";
 import {
 	type SidebarConversation,
@@ -53,9 +54,11 @@ function stopRowEvent(event: SyntheticEvent) {
 
 function ConversationRow({
 	workspaceId,
+	hostId,
 	conversation,
 }: {
 	workspaceId: string;
+	hostId: string;
 	conversation: SidebarConversation;
 }) {
 	const { t } = useLingui();
@@ -142,6 +145,12 @@ function ConversationRow({
 						{conversation.title}
 					</span>
 				</button>
+				<ConversationStats
+					workspaceId={workspaceId}
+					hostId={hostId}
+					terminalId={conversation.terminalId}
+					lastEventAt={conversation.since}
+				/>
 				{showTodos && (
 					<button
 						type="button"
@@ -236,6 +245,7 @@ export function DashboardSidebarConversationList({
 					<ConversationRow
 						key={conversation.terminalId}
 						workspaceId={workspaceId}
+						hostId={hostId}
 						conversation={conversation}
 					/>
 				))}

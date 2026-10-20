@@ -1155,6 +1155,12 @@ msgstr "{updatedLabel} przywrócono do ustawień domyślnych"
 msgid "{uploading, plural, one {Uploading # file…} other {Uploading # files…}}"
 msgstr "{uploading, plural, one {Przesyłanie # pliku…} few {Przesyłanie # plików…} many {Przesyłanie # plików…} other {Przesyłanie # pliku…}}"
 
+msgid "{used} of {max} tokens"
+msgstr "{used} z {max} tokenów"
+
+msgid "{used} tokens"
+msgstr "{used} tokenów"
+
 msgid "{used} used"
 msgstr "Wykorzystano {used}"
 
@@ -3325,6 +3331,9 @@ msgstr "Obrazy i pliki z pamięci podręcznej"
 msgid "Cached input"
 msgstr "Wejście z cache"
 
+msgid "Cached input tokens"
+msgstr "Tokeny wejścia z cache"
+
 msgid "Calendar"
 msgstr "Kalendarz"
 
@@ -4603,6 +4612,12 @@ msgstr "Kontekst"
 
 msgid "Context Menu"
 msgstr "Menu kontekstowe"
+
+msgid "Context used: {compact}"
+msgstr "Użyty kontekst: {compact}"
+
+msgid "Context window"
+msgstr "Okno kontekstu"
 
 msgid "Continue"
 msgstr "Kontynuuj"
@@ -6830,6 +6845,9 @@ msgstr "esc aby zamknąć"
 msgid "esc to exit"
 msgstr "esc aby wyjść"
 
+msgid "Estimated cost"
+msgstr "Szacowany koszt"
+
 msgid "Event log"
 msgstr "Dziennik zdarzeń"
 
@@ -8893,6 +8911,9 @@ msgstr "Input Group"
 
 msgid "Input OTP"
 msgstr "Input OTP"
+
+msgid "Input tokens"
+msgstr "Tokeny wejściowe"
 
 msgid "input, cache and output tokens"
 msgstr "tokeny wejściowe, cache i wyjściowe"
@@ -12393,6 +12414,9 @@ msgstr "Wynik · scalone PR tygodniowo"
 
 msgid "Output Schema"
 msgstr "Schemat wyjścia"
+
+msgid "Output tokens"
+msgstr "Tokeny wyjściowe"
 
 msgid "Output truncated"
 msgstr "Wyjście skrócone"
@@ -18267,6 +18291,9 @@ msgstr "Zamieniaj rozmowy na Slacku w zadania, uruchamiaj agentów ze swojego ob
 
 msgid "turn the onboarding findings into a page"
 msgstr "zrób stronę z wniosków o onboardingu"
+
+msgid "Turns"
+msgstr "Tury"
 
 msgid "Two Hands"
 msgstr "Dwie ręce"

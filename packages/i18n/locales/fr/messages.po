@@ -1155,6 +1155,12 @@ msgstr "{updatedLabel} restauré aux valeurs par défaut"
 msgid "{uploading, plural, one {Uploading # file…} other {Uploading # files…}}"
 msgstr "{uploading, plural, one {Envoi de # fichier…} other {Envoi de # fichiers…}}"
 
+msgid "{used} of {max} tokens"
+msgstr "{used} sur {max} tokens"
+
+msgid "{used} tokens"
+msgstr "{used} tokens"
+
 msgid "{used} used"
 msgstr "{used} utilisés"
 
@@ -3325,6 +3331,9 @@ msgstr "Images et fichiers en cache"
 msgid "Cached input"
 msgstr "Entrée mise en cache"
 
+msgid "Cached input tokens"
+msgstr "Tokens d'entrée en cache"
+
 msgid "Calendar"
 msgstr "Calendrier"
 
@@ -4603,6 +4612,12 @@ msgstr "Contexte"
 
 msgid "Context Menu"
 msgstr "Menu contextuel"
+
+msgid "Context used: {compact}"
+msgstr "Contexte utilisé : {compact}"
+
+msgid "Context window"
+msgstr "Fenêtre de contexte"
 
 msgid "Continue"
 msgstr "Continuer"
@@ -6830,6 +6845,9 @@ msgstr "esc pour fermer"
 msgid "esc to exit"
 msgstr "esc pour quitter"
 
+msgid "Estimated cost"
+msgstr "Coût estimé"
+
 msgid "Event log"
 msgstr "Journal des événements"
 
@@ -8893,6 +8911,9 @@ msgstr "Groupe d'entrées"
 
 msgid "Input OTP"
 msgstr "Entrée OTP"
+
+msgid "Input tokens"
+msgstr "Tokens d'entrée"
 
 msgid "input, cache and output tokens"
 msgstr "tokens d'entrée, de cache et de sortie"
@@ -12393,6 +12414,9 @@ msgstr "Production · PR fusionnées par semaine"
 
 msgid "Output Schema"
 msgstr "Schéma de sortie"
+
+msgid "Output tokens"
+msgstr "Tokens de sortie"
 
 msgid "Output truncated"
 msgstr "Sortie tronquée"
@@ -18267,6 +18291,9 @@ msgstr "Transformez les conversations Slack en tâches, exécutez des agents dep
 
 msgid "turn the onboarding findings into a page"
 msgstr "transforme les résultats sur l'onboarding en page"
+
+msgid "Turns"
+msgstr "Tours"
 
 msgid "Two Hands"
 msgstr "Deux mains"

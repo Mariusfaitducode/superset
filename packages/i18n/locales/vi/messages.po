@@ -1155,6 +1155,12 @@ msgstr "Đã khôi phục {updatedLabel} về mặc định"
 msgid "{uploading, plural, one {Uploading # file…} other {Uploading # files…}}"
 msgstr "{uploading, plural, other {Đang tải lên # tệp…}}"
 
+msgid "{used} of {max} tokens"
+msgstr "{used} / {max} token"
+
+msgid "{used} tokens"
+msgstr "{used} token"
+
 msgid "{used} used"
 msgstr "Đã dùng {used}"
 
@@ -3325,6 +3331,9 @@ msgstr "Ảnh và tệp đã cache"
 msgid "Cached input"
 msgstr "Đầu vào đã cache"
 
+msgid "Cached input tokens"
+msgstr "Token đầu vào đã cache"
+
 msgid "Calendar"
 msgstr "Calendar"
 
@@ -4603,6 +4612,12 @@ msgstr "Ngữ cảnh"
 
 msgid "Context Menu"
 msgstr "Context Menu"
+
+msgid "Context used: {compact}"
+msgstr "Ngữ cảnh đã dùng: {compact}"
+
+msgid "Context window"
+msgstr "Cửa sổ ngữ cảnh"
 
 msgid "Continue"
 msgstr "Tiếp tục"
@@ -6830,6 +6845,9 @@ msgstr "esc để đóng"
 msgid "esc to exit"
 msgstr "esc để thoát"
 
+msgid "Estimated cost"
+msgstr "Chi phí ước tính"
+
 msgid "Event log"
 msgstr "Nhật ký sự kiện"
 
@@ -8893,6 +8911,9 @@ msgstr "Input Group"
 
 msgid "Input OTP"
 msgstr "Input OTP"
+
+msgid "Input tokens"
+msgstr "Token đầu vào"
 
 msgid "input, cache and output tokens"
 msgstr "token đầu vào, cache và đầu ra"
@@ -12393,6 +12414,9 @@ msgstr "Đầu ra · PR hợp nhất mỗi tuần"
 
 msgid "Output Schema"
 msgstr "Schema đầu ra"
+
+msgid "Output tokens"
+msgstr "Token đầu ra"
 
 msgid "Output truncated"
 msgstr "Kết quả đã bị cắt bớt"
@@ -18267,6 +18291,9 @@ msgstr "Biến hội thoại Slack thành tác vụ, chạy agent từ workspace
 
 msgid "turn the onboarding findings into a page"
 msgstr "biến kết quả nghiên cứu onboarding thành một trang"
+
+msgid "Turns"
+msgstr "Lượt"
 
 msgid "Two Hands"
 msgstr "Hai tay"
