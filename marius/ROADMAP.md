@@ -1,33 +1,29 @@
-# Feuille de route du fork
+# Fork roadmap
 
-Suivie par les agents qui travaillent sur ce fork, et lue sur les deux Macs. Mise à jour à chaque étape.
+Kept by the agents working on this fork and read on every Mac. Updated at each step.
 
-## Ta liste (sidebar)
+## Marius's list (sidebar)
 
-| # | To-do | État | Quand / comment |
+| # | To-do | State | When / how |
 |---|---|---|---|
-| 1 | Idea list ? | Confié | Une autre session construit une Page Superset. Les idées propres au fork l'y rejoindront ensuite. |
-| 2 | Latest release / merged version | Fait, à valider | Le build affiché vient du dernier tag upstream (`desktop-v1.39.0`, le plus récent au 2026-10-20) et de la branche fusionnée. Suite : rebase hebdomadaire, voir « Routine ». |
-| 3 | Show release name | Fait, à valider | En bas des Réglages : tag upstream + branche@commit + date, posé par `marius/update.sh`. |
-| 4 | Allow agents to see todos | **Prochain** | D'abord une conception avec toi. Les to-do quittent le stockage du navigateur pour le service hôte, puis sont exposées aux agents (CLI `superset` ou MCP) : lire, créer, cocher, réorganiser. |
-| 5 | Create general agent | Après le 4 | Projet B : un coordinateur qui voit toutes les sessions et leurs to-do et aide à prioriser. Regarder d'abord le skill `cockpit`. |
-| 6 | Rename conv in sidebar | Fait, à valider | Double-clic sur le titre, Entrée pour valider, Échap pour annuler. |
+| 1 | Idea list ? | Handed off | Another session builds a Superset Page. The fork's own ideas join it afterwards. |
+| 2 | Latest release / merged version | Done, to validate | The build shown comes from the latest upstream tag (`desktop-v1.39.0`, newest on 2026-10-20) plus the merged branch. Next: weekly rebase, see "Routine". |
+| 3 | Show release name | Done, to validate | At the bottom of Settings: upstream tag + branch@commit + date, stamped by `marius/update.sh`. |
+| 4 | Allow agents to see todos | **Next** | Design together first. To-dos move from browser storage to the host service, then agents get them through the `superset` CLI (MCP later): read, create, check, reorder. |
+| 5 | Create general agent | After 4 | A coordinator that sees every session and its to-dos and helps prioritize. Look at the `cockpit` skill first. |
+| 6 | Rename conv in sidebar | Done, to validate | Double-click the title, Enter to save, Escape to cancel. |
 
 ## Backlog
 
-- **Carte de tâche de fond** : une carte rattachée à la conversation, qui dit ce que l'agent fait, où il en est, avec une barre de progression. C'est l'agent qui la met à jour, par la même voie que les to-do. Cas d'origine : suivre le cleanup du disque d'un proto au lieu de relancer Grafana à la main. Une courbe de métrique pourra venir ensuite.
-- **Vues custom** : en commençant par une vue PR. La page PR actuelle affiche « no GitHub remote » sur hub : comprendre pourquoi d'abord.
-- **⌘K façon Notion pour passer d'un agent à l'autre** : ⌘K vide le terminal aujourd'hui, et la palette est sur ⌘⇧K. Il faut choisir le raccourci.
-- **Vue workspaces plus riche** : quelles infos ajouter, à définir.
-- Plus tard : ergonomie, performance, agent général, MCP, fonctions bloquées par l'offre payante.
-- Proposer en amont ce qui marche (issue superset-sh/superset#8634).
+- **Background task card**: a card on the conversation that says what the agent is doing and how far it is, with a progress bar. The agent updates it, the same way as to-dos. First use: following a prototype's disk cleanup instead of polling Grafana by hand. A metric curve can come later.
+- **Custom views**: starting with a PR view. The current PR page says "no GitHub remote" on hub: find out why first.
+- **Notion-like ⌘K to switch between agents**: ⌘K clears the terminal today and the palette is on ⌘⇧K, so the shortcut needs a decision.
+- **Richer workspaces view**: which information to add, to define.
+- Later: ergonomics, performance, general agent, MCP, features behind the paid gate.
+- Propose upstream what works (issue superset-sh/superset#8634).
 
 ## Routine
 
-- Chaque semaine : `git fetch upstream --tags`. Si un nouveau `desktop-vX.Y.Z` existe, rebaser `marius/main` dessus, recompiler (`marius/update.sh`), réinstaller.
-- Avant de coder sur un Mac : `git fetch` pour voir ce que l'autre a poussé.
-
-## À régler
-
-- Pousser `feature/sidebar-unify` à la place de la PR #2 (attend ton OK).
-- L'autre Mac commite avec l'adresse Spore : corriger sa config git. Réécrire ses 3 commits demande un force-push (attend ton OK).
+- Every week: `git fetch upstream --tags`. If a new `desktop-vX.Y.Z` exists, rebase `marius/main` onto it, rebuild (`marius/update.sh`), reinstall.
+- Before coding on a Mac: `git fetch` to see what the other one pushed.
+- Releases: merge into `marius/main` only with green CI, then tag `marius-v<upstream>-<n>`.

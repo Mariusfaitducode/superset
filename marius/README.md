@@ -1,36 +1,36 @@
-# Installer ce fork
+# Installing this fork
 
-Ce build remplace `/Applications/Superset.app` et garde toutes tes données, puisqu'il utilise le même `~/.superset` que l'app officielle. Les terminaux et les agents en cours continuent de tourner pendant le remplacement.
+This build replaces `/Applications/Superset.app` and keeps all your data: it uses the same `~/.superset` as the official app. Running terminals and agents keep going during the swap.
 
-## Prérequis
+## Requirements
 
-- Un Mac Apple Silicon.
-- [Bun](https://bun.sh) 1.4.2 dans `~/.bun/bin`.
+- An Apple Silicon Mac.
+- [Bun](https://bun.sh) 1.4.2 in `~/.bun/bin`.
 
-## Installer ou mettre à jour
+## Install or update
 
 ```bash
-git clone https://github.com/Mariusfaitducode/superset && cd superset   # première fois
-git fetch origin && git checkout marius/main && git pull                  # ensuite
+git clone https://github.com/Mariusfaitducode/superset && cd superset   # first time
+git fetch origin && git checkout marius/main && git pull                  # afterwards
 bun install
 ./marius/update.sh
 ```
 
-La compilation prend entre 7 et 30 minutes. À la fin, Superset demande à quitter : clique « Quitter », l'app se relance toute seule sur le nouveau build. Le suivi s'affiche dans `build-marius.log` et `marius/swap.log`.
+The build takes 7 to 30 minutes. At the end Superset asks to quit: click "Quit" and it reopens on its own on the new build. Progress is in `build-marius.log` and `marius/swap.log`.
 
-Au premier remplacement, l'app officielle est gardée dans `~/Backups/superset-<date>`.
+The first swap keeps the official app in `~/Backups/superset-<date>`.
 
-## Vérifier la version
+## Check the version
 
-Réglages, en bas de la colonne de gauche : `desktop-v1.39.0 + marius/main@<commit> · <date>`.
+Settings, at the bottom of the left column: `desktop-v1.39.0 + marius/main@<commit> · <date>`.
 
-## Revenir à l'app officielle
+## Go back to the official app
 
 ```bash
 ./marius/rollback-to-official.sh
 ```
 
-## À savoir
+## Good to know
 
-- La mise à jour automatique est désactivée : c'est `update.sh` qui met à jour.
-- Ne tue jamais tous les processus Superset, ça couperait les terminaux en cours.
+- Auto-update is off: `update.sh` is how you update.
+- Never kill every Superset process, it would cut the running terminals.
