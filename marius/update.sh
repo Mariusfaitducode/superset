@@ -9,7 +9,9 @@ APP="$ROOT/apps/desktop/release/mac-arm64/Superset.app"
 export PATH="$HOME/.bun/bin:$PATH" NODE_ENV=production
 
 started=$(date +%s)
-echo "building $(git -C "$ROOT" rev-parse --abbrev-ref HEAD)@$(git -C "$ROOT" rev-parse --short HEAD), log: $LOG"
+dirty=$(git -C "$ROOT" status --porcelain --untracked-files=no | grep -q . && echo "+dirty" || true)
+export FORK_BUILD="$(git -C "$ROOT" describe --tags --match 'desktop-v*' --abbrev=0) + $(git -C "$ROOT" rev-parse --abbrev-ref HEAD)@$(git -C "$ROOT" rev-parse --short HEAD)$dirty · $(date '+%Y-%m-%d %H:%M')"
+echo "building $FORK_BUILD, log: $LOG"
 (
 	cd "$ROOT/apps/desktop"
 	bun run prebuild
