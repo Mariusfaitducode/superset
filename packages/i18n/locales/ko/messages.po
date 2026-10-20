@@ -497,6 +497,10 @@ msgstr "{0} 플랜"
 msgid "{0} projects"
 msgstr "프로젝트 {0}개"
 
+#. placeholder {0}: conversation.queuedPrompts
+msgid "{0} queued messages"
+msgstr "대기 중인 메시지 {0}개"
+
 #. placeholder {0}: tally.running
 msgid "{0} Running"
 msgstr "{0}개 실행 중"
@@ -2242,6 +2246,9 @@ msgstr "로컬 브랜치도 삭제"
 
 msgid "Also delete the local git branch when deleting a worktree workspace"
 msgstr "worktree 워크스페이스를 삭제할 때 로컬 git 브랜치도 함께 삭제합니다"
+
+msgid "Also list agents that have not started working yet."
+msgstr "아직 작업을 시작하지 않은 에이전트도 표시합니다."
 
 msgid "Also viewing this page"
 msgstr "이 페이지를 함께 보는 사람"
@@ -5677,6 +5684,9 @@ msgstr "현재 플랜"
 msgid "Current tab"
 msgstr "현재 탭"
 
+msgid "Current turn running"
+msgstr "현재 턴 진행 중"
+
 msgid "Cursor"
 msgstr "커서"
 
@@ -8654,6 +8664,9 @@ msgstr "대기 중"
 
 msgid "Idle · branch pushed"
 msgstr "유휴 · 브랜치 푸시됨"
+
+msgid "Idle conversations"
+msgstr "유휴 대화"
 
 msgid "If you're enjoying Superset so far, a GitHub star helps other developers discover it."
 msgstr "지금까지 Superset이 마음에 드셨다면 GitHub 스타가 다른 개발자들이 Superset을 발견하는 데 도움이 됩니다."
@@ -15633,6 +15646,9 @@ msgstr "간략히 보기"
 msgid "Show file tree"
 msgstr "파일 트리 표시"
 
+msgid "Show how long the current turn has been running."
+msgstr "현재 턴이 얼마나 진행됐는지 표시합니다."
+
 msgid "Show how much of the context window each conversation uses, with its model and tokens on hover."
 msgstr "각 대화가 컨텍스트 창을 얼마나 사용하는지 표시하고, 마우스를 올리면 모델과 토큰을 보여줍니다."
 
@@ -15713,6 +15729,9 @@ msgstr "이 에이전트의 상태를 표시하고 알림을 보냅니다."
 
 msgid "Show text"
 msgstr "텍스트 보기"
+
+msgid "Show the messages that wait for the current turn to end."
+msgstr "현재 턴이 끝나기를 기다리는 메시지를 표시합니다."
 
 msgid "Show the to-do button and list on each conversation."
 msgstr "각 대화에 할 일 버튼과 목록을 표시합니다."
@@ -16463,6 +16482,9 @@ msgstr "취소선"
 msgid "Strip redundant overrides at call sites"
 msgstr "호출 지점의 중복 재정의 제거"
 
+msgid "Strong"
+msgstr "강하게"
+
 msgid "Structure, scrolling, and overflow handling"
 msgstr "구조, 스크롤, 오버플로 처리"
 
@@ -16507,6 +16529,9 @@ msgstr "구독"
 
 msgid "Subscription"
 msgstr "구독"
+
+msgid "Subtle"
+msgstr "은은하게"
 
 msgid "Success"
 msgstr "성공"
@@ -19024,8 +19049,8 @@ msgstr "워크스페이스 깨우는 중"
 msgid "Want something sooner? <0>Tell us in Discord</0>. Much of what's here started as a user request."
 msgstr "더 빨리 필요한 기능이 있나요? <0>Discord에서 알려 주세요</0>. 여기 있는 항목 상당수가 사용자 요청에서 시작했습니다."
 
-msgid "Warm up a conversation the longer it waits for you."
-msgstr "대화가 오래 기다릴수록 색을 따뜻하게 바꿉니다."
+msgid "Warm up a conversation after it waits for you 10 minutes, 1 hour and 4 hours."
+msgstr "대화가 10분, 1시간, 4시간 기다리면 색을 진하게 합니다."
 
 msgid "Warning"
 msgstr "경고"
@@ -19373,6 +19398,9 @@ msgstr "{0}분 {1}초 동안 작업 중"
 
 msgid "Working for {seconds}s"
 msgstr "{seconds}초 동안 작업 중"
+
+msgid "Working time"
+msgstr "작업 시간"
 
 msgid "Working…"
 msgstr "작업 중…"

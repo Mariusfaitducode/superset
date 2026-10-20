@@ -497,6 +497,10 @@ msgstr "Gói {0}"
 msgid "{0} projects"
 msgstr "{0} dự án"
 
+#. placeholder {0}: conversation.queuedPrompts
+msgid "{0} queued messages"
+msgstr "{0} tin nhắn đang chờ"
+
 #. placeholder {0}: tally.running
 msgid "{0} Running"
 msgstr "{0} đang chạy"
@@ -2242,6 +2246,9 @@ msgstr "Xóa luôn nhánh cục bộ"
 
 msgid "Also delete the local git branch when deleting a worktree workspace"
 msgstr "Xóa luôn nhánh git cục bộ khi xóa một workspace worktree"
+
+msgid "Also list agents that have not started working yet."
+msgstr "Hiển thị cả các agent chưa bắt đầu làm việc."
 
 msgid "Also viewing this page"
 msgstr "Cũng đang xem trang này"
@@ -5677,6 +5684,9 @@ msgstr "Gói hiện tại"
 msgid "Current tab"
 msgstr "Tab hiện tại"
 
+msgid "Current turn running"
+msgstr "Lượt hiện tại đang chạy"
+
 msgid "Cursor"
 msgstr "Con trỏ"
 
@@ -8654,6 +8664,9 @@ msgstr "Rảnh"
 
 msgid "Idle · branch pushed"
 msgstr "Rảnh · đã push nhánh"
+
+msgid "Idle conversations"
+msgstr "Cuộc trò chuyện nhàn rỗi"
 
 msgid "If you're enjoying Superset so far, a GitHub star helps other developers discover it."
 msgstr "Nếu đến giờ bạn thấy Superset hữu ích, một star trên GitHub sẽ giúp các lập trình viên khác biết đến nó."
@@ -15633,6 +15646,9 @@ msgstr "Hiện ít hơn"
 msgid "Show file tree"
 msgstr "Hiện cây tệp"
 
+msgid "Show how long the current turn has been running."
+msgstr "Hiển thị lượt hiện tại đã chạy bao lâu."
+
 msgid "Show how much of the context window each conversation uses, with its model and tokens on hover."
 msgstr "Hiển thị mỗi cuộc trò chuyện dùng bao nhiêu cửa sổ ngữ cảnh, kèm mô hình và token khi di chuột."
 
@@ -15713,6 +15729,9 @@ msgstr "Hiển thị trạng thái và gửi thông báo cho agent này."
 
 msgid "Show text"
 msgstr "Hiện văn bản"
+
+msgid "Show the messages that wait for the current turn to end."
+msgstr "Hiển thị các tin nhắn đang chờ lượt hiện tại kết thúc."
 
 msgid "Show the to-do button and list on each conversation."
 msgstr "Hiển thị nút và danh sách việc cần làm trên mỗi cuộc trò chuyện."
@@ -16463,6 +16482,9 @@ msgstr "Gạch ngang"
 msgid "Strip redundant overrides at call sites"
 msgstr "Bỏ các chỗ ghi đè thừa tại nơi gọi"
 
+msgid "Strong"
+msgstr "Mạnh"
+
 msgid "Structure, scrolling, and overflow handling"
 msgstr "Cấu trúc, cuộn và xử lý tràn nội dung"
 
@@ -16507,6 +16529,9 @@ msgstr "gói đăng ký"
 
 msgid "Subscription"
 msgstr "Gói đăng ký"
+
+msgid "Subtle"
+msgstr "Nhẹ"
 
 msgid "Success"
 msgstr "Thành công"
@@ -19024,8 +19049,8 @@ msgstr "Đang đánh thức workspace"
 msgid "Want something sooner? <0>Tell us in Discord</0>. Much of what's here started as a user request."
 msgstr "Muốn có sớm hơn? <0>Hãy nói với chúng tôi trên Discord</0>. Phần lớn những gì ở đây bắt đầu từ yêu cầu của người dùng."
 
-msgid "Warm up a conversation the longer it waits for you."
-msgstr "Làm ấm màu cuộc trò chuyện càng lâu nó chờ bạn."
+msgid "Warm up a conversation after it waits for you 10 minutes, 1 hour and 4 hours."
+msgstr "Tô ấm cuộc trò chuyện khi nó chờ bạn 10 phút, 1 giờ và 4 giờ."
 
 msgid "Warning"
 msgstr "Cảnh báo"
@@ -19373,6 +19398,9 @@ msgstr "Đang chạy {0} phút {1} giây"
 
 msgid "Working for {seconds}s"
 msgstr "Đang chạy {seconds} giây"
+
+msgid "Working time"
+msgstr "Thời gian làm việc"
 
 msgid "Working…"
 msgstr "Đang xử lý…"

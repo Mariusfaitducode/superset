@@ -497,6 +497,10 @@ msgstr "Tarif {0}"
 msgid "{0} projects"
 msgstr "{0} projektů"
 
+#. placeholder {0}: conversation.queuedPrompts
+msgid "{0} queued messages"
+msgstr "{0} zpráv ve frontě"
+
 #. placeholder {0}: tally.running
 msgid "{0} Running"
 msgstr "Běží {0}"
@@ -2242,6 +2246,9 @@ msgstr "Smazat i lokální větve"
 
 msgid "Also delete the local git branch when deleting a worktree workspace"
 msgstr "Při mazání pracovního prostoru s worktree smazat i lokální git větev"
+
+msgid "Also list agents that have not started working yet."
+msgstr "Zobrazit i agenty, kteří ještě nezačali pracovat."
 
 msgid "Also viewing this page"
 msgstr "Tuto stránku si také prohlížejí"
@@ -5677,6 +5684,9 @@ msgstr "Aktuální tarif"
 msgid "Current tab"
 msgstr "Aktuální karta"
 
+msgid "Current turn running"
+msgstr "Probíhá aktuální kolo"
+
 msgid "Cursor"
 msgstr "Kurzor"
 
@@ -8654,6 +8664,9 @@ msgstr "Nečinný"
 
 msgid "Idle · branch pushed"
 msgstr "Nečinné · větev odeslána"
+
+msgid "Idle conversations"
+msgstr "Nečinné konverzace"
 
 msgid "If you're enjoying Superset so far, a GitHub star helps other developers discover it."
 msgstr "Pokud se vám Superset zatím líbí, hvězda na GitHubu pomůže dalším vývojářům ho objevit."
@@ -15633,6 +15646,9 @@ msgstr "Zobrazit méně"
 msgid "Show file tree"
 msgstr "Zobrazit strom souborů"
 
+msgid "Show how long the current turn has been running."
+msgstr "Zobrazit, jak dlouho běží aktuální kolo."
+
 msgid "Show how much of the context window each conversation uses, with its model and tokens on hover."
 msgstr "Zobrazí, kolik kontextového okna každá konverzace využívá, s modelem a tokeny při najetí myší."
 
@@ -15713,6 +15729,9 @@ msgstr "Zobrazovat stav a posílat oznámení pro tohoto agenta."
 
 msgid "Show text"
 msgstr "Zobrazit text"
+
+msgid "Show the messages that wait for the current turn to end."
+msgstr "Zobrazit zprávy, které čekají na konec aktuálního kola."
 
 msgid "Show the to-do button and list on each conversation."
 msgstr "Zobrazí tlačítko a seznam úkolů u každé konverzace."
@@ -16463,6 +16482,9 @@ msgstr "Přeškrtnuté"
 msgid "Strip redundant overrides at call sites"
 msgstr "Odstranit nadbytečné přepisy v místech volání"
 
+msgid "Strong"
+msgstr "Silné"
+
 msgid "Structure, scrolling, and overflow handling"
 msgstr "Struktura, posuv a práce s přetečením"
 
@@ -16507,6 +16529,9 @@ msgstr "předplatné"
 
 msgid "Subscription"
 msgstr "Předplatné"
+
+msgid "Subtle"
+msgstr "Jemné"
 
 msgid "Success"
 msgstr "Úspěch"
@@ -19024,8 +19049,8 @@ msgstr "Probouzení pracovního prostoru"
 msgid "Want something sooner? <0>Tell us in Discord</0>. Much of what's here started as a user request."
 msgstr "Chcete něco dřív? <0>Napište nám na Discordu</0>. Spousta z toho, co je tady, začala jako přání uživatele."
 
-msgid "Warm up a conversation the longer it waits for you."
-msgstr "Zahřeje barvu konverzace, čím déle na vás čeká."
+msgid "Warm up a conversation after it waits for you 10 minutes, 1 hour and 4 hours."
+msgstr "Zvýraznit konverzaci, když na vás čeká 10 minut, 1 hodinu a 4 hodiny."
 
 msgid "Warning"
 msgstr "Varování"
@@ -19373,6 +19398,9 @@ msgstr "Pracuje se {0} m {1} s"
 
 msgid "Working for {seconds}s"
 msgstr "Pracuje se {seconds} s"
+
+msgid "Working time"
+msgstr "Doba práce"
 
 msgid "Working…"
 msgstr "Pracuji…"

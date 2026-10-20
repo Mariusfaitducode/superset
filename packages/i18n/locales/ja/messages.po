@@ -497,6 +497,10 @@ msgstr "{0}プラン"
 msgid "{0} projects"
 msgstr "{0}件のプロジェクト"
 
+#. placeholder {0}: conversation.queuedPrompts
+msgid "{0} queued messages"
+msgstr "{0} 件のキュー済みメッセージ"
+
 #. placeholder {0}: tally.running
 msgid "{0} Running"
 msgstr "{0}件実行中"
@@ -2242,6 +2246,9 @@ msgstr "ローカルブランチも削除"
 
 msgid "Also delete the local git branch when deleting a worktree workspace"
 msgstr "ワークツリーワークスペースを削除するときにローカルのgitブランチも削除する"
+
+msgid "Also list agents that have not started working yet."
+msgstr "まだ作業を始めていないエージェントも表示します。"
 
 msgid "Also viewing this page"
 msgstr "このページを見ている他のユーザー"
@@ -5677,6 +5684,9 @@ msgstr "現在のプラン"
 msgid "Current tab"
 msgstr "現在のタブ"
 
+msgid "Current turn running"
+msgstr "現在のターンを実行中"
+
 msgid "Cursor"
 msgstr "カーソル"
 
@@ -8654,6 +8664,9 @@ msgstr "アイドル"
 
 msgid "Idle · branch pushed"
 msgstr "アイドル · ブランチをプッシュ済み"
+
+msgid "Idle conversations"
+msgstr "アイドル状態の会話"
 
 msgid "If you're enjoying Superset so far, a GitHub star helps other developers discover it."
 msgstr "Supersetを気に入っていただけたら、GitHubスターが他の開発者の発見につながります。"
@@ -15633,6 +15646,9 @@ msgstr "表示を減らす"
 msgid "Show file tree"
 msgstr "ファイルツリーを表示"
 
+msgid "Show how long the current turn has been running."
+msgstr "現在のターンの実行時間を表示します。"
+
 msgid "Show how much of the context window each conversation uses, with its model and tokens on hover."
 msgstr "各会話がコンテキストウィンドウをどれだけ使っているかを表示し、ホバーでモデルとトークンを表示します。"
 
@@ -15713,6 +15729,9 @@ msgstr "このエージェントのステータス表示と通知を有効にし
 
 msgid "Show text"
 msgstr "テキストを表示"
+
+msgid "Show the messages that wait for the current turn to end."
+msgstr "現在のターンの終了を待っているメッセージを表示します。"
 
 msgid "Show the to-do button and list on each conversation."
 msgstr "各会話にTo-doボタンとリストを表示します。"
@@ -16463,6 +16482,9 @@ msgstr "取り消し線"
 msgid "Strip redundant overrides at call sites"
 msgstr "呼び出し元の冗長なオーバーライドを削除する"
 
+msgid "Strong"
+msgstr "強"
+
 msgid "Structure, scrolling, and overflow handling"
 msgstr "構造、スクロール、オーバーフローの処理"
 
@@ -16507,6 +16529,9 @@ msgstr "サブスクリプション"
 
 msgid "Subscription"
 msgstr "サブスクリプション"
+
+msgid "Subtle"
+msgstr "控えめ"
 
 msgid "Success"
 msgstr "成功"
@@ -19024,8 +19049,8 @@ msgstr "ワークスペースを起動中"
 msgid "Want something sooner? <0>Tell us in Discord</0>. Much of what's here started as a user request."
 msgstr "もっと早く欲しいものがありますか?<0>Discordで教えてください</0>。ここにあるものの多くは、ユーザーの要望から始まりました。"
 
-msgid "Warm up a conversation the longer it waits for you."
-msgstr "会話があなたを待つ時間が長いほど色を暖かくします。"
+msgid "Warm up a conversation after it waits for you 10 minutes, 1 hour and 4 hours."
+msgstr "会話が10分、1時間、4時間待機すると色を強めます。"
 
 msgid "Warning"
 msgstr "警告"
@@ -19373,6 +19398,9 @@ msgstr "作業時間 {0}分{1}秒"
 
 msgid "Working for {seconds}s"
 msgstr "作業時間 {seconds}秒"
+
+msgid "Working time"
+msgstr "作業時間"
 
 msgid "Working…"
 msgstr "処理中…"

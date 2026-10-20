@@ -497,6 +497,10 @@ msgstr "Paket {0}"
 msgid "{0} projects"
 msgstr "{0} proyek"
 
+#. placeholder {0}: conversation.queuedPrompts
+msgid "{0} queued messages"
+msgstr "{0} pesan dalam antrean"
+
 #. placeholder {0}: tally.running
 msgid "{0} Running"
 msgstr "{0} Berjalan"
@@ -2242,6 +2246,9 @@ msgstr "Hapus juga branch lokal"
 
 msgid "Also delete the local git branch when deleting a worktree workspace"
 msgstr "Hapus juga branch git lokal saat menghapus workspace worktree"
+
+msgid "Also list agents that have not started working yet."
+msgstr "Tampilkan juga agen yang belum mulai bekerja."
 
 msgid "Also viewing this page"
 msgstr "Juga melihat halaman ini"
@@ -5677,6 +5684,9 @@ msgstr "Paket saat ini"
 msgid "Current tab"
 msgstr "Tab saat ini"
 
+msgid "Current turn running"
+msgstr "Giliran saat ini berjalan"
+
 msgid "Cursor"
 msgstr "Kursor"
 
@@ -8654,6 +8664,9 @@ msgstr "Idle"
 
 msgid "Idle · branch pushed"
 msgstr "Idle · branch sudah di-push"
+
+msgid "Idle conversations"
+msgstr "Percakapan tidak aktif"
 
 msgid "If you're enjoying Superset so far, a GitHub star helps other developers discover it."
 msgstr "Kalau sejauh ini Anda menikmati Superset, satu star GitHub membantu developer lain menemukannya."
@@ -15633,6 +15646,9 @@ msgstr "Tampilkan lebih sedikit"
 msgid "Show file tree"
 msgstr "Tampilkan pohon file"
 
+msgid "Show how long the current turn has been running."
+msgstr "Tampilkan berapa lama giliran saat ini sudah berjalan."
+
 msgid "Show how much of the context window each conversation uses, with its model and tokens on hover."
 msgstr "Menampilkan seberapa banyak jendela konteks yang dipakai setiap percakapan, dengan model dan token saat diarahkan."
 
@@ -15713,6 +15729,9 @@ msgstr "Tampilkan status dan kirim notifikasi untuk agen ini."
 
 msgid "Show text"
 msgstr "Tampilkan teks"
+
+msgid "Show the messages that wait for the current turn to end."
+msgstr "Tampilkan pesan yang menunggu giliran saat ini selesai."
 
 msgid "Show the to-do button and list on each conversation."
 msgstr "Menampilkan tombol dan daftar tugas pada setiap percakapan."
@@ -16463,6 +16482,9 @@ msgstr "Coret"
 msgid "Strip redundant overrides at call sites"
 msgstr "Buang penimpaan berlebih di call site"
 
+msgid "Strong"
+msgstr "Kuat"
+
 msgid "Structure, scrolling, and overflow handling"
 msgstr "Struktur, penggulungan, dan penanganan overflow"
 
@@ -16507,6 +16529,9 @@ msgstr "langganan"
 
 msgid "Subscription"
 msgstr "Langganan"
+
+msgid "Subtle"
+msgstr "Halus"
 
 msgid "Success"
 msgstr "Berhasil"
@@ -19024,8 +19049,8 @@ msgstr "Membangunkan workspace"
 msgid "Want something sooner? <0>Tell us in Discord</0>. Much of what's here started as a user request."
 msgstr "Ingin sesuatu lebih cepat? <0>Beri tahu kami di Discord</0>. Banyak yang ada di sini bermula dari permintaan pengguna."
 
-msgid "Warm up a conversation the longer it waits for you."
-msgstr "Menghangatkan warna percakapan makin lama ia menunggu Anda."
+msgid "Warm up a conversation after it waits for you 10 minutes, 1 hour and 4 hours."
+msgstr "Warnai percakapan setelah menunggu Anda 10 menit, 1 jam, dan 4 jam."
 
 msgid "Warning"
 msgstr "Warning"
@@ -19373,6 +19398,9 @@ msgstr "Bekerja selama {0} mnt {1} dtk"
 
 msgid "Working for {seconds}s"
 msgstr "Bekerja selama {seconds} dtk"
+
+msgid "Working time"
+msgstr "Waktu kerja"
 
 msgid "Working…"
 msgstr "Sedang bekerja…"

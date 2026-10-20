@@ -497,6 +497,10 @@ msgstr "Plano {0}"
 msgid "{0} projects"
 msgstr "{0} projetos"
 
+#. placeholder {0}: conversation.queuedPrompts
+msgid "{0} queued messages"
+msgstr "{0} mensagens na fila"
+
 #. placeholder {0}: tally.running
 msgid "{0} Running"
 msgstr "{0} em execução"
@@ -2242,6 +2246,9 @@ msgstr "Excluir também as branches locais"
 
 msgid "Also delete the local git branch when deleting a worktree workspace"
 msgstr "Excluir também a branch local do git ao excluir uma área de trabalho com worktree"
+
+msgid "Also list agents that have not started working yet."
+msgstr "Listar também os agentes que ainda não começaram a trabalhar."
 
 msgid "Also viewing this page"
 msgstr "Também estão vendo esta página"
@@ -5677,6 +5684,9 @@ msgstr "Plano atual"
 msgid "Current tab"
 msgstr "Aba atual"
 
+msgid "Current turn running"
+msgstr "Turno atual em andamento"
+
 msgid "Cursor"
 msgstr "Cursor"
 
@@ -8654,6 +8664,9 @@ msgstr "Ocioso"
 
 msgid "Idle · branch pushed"
 msgstr "Ocioso · push da branch feito"
+
+msgid "Idle conversations"
+msgstr "Conversas inativas"
 
 msgid "If you're enjoying Superset so far, a GitHub star helps other developers discover it."
 msgstr "Se você está curtindo o Superset até aqui, uma estrela no GitHub ajuda outras pessoas a descobri-lo."
@@ -15633,6 +15646,9 @@ msgstr "Mostrar menos"
 msgid "Show file tree"
 msgstr "Mostrar a árvore de arquivos"
 
+msgid "Show how long the current turn has been running."
+msgstr "Mostrar há quanto tempo o turno atual está em andamento."
+
 msgid "Show how much of the context window each conversation uses, with its model and tokens on hover."
 msgstr "Mostra quanto da janela de contexto cada conversa usa, com modelo e tokens ao passar o mouse."
 
@@ -15713,6 +15729,9 @@ msgstr "Mostra o status e envia notificações para este agente."
 
 msgid "Show text"
 msgstr "Mostrar texto"
+
+msgid "Show the messages that wait for the current turn to end."
+msgstr "Mostrar as mensagens que aguardam o fim do turno atual."
 
 msgid "Show the to-do button and list on each conversation."
 msgstr "Mostra o botão e a lista de tarefas em cada conversa."
@@ -16463,6 +16482,9 @@ msgstr "Tachado"
 msgid "Strip redundant overrides at call sites"
 msgstr "Remover sobrescritas redundantes nos pontos de chamada"
 
+msgid "Strong"
+msgstr "Forte"
+
 msgid "Structure, scrolling, and overflow handling"
 msgstr "Estrutura, rolagem e tratamento de overflow"
 
@@ -16507,6 +16529,9 @@ msgstr "assinatura"
 
 msgid "Subscription"
 msgstr "Assinatura"
+
+msgid "Subtle"
+msgstr "Sutil"
 
 msgid "Success"
 msgstr "Sucesso"
@@ -19024,8 +19049,8 @@ msgstr "Ativando a área de trabalho"
 msgid "Want something sooner? <0>Tell us in Discord</0>. Much of what's here started as a user request."
 msgstr "Quer algo antes? <0>Conte para a gente no Discord</0>. Boa parte do que está aqui começou como pedido de usuário."
 
-msgid "Warm up a conversation the longer it waits for you."
-msgstr "Esquenta a cor de uma conversa quanto mais tempo ela espera por você."
+msgid "Warm up a conversation after it waits for you 10 minutes, 1 hour and 4 hours."
+msgstr "Destacar uma conversa quando ela espera por você 10 minutos, 1 hora e 4 horas."
 
 msgid "Warning"
 msgstr "Aviso"
@@ -19373,6 +19398,9 @@ msgstr "Trabalhando há {0} min {1} s"
 
 msgid "Working for {seconds}s"
 msgstr "Trabalhando há {seconds} s"
+
+msgid "Working time"
+msgstr "Tempo de trabalho"
 
 msgid "Working…"
 msgstr "Trabalhando…"

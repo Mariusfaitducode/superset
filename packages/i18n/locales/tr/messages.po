@@ -497,6 +497,10 @@ msgstr "{0} planı"
 msgid "{0} projects"
 msgstr "{0} proje"
 
+#. placeholder {0}: conversation.queuedPrompts
+msgid "{0} queued messages"
+msgstr "Kuyrukta {0} mesaj"
+
 #. placeholder {0}: tally.running
 msgid "{0} Running"
 msgstr "{0} çalışıyor"
@@ -2242,6 +2246,9 @@ msgstr "Yerel dalları da sil"
 
 msgid "Also delete the local git branch when deleting a worktree workspace"
 msgstr "Bir worktree çalışma alanını silerken yerel git dalını da sil"
+
+msgid "Also list agents that have not started working yet."
+msgstr "Henüz çalışmaya başlamamış ajanları da listele."
 
 msgid "Also viewing this page"
 msgstr "Bu sayfayı görüntüleyen diğer kişiler"
@@ -5677,6 +5684,9 @@ msgstr "Mevcut plan"
 msgid "Current tab"
 msgstr "Geçerli sekme"
 
+msgid "Current turn running"
+msgstr "Mevcut tur sürüyor"
+
 msgid "Cursor"
 msgstr "İmleç"
 
@@ -8654,6 +8664,9 @@ msgstr "Boşta"
 
 msgid "Idle · branch pushed"
 msgstr "Boşta · dal push edildi"
+
+msgid "Idle conversations"
+msgstr "Boştaki konuşmalar"
 
 msgid "If you're enjoying Superset so far, a GitHub star helps other developers discover it."
 msgstr "Superset'ten şimdiye kadar memnunsanız, bir GitHub yıldızı diğer geliştiricilerin onu keşfetmesine yardımcı olur."
@@ -15633,6 +15646,9 @@ msgstr "Daha az göster"
 msgid "Show file tree"
 msgstr "Dosya ağacını göster"
 
+msgid "Show how long the current turn has been running."
+msgstr "Mevcut turun ne kadar süredir çalıştığını göster."
+
 msgid "Show how much of the context window each conversation uses, with its model and tokens on hover."
 msgstr "Her konuşmanın bağlam penceresinin ne kadarını kullandığını, üzerine gelince modeli ve token'larıyla gösterir."
 
@@ -15713,6 +15729,9 @@ msgstr "Bu ajan için durum göster ve bildirim gönder."
 
 msgid "Show text"
 msgstr "Metni göster"
+
+msgid "Show the messages that wait for the current turn to end."
+msgstr "Mevcut turun bitmesini bekleyen mesajları göster."
 
 msgid "Show the to-do button and list on each conversation."
 msgstr "Her konuşmada yapılacaklar düğmesini ve listesini gösterir."
@@ -16463,6 +16482,9 @@ msgstr "Üstü çizili"
 msgid "Strip redundant overrides at call sites"
 msgstr "Çağrı noktalarındaki gereksiz geçersiz kılmaları kaldır"
 
+msgid "Strong"
+msgstr "Güçlü"
+
 msgid "Structure, scrolling, and overflow handling"
 msgstr "Yapı, kaydırma ve taşma yönetimi"
 
@@ -16507,6 +16529,9 @@ msgstr "abonelik"
 
 msgid "Subscription"
 msgstr "Abonelik"
+
+msgid "Subtle"
+msgstr "Hafif"
 
 msgid "Success"
 msgstr "Başarılı"
@@ -19024,8 +19049,8 @@ msgstr "Çalışma alanı uyandırılıyor"
 msgid "Want something sooner? <0>Tell us in Discord</0>. Much of what's here started as a user request."
 msgstr "Bir şeyi daha erken mi istiyorsunuz? <0>Discord'da bize söyleyin</0>. Buradakilerin çoğu bir kullanıcı isteği olarak başladı."
 
-msgid "Warm up a conversation the longer it waits for you."
-msgstr "Bir konuşma sizi ne kadar uzun beklerse rengini o kadar ısıtır."
+msgid "Warm up a conversation after it waits for you 10 minutes, 1 hour and 4 hours."
+msgstr "Bir konuşma seni 10 dakika, 1 saat ve 4 saat beklediğinde rengini ısıt."
 
 msgid "Warning"
 msgstr "Uyarı"
@@ -19373,6 +19398,9 @@ msgstr "{0} dk {1} sn'dir çalışıyor"
 
 msgid "Working for {seconds}s"
 msgstr "{seconds} sn'dir çalışıyor"
+
+msgid "Working time"
+msgstr "Çalışma süresi"
 
 msgid "Working…"
 msgstr "Çalışıyor…"

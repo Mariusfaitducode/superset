@@ -497,6 +497,10 @@ msgstr "Тариф {0}"
 msgid "{0} projects"
 msgstr "{0} проектов"
 
+#. placeholder {0}: conversation.queuedPrompts
+msgid "{0} queued messages"
+msgstr "{0} сообщений в очереди"
+
 #. placeholder {0}: tally.running
 msgid "{0} Running"
 msgstr "Выполняется: {0}"
@@ -2242,6 +2246,9 @@ msgstr "Также удалить локальные ветки"
 
 msgid "Also delete the local git branch when deleting a worktree workspace"
 msgstr "Также удалять локальную ветку git при удалении рабочей области с worktree"
+
+msgid "Also list agents that have not started working yet."
+msgstr "Показывать также агентов, которые ещё не начали работу."
 
 msgid "Also viewing this page"
 msgstr "Также просматривают эту страницу"
@@ -5677,6 +5684,9 @@ msgstr "Текущий тариф"
 msgid "Current tab"
 msgstr "Текущая вкладка"
 
+msgid "Current turn running"
+msgstr "Текущий ход выполняется"
+
 msgid "Cursor"
 msgstr "Курсор"
 
@@ -8654,6 +8664,9 @@ msgstr "Простаивает"
 
 msgid "Idle · branch pushed"
 msgstr "Простаивает · ветка отправлена"
+
+msgid "Idle conversations"
+msgstr "Неактивные беседы"
 
 msgid "If you're enjoying Superset so far, a GitHub star helps other developers discover it."
 msgstr "Если Superset вам нравится, звезда на GitHub поможет другим разработчикам его найти."
@@ -15633,6 +15646,9 @@ msgstr "Показать меньше"
 msgid "Show file tree"
 msgstr "Показать дерево файлов"
 
+msgid "Show how long the current turn has been running."
+msgstr "Показывать, сколько уже длится текущий ход."
+
 msgid "Show how much of the context window each conversation uses, with its model and tokens on hover."
 msgstr "Показывает, какую часть контекстного окна использует каждый разговор, с моделью и токенами при наведении."
 
@@ -15713,6 +15729,9 @@ msgstr "Показывать статус и отправлять уведомл
 
 msgid "Show text"
 msgstr "Показать текст"
+
+msgid "Show the messages that wait for the current turn to end."
+msgstr "Показывать сообщения, ожидающие окончания текущего хода."
 
 msgid "Show the to-do button and list on each conversation."
 msgstr "Показывает кнопку и список задач у каждого разговора."
@@ -16463,6 +16482,9 @@ msgstr "Зачёркнутый"
 msgid "Strip redundant overrides at call sites"
 msgstr "Убрать лишние переопределения в местах вызова"
 
+msgid "Strong"
+msgstr "Сильный"
+
 msgid "Structure, scrolling, and overflow handling"
 msgstr "Структура, прокрутка и обработка переполнения"
 
@@ -16507,6 +16529,9 @@ msgstr "подписку"
 
 msgid "Subscription"
 msgstr "Подписка"
+
+msgid "Subtle"
+msgstr "Слабый"
 
 msgid "Success"
 msgstr "Успех"
@@ -19024,8 +19049,8 @@ msgstr "Пробуждение рабочей области"
 msgid "Want something sooner? <0>Tell us in Discord</0>. Much of what's here started as a user request."
 msgstr "Хотите что-то быстрее? <0>Скажите нам в Discord</0>. Многое из этого началось с пожелания пользователя."
 
-msgid "Warm up a conversation the longer it waits for you."
-msgstr "Окрашивает разговор теплее, чем дольше он вас ждёт."
+msgid "Warm up a conversation after it waits for you 10 minutes, 1 hour and 4 hours."
+msgstr "Подсвечивать беседу, когда она ждёт вас 10 минут, 1 час и 4 часа."
 
 msgid "Warning"
 msgstr "Предупреждение"
@@ -19373,6 +19398,9 @@ msgstr "В работе {0} мин {1} с"
 
 msgid "Working for {seconds}s"
 msgstr "В работе {seconds} с"
+
+msgid "Working time"
+msgstr "Время работы"
 
 msgid "Working…"
 msgstr "Работаю…"

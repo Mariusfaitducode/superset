@@ -497,6 +497,10 @@ msgstr "{0}方案"
 msgid "{0} projects"
 msgstr "{0}个项目"
 
+#. placeholder {0}: conversation.queuedPrompts
+msgid "{0} queued messages"
+msgstr "{0} 条排队消息"
+
 #. placeholder {0}: tally.running
 msgid "{0} Running"
 msgstr "{0}项运行中"
@@ -2242,6 +2246,9 @@ msgstr "同时删除本地分支"
 
 msgid "Also delete the local git branch when deleting a worktree workspace"
 msgstr "删除worktree工作区时一并删除本地git分支"
+
+msgid "Also list agents that have not started working yet."
+msgstr "同时列出尚未开始工作的智能体。"
 
 msgid "Also viewing this page"
 msgstr "也在查看此页面的人"
@@ -5677,6 +5684,9 @@ msgstr "当前方案"
 msgid "Current tab"
 msgstr "当前标签页"
 
+msgid "Current turn running"
+msgstr "当前轮次进行中"
+
 msgid "Cursor"
 msgstr "光标"
 
@@ -8654,6 +8664,9 @@ msgstr "空闲"
 
 msgid "Idle · branch pushed"
 msgstr "空闲 · 分支已推送"
+
+msgid "Idle conversations"
+msgstr "空闲对话"
 
 msgid "If you're enjoying Superset so far, a GitHub star helps other developers discover it."
 msgstr "如果你觉得Superset还不错，一个GitHub星标能帮助更多开发者发现它。"
@@ -15633,6 +15646,9 @@ msgstr "收起"
 msgid "Show file tree"
 msgstr "显示文件树"
 
+msgid "Show how long the current turn has been running."
+msgstr "显示当前轮次已运行多长时间。"
+
 msgid "Show how much of the context window each conversation uses, with its model and tokens on hover."
 msgstr "显示每个会话使用了多少上下文窗口，悬停时显示其模型和令牌。"
 
@@ -15713,6 +15729,9 @@ msgstr "为此智能体显示状态并发送通知。"
 
 msgid "Show text"
 msgstr "显示文本"
+
+msgid "Show the messages that wait for the current turn to end."
+msgstr "显示等待当前轮次结束的消息。"
 
 msgid "Show the to-do button and list on each conversation."
 msgstr "在每个会话上显示待办按钮和列表。"
@@ -16463,6 +16482,9 @@ msgstr "删除线"
 msgid "Strip redundant overrides at call sites"
 msgstr "移除调用处多余的样式覆盖"
 
+msgid "Strong"
+msgstr "强"
+
 msgid "Structure, scrolling, and overflow handling"
 msgstr "结构、滚动与溢出处理"
 
@@ -16507,6 +16529,9 @@ msgstr "订阅"
 
 msgid "Subscription"
 msgstr "订阅"
+
+msgid "Subtle"
+msgstr "轻微"
 
 msgid "Success"
 msgstr "成功"
@@ -19024,8 +19049,8 @@ msgstr "正在唤醒工作区"
 msgid "Want something sooner? <0>Tell us in Discord</0>. Much of what's here started as a user request."
 msgstr "想让某件事早点做？<0>在Discord上告诉我们</0>。这里的很多条目最初都来自用户的请求。"
 
-msgid "Warm up a conversation the longer it waits for you."
-msgstr "会话等待你越久，颜色越暖。"
+msgid "Warm up a conversation after it waits for you 10 minutes, 1 hour and 4 hours."
+msgstr "对话等待你 10 分钟、1 小时和 4 小时后逐步加深颜色。"
 
 msgid "Warning"
 msgstr "警告"
@@ -19373,6 +19398,9 @@ msgstr "已运行 {0} 分 {1} 秒"
 
 msgid "Working for {seconds}s"
 msgstr "已运行 {seconds} 秒"
+
+msgid "Working time"
+msgstr "工作时长"
 
 msgid "Working…"
 msgstr "处理中…"
