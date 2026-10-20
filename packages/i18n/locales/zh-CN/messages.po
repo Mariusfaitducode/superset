@@ -1904,6 +1904,9 @@ msgstr "智能体已完成 — {workspaceName}"
 msgid "Agent Configs"
 msgstr "智能体配置"
 
+msgid "Agent conversations"
+msgstr "智能体会话"
+
 msgid "Agent credentials changed"
 msgstr "智能体凭据已更改"
 
@@ -3708,6 +3711,9 @@ msgstr "选择从顶栏打开更改视图的方式"
 msgid "Choose how to open file paths when Cmd+clicking in the terminal"
 msgstr "选择在终端中Cmd+点击文件路径时的打开方式"
 
+msgid "Choose what the sidebar shows under each workspace."
+msgstr "选择侧边栏在每个工作区下显示的内容。"
+
 msgid "Choose what to clear from the in-app browser."
 msgstr "选择要从应用内浏览器清除的内容。"
 
@@ -4656,6 +4662,12 @@ msgstr "对话"
 
 msgid "Conversation · Message"
 msgstr "对话 · 消息"
+
+msgid "Conversation stats"
+msgstr "会话统计"
+
+msgid "Conversation to-dos"
+msgstr "会话待办"
 
 msgid "Convert to draft"
 msgstr "转为草稿"
@@ -9667,6 +9679,9 @@ msgstr "列出主机上配置的智能体，并在工作区中启动智能体会
 msgid "List all my assigned tasks"
 msgstr "列出分配给我的所有任务"
 
+msgid "List each agent conversation under its workspace, with its state dot."
+msgstr "在每个工作区下列出每个智能体会话及其状态点。"
+
 msgid "List members of your active organization."
 msgstr "列出当前组织的成员。"
 
@@ -9675,6 +9690,9 @@ msgstr "列出你有权用来运行工作区的机器。"
 
 msgid "List the projects (checked-out repos) available on a host."
 msgstr "列出主机上可用的项目（已检出的仓库）。"
+
+msgid "List the subagents of each conversation under it."
+msgstr "在每个会话下列出其子智能体。"
 
 msgid "List, create, update, and delete workspaces on a host."
 msgstr "列出、创建、更新和删除主机上的工作区。"
@@ -15591,6 +15609,9 @@ msgstr "收起"
 msgid "Show file tree"
 msgstr "显示文件树"
 
+msgid "Show how much of the context window each conversation uses, with its model and tokens on hover."
+msgstr "显示每个会话使用了多少上下文窗口，悬停时显示其模型和令牌。"
+
 msgid "Show in bar"
 msgstr "在工具栏显示"
 
@@ -15668,6 +15689,9 @@ msgstr "为此智能体显示状态并发送通知。"
 
 msgid "Show text"
 msgstr "显示文本"
+
+msgid "Show the to-do button and list on each conversation."
+msgstr "在每个会话上显示待办按钮和列表。"
 
 msgid "Show the triggering payload"
 msgstr "显示触发负载"
@@ -18964,11 +18988,17 @@ msgstr "等待你的输入"
 msgid "Waiting for your reply"
 msgstr "等待你的回复"
 
+msgid "Waiting tint"
+msgstr "等待着色"
+
 msgid "Waking up workspace"
 msgstr "正在唤醒工作区"
 
 msgid "Want something sooner? <0>Tell us in Discord</0>. Much of what's here started as a user request."
 msgstr "想让某件事早点做？<0>在Discord上告诉我们</0>。这里的很多条目最初都来自用户的请求。"
+
+msgid "Warm up a conversation the longer it waits for you."
+msgstr "会话等待你越久，颜色越暖。"
 
 msgid "Warning"
 msgstr "警告"

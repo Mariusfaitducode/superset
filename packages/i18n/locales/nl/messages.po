@@ -1904,6 +1904,9 @@ msgstr "Agent klaar — {workspaceName}"
 msgid "Agent Configs"
 msgstr "Agentconfiguraties"
 
+msgid "Agent conversations"
+msgstr "Agentgesprekken"
+
 msgid "Agent credentials changed"
 msgstr "Agentgegevens gewijzigd"
 
@@ -3708,6 +3711,9 @@ msgstr "Kies hoe de weergave Wijzigingen vanuit de bovenbalk wordt geopend"
 msgid "Choose how to open file paths when Cmd+clicking in the terminal"
 msgstr "Kies hoe bestandspaden openen bij Cmd+klik in de terminal"
 
+msgid "Choose what the sidebar shows under each workspace."
+msgstr "Kies wat de zijbalk onder elke workspace toont."
+
 msgid "Choose what to clear from the in-app browser."
 msgstr "Kies wat je uit de ingebouwde browser wilt wissen."
 
@@ -4656,6 +4662,12 @@ msgstr "Gesprek"
 
 msgid "Conversation · Message"
 msgstr "Gesprek · Bericht"
+
+msgid "Conversation stats"
+msgstr "Gespreksstatistieken"
+
+msgid "Conversation to-dos"
+msgstr "Taken van gesprekken"
 
 msgid "Convert to draft"
 msgstr "Omzetten naar concept"
@@ -9667,6 +9679,9 @@ msgstr "Agents opsommen die op een host zijn geconfigureerd en een agentsessie i
 msgid "List all my assigned tasks"
 msgstr "Toon alle taken die aan mij zijn toegewezen"
 
+msgid "List each agent conversation under its workspace, with its state dot."
+msgstr "Toont elk agentgesprek onder zijn workspace, met zijn statusstip."
+
 msgid "List members of your active organization."
 msgstr "Leden van je actieve organisatie opsommen."
 
@@ -9675,6 +9690,9 @@ msgstr "De machines opsommen waarop je werkruimtes mag draaien."
 
 msgid "List the projects (checked-out repos) available on a host."
 msgstr "De projecten (uitgecheckte repo's) opsommen die op een host beschikbaar zijn."
+
+msgid "List the subagents of each conversation under it."
+msgstr "Toont de subagents van elk gesprek eronder."
 
 msgid "List, create, update, and delete workspaces on a host."
 msgstr "Werkruimtes op een host opsommen, aanmaken, bijwerken en verwijderen."
@@ -15591,6 +15609,9 @@ msgstr "Minder tonen"
 msgid "Show file tree"
 msgstr "Bestandsboom tonen"
 
+msgid "Show how much of the context window each conversation uses, with its model and tokens on hover."
+msgstr "Toont hoeveel van het contextvenster elk gesprek gebruikt, met model en tokens bij hover."
+
 msgid "Show in bar"
 msgstr "Tonen in balk"
 
@@ -15668,6 +15689,9 @@ msgstr "Status tonen en meldingen sturen voor deze agent."
 
 msgid "Show text"
 msgstr "Tekst tonen"
+
+msgid "Show the to-do button and list on each conversation."
+msgstr "Toont de takenknop en -lijst bij elk gesprek."
 
 msgid "Show the triggering payload"
 msgstr "Activerende payload tonen"
@@ -18964,11 +18988,17 @@ msgstr "Wacht op je invoer"
 msgid "Waiting for your reply"
 msgstr "Wacht op je antwoord"
 
+msgid "Waiting tint"
+msgstr "Wachtkleur"
+
 msgid "Waking up workspace"
 msgstr "Werkruimte wordt gewekt"
 
 msgid "Want something sooner? <0>Tell us in Discord</0>. Much of what's here started as a user request."
 msgstr "Wil je iets eerder zien? <0>Laat het weten in Discord</0>. Veel van wat hier staat begon als gebruikersverzoek."
+
+msgid "Warm up a conversation the longer it waits for you."
+msgstr "Kleurt een gesprek warmer naarmate het langer op je wacht."
 
 msgid "Warning"
 msgstr "Warning"

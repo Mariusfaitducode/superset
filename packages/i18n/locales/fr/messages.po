@@ -1904,6 +1904,9 @@ msgstr "Agent terminé — {workspaceName}"
 msgid "Agent Configs"
 msgstr "Configurations d'agents"
 
+msgid "Agent conversations"
+msgstr "Conversations des agents"
+
 msgid "Agent credentials changed"
 msgstr "Les identifiants de l'agent ont changé"
 
@@ -3708,6 +3711,9 @@ msgstr "Choisissez comment la vue des changements s'ouvre depuis la barre supér
 msgid "Choose how to open file paths when Cmd+clicking in the terminal"
 msgstr "Choisissez comment ouvrir les chemins de fichiers lors d'un Cmd+clic dans le terminal"
 
+msgid "Choose what the sidebar shows under each workspace."
+msgstr "Choisissez ce que la barre latérale affiche sous chaque espace de travail."
+
 msgid "Choose what to clear from the in-app browser."
 msgstr "Choisissez ce qu'il faut effacer du navigateur intégré."
 
@@ -4656,6 +4662,12 @@ msgstr "Conversation"
 
 msgid "Conversation · Message"
 msgstr "Conversation · Message"
+
+msgid "Conversation stats"
+msgstr "Statistiques des conversations"
+
+msgid "Conversation to-dos"
+msgstr "Tâches des conversations"
 
 msgid "Convert to draft"
 msgstr "Convertir en brouillon"
@@ -9667,6 +9679,9 @@ msgstr "Lister les agents configurés sur un hôte et lancer une session d'agent
 msgid "List all my assigned tasks"
 msgstr "Liste toutes les tâches qui me sont assignées"
 
+msgid "List each agent conversation under its workspace, with its state dot."
+msgstr "Affiche chaque conversation d'agent sous son espace de travail, avec sa pastille d'état."
+
 msgid "List members of your active organization."
 msgstr "Lister les membres de votre organisation active."
 
@@ -9675,6 +9690,9 @@ msgstr "Lister les machines sur lesquelles vous pouvez exécuter des espaces de 
 
 msgid "List the projects (checked-out repos) available on a host."
 msgstr "Lister les projets (dépôts clonés) disponibles sur un hôte."
+
+msgid "List the subagents of each conversation under it."
+msgstr "Affiche les sous-agents de chaque conversation sous celle-ci."
 
 msgid "List, create, update, and delete workspaces on a host."
 msgstr "Lister, créer, modifier et supprimer des espaces de travail sur un hôte."
@@ -15591,6 +15609,9 @@ msgstr "Afficher moins"
 msgid "Show file tree"
 msgstr "Afficher l'arborescence des fichiers"
 
+msgid "Show how much of the context window each conversation uses, with its model and tokens on hover."
+msgstr "Affiche la part de la fenêtre de contexte utilisée par chaque conversation, avec son modèle et ses tokens au survol."
+
 msgid "Show in bar"
 msgstr "Afficher dans la barre"
 
@@ -15668,6 +15689,9 @@ msgstr "Afficher le statut et envoyer des notifications pour cet agent."
 
 msgid "Show text"
 msgstr "Afficher le texte"
+
+msgid "Show the to-do button and list on each conversation."
+msgstr "Affiche le bouton et la liste des tâches sur chaque conversation."
 
 msgid "Show the triggering payload"
 msgstr "Afficher la charge utile déclenchante"
@@ -18964,11 +18988,17 @@ msgstr "En attente de votre réponse"
 msgid "Waiting for your reply"
 msgstr "Attend ta réponse"
 
+msgid "Waiting tint"
+msgstr "Teinte d'attente"
+
 msgid "Waking up workspace"
 msgstr "Réveil de l’espace de travail"
 
 msgid "Want something sooner? <0>Tell us in Discord</0>. Much of what's here started as a user request."
 msgstr "Vous voulez quelque chose plus tôt ? <0>Dites-le-nous sur Discord</0>. Une bonne partie de ce qui figure ici est née d'une demande d'utilisateur."
+
+msgid "Warm up a conversation the longer it waits for you."
+msgstr "Réchauffe la couleur d'une conversation à mesure qu'elle vous attend."
 
 msgid "Warning"
 msgstr "Avertissement"

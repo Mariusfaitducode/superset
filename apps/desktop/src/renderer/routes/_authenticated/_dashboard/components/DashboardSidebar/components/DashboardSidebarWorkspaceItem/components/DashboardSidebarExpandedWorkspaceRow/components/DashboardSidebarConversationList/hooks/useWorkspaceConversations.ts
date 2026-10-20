@@ -47,9 +47,11 @@ function cleanTitle(title: string | null | undefined): string | null {
 export function useWorkspaceConversations({
 	workspaceId,
 	hostId,
+	enabled = true,
 }: {
 	workspaceId: string;
 	hostId: string;
+	enabled?: boolean;
 }): SidebarConversation[] {
 	const { bindings } = useSidebarWorkspaceStatus(workspaceId);
 	const terminalSeenAt = useV2NotificationStore(
@@ -63,7 +65,7 @@ export function useWorkspaceConversations({
 	const bindingsKey = [...bindings.keys()].sort().join(",");
 	const titlesQuery = useQuery({
 		queryKey: ["sidebar-conversation-titles", workspaceId, bindingsKey],
-		enabled: hostUrl !== null && bindings.size > 0,
+		enabled: enabled && hostUrl !== null && bindings.size > 0,
 		queryFn: async () => {
 			if (!hostUrl) return new Map<string, string | null>();
 			const { sessions } = await getHostServiceClientByUrl(

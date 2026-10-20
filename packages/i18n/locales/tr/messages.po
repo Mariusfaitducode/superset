@@ -1904,6 +1904,9 @@ msgstr "Ajan tamamlandı — {workspaceName}"
 msgid "Agent Configs"
 msgstr "Ajan yapılandırmaları"
 
+msgid "Agent conversations"
+msgstr "Ajan konuşmaları"
+
 msgid "Agent credentials changed"
 msgstr "Ajan kimlik bilgileri değişti"
 
@@ -3708,6 +3711,9 @@ msgstr "Değişiklikler görünümünün üst çubuktan nasıl açılacağını 
 msgid "Choose how to open file paths when Cmd+clicking in the terminal"
 msgstr "Terminalde Cmd+tıkladığınızda dosya yollarının nasıl açılacağını seçin"
 
+msgid "Choose what the sidebar shows under each workspace."
+msgstr "Kenar çubuğunun her çalışma alanının altında ne göstereceğini seçin."
+
 msgid "Choose what to clear from the in-app browser."
 msgstr "Uygulama içi tarayıcıdan neyin temizleneceğini seçin."
 
@@ -4656,6 +4662,12 @@ msgstr "Konuşma"
 
 msgid "Conversation · Message"
 msgstr "Konuşma · Mesaj"
+
+msgid "Conversation stats"
+msgstr "Konuşma istatistikleri"
+
+msgid "Conversation to-dos"
+msgstr "Konuşma yapılacakları"
 
 msgid "Convert to draft"
 msgstr "Taslağa dönüştür"
@@ -9667,6 +9679,9 @@ msgstr "Bir host'ta yapılandırılmış ajanları listeleyin ve bir çalışma 
 msgid "List all my assigned tasks"
 msgstr "Bana atanmış tüm görevleri listele"
 
+msgid "List each agent conversation under its workspace, with its state dot."
+msgstr "Her ajan konuşmasını çalışma alanının altında durum noktasıyla gösterir."
+
 msgid "List members of your active organization."
 msgstr "Etkin kuruluşunuzun üyelerini listeleyin."
 
@@ -9675,6 +9690,9 @@ msgstr "Çalışma alanı çalıştırma erişiminiz olan makineleri listeleyin.
 
 msgid "List the projects (checked-out repos) available on a host."
 msgstr "Bir host'ta kullanılabilir projeleri (checkout edilmiş depoları) listeleyin."
+
+msgid "List the subagents of each conversation under it."
+msgstr "Her konuşmanın alt ajanlarını altında gösterir."
 
 msgid "List, create, update, and delete workspaces on a host."
 msgstr "Bir host'taki çalışma alanlarını listeleyin, oluşturun, güncelleyin ve silin."
@@ -15591,6 +15609,9 @@ msgstr "Daha az göster"
 msgid "Show file tree"
 msgstr "Dosya ağacını göster"
 
+msgid "Show how much of the context window each conversation uses, with its model and tokens on hover."
+msgstr "Her konuşmanın bağlam penceresinin ne kadarını kullandığını, üzerine gelince modeli ve token'larıyla gösterir."
+
 msgid "Show in bar"
 msgstr "Çubukta göster"
 
@@ -15668,6 +15689,9 @@ msgstr "Bu ajan için durum göster ve bildirim gönder."
 
 msgid "Show text"
 msgstr "Metni göster"
+
+msgid "Show the to-do button and list on each conversation."
+msgstr "Her konuşmada yapılacaklar düğmesini ve listesini gösterir."
 
 msgid "Show the triggering payload"
 msgstr "Tetikleyen yükü göster"
@@ -18964,11 +18988,17 @@ msgstr "Girdinizi bekliyor"
 msgid "Waiting for your reply"
 msgstr "Yanıtınızı bekliyor"
 
+msgid "Waiting tint"
+msgstr "Bekleme tonu"
+
 msgid "Waking up workspace"
 msgstr "Çalışma alanı uyandırılıyor"
 
 msgid "Want something sooner? <0>Tell us in Discord</0>. Much of what's here started as a user request."
 msgstr "Bir şeyi daha erken mi istiyorsunuz? <0>Discord'da bize söyleyin</0>. Buradakilerin çoğu bir kullanıcı isteği olarak başladı."
+
+msgid "Warm up a conversation the longer it waits for you."
+msgstr "Bir konuşma sizi ne kadar uzun beklerse rengini o kadar ısıtır."
 
 msgid "Warning"
 msgstr "Uyarı"

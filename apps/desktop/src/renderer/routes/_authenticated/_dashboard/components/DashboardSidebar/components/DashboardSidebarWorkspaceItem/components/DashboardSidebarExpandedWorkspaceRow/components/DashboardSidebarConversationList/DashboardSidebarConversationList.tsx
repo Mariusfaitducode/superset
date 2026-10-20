@@ -13,6 +13,7 @@ import {
 	type ConversationTodo,
 	useConversationTodosStore,
 } from "renderer/stores/conversation-todos";
+import { useSidebarPreference } from "renderer/stores/sidebar-preferences";
 import { useIsTerminalVisible } from "renderer/stores/visible-terminals";
 import type { DashboardSidebarWorkspaceIndentation } from "../../../../../../types";
 import { ConversationTodos } from "./components/ConversationTodos";
@@ -66,6 +67,9 @@ function ConversationRow({
 	);
 	const [todosOpen, setTodosOpen] = useState(false);
 	const isVisible = useIsTerminalVisible(conversation.terminalId);
+	const showTodos = useSidebarPreference("showTodos");
+	const showSubagents = useSidebarPreference("showSubagents");
+	const showWaitingTint = useSidebarPreference("showWaitingTint");
 	const openTodos = todos.filter((todo) => !todo.done).length;
 
 	const stateLabel: Record<ConversationState, string> = {
@@ -79,7 +83,8 @@ function ConversationRow({
 
 	const waiting = isWaitingOnUser(conversation.state);
 	const waitedMs = now - conversation.since;
-	const tint = waiting ? TINT_CLASS[waitingTintLevel(waitedMs)] : "";
+	const tint =
+		waiting && showWaitingTint ? TINT_CLASS[waitingTintLevel(waitedMs)] : "";
 
 	const open = () => {
 		void navigateToV2Workspace(workspaceId, navigate, {
@@ -137,28 +142,30 @@ function ConversationRow({
 						{conversation.title}
 					</span>
 				</button>
-				<button
-					type="button"
-					aria-expanded={todosOpen}
-					aria-label={t`To-dos`}
-					onClick={() => setTodosOpen((value) => !value)}
-					className={cn(
-						"flex shrink-0 items-center gap-0.5 rounded-sm px-1 text-[10px] text-muted-foreground hover:bg-background hover:text-foreground",
-						todos.length === 0 &&
-							!todosOpen &&
-							"opacity-0 focus-visible:opacity-100 group-hover/conversation:opacity-100",
-					)}
-				>
-					<LuListChecks className="size-3" />
-					{todos.length > 0 && <span>{openTodos > 0 ? openTodos : "✓"}</span>}
-				</button>
+				{showTodos && (
+					<button
+						type="button"
+						aria-expanded={todosOpen}
+						aria-label={t`To-dos`}
+						onClick={() => setTodosOpen((value) => !value)}
+						className={cn(
+							"flex shrink-0 items-center gap-0.5 rounded-sm px-1 text-[10px] text-muted-foreground hover:bg-background hover:text-foreground",
+							todos.length === 0 &&
+								!todosOpen &&
+								"opacity-0 focus-visible:opacity-100 group-hover/conversation:opacity-100",
+						)}
+					>
+						<LuListChecks className="size-3" />
+						{todos.length > 0 && <span>{openTodos > 0 ? openTodos : "✓"}</span>}
+					</button>
+				)}
 				{waiting && (
 					<span className="shrink-0 text-[10px] tabular-nums text-muted-foreground">
 						{formatCompactRelativeTime(Math.min(conversation.since, now), now)}
 					</span>
 				)}
 			</div>
-			{conversation.subagents.length > 0 && (
+			{showSubagents && conversation.subagents.length > 0 && (
 				<ul className="ml-[3px] border-l border-border pl-2">
 					{conversation.subagents.map((subagent) => (
 						<li key={subagent.id}>
@@ -175,7 +182,7 @@ function ConversationRow({
 					))}
 				</ul>
 			)}
-			{todosOpen && (
+			{showTodos && todosOpen && (
 				<ConversationTodos conversationId={conversation.terminalId} />
 			)}
 		</li>
@@ -198,9 +205,14 @@ export function DashboardSidebarConversationList({
 	isInSection?: boolean;
 	indentation?: DashboardSidebarWorkspaceIndentation;
 }) {
-	const conversations = useWorkspaceConversations({ workspaceId, hostId });
+	const showConversations = useSidebarPreference("showConversations");
+	const conversations = useWorkspaceConversations({
+		workspaceId,
+		hostId,
+		enabled: showConversations,
+	});
 
-	if (conversations.length === 0) return null;
+	if (!showConversations || conversations.length === 0) return null;
 
 	return (
 		// biome-ignore lint/a11y/noStaticElementInteractions: only keeps clicks and drags in the list from activating or dragging the workspace row

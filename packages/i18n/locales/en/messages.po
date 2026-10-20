@@ -1904,6 +1904,9 @@ msgstr "Agent Complete — {workspaceName}"
 msgid "Agent Configs"
 msgstr "Agent Configs"
 
+msgid "Agent conversations"
+msgstr "Agent conversations"
+
 msgid "Agent credentials changed"
 msgstr "Agent credentials changed"
 
@@ -3708,6 +3711,9 @@ msgstr "Choose how the Changes view opens from the top bar"
 msgid "Choose how to open file paths when Cmd+clicking in the terminal"
 msgstr "Choose how to open file paths when Cmd+clicking in the terminal"
 
+msgid "Choose what the sidebar shows under each workspace."
+msgstr "Choose what the sidebar shows under each workspace."
+
 msgid "Choose what to clear from the in-app browser."
 msgstr "Choose what to clear from the in-app browser."
 
@@ -4656,6 +4662,12 @@ msgstr "Conversation"
 
 msgid "Conversation · Message"
 msgstr "Conversation · Message"
+
+msgid "Conversation stats"
+msgstr "Conversation stats"
+
+msgid "Conversation to-dos"
+msgstr "Conversation to-dos"
 
 msgid "Convert to draft"
 msgstr "Convert to draft"
@@ -9667,6 +9679,9 @@ msgstr "List agents configured on a host and launch an agent session in a worksp
 msgid "List all my assigned tasks"
 msgstr "List all my assigned tasks"
 
+msgid "List each agent conversation under its workspace, with its state dot."
+msgstr "List each agent conversation under its workspace, with its state dot."
+
 msgid "List members of your active organization."
 msgstr "List members of your active organization."
 
@@ -9675,6 +9690,9 @@ msgstr "List the machines you have access to run workspaces on."
 
 msgid "List the projects (checked-out repos) available on a host."
 msgstr "List the projects (checked-out repos) available on a host."
+
+msgid "List the subagents of each conversation under it."
+msgstr "List the subagents of each conversation under it."
 
 msgid "List, create, update, and delete workspaces on a host."
 msgstr "List, create, update, and delete workspaces on a host."
@@ -15591,6 +15609,9 @@ msgstr "Show fewer"
 msgid "Show file tree"
 msgstr "Show file tree"
 
+msgid "Show how much of the context window each conversation uses, with its model and tokens on hover."
+msgstr "Show how much of the context window each conversation uses, with its model and tokens on hover."
+
 msgid "Show in bar"
 msgstr "Show in bar"
 
@@ -15668,6 +15689,9 @@ msgstr "Show status and send notifications for this agent."
 
 msgid "Show text"
 msgstr "Show text"
+
+msgid "Show the to-do button and list on each conversation."
+msgstr "Show the to-do button and list on each conversation."
 
 msgid "Show the triggering payload"
 msgstr "Show the triggering payload"
@@ -18964,11 +18988,17 @@ msgstr "Waiting for your input"
 msgid "Waiting for your reply"
 msgstr "Waiting for your reply"
 
+msgid "Waiting tint"
+msgstr "Waiting tint"
+
 msgid "Waking up workspace"
 msgstr "Waking up workspace"
 
 msgid "Want something sooner? <0>Tell us in Discord</0>. Much of what's here started as a user request."
 msgstr "Want something sooner? <0>Tell us in Discord</0>. Much of what's here started as a user request."
+
+msgid "Warm up a conversation the longer it waits for you."
+msgstr "Warm up a conversation the longer it waits for you."
 
 msgid "Warning"
 msgstr "Warning"

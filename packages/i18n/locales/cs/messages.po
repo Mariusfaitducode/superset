@@ -1904,6 +1904,9 @@ msgstr "Agent dokončil — {workspaceName}"
 msgid "Agent Configs"
 msgstr "Konfigurace agentů"
 
+msgid "Agent conversations"
+msgstr "Konverzace agentů"
+
 msgid "Agent credentials changed"
 msgstr "Přihlašovací údaje agenta se změnily"
 
@@ -3708,6 +3711,9 @@ msgstr "Zvolte, jak se zobrazení změn otevírá z horní lišty"
 msgid "Choose how to open file paths when Cmd+clicking in the terminal"
 msgstr "Zvolte, jak se otevírají cesty k souborům při Cmd+kliknutí v terminálu"
 
+msgid "Choose what the sidebar shows under each workspace."
+msgstr "Vyberte, co postranní panel zobrazuje pod každým pracovním prostorem."
+
 msgid "Choose what to clear from the in-app browser."
 msgstr "Vyberte, co se má z vestavěného prohlížeče vymazat."
 
@@ -4656,6 +4662,12 @@ msgstr "Konverzace"
 
 msgid "Conversation · Message"
 msgstr "Konverzace · Zpráva"
+
+msgid "Conversation stats"
+msgstr "Statistiky konverzací"
+
+msgid "Conversation to-dos"
+msgstr "Úkoly konverzací"
 
 msgid "Convert to draft"
 msgstr "Převést na koncept"
@@ -9667,6 +9679,9 @@ msgstr "Vypsat agenty nastavené na hostu a spustit relaci agenta v pracovním p
 msgid "List all my assigned tasks"
 msgstr "Vypiš všechny úkoly přiřazené mně"
 
+msgid "List each agent conversation under its workspace, with its state dot."
+msgstr "Zobrazí každou konverzaci agenta pod jejím pracovním prostorem s tečkou stavu."
+
 msgid "List members of your active organization."
 msgstr "Vypsat členy vaší aktivní organizace."
 
@@ -9675,6 +9690,9 @@ msgstr "Vypsat počítače, na kterých můžete spouštět pracovní prostory."
 
 msgid "List the projects (checked-out repos) available on a host."
 msgstr "Vypsat projekty (naklonované repozitáře) dostupné na hostu."
+
+msgid "List the subagents of each conversation under it."
+msgstr "Zobrazí subagenty každé konverzace pod ní."
 
 msgid "List, create, update, and delete workspaces on a host."
 msgstr "Vypisovat, vytvářet, upravovat a mazat pracovní prostory na hostu."
@@ -15591,6 +15609,9 @@ msgstr "Zobrazit méně"
 msgid "Show file tree"
 msgstr "Zobrazit strom souborů"
 
+msgid "Show how much of the context window each conversation uses, with its model and tokens on hover."
+msgstr "Zobrazí, kolik kontextového okna každá konverzace využívá, s modelem a tokeny při najetí myší."
+
 msgid "Show in bar"
 msgstr "Zobrazit v liště"
 
@@ -15668,6 +15689,9 @@ msgstr "Zobrazovat stav a posílat oznámení pro tohoto agenta."
 
 msgid "Show text"
 msgstr "Zobrazit text"
+
+msgid "Show the to-do button and list on each conversation."
+msgstr "Zobrazí tlačítko a seznam úkolů u každé konverzace."
 
 msgid "Show the triggering payload"
 msgstr "Zobrazit spouštěcí data"
@@ -18964,11 +18988,17 @@ msgstr "Čeká na váš vstup"
 msgid "Waiting for your reply"
 msgstr "Čeká na vaši odpověď"
 
+msgid "Waiting tint"
+msgstr "Odstín čekání"
+
 msgid "Waking up workspace"
 msgstr "Probouzení pracovního prostoru"
 
 msgid "Want something sooner? <0>Tell us in Discord</0>. Much of what's here started as a user request."
 msgstr "Chcete něco dřív? <0>Napište nám na Discordu</0>. Spousta z toho, co je tady, začala jako přání uživatele."
+
+msgid "Warm up a conversation the longer it waits for you."
+msgstr "Zahřeje barvu konverzace, čím déle na vás čeká."
 
 msgid "Warning"
 msgstr "Varování"

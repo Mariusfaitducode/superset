@@ -1904,6 +1904,9 @@ msgstr "Агент завершил — {workspaceName}"
 msgid "Agent Configs"
 msgstr "Конфигурации агентов"
 
+msgid "Agent conversations"
+msgstr "Разговоры агентов"
+
 msgid "Agent credentials changed"
 msgstr "Учётные данные агента изменились"
 
@@ -3708,6 +3711,9 @@ msgstr "Выберите, как открывается представлени
 msgid "Choose how to open file paths when Cmd+clicking in the terminal"
 msgstr "Выберите, как открывать пути файлов при Cmd+клике в терминале"
 
+msgid "Choose what the sidebar shows under each workspace."
+msgstr "Выберите, что боковая панель показывает под каждым рабочим пространством."
+
 msgid "Choose what to clear from the in-app browser."
 msgstr "Выберите, что очистить во встроенном браузере."
 
@@ -4656,6 +4662,12 @@ msgstr "Диалог"
 
 msgid "Conversation · Message"
 msgstr "Диалог · сообщение"
+
+msgid "Conversation stats"
+msgstr "Статистика разговоров"
+
+msgid "Conversation to-dos"
+msgstr "Задачи разговоров"
 
 msgid "Convert to draft"
 msgstr "Перевести в черновик"
@@ -9667,6 +9679,9 @@ msgstr "Показать агентов, настроенных на хосте,
 msgid "List all my assigned tasks"
 msgstr "Покажи все назначенные мне задачи"
 
+msgid "List each agent conversation under its workspace, with its state dot."
+msgstr "Показывает каждый разговор агента под его рабочим пространством, с точкой состояния."
+
 msgid "List members of your active organization."
 msgstr "Показать участников вашей активной организации."
 
@@ -9675,6 +9690,9 @@ msgstr "Показать машины, на которых вам доступе
 
 msgid "List the projects (checked-out repos) available on a host."
 msgstr "Показать проекты (выгруженные репозитории), доступные на хосте."
+
+msgid "List the subagents of each conversation under it."
+msgstr "Показывает субагентов каждого разговора под ним."
 
 msgid "List, create, update, and delete workspaces on a host."
 msgstr "Показывать, создавать, обновлять и удалять рабочие области на хосте."
@@ -15591,6 +15609,9 @@ msgstr "Показать меньше"
 msgid "Show file tree"
 msgstr "Показать дерево файлов"
 
+msgid "Show how much of the context window each conversation uses, with its model and tokens on hover."
+msgstr "Показывает, какую часть контекстного окна использует каждый разговор, с моделью и токенами при наведении."
+
 msgid "Show in bar"
 msgstr "Показать на панели"
 
@@ -15668,6 +15689,9 @@ msgstr "Показывать статус и отправлять уведомл
 
 msgid "Show text"
 msgstr "Показать текст"
+
+msgid "Show the to-do button and list on each conversation."
+msgstr "Показывает кнопку и список задач у каждого разговора."
 
 msgid "Show the triggering payload"
 msgstr "Показать полезную нагрузку триггера"
@@ -18964,11 +18988,17 @@ msgstr "Ждёт вашего ответа"
 msgid "Waiting for your reply"
 msgstr "Ждёт вашего ответа"
 
+msgid "Waiting tint"
+msgstr "Оттенок ожидания"
+
 msgid "Waking up workspace"
 msgstr "Пробуждение рабочей области"
 
 msgid "Want something sooner? <0>Tell us in Discord</0>. Much of what's here started as a user request."
 msgstr "Хотите что-то быстрее? <0>Скажите нам в Discord</0>. Многое из этого началось с пожелания пользователя."
+
+msgid "Warm up a conversation the longer it waits for you."
+msgstr "Окрашивает разговор теплее, чем дольше он вас ждёт."
 
 msgid "Warning"
 msgstr "Предупреждение"

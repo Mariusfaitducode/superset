@@ -14,6 +14,7 @@ import {
 	LinkIcon,
 	type LucideIcon,
 	PaletteIcon,
+	PanelLeftIcon,
 	ServerIcon,
 	ShieldIcon,
 	SlidersIcon,
@@ -49,6 +50,15 @@ const TABS: SettingsTab[] = [
 		path: "/settings/appearance",
 		icon: PaletteIcon,
 		keywords: ["theme", "color"],
+	},
+	{
+		id: "sidebar",
+		title: msg({
+			message: "Sidebar",
+		}),
+		path: "/settings/sidebar",
+		icon: PanelLeftIcon,
+		keywords: ["conversations", "agents", "todos", "subagents"],
 	},
 	{
 		id: "behavior",

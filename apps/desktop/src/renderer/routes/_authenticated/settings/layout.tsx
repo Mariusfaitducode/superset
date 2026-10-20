@@ -71,6 +71,7 @@ const SECTION_PATHS: Partial<Record<SettingsSection, string>> = {
 	organization: "/settings/organization",
 	teams: "/settings/teams",
 	appearance: "/settings/appearance",
+	sidebar: "/settings/sidebar",
 	ringtones: "/settings/ringtones",
 	usage: "/settings/usage",
 	keyboard: "/settings/keyboard",

@@ -1904,6 +1904,9 @@ msgstr "Agent đã xong — {workspaceName}"
 msgid "Agent Configs"
 msgstr "Cấu hình agent"
 
+msgid "Agent conversations"
+msgstr "Cuộc trò chuyện của agent"
+
 msgid "Agent credentials changed"
 msgstr "Thông tin xác thực của agent đã thay đổi"
 
@@ -3708,6 +3711,9 @@ msgstr "Chọn cách chế độ xem thay đổi mở từ thanh trên cùng"
 msgid "Choose how to open file paths when Cmd+clicking in the terminal"
 msgstr "Chọn cách mở đường dẫn tệp khi Cmd+nhấp trong terminal"
 
+msgid "Choose what the sidebar shows under each workspace."
+msgstr "Chọn những gì thanh bên hiển thị dưới mỗi không gian làm việc."
+
 msgid "Choose what to clear from the in-app browser."
 msgstr "Chọn thứ cần xóa khỏi trình duyệt trong ứng dụng."
 
@@ -4656,6 +4662,12 @@ msgstr "Cuộc thảo luận"
 
 msgid "Conversation · Message"
 msgstr "Hội thoại · Tin nhắn"
+
+msgid "Conversation stats"
+msgstr "Thống kê cuộc trò chuyện"
+
+msgid "Conversation to-dos"
+msgstr "Việc cần làm của cuộc trò chuyện"
 
 msgid "Convert to draft"
 msgstr "Chuyển thành bản nháp"
@@ -6069,7 +6081,7 @@ msgid "Describe the task for the agent…"
 msgstr "Mô tả tác vụ cho agent…"
 
 msgid "Describe the work to your agent"
-msgstr "Mô tả công việc cho tác tử của bạn"
+msgstr "Mô tả công việc cho agent của bạn"
 
 msgid "Describe what you need. Superset creates an isolated workspace and clean branch for the task."
 msgstr "Mô tả điều bạn cần. Superset tạo một workspace tách biệt và một nhánh sạch cho tác vụ đó."
@@ -6831,7 +6843,7 @@ msgid "Every {day} at {time}"
 msgstr "{day} hằng tuần, lúc {time}"
 
 msgid "Every agent runs in its own Git worktree and branch, keeping working files separate. Changes can still conflict when merged. You watch, review, and merge them all from one window."
-msgstr "Mỗi tác tử chạy trong worktree và nhánh Git riêng, giữ các tệp làm việc tách biệt. Xung đột vẫn có thể xảy ra khi hợp nhất thay đổi. Bạn theo dõi, xem xét và hợp nhất tất cả từ một cửa sổ."
+msgstr "Mỗi agent chạy trong worktree và nhánh Git riêng, giữ các tệp làm việc tách biệt. Xung đột vẫn có thể xảy ra khi hợp nhất thay đổi. Bạn theo dõi, xem xét và hợp nhất tất cả từ một cửa sổ."
 
 msgid "Every axis is carrying its weight for the next tier. Hold it and the tier follows."
 msgstr "Mọi trục đều đang góp sức cho hạng tiếp theo. Giữ được như vậy thì hạng sẽ tới."
@@ -8533,7 +8545,7 @@ msgid "How much agent work engineers are actually running — tokens, cost, mode
 msgstr "Khối lượng công việc agent mà các kỹ sư thực sự đang chạy — token, chi phí, mô hình và phiên, do những người chủ động chia sẻ công bố."
 
 msgid "How should the agent's actions be approved?"
-msgstr "Thao tác của tác tử nên được phê duyệt thế nào?"
+msgstr "Thao tác của agent nên được phê duyệt thế nào?"
 
 msgid "How the command opens."
 msgstr "Cách mở lệnh."
@@ -9667,6 +9679,9 @@ msgstr "Liệt kê agent đã cấu hình trên một host và khởi chạy phi
 msgid "List all my assigned tasks"
 msgstr "Liệt kê tất cả tác vụ được giao cho tôi"
 
+msgid "List each agent conversation under its workspace, with its state dot."
+msgstr "Hiển thị từng cuộc trò chuyện của agent dưới không gian làm việc của nó, kèm chấm trạng thái."
+
 msgid "List members of your active organization."
 msgstr "Liệt kê thành viên của tổ chức đang hoạt động."
 
@@ -9675,6 +9690,9 @@ msgstr "Liệt kê các máy bạn có quyền chạy workspace."
 
 msgid "List the projects (checked-out repos) available on a host."
 msgstr "Liệt kê các dự án (repo đã checkout) có trên một host."
+
+msgid "List the subagents of each conversation under it."
+msgstr "Hiển thị các agent con của mỗi cuộc trò chuyện bên dưới nó."
 
 msgid "List, create, update, and delete workspaces on a host."
 msgstr "Liệt kê, tạo, cập nhật và xóa workspace trên một host."
@@ -11585,11 +11603,11 @@ msgstr "Tắt"
 
 #. placeholder {0}: COMPANY.NAME
 msgid "Official documentation for {0}, the app for running 100+ coding agents in parallel."
-msgstr "Tài liệu chính thức của {0}, ứng dụng chạy song song hơn 100 tác tử lập trình."
+msgstr "Tài liệu chính thức của {0}, ứng dụng chạy song song hơn 100 agent lập trình."
 
 #. placeholder {0}: COMPANY.NAME
 msgid "Official documentation for {0}. Learn how to run 100+ coding agents in parallel on your machine."
-msgstr "Tài liệu chính thức của {0}. Tìm hiểu cách chạy song song hơn 100 tác tử lập trình trên máy của bạn."
+msgstr "Tài liệu chính thức của {0}. Tìm hiểu cách chạy song song hơn 100 agent lập trình trên máy của bạn."
 
 msgid "Official quota · refreshes every 5 min"
 msgstr "Hạn mức chính thức · làm mới mỗi 5 phút"
@@ -14514,7 +14532,7 @@ msgid "Run 01"
 msgstr "Run 01"
 
 msgid "Run 10+ parallel coding agents on your machine"
-msgstr "Chạy song song hơn 10 tác tử lập trình trên máy của bạn"
+msgstr "Chạy song song hơn 10 agent lập trình trên máy của bạn"
 
 msgid "Run 10+ parallel coding agents on your machine."
 msgstr "Chạy hơn 10 agent lập trình song song trên máy của bạn."
@@ -15043,7 +15061,7 @@ msgid "See how we work"
 msgstr "Xem cách chúng tôi làm việc"
 
 msgid "See how your agent usage compares. Explore the models behind each profile."
-msgstr "So sánh mức sử dụng tác tử của bạn với người khác. Khám phá các mô hình trong từng hồ sơ."
+msgstr "So sánh mức sử dụng agent của bạn với người khác. Khám phá các mô hình trong từng hồ sơ."
 
 msgid "See Less"
 msgstr "Xem ít hơn"
@@ -15591,6 +15609,9 @@ msgstr "Hiện ít hơn"
 msgid "Show file tree"
 msgstr "Hiện cây tệp"
 
+msgid "Show how much of the context window each conversation uses, with its model and tokens on hover."
+msgstr "Hiển thị mỗi cuộc trò chuyện dùng bao nhiêu cửa sổ ngữ cảnh, kèm mô hình và token khi di chuột."
+
 msgid "Show in bar"
 msgstr "Hiện trên thanh"
 
@@ -15668,6 +15689,9 @@ msgstr "Hiển thị trạng thái và gửi thông báo cho agent này."
 
 msgid "Show text"
 msgstr "Hiện văn bản"
+
+msgid "Show the to-do button and list on each conversation."
+msgstr "Hiển thị nút và danh sách việc cần làm trên mỗi cuộc trò chuyện."
 
 msgid "Show the triggering payload"
 msgstr "Hiển thị payload kích hoạt"
@@ -16370,7 +16394,7 @@ msgid "Stop {label}"
 msgstr "Dừng {label}"
 
 msgid "Stop all agent background processes"
-msgstr "Dừng tất cả tiến trình nền của tác tử"
+msgstr "Dừng tất cả tiến trình nền của agent"
 
 msgid "Stop dictation"
 msgstr "Dừng đọc chính tả"
@@ -16386,7 +16410,7 @@ msgid "Stop Superset here to delete from another device."
 msgstr "Hãy dừng Superset ở đây để xóa từ thiết bị khác."
 
 msgid "Stop the agent and send this now"
-msgstr "Dừng tác tử và gửi ngay"
+msgstr "Dừng agent và gửi ngay"
 
 msgid "Stop watching"
 msgstr "Ngừng theo dõi"
@@ -18964,11 +18988,17 @@ msgstr "Đang chờ bạn phản hồi"
 msgid "Waiting for your reply"
 msgstr "Đang chờ bạn trả lời"
 
+msgid "Waiting tint"
+msgstr "Sắc chờ"
+
 msgid "Waking up workspace"
 msgstr "Đang đánh thức workspace"
 
 msgid "Want something sooner? <0>Tell us in Discord</0>. Much of what's here started as a user request."
 msgstr "Muốn có sớm hơn? <0>Hãy nói với chúng tôi trên Discord</0>. Phần lớn những gì ở đây bắt đầu từ yêu cầu của người dùng."
+
+msgid "Warm up a conversation the longer it waits for you."
+msgstr "Làm ấm màu cuộc trò chuyện càng lâu nó chờ bạn."
 
 msgid "Warning"
 msgstr "Cảnh báo"

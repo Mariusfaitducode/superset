@@ -73,6 +73,12 @@ export const SETTING_ITEM_ID = {
 	LINKS_PORT: "links-port",
 	LINKS_PAGE: "links-page",
 
+	SIDEBAR_CONVERSATIONS: "sidebar-conversations",
+	SIDEBAR_CONVERSATION_STATS: "sidebar-conversation-stats",
+	SIDEBAR_TODOS: "sidebar-todos",
+	SIDEBAR_SUBAGENTS: "sidebar-subagents",
+	SIDEBAR_WAITING_TINT: "sidebar-waiting-tint",
+
 	EXPERIMENTAL_V1_MIGRATION: "experimental-v1-migration",
 	EXPERIMENTAL_INLINE_WORKSPACE_PORTS: "experimental-inline-workspace-ports",
 	EXPERIMENTAL_WORKSPACE_AGENTS: "experimental-workspace-agents",
@@ -229,6 +235,12 @@ export const SETTING_ITEM_VARIANT: Record<SettingItemId, SettingVariant> = {
 	[SETTING_ITEM_ID.LINKS_SIDEBAR_FILE]: "v2",
 	[SETTING_ITEM_ID.LINKS_PORT]: "v2",
 	[SETTING_ITEM_ID.LINKS_PAGE]: "v2",
+
+	[SETTING_ITEM_ID.SIDEBAR_CONVERSATIONS]: "v2",
+	[SETTING_ITEM_ID.SIDEBAR_CONVERSATION_STATS]: "v2",
+	[SETTING_ITEM_ID.SIDEBAR_TODOS]: "v2",
+	[SETTING_ITEM_ID.SIDEBAR_SUBAGENTS]: "v2",
+	[SETTING_ITEM_ID.SIDEBAR_WAITING_TINT]: "v2",
 
 	[SETTING_ITEM_ID.EXPERIMENTAL_V1_MIGRATION]: "v2",
 	[SETTING_ITEM_ID.EXPERIMENTAL_INLINE_WORKSPACE_PORTS]: "v2",
@@ -1396,6 +1408,59 @@ export const SETTINGS_ITEMS: SettingsItem[] = [
 			"chat",
 			"behavior",
 		],
+	},
+	{
+		id: SETTING_ITEM_ID.SIDEBAR_CONVERSATIONS,
+		section: "sidebar",
+		title: "Agent conversations",
+		description:
+			"List each agent conversation under its workspace, with its state dot",
+		keywords: [
+			"sidebar",
+			"conversations",
+			"agents",
+			"agent",
+			"workspace",
+			"status",
+			"dot",
+		],
+	},
+	{
+		id: SETTING_ITEM_ID.SIDEBAR_CONVERSATION_STATS,
+		section: "sidebar",
+		title: "Conversation stats",
+		description:
+			"Show how much of the context window each conversation uses, with its model and tokens on hover",
+		keywords: [
+			"sidebar",
+			"context",
+			"tokens",
+			"model",
+			"stats",
+			"usage",
+			"window",
+		],
+	},
+	{
+		id: SETTING_ITEM_ID.SIDEBAR_TODOS,
+		section: "sidebar",
+		title: "Conversation to-dos",
+		description: "Show the to-do button and list on each conversation",
+		keywords: ["sidebar", "todo", "todos", "to-do", "checklist", "tasks"],
+	},
+	{
+		id: SETTING_ITEM_ID.SIDEBAR_SUBAGENTS,
+		section: "sidebar",
+		title: "Subagents",
+		description: "List the subagents of each conversation under it",
+		keywords: ["sidebar", "subagents", "subagent", "children"],
+	},
+	{
+		id: SETTING_ITEM_ID.SIDEBAR_WAITING_TINT,
+		section: "sidebar",
+		title: "Waiting tint",
+		description: "Warm up a conversation the longer it waits for you",
+		keywords: ["sidebar", "tint", "waiting", "color", "highlight", "reply"],
 	},
 	{
 		id: SETTING_ITEM_ID.EXPERIMENTAL_V1_MIGRATION,

@@ -29,7 +29,13 @@ import {
 	HiOutlineUser,
 	HiOutlineUserGroup,
 } from "react-icons/hi2";
-import { LuGitBranch, LuKeyboard, LuKeyRound, LuLink } from "react-icons/lu";
+import {
+	LuGitBranch,
+	LuKeyboard,
+	LuKeyRound,
+	LuLink,
+	LuPanelLeft,
+} from "react-icons/lu";
 import { useHostsNeedingUpdateCount } from "renderer/hooks/host-version/useHostsNeedingUpdate";
 import { useIsV2CloudEnabled } from "renderer/hooks/useIsV2CloudEnabled";
 import { electronTrpc } from "renderer/lib/electron-trpc";
@@ -48,6 +54,7 @@ type SettingsRoute =
 	| "/settings/organization"
 	| "/settings/teams"
 	| "/settings/appearance"
+	| "/settings/sidebar"
 	| "/settings/ringtones"
 	| "/settings/usage"
 	| "/settings/keyboard"
@@ -112,6 +119,14 @@ const SECTION_GROUPS: SectionGroup[] = [
 					message: "Appearance",
 				}),
 				icon: <HiOutlinePaintBrush className="h-4 w-4" />,
+			},
+			{
+				id: "/settings/sidebar",
+				section: "sidebar",
+				label: msg({
+					message: "Sidebar",
+				}),
+				icon: <LuPanelLeft className="h-4 w-4" />,
 			},
 			{
 				id: "/settings/ringtones",

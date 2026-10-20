@@ -1904,6 +1904,9 @@ msgstr "エージェント完了 — {workspaceName}"
 msgid "Agent Configs"
 msgstr "エージェント設定"
 
+msgid "Agent conversations"
+msgstr "エージェントの会話"
+
 msgid "Agent credentials changed"
 msgstr "エージェントの認証情報が変更されました"
 
@@ -3708,6 +3711,9 @@ msgstr "トップバーから変更ビューをどのように開くかを選択
 msgid "Choose how to open file paths when Cmd+clicking in the terminal"
 msgstr "ターミナルでCmd+クリックしたときのファイルパスの開き方"
 
+msgid "Choose what the sidebar shows under each workspace."
+msgstr "各ワークスペースの下にサイドバーが表示する内容を選びます。"
+
 msgid "Choose what to clear from the in-app browser."
 msgstr "アプリ内ブラウザから消去する項目を選択してください。"
 
@@ -4656,6 +4662,12 @@ msgstr "会話"
 
 msgid "Conversation · Message"
 msgstr "Conversation · Message"
+
+msgid "Conversation stats"
+msgstr "会話の統計"
+
+msgid "Conversation to-dos"
+msgstr "会話のTo-do"
 
 msgid "Convert to draft"
 msgstr "ドラフトに変換"
@@ -9667,6 +9679,9 @@ msgstr "ホストに設定されたエージェントを一覧し、ワークス
 msgid "List all my assigned tasks"
 msgstr "自分に割り当てられたタスクをすべて出して"
 
+msgid "List each agent conversation under its workspace, with its state dot."
+msgstr "各エージェントの会話を、状態ドット付きでワークスペースの下に表示します。"
+
 msgid "List members of your active organization."
 msgstr "アクティブな組織のメンバーを一覧します。"
 
@@ -9675,6 +9690,9 @@ msgstr "ワークスペースを実行できるマシンを一覧します。"
 
 msgid "List the projects (checked-out repos) available on a host."
 msgstr "ホスト上で利用できるプロジェクト(チェックアウト済みのリポジトリ)を一覧します。"
+
+msgid "List the subagents of each conversation under it."
+msgstr "各会話のサブエージェントをその下に表示します。"
 
 msgid "List, create, update, and delete workspaces on a host."
 msgstr "ホスト上のワークスペースの一覧、作成、更新、削除ができます。"
@@ -15591,6 +15609,9 @@ msgstr "表示を減らす"
 msgid "Show file tree"
 msgstr "ファイルツリーを表示"
 
+msgid "Show how much of the context window each conversation uses, with its model and tokens on hover."
+msgstr "各会話がコンテキストウィンドウをどれだけ使っているかを表示し、ホバーでモデルとトークンを表示します。"
+
 msgid "Show in bar"
 msgstr "バーに表示"
 
@@ -15668,6 +15689,9 @@ msgstr "このエージェントのステータス表示と通知を有効にし
 
 msgid "Show text"
 msgstr "テキストを表示"
+
+msgid "Show the to-do button and list on each conversation."
+msgstr "各会話にTo-doボタンとリストを表示します。"
 
 msgid "Show the triggering payload"
 msgstr "トリガーのペイロードを表示"
@@ -18964,11 +18988,17 @@ msgstr "入力を待っています"
 msgid "Waiting for your reply"
 msgstr "返信待ちです"
 
+msgid "Waiting tint"
+msgstr "待機の色付け"
+
 msgid "Waking up workspace"
 msgstr "ワークスペースを起動中"
 
 msgid "Want something sooner? <0>Tell us in Discord</0>. Much of what's here started as a user request."
 msgstr "もっと早く欲しいものがありますか?<0>Discordで教えてください</0>。ここにあるものの多くは、ユーザーの要望から始まりました。"
+
+msgid "Warm up a conversation the longer it waits for you."
+msgstr "会話があなたを待つ時間が長いほど色を暖かくします。"
 
 msgid "Warning"
 msgstr "警告"
