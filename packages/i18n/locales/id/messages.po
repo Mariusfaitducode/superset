@@ -1680,6 +1680,9 @@ msgstr "Tambahkan proyek untuk melihat pull request."
 msgid "Add a short summary…"
 msgstr "Tambahkan ringkasan singkat…"
 
+msgid "Add a to-do…"
+msgstr "Tambah tugas…"
+
 msgid "Add account"
 msgstr "Tambah akun"
 
@@ -3742,6 +3745,9 @@ msgctxt "Liquid Glass style"
 msgid "Clear"
 msgstr "Bening"
 
+msgid "Clear {doneCount} done"
+msgstr "Hapus {doneCount} selesai"
+
 msgid "Clear all"
 msgstr "Hapus semua"
 
@@ -3858,6 +3864,9 @@ msgstr "Klik chip untuk membuka pull request"
 
 msgid "Click to copy the session ID (resume with `claude --resume <id>`)."
 msgstr "Klik untuk menyalin ID sesi (lanjutkan dengan `claude --resume <id>`)."
+
+msgid "Click to edit"
+msgstr "Klik untuk mengedit"
 
 msgid "Click to open on GitHub"
 msgstr "Klik untuk membuka di GitHub"
@@ -5933,6 +5942,9 @@ msgstr "Hapus workspace ini?"
 msgid "Delete thread"
 msgstr "Hapus thread"
 
+msgid "Delete to-do"
+msgstr "Hapus tugas"
+
 msgid "Delete without checking"
 msgstr "Hapus tanpa memeriksa"
 
@@ -7720,6 +7732,9 @@ msgstr "Selesaikan review"
 
 msgid "Finished"
 msgstr "Selesai"
+
+msgid "Finished — not opened yet"
+msgstr "Selesai — belum dibuka"
 
 msgid "finished · worked for 7s"
 msgstr "selesai · bekerja 7 dtk"
@@ -10011,6 +10026,12 @@ msgstr "Manual"
 msgid "Manual order"
 msgstr "Urutan manual"
 
+msgid "Mark as done"
+msgstr "Tandai selesai"
+
+msgid "Mark as not done"
+msgstr "Tandai belum selesai"
+
 msgid "Mark as not viewed"
 msgstr "Tandai belum dilihat"
 
@@ -10545,6 +10566,9 @@ msgstr "Perlu diperbarui"
 msgctxt "agent status"
 msgid "Needs you"
 msgstr "Butuh Anda"
+
+msgid "Needs your approval"
+msgstr "Perlu persetujuan Anda"
 
 msgid "Nerd Fonts"
 msgstr "Nerd Fonts"
@@ -16376,6 +16400,9 @@ msgstr "berhenti"
 msgid "Stopped"
 msgstr "Dihentikan"
 
+msgid "Stopped on an error"
+msgstr "Berhenti karena galat"
+
 msgid "Stopping the agent in {what}"
 msgstr "Menghentikan agen di {what}"
 
@@ -17923,6 +17950,9 @@ msgstr "Untuk melanjutkan percakapan agen, jalankan ini di foldernya:"
 msgid "To resume another agent conversation, run this in its folder:"
 msgstr "Untuk melanjutkan percakapan agen lain, jalankan ini di foldernya:"
 
+msgid "To-dos"
+msgstr "Tugas"
+
 msgid "Toast (Sonner)"
 msgstr "Toast (Sonner)"
 
@@ -18930,6 +18960,9 @@ msgstr "Menunggu pesan pertama dari subagen…"
 
 msgid "Waiting for your input"
 msgstr "Menunggu masukan Anda"
+
+msgid "Waiting for your reply"
+msgstr "Menunggu balasan Anda"
 
 msgid "Waking up workspace"
 msgstr "Membangunkan workspace"

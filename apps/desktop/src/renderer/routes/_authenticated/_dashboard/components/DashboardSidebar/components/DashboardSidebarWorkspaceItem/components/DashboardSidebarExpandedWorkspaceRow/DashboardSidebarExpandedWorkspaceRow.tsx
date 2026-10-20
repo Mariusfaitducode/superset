@@ -33,9 +33,9 @@ import type {
 	DashboardSidebarWorkspacePullRequest,
 } from "../../../../types";
 import { DashboardSidebarWorkspaceQueuedBadge } from "../DashboardSidebarWorkspaceQueuedBadge";
+import { DashboardSidebarConversationList } from "./components/DashboardSidebarConversationList";
 import { DashboardSidebarPortsChip } from "./components/DashboardSidebarPortsChip";
 import { DashboardSidebarRowEventBoundary } from "./components/DashboardSidebarRowEventBoundary";
-import { DashboardSidebarWorkspaceChips } from "./components/DashboardSidebarWorkspaceChips";
 import { DashboardSidebarWorkspaceHostGlyph } from "./components/DashboardSidebarWorkspaceHostGlyph";
 import { DashboardSidebarWorkspaceLeadIndicator } from "./components/DashboardSidebarWorkspaceLeadIndicator";
 
@@ -78,7 +78,6 @@ interface DashboardSidebarExpandedWorkspaceRowProps
 	pinnedContext?: { projectName: string | null; projectIconUrl: string | null };
 	onClick?: MouseEventHandler<HTMLDivElement>;
 	onKeyboardActivate?: KeyboardEventHandler<HTMLDivElement>;
-	onWorkspaceChipsClick?: MouseEventHandler<HTMLDivElement>;
 	onDoubleClick?: () => void;
 	onCloseWorkspaceClick: () => void;
 	onRemoveFromSidebarClick: () => void;
@@ -106,7 +105,6 @@ export const DashboardSidebarExpandedWorkspaceRow = forwardRef<
 			pinnedContext,
 			onClick,
 			onKeyboardActivate,
-			onWorkspaceChipsClick,
 			onDoubleClick,
 			onCloseWorkspaceClick,
 			onRemoveFromSidebarClick,
@@ -447,11 +445,11 @@ export const DashboardSidebarExpandedWorkspaceRow = forwardRef<
 					</div>
 				</div>
 				{!isPending && (
-					<DashboardSidebarWorkspaceChips
+					<DashboardSidebarConversationList
 						workspaceId={workspace.id}
+						hostId={workspace.hostId}
 						isInSection={isInSection}
 						indentation={resolvedIndentation}
-						onClick={onWorkspaceChipsClick}
 					/>
 				)}
 			</div>

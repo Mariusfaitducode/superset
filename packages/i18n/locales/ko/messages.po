@@ -1680,6 +1680,9 @@ msgstr "풀 리퀘스트를 보려면 프로젝트를 추가하세요."
 msgid "Add a short summary…"
 msgstr "짧은 요약 추가…"
 
+msgid "Add a to-do…"
+msgstr "할 일 추가…"
+
 msgid "Add account"
 msgstr "계정 추가"
 
@@ -3742,6 +3745,9 @@ msgctxt "Liquid Glass style"
 msgid "Clear"
 msgstr "투명"
 
+msgid "Clear {doneCount} done"
+msgstr "완료된 {doneCount}개 지우기"
+
 msgid "Clear all"
 msgstr "모두 지우기"
 
@@ -3858,6 +3864,9 @@ msgstr "칩을 클릭하면 풀 리퀘스트가 열립니다"
 
 msgid "Click to copy the session ID (resume with `claude --resume <id>`)."
 msgstr "클릭하면 세션 ID를 복사합니다(`claude --resume <id>`로 이어서 진행)."
+
+msgid "Click to edit"
+msgstr "클릭하여 편집"
 
 msgid "Click to open on GitHub"
 msgstr "클릭하여 GitHub에서 열기"
@@ -5933,6 +5942,9 @@ msgstr "이 워크스페이스를 삭제할까요?"
 msgid "Delete thread"
 msgstr "스레드 삭제"
 
+msgid "Delete to-do"
+msgstr "할 일 삭제"
+
 msgid "Delete without checking"
 msgstr "확인 없이 삭제"
 
@@ -7720,6 +7732,9 @@ msgstr "리뷰 마치기"
 
 msgid "Finished"
 msgstr "완료"
+
+msgid "Finished — not opened yet"
+msgstr "완료됨 — 아직 열지 않음"
 
 msgid "finished · worked for 7s"
 msgstr "완료 · 7초 작업"
@@ -10011,6 +10026,12 @@ msgstr "수동"
 msgid "Manual order"
 msgstr "수동 정렬"
 
+msgid "Mark as done"
+msgstr "완료로 표시"
+
+msgid "Mark as not done"
+msgstr "미완료로 표시"
+
 msgid "Mark as not viewed"
 msgstr "확인 안 함으로 표시"
 
@@ -10545,6 +10566,9 @@ msgstr "업데이트 필요"
 msgctxt "agent status"
 msgid "Needs you"
 msgstr "확인 필요"
+
+msgid "Needs your approval"
+msgstr "승인이 필요합니다"
 
 msgid "Nerd Fonts"
 msgstr "Nerd Fonts"
@@ -16376,6 +16400,9 @@ msgstr "중지됨"
 msgid "Stopped"
 msgstr "중지됨"
 
+msgid "Stopped on an error"
+msgstr "오류로 중지됨"
+
 msgid "Stopping the agent in {what}"
 msgstr "{what}의 에이전트 중지 중"
 
@@ -17923,6 +17950,9 @@ msgstr "에이전트 대화를 재개하려면 해당 폴더에서 다음을 실
 msgid "To resume another agent conversation, run this in its folder:"
 msgstr "다른 에이전트 대화를 재개하려면 해당 폴더에서 다음을 실행하세요:"
 
+msgid "To-dos"
+msgstr "할 일"
+
 msgid "Toast (Sonner)"
 msgstr "토스트 (Sonner)"
 
@@ -18930,6 +18960,9 @@ msgstr "서브 에이전트의 첫 메시지를 기다리는 중…"
 
 msgid "Waiting for your input"
 msgstr "입력을 기다리는 중"
+
+msgid "Waiting for your reply"
+msgstr "답변을 기다리는 중"
 
 msgid "Waking up workspace"
 msgstr "워크스페이스 깨우는 중"

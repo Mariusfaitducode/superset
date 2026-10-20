@@ -114,6 +114,10 @@ export const PERSISTED_KEY_REGISTRY: ReadonlyArray<
 		["v2-changes-sections-v1"],
 	],
 	["src/renderer/stores/v2-notifications/store.ts", ["v2-notifications-v1"]],
+	[
+		"src/renderer/stores/conversation-todos/store.ts",
+		["conversation-todos-v1"],
+	],
 	["src/renderer/stores/hiring-banner/store.ts", ["hiring-banner-v1"]],
 	["src/renderer/stores/star-nag/store.ts", ["star-nag-v1"]],
 	[

@@ -1680,6 +1680,9 @@ msgstr "プロジェクトを追加するとプルリクエストが表示され
 msgid "Add a short summary…"
 msgstr "短い概要を追加…"
 
+msgid "Add a to-do…"
+msgstr "To-doを追加…"
+
 msgid "Add account"
 msgstr "アカウントを追加"
 
@@ -3742,6 +3745,9 @@ msgctxt "Liquid Glass style"
 msgid "Clear"
 msgstr "クリア"
 
+msgid "Clear {doneCount} done"
+msgstr "完了済み{doneCount}件を削除"
+
 msgid "Clear all"
 msgstr "すべてクリア"
 
@@ -3858,6 +3864,9 @@ msgstr "チップをクリックするとプルリクエストを開きます"
 
 msgid "Click to copy the session ID (resume with `claude --resume <id>`)."
 msgstr "クリックでセッションIDをコピーします(`claude --resume <id>`で再開)。"
+
+msgid "Click to edit"
+msgstr "クリックして編集"
 
 msgid "Click to open on GitHub"
 msgstr "クリックしてGitHubで開く"
@@ -5933,6 +5942,9 @@ msgstr "このワークスペースを削除しますか?"
 msgid "Delete thread"
 msgstr "スレッドを削除"
 
+msgid "Delete to-do"
+msgstr "To-doを削除"
+
 msgid "Delete without checking"
 msgstr "確認せずに削除"
 
@@ -7720,6 +7732,9 @@ msgstr "レビューを完了"
 
 msgid "Finished"
 msgstr "完了"
+
+msgid "Finished — not opened yet"
+msgstr "完了 — 未確認"
 
 msgid "finished · worked for 7s"
 msgstr "完了 · 7秒稼働"
@@ -10011,6 +10026,12 @@ msgstr "手作業"
 msgid "Manual order"
 msgstr "手動順"
 
+msgid "Mark as done"
+msgstr "完了にする"
+
+msgid "Mark as not done"
+msgstr "未完了にする"
+
 msgid "Mark as not viewed"
 msgstr "未確認にする"
 
@@ -10545,6 +10566,9 @@ msgstr "要更新"
 msgctxt "agent status"
 msgid "Needs you"
 msgstr "要対応"
+
+msgid "Needs your approval"
+msgstr "承認が必要です"
 
 msgid "Nerd Fonts"
 msgstr "Nerd Fonts"
@@ -16376,6 +16400,9 @@ msgstr "停止"
 msgid "Stopped"
 msgstr "停止しました"
 
+msgid "Stopped on an error"
+msgstr "エラーで停止しました"
+
 msgid "Stopping the agent in {what}"
 msgstr "{what} のエージェントを停止中"
 
@@ -17923,6 +17950,9 @@ msgstr "エージェントとの会話を再開するには、そのフォルダ
 msgid "To resume another agent conversation, run this in its folder:"
 msgstr "別のエージェントとの会話を再開するには、そのフォルダで次を実行します:"
 
+msgid "To-dos"
+msgstr "To-do"
+
 msgid "Toast (Sonner)"
 msgstr "Toast (Sonner)"
 
@@ -18930,6 +18960,9 @@ msgstr "サブエージェントの最初のメッセージを待っています
 
 msgid "Waiting for your input"
 msgstr "入力を待っています"
+
+msgid "Waiting for your reply"
+msgstr "返信待ちです"
 
 msgid "Waking up workspace"
 msgstr "ワークスペースを起動中"

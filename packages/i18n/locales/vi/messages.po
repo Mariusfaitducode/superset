@@ -1680,6 +1680,9 @@ msgstr "Thêm một dự án để xem pull request."
 msgid "Add a short summary…"
 msgstr "Thêm tóm tắt ngắn…"
 
+msgid "Add a to-do…"
+msgstr "Thêm việc cần làm…"
+
 msgid "Add account"
 msgstr "Thêm tài khoản"
 
@@ -3742,6 +3745,9 @@ msgctxt "Liquid Glass style"
 msgid "Clear"
 msgstr "Trong suốt"
 
+msgid "Clear {doneCount} done"
+msgstr "Xóa {doneCount} việc đã xong"
+
 msgid "Clear all"
 msgstr "Xóa tất cả"
 
@@ -3858,6 +3864,9 @@ msgstr "Nhấp vào thẻ để mở pull request"
 
 msgid "Click to copy the session ID (resume with `claude --resume <id>`)."
 msgstr "Nhấp để sao chép ID phiên (resume bằng `claude --resume <id>`)."
+
+msgid "Click to edit"
+msgstr "Nhấp để chỉnh sửa"
 
 msgid "Click to open on GitHub"
 msgstr "Nhấp để mở trên GitHub"
@@ -5933,6 +5942,9 @@ msgstr "Xóa workspace này?"
 msgid "Delete thread"
 msgstr "Xóa luồng"
 
+msgid "Delete to-do"
+msgstr "Xóa việc cần làm"
+
 msgid "Delete without checking"
 msgstr "Xóa mà không kiểm tra"
 
@@ -7720,6 +7732,9 @@ msgstr "Hoàn tất review"
 
 msgid "Finished"
 msgstr "Đã xong"
+
+msgid "Finished — not opened yet"
+msgstr "Đã xong — chưa mở"
 
 msgid "finished · worked for 7s"
 msgstr "đã xong · làm trong 7s"
@@ -10011,6 +10026,12 @@ msgstr "Thủ công"
 msgid "Manual order"
 msgstr "Thứ tự thủ công"
 
+msgid "Mark as done"
+msgstr "Đánh dấu đã xong"
+
+msgid "Mark as not done"
+msgstr "Đánh dấu chưa xong"
+
 msgid "Mark as not viewed"
 msgstr "Đánh dấu chưa xem"
 
@@ -10545,6 +10566,9 @@ msgstr "Cần cập nhật"
 msgctxt "agent status"
 msgid "Needs you"
 msgstr "Cần bạn"
+
+msgid "Needs your approval"
+msgstr "Cần bạn phê duyệt"
 
 msgid "Nerd Fonts"
 msgstr "Nerd Fonts"
@@ -16376,6 +16400,9 @@ msgstr "đã dừng"
 msgid "Stopped"
 msgstr "Đã dừng"
 
+msgid "Stopped on an error"
+msgstr "Đã dừng do lỗi"
+
 msgid "Stopping the agent in {what}"
 msgstr "Đang dừng tác nhân trong {what}"
 
@@ -17923,6 +17950,9 @@ msgstr "Để tiếp tục một cuộc trò chuyện với agent, hãy chạy l
 msgid "To resume another agent conversation, run this in its folder:"
 msgstr "Để tiếp tục một cuộc trò chuyện khác với agent, hãy chạy lệnh này trong thư mục của nó:"
 
+msgid "To-dos"
+msgstr "Việc cần làm"
+
 msgid "Toast (Sonner)"
 msgstr "Toast (Sonner)"
 
@@ -18930,6 +18960,9 @@ msgstr "Đang chờ tin nhắn đầu tiên của agent con…"
 
 msgid "Waiting for your input"
 msgstr "Đang chờ bạn phản hồi"
+
+msgid "Waiting for your reply"
+msgstr "Đang chờ bạn trả lời"
 
 msgid "Waking up workspace"
 msgstr "Đang đánh thức workspace"

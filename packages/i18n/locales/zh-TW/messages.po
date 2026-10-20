@@ -1680,6 +1680,9 @@ msgstr "新增一個專案來檢視拉取請求。"
 msgid "Add a short summary…"
 msgstr "新增簡短摘要…"
 
+msgid "Add a to-do…"
+msgstr "新增待辦…"
+
 msgid "Add account"
 msgstr "新增帳戶"
 
@@ -3742,6 +3745,9 @@ msgctxt "Liquid Glass style"
 msgid "Clear"
 msgstr "透明"
 
+msgid "Clear {doneCount} done"
+msgstr "清除 {doneCount} 項已完成"
+
 msgid "Clear all"
 msgstr "全部清除"
 
@@ -3858,6 +3864,9 @@ msgstr "點擊開啟拉取請求"
 
 msgid "Click to copy the session ID (resume with `claude --resume <id>`)."
 msgstr "點選複製會話ID（使用`claude --resume <id>`恢復）。"
+
+msgid "Click to edit"
+msgstr "點擊編輯"
 
 msgid "Click to open on GitHub"
 msgstr "點選在GitHub上開啟"
@@ -5933,6 +5942,9 @@ msgstr "刪除這個工作區？"
 msgid "Delete thread"
 msgstr "刪除討論串"
 
+msgid "Delete to-do"
+msgstr "刪除待辦"
+
 msgid "Delete without checking"
 msgstr "不檢查直接刪除"
 
@@ -7720,6 +7732,9 @@ msgstr "完成審查"
 
 msgid "Finished"
 msgstr "已完成"
+
+msgid "Finished — not opened yet"
+msgstr "已完成 — 尚未開啟"
 
 msgid "finished · worked for 7s"
 msgstr "已完成 · 用時7秒"
@@ -10011,6 +10026,12 @@ msgstr "手動"
 msgid "Manual order"
 msgstr "手動排序"
 
+msgid "Mark as done"
+msgstr "標記為已完成"
+
+msgid "Mark as not done"
+msgstr "標記為未完成"
+
 msgid "Mark as not viewed"
 msgstr "標記為未檢視"
 
@@ -10545,6 +10566,9 @@ msgstr "需要更新"
 msgctxt "agent status"
 msgid "Needs you"
 msgstr "需要你"
+
+msgid "Needs your approval"
+msgstr "需要你的核准"
 
 msgid "Nerd Fonts"
 msgstr "Nerd Fonts"
@@ -16376,6 +16400,9 @@ msgstr "已停止"
 msgid "Stopped"
 msgstr "已停止"
 
+msgid "Stopped on an error"
+msgstr "因錯誤而停止"
+
 msgid "Stopping the agent in {what}"
 msgstr "正在停止 {what} 中的代理程式"
 
@@ -17923,6 +17950,9 @@ msgstr "若要恢復與代理的對話，請在其資料夾中執行："
 msgid "To resume another agent conversation, run this in its folder:"
 msgstr "若要恢復其他與代理的對話，請在其資料夾中執行："
 
+msgid "To-dos"
+msgstr "待辦"
+
 msgid "Toast (Sonner)"
 msgstr "Toast（Sonner）"
 
@@ -18930,6 +18960,9 @@ msgstr "正在等待子代理程式的第一則訊息…"
 
 msgid "Waiting for your input"
 msgstr "等待你的輸入"
+
+msgid "Waiting for your reply"
+msgstr "等待你的回覆"
 
 msgid "Waking up workspace"
 msgstr "正在喚醒工作區"

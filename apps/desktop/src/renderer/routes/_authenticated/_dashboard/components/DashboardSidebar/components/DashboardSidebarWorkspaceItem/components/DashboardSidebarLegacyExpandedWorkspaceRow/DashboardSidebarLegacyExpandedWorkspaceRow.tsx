@@ -31,9 +31,9 @@ import type {
 	DashboardSidebarWorkspaceIndentation,
 	DashboardSidebarWorkspacePullRequest,
 } from "../../../../types";
+import { DashboardSidebarConversationList } from "../DashboardSidebarExpandedWorkspaceRow/components/DashboardSidebarConversationList";
 import { DashboardSidebarPortsChip } from "../DashboardSidebarExpandedWorkspaceRow/components/DashboardSidebarPortsChip";
 import { DashboardSidebarRowEventBoundary } from "../DashboardSidebarExpandedWorkspaceRow/components/DashboardSidebarRowEventBoundary";
-import { DashboardSidebarWorkspaceChips } from "../DashboardSidebarExpandedWorkspaceRow/components/DashboardSidebarWorkspaceChips";
 import { DashboardSidebarWorkspaceIcon } from "../DashboardSidebarWorkspaceIcon";
 import { DashboardSidebarWorkspaceQueuedBadge } from "../DashboardSidebarWorkspaceQueuedBadge";
 import { DashboardSidebarWorkspaceDiffStats } from "./components/DashboardSidebarWorkspaceDiffStats";
@@ -78,7 +78,6 @@ interface DashboardSidebarLegacyExpandedWorkspaceRowProps
 	pinnedContext?: { projectName: string | null; projectIconUrl: string | null };
 	onClick?: MouseEventHandler<HTMLDivElement>;
 	onKeyboardActivate?: KeyboardEventHandler<HTMLDivElement>;
-	onWorkspaceChipsClick?: MouseEventHandler<HTMLDivElement>;
 	onDoubleClick?: () => void;
 	onCloseWorkspaceClick: () => void;
 	onRemoveFromSidebarClick: () => void;
@@ -108,7 +107,6 @@ export const DashboardSidebarLegacyExpandedWorkspaceRow = forwardRef<
 			pinnedContext,
 			onClick,
 			onKeyboardActivate,
-			onWorkspaceChipsClick,
 			onDoubleClick,
 			onCloseWorkspaceClick,
 			onRemoveFromSidebarClick,
@@ -464,11 +462,11 @@ export const DashboardSidebarLegacyExpandedWorkspaceRow = forwardRef<
 					</div>
 				</div>
 				{!isPending && (
-					<DashboardSidebarWorkspaceChips
+					<DashboardSidebarConversationList
 						workspaceId={workspace.id}
+						hostId={workspace.hostId}
 						isInSection={isInSection}
 						indentation={resolvedIndentation}
-						onClick={onWorkspaceChipsClick}
 					/>
 				)}
 			</div>

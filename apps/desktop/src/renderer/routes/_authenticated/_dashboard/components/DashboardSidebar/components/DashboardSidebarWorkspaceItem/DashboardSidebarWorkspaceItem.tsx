@@ -214,13 +214,6 @@ export function DashboardSidebarWorkspaceItem({
 		},
 		[handleClick, onSelectionClick],
 	);
-	const handleWorkspaceChipsClick = useCallback(
-		(event: MouseEvent<HTMLElement>) => {
-			if (onSelectionClick?.(event)) return;
-			handleClick();
-		},
-		[handleClick, onSelectionClick],
-	);
 	if (isCollapsed) {
 		const content = (
 			// biome-ignore lint/a11y/noStaticElementInteractions: hover handlers drive a non-interactive popover, no new keyboard semantics
@@ -336,7 +329,6 @@ export function DashboardSidebarWorkspaceItem({
 					onMouseDown={handleExpandedMouseDown}
 					onContextMenu={handleExpandedContextMenu}
 					onKeyboardActivate={handleExpandedKeyboardActivate}
-					onWorkspaceChipsClick={handleWorkspaceChipsClick}
 					onDoubleClick={isPending ? undefined : startRename}
 					onRemoveFromSidebarClick={handleRemoveFromSidebar}
 					onCloseWorkspaceClick={requestDelete}
@@ -361,7 +353,6 @@ export function DashboardSidebarWorkspaceItem({
 					onMouseDown={handleExpandedMouseDown}
 					onContextMenu={handleExpandedContextMenu}
 					onKeyboardActivate={handleExpandedKeyboardActivate}
-					onWorkspaceChipsClick={handleWorkspaceChipsClick}
 					onDoubleClick={isPending ? undefined : startRename}
 					onRemoveFromSidebarClick={handleRemoveFromSidebar}
 					onCloseWorkspaceClick={requestDelete}
