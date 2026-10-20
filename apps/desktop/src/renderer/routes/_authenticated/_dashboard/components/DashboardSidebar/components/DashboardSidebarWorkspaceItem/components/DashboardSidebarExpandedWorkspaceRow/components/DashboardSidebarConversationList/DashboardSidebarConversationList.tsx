@@ -1,10 +1,14 @@
 import { useLingui } from "@lingui/react/macro";
+import { formatCompactRelativeTime } from "@superset/i18n/format";
 import { cn } from "@superset/ui/utils";
 import { useNavigate } from "@tanstack/react-router";
 import { type SyntheticEvent, useState } from "react";
 import { LuListChecks } from "react-icons/lu";
 import { useNow } from "renderer/hooks/useNow";
-import { navigateToV2Workspace } from "renderer/routes/_authenticated/_dashboard/utils/workspace-navigation";
+import {
+	buildSubagentSearch,
+	navigateToV2Workspace,
+} from "renderer/routes/_authenticated/_dashboard/utils/workspace-navigation";
 import {
 	type ConversationTodo,
 	useConversationTodosStore,
@@ -13,11 +17,11 @@ import type { DashboardSidebarWorkspaceIndentation } from "../../../../../../typ
 import { ConversationTodos } from "./components/ConversationTodos";
 import {
 	type SidebarConversation,
+	type SidebarSubagent,
 	useWorkspaceConversations,
 } from "./hooks/useWorkspaceConversations";
 import {
 	type ConversationState,
-	formatWaited,
 	isWaitingOnUser,
 	waitingTintLevel,
 } from "./utils/conversation-state";
@@ -48,13 +52,13 @@ function stopRowEvent(event: SyntheticEvent) {
 function ConversationRow({
 	workspaceId,
 	conversation,
-	now,
 }: {
 	workspaceId: string;
 	conversation: SidebarConversation;
-	now: number;
 }) {
 	const { t } = useLingui();
+	// Minutes are the finest unit shown.
+	const now = useNow(30_000).getTime();
 	const navigate = useNavigate();
 	const todos = useConversationTodosStore(
 		(state) => state.todosByConversation[conversation.terminalId] ?? EMPTY,
@@ -79,6 +83,20 @@ function ConversationRow({
 		void navigateToV2Workspace(workspaceId, navigate, {
 			search: {
 				terminalId: conversation.terminalId,
+				focusRequestId: crypto.randomUUID(),
+			},
+		});
+	};
+
+	const openSubagent = (subagent: SidebarSubagent) => {
+		void navigateToV2Workspace(workspaceId, navigate, {
+			search: {
+				...buildSubagentSearch({
+					terminalId: conversation.terminalId,
+					subagentId: subagent.id,
+					agentId: conversation.agentId,
+					...(subagent.agentType ? { agentType: subagent.agentType } : {}),
+				}),
 				focusRequestId: crypto.randomUUID(),
 			},
 		});
@@ -132,10 +150,27 @@ function ConversationRow({
 				</button>
 				{waiting && (
 					<span className="shrink-0 text-[10px] tabular-nums text-muted-foreground">
-						{formatWaited(waitedMs)}
+						{formatCompactRelativeTime(Math.min(conversation.since, now), now)}
 					</span>
 				)}
 			</div>
+			{conversation.subagents.length > 0 && (
+				<ul className="ml-[3px] border-l border-border pl-2">
+					{conversation.subagents.map((subagent) => (
+						<li key={subagent.id}>
+							<button
+								type="button"
+								onClick={() => openSubagent(subagent)}
+								className="flex h-5 w-full items-center gap-1.5 rounded-sm px-1 text-left text-muted-foreground hover:bg-muted focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+							>
+								<span className="min-w-0 flex-1 truncate text-[11px]">
+									{subagent.agentType ?? t`Subagent`}
+								</span>
+							</button>
+						</li>
+					))}
+				</ul>
+			)}
 			{todosOpen && (
 				<ConversationTodos conversationId={conversation.terminalId} />
 			)}
@@ -160,8 +195,6 @@ export function DashboardSidebarConversationList({
 	indentation?: DashboardSidebarWorkspaceIndentation;
 }) {
 	const conversations = useWorkspaceConversations({ workspaceId, hostId });
-	// Minutes are the finest unit shown.
-	const now = useNow(30_000).getTime();
 
 	if (conversations.length === 0) return null;
 
@@ -188,7 +221,6 @@ export function DashboardSidebarConversationList({
 						key={conversation.terminalId}
 						workspaceId={workspaceId}
 						conversation={conversation}
-						now={now}
 					/>
 				))}
 			</ul>

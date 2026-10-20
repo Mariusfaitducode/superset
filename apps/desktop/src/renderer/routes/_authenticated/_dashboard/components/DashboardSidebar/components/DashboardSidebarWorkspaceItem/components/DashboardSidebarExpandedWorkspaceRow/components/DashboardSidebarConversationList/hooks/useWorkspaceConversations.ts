@@ -1,4 +1,7 @@
-import { AGENT_IDENTITY_LABELS } from "@superset/shared/agent-catalog";
+import {
+	AGENT_IDENTITY_LABELS,
+	type AgentIdentityId,
+} from "@superset/shared/agent-catalog";
 import { useQuery } from "@tanstack/react-query";
 import { useMemo } from "react";
 import { getHostServiceClientByUrl } from "renderer/lib/host-service-client";
@@ -10,9 +13,16 @@ import {
 	deriveConversationState,
 } from "../utils/conversation-state";
 
+export interface SidebarSubagent {
+	id: string;
+	agentType?: string;
+}
+
 export interface SidebarConversation {
 	terminalId: string;
+	agentId: AgentIdentityId;
 	title: string;
+	subagents: SidebarSubagent[];
 	state: ConversationState;
 	/** Host clock, ms: when the conversation entered its current state. */
 	since: number;
@@ -79,7 +89,12 @@ export function useWorkspaceConversations({
 				AGENT_IDENTITY_LABELS[binding.agentId] ?? binding.agentId;
 			conversations.push({
 				terminalId: binding.terminalId,
+				agentId: binding.agentId,
 				title: titles?.get(binding.terminalId) ?? agentLabel,
+				subagents: (binding.subagents ?? []).map((subagent) => ({
+					id: subagent.id,
+					...(subagent.agentType ? { agentType: subagent.agentType } : {}),
+				})),
 				state: deriveConversationState({
 					lastEventType: binding.lastEventType,
 					lastEventAt: binding.lastEventAt,

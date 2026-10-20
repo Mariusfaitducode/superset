@@ -1,5 +1,9 @@
 import { beforeEach, describe, expect, test } from "bun:test";
-import { useConversationTodosStore } from "./store";
+import {
+	MAX_CONVERSATIONS,
+	MAX_TODOS_PER_CONVERSATION,
+	useConversationTodosStore,
+} from "./store";
 
 const T = "terminal-1";
 const store = () => useConversationTodosStore.getState();
@@ -64,5 +68,28 @@ describe("conversation todos", () => {
 		store().addTodo(T, "a");
 		store().addTodo("terminal-2", "b");
 		expect(todos().map((todo) => todo.text)).toEqual(["a"]);
+	});
+
+	test("keeps the most recently touched conversations within the cap", () => {
+		const conversations = Object.fromEntries(
+			Array.from({ length: MAX_CONVERSATIONS }, (_, index) => [
+				`old-${index}`,
+				[{ id: `${index}`, text: "a", done: false, createdAt: index }],
+			]),
+		);
+		useConversationTodosStore.setState({ todosByConversation: conversations });
+		store().addTodo(T, "new");
+		const kept = store().todosByConversation;
+		expect(Object.keys(kept)).toHaveLength(MAX_CONVERSATIONS);
+		expect("old-0" in kept).toBe(false);
+		expect(T in kept).toBe(true);
+	});
+
+	test("keeps the newest todos of a conversation within the cap", () => {
+		for (let index = 0; index <= MAX_TODOS_PER_CONVERSATION; index += 1) {
+			store().addTodo(T, `todo ${index}`);
+		}
+		expect(todos()).toHaveLength(MAX_TODOS_PER_CONVERSATION);
+		expect(todos()[0].text).toBe("todo 1");
 	});
 });

@@ -51,7 +51,8 @@ function TodoItem({
 					onChange={(event) => setDraft(event.target.value)}
 					onBlur={commit}
 					onKeyDown={(event) => {
-						if (event.key === "Enter") commit();
+						if (event.key === "Enter" && !event.nativeEvent.isComposing)
+							commit();
 						if (event.key === "Escape") setDraft(null);
 					}}
 					className="h-5 min-w-0 flex-1 rounded-sm bg-background px-1 text-xs outline-none ring-1 ring-ring"
@@ -97,7 +98,7 @@ export function ConversationTodos({
 	const doneCount = todos.filter((todo) => todo.done).length;
 
 	const onKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
-		if (event.key !== "Enter") return;
+		if (event.key !== "Enter" || event.nativeEvent.isComposing) return;
 		addTodo(conversationId, text);
 		setText("");
 	};

@@ -22,15 +22,30 @@ export interface ConversationTodosState {
 	clearDone: (conversationId: string) => void;
 }
 
+export const MAX_CONVERSATIONS = 100;
+export const MAX_TODOS_PER_CONVERSATION = 50;
+
+function lastTouchedAt(list: ConversationTodo[]): number {
+	return Math.max(...list.map((todo) => todo.createdAt));
+}
+
+// Terminal ids never come back, so the list of the conversation touched
+// longest ago goes first once the cap is reached.
 function withList(
 	state: ConversationTodosState,
 	conversationId: string,
 	list: ConversationTodo[],
 ): Pick<ConversationTodosState, "todosByConversation"> {
 	const { [conversationId]: _previous, ...rest } = state.todosByConversation;
+	if (list.length === 0) return { todosByConversation: rest };
+	const others = Object.entries(rest)
+		.sort(([, a], [, b]) => lastTouchedAt(b) - lastTouchedAt(a))
+		.slice(0, MAX_CONVERSATIONS - 1);
 	return {
-		todosByConversation:
-			list.length > 0 ? { ...rest, [conversationId]: list } : rest,
+		todosByConversation: {
+			...Object.fromEntries(others),
+			[conversationId]: list.slice(-MAX_TODOS_PER_CONVERSATION),
+		},
 	};
 }
 

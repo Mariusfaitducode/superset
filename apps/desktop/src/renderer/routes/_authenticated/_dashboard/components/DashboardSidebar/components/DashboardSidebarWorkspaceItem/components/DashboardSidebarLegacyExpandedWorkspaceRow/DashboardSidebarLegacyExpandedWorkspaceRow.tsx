@@ -78,7 +78,6 @@ interface DashboardSidebarLegacyExpandedWorkspaceRowProps
 	pinnedContext?: { projectName: string | null; projectIconUrl: string | null };
 	onClick?: MouseEventHandler<HTMLDivElement>;
 	onKeyboardActivate?: KeyboardEventHandler<HTMLDivElement>;
-	onWorkspaceChipsClick?: MouseEventHandler<HTMLDivElement>;
 	onDoubleClick?: () => void;
 	onCloseWorkspaceClick: () => void;
 	onRemoveFromSidebarClick: () => void;
@@ -108,7 +107,6 @@ export const DashboardSidebarLegacyExpandedWorkspaceRow = forwardRef<
 			pinnedContext,
 			onClick,
 			onKeyboardActivate,
-			onWorkspaceChipsClick: _onWorkspaceChipsClick,
 			onDoubleClick,
 			onCloseWorkspaceClick,
 			onRemoveFromSidebarClick,
