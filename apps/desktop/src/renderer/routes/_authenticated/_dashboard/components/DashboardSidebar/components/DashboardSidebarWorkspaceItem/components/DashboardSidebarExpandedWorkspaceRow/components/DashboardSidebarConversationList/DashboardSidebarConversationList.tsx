@@ -3,7 +3,8 @@ import { formatCompactRelativeTime } from "@superset/i18n/format";
 import { cn } from "@superset/ui/utils";
 import { useNavigate } from "@tanstack/react-router";
 import { type SyntheticEvent, useState } from "react";
-import { LuListChecks } from "react-icons/lu";
+import { LuBot, LuListChecks, LuMessageSquarePlus } from "react-icons/lu";
+import { usePresetIcon } from "renderer/assets/app-icons/preset-icons";
 import { useNow } from "renderer/hooks/useNow";
 import {
 	buildSubagentSearch,
@@ -13,7 +14,10 @@ import {
 	type ConversationTodo,
 	useConversationTodosStore,
 } from "renderer/stores/conversation-todos";
-import { useSidebarPreference } from "renderer/stores/sidebar-preferences";
+import {
+	useSidebarPreference,
+	type WaitingTint,
+} from "renderer/stores/sidebar-preferences";
 import { useIsTerminalVisible } from "renderer/stores/visible-terminals";
 import type { DashboardSidebarWorkspaceIndentation } from "../../../../../../types";
 import { ConversationStats } from "./components/ConversationStats";
@@ -39,17 +43,52 @@ const DOT_CLASS: Record<ConversationState, string> = {
 };
 
 // Warms up the longer a conversation has waited on the user.
-const TINT_CLASS = [
-	"",
-	"bg-orange-500/[0.07]",
-	"bg-orange-500/[0.14]",
-	"bg-red-500/[0.18]",
-];
+const TINT_CLASS: Record<Exclude<WaitingTint, "off">, string[]> = {
+	subtle: [
+		"",
+		"bg-orange-500/[0.07]",
+		"bg-orange-500/[0.14]",
+		"bg-red-500/[0.18]",
+	],
+	strong: [
+		"",
+		"bg-orange-500/[0.14]",
+		"bg-orange-500/[0.26]",
+		"bg-red-500/[0.32]",
+	],
+};
 
 const EMPTY: ConversationTodo[] = [];
 
 function stopRowEvent(event: SyntheticEvent) {
 	event.stopPropagation();
+}
+
+function AgentAvatar({
+	conversation,
+	label,
+}: {
+	conversation: SidebarConversation;
+	label: string;
+}) {
+	const iconUrl = usePresetIcon(conversation.agentId);
+	return (
+		<span className="relative flex size-3.5 shrink-0 items-center justify-center">
+			{iconUrl ? (
+				<img src={iconUrl} alt="" className="size-3.5 object-contain" />
+			) : (
+				<LuBot className="size-3.5" />
+			)}
+			<span
+				role="img"
+				aria-label={label}
+				className={cn(
+					"absolute -right-1 -bottom-0.5 size-2 rounded-full ring-2 ring-sidebar",
+					DOT_CLASS[conversation.state],
+				)}
+			/>
+		</span>
+	);
 }
 
 function ConversationRow({
@@ -72,7 +111,9 @@ function ConversationRow({
 	const isVisible = useIsTerminalVisible(conversation.terminalId);
 	const showTodos = useSidebarPreference("showTodos");
 	const showSubagents = useSidebarPreference("showSubagents");
-	const showWaitingTint = useSidebarPreference("showWaitingTint");
+	const showTurnTime = useSidebarPreference("showTurnTime");
+	const showQueuedPrompts = useSidebarPreference("showQueuedPrompts");
+	const waitingTint = useSidebarPreference("waitingTint");
 	const openTodos = todos.filter((todo) => !todo.done).length;
 
 	const stateLabel: Record<ConversationState, string> = {
@@ -87,7 +128,10 @@ function ConversationRow({
 	const waiting = isWaitingOnUser(conversation.state);
 	const waitedMs = now - conversation.since;
 	const tint =
-		waiting && showWaitingTint ? TINT_CLASS[waitingTintLevel(waitedMs)] : "";
+		waiting && waitingTint !== "off"
+			? TINT_CLASS[waitingTint][waitingTintLevel(waitedMs)]
+			: "";
+	const turnStartedAt = showTurnTime ? conversation.turnStartedAt : null;
 
 	const open = () => {
 		void navigateToV2Workspace(workspaceId, navigate, {
@@ -128,23 +172,30 @@ function ConversationRow({
 					title={`${stateLabel[conversation.state]} · ${conversation.title}`}
 					className="flex min-w-0 flex-1 items-center gap-2 text-left focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
 				>
-					<span
-						role="img"
-						aria-label={stateLabel[conversation.state]}
-						className={cn(
-							"size-2 shrink-0 rounded-full",
-							DOT_CLASS[conversation.state],
-						)}
+					<AgentAvatar
+						conversation={conversation}
+						label={stateLabel[conversation.state]}
 					/>
 					<span
 						className={cn(
 							"min-w-0 flex-1 truncate text-xs",
-							waiting ? "text-foreground" : "text-muted-foreground",
+							waiting || conversation.state === "working"
+								? "text-foreground"
+								: "text-muted-foreground",
 						)}
 					>
 						{conversation.title}
 					</span>
 				</button>
+				{showQueuedPrompts && conversation.queuedPrompts > 0 && (
+					<span
+						className="flex shrink-0 items-center gap-0.5 text-[10px] text-muted-foreground"
+						title={t`${conversation.queuedPrompts} queued messages`}
+					>
+						<LuMessageSquarePlus className="size-3" />
+						{conversation.queuedPrompts}
+					</span>
+				)}
 				<ConversationStats
 					workspaceId={workspaceId}
 					hostId={hostId}
@@ -168,11 +219,18 @@ function ConversationRow({
 						{todos.length > 0 && <span>{openTodos > 0 ? openTodos : "✓"}</span>}
 					</button>
 				)}
-				{waiting && (
+				{waiting ? (
 					<span className="shrink-0 text-[10px] tabular-nums text-muted-foreground">
 						{formatCompactRelativeTime(Math.min(conversation.since, now), now)}
 					</span>
-				)}
+				) : turnStartedAt !== null ? (
+					<span
+						className="shrink-0 text-[10px] tabular-nums text-yellow-500"
+						title={t`Current turn running`}
+					>
+						{formatCompactRelativeTime(Math.min(turnStartedAt, now), now)}
+					</span>
+				) : null}
 			</div>
 			{showSubagents && conversation.subagents.length > 0 && (
 				<ul className="ml-[3px] border-l border-border pl-2">
@@ -199,9 +257,9 @@ function ConversationRow({
 }
 
 /**
- * Every agent conversation of a workspace, under its row: one state dot per
- * conversation, a tint that warms with the time it has waited on the user,
- * and the user's own to-dos for it.
+ * Every agent conversation of a workspace, under its row: the agent's icon
+ * with a state dot, a tint that warms with the time it has waited on the
+ * user, its turn time and stats, and the user's own to-dos for it.
  */
 export function DashboardSidebarConversationList({
 	workspaceId,
@@ -215,11 +273,15 @@ export function DashboardSidebarConversationList({
 	indentation?: DashboardSidebarWorkspaceIndentation;
 }) {
 	const showConversations = useSidebarPreference("showConversations");
-	const conversations = useWorkspaceConversations({
+	const showIdleConversations = useSidebarPreference("showIdleConversations");
+	const allConversations = useWorkspaceConversations({
 		workspaceId,
 		hostId,
 		enabled: showConversations,
 	});
+	const conversations = showIdleConversations
+		? allConversations
+		: allConversations.filter((conversation) => conversation.state !== "idle");
 
 	if (!showConversations || conversations.length === 0) return null;
 

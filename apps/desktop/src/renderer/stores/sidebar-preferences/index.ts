@@ -4,4 +4,5 @@ export {
 	type SidebarPreferences,
 	useSidebarPreference,
 	useSidebarPreferencesStore,
+	type WaitingTint,
 } from "./store";

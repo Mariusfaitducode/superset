@@ -74,7 +74,10 @@ export const SETTING_ITEM_ID = {
 	LINKS_PAGE: "links-page",
 
 	SIDEBAR_CONVERSATIONS: "sidebar-conversations",
+	SIDEBAR_IDLE_CONVERSATIONS: "sidebar-idle-conversations",
 	SIDEBAR_CONVERSATION_STATS: "sidebar-conversation-stats",
+	SIDEBAR_TURN_TIME: "sidebar-turn-time",
+	SIDEBAR_QUEUED_PROMPTS: "sidebar-queued-prompts",
 	SIDEBAR_TODOS: "sidebar-todos",
 	SIDEBAR_SUBAGENTS: "sidebar-subagents",
 	SIDEBAR_WAITING_TINT: "sidebar-waiting-tint",
@@ -237,7 +240,10 @@ export const SETTING_ITEM_VARIANT: Record<SettingItemId, SettingVariant> = {
 	[SETTING_ITEM_ID.LINKS_PAGE]: "v2",
 
 	[SETTING_ITEM_ID.SIDEBAR_CONVERSATIONS]: "v2",
+	[SETTING_ITEM_ID.SIDEBAR_IDLE_CONVERSATIONS]: "v2",
 	[SETTING_ITEM_ID.SIDEBAR_CONVERSATION_STATS]: "v2",
+	[SETTING_ITEM_ID.SIDEBAR_TURN_TIME]: "v2",
+	[SETTING_ITEM_ID.SIDEBAR_QUEUED_PROMPTS]: "v2",
 	[SETTING_ITEM_ID.SIDEBAR_TODOS]: "v2",
 	[SETTING_ITEM_ID.SIDEBAR_SUBAGENTS]: "v2",
 	[SETTING_ITEM_ID.SIDEBAR_WAITING_TINT]: "v2",
@@ -1426,6 +1432,13 @@ export const SETTINGS_ITEMS: SettingsItem[] = [
 		],
 	},
 	{
+		id: SETTING_ITEM_ID.SIDEBAR_IDLE_CONVERSATIONS,
+		section: "sidebar",
+		title: "Idle conversations",
+		description: "Also list agents that have not started working yet",
+		keywords: ["sidebar", "idle", "conversations", "agents", "hide"],
+	},
+	{
 		id: SETTING_ITEM_ID.SIDEBAR_CONVERSATION_STATS,
 		section: "sidebar",
 		title: "Conversation stats",
@@ -1440,6 +1453,20 @@ export const SETTINGS_ITEMS: SettingsItem[] = [
 			"usage",
 			"window",
 		],
+	},
+	{
+		id: SETTING_ITEM_ID.SIDEBAR_TURN_TIME,
+		section: "sidebar",
+		title: "Working time",
+		description: "Show how long the current turn has been running",
+		keywords: ["sidebar", "time", "duration", "turn", "working", "running"],
+	},
+	{
+		id: SETTING_ITEM_ID.SIDEBAR_QUEUED_PROMPTS,
+		section: "sidebar",
+		title: "Queued messages",
+		description: "Show the messages that wait for the current turn to end",
+		keywords: ["sidebar", "queue", "queued", "messages", "prompts"],
 	},
 	{
 		id: SETTING_ITEM_ID.SIDEBAR_TODOS,
