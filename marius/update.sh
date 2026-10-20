@@ -21,5 +21,6 @@ echo "building $FORK_BUILD, log: $LOG"
 codesign --verify --deep --strict "$APP"
 echo "built in $(( $(date +%s) - started ))s"
 
-nohup "$ROOT/marius/swap-to-fork.sh" "$APP" >/dev/null 2>&1 &
+# Own session, so the swap outlives whatever ran this script (an agent's shell gets reaped).
+nohup perl -MPOSIX -e 'POSIX::setsid(); exec @ARGV' "$ROOT/marius/swap-to-fork.sh" "$APP" </dev/null >/dev/null 2>&1 &
 echo "installing: Superset will quit and reopen (progress in marius/swap.log)"
