@@ -4,6 +4,7 @@ import { contextBridge, ipcRenderer, webUtils } from "electron";
 import { exposeElectronTRPC } from "trpc-electron/main";
 
 declare const __APP_VERSION__: string;
+declare const __FORK_BUILD__: string;
 
 declare global {
 	interface Window {
@@ -19,6 +20,8 @@ const API = {
 	sayHelloFromBridge: () => console.log("\nHello from bridgeAPI! 👋\n\n"),
 	username: process.env.USER,
 	appVersion: __APP_VERSION__,
+	/** Set by marius/update.sh: the upstream tag and the fork commit built. */
+	forkBuild: __FORK_BUILD__,
 	platform: process.platform,
 };
 

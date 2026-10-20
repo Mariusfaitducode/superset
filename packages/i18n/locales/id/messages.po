@@ -497,6 +497,10 @@ msgstr "Paket {0}"
 msgid "{0} projects"
 msgstr "{0} proyek"
 
+#. placeholder {0}: conversation.queuedPrompts
+msgid "{0} queued messages"
+msgstr "{0} pesan dalam antrean"
+
 #. placeholder {0}: tally.running
 msgid "{0} Running"
 msgstr "{0} Berjalan"
@@ -1154,6 +1158,12 @@ msgstr "{updatedLabel} dipulihkan ke setelan bawaan"
 
 msgid "{uploading, plural, one {Uploading # file…} other {Uploading # files…}}"
 msgstr "{uploading, plural, other {Mengunggah # file…}}"
+
+msgid "{used} of {max} tokens"
+msgstr "{used} dari {max} token"
+
+msgid "{used} tokens"
+msgstr "{used} token"
 
 msgid "{used} used"
 msgstr "{used} terpakai"
@@ -1904,6 +1914,9 @@ msgstr "Agen Selesai — {workspaceName}"
 msgid "Agent Configs"
 msgstr "Konfigurasi Agen"
 
+msgid "Agent conversations"
+msgstr "Percakapan agen"
+
 msgid "Agent credentials changed"
 msgstr "Kredensial agen berubah"
 
@@ -2233,6 +2246,9 @@ msgstr "Hapus juga branch lokal"
 
 msgid "Also delete the local git branch when deleting a worktree workspace"
 msgstr "Hapus juga branch git lokal saat menghapus workspace worktree"
+
+msgid "Also list agents that have not started working yet."
+msgstr "Tampilkan juga agen yang belum mulai bekerja."
 
 msgid "Also viewing this page"
 msgstr "Juga melihat halaman ini"
@@ -3322,6 +3338,9 @@ msgstr "Gambar dan file ter-cache"
 msgid "Cached input"
 msgstr "Input ter-cache"
 
+msgid "Cached input tokens"
+msgstr "Token input ter-cache"
+
 msgid "Calendar"
 msgstr "Kalender"
 
@@ -3707,6 +3726,9 @@ msgstr "Pilih cara membuka tampilan perubahan dari bilah atas"
 
 msgid "Choose how to open file paths when Cmd+clicking in the terminal"
 msgstr "Pilih cara membuka path file saat Cmd+klik di terminal"
+
+msgid "Choose what the sidebar shows under each workspace."
+msgstr "Pilih apa yang ditampilkan bilah sisi di bawah setiap workspace."
 
 msgid "Choose what to clear from the in-app browser."
 msgstr "Pilih apa yang ingin dibersihkan dari browser dalam aplikasi."
@@ -4598,6 +4620,12 @@ msgstr "Konteks"
 msgid "Context Menu"
 msgstr "Menu Konteks"
 
+msgid "Context used: {compact}"
+msgstr "Konteks terpakai: {compact}"
+
+msgid "Context window"
+msgstr "Jendela konteks"
+
 msgid "Continue"
 msgstr "Lanjutkan"
 
@@ -4656,6 +4684,12 @@ msgstr "Percakapan"
 
 msgid "Conversation · Message"
 msgstr "Percakapan · Pesan"
+
+msgid "Conversation stats"
+msgstr "Statistik percakapan"
+
+msgid "Conversation to-dos"
+msgstr "Tugas percakapan"
 
 msgid "Convert to draft"
 msgstr "Ubah menjadi draf"
@@ -5649,6 +5683,9 @@ msgstr "Paket saat ini"
 
 msgid "Current tab"
 msgstr "Tab saat ini"
+
+msgid "Current turn running"
+msgstr "Giliran saat ini berjalan"
 
 msgid "Cursor"
 msgstr "Kursor"
@@ -6817,6 +6854,9 @@ msgstr "esc untuk menutup"
 
 msgid "esc to exit"
 msgstr "esc untuk keluar"
+
+msgid "Estimated cost"
+msgstr "Perkiraan biaya"
 
 msgid "Event log"
 msgstr "Log peristiwa"
@@ -8625,6 +8665,9 @@ msgstr "Idle"
 msgid "Idle · branch pushed"
 msgstr "Idle · branch sudah di-push"
 
+msgid "Idle conversations"
+msgstr "Percakapan tidak aktif"
+
 msgid "If you're enjoying Superset so far, a GitHub star helps other developers discover it."
 msgstr "Kalau sejauh ini Anda menikmati Superset, satu star GitHub membantu developer lain menemukannya."
 
@@ -8881,6 +8924,9 @@ msgstr "Input Group"
 
 msgid "Input OTP"
 msgstr "Input OTP"
+
+msgid "Input tokens"
+msgstr "Token input"
 
 msgid "input, cache and output tokens"
 msgstr "token input, cache, dan output"
@@ -9667,6 +9713,9 @@ msgstr "Menampilkan agen yang dikonfigurasi di sebuah host dan menjalankan sesi 
 msgid "List all my assigned tasks"
 msgstr "Tampilkan semua tugas yang ditugaskan ke saya"
 
+msgid "List each agent conversation under its workspace, with its state dot."
+msgstr "Menampilkan setiap percakapan agen di bawah workspace-nya, dengan titik statusnya."
+
 msgid "List members of your active organization."
 msgstr "Menampilkan anggota organisasi aktif Anda."
 
@@ -9675,6 +9724,9 @@ msgstr "Menampilkan mesin yang bisa Anda pakai untuk menjalankan workspace."
 
 msgid "List the projects (checked-out repos) available on a host."
 msgstr "Menampilkan proyek (repo yang sudah di-checkout) yang tersedia di sebuah host."
+
+msgid "List the subagents of each conversation under it."
+msgstr "Menampilkan subagen setiap percakapan di bawahnya."
 
 msgid "List, create, update, and delete workspaces on a host."
 msgstr "Menampilkan, membuat, memperbarui, dan menghapus workspace di sebuah host."
@@ -12375,6 +12427,9 @@ msgstr "Hasil · PR yang digabungkan per minggu"
 
 msgid "Output Schema"
 msgstr "Skema Output"
+
+msgid "Output tokens"
+msgstr "Token output"
 
 msgid "Output truncated"
 msgstr "Output dipotong"
@@ -15591,6 +15646,12 @@ msgstr "Tampilkan lebih sedikit"
 msgid "Show file tree"
 msgstr "Tampilkan pohon file"
 
+msgid "Show how long the current turn has been running."
+msgstr "Tampilkan berapa lama giliran saat ini sudah berjalan."
+
+msgid "Show how much of the context window each conversation uses, with its model and tokens on hover."
+msgstr "Menampilkan seberapa banyak jendela konteks yang dipakai setiap percakapan, dengan model dan token saat diarahkan."
+
 msgid "Show in bar"
 msgstr "Tampilkan di bilah"
 
@@ -15668,6 +15729,12 @@ msgstr "Tampilkan status dan kirim notifikasi untuk agen ini."
 
 msgid "Show text"
 msgstr "Tampilkan teks"
+
+msgid "Show the messages that wait for the current turn to end."
+msgstr "Tampilkan pesan yang menunggu giliran saat ini selesai."
+
+msgid "Show the to-do button and list on each conversation."
+msgstr "Menampilkan tombol dan daftar tugas pada setiap percakapan."
 
 msgid "Show the triggering payload"
 msgstr "Tampilkan payload pemicu"
@@ -16415,6 +16482,9 @@ msgstr "Coret"
 msgid "Strip redundant overrides at call sites"
 msgstr "Buang penimpaan berlebih di call site"
 
+msgid "Strong"
+msgstr "Kuat"
+
 msgid "Structure, scrolling, and overflow handling"
 msgstr "Struktur, penggulungan, dan penanganan overflow"
 
@@ -16459,6 +16529,9 @@ msgstr "langganan"
 
 msgid "Subscription"
 msgstr "Langganan"
+
+msgid "Subtle"
+msgstr "Halus"
 
 msgid "Success"
 msgstr "Berhasil"
@@ -18244,6 +18317,9 @@ msgstr "Ubah percakapan Slack menjadi tugas, jalankan agen dari workspace Anda, 
 msgid "turn the onboarding findings into a page"
 msgstr "ubah temuan onboarding menjadi halaman"
 
+msgid "Turns"
+msgstr "Giliran"
+
 msgid "Two Hands"
 msgstr "Dua tangan"
 
@@ -18964,11 +19040,17 @@ msgstr "Menunggu masukan Anda"
 msgid "Waiting for your reply"
 msgstr "Menunggu balasan Anda"
 
+msgid "Waiting tint"
+msgstr "Warna tunggu"
+
 msgid "Waking up workspace"
 msgstr "Membangunkan workspace"
 
 msgid "Want something sooner? <0>Tell us in Discord</0>. Much of what's here started as a user request."
 msgstr "Ingin sesuatu lebih cepat? <0>Beri tahu kami di Discord</0>. Banyak yang ada di sini bermula dari permintaan pengguna."
+
+msgid "Warm up a conversation after it waits for you 10 minutes, 1 hour and 4 hours."
+msgstr "Warnai percakapan setelah menunggu Anda 10 menit, 1 jam, dan 4 jam."
 
 msgid "Warning"
 msgstr "Warning"
@@ -19316,6 +19398,9 @@ msgstr "Bekerja selama {0} mnt {1} dtk"
 
 msgid "Working for {seconds}s"
 msgstr "Bekerja selama {seconds} dtk"
+
+msgid "Working time"
+msgstr "Waktu kerja"
 
 msgid "Working…"
 msgstr "Sedang bekerja…"

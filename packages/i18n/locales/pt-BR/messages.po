@@ -497,6 +497,10 @@ msgstr "Plano {0}"
 msgid "{0} projects"
 msgstr "{0} projetos"
 
+#. placeholder {0}: conversation.queuedPrompts
+msgid "{0} queued messages"
+msgstr "{0} mensagens na fila"
+
 #. placeholder {0}: tally.running
 msgid "{0} Running"
 msgstr "{0} em execução"
@@ -1154,6 +1158,12 @@ msgstr "{updatedLabel} restaurado para os padrões"
 
 msgid "{uploading, plural, one {Uploading # file…} other {Uploading # files…}}"
 msgstr "{uploading, plural, one {Enviando # arquivo…} other {Enviando # arquivos…}}"
+
+msgid "{used} of {max} tokens"
+msgstr "{used} de {max} tokens"
+
+msgid "{used} tokens"
+msgstr "{used} tokens"
 
 msgid "{used} used"
 msgstr "{used} usado"
@@ -1904,6 +1914,9 @@ msgstr "Agente concluiu — {workspaceName}"
 msgid "Agent Configs"
 msgstr "Configurações de agente"
 
+msgid "Agent conversations"
+msgstr "Conversas dos agentes"
+
 msgid "Agent credentials changed"
 msgstr "As credenciais do agente mudaram"
 
@@ -2233,6 +2246,9 @@ msgstr "Excluir também as branches locais"
 
 msgid "Also delete the local git branch when deleting a worktree workspace"
 msgstr "Excluir também a branch local do git ao excluir uma área de trabalho com worktree"
+
+msgid "Also list agents that have not started working yet."
+msgstr "Listar também os agentes que ainda não começaram a trabalhar."
 
 msgid "Also viewing this page"
 msgstr "Também estão vendo esta página"
@@ -3322,6 +3338,9 @@ msgstr "Imagens e arquivos em cache"
 msgid "Cached input"
 msgstr "Entrada em cache"
 
+msgid "Cached input tokens"
+msgstr "Tokens de entrada em cache"
+
 msgid "Calendar"
 msgstr "Calendário"
 
@@ -3707,6 +3726,9 @@ msgstr "Escolha como a visualização de alterações abre pela barra superior"
 
 msgid "Choose how to open file paths when Cmd+clicking in the terminal"
 msgstr "Escolha como abrir caminhos de arquivo ao dar Cmd+clique no terminal"
+
+msgid "Choose what the sidebar shows under each workspace."
+msgstr "Escolha o que a barra lateral mostra abaixo de cada workspace."
 
 msgid "Choose what to clear from the in-app browser."
 msgstr "Escolha o que limpar do navegador do app."
@@ -4598,6 +4620,12 @@ msgstr "Contexto"
 msgid "Context Menu"
 msgstr "Menu de contexto"
 
+msgid "Context used: {compact}"
+msgstr "Contexto usado: {compact}"
+
+msgid "Context window"
+msgstr "Janela de contexto"
+
 msgid "Continue"
 msgstr "Continuar"
 
@@ -4656,6 +4684,12 @@ msgstr "Conversa"
 
 msgid "Conversation · Message"
 msgstr "Conversa · Mensagem"
+
+msgid "Conversation stats"
+msgstr "Estatísticas das conversas"
+
+msgid "Conversation to-dos"
+msgstr "Tarefas das conversas"
 
 msgid "Convert to draft"
 msgstr "Converter em rascunho"
@@ -5649,6 +5683,9 @@ msgstr "Plano atual"
 
 msgid "Current tab"
 msgstr "Aba atual"
+
+msgid "Current turn running"
+msgstr "Turno atual em andamento"
 
 msgid "Cursor"
 msgstr "Cursor"
@@ -6817,6 +6854,9 @@ msgstr "esc para dispensar"
 
 msgid "esc to exit"
 msgstr "esc para sair"
+
+msgid "Estimated cost"
+msgstr "Custo estimado"
 
 msgid "Event log"
 msgstr "Log de eventos"
@@ -8625,6 +8665,9 @@ msgstr "Ocioso"
 msgid "Idle · branch pushed"
 msgstr "Ocioso · push da branch feito"
 
+msgid "Idle conversations"
+msgstr "Conversas inativas"
+
 msgid "If you're enjoying Superset so far, a GitHub star helps other developers discover it."
 msgstr "Se você está curtindo o Superset até aqui, uma estrela no GitHub ajuda outras pessoas a descobri-lo."
 
@@ -8881,6 +8924,9 @@ msgstr "Input Group"
 
 msgid "Input OTP"
 msgstr "Input OTP"
+
+msgid "Input tokens"
+msgstr "Tokens de entrada"
 
 msgid "input, cache and output tokens"
 msgstr "tokens de entrada, cache e saída"
@@ -9667,6 +9713,9 @@ msgstr "Listar os agentes configurados em um host e iniciar uma sessão de agent
 msgid "List all my assigned tasks"
 msgstr "Liste todas as tarefas atribuídas a mim"
 
+msgid "List each agent conversation under its workspace, with its state dot."
+msgstr "Mostra cada conversa de agente abaixo do seu workspace, com seu indicador de status."
+
 msgid "List members of your active organization."
 msgstr "Listar os membros da sua organização ativa."
 
@@ -9675,6 +9724,9 @@ msgstr "Listar as máquinas em que você pode rodar áreas de trabalho."
 
 msgid "List the projects (checked-out repos) available on a host."
 msgstr "Listar os projetos (repositórios já clonados) disponíveis em um host."
+
+msgid "List the subagents of each conversation under it."
+msgstr "Mostra os subagentes de cada conversa abaixo dela."
 
 msgid "List, create, update, and delete workspaces on a host."
 msgstr "Listar, criar, atualizar e excluir áreas de trabalho em um host."
@@ -12375,6 +12427,9 @@ msgstr "Produção · PRs mesclados por semana"
 
 msgid "Output Schema"
 msgstr "Esquema de saída"
+
+msgid "Output tokens"
+msgstr "Tokens de saída"
 
 msgid "Output truncated"
 msgstr "Saída truncada"
@@ -15591,6 +15646,12 @@ msgstr "Mostrar menos"
 msgid "Show file tree"
 msgstr "Mostrar a árvore de arquivos"
 
+msgid "Show how long the current turn has been running."
+msgstr "Mostrar há quanto tempo o turno atual está em andamento."
+
+msgid "Show how much of the context window each conversation uses, with its model and tokens on hover."
+msgstr "Mostra quanto da janela de contexto cada conversa usa, com modelo e tokens ao passar o mouse."
+
 msgid "Show in bar"
 msgstr "Mostrar na barra"
 
@@ -15668,6 +15729,12 @@ msgstr "Mostra o status e envia notificações para este agente."
 
 msgid "Show text"
 msgstr "Mostrar texto"
+
+msgid "Show the messages that wait for the current turn to end."
+msgstr "Mostrar as mensagens que aguardam o fim do turno atual."
+
+msgid "Show the to-do button and list on each conversation."
+msgstr "Mostra o botão e a lista de tarefas em cada conversa."
 
 msgid "Show the triggering payload"
 msgstr "Mostrar a carga útil que disparou"
@@ -16415,6 +16482,9 @@ msgstr "Tachado"
 msgid "Strip redundant overrides at call sites"
 msgstr "Remover sobrescritas redundantes nos pontos de chamada"
 
+msgid "Strong"
+msgstr "Forte"
+
 msgid "Structure, scrolling, and overflow handling"
 msgstr "Estrutura, rolagem e tratamento de overflow"
 
@@ -16459,6 +16529,9 @@ msgstr "assinatura"
 
 msgid "Subscription"
 msgstr "Assinatura"
+
+msgid "Subtle"
+msgstr "Sutil"
 
 msgid "Success"
 msgstr "Sucesso"
@@ -18244,6 +18317,9 @@ msgstr "Transforme conversas do Slack em tarefas, execute agentes a partir da su
 msgid "turn the onboarding findings into a page"
 msgstr "transforme as descobertas do onboarding em uma página"
 
+msgid "Turns"
+msgstr "Turnos"
+
 msgid "Two Hands"
 msgstr "Duas mãos"
 
@@ -18964,11 +19040,17 @@ msgstr "Aguardando sua resposta"
 msgid "Waiting for your reply"
 msgstr "Aguardando sua resposta"
 
+msgid "Waiting tint"
+msgstr "Tom de espera"
+
 msgid "Waking up workspace"
 msgstr "Ativando a área de trabalho"
 
 msgid "Want something sooner? <0>Tell us in Discord</0>. Much of what's here started as a user request."
 msgstr "Quer algo antes? <0>Conte para a gente no Discord</0>. Boa parte do que está aqui começou como pedido de usuário."
+
+msgid "Warm up a conversation after it waits for you 10 minutes, 1 hour and 4 hours."
+msgstr "Destacar uma conversa quando ela espera por você 10 minutos, 1 hora e 4 horas."
 
 msgid "Warning"
 msgstr "Aviso"
@@ -19316,6 +19398,9 @@ msgstr "Trabalhando há {0} min {1} s"
 
 msgid "Working for {seconds}s"
 msgstr "Trabalhando há {seconds} s"
+
+msgid "Working time"
+msgstr "Tempo de trabalho"
 
 msgid "Working…"
 msgstr "Trabalhando…"

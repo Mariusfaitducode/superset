@@ -6,12 +6,26 @@
 # official updates keep sessions alive), so running agents carry on across the swap.
 set -u
 NEW_APP=${1:?usage: swap-to-fork.sh /path/to/Superset.app}
-BACKUP=$(cat "$HOME/CodeProjects/superset/.last-backup-path")
-LOG="$HOME/CodeProjects/superset/marius/swap.log"
+ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+LOG="$ROOT/marius/swap.log"
 exec >>"$LOG" 2>&1
+[ -f "$ROOT/.last-backup-path" ] || echo "$HOME/Backups/superset-$(date +%Y%m%d-%H%M)" >"$ROOT/.last-backup-path"
+BACKUP=$(cat "$ROOT/.last-backup-path")
+mkdir -p "$BACKUP/dot-superset"
 echo "== $(date) swap to $NEW_APP (backup: $BACKUP)"
 
 [ -d "$NEW_APP" ] || { echo "missing $NEW_APP"; exit 1; }
+
+# Keep the official app for rollback-to-official.sh: it is the only one signed by
+# Superset's Developer ID, fork builds are signed ad hoc.
+INSTALLED=/Applications/Superset.app
+if [ -d "$INSTALLED" ] && codesign -dvv "$INSTALLED" 2>&1 | grep -q "^Authority=Developer ID"; then
+  version=$(/usr/libexec/PlistBuddy -c 'Print CFBundleShortVersionString' "$INSTALLED/Contents/Info.plist")
+  [ -d "$BACKUP/Superset-official-$version.app" ] || {
+    ditto "$INSTALLED" "$BACKUP/Superset-official-$version.app"
+    echo "official $version kept in $BACKUP"
+  }
+fi
 
 main_running() { ps -axo args= | awk '$0=="/Applications/Superset.app/Contents/MacOS/Superset"{f=1} END{exit !f}'; }
 

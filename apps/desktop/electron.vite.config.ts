@@ -176,6 +176,7 @@ export default defineConfig({
 				"",
 			),
 			__APP_VERSION__: defineEnv(version),
+			__FORK_BUILD__: defineEnv(process.env.FORK_BUILD, ""),
 		},
 
 		build: {

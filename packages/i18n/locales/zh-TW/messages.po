@@ -497,6 +497,10 @@ msgstr "{0}方案"
 msgid "{0} projects"
 msgstr "{0}個專案"
 
+#. placeholder {0}: conversation.queuedPrompts
+msgid "{0} queued messages"
+msgstr "{0} 則排隊訊息"
+
 #. placeholder {0}: tally.running
 msgid "{0} Running"
 msgstr "{0}項執行中"
@@ -1154,6 +1158,12 @@ msgstr "{updatedLabel}已恢復為預設值"
 
 msgid "{uploading, plural, one {Uploading # file…} other {Uploading # files…}}"
 msgstr "{uploading, plural, other {正在上傳 # 個檔案…}}"
+
+msgid "{used} of {max} tokens"
+msgstr "{used} / {max} Token"
+
+msgid "{used} tokens"
+msgstr "{used} Token"
 
 msgid "{used} used"
 msgstr "已使用 {used}"
@@ -1904,6 +1914,9 @@ msgstr "代理程式已完成 — {workspaceName}"
 msgid "Agent Configs"
 msgstr "代理程式配置"
 
+msgid "Agent conversations"
+msgstr "代理程式對話"
+
 msgid "Agent credentials changed"
 msgstr "代理憑證已變更"
 
@@ -2233,6 +2246,9 @@ msgstr "同時刪除本地分支"
 
 msgid "Also delete the local git branch when deleting a worktree workspace"
 msgstr "刪除worktree工作區時一併刪除本地git分支"
+
+msgid "Also list agents that have not started working yet."
+msgstr "同時列出尚未開始工作的代理。"
 
 msgid "Also viewing this page"
 msgstr "也在檢視此頁面的人"
@@ -3322,6 +3338,9 @@ msgstr "快取的圖片和檔案"
 msgid "Cached input"
 msgstr "快取輸入"
 
+msgid "Cached input tokens"
+msgstr "快取輸入 Token"
+
 msgid "Calendar"
 msgstr "日曆"
 
@@ -3707,6 +3726,9 @@ msgstr "選擇從頂欄開啟變更檢視的方式"
 
 msgid "Choose how to open file paths when Cmd+clicking in the terminal"
 msgstr "選擇在終端中Cmd+點選檔案路徑時的開啟方式"
+
+msgid "Choose what the sidebar shows under each workspace."
+msgstr "選擇側邊欄在每個工作區下方顯示的內容。"
 
 msgid "Choose what to clear from the in-app browser."
 msgstr "選擇要從應用程式內瀏覽器清除的內容。"
@@ -4598,6 +4620,12 @@ msgstr "上下文"
 msgid "Context Menu"
 msgstr "右鍵選單"
 
+msgid "Context used: {compact}"
+msgstr "已用上下文：{compact}"
+
+msgid "Context window"
+msgstr "上下文視窗"
+
 msgid "Continue"
 msgstr "繼續"
 
@@ -4656,6 +4684,12 @@ msgstr "對話"
 
 msgid "Conversation · Message"
 msgstr "對話 · 訊息"
+
+msgid "Conversation stats"
+msgstr "對話統計"
+
+msgid "Conversation to-dos"
+msgstr "對話待辦"
 
 msgid "Convert to draft"
 msgstr "轉為草稿"
@@ -5649,6 +5683,9 @@ msgstr "目前方案"
 
 msgid "Current tab"
 msgstr "目前分頁"
+
+msgid "Current turn running"
+msgstr "目前回合進行中"
 
 msgid "Cursor"
 msgstr "游標"
@@ -6817,6 +6854,9 @@ msgstr "按esc關閉"
 
 msgid "esc to exit"
 msgstr "esc退出"
+
+msgid "Estimated cost"
+msgstr "預估費用"
 
 msgid "Event log"
 msgstr "事件記錄"
@@ -8625,6 +8665,9 @@ msgstr "空閒"
 msgid "Idle · branch pushed"
 msgstr "空閒 · 分支已推送"
 
+msgid "Idle conversations"
+msgstr "閒置對話"
+
 msgid "If you're enjoying Superset so far, a GitHub star helps other developers discover it."
 msgstr "如果你覺得Superset還不錯，一個GitHub星標能幫助更多開發者發現它。"
 
@@ -8881,6 +8924,9 @@ msgstr "輸入框組"
 
 msgid "Input OTP"
 msgstr "驗證碼輸入框"
+
+msgid "Input tokens"
+msgstr "輸入 Token"
 
 msgid "input, cache and output tokens"
 msgstr "輸入、快取和輸出token"
@@ -9667,6 +9713,9 @@ msgstr "列出主機上配置的代理程式，並在工作區中啟動代理程
 msgid "List all my assigned tasks"
 msgstr "列出分配給我的所有任務"
 
+msgid "List each agent conversation under its workspace, with its state dot."
+msgstr "在每個工作區下方列出每個代理程式對話及其狀態點。"
+
 msgid "List members of your active organization."
 msgstr "列出目前組織的成員。"
 
@@ -9675,6 +9724,9 @@ msgstr "列出你有權用來執行工作區的機器。"
 
 msgid "List the projects (checked-out repos) available on a host."
 msgstr "列出主機上可用的專案（已檢出的儲存庫）。"
+
+msgid "List the subagents of each conversation under it."
+msgstr "在每個對話下方列出其子代理程式。"
 
 msgid "List, create, update, and delete workspaces on a host."
 msgstr "列出、建立、更新和刪除主機上的工作區。"
@@ -12375,6 +12427,9 @@ msgstr "產出 · 每週合併的 PR 數"
 
 msgid "Output Schema"
 msgstr "輸出結構"
+
+msgid "Output tokens"
+msgstr "輸出 Token"
 
 msgid "Output truncated"
 msgstr "輸出已截斷"
@@ -15591,6 +15646,12 @@ msgstr "顯示較少"
 msgid "Show file tree"
 msgstr "顯示檔案樹"
 
+msgid "Show how long the current turn has been running."
+msgstr "顯示目前回合已執行多久。"
+
+msgid "Show how much of the context window each conversation uses, with its model and tokens on hover."
+msgstr "顯示每個對話使用了多少上下文視窗，滑鼠懸停時顯示其模型與權杖。"
+
 msgid "Show in bar"
 msgstr "在工具列顯示"
 
@@ -15668,6 +15729,12 @@ msgstr "為此代理程式顯示狀態併發送通知。"
 
 msgid "Show text"
 msgstr "顯示文字"
+
+msgid "Show the messages that wait for the current turn to end."
+msgstr "顯示等待目前回合結束的訊息。"
+
+msgid "Show the to-do button and list on each conversation."
+msgstr "在每個對話上顯示待辦按鈕與清單。"
 
 msgid "Show the triggering payload"
 msgstr "顯示觸發酬載"
@@ -16415,6 +16482,9 @@ msgstr "刪除線"
 msgid "Strip redundant overrides at call sites"
 msgstr "移除呼叫處多餘的樣式覆蓋"
 
+msgid "Strong"
+msgstr "強"
+
 msgid "Structure, scrolling, and overflow handling"
 msgstr "結構、滾動與溢位處理"
 
@@ -16459,6 +16529,9 @@ msgstr "訂閱"
 
 msgid "Subscription"
 msgstr "訂閱"
+
+msgid "Subtle"
+msgstr "輕微"
 
 msgid "Success"
 msgstr "成功"
@@ -18244,6 +18317,9 @@ msgstr "把Slack對話變成任務，從工作區執行代理程式，讓隊友�
 msgid "turn the onboarding findings into a page"
 msgstr "把新手引導的調查結果做成頁面"
 
+msgid "Turns"
+msgstr "輪次"
+
 msgid "Two Hands"
 msgstr "雙手齊開"
 
@@ -18964,11 +19040,17 @@ msgstr "等待你的輸入"
 msgid "Waiting for your reply"
 msgstr "等待你的回覆"
 
+msgid "Waiting tint"
+msgstr "等待著色"
+
 msgid "Waking up workspace"
 msgstr "正在喚醒工作區"
 
 msgid "Want something sooner? <0>Tell us in Discord</0>. Much of what's here started as a user request."
 msgstr "想讓某件事早點做？<0>在Discord上告訴我們</0>。這裡的很多條目最初都來自使用者的請求。"
+
+msgid "Warm up a conversation after it waits for you 10 minutes, 1 hour and 4 hours."
+msgstr "對話等待你 10 分鐘、1 小時和 4 小時後逐步加深顏色。"
 
 msgid "Warning"
 msgstr "警告"
@@ -19316,6 +19398,9 @@ msgstr "已執行 {0} 分 {1} 秒"
 
 msgid "Working for {seconds}s"
 msgstr "已執行 {seconds} 秒"
+
+msgid "Working time"
+msgstr "工作時長"
 
 msgid "Working…"
 msgstr "處理中…"

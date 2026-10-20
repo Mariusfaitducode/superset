@@ -20,7 +20,10 @@ import type {
 import { resolveHostAgentConfig } from "../../../terminal-agents/agent-config";
 import { terminalHarnessSession } from "../../../terminal-agents/harness-session-ref";
 import { hasHarnessSession } from "../../../terminal-agents/harness-sessions";
-import { readHarnessTranscriptOffLoop } from "../../../terminal-agents/harness-sessions/read-off-loop";
+import {
+	readHarnessSessionStatsOffLoop,
+	readHarnessTranscriptOffLoop,
+} from "../../../terminal-agents/harness-sessions/read-off-loop";
 import {
 	claimResumeCandidateBinding,
 	findResumeCandidateBinding,
@@ -489,6 +492,20 @@ export const terminalAgentsRouter = router({
 						),
 					}
 				: null;
+		}),
+
+	/**
+	 * Context use, tokens, and estimated cost of a bound Claude or Codex
+	 * session, read from the harness's own transcript. Null for any other
+	 * harness or while the session has no transcript.
+	 */
+	sessionStats: protectedProcedure
+		.input(z.object({ workspaceId: z.string(), terminalId: z.string() }))
+		.query(async ({ ctx, input }) => {
+			const binding = getTerminalAgentBinding(ctx.db, input.terminalId);
+			if (!binding || binding.workspaceId !== input.workspaceId) return null;
+			const bound = terminalHarnessSession(ctx.db, input.terminalId);
+			return bound ? readHarnessSessionStatsOffLoop(bound.ref) : null;
 		}),
 
 	/**

@@ -118,6 +118,10 @@ export const PERSISTED_KEY_REGISTRY: ReadonlyArray<
 		"src/renderer/stores/conversation-todos/store.ts",
 		["conversation-todos-v1"],
 	],
+	[
+		"src/renderer/stores/sidebar-preferences/store.ts",
+		["sidebar-preferences-v1"],
+	],
 	["src/renderer/stores/hiring-banner/store.ts", ["hiring-banner-v1"]],
 	["src/renderer/stores/star-nag/store.ts", ["star-nag-v1"]],
 	[

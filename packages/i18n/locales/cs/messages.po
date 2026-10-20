@@ -497,6 +497,10 @@ msgstr "Tarif {0}"
 msgid "{0} projects"
 msgstr "{0} projektů"
 
+#. placeholder {0}: conversation.queuedPrompts
+msgid "{0} queued messages"
+msgstr "{0} zpráv ve frontě"
+
 #. placeholder {0}: tally.running
 msgid "{0} Running"
 msgstr "Běží {0}"
@@ -1154,6 +1158,12 @@ msgstr "{updatedLabel} obnoveno na výchozí"
 
 msgid "{uploading, plural, one {Uploading # file…} other {Uploading # files…}}"
 msgstr "{uploading, plural, one {Nahrává se # soubor…} few {Nahrávají se # soubory…} many {Nahrává se # souboru…} other {Nahrává se # souborů…}}"
+
+msgid "{used} of {max} tokens"
+msgstr "{used} z {max} tokenů"
+
+msgid "{used} tokens"
+msgstr "{used} tokenů"
 
 msgid "{used} used"
 msgstr "Využito {used}"
@@ -1904,6 +1914,9 @@ msgstr "Agent dokončil — {workspaceName}"
 msgid "Agent Configs"
 msgstr "Konfigurace agentů"
 
+msgid "Agent conversations"
+msgstr "Konverzace agentů"
+
 msgid "Agent credentials changed"
 msgstr "Přihlašovací údaje agenta se změnily"
 
@@ -2233,6 +2246,9 @@ msgstr "Smazat i lokální větve"
 
 msgid "Also delete the local git branch when deleting a worktree workspace"
 msgstr "Při mazání pracovního prostoru s worktree smazat i lokální git větev"
+
+msgid "Also list agents that have not started working yet."
+msgstr "Zobrazit i agenty, kteří ještě nezačali pracovat."
 
 msgid "Also viewing this page"
 msgstr "Tuto stránku si také prohlížejí"
@@ -3322,6 +3338,9 @@ msgstr "Obrázky a soubory v mezipaměti"
 msgid "Cached input"
 msgstr "Vstup z cache"
 
+msgid "Cached input tokens"
+msgstr "Tokeny vstupu z cache"
+
 msgid "Calendar"
 msgstr "Kalendář"
 
@@ -3707,6 +3726,9 @@ msgstr "Zvolte, jak se zobrazení změn otevírá z horní lišty"
 
 msgid "Choose how to open file paths when Cmd+clicking in the terminal"
 msgstr "Zvolte, jak se otevírají cesty k souborům při Cmd+kliknutí v terminálu"
+
+msgid "Choose what the sidebar shows under each workspace."
+msgstr "Vyberte, co postranní panel zobrazuje pod každým pracovním prostorem."
 
 msgid "Choose what to clear from the in-app browser."
 msgstr "Vyberte, co se má z vestavěného prohlížeče vymazat."
@@ -4598,6 +4620,12 @@ msgstr "Kontext"
 msgid "Context Menu"
 msgstr "Kontextová nabídka"
 
+msgid "Context used: {compact}"
+msgstr "Využitý kontext: {compact}"
+
+msgid "Context window"
+msgstr "Kontextové okno"
+
 msgid "Continue"
 msgstr "Pokračovat"
 
@@ -4656,6 +4684,12 @@ msgstr "Konverzace"
 
 msgid "Conversation · Message"
 msgstr "Konverzace · Zpráva"
+
+msgid "Conversation stats"
+msgstr "Statistiky konverzací"
+
+msgid "Conversation to-dos"
+msgstr "Úkoly konverzací"
 
 msgid "Convert to draft"
 msgstr "Převést na koncept"
@@ -5649,6 +5683,9 @@ msgstr "Aktuální tarif"
 
 msgid "Current tab"
 msgstr "Aktuální karta"
+
+msgid "Current turn running"
+msgstr "Probíhá aktuální kolo"
 
 msgid "Cursor"
 msgstr "Kurzor"
@@ -6817,6 +6854,9 @@ msgstr "esc zavře"
 
 msgid "esc to exit"
 msgstr "esc pro ukončení"
+
+msgid "Estimated cost"
+msgstr "Odhadované náklady"
 
 msgid "Event log"
 msgstr "Protokol událostí"
@@ -8625,6 +8665,9 @@ msgstr "Nečinný"
 msgid "Idle · branch pushed"
 msgstr "Nečinné · větev odeslána"
 
+msgid "Idle conversations"
+msgstr "Nečinné konverzace"
+
 msgid "If you're enjoying Superset so far, a GitHub star helps other developers discover it."
 msgstr "Pokud se vám Superset zatím líbí, hvězda na GitHubu pomůže dalším vývojářům ho objevit."
 
@@ -8881,6 +8924,9 @@ msgstr "Skupina vstupů"
 
 msgid "Input OTP"
 msgstr "Vstup OTP"
+
+msgid "Input tokens"
+msgstr "Vstupní tokeny"
 
 msgid "input, cache and output tokens"
 msgstr "vstupní tokeny, tokeny cache a výstupní tokeny"
@@ -9667,6 +9713,9 @@ msgstr "Vypsat agenty nastavené na hostu a spustit relaci agenta v pracovním p
 msgid "List all my assigned tasks"
 msgstr "Vypiš všechny úkoly přiřazené mně"
 
+msgid "List each agent conversation under its workspace, with its state dot."
+msgstr "Zobrazí každou konverzaci agenta pod jejím pracovním prostorem s tečkou stavu."
+
 msgid "List members of your active organization."
 msgstr "Vypsat členy vaší aktivní organizace."
 
@@ -9675,6 +9724,9 @@ msgstr "Vypsat počítače, na kterých můžete spouštět pracovní prostory."
 
 msgid "List the projects (checked-out repos) available on a host."
 msgstr "Vypsat projekty (naklonované repozitáře) dostupné na hostu."
+
+msgid "List the subagents of each conversation under it."
+msgstr "Zobrazí subagenty každé konverzace pod ní."
 
 msgid "List, create, update, and delete workspaces on a host."
 msgstr "Vypisovat, vytvářet, upravovat a mazat pracovní prostory na hostu."
@@ -12375,6 +12427,9 @@ msgstr "Výstup · sloučené PR za týden"
 
 msgid "Output Schema"
 msgstr "Výstupní schéma"
+
+msgid "Output tokens"
+msgstr "Výstupní tokeny"
 
 msgid "Output truncated"
 msgstr "Výstup zkrácen"
@@ -15591,6 +15646,12 @@ msgstr "Zobrazit méně"
 msgid "Show file tree"
 msgstr "Zobrazit strom souborů"
 
+msgid "Show how long the current turn has been running."
+msgstr "Zobrazit, jak dlouho běží aktuální kolo."
+
+msgid "Show how much of the context window each conversation uses, with its model and tokens on hover."
+msgstr "Zobrazí, kolik kontextového okna každá konverzace využívá, s modelem a tokeny při najetí myší."
+
 msgid "Show in bar"
 msgstr "Zobrazit v liště"
 
@@ -15668,6 +15729,12 @@ msgstr "Zobrazovat stav a posílat oznámení pro tohoto agenta."
 
 msgid "Show text"
 msgstr "Zobrazit text"
+
+msgid "Show the messages that wait for the current turn to end."
+msgstr "Zobrazit zprávy, které čekají na konec aktuálního kola."
+
+msgid "Show the to-do button and list on each conversation."
+msgstr "Zobrazí tlačítko a seznam úkolů u každé konverzace."
 
 msgid "Show the triggering payload"
 msgstr "Zobrazit spouštěcí data"
@@ -16415,6 +16482,9 @@ msgstr "Přeškrtnuté"
 msgid "Strip redundant overrides at call sites"
 msgstr "Odstranit nadbytečné přepisy v místech volání"
 
+msgid "Strong"
+msgstr "Silné"
+
 msgid "Structure, scrolling, and overflow handling"
 msgstr "Struktura, posuv a práce s přetečením"
 
@@ -16459,6 +16529,9 @@ msgstr "předplatné"
 
 msgid "Subscription"
 msgstr "Předplatné"
+
+msgid "Subtle"
+msgstr "Jemné"
 
 msgid "Success"
 msgstr "Úspěch"
@@ -18244,6 +18317,9 @@ msgstr "Proměňte konverzace ve Slacku v úkoly, spouštějte agenty ze svého 
 msgid "turn the onboarding findings into a page"
 msgstr "udělej z poznatků o onboardingu stránku"
 
+msgid "Turns"
+msgstr "Kola"
+
 msgid "Two Hands"
 msgstr "Obě ruce"
 
@@ -18964,11 +19040,17 @@ msgstr "Čeká na váš vstup"
 msgid "Waiting for your reply"
 msgstr "Čeká na vaši odpověď"
 
+msgid "Waiting tint"
+msgstr "Odstín čekání"
+
 msgid "Waking up workspace"
 msgstr "Probouzení pracovního prostoru"
 
 msgid "Want something sooner? <0>Tell us in Discord</0>. Much of what's here started as a user request."
 msgstr "Chcete něco dřív? <0>Napište nám na Discordu</0>. Spousta z toho, co je tady, začala jako přání uživatele."
+
+msgid "Warm up a conversation after it waits for you 10 minutes, 1 hour and 4 hours."
+msgstr "Zvýraznit konverzaci, když na vás čeká 10 minut, 1 hodinu a 4 hodiny."
 
 msgid "Warning"
 msgstr "Varování"
@@ -19316,6 +19398,9 @@ msgstr "Pracuje se {0} m {1} s"
 
 msgid "Working for {seconds}s"
 msgstr "Pracuje se {seconds} s"
+
+msgid "Working time"
+msgstr "Doba práce"
 
 msgid "Working…"
 msgstr "Pracuji…"

@@ -53,6 +53,7 @@ import { usePaneAreaMoveActions } from "./hooks/usePaneAreaMoveActions";
 import { usePaneRegistry } from "./hooks/usePaneRegistry";
 import { renderBrowserTabIcon } from "./hooks/usePaneRegistry/components/BrowserPane";
 import { usePullRequestPaneIntentOpener } from "./hooks/usePullRequestPaneIntentOpener";
+import { useReportVisibleTerminal } from "./hooks/useReportVisibleTerminal";
 import { useRightPaneAreaExpansion } from "./hooks/useRightPaneAreaExpansion";
 import { useRightPaneAreaLifecycle } from "./hooks/useRightPaneAreaLifecycle";
 import { useRunPendingChatHandoff } from "./hooks/useRunPendingChatHandoff";
@@ -191,6 +192,7 @@ function V2WorkspaceContent() {
 	);
 	const { store, isLayoutReady, hasRow } = useV2WorkspacePaneLayout();
 	useClearActivePaneAttention({ store });
+	useReportVisibleTerminal({ store, slot: "center" });
 	const rightPaneAreaFlag = useFeatureFlagEnabled(
 		FEATURE_FLAGS.RIGHT_PANE_AREA,
 	);
@@ -198,6 +200,11 @@ function V2WorkspaceContent() {
 	const { store: rightStore, isLayoutReady: isRightLayoutReady } =
 		useV2WorkspacePaneLayout({ slot: "rightPaneLayout" });
 	useClearActivePaneAttention({ store: rightStore });
+	useReportVisibleTerminal({
+		store: rightStore,
+		slot: "right",
+		enabled: isRightPaneAreaEnabled,
+	});
 	useRightPaneAreaLifecycle({
 		workspaceId,
 		flag: rightPaneAreaFlag,

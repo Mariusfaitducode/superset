@@ -497,6 +497,10 @@ msgstr "{0} 플랜"
 msgid "{0} projects"
 msgstr "프로젝트 {0}개"
 
+#. placeholder {0}: conversation.queuedPrompts
+msgid "{0} queued messages"
+msgstr "대기 중인 메시지 {0}개"
+
 #. placeholder {0}: tally.running
 msgid "{0} Running"
 msgstr "{0}개 실행 중"
@@ -1154,6 +1158,12 @@ msgstr "{updatedLabel}이(가) 기본값으로 복원되었습니다"
 
 msgid "{uploading, plural, one {Uploading # file…} other {Uploading # files…}}"
 msgstr "{uploading, plural, other {파일 #개 업로드 중…}}"
+
+msgid "{used} of {max} tokens"
+msgstr "{used} / {max} 토큰"
+
+msgid "{used} tokens"
+msgstr "{used} 토큰"
 
 msgid "{used} used"
 msgstr "{used} 사용됨"
@@ -1904,6 +1914,9 @@ msgstr "에이전트 완료 — {workspaceName}"
 msgid "Agent Configs"
 msgstr "에이전트 설정"
 
+msgid "Agent conversations"
+msgstr "에이전트 대화"
+
 msgid "Agent credentials changed"
 msgstr "에이전트 자격 증명이 변경됨"
 
@@ -2233,6 +2246,9 @@ msgstr "로컬 브랜치도 삭제"
 
 msgid "Also delete the local git branch when deleting a worktree workspace"
 msgstr "worktree 워크스페이스를 삭제할 때 로컬 git 브랜치도 함께 삭제합니다"
+
+msgid "Also list agents that have not started working yet."
+msgstr "아직 작업을 시작하지 않은 에이전트도 표시합니다."
 
 msgid "Also viewing this page"
 msgstr "이 페이지를 함께 보는 사람"
@@ -3322,6 +3338,9 @@ msgstr "캐시된 이미지 및 파일"
 msgid "Cached input"
 msgstr "캐시된 입력"
 
+msgid "Cached input tokens"
+msgstr "캐시된 입력 토큰"
+
 msgid "Calendar"
 msgstr "캘린더"
 
@@ -3707,6 +3726,9 @@ msgstr "상단 바에서 변경 사항 보기를 여는 방식을 선택합니�
 
 msgid "Choose how to open file paths when Cmd+clicking in the terminal"
 msgstr "터미널에서 Cmd+클릭할 때 파일 경로를 여는 방식을 선택하세요"
+
+msgid "Choose what the sidebar shows under each workspace."
+msgstr "각 워크스페이스 아래에 사이드바가 표시할 항목을 선택하세요."
 
 msgid "Choose what to clear from the in-app browser."
 msgstr "인앱 브라우저에서 삭제할 항목을 선택하세요."
@@ -4598,6 +4620,12 @@ msgstr "컨텍스트"
 msgid "Context Menu"
 msgstr "컨텍스트 메뉴"
 
+msgid "Context used: {compact}"
+msgstr "사용한 컨텍스트: {compact}"
+
+msgid "Context window"
+msgstr "컨텍스트 윈도우"
+
 msgid "Continue"
 msgstr "계속"
 
@@ -4656,6 +4684,12 @@ msgstr "대화"
 
 msgid "Conversation · Message"
 msgstr "대화 · 메시지"
+
+msgid "Conversation stats"
+msgstr "대화 통계"
+
+msgid "Conversation to-dos"
+msgstr "대화 할 일"
 
 msgid "Convert to draft"
 msgstr "초안으로 전환"
@@ -5649,6 +5683,9 @@ msgstr "현재 플랜"
 
 msgid "Current tab"
 msgstr "현재 탭"
+
+msgid "Current turn running"
+msgstr "현재 턴 진행 중"
 
 msgid "Cursor"
 msgstr "커서"
@@ -6817,6 +6854,9 @@ msgstr "esc로 닫기"
 
 msgid "esc to exit"
 msgstr "esc로 종료"
+
+msgid "Estimated cost"
+msgstr "예상 비용"
 
 msgid "Event log"
 msgstr "이벤트 로그"
@@ -8625,6 +8665,9 @@ msgstr "대기 중"
 msgid "Idle · branch pushed"
 msgstr "유휴 · 브랜치 푸시됨"
 
+msgid "Idle conversations"
+msgstr "유휴 대화"
+
 msgid "If you're enjoying Superset so far, a GitHub star helps other developers discover it."
 msgstr "지금까지 Superset이 마음에 드셨다면 GitHub 스타가 다른 개발자들이 Superset을 발견하는 데 도움이 됩니다."
 
@@ -8881,6 +8924,9 @@ msgstr "입력 그룹"
 
 msgid "Input OTP"
 msgstr "OTP 입력"
+
+msgid "Input tokens"
+msgstr "입력 토큰"
 
 msgid "input, cache and output tokens"
 msgstr "입력, 캐시, 출력 토큰"
@@ -9667,6 +9713,9 @@ msgstr "호스트에 설정된 에이전트를 나열하고 워크스페이스�
 msgid "List all my assigned tasks"
 msgstr "나에게 할당된 작업을 모두 나열해 줘"
 
+msgid "List each agent conversation under its workspace, with its state dot."
+msgstr "각 에이전트 대화를 상태 점과 함께 워크스페이스 아래에 표시합니다."
+
 msgid "List members of your active organization."
 msgstr "활성 조직의 멤버를 나열합니다."
 
@@ -9675,6 +9724,9 @@ msgstr "워크스페이스를 실행할 수 있는 머신을 나열합니다."
 
 msgid "List the projects (checked-out repos) available on a host."
 msgstr "호스트에서 사용할 수 있는 프로젝트(체크아웃된 리포지토리)를 나열합니다."
+
+msgid "List the subagents of each conversation under it."
+msgstr "각 대화의 서브 에이전트를 그 아래에 표시합니다."
 
 msgid "List, create, update, and delete workspaces on a host."
 msgstr "호스트의 워크스페이스를 나열, 생성, 수정, 삭제합니다."
@@ -12375,6 +12427,9 @@ msgstr "산출 · 주당 병합된 PR"
 
 msgid "Output Schema"
 msgstr "출력 스키마"
+
+msgid "Output tokens"
+msgstr "출력 토큰"
 
 msgid "Output truncated"
 msgstr "출력이 잘렸습니다"
@@ -15591,6 +15646,12 @@ msgstr "간략히 보기"
 msgid "Show file tree"
 msgstr "파일 트리 표시"
 
+msgid "Show how long the current turn has been running."
+msgstr "현재 턴이 얼마나 진행됐는지 표시합니다."
+
+msgid "Show how much of the context window each conversation uses, with its model and tokens on hover."
+msgstr "각 대화가 컨텍스트 창을 얼마나 사용하는지 표시하고, 마우스를 올리면 모델과 토큰을 보여줍니다."
+
 msgid "Show in bar"
 msgstr "바에 표시"
 
@@ -15668,6 +15729,12 @@ msgstr "이 에이전트의 상태를 표시하고 알림을 보냅니다."
 
 msgid "Show text"
 msgstr "텍스트 보기"
+
+msgid "Show the messages that wait for the current turn to end."
+msgstr "현재 턴이 끝나기를 기다리는 메시지를 표시합니다."
+
+msgid "Show the to-do button and list on each conversation."
+msgstr "각 대화에 할 일 버튼과 목록을 표시합니다."
 
 msgid "Show the triggering payload"
 msgstr "트리거 페이로드 표시"
@@ -16415,6 +16482,9 @@ msgstr "취소선"
 msgid "Strip redundant overrides at call sites"
 msgstr "호출 지점의 중복 재정의 제거"
 
+msgid "Strong"
+msgstr "강하게"
+
 msgid "Structure, scrolling, and overflow handling"
 msgstr "구조, 스크롤, 오버플로 처리"
 
@@ -16459,6 +16529,9 @@ msgstr "구독"
 
 msgid "Subscription"
 msgstr "구독"
+
+msgid "Subtle"
+msgstr "은은하게"
 
 msgid "Success"
 msgstr "성공"
@@ -18244,6 +18317,9 @@ msgstr "Slack 대화를 작업으로 바꾸고, 워크스페이스에서 에이�
 msgid "turn the onboarding findings into a page"
 msgstr "온보딩 조사 결과를 페이지로 만들어 줘"
 
+msgid "Turns"
+msgstr "턴 수"
+
 msgid "Two Hands"
 msgstr "양손"
 
@@ -18964,11 +19040,17 @@ msgstr "입력을 기다리는 중"
 msgid "Waiting for your reply"
 msgstr "답변을 기다리는 중"
 
+msgid "Waiting tint"
+msgstr "대기 색조"
+
 msgid "Waking up workspace"
 msgstr "워크스페이스 깨우는 중"
 
 msgid "Want something sooner? <0>Tell us in Discord</0>. Much of what's here started as a user request."
 msgstr "더 빨리 필요한 기능이 있나요? <0>Discord에서 알려 주세요</0>. 여기 있는 항목 상당수가 사용자 요청에서 시작했습니다."
+
+msgid "Warm up a conversation after it waits for you 10 minutes, 1 hour and 4 hours."
+msgstr "대화가 10분, 1시간, 4시간 기다리면 색을 진하게 합니다."
 
 msgid "Warning"
 msgstr "경고"
@@ -19316,6 +19398,9 @@ msgstr "{0}분 {1}초 동안 작업 중"
 
 msgid "Working for {seconds}s"
 msgstr "{seconds}초 동안 작업 중"
+
+msgid "Working time"
+msgstr "작업 시간"
 
 msgid "Working…"
 msgstr "작업 중…"

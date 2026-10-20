@@ -130,6 +130,14 @@ export function SettingsSidebar() {
 						<Trans>Documentation</Trans>
 					</span>
 				</a>
+				{window.App.forkBuild && (
+					<p
+						className="truncate px-3 py-1.5 text-[11px] text-muted-foreground"
+						title={window.App.forkBuild}
+					>
+						{window.App.forkBuild}
+					</p>
+				)}
 			</div>
 		</div>
 	);

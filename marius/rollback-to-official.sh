@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
-# Puts the official Superset 1.39.0 back — the release the fork is built from, so it
-# reads the data the fork build wrote.
+# Puts back the newest official Superset kept by swap-to-fork.sh. Use the release the
+# fork is built from, so it reads the data the fork build wrote.
 set -u
-BACKUP=$(cat "$HOME/CodeProjects/superset/.last-backup-path")
-OFFICIAL="$BACKUP/Superset-official-1.39.0.app"
-[ -d "$OFFICIAL" ] || { echo "missing $OFFICIAL"; exit 1; }
+ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+BACKUP=$(cat "$ROOT/.last-backup-path")
+OFFICIAL=$(ls -d "$BACKUP"/Superset-official-*.app 2>/dev/null | sort -V | tail -n 1)
+[ -d "$OFFICIAL" ] || { echo "no official app kept in $BACKUP"; exit 1; }
 osascript -e 'tell application "Superset" to quit' || true
 main_running() { ps -axo args= | awk '$0=="/Applications/Superset.app/Contents/MacOS/Superset"{f=1} END{exit !f}'; }
 for _ in $(seq 1 300); do main_running || break; sleep 1; done
