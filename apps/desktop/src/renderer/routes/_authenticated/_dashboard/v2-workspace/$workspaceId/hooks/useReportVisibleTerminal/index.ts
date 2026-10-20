@@ -1,0 +1,1 @@
+export { useReportVisibleTerminal } from "./useReportVisibleTerminal";

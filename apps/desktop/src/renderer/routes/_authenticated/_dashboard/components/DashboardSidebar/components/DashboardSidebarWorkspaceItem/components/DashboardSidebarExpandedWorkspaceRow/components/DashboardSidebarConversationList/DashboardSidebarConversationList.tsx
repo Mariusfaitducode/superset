@@ -13,6 +13,7 @@ import {
 	type ConversationTodo,
 	useConversationTodosStore,
 } from "renderer/stores/conversation-todos";
+import { useIsTerminalVisible } from "renderer/stores/visible-terminals";
 import type { DashboardSidebarWorkspaceIndentation } from "../../../../../../types";
 import { ConversationTodos } from "./components/ConversationTodos";
 import {
@@ -64,6 +65,7 @@ function ConversationRow({
 		(state) => state.todosByConversation[conversation.terminalId] ?? EMPTY,
 	);
 	const [todosOpen, setTodosOpen] = useState(false);
+	const isVisible = useIsTerminalVisible(conversation.terminalId);
 	const openTodos = todos.filter((todo) => !todo.done).length;
 
 	const stateLabel: Record<ConversationState, string> = {
@@ -106,13 +108,15 @@ function ConversationRow({
 		<li>
 			<div
 				className={cn(
-					"group/conversation flex h-6 items-center gap-2 rounded-sm pr-1 pl-1 hover:bg-muted",
+					"group/conversation flex h-6 items-center gap-2 rounded-sm border border-transparent pr-1 pl-1 hover:bg-muted",
 					tint,
+					isVisible && "border-primary bg-primary/10",
 				)}
 			>
 				<button
 					type="button"
 					onClick={open}
+					aria-current={isVisible ? "true" : undefined}
 					title={`${stateLabel[conversation.state]} · ${conversation.title}`}
 					className="flex min-w-0 flex-1 items-center gap-2 text-left focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
 				>
