@@ -15,7 +15,11 @@ Suivie par les agents qui travaillent sur ce fork, et lue sur les deux Macs. Mis
 
 ## Backlog
 
-- Panneau qui suit une tâche d'ops en direct (courbe d'une métrique Prometheus/Grafana, rattachée à la conversation qui l'a lancée). Idée de la session debugging, pas commencée.
+- **Carte de tâche de fond** : une carte rattachée à la conversation, qui dit ce que l'agent fait, où il en est, avec une barre de progression. C'est l'agent qui la met à jour, par la même voie que les to-do. Cas d'origine : suivre le cleanup du disque d'un proto au lieu de relancer Grafana à la main. Une courbe de métrique pourra venir ensuite.
+- **Vues custom** : en commençant par une vue PR. La page PR actuelle affiche « no GitHub remote » sur hub : comprendre pourquoi d'abord.
+- **⌘K façon Notion pour passer d'un agent à l'autre** : ⌘K vide le terminal aujourd'hui, et la palette est sur ⌘⇧K. Il faut choisir le raccourci.
+- **Vue workspaces plus riche** : quelles infos ajouter, à définir.
+- Plus tard : ergonomie, performance, agent général, MCP, fonctions bloquées par l'offre payante.
 - Proposer en amont ce qui marche (issue superset-sh/superset#8634).
 
 ## Routine
