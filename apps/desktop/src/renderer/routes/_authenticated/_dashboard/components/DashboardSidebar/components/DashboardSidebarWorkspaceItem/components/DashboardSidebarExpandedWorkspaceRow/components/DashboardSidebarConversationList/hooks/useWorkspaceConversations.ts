@@ -15,6 +15,7 @@ import {
 	type ConversationState,
 	deriveConversationState,
 } from "../utils/conversation-state";
+import { pickConversationTitle } from "../utils/conversation-title";
 import { terminalTabNames } from "../utils/terminal-tab-names";
 
 export interface SidebarSubagent {
@@ -70,11 +71,19 @@ function trackTurnStart(
 	return lastEventAt;
 }
 
+interface SessionTitles {
+	customTitle: string | null;
+	runtimeTitle: string | null;
+}
+
+export function conversationTitlesQueryKey(workspaceId: string) {
+	return ["sidebar-conversation-titles", workspaceId] as const;
+}
+
 /**
- * One entry per live agent in the workspace, oldest first. The title is the
- * name the user gave the tab, else the session's name, else the title the
- * agent set. Host titles are read only for workspaces that have agents,
- * since the sidebar lists every workspace all day.
+ * One entry per live agent in the workspace, oldest first. Host titles are
+ * read only for workspaces that have agents, since the sidebar lists every
+ * workspace all day.
  */
 export function useWorkspaceConversations({
 	workspaceId,
@@ -107,17 +116,20 @@ export function useWorkspaceConversations({
 
 	const bindingsKey = [...bindings.keys()].sort().join(",");
 	const titlesQuery = useQuery({
-		queryKey: ["sidebar-conversation-titles", workspaceId, bindingsKey],
+		queryKey: [...conversationTitlesQueryKey(workspaceId), bindingsKey],
 		enabled: enabled && hostUrl !== null && bindings.size > 0,
 		queryFn: async () => {
-			if (!hostUrl) return new Map<string, string | null>();
+			if (!hostUrl) return new Map<string, SessionTitles>();
 			const { sessions } = await getHostServiceClientByUrl(
 				hostUrl,
 			).terminal.list.query({ workspaceId });
 			return new Map(
-				sessions.map((session) => [
+				sessions.map((session): [string, SessionTitles] => [
 					session.terminalId,
-					cleanTitle(session.customTitle) ?? cleanTitle(session.title),
+					{
+						customTitle: cleanTitle(session.customTitle),
+						runtimeTitle: cleanTitle(session.title),
+					},
 				]),
 			);
 		},
@@ -138,11 +150,12 @@ export function useWorkspaceConversations({
 			conversations.push({
 				terminalId: binding.terminalId,
 				agentId: binding.agentId,
-				title:
-					tabNames.get(binding.terminalId) ??
-					titles?.get(binding.terminalId) ??
-					AGENT_IDENTITY_LABELS[binding.agentId] ??
-					binding.agentId,
+				title: pickConversationTitle({
+					customTitle: titles?.get(binding.terminalId)?.customTitle ?? null,
+					tabName: tabNames.get(binding.terminalId) ?? null,
+					runtimeTitle: titles?.get(binding.terminalId)?.runtimeTitle ?? null,
+					agentLabel: AGENT_IDENTITY_LABELS[binding.agentId] ?? binding.agentId,
+				}),
 				subagents: (binding.subagents ?? []).map((subagent) => ({
 					id: subagent.id,
 					...(subagent.agentType ? { agentType: subagent.agentType } : {}),

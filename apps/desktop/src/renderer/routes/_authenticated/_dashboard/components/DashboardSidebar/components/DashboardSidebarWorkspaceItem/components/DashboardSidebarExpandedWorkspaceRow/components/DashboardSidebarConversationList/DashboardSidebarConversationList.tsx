@@ -1,5 +1,6 @@
 import { useLingui } from "@lingui/react/macro";
 import { formatCompactRelativeTime } from "@superset/i18n/format";
+import { toast } from "@superset/ui/sonner";
 import { cn } from "@superset/ui/utils";
 import { useNavigate } from "@tanstack/react-router";
 import { type SyntheticEvent, useState } from "react";
@@ -10,6 +11,7 @@ import {
 	buildSubagentSearch,
 	navigateToV2Workspace,
 } from "renderer/routes/_authenticated/_dashboard/utils/workspace-navigation";
+import { RenameInput } from "renderer/screens/main/components/WorkspaceSidebar/RenameInput";
 import {
 	type ConversationTodo,
 	useConversationTodosStore,
@@ -22,6 +24,7 @@ import { useIsTerminalVisible } from "renderer/stores/visible-terminals";
 import type { DashboardSidebarWorkspaceIndentation } from "../../../../../../types";
 import { ConversationStats } from "./components/ConversationStats";
 import { ConversationTodos } from "./components/ConversationTodos";
+import { useRenameConversation } from "./hooks/useRenameConversation";
 import {
 	type SidebarConversation,
 	type SidebarSubagent,
@@ -108,6 +111,8 @@ function ConversationRow({
 		(state) => state.todosByConversation[conversation.terminalId] ?? EMPTY,
 	);
 	const [todosOpen, setTodosOpen] = useState(false);
+	const [renameValue, setRenameValue] = useState<string | null>(null);
+	const renameConversation = useRenameConversation({ workspaceId, hostId });
 	const isVisible = useIsTerminalVisible(conversation.terminalId);
 	const showTodos = useSidebarPreference("showTodos");
 	const showSubagents = useSidebarPreference("showSubagents");
@@ -132,6 +137,15 @@ function ConversationRow({
 			? TINT_CLASS[waitingTint][waitingTintLevel(waitedMs)]
 			: "";
 	const turnStartedAt = showTurnTime ? conversation.turnStartedAt : null;
+
+	const submitRename = () => {
+		if (renameValue === null) return;
+		setRenameValue(null);
+		if (renameValue.trim() === conversation.title) return;
+		renameConversation(conversation.terminalId, renameValue).catch(() =>
+			toast.error(t`Failed to rename session`),
+		);
+	};
 
 	const open = () => {
 		void navigateToV2Workspace(workspaceId, navigate, {
@@ -165,28 +179,45 @@ function ConversationRow({
 					isVisible && "border-primary bg-primary/10",
 				)}
 			>
-				<button
-					type="button"
-					onClick={open}
-					aria-current={isVisible ? "true" : undefined}
-					title={`${stateLabel[conversation.state]} · ${conversation.title}`}
-					className="flex min-w-0 flex-1 items-center gap-2 text-left focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
-				>
-					<AgentAvatar
-						conversation={conversation}
-						label={stateLabel[conversation.state]}
-					/>
-					<span
-						className={cn(
-							"min-w-0 flex-1 truncate text-xs",
-							waiting || conversation.state === "working"
-								? "text-foreground"
-								: "text-muted-foreground",
-						)}
+				{renameValue !== null ? (
+					<div className="flex min-w-0 flex-1 items-center gap-2">
+						<AgentAvatar
+							conversation={conversation}
+							label={stateLabel[conversation.state]}
+						/>
+						<RenameInput
+							value={renameValue}
+							onChange={setRenameValue}
+							onSubmit={submitRename}
+							onCancel={() => setRenameValue(null)}
+							className="h-5 min-w-0 flex-1 -ml-1 border-none bg-transparent px-1 py-0 text-xs outline-none"
+						/>
+					</div>
+				) : (
+					<button
+						type="button"
+						onClick={open}
+						onDoubleClick={() => setRenameValue(conversation.title)}
+						aria-current={isVisible ? "true" : undefined}
+						title={`${stateLabel[conversation.state]} · ${conversation.title}`}
+						className="flex min-w-0 flex-1 items-center gap-2 text-left focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
 					>
-						{conversation.title}
-					</span>
-				</button>
+						<AgentAvatar
+							conversation={conversation}
+							label={stateLabel[conversation.state]}
+						/>
+						<span
+							className={cn(
+								"min-w-0 flex-1 truncate text-xs",
+								waiting || conversation.state === "working"
+									? "text-foreground"
+									: "text-muted-foreground",
+							)}
+						>
+							{conversation.title}
+						</span>
+					</button>
+				)}
 				{showQueuedPrompts && conversation.queuedPrompts > 0 && (
 					<span
 						className="flex shrink-0 items-center gap-0.5 text-[10px] text-muted-foreground"
