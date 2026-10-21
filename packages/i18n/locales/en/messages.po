@@ -9494,6 +9494,9 @@ msgstr "Latest (v{latestVersion})"
 msgid "Latest news"
 msgstr "Latest news"
 
+msgid "Latest release"
+msgstr "Latest release"
+
 msgid "Launch"
 msgstr "Launch"
 
@@ -10274,6 +10277,9 @@ msgctxt "pull request state"
 msgid "Merged"
 msgstr "Merged"
 
+msgid "Merged after {base}, not released yet"
+msgstr "Merged after {base}, not released yet"
+
 #. placeholder {0}: mergedBy.login
 msgid "Merged by {0}"
 msgstr "Merged by {0}"
@@ -10775,6 +10781,10 @@ msgstr "New Workspace ({shortcutText})"
 
 msgid "New workspace in {name}"
 msgstr "New workspace in {name}"
+
+#. placeholder {0}: build.latestRelease
+msgid "Newer release: {0}"
+msgstr "Newer release: {0}"
 
 msgid "Newer than this app"
 msgstr "Newer than this app"
@@ -11293,6 +11303,9 @@ msgstr "No public agent configs yet. This route is ready for future agent config
 msgid "No pull requests found."
 msgstr "No pull requests found."
 
+msgid "no release"
+msgstr "no release"
+
 msgid "No release notes at {url}"
 msgstr "No release notes at {url}"
 
@@ -11529,6 +11542,9 @@ msgstr "Not included"
 
 msgid "Not loaded"
 msgstr "Not loaded"
+
+msgid "Not merged yet, on top of {base}"
+msgstr "Not merged yet, on top of {base}"
 
 msgid "Not now"
 msgstr "Not now"
@@ -13781,6 +13797,9 @@ msgstr "Relaunch running agents to switch them."
 
 msgid "Relay access enabled, connecting to the relay…"
 msgstr "Relay access enabled, connecting to the relay…"
+
+msgid "Release"
+msgstr "Release"
 
 msgid "Release control"
 msgstr "Release control"
@@ -16605,6 +16624,9 @@ msgstr "Superset"
 msgid "Superset (YC P26) is the source-available IDE for the AI agents era, where engineers run hundreds of coding agents like Claude Code and Codex in parallel."
 msgstr "Superset (YC P26) is the source-available IDE for the AI agents era, where engineers run hundreds of coding agents like Claude Code and Codex in parallel."
 
+msgid "Superset {upstream} · built {builtAt}"
+msgstr "Superset {upstream} · built {builtAt}"
+
 msgid "Superset {version}"
 msgstr "Superset {version}"
 
@@ -18458,6 +18480,9 @@ msgstr "Uncommitted · Unpushed"
 msgid "Uncommitted changes"
 msgstr "Uncommitted changes"
 
+msgid "Uncommitted changes, on top of {base}"
+msgstr "Uncommitted changes, on top of {base}"
+
 msgid "Underline"
 msgstr "Underline"
 
@@ -19390,6 +19415,9 @@ msgstr "Work email"
 
 msgid "Work from tickets"
 msgstr "Work from tickets"
+
+msgid "Work in progress"
+msgstr "Work in progress"
 
 msgid "Work the action items from a call"
 msgstr "Work the action items from a call"

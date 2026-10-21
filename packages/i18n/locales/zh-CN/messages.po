@@ -9494,6 +9494,9 @@ msgstr "最新（v{latestVersion}）"
 msgid "Latest news"
 msgstr "最新动态"
 
+msgid "Latest release"
+msgstr "最新发布"
+
 msgid "Launch"
 msgstr "启动"
 
@@ -10274,6 +10277,9 @@ msgctxt "pull request state"
 msgid "Merged"
 msgstr "已合并"
 
+msgid "Merged after {base}, not released yet"
+msgstr "在 {base} 之后合并，尚未发布"
+
 #. placeholder {0}: mergedBy.login
 msgid "Merged by {0}"
 msgstr "由{0}合并"
@@ -10775,6 +10781,10 @@ msgstr "新建工作区（{shortcutText}）"
 
 msgid "New workspace in {name}"
 msgstr "在 {name} 中新建工作区"
+
+#. placeholder {0}: build.latestRelease
+msgid "Newer release: {0}"
+msgstr "更新的发布：{0}"
 
 msgid "Newer than this app"
 msgstr "比此应用新"
@@ -11293,6 +11303,9 @@ msgstr "暂无公开的智能体配置。此页面已为将来的智能体配置
 msgid "No pull requests found."
 msgstr "未找到拉取请求。"
 
+msgid "no release"
+msgstr "无发布"
+
 msgid "No release notes at {url}"
 msgstr "{url} 上没有版本说明"
 
@@ -11529,6 +11542,9 @@ msgstr "不包含"
 
 msgid "Not loaded"
 msgstr "未加载"
+
+msgid "Not merged yet, on top of {base}"
+msgstr "尚未合并，基于 {base}"
 
 msgid "Not now"
 msgstr "暂不"
@@ -13781,6 +13797,9 @@ msgstr "重新启动运行中的智能体才能切换。"
 
 msgid "Relay access enabled, connecting to the relay…"
 msgstr "已启用中继访问，正在连接中继…"
+
+msgid "Release"
+msgstr "发布"
 
 msgid "Release control"
 msgstr "释放控制"
@@ -16605,6 +16624,9 @@ msgstr "Superset"
 msgid "Superset (YC P26) is the source-available IDE for the AI agents era, where engineers run hundreds of coding agents like Claude Code and Codex in parallel."
 msgstr "Superset（YC P26）是面向 AI 智能体时代的源码可用 IDE，工程师可以在其中并行运行数百个 Claude Code、Codex 等编程智能体。"
 
+msgid "Superset {upstream} · built {builtAt}"
+msgstr "Superset {upstream} · 构建于 {builtAt}"
+
 msgid "Superset {version}"
 msgstr "Superset {version}"
 
@@ -18458,6 +18480,9 @@ msgstr "未提交 · 未推送"
 msgid "Uncommitted changes"
 msgstr "未提交的更改"
 
+msgid "Uncommitted changes, on top of {base}"
+msgstr "未提交的更改，基于 {base}"
+
 msgid "Underline"
 msgstr "下划线"
 
@@ -19390,6 +19415,9 @@ msgstr "工作邮箱"
 
 msgid "Work from tickets"
 msgstr "从工单开始工作"
+
+msgid "Work in progress"
+msgstr "进行中"
 
 msgid "Work the action items from a call"
 msgstr "处理通话中的待办事项"

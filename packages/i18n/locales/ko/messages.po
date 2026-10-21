@@ -9494,6 +9494,9 @@ msgstr "최신 (v{latestVersion})"
 msgid "Latest news"
 msgstr "최신 소식"
 
+msgid "Latest release"
+msgstr "최신 릴리스"
+
 msgid "Launch"
 msgstr "실행"
 
@@ -10274,6 +10277,9 @@ msgctxt "pull request state"
 msgid "Merged"
 msgstr "머지됨"
 
+msgid "Merged after {base}, not released yet"
+msgstr "{base} 이후 병합됨, 아직 릴리스 안 됨"
+
 #. placeholder {0}: mergedBy.login
 msgid "Merged by {0}"
 msgstr "{0}이(가) 머지함"
@@ -10775,6 +10781,10 @@ msgstr "새 워크스페이스 ({shortcutText})"
 
 msgid "New workspace in {name}"
 msgstr "{name}에 새 워크스페이스"
+
+#. placeholder {0}: build.latestRelease
+msgid "Newer release: {0}"
+msgstr "더 새 릴리스: {0}"
 
 msgid "Newer than this app"
 msgstr "이 앱보다 최신"
@@ -11293,6 +11303,9 @@ msgstr "아직 공개된 에이전트 설정이 없습니다. 이 경로는 앞�
 msgid "No pull requests found."
 msgstr "풀 리퀘스트를 찾을 수 없습니다."
 
+msgid "no release"
+msgstr "릴리스 없음"
+
 msgid "No release notes at {url}"
 msgstr "{url}에 릴리스 노트가 없습니다"
 
@@ -11529,6 +11542,9 @@ msgstr "미포함"
 
 msgid "Not loaded"
 msgstr "로드 안 됨"
+
+msgid "Not merged yet, on top of {base}"
+msgstr "아직 병합 안 됨, {base} 위"
 
 msgid "Not now"
 msgstr "나중에"
@@ -13781,6 +13797,9 @@ msgstr "실행 중인 에이전트는 다시 실행해야 바뀝니다."
 
 msgid "Relay access enabled, connecting to the relay…"
 msgstr "릴레이 접근이 활성화되었습니다. 릴레이에 연결하는 중…"
+
+msgid "Release"
+msgstr "릴리스"
 
 msgid "Release control"
 msgstr "제어 해제"
@@ -16605,6 +16624,9 @@ msgstr "Superset"
 msgid "Superset (YC P26) is the source-available IDE for the AI agents era, where engineers run hundreds of coding agents like Claude Code and Codex in parallel."
 msgstr "Superset(YC P26)은 AI 에이전트 시대를 위한 소스 공개형 IDE로, 엔지니어가 Claude Code와 Codex 같은 코딩 에이전트 수백 개를 병렬로 실행할 수 있습니다."
 
+msgid "Superset {upstream} · built {builtAt}"
+msgstr "Superset {upstream} · 빌드 {builtAt}"
+
 msgid "Superset {version}"
 msgstr "Superset {version}"
 
@@ -18458,6 +18480,9 @@ msgstr "커밋 안 됨 · 푸시 안 됨"
 msgid "Uncommitted changes"
 msgstr "커밋되지 않은 변경 사항"
 
+msgid "Uncommitted changes, on top of {base}"
+msgstr "커밋되지 않은 변경, {base} 위"
+
 msgid "Underline"
 msgstr "밑줄"
 
@@ -19390,6 +19415,9 @@ msgstr "업무용 이메일"
 
 msgid "Work from tickets"
 msgstr "티켓에서 바로 작업"
+
+msgid "Work in progress"
+msgstr "작업 중"
 
 msgid "Work the action items from a call"
 msgstr "통화의 액션 아이템 처리"

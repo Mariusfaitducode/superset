@@ -9,8 +9,22 @@ APP="$ROOT/apps/desktop/release/mac-arm64/Superset.app"
 export PATH="$HOME/.bun/bin:$PATH" NODE_ENV=production
 
 started=$(date +%s)
-dirty=$(git -C "$ROOT" status --porcelain --untracked-files=no | grep -q . && echo "+dirty" || true)
-export FORK_BUILD="$(git -C "$ROOT" describe --tags --match 'desktop-v*' --abbrev=0) + $(git -C "$ROOT" rev-parse --abbrev-ref HEAD)@$(git -C "$ROOT" rev-parse --short HEAD)$dirty · $(date '+%Y-%m-%d %H:%M')"
+# What the build is, for the line at the bottom of Settings: a release, merged
+# into marius/main, or work in progress. Uses the remote refs as last fetched.
+repo() { git -C "$ROOT" "$@"; }
+dirty=$(repo status --porcelain --untracked-files=no | grep -q . && echo true || echo false)
+release=$(repo describe --tags --exact-match --match 'marius-v*' HEAD 2>/dev/null || true)
+merged=$(repo merge-base --is-ancestor HEAD origin/marius/main 2>/dev/null && echo true || echo false)
+status=wip
+[ "$merged" = true ] && status=merged
+[ -n "$release" ] && status=release
+[ "$dirty" = true ] && status=wip
+FORK_BUILD=$(printf '{"status":"%s","branch":"%s","commit":"%s","dirty":%s,"release":"%s","baseRelease":"%s","latestRelease":"%s","upstream":"%s","builtAt":"%s"}' \
+	"$status" "$(repo rev-parse --abbrev-ref HEAD)" "$(repo rev-parse --short HEAD)" "$dirty" "$release" \
+	"$(repo describe --tags --match 'marius-v*' --abbrev=0 2>/dev/null || true)" \
+	"$(repo tag --list 'marius-v*' --sort=-v:refname | head -n 1)" \
+	"$(repo describe --tags --match 'desktop-v*' --abbrev=0)" "$(date -u +%Y-%m-%dT%H:%M:%SZ)")
+export FORK_BUILD
 echo "building $FORK_BUILD, log: $LOG"
 (
 	cd "$ROOT/apps/desktop"

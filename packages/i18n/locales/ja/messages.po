@@ -9494,6 +9494,9 @@ msgstr "最新(v{latestVersion})"
 msgid "Latest news"
 msgstr "最新ニュース"
 
+msgid "Latest release"
+msgstr "最新リリース"
+
 msgid "Launch"
 msgstr "起動"
 
@@ -10274,6 +10277,9 @@ msgctxt "pull request state"
 msgid "Merged"
 msgstr "マージ済み"
 
+msgid "Merged after {base}, not released yet"
+msgstr "{base} の後にマージ済み、未リリース"
+
 #. placeholder {0}: mergedBy.login
 msgid "Merged by {0}"
 msgstr "{0}がマージ"
@@ -10775,6 +10781,10 @@ msgstr "新規ワークスペース({shortcutText})"
 
 msgid "New workspace in {name}"
 msgstr "{name} に新規ワークスペース"
+
+#. placeholder {0}: build.latestRelease
+msgid "Newer release: {0}"
+msgstr "新しいリリース: {0}"
 
 msgid "Newer than this app"
 msgstr "このアプリより新しい"
@@ -11293,6 +11303,9 @@ msgstr "公開されているエージェント設定はまだありません。
 msgid "No pull requests found."
 msgstr "プルリクエストが見つかりません。"
 
+msgid "no release"
+msgstr "リリースなし"
+
 msgid "No release notes at {url}"
 msgstr "{url} にリリースノートがありません"
 
@@ -11529,6 +11542,9 @@ msgstr "含まれない"
 
 msgid "Not loaded"
 msgstr "未読み込み"
+
+msgid "Not merged yet, on top of {base}"
+msgstr "未マージ、{base} の上"
 
 msgid "Not now"
 msgstr "あとで"
@@ -13781,6 +13797,9 @@ msgstr "実行中のエージェントを切り替えるには再起動してく
 
 msgid "Relay access enabled, connecting to the relay…"
 msgstr "リレーアクセスを有効にしました。リレーに接続中…"
+
+msgid "Release"
+msgstr "リリース"
 
 msgid "Release control"
 msgstr "操作を終了"
@@ -16605,6 +16624,9 @@ msgstr "Superset"
 msgid "Superset (YC P26) is the source-available IDE for the AI agents era, where engineers run hundreds of coding agents like Claude Code and Codex in parallel."
 msgstr "Superset（YC P26）は、AI エージェント時代のためのソースコード公開型 IDE です。エンジニアは Claude Code や Codex などのコーディングエージェントを数百単位で並行して実行できます。"
 
+msgid "Superset {upstream} · built {builtAt}"
+msgstr "Superset {upstream} · ビルド {builtAt}"
+
 msgid "Superset {version}"
 msgstr "Superset {version}"
 
@@ -18458,6 +18480,9 @@ msgstr "未コミット · 未プッシュ"
 msgid "Uncommitted changes"
 msgstr "未コミットの変更"
 
+msgid "Uncommitted changes, on top of {base}"
+msgstr "未コミットの変更、{base} の上"
+
 msgid "Underline"
 msgstr "下線"
 
@@ -19390,6 +19415,9 @@ msgstr "勤務先のメールアドレス"
 
 msgid "Work from tickets"
 msgstr "チケットから作業を始める"
+
+msgid "Work in progress"
+msgstr "作業中"
 
 msgid "Work the action items from a call"
 msgstr "通話のアクションアイテムを処理"

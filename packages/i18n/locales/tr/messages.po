@@ -9494,6 +9494,9 @@ msgstr "En son (v{latestVersion})"
 msgid "Latest news"
 msgstr "Son haberler"
 
+msgid "Latest release"
+msgstr "En son sürüm"
+
 msgid "Launch"
 msgstr "Başlatma"
 
@@ -10274,6 +10277,9 @@ msgctxt "pull request state"
 msgid "Merged"
 msgstr "Birleştirildi"
 
+msgid "Merged after {base}, not released yet"
+msgstr "{base} sonrasında birleştirildi, henüz yayınlanmadı"
+
 #. placeholder {0}: mergedBy.login
 msgid "Merged by {0}"
 msgstr "{0} birleştirdi"
@@ -10775,6 +10781,10 @@ msgstr "Yeni çalışma alanı ({shortcutText})"
 
 msgid "New workspace in {name}"
 msgstr "{name} içinde yeni çalışma alanı"
+
+#. placeholder {0}: build.latestRelease
+msgid "Newer release: {0}"
+msgstr "Daha yeni sürüm: {0}"
 
 msgid "Newer than this app"
 msgstr "Bu uygulamadan daha yeni"
@@ -11293,6 +11303,9 @@ msgstr "Henüz herkese açık ajan yapılandırması yok. Bu bölüm gelecekteki
 msgid "No pull requests found."
 msgstr "Pull request bulunamadı."
 
+msgid "no release"
+msgstr "sürüm yok"
+
 msgid "No release notes at {url}"
 msgstr "{url} adresinde sürüm notu yok"
 
@@ -11529,6 +11542,9 @@ msgstr "Dahil değil"
 
 msgid "Not loaded"
 msgstr "Yüklenmedi"
+
+msgid "Not merged yet, on top of {base}"
+msgstr "Henüz birleştirilmedi, {base} üzerinde"
 
 msgid "Not now"
 msgstr "Şimdi değil"
@@ -13781,6 +13797,9 @@ msgstr "Değiştirmek için çalışan ajanları yeniden başlatın."
 
 msgid "Relay access enabled, connecting to the relay…"
 msgstr "Röle erişimi etkinleştirildi, röleye bağlanılıyor…"
+
+msgid "Release"
+msgstr "Sürüm"
 
 msgid "Release control"
 msgstr "Kontrolü bırak"
@@ -16605,6 +16624,9 @@ msgstr "Superset"
 msgid "Superset (YC P26) is the source-available IDE for the AI agents era, where engineers run hundreds of coding agents like Claude Code and Codex in parallel."
 msgstr "Superset (YC P26), mühendislerin Claude Code ve Codex gibi yüzlerce kodlama ajanını paralel olarak çalıştırdığı, yapay zekâ ajanları çağı için kaynak kodu erişilebilir IDE'dir."
 
+msgid "Superset {upstream} · built {builtAt}"
+msgstr "Superset {upstream} · derlendi {builtAt}"
+
 msgid "Superset {version}"
 msgstr "Superset {version}"
 
@@ -18458,6 +18480,9 @@ msgstr "Commit'lenmemiş · Push edilmemiş"
 msgid "Uncommitted changes"
 msgstr "Commit'lenmemiş değişiklikler"
 
+msgid "Uncommitted changes, on top of {base}"
+msgstr "Commit edilmemiş değişiklikler, {base} üzerinde"
+
 msgid "Underline"
 msgstr "Altı çizili"
 
@@ -19390,6 +19415,9 @@ msgstr "İş e-postası"
 
 msgid "Work from tickets"
 msgstr "Biletlerden çalışma"
+
+msgid "Work in progress"
+msgstr "Devam ediyor"
 
 msgid "Work the action items from a call"
 msgstr "Bir görüşmenin aksiyon maddelerini yürütün"

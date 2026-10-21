@@ -9494,6 +9494,9 @@ msgstr "最新（v{latestVersion}）"
 msgid "Latest news"
 msgstr "最新消息"
 
+msgid "Latest release"
+msgstr "最新發行"
+
 msgid "Launch"
 msgstr "啟動"
 
@@ -10274,6 +10277,9 @@ msgctxt "pull request state"
 msgid "Merged"
 msgstr "已合併"
 
+msgid "Merged after {base}, not released yet"
+msgstr "在 {base} 之後合併，尚未發行"
+
 #. placeholder {0}: mergedBy.login
 msgid "Merged by {0}"
 msgstr "由{0}合併"
@@ -10775,6 +10781,10 @@ msgstr "新建工作區（{shortcutText}）"
 
 msgid "New workspace in {name}"
 msgstr "在 {name} 中新建工作區"
+
+#. placeholder {0}: build.latestRelease
+msgid "Newer release: {0}"
+msgstr "更新的發行：{0}"
 
 msgid "Newer than this app"
 msgstr "比此應用程式新"
@@ -11293,6 +11303,9 @@ msgstr "暫無公開的代理程式配置。此頁面已為將來的代理程式
 msgid "No pull requests found."
 msgstr "未找到拉取請求。"
 
+msgid "no release"
+msgstr "無發行"
+
 msgid "No release notes at {url}"
 msgstr "{url} 上沒有版本說明"
 
@@ -11529,6 +11542,9 @@ msgstr "不包含"
 
 msgid "Not loaded"
 msgstr "未載入"
+
+msgid "Not merged yet, on top of {base}"
+msgstr "尚未合併，基於 {base}"
 
 msgid "Not now"
 msgstr "暫不"
@@ -13781,6 +13797,9 @@ msgstr "重新啟動執行中的代理程式才能切換。"
 
 msgid "Relay access enabled, connecting to the relay…"
 msgstr "已啟用中繼存取，正在連線中繼…"
+
+msgid "Release"
+msgstr "發行"
 
 msgid "Release control"
 msgstr "釋放控制"
@@ -16605,6 +16624,9 @@ msgstr "Superset"
 msgid "Superset (YC P26) is the source-available IDE for the AI agents era, where engineers run hundreds of coding agents like Claude Code and Codex in parallel."
 msgstr "Superset（YC P26）是為 AI agent 時代打造的原始碼公開 IDE，工程師可以在其中平行執行數百個 Claude Code、Codex 等程式設計 agent。"
 
+msgid "Superset {upstream} · built {builtAt}"
+msgstr "Superset {upstream} · 建置於 {builtAt}"
+
 msgid "Superset {version}"
 msgstr "Superset {version}"
 
@@ -18458,6 +18480,9 @@ msgstr "未提交 · 未推送"
 msgid "Uncommitted changes"
 msgstr "未提交的更改"
 
+msgid "Uncommitted changes, on top of {base}"
+msgstr "未提交的變更，基於 {base}"
+
 msgid "Underline"
 msgstr "底線"
 
@@ -19390,6 +19415,9 @@ msgstr "工作電子郵件"
 
 msgid "Work from tickets"
 msgstr "從工單開始工作"
+
+msgid "Work in progress"
+msgstr "進行中"
 
 msgid "Work the action items from a call"
 msgstr "處理通話中的待辦事項"

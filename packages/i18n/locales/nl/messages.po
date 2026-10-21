@@ -9494,6 +9494,9 @@ msgstr "Nieuwste (v{latestVersion})"
 msgid "Latest news"
 msgstr "Laatste nieuws"
 
+msgid "Latest release"
+msgstr "Nieuwste release"
+
 msgid "Launch"
 msgstr "Starten"
 
@@ -10274,6 +10277,9 @@ msgctxt "pull request state"
 msgid "Merged"
 msgstr "Gemerged"
 
+msgid "Merged after {base}, not released yet"
+msgstr "Gemerged na {base}, nog niet uitgebracht"
+
 #. placeholder {0}: mergedBy.login
 msgid "Merged by {0}"
 msgstr "Gemerged door {0}"
@@ -10775,6 +10781,10 @@ msgstr "Nieuwe werkruimte ({shortcutText})"
 
 msgid "New workspace in {name}"
 msgstr "Nieuwe werkruimte in {name}"
+
+#. placeholder {0}: build.latestRelease
+msgid "Newer release: {0}"
+msgstr "Nieuwere release: {0}"
 
 msgid "Newer than this app"
 msgstr "Nieuwer dan deze app"
@@ -11293,6 +11303,9 @@ msgstr "Nog geen publieke agentconfiguraties. Deze route is klaar voor toekomsti
 msgid "No pull requests found."
 msgstr "Geen pull requests gevonden."
 
+msgid "no release"
+msgstr "geen release"
+
 msgid "No release notes at {url}"
 msgstr "Geen releasenotes op {url}"
 
@@ -11529,6 +11542,9 @@ msgstr "Niet inbegrepen"
 
 msgid "Not loaded"
 msgstr "Niet geladen"
+
+msgid "Not merged yet, on top of {base}"
+msgstr "Nog niet gemerged, bovenop {base}"
 
 msgid "Not now"
 msgstr "Niet nu"
@@ -13781,6 +13797,9 @@ msgstr "Herstart draaiende agents om ze te wisselen."
 
 msgid "Relay access enabled, connecting to the relay…"
 msgstr "Relaytoegang ingeschakeld, verbinden met de relay…"
+
+msgid "Release"
+msgstr "Release"
 
 msgid "Release control"
 msgstr "Besturing loslaten"
@@ -16605,6 +16624,9 @@ msgstr "Superset"
 msgid "Superset (YC P26) is the source-available IDE for the AI agents era, where engineers run hundreds of coding agents like Claude Code and Codex in parallel."
 msgstr "Superset (YC P26) is de source-available IDE voor het tijdperk van AI-agents, waarin engineers honderden codeeragents zoals Claude Code en Codex parallel draaien."
 
+msgid "Superset {upstream} · built {builtAt}"
+msgstr "Superset {upstream} · gebouwd {builtAt}"
+
 msgid "Superset {version}"
 msgstr "Superset {version}"
 
@@ -18458,6 +18480,9 @@ msgstr "Niet gecommit · Niet gepusht"
 msgid "Uncommitted changes"
 msgstr "Niet-gecommitte wijzigingen"
 
+msgid "Uncommitted changes, on top of {base}"
+msgstr "Niet-gecommitte wijzigingen, bovenop {base}"
+
 msgid "Underline"
 msgstr "Onderstrepen"
 
@@ -19390,6 +19415,9 @@ msgstr "Zakelijk e-mailadres"
 
 msgid "Work from tickets"
 msgstr "Werken vanuit tickets"
+
+msgid "Work in progress"
+msgstr "Work in progress"
 
 msgid "Work the action items from a call"
 msgstr "Werk de actiepunten uit een gesprek af"

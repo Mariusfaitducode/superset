@@ -9494,6 +9494,9 @@ msgstr "Mới nhất (v{latestVersion})"
 msgid "Latest news"
 msgstr "Tin tức mới nhất"
 
+msgid "Latest release"
+msgstr "Bản phát hành mới nhất"
+
 msgid "Launch"
 msgstr "Khởi chạy"
 
@@ -10274,6 +10277,9 @@ msgctxt "pull request state"
 msgid "Merged"
 msgstr "Đã merge"
 
+msgid "Merged after {base}, not released yet"
+msgstr "Đã gộp sau {base}, chưa phát hành"
+
 #. placeholder {0}: mergedBy.login
 msgid "Merged by {0}"
 msgstr "Được merge bởi {0}"
@@ -10775,6 +10781,10 @@ msgstr "Workspace mới ({shortcutText})"
 
 msgid "New workspace in {name}"
 msgstr "Workspace mới trong {name}"
+
+#. placeholder {0}: build.latestRelease
+msgid "Newer release: {0}"
+msgstr "Bản mới hơn: {0}"
 
 msgid "Newer than this app"
 msgstr "Mới hơn ứng dụng này"
@@ -11293,6 +11303,9 @@ msgstr "Chưa có cấu hình agent công khai nào. Đường dẫn này đã s
 msgid "No pull requests found."
 msgstr "Không tìm thấy pull request nào."
 
+msgid "no release"
+msgstr "chưa có bản phát hành"
+
 msgid "No release notes at {url}"
 msgstr "Không có ghi chú phát hành tại {url}"
 
@@ -11529,6 +11542,9 @@ msgstr "Không có"
 
 msgid "Not loaded"
 msgstr "Chưa tải"
+
+msgid "Not merged yet, on top of {base}"
+msgstr "Chưa gộp, dựa trên {base}"
 
 msgid "Not now"
 msgstr "Để sau"
@@ -13781,6 +13797,9 @@ msgstr "Hãy khởi chạy lại các agent đang chạy để đổi sang tài 
 
 msgid "Relay access enabled, connecting to the relay…"
 msgstr "Đã bật truy cập relay, đang kết nối tới relay…"
+
+msgid "Release"
+msgstr "Phát hành"
 
 msgid "Release control"
 msgstr "Ngừng điều khiển"
@@ -16605,6 +16624,9 @@ msgstr "Superset"
 msgid "Superset (YC P26) is the source-available IDE for the AI agents era, where engineers run hundreds of coding agents like Claude Code and Codex in parallel."
 msgstr "Superset (YC P26) là IDE công khai mã nguồn cho kỷ nguyên agent AI, nơi các kỹ sư chạy song song hàng trăm agent lập trình như Claude Code và Codex."
 
+msgid "Superset {upstream} · built {builtAt}"
+msgstr "Superset {upstream} · dựng lúc {builtAt}"
+
 msgid "Superset {version}"
 msgstr "Superset {version}"
 
@@ -18458,6 +18480,9 @@ msgstr "Chưa commit · Chưa push"
 msgid "Uncommitted changes"
 msgstr "Thay đổi chưa commit"
 
+msgid "Uncommitted changes, on top of {base}"
+msgstr "Thay đổi chưa commit, dựa trên {base}"
+
 msgid "Underline"
 msgstr "Gạch chân"
 
@@ -19390,6 +19415,9 @@ msgstr "Email công việc"
 
 msgid "Work from tickets"
 msgstr "Làm việc từ ticket"
+
+msgid "Work in progress"
+msgstr "Đang làm"
 
 msgid "Work the action items from a call"
 msgstr "Xử lý các việc cần làm từ cuộc gọi"

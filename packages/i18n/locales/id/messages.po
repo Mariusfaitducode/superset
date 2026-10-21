@@ -9494,6 +9494,9 @@ msgstr "Terbaru (v{latestVersion})"
 msgid "Latest news"
 msgstr "Berita terbaru"
 
+msgid "Latest release"
+msgstr "Rilis terbaru"
+
 msgid "Launch"
 msgstr "Peluncuran"
 
@@ -10274,6 +10277,9 @@ msgctxt "pull request state"
 msgid "Merged"
 msgstr "Di-merge"
 
+msgid "Merged after {base}, not released yet"
+msgstr "Digabung setelah {base}, belum dirilis"
+
 #. placeholder {0}: mergedBy.login
 msgid "Merged by {0}"
 msgstr "Di-merge oleh {0}"
@@ -10775,6 +10781,10 @@ msgstr "Workspace Baru ({shortcutText})"
 
 msgid "New workspace in {name}"
 msgstr "Workspace baru di {name}"
+
+#. placeholder {0}: build.latestRelease
+msgid "Newer release: {0}"
+msgstr "Rilis lebih baru: {0}"
 
 msgid "Newer than this app"
 msgstr "Lebih baru dari aplikasi ini"
@@ -11293,6 +11303,9 @@ msgstr "Belum ada konfigurasi agen publik. Rute ini siap untuk daftar konfiguras
 msgid "No pull requests found."
 msgstr "Tidak ada pull request ditemukan."
 
+msgid "no release"
+msgstr "tanpa rilis"
+
 msgid "No release notes at {url}"
 msgstr "Tidak ada catatan rilis di {url}"
 
@@ -11529,6 +11542,9 @@ msgstr "Tidak termasuk"
 
 msgid "Not loaded"
 msgstr "Belum dimuat"
+
+msgid "Not merged yet, on top of {base}"
+msgstr "Belum digabung, di atas {base}"
 
 msgid "Not now"
 msgstr "Nanti saja"
@@ -13781,6 +13797,9 @@ msgstr "Jalankan ulang agen yang sedang berjalan untuk menggantinya."
 
 msgid "Relay access enabled, connecting to the relay…"
 msgstr "Akses relay aktif, menghubungkan ke relay…"
+
+msgid "Release"
+msgstr "Rilis"
 
 msgid "Release control"
 msgstr "Lepaskan kendali"
@@ -16605,6 +16624,9 @@ msgstr "Superset"
 msgid "Superset (YC P26) is the source-available IDE for the AI agents era, where engineers run hundreds of coding agents like Claude Code and Codex in parallel."
 msgstr "Superset (YC P26) adalah IDE source-available untuk era agen AI, tempat para engineer menjalankan ratusan agen coding seperti Claude Code dan Codex secara paralel."
 
+msgid "Superset {upstream} · built {builtAt}"
+msgstr "Superset {upstream} · dibangun {builtAt}"
+
 msgid "Superset {version}"
 msgstr "Superset {version}"
 
@@ -18458,6 +18480,9 @@ msgstr "Belum di-commit · Belum di-push"
 msgid "Uncommitted changes"
 msgstr "Perubahan yang belum di-commit"
 
+msgid "Uncommitted changes, on top of {base}"
+msgstr "Perubahan belum di-commit, di atas {base}"
+
 msgid "Underline"
 msgstr "Garis bawah"
 
@@ -19390,6 +19415,9 @@ msgstr "Email kerja"
 
 msgid "Work from tickets"
 msgstr "Bekerja dari tiket"
+
+msgid "Work in progress"
+msgstr "Sedang dikerjakan"
 
 msgid "Work the action items from a call"
 msgstr "Kerjakan tindak lanjut dari panggilan"

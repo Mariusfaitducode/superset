@@ -9494,6 +9494,9 @@ msgstr "Mais recente (v{latestVersion})"
 msgid "Latest news"
 msgstr "Últimas notícias"
 
+msgid "Latest release"
+msgstr "Versão mais recente"
+
 msgid "Launch"
 msgstr "Execução"
 
@@ -10274,6 +10277,9 @@ msgctxt "pull request state"
 msgid "Merged"
 msgstr "Mesclado"
 
+msgid "Merged after {base}, not released yet"
+msgstr "Mesclado após {base}, ainda não lançado"
+
 #. placeholder {0}: mergedBy.login
 msgid "Merged by {0}"
 msgstr "Mesclado por {0}"
@@ -10775,6 +10781,10 @@ msgstr "Nova área de trabalho ({shortcutText})"
 
 msgid "New workspace in {name}"
 msgstr "Nova área de trabalho em {name}"
+
+#. placeholder {0}: build.latestRelease
+msgid "Newer release: {0}"
+msgstr "Versão mais recente: {0}"
 
 msgid "Newer than this app"
 msgstr "Mais recente que este app"
@@ -11293,6 +11303,9 @@ msgstr "Nenhuma configuração de agente pública ainda. Esta rota já está pro
 msgid "No pull requests found."
 msgstr "Nenhum pull request encontrado."
 
+msgid "no release"
+msgstr "nenhuma versão"
+
 msgid "No release notes at {url}"
 msgstr "Nenhuma nota de versão em {url}"
 
@@ -11529,6 +11542,9 @@ msgstr "Não incluído"
 
 msgid "Not loaded"
 msgstr "Não carregado"
+
+msgid "Not merged yet, on top of {base}"
+msgstr "Ainda não mesclado, sobre {base}"
 
 msgid "Not now"
 msgstr "Agora não"
@@ -13781,6 +13797,9 @@ msgstr "Reinicie os agentes em execução para trocar a conta deles."
 
 msgid "Relay access enabled, connecting to the relay…"
 msgstr "Acesso ao relay habilitado, conectando ao relay…"
+
+msgid "Release"
+msgstr "Versão"
 
 msgid "Release control"
 msgstr "Liberar o controle"
@@ -16605,6 +16624,9 @@ msgstr "Superset"
 msgid "Superset (YC P26) is the source-available IDE for the AI agents era, where engineers run hundreds of coding agents like Claude Code and Codex in parallel."
 msgstr "O Superset (YC P26) é o IDE com código-fonte disponível para a era dos agentes de IA, em que engenheiros executam centenas de agentes de programação como Claude Code e Codex em paralelo."
 
+msgid "Superset {upstream} · built {builtAt}"
+msgstr "Superset {upstream} · compilado {builtAt}"
+
 msgid "Superset {version}"
 msgstr "Superset {version}"
 
@@ -18458,6 +18480,9 @@ msgstr "Sem commit · Sem push"
 msgid "Uncommitted changes"
 msgstr "Alterações sem commit"
 
+msgid "Uncommitted changes, on top of {base}"
+msgstr "Alterações não commitadas, sobre {base}"
+
 msgid "Underline"
 msgstr "Sublinhado"
 
@@ -19390,6 +19415,9 @@ msgstr "E-mail profissional"
 
 msgid "Work from tickets"
 msgstr "Trabalhar a partir de tickets"
+
+msgid "Work in progress"
+msgstr "Em andamento"
 
 msgid "Work the action items from a call"
 msgstr "Resolver os itens de ação de uma chamada"

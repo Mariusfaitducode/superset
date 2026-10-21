@@ -9494,6 +9494,9 @@ msgstr "Последняя (v{latestVersion})"
 msgid "Latest news"
 msgstr "Последние новости"
 
+msgid "Latest release"
+msgstr "Последний релиз"
+
 msgid "Launch"
 msgstr "Запуск"
 
@@ -10274,6 +10277,9 @@ msgctxt "pull request state"
 msgid "Merged"
 msgstr "Объединено"
 
+msgid "Merged after {base}, not released yet"
+msgstr "Слито после {base}, ещё не выпущено"
+
 #. placeholder {0}: mergedBy.login
 msgid "Merged by {0}"
 msgstr "Объединил {0}"
@@ -10775,6 +10781,10 @@ msgstr "Новая рабочая область ({shortcutText})"
 
 msgid "New workspace in {name}"
 msgstr "Новая рабочая область в {name}"
+
+#. placeholder {0}: build.latestRelease
+msgid "Newer release: {0}"
+msgstr "Новый релиз: {0}"
 
 msgid "Newer than this app"
 msgstr "Новее этого приложения"
@@ -11293,6 +11303,9 @@ msgstr "Публичных конфигураций агентов пока не
 msgid "No pull requests found."
 msgstr "Пул-реквесты не найдены."
 
+msgid "no release"
+msgstr "нет релиза"
+
 msgid "No release notes at {url}"
 msgstr "Нет заметок о релизе по адресу {url}"
 
@@ -11529,6 +11542,9 @@ msgstr "Не входит"
 
 msgid "Not loaded"
 msgstr "Не загружено"
+
+msgid "Not merged yet, on top of {base}"
+msgstr "Ещё не слито, поверх {base}"
 
 msgid "Not now"
 msgstr "Не сейчас"
@@ -13781,6 +13797,9 @@ msgstr "Перезапустите работающих агентов, чтоб
 
 msgid "Relay access enabled, connecting to the relay…"
 msgstr "Доступ через реле включён, подключаемся к реле…"
+
+msgid "Release"
+msgstr "Релиз"
 
 msgid "Release control"
 msgstr "Отпустить управление"
@@ -16605,6 +16624,9 @@ msgstr "Superset"
 msgid "Superset (YC P26) is the source-available IDE for the AI agents era, where engineers run hundreds of coding agents like Claude Code and Codex in parallel."
 msgstr "Superset (YC P26) — это IDE с доступным исходным кодом для эпохи ИИ-агентов, в которой инженеры параллельно запускают сотни агентов для программирования, таких как Claude Code и Codex."
 
+msgid "Superset {upstream} · built {builtAt}"
+msgstr "Superset {upstream} · собрано {builtAt}"
+
 msgid "Superset {version}"
 msgstr "Superset {version}"
 
@@ -18458,6 +18480,9 @@ msgstr "Незакоммиченное · Неотправленное"
 msgid "Uncommitted changes"
 msgstr "Незакоммиченные изменения"
 
+msgid "Uncommitted changes, on top of {base}"
+msgstr "Незакоммиченные изменения, поверх {base}"
+
 msgid "Underline"
 msgstr "Подчёркнутый"
 
@@ -19390,6 +19415,9 @@ msgstr "Рабочая электронная почта"
 
 msgid "Work from tickets"
 msgstr "Работа из тикетов"
+
+msgid "Work in progress"
+msgstr "В работе"
 
 msgid "Work the action items from a call"
 msgstr "Разбор задач из созвона"

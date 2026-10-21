@@ -21,13 +21,21 @@ import {
 	useSettingsOriginRoute,
 	useSettingsSearchQuery,
 } from "renderer/stores/settings-state";
-import { COLLAPSED_WORKSPACE_SIDEBAR_WIDTH } from "renderer/stores/workspace-sidebar-state";
+import {
+	COLLAPSED_WORKSPACE_SIDEBAR_WIDTH,
+	useWorkspaceSidebarStore,
+} from "renderer/stores/workspace-sidebar-state";
 import { getVisibleMatchCountBySection } from "../../utils/settings-search";
+import { ForkBuildInfo } from "./components/ForkBuildInfo";
 import { GeneralSettings } from "./GeneralSettings";
 
 export function SettingsSidebar() {
 	const { t } = useLingui();
 	const searchQuery = useSettingsSearchQuery();
+	// Same width as the workspace sidebar, so opening Settings does not jump.
+	const sidebarWidth = useWorkspaceSidebarStore(
+		(state) => state.lastExpandedWidth,
+	);
 	const setSearchQuery = useSetSettingsSearchQuery();
 	const originRoute = useSettingsOriginRoute();
 	const isV2CloudEnabled = useIsV2CloudEnabled();
@@ -48,7 +56,10 @@ export function SettingsSidebar() {
 		: null;
 
 	return (
-		<div className="w-56 flex flex-col pb-3 overflow-hidden border-r border-border bg-sidebar dark:bg-muted/35">
+		<div
+			className="flex shrink-0 flex-col pb-3 overflow-hidden border-r border-border bg-sidebar dark:bg-muted/35"
+			style={{ width: sidebarWidth }}
+		>
 			<div className="mb-1 flex h-12 shrink-0 items-center">
 				{isMac ? (
 					<div className="drag h-full shrink-0" style={{ width: 96 }} />
@@ -130,14 +141,7 @@ export function SettingsSidebar() {
 						<Trans>Documentation</Trans>
 					</span>
 				</a>
-				{window.App.forkBuild && (
-					<p
-						className="truncate px-3 py-1.5 text-[11px] text-muted-foreground"
-						title={window.App.forkBuild}
-					>
-						{window.App.forkBuild}
-					</p>
-				)}
+				<ForkBuildInfo />
 			</div>
 		</div>
 	);

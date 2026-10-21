@@ -9494,6 +9494,9 @@ msgstr "Nejnovější (v{latestVersion})"
 msgid "Latest news"
 msgstr "Novinky"
 
+msgid "Latest release"
+msgstr "Nejnovější verze"
+
 msgid "Launch"
 msgstr "Spuštění"
 
@@ -10274,6 +10277,9 @@ msgctxt "pull request state"
 msgid "Merged"
 msgstr "Sloučeno"
 
+msgid "Merged after {base}, not released yet"
+msgstr "Sloučeno po {base}, zatím nevydáno"
+
 #. placeholder {0}: mergedBy.login
 msgid "Merged by {0}"
 msgstr "Sloučil {0}"
@@ -10775,6 +10781,10 @@ msgstr "Nový pracovní prostor ({shortcutText})"
 
 msgid "New workspace in {name}"
 msgstr "Nový pracovní prostor v {name}"
+
+#. placeholder {0}: build.latestRelease
+msgid "Newer release: {0}"
+msgstr "Novější verze: {0}"
 
 msgid "Newer than this app"
 msgstr "Novější než tato aplikace"
@@ -11293,6 +11303,9 @@ msgstr "Zatím žádné veřejné konfigurace agentů. Tato adresa je připraven
 msgid "No pull requests found."
 msgstr "Nenalezeny žádné pull requesty."
 
+msgid "no release"
+msgstr "žádná verze"
+
 msgid "No release notes at {url}"
 msgstr "Žádné poznámky k vydání na {url}"
 
@@ -11529,6 +11542,9 @@ msgstr "Není zahrnuto"
 
 msgid "Not loaded"
 msgstr "Nenačteno"
+
+msgid "Not merged yet, on top of {base}"
+msgstr "Zatím nesloučeno, nad {base}"
 
 msgid "Not now"
 msgstr "Teď ne"
@@ -13781,6 +13797,9 @@ msgstr "Běžící agenty přepnete jejich novým spuštěním."
 
 msgid "Relay access enabled, connecting to the relay…"
 msgstr "Přístup přes relay povolen, připojuji se k relay…"
+
+msgid "Release"
+msgstr "Verze"
 
 msgid "Release control"
 msgstr "Uvolnit ovládání"
@@ -16605,6 +16624,9 @@ msgstr "Superset"
 msgid "Superset (YC P26) is the source-available IDE for the AI agents era, where engineers run hundreds of coding agents like Claude Code and Codex in parallel."
 msgstr "Superset (YC P26) je IDE s dostupným zdrojovým kódem pro éru AI agentů, ve kterém inženýři paralelně spouštějí stovky programovacích agentů, jako jsou Claude Code a Codex."
 
+msgid "Superset {upstream} · built {builtAt}"
+msgstr "Superset {upstream} · sestaveno {builtAt}"
+
 msgid "Superset {version}"
 msgstr "Superset {version}"
 
@@ -18458,6 +18480,9 @@ msgstr "Necommitnuto · Neodesláno"
 msgid "Uncommitted changes"
 msgstr "Necommitnuté změny"
 
+msgid "Uncommitted changes, on top of {base}"
+msgstr "Necommitnuté změny, nad {base}"
+
 msgid "Underline"
 msgstr "Podtržené"
 
@@ -19390,6 +19415,9 @@ msgstr "Pracovní e-mail"
 
 msgid "Work from tickets"
 msgstr "Práce z ticketů"
+
+msgid "Work in progress"
+msgstr "Rozpracováno"
 
 msgid "Work the action items from a call"
 msgstr "Plnění úkolů z hovoru"
