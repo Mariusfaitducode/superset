@@ -375,6 +375,14 @@ msgstr "čeká {0} → {1}"
 msgid "{0} actions"
 msgstr "Akce {0}"
 
+#. placeholder {0}: states.length
+msgid "{0} agents"
+msgstr "Agenti: {0}"
+
+#. placeholder {0}: states.length
+msgid "{0} agents · {waiting} waiting for you"
+msgstr "Agenti: {0} · čeká na vás: {waiting}"
+
 #. placeholder {0}: formatTokens(belowGap > 0n ? belowGap : 0n)
 msgid "{0} behind you"
 msgstr "{0} za vámi"
@@ -3309,6 +3317,9 @@ msgstr "Autorizací umožníte této aplikaci přístup k vašim datům podle je
 msgid "By clicking continue, you agree to our <0>Terms of Service</0> and <1>Privacy Policy</1>."
 msgstr "Kliknutím na Pokračovat souhlasíte s <0>podmínkami služby</0> a <1>zásadami ochrany soukromí</1>."
 
+msgid "By label"
+msgstr "Podle štítku"
+
 msgid "By signing in, you agree to our\n"
 "<0>Terms of Service</0> and <1>Privacy Policy</1>"
 msgstr "Přihlášením souhlasíte s\n"
@@ -3319,6 +3330,9 @@ msgstr "Přihlášením souhlasíte s <0>podmínkami služby</0> a <1>zásadami 
 
 msgid "by spend"
 msgstr "podle útraty"
+
+msgid "By status"
+msgstr "Podle stavu"
 
 msgid "by tokens"
 msgstr "podle tokenů"
@@ -3803,6 +3817,9 @@ msgstr "Zrušit filtry"
 msgid "Clear history"
 msgstr "Vymazat historii"
 
+msgid "Clear label filter"
+msgstr "Zrušit filtr štítků"
+
 msgid "Clear list"
 msgstr "Vymazat seznam"
 
@@ -4189,6 +4206,9 @@ msgstr "Barva"
 
 msgid "Color Filter"
 msgstr "Barevný filtr"
+
+msgid "Columns"
+msgstr "Sloupce"
 
 msgid "Combine all commits"
 msgstr "Spojí všechny commity"
@@ -4911,6 +4931,9 @@ msgstr "Chat se nepodařilo rozvětvit"
 
 msgid "Could not change access"
 msgstr "Přístup se nepodařilo změnit"
+
+msgid "Could not change the labels"
+msgstr "Štítky se nepodařilo změnit"
 
 msgid "Could not change the mode"
 msgstr "Režim se nepodařilo změnit"
@@ -5941,6 +5964,9 @@ msgstr "Smazat hosta"
 
 msgid "Delete image"
 msgstr "Smazat obrázek"
+
+msgid "Delete label"
+msgstr "Smazat štítek"
 
 msgid "Delete local branch on workspace removal"
 msgstr "Smazat lokální větev při odstranění pracovního prostoru"
@@ -9400,8 +9426,14 @@ msgstr "Štítek"
 msgid "Label change"
 msgstr "Změna štítku"
 
+msgid "Label color"
+msgstr "Barva štítku"
+
 msgid "Label is required."
 msgstr "Popisek je povinný."
+
+msgid "Label name"
+msgstr "Název štítku"
 
 msgid "Label name..."
 msgstr "Název štítku..."
@@ -9493,6 +9525,9 @@ msgstr "Nejnovější (v{latestVersion})"
 
 msgid "Latest news"
 msgstr "Novinky"
+
+msgid "Latest release"
+msgstr "Nejnovější verze"
 
 msgid "Launch"
 msgstr "Spuštění"
@@ -10053,6 +10088,9 @@ msgstr "Integrace spravujte ve webové aplikaci, kde služby připojíte a nasta
 msgid "Manage keys for MCP server access and external integrations like Claude Desktop or Claude Code. <0>Learn more<1/></0>"
 msgstr "Spravujte klíče pro přístup k MCP serveru a externí integrace, jako je Claude Desktop nebo Claude Code. <0>Zjistit více<1/></0>"
 
+msgid "Manage labels…"
+msgstr "Spravovat štítky…"
+
 msgid "Manage members"
 msgstr "Spravovat členy"
 
@@ -10273,6 +10311,9 @@ msgstr "Sloučený"
 msgctxt "pull request state"
 msgid "Merged"
 msgstr "Sloučeno"
+
+msgid "Merged after {base}, not released yet"
+msgstr "Sloučeno po {base}, zatím nevydáno"
 
 #. placeholder {0}: mergedBy.login
 msgid "Merged by {0}"
@@ -10713,6 +10754,9 @@ msgstr "Nová skupina z pracovního prostoru"
 msgid "New issue"
 msgstr "Nová issue"
 
+msgid "New label…"
+msgstr "Nový štítek…"
+
 msgid "New page"
 msgstr "Nová stránka"
 
@@ -10775,6 +10819,10 @@ msgstr "Nový pracovní prostor ({shortcutText})"
 
 msgid "New workspace in {name}"
 msgstr "Nový pracovní prostor v {name}"
+
+#. placeholder {0}: build.latestRelease
+msgid "Newer release: {0}"
+msgstr "Novější verze: {0}"
 
 msgid "Newer than this app"
 msgstr "Novější než tato aplikace"
@@ -11109,6 +11157,9 @@ msgstr "Žádné položky"
 msgid "No known creators"
 msgstr "Žádní známí autoři"
 
+msgid "No label"
+msgstr "Bez štítku"
+
 msgid "No labels"
 msgstr "Žádné štítky"
 
@@ -11292,6 +11343,9 @@ msgstr "Zatím žádné veřejné konfigurace agentů. Tato adresa je připraven
 
 msgid "No pull requests found."
 msgstr "Nenalezeny žádné pull requesty."
+
+msgid "no release"
+msgstr "žádná verze"
 
 msgid "No release notes at {url}"
 msgstr "Žádné poznámky k vydání na {url}"
@@ -11529,6 +11583,9 @@ msgstr "Není zahrnuto"
 
 msgid "Not loaded"
 msgstr "Nenačteno"
+
+msgid "Not merged yet, on top of {base}"
+msgstr "Zatím nesloučeno, nad {base}"
 
 msgid "Not now"
 msgstr "Teď ne"
@@ -13426,6 +13483,9 @@ msgstr "Naplánujte opakovanou práci"
 msgid "Put recurring work on a schedule or an event. Agents run on their own and land in a workspace for you to review."
 msgstr "Naplánujte opakující se práci podle rozvrhu nebo události. Agenti běží sami a výsledek skončí v pracovním prostoru, kde ho zkontrolujete."
 
+msgid "Put them on a workspace from its right-click menu, then filter the sidebar by clicking them under Workspaces. Agents can set them too."
+msgstr "Přidejte je k pracovnímu prostoru z kontextové nabídky a pak filtrujte postranní panel kliknutím na ně pod Workspaces. Mohou je nastavit i agenti."
+
 msgid "px"
 msgstr "px"
 
@@ -13781,6 +13841,9 @@ msgstr "Běžící agenty přepnete jejich novým spuštěním."
 
 msgid "Relay access enabled, connecting to the relay…"
 msgstr "Přístup přes relay povolen, připojuji se k relay…"
+
+msgid "Release"
+msgstr "Verze"
 
 msgid "Release control"
 msgstr "Uvolnit ovládání"
@@ -16605,6 +16668,9 @@ msgstr "Superset"
 msgid "Superset (YC P26) is the source-available IDE for the AI agents era, where engineers run hundreds of coding agents like Claude Code and Codex in parallel."
 msgstr "Superset (YC P26) je IDE s dostupným zdrojovým kódem pro éru AI agentů, ve kterém inženýři paralelně spouštějí stovky programovacích agentů, jako jsou Claude Code a Codex."
 
+msgid "Superset {upstream} · built {builtAt}"
+msgstr "Superset {upstream} · sestaveno {builtAt}"
+
 msgid "Superset {version}"
 msgstr "Superset {version}"
 
@@ -18458,6 +18524,9 @@ msgstr "Necommitnuto · Neodesláno"
 msgid "Uncommitted changes"
 msgstr "Necommitnuté změny"
 
+msgid "Uncommitted changes, on top of {base}"
+msgstr "Necommitnuté změny, nad {base}"
+
 msgid "Underline"
 msgstr "Podtržené"
 
@@ -19391,6 +19460,9 @@ msgstr "Pracovní e-mail"
 msgid "Work from tickets"
 msgstr "Práce z ticketů"
 
+msgid "Work in progress"
+msgstr "Rozpracováno"
+
 msgid "Work the action items from a call"
 msgstr "Plnění úkolů z hovoru"
 
@@ -19482,6 +19554,9 @@ msgstr "ID pracovního prostoru"
 
 msgid "Workspace ID copied"
 msgstr "ID pracovního prostoru zkopírováno"
+
+msgid "Workspace labels"
+msgstr "Štítky pracovních prostorů"
 
 msgid "Workspace layout"
 msgstr "Rozvržení pracovních prostorů"

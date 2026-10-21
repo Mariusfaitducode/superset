@@ -20,6 +20,7 @@ import {
 	SETTING_ITEM_ID,
 	type SettingItemId,
 } from "../../../utils/settings-search";
+import { WorkspaceLabelsSettings } from "./components/WorkspaceLabelsSettings";
 
 function StateLegend() {
 	const { t } = useLingui();
@@ -188,6 +189,10 @@ export function SidebarSettings({ visibleItems }: SidebarSettingsProps) {
 					<StateLegend />
 				)}
 			</div>
+			{isItemVisible(
+				SETTING_ITEM_ID.SIDEBAR_WORKSPACE_LABELS,
+				visibleItems,
+			) && <WorkspaceLabelsSettings />}
 		</div>
 	);
 }

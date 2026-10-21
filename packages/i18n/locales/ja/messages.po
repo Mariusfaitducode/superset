@@ -375,6 +375,14 @@ msgstr "{0} → {1} 保留中"
 msgid "{0} actions"
 msgstr "{0}の操作"
 
+#. placeholder {0}: states.length
+msgid "{0} agents"
+msgstr "エージェント {0}"
+
+#. placeholder {0}: states.length
+msgid "{0} agents · {waiting} waiting for you"
+msgstr "エージェント {0} · {waiting} 件があなたを待っています"
+
 #. placeholder {0}: formatTokens(belowGap > 0n ? belowGap : 0n)
 msgid "{0} behind you"
 msgstr "{0}差で後続"
@@ -3309,6 +3317,9 @@ msgstr "許可すると、このアプリケーションはその利用規約と
 msgid "By clicking continue, you agree to our <0>Terms of Service</0> and <1>Privacy Policy</1>."
 msgstr "続行をクリックすると、<0>利用規約</0>と<1>プライバシーポリシー</1>に同意したことになります。"
 
+msgid "By label"
+msgstr "ラベル別"
+
 msgid "By signing in, you agree to our\n"
 "<0>Terms of Service</0> and <1>Privacy Policy</1>"
 msgstr "サインインすると、以下に同意したことになります\n"
@@ -3319,6 +3330,9 @@ msgstr "サインインすると、<0>利用規約</0>と<1>プライバシー�
 
 msgid "by spend"
 msgstr "支出額順"
+
+msgid "By status"
+msgstr "ステータス別"
 
 msgid "by tokens"
 msgstr "トークン数順"
@@ -3803,6 +3817,9 @@ msgstr "フィルターをクリア"
 msgid "Clear history"
 msgstr "履歴をクリア"
 
+msgid "Clear label filter"
+msgstr "ラベルフィルターをクリア"
+
 msgid "Clear list"
 msgstr "リストをクリア"
 
@@ -4189,6 +4206,9 @@ msgstr "色"
 
 msgid "Color Filter"
 msgstr "カラーフィルタ"
+
+msgid "Columns"
+msgstr "列"
 
 msgid "Combine all commits"
 msgstr "すべてのコミットを1つに統合"
@@ -4911,6 +4931,9 @@ msgstr "チャットを分岐できませんでした"
 
 msgid "Could not change access"
 msgstr "アクセスを変更できませんでした"
+
+msgid "Could not change the labels"
+msgstr "ラベルを変更できませんでした"
 
 msgid "Could not change the mode"
 msgstr "モードを変更できませんでした"
@@ -5941,6 +5964,9 @@ msgstr "ホストを削除"
 
 msgid "Delete image"
 msgstr "画像を削除"
+
+msgid "Delete label"
+msgstr "ラベルを削除"
 
 msgid "Delete local branch on workspace removal"
 msgstr "ワークスペース削除時にローカルブランチも削除"
@@ -9400,8 +9426,14 @@ msgstr "ラベル"
 msgid "Label change"
 msgstr "ラベル変更"
 
+msgid "Label color"
+msgstr "ラベルの色"
+
 msgid "Label is required."
 msgstr "ラベルは必須です。"
+
+msgid "Label name"
+msgstr "ラベル名"
 
 msgid "Label name..."
 msgstr "ラベル名..."
@@ -9493,6 +9525,9 @@ msgstr "最新(v{latestVersion})"
 
 msgid "Latest news"
 msgstr "最新ニュース"
+
+msgid "Latest release"
+msgstr "最新リリース"
 
 msgid "Launch"
 msgstr "起動"
@@ -10053,6 +10088,9 @@ msgstr "Webアプリで連携を管理し、サービスを接続・設定しま
 msgid "Manage keys for MCP server access and external integrations like Claude Desktop or Claude Code. <0>Learn more<1/></0>"
 msgstr "MCPサーバーアクセスやClaude Desktop・Claude Codeなどの外部連携用のキーを管理します。<0>詳細<1/></0>"
 
+msgid "Manage labels…"
+msgstr "ラベルを管理…"
+
 msgid "Manage members"
 msgstr "メンバーを管理"
 
@@ -10273,6 +10311,9 @@ msgstr "マージ済み"
 msgctxt "pull request state"
 msgid "Merged"
 msgstr "マージ済み"
+
+msgid "Merged after {base}, not released yet"
+msgstr "{base} の後にマージ済み、未リリース"
 
 #. placeholder {0}: mergedBy.login
 msgid "Merged by {0}"
@@ -10713,6 +10754,9 @@ msgstr "ワークスペースから新規グループ"
 msgid "New issue"
 msgstr "新規issue"
 
+msgid "New label…"
+msgstr "新しいラベル…"
+
 msgid "New page"
 msgstr "新しいページ"
 
@@ -10775,6 +10819,10 @@ msgstr "新規ワークスペース({shortcutText})"
 
 msgid "New workspace in {name}"
 msgstr "{name} に新規ワークスペース"
+
+#. placeholder {0}: build.latestRelease
+msgid "Newer release: {0}"
+msgstr "新しいリリース: {0}"
 
 msgid "Newer than this app"
 msgstr "このアプリより新しい"
@@ -11109,6 +11157,9 @@ msgstr "項目なし"
 msgid "No known creators"
 msgstr "既知の作成者はいません"
 
+msgid "No label"
+msgstr "ラベルなし"
+
 msgid "No labels"
 msgstr "ラベルなし"
 
@@ -11292,6 +11343,9 @@ msgstr "公開されているエージェント設定はまだありません。
 
 msgid "No pull requests found."
 msgstr "プルリクエストが見つかりません。"
+
+msgid "no release"
+msgstr "リリースなし"
 
 msgid "No release notes at {url}"
 msgstr "{url} にリリースノートがありません"
@@ -11529,6 +11583,9 @@ msgstr "含まれない"
 
 msgid "Not loaded"
 msgstr "未読み込み"
+
+msgid "Not merged yet, on top of {base}"
+msgstr "未マージ、{base} の上"
 
 msgid "Not now"
 msgstr "あとで"
@@ -13426,6 +13483,9 @@ msgstr "繰り返しの作業をスケジュールに載せる"
 msgid "Put recurring work on a schedule or an event. Agents run on their own and land in a workspace for you to review."
 msgstr "繰り返しの作業をスケジュールやイベントで実行しましょう。エージェントは自動で動き、結果はレビュー用のワークスペースに入ります。"
 
+msgid "Put them on a workspace from its right-click menu, then filter the sidebar by clicking them under Workspaces. Agents can set them too."
+msgstr "右クリックメニューからワークスペースに付け、Workspaces の下でクリックしてサイドバーを絞り込みます。エージェントも設定できます。"
+
 msgid "px"
 msgstr "px"
 
@@ -13781,6 +13841,9 @@ msgstr "実行中のエージェントを切り替えるには再起動してく
 
 msgid "Relay access enabled, connecting to the relay…"
 msgstr "リレーアクセスを有効にしました。リレーに接続中…"
+
+msgid "Release"
+msgstr "リリース"
 
 msgid "Release control"
 msgstr "操作を終了"
@@ -16605,6 +16668,9 @@ msgstr "Superset"
 msgid "Superset (YC P26) is the source-available IDE for the AI agents era, where engineers run hundreds of coding agents like Claude Code and Codex in parallel."
 msgstr "Superset（YC P26）は、AI エージェント時代のためのソースコード公開型 IDE です。エンジニアは Claude Code や Codex などのコーディングエージェントを数百単位で並行して実行できます。"
 
+msgid "Superset {upstream} · built {builtAt}"
+msgstr "Superset {upstream} · ビルド {builtAt}"
+
 msgid "Superset {version}"
 msgstr "Superset {version}"
 
@@ -18458,6 +18524,9 @@ msgstr "未コミット · 未プッシュ"
 msgid "Uncommitted changes"
 msgstr "未コミットの変更"
 
+msgid "Uncommitted changes, on top of {base}"
+msgstr "未コミットの変更、{base} の上"
+
 msgid "Underline"
 msgstr "下線"
 
@@ -19391,6 +19460,9 @@ msgstr "勤務先のメールアドレス"
 msgid "Work from tickets"
 msgstr "チケットから作業を始める"
 
+msgid "Work in progress"
+msgstr "作業中"
+
 msgid "Work the action items from a call"
 msgstr "通話のアクションアイテムを処理"
 
@@ -19482,6 +19554,9 @@ msgstr "ワークスペースID"
 
 msgid "Workspace ID copied"
 msgstr "ワークスペースIDをコピーしました"
+
+msgid "Workspace labels"
+msgstr "ワークスペースのラベル"
 
 msgid "Workspace layout"
 msgstr "ワークスペースのレイアウト"

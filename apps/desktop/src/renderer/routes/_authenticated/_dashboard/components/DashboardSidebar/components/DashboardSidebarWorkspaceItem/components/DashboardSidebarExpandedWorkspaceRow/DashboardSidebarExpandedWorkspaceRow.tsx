@@ -32,6 +32,7 @@ import type {
 	DashboardSidebarWorkspaceIndentation,
 	DashboardSidebarWorkspacePullRequest,
 } from "../../../../types";
+import { WorkspaceLabelPills } from "../../../WorkspaceLabels";
 import { DashboardSidebarWorkspaceQueuedBadge } from "../DashboardSidebarWorkspaceQueuedBadge";
 import { DashboardSidebarConversationList } from "./components/DashboardSidebarConversationList";
 import { DashboardSidebarPortsChip } from "./components/DashboardSidebarPortsChip";
@@ -374,9 +375,15 @@ export const DashboardSidebarExpandedWorkspaceRow = forwardRef<
 									{creationStatusText}
 								</span>
 							) : (
-								<DashboardSidebarWorkspaceQueuedBadge
-									workspaceId={workspace.id}
-								/>
+								<>
+									<WorkspaceLabelPills
+										workspaceId={workspace.id}
+										hostId={workspace.hostId}
+									/>
+									<DashboardSidebarWorkspaceQueuedBadge
+										workspaceId={workspace.id}
+									/>
+								</>
 							)}
 							<div className="grid items-center justify-items-end [&>*]:col-start-1 [&>*]:row-start-1">
 								<span

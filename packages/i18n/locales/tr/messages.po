@@ -375,6 +375,14 @@ msgstr "{0} → {1} bekliyor"
 msgid "{0} actions"
 msgstr "{0} eylemleri"
 
+#. placeholder {0}: states.length
+msgid "{0} agents"
+msgstr "{0} ajan"
+
+#. placeholder {0}: states.length
+msgid "{0} agents · {waiting} waiting for you"
+msgstr "{0} ajan · {waiting} seni bekliyor"
+
 #. placeholder {0}: formatTokens(belowGap > 0n ? belowGap : 0n)
 msgid "{0} behind you"
 msgstr "{0} arkanızda"
@@ -3309,6 +3317,9 @@ msgstr "Yetkilendirerek, bu uygulamanın hizmet şartlarına ve gizlilik politik
 msgid "By clicking continue, you agree to our <0>Terms of Service</0> and <1>Privacy Policy</1>."
 msgstr "Devam'a tıklayarak <0>Hizmet Şartları</0> ve <1>Gizlilik Politikası</1> belgelerimizi kabul edersiniz."
 
+msgid "By label"
+msgstr "Etikete göre"
+
 msgid "By signing in, you agree to our\n"
 "<0>Terms of Service</0> and <1>Privacy Policy</1>"
 msgstr "Oturum açarak şunları kabul edersiniz:\n"
@@ -3319,6 +3330,9 @@ msgstr "Oturum açarak <0>Hizmet Şartları</0> ve <1>Gizlilik Politikası</1> b
 
 msgid "by spend"
 msgstr "harcamaya göre"
+
+msgid "By status"
+msgstr "Duruma göre"
 
 msgid "by tokens"
 msgstr "token'a göre"
@@ -3803,6 +3817,9 @@ msgstr "Filtreleri temizle"
 msgid "Clear history"
 msgstr "Geçmişi temizle"
 
+msgid "Clear label filter"
+msgstr "Etiket filtresini temizle"
+
 msgid "Clear list"
 msgstr "Listeyi temizle"
 
@@ -4189,6 +4206,9 @@ msgstr "Renk"
 
 msgid "Color Filter"
 msgstr "Renk Filtresi"
+
+msgid "Columns"
+msgstr "Sütunlar"
 
 msgid "Combine all commits"
 msgstr "Tüm commit'leri birleştirir"
@@ -4911,6 +4931,9 @@ msgstr "Sohbet dallandırılamadı"
 
 msgid "Could not change access"
 msgstr "Erişim değiştirilemedi"
+
+msgid "Could not change the labels"
+msgstr "Etiketler değiştirilemedi"
 
 msgid "Could not change the mode"
 msgstr "Mod değiştirilemedi"
@@ -5941,6 +5964,9 @@ msgstr "Host'u sil"
 
 msgid "Delete image"
 msgstr "Görseli sil"
+
+msgid "Delete label"
+msgstr "Etiketi sil"
 
 msgid "Delete local branch on workspace removal"
 msgstr "Çalışma alanı kaldırılırken yerel dalı sil"
@@ -9400,8 +9426,14 @@ msgstr "Etiket"
 msgid "Label change"
 msgstr "Etiket değişikliği"
 
+msgid "Label color"
+msgstr "Etiket rengi"
+
 msgid "Label is required."
 msgstr "Etiket gereklidir."
+
+msgid "Label name"
+msgstr "Etiket adı"
 
 msgid "Label name..."
 msgstr "Etiket adı..."
@@ -9493,6 +9525,9 @@ msgstr "En son (v{latestVersion})"
 
 msgid "Latest news"
 msgstr "Son haberler"
+
+msgid "Latest release"
+msgstr "En son sürüm"
 
 msgid "Launch"
 msgstr "Başlatma"
@@ -10053,6 +10088,9 @@ msgstr "Hizmetleri bağlamak ve yapılandırmak için entegrasyonları web uygul
 msgid "Manage keys for MCP server access and external integrations like Claude Desktop or Claude Code. <0>Learn more<1/></0>"
 msgstr "MCP sunucusu erişimi ve Claude Desktop veya Claude Code gibi harici entegrasyonlar için anahtarları yönetin. <0>Daha fazla bilgi<1/></0>"
 
+msgid "Manage labels…"
+msgstr "Etiketleri yönet…"
+
 msgid "Manage members"
 msgstr "Üyeleri yönet"
 
@@ -10273,6 +10311,9 @@ msgstr "Birleştirildi"
 msgctxt "pull request state"
 msgid "Merged"
 msgstr "Birleştirildi"
+
+msgid "Merged after {base}, not released yet"
+msgstr "{base} sonrasında birleştirildi, henüz yayınlanmadı"
 
 #. placeholder {0}: mergedBy.login
 msgid "Merged by {0}"
@@ -10713,6 +10754,9 @@ msgstr "Çalışma alanından yeni grup"
 msgid "New issue"
 msgstr "Yeni issue"
 
+msgid "New label…"
+msgstr "Yeni etiket…"
+
 msgid "New page"
 msgstr "Yeni sayfa"
 
@@ -10775,6 +10819,10 @@ msgstr "Yeni çalışma alanı ({shortcutText})"
 
 msgid "New workspace in {name}"
 msgstr "{name} içinde yeni çalışma alanı"
+
+#. placeholder {0}: build.latestRelease
+msgid "Newer release: {0}"
+msgstr "Daha yeni sürüm: {0}"
 
 msgid "Newer than this app"
 msgstr "Bu uygulamadan daha yeni"
@@ -11109,6 +11157,9 @@ msgstr "Öğe yok"
 msgid "No known creators"
 msgstr "Bilinen oluşturan yok"
 
+msgid "No label"
+msgstr "Etiket yok"
+
 msgid "No labels"
 msgstr "Etiket yok"
 
@@ -11292,6 +11343,9 @@ msgstr "Henüz herkese açık ajan yapılandırması yok. Bu bölüm gelecekteki
 
 msgid "No pull requests found."
 msgstr "Pull request bulunamadı."
+
+msgid "no release"
+msgstr "sürüm yok"
 
 msgid "No release notes at {url}"
 msgstr "{url} adresinde sürüm notu yok"
@@ -11529,6 +11583,9 @@ msgstr "Dahil değil"
 
 msgid "Not loaded"
 msgstr "Yüklenmedi"
+
+msgid "Not merged yet, on top of {base}"
+msgstr "Henüz birleştirilmedi, {base} üzerinde"
 
 msgid "Not now"
 msgstr "Şimdi değil"
@@ -13426,6 +13483,9 @@ msgstr "Tekrarlayan işleri zamanlamaya alın"
 msgid "Put recurring work on a schedule or an event. Agents run on their own and land in a workspace for you to review."
 msgstr "Tekrarlayan işleri bir zamanlamaya veya olaya bağlayın. Ajanlar kendi başına çalışır ve sonuç, incelemeniz için bir çalışma alanına düşer."
 
+msgid "Put them on a workspace from its right-click menu, then filter the sidebar by clicking them under Workspaces. Agents can set them too."
+msgstr "Sağ tık menüsünden bir workspace'e ekleyin, ardından Workspaces altında tıklayarak kenar çubuğunu filtreleyin. Ajanlar da ekleyebilir."
+
 msgid "px"
 msgstr "px"
 
@@ -13781,6 +13841,9 @@ msgstr "Değiştirmek için çalışan ajanları yeniden başlatın."
 
 msgid "Relay access enabled, connecting to the relay…"
 msgstr "Röle erişimi etkinleştirildi, röleye bağlanılıyor…"
+
+msgid "Release"
+msgstr "Sürüm"
 
 msgid "Release control"
 msgstr "Kontrolü bırak"
@@ -16605,6 +16668,9 @@ msgstr "Superset"
 msgid "Superset (YC P26) is the source-available IDE for the AI agents era, where engineers run hundreds of coding agents like Claude Code and Codex in parallel."
 msgstr "Superset (YC P26), mühendislerin Claude Code ve Codex gibi yüzlerce kodlama ajanını paralel olarak çalıştırdığı, yapay zekâ ajanları çağı için kaynak kodu erişilebilir IDE'dir."
 
+msgid "Superset {upstream} · built {builtAt}"
+msgstr "Superset {upstream} · derlendi {builtAt}"
+
 msgid "Superset {version}"
 msgstr "Superset {version}"
 
@@ -18458,6 +18524,9 @@ msgstr "Commit'lenmemiş · Push edilmemiş"
 msgid "Uncommitted changes"
 msgstr "Commit'lenmemiş değişiklikler"
 
+msgid "Uncommitted changes, on top of {base}"
+msgstr "Commit edilmemiş değişiklikler, {base} üzerinde"
+
 msgid "Underline"
 msgstr "Altı çizili"
 
@@ -19391,6 +19460,9 @@ msgstr "İş e-postası"
 msgid "Work from tickets"
 msgstr "Biletlerden çalışma"
 
+msgid "Work in progress"
+msgstr "Devam ediyor"
+
 msgid "Work the action items from a call"
 msgstr "Bir görüşmenin aksiyon maddelerini yürütün"
 
@@ -19482,6 +19554,9 @@ msgstr "Çalışma alanı kimliği"
 
 msgid "Workspace ID copied"
 msgstr "Çalışma alanı kimliği kopyalandı"
+
+msgid "Workspace labels"
+msgstr "Workspace etiketleri"
 
 msgid "Workspace layout"
 msgstr "Çalışma alanı düzeni"

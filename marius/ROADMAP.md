@@ -18,7 +18,8 @@ Kept by the agents working on this fork and read on every Mac. Updated at each s
 - **Background task card**: a card on the conversation that says what the agent is doing and how far it is, with a progress bar. The agent updates it, the same way as to-dos. First use: following a prototype's disk cleanup instead of polling Grafana by hand. A metric curve can come later.
 - **Custom views**: starting with a PR view. The current PR page says "no GitHub remote" on hub: find out why first.
 - **Notion-like ⌘K to switch between agents**: ⌘K clears the terminal today and the palette is on ⌘⇧K, so the shortcut needs a decision.
-- **Richer workspaces view**: which information to add, to define.
+- **Workspace labels** (Waiting, In progress, Today, Top priority, custom): built, to validate. Pills on rows, sidebar filter, `superset labels` for agents.
+- **Richer workspaces view**: built, to validate. Cards show labels, agent dots and the top open to-do; filter by label; columns by status or by label.
 - Later: ergonomics, performance, general agent, MCP, features behind the paid gate.
 - Propose upstream what works (issue superset-sh/superset#8634).
 

@@ -375,6 +375,14 @@ msgstr "{0} → {1}待更新"
 msgid "{0} actions"
 msgstr "{0}的操作"
 
+#. placeholder {0}: states.length
+msgid "{0} agents"
+msgstr "{0} 個代理"
+
+#. placeholder {0}: states.length
+msgid "{0} agents · {waiting} waiting for you"
+msgstr "{0} 個代理 · {waiting} 個在等你"
+
 #. placeholder {0}: formatTokens(belowGap > 0n ? belowGap : 0n)
 msgid "{0} behind you"
 msgstr "落後你 {0}"
@@ -3309,6 +3317,9 @@ msgstr "授權即表示你允許該應用程式按照其服務條款和隱私政
 msgid "By clicking continue, you agree to our <0>Terms of Service</0> and <1>Privacy Policy</1>."
 msgstr "點選繼續即表示你同意我們的<0>服務條款</0>和<1>隱私政策</1>。"
 
+msgid "By label"
+msgstr "依標籤"
+
 msgid "By signing in, you agree to our\n"
 "<0>Terms of Service</0> and <1>Privacy Policy</1>"
 msgstr "登入即表示你同意我們的\n"
@@ -3319,6 +3330,9 @@ msgstr "登入即表示你同意我們的<0>服務條款</0>和<1>隱私政策</
 
 msgid "by spend"
 msgstr "按花費"
+
+msgid "By status"
+msgstr "依狀態"
 
 msgid "by tokens"
 msgstr "按token"
@@ -3803,6 +3817,9 @@ msgstr "清除篩選"
 msgid "Clear history"
 msgstr "清除歷史"
 
+msgid "Clear label filter"
+msgstr "清除標籤篩選"
+
 msgid "Clear list"
 msgstr "清空列表"
 
@@ -4189,6 +4206,9 @@ msgstr "顏色"
 
 msgid "Color Filter"
 msgstr "色彩濾鏡"
+
+msgid "Columns"
+msgstr "欄"
 
 msgid "Combine all commits"
 msgstr "把所有提交合成一個"
@@ -4911,6 +4931,9 @@ msgstr "無法為聊天建立分支"
 
 msgid "Could not change access"
 msgstr "無法變更存取權限"
+
+msgid "Could not change the labels"
+msgstr "無法變更標籤"
 
 msgid "Could not change the mode"
 msgstr "無法變更模式"
@@ -5941,6 +5964,9 @@ msgstr "刪除主機"
 
 msgid "Delete image"
 msgstr "刪除圖片"
+
+msgid "Delete label"
+msgstr "刪除標籤"
 
 msgid "Delete local branch on workspace removal"
 msgstr "移除工作區時刪除本地分支"
@@ -9400,8 +9426,14 @@ msgstr "標籤"
 msgid "Label change"
 msgstr "標籤變更"
 
+msgid "Label color"
+msgstr "標籤顏色"
+
 msgid "Label is required."
 msgstr "名稱為必填項。"
+
+msgid "Label name"
+msgstr "標籤名稱"
 
 msgid "Label name..."
 msgstr "標籤名稱..."
@@ -9493,6 +9525,9 @@ msgstr "最新（v{latestVersion}）"
 
 msgid "Latest news"
 msgstr "最新消息"
+
+msgid "Latest release"
+msgstr "最新發行"
 
 msgid "Launch"
 msgstr "啟動"
@@ -10053,6 +10088,9 @@ msgstr "在網頁應用中管理整合，以連線和配置服務。"
 msgid "Manage keys for MCP server access and external integrations like Claude Desktop or Claude Code. <0>Learn more<1/></0>"
 msgstr "管理用於MCP伺服器存取以及Claude Desktop、Claude Code等外部整合的金鑰。<0>瞭解更多<1/></0>"
 
+msgid "Manage labels…"
+msgstr "管理標籤…"
+
 msgid "Manage members"
 msgstr "管理成員"
 
@@ -10273,6 +10311,9 @@ msgstr "已合併"
 msgctxt "pull request state"
 msgid "Merged"
 msgstr "已合併"
+
+msgid "Merged after {base}, not released yet"
+msgstr "在 {base} 之後合併，尚未發行"
 
 #. placeholder {0}: mergedBy.login
 msgid "Merged by {0}"
@@ -10713,6 +10754,9 @@ msgstr "以此工作區新建群組"
 msgid "New issue"
 msgstr "新建議題"
 
+msgid "New label…"
+msgstr "新標籤…"
+
 msgid "New page"
 msgstr "新增頁面"
 
@@ -10775,6 +10819,10 @@ msgstr "新建工作區（{shortcutText}）"
 
 msgid "New workspace in {name}"
 msgstr "在 {name} 中新建工作區"
+
+#. placeholder {0}: build.latestRelease
+msgid "Newer release: {0}"
+msgstr "更新的發行：{0}"
 
 msgid "Newer than this app"
 msgstr "比此應用程式新"
@@ -11109,6 +11157,9 @@ msgstr "暫無條目"
 msgid "No known creators"
 msgstr "沒有已知的建立者"
 
+msgid "No label"
+msgstr "無標籤"
+
 msgid "No labels"
 msgstr "無標籤"
 
@@ -11292,6 +11343,9 @@ msgstr "暫無公開的代理程式配置。此頁面已為將來的代理程式
 
 msgid "No pull requests found."
 msgstr "未找到拉取請求。"
+
+msgid "no release"
+msgstr "無發行"
 
 msgid "No release notes at {url}"
 msgstr "{url} 上沒有版本說明"
@@ -11529,6 +11583,9 @@ msgstr "不包含"
 
 msgid "Not loaded"
 msgstr "未載入"
+
+msgid "Not merged yet, on top of {base}"
+msgstr "尚未合併，基於 {base}"
 
 msgid "Not now"
 msgstr "暫不"
@@ -13426,6 +13483,9 @@ msgstr "把重複的活兒排進日程"
 msgid "Put recurring work on a schedule or an event. Agents run on their own and land in a workspace for you to review."
 msgstr "將重複性工作排入排程，或設定為由事件觸發。代理程式會自行執行，並將結果放入工作區供你審查。"
 
+msgid "Put them on a workspace from its right-click menu, then filter the sidebar by clicking them under Workspaces. Agents can set them too."
+msgstr "在工作區的右鍵選單中加入，然後在 Workspaces 下點選它們來篩選側邊欄。代理也可以設定。"
+
 msgid "px"
 msgstr "px"
 
@@ -13781,6 +13841,9 @@ msgstr "重新啟動執行中的代理程式才能切換。"
 
 msgid "Relay access enabled, connecting to the relay…"
 msgstr "已啟用中繼存取，正在連線中繼…"
+
+msgid "Release"
+msgstr "發行"
 
 msgid "Release control"
 msgstr "釋放控制"
@@ -16605,6 +16668,9 @@ msgstr "Superset"
 msgid "Superset (YC P26) is the source-available IDE for the AI agents era, where engineers run hundreds of coding agents like Claude Code and Codex in parallel."
 msgstr "Superset（YC P26）是為 AI agent 時代打造的原始碼公開 IDE，工程師可以在其中平行執行數百個 Claude Code、Codex 等程式設計 agent。"
 
+msgid "Superset {upstream} · built {builtAt}"
+msgstr "Superset {upstream} · 建置於 {builtAt}"
+
 msgid "Superset {version}"
 msgstr "Superset {version}"
 
@@ -18458,6 +18524,9 @@ msgstr "未提交 · 未推送"
 msgid "Uncommitted changes"
 msgstr "未提交的更改"
 
+msgid "Uncommitted changes, on top of {base}"
+msgstr "未提交的變更，基於 {base}"
+
 msgid "Underline"
 msgstr "底線"
 
@@ -19391,6 +19460,9 @@ msgstr "工作電子郵件"
 msgid "Work from tickets"
 msgstr "從工單開始工作"
 
+msgid "Work in progress"
+msgstr "進行中"
+
 msgid "Work the action items from a call"
 msgstr "處理通話中的待辦事項"
 
@@ -19482,6 +19554,9 @@ msgstr "工作區ID"
 
 msgid "Workspace ID copied"
 msgstr "已複製工作區ID"
+
+msgid "Workspace labels"
+msgstr "工作區標籤"
 
 msgid "Workspace layout"
 msgstr "工作區佈局"

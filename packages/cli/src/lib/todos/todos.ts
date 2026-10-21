@@ -1,7 +1,7 @@
 import { CLIError, string } from "@superset/cli-framework";
-import { getHostId } from "@superset/shared/host-info";
 import type { CliContext } from "../command";
-import { type HostServiceClient, resolveHostTarget } from "../host-target";
+import type { HostServiceClient } from "../host-target";
+import { localHostClient } from "../local-host";
 
 export type Todo = Awaited<
 	ReturnType<HostServiceClient["conversationTodos"]["list"]["query"]>
@@ -81,15 +81,5 @@ export function todoRows(todos: Todo[]) {
 
 /** To-dos live on the host of this machine, where the agents run. */
 export async function localTodosClient(ctx: CliContext) {
-	const organizationId = ctx.config.organizationId;
-	if (!organizationId) {
-		throw new CLIError("No active organization", "Run: superset auth login");
-	}
-	const target = await resolveHostTarget({
-		requestedHostId: getHostId(),
-		organizationId,
-		userJwt: ctx.bearer,
-		api: ctx.api,
-	});
-	return target.client.conversationTodos;
+	return (await localHostClient(ctx)).conversationTodos;
 }

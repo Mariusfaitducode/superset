@@ -375,6 +375,14 @@ msgstr "{0} → {1} pendente"
 msgid "{0} actions"
 msgstr "Ações de {0}"
 
+#. placeholder {0}: states.length
+msgid "{0} agents"
+msgstr "{0} agentes"
+
+#. placeholder {0}: states.length
+msgid "{0} agents · {waiting} waiting for you"
+msgstr "{0} agentes · {waiting} aguardando você"
+
 #. placeholder {0}: formatTokens(belowGap > 0n ? belowGap : 0n)
 msgid "{0} behind you"
 msgstr "{0} atrás de você"
@@ -3309,6 +3317,9 @@ msgstr "Ao autorizar, você permite que este aplicativo acesse seus dados confor
 msgid "By clicking continue, you agree to our <0>Terms of Service</0> and <1>Privacy Policy</1>."
 msgstr "Ao clicar em continuar, você concorda com nossos <0>Termos de Serviço</0> e nossa <1>Política de Privacidade</1>."
 
+msgid "By label"
+msgstr "Por rótulo"
+
 msgid "By signing in, you agree to our\n"
 "<0>Terms of Service</0> and <1>Privacy Policy</1>"
 msgstr "Ao entrar, você concorda com nossos\n"
@@ -3319,6 +3330,9 @@ msgstr "Ao entrar, você concorda com nossos <0>Termos de Serviço</0> e <1>Pol�
 
 msgid "by spend"
 msgstr "por gasto"
+
+msgid "By status"
+msgstr "Por status"
 
 msgid "by tokens"
 msgstr "por tokens"
@@ -3803,6 +3817,9 @@ msgstr "Limpar filtros"
 msgid "Clear history"
 msgstr "Limpar histórico"
 
+msgid "Clear label filter"
+msgstr "Limpar filtro de rótulos"
+
 msgid "Clear list"
 msgstr "Limpar lista"
 
@@ -4189,6 +4206,9 @@ msgstr "Cor"
 
 msgid "Color Filter"
 msgstr "Filtro de cor"
+
+msgid "Columns"
+msgstr "Colunas"
 
 msgid "Combine all commits"
 msgstr "Combina todos os commits"
@@ -4911,6 +4931,9 @@ msgstr "Não foi possível ramificar o chat"
 
 msgid "Could not change access"
 msgstr "Não foi possível alterar o acesso"
+
+msgid "Could not change the labels"
+msgstr "Não foi possível alterar os rótulos"
 
 msgid "Could not change the mode"
 msgstr "Não foi possível mudar o modo"
@@ -5941,6 +5964,9 @@ msgstr "Excluir host"
 
 msgid "Delete image"
 msgstr "Excluir imagem"
+
+msgid "Delete label"
+msgstr "Excluir rótulo"
 
 msgid "Delete local branch on workspace removal"
 msgstr "Excluir a branch local ao remover a área de trabalho"
@@ -9400,8 +9426,14 @@ msgstr "Rótulo"
 msgid "Label change"
 msgstr "Mudança de label"
 
+msgid "Label color"
+msgstr "Cor do rótulo"
+
 msgid "Label is required."
 msgstr "O rótulo é obrigatório."
+
+msgid "Label name"
+msgstr "Nome do rótulo"
 
 msgid "Label name..."
 msgstr "Nome do rótulo..."
@@ -9493,6 +9525,9 @@ msgstr "Mais recente (v{latestVersion})"
 
 msgid "Latest news"
 msgstr "Últimas notícias"
+
+msgid "Latest release"
+msgstr "Versão mais recente"
 
 msgid "Launch"
 msgstr "Execução"
@@ -10053,6 +10088,9 @@ msgstr "Gerencie as integrações no app web para conectar e configurar serviço
 msgid "Manage keys for MCP server access and external integrations like Claude Desktop or Claude Code. <0>Learn more<1/></0>"
 msgstr "Gerencie as chaves de acesso ao servidor MCP e a integrações externas como Claude Desktop ou Claude Code. <0>Saiba mais<1/></0>"
 
+msgid "Manage labels…"
+msgstr "Gerenciar rótulos…"
+
 msgid "Manage members"
 msgstr "Gerenciar membros"
 
@@ -10273,6 +10311,9 @@ msgstr "Mesclado"
 msgctxt "pull request state"
 msgid "Merged"
 msgstr "Mesclado"
+
+msgid "Merged after {base}, not released yet"
+msgstr "Mesclado após {base}, ainda não lançado"
 
 #. placeholder {0}: mergedBy.login
 msgid "Merged by {0}"
@@ -10713,6 +10754,9 @@ msgstr "Novo grupo a partir da área de trabalho"
 msgid "New issue"
 msgstr "Nova issue"
 
+msgid "New label…"
+msgstr "Novo rótulo…"
+
 msgid "New page"
 msgstr "Nova página"
 
@@ -10775,6 +10819,10 @@ msgstr "Nova área de trabalho ({shortcutText})"
 
 msgid "New workspace in {name}"
 msgstr "Nova área de trabalho em {name}"
+
+#. placeholder {0}: build.latestRelease
+msgid "Newer release: {0}"
+msgstr "Versão mais recente: {0}"
 
 msgid "Newer than this app"
 msgstr "Mais recente que este app"
@@ -11109,6 +11157,9 @@ msgstr "Nenhum item"
 msgid "No known creators"
 msgstr "Nenhum criador conhecido"
 
+msgid "No label"
+msgstr "Sem rótulo"
+
 msgid "No labels"
 msgstr "Sem labels"
 
@@ -11292,6 +11343,9 @@ msgstr "Nenhuma configuração de agente pública ainda. Esta rota já está pro
 
 msgid "No pull requests found."
 msgstr "Nenhum pull request encontrado."
+
+msgid "no release"
+msgstr "nenhuma versão"
 
 msgid "No release notes at {url}"
 msgstr "Nenhuma nota de versão em {url}"
@@ -11529,6 +11583,9 @@ msgstr "Não incluído"
 
 msgid "Not loaded"
 msgstr "Não carregado"
+
+msgid "Not merged yet, on top of {base}"
+msgstr "Ainda não mesclado, sobre {base}"
 
 msgid "Not now"
 msgstr "Agora não"
@@ -13426,6 +13483,9 @@ msgstr "Coloque o trabalho recorrente em uma agenda"
 msgid "Put recurring work on a schedule or an event. Agents run on their own and land in a workspace for you to review."
 msgstr "Coloque o trabalho recorrente em um agendamento ou evento. Os agentes rodam sozinhos e o resultado chega em uma área de trabalho para você revisar."
 
+msgid "Put them on a workspace from its right-click menu, then filter the sidebar by clicking them under Workspaces. Agents can set them too."
+msgstr "Coloque-os em um workspace pelo menu do botão direito e filtre a barra lateral clicando neles em Workspaces. Os agentes também podem defini-los."
+
 msgid "px"
 msgstr "px"
 
@@ -13781,6 +13841,9 @@ msgstr "Reinicie os agentes em execução para trocar a conta deles."
 
 msgid "Relay access enabled, connecting to the relay…"
 msgstr "Acesso ao relay habilitado, conectando ao relay…"
+
+msgid "Release"
+msgstr "Versão"
 
 msgid "Release control"
 msgstr "Liberar o controle"
@@ -16605,6 +16668,9 @@ msgstr "Superset"
 msgid "Superset (YC P26) is the source-available IDE for the AI agents era, where engineers run hundreds of coding agents like Claude Code and Codex in parallel."
 msgstr "O Superset (YC P26) é o IDE com código-fonte disponível para a era dos agentes de IA, em que engenheiros executam centenas de agentes de programação como Claude Code e Codex em paralelo."
 
+msgid "Superset {upstream} · built {builtAt}"
+msgstr "Superset {upstream} · compilado {builtAt}"
+
 msgid "Superset {version}"
 msgstr "Superset {version}"
 
@@ -18458,6 +18524,9 @@ msgstr "Sem commit · Sem push"
 msgid "Uncommitted changes"
 msgstr "Alterações sem commit"
 
+msgid "Uncommitted changes, on top of {base}"
+msgstr "Alterações não commitadas, sobre {base}"
+
 msgid "Underline"
 msgstr "Sublinhado"
 
@@ -19391,6 +19460,9 @@ msgstr "E-mail profissional"
 msgid "Work from tickets"
 msgstr "Trabalhar a partir de tickets"
 
+msgid "Work in progress"
+msgstr "Em andamento"
+
 msgid "Work the action items from a call"
 msgstr "Resolver os itens de ação de uma chamada"
 
@@ -19482,6 +19554,9 @@ msgstr "ID da área de trabalho"
 
 msgid "Workspace ID copied"
 msgstr "ID da área de trabalho copiado"
+
+msgid "Workspace labels"
+msgstr "Rótulos de workspace"
 
 msgid "Workspace layout"
 msgstr "Layout das áreas de trabalho"

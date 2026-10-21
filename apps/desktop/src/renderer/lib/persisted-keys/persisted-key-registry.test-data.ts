@@ -122,6 +122,14 @@ export const PERSISTED_KEY_REGISTRY: ReadonlyArray<
 		"src/renderer/stores/sidebar-preferences/store.ts",
 		["sidebar-preferences-v1"],
 	],
+	[
+		"src/renderer/stores/workspace-label-filter/store.ts",
+		["workspace-label-filter-v1"],
+	],
+	[
+		"src/renderer/routes/_authenticated/_dashboard/v2-workspaces/stores/workspacesLabelView/store.ts",
+		["workspaces-label-view-v1"],
+	],
 	["src/renderer/stores/hiring-banner/store.ts", ["hiring-banner-v1"]],
 	["src/renderer/stores/star-nag/store.ts", ["star-nag-v1"]],
 	[

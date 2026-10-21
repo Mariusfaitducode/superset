@@ -375,6 +375,14 @@ msgstr "{0} → {1} 대기 중"
 msgid "{0} actions"
 msgstr "{0} 작업"
 
+#. placeholder {0}: states.length
+msgid "{0} agents"
+msgstr "에이전트 {0}개"
+
+#. placeholder {0}: states.length
+msgid "{0} agents · {waiting} waiting for you"
+msgstr "에이전트 {0}개 · {waiting}개가 기다리는 중"
+
 #. placeholder {0}: formatTokens(belowGap > 0n ? belowGap : 0n)
 msgid "{0} behind you"
 msgstr "{0} 차이로 뒤"
@@ -3309,6 +3317,9 @@ msgstr "승인하면 이 애플리케이션이 자체 서비스 약관과 개인
 msgid "By clicking continue, you agree to our <0>Terms of Service</0> and <1>Privacy Policy</1>."
 msgstr "계속을 클릭하면 <0>서비스 약관</0>과 <1>개인정보처리방침</1>에 동의하는 것입니다."
 
+msgid "By label"
+msgstr "라벨별"
+
 msgid "By signing in, you agree to our\n"
 "<0>Terms of Service</0> and <1>Privacy Policy</1>"
 msgstr "로그인하면 다음에 동의하게 됩니다\n"
@@ -3319,6 +3330,9 @@ msgstr "로그인하면 <0>서비스 약관</0>과 <1>개인정보 처리방침<
 
 msgid "by spend"
 msgstr "지출 기준"
+
+msgid "By status"
+msgstr "상태별"
 
 msgid "by tokens"
 msgstr "토큰 기준"
@@ -3803,6 +3817,9 @@ msgstr "필터 지우기"
 msgid "Clear history"
 msgstr "기록 지우기"
 
+msgid "Clear label filter"
+msgstr "라벨 필터 지우기"
+
 msgid "Clear list"
 msgstr "목록 지우기"
 
@@ -4189,6 +4206,9 @@ msgstr "색상"
 
 msgid "Color Filter"
 msgstr "색상 필터"
+
+msgid "Columns"
+msgstr "열"
 
 msgid "Combine all commits"
 msgstr "모든 커밋 합치기"
@@ -4911,6 +4931,9 @@ msgstr "채팅을 분기할 수 없습니다"
 
 msgid "Could not change access"
 msgstr "접근 권한을 변경할 수 없습니다"
+
+msgid "Could not change the labels"
+msgstr "라벨을 변경할 수 없습니다"
 
 msgid "Could not change the mode"
 msgstr "모드를 변경할 수 없습니다"
@@ -5941,6 +5964,9 @@ msgstr "호스트 삭제"
 
 msgid "Delete image"
 msgstr "이미지 삭제"
+
+msgid "Delete label"
+msgstr "라벨 삭제"
 
 msgid "Delete local branch on workspace removal"
 msgstr "워크스페이스 삭제 시 로컬 브랜치 삭제"
@@ -9400,8 +9426,14 @@ msgstr "레이블"
 msgid "Label change"
 msgstr "라벨 변경"
 
+msgid "Label color"
+msgstr "라벨 색상"
+
 msgid "Label is required."
 msgstr "레이블은 필수입니다."
+
+msgid "Label name"
+msgstr "라벨 이름"
 
 msgid "Label name..."
 msgstr "라벨 이름..."
@@ -9493,6 +9525,9 @@ msgstr "최신 (v{latestVersion})"
 
 msgid "Latest news"
 msgstr "최신 소식"
+
+msgid "Latest release"
+msgstr "최신 릴리스"
 
 msgid "Launch"
 msgstr "실행"
@@ -10053,6 +10088,9 @@ msgstr "웹 앱에서 연동을 관리하며 서비스를 연결하고 설정할
 msgid "Manage keys for MCP server access and external integrations like Claude Desktop or Claude Code. <0>Learn more<1/></0>"
 msgstr "MCP 서버 접근과 Claude Desktop, Claude Code 같은 외부 연동에 쓰는 키를 관리합니다. <0>자세히 알아보기<1/></0>"
 
+msgid "Manage labels…"
+msgstr "라벨 관리…"
+
 msgid "Manage members"
 msgstr "멤버 관리"
 
@@ -10273,6 +10311,9 @@ msgstr "머지됨"
 msgctxt "pull request state"
 msgid "Merged"
 msgstr "머지됨"
+
+msgid "Merged after {base}, not released yet"
+msgstr "{base} 이후 병합됨, 아직 릴리스 안 됨"
 
 #. placeholder {0}: mergedBy.login
 msgid "Merged by {0}"
@@ -10713,6 +10754,9 @@ msgstr "워크스페이스로 새 그룹 만들기"
 msgid "New issue"
 msgstr "새 이슈"
 
+msgid "New label…"
+msgstr "새 라벨…"
+
 msgid "New page"
 msgstr "새 페이지"
 
@@ -10775,6 +10819,10 @@ msgstr "새 워크스페이스 ({shortcutText})"
 
 msgid "New workspace in {name}"
 msgstr "{name}에 새 워크스페이스"
+
+#. placeholder {0}: build.latestRelease
+msgid "Newer release: {0}"
+msgstr "더 새 릴리스: {0}"
 
 msgid "Newer than this app"
 msgstr "이 앱보다 최신"
@@ -11109,6 +11157,9 @@ msgstr "항목 없음"
 msgid "No known creators"
 msgstr "알려진 만든 사람이 없습니다"
 
+msgid "No label"
+msgstr "라벨 없음"
+
 msgid "No labels"
 msgstr "레이블 없음"
 
@@ -11292,6 +11343,9 @@ msgstr "아직 공개된 에이전트 설정이 없습니다. 이 경로는 앞�
 
 msgid "No pull requests found."
 msgstr "풀 리퀘스트를 찾을 수 없습니다."
+
+msgid "no release"
+msgstr "릴리스 없음"
 
 msgid "No release notes at {url}"
 msgstr "{url}에 릴리스 노트가 없습니다"
@@ -11529,6 +11583,9 @@ msgstr "미포함"
 
 msgid "Not loaded"
 msgstr "로드 안 됨"
+
+msgid "Not merged yet, on top of {base}"
+msgstr "아직 병합 안 됨, {base} 위"
 
 msgid "Not now"
 msgstr "나중에"
@@ -13426,6 +13483,9 @@ msgstr "반복 업무를 일정에 올리세요"
 msgid "Put recurring work on a schedule or an event. Agents run on their own and land in a workspace for you to review."
 msgstr "반복되는 작업을 일정이나 이벤트에 맡기세요. 에이전트가 알아서 실행되고 결과는 검토할 수 있도록 워크스페이스에 도착합니다."
 
+msgid "Put them on a workspace from its right-click menu, then filter the sidebar by clicking them under Workspaces. Agents can set them too."
+msgstr "우클릭 메뉴에서 워크스페이스에 붙이고, Workspaces 아래에서 클릭해 사이드바를 필터링하세요. 에이전트도 설정할 수 있습니다."
+
 msgid "px"
 msgstr "px"
 
@@ -13781,6 +13841,9 @@ msgstr "실행 중인 에이전트는 다시 실행해야 바뀝니다."
 
 msgid "Relay access enabled, connecting to the relay…"
 msgstr "릴레이 접근이 활성화되었습니다. 릴레이에 연결하는 중…"
+
+msgid "Release"
+msgstr "릴리스"
 
 msgid "Release control"
 msgstr "제어 해제"
@@ -16605,6 +16668,9 @@ msgstr "Superset"
 msgid "Superset (YC P26) is the source-available IDE for the AI agents era, where engineers run hundreds of coding agents like Claude Code and Codex in parallel."
 msgstr "Superset(YC P26)은 AI 에이전트 시대를 위한 소스 공개형 IDE로, 엔지니어가 Claude Code와 Codex 같은 코딩 에이전트 수백 개를 병렬로 실행할 수 있습니다."
 
+msgid "Superset {upstream} · built {builtAt}"
+msgstr "Superset {upstream} · 빌드 {builtAt}"
+
 msgid "Superset {version}"
 msgstr "Superset {version}"
 
@@ -18458,6 +18524,9 @@ msgstr "커밋 안 됨 · 푸시 안 됨"
 msgid "Uncommitted changes"
 msgstr "커밋되지 않은 변경 사항"
 
+msgid "Uncommitted changes, on top of {base}"
+msgstr "커밋되지 않은 변경, {base} 위"
+
 msgid "Underline"
 msgstr "밑줄"
 
@@ -19391,6 +19460,9 @@ msgstr "업무용 이메일"
 msgid "Work from tickets"
 msgstr "티켓에서 바로 작업"
 
+msgid "Work in progress"
+msgstr "작업 중"
+
 msgid "Work the action items from a call"
 msgstr "통화의 액션 아이템 처리"
 
@@ -19482,6 +19554,9 @@ msgstr "워크스페이스 ID"
 
 msgid "Workspace ID copied"
 msgstr "워크스페이스 ID 복사됨"
+
+msgid "Workspace labels"
+msgstr "워크스페이스 라벨"
 
 msgid "Workspace layout"
 msgstr "워크스페이스 레이아웃"

@@ -1,8 +1,10 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
-import { useDeferredValue, useEffect, useRef } from "react";
-import { V2WorkspacesBoard } from "./components/V2WorkspacesBoard";
+import { useDeferredValue, useEffect, useMemo, useRef } from "react";
 import { V2WorkspacesHeader } from "./components/V2WorkspacesHeader";
-import { V2WorkspacesList } from "./components/V2WorkspacesList";
+import {
+	LabeledWorkspacesViews,
+	WorkspacesLabelsProvider,
+} from "./components/WorkspacesLabels";
 import { useAccessibleV2Workspaces } from "./hooks/useAccessibleV2Workspaces";
 import {
 	DEVICE_FILTER_THIS_DEVICE,
@@ -230,27 +232,27 @@ function V2WorkspacesPage() {
 	// state while the first rows are being rendered.
 	const deferredWorkspaces = useDeferredValue(all);
 	const deferredIsReady = useDeferredValue(isReady);
+	const hostIds = useMemo(
+		() => [...new Set(all.map((workspace) => workspace.hostId))],
+		[all],
+	);
 
 	return (
-		<div className="flex h-full w-full flex-1 flex-col overflow-hidden">
-			<V2WorkspacesHeader
-				hostOptions={hostOptions}
-				projectOptions={projectOptions}
-				creatorOptions={creatorOptions}
-				hostsById={hostsById}
-				projectsById={projectsById}
-			/>
-			{viewMode === "board" ? (
-				<V2WorkspacesBoard
+		<WorkspacesLabelsProvider hostIds={hostIds}>
+			<div className="flex h-full w-full flex-1 flex-col overflow-hidden">
+				<V2WorkspacesHeader
+					hostOptions={hostOptions}
+					projectOptions={projectOptions}
+					creatorOptions={creatorOptions}
+					hostsById={hostsById}
+					projectsById={projectsById}
+				/>
+				<LabeledWorkspacesViews
+					viewMode={viewMode}
 					workspaces={deferredWorkspaces}
 					isReady={deferredIsReady}
 				/>
-			) : (
-				<V2WorkspacesList
-					workspaces={deferredWorkspaces}
-					isReady={deferredIsReady}
-				/>
-			)}
-		</div>
+			</div>
+		</WorkspacesLabelsProvider>
 	);
 }

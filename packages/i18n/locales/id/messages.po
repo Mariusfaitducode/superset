@@ -375,6 +375,14 @@ msgstr "{0} → {1} tertunda"
 msgid "{0} actions"
 msgstr "Aksi {0}"
 
+#. placeholder {0}: states.length
+msgid "{0} agents"
+msgstr "{0} agen"
+
+#. placeholder {0}: states.length
+msgid "{0} agents · {waiting} waiting for you"
+msgstr "{0} agen · {waiting} menunggu Anda"
+
 #. placeholder {0}: formatTokens(belowGap > 0n ? belowGap : 0n)
 msgid "{0} behind you"
 msgstr "{0} di belakang Anda"
@@ -3309,6 +3317,9 @@ msgstr "Dengan memberi otorisasi, Anda mengizinkan aplikasi ini mengakses data A
 msgid "By clicking continue, you agree to our <0>Terms of Service</0> and <1>Privacy Policy</1>."
 msgstr "Dengan mengklik lanjutkan, Anda menyetujui <0>Ketentuan Layanan</0> dan <1>Kebijakan Privasi</1> kami."
 
+msgid "By label"
+msgstr "Menurut label"
+
 msgid "By signing in, you agree to our\n"
 "<0>Terms of Service</0> and <1>Privacy Policy</1>"
 msgstr "Dengan masuk, Anda menyetujui\n"
@@ -3319,6 +3330,9 @@ msgstr "Dengan masuk, Anda menyetujui <0>Ketentuan Layanan</0> dan <1>Kebijakan 
 
 msgid "by spend"
 msgstr "menurut pengeluaran"
+
+msgid "By status"
+msgstr "Menurut status"
 
 msgid "by tokens"
 msgstr "menurut token"
@@ -3803,6 +3817,9 @@ msgstr "Bersihkan filter"
 msgid "Clear history"
 msgstr "Bersihkan riwayat"
 
+msgid "Clear label filter"
+msgstr "Hapus filter label"
+
 msgid "Clear list"
 msgstr "Bersihkan daftar"
 
@@ -4189,6 +4206,9 @@ msgstr "Warna"
 
 msgid "Color Filter"
 msgstr "Filter Warna"
+
+msgid "Columns"
+msgstr "Kolom"
 
 msgid "Combine all commits"
 msgstr "Gabungkan semua commit"
@@ -4911,6 +4931,9 @@ msgstr "Tidak dapat mencabangkan obrolan"
 
 msgid "Could not change access"
 msgstr "Tidak bisa mengubah akses"
+
+msgid "Could not change the labels"
+msgstr "Tidak dapat mengubah label"
 
 msgid "Could not change the mode"
 msgstr "Tidak dapat mengubah mode"
@@ -5941,6 +5964,9 @@ msgstr "Hapus host"
 
 msgid "Delete image"
 msgstr "Hapus gambar"
+
+msgid "Delete label"
+msgstr "Hapus label"
 
 msgid "Delete local branch on workspace removal"
 msgstr "Hapus branch lokal saat workspace dihapus"
@@ -9400,8 +9426,14 @@ msgstr "Label"
 msgid "Label change"
 msgstr "Perubahan label"
 
+msgid "Label color"
+msgstr "Warna label"
+
 msgid "Label is required."
 msgstr "Label wajib diisi."
+
+msgid "Label name"
+msgstr "Nama label"
 
 msgid "Label name..."
 msgstr "Nama label..."
@@ -9493,6 +9525,9 @@ msgstr "Terbaru (v{latestVersion})"
 
 msgid "Latest news"
 msgstr "Berita terbaru"
+
+msgid "Latest release"
+msgstr "Rilis terbaru"
 
 msgid "Launch"
 msgstr "Peluncuran"
@@ -10053,6 +10088,9 @@ msgstr "Kelola integrasi di aplikasi web untuk menghubungkan dan mengatur layana
 msgid "Manage keys for MCP server access and external integrations like Claude Desktop or Claude Code. <0>Learn more<1/></0>"
 msgstr "Kelola kunci untuk akses server MCP dan integrasi eksternal seperti Claude Desktop atau Claude Code. <0>Pelajari lebih lanjut<1/></0>"
 
+msgid "Manage labels…"
+msgstr "Kelola label…"
+
 msgid "Manage members"
 msgstr "Kelola anggota"
 
@@ -10273,6 +10311,9 @@ msgstr "Di-merge"
 msgctxt "pull request state"
 msgid "Merged"
 msgstr "Di-merge"
+
+msgid "Merged after {base}, not released yet"
+msgstr "Digabung setelah {base}, belum dirilis"
 
 #. placeholder {0}: mergedBy.login
 msgid "Merged by {0}"
@@ -10713,6 +10754,9 @@ msgstr "Grup baru dari workspace"
 msgid "New issue"
 msgstr "Issue baru"
 
+msgid "New label…"
+msgstr "Label baru…"
+
 msgid "New page"
 msgstr "Halaman baru"
 
@@ -10775,6 +10819,10 @@ msgstr "Workspace Baru ({shortcutText})"
 
 msgid "New workspace in {name}"
 msgstr "Workspace baru di {name}"
+
+#. placeholder {0}: build.latestRelease
+msgid "Newer release: {0}"
+msgstr "Rilis lebih baru: {0}"
 
 msgid "Newer than this app"
 msgstr "Lebih baru dari aplikasi ini"
@@ -11109,6 +11157,9 @@ msgstr "Tidak ada item"
 msgid "No known creators"
 msgstr "Tidak ada pembuat yang diketahui"
 
+msgid "No label"
+msgstr "Tanpa label"
+
 msgid "No labels"
 msgstr "Tanpa label"
 
@@ -11292,6 +11343,9 @@ msgstr "Belum ada konfigurasi agen publik. Rute ini siap untuk daftar konfiguras
 
 msgid "No pull requests found."
 msgstr "Tidak ada pull request ditemukan."
+
+msgid "no release"
+msgstr "tanpa rilis"
 
 msgid "No release notes at {url}"
 msgstr "Tidak ada catatan rilis di {url}"
@@ -11529,6 +11583,9 @@ msgstr "Tidak termasuk"
 
 msgid "Not loaded"
 msgstr "Belum dimuat"
+
+msgid "Not merged yet, on top of {base}"
+msgstr "Belum digabung, di atas {base}"
 
 msgid "Not now"
 msgstr "Nanti saja"
@@ -13426,6 +13483,9 @@ msgstr "Jadwalkan pekerjaan yang berulang"
 msgid "Put recurring work on a schedule or an event. Agents run on their own and land in a workspace for you to review."
 msgstr "Jadwalkan pekerjaan berulang berdasarkan waktu atau picu lewat event. Agen berjalan sendiri dan hasilnya mendarat di sebuah workspace untuk Anda tinjau."
 
+msgid "Put them on a workspace from its right-click menu, then filter the sidebar by clicking them under Workspaces. Agents can set them too."
+msgstr "Pasang pada workspace dari menu klik kanannya, lalu filter sidebar dengan mengekliknya di bawah Workspaces. Agen juga bisa memasangnya."
+
 msgid "px"
 msgstr "px"
 
@@ -13781,6 +13841,9 @@ msgstr "Jalankan ulang agen yang sedang berjalan untuk menggantinya."
 
 msgid "Relay access enabled, connecting to the relay…"
 msgstr "Akses relay aktif, menghubungkan ke relay…"
+
+msgid "Release"
+msgstr "Rilis"
 
 msgid "Release control"
 msgstr "Lepaskan kendali"
@@ -16605,6 +16668,9 @@ msgstr "Superset"
 msgid "Superset (YC P26) is the source-available IDE for the AI agents era, where engineers run hundreds of coding agents like Claude Code and Codex in parallel."
 msgstr "Superset (YC P26) adalah IDE source-available untuk era agen AI, tempat para engineer menjalankan ratusan agen coding seperti Claude Code dan Codex secara paralel."
 
+msgid "Superset {upstream} · built {builtAt}"
+msgstr "Superset {upstream} · dibangun {builtAt}"
+
 msgid "Superset {version}"
 msgstr "Superset {version}"
 
@@ -18458,6 +18524,9 @@ msgstr "Belum di-commit · Belum di-push"
 msgid "Uncommitted changes"
 msgstr "Perubahan yang belum di-commit"
 
+msgid "Uncommitted changes, on top of {base}"
+msgstr "Perubahan belum di-commit, di atas {base}"
+
 msgid "Underline"
 msgstr "Garis bawah"
 
@@ -19391,6 +19460,9 @@ msgstr "Email kerja"
 msgid "Work from tickets"
 msgstr "Bekerja dari tiket"
 
+msgid "Work in progress"
+msgstr "Sedang dikerjakan"
+
 msgid "Work the action items from a call"
 msgstr "Kerjakan tindak lanjut dari panggilan"
 
@@ -19482,6 +19554,9 @@ msgstr "ID Workspace"
 
 msgid "Workspace ID copied"
 msgstr "ID workspace disalin"
+
+msgid "Workspace labels"
+msgstr "Label workspace"
 
 msgid "Workspace layout"
 msgstr "Tata letak workspace"

@@ -10,6 +10,7 @@ import { LuLaptop, LuMonitor } from "react-icons/lu";
 import { WorkspaceNameMarquee } from "renderer/components/WorkspaceNameMarquee";
 import { useFocusVisible } from "renderer/hooks/useFocusVisible";
 import { pullRequestRefFromUrl } from "renderer/lib/github/pullRequestRef";
+import { WorkspaceLabelPills } from "renderer/routes/_authenticated/_dashboard/components/DashboardSidebar/components/WorkspaceLabels";
 import { navigateToV2Workspace } from "renderer/routes/_authenticated/_dashboard/utils/workspace-navigation";
 import { V2WorkspaceContextMenu } from "renderer/routes/_authenticated/_dashboard/v2-workspaces/components/V2WorkspaceContextMenu";
 import { WorkspaceStateGlyph } from "renderer/routes/_authenticated/_dashboard/v2-workspaces/components/WorkspaceStateGlyph";
@@ -178,6 +179,11 @@ export const V2WorkspaceRow = memo(function V2WorkspaceRow({
 								? "text-muted-foreground"
 								: "text-foreground",
 						)}
+					/>
+
+					<WorkspaceLabelPills
+						workspaceId={workspace.id}
+						hostId={workspace.hostId}
 					/>
 
 					{workspace.pr ? (

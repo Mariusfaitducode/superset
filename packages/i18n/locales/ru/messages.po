@@ -375,6 +375,14 @@ msgstr "{0} → {1} ожидается"
 msgid "{0} actions"
 msgstr "Действия {0}"
 
+#. placeholder {0}: states.length
+msgid "{0} agents"
+msgstr "Агентов: {0}"
+
+#. placeholder {0}: states.length
+msgid "{0} agents · {waiting} waiting for you"
+msgstr "Агентов: {0} · ждут вас: {waiting}"
+
 #. placeholder {0}: formatTokens(belowGap > 0n ? belowGap : 0n)
 msgid "{0} behind you"
 msgstr "{0} позади вас"
@@ -3309,6 +3317,9 @@ msgstr "Авторизуя, вы разрешаете этому приложе�
 msgid "By clicking continue, you agree to our <0>Terms of Service</0> and <1>Privacy Policy</1>."
 msgstr "Нажимая «Продолжить», вы соглашаетесь с <0>Условиями использования</0> и <1>Политикой конфиденциальности</1>."
 
+msgid "By label"
+msgstr "По меткам"
+
 msgid "By signing in, you agree to our\n"
 "<0>Terms of Service</0> and <1>Privacy Policy</1>"
 msgstr "Выполняя вход, вы соглашаетесь с\n"
@@ -3319,6 +3330,9 @@ msgstr "Выполняя вход, вы соглашаетесь с <0>Усло�
 
 msgid "by spend"
 msgstr "по расходам"
+
+msgid "By status"
+msgstr "По состоянию"
 
 msgid "by tokens"
 msgstr "по токенам"
@@ -3803,6 +3817,9 @@ msgstr "Сбросить фильтры"
 msgid "Clear history"
 msgstr "Очистить историю"
 
+msgid "Clear label filter"
+msgstr "Сбросить фильтр меток"
+
 msgid "Clear list"
 msgstr "Очистить список"
 
@@ -4189,6 +4206,9 @@ msgstr "Цвет"
 
 msgid "Color Filter"
 msgstr "Цветовой фильтр"
+
+msgid "Columns"
+msgstr "Колонки"
 
 msgid "Combine all commits"
 msgstr "Свести все коммиты в один"
@@ -4911,6 +4931,9 @@ msgstr "Не удалось ответвить чат"
 
 msgid "Could not change access"
 msgstr "Не удалось изменить доступ"
+
+msgid "Could not change the labels"
+msgstr "Не удалось изменить метки"
 
 msgid "Could not change the mode"
 msgstr "Не удалось сменить режим"
@@ -5941,6 +5964,9 @@ msgstr "Удалить хост"
 
 msgid "Delete image"
 msgstr "Удалить изображение"
+
+msgid "Delete label"
+msgstr "Удалить метку"
 
 msgid "Delete local branch on workspace removal"
 msgstr "Удалять локальную ветку при удалении рабочей области"
@@ -9400,8 +9426,14 @@ msgstr "Метка"
 msgid "Label change"
 msgstr "Изменение метки"
 
+msgid "Label color"
+msgstr "Цвет метки"
+
 msgid "Label is required."
 msgstr "Название обязательно."
+
+msgid "Label name"
+msgstr "Название метки"
 
 msgid "Label name..."
 msgstr "Название метки..."
@@ -9493,6 +9525,9 @@ msgstr "Последняя (v{latestVersion})"
 
 msgid "Latest news"
 msgstr "Последние новости"
+
+msgid "Latest release"
+msgstr "Последний релиз"
 
 msgid "Launch"
 msgstr "Запуск"
@@ -10053,6 +10088,9 @@ msgstr "Управляйте интеграциями в веб-приложен
 msgid "Manage keys for MCP server access and external integrations like Claude Desktop or Claude Code. <0>Learn more<1/></0>"
 msgstr "Управляйте ключами для доступа к серверу MCP и внешних интеграций вроде Claude Desktop или Claude Code. <0>Подробнее<1/></0>"
 
+msgid "Manage labels…"
+msgstr "Управлять метками…"
+
 msgid "Manage members"
 msgstr "Управление участниками"
 
@@ -10273,6 +10311,9 @@ msgstr "Объединён"
 msgctxt "pull request state"
 msgid "Merged"
 msgstr "Объединено"
+
+msgid "Merged after {base}, not released yet"
+msgstr "Слито после {base}, ещё не выпущено"
 
 #. placeholder {0}: mergedBy.login
 msgid "Merged by {0}"
@@ -10713,6 +10754,9 @@ msgstr "Новая группа из рабочей области"
 msgid "New issue"
 msgstr "Новая задача"
 
+msgid "New label…"
+msgstr "Новая метка…"
+
 msgid "New page"
 msgstr "Новая страница"
 
@@ -10775,6 +10819,10 @@ msgstr "Новая рабочая область ({shortcutText})"
 
 msgid "New workspace in {name}"
 msgstr "Новая рабочая область в {name}"
+
+#. placeholder {0}: build.latestRelease
+msgid "Newer release: {0}"
+msgstr "Новый релиз: {0}"
 
 msgid "Newer than this app"
 msgstr "Новее этого приложения"
@@ -11109,6 +11157,9 @@ msgstr "Пусто"
 msgid "No known creators"
 msgstr "Нет известных создателей"
 
+msgid "No label"
+msgstr "Без метки"
+
 msgid "No labels"
 msgstr "Без меток"
 
@@ -11292,6 +11343,9 @@ msgstr "Публичных конфигураций агентов пока не
 
 msgid "No pull requests found."
 msgstr "Пул-реквесты не найдены."
+
+msgid "no release"
+msgstr "нет релиза"
 
 msgid "No release notes at {url}"
 msgstr "Нет заметок о релизе по адресу {url}"
@@ -11529,6 +11583,9 @@ msgstr "Не входит"
 
 msgid "Not loaded"
 msgstr "Не загружено"
+
+msgid "Not merged yet, on top of {base}"
+msgstr "Ещё не слито, поверх {base}"
 
 msgid "Not now"
 msgstr "Не сейчас"
@@ -13426,6 +13483,9 @@ msgstr "Поставьте повторяющуюся работу на расп
 msgid "Put recurring work on a schedule or an event. Agents run on their own and land in a workspace for you to review."
 msgstr "Поставьте повторяющуюся работу на расписание или событие. Агенты работают сами, а результат приземляется в рабочую область для проверки."
 
+msgid "Put them on a workspace from its right-click menu, then filter the sidebar by clicking them under Workspaces. Agents can set them too."
+msgstr "Ставьте их на рабочее пространство через контекстное меню, затем фильтруйте боковую панель, нажимая на них под Workspaces. Агенты тоже могут их ставить."
+
 msgid "px"
 msgstr "px"
 
@@ -13781,6 +13841,9 @@ msgstr "Перезапустите работающих агентов, чтоб
 
 msgid "Relay access enabled, connecting to the relay…"
 msgstr "Доступ через реле включён, подключаемся к реле…"
+
+msgid "Release"
+msgstr "Релиз"
 
 msgid "Release control"
 msgstr "Отпустить управление"
@@ -16605,6 +16668,9 @@ msgstr "Superset"
 msgid "Superset (YC P26) is the source-available IDE for the AI agents era, where engineers run hundreds of coding agents like Claude Code and Codex in parallel."
 msgstr "Superset (YC P26) — это IDE с доступным исходным кодом для эпохи ИИ-агентов, в которой инженеры параллельно запускают сотни агентов для программирования, таких как Claude Code и Codex."
 
+msgid "Superset {upstream} · built {builtAt}"
+msgstr "Superset {upstream} · собрано {builtAt}"
+
 msgid "Superset {version}"
 msgstr "Superset {version}"
 
@@ -18458,6 +18524,9 @@ msgstr "Незакоммиченное · Неотправленное"
 msgid "Uncommitted changes"
 msgstr "Незакоммиченные изменения"
 
+msgid "Uncommitted changes, on top of {base}"
+msgstr "Незакоммиченные изменения, поверх {base}"
+
 msgid "Underline"
 msgstr "Подчёркнутый"
 
@@ -19391,6 +19460,9 @@ msgstr "Рабочая электронная почта"
 msgid "Work from tickets"
 msgstr "Работа из тикетов"
 
+msgid "Work in progress"
+msgstr "В работе"
+
 msgid "Work the action items from a call"
 msgstr "Разбор задач из созвона"
 
@@ -19482,6 +19554,9 @@ msgstr "ID рабочей области"
 
 msgid "Workspace ID copied"
 msgstr "ID рабочей области скопирован"
+
+msgid "Workspace labels"
+msgstr "Метки рабочих пространств"
 
 msgid "Workspace layout"
 msgstr "Раскладка рабочих областей"

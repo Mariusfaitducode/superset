@@ -261,6 +261,7 @@ export function DashboardSidebarWorkspaceItem({
 					) : (
 						<DashboardSidebarWorkspaceContextMenu
 							workspaceId={id}
+							hostId={workspace.hostId}
 							projectId={projectId}
 							isSessionWorkspace={isSessionWorkspace}
 							isInSection={isInSection}
@@ -377,6 +378,7 @@ export function DashboardSidebarWorkspaceItem({
 				) : (
 					<DashboardSidebarWorkspaceContextMenu
 						workspaceId={id}
+						hostId={workspace.hostId}
 						projectId={projectId}
 						isSessionWorkspace={isSessionWorkspace}
 						isInSection={isInSection}

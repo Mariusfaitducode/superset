@@ -37,9 +37,12 @@ import { useDashboardSidebarPortKill } from "../../../../hooks/useDashboardSideb
 import { useProjectTagFolderSections } from "../../../../hooks/useProjectTagFolderSections";
 import { useDashboardSidebarHoverActions } from "../../../../providers/DashboardSidebarHoverProvider";
 import { useDashboardSidebarWorkspacePorts } from "../../../../providers/DashboardSidebarPortsProvider";
+import { WorkspaceLabelsSubmenu } from "../../../WorkspaceLabels";
 
 interface DashboardSidebarWorkspaceContextMenuProps {
 	workspaceId: string;
+	/** The host keeping the workspace's labels; absent hides the Labels menu. */
+	hostId?: string;
 	/** Null for project-less session workspaces. */
 	projectId: string | null;
 	/** Only sessions and project workspaces can join a group. */
@@ -76,6 +79,7 @@ interface DashboardSidebarWorkspaceContextMenuProps {
 
 export function DashboardSidebarWorkspaceContextMenu({
 	workspaceId,
+	hostId,
 	projectId,
 	isSessionWorkspace = false,
 	isInSection,
@@ -196,6 +200,12 @@ export function DashboardSidebarWorkspaceContextMenu({
 						<LuUnlink className="size-4 mr-2" />
 						<Trans>Remove PR Link</Trans>
 					</ContextMenuItem>
+				)}
+				{hostId && !isCloudWorkspace && (
+					<>
+						<ContextMenuSeparator />
+						<WorkspaceLabelsSubmenu workspaceId={workspaceId} hostId={hostId} />
+					</>
 				)}
 				{/* Group actions mutate placement (sectionId/tabOrder), which a pinned
 				    row doesn't display — the change would only surface on unpin. */}
