@@ -82,6 +82,7 @@ export const SETTING_ITEM_ID = {
 	SIDEBAR_AGENT_TODOS: "sidebar-agent-todos",
 	SIDEBAR_SUBAGENTS: "sidebar-subagents",
 	SIDEBAR_WAITING_TINT: "sidebar-waiting-tint",
+	SIDEBAR_WORKSPACE_LABELS: "sidebar-workspace-labels",
 
 	EXPERIMENTAL_V1_MIGRATION: "experimental-v1-migration",
 	EXPERIMENTAL_INLINE_WORKSPACE_PORTS: "experimental-inline-workspace-ports",
@@ -249,6 +250,7 @@ export const SETTING_ITEM_VARIANT: Record<SettingItemId, SettingVariant> = {
 	[SETTING_ITEM_ID.SIDEBAR_AGENT_TODOS]: "v2",
 	[SETTING_ITEM_ID.SIDEBAR_SUBAGENTS]: "v2",
 	[SETTING_ITEM_ID.SIDEBAR_WAITING_TINT]: "v2",
+	[SETTING_ITEM_ID.SIDEBAR_WORKSPACE_LABELS]: "v2",
 
 	[SETTING_ITEM_ID.EXPERIMENTAL_V1_MIGRATION]: "v2",
 	[SETTING_ITEM_ID.EXPERIMENTAL_INLINE_WORKSPACE_PORTS]: "v2",
@@ -1490,6 +1492,23 @@ export const SETTINGS_ITEMS: SettingsItem[] = [
 		title: "Subagents",
 		description: "List the subagents of each conversation under it",
 		keywords: ["sidebar", "subagents", "subagent", "children"],
+	},
+	{
+		id: SETTING_ITEM_ID.SIDEBAR_WORKSPACE_LABELS,
+		section: "sidebar",
+		title: "Workspace labels",
+		description:
+			"Create and color the labels you put on workspaces and filter by",
+		keywords: [
+			"sidebar",
+			"labels",
+			"label",
+			"tags",
+			"filter",
+			"today",
+			"waiting",
+			"priority",
+		],
 	},
 	{
 		id: SETTING_ITEM_ID.SIDEBAR_WAITING_TINT,

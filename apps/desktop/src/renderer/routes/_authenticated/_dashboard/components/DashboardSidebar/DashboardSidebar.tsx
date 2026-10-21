@@ -35,6 +35,7 @@ import { useLocalHostService } from "renderer/routes/_authenticated/providers/Lo
 import { useReleaseNotesCardStore } from "renderer/stores/release-notes-card";
 import { useSidebarSectionsCollapseStore } from "renderer/stores/sidebar-sections-collapse";
 import { useV2NotificationStore } from "renderer/stores/v2-notifications";
+import { useWorkspaceLabelFilterStore } from "renderer/stores/workspace-label-filter";
 import {
 	type ActiveWorkspaceSwitcherOption,
 	DashboardSidebarActiveWorkspaceSwitcher,
@@ -53,6 +54,13 @@ import { DashboardSidebarSessionsSection } from "./components/DashboardSidebarSe
 import { DashboardSidebarWorkspacesHeader } from "./components/DashboardSidebarWorkspacesHeader";
 import { useGettingStartedCard } from "./components/GettingStartedCard";
 import { useV2SetupScriptCard } from "./components/V2SetupScriptCard";
+import {
+	hasAllLabels,
+	useLabelsByHost,
+	type WorkspaceLabel,
+	WorkspaceLabelFilterBar,
+	workspaceLabels,
+} from "./components/WorkspaceLabels";
 import {
 	getBlockedDragProps,
 	useBlockedDragNotice,
@@ -81,6 +89,7 @@ import {
 	filterDashboardSidebarProjectsByHost,
 	matchesHostFilter,
 } from "./utils/filterDashboardSidebarProjectsByHost";
+import { filterDashboardSidebarProjectsByWorkspace } from "./utils/filterDashboardSidebarProjectsByWorkspace";
 import { getProjectChildrenWorkspaces } from "./utils/projectChildren";
 import { sortDashboardSidebarProjects } from "./utils/sortDashboardSidebarProjects";
 
@@ -246,35 +255,91 @@ export function DashboardSidebar({
 		() => filterDashboardSidebarProjectsByHost(sortedGroups, hostFilter),
 		[sortedGroups, hostFilter],
 	);
+	const selectedLabels = useWorkspaceLabelFilterStore(
+		(state) => state.selected,
+	);
+	const clearLabelFilter = useWorkspaceLabelFilterStore((state) => state.clear);
+	const labelsByHost = useLabelsByHost(
+		useMemo(
+			() =>
+				[
+					...groups.flatMap((group) =>
+						getProjectChildrenWorkspaces(group.children),
+					),
+					...pinnedWorkspaces,
+					...sessionWorkspaces,
+				].map((workspace) => workspace.hostId),
+			[groups, pinnedWorkspaces, sessionWorkspaces],
+		),
+		!isCollapsed,
+	);
+	const filterLabels = useMemo(() => {
+		const byName = new Map<string, WorkspaceLabel>();
+		for (const state of labelsByHost.values()) {
+			for (const label of state.labels) {
+				const key = label.name.toLowerCase();
+				if (!byName.has(key)) byName.set(key, label);
+			}
+		}
+		return [...byName.values()];
+	}, [labelsByHost]);
+	// Only labels some host still has, so a deleted label can't hide everything.
+	const activeLabels = useMemo(
+		() =>
+			isCollapsed
+				? []
+				: selectedLabels.filter((name) =>
+						filterLabels.some(
+							(label) => label.name.toLowerCase() === name.toLowerCase(),
+						),
+					),
+		[isCollapsed, selectedLabels, filterLabels],
+	);
+	const keepLabeled = useCallback(
+		(workspace: DashboardSidebarWorkspace) =>
+			hasAllLabels(
+				workspaceLabels(labelsByHost.get(workspace.hostId), workspace.id),
+				activeLabels,
+			),
+		[labelsByHost, activeLabels],
+	);
 	const displayedPinnedWorkspaces = useMemo(
 		() =>
-			hostFilter === "all"
-				? pinnedWorkspaces
-				: pinnedWorkspaces.filter((workspace) =>
-						matchesHostFilter(workspace, hostFilter),
-					),
-		[pinnedWorkspaces, hostFilter],
+			pinnedWorkspaces.filter(
+				(workspace) =>
+					(hostFilter === "all" || matchesHostFilter(workspace, hostFilter)) &&
+					(activeLabels.length === 0 || keepLabeled(workspace)),
+			),
+		[pinnedWorkspaces, hostFilter, activeLabels, keepLabeled],
 	);
 	const displayedSessionWorkspaces = useMemo(
 		() =>
-			hostFilter === "all"
-				? sessionWorkspaces
-				: sessionWorkspaces.filter((workspace) =>
-						matchesHostFilter(workspace, hostFilter),
-					),
-		[sessionWorkspaces, hostFilter],
+			sessionWorkspaces.filter(
+				(workspace) =>
+					(hostFilter === "all" || matchesHostFilter(workspace, hostFilter)) &&
+					(activeLabels.length === 0 || keepLabeled(workspace)),
+			),
+		[sessionWorkspaces, hostFilter, activeLabels, keepLabeled],
 	);
-	const displayedGroups = useMemo(
-		() =>
-			filterDashboardSidebarProjects(hostFilteredGroups, projectFilterQuery),
-		[hostFilteredGroups, projectFilterQuery],
-	);
+	const displayedGroups = useMemo(() => {
+		const labelFiltered =
+			activeLabels.length === 0
+				? hostFilteredGroups
+				: filterDashboardSidebarProjectsByWorkspace(
+						hostFilteredGroups,
+						keepLabeled,
+					);
+		return filterDashboardSidebarProjects(labelFiltered, projectFilterQuery);
+	}, [hostFilteredGroups, projectFilterQuery, activeLabels, keepLabeled]);
 	const displayedProjectIds = useMemo(
 		() => displayedGroups.map((project) => project.id),
 		[displayedGroups],
 	);
 	const trimmedFilterQuery = projectFilterQuery.trim();
-	const isFilterActive = trimmedFilterQuery !== "" || hostFilter !== "all";
+	const isFilterActive =
+		trimmedFilterQuery !== "" ||
+		hostFilter !== "all" ||
+		activeLabels.length > 0;
 	// The sort modes only reorder rows inside a project, so the project list
 	// is still the manual order and stays draggable; only a filter, which
 	// hides projects outright, makes a project drop unsafe to commit.
@@ -286,6 +351,7 @@ export function DashboardSidebar({
 		onClearFilter: () => {
 			setProjectFilterQuery("");
 			setSidebarProjectHostFilter("all");
+			clearLabelFilter();
 		},
 	});
 
@@ -548,6 +614,7 @@ export function DashboardSidebar({
 															onFilterQueryChange={setProjectFilterQuery}
 														/>
 													</DashboardSidebarBulkActions>
+													<WorkspaceLabelFilterBar labels={filterLabels} />
 												</div>
 											)}
 											{(isCollapsed || !workspacesListCollapsed) && (

@@ -31,6 +31,7 @@ import type {
 	DashboardSidebarWorkspaceIndentation,
 	DashboardSidebarWorkspacePullRequest,
 } from "../../../../types";
+import { WorkspaceLabelPills } from "../../../WorkspaceLabels";
 import { DashboardSidebarConversationList } from "../DashboardSidebarExpandedWorkspaceRow/components/DashboardSidebarConversationList";
 import { DashboardSidebarPortsChip } from "../DashboardSidebarExpandedWorkspaceRow/components/DashboardSidebarPortsChip";
 import { DashboardSidebarRowEventBoundary } from "../DashboardSidebarExpandedWorkspaceRow/components/DashboardSidebarRowEventBoundary";
@@ -394,6 +395,10 @@ export const DashboardSidebarLegacyExpandedWorkspaceRow = forwardRef<
 								</span>
 							) : (
 								<>
+									<WorkspaceLabelPills
+										workspaceId={workspace.id}
+										hostId={workspace.hostId}
+									/>
 									<DashboardSidebarWorkspaceQueuedBadge
 										workspaceId={workspace.id}
 									/>
