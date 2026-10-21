@@ -1245,6 +1245,9 @@ msgstr "+{hidden} mais"
 msgid "+{hiddenCount} earlier"
 msgstr "+{hiddenCount} anteriores"
 
+msgid "+{hiddenCount} more"
+msgstr "+{hiddenCount} mais"
+
 msgid "+{remainingCount} more"
 msgstr "+{remainingCount} mais"
 
@@ -1299,6 +1302,9 @@ msgstr "⌘ clique"
 
 msgid "⌘⇧ click"
 msgstr "⌘⇧ clique"
+
+msgid "⌘K ↵ goes back to the previous conversation"
+msgstr "⌘K ↵ volta para a conversa anterior"
 
 msgid "● Online"
 msgstr "● Online"
@@ -8255,6 +8261,9 @@ msgstr "Avançar para a próxima página do histórico"
 msgid "Go home"
 msgstr "Ir para o início"
 
+msgid "Go to Conversation"
+msgstr "Ir para conversa"
+
 msgid "Go to home"
 msgstr "Ir para o início"
 
@@ -8486,6 +8495,9 @@ msgstr "histórico"
 
 msgid "History"
 msgstr "Histórico"
+
+msgid "Hold Ctrl and press Tab to step through workspaces, most recently used first"
+msgstr "Segure Ctrl e pressione Tab para percorrer os workspaces, os usados mais recentemente primeiro"
 
 msgid "Home"
 msgstr "Início"
@@ -9334,6 +9346,9 @@ msgstr "Entrando…"
 
 msgid "Jump into your favorite editor with one click. VS Code, Cursor, Xcode, JetBrains IDEs, or any terminal: open worktrees exactly where you need them."
 msgstr "Vá para o seu editor favorito com um clique. VS Code, Cursor, Xcode, IDEs da JetBrains ou qualquer terminal: abra as worktrees exatamente onde você precisa."
+
+msgid "Jump to any agent conversation, in any workspace"
+msgstr "Ir para qualquer conversa de agente, em qualquer workspace"
 
 msgid "Jump to file"
 msgstr "Ir para o arquivo"
@@ -10546,6 +10561,9 @@ msgstr "a maioria das pessoas desenvolvedoras"
 msgid "Most of software history"
 msgstr "Quase toda a história do software"
 
+msgid "Move"
+msgstr "Mover"
+
 msgid "Move {count} to Group"
 msgstr "Mover {count} para um grupo"
 
@@ -10673,6 +10691,9 @@ msgstr "precisa atualizar"
 
 msgid "Needs update"
 msgstr "Precisa atualizar"
+
+msgid "Needs you"
+msgstr "Precisa de você"
 
 msgctxt "agent status"
 msgid "Needs you"
@@ -10931,6 +10952,12 @@ msgstr "Nenhuma área de trabalho ativa"
 msgid "No agent"
 msgstr "Nenhum agente"
 
+msgid "No agent conversations"
+msgstr "Nenhuma conversa de agente"
+
+msgid "No agent conversations yet."
+msgstr "Ainda não há conversas de agentes."
+
 msgid "No agent is configured on this host"
 msgstr "Nenhum agente está configurado neste host"
 
@@ -11045,6 +11072,9 @@ msgstr "Nenhuma saída no console"
 
 msgid "No contributors found."
 msgstr "Nenhum contribuidor encontrado."
+
+msgid "No conversations found."
+msgstr "Nenhuma conversa encontrada."
 
 msgid "No credit card required."
 msgstr "Sem cartão de crédito."
@@ -11747,6 +11777,9 @@ msgstr "No GitHub, tem mais de 15 mil estrelas, mais de 1.000 forks e mais de 10
 
 msgid "On our radar. Order and scope may change."
 msgstr "No nosso radar. Ordem e escopo podem mudar."
+
+msgid "On screen"
+msgstr "Na tela"
 
 msgid "on the board"
 msgstr "no ranking"
@@ -12481,6 +12514,9 @@ msgstr "Outras pessoas do time"
 
 msgid "Other ways to reach us"
 msgstr "Outras formas de falar com a gente"
+
+msgid "Others"
+msgstr "Outras"
 
 msgid "Our $11.5M seed round is led by Union Square Ventures, with Y Combinator, Paul Graham, and founders we admire."
 msgstr "Nossa rodada seed de US$ 11,5 milhões é liderada pela Union Square Ventures, com Y Combinator, Paul Graham e fundadores que admiramos."
@@ -13700,6 +13736,9 @@ msgstr "Rebase e merge"
 
 msgid "Rebase and merge"
 msgstr "Rebase e merge"
+
+msgid "Recent"
+msgstr "Recentes"
 
 msgid "Recent Activity"
 msgstr "Atividade recente"
@@ -14997,6 +15036,9 @@ msgstr "Buscar por nome de chave..."
 
 msgid "Search changed files"
 msgstr "Buscar arquivos alterados"
+
+msgid "Search conversations…"
+msgstr "Pesquisar conversas…"
 
 msgid "Search developers"
 msgstr "Buscar desenvolvedores"
@@ -16926,6 +16968,12 @@ msgstr "Alternar para área de trabalho ativa"
 
 msgid "Switch to manual order to rearrange the sidebar"
 msgstr "Mude para a ordem manual para reorganizar a barra lateral"
+
+msgid "Switch to Recent Workspace"
+msgstr "Alternar para workspace recente"
+
+msgid "Switch to Recent Workspace, Backwards"
+msgstr "Alternar para workspace recente, para trás"
 
 msgid "Switch to Tab 1"
 msgstr "Ir para a aba 1"

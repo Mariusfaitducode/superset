@@ -1245,6 +1245,9 @@ msgstr "+{hidden} daha"
 msgid "+{hiddenCount} earlier"
 msgstr "+{hiddenCount} daha önce"
 
+msgid "+{hiddenCount} more"
+msgstr "+{hiddenCount} daha"
+
 msgid "+{remainingCount} more"
 msgstr "+{remainingCount} daha"
 
@@ -1299,6 +1302,9 @@ msgstr "⌘ tık"
 
 msgid "⌘⇧ click"
 msgstr "⌘⇧ tık"
+
+msgid "⌘K ↵ goes back to the previous conversation"
+msgstr "⌘K ↵ önceki konuşmaya döner"
 
 msgid "● Online"
 msgstr "● Çevrimiçi"
@@ -8255,6 +8261,9 @@ msgstr "Geçmişte sonraki sayfaya git"
 msgid "Go home"
 msgstr "Ana sayfaya git"
 
+msgid "Go to Conversation"
+msgstr "Konuşmaya git"
+
 msgid "Go to home"
 msgstr "Ana sayfaya git"
 
@@ -8486,6 +8495,9 @@ msgstr "geçmiş"
 
 msgid "History"
 msgstr "Geçmiş"
+
+msgid "Hold Ctrl and press Tab to step through workspaces, most recently used first"
+msgstr "Çalışma alanları arasında en son kullanılandan başlayarak geçmek için Ctrl'yi basılı tutup Tab'a basın"
 
 msgid "Home"
 msgstr "Ana sayfa"
@@ -9334,6 +9346,9 @@ msgstr "Katılınıyor…"
 
 msgid "Jump into your favorite editor with one click. VS Code, Cursor, Xcode, JetBrains IDEs, or any terminal: open worktrees exactly where you need them."
 msgstr "Tek tıkla en sevdiğiniz düzenleyiciye atlayın. VS Code, Cursor, Xcode, JetBrains IDE'leri veya herhangi bir terminal: worktree'leri tam ihtiyacınız olan yerde açın."
+
+msgid "Jump to any agent conversation, in any workspace"
+msgstr "Herhangi bir çalışma alanındaki herhangi bir ajan konuşmasına git"
 
 msgid "Jump to file"
 msgstr "Dosyaya git"
@@ -10546,6 +10561,9 @@ msgstr "çoğu geliştirici"
 msgid "Most of software history"
 msgstr "Yazılım tarihinin çoğu"
 
+msgid "Move"
+msgstr "Gezin"
+
 msgid "Move {count} to Group"
 msgstr "{count} öğeyi gruba taşı"
 
@@ -10673,6 +10691,9 @@ msgstr "güncelleme gerekli"
 
 msgid "Needs update"
 msgstr "Güncelleme gerekli"
+
+msgid "Needs you"
+msgstr "Seni bekliyor"
 
 msgctxt "agent status"
 msgid "Needs you"
@@ -10931,6 +10952,12 @@ msgstr "Etkin çalışma alanı yok"
 msgid "No agent"
 msgstr "Ajan yok"
 
+msgid "No agent conversations"
+msgstr "Ajan konuşması yok"
+
+msgid "No agent conversations yet."
+msgstr "Henüz ajan konuşması yok."
+
 msgid "No agent is configured on this host"
 msgstr "Bu ana makinede yapılandırılmış bir ajan yok"
 
@@ -11045,6 +11072,9 @@ msgstr "Konsol çıktısı yok"
 
 msgid "No contributors found."
 msgstr "Katkıda bulunan bulunamadı."
+
+msgid "No conversations found."
+msgstr "Konuşma bulunamadı."
 
 msgid "No credit card required."
 msgstr "Kredi kartı gerekmez."
@@ -11747,6 +11777,9 @@ msgstr "GitHub'da 15k+ yıldızı, 1.000+ fork'u ve 100+ katkıda bulunanı var.
 
 msgid "On our radar. Order and scope may change."
 msgstr "Radarımızda. Sıra ve kapsam değişebilir."
+
+msgid "On screen"
+msgstr "Ekranda"
 
 msgid "on the board"
 msgstr "tabloda"
@@ -12481,6 +12514,9 @@ msgstr "Diğer takım üyeleri"
 
 msgid "Other ways to reach us"
 msgstr "Bize ulaşmanın diğer yolları"
+
+msgid "Others"
+msgstr "Diğerleri"
 
 msgid "Our $11.5M seed round is led by Union Square Ventures, with Y Combinator, Paul Graham, and founders we admire."
 msgstr "11,5 milyon dolarlık tohum turumuza Union Square Ventures liderlik ediyor; Y Combinator, Paul Graham ve hayran olduğumuz kurucular da yer alıyor."
@@ -13700,6 +13736,9 @@ msgstr "Rebase ve birleştir"
 
 msgid "Rebase and merge"
 msgstr "Rebase ve birleştir"
+
+msgid "Recent"
+msgstr "Son"
 
 msgid "Recent Activity"
 msgstr "Son etkinlik"
@@ -14997,6 +15036,9 @@ msgstr "Anahtar adına göre ara..."
 
 msgid "Search changed files"
 msgstr "Değişen dosyaları ara"
+
+msgid "Search conversations…"
+msgstr "Konuşma ara…"
 
 msgid "Search developers"
 msgstr "Geliştirici ara"
@@ -16926,6 +16968,12 @@ msgstr "Etkin çalışma alanına geç"
 
 msgid "Switch to manual order to rearrange the sidebar"
 msgstr "Kenar çubuğunu yeniden düzenlemek için manuel sıralamaya geçin"
+
+msgid "Switch to Recent Workspace"
+msgstr "Son çalışma alanına geç"
+
+msgid "Switch to Recent Workspace, Backwards"
+msgstr "Son çalışma alanına geç, geriye doğru"
 
 msgid "Switch to Tab 1"
 msgstr "1. sekmeye geç"

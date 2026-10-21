@@ -1,0 +1,1 @@
+export { DashboardSidebarRecentWorkspaceSwitcher } from "./DashboardSidebarRecentWorkspaceSwitcher";

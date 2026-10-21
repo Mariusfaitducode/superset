@@ -1245,6 +1245,9 @@ msgstr "+{hidden} lagi"
 msgid "+{hiddenCount} earlier"
 msgstr "+{hiddenCount} sebelumnya"
 
+msgid "+{hiddenCount} more"
+msgstr "+{hiddenCount} lainnya"
+
 msgid "+{remainingCount} more"
 msgstr "+{remainingCount} lagi"
 
@@ -1299,6 +1302,9 @@ msgstr "⌘ klik"
 
 msgid "⌘⇧ click"
 msgstr "⌘⇧ klik"
+
+msgid "⌘K ↵ goes back to the previous conversation"
+msgstr "⌘K ↵ kembali ke percakapan sebelumnya"
 
 msgid "● Online"
 msgstr "● Online"
@@ -8255,6 +8261,9 @@ msgstr "Maju ke halaman berikutnya di riwayat"
 msgid "Go home"
 msgstr "Ke beranda"
 
+msgid "Go to Conversation"
+msgstr "Buka percakapan"
+
 msgid "Go to home"
 msgstr "Ke beranda"
 
@@ -8486,6 +8495,9 @@ msgstr "riwayat"
 
 msgid "History"
 msgstr "Riwayat"
+
+msgid "Hold Ctrl and press Tab to step through workspaces, most recently used first"
+msgstr "Tahan Ctrl dan tekan Tab untuk menelusuri workspace, yang terakhir digunakan lebih dulu"
 
 msgid "Home"
 msgstr "Beranda"
@@ -9334,6 +9346,9 @@ msgstr "Bergabung…"
 
 msgid "Jump into your favorite editor with one click. VS Code, Cursor, Xcode, JetBrains IDEs, or any terminal: open worktrees exactly where you need them."
 msgstr "Lompat ke editor favorit Anda dengan satu klik. VS Code, Cursor, Xcode, IDE JetBrains, atau terminal apa pun: buka worktree persis di tempat yang Anda butuhkan."
+
+msgid "Jump to any agent conversation, in any workspace"
+msgstr "Lompat ke percakapan agen mana pun, di workspace mana pun"
 
 msgid "Jump to file"
 msgstr "Lompat ke file"
@@ -10546,6 +10561,9 @@ msgstr "sebagian besar developer"
 msgid "Most of software history"
 msgstr "Sebagian besar sejarah perangkat lunak"
 
+msgid "Move"
+msgstr "Pindah"
+
 msgid "Move {count} to Group"
 msgstr "Pindahkan {count} ke Grup"
 
@@ -10673,6 +10691,9 @@ msgstr "perlu diperbarui"
 
 msgid "Needs update"
 msgstr "Perlu diperbarui"
+
+msgid "Needs you"
+msgstr "Butuh Anda"
 
 msgctxt "agent status"
 msgid "Needs you"
@@ -10931,6 +10952,12 @@ msgstr "Tidak ada workspace aktif"
 msgid "No agent"
 msgstr "Tanpa agen"
 
+msgid "No agent conversations"
+msgstr "Tidak ada percakapan agen"
+
+msgid "No agent conversations yet."
+msgstr "Belum ada percakapan agen."
+
 msgid "No agent is configured on this host"
 msgstr "Tidak ada agen yang dikonfigurasi di host ini"
 
@@ -11045,6 +11072,9 @@ msgstr "Tidak ada output console"
 
 msgid "No contributors found."
 msgstr "Tidak ada kontributor ditemukan."
+
+msgid "No conversations found."
+msgstr "Tidak ada percakapan ditemukan."
 
 msgid "No credit card required."
 msgstr "Tanpa kartu kredit."
@@ -11747,6 +11777,9 @@ msgstr "Di GitHub, Superset memiliki lebih dari 15k bintang, lebih dari 1.000 fo
 
 msgid "On our radar. Order and scope may change."
 msgstr "Ada di radar kami. Urutan dan cakupannya bisa berubah."
+
+msgid "On screen"
+msgstr "Di layar"
 
 msgid "on the board"
 msgstr "di papan ini"
@@ -12481,6 +12514,9 @@ msgstr "Anggota Tim Lainnya"
 
 msgid "Other ways to reach us"
 msgstr "Cara lain menghubungi kami"
+
+msgid "Others"
+msgstr "Lainnya"
 
 msgid "Our $11.5M seed round is led by Union Square Ventures, with Y Combinator, Paul Graham, and founders we admire."
 msgstr "Putaran pendanaan awal kami senilai $11,5 juta dipimpin oleh Union Square Ventures, bersama Y Combinator, Paul Graham, dan para pendiri yang kami kagumi."
@@ -13700,6 +13736,9 @@ msgstr "Rebase & Merge"
 
 msgid "Rebase and merge"
 msgstr "Rebase dan merge"
+
+msgid "Recent"
+msgstr "Terbaru"
 
 msgid "Recent Activity"
 msgstr "Aktivitas Terbaru"
@@ -14997,6 +15036,9 @@ msgstr "Cari berdasarkan nama kunci..."
 
 msgid "Search changed files"
 msgstr "Cari file yang berubah"
+
+msgid "Search conversations…"
+msgstr "Cari percakapan…"
 
 msgid "Search developers"
 msgstr "Cari pengembang"
@@ -16926,6 +16968,12 @@ msgstr "Beralih ke workspace aktif"
 
 msgid "Switch to manual order to rearrange the sidebar"
 msgstr "Beralih ke urutan manual untuk menyusun ulang sidebar"
+
+msgid "Switch to Recent Workspace"
+msgstr "Beralih ke workspace terbaru"
+
+msgid "Switch to Recent Workspace, Backwards"
+msgstr "Beralih ke workspace terbaru, mundur"
 
 msgid "Switch to Tab 1"
 msgstr "Beralih ke Tab 1"

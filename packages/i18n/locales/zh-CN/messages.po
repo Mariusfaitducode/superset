@@ -1245,6 +1245,9 @@ msgstr "还有 {hidden} 个"
 msgid "+{hiddenCount} earlier"
 msgstr "更早的+{hiddenCount}条"
 
+msgid "+{hiddenCount} more"
+msgstr "+{hiddenCount} 个"
+
 msgid "+{remainingCount} more"
 msgstr "+{remainingCount}个"
 
@@ -1299,6 +1302,9 @@ msgstr "⌘点击"
 
 msgid "⌘⇧ click"
 msgstr "⌘⇧点击"
+
+msgid "⌘K ↵ goes back to the previous conversation"
+msgstr "⌘K ↵ 返回上一个对话"
 
 msgid "● Online"
 msgstr "● 在线"
@@ -8255,6 +8261,9 @@ msgstr "前进到历史记录中的下一页"
 msgid "Go home"
 msgstr "回到首页"
 
+msgid "Go to Conversation"
+msgstr "转到对话"
+
 msgid "Go to home"
 msgstr "前往主页"
 
@@ -8486,6 +8495,9 @@ msgstr "历史"
 
 msgid "History"
 msgstr "历史"
+
+msgid "Hold Ctrl and press Tab to step through workspaces, most recently used first"
+msgstr "按住 Ctrl 并按 Tab，按最近使用顺序切换工作区"
 
 msgid "Home"
 msgstr "首页"
@@ -9334,6 +9346,9 @@ msgstr "正在加入…"
 
 msgid "Jump into your favorite editor with one click. VS Code, Cursor, Xcode, JetBrains IDEs, or any terminal: open worktrees exactly where you need them."
 msgstr "一键跳进你喜欢的编辑器。VS Code、Cursor、Xcode、JetBrains系列IDE或任意终端：在你需要的地方打开worktree。"
+
+msgid "Jump to any agent conversation, in any workspace"
+msgstr "跳转到任意工作区中的任意智能体对话"
 
 msgid "Jump to file"
 msgstr "跳转到文件"
@@ -10546,6 +10561,9 @@ msgstr "多数开发者"
 msgid "Most of software history"
 msgstr "软件史的大部分时间"
 
+msgid "Move"
+msgstr "移动"
+
 msgid "Move {count} to Group"
 msgstr "将{count}个移动到分组"
 
@@ -10673,6 +10691,9 @@ msgstr "需要更新"
 
 msgid "Needs update"
 msgstr "需要更新"
+
+msgid "Needs you"
+msgstr "需要你处理"
 
 msgctxt "agent status"
 msgid "Needs you"
@@ -10931,6 +10952,12 @@ msgstr "没有活动的工作区"
 msgid "No agent"
 msgstr "无智能体"
 
+msgid "No agent conversations"
+msgstr "没有智能体对话"
+
+msgid "No agent conversations yet."
+msgstr "还没有智能体对话。"
+
 msgid "No agent is configured on this host"
 msgstr "此主机上未配置任何智能体"
 
@@ -11045,6 +11072,9 @@ msgstr "没有控制台输出"
 
 msgid "No contributors found."
 msgstr "未找到贡献者。"
+
+msgid "No conversations found."
+msgstr "未找到对话。"
 
 msgid "No credit card required."
 msgstr "无需信用卡。"
@@ -11747,6 +11777,9 @@ msgstr "Superset 在 GitHub 上拥有 15k+ 星标、1,000+ 次 fork 和 100+ 位
 
 msgid "On our radar. Order and scope may change."
 msgstr "在我们的视野内。顺序和范围可能会变。"
+
+msgid "On screen"
+msgstr "当前显示"
 
 msgid "on the board"
 msgstr "在榜上"
@@ -12481,6 +12514,9 @@ msgstr "其他团队成员"
 
 msgid "Other ways to reach us"
 msgstr "其他联系方式"
+
+msgid "Others"
+msgstr "其他"
 
 msgid "Our $11.5M seed round is led by Union Square Ventures, with Y Combinator, Paul Graham, and founders we admire."
 msgstr "我们 1150 万美元的种子轮由 Union Square Ventures 领投，Y Combinator、Paul Graham 以及我们敬佩的创始人参投。"
@@ -13700,6 +13736,9 @@ msgstr "变基并合并"
 
 msgid "Rebase and merge"
 msgstr "变基并合并"
+
+msgid "Recent"
+msgstr "最近"
 
 msgid "Recent Activity"
 msgstr "最近动态"
@@ -14997,6 +15036,9 @@ msgstr "按键名搜索..."
 
 msgid "Search changed files"
 msgstr "搜索更改的文件"
+
+msgid "Search conversations…"
+msgstr "搜索对话…"
 
 msgid "Search developers"
 msgstr "搜索开发者"
@@ -16926,6 +16968,12 @@ msgstr "切换到活动工作区"
 
 msgid "Switch to manual order to rearrange the sidebar"
 msgstr "切换到手动排序即可重新排列侧边栏"
+
+msgid "Switch to Recent Workspace"
+msgstr "切换到最近的工作区"
+
+msgid "Switch to Recent Workspace, Backwards"
+msgstr "切换到最近的工作区（反向）"
 
 msgid "Switch to Tab 1"
 msgstr "切换到标签页1"

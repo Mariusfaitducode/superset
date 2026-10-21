@@ -1245,6 +1245,9 @@ msgstr "+{hidden} nữa"
 msgid "+{hiddenCount} earlier"
 msgstr "+{hiddenCount} trước đó"
 
+msgid "+{hiddenCount} more"
+msgstr "+{hiddenCount} nữa"
+
 msgid "+{remainingCount} more"
 msgstr "+{remainingCount} nữa"
 
@@ -1299,6 +1302,9 @@ msgstr "⌘ nhấp"
 
 msgid "⌘⇧ click"
 msgstr "⌘⇧ nhấp"
+
+msgid "⌘K ↵ goes back to the previous conversation"
+msgstr "⌘K ↵ quay lại cuộc trò chuyện trước"
 
 msgid "● Online"
 msgstr "● Trực tuyến"
@@ -8255,6 +8261,9 @@ msgstr "Đi tới trang kế tiếp trong lịch sử"
 msgid "Go home"
 msgstr "Về trang chủ"
 
+msgid "Go to Conversation"
+msgstr "Đi tới cuộc trò chuyện"
+
 msgid "Go to home"
 msgstr "Về trang chủ"
 
@@ -8486,6 +8495,9 @@ msgstr "lịch sử"
 
 msgid "History"
 msgstr "Lịch sử"
+
+msgid "Hold Ctrl and press Tab to step through workspaces, most recently used first"
+msgstr "Giữ Ctrl và nhấn Tab để lần lượt qua các workspace, dùng gần đây nhất trước"
 
 msgid "Home"
 msgstr "Trang chủ"
@@ -9334,6 +9346,9 @@ msgstr "Đang tham gia…"
 
 msgid "Jump into your favorite editor with one click. VS Code, Cursor, Xcode, JetBrains IDEs, or any terminal: open worktrees exactly where you need them."
 msgstr "Nhảy vào editor yêu thích chỉ với một cú nhấp. VS Code, Cursor, Xcode, các IDE JetBrains hay bất kỳ terminal nào: mở worktree đúng nơi bạn cần."
+
+msgid "Jump to any agent conversation, in any workspace"
+msgstr "Chuyển tới bất kỳ cuộc trò chuyện nào của agent, trong bất kỳ workspace nào"
 
 msgid "Jump to file"
 msgstr "Nhảy tới tệp"
@@ -10546,6 +10561,9 @@ msgstr "phần lớn lập trình viên"
 msgid "Most of software history"
 msgstr "Gần như suốt lịch sử phần mềm"
 
+msgid "Move"
+msgstr "Di chuyển"
+
 msgid "Move {count} to Group"
 msgstr "Chuyển {count} vào nhóm"
 
@@ -10673,6 +10691,9 @@ msgstr "cần cập nhật"
 
 msgid "Needs update"
 msgstr "Cần cập nhật"
+
+msgid "Needs you"
+msgstr "Cần bạn"
 
 msgctxt "agent status"
 msgid "Needs you"
@@ -10931,6 +10952,12 @@ msgstr "Không có workspace đang hoạt động"
 msgid "No agent"
 msgstr "Không có agent"
 
+msgid "No agent conversations"
+msgstr "Không có cuộc trò chuyện nào của agent"
+
+msgid "No agent conversations yet."
+msgstr "Chưa có cuộc trò chuyện nào của agent."
+
 msgid "No agent is configured on this host"
 msgstr "Không có tác nhân nào được cấu hình trên máy chủ này"
 
@@ -11045,6 +11072,9 @@ msgstr "Không có kết quả console"
 
 msgid "No contributors found."
 msgstr "Không tìm thấy người đóng góp nào."
+
+msgid "No conversations found."
+msgstr "Không tìm thấy cuộc trò chuyện nào."
 
 msgid "No credit card required."
 msgstr "Không cần thẻ tín dụng."
@@ -11747,6 +11777,9 @@ msgstr "Trên GitHub, Superset có hơn 15k sao, hơn 1.000 fork và hơn 100 ng
 
 msgid "On our radar. Order and scope may change."
 msgstr "Đang trong tầm ngắm. Thứ tự và phạm vi có thể thay đổi."
+
+msgid "On screen"
+msgstr "Đang hiển thị"
 
 msgid "on the board"
 msgstr "trên bảng xếp hạng"
@@ -12481,6 +12514,9 @@ msgstr "Các thành viên khác"
 
 msgid "Other ways to reach us"
 msgstr "Các cách khác để liên hệ"
+
+msgid "Others"
+msgstr "Khác"
 
 msgid "Our $11.5M seed round is led by Union Square Ventures, with Y Combinator, Paul Graham, and founders we admire."
 msgstr "Vòng gọi vốn hạt giống 11,5 triệu USD của chúng tôi do Union Square Ventures dẫn dắt, cùng Y Combinator, Paul Graham và những nhà sáng lập mà chúng tôi ngưỡng mộ."
@@ -13700,6 +13736,9 @@ msgstr "Rebase & merge"
 
 msgid "Rebase and merge"
 msgstr "Rebase và merge"
+
+msgid "Recent"
+msgstr "Gần đây"
 
 msgid "Recent Activity"
 msgstr "Hoạt động gần đây"
@@ -14997,6 +15036,9 @@ msgstr "Tìm theo tên khóa..."
 
 msgid "Search changed files"
 msgstr "Tìm tệp đã thay đổi"
+
+msgid "Search conversations…"
+msgstr "Tìm cuộc trò chuyện…"
 
 msgid "Search developers"
 msgstr "Tìm nhà phát triển"
@@ -16926,6 +16968,12 @@ msgstr "Chuyển sang workspace đang hoạt động"
 
 msgid "Switch to manual order to rearrange the sidebar"
 msgstr "Chuyển sang thứ tự thủ công để sắp xếp lại thanh bên"
+
+msgid "Switch to Recent Workspace"
+msgstr "Chuyển sang workspace gần đây"
+
+msgid "Switch to Recent Workspace, Backwards"
+msgstr "Chuyển sang workspace gần đây, theo chiều ngược"
 
 msgid "Switch to Tab 1"
 msgstr "Chuyển tới tab 1"

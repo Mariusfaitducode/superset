@@ -213,6 +213,28 @@ export const HOTKEYS_REGISTRY = {
 			message: "Navigate to the next workspace in the sidebar",
 		}),
 	},
+	NEXT_RECENT_WORKSPACE: {
+		key: { mac: "ctrl+tab", windows: "ctrl+tab", linux: "ctrl+tab" },
+		label: msg({
+			message: "Switch to Recent Workspace",
+		}),
+		category: "Workspace",
+		description: msg({
+			message:
+				"Hold Ctrl and press Tab to step through workspaces, most recently used first",
+		}),
+	},
+	PREV_RECENT_WORKSPACE: {
+		key: {
+			mac: "ctrl+shift+tab",
+			windows: "ctrl+shift+tab",
+			linux: "ctrl+shift+tab",
+		},
+		label: msg({
+			message: "Switch to Recent Workspace, Backwards",
+		}),
+		category: "Workspace",
+	},
 	OPEN_ACTIVE_WORKSPACE_SWITCHER: {
 		key: {
 			mac: L("meta+semicolon"),
@@ -593,7 +615,8 @@ export const HOTKEYS_REGISTRY = {
 	},
 	CLEAR_TERMINAL: {
 		key: {
-			mac: L("meta+k"),
+			// ⌘K opens the conversation switcher; ctrl+L still clears from the shell.
+			mac: null,
 			windows: L("ctrl+shift+k"),
 			linux: L("ctrl+shift+k"),
 		},
@@ -616,17 +639,14 @@ export const HOTKEYS_REGISTRY = {
 			message: "Scroll the active terminal to the bottom",
 		}),
 	},
+	// Ctrl+Tab switches workspaces; PREV_TAB / NEXT_TAB still cycle tabs.
 	PREV_TAB_ALT: {
-		key: {
-			mac: "ctrl+shift+tab",
-			windows: "ctrl+shift+tab",
-			linux: "ctrl+shift+tab",
-		},
+		key: { mac: null, windows: null, linux: null },
 		label: msg({ message: "Previous Tab (Second Shortcut)" }),
 		category: "Layout",
 	},
 	NEXT_TAB_ALT: {
-		key: { mac: "ctrl+tab", windows: "ctrl+tab", linux: "ctrl+tab" },
+		key: { mac: null, windows: null, linux: null },
 		label: msg({ message: "Next Tab (Second Shortcut)" }),
 		category: "Layout",
 	},
@@ -945,6 +965,16 @@ export const HOTKEYS_REGISTRY = {
 			message: "Show Keyboard Shortcuts",
 		}),
 		category: "Help",
+	},
+	OPEN_CONVERSATION_SWITCHER: {
+		key: { mac: L("meta+k"), windows: null, linux: null },
+		label: msg({
+			message: "Go to Conversation",
+		}),
+		category: "Navigation",
+		description: msg({
+			message: "Jump to any agent conversation, in any workspace",
+		}),
 	},
 	OPEN_COMMAND_PALETTE: {
 		key: {

@@ -1245,6 +1245,9 @@ msgstr "他 {hidden} 件"
 msgid "+{hiddenCount} earlier"
 msgstr "以前の{hiddenCount}件"
 
+msgid "+{hiddenCount} more"
+msgstr "+{hiddenCount} 件"
+
 msgid "+{remainingCount} more"
 msgstr "+{remainingCount}件"
 
@@ -1299,6 +1302,9 @@ msgstr "⌘クリック"
 
 msgid "⌘⇧ click"
 msgstr "⌘⇧クリック"
+
+msgid "⌘K ↵ goes back to the previous conversation"
+msgstr "⌘K ↵ で前の会話に戻ります"
 
 msgid "● Online"
 msgstr "● オンライン"
@@ -8255,6 +8261,9 @@ msgstr "履歴の次のページに進む"
 msgid "Go home"
 msgstr "ホームへ"
 
+msgid "Go to Conversation"
+msgstr "会話に移動"
+
 msgid "Go to home"
 msgstr "ホームへ"
 
@@ -8486,6 +8495,9 @@ msgstr "履歴"
 
 msgid "History"
 msgstr "履歴"
+
+msgid "Hold Ctrl and press Tab to step through workspaces, most recently used first"
+msgstr "Ctrl を押したまま Tab を押すと、最近使った順にワークスペースを切り替えます"
 
 msgid "Home"
 msgstr "ホーム"
@@ -9334,6 +9346,9 @@ msgstr "参加中…"
 
 msgid "Jump into your favorite editor with one click. VS Code, Cursor, Xcode, JetBrains IDEs, or any terminal: open worktrees exactly where you need them."
 msgstr "ワンクリックでお気に入りのエディタに移動できます。VS Code、Cursor、Xcode、JetBrainsのIDE、あるいは任意のターミナル。ワークツリーを必要な場所でそのまま開けます。"
+
+msgid "Jump to any agent conversation, in any workspace"
+msgstr "任意のワークスペースの任意のエージェント会話に移動"
 
 msgid "Jump to file"
 msgstr "ファイルへジャンプ"
@@ -10546,6 +10561,9 @@ msgstr "大半の開発者"
 msgid "Most of software history"
 msgstr "ソフトウェアの歴史のほとんど"
 
+msgid "Move"
+msgstr "移動"
+
 msgid "Move {count} to Group"
 msgstr "{count}件をグループへ移動"
 
@@ -10673,6 +10691,9 @@ msgstr "要更新"
 
 msgid "Needs update"
 msgstr "要更新"
+
+msgid "Needs you"
+msgstr "対応が必要"
 
 msgctxt "agent status"
 msgid "Needs you"
@@ -10931,6 +10952,12 @@ msgstr "アクティブなワークスペースはありません"
 msgid "No agent"
 msgstr "エージェントなし"
 
+msgid "No agent conversations"
+msgstr "エージェントの会話はありません"
+
+msgid "No agent conversations yet."
+msgstr "エージェントの会話はまだありません。"
+
 msgid "No agent is configured on this host"
 msgstr "このホストにはエージェントが設定されていません"
 
@@ -11045,6 +11072,9 @@ msgstr "コンソール出力はありません"
 
 msgid "No contributors found."
 msgstr "コントリビューターが見つかりません。"
+
+msgid "No conversations found."
+msgstr "会話が見つかりません。"
 
 msgid "No credit card required."
 msgstr "クレジットカードは不要です。"
@@ -11747,6 +11777,9 @@ msgstr "GitHub ではスター 1.5 万以上、フォーク 1,000 以上、コ�
 
 msgid "On our radar. Order and scope may change."
 msgstr "視野には入っています。順序や範囲は変わる可能性があります。"
+
+msgid "On screen"
+msgstr "表示中"
 
 msgid "on the board"
 msgstr "ボード上"
@@ -12481,6 +12514,9 @@ msgstr "他のチームメンバー"
 
 msgid "Other ways to reach us"
 msgstr "その他の連絡方法"
+
+msgid "Others"
+msgstr "その他"
 
 msgid "Our $11.5M seed round is led by Union Square Ventures, with Y Combinator, Paul Graham, and founders we admire."
 msgstr "1,150万ドルのシードラウンドは Union Square Ventures が主導し、Y Combinator、Paul Graham、そして私たちが尊敬する創業者たちが参加しています。"
@@ -13700,6 +13736,9 @@ msgstr "リベースしてマージ"
 
 msgid "Rebase and merge"
 msgstr "リベースしてマージ"
+
+msgid "Recent"
+msgstr "最近"
 
 msgid "Recent Activity"
 msgstr "最近のアクティビティ"
@@ -14997,6 +15036,9 @@ msgstr "キー名で検索..."
 
 msgid "Search changed files"
 msgstr "変更されたファイルを検索"
+
+msgid "Search conversations…"
+msgstr "会話を検索…"
 
 msgid "Search developers"
 msgstr "開発者を検索"
@@ -16926,6 +16968,12 @@ msgstr "アクティブなワークスペースに切り替え"
 
 msgid "Switch to manual order to rearrange the sidebar"
 msgstr "サイドバーを並べ替えるには手動順に切り替えてください"
+
+msgid "Switch to Recent Workspace"
+msgstr "最近のワークスペースに切り替え"
+
+msgid "Switch to Recent Workspace, Backwards"
+msgstr "最近のワークスペースに切り替え（逆順）"
 
 msgid "Switch to Tab 1"
 msgstr "タブ1に切り替え"
