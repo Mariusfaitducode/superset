@@ -13,6 +13,7 @@ import { workspaceActivityAt } from "renderer/routes/_authenticated/_dashboard/v
 import { PRIcon } from "renderer/screens/main/components/PRIcon/PRIcon";
 import { getRelativeTime } from "renderer/screens/main/components/WorkspacesListView/utils";
 import { V2WorkspaceProjectIcon } from "../../../V2WorkspaceProjectIcon";
+import { WorkspaceInsights } from "../../../WorkspaceInsights";
 
 interface V2WorkspacesBoardCardProps {
 	workspace: AccessibleV2Workspace;
@@ -189,6 +190,11 @@ function BoardCardBody({
 					<WorkspaceStateGlyph workspace={workspace} />
 				</span>
 			</div>
+			<WorkspaceInsights
+				workspaceId={workspace.id}
+				hostId={workspace.hostId}
+				className="mt-2 empty:hidden"
+			/>
 		</button>
 	);
 }

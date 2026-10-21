@@ -68,7 +68,13 @@ import {
 } from "renderer/routes/_authenticated/_dashboard/v2-workspaces/stores/v2WorkspacesFilterStore";
 import { BOARD_COLUMN_LABELS } from "renderer/routes/_authenticated/_dashboard/v2-workspaces/utils/deriveBoardColumn";
 import { PRIcon } from "renderer/screens/main/components/PRIcon/PRIcon";
+import { useWorkspacesLabelViewStore } from "../../stores/workspacesLabelView";
 import { V2WorkspaceProjectIcon } from "../V2WorkspaceProjectIcon";
+import {
+	useWorkspacesLabels,
+	WorkspacesGroupByMenu,
+	WorkspacesLabelFilterSubmenu,
+} from "../WorkspacesLabels";
 import { DeviceOptionLabel } from "./components/DeviceOptionLabel";
 
 const PR_STATE_LABELS: Record<V2WorkspacesPrStateFilter, MessageDescriptor> = {
@@ -256,6 +262,12 @@ export function V2WorkspacesHeader({
 				null)
 			: null;
 
+	const { activeFilters: activeLabelFilters } = useWorkspacesLabels();
+	const groupBy = useWorkspacesLabelViewStore((state) => state.groupBy);
+	const clearLabelFilters = useWorkspacesLabelViewStore(
+		(state) => state.clearLabelFilters,
+	);
+
 	const toggleIn = (values: string[], value: string) =>
 		values.includes(value)
 			? values.filter((entry) => entry !== value)
@@ -264,12 +276,14 @@ export function V2WorkspacesHeader({
 	// Device and project are first-class controls that show their own state;
 	// the Filter badge only counts what lives inside its menu.
 	const activeFilterCount =
+		(activeLabelFilters.length > 0 ? 1 : 0) +
 		(prStateFilters.length > 0 ? 1 : 0) +
 		(agentStatusFilters.length > 0 ? 1 : 0) +
 		(creatorFilters.length > 0 ? 1 : 0) +
 		(pinFilter !== "all" ? 1 : 0);
 
 	const clearFilters = () => {
+		clearLabelFilters();
 		setPrStateFilters([]);
 		setAgentStatusFilters([]);
 		setCreatorFilters([]);
@@ -492,6 +506,8 @@ export function V2WorkspacesHeader({
 								</DropdownMenuSubContent>
 							</DropdownMenuSub>
 
+							<WorkspacesLabelFilterSubmenu />
+
 							<DropdownMenuSub>
 								<DropdownMenuSubTrigger>
 									<span className="flex items-center gap-2">
@@ -670,7 +686,8 @@ export function V2WorkspacesHeader({
 									</DropdownMenuRadioItem>
 								))}
 							</DropdownMenuRadioGroup>
-							{viewMode === "board" && (
+							{viewMode === "board" && <WorkspacesGroupByMenu />}
+							{viewMode === "board" && groupBy === "status" && (
 								<>
 									<DropdownMenuSeparator />
 									<DropdownMenuLabel className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground/70">
