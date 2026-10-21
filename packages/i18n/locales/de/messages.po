@@ -1300,6 +1300,9 @@ msgstr "⌘ Klick"
 msgid "⌘⇧ click"
 msgstr "⌘⇧ Klick"
 
+msgid "⌘K ↵ goes back to the previous conversation"
+msgstr "⌘K ↵ springt zur vorherigen Unterhaltung zurück"
+
 msgid "● Online"
 msgstr "● Online"
 
@@ -8255,6 +8258,9 @@ msgstr "Zur nächsten Seite im Verlauf vorgehen"
 msgid "Go home"
 msgstr "Zur Startseite"
 
+msgid "Go to Conversation"
+msgstr "Zur Unterhaltung wechseln"
+
 msgid "Go to home"
 msgstr "Zur Startseite"
 
@@ -9334,6 +9340,9 @@ msgstr "Beitritt läuft…"
 
 msgid "Jump into your favorite editor with one click. VS Code, Cursor, Xcode, JetBrains IDEs, or any terminal: open worktrees exactly where you need them."
 msgstr "Spring mit einem Klick in deinen Lieblingseditor. VS Code, Cursor, Xcode, JetBrains-IDEs oder ein beliebiges Terminal: Öffne Worktrees genau dort, wo du sie brauchst."
+
+msgid "Jump to any agent conversation, in any workspace"
+msgstr "Zu jeder Agent-Unterhaltung in jedem Workspace springen"
 
 msgid "Jump to file"
 msgstr "Zu Datei springen"
@@ -10546,6 +10555,9 @@ msgstr "die meisten Entwickler"
 msgid "Most of software history"
 msgstr "Der Großteil der Softwaregeschichte"
 
+msgid "Move"
+msgstr "Bewegen"
+
 msgid "Move {count} to Group"
 msgstr "{count} in Gruppe verschieben"
 
@@ -10673,6 +10685,9 @@ msgstr "Update nötig"
 
 msgid "Needs update"
 msgstr "Update nötig"
+
+msgid "Needs you"
+msgstr "Braucht dich"
 
 msgctxt "agent status"
 msgid "Needs you"
@@ -10931,6 +10946,9 @@ msgstr "Keine aktiven Arbeitsbereiche"
 msgid "No agent"
 msgstr "Kein Agent"
 
+msgid "No agent conversations yet."
+msgstr "Noch keine Agent-Unterhaltungen."
+
 msgid "No agent is configured on this host"
 msgstr "Auf diesem Host ist kein Agent konfiguriert"
 
@@ -11045,6 +11063,9 @@ msgstr "Keine Konsolenausgabe"
 
 msgid "No contributors found."
 msgstr "Keine Mitwirkenden gefunden."
+
+msgid "No conversations found."
+msgstr "Keine Unterhaltungen gefunden."
 
 msgid "No credit card required."
 msgstr "Ohne Kreditkarte."
@@ -11747,6 +11768,9 @@ msgstr "Auf GitHub hat Superset über 15k Sterne, über 1.000 Forks und über 10
 
 msgid "On our radar. Order and scope may change."
 msgstr "Auf unserem Radar. Reihenfolge und Umfang können sich ändern."
+
+msgid "On screen"
+msgstr "Auf dem Bildschirm"
 
 msgid "on the board"
 msgstr "auf dem Board"
@@ -12481,6 +12505,9 @@ msgstr "Weitere Teammitglieder"
 
 msgid "Other ways to reach us"
 msgstr "Weitere Wege zu uns"
+
+msgid "Others"
+msgstr "Andere"
 
 msgid "Our $11.5M seed round is led by Union Square Ventures, with Y Combinator, Paul Graham, and founders we admire."
 msgstr "Unsere Seed-Runde über 11,5 Mio. $ wird von Union Square Ventures angeführt, zusammen mit Y Combinator, Paul Graham und Gründern, die wir bewundern."
@@ -13700,6 +13727,9 @@ msgstr "Rebase & zusammenführen"
 
 msgid "Rebase and merge"
 msgstr "Rebase und zusammenführen"
+
+msgid "Recent"
+msgstr "Zuletzt"
 
 msgid "Recent Activity"
 msgstr "Letzte Aktivität"
@@ -14997,6 +15027,9 @@ msgstr "Nach Schlüsselname suchen..."
 
 msgid "Search changed files"
 msgstr "Geänderte Dateien suchen"
+
+msgid "Search conversations…"
+msgstr "Unterhaltungen suchen…"
 
 msgid "Search developers"
 msgstr "Entwickler suchen"

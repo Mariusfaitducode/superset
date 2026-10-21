@@ -1300,6 +1300,9 @@ msgstr "⌘ click"
 msgid "⌘⇧ click"
 msgstr "⌘⇧ click"
 
+msgid "⌘K ↵ goes back to the previous conversation"
+msgstr "⌘K ↵ goes back to the previous conversation"
+
 msgid "● Online"
 msgstr "● Online"
 
@@ -8255,6 +8258,9 @@ msgstr "Go forward to the next page in history"
 msgid "Go home"
 msgstr "Go home"
 
+msgid "Go to Conversation"
+msgstr "Go to Conversation"
+
 msgid "Go to home"
 msgstr "Go to home"
 
@@ -9334,6 +9340,9 @@ msgstr "Joining…"
 
 msgid "Jump into your favorite editor with one click. VS Code, Cursor, Xcode, JetBrains IDEs, or any terminal: open worktrees exactly where you need them."
 msgstr "Jump into your favorite editor with one click. VS Code, Cursor, Xcode, JetBrains IDEs, or any terminal: open worktrees exactly where you need them."
+
+msgid "Jump to any agent conversation, in any workspace"
+msgstr "Jump to any agent conversation, in any workspace"
 
 msgid "Jump to file"
 msgstr "Jump to file"
@@ -10546,6 +10555,9 @@ msgstr "most developers"
 msgid "Most of software history"
 msgstr "Most of software history"
 
+msgid "Move"
+msgstr "Move"
+
 msgid "Move {count} to Group"
 msgstr "Move {count} to Group"
 
@@ -10673,6 +10685,9 @@ msgstr "needs update"
 
 msgid "Needs update"
 msgstr "Needs update"
+
+msgid "Needs you"
+msgstr "Needs you"
 
 msgctxt "agent status"
 msgid "Needs you"
@@ -10931,6 +10946,9 @@ msgstr "No active workspaces"
 msgid "No agent"
 msgstr "No agent"
 
+msgid "No agent conversations yet."
+msgstr "No agent conversations yet."
+
 msgid "No agent is configured on this host"
 msgstr "No agent is configured on this host"
 
@@ -11045,6 +11063,9 @@ msgstr "No console output"
 
 msgid "No contributors found."
 msgstr "No contributors found."
+
+msgid "No conversations found."
+msgstr "No conversations found."
 
 msgid "No credit card required."
 msgstr "No credit card required."
@@ -11747,6 +11768,9 @@ msgstr "On GitHub, it has 15k+ stars, 1,000+ forks, and 100+ contributors. It al
 
 msgid "On our radar. Order and scope may change."
 msgstr "On our radar. Order and scope may change."
+
+msgid "On screen"
+msgstr "On screen"
 
 msgid "on the board"
 msgstr "on the board"
@@ -12481,6 +12505,9 @@ msgstr "Other Team Members"
 
 msgid "Other ways to reach us"
 msgstr "Other ways to reach us"
+
+msgid "Others"
+msgstr "Others"
 
 msgid "Our $11.5M seed round is led by Union Square Ventures, with Y Combinator, Paul Graham, and founders we admire."
 msgstr "Our $11.5M seed round is led by Union Square Ventures, with Y Combinator, Paul Graham, and founders we admire."
@@ -13700,6 +13727,9 @@ msgstr "Rebase & Merge"
 
 msgid "Rebase and merge"
 msgstr "Rebase and merge"
+
+msgid "Recent"
+msgstr "Recent"
 
 msgid "Recent Activity"
 msgstr "Recent Activity"
@@ -14997,6 +15027,9 @@ msgstr "Search by key name..."
 
 msgid "Search changed files"
 msgstr "Search changed files"
+
+msgid "Search conversations…"
+msgstr "Search conversations…"
 
 msgid "Search developers"
 msgstr "Search developers"

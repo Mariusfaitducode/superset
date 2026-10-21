@@ -593,7 +593,8 @@ export const HOTKEYS_REGISTRY = {
 	},
 	CLEAR_TERMINAL: {
 		key: {
-			mac: L("meta+k"),
+			// ⌘K opens the conversation switcher; ctrl+L still clears from the shell.
+			mac: null,
 			windows: L("ctrl+shift+k"),
 			linux: L("ctrl+shift+k"),
 		},
@@ -945,6 +946,16 @@ export const HOTKEYS_REGISTRY = {
 			message: "Show Keyboard Shortcuts",
 		}),
 		category: "Help",
+	},
+	OPEN_CONVERSATION_SWITCHER: {
+		key: { mac: L("meta+k"), windows: null, linux: null },
+		label: msg({
+			message: "Go to Conversation",
+		}),
+		category: "Navigation",
+		description: msg({
+			message: "Jump to any agent conversation, in any workspace",
+		}),
 	},
 	OPEN_COMMAND_PALETTE: {
 		key: {

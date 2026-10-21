@@ -1300,6 +1300,9 @@ msgstr "⌘ kliknutí"
 msgid "⌘⇧ click"
 msgstr "⌘⇧ kliknutí"
 
+msgid "⌘K ↵ goes back to the previous conversation"
+msgstr "⌘K ↵ vrátí na předchozí konverzaci"
+
 msgid "● Online"
 msgstr "● Online"
 
@@ -8255,6 +8258,9 @@ msgstr "Přejít vpřed na další stránku v historii"
 msgid "Go home"
 msgstr "Přejít domů"
 
+msgid "Go to Conversation"
+msgstr "Přejít na konverzaci"
+
 msgid "Go to home"
 msgstr "Přejít na úvod"
 
@@ -9334,6 +9340,9 @@ msgstr "Připojuji…"
 
 msgid "Jump into your favorite editor with one click. VS Code, Cursor, Xcode, JetBrains IDEs, or any terminal: open worktrees exactly where you need them."
 msgstr "Skočte do svého oblíbeného editoru jedním kliknutím. VS Code, Cursor, Xcode, JetBrains IDE nebo libovolný terminál: otevřete worktree přesně tam, kde ho potřebujete."
+
+msgid "Jump to any agent conversation, in any workspace"
+msgstr "Přejít na libovolnou konverzaci agenta v libovolném pracovním prostoru"
 
 msgid "Jump to file"
 msgstr "Přejít na soubor"
@@ -10546,6 +10555,9 @@ msgstr "většina vývojářů"
 msgid "Most of software history"
 msgstr "Většina historie softwaru"
 
+msgid "Move"
+msgstr "Pohyb"
+
 msgid "Move {count} to Group"
 msgstr "Přesunout {count} do skupiny"
 
@@ -10673,6 +10685,9 @@ msgstr "vyžaduje aktualizaci"
 
 msgid "Needs update"
 msgstr "Vyžaduje aktualizaci"
+
+msgid "Needs you"
+msgstr "Potřebuje vás"
 
 msgctxt "agent status"
 msgid "Needs you"
@@ -10931,6 +10946,9 @@ msgstr "Žádné aktivní pracovní prostory"
 msgid "No agent"
 msgstr "Žádný agent"
 
+msgid "No agent conversations yet."
+msgstr "Zatím žádné konverzace agentů."
+
 msgid "No agent is configured on this host"
 msgstr "Na tomto hostiteli není nakonfigurován žádný agent"
 
@@ -11045,6 +11063,9 @@ msgstr "Žádný výstup konzole"
 
 msgid "No contributors found."
 msgstr "Nenalezeni žádní přispěvatelé."
+
+msgid "No conversations found."
+msgstr "Žádné konverzace nenalezeny."
 
 msgid "No credit card required."
 msgstr "Bez platební karty."
@@ -11747,6 +11768,9 @@ msgstr "Na GitHubu má přes 15 tis. hvězdiček, přes 1 000 forků a přes 100
 
 msgid "On our radar. Order and scope may change."
 msgstr "Máme to na radaru. Pořadí i rozsah se můžou změnit."
+
+msgid "On screen"
+msgstr "Na obrazovce"
 
 msgid "on the board"
 msgstr "v žebříčku"
@@ -12481,6 +12505,9 @@ msgstr "Další členové týmu"
 
 msgid "Other ways to reach us"
 msgstr "Další způsoby, jak nás zastihnout"
+
+msgid "Others"
+msgstr "Ostatní"
 
 msgid "Our $11.5M seed round is led by Union Square Ventures, with Y Combinator, Paul Graham, and founders we admire."
 msgstr "Naše seedové kolo ve výši 11,5 mil. $ vede Union Square Ventures, spolu s Y Combinator, Paulem Grahamem a zakladateli, kterých si vážíme."
@@ -13700,6 +13727,9 @@ msgstr "Rebase a sloučit"
 
 msgid "Rebase and merge"
 msgstr "Rebase a sloučit"
+
+msgid "Recent"
+msgstr "Nedávné"
 
 msgid "Recent Activity"
 msgstr "Nedávná aktivita"
@@ -14997,6 +15027,9 @@ msgstr "Hledat podle názvu klíče..."
 
 msgid "Search changed files"
 msgstr "Hledat změněné soubory"
+
+msgid "Search conversations…"
+msgstr "Hledat konverzace…"
 
 msgid "Search developers"
 msgstr "Hledat vývojáře"

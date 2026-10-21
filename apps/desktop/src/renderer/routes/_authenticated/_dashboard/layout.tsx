@@ -38,6 +38,7 @@ import {
 } from "renderer/stores/workspace-sidebar-state";
 import { ContentBoundary } from "../components/ContentBoundary";
 import { AddRepositoryModals } from "./components/AddRepositoryModals";
+import { ConversationSwitcher } from "./components/ConversationSwitcher";
 import { CrossVersionMismatchState } from "./components/CrossVersionMismatchState";
 import { RemotePortForwarder } from "./components/RemotePortForwarder";
 import { SaveAsEnvironmentMount } from "./components/SaveAsEnvironmentMount";
@@ -251,6 +252,7 @@ function DashboardLayout() {
 				<RemotePortForwarder />
 				<div className="flex h-full w-full overflow-hidden">
 					<CommandPaletteHost />
+					<ConversationSwitcher />
 					{sidebarOutsideColumn && sidebarPanel}
 					<div className="flex flex-1 flex-col min-w-0 min-h-0">
 						{showsAppTopBar && <TopBar />}
