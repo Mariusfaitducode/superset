@@ -1850,6 +1850,9 @@ msgstr "已向{where}添加{added}个文件"
 msgid "Added 1 file to {where}"
 msgstr "已向{where}添加1个文件"
 
+msgid "Added by the agent"
+msgstr "由智能体添加"
+
 msgid "Added only when launching with a prompt — e.g. <0>--</0>, <1>--prompt</1>, <2>-i</2>."
 msgstr "仅在带提示词启动时添加，例如<0>--</0>、<1>--prompt</1>、<2>-i</2>。"
 
@@ -1997,6 +2000,9 @@ msgstr "同时运行的智能体数"
 
 msgid "Agents use this account when they call Linear tools."
 msgstr "智能体调用 Linear 工具时会使用此账号。"
+
+msgid "Agents' to-dos"
+msgstr "智能体的待办"
 
 msgid "Aggregate agent usage across every developer on the Superset leaderboard — tokens, cost, cache behaviour and which models people actually reach for."
 msgstr "Superset 排行榜上所有开发者的智能体使用汇总 —— token、成本、缓存表现，以及大家实际常用的模型。"
@@ -2249,6 +2255,9 @@ msgstr "删除worktree工作区时一并删除本地git分支"
 
 msgid "Also list agents that have not started working yet."
 msgstr "同时列出尚未开始工作的智能体。"
+
+msgid "Also show the to-dos agents add to their conversation through the superset CLI."
+msgstr "同时显示智能体通过 superset CLI 添加到其对话的待办。"
 
 msgid "Also viewing this page"
 msgstr "也在查看此页面的人"
@@ -3634,6 +3643,9 @@ msgstr "查收你的邮箱"
 msgid "Checkbox · Radio · Switch"
 msgstr "复选框 · 单选框 · 开关"
 
+msgid "Checked by the agent"
+msgstr "由智能体勾选"
+
 msgid "Checking agents…"
 msgstr "正在检查智能体…"
 
@@ -3886,9 +3898,6 @@ msgstr "点击打开拉取请求"
 
 msgid "Click to copy the session ID (resume with `claude --resume <id>`)."
 msgstr "点击复制会话ID（使用`claude --resume <id>`恢复）。"
-
-msgid "Click to edit"
-msgstr "点击编辑"
 
 msgid "Click to open on GitHub"
 msgstr "点击在GitHub上打开"
@@ -5143,6 +5152,9 @@ msgstr "无法更新技能"
 
 msgid "Could not update the branch"
 msgstr "无法更新分支"
+
+msgid "Could not update the to-do"
+msgstr "无法更新待办"
 
 #. js-lingui-explicit-id
 msgid "serverError.plugins.credentialUnverified"
@@ -6557,6 +6569,9 @@ msgstr "下拉菜单"
 
 msgid "Dropdown, context, and application menus"
 msgstr "下拉菜单、右键菜单和应用菜单"
+
+msgid "Due"
+msgstr "截止"
 
 msgid "Duration"
 msgstr "耗时"
@@ -10278,6 +10293,9 @@ msgstr "正在合并…"
 msgid "Mesh Gradient"
 msgstr "网格渐变"
 
+msgid "Message"
+msgstr "消息"
+
 msgid "Message in channel"
 msgstr "频道中的消息"
 
@@ -11464,6 +11482,9 @@ msgstr "无（会话）"
 msgid "None. This is the floor."
 msgstr "没有。这是起点。"
 
+msgid "Normal"
+msgstr "普通"
+
 msgid "Not a 2026 claim"
 msgstr "不是2026年的主张"
 
@@ -12083,6 +12104,9 @@ msgstr "打开的议题"
 
 msgid "Open leaderboard"
 msgstr "打开排行榜"
+
+msgid "Open link"
+msgstr "打开链接"
 
 msgid "Open Link as New Split"
 msgstr "在新拆分中打开链接"
@@ -15733,8 +15757,8 @@ msgstr "显示文本"
 msgid "Show the messages that wait for the current turn to end."
 msgstr "显示等待当前轮次结束的消息。"
 
-msgid "Show the to-do button and list on each conversation."
-msgstr "在每个会话上显示待办按钮和列表。"
+msgid "Show the to-do list of each conversation, shared with its agent."
+msgstr "显示每个对话的待办列表，与其智能体共享。"
 
 msgid "Show the triggering payload"
 msgstr "显示触发负载"
@@ -18022,6 +18046,9 @@ msgstr "要恢复与智能体的对话，请在其文件夹中运行："
 
 msgid "To resume another agent conversation, run this in its folder:"
 msgstr "要恢复其他与智能体的对话，请在其文件夹中运行："
+
+msgid "To-do details"
+msgstr "待办详情"
 
 msgid "To-dos"
 msgstr "待办"

@@ -1850,6 +1850,9 @@ msgstr "Přidáno {added} souborů do {where}"
 msgid "Added 1 file to {where}"
 msgstr "Přidán 1 soubor do {where}"
 
+msgid "Added by the agent"
+msgstr "Přidal agent"
+
 msgid "Added only when launching with a prompt — e.g. <0>--</0>, <1>--prompt</1>, <2>-i</2>."
 msgstr "Přidá se jen při spuštění s promptem — např. <0>--</0>, <1>--prompt</1>, <2>-i</2>."
 
@@ -1997,6 +2000,9 @@ msgstr "Agentů běžících najednou"
 
 msgid "Agents use this account when they call Linear tools."
 msgstr "Agenti používají tento účet, když volají nástroje Linear."
+
+msgid "Agents' to-dos"
+msgstr "Úkoly agentů"
 
 msgid "Aggregate agent usage across every developer on the Superset leaderboard — tokens, cost, cache behaviour and which models people actually reach for."
 msgstr "Souhrnné využití agentů napříč všemi vývojáři v žebříčku Superset — tokeny, náklady, chování cache a modely, po kterých lidé skutečně sahají."
@@ -2249,6 +2255,9 @@ msgstr "Při mazání pracovního prostoru s worktree smazat i lokální git vě
 
 msgid "Also list agents that have not started working yet."
 msgstr "Zobrazit i agenty, kteří ještě nezačali pracovat."
+
+msgid "Also show the to-dos agents add to their conversation through the superset CLI."
+msgstr "Zobrazit i úkoly, které agenti přidají ke své konverzaci přes superset CLI."
 
 msgid "Also viewing this page"
 msgstr "Tuto stránku si také prohlížejí"
@@ -3634,6 +3643,9 @@ msgstr "Zkontrolujte schránku"
 msgid "Checkbox · Radio · Switch"
 msgstr "Zaškrtávátko · Přepínač · Vypínač"
 
+msgid "Checked by the agent"
+msgstr "Odškrtl agent"
+
 msgid "Checking agents…"
 msgstr "Kontroluji agenty…"
 
@@ -3886,9 +3898,6 @@ msgstr "Kliknutím na štítek otevřete pull request"
 
 msgid "Click to copy the session ID (resume with `claude --resume <id>`)."
 msgstr "Kliknutím zkopírujete ID relace (pokračování přes `claude --resume <id>`)."
-
-msgid "Click to edit"
-msgstr "Klikněte pro úpravu"
 
 msgid "Click to open on GitHub"
 msgstr "Kliknutím otevřete na GitHubu"
@@ -5143,6 +5152,9 @@ msgstr "Skill se nepodařilo aktualizovat"
 
 msgid "Could not update the branch"
 msgstr "Nepodařilo se aktualizovat větev"
+
+msgid "Could not update the to-do"
+msgstr "Úkol se nepodařilo upravit"
 
 #. js-lingui-explicit-id
 msgid "serverError.plugins.credentialUnverified"
@@ -6557,6 +6569,9 @@ msgstr "Rozbalovací nabídka"
 
 msgid "Dropdown, context, and application menus"
 msgstr "Rozbalovací, kontextové a aplikační nabídky"
+
+msgid "Due"
+msgstr "Termín"
 
 msgid "Duration"
 msgstr "Trvání"
@@ -10278,6 +10293,9 @@ msgstr "Slučování…"
 msgid "Mesh Gradient"
 msgstr "Mesh Gradient"
 
+msgid "Message"
+msgstr "Zpráva"
+
 msgid "Message in channel"
 msgstr "Zpráva v kanálu"
 
@@ -11464,6 +11482,9 @@ msgstr "žádný (relace)"
 msgid "None. This is the floor."
 msgstr "Žádná. Tohle je základ."
 
+msgid "Normal"
+msgstr "Normální"
+
 msgid "Not a 2026 claim"
 msgstr "Ne tvrzení pro rok 2026"
 
@@ -12083,6 +12104,9 @@ msgstr "Otevřené issues"
 
 msgid "Open leaderboard"
 msgstr "Otevřít žebříček"
+
+msgid "Open link"
+msgstr "Otevřít odkaz"
 
 msgid "Open Link as New Split"
 msgstr "Otevřít odkaz v novém rozdělení"
@@ -15733,8 +15757,8 @@ msgstr "Zobrazit text"
 msgid "Show the messages that wait for the current turn to end."
 msgstr "Zobrazit zprávy, které čekají na konec aktuálního kola."
 
-msgid "Show the to-do button and list on each conversation."
-msgstr "Zobrazí tlačítko a seznam úkolů u každé konverzace."
+msgid "Show the to-do list of each conversation, shared with its agent."
+msgstr "Zobrazit seznam úkolů každé konverzace, sdílený s jejím agentem."
 
 msgid "Show the triggering payload"
 msgstr "Zobrazit spouštěcí data"
@@ -18022,6 +18046,9 @@ msgstr "Chcete-li obnovit konverzaci s agentem, spusťte toto v její složce:"
 
 msgid "To resume another agent conversation, run this in its folder:"
 msgstr "Chcete-li obnovit jinou konverzaci s agentem, spusťte toto v její složce:"
+
+msgid "To-do details"
+msgstr "Podrobnosti úkolu"
 
 msgid "To-dos"
 msgstr "Úkoly"

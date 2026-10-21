@@ -1850,6 +1850,9 @@ msgstr "В {where} добавлено файлов: {added}"
 msgid "Added 1 file to {where}"
 msgstr "В {where} добавлен 1 файл"
 
+msgid "Added by the agent"
+msgstr "Добавлено агентом"
+
 msgid "Added only when launching with a prompt — e.g. <0>--</0>, <1>--prompt</1>, <2>-i</2>."
 msgstr "Добавляются только при запуске с промптом — например, <0>--</0>, <1>--prompt</1>, <2>-i</2>."
 
@@ -1997,6 +2000,9 @@ msgstr "Агентов запущено одновременно"
 
 msgid "Agents use this account when they call Linear tools."
 msgstr "Агенты используют этот аккаунт, когда вызывают инструменты Linear."
+
+msgid "Agents' to-dos"
+msgstr "Задачи агентов"
 
 msgid "Aggregate agent usage across every developer on the Superset leaderboard — tokens, cost, cache behaviour and which models people actually reach for."
 msgstr "Совокупное использование агентов всеми разработчиками в лидерборде Superset — токены, стоимость, поведение кеша и модели, к которым люди действительно обращаются."
@@ -2249,6 +2255,9 @@ msgstr "Также удалять локальную ветку git при уд�
 
 msgid "Also list agents that have not started working yet."
 msgstr "Показывать также агентов, которые ещё не начали работу."
+
+msgid "Also show the to-dos agents add to their conversation through the superset CLI."
+msgstr "Показывать и задачи, которые агенты добавляют в свою беседу через CLI superset."
 
 msgid "Also viewing this page"
 msgstr "Также просматривают эту страницу"
@@ -3634,6 +3643,9 @@ msgstr "Проверьте почту"
 msgid "Checkbox · Radio · Switch"
 msgstr "Чекбокс · радио · переключатель"
 
+msgid "Checked by the agent"
+msgstr "Отмечено агентом"
+
 msgid "Checking agents…"
 msgstr "Проверка агентов…"
 
@@ -3886,9 +3898,6 @@ msgstr "Нажмите на чип, чтобы открыть пул-рекве�
 
 msgid "Click to copy the session ID (resume with `claude --resume <id>`)."
 msgstr "Нажмите, чтобы скопировать ID сессии (возобновление: `claude --resume <id>`)."
-
-msgid "Click to edit"
-msgstr "Нажмите, чтобы изменить"
 
 msgid "Click to open on GitHub"
 msgstr "Нажмите, чтобы открыть на GitHub"
@@ -5143,6 +5152,9 @@ msgstr "Не удалось обновить навык"
 
 msgid "Could not update the branch"
 msgstr "Не удалось обновить ветку"
+
+msgid "Could not update the to-do"
+msgstr "Не удалось обновить задачу"
 
 #. js-lingui-explicit-id
 msgid "serverError.plugins.credentialUnverified"
@@ -6557,6 +6569,9 @@ msgstr "Выпадающее меню"
 
 msgid "Dropdown, context, and application menus"
 msgstr "Выпадающие, контекстные и прикладные меню"
+
+msgid "Due"
+msgstr "Срок"
 
 msgid "Duration"
 msgstr "Длительность"
@@ -10278,6 +10293,9 @@ msgstr "Объединение…"
 msgid "Mesh Gradient"
 msgstr "Mesh-градиент"
 
+msgid "Message"
+msgstr "Сообщение"
+
 msgid "Message in channel"
 msgstr "Сообщение в канале"
 
@@ -11464,6 +11482,9 @@ msgstr "нет (сессия)"
 msgid "None. This is the floor."
 msgstr "Нет. Это нижняя граница."
 
+msgid "Normal"
+msgstr "Обычный"
+
 msgid "Not a 2026 claim"
 msgstr "Не про 2026 год"
 
@@ -12083,6 +12104,9 @@ msgstr "Открытые задачи"
 
 msgid "Open leaderboard"
 msgstr "Открыть рейтинг"
+
+msgid "Open link"
+msgstr "Открыть ссылку"
 
 msgid "Open Link as New Split"
 msgstr "Открыть ссылку в новой панели"
@@ -15733,8 +15757,8 @@ msgstr "Показать текст"
 msgid "Show the messages that wait for the current turn to end."
 msgstr "Показывать сообщения, ожидающие окончания текущего хода."
 
-msgid "Show the to-do button and list on each conversation."
-msgstr "Показывает кнопку и список задач у каждого разговора."
+msgid "Show the to-do list of each conversation, shared with its agent."
+msgstr "Показывать список задач каждой беседы, общий с её агентом."
 
 msgid "Show the triggering payload"
 msgstr "Показать полезную нагрузку триггера"
@@ -18022,6 +18046,9 @@ msgstr "Чтобы возобновить разговор с агентом, в
 
 msgid "To resume another agent conversation, run this in its folder:"
 msgstr "Чтобы возобновить другой разговор с агентом, выполните это в его папке:"
+
+msgid "To-do details"
+msgstr "Подробности задачи"
 
 msgid "To-dos"
 msgstr "Задачи"

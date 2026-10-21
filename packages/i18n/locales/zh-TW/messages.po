@@ -1850,6 +1850,9 @@ msgstr "已向{where}新增{added}個檔案"
 msgid "Added 1 file to {where}"
 msgstr "已向{where}新增1個檔案"
 
+msgid "Added by the agent"
+msgstr "由代理新增"
+
 msgid "Added only when launching with a prompt — e.g. <0>--</0>, <1>--prompt</1>, <2>-i</2>."
 msgstr "僅在帶提示詞啟動時新增，例如<0>--</0>、<1>--prompt</1>、<2>-i</2>。"
 
@@ -1997,6 +2000,9 @@ msgstr "同時執行的代理程式數"
 
 msgid "Agents use this account when they call Linear tools."
 msgstr "代理程式呼叫 Linear 工具時會使用此帳號。"
+
+msgid "Agents' to-dos"
+msgstr "代理的待辦"
 
 msgid "Aggregate agent usage across every developer on the Superset leaderboard — tokens, cost, cache behaviour and which models people actually reach for."
 msgstr "Superset 排行榜上所有開發者的彙總代理使用量 — tokens、成本、快取行為，以及大家實際選用的模型。"
@@ -2249,6 +2255,9 @@ msgstr "刪除worktree工作區時一併刪除本地git分支"
 
 msgid "Also list agents that have not started working yet."
 msgstr "同時列出尚未開始工作的代理。"
+
+msgid "Also show the to-dos agents add to their conversation through the superset CLI."
+msgstr "同時顯示代理透過 superset CLI 加入其對話的待辦。"
 
 msgid "Also viewing this page"
 msgstr "也在檢視此頁面的人"
@@ -3634,6 +3643,9 @@ msgstr "查收你的信箱"
 msgid "Checkbox · Radio · Switch"
 msgstr "核取方塊 · 單選框 · 開關"
 
+msgid "Checked by the agent"
+msgstr "由代理勾選"
+
 msgid "Checking agents…"
 msgstr "正在檢查代理程式…"
 
@@ -3886,9 +3898,6 @@ msgstr "點擊開啟拉取請求"
 
 msgid "Click to copy the session ID (resume with `claude --resume <id>`)."
 msgstr "點選複製會話ID（使用`claude --resume <id>`恢復）。"
-
-msgid "Click to edit"
-msgstr "點擊編輯"
 
 msgid "Click to open on GitHub"
 msgstr "點選在GitHub上開啟"
@@ -5143,6 +5152,9 @@ msgstr "無法更新技能"
 
 msgid "Could not update the branch"
 msgstr "無法更新分支"
+
+msgid "Could not update the to-do"
+msgstr "無法更新待辦"
 
 #. js-lingui-explicit-id
 msgid "serverError.plugins.credentialUnverified"
@@ -6557,6 +6569,9 @@ msgstr "下拉選單"
 
 msgid "Dropdown, context, and application menus"
 msgstr "下拉選單、右鍵選單和應用程式選單"
+
+msgid "Due"
+msgstr "截止"
 
 msgid "Duration"
 msgstr "耗時"
@@ -10278,6 +10293,9 @@ msgstr "正在合併…"
 msgid "Mesh Gradient"
 msgstr "網格漸變"
 
+msgid "Message"
+msgstr "訊息"
+
 msgid "Message in channel"
 msgstr "頻道中的訊息"
 
@@ -11464,6 +11482,9 @@ msgstr "無（會話）"
 msgid "None. This is the floor."
 msgstr "沒有。這是起點。"
 
+msgid "Normal"
+msgstr "一般"
+
 msgid "Not a 2026 claim"
 msgstr "不是2026年的主張"
 
@@ -12083,6 +12104,9 @@ msgstr "開啟的議題"
 
 msgid "Open leaderboard"
 msgstr "開啟排行榜"
+
+msgid "Open link"
+msgstr "開啟連結"
 
 msgid "Open Link as New Split"
 msgstr "在新拆分中開啟連結"
@@ -15733,8 +15757,8 @@ msgstr "顯示文字"
 msgid "Show the messages that wait for the current turn to end."
 msgstr "顯示等待目前回合結束的訊息。"
 
-msgid "Show the to-do button and list on each conversation."
-msgstr "在每個對話上顯示待辦按鈕與清單。"
+msgid "Show the to-do list of each conversation, shared with its agent."
+msgstr "顯示每個對話的待辦清單，與其代理共用。"
 
 msgid "Show the triggering payload"
 msgstr "顯示觸發酬載"
@@ -18022,6 +18046,9 @@ msgstr "若要恢復與代理的對話，請在其資料夾中執行："
 
 msgid "To resume another agent conversation, run this in its folder:"
 msgstr "若要恢復其他與代理的對話，請在其資料夾中執行："
+
+msgid "To-do details"
+msgstr "待辦詳細資料"
 
 msgid "To-dos"
 msgstr "待辦"

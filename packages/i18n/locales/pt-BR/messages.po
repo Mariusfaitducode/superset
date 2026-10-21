@@ -1850,6 +1850,9 @@ msgstr "{added} arquivos adicionados a {where}"
 msgid "Added 1 file to {where}"
 msgstr "1 arquivo adicionado a {where}"
 
+msgid "Added by the agent"
+msgstr "Adicionado pelo agente"
+
 msgid "Added only when launching with a prompt — e.g. <0>--</0>, <1>--prompt</1>, <2>-i</2>."
 msgstr "Adicionados só ao iniciar com um prompt — ex.: <0>--</0>, <1>--prompt</1>, <2>-i</2>."
 
@@ -1997,6 +2000,9 @@ msgstr "Agentes rodando ao mesmo tempo"
 
 msgid "Agents use this account when they call Linear tools."
 msgstr "Os agentes usam esta conta quando chamam as ferramentas do Linear."
+
+msgid "Agents' to-dos"
+msgstr "Tarefas dos agentes"
 
 msgid "Aggregate agent usage across every developer on the Superset leaderboard — tokens, cost, cache behaviour and which models people actually reach for."
 msgstr "Uso agregado de agentes por todos os desenvolvedores do ranking do Superset — tokens, custo, comportamento de cache e quais modelos as pessoas realmente usam."
@@ -2249,6 +2255,9 @@ msgstr "Excluir também a branch local do git ao excluir uma área de trabalho c
 
 msgid "Also list agents that have not started working yet."
 msgstr "Listar também os agentes que ainda não começaram a trabalhar."
+
+msgid "Also show the to-dos agents add to their conversation through the superset CLI."
+msgstr "Mostrar também as tarefas que os agentes adicionam à conversa pela CLI do superset."
 
 msgid "Also viewing this page"
 msgstr "Também estão vendo esta página"
@@ -3634,6 +3643,9 @@ msgstr "Confira sua caixa de entrada"
 msgid "Checkbox · Radio · Switch"
 msgstr "Checkbox · Radio · Switch"
 
+msgid "Checked by the agent"
+msgstr "Marcado pelo agente"
+
 msgid "Checking agents…"
 msgstr "Verificando os agentes…"
 
@@ -3886,9 +3898,6 @@ msgstr "Clique na etiqueta para abrir o pull request"
 
 msgid "Click to copy the session ID (resume with `claude --resume <id>`)."
 msgstr "Clique para copiar o ID da sessão (retome com `claude --resume <id>`)."
-
-msgid "Click to edit"
-msgstr "Clique para editar"
 
 msgid "Click to open on GitHub"
 msgstr "Clique para abrir no GitHub"
@@ -5143,6 +5152,9 @@ msgstr "Não foi possível atualizar a skill"
 
 msgid "Could not update the branch"
 msgstr "Não foi possível atualizar a branch"
+
+msgid "Could not update the to-do"
+msgstr "Não foi possível atualizar a tarefa"
 
 #. js-lingui-explicit-id
 msgid "serverError.plugins.credentialUnverified"
@@ -6557,6 +6569,9 @@ msgstr "Menu suspenso"
 
 msgid "Dropdown, context, and application menus"
 msgstr "Menus suspensos, de contexto e de aplicativo"
+
+msgid "Due"
+msgstr "Prazo"
 
 msgid "Duration"
 msgstr "Duração"
@@ -10278,6 +10293,9 @@ msgstr "Fazendo merge…"
 msgid "Mesh Gradient"
 msgstr "Mesh Gradient"
 
+msgid "Message"
+msgstr "Mensagem"
+
 msgid "Message in channel"
 msgstr "Mensagem no canal"
 
@@ -11464,6 +11482,9 @@ msgstr "nenhum (sessão)"
 msgid "None. This is the floor."
 msgstr "Nenhum. Este é o piso."
 
+msgid "Normal"
+msgstr "Normal"
+
 msgid "Not a 2026 claim"
 msgstr "Não é uma promessa para 2026"
 
@@ -12083,6 +12104,9 @@ msgstr "Issues abertas"
 
 msgid "Open leaderboard"
 msgstr "Abrir ranking"
+
+msgid "Open link"
+msgstr "Abrir link"
 
 msgid "Open Link as New Split"
 msgstr "Abrir o link em nova divisão"
@@ -15733,8 +15757,8 @@ msgstr "Mostrar texto"
 msgid "Show the messages that wait for the current turn to end."
 msgstr "Mostrar as mensagens que aguardam o fim do turno atual."
 
-msgid "Show the to-do button and list on each conversation."
-msgstr "Mostra o botão e a lista de tarefas em cada conversa."
+msgid "Show the to-do list of each conversation, shared with its agent."
+msgstr "Mostrar a lista de tarefas de cada conversa, compartilhada com o agente."
 
 msgid "Show the triggering payload"
 msgstr "Mostrar a carga útil que disparou"
@@ -18022,6 +18046,9 @@ msgstr "Para retomar uma conversa com um agente, execute isto na pasta dela:"
 
 msgid "To resume another agent conversation, run this in its folder:"
 msgstr "Para retomar outra conversa com um agente, execute isto na pasta dela:"
+
+msgid "To-do details"
+msgstr "Detalhes da tarefa"
 
 msgid "To-dos"
 msgstr "Tarefas"

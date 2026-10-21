@@ -1850,6 +1850,9 @@ msgstr "Aggiunti {added} file a {where}"
 msgid "Added 1 file to {where}"
 msgstr "Aggiunto 1 file a {where}"
 
+msgid "Added by the agent"
+msgstr "Aggiunto dall'agente"
+
 msgid "Added only when launching with a prompt — e.g. <0>--</0>, <1>--prompt</1>, <2>-i</2>."
 msgstr "Aggiunti solo quando si avvia con un prompt — es. <0>--</0>, <1>--prompt</1>, <2>-i</2>."
 
@@ -1997,6 +2000,9 @@ msgstr "Agenti in esecuzione in parallelo"
 
 msgid "Agents use this account when they call Linear tools."
 msgstr "Gli agenti usano questo account quando chiamano gli strumenti di Linear."
+
+msgid "Agents' to-dos"
+msgstr "To-do degli agenti"
 
 msgid "Aggregate agent usage across every developer on the Superset leaderboard — tokens, cost, cache behaviour and which models people actually reach for."
 msgstr "Utilizzo aggregato degli agenti di tutti gli sviluppatori nella classifica di Superset — token, costi, comportamento della cache e quali modelli vengono davvero usati."
@@ -2249,6 +2255,9 @@ msgstr "Elimina anche il branch git locale quando elimini un workspace worktree"
 
 msgid "Also list agents that have not started working yet."
 msgstr "Elenca anche gli agenti che non hanno ancora iniziato a lavorare."
+
+msgid "Also show the to-dos agents add to their conversation through the superset CLI."
+msgstr "Mostra anche i to-do che gli agenti aggiungono alla loro conversazione tramite la CLI superset."
 
 msgid "Also viewing this page"
 msgstr "Stanno guardando anche questa pagina"
@@ -3634,6 +3643,9 @@ msgstr "Controlla la tua casella di posta"
 msgid "Checkbox · Radio · Switch"
 msgstr "Checkbox · Radio · Switch"
 
+msgid "Checked by the agent"
+msgstr "Spuntato dall'agente"
+
 msgid "Checking agents…"
 msgstr "Verifica degli agenti…"
 
@@ -3886,9 +3898,6 @@ msgstr "Fai clic sul chip per aprire la pull request"
 
 msgid "Click to copy the session ID (resume with `claude --resume <id>`)."
 msgstr "Clicca per copiare l'ID della sessione (riprendi con `claude --resume <id>`)."
-
-msgid "Click to edit"
-msgstr "Fai clic per modificare"
 
 msgid "Click to open on GitHub"
 msgstr "Clicca per aprire su GitHub"
@@ -5143,6 +5152,9 @@ msgstr "Impossibile aggiornare la skill"
 
 msgid "Could not update the branch"
 msgstr "Impossibile aggiornare il branch"
+
+msgid "Could not update the to-do"
+msgstr "Impossibile aggiornare il to-do"
 
 #. js-lingui-explicit-id
 msgid "serverError.plugins.credentialUnverified"
@@ -6557,6 +6569,9 @@ msgstr "Dropdown Menu"
 
 msgid "Dropdown, context, and application menus"
 msgstr "Menu a discesa, contestuali e dell'applicazione"
+
+msgid "Due"
+msgstr "Scadenza"
 
 msgid "Duration"
 msgstr "Durata"
@@ -10278,6 +10293,9 @@ msgstr "Unione in corso…"
 msgid "Mesh Gradient"
 msgstr "Mesh Gradient"
 
+msgid "Message"
+msgstr "Messaggio"
+
 msgid "Message in channel"
 msgstr "Messaggio in un canale"
 
@@ -11464,6 +11482,9 @@ msgstr "nessuno (sessione)"
 msgid "None. This is the floor."
 msgstr "Nessuno. Questo è il punto di partenza."
 
+msgid "Normal"
+msgstr "Normale"
+
 msgid "Not a 2026 claim"
 msgstr "Non una previsione per il 2026"
 
@@ -12083,6 +12104,9 @@ msgstr "Issue aperte"
 
 msgid "Open leaderboard"
 msgstr "Apri la classifica"
+
+msgid "Open link"
+msgstr "Apri link"
 
 msgid "Open Link as New Split"
 msgstr "Apri il link in una nuova divisione"
@@ -15733,8 +15757,8 @@ msgstr "Mostra testo"
 msgid "Show the messages that wait for the current turn to end."
 msgstr "Mostra i messaggi che aspettano la fine del turno corrente."
 
-msgid "Show the to-do button and list on each conversation."
-msgstr "Mostra il pulsante e l'elenco delle attività su ogni conversazione."
+msgid "Show the to-do list of each conversation, shared with its agent."
+msgstr "Mostra la lista dei to-do di ogni conversazione, condivisa con il suo agente."
 
 msgid "Show the triggering payload"
 msgstr "Mostra il payload che ha attivato questa esecuzione"
@@ -18022,6 +18046,9 @@ msgstr "Per riprendere una conversazione con un agente, esegui questo nella sua 
 
 msgid "To resume another agent conversation, run this in its folder:"
 msgstr "Per riprendere un’altra conversazione con un agente, esegui questo nella sua cartella:"
+
+msgid "To-do details"
+msgstr "Dettagli del to-do"
 
 msgid "To-dos"
 msgstr "Attività"

@@ -1850,6 +1850,9 @@ msgstr "{where} konumuna {added} dosya eklendi"
 msgid "Added 1 file to {where}"
 msgstr "{where} konumuna 1 dosya eklendi"
 
+msgid "Added by the agent"
+msgstr "Ajan tarafından eklendi"
+
 msgid "Added only when launching with a prompt — e.g. <0>--</0>, <1>--prompt</1>, <2>-i</2>."
 msgstr "Yalnızca istemle başlatılırken eklenir — örn. <0>--</0>, <1>--prompt</1>, <2>-i</2>."
 
@@ -1997,6 +2000,9 @@ msgstr "Aynı anda çalışan ajanlar"
 
 msgid "Agents use this account when they call Linear tools."
 msgstr "Ajanlar Linear araçlarını çağırırken bu hesabı kullanır."
+
+msgid "Agents' to-dos"
+msgstr "Ajanların yapılacakları"
 
 msgid "Aggregate agent usage across every developer on the Superset leaderboard — tokens, cost, cache behaviour and which models people actually reach for."
 msgstr "Superset liderlik tablosundaki her geliştiricinin toplam ajan kullanımı — token, maliyet, önbellek davranışı ve insanların gerçekte tercih ettiği modeller."
@@ -2249,6 +2255,9 @@ msgstr "Bir worktree çalışma alanını silerken yerel git dalını da sil"
 
 msgid "Also list agents that have not started working yet."
 msgstr "Henüz çalışmaya başlamamış ajanları da listele."
+
+msgid "Also show the to-dos agents add to their conversation through the superset CLI."
+msgstr "Ajanların superset CLI ile konuşmalarına eklediği yapılacakları da göster."
 
 msgid "Also viewing this page"
 msgstr "Bu sayfayı görüntüleyen diğer kişiler"
@@ -3634,6 +3643,9 @@ msgstr "Gelen kutunuzu kontrol edin"
 msgid "Checkbox · Radio · Switch"
 msgstr "Onay kutusu · Radyo · Anahtar"
 
+msgid "Checked by the agent"
+msgstr "Ajan tarafından işaretlendi"
+
 msgid "Checking agents…"
 msgstr "Ajanlar denetleniyor…"
 
@@ -3886,9 +3898,6 @@ msgstr "Pull request'i açmak için etikete tıklayın"
 
 msgid "Click to copy the session ID (resume with `claude --resume <id>`)."
 msgstr "Oturum kimliğini kopyalamak için tıklayın (`claude --resume <id>` ile sürdürün)."
-
-msgid "Click to edit"
-msgstr "Düzenlemek için tıklayın"
 
 msgid "Click to open on GitHub"
 msgstr "GitHub'da açmak için tıklayın"
@@ -5143,6 +5152,9 @@ msgstr "Beceri güncellenemedi"
 
 msgid "Could not update the branch"
 msgstr "Dal güncellenemedi"
+
+msgid "Could not update the to-do"
+msgstr "Yapılacak güncellenemedi"
 
 #. js-lingui-explicit-id
 msgid "serverError.plugins.credentialUnverified"
@@ -6557,6 +6569,9 @@ msgstr "Açılır menü"
 
 msgid "Dropdown, context, and application menus"
 msgstr "Açılır, bağlam ve uygulama menüleri"
+
+msgid "Due"
+msgstr "Bitiş"
 
 msgid "Duration"
 msgstr "Süre"
@@ -10278,6 +10293,9 @@ msgstr "Birleştiriliyor…"
 msgid "Mesh Gradient"
 msgstr "Mesh gradyanı"
 
+msgid "Message"
+msgstr "Mesaj"
+
 msgid "Message in channel"
 msgstr "Kanalda mesaj"
 
@@ -11464,6 +11482,9 @@ msgstr "yok (oturum)"
 msgid "None. This is the floor."
 msgstr "Yok. Bu, taban düzeydir."
 
+msgid "Normal"
+msgstr "Normal"
+
 msgid "Not a 2026 claim"
 msgstr "2026 iddiası değil"
 
@@ -12083,6 +12104,9 @@ msgstr "Açık issue'lar"
 
 msgid "Open leaderboard"
 msgstr "Liderlik tablosunu aç"
+
+msgid "Open link"
+msgstr "Bağlantıyı aç"
 
 msgid "Open Link as New Split"
 msgstr "Bağlantıyı yeni bölmede aç"
@@ -15733,8 +15757,8 @@ msgstr "Metni göster"
 msgid "Show the messages that wait for the current turn to end."
 msgstr "Mevcut turun bitmesini bekleyen mesajları göster."
 
-msgid "Show the to-do button and list on each conversation."
-msgstr "Her konuşmada yapılacaklar düğmesini ve listesini gösterir."
+msgid "Show the to-do list of each conversation, shared with its agent."
+msgstr "Her konuşmanın yapılacaklar listesini, ajanıyla paylaşarak göster."
 
 msgid "Show the triggering payload"
 msgstr "Tetikleyen yükü göster"
@@ -18022,6 +18046,9 @@ msgstr "Bir ajan konuşmasını sürdürmek için klasöründe şunu çalıştı
 
 msgid "To resume another agent conversation, run this in its folder:"
 msgstr "Başka bir ajan konuşmasını sürdürmek için klasöründe şunu çalıştırın:"
+
+msgid "To-do details"
+msgstr "Yapılacak ayrıntıları"
 
 msgid "To-dos"
 msgstr "Yapılacaklar"
