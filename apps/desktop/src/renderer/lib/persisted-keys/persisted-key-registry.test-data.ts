@@ -127,6 +127,14 @@ export const PERSISTED_KEY_REGISTRY: ReadonlyArray<
 		["workspace-label-filter-v1"],
 	],
 	[
+		"src/renderer/stores/conversation-recency/store.ts",
+		["conversation-recency-v1"],
+	],
+	[
+		"src/renderer/stores/workspace-recency/store.ts",
+		["workspace-recency-v1"],
+	],
+	[
 		"src/renderer/routes/_authenticated/_dashboard/v2-workspaces/stores/workspacesLabelView/store.ts",
 		["workspaces-label-view-v1"],
 	],
