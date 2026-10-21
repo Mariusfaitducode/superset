@@ -38,7 +38,10 @@ const dueOn = z
 	.string()
 	.regex(/^\d{4}-\d{2}-\d{2}$/, "Use YYYY-MM-DD")
 	.nullable();
-const link = z.string().url().max(2_000).nullable();
+const link = z
+	.url({ protocol: /^https?$/ })
+	.max(2_000)
+	.nullable();
 
 /**
  * Per-conversation to-dos shared by the user and the agents of this host.

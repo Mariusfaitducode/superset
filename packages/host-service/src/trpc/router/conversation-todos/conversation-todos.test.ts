@@ -49,6 +49,24 @@ describe("conversationTodosRouter", () => {
 		).rejects.toMatchObject({ code: "NOT_FOUND" });
 	});
 
+	test("accepts only http and https links", async () => {
+		await expect(
+			caller.add({
+				workspaceId: "ws",
+				terminalId: "term",
+				text: "x",
+				link: "javascript:alert(1)",
+			}),
+		).rejects.toThrow();
+		const todo = await caller.add({
+			workspaceId: "ws",
+			terminalId: "term",
+			text: "x",
+			link: "https://github.com/a/b/pull/1",
+		});
+		expect(todo.link).toBe("https://github.com/a/b/pull/1");
+	});
+
 	test("rejects a malformed due date", async () => {
 		await expect(
 			caller.add({
