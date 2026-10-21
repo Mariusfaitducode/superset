@@ -4720,6 +4720,9 @@ msgstr "Estadísticas de conversaciones"
 msgid "Conversation to-dos"
 msgstr "Tareas de conversaciones"
 
+msgid "Conversations"
+msgstr "Conversaciones"
+
 msgid "Convert to draft"
 msgstr "Convertir en borrador"
 
@@ -8255,6 +8258,9 @@ msgstr "Avanzar a la página siguiente del historial"
 msgid "Go home"
 msgstr "Ir al inicio"
 
+msgid "Go to Conversation"
+msgstr "Ir a conversación"
+
 msgid "Go to home"
 msgstr "Ir al inicio"
 
@@ -8486,6 +8492,9 @@ msgstr "historial"
 
 msgid "History"
 msgstr "Historial"
+
+msgid "Hold Ctrl and press Tab to step through workspaces, most recently used first"
+msgstr "Mantén Ctrl y pulsa Tab para recorrer los espacios de trabajo, los usados más recientemente primero"
 
 msgid "Home"
 msgstr "Inicio"
@@ -9334,6 +9343,9 @@ msgstr "Uniéndose…"
 
 msgid "Jump into your favorite editor with one click. VS Code, Cursor, Xcode, JetBrains IDEs, or any terminal: open worktrees exactly where you need them."
 msgstr "Salta a tu editor favorito con un clic. VS Code, Cursor, Xcode, los IDE de JetBrains o cualquier terminal: abre los worktrees justo donde los necesitas."
+
+msgid "Jump to any agent conversation, in any workspace"
+msgstr "Saltar a cualquier conversación de agente, en cualquier espacio de trabajo"
 
 msgid "Jump to file"
 msgstr "Ir al archivo"
@@ -11045,6 +11057,9 @@ msgstr "Sin salida de consola"
 
 msgid "No contributors found."
 msgstr "No se encontraron colaboradores."
+
+msgid "No conversations found."
+msgstr "No se encontraron conversaciones."
 
 msgid "No credit card required."
 msgstr "No hace falta tarjeta de crédito."
@@ -16926,6 +16941,12 @@ msgstr "Cambiar a espacio de trabajo activo"
 
 msgid "Switch to manual order to rearrange the sidebar"
 msgstr "Cambia al orden manual para reorganizar la barra lateral"
+
+msgid "Switch to Recent Workspace"
+msgstr "Cambiar a espacio de trabajo reciente"
+
+msgid "Switch to Recent Workspace, Backwards"
+msgstr "Cambiar a espacio de trabajo reciente, hacia atrás"
 
 msgid "Switch to Tab 1"
 msgstr "Ir a la pestaña 1"

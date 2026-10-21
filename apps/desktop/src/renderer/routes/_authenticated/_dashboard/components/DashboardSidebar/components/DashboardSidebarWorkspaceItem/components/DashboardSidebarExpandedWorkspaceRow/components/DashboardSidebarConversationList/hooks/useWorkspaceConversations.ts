@@ -41,7 +41,7 @@ export interface SidebarConversation {
 // conversation's state already shows, so the glyph is noise.
 const LEADING_GLYPHS = /^[^\p{L}\p{N}~/.([{"'`]+/u;
 
-function cleanTitle(title: string | null | undefined): string | null {
+export function cleanTitle(title: string | null | undefined): string | null {
 	const cleaned = title?.replace(LEADING_GLYPHS, "").trim();
 	return cleaned ? cleaned : null;
 }

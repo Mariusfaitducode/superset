@@ -4720,6 +4720,9 @@ msgstr "Statistiques des conversations"
 msgid "Conversation to-dos"
 msgstr "Tâches des conversations"
 
+msgid "Conversations"
+msgstr "Conversations"
+
 msgid "Convert to draft"
 msgstr "Convertir en brouillon"
 
@@ -8255,6 +8258,9 @@ msgstr "Aller à la page suivante de l'historique"
 msgid "Go home"
 msgstr "Aller à l'accueil"
 
+msgid "Go to Conversation"
+msgstr "Aller à une conversation"
+
 msgid "Go to home"
 msgstr "Aller à l'accueil"
 
@@ -8486,6 +8492,9 @@ msgstr "historique"
 
 msgid "History"
 msgstr "Historique"
+
+msgid "Hold Ctrl and press Tab to step through workspaces, most recently used first"
+msgstr "Maintenez Ctrl et appuyez sur Tab pour parcourir les workspaces, du plus récemment utilisé au plus ancien"
 
 msgid "Home"
 msgstr "Accueil"
@@ -9334,6 +9343,9 @@ msgstr "Adhésion…"
 
 msgid "Jump into your favorite editor with one click. VS Code, Cursor, Xcode, JetBrains IDEs, or any terminal: open worktrees exactly where you need them."
 msgstr "Ouvrez votre éditeur favori en un clic. VS Code, Cursor, Xcode, les IDE JetBrains ou n'importe quel terminal : ouvrez vos worktrees exactement là où vous en avez besoin."
+
+msgid "Jump to any agent conversation, in any workspace"
+msgstr "Aller à n'importe quelle conversation d'agent, dans n'importe quel workspace"
 
 msgid "Jump to file"
 msgstr "Aller au fichier"
@@ -11045,6 +11057,9 @@ msgstr "Aucune sortie console"
 
 msgid "No contributors found."
 msgstr "Aucun contributeur trouvé."
+
+msgid "No conversations found."
+msgstr "Aucune conversation trouvée."
 
 msgid "No credit card required."
 msgstr "Aucune carte bancaire requise."
@@ -16926,6 +16941,12 @@ msgstr "Basculer vers un espace de travail actif"
 
 msgid "Switch to manual order to rearrange the sidebar"
 msgstr "Passez à l’ordre manuel pour réorganiser la barre latérale"
+
+msgid "Switch to Recent Workspace"
+msgstr "Basculer vers un workspace récent"
+
+msgid "Switch to Recent Workspace, Backwards"
+msgstr "Basculer vers un workspace récent, en arrière"
 
 msgid "Switch to Tab 1"
 msgstr "Passer à l'onglet 1"

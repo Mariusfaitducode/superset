@@ -4720,6 +4720,9 @@ msgstr "Konuşma istatistikleri"
 msgid "Conversation to-dos"
 msgstr "Konuşma yapılacakları"
 
+msgid "Conversations"
+msgstr "Konuşmalar"
+
 msgid "Convert to draft"
 msgstr "Taslağa dönüştür"
 
@@ -8255,6 +8258,9 @@ msgstr "Geçmişte sonraki sayfaya git"
 msgid "Go home"
 msgstr "Ana sayfaya git"
 
+msgid "Go to Conversation"
+msgstr "Konuşmaya git"
+
 msgid "Go to home"
 msgstr "Ana sayfaya git"
 
@@ -8486,6 +8492,9 @@ msgstr "geçmiş"
 
 msgid "History"
 msgstr "Geçmiş"
+
+msgid "Hold Ctrl and press Tab to step through workspaces, most recently used first"
+msgstr "Çalışma alanları arasında en son kullanılandan başlayarak geçmek için Ctrl'yi basılı tutup Tab'a basın"
 
 msgid "Home"
 msgstr "Ana sayfa"
@@ -9334,6 +9343,9 @@ msgstr "Katılınıyor…"
 
 msgid "Jump into your favorite editor with one click. VS Code, Cursor, Xcode, JetBrains IDEs, or any terminal: open worktrees exactly where you need them."
 msgstr "Tek tıkla en sevdiğiniz düzenleyiciye atlayın. VS Code, Cursor, Xcode, JetBrains IDE'leri veya herhangi bir terminal: worktree'leri tam ihtiyacınız olan yerde açın."
+
+msgid "Jump to any agent conversation, in any workspace"
+msgstr "Herhangi bir çalışma alanındaki herhangi bir ajan konuşmasına git"
 
 msgid "Jump to file"
 msgstr "Dosyaya git"
@@ -11045,6 +11057,9 @@ msgstr "Konsol çıktısı yok"
 
 msgid "No contributors found."
 msgstr "Katkıda bulunan bulunamadı."
+
+msgid "No conversations found."
+msgstr "Konuşma bulunamadı."
 
 msgid "No credit card required."
 msgstr "Kredi kartı gerekmez."
@@ -16926,6 +16941,12 @@ msgstr "Etkin çalışma alanına geç"
 
 msgid "Switch to manual order to rearrange the sidebar"
 msgstr "Kenar çubuğunu yeniden düzenlemek için manuel sıralamaya geçin"
+
+msgid "Switch to Recent Workspace"
+msgstr "Son çalışma alanına geç"
+
+msgid "Switch to Recent Workspace, Backwards"
+msgstr "Son çalışma alanına geç, geriye doğru"
 
 msgid "Switch to Tab 1"
 msgstr "1. sekmeye geç"

@@ -4720,6 +4720,9 @@ msgstr "Estatísticas das conversas"
 msgid "Conversation to-dos"
 msgstr "Tarefas das conversas"
 
+msgid "Conversations"
+msgstr "Conversas"
+
 msgid "Convert to draft"
 msgstr "Converter em rascunho"
 
@@ -8255,6 +8258,9 @@ msgstr "Avançar para a próxima página do histórico"
 msgid "Go home"
 msgstr "Ir para o início"
 
+msgid "Go to Conversation"
+msgstr "Ir para conversa"
+
 msgid "Go to home"
 msgstr "Ir para o início"
 
@@ -8486,6 +8492,9 @@ msgstr "histórico"
 
 msgid "History"
 msgstr "Histórico"
+
+msgid "Hold Ctrl and press Tab to step through workspaces, most recently used first"
+msgstr "Segure Ctrl e pressione Tab para percorrer os workspaces, os usados mais recentemente primeiro"
 
 msgid "Home"
 msgstr "Início"
@@ -9334,6 +9343,9 @@ msgstr "Entrando…"
 
 msgid "Jump into your favorite editor with one click. VS Code, Cursor, Xcode, JetBrains IDEs, or any terminal: open worktrees exactly where you need them."
 msgstr "Vá para o seu editor favorito com um clique. VS Code, Cursor, Xcode, IDEs da JetBrains ou qualquer terminal: abra as worktrees exatamente onde você precisa."
+
+msgid "Jump to any agent conversation, in any workspace"
+msgstr "Ir para qualquer conversa de agente, em qualquer workspace"
 
 msgid "Jump to file"
 msgstr "Ir para o arquivo"
@@ -11045,6 +11057,9 @@ msgstr "Nenhuma saída no console"
 
 msgid "No contributors found."
 msgstr "Nenhum contribuidor encontrado."
+
+msgid "No conversations found."
+msgstr "Nenhuma conversa encontrada."
 
 msgid "No credit card required."
 msgstr "Sem cartão de crédito."
@@ -16926,6 +16941,12 @@ msgstr "Alternar para área de trabalho ativa"
 
 msgid "Switch to manual order to rearrange the sidebar"
 msgstr "Mude para a ordem manual para reorganizar a barra lateral"
+
+msgid "Switch to Recent Workspace"
+msgstr "Alternar para workspace recente"
+
+msgid "Switch to Recent Workspace, Backwards"
+msgstr "Alternar para workspace recente, para trás"
 
 msgid "Switch to Tab 1"
 msgstr "Ir para a aba 1"

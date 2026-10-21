@@ -4720,6 +4720,9 @@ msgstr "Statistiky konverzací"
 msgid "Conversation to-dos"
 msgstr "Úkoly konverzací"
 
+msgid "Conversations"
+msgstr "Konverzace"
+
 msgid "Convert to draft"
 msgstr "Převést na koncept"
 
@@ -8255,6 +8258,9 @@ msgstr "Přejít vpřed na další stránku v historii"
 msgid "Go home"
 msgstr "Přejít domů"
 
+msgid "Go to Conversation"
+msgstr "Přejít na konverzaci"
+
 msgid "Go to home"
 msgstr "Přejít na úvod"
 
@@ -8486,6 +8492,9 @@ msgstr "historie"
 
 msgid "History"
 msgstr "Historie"
+
+msgid "Hold Ctrl and press Tab to step through workspaces, most recently used first"
+msgstr "Podržte Ctrl a stiskem Tab procházejte pracovní prostory, naposledy použité jako první"
 
 msgid "Home"
 msgstr "Domů"
@@ -9334,6 +9343,9 @@ msgstr "Připojuji…"
 
 msgid "Jump into your favorite editor with one click. VS Code, Cursor, Xcode, JetBrains IDEs, or any terminal: open worktrees exactly where you need them."
 msgstr "Skočte do svého oblíbeného editoru jedním kliknutím. VS Code, Cursor, Xcode, JetBrains IDE nebo libovolný terminál: otevřete worktree přesně tam, kde ho potřebujete."
+
+msgid "Jump to any agent conversation, in any workspace"
+msgstr "Přejít na libovolnou konverzaci agenta v libovolném pracovním prostoru"
 
 msgid "Jump to file"
 msgstr "Přejít na soubor"
@@ -11045,6 +11057,9 @@ msgstr "Žádný výstup konzole"
 
 msgid "No contributors found."
 msgstr "Nenalezeni žádní přispěvatelé."
+
+msgid "No conversations found."
+msgstr "Žádné konverzace nenalezeny."
 
 msgid "No credit card required."
 msgstr "Bez platební karty."
@@ -16926,6 +16941,12 @@ msgstr "Přepnout na aktivní pracovní prostor"
 
 msgid "Switch to manual order to rearrange the sidebar"
 msgstr "Chcete-li postranní panel přeuspořádat, přepněte na ruční řazení"
+
+msgid "Switch to Recent Workspace"
+msgstr "Přepnout na nedávný pracovní prostor"
+
+msgid "Switch to Recent Workspace, Backwards"
+msgstr "Přepnout na nedávný pracovní prostor, pozpátku"
 
 msgid "Switch to Tab 1"
 msgstr "Přepnout na kartu 1"

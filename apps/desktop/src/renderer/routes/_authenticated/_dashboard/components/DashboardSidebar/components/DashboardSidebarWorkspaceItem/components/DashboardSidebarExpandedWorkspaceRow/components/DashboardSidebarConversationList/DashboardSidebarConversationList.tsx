@@ -37,7 +37,7 @@ import {
 	waitingTintLevel,
 } from "./utils/conversation-state";
 
-const DOT_CLASS: Record<ConversationState, string> = {
+export const DOT_CLASS: Record<ConversationState, string> = {
 	working: "bg-yellow-400 animate-pulse",
 	request: "bg-violet-500",
 	failed: "bg-red-500",
