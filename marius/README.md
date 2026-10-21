@@ -5,9 +5,22 @@ This build replaces `/Applications/Superset.app` and keeps all your data: it use
 ## Requirements
 
 - An Apple Silicon Mac.
-- [Bun](https://bun.sh) 1.4.2 in `~/.bun/bin`.
+- [GitHub CLI](https://cli.github.com) logged in, to install from GitHub; or [Bun](https://bun.sh) 1.4.2 in `~/.bun/bin`, to build yourself.
 
-## Install or update
+## Install or update from GitHub (fastest)
+
+GitHub builds the app for every release, so nothing compiles on your Mac. You need `gh` logged in:
+
+```bash
+git clone https://github.com/Mariusfaitducode/superset && cd superset   # first time
+git pull                                                                  # afterwards
+./marius/install-from-ci.sh                     # the latest release
+./marius/install-from-ci.sh build/next          # or the latest test build of a build/ branch
+```
+
+## Build it yourself
+
+Needs Bun, and 25 to 45 minutes of a busy laptop.
 
 ```bash
 git clone https://github.com/Mariusfaitducode/superset && cd superset   # first time
@@ -22,7 +35,7 @@ The first swap keeps the official app in `~/Backups/superset-<date>`.
 
 ## Check the version
 
-Settings, at the bottom of the left column: `desktop-v1.39.0 + marius/main@<commit> · <date>`.
+Settings, at the bottom of the left column: a Release, Merged or Work in progress badge, the build's name, and the release it is on.
 
 ## Go back to the official app
 

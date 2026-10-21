@@ -4,8 +4,8 @@ name: Fork CI
 # Superset's secrets and paid runners. Covers what the fork changes (desktop
 # and host-service) on GitHub's free runners.
 on:
+  # Every PR, so stacked PRs (based on another feature branch) are checked too.
   pull_request:
-    branches: ["marius/**"]
   push:
     branches: ["marius/main"]
 
