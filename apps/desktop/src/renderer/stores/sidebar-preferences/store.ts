@@ -10,6 +10,8 @@ export interface SidebarPreferences {
 	showConversationStats: boolean;
 	showTurnTime: boolean;
 	showTodos: boolean;
+	/** To-dos the agents added themselves, not only the user's. */
+	showAgentTodos: boolean;
 	showSubagents: boolean;
 	showQueuedPrompts: boolean;
 	waitingTint: WaitingTint;
@@ -27,6 +29,7 @@ export const DEFAULT_SIDEBAR_PREFERENCES: SidebarPreferences = {
 	showConversationStats: true,
 	showTurnTime: true,
 	showTodos: true,
+	showAgentTodos: true,
 	showSubagents: true,
 	showQueuedPrompts: true,
 	waitingTint: "subtle",

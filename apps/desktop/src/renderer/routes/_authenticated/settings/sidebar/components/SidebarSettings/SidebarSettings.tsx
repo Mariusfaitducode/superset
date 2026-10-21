@@ -98,7 +98,14 @@ export function SidebarSettings({ visibleItems }: SidebarSettingsProps) {
 			itemId: SETTING_ITEM_ID.SIDEBAR_TODOS,
 			key: "showTodos",
 			label: t`Conversation to-dos`,
-			hint: t`Show the to-do button and list on each conversation.`,
+			hint: t`Show the to-do list of each conversation, shared with its agent.`,
+			needsConversations: true,
+		},
+		{
+			itemId: SETTING_ITEM_ID.SIDEBAR_AGENT_TODOS,
+			key: "showAgentTodos",
+			label: t`Agents' to-dos`,
+			hint: t`Also show the to-dos agents add to their conversation through the superset CLI.`,
 			needsConversations: true,
 		},
 		{
