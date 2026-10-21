@@ -1245,6 +1245,9 @@ msgstr "+{hidden} ещё"
 msgid "+{hiddenCount} earlier"
 msgstr "ещё +{hiddenCount} ранее"
 
+msgid "+{hiddenCount} more"
+msgstr "+{hiddenCount} ещё"
+
 msgid "+{remainingCount} more"
 msgstr "ещё +{remainingCount}"
 
@@ -8493,6 +8496,9 @@ msgstr "история"
 msgid "History"
 msgstr "История"
 
+msgid "Hold Ctrl and press Tab to step through workspaces, most recently used first"
+msgstr "Удерживайте Ctrl и нажимайте Tab, чтобы перебирать рабочие пространства, начиная с недавних"
+
 msgid "Home"
 msgstr "Главная"
 
@@ -10945,6 +10951,9 @@ msgstr "Нет активных рабочих областей"
 
 msgid "No agent"
 msgstr "Без агента"
+
+msgid "No agent conversations"
+msgstr "Нет разговоров агентов"
 
 msgid "No agent conversations yet."
 msgstr "Разговоров агентов пока нет."
@@ -16959,6 +16968,12 @@ msgstr "Переключиться на активную рабочую обла
 
 msgid "Switch to manual order to rearrange the sidebar"
 msgstr "Переключитесь на ручной порядок, чтобы изменить расположение в боковой панели"
+
+msgid "Switch to Recent Workspace"
+msgstr "Перейти к недавнему рабочему пространству"
+
+msgid "Switch to Recent Workspace, Backwards"
+msgstr "Перейти к недавнему рабочему пространству, назад"
 
 msgid "Switch to Tab 1"
 msgstr "Перейти на вкладку 1"

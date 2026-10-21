@@ -49,6 +49,7 @@ import { DashboardSidebarHiddenProjects } from "./components/DashboardSidebarHid
 import { DashboardSidebarHoverCardOverlay } from "./components/DashboardSidebarHoverCardOverlay";
 import { DashboardSidebarPinnedSection } from "./components/DashboardSidebarPinnedSection";
 import { DashboardSidebarProjectSection } from "./components/DashboardSidebarProjectSection";
+import { DashboardSidebarRecentWorkspaceSwitcher } from "./components/DashboardSidebarRecentWorkspaceSwitcher";
 import { DashboardSidebarSectionRenameProvider } from "./components/DashboardSidebarSectionRenameContext";
 import { DashboardSidebarSessionsSection } from "./components/DashboardSidebarSessionsSection";
 import { DashboardSidebarWorkspacesHeader } from "./components/DashboardSidebarWorkspacesHeader";
@@ -550,6 +551,10 @@ export function DashboardSidebar({
 						activeWorkspaceId={activeV2WorkspaceId}
 					>
 						<DashboardSidebarActiveWorkspaceSwitcher
+							workspaces={switcherWorkspaces}
+							activeWorkspaceId={activeV2WorkspaceId}
+						/>
+						<DashboardSidebarRecentWorkspaceSwitcher
 							workspaces={switcherWorkspaces}
 							activeWorkspaceId={activeV2WorkspaceId}
 						/>

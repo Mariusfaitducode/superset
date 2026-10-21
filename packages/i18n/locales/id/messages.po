@@ -1245,6 +1245,9 @@ msgstr "+{hidden} lagi"
 msgid "+{hiddenCount} earlier"
 msgstr "+{hiddenCount} sebelumnya"
 
+msgid "+{hiddenCount} more"
+msgstr "+{hiddenCount} lainnya"
+
 msgid "+{remainingCount} more"
 msgstr "+{remainingCount} lagi"
 
@@ -8493,6 +8496,9 @@ msgstr "riwayat"
 msgid "History"
 msgstr "Riwayat"
 
+msgid "Hold Ctrl and press Tab to step through workspaces, most recently used first"
+msgstr "Tahan Ctrl dan tekan Tab untuk menelusuri workspace, yang terakhir digunakan lebih dulu"
+
 msgid "Home"
 msgstr "Beranda"
 
@@ -10945,6 +10951,9 @@ msgstr "Tidak ada workspace aktif"
 
 msgid "No agent"
 msgstr "Tanpa agen"
+
+msgid "No agent conversations"
+msgstr "Tidak ada percakapan agen"
 
 msgid "No agent conversations yet."
 msgstr "Belum ada percakapan agen."
@@ -16959,6 +16968,12 @@ msgstr "Beralih ke workspace aktif"
 
 msgid "Switch to manual order to rearrange the sidebar"
 msgstr "Beralih ke urutan manual untuk menyusun ulang sidebar"
+
+msgid "Switch to Recent Workspace"
+msgstr "Beralih ke workspace terbaru"
+
+msgid "Switch to Recent Workspace, Backwards"
+msgstr "Beralih ke workspace terbaru, mundur"
 
 msgid "Switch to Tab 1"
 msgstr "Beralih ke Tab 1"

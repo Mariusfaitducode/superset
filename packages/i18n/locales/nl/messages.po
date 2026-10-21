@@ -1245,6 +1245,9 @@ msgstr "+{hidden} meer"
 msgid "+{hiddenCount} earlier"
 msgstr "+{hiddenCount} eerder"
 
+msgid "+{hiddenCount} more"
+msgstr "+{hiddenCount} meer"
+
 msgid "+{remainingCount} more"
 msgstr "+{remainingCount} meer"
 
@@ -8493,6 +8496,9 @@ msgstr "geschiedenis"
 msgid "History"
 msgstr "Geschiedenis"
 
+msgid "Hold Ctrl and press Tab to step through workspaces, most recently used first"
+msgstr "Houd Ctrl ingedrukt en druk op Tab om door workspaces te bladeren, meest recent gebruikt eerst"
+
 msgid "Home"
 msgstr "Home"
 
@@ -10945,6 +10951,9 @@ msgstr "Geen actieve werkruimtes"
 
 msgid "No agent"
 msgstr "Geen agent"
+
+msgid "No agent conversations"
+msgstr "Geen agentgesprekken"
 
 msgid "No agent conversations yet."
 msgstr "Nog geen agentgesprekken."
@@ -16959,6 +16968,12 @@ msgstr "Overschakelen naar actieve werkruimte"
 
 msgid "Switch to manual order to rearrange the sidebar"
 msgstr "Schakel over naar handmatige volgorde om de zijbalk te herschikken"
+
+msgid "Switch to Recent Workspace"
+msgstr "Wisselen naar recente workspace"
+
+msgid "Switch to Recent Workspace, Backwards"
+msgstr "Wisselen naar recente workspace, achteruit"
 
 msgid "Switch to Tab 1"
 msgstr "Naar tabblad 1"

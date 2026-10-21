@@ -1245,6 +1245,9 @@ msgstr "還有 {hidden} 個"
 msgid "+{hiddenCount} earlier"
 msgstr "更早的+{hiddenCount}條"
 
+msgid "+{hiddenCount} more"
+msgstr "+{hiddenCount} 個"
+
 msgid "+{remainingCount} more"
 msgstr "+{remainingCount}個"
 
@@ -8493,6 +8496,9 @@ msgstr "歷史"
 msgid "History"
 msgstr "歷史"
 
+msgid "Hold Ctrl and press Tab to step through workspaces, most recently used first"
+msgstr "按住 Ctrl 並按 Tab，依最近使用順序切換工作區"
+
 msgid "Home"
 msgstr "首頁"
 
@@ -10945,6 +10951,9 @@ msgstr "沒有作用中的工作區"
 
 msgid "No agent"
 msgstr "無代理程式"
+
+msgid "No agent conversations"
+msgstr "沒有代理對話"
 
 msgid "No agent conversations yet."
 msgstr "尚無代理對話。"
@@ -16959,6 +16968,12 @@ msgstr "切換到作用中的工作區"
 
 msgid "Switch to manual order to rearrange the sidebar"
 msgstr "切換到手動排序即可重新排列側邊欄"
+
+msgid "Switch to Recent Workspace"
+msgstr "切換到最近的工作區"
+
+msgid "Switch to Recent Workspace, Backwards"
+msgstr "切換到最近的工作區（反向）"
 
 msgid "Switch to Tab 1"
 msgstr "切換到分頁1"

@@ -22,6 +22,8 @@ export const FORWARDED_HOTKEYS: ReadonlySet<HotkeyId> = new Set<HotkeyId>([
 	"NEXT_TAB",
 	"PREV_TAB_ALT",
 	"NEXT_TAB_ALT",
+	"PREV_RECENT_WORKSPACE",
+	"NEXT_RECENT_WORKSPACE",
 	"JUMP_TO_TAB_1",
 	"JUMP_TO_TAB_2",
 	"JUMP_TO_TAB_3",

@@ -1245,6 +1245,9 @@ msgstr "+{hidden} daha"
 msgid "+{hiddenCount} earlier"
 msgstr "+{hiddenCount} daha önce"
 
+msgid "+{hiddenCount} more"
+msgstr "+{hiddenCount} daha"
+
 msgid "+{remainingCount} more"
 msgstr "+{remainingCount} daha"
 
@@ -8493,6 +8496,9 @@ msgstr "geçmiş"
 msgid "History"
 msgstr "Geçmiş"
 
+msgid "Hold Ctrl and press Tab to step through workspaces, most recently used first"
+msgstr "Çalışma alanları arasında en son kullanılandan başlayarak geçmek için Ctrl'yi basılı tutup Tab'a basın"
+
 msgid "Home"
 msgstr "Ana sayfa"
 
@@ -10945,6 +10951,9 @@ msgstr "Etkin çalışma alanı yok"
 
 msgid "No agent"
 msgstr "Ajan yok"
+
+msgid "No agent conversations"
+msgstr "Ajan konuşması yok"
 
 msgid "No agent conversations yet."
 msgstr "Henüz ajan konuşması yok."
@@ -16959,6 +16968,12 @@ msgstr "Etkin çalışma alanına geç"
 
 msgid "Switch to manual order to rearrange the sidebar"
 msgstr "Kenar çubuğunu yeniden düzenlemek için manuel sıralamaya geçin"
+
+msgid "Switch to Recent Workspace"
+msgstr "Son çalışma alanına geç"
+
+msgid "Switch to Recent Workspace, Backwards"
+msgstr "Son çalışma alanına geç, geriye doğru"
 
 msgid "Switch to Tab 1"
 msgstr "1. sekmeye geç"

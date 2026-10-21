@@ -1245,6 +1245,9 @@ msgstr "+{hidden} more"
 msgid "+{hiddenCount} earlier"
 msgstr "+{hiddenCount} earlier"
 
+msgid "+{hiddenCount} more"
+msgstr "+{hiddenCount} more"
+
 msgid "+{remainingCount} more"
 msgstr "+{remainingCount} more"
 
@@ -8493,6 +8496,9 @@ msgstr "history"
 msgid "History"
 msgstr "History"
 
+msgid "Hold Ctrl and press Tab to step through workspaces, most recently used first"
+msgstr "Hold Ctrl and press Tab to step through workspaces, most recently used first"
+
 msgid "Home"
 msgstr "Home"
 
@@ -10945,6 +10951,9 @@ msgstr "No active workspaces"
 
 msgid "No agent"
 msgstr "No agent"
+
+msgid "No agent conversations"
+msgstr "No agent conversations"
 
 msgid "No agent conversations yet."
 msgstr "No agent conversations yet."
@@ -16959,6 +16968,12 @@ msgstr "Switch to Active Workspace"
 
 msgid "Switch to manual order to rearrange the sidebar"
 msgstr "Switch to manual order to rearrange the sidebar"
+
+msgid "Switch to Recent Workspace"
+msgstr "Switch to Recent Workspace"
+
+msgid "Switch to Recent Workspace, Backwards"
+msgstr "Switch to Recent Workspace, Backwards"
 
 msgid "Switch to Tab 1"
 msgstr "Switch to Tab 1"
