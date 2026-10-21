@@ -9,7 +9,7 @@ Kept by the agents working on this fork and read on every Mac. Updated at each s
 | 1 | Idea list ? | Handed off | Another session builds a Superset Page. The fork's own ideas join it afterwards. |
 | 2 | Latest release / merged version | Done, to validate | The build shown comes from the latest upstream tag (`desktop-v1.39.0`, newest on 2026-10-20) plus the merged branch. Next: weekly rebase, see "Routine". |
 | 3 | Show release name | Done, to validate | At the bottom of Settings: upstream tag + branch@commit + date, stamped by `marius/update.sh`. |
-| 4 | Allow agents to see todos | **Next** | Design together first. To-dos move from browser storage to the host service, then agents get them through the `superset` CLI (MCP later): read, create, check, reorder. |
+| 4 | Allow agents to see todos | Built, to validate | To-dos live on the host (`~/.superset/state/conversation-todos.json`), with priority, type, due day and link. Agents use `superset todos` and the `superset:todos` skill; they can check the user's to-dos but only change or delete their own. |
 | 5 | Create general agent | After 4 | A coordinator that sees every session and its to-dos and helps prioritize. Look at the `cockpit` skill first. |
 | 6 | Rename conv in sidebar | Done, to validate | Double-click the title, Enter to save, Escape to cancel. |
 
