@@ -1850,6 +1850,9 @@ msgstr "Đã thêm {added} tệp vào {where}"
 msgid "Added 1 file to {where}"
 msgstr "Đã thêm 1 tệp vào {where}"
 
+msgid "Added by the agent"
+msgstr "Do agent thêm"
+
 msgid "Added only when launching with a prompt — e.g. <0>--</0>, <1>--prompt</1>, <2>-i</2>."
 msgstr "Chỉ thêm vào khi khởi chạy kèm prompt — ví dụ <0>--</0>, <1>--prompt</1>, <2>-i</2>."
 
@@ -1997,6 +2000,9 @@ msgstr "Số agent chạy cùng lúc"
 
 msgid "Agents use this account when they call Linear tools."
 msgstr "Agent dùng tài khoản này khi gọi các công cụ Linear."
+
+msgid "Agents' to-dos"
+msgstr "Việc cần làm của agent"
 
 msgid "Aggregate agent usage across every developer on the Superset leaderboard — tokens, cost, cache behaviour and which models people actually reach for."
 msgstr "Tổng hợp mức sử dụng agent của mọi lập trình viên trên bảng xếp hạng Superset — token, chi phí, hành vi cache và những mô hình mọi người thực sự dùng."
@@ -2249,6 +2255,9 @@ msgstr "Xóa luôn nhánh git cục bộ khi xóa một workspace worktree"
 
 msgid "Also list agents that have not started working yet."
 msgstr "Hiển thị cả các agent chưa bắt đầu làm việc."
+
+msgid "Also show the to-dos agents add to their conversation through the superset CLI."
+msgstr "Hiển thị cả việc cần làm mà agent thêm vào cuộc trò chuyện qua CLI superset."
 
 msgid "Also viewing this page"
 msgstr "Cũng đang xem trang này"
@@ -3634,6 +3643,9 @@ msgstr "Kiểm tra hộp thư"
 msgid "Checkbox · Radio · Switch"
 msgstr "Checkbox · Radio · Switch"
 
+msgid "Checked by the agent"
+msgstr "Do agent đánh dấu"
+
 msgid "Checking agents…"
 msgstr "Đang kiểm tra agent…"
 
@@ -3886,9 +3898,6 @@ msgstr "Nhấp vào thẻ để mở pull request"
 
 msgid "Click to copy the session ID (resume with `claude --resume <id>`)."
 msgstr "Nhấp để sao chép ID phiên (resume bằng `claude --resume <id>`)."
-
-msgid "Click to edit"
-msgstr "Nhấp để chỉnh sửa"
 
 msgid "Click to open on GitHub"
 msgstr "Nhấp để mở trên GitHub"
@@ -5143,6 +5152,9 @@ msgstr "Không thể cập nhật skill"
 
 msgid "Could not update the branch"
 msgstr "Không thể cập nhật nhánh"
+
+msgid "Could not update the to-do"
+msgstr "Không thể cập nhật việc cần làm"
 
 #. js-lingui-explicit-id
 msgid "serverError.plugins.credentialUnverified"
@@ -6557,6 +6569,9 @@ msgstr "Dropdown Menu"
 
 msgid "Dropdown, context, and application menus"
 msgstr "Menu thả xuống, menu ngữ cảnh và menu ứng dụng"
+
+msgid "Due"
+msgstr "Hạn"
 
 msgid "Duration"
 msgstr "Thời lượng"
@@ -10278,6 +10293,9 @@ msgstr "Đang merge…"
 msgid "Mesh Gradient"
 msgstr "Mesh Gradient"
 
+msgid "Message"
+msgstr "Tin nhắn"
+
 msgid "Message in channel"
 msgstr "Tin nhắn trong kênh"
 
@@ -11464,6 +11482,9 @@ msgstr "không có (phiên)"
 msgid "None. This is the floor."
 msgstr "Không có. Đây là mức sàn."
 
+msgid "Normal"
+msgstr "Bình thường"
+
 msgid "Not a 2026 claim"
 msgstr "Không phải tuyên bố cho 2026"
 
@@ -12083,6 +12104,9 @@ msgstr "Issue đang mở"
 
 msgid "Open leaderboard"
 msgstr "Mở bảng xếp hạng"
+
+msgid "Open link"
+msgstr "Mở liên kết"
 
 msgid "Open Link as New Split"
 msgstr "Mở liên kết ở khung chia mới"
@@ -15733,8 +15757,8 @@ msgstr "Hiện văn bản"
 msgid "Show the messages that wait for the current turn to end."
 msgstr "Hiển thị các tin nhắn đang chờ lượt hiện tại kết thúc."
 
-msgid "Show the to-do button and list on each conversation."
-msgstr "Hiển thị nút và danh sách việc cần làm trên mỗi cuộc trò chuyện."
+msgid "Show the to-do list of each conversation, shared with its agent."
+msgstr "Hiển thị danh sách việc cần làm của mỗi cuộc trò chuyện, chia sẻ với agent của nó."
 
 msgid "Show the triggering payload"
 msgstr "Hiển thị payload kích hoạt"
@@ -18022,6 +18046,9 @@ msgstr "Để tiếp tục một cuộc trò chuyện với agent, hãy chạy l
 
 msgid "To resume another agent conversation, run this in its folder:"
 msgstr "Để tiếp tục một cuộc trò chuyện khác với agent, hãy chạy lệnh này trong thư mục của nó:"
+
+msgid "To-do details"
+msgstr "Chi tiết việc cần làm"
 
 msgid "To-dos"
 msgstr "Việc cần làm"

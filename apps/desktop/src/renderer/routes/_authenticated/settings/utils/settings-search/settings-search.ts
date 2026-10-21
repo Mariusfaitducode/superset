@@ -79,6 +79,7 @@ export const SETTING_ITEM_ID = {
 	SIDEBAR_TURN_TIME: "sidebar-turn-time",
 	SIDEBAR_QUEUED_PROMPTS: "sidebar-queued-prompts",
 	SIDEBAR_TODOS: "sidebar-todos",
+	SIDEBAR_AGENT_TODOS: "sidebar-agent-todos",
 	SIDEBAR_SUBAGENTS: "sidebar-subagents",
 	SIDEBAR_WAITING_TINT: "sidebar-waiting-tint",
 
@@ -245,6 +246,7 @@ export const SETTING_ITEM_VARIANT: Record<SettingItemId, SettingVariant> = {
 	[SETTING_ITEM_ID.SIDEBAR_TURN_TIME]: "v2",
 	[SETTING_ITEM_ID.SIDEBAR_QUEUED_PROMPTS]: "v2",
 	[SETTING_ITEM_ID.SIDEBAR_TODOS]: "v2",
+	[SETTING_ITEM_ID.SIDEBAR_AGENT_TODOS]: "v2",
 	[SETTING_ITEM_ID.SIDEBAR_SUBAGENTS]: "v2",
 	[SETTING_ITEM_ID.SIDEBAR_WAITING_TINT]: "v2",
 
@@ -1474,6 +1476,13 @@ export const SETTINGS_ITEMS: SettingsItem[] = [
 		title: "Conversation to-dos",
 		description: "Show the to-do button and list on each conversation",
 		keywords: ["sidebar", "todo", "todos", "to-do", "checklist", "tasks"],
+	},
+	{
+		id: SETTING_ITEM_ID.SIDEBAR_AGENT_TODOS,
+		section: "sidebar",
+		title: "Agents' to-dos",
+		description: "Also show the to-dos agents add to their conversation",
+		keywords: ["sidebar", "todo", "todos", "agent", "agents", "cli"],
 	},
 	{
 		id: SETTING_ITEM_ID.SIDEBAR_SUBAGENTS,

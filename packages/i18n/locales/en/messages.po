@@ -1850,6 +1850,9 @@ msgstr "Added {added} files to {where}"
 msgid "Added 1 file to {where}"
 msgstr "Added 1 file to {where}"
 
+msgid "Added by the agent"
+msgstr "Added by the agent"
+
 msgid "Added only when launching with a prompt — e.g. <0>--</0>, <1>--prompt</1>, <2>-i</2>."
 msgstr "Added only when launching with a prompt — e.g. <0>--</0>, <1>--prompt</1>, <2>-i</2>."
 
@@ -1997,6 +2000,9 @@ msgstr "Agents running at once"
 
 msgid "Agents use this account when they call Linear tools."
 msgstr "Agents use this account when they call Linear tools."
+
+msgid "Agents' to-dos"
+msgstr "Agents' to-dos"
 
 msgid "Aggregate agent usage across every developer on the Superset leaderboard — tokens, cost, cache behaviour and which models people actually reach for."
 msgstr "Aggregate agent usage across every developer on the Superset leaderboard — tokens, cost, cache behaviour and which models people actually reach for."
@@ -2249,6 +2255,9 @@ msgstr "Also delete the local git branch when deleting a worktree workspace"
 
 msgid "Also list agents that have not started working yet."
 msgstr "Also list agents that have not started working yet."
+
+msgid "Also show the to-dos agents add to their conversation through the superset CLI."
+msgstr "Also show the to-dos agents add to their conversation through the superset CLI."
 
 msgid "Also viewing this page"
 msgstr "Also viewing this page"
@@ -3634,6 +3643,9 @@ msgstr "Check your inbox"
 msgid "Checkbox · Radio · Switch"
 msgstr "Checkbox · Radio · Switch"
 
+msgid "Checked by the agent"
+msgstr "Checked by the agent"
+
 msgid "Checking agents…"
 msgstr "Checking agents…"
 
@@ -3886,9 +3898,6 @@ msgstr "Click the chip to open the pull request"
 
 msgid "Click to copy the session ID (resume with `claude --resume <id>`)."
 msgstr "Click to copy the session ID (resume with `claude --resume <id>`)."
-
-msgid "Click to edit"
-msgstr "Click to edit"
 
 msgid "Click to open on GitHub"
 msgstr "Click to open on GitHub"
@@ -5143,6 +5152,9 @@ msgstr "Could not update skill"
 
 msgid "Could not update the branch"
 msgstr "Could not update the branch"
+
+msgid "Could not update the to-do"
+msgstr "Could not update the to-do"
 
 #. js-lingui-explicit-id
 msgid "serverError.plugins.credentialUnverified"
@@ -6557,6 +6569,9 @@ msgstr "Dropdown Menu"
 
 msgid "Dropdown, context, and application menus"
 msgstr "Dropdown, context, and application menus"
+
+msgid "Due"
+msgstr "Due"
 
 msgid "Duration"
 msgstr "Duration"
@@ -10278,6 +10293,9 @@ msgstr "Merging…"
 msgid "Mesh Gradient"
 msgstr "Mesh Gradient"
 
+msgid "Message"
+msgstr "Message"
+
 msgid "Message in channel"
 msgstr "Message in channel"
 
@@ -11464,6 +11482,9 @@ msgstr "none (session)"
 msgid "None. This is the floor."
 msgstr "None. This is the floor."
 
+msgid "Normal"
+msgstr "Normal"
+
 msgid "Not a 2026 claim"
 msgstr "Not a 2026 claim"
 
@@ -12083,6 +12104,9 @@ msgstr "Open issues"
 
 msgid "Open leaderboard"
 msgstr "Open leaderboard"
+
+msgid "Open link"
+msgstr "Open link"
 
 msgid "Open Link as New Split"
 msgstr "Open Link as New Split"
@@ -15733,8 +15757,8 @@ msgstr "Show text"
 msgid "Show the messages that wait for the current turn to end."
 msgstr "Show the messages that wait for the current turn to end."
 
-msgid "Show the to-do button and list on each conversation."
-msgstr "Show the to-do button and list on each conversation."
+msgid "Show the to-do list of each conversation, shared with its agent."
+msgstr "Show the to-do list of each conversation, shared with its agent."
 
 msgid "Show the triggering payload"
 msgstr "Show the triggering payload"
@@ -18022,6 +18046,9 @@ msgstr "To resume an agent conversation, run this in its folder:"
 
 msgid "To resume another agent conversation, run this in its folder:"
 msgstr "To resume another agent conversation, run this in its folder:"
+
+msgid "To-do details"
+msgstr "To-do details"
 
 msgid "To-dos"
 msgstr "To-dos"

@@ -1,0 +1,231 @@
+import { randomUUID } from "node:crypto";
+import {
+	mkdirSync,
+	readFileSync,
+	renameSync,
+	unlinkSync,
+	writeFileSync,
+} from "node:fs";
+import { homedir } from "node:os";
+import { dirname, join } from "node:path";
+
+export const TODO_PRIORITIES = ["high", "normal", "low"] as const;
+export const TODO_KINDS = ["code", "message", "review", "other"] as const;
+export const TODO_ACTORS = ["user", "agent"] as const;
+
+export type TodoPriority = (typeof TODO_PRIORITIES)[number];
+export type TodoKind = (typeof TODO_KINDS)[number];
+/** Who acts on a to-do: the user in the app, or an agent through the CLI. */
+export type TodoActor = (typeof TODO_ACTORS)[number];
+
+export interface ConversationTodo {
+	id: string;
+	workspaceId: string;
+	terminalId: string;
+	text: string;
+	done: boolean;
+	author: TodoActor;
+	/** Who checked it, so the user can tell an agent's check from their own. */
+	doneBy: TodoActor | null;
+	priority: TodoPriority;
+	kind: TodoKind;
+	/** Calendar day, `YYYY-MM-DD`. */
+	dueOn: string | null;
+	link: string | null;
+	createdAt: number;
+	updatedAt: number;
+}
+
+export interface TodoFields {
+	text?: string;
+	priority?: TodoPriority;
+	kind?: TodoKind;
+	dueOn?: string | null;
+	link?: string | null;
+}
+
+export class TodoPermissionError extends Error {}
+export class TodoNotFoundError extends Error {}
+
+export const MAX_CONVERSATIONS = 200;
+export const MAX_TODOS_PER_CONVERSATION = 100;
+
+interface TodoFile {
+	version: 1;
+	todos: ConversationTodo[];
+}
+
+export function defaultTodosPath(): string {
+	const home =
+		process.env.SUPERSET_HOME_DIR?.trim() || join(homedir(), ".superset");
+	return join(home, "state", "conversation-todos.json");
+}
+
+/**
+ * The to-dos of every agent conversation on this host, in one JSON file the
+ * app and the agents' CLI both go through. Agents may check any to-do but
+ * only change or delete their own: the user's to-dos say what the user
+ * wants, and an agent rewriting them would make the list untrustworthy.
+ */
+export class ConversationTodoStore {
+	private todos: ConversationTodo[] | null = null;
+
+	constructor(
+		private readonly filePath: string = defaultTodosPath(),
+		private readonly now: () => number = Date.now,
+	) {}
+
+	list(filter: { workspaceId?: string; terminalId?: string } = {}) {
+		return this.load().filter(
+			(todo) =>
+				(!filter.workspaceId || todo.workspaceId === filter.workspaceId) &&
+				(!filter.terminalId || todo.terminalId === filter.terminalId),
+		);
+	}
+
+	add(input: {
+		actor: TodoActor;
+		workspaceId: string;
+		terminalId: string;
+		text: string;
+		priority?: TodoPriority;
+		kind?: TodoKind;
+		dueOn?: string | null;
+		link?: string | null;
+	}): ConversationTodo {
+		const text = input.text.trim();
+		if (!text) throw new Error("A to-do needs some text");
+		const at = this.now();
+		const todo: ConversationTodo = {
+			id: randomUUID(),
+			workspaceId: input.workspaceId,
+			terminalId: input.terminalId,
+			text,
+			done: false,
+			author: input.actor,
+			doneBy: null,
+			priority: input.priority ?? "normal",
+			kind: input.kind ?? "other",
+			dueOn: input.dueOn ?? null,
+			link: input.link ?? null,
+			createdAt: at,
+			updatedAt: at,
+		};
+		this.save([...this.load(), todo]);
+		return todo;
+	}
+
+	update(actor: TodoActor, id: string, fields: TodoFields): ConversationTodo {
+		const todo = this.get(id);
+		this.assertOwns(actor, todo, "change");
+		const text = fields.text?.trim();
+		if (fields.text !== undefined && !text) {
+			throw new Error("A to-do needs some text");
+		}
+		return this.replace({
+			...todo,
+			...(text ? { text } : {}),
+			...(fields.priority ? { priority: fields.priority } : {}),
+			...(fields.kind ? { kind: fields.kind } : {}),
+			...(fields.dueOn !== undefined ? { dueOn: fields.dueOn } : {}),
+			...(fields.link !== undefined ? { link: fields.link } : {}),
+		});
+	}
+
+	setDone(actor: TodoActor, id: string, done: boolean): ConversationTodo {
+		const todo = this.get(id);
+		return this.replace({ ...todo, done, doneBy: done ? actor : null });
+	}
+
+	remove(actor: TodoActor, id: string): void {
+		const todo = this.get(id);
+		this.assertOwns(actor, todo, "delete");
+		this.save(this.load().filter((item) => item.id !== id));
+	}
+
+	/** Removes the checked to-dos of a conversation that the actor may delete. */
+	clearDone(actor: TodoActor, terminalId: string): number {
+		const todos = this.load();
+		const kept = todos.filter(
+			(todo) =>
+				todo.terminalId !== terminalId || !todo.done || !this.owns(actor, todo),
+		);
+		this.save(kept);
+		return todos.length - kept.length;
+	}
+
+	private owns(actor: TodoActor, todo: ConversationTodo): boolean {
+		return actor === "user" || todo.author === "agent";
+	}
+
+	private assertOwns(
+		actor: TodoActor,
+		todo: ConversationTodo,
+		action: string,
+	): void {
+		if (this.owns(actor, todo)) return;
+		throw new TodoPermissionError(
+			`Agents can check the user's to-dos but not ${action} them`,
+		);
+	}
+
+	private get(id: string): ConversationTodo {
+		const todo = this.load().find((item) => item.id === id);
+		if (!todo) throw new TodoNotFoundError(`To-do not found: ${id}`);
+		return todo;
+	}
+
+	private replace(todo: ConversationTodo): ConversationTodo {
+		const updated = { ...todo, updatedAt: this.now() };
+		this.save(
+			this.load().map((item) => (item.id === todo.id ? updated : item)),
+		);
+		return updated;
+	}
+
+	private load(): ConversationTodo[] {
+		if (this.todos) return this.todos;
+		try {
+			const file = JSON.parse(readFileSync(this.filePath, "utf8")) as TodoFile;
+			this.todos = Array.isArray(file.todos) ? file.todos : [];
+		} catch {
+			this.todos = [];
+		}
+		return this.todos;
+	}
+
+	private save(todos: ConversationTodo[]): void {
+		this.todos = bound(todos);
+		mkdirSync(dirname(this.filePath), { recursive: true });
+		const temporaryPath = `${this.filePath}.${process.pid}.tmp`;
+		try {
+			const file: TodoFile = { version: 1, todos: this.todos };
+			writeFileSync(temporaryPath, JSON.stringify(file, null, "\t"));
+			renameSync(temporaryPath, this.filePath);
+		} catch (error) {
+			try {
+				unlinkSync(temporaryPath);
+			} catch {
+				// Best-effort cleanup after a failed write or rename.
+			}
+			throw error;
+		}
+	}
+}
+
+// Terminal ids never come back, so once the cap is reached the conversation
+// touched longest ago goes first.
+function bound(todos: ConversationTodo[]): ConversationTodo[] {
+	const byTerminal = new Map<string, ConversationTodo[]>();
+	for (const todo of todos) {
+		const list = byTerminal.get(todo.terminalId) ?? [];
+		list.push(todo);
+		byTerminal.set(todo.terminalId, list);
+	}
+	const lastTouched = (list: ConversationTodo[]) =>
+		Math.max(...list.map((todo) => todo.updatedAt));
+	return [...byTerminal.values()]
+		.sort((a, b) => lastTouched(b) - lastTouched(a))
+		.slice(0, MAX_CONVERSATIONS)
+		.flatMap((list) => list.slice(-MAX_TODOS_PER_CONVERSATION));
+}

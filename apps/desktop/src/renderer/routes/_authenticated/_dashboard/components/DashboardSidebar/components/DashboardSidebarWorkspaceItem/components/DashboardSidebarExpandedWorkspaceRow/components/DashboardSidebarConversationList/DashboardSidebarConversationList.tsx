@@ -13,10 +13,6 @@ import {
 } from "renderer/routes/_authenticated/_dashboard/utils/workspace-navigation";
 import { RenameInput } from "renderer/screens/main/components/WorkspaceSidebar/RenameInput";
 import {
-	type ConversationTodo,
-	useConversationTodosStore,
-} from "renderer/stores/conversation-todos";
-import {
 	useSidebarPreference,
 	type WaitingTint,
 } from "renderer/stores/sidebar-preferences";
@@ -30,6 +26,11 @@ import {
 	type SidebarSubagent,
 	useWorkspaceConversations,
 } from "./hooks/useWorkspaceConversations";
+import {
+	type ConversationTodo,
+	type TodoActions,
+	useWorkspaceTodos,
+} from "./hooks/useWorkspaceTodos";
 import {
 	type ConversationState,
 	isWaitingOnUser,
@@ -60,8 +61,6 @@ const TINT_CLASS: Record<Exclude<WaitingTint, "off">, string[]> = {
 		"bg-red-500/[0.32]",
 	],
 };
-
-const EMPTY: ConversationTodo[] = [];
 
 function stopRowEvent(event: SyntheticEvent) {
 	event.stopPropagation();
@@ -98,28 +97,33 @@ function ConversationRow({
 	workspaceId,
 	hostId,
 	conversation,
+	todos,
+	todoActions,
 }: {
 	workspaceId: string;
 	hostId: string;
 	conversation: SidebarConversation;
+	/** Null when the host is too old to keep to-dos. */
+	todos: ConversationTodo[] | null;
+	todoActions: TodoActions;
 }) {
 	const { t } = useLingui();
 	// Minutes are the finest unit shown.
 	const now = useNow(30_000).getTime();
 	const navigate = useNavigate();
-	const todos = useConversationTodosStore(
-		(state) => state.todosByConversation[conversation.terminalId] ?? EMPTY,
-	);
 	const [todosOpen, setTodosOpen] = useState(false);
 	const [renameValue, setRenameValue] = useState<string | null>(null);
 	const renameConversation = useRenameConversation({ workspaceId, hostId });
 	const isVisible = useIsTerminalVisible(conversation.terminalId);
-	const showTodos = useSidebarPreference("showTodos");
+	const showTodos = useSidebarPreference("showTodos") && todos !== null;
 	const showSubagents = useSidebarPreference("showSubagents");
 	const showTurnTime = useSidebarPreference("showTurnTime");
 	const showQueuedPrompts = useSidebarPreference("showQueuedPrompts");
 	const waitingTint = useSidebarPreference("waitingTint");
-	const openTodos = todos.filter((todo) => !todo.done).length;
+	const openTodos = (todos ?? []).filter((todo) => !todo.done).length;
+	const urgentTodos = (todos ?? []).some(
+		(todo) => !todo.done && todo.priority === "high",
+	);
 
 	const stateLabel: Record<ConversationState, string> = {
 		working: t`Working`,
@@ -241,13 +245,16 @@ function ConversationRow({
 						onClick={() => setTodosOpen((value) => !value)}
 						className={cn(
 							"flex shrink-0 items-center gap-0.5 rounded-sm px-1 text-[10px] text-muted-foreground hover:bg-background hover:text-foreground",
-							todos.length === 0 &&
+							urgentTodos && "text-red-500",
+							todos?.length === 0 &&
 								!todosOpen &&
 								"opacity-0 focus-visible:opacity-100 group-hover/conversation:opacity-100",
 						)}
 					>
 						<LuListChecks className="size-3" />
-						{todos.length > 0 && <span>{openTodos > 0 ? openTodos : "✓"}</span>}
+						{(todos?.length ?? 0) > 0 && (
+							<span>{openTodos > 0 ? openTodos : "✓"}</span>
+						)}
 					</button>
 				)}
 				{waiting ? (
@@ -281,7 +288,11 @@ function ConversationRow({
 				</ul>
 			)}
 			{showTodos && todosOpen && (
-				<ConversationTodos conversationId={conversation.terminalId} />
+				<ConversationTodos
+					terminalId={conversation.terminalId}
+					todos={todos ?? []}
+					actions={todoActions}
+				/>
 			)}
 		</li>
 	);
@@ -313,6 +324,23 @@ export function DashboardSidebarConversationList({
 	const conversations = showIdleConversations
 		? allConversations
 		: allConversations.filter((conversation) => conversation.state !== "idle");
+	const showTodos = useSidebarPreference("showTodos");
+	const showAgentTodos = useSidebarPreference("showAgentTodos");
+	const todos = useWorkspaceTodos({
+		workspaceId,
+		hostId,
+		terminalIds: allConversations.map(
+			(conversation) => conversation.terminalId,
+		),
+		enabled: showConversations && showTodos,
+	});
+	const todosFor = (terminalId: string): ConversationTodo[] | null => {
+		if (!todos.available) return null;
+		const list = todos.byTerminal.get(terminalId) ?? [];
+		return showAgentTodos
+			? list
+			: list.filter((todo) => todo.author !== "agent");
+	};
 
 	if (!showConversations || conversations.length === 0) return null;
 
@@ -340,6 +368,8 @@ export function DashboardSidebarConversationList({
 						workspaceId={workspaceId}
 						hostId={hostId}
 						conversation={conversation}
+						todos={todosFor(conversation.terminalId)}
+						todoActions={todos.actions}
 					/>
 				))}
 			</ul>

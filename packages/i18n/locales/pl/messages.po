@@ -1850,6 +1850,9 @@ msgstr "Dodano {added} plików do {where}"
 msgid "Added 1 file to {where}"
 msgstr "Dodano 1 plik do {where}"
 
+msgid "Added by the agent"
+msgstr "Dodane przez agenta"
+
 msgid "Added only when launching with a prompt — e.g. <0>--</0>, <1>--prompt</1>, <2>-i</2>."
 msgstr "Dodawane tylko przy uruchamianiu z promptem — np. <0>--</0>, <1>--prompt</1>, <2>-i</2>."
 
@@ -1997,6 +2000,9 @@ msgstr "Agentów uruchomionych naraz"
 
 msgid "Agents use this account when they call Linear tools."
 msgstr "Agenci używają tego konta, gdy wywołują narzędzia Linear."
+
+msgid "Agents' to-dos"
+msgstr "Zadania agentów"
 
 msgid "Aggregate agent usage across every developer on the Superset leaderboard — tokens, cost, cache behaviour and which models people actually reach for."
 msgstr "Zbiorcze użycie agentów przez wszystkich deweloperów w rankingu Superset — tokeny, koszt, zachowanie cache'u i modele, po które ludzie faktycznie sięgają."
@@ -2249,6 +2255,9 @@ msgstr "Usuwaj też lokalną gałąź git przy usuwaniu obszaru roboczego oparte
 
 msgid "Also list agents that have not started working yet."
 msgstr "Pokazuj też agentów, którzy jeszcze nie zaczęli pracy."
+
+msgid "Also show the to-dos agents add to their conversation through the superset CLI."
+msgstr "Pokazuj też zadania, które agenci dodają do swojej rozmowy przez CLI superset."
 
 msgid "Also viewing this page"
 msgstr "Tę stronę przeglądają też"
@@ -3634,6 +3643,9 @@ msgstr "Sprawdź skrzynkę"
 msgid "Checkbox · Radio · Switch"
 msgstr "Checkbox · Radio · Switch"
 
+msgid "Checked by the agent"
+msgstr "Zaznaczone przez agenta"
+
 msgid "Checking agents…"
 msgstr "Sprawdzanie agentów…"
 
@@ -3886,9 +3898,6 @@ msgstr "Kliknij chip, aby otworzyć pull request"
 
 msgid "Click to copy the session ID (resume with `claude --resume <id>`)."
 msgstr "Kliknij, aby skopiować ID sesji (wznów przez `claude --resume <id>`)."
-
-msgid "Click to edit"
-msgstr "Kliknij, aby edytować"
 
 msgid "Click to open on GitHub"
 msgstr "Kliknij, aby otworzyć na GitHub"
@@ -5143,6 +5152,9 @@ msgstr "Nie udało się zaktualizować umiejętności"
 
 msgid "Could not update the branch"
 msgstr "Nie udało się zaktualizować gałęzi"
+
+msgid "Could not update the to-do"
+msgstr "Nie udało się zaktualizować zadania"
 
 #. js-lingui-explicit-id
 msgid "serverError.plugins.credentialUnverified"
@@ -6557,6 +6569,9 @@ msgstr "Menu rozwijane"
 
 msgid "Dropdown, context, and application menus"
 msgstr "Menu rozwijane, kontekstowe i aplikacji"
+
+msgid "Due"
+msgstr "Termin"
 
 msgid "Duration"
 msgstr "Czas trwania"
@@ -10278,6 +10293,9 @@ msgstr "Scalanie…"
 msgid "Mesh Gradient"
 msgstr "Mesh Gradient"
 
+msgid "Message"
+msgstr "Wiadomość"
+
 msgid "Message in channel"
 msgstr "Wiadomość na kanale"
 
@@ -11464,6 +11482,9 @@ msgstr "brak (sesja)"
 msgid "None. This is the floor."
 msgstr "Brak. To jest poziom zerowy."
 
+msgid "Normal"
+msgstr "Normalny"
+
 msgid "Not a 2026 claim"
 msgstr "To nie zapowiedź na 2026"
 
@@ -12083,6 +12104,9 @@ msgstr "Otwarte zgłoszenia"
 
 msgid "Open leaderboard"
 msgstr "Otwórz ranking"
+
+msgid "Open link"
+msgstr "Otwórz link"
 
 msgid "Open Link as New Split"
 msgstr "Otwórz link w nowym podziale"
@@ -15733,8 +15757,8 @@ msgstr "Pokaż tekst"
 msgid "Show the messages that wait for the current turn to end."
 msgstr "Pokazuj wiadomości czekające na koniec bieżącej tury."
 
-msgid "Show the to-do button and list on each conversation."
-msgstr "Pokazuje przycisk i listę zadań przy każdej rozmowie."
+msgid "Show the to-do list of each conversation, shared with its agent."
+msgstr "Pokazuj listę zadań każdej rozmowy, współdzieloną z jej agentem."
 
 msgid "Show the triggering payload"
 msgstr "Pokaż ładunek wyzwalający"
@@ -18022,6 +18046,9 @@ msgstr "Aby wznowić rozmowę z agentem, uruchom to w jej folderze:"
 
 msgid "To resume another agent conversation, run this in its folder:"
 msgstr "Aby wznowić inną rozmowę z agentem, uruchom to w jej folderze:"
+
+msgid "To-do details"
+msgstr "Szczegóły zadania"
 
 msgid "To-dos"
 msgstr "Zadania"

@@ -1850,6 +1850,9 @@ msgstr "{added}件のファイルを{where}に追加しました"
 msgid "Added 1 file to {where}"
 msgstr "1件のファイルを{where}に追加しました"
 
+msgid "Added by the agent"
+msgstr "エージェントが追加"
+
 msgid "Added only when launching with a prompt — e.g. <0>--</0>, <1>--prompt</1>, <2>-i</2>."
 msgstr "プロンプト付きで起動するときのみ追加されます — 例: <0>--</0>、<1>--prompt</1>、<2>-i</2>。"
 
@@ -1997,6 +2000,9 @@ msgstr "同時に動かしているエージェント数"
 
 msgid "Agents use this account when they call Linear tools."
 msgstr "エージェントは、Linearのツールを呼び出すときにこのアカウントを使います。"
+
+msgid "Agents' to-dos"
+msgstr "エージェントのTo-do"
 
 msgid "Aggregate agent usage across every developer on the Superset leaderboard — tokens, cost, cache behaviour and which models people actually reach for."
 msgstr "Supersetリーダーボード上の全開発者を横断したエージェント利用の集計 — トークン、コスト、キャッシュの挙動、実際に選ばれているモデル。"
@@ -2249,6 +2255,9 @@ msgstr "ワークツリーワークスペースを削除するときにローカ
 
 msgid "Also list agents that have not started working yet."
 msgstr "まだ作業を始めていないエージェントも表示します。"
+
+msgid "Also show the to-dos agents add to their conversation through the superset CLI."
+msgstr "エージェントが superset CLI で会話に追加したTo-doも表示します。"
 
 msgid "Also viewing this page"
 msgstr "このページを見ている他のユーザー"
@@ -3634,6 +3643,9 @@ msgstr "受信トレイを確認してください"
 msgid "Checkbox · Radio · Switch"
 msgstr "Checkbox · Radio · Switch"
 
+msgid "Checked by the agent"
+msgstr "エージェントがチェック"
+
 msgid "Checking agents…"
 msgstr "エージェントを確認中…"
 
@@ -3886,9 +3898,6 @@ msgstr "チップをクリックするとプルリクエストを開きます"
 
 msgid "Click to copy the session ID (resume with `claude --resume <id>`)."
 msgstr "クリックでセッションIDをコピーします(`claude --resume <id>`で再開)。"
-
-msgid "Click to edit"
-msgstr "クリックして編集"
 
 msgid "Click to open on GitHub"
 msgstr "クリックしてGitHubで開く"
@@ -5143,6 +5152,9 @@ msgstr "スキルを更新できませんでした"
 
 msgid "Could not update the branch"
 msgstr "ブランチを更新できませんでした"
+
+msgid "Could not update the to-do"
+msgstr "To-doを更新できませんでした"
 
 #. js-lingui-explicit-id
 msgid "serverError.plugins.credentialUnverified"
@@ -6557,6 +6569,9 @@ msgstr "Dropdown Menu"
 
 msgid "Dropdown, context, and application menus"
 msgstr "ドロップダウン、コンテキスト、アプリケーションメニュー"
+
+msgid "Due"
+msgstr "期限"
 
 msgid "Duration"
 msgstr "所要時間"
@@ -10278,6 +10293,9 @@ msgstr "マージ中…"
 msgid "Mesh Gradient"
 msgstr "Mesh Gradient"
 
+msgid "Message"
+msgstr "メッセージ"
+
 msgid "Message in channel"
 msgstr "チャンネルのメッセージ"
 
@@ -11464,6 +11482,9 @@ msgstr "なし (セッション)"
 msgid "None. This is the floor."
 msgstr "なし。ここが出発点です。"
 
+msgid "Normal"
+msgstr "通常"
+
 msgid "Not a 2026 claim"
 msgstr "2026年の話ではない"
 
@@ -12083,6 +12104,9 @@ msgstr "オープンなIssue"
 
 msgid "Open leaderboard"
 msgstr "リーダーボードを開く"
+
+msgid "Open link"
+msgstr "リンクを開く"
 
 msgid "Open Link as New Split"
 msgstr "リンクを新規分割で開く"
@@ -15733,8 +15757,8 @@ msgstr "テキストを表示"
 msgid "Show the messages that wait for the current turn to end."
 msgstr "現在のターンの終了を待っているメッセージを表示します。"
 
-msgid "Show the to-do button and list on each conversation."
-msgstr "各会話にTo-doボタンとリストを表示します。"
+msgid "Show the to-do list of each conversation, shared with its agent."
+msgstr "各会話のTo-doリストを表示し、そのエージェントと共有します。"
 
 msgid "Show the triggering payload"
 msgstr "トリガーのペイロードを表示"
@@ -18022,6 +18046,9 @@ msgstr "エージェントとの会話を再開するには、そのフォルダ
 
 msgid "To resume another agent conversation, run this in its folder:"
 msgstr "別のエージェントとの会話を再開するには、そのフォルダで次を実行します:"
+
+msgid "To-do details"
+msgstr "To-doの詳細"
 
 msgid "To-dos"
 msgstr "To-do"

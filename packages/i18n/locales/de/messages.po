@@ -1850,6 +1850,9 @@ msgstr "{added} Dateien zu {where} hinzugefügt"
 msgid "Added 1 file to {where}"
 msgstr "1 Datei zu {where} hinzugefügt"
 
+msgid "Added by the agent"
+msgstr "Vom Agenten hinzugefügt"
+
 msgid "Added only when launching with a prompt — e.g. <0>--</0>, <1>--prompt</1>, <2>-i</2>."
 msgstr "Nur beim Start mit Prompt ergänzt — z. B. <0>--</0>, <1>--prompt</1>, <2>-i</2>."
 
@@ -1997,6 +2000,9 @@ msgstr "Gleichzeitig laufende Agenten"
 
 msgid "Agents use this account when they call Linear tools."
 msgstr "Agenten nutzen dieses Konto, wenn sie Linear-Tools aufrufen."
+
+msgid "Agents' to-dos"
+msgstr "To-dos der Agenten"
 
 msgid "Aggregate agent usage across every developer on the Superset leaderboard — tokens, cost, cache behaviour and which models people actually reach for."
 msgstr "Aggregierte Agent-Nutzung über alle Entwickler im Superset-Leaderboard — Tokens, Kosten, Cache-Verhalten und welche Modelle tatsächlich genutzt werden."
@@ -2249,6 +2255,9 @@ msgstr "Beim Löschen eines Worktree-Arbeitsbereichs auch den lokalen Git-Branch
 
 msgid "Also list agents that have not started working yet."
 msgstr "Auch Agenten auflisten, die noch nicht angefangen haben."
+
+msgid "Also show the to-dos agents add to their conversation through the superset CLI."
+msgstr "Auch die To-dos anzeigen, die Agenten über die superset-CLI zu ihrer Unterhaltung hinzufügen."
 
 msgid "Also viewing this page"
 msgstr "Ebenfalls auf dieser Seite"
@@ -3634,6 +3643,9 @@ msgstr "Sieh in dein Postfach"
 msgid "Checkbox · Radio · Switch"
 msgstr "Checkbox · Radio · Switch"
 
+msgid "Checked by the agent"
+msgstr "Vom Agenten abgehakt"
+
 msgid "Checking agents…"
 msgstr "Agenten werden geprüft…"
 
@@ -3886,9 +3898,6 @@ msgstr "Klicke auf den Chip, um den Pull Request zu öffnen"
 
 msgid "Click to copy the session ID (resume with `claude --resume <id>`)."
 msgstr "Klicken, um die Session-ID zu kopieren (fortsetzen mit `claude --resume <id>`)."
-
-msgid "Click to edit"
-msgstr "Zum Bearbeiten klicken"
 
 msgid "Click to open on GitHub"
 msgstr "Klicken, um auf GitHub zu öffnen"
@@ -5143,6 +5152,9 @@ msgstr "Skill konnte nicht aktualisiert werden"
 
 msgid "Could not update the branch"
 msgstr "Branch konnte nicht aktualisiert werden"
+
+msgid "Could not update the to-do"
+msgstr "To-do konnte nicht aktualisiert werden"
 
 #. js-lingui-explicit-id
 msgid "serverError.plugins.credentialUnverified"
@@ -6557,6 +6569,9 @@ msgstr "Dropdown-Menü"
 
 msgid "Dropdown, context, and application menus"
 msgstr "Dropdown-, Kontext- und Anwendungsmenüs"
+
+msgid "Due"
+msgstr "Fällig"
 
 msgid "Duration"
 msgstr "Dauer"
@@ -10278,6 +10293,9 @@ msgstr "Wird zusammengeführt…"
 msgid "Mesh Gradient"
 msgstr "Mesh Gradient"
 
+msgid "Message"
+msgstr "Nachricht"
+
 msgid "Message in channel"
 msgstr "Nachricht im Channel"
 
@@ -11464,6 +11482,9 @@ msgstr "keins (Sitzung)"
 msgid "None. This is the floor."
 msgstr "Keine. Das ist der Boden."
 
+msgid "Normal"
+msgstr "Normal"
+
 msgid "Not a 2026 claim"
 msgstr "Keine Behauptung für 2026"
 
@@ -12083,6 +12104,9 @@ msgstr "Offene Issues"
 
 msgid "Open leaderboard"
 msgstr "Bestenliste öffnen"
+
+msgid "Open link"
+msgstr "Link öffnen"
 
 msgid "Open Link as New Split"
 msgstr "Link in neuem geteilten Bereich öffnen"
@@ -15733,8 +15757,8 @@ msgstr "Text anzeigen"
 msgid "Show the messages that wait for the current turn to end."
 msgstr "Nachrichten anzeigen, die auf das Ende des aktuellen Durchlaufs warten."
 
-msgid "Show the to-do button and list on each conversation."
-msgstr "Zeigt die To-do-Schaltfläche und -Liste bei jeder Unterhaltung."
+msgid "Show the to-do list of each conversation, shared with its agent."
+msgstr "Die To-do-Liste jeder Unterhaltung anzeigen, geteilt mit ihrem Agenten."
 
 msgid "Show the triggering payload"
 msgstr "Auslösende Nutzlast anzeigen"
@@ -18022,6 +18046,9 @@ msgstr "Um eine Agent-Unterhaltung fortzusetzen, führe dies in ihrem Ordner aus
 
 msgid "To resume another agent conversation, run this in its folder:"
 msgstr "Um eine andere Agent-Unterhaltung fortzusetzen, führe dies in ihrem Ordner aus:"
+
+msgid "To-do details"
+msgstr "To-do-Details"
 
 msgid "To-dos"
 msgstr "To-dos"

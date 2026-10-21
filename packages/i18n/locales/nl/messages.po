@@ -1850,6 +1850,9 @@ msgstr "{added} bestanden toegevoegd aan {where}"
 msgid "Added 1 file to {where}"
 msgstr "1 bestand toegevoegd aan {where}"
 
+msgid "Added by the agent"
+msgstr "Toegevoegd door de agent"
+
 msgid "Added only when launching with a prompt — e.g. <0>--</0>, <1>--prompt</1>, <2>-i</2>."
 msgstr "Alleen toegevoegd bij starten met een prompt — bijv. <0>--</0>, <1>--prompt</1>, <2>-i</2>."
 
@@ -1997,6 +2000,9 @@ msgstr "Agents die tegelijk draaien"
 
 msgid "Agents use this account when they call Linear tools."
 msgstr "Agents gebruiken dit account wanneer ze Linear-tools aanroepen."
+
+msgid "Agents' to-dos"
+msgstr "To-do's van agents"
 
 msgid "Aggregate agent usage across every developer on the Superset leaderboard — tokens, cost, cache behaviour and which models people actually reach for."
 msgstr "Totaal agentgebruik van alle developers op het Superset-leaderboard — tokens, kosten, cachegedrag en welke modellen mensen echt gebruiken."
@@ -2249,6 +2255,9 @@ msgstr "Verwijder ook de lokale git-branch bij het verwijderen van een worktree-
 
 msgid "Also list agents that have not started working yet."
 msgstr "Toon ook agents die nog niet aan het werk zijn gegaan."
+
+msgid "Also show the to-dos agents add to their conversation through the superset CLI."
+msgstr "Toon ook de to-do's die agents via de superset-CLI aan hun gesprek toevoegen."
 
 msgid "Also viewing this page"
 msgstr "Ook op deze pagina"
@@ -3634,6 +3643,9 @@ msgstr "Check je inbox"
 msgid "Checkbox · Radio · Switch"
 msgstr "Checkbox · Radio · Switch"
 
+msgid "Checked by the agent"
+msgstr "Afgevinkt door de agent"
+
 msgid "Checking agents…"
 msgstr "Agents controleren…"
 
@@ -3886,9 +3898,6 @@ msgstr "Klik op de chip om de pull request te openen"
 
 msgid "Click to copy the session ID (resume with `claude --resume <id>`)."
 msgstr "Klik om de sessie-ID te kopiëren (hervatten met `claude --resume <id>`)."
-
-msgid "Click to edit"
-msgstr "Klik om te bewerken"
 
 msgid "Click to open on GitHub"
 msgstr "Klik om te openen op GitHub"
@@ -5143,6 +5152,9 @@ msgstr "Kan skill niet bijwerken"
 
 msgid "Could not update the branch"
 msgstr "Kan de branch niet bijwerken"
+
+msgid "Could not update the to-do"
+msgstr "Kan de to-do niet bijwerken"
 
 #. js-lingui-explicit-id
 msgid "serverError.plugins.credentialUnverified"
@@ -6557,6 +6569,9 @@ msgstr "Dropdownmenu"
 
 msgid "Dropdown, context, and application menus"
 msgstr "Dropdown-, context- en applicatiemenu's"
+
+msgid "Due"
+msgstr "Deadline"
 
 msgid "Duration"
 msgstr "Duur"
@@ -10278,6 +10293,9 @@ msgstr "Bezig met mergen…"
 msgid "Mesh Gradient"
 msgstr "Mesh Gradient"
 
+msgid "Message"
+msgstr "Bericht"
+
 msgid "Message in channel"
 msgstr "Bericht in kanaal"
 
@@ -11464,6 +11482,9 @@ msgstr "geen (sessie)"
 msgid "None. This is the floor."
 msgstr "Geen. Dit is de bodem."
 
+msgid "Normal"
+msgstr "Normaal"
+
 msgid "Not a 2026 claim"
 msgstr "Geen claim voor 2026"
 
@@ -12083,6 +12104,9 @@ msgstr "Open issues"
 
 msgid "Open leaderboard"
 msgstr "Ranglijst openen"
+
+msgid "Open link"
+msgstr "Link openen"
 
 msgid "Open Link as New Split"
 msgstr "Link openen als nieuwe split"
@@ -15733,8 +15757,8 @@ msgstr "Tekst tonen"
 msgid "Show the messages that wait for the current turn to end."
 msgstr "Toon de berichten die wachten tot de huidige beurt klaar is."
 
-msgid "Show the to-do button and list on each conversation."
-msgstr "Toont de takenknop en -lijst bij elk gesprek."
+msgid "Show the to-do list of each conversation, shared with its agent."
+msgstr "Toon de to-dolijst van elk gesprek, gedeeld met de agent."
 
 msgid "Show the triggering payload"
 msgstr "Activerende payload tonen"
@@ -18022,6 +18046,9 @@ msgstr "Voer dit uit in de map om een agentgesprek te hervatten:"
 
 msgid "To resume another agent conversation, run this in its folder:"
 msgstr "Voer dit uit in de map om een ander agentgesprek te hervatten:"
+
+msgid "To-do details"
+msgstr "To-do-details"
 
 msgid "To-dos"
 msgstr "To-do's"

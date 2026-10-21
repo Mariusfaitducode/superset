@@ -1850,6 +1850,9 @@ msgstr "Menambahkan {added} file ke {where}"
 msgid "Added 1 file to {where}"
 msgstr "Menambahkan 1 file ke {where}"
 
+msgid "Added by the agent"
+msgstr "Ditambahkan oleh agen"
+
 msgid "Added only when launching with a prompt — e.g. <0>--</0>, <1>--prompt</1>, <2>-i</2>."
 msgstr "Ditambahkan hanya saat menjalankan dengan prompt — mis. <0>--</0>, <1>--prompt</1>, <2>-i</2>."
 
@@ -1997,6 +2000,9 @@ msgstr "Agen yang berjalan sekaligus"
 
 msgid "Agents use this account when they call Linear tools."
 msgstr "Agen memakai akun ini saat memanggil tool Linear."
+
+msgid "Agents' to-dos"
+msgstr "To-do agen"
 
 msgid "Aggregate agent usage across every developer on the Superset leaderboard — tokens, cost, cache behaviour and which models people actually reach for."
 msgstr "Agregat penggunaan agen dari seluruh developer di papan peringkat Superset — token, biaya, perilaku cache, dan model yang benar-benar dipakai orang."
@@ -2249,6 +2255,9 @@ msgstr "Hapus juga branch git lokal saat menghapus workspace worktree"
 
 msgid "Also list agents that have not started working yet."
 msgstr "Tampilkan juga agen yang belum mulai bekerja."
+
+msgid "Also show the to-dos agents add to their conversation through the superset CLI."
+msgstr "Tampilkan juga to-do yang ditambahkan agen ke percakapannya lewat CLI superset."
 
 msgid "Also viewing this page"
 msgstr "Juga melihat halaman ini"
@@ -3634,6 +3643,9 @@ msgstr "Periksa kotak masuk Anda"
 msgid "Checkbox · Radio · Switch"
 msgstr "Checkbox · Radio · Switch"
 
+msgid "Checked by the agent"
+msgstr "Dicentang oleh agen"
+
 msgid "Checking agents…"
 msgstr "Memeriksa agen…"
 
@@ -3886,9 +3898,6 @@ msgstr "Klik chip untuk membuka pull request"
 
 msgid "Click to copy the session ID (resume with `claude --resume <id>`)."
 msgstr "Klik untuk menyalin ID sesi (lanjutkan dengan `claude --resume <id>`)."
-
-msgid "Click to edit"
-msgstr "Klik untuk mengedit"
 
 msgid "Click to open on GitHub"
 msgstr "Klik untuk membuka di GitHub"
@@ -5143,6 +5152,9 @@ msgstr "Tidak bisa memperbarui skill"
 
 msgid "Could not update the branch"
 msgstr "Tidak bisa memperbarui branch"
+
+msgid "Could not update the to-do"
+msgstr "Tidak dapat memperbarui to-do"
 
 #. js-lingui-explicit-id
 msgid "serverError.plugins.credentialUnverified"
@@ -6557,6 +6569,9 @@ msgstr "Menu Dropdown"
 
 msgid "Dropdown, context, and application menus"
 msgstr "Menu dropdown, konteks, dan aplikasi"
+
+msgid "Due"
+msgstr "Tenggat"
 
 msgid "Duration"
 msgstr "Durasi"
@@ -10278,6 +10293,9 @@ msgstr "Melakukan merge…"
 msgid "Mesh Gradient"
 msgstr "Mesh Gradient"
 
+msgid "Message"
+msgstr "Pesan"
+
 msgid "Message in channel"
 msgstr "Pesan di channel"
 
@@ -11464,6 +11482,9 @@ msgstr "tidak ada (sesi)"
 msgid "None. This is the floor."
 msgstr "Tidak ada. Ini adalah lantai dasarnya."
 
+msgid "Normal"
+msgstr "Normal"
+
 msgid "Not a 2026 claim"
 msgstr "Bukan klaim 2026"
 
@@ -12083,6 +12104,9 @@ msgstr "Issue terbuka"
 
 msgid "Open leaderboard"
 msgstr "Buka papan peringkat"
+
+msgid "Open link"
+msgstr "Buka tautan"
 
 msgid "Open Link as New Split"
 msgstr "Buka Tautan sebagai Panel Baru"
@@ -15733,8 +15757,8 @@ msgstr "Tampilkan teks"
 msgid "Show the messages that wait for the current turn to end."
 msgstr "Tampilkan pesan yang menunggu giliran saat ini selesai."
 
-msgid "Show the to-do button and list on each conversation."
-msgstr "Menampilkan tombol dan daftar tugas pada setiap percakapan."
+msgid "Show the to-do list of each conversation, shared with its agent."
+msgstr "Tampilkan daftar to-do setiap percakapan, dibagikan dengan agennya."
 
 msgid "Show the triggering payload"
 msgstr "Tampilkan payload pemicu"
@@ -18022,6 +18046,9 @@ msgstr "Untuk melanjutkan percakapan agen, jalankan ini di foldernya:"
 
 msgid "To resume another agent conversation, run this in its folder:"
 msgstr "Untuk melanjutkan percakapan agen lain, jalankan ini di foldernya:"
+
+msgid "To-do details"
+msgstr "Detail to-do"
 
 msgid "To-dos"
 msgstr "Tugas"
