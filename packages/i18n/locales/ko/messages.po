@@ -1237,6 +1237,9 @@ msgstr "+{hidden}개 더"
 msgid "+{hiddenCount} earlier"
 msgstr "이전 +{hiddenCount}개"
 
+msgid "+{hiddenCount} more"
+msgstr "+{hiddenCount}개 더"
+
 msgid "+{remainingCount} more"
 msgstr "+{remainingCount}개 더"
 
@@ -10900,6 +10903,9 @@ msgstr "활성 워크스페이스 없음"
 
 msgid "No agent"
 msgstr "에이전트 없음"
+
+msgid "No agent conversations"
+msgstr "에이전트 대화 없음"
 
 msgid "No agent conversations yet."
 msgstr "아직 에이전트 대화가 없습니다."

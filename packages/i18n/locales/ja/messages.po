@@ -1237,6 +1237,9 @@ msgstr "他 {hidden} 件"
 msgid "+{hiddenCount} earlier"
 msgstr "以前の{hiddenCount}件"
 
+msgid "+{hiddenCount} more"
+msgstr "+{hiddenCount} 件"
+
 msgid "+{remainingCount} more"
 msgstr "+{remainingCount}件"
 
@@ -10900,6 +10903,9 @@ msgstr "アクティブなワークスペースはありません"
 
 msgid "No agent"
 msgstr "エージェントなし"
+
+msgid "No agent conversations"
+msgstr "エージェントの会話はありません"
 
 msgid "No agent conversations yet."
 msgstr "エージェントの会話はまだありません。"

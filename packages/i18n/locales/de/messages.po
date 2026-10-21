@@ -1237,6 +1237,9 @@ msgstr "+{hidden} weitere"
 msgid "+{hiddenCount} earlier"
 msgstr "+{hiddenCount} früher"
 
+msgid "+{hiddenCount} more"
+msgstr "+{hiddenCount} weitere"
+
 msgid "+{remainingCount} more"
 msgstr "+{remainingCount} weitere"
 
@@ -10900,6 +10903,9 @@ msgstr "Keine aktiven Arbeitsbereiche"
 
 msgid "No agent"
 msgstr "Kein Agent"
+
+msgid "No agent conversations"
+msgstr "Keine Agent-Unterhaltungen"
 
 msgid "No agent conversations yet."
 msgstr "Noch keine Agent-Unterhaltungen."

@@ -1237,6 +1237,9 @@ msgstr "+{hidden} ещё"
 msgid "+{hiddenCount} earlier"
 msgstr "ещё +{hiddenCount} ранее"
 
+msgid "+{hiddenCount} more"
+msgstr "+{hiddenCount} ещё"
+
 msgid "+{remainingCount} more"
 msgstr "ещё +{remainingCount}"
 
@@ -10900,6 +10903,9 @@ msgstr "Нет активных рабочих областей"
 
 msgid "No agent"
 msgstr "Без агента"
+
+msgid "No agent conversations"
+msgstr "Нет разговоров агентов"
 
 msgid "No agent conversations yet."
 msgstr "Разговоров агентов пока нет."

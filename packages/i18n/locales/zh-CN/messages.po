@@ -1237,6 +1237,9 @@ msgstr "还有 {hidden} 个"
 msgid "+{hiddenCount} earlier"
 msgstr "更早的+{hiddenCount}条"
 
+msgid "+{hiddenCount} more"
+msgstr "+{hiddenCount} 个"
+
 msgid "+{remainingCount} more"
 msgstr "+{remainingCount}个"
 
@@ -10900,6 +10903,9 @@ msgstr "没有活动的工作区"
 
 msgid "No agent"
 msgstr "无智能体"
+
+msgid "No agent conversations"
+msgstr "没有智能体对话"
 
 msgid "No agent conversations yet."
 msgstr "还没有智能体对话。"

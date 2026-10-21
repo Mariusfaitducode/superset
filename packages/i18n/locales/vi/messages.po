@@ -1237,6 +1237,9 @@ msgstr "+{hidden} nữa"
 msgid "+{hiddenCount} earlier"
 msgstr "+{hiddenCount} trước đó"
 
+msgid "+{hiddenCount} more"
+msgstr "+{hiddenCount} nữa"
+
 msgid "+{remainingCount} more"
 msgstr "+{remainingCount} nữa"
 
@@ -10900,6 +10903,9 @@ msgstr "Không có workspace đang hoạt động"
 
 msgid "No agent"
 msgstr "Không có agent"
+
+msgid "No agent conversations"
+msgstr "Không có cuộc trò chuyện nào của agent"
 
 msgid "No agent conversations yet."
 msgstr "Chưa có cuộc trò chuyện nào của agent."

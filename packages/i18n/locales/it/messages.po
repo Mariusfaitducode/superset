@@ -1237,6 +1237,9 @@ msgstr "+{hidden} altri"
 msgid "+{hiddenCount} earlier"
 msgstr "+{hiddenCount} precedenti"
 
+msgid "+{hiddenCount} more"
+msgstr "+{hiddenCount} altre"
+
 msgid "+{remainingCount} more"
 msgstr "+{remainingCount} altri"
 
@@ -10900,6 +10903,9 @@ msgstr "Nessun workspace attivo"
 
 msgid "No agent"
 msgstr "Nessun agente"
+
+msgid "No agent conversations"
+msgstr "Nessuna conversazione di agenti"
 
 msgid "No agent conversations yet."
 msgstr "Nessuna conversazione di agenti per ora."

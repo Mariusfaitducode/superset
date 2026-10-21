@@ -1237,6 +1237,9 @@ msgstr "+{hidden} dalších"
 msgid "+{hiddenCount} earlier"
 msgstr "+{hiddenCount} dřívějších"
 
+msgid "+{hiddenCount} more"
+msgstr "+{hiddenCount} další"
+
 msgid "+{remainingCount} more"
 msgstr "+{remainingCount} další"
 
@@ -10900,6 +10903,9 @@ msgstr "Žádné aktivní pracovní prostory"
 
 msgid "No agent"
 msgstr "Žádný agent"
+
+msgid "No agent conversations"
+msgstr "Žádné konverzace agentů"
 
 msgid "No agent conversations yet."
 msgstr "Zatím žádné konverzace agentů."
