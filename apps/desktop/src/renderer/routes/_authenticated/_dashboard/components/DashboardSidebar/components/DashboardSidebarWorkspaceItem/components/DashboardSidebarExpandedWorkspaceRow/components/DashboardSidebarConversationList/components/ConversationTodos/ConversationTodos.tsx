@@ -22,6 +22,7 @@ import type {
 	TodoFields,
 } from "../../hooks/useWorkspaceTodos";
 import { dueState, localDay } from "../../utils/todo-order";
+import { httpLink } from "./utils/httpLink";
 
 type Priority = ConversationTodo["priority"];
 type Kind = ConversationTodo["kind"];
@@ -85,7 +86,12 @@ function TodoDetails({
 		{ value: "other", label: t`Other` },
 	];
 	const commitLink = () => {
-		const next = link.trim() || null;
+		const trimmed = link.trim();
+		const next = trimmed ? httpLink(trimmed) : null;
+		if (trimmed && !next) {
+			setLink(todo.link ?? "");
+			return;
+		}
 		if (next !== todo.link) onChange({ link: next });
 	};
 
@@ -177,6 +183,7 @@ function TodoItem({
 	const [draft, setDraft] = useState<string | null>(null);
 	const KindIcon = KIND_ICON[todo.kind];
 	const due = dueState(todo.dueOn, today);
+	const safeLink = httpLink(todo.link);
 	const failed = t`Could not update the to-do`;
 
 	const commit = () => {
@@ -252,13 +259,13 @@ function TodoItem({
 					{due === "today" ? t`Today` : formatDay(todo.dueOn ?? "")}
 				</span>
 			)}
-			{todo.link && (
+			{safeLink && (
 				<a
-					href={todo.link}
+					href={safeLink}
 					target="_blank"
-					rel="noreferrer"
+					rel="noreferrer noopener"
 					aria-label={t`Open link`}
-					title={todo.link}
+					title={safeLink}
 					className="shrink-0 rounded-sm p-0.5 text-muted-foreground hover:bg-muted hover:text-foreground"
 				>
 					<LuExternalLink className="size-3" />
