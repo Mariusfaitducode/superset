@@ -1292,6 +1292,9 @@ msgstr "⌘クリック"
 msgid "⌘⇧ click"
 msgstr "⌘⇧クリック"
 
+msgid "⌘K ↵ goes back to the previous conversation"
+msgstr "⌘K ↵ で前の会話に戻ります"
+
 msgid "● Online"
 msgstr "● オンライン"
 
@@ -4699,9 +4702,6 @@ msgstr "会話の統計"
 
 msgid "Conversation to-dos"
 msgstr "会話のTo-do"
-
-msgid "Conversations"
-msgstr "会話"
 
 msgid "Convert to draft"
 msgstr "ドラフトに変換"
@@ -10514,6 +10514,9 @@ msgstr "大半の開発者"
 msgid "Most of software history"
 msgstr "ソフトウェアの歴史のほとんど"
 
+msgid "Move"
+msgstr "移動"
+
 msgid "Move {count} to Group"
 msgstr "{count}件をグループへ移動"
 
@@ -10641,6 +10644,9 @@ msgstr "要更新"
 
 msgid "Needs update"
 msgstr "要更新"
+
+msgid "Needs you"
+msgstr "対応が必要"
 
 msgctxt "agent status"
 msgid "Needs you"
@@ -10891,6 +10897,9 @@ msgstr "アクティブなワークスペースはありません"
 
 msgid "No agent"
 msgstr "エージェントなし"
+
+msgid "No agent conversations yet."
+msgstr "エージェントの会話はまだありません。"
 
 msgid "No agent is configured on this host"
 msgstr "このホストにはエージェントが設定されていません"
@@ -11703,6 +11712,9 @@ msgstr "GitHub ではスター 1.5 万以上、フォーク 1,000 以上、コ�
 msgid "On our radar. Order and scope may change."
 msgstr "視野には入っています。順序や範囲は変わる可能性があります。"
 
+msgid "On screen"
+msgstr "表示中"
+
 msgid "on the board"
 msgstr "ボード上"
 
@@ -12436,6 +12448,9 @@ msgstr "他のチームメンバー"
 
 msgid "Other ways to reach us"
 msgstr "その他の連絡方法"
+
+msgid "Others"
+msgstr "その他"
 
 msgid "Our $11.5M seed round is led by Union Square Ventures, with Y Combinator, Paul Graham, and founders we admire."
 msgstr "1,150万ドルのシードラウンドは Union Square Ventures が主導し、Y Combinator、Paul Graham、そして私たちが尊敬する創業者たちが参加しています。"
@@ -13652,6 +13667,9 @@ msgstr "リベースしてマージ"
 
 msgid "Rebase and merge"
 msgstr "リベースしてマージ"
+
+msgid "Recent"
+msgstr "最近"
 
 msgid "Recent Activity"
 msgstr "最近のアクティビティ"
@@ -14946,6 +14964,9 @@ msgstr "キー名で検索..."
 
 msgid "Search changed files"
 msgstr "変更されたファイルを検索"
+
+msgid "Search conversations…"
+msgstr "会話を検索…"
 
 msgid "Search developers"
 msgstr "開発者を検索"

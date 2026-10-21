@@ -9,7 +9,7 @@ import {
 } from "renderer/routes/_authenticated/_dashboard/components/DashboardSidebar/components/DashboardSidebarWorkspaceItem/components/DashboardSidebarExpandedWorkspaceRow/components/DashboardSidebarConversationList/utils/conversation-state";
 import { pickConversationTitle } from "renderer/routes/_authenticated/_dashboard/components/DashboardSidebar/components/DashboardSidebarWorkspaceItem/components/DashboardSidebarExpandedWorkspaceRow/components/DashboardSidebarConversationList/utils/conversation-title";
 
-export interface SwitcherBinding {
+export interface AgentBinding {
 	terminalId: string;
 	workspaceId: string;
 	agentId: AgentIdentityId;
@@ -17,17 +17,17 @@ export interface SwitcherBinding {
 	lastEventAt: number;
 }
 
-export interface SwitcherWorkspace {
+export interface ConversationWorkspace {
 	name: string;
 	projectName: string | null;
 }
 
-export interface SwitcherTitles {
+export interface ConversationTitles {
 	customTitle: string | null;
 	runtimeTitle: string | null;
 }
 
-export interface SwitcherConversation {
+export interface AgentConversation {
 	terminalId: string;
 	workspaceId: string;
 	agentId: AgentIdentityId;
@@ -45,20 +45,20 @@ export interface SwitcherConversation {
  * Conversations waiting on the user come first, then the rest; the most
  * recent state change leads within each group.
  */
-export function buildSwitcherConversations({
+export function buildAgentConversations({
 	bindings,
 	workspaces,
 	terminalSeenAt,
 	titles,
 	tabNames,
 }: {
-	bindings: Iterable<SwitcherBinding>;
-	workspaces: ReadonlyMap<string, SwitcherWorkspace>;
+	bindings: Iterable<AgentBinding>;
+	workspaces: ReadonlyMap<string, ConversationWorkspace>;
 	terminalSeenAt: Readonly<Record<string, number>>;
-	titles: ReadonlyMap<string, SwitcherTitles>;
+	titles: ReadonlyMap<string, ConversationTitles>;
 	tabNames: ReadonlyMap<string, string>;
-}): SwitcherConversation[] {
-	const conversations: SwitcherConversation[] = [];
+}): AgentConversation[] {
+	const conversations: AgentConversation[] = [];
 	for (const binding of bindings) {
 		// Bindings of a deleted workspace can outlive it in the query cache.
 		const workspace = workspaces.get(binding.workspaceId);
@@ -95,8 +95,8 @@ export function buildSwitcherConversations({
 }
 
 /** Every word of the query must appear in the title, workspace, project or agent. */
-export function matchesSwitcherQuery(
-	conversation: SwitcherConversation,
+export function matchesConversationQuery(
+	conversation: AgentConversation,
 	query: string,
 ): boolean {
 	const words = query.toLowerCase().split(/\s+/).filter(Boolean);

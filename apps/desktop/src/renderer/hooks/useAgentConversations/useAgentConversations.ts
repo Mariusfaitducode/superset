@@ -11,11 +11,11 @@ import { useHostWorkspaces } from "renderer/routes/_authenticated/providers/Host
 import { useV2NotificationStore } from "renderer/stores/v2-notifications";
 import { getV2WorkspaceDisplayName } from "renderer/utils/getV2WorkspaceDisplayName";
 import {
-	buildSwitcherConversations,
-	type SwitcherConversation,
-	type SwitcherTitles,
-	type SwitcherWorkspace,
-} from "./switcher-conversations";
+	type AgentConversation,
+	buildAgentConversations,
+	type ConversationTitles,
+	type ConversationWorkspace,
+} from "./agent-conversations";
 
 /**
  * The bindings the sidebar's status provider already keeps live for every
@@ -48,14 +48,14 @@ function useCachedAgentBindings(): TerminalAgentBinding[] {
 	);
 }
 
-type TitleEntries = [string, SwitcherTitles][];
+type TitleEntries = [string, ConversationTitles][];
 
 // Module-level so react-query can keep the combined result stable.
 function titlesByHost(results: { data?: TitleEntries }[]) {
 	return results.map((result) => result.data);
 }
 
-export function useSwitcherConversations(): SwitcherConversation[] {
+export function useAgentConversations(): AgentConversation[] {
 	const bindings = useCachedAgentBindings();
 	const terminalSeenAt = useV2NotificationStore(
 		(state) => state.terminalSeenAt,
@@ -68,7 +68,7 @@ export function useSwitcherConversations(): SwitcherConversation[] {
 			projects.map((project) => [project.projectKey, project.name]),
 		);
 		return new Map(
-			hostWorkspaces.map((workspace): [string, SwitcherWorkspace] => [
+			hostWorkspaces.map((workspace): [string, ConversationWorkspace] => [
 				workspace.id,
 				{
 					name: getV2WorkspaceDisplayName(workspace),
@@ -97,7 +97,7 @@ export function useSwitcherConversations(): SwitcherConversation[] {
 
 	const titleResults = useQueries({
 		queries: hostUrls.map((hostUrl) => ({
-			queryKey: ["conversation-switcher-titles", hostUrl],
+			queryKey: ["agent-conversation-titles", hostUrl],
 			queryFn: async () => {
 				const { sessions } =
 					await getHostServiceClientByUrl(hostUrl).terminal.list.query();
@@ -133,7 +133,7 @@ export function useSwitcherConversations(): SwitcherConversation[] {
 
 	return useMemo(
 		() =>
-			buildSwitcherConversations({
+			buildAgentConversations({
 				bindings,
 				workspaces,
 				terminalSeenAt,
