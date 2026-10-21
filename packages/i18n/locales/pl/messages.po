@@ -1245,6 +1245,9 @@ msgstr "+{hidden} więcej"
 msgid "+{hiddenCount} earlier"
 msgstr "+{hiddenCount} wcześniej"
 
+msgid "+{hiddenCount} more"
+msgstr "+{hiddenCount} więcej"
+
 msgid "+{remainingCount} more"
 msgstr "+{remainingCount} więcej"
 
@@ -1299,6 +1302,9 @@ msgstr "⌘ klik"
 
 msgid "⌘⇧ click"
 msgstr "⌘⇧ klik"
+
+msgid "⌘K ↵ goes back to the previous conversation"
+msgstr "⌘K ↵ wraca do poprzedniej rozmowy"
 
 msgid "● Online"
 msgstr "● Online"
@@ -4719,9 +4725,6 @@ msgstr "Statystyki rozmów"
 
 msgid "Conversation to-dos"
 msgstr "Zadania rozmów"
-
-msgid "Conversations"
-msgstr "Rozmowy"
 
 msgid "Convert to draft"
 msgstr "Zamień na wersję roboczą"
@@ -10558,6 +10561,9 @@ msgstr "większość programistów"
 msgid "Most of software history"
 msgstr "Większość historii oprogramowania"
 
+msgid "Move"
+msgstr "Przesuń"
+
 msgid "Move {count} to Group"
 msgstr "Przenieś {count} do grupy"
 
@@ -10685,6 +10691,9 @@ msgstr "wymaga aktualizacji"
 
 msgid "Needs update"
 msgstr "Wymaga aktualizacji"
+
+msgid "Needs you"
+msgstr "Czeka na ciebie"
 
 msgctxt "agent status"
 msgid "Needs you"
@@ -10942,6 +10951,12 @@ msgstr "Brak aktywnych obszarów roboczych"
 
 msgid "No agent"
 msgstr "Brak agenta"
+
+msgid "No agent conversations"
+msgstr "Brak rozmów agentów"
+
+msgid "No agent conversations yet."
+msgstr "Brak rozmów agentów."
 
 msgid "No agent is configured on this host"
 msgstr "Na tym hoście nie skonfigurowano żadnego agenta"
@@ -11763,6 +11778,9 @@ msgstr "Na GitHubie ma ponad 15 tys. gwiazdek, ponad 1000 forków i ponad 100 ko
 msgid "On our radar. Order and scope may change."
 msgstr "Mamy to na radarze. Kolejność i zakres mogą się zmienić."
 
+msgid "On screen"
+msgstr "Na ekranie"
+
 msgid "on the board"
 msgstr "na tablicy"
 
@@ -12496,6 +12514,9 @@ msgstr "Pozostali członkowie zespołu"
 
 msgid "Other ways to reach us"
 msgstr "Inne sposoby kontaktu"
+
+msgid "Others"
+msgstr "Pozostałe"
 
 msgid "Our $11.5M seed round is led by Union Square Ventures, with Y Combinator, Paul Graham, and founders we admire."
 msgstr "Naszą rundę seed o wartości 11,5 mln $ prowadzi Union Square Ventures, razem z Y Combinator, Paulem Grahamem i założycielami, których podziwiamy."
@@ -13715,6 +13736,9 @@ msgstr "Rebase i scal"
 
 msgid "Rebase and merge"
 msgstr "Rebase i scal"
+
+msgid "Recent"
+msgstr "Ostatnie"
 
 msgid "Recent Activity"
 msgstr "Ostatnia aktywność"
@@ -15012,6 +15036,9 @@ msgstr "Szukaj według nazwy klucza..."
 
 msgid "Search changed files"
 msgstr "Szukaj zmienionych plików"
+
+msgid "Search conversations…"
+msgstr "Szukaj rozmów…"
 
 msgid "Search developers"
 msgstr "Szukaj programistów"

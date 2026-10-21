@@ -1245,6 +1245,9 @@ msgstr "還有 {hidden} 個"
 msgid "+{hiddenCount} earlier"
 msgstr "更早的+{hiddenCount}條"
 
+msgid "+{hiddenCount} more"
+msgstr "+{hiddenCount} 個"
+
 msgid "+{remainingCount} more"
 msgstr "+{remainingCount}個"
 
@@ -1299,6 +1302,9 @@ msgstr "⌘點選"
 
 msgid "⌘⇧ click"
 msgstr "⌘⇧點選"
+
+msgid "⌘K ↵ goes back to the previous conversation"
+msgstr "⌘K ↵ 返回上一個對話"
 
 msgid "● Online"
 msgstr "● 線上"
@@ -4719,9 +4725,6 @@ msgstr "對話統計"
 
 msgid "Conversation to-dos"
 msgstr "對話待辦"
-
-msgid "Conversations"
-msgstr "對話"
 
 msgid "Convert to draft"
 msgstr "轉為草稿"
@@ -10558,6 +10561,9 @@ msgstr "多數開發者"
 msgid "Most of software history"
 msgstr "軟體史的大部分時間"
 
+msgid "Move"
+msgstr "移動"
+
 msgid "Move {count} to Group"
 msgstr "將{count}個移動到群組"
 
@@ -10685,6 +10691,9 @@ msgstr "需要更新"
 
 msgid "Needs update"
 msgstr "需要更新"
+
+msgid "Needs you"
+msgstr "需要你處理"
 
 msgctxt "agent status"
 msgid "Needs you"
@@ -10942,6 +10951,12 @@ msgstr "沒有作用中的工作區"
 
 msgid "No agent"
 msgstr "無代理程式"
+
+msgid "No agent conversations"
+msgstr "沒有代理對話"
+
+msgid "No agent conversations yet."
+msgstr "尚無代理對話。"
 
 msgid "No agent is configured on this host"
 msgstr "此主機上未設定任何代理程式"
@@ -11763,6 +11778,9 @@ msgstr "Superset 在 GitHub 上擁有 15k+ 顆星、1,000+ 次 fork 與 100+ 位
 msgid "On our radar. Order and scope may change."
 msgstr "在我們的視野內。順序和範圍可能會變。"
 
+msgid "On screen"
+msgstr "目前顯示"
+
 msgid "on the board"
 msgstr "在榜上"
 
@@ -12496,6 +12514,9 @@ msgstr "其他團隊成員"
 
 msgid "Other ways to reach us"
 msgstr "其他聯絡方式"
+
+msgid "Others"
+msgstr "其他"
 
 msgid "Our $11.5M seed round is led by Union Square Ventures, with Y Combinator, Paul Graham, and founders we admire."
 msgstr "我們 1,150 萬美元的種子輪由 Union Square Ventures 領投，Y Combinator、Paul Graham 以及我們敬佩的創辦人參與投資。"
@@ -13715,6 +13736,9 @@ msgstr "變基併合併"
 
 msgid "Rebase and merge"
 msgstr "變基併合併"
+
+msgid "Recent"
+msgstr "最近"
 
 msgid "Recent Activity"
 msgstr "最近動態"
@@ -15012,6 +15036,9 @@ msgstr "依鍵名搜尋..."
 
 msgid "Search changed files"
 msgstr "搜尋更改的檔案"
+
+msgid "Search conversations…"
+msgstr "搜尋對話…"
 
 msgid "Search developers"
 msgstr "搜尋開發者"

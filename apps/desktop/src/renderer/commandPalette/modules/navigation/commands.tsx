@@ -1,24 +1,11 @@
 import { msg } from "@lingui/core/macro";
 import { BookOpenIcon, HistoryIcon, SettingsIcon } from "lucide-react";
 import { LuLayers, LuMessagesSquare } from "react-icons/lu";
+import { useConversationSwitcherStore } from "renderer/routes/_authenticated/_dashboard/components/ConversationSwitcher/store";
 import type { Command, CommandProvider } from "../../core/types";
-import { ConversationSwitcherFrame } from "../../ui/ConversationSwitcher";
 import { RecentlyViewedFrame } from "../../ui/RecentlyViewed/RecentlyViewedFrame";
 import { WorkspaceListFrame } from "../../ui/WorkspaceList";
 import { settingsTabCommands } from "../settings/commands";
-
-export const conversationSwitcherCommand: Command = {
-	id: "nav.conversations",
-	title: msg({
-		message: "Conversations",
-	}),
-	section: "navigation",
-	icon: LuMessagesSquare,
-	keywords: ["conversation", "agent", "session", "chat", "switch"],
-	hotkeyId: "OPEN_CONVERSATION_SWITCHER",
-	when: (ctx) => ctx.isV2CloudEnabled,
-	renderFrame: () => <ConversationSwitcherFrame />,
-};
 
 export const navigationProvider: CommandProvider = {
 	id: "navigation",
@@ -43,7 +30,18 @@ export const navigationProvider: CommandProvider = {
 				keywords: ["history", "recent", "back"],
 				renderFrame: () => <RecentlyViewedFrame />,
 			},
-			conversationSwitcherCommand,
+			{
+				id: "nav.conversations",
+				title: msg({
+					message: "Go to Conversation",
+				}),
+				section: "navigation",
+				icon: LuMessagesSquare,
+				keywords: ["conversation", "agent", "session", "chat", "switch"],
+				hotkeyId: "OPEN_CONVERSATION_SWITCHER",
+				when: (ctx) => ctx.isV2CloudEnabled,
+				run: () => useConversationSwitcherStore.getState().setOpen(true),
+			},
 			{
 				id: "nav.workspaces",
 				title: msg({

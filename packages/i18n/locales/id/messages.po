@@ -1245,6 +1245,9 @@ msgstr "+{hidden} lagi"
 msgid "+{hiddenCount} earlier"
 msgstr "+{hiddenCount} sebelumnya"
 
+msgid "+{hiddenCount} more"
+msgstr "+{hiddenCount} lainnya"
+
 msgid "+{remainingCount} more"
 msgstr "+{remainingCount} lagi"
 
@@ -1299,6 +1302,9 @@ msgstr "⌘ klik"
 
 msgid "⌘⇧ click"
 msgstr "⌘⇧ klik"
+
+msgid "⌘K ↵ goes back to the previous conversation"
+msgstr "⌘K ↵ kembali ke percakapan sebelumnya"
 
 msgid "● Online"
 msgstr "● Online"
@@ -4719,9 +4725,6 @@ msgstr "Statistik percakapan"
 
 msgid "Conversation to-dos"
 msgstr "Tugas percakapan"
-
-msgid "Conversations"
-msgstr "Percakapan"
 
 msgid "Convert to draft"
 msgstr "Ubah menjadi draf"
@@ -10558,6 +10561,9 @@ msgstr "sebagian besar developer"
 msgid "Most of software history"
 msgstr "Sebagian besar sejarah perangkat lunak"
 
+msgid "Move"
+msgstr "Pindah"
+
 msgid "Move {count} to Group"
 msgstr "Pindahkan {count} ke Grup"
 
@@ -10685,6 +10691,9 @@ msgstr "perlu diperbarui"
 
 msgid "Needs update"
 msgstr "Perlu diperbarui"
+
+msgid "Needs you"
+msgstr "Butuh Anda"
 
 msgctxt "agent status"
 msgid "Needs you"
@@ -10942,6 +10951,12 @@ msgstr "Tidak ada workspace aktif"
 
 msgid "No agent"
 msgstr "Tanpa agen"
+
+msgid "No agent conversations"
+msgstr "Tidak ada percakapan agen"
+
+msgid "No agent conversations yet."
+msgstr "Belum ada percakapan agen."
 
 msgid "No agent is configured on this host"
 msgstr "Tidak ada agen yang dikonfigurasi di host ini"
@@ -11763,6 +11778,9 @@ msgstr "Di GitHub, Superset memiliki lebih dari 15k bintang, lebih dari 1.000 fo
 msgid "On our radar. Order and scope may change."
 msgstr "Ada di radar kami. Urutan dan cakupannya bisa berubah."
 
+msgid "On screen"
+msgstr "Di layar"
+
 msgid "on the board"
 msgstr "di papan ini"
 
@@ -12496,6 +12514,9 @@ msgstr "Anggota Tim Lainnya"
 
 msgid "Other ways to reach us"
 msgstr "Cara lain menghubungi kami"
+
+msgid "Others"
+msgstr "Lainnya"
 
 msgid "Our $11.5M seed round is led by Union Square Ventures, with Y Combinator, Paul Graham, and founders we admire."
 msgstr "Putaran pendanaan awal kami senilai $11,5 juta dipimpin oleh Union Square Ventures, bersama Y Combinator, Paul Graham, dan para pendiri yang kami kagumi."
@@ -13715,6 +13736,9 @@ msgstr "Rebase & Merge"
 
 msgid "Rebase and merge"
 msgstr "Rebase dan merge"
+
+msgid "Recent"
+msgstr "Terbaru"
 
 msgid "Recent Activity"
 msgstr "Aktivitas Terbaru"
@@ -15012,6 +15036,9 @@ msgstr "Cari berdasarkan nama kunci..."
 
 msgid "Search changed files"
 msgstr "Cari file yang berubah"
+
+msgid "Search conversations…"
+msgstr "Cari percakapan…"
 
 msgid "Search developers"
 msgstr "Cari pengembang"

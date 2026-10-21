@@ -1,16 +1,16 @@
 import { describe, expect, test } from "bun:test";
 import {
-	buildSwitcherConversations,
-	matchesSwitcherQuery,
-	type SwitcherBinding,
-} from "./switcher-conversations";
+	type AgentBinding,
+	buildAgentConversations,
+	matchesConversationQuery,
+} from "./agent-conversations";
 
 const AT = 1_000_000;
 
 function binding(
 	terminalId: string,
-	overrides: Partial<SwitcherBinding> = {},
-): SwitcherBinding {
+	overrides: Partial<AgentBinding> = {},
+): AgentBinding {
 	return {
 		terminalId,
 		workspaceId: "ws-1",
@@ -26,8 +26,8 @@ const workspaces = new Map([
 	["ws-2", { name: "ctrl tab", projectName: null }],
 ]);
 
-function build(bindings: SwitcherBinding[], terminalSeenAt = {}) {
-	return buildSwitcherConversations({
+function build(bindings: AgentBinding[], terminalSeenAt = {}) {
+	return buildAgentConversations({
 		bindings,
 		workspaces,
 		terminalSeenAt,
@@ -36,7 +36,7 @@ function build(bindings: SwitcherBinding[], terminalSeenAt = {}) {
 	});
 }
 
-describe("buildSwitcherConversations", () => {
+describe("buildAgentConversations", () => {
 	test("puts conversations waiting on the user first, most recent first", () => {
 		const conversations = build(
 			[
@@ -65,7 +65,7 @@ describe("buildSwitcherConversations", () => {
 	});
 
 	test("titles a conversation like the sidebar and names its workspace", () => {
-		const [conversation] = buildSwitcherConversations({
+		const [conversation] = buildAgentConversations({
 			bindings: [binding("t1", { workspaceId: "ws-2" })],
 			workspaces,
 			terminalSeenAt: {},
@@ -88,8 +88,8 @@ describe("buildSwitcherConversations", () => {
 	});
 });
 
-describe("matchesSwitcherQuery", () => {
-	const [conversation] = buildSwitcherConversations({
+describe("matchesConversationQuery", () => {
+	const [conversation] = buildAgentConversations({
 		bindings: [binding("t1")],
 		workspaces,
 		terminalSeenAt: {},
@@ -99,13 +99,13 @@ describe("matchesSwitcherQuery", () => {
 	if (!conversation) throw new Error("missing conversation");
 
 	test("matches every word across title, workspace, project and agent", () => {
-		expect(matchesSwitcherQuery(conversation, "")).toBe(true);
-		expect(matchesSwitcherQuery(conversation, "review")).toBe(true);
-		expect(matchesSwitcherQuery(conversation, "SUPERSET pr")).toBe(true);
-		expect(matchesSwitcherQuery(conversation, "todos claude")).toBe(true);
+		expect(matchesConversationQuery(conversation, "")).toBe(true);
+		expect(matchesConversationQuery(conversation, "review")).toBe(true);
+		expect(matchesConversationQuery(conversation, "SUPERSET pr")).toBe(true);
+		expect(matchesConversationQuery(conversation, "todos claude")).toBe(true);
 	});
 
 	test("rejects a query with a word found nowhere", () => {
-		expect(matchesSwitcherQuery(conversation, "review codex")).toBe(false);
+		expect(matchesConversationQuery(conversation, "review codex")).toBe(false);
 	});
 });

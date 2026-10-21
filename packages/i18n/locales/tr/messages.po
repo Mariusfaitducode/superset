@@ -1245,6 +1245,9 @@ msgstr "+{hidden} daha"
 msgid "+{hiddenCount} earlier"
 msgstr "+{hiddenCount} daha önce"
 
+msgid "+{hiddenCount} more"
+msgstr "+{hiddenCount} daha"
+
 msgid "+{remainingCount} more"
 msgstr "+{remainingCount} daha"
 
@@ -1299,6 +1302,9 @@ msgstr "⌘ tık"
 
 msgid "⌘⇧ click"
 msgstr "⌘⇧ tık"
+
+msgid "⌘K ↵ goes back to the previous conversation"
+msgstr "⌘K ↵ önceki konuşmaya döner"
 
 msgid "● Online"
 msgstr "● Çevrimiçi"
@@ -4719,9 +4725,6 @@ msgstr "Konuşma istatistikleri"
 
 msgid "Conversation to-dos"
 msgstr "Konuşma yapılacakları"
-
-msgid "Conversations"
-msgstr "Konuşmalar"
 
 msgid "Convert to draft"
 msgstr "Taslağa dönüştür"
@@ -10558,6 +10561,9 @@ msgstr "çoğu geliştirici"
 msgid "Most of software history"
 msgstr "Yazılım tarihinin çoğu"
 
+msgid "Move"
+msgstr "Gezin"
+
 msgid "Move {count} to Group"
 msgstr "{count} öğeyi gruba taşı"
 
@@ -10685,6 +10691,9 @@ msgstr "güncelleme gerekli"
 
 msgid "Needs update"
 msgstr "Güncelleme gerekli"
+
+msgid "Needs you"
+msgstr "Seni bekliyor"
 
 msgctxt "agent status"
 msgid "Needs you"
@@ -10942,6 +10951,12 @@ msgstr "Etkin çalışma alanı yok"
 
 msgid "No agent"
 msgstr "Ajan yok"
+
+msgid "No agent conversations"
+msgstr "Ajan konuşması yok"
+
+msgid "No agent conversations yet."
+msgstr "Henüz ajan konuşması yok."
 
 msgid "No agent is configured on this host"
 msgstr "Bu ana makinede yapılandırılmış bir ajan yok"
@@ -11763,6 +11778,9 @@ msgstr "GitHub'da 15k+ yıldızı, 1.000+ fork'u ve 100+ katkıda bulunanı var.
 msgid "On our radar. Order and scope may change."
 msgstr "Radarımızda. Sıra ve kapsam değişebilir."
 
+msgid "On screen"
+msgstr "Ekranda"
+
 msgid "on the board"
 msgstr "tabloda"
 
@@ -12496,6 +12514,9 @@ msgstr "Diğer takım üyeleri"
 
 msgid "Other ways to reach us"
 msgstr "Bize ulaşmanın diğer yolları"
+
+msgid "Others"
+msgstr "Diğerleri"
 
 msgid "Our $11.5M seed round is led by Union Square Ventures, with Y Combinator, Paul Graham, and founders we admire."
 msgstr "11,5 milyon dolarlık tohum turumuza Union Square Ventures liderlik ediyor; Y Combinator, Paul Graham ve hayran olduğumuz kurucular da yer alıyor."
@@ -13715,6 +13736,9 @@ msgstr "Rebase ve birleştir"
 
 msgid "Rebase and merge"
 msgstr "Rebase ve birleştir"
+
+msgid "Recent"
+msgstr "Son"
 
 msgid "Recent Activity"
 msgstr "Son etkinlik"
@@ -15012,6 +15036,9 @@ msgstr "Anahtar adına göre ara..."
 
 msgid "Search changed files"
 msgstr "Değişen dosyaları ara"
+
+msgid "Search conversations…"
+msgstr "Konuşma ara…"
 
 msgid "Search developers"
 msgstr "Geliştirici ara"

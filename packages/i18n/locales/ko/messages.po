@@ -1245,6 +1245,9 @@ msgstr "+{hidden}개 더"
 msgid "+{hiddenCount} earlier"
 msgstr "이전 +{hiddenCount}개"
 
+msgid "+{hiddenCount} more"
+msgstr "+{hiddenCount}개 더"
+
 msgid "+{remainingCount} more"
 msgstr "+{remainingCount}개 더"
 
@@ -1299,6 +1302,9 @@ msgstr "⌘ 클릭"
 
 msgid "⌘⇧ click"
 msgstr "⌘⇧ 클릭"
+
+msgid "⌘K ↵ goes back to the previous conversation"
+msgstr "⌘K ↵ 이전 대화로 돌아갑니다"
 
 msgid "● Online"
 msgstr "● 온라인"
@@ -4719,9 +4725,6 @@ msgstr "대화 통계"
 
 msgid "Conversation to-dos"
 msgstr "대화 할 일"
-
-msgid "Conversations"
-msgstr "대화"
 
 msgid "Convert to draft"
 msgstr "초안으로 전환"
@@ -10558,6 +10561,9 @@ msgstr "대부분의 개발자"
 msgid "Most of software history"
 msgstr "소프트웨어 역사의 대부분"
 
+msgid "Move"
+msgstr "이동"
+
 msgid "Move {count} to Group"
 msgstr "{count}개를 그룹으로 이동"
 
@@ -10685,6 +10691,9 @@ msgstr "업데이트 필요"
 
 msgid "Needs update"
 msgstr "업데이트 필요"
+
+msgid "Needs you"
+msgstr "확인 필요"
 
 msgctxt "agent status"
 msgid "Needs you"
@@ -10942,6 +10951,12 @@ msgstr "활성 워크스페이스 없음"
 
 msgid "No agent"
 msgstr "에이전트 없음"
+
+msgid "No agent conversations"
+msgstr "에이전트 대화 없음"
+
+msgid "No agent conversations yet."
+msgstr "아직 에이전트 대화가 없습니다."
 
 msgid "No agent is configured on this host"
 msgstr "이 호스트에 구성된 에이전트가 없습니다"
@@ -11763,6 +11778,9 @@ msgstr "GitHub에서 스타 15k+, 포크 1,000+, 기여자 100명 이상을 보�
 msgid "On our radar. Order and scope may change."
 msgstr "지켜보고 있습니다. 순서와 범위는 바뀔 수 있습니다."
 
+msgid "On screen"
+msgstr "화면에 표시 중"
+
 msgid "on the board"
 msgstr "순위표 등록"
 
@@ -12496,6 +12514,9 @@ msgstr "다른 팀 멤버"
 
 msgid "Other ways to reach us"
 msgstr "다른 문의 방법"
+
+msgid "Others"
+msgstr "기타"
 
 msgid "Our $11.5M seed round is led by Union Square Ventures, with Y Combinator, Paul Graham, and founders we admire."
 msgstr "1,150만 달러 규모의 시드 라운드는 Union Square Ventures가 주도했으며, Y Combinator, Paul Graham, 그리고 우리가 존경하는 창업자들이 함께했습니다."
@@ -13715,6 +13736,9 @@ msgstr "리베이스 후 머지"
 
 msgid "Rebase and merge"
 msgstr "리베이스 후 머지"
+
+msgid "Recent"
+msgstr "최근"
 
 msgid "Recent Activity"
 msgstr "최근 활동"
@@ -15012,6 +15036,9 @@ msgstr "키 이름으로 검색..."
 
 msgid "Search changed files"
 msgstr "변경된 파일 검색"
+
+msgid "Search conversations…"
+msgstr "대화 검색…"
 
 msgid "Search developers"
 msgstr "개발자 검색"

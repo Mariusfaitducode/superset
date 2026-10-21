@@ -1245,6 +1245,9 @@ msgstr "+{hidden} ещё"
 msgid "+{hiddenCount} earlier"
 msgstr "ещё +{hiddenCount} ранее"
 
+msgid "+{hiddenCount} more"
+msgstr "+{hiddenCount} ещё"
+
 msgid "+{remainingCount} more"
 msgstr "ещё +{remainingCount}"
 
@@ -1299,6 +1302,9 @@ msgstr "⌘ клик"
 
 msgid "⌘⇧ click"
 msgstr "⌘⇧ клик"
+
+msgid "⌘K ↵ goes back to the previous conversation"
+msgstr "⌘K ↵ возвращает к предыдущему разговору"
 
 msgid "● Online"
 msgstr "● В сети"
@@ -4719,9 +4725,6 @@ msgstr "Статистика разговоров"
 
 msgid "Conversation to-dos"
 msgstr "Задачи разговоров"
-
-msgid "Conversations"
-msgstr "Разговоры"
 
 msgid "Convert to draft"
 msgstr "Перевести в черновик"
@@ -10558,6 +10561,9 @@ msgstr "большинство разработчиков"
 msgid "Most of software history"
 msgstr "Почти вся история софта"
 
+msgid "Move"
+msgstr "Перемещение"
+
 msgid "Move {count} to Group"
 msgstr "Переместить {count} в группу"
 
@@ -10685,6 +10691,9 @@ msgstr "нужно обновить"
 
 msgid "Needs update"
 msgstr "Нужно обновить"
+
+msgid "Needs you"
+msgstr "Ждёт вас"
 
 msgctxt "agent status"
 msgid "Needs you"
@@ -10942,6 +10951,12 @@ msgstr "Нет активных рабочих областей"
 
 msgid "No agent"
 msgstr "Без агента"
+
+msgid "No agent conversations"
+msgstr "Нет разговоров агентов"
+
+msgid "No agent conversations yet."
+msgstr "Разговоров агентов пока нет."
 
 msgid "No agent is configured on this host"
 msgstr "На этом хосте не настроен ни один агент"
@@ -11763,6 +11778,9 @@ msgstr "На GitHub у проекта более 15 тыс. звёзд, боле
 msgid "On our radar. Order and scope may change."
 msgstr "У нас на радаре. Порядок и объём могут измениться."
 
+msgid "On screen"
+msgstr "На экране"
+
 msgid "on the board"
 msgstr "в рейтинге"
 
@@ -12496,6 +12514,9 @@ msgstr "Другие участники команды"
 
 msgid "Other ways to reach us"
 msgstr "Другие способы связаться"
+
+msgid "Others"
+msgstr "Остальные"
 
 msgid "Our $11.5M seed round is led by Union Square Ventures, with Y Combinator, Paul Graham, and founders we admire."
 msgstr "Наш посевной раунд на 11,5 млн $ возглавляет Union Square Ventures, вместе с Y Combinator, Полом Грэмом и основателями, которыми мы восхищаемся."
@@ -13715,6 +13736,9 @@ msgstr "Перебазировать и объединить"
 
 msgid "Rebase and merge"
 msgstr "Перебазировать и объединить"
+
+msgid "Recent"
+msgstr "Недавние"
 
 msgid "Recent Activity"
 msgstr "Недавняя активность"
@@ -15012,6 +15036,9 @@ msgstr "Поиск по имени ключа..."
 
 msgid "Search changed files"
 msgstr "Поиск изменённых файлов"
+
+msgid "Search conversations…"
+msgstr "Поиск разговоров…"
 
 msgid "Search developers"
 msgstr "Поиск разработчиков"
