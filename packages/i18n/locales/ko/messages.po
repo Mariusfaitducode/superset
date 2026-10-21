@@ -375,6 +375,14 @@ msgstr "{0} → {1} 대기 중"
 msgid "{0} actions"
 msgstr "{0} 작업"
 
+#. placeholder {0}: states.length
+msgid "{0} agents"
+msgstr "에이전트 {0}개"
+
+#. placeholder {0}: states.length
+msgid "{0} agents · {waiting} waiting for you"
+msgstr "에이전트 {0}개 · {waiting}개가 기다리는 중"
+
 #. placeholder {0}: formatTokens(belowGap > 0n ? belowGap : 0n)
 msgid "{0} behind you"
 msgstr "{0} 차이로 뒤"
@@ -3309,6 +3317,9 @@ msgstr "승인하면 이 애플리케이션이 자체 서비스 약관과 개인
 msgid "By clicking continue, you agree to our <0>Terms of Service</0> and <1>Privacy Policy</1>."
 msgstr "계속을 클릭하면 <0>서비스 약관</0>과 <1>개인정보처리방침</1>에 동의하는 것입니다."
 
+msgid "By label"
+msgstr "라벨별"
+
 msgid "By signing in, you agree to our\n"
 "<0>Terms of Service</0> and <1>Privacy Policy</1>"
 msgstr "로그인하면 다음에 동의하게 됩니다\n"
@@ -3319,6 +3330,9 @@ msgstr "로그인하면 <0>서비스 약관</0>과 <1>개인정보 처리방침<
 
 msgid "by spend"
 msgstr "지출 기준"
+
+msgid "By status"
+msgstr "상태별"
 
 msgid "by tokens"
 msgstr "토큰 기준"
@@ -4192,6 +4206,9 @@ msgstr "색상"
 
 msgid "Color Filter"
 msgstr "색상 필터"
+
+msgid "Columns"
+msgstr "열"
 
 msgid "Combine all commits"
 msgstr "모든 커밋 합치기"
@@ -11139,6 +11156,9 @@ msgstr "항목 없음"
 
 msgid "No known creators"
 msgstr "알려진 만든 사람이 없습니다"
+
+msgid "No label"
+msgstr "라벨 없음"
 
 msgid "No labels"
 msgstr "레이블 없음"

@@ -375,6 +375,14 @@ msgstr "{0} → {1} 保留中"
 msgid "{0} actions"
 msgstr "{0}の操作"
 
+#. placeholder {0}: states.length
+msgid "{0} agents"
+msgstr "エージェント {0}"
+
+#. placeholder {0}: states.length
+msgid "{0} agents · {waiting} waiting for you"
+msgstr "エージェント {0} · {waiting} 件があなたを待っています"
+
 #. placeholder {0}: formatTokens(belowGap > 0n ? belowGap : 0n)
 msgid "{0} behind you"
 msgstr "{0}差で後続"
@@ -3309,6 +3317,9 @@ msgstr "許可すると、このアプリケーションはその利用規約と
 msgid "By clicking continue, you agree to our <0>Terms of Service</0> and <1>Privacy Policy</1>."
 msgstr "続行をクリックすると、<0>利用規約</0>と<1>プライバシーポリシー</1>に同意したことになります。"
 
+msgid "By label"
+msgstr "ラベル別"
+
 msgid "By signing in, you agree to our\n"
 "<0>Terms of Service</0> and <1>Privacy Policy</1>"
 msgstr "サインインすると、以下に同意したことになります\n"
@@ -3319,6 +3330,9 @@ msgstr "サインインすると、<0>利用規約</0>と<1>プライバシー�
 
 msgid "by spend"
 msgstr "支出額順"
+
+msgid "By status"
+msgstr "ステータス別"
 
 msgid "by tokens"
 msgstr "トークン数順"
@@ -4192,6 +4206,9 @@ msgstr "色"
 
 msgid "Color Filter"
 msgstr "カラーフィルタ"
+
+msgid "Columns"
+msgstr "列"
 
 msgid "Combine all commits"
 msgstr "すべてのコミットを1つに統合"
@@ -11139,6 +11156,9 @@ msgstr "項目なし"
 
 msgid "No known creators"
 msgstr "既知の作成者はいません"
+
+msgid "No label"
+msgstr "ラベルなし"
 
 msgid "No labels"
 msgstr "ラベルなし"

@@ -375,6 +375,14 @@ msgstr "{0} → {1} pending"
 msgid "{0} actions"
 msgstr "{0} actions"
 
+#. placeholder {0}: states.length
+msgid "{0} agents"
+msgstr "{0} agents"
+
+#. placeholder {0}: states.length
+msgid "{0} agents · {waiting} waiting for you"
+msgstr "{0} agents · {waiting} waiting for you"
+
 #. placeholder {0}: formatTokens(belowGap > 0n ? belowGap : 0n)
 msgid "{0} behind you"
 msgstr "{0} behind you"
@@ -3309,6 +3317,9 @@ msgstr "By authorizing, you allow this application to access your data according
 msgid "By clicking continue, you agree to our <0>Terms of Service</0> and <1>Privacy Policy</1>."
 msgstr "By clicking continue, you agree to our <0>Terms of Service</0> and <1>Privacy Policy</1>."
 
+msgid "By label"
+msgstr "By label"
+
 msgid "By signing in, you agree to our\n"
 "<0>Terms of Service</0> and <1>Privacy Policy</1>"
 msgstr "By signing in, you agree to our\n"
@@ -3319,6 +3330,9 @@ msgstr "By signing in, you agree to our <0>Terms of Service</0> and <1>Privacy P
 
 msgid "by spend"
 msgstr "by spend"
+
+msgid "By status"
+msgstr "By status"
 
 msgid "by tokens"
 msgstr "by tokens"
@@ -4192,6 +4206,9 @@ msgstr "Color"
 
 msgid "Color Filter"
 msgstr "Color Filter"
+
+msgid "Columns"
+msgstr "Columns"
 
 msgid "Combine all commits"
 msgstr "Combine all commits"
@@ -11139,6 +11156,9 @@ msgstr "No items"
 
 msgid "No known creators"
 msgstr "No known creators"
+
+msgid "No label"
+msgstr "No label"
 
 msgid "No labels"
 msgstr "No labels"

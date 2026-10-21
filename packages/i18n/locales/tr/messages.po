@@ -375,6 +375,14 @@ msgstr "{0} → {1} bekliyor"
 msgid "{0} actions"
 msgstr "{0} eylemleri"
 
+#. placeholder {0}: states.length
+msgid "{0} agents"
+msgstr "{0} ajan"
+
+#. placeholder {0}: states.length
+msgid "{0} agents · {waiting} waiting for you"
+msgstr "{0} ajan · {waiting} seni bekliyor"
+
 #. placeholder {0}: formatTokens(belowGap > 0n ? belowGap : 0n)
 msgid "{0} behind you"
 msgstr "{0} arkanızda"
@@ -3309,6 +3317,9 @@ msgstr "Yetkilendirerek, bu uygulamanın hizmet şartlarına ve gizlilik politik
 msgid "By clicking continue, you agree to our <0>Terms of Service</0> and <1>Privacy Policy</1>."
 msgstr "Devam'a tıklayarak <0>Hizmet Şartları</0> ve <1>Gizlilik Politikası</1> belgelerimizi kabul edersiniz."
 
+msgid "By label"
+msgstr "Etikete göre"
+
 msgid "By signing in, you agree to our\n"
 "<0>Terms of Service</0> and <1>Privacy Policy</1>"
 msgstr "Oturum açarak şunları kabul edersiniz:\n"
@@ -3319,6 +3330,9 @@ msgstr "Oturum açarak <0>Hizmet Şartları</0> ve <1>Gizlilik Politikası</1> b
 
 msgid "by spend"
 msgstr "harcamaya göre"
+
+msgid "By status"
+msgstr "Duruma göre"
 
 msgid "by tokens"
 msgstr "token'a göre"
@@ -4192,6 +4206,9 @@ msgstr "Renk"
 
 msgid "Color Filter"
 msgstr "Renk Filtresi"
+
+msgid "Columns"
+msgstr "Sütunlar"
 
 msgid "Combine all commits"
 msgstr "Tüm commit'leri birleştirir"
@@ -11139,6 +11156,9 @@ msgstr "Öğe yok"
 
 msgid "No known creators"
 msgstr "Bilinen oluşturan yok"
+
+msgid "No label"
+msgstr "Etiket yok"
 
 msgid "No labels"
 msgstr "Etiket yok"

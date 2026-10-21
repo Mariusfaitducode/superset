@@ -375,6 +375,14 @@ msgstr "{0} → {1} in behandeling"
 msgid "{0} actions"
 msgstr "Acties voor {0}"
 
+#. placeholder {0}: states.length
+msgid "{0} agents"
+msgstr "{0} agents"
+
+#. placeholder {0}: states.length
+msgid "{0} agents · {waiting} waiting for you"
+msgstr "{0} agents · {waiting} wachten op jou"
+
 #. placeholder {0}: formatTokens(belowGap > 0n ? belowGap : 0n)
 msgid "{0} behind you"
 msgstr "{0} achter je"
@@ -3309,6 +3317,9 @@ msgstr "Door te autoriseren geef je deze applicatie toegang tot je gegevens volg
 msgid "By clicking continue, you agree to our <0>Terms of Service</0> and <1>Privacy Policy</1>."
 msgstr "Door op doorgaan te klikken ga je akkoord met onze <0>servicevoorwaarden</0> en het <1>privacybeleid</1>."
 
+msgid "By label"
+msgstr "Per label"
+
 msgid "By signing in, you agree to our\n"
 "<0>Terms of Service</0> and <1>Privacy Policy</1>"
 msgstr "Door in te loggen ga je akkoord met onze\n"
@@ -3319,6 +3330,9 @@ msgstr "Door in te loggen ga je akkoord met onze <0>servicevoorwaarden</0> en he
 
 msgid "by spend"
 msgstr "op uitgaven"
+
+msgid "By status"
+msgstr "Per status"
 
 msgid "by tokens"
 msgstr "op tokens"
@@ -4192,6 +4206,9 @@ msgstr "Kleur"
 
 msgid "Color Filter"
 msgstr "Kleurfilter"
+
+msgid "Columns"
+msgstr "Kolommen"
 
 msgid "Combine all commits"
 msgstr "Alle commits samenvoegen"
@@ -11139,6 +11156,9 @@ msgstr "Geen items"
 
 msgid "No known creators"
 msgstr "Geen bekende makers"
+
+msgid "No label"
+msgstr "Geen label"
 
 msgid "No labels"
 msgstr "Geen labels"

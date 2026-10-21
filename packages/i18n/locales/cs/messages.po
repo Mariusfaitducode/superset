@@ -375,6 +375,14 @@ msgstr "čeká {0} → {1}"
 msgid "{0} actions"
 msgstr "Akce {0}"
 
+#. placeholder {0}: states.length
+msgid "{0} agents"
+msgstr "Agenti: {0}"
+
+#. placeholder {0}: states.length
+msgid "{0} agents · {waiting} waiting for you"
+msgstr "Agenti: {0} · čeká na vás: {waiting}"
+
 #. placeholder {0}: formatTokens(belowGap > 0n ? belowGap : 0n)
 msgid "{0} behind you"
 msgstr "{0} za vámi"
@@ -3309,6 +3317,9 @@ msgstr "Autorizací umožníte této aplikaci přístup k vašim datům podle je
 msgid "By clicking continue, you agree to our <0>Terms of Service</0> and <1>Privacy Policy</1>."
 msgstr "Kliknutím na Pokračovat souhlasíte s <0>podmínkami služby</0> a <1>zásadami ochrany soukromí</1>."
 
+msgid "By label"
+msgstr "Podle štítku"
+
 msgid "By signing in, you agree to our\n"
 "<0>Terms of Service</0> and <1>Privacy Policy</1>"
 msgstr "Přihlášením souhlasíte s\n"
@@ -3319,6 +3330,9 @@ msgstr "Přihlášením souhlasíte s <0>podmínkami služby</0> a <1>zásadami 
 
 msgid "by spend"
 msgstr "podle útraty"
+
+msgid "By status"
+msgstr "Podle stavu"
 
 msgid "by tokens"
 msgstr "podle tokenů"
@@ -4192,6 +4206,9 @@ msgstr "Barva"
 
 msgid "Color Filter"
 msgstr "Barevný filtr"
+
+msgid "Columns"
+msgstr "Sloupce"
 
 msgid "Combine all commits"
 msgstr "Spojí všechny commity"
@@ -11139,6 +11156,9 @@ msgstr "Žádné položky"
 
 msgid "No known creators"
 msgstr "Žádní známí autoři"
+
+msgid "No label"
+msgstr "Bez štítku"
 
 msgid "No labels"
 msgstr "Žádné štítky"

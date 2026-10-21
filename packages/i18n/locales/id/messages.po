@@ -375,6 +375,14 @@ msgstr "{0} → {1} tertunda"
 msgid "{0} actions"
 msgstr "Aksi {0}"
 
+#. placeholder {0}: states.length
+msgid "{0} agents"
+msgstr "{0} agen"
+
+#. placeholder {0}: states.length
+msgid "{0} agents · {waiting} waiting for you"
+msgstr "{0} agen · {waiting} menunggu Anda"
+
 #. placeholder {0}: formatTokens(belowGap > 0n ? belowGap : 0n)
 msgid "{0} behind you"
 msgstr "{0} di belakang Anda"
@@ -3309,6 +3317,9 @@ msgstr "Dengan memberi otorisasi, Anda mengizinkan aplikasi ini mengakses data A
 msgid "By clicking continue, you agree to our <0>Terms of Service</0> and <1>Privacy Policy</1>."
 msgstr "Dengan mengklik lanjutkan, Anda menyetujui <0>Ketentuan Layanan</0> dan <1>Kebijakan Privasi</1> kami."
 
+msgid "By label"
+msgstr "Menurut label"
+
 msgid "By signing in, you agree to our\n"
 "<0>Terms of Service</0> and <1>Privacy Policy</1>"
 msgstr "Dengan masuk, Anda menyetujui\n"
@@ -3319,6 +3330,9 @@ msgstr "Dengan masuk, Anda menyetujui <0>Ketentuan Layanan</0> dan <1>Kebijakan 
 
 msgid "by spend"
 msgstr "menurut pengeluaran"
+
+msgid "By status"
+msgstr "Menurut status"
 
 msgid "by tokens"
 msgstr "menurut token"
@@ -4192,6 +4206,9 @@ msgstr "Warna"
 
 msgid "Color Filter"
 msgstr "Filter Warna"
+
+msgid "Columns"
+msgstr "Kolom"
 
 msgid "Combine all commits"
 msgstr "Gabungkan semua commit"
@@ -11139,6 +11156,9 @@ msgstr "Tidak ada item"
 
 msgid "No known creators"
 msgstr "Tidak ada pembuat yang diketahui"
+
+msgid "No label"
+msgstr "Tanpa label"
 
 msgid "No labels"
 msgstr "Tanpa label"

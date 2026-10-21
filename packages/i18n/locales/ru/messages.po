@@ -375,6 +375,14 @@ msgstr "{0} → {1} ожидается"
 msgid "{0} actions"
 msgstr "Действия {0}"
 
+#. placeholder {0}: states.length
+msgid "{0} agents"
+msgstr "Агентов: {0}"
+
+#. placeholder {0}: states.length
+msgid "{0} agents · {waiting} waiting for you"
+msgstr "Агентов: {0} · ждут вас: {waiting}"
+
 #. placeholder {0}: formatTokens(belowGap > 0n ? belowGap : 0n)
 msgid "{0} behind you"
 msgstr "{0} позади вас"
@@ -3309,6 +3317,9 @@ msgstr "Авторизуя, вы разрешаете этому приложе�
 msgid "By clicking continue, you agree to our <0>Terms of Service</0> and <1>Privacy Policy</1>."
 msgstr "Нажимая «Продолжить», вы соглашаетесь с <0>Условиями использования</0> и <1>Политикой конфиденциальности</1>."
 
+msgid "By label"
+msgstr "По меткам"
+
 msgid "By signing in, you agree to our\n"
 "<0>Terms of Service</0> and <1>Privacy Policy</1>"
 msgstr "Выполняя вход, вы соглашаетесь с\n"
@@ -3319,6 +3330,9 @@ msgstr "Выполняя вход, вы соглашаетесь с <0>Усло�
 
 msgid "by spend"
 msgstr "по расходам"
+
+msgid "By status"
+msgstr "По состоянию"
 
 msgid "by tokens"
 msgstr "по токенам"
@@ -4192,6 +4206,9 @@ msgstr "Цвет"
 
 msgid "Color Filter"
 msgstr "Цветовой фильтр"
+
+msgid "Columns"
+msgstr "Колонки"
 
 msgid "Combine all commits"
 msgstr "Свести все коммиты в один"
@@ -11139,6 +11156,9 @@ msgstr "Пусто"
 
 msgid "No known creators"
 msgstr "Нет известных создателей"
+
+msgid "No label"
+msgstr "Без метки"
 
 msgid "No labels"
 msgstr "Без меток"

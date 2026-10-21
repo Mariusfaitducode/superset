@@ -375,6 +375,14 @@ msgstr "{0} → {1}待更新"
 msgid "{0} actions"
 msgstr "{0}的操作"
 
+#. placeholder {0}: states.length
+msgid "{0} agents"
+msgstr "{0} 個代理"
+
+#. placeholder {0}: states.length
+msgid "{0} agents · {waiting} waiting for you"
+msgstr "{0} 個代理 · {waiting} 個在等你"
+
 #. placeholder {0}: formatTokens(belowGap > 0n ? belowGap : 0n)
 msgid "{0} behind you"
 msgstr "落後你 {0}"
@@ -3309,6 +3317,9 @@ msgstr "授權即表示你允許該應用程式按照其服務條款和隱私政
 msgid "By clicking continue, you agree to our <0>Terms of Service</0> and <1>Privacy Policy</1>."
 msgstr "點選繼續即表示你同意我們的<0>服務條款</0>和<1>隱私政策</1>。"
 
+msgid "By label"
+msgstr "依標籤"
+
 msgid "By signing in, you agree to our\n"
 "<0>Terms of Service</0> and <1>Privacy Policy</1>"
 msgstr "登入即表示你同意我們的\n"
@@ -3319,6 +3330,9 @@ msgstr "登入即表示你同意我們的<0>服務條款</0>和<1>隱私政策</
 
 msgid "by spend"
 msgstr "按花費"
+
+msgid "By status"
+msgstr "依狀態"
 
 msgid "by tokens"
 msgstr "按token"
@@ -4192,6 +4206,9 @@ msgstr "顏色"
 
 msgid "Color Filter"
 msgstr "色彩濾鏡"
+
+msgid "Columns"
+msgstr "欄"
 
 msgid "Combine all commits"
 msgstr "把所有提交合成一個"
@@ -11139,6 +11156,9 @@ msgstr "暫無條目"
 
 msgid "No known creators"
 msgstr "沒有已知的建立者"
+
+msgid "No label"
+msgstr "無標籤"
 
 msgid "No labels"
 msgstr "無標籤"

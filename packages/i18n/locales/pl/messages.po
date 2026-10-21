@@ -375,6 +375,14 @@ msgstr "{0} → {1} oczekuje"
 msgid "{0} actions"
 msgstr "Akcje {0}"
 
+#. placeholder {0}: states.length
+msgid "{0} agents"
+msgstr "Agenci: {0}"
+
+#. placeholder {0}: states.length
+msgid "{0} agents · {waiting} waiting for you"
+msgstr "Agenci: {0} · czeka na ciebie: {waiting}"
+
 #. placeholder {0}: formatTokens(belowGap > 0n ? belowGap : 0n)
 msgid "{0} behind you"
 msgstr "{0} za tobą"
@@ -3309,6 +3317,9 @@ msgstr "Autoryzując, zezwalasz tej aplikacji na dostęp do Twoich danych zgodni
 msgid "By clicking continue, you agree to our <0>Terms of Service</0> and <1>Privacy Policy</1>."
 msgstr "Klikając „kontynuuj”, akceptujesz <0>Warunki korzystania z usługi</0> i <1>Politykę prywatności</1>."
 
+msgid "By label"
+msgstr "Według etykiety"
+
 msgid "By signing in, you agree to our\n"
 "<0>Terms of Service</0> and <1>Privacy Policy</1>"
 msgstr "Logując się, akceptujesz nasze\n"
@@ -3319,6 +3330,9 @@ msgstr "Logując się, akceptujesz <0>Warunki korzystania z usługi</0> i <1>Pol
 
 msgid "by spend"
 msgstr "wg wydatków"
+
+msgid "By status"
+msgstr "Według stanu"
 
 msgid "by tokens"
 msgstr "wg tokenów"
@@ -4192,6 +4206,9 @@ msgstr "Kolor"
 
 msgid "Color Filter"
 msgstr "Filtr kolorów"
+
+msgid "Columns"
+msgstr "Kolumny"
 
 msgid "Combine all commits"
 msgstr "Połącz wszystkie commity"
@@ -11139,6 +11156,9 @@ msgstr "Brak pozycji"
 
 msgid "No known creators"
 msgstr "Brak znanych twórców"
+
+msgid "No label"
+msgstr "Bez etykiety"
 
 msgid "No labels"
 msgstr "Brak etykiet"

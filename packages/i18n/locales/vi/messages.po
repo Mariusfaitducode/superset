@@ -375,6 +375,14 @@ msgstr "{0} → {1} đang chờ"
 msgid "{0} actions"
 msgstr "Hành động {0}"
 
+#. placeholder {0}: states.length
+msgid "{0} agents"
+msgstr "{0} agent"
+
+#. placeholder {0}: states.length
+msgid "{0} agents · {waiting} waiting for you"
+msgstr "{0} agent · {waiting} đang chờ bạn"
+
 #. placeholder {0}: formatTokens(belowGap > 0n ? belowGap : 0n)
 msgid "{0} behind you"
 msgstr "{0} phía sau bạn"
@@ -3309,6 +3317,9 @@ msgstr "Khi cấp quyền, bạn cho phép ứng dụng này truy cập dữ li�
 msgid "By clicking continue, you agree to our <0>Terms of Service</0> and <1>Privacy Policy</1>."
 msgstr "Khi nhấn tiếp tục, bạn đồng ý với <0>Điều khoản dịch vụ</0> và <1>Chính sách quyền riêng tư</1> của chúng tôi."
 
+msgid "By label"
+msgstr "Theo nhãn"
+
 msgid "By signing in, you agree to our\n"
 "<0>Terms of Service</0> and <1>Privacy Policy</1>"
 msgstr "Khi đăng nhập, bạn đồng ý với\n"
@@ -3319,6 +3330,9 @@ msgstr "Khi đăng nhập, bạn đồng ý với <0>Điều khoản dịch vụ
 
 msgid "by spend"
 msgstr "theo chi tiêu"
+
+msgid "By status"
+msgstr "Theo trạng thái"
 
 msgid "by tokens"
 msgstr "theo token"
@@ -4192,6 +4206,9 @@ msgstr "Màu"
 
 msgid "Color Filter"
 msgstr "Bộ lọc màu"
+
+msgid "Columns"
+msgstr "Cột"
 
 msgid "Combine all commits"
 msgstr "Gộp toàn bộ commit"
@@ -11139,6 +11156,9 @@ msgstr "Không có mục nào"
 
 msgid "No known creators"
 msgstr "Không có người tạo nào được biết"
+
+msgid "No label"
+msgstr "Không có nhãn"
 
 msgid "No labels"
 msgstr "Không có nhãn"
