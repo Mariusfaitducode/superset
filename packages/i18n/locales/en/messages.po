@@ -4700,6 +4700,9 @@ msgstr "Conversation stats"
 msgid "Conversation to-dos"
 msgstr "Conversation to-dos"
 
+msgid "Conversations"
+msgstr "Conversations"
+
 msgid "Convert to draft"
 msgstr "Convert to draft"
 
@@ -8229,6 +8232,9 @@ msgstr "Go forward to the next page in history"
 msgid "Go home"
 msgstr "Go home"
 
+msgid "Go to Conversation"
+msgstr "Go to Conversation"
+
 msgid "Go to home"
 msgstr "Go to home"
 
@@ -9308,6 +9314,9 @@ msgstr "Joining…"
 
 msgid "Jump into your favorite editor with one click. VS Code, Cursor, Xcode, JetBrains IDEs, or any terminal: open worktrees exactly where you need them."
 msgstr "Jump into your favorite editor with one click. VS Code, Cursor, Xcode, JetBrains IDEs, or any terminal: open worktrees exactly where you need them."
+
+msgid "Jump to any agent conversation, in any workspace"
+msgstr "Jump to any agent conversation, in any workspace"
 
 msgid "Jump to file"
 msgstr "Jump to file"
@@ -10997,6 +11006,9 @@ msgstr "No console output"
 
 msgid "No contributors found."
 msgstr "No contributors found."
+
+msgid "No conversations found."
+msgstr "No conversations found."
 
 msgid "No credit card required."
 msgstr "No credit card required."

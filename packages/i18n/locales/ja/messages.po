@@ -4700,6 +4700,9 @@ msgstr "会話の統計"
 msgid "Conversation to-dos"
 msgstr "会話のTo-do"
 
+msgid "Conversations"
+msgstr "会話"
+
 msgid "Convert to draft"
 msgstr "ドラフトに変換"
 
@@ -8229,6 +8232,9 @@ msgstr "履歴の次のページに進む"
 msgid "Go home"
 msgstr "ホームへ"
 
+msgid "Go to Conversation"
+msgstr "会話に移動"
+
 msgid "Go to home"
 msgstr "ホームへ"
 
@@ -9308,6 +9314,9 @@ msgstr "参加中…"
 
 msgid "Jump into your favorite editor with one click. VS Code, Cursor, Xcode, JetBrains IDEs, or any terminal: open worktrees exactly where you need them."
 msgstr "ワンクリックでお気に入りのエディタに移動できます。VS Code、Cursor、Xcode、JetBrainsのIDE、あるいは任意のターミナル。ワークツリーを必要な場所でそのまま開けます。"
+
+msgid "Jump to any agent conversation, in any workspace"
+msgstr "任意のワークスペースの任意のエージェント会話に移動"
 
 msgid "Jump to file"
 msgstr "ファイルへジャンプ"
@@ -10997,6 +11006,9 @@ msgstr "コンソール出力はありません"
 
 msgid "No contributors found."
 msgstr "コントリビューターが見つかりません。"
+
+msgid "No conversations found."
+msgstr "会話が見つかりません。"
 
 msgid "No credit card required."
 msgstr "クレジットカードは不要です。"

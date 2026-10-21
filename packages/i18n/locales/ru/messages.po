@@ -4700,6 +4700,9 @@ msgstr "Статистика разговоров"
 msgid "Conversation to-dos"
 msgstr "Задачи разговоров"
 
+msgid "Conversations"
+msgstr "Разговоры"
+
 msgid "Convert to draft"
 msgstr "Перевести в черновик"
 
@@ -8229,6 +8232,9 @@ msgstr "Перейти на следующую страницу в истори�
 msgid "Go home"
 msgstr "На главную"
 
+msgid "Go to Conversation"
+msgstr "Перейти к разговору"
+
 msgid "Go to home"
 msgstr "На главную"
 
@@ -9308,6 +9314,9 @@ msgstr "Присоединение…"
 
 msgid "Jump into your favorite editor with one click. VS Code, Cursor, Xcode, JetBrains IDEs, or any terminal: open worktrees exactly where you need them."
 msgstr "Переходите в любимый редактор одним кликом. VS Code, Cursor, Xcode, IDE от JetBrains или любой терминал: открывайте worktree ровно там, где нужно."
+
+msgid "Jump to any agent conversation, in any workspace"
+msgstr "Перейти к любому разговору агента в любом рабочем пространстве"
 
 msgid "Jump to file"
 msgstr "Перейти к файлу"
@@ -10997,6 +11006,9 @@ msgstr "Нет вывода в консоль"
 
 msgid "No contributors found."
 msgstr "Контрибьюторы не найдены."
+
+msgid "No conversations found."
+msgstr "Разговоры не найдены."
 
 msgid "No credit card required."
 msgstr "Карта не нужна."

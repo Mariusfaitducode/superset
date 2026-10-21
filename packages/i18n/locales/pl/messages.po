@@ -4700,6 +4700,9 @@ msgstr "Statystyki rozmów"
 msgid "Conversation to-dos"
 msgstr "Zadania rozmów"
 
+msgid "Conversations"
+msgstr "Rozmowy"
+
 msgid "Convert to draft"
 msgstr "Zamień na wersję roboczą"
 
@@ -8229,6 +8232,9 @@ msgstr "Przejdź do następnej strony w historii"
 msgid "Go home"
 msgstr "Strona główna"
 
+msgid "Go to Conversation"
+msgstr "Przejdź do rozmowy"
+
 msgid "Go to home"
 msgstr "Przejdź na stronę główną"
 
@@ -9308,6 +9314,9 @@ msgstr "Dołączanie…"
 
 msgid "Jump into your favorite editor with one click. VS Code, Cursor, Xcode, JetBrains IDEs, or any terminal: open worktrees exactly where you need them."
 msgstr "Przeskocz do ulubionego edytora jednym kliknięciem. VS Code, Cursor, Xcode, IDE od JetBrains albo dowolny terminal: otwieraj worktree dokładnie tam, gdzie ich potrzebujesz."
+
+msgid "Jump to any agent conversation, in any workspace"
+msgstr "Przejdź do dowolnej rozmowy agenta w dowolnym obszarze roboczym"
 
 msgid "Jump to file"
 msgstr "Przejdź do pliku"
@@ -10997,6 +11006,9 @@ msgstr "Brak wyjścia konsoli"
 
 msgid "No contributors found."
 msgstr "Nie znaleziono współtwórców."
+
+msgid "No conversations found."
+msgstr "Nie znaleziono rozmów."
 
 msgid "No credit card required."
 msgstr "Bez karty kredytowej."

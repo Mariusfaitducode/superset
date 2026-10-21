@@ -4700,6 +4700,9 @@ msgstr "Unterhaltungsstatistiken"
 msgid "Conversation to-dos"
 msgstr "To-dos der Unterhaltungen"
 
+msgid "Conversations"
+msgstr "Unterhaltungen"
+
 msgid "Convert to draft"
 msgstr "In Entwurf umwandeln"
 
@@ -8229,6 +8232,9 @@ msgstr "Zur nächsten Seite im Verlauf vorgehen"
 msgid "Go home"
 msgstr "Zur Startseite"
 
+msgid "Go to Conversation"
+msgstr "Zur Unterhaltung wechseln"
+
 msgid "Go to home"
 msgstr "Zur Startseite"
 
@@ -9308,6 +9314,9 @@ msgstr "Beitritt läuft…"
 
 msgid "Jump into your favorite editor with one click. VS Code, Cursor, Xcode, JetBrains IDEs, or any terminal: open worktrees exactly where you need them."
 msgstr "Spring mit einem Klick in deinen Lieblingseditor. VS Code, Cursor, Xcode, JetBrains-IDEs oder ein beliebiges Terminal: Öffne Worktrees genau dort, wo du sie brauchst."
+
+msgid "Jump to any agent conversation, in any workspace"
+msgstr "Zu jeder Agent-Unterhaltung in jedem Workspace springen"
 
 msgid "Jump to file"
 msgstr "Zu Datei springen"
@@ -10997,6 +11006,9 @@ msgstr "Keine Konsolenausgabe"
 
 msgid "No contributors found."
 msgstr "Keine Mitwirkenden gefunden."
+
+msgid "No conversations found."
+msgstr "Keine Unterhaltungen gefunden."
 
 msgid "No credit card required."
 msgstr "Ohne Kreditkarte."

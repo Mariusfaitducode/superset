@@ -4700,6 +4700,9 @@ msgstr "대화 통계"
 msgid "Conversation to-dos"
 msgstr "대화 할 일"
 
+msgid "Conversations"
+msgstr "대화"
+
 msgid "Convert to draft"
 msgstr "초안으로 전환"
 
@@ -8229,6 +8232,9 @@ msgstr "기록에서 다음 페이지로 이동합니다"
 msgid "Go home"
 msgstr "홈으로"
 
+msgid "Go to Conversation"
+msgstr "대화로 이동"
+
 msgid "Go to home"
 msgstr "홈으로 이동"
 
@@ -9308,6 +9314,9 @@ msgstr "참가하는 중…"
 
 msgid "Jump into your favorite editor with one click. VS Code, Cursor, Xcode, JetBrains IDEs, or any terminal: open worktrees exactly where you need them."
 msgstr "클릭 한 번으로 즐겨 쓰는 에디터로 이동하세요. VS Code, Cursor, Xcode, JetBrains IDE, 또는 아무 터미널에서든 worktree를 원하는 곳에서 엽니다."
+
+msgid "Jump to any agent conversation, in any workspace"
+msgstr "모든 워크스페이스의 에이전트 대화로 바로 이동"
 
 msgid "Jump to file"
 msgstr "파일로 이동"
@@ -10997,6 +11006,9 @@ msgstr "콘솔 출력 없음"
 
 msgid "No contributors found."
 msgstr "기여자를 찾을 수 없습니다."
+
+msgid "No conversations found."
+msgstr "대화를 찾을 수 없습니다."
 
 msgid "No credit card required."
 msgstr "신용카드가 필요 없습니다."

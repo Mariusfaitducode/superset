@@ -4700,6 +4700,9 @@ msgstr "会话统计"
 msgid "Conversation to-dos"
 msgstr "会话待办"
 
+msgid "Conversations"
+msgstr "对话"
+
 msgid "Convert to draft"
 msgstr "转为草稿"
 
@@ -8229,6 +8232,9 @@ msgstr "前进到历史记录中的下一页"
 msgid "Go home"
 msgstr "回到首页"
 
+msgid "Go to Conversation"
+msgstr "转到对话"
+
 msgid "Go to home"
 msgstr "前往主页"
 
@@ -9308,6 +9314,9 @@ msgstr "正在加入…"
 
 msgid "Jump into your favorite editor with one click. VS Code, Cursor, Xcode, JetBrains IDEs, or any terminal: open worktrees exactly where you need them."
 msgstr "一键跳进你喜欢的编辑器。VS Code、Cursor、Xcode、JetBrains系列IDE或任意终端：在你需要的地方打开worktree。"
+
+msgid "Jump to any agent conversation, in any workspace"
+msgstr "跳转到任意工作区中的任意智能体对话"
 
 msgid "Jump to file"
 msgstr "跳转到文件"
@@ -10997,6 +11006,9 @@ msgstr "没有控制台输出"
 
 msgid "No contributors found."
 msgstr "未找到贡献者。"
+
+msgid "No conversations found."
+msgstr "未找到对话。"
 
 msgid "No credit card required."
 msgstr "无需信用卡。"

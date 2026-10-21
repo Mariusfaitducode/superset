@@ -4700,6 +4700,9 @@ msgstr "Thống kê cuộc trò chuyện"
 msgid "Conversation to-dos"
 msgstr "Việc cần làm của cuộc trò chuyện"
 
+msgid "Conversations"
+msgstr "Cuộc trò chuyện"
+
 msgid "Convert to draft"
 msgstr "Chuyển thành bản nháp"
 
@@ -8229,6 +8232,9 @@ msgstr "Đi tới trang kế tiếp trong lịch sử"
 msgid "Go home"
 msgstr "Về trang chủ"
 
+msgid "Go to Conversation"
+msgstr "Đi tới cuộc trò chuyện"
+
 msgid "Go to home"
 msgstr "Về trang chủ"
 
@@ -9308,6 +9314,9 @@ msgstr "Đang tham gia…"
 
 msgid "Jump into your favorite editor with one click. VS Code, Cursor, Xcode, JetBrains IDEs, or any terminal: open worktrees exactly where you need them."
 msgstr "Nhảy vào editor yêu thích chỉ với một cú nhấp. VS Code, Cursor, Xcode, các IDE JetBrains hay bất kỳ terminal nào: mở worktree đúng nơi bạn cần."
+
+msgid "Jump to any agent conversation, in any workspace"
+msgstr "Chuyển tới bất kỳ cuộc trò chuyện nào của agent, trong bất kỳ workspace nào"
 
 msgid "Jump to file"
 msgstr "Nhảy tới tệp"
@@ -10997,6 +11006,9 @@ msgstr "Không có kết quả console"
 
 msgid "No contributors found."
 msgstr "Không tìm thấy người đóng góp nào."
+
+msgid "No conversations found."
+msgstr "Không tìm thấy cuộc trò chuyện nào."
 
 msgid "No credit card required."
 msgstr "Không cần thẻ tín dụng."

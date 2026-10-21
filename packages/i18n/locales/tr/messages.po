@@ -4700,6 +4700,9 @@ msgstr "Konuşma istatistikleri"
 msgid "Conversation to-dos"
 msgstr "Konuşma yapılacakları"
 
+msgid "Conversations"
+msgstr "Konuşmalar"
+
 msgid "Convert to draft"
 msgstr "Taslağa dönüştür"
 
@@ -8229,6 +8232,9 @@ msgstr "Geçmişte sonraki sayfaya git"
 msgid "Go home"
 msgstr "Ana sayfaya git"
 
+msgid "Go to Conversation"
+msgstr "Konuşmaya git"
+
 msgid "Go to home"
 msgstr "Ana sayfaya git"
 
@@ -9308,6 +9314,9 @@ msgstr "Katılınıyor…"
 
 msgid "Jump into your favorite editor with one click. VS Code, Cursor, Xcode, JetBrains IDEs, or any terminal: open worktrees exactly where you need them."
 msgstr "Tek tıkla en sevdiğiniz düzenleyiciye atlayın. VS Code, Cursor, Xcode, JetBrains IDE'leri veya herhangi bir terminal: worktree'leri tam ihtiyacınız olan yerde açın."
+
+msgid "Jump to any agent conversation, in any workspace"
+msgstr "Herhangi bir çalışma alanındaki herhangi bir ajan konuşmasına git"
 
 msgid "Jump to file"
 msgstr "Dosyaya git"
@@ -10997,6 +11006,9 @@ msgstr "Konsol çıktısı yok"
 
 msgid "No contributors found."
 msgstr "Katkıda bulunan bulunamadı."
+
+msgid "No conversations found."
+msgstr "Konuşma bulunamadı."
 
 msgid "No credit card required."
 msgstr "Kredi kartı gerekmez."
