@@ -4,6 +4,7 @@ import { agentsRouter } from "./agents";
 import { attachmentsRouter } from "./attachments";
 import { browserRouter } from "./browser/browser";
 import { configRouter } from "./config";
+import { conversationTodosRouter } from "./conversation-todos";
 import { filesystemRouter } from "./filesystem";
 import { gitRouter } from "./git";
 import { githubRouter } from "./github";
@@ -38,6 +39,7 @@ export const appRouter = router({
 	health: healthRouter,
 	host: hostRouter,
 	config: configRouter,
+	conversationTodos: conversationTodosRouter,
 	filesystem: filesystemRouter,
 	git: gitRouter,
 	github: githubRouter,
