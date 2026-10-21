@@ -23,6 +23,14 @@ Kept by the agents working on this fork and read on every Mac. Updated at each s
 - Later: ergonomics, performance, general agent, MCP, features behind the paid gate.
 - Propose upstream what works (issue superset-sh/superset#8634).
 
+## How we work
+
+1. **One feature, one agent.** Each feature gets a dedicated agent in its own worktree (`~/CodeProjects/superset-<feature>`) and branch off `marius/main`. It agrees the design with Marius first, then loops until its PR is done: English everywhere, targeted tests only, Fork CI green on GitHub, no local app builds (memory).
+2. **Integration branch.** The coordinator rebuilds `build/next` from `marius/main` plus every finished PR, fixes conflicts and red CI, and GitHub builds it. Marius installs it with `./marius/install-from-ci.sh build/next` and tests everything together.
+3. **Merge and release.** Once it works, the coordinator merges every PR (CI green each time), tags `marius-v<upstream>-<n>`, and GitHub attaches the app. Every Mac installs with `./marius/install-from-ci.sh`.
+
+No PR is merged before the integration test, and nothing stops while a PR or the integration is red.
+
 ## Routine
 
 - Every week: `git fetch upstream --tags`. If a new `desktop-vX.Y.Z` exists, rebase `marius/main` onto it, rebuild (`marius/update.sh`), reinstall.
