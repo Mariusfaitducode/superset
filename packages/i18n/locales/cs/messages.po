@@ -8467,6 +8467,9 @@ msgstr "historie"
 msgid "History"
 msgstr "Historie"
 
+msgid "Hold Ctrl and press Tab to step through workspaces, most recently used first"
+msgstr "Podržte Ctrl a stiskem Tab procházejte pracovní prostory, naposledy použité jako první"
+
 msgid "Home"
 msgstr "Domů"
 
@@ -16872,6 +16875,12 @@ msgstr "Přepnout na aktivní pracovní prostor"
 
 msgid "Switch to manual order to rearrange the sidebar"
 msgstr "Chcete-li postranní panel přeuspořádat, přepněte na ruční řazení"
+
+msgid "Switch to Recent Workspace"
+msgstr "Přepnout na nedávný pracovní prostor"
+
+msgid "Switch to Recent Workspace, Backwards"
+msgstr "Přepnout na nedávný pracovní prostor, pozpátku"
 
 msgid "Switch to Tab 1"
 msgstr "Přepnout na kartu 1"

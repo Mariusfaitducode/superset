@@ -8467,6 +8467,9 @@ msgstr "기록"
 msgid "History"
 msgstr "기록"
 
+msgid "Hold Ctrl and press Tab to step through workspaces, most recently used first"
+msgstr "Ctrl을 누른 채 Tab을 눌러 최근에 사용한 순서대로 워크스페이스를 넘깁니다"
+
 msgid "Home"
 msgstr "홈"
 
@@ -16872,6 +16875,12 @@ msgstr "활성 워크스페이스로 전환"
 
 msgid "Switch to manual order to rearrange the sidebar"
 msgstr "사이드바를 다시 정렬하려면 수동 정렬로 전환하세요"
+
+msgid "Switch to Recent Workspace"
+msgstr "최근 워크스페이스로 전환"
+
+msgid "Switch to Recent Workspace, Backwards"
+msgstr "최근 워크스페이스로 전환(역순)"
 
 msgid "Switch to Tab 1"
 msgstr "탭 1로 전환"

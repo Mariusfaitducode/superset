@@ -8467,6 +8467,9 @@ msgstr "historique"
 msgid "History"
 msgstr "Historique"
 
+msgid "Hold Ctrl and press Tab to step through workspaces, most recently used first"
+msgstr "Maintenez Ctrl et appuyez sur Tab pour parcourir les workspaces, du plus récemment utilisé au plus ancien"
+
 msgid "Home"
 msgstr "Accueil"
 
@@ -16872,6 +16875,12 @@ msgstr "Basculer vers un espace de travail actif"
 
 msgid "Switch to manual order to rearrange the sidebar"
 msgstr "Passez à l’ordre manuel pour réorganiser la barre latérale"
+
+msgid "Switch to Recent Workspace"
+msgstr "Basculer vers un workspace récent"
+
+msgid "Switch to Recent Workspace, Backwards"
+msgstr "Basculer vers un workspace récent, en arrière"
 
 msgid "Switch to Tab 1"
 msgstr "Passer à l'onglet 1"

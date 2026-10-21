@@ -8467,6 +8467,9 @@ msgstr "历史"
 msgid "History"
 msgstr "历史"
 
+msgid "Hold Ctrl and press Tab to step through workspaces, most recently used first"
+msgstr "按住 Ctrl 并按 Tab，按最近使用顺序切换工作区"
+
 msgid "Home"
 msgstr "首页"
 
@@ -16872,6 +16875,12 @@ msgstr "切换到活动工作区"
 
 msgid "Switch to manual order to rearrange the sidebar"
 msgstr "切换到手动排序即可重新排列侧边栏"
+
+msgid "Switch to Recent Workspace"
+msgstr "切换到最近的工作区"
+
+msgid "Switch to Recent Workspace, Backwards"
+msgstr "切换到最近的工作区（反向）"
 
 msgid "Switch to Tab 1"
 msgstr "切换到标签页1"
