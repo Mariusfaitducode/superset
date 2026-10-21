@@ -3803,6 +3803,9 @@ msgstr "フィルターをクリア"
 msgid "Clear history"
 msgstr "履歴をクリア"
 
+msgid "Clear label filter"
+msgstr "ラベルフィルターをクリア"
+
 msgid "Clear list"
 msgstr "リストをクリア"
 
@@ -4912,6 +4915,9 @@ msgstr "チャットを分岐できませんでした"
 msgid "Could not change access"
 msgstr "アクセスを変更できませんでした"
 
+msgid "Could not change the labels"
+msgstr "ラベルを変更できませんでした"
+
 msgid "Could not change the mode"
 msgstr "モードを変更できませんでした"
 
@@ -5941,6 +5947,9 @@ msgstr "ホストを削除"
 
 msgid "Delete image"
 msgstr "画像を削除"
+
+msgid "Delete label"
+msgstr "ラベルを削除"
 
 msgid "Delete local branch on workspace removal"
 msgstr "ワークスペース削除時にローカルブランチも削除"
@@ -9400,8 +9409,14 @@ msgstr "ラベル"
 msgid "Label change"
 msgstr "ラベル変更"
 
+msgid "Label color"
+msgstr "ラベルの色"
+
 msgid "Label is required."
 msgstr "ラベルは必須です。"
+
+msgid "Label name"
+msgstr "ラベル名"
 
 msgid "Label name..."
 msgstr "ラベル名..."
@@ -10055,6 +10070,9 @@ msgstr "Webアプリで連携を管理し、サービスを接続・設定しま
 
 msgid "Manage keys for MCP server access and external integrations like Claude Desktop or Claude Code. <0>Learn more<1/></0>"
 msgstr "MCPサーバーアクセスやClaude Desktop・Claude Codeなどの外部連携用のキーを管理します。<0>詳細<1/></0>"
+
+msgid "Manage labels…"
+msgstr "ラベルを管理…"
 
 msgid "Manage members"
 msgstr "メンバーを管理"
@@ -10718,6 +10736,9 @@ msgstr "ワークスペースから新規グループ"
 
 msgid "New issue"
 msgstr "新規issue"
+
+msgid "New label…"
+msgstr "新しいラベル…"
 
 msgid "New page"
 msgstr "新しいページ"
@@ -13441,6 +13462,9 @@ msgstr "繰り返しの作業をスケジュールに載せる"
 
 msgid "Put recurring work on a schedule or an event. Agents run on their own and land in a workspace for you to review."
 msgstr "繰り返しの作業をスケジュールやイベントで実行しましょう。エージェントは自動で動き、結果はレビュー用のワークスペースに入ります。"
+
+msgid "Put them on a workspace from its right-click menu, then filter the sidebar by clicking them under Workspaces. Agents can set them too."
+msgstr "右クリックメニューからワークスペースに付け、Workspaces の下でクリックしてサイドバーを絞り込みます。エージェントも設定できます。"
 
 msgid "px"
 msgstr "px"
@@ -19510,6 +19534,9 @@ msgstr "ワークスペースID"
 
 msgid "Workspace ID copied"
 msgstr "ワークスペースIDをコピーしました"
+
+msgid "Workspace labels"
+msgstr "ワークスペースのラベル"
 
 msgid "Workspace layout"
 msgstr "ワークスペースのレイアウト"

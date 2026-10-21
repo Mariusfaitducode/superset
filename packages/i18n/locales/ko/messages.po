@@ -3803,6 +3803,9 @@ msgstr "필터 지우기"
 msgid "Clear history"
 msgstr "기록 지우기"
 
+msgid "Clear label filter"
+msgstr "라벨 필터 지우기"
+
 msgid "Clear list"
 msgstr "목록 지우기"
 
@@ -4912,6 +4915,9 @@ msgstr "채팅을 분기할 수 없습니다"
 msgid "Could not change access"
 msgstr "접근 권한을 변경할 수 없습니다"
 
+msgid "Could not change the labels"
+msgstr "라벨을 변경할 수 없습니다"
+
 msgid "Could not change the mode"
 msgstr "모드를 변경할 수 없습니다"
 
@@ -5941,6 +5947,9 @@ msgstr "호스트 삭제"
 
 msgid "Delete image"
 msgstr "이미지 삭제"
+
+msgid "Delete label"
+msgstr "라벨 삭제"
 
 msgid "Delete local branch on workspace removal"
 msgstr "워크스페이스 삭제 시 로컬 브랜치 삭제"
@@ -9400,8 +9409,14 @@ msgstr "레이블"
 msgid "Label change"
 msgstr "라벨 변경"
 
+msgid "Label color"
+msgstr "라벨 색상"
+
 msgid "Label is required."
 msgstr "레이블은 필수입니다."
+
+msgid "Label name"
+msgstr "라벨 이름"
 
 msgid "Label name..."
 msgstr "라벨 이름..."
@@ -10055,6 +10070,9 @@ msgstr "웹 앱에서 연동을 관리하며 서비스를 연결하고 설정할
 
 msgid "Manage keys for MCP server access and external integrations like Claude Desktop or Claude Code. <0>Learn more<1/></0>"
 msgstr "MCP 서버 접근과 Claude Desktop, Claude Code 같은 외부 연동에 쓰는 키를 관리합니다. <0>자세히 알아보기<1/></0>"
+
+msgid "Manage labels…"
+msgstr "라벨 관리…"
 
 msgid "Manage members"
 msgstr "멤버 관리"
@@ -10718,6 +10736,9 @@ msgstr "워크스페이스로 새 그룹 만들기"
 
 msgid "New issue"
 msgstr "새 이슈"
+
+msgid "New label…"
+msgstr "새 라벨…"
 
 msgid "New page"
 msgstr "새 페이지"
@@ -13441,6 +13462,9 @@ msgstr "반복 업무를 일정에 올리세요"
 
 msgid "Put recurring work on a schedule or an event. Agents run on their own and land in a workspace for you to review."
 msgstr "반복되는 작업을 일정이나 이벤트에 맡기세요. 에이전트가 알아서 실행되고 결과는 검토할 수 있도록 워크스페이스에 도착합니다."
+
+msgid "Put them on a workspace from its right-click menu, then filter the sidebar by clicking them under Workspaces. Agents can set them too."
+msgstr "우클릭 메뉴에서 워크스페이스에 붙이고, Workspaces 아래에서 클릭해 사이드바를 필터링하세요. 에이전트도 설정할 수 있습니다."
 
 msgid "px"
 msgstr "px"
@@ -19510,6 +19534,9 @@ msgstr "워크스페이스 ID"
 
 msgid "Workspace ID copied"
 msgstr "워크스페이스 ID 복사됨"
+
+msgid "Workspace labels"
+msgstr "워크스페이스 라벨"
 
 msgid "Workspace layout"
 msgstr "워크스페이스 레이아웃"

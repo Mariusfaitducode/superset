@@ -3803,6 +3803,9 @@ msgstr "Limpar filtros"
 msgid "Clear history"
 msgstr "Limpar histórico"
 
+msgid "Clear label filter"
+msgstr "Limpar filtro de rótulos"
+
 msgid "Clear list"
 msgstr "Limpar lista"
 
@@ -4912,6 +4915,9 @@ msgstr "Não foi possível ramificar o chat"
 msgid "Could not change access"
 msgstr "Não foi possível alterar o acesso"
 
+msgid "Could not change the labels"
+msgstr "Não foi possível alterar os rótulos"
+
 msgid "Could not change the mode"
 msgstr "Não foi possível mudar o modo"
 
@@ -5941,6 +5947,9 @@ msgstr "Excluir host"
 
 msgid "Delete image"
 msgstr "Excluir imagem"
+
+msgid "Delete label"
+msgstr "Excluir rótulo"
 
 msgid "Delete local branch on workspace removal"
 msgstr "Excluir a branch local ao remover a área de trabalho"
@@ -9400,8 +9409,14 @@ msgstr "Rótulo"
 msgid "Label change"
 msgstr "Mudança de label"
 
+msgid "Label color"
+msgstr "Cor do rótulo"
+
 msgid "Label is required."
 msgstr "O rótulo é obrigatório."
+
+msgid "Label name"
+msgstr "Nome do rótulo"
 
 msgid "Label name..."
 msgstr "Nome do rótulo..."
@@ -10055,6 +10070,9 @@ msgstr "Gerencie as integrações no app web para conectar e configurar serviço
 
 msgid "Manage keys for MCP server access and external integrations like Claude Desktop or Claude Code. <0>Learn more<1/></0>"
 msgstr "Gerencie as chaves de acesso ao servidor MCP e a integrações externas como Claude Desktop ou Claude Code. <0>Saiba mais<1/></0>"
+
+msgid "Manage labels…"
+msgstr "Gerenciar rótulos…"
 
 msgid "Manage members"
 msgstr "Gerenciar membros"
@@ -10718,6 +10736,9 @@ msgstr "Novo grupo a partir da área de trabalho"
 
 msgid "New issue"
 msgstr "Nova issue"
+
+msgid "New label…"
+msgstr "Novo rótulo…"
 
 msgid "New page"
 msgstr "Nova página"
@@ -13441,6 +13462,9 @@ msgstr "Coloque o trabalho recorrente em uma agenda"
 
 msgid "Put recurring work on a schedule or an event. Agents run on their own and land in a workspace for you to review."
 msgstr "Coloque o trabalho recorrente em um agendamento ou evento. Os agentes rodam sozinhos e o resultado chega em uma área de trabalho para você revisar."
+
+msgid "Put them on a workspace from its right-click menu, then filter the sidebar by clicking them under Workspaces. Agents can set them too."
+msgstr "Coloque-os em um workspace pelo menu do botão direito e filtre a barra lateral clicando neles em Workspaces. Os agentes também podem defini-los."
 
 msgid "px"
 msgstr "px"
@@ -19510,6 +19534,9 @@ msgstr "ID da área de trabalho"
 
 msgid "Workspace ID copied"
 msgstr "ID da área de trabalho copiado"
+
+msgid "Workspace labels"
+msgstr "Rótulos de workspace"
 
 msgid "Workspace layout"
 msgstr "Layout das áreas de trabalho"

@@ -3803,6 +3803,9 @@ msgstr "Wyczyść filtry"
 msgid "Clear history"
 msgstr "Wyczyść historię"
 
+msgid "Clear label filter"
+msgstr "Wyczyść filtr etykiet"
+
 msgid "Clear list"
 msgstr "Wyczyść listę"
 
@@ -4912,6 +4915,9 @@ msgstr "Nie udało się rozgałęzić czatu"
 msgid "Could not change access"
 msgstr "Nie udało się zmienić dostępu"
 
+msgid "Could not change the labels"
+msgstr "Nie udało się zmienić etykiet"
+
 msgid "Could not change the mode"
 msgstr "Nie udało się zmienić trybu"
 
@@ -5941,6 +5947,9 @@ msgstr "Usuń hosta"
 
 msgid "Delete image"
 msgstr "Usuń obraz"
+
+msgid "Delete label"
+msgstr "Usuń etykietę"
 
 msgid "Delete local branch on workspace removal"
 msgstr "Usuwaj lokalną gałąź przy usuwaniu obszaru roboczego"
@@ -9400,8 +9409,14 @@ msgstr "Etykieta"
 msgid "Label change"
 msgstr "Zmiana etykiety"
 
+msgid "Label color"
+msgstr "Kolor etykiety"
+
 msgid "Label is required."
 msgstr "Etykieta jest wymagana."
+
+msgid "Label name"
+msgstr "Nazwa etykiety"
 
 msgid "Label name..."
 msgstr "Nazwa etykiety..."
@@ -10055,6 +10070,9 @@ msgstr "Integracjami zarządza się w aplikacji webowej — tam podłączysz i s
 
 msgid "Manage keys for MCP server access and external integrations like Claude Desktop or Claude Code. <0>Learn more<1/></0>"
 msgstr "Zarządzaj kluczami dostępu do serwerów MCP i zewnętrznych integracji, takich jak Claude Desktop czy Claude Code. <0>Dowiedz się więcej<1/></0>"
+
+msgid "Manage labels…"
+msgstr "Zarządzaj etykietami…"
 
 msgid "Manage members"
 msgstr "Zarządzaj członkami"
@@ -10718,6 +10736,9 @@ msgstr "Nowa grupa z obszaru roboczego"
 
 msgid "New issue"
 msgstr "Nowe zgłoszenie"
+
+msgid "New label…"
+msgstr "Nowa etykieta…"
 
 msgid "New page"
 msgstr "Nowa strona"
@@ -13441,6 +13462,9 @@ msgstr "Ustaw powtarzalną pracę na harmonogram"
 
 msgid "Put recurring work on a schedule or an event. Agents run on their own and land in a workspace for you to review."
 msgstr "Ustaw powtarzalną pracę według harmonogramu lub po wystąpieniu zdarzenia. Agenci działają sami, a wynik ląduje w obszarze roboczym do Twojego przeglądu."
+
+msgid "Put them on a workspace from its right-click menu, then filter the sidebar by clicking them under Workspaces. Agents can set them too."
+msgstr "Dodaj je do workspace'u z menu kontekstowego, a potem filtruj pasek boczny, klikając je pod Workspaces. Agenci też mogą je ustawiać."
 
 msgid "px"
 msgstr "px"
@@ -19510,6 +19534,9 @@ msgstr "ID obszaru roboczego"
 
 msgid "Workspace ID copied"
 msgstr "Skopiowano ID obszaru roboczego"
+
+msgid "Workspace labels"
+msgstr "Etykiety workspace'ów"
 
 msgid "Workspace layout"
 msgstr "Układ obszarów roboczych"

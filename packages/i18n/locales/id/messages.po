@@ -3803,6 +3803,9 @@ msgstr "Bersihkan filter"
 msgid "Clear history"
 msgstr "Bersihkan riwayat"
 
+msgid "Clear label filter"
+msgstr "Hapus filter label"
+
 msgid "Clear list"
 msgstr "Bersihkan daftar"
 
@@ -4912,6 +4915,9 @@ msgstr "Tidak dapat mencabangkan obrolan"
 msgid "Could not change access"
 msgstr "Tidak bisa mengubah akses"
 
+msgid "Could not change the labels"
+msgstr "Tidak dapat mengubah label"
+
 msgid "Could not change the mode"
 msgstr "Tidak dapat mengubah mode"
 
@@ -5941,6 +5947,9 @@ msgstr "Hapus host"
 
 msgid "Delete image"
 msgstr "Hapus gambar"
+
+msgid "Delete label"
+msgstr "Hapus label"
 
 msgid "Delete local branch on workspace removal"
 msgstr "Hapus branch lokal saat workspace dihapus"
@@ -9400,8 +9409,14 @@ msgstr "Label"
 msgid "Label change"
 msgstr "Perubahan label"
 
+msgid "Label color"
+msgstr "Warna label"
+
 msgid "Label is required."
 msgstr "Label wajib diisi."
+
+msgid "Label name"
+msgstr "Nama label"
 
 msgid "Label name..."
 msgstr "Nama label..."
@@ -10055,6 +10070,9 @@ msgstr "Kelola integrasi di aplikasi web untuk menghubungkan dan mengatur layana
 
 msgid "Manage keys for MCP server access and external integrations like Claude Desktop or Claude Code. <0>Learn more<1/></0>"
 msgstr "Kelola kunci untuk akses server MCP dan integrasi eksternal seperti Claude Desktop atau Claude Code. <0>Pelajari lebih lanjut<1/></0>"
+
+msgid "Manage labels…"
+msgstr "Kelola label…"
 
 msgid "Manage members"
 msgstr "Kelola anggota"
@@ -10718,6 +10736,9 @@ msgstr "Grup baru dari workspace"
 
 msgid "New issue"
 msgstr "Issue baru"
+
+msgid "New label…"
+msgstr "Label baru…"
 
 msgid "New page"
 msgstr "Halaman baru"
@@ -13441,6 +13462,9 @@ msgstr "Jadwalkan pekerjaan yang berulang"
 
 msgid "Put recurring work on a schedule or an event. Agents run on their own and land in a workspace for you to review."
 msgstr "Jadwalkan pekerjaan berulang berdasarkan waktu atau picu lewat event. Agen berjalan sendiri dan hasilnya mendarat di sebuah workspace untuk Anda tinjau."
+
+msgid "Put them on a workspace from its right-click menu, then filter the sidebar by clicking them under Workspaces. Agents can set them too."
+msgstr "Pasang pada workspace dari menu klik kanannya, lalu filter sidebar dengan mengekliknya di bawah Workspaces. Agen juga bisa memasangnya."
 
 msgid "px"
 msgstr "px"
@@ -19510,6 +19534,9 @@ msgstr "ID Workspace"
 
 msgid "Workspace ID copied"
 msgstr "ID workspace disalin"
+
+msgid "Workspace labels"
+msgstr "Label workspace"
 
 msgid "Workspace layout"
 msgstr "Tata letak workspace"

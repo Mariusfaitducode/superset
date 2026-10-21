@@ -3803,6 +3803,9 @@ msgstr "Filters wissen"
 msgid "Clear history"
 msgstr "Geschiedenis wissen"
 
+msgid "Clear label filter"
+msgstr "Labelfilter wissen"
+
 msgid "Clear list"
 msgstr "Lijst wissen"
 
@@ -4912,6 +4915,9 @@ msgstr "Kan de chat niet vertakken"
 msgid "Could not change access"
 msgstr "Kan toegang niet wijzigen"
 
+msgid "Could not change the labels"
+msgstr "Kan de labels niet wijzigen"
+
 msgid "Could not change the mode"
 msgstr "Kan de modus niet wijzigen"
 
@@ -5941,6 +5947,9 @@ msgstr "Host verwijderen"
 
 msgid "Delete image"
 msgstr "Afbeelding verwijderen"
+
+msgid "Delete label"
+msgstr "Label verwijderen"
 
 msgid "Delete local branch on workspace removal"
 msgstr "Lokale branch verwijderen bij verwijderen werkruimte"
@@ -9400,8 +9409,14 @@ msgstr "Label"
 msgid "Label change"
 msgstr "Labelwijziging"
 
+msgid "Label color"
+msgstr "Labelkleur"
+
 msgid "Label is required."
 msgstr "Label is verplicht."
+
+msgid "Label name"
+msgstr "Labelnaam"
 
 msgid "Label name..."
 msgstr "Labelnaam..."
@@ -10055,6 +10070,9 @@ msgstr "Beheer integraties in de webapp om diensten te verbinden en te configure
 
 msgid "Manage keys for MCP server access and external integrations like Claude Desktop or Claude Code. <0>Learn more<1/></0>"
 msgstr "Beheer sleutels voor toegang tot MCP-servers en externe integraties zoals Claude Desktop of Claude Code. <0>Meer info<1/></0>"
+
+msgid "Manage labels…"
+msgstr "Labels beheren…"
 
 msgid "Manage members"
 msgstr "Leden beheren"
@@ -10718,6 +10736,9 @@ msgstr "Nieuwe groep van werkruimte"
 
 msgid "New issue"
 msgstr "Nieuwe issue"
+
+msgid "New label…"
+msgstr "Nieuw label…"
 
 msgid "New page"
 msgstr "Nieuwe pagina"
@@ -13441,6 +13462,9 @@ msgstr "Zet terugkerend werk op een schema"
 
 msgid "Put recurring work on a schedule or an event. Agents run on their own and land in a workspace for you to review."
 msgstr "Zet terugkerend werk op een schema of laat het starten door een gebeurtenis. Agents draaien vanzelf en zetten het resultaat klaar in een werkruimte om te beoordelen."
+
+msgid "Put them on a workspace from its right-click menu, then filter the sidebar by clicking them under Workspaces. Agents can set them too."
+msgstr "Zet ze op een workspace via het rechtsklikmenu en filter de zijbalk door erop te klikken onder Workspaces. Agents kunnen ze ook zetten."
 
 msgid "px"
 msgstr "px"
@@ -19510,6 +19534,9 @@ msgstr "Werkruimte-ID"
 
 msgid "Workspace ID copied"
 msgstr "Werkruimte-ID gekopieerd"
+
+msgid "Workspace labels"
+msgstr "Workspacelabels"
 
 msgid "Workspace layout"
 msgstr "Werkruimteweergave"

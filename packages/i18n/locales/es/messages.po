@@ -3803,6 +3803,9 @@ msgstr "Borrar filtros"
 msgid "Clear history"
 msgstr "Borrar el historial"
 
+msgid "Clear label filter"
+msgstr "Quitar filtro de etiquetas"
+
 msgid "Clear list"
 msgstr "Borrar la lista"
 
@@ -4912,6 +4915,9 @@ msgstr "No se pudo crear una rama del chat"
 msgid "Could not change access"
 msgstr "No se pudo cambiar el acceso"
 
+msgid "Could not change the labels"
+msgstr "No se pudieron cambiar las etiquetas"
+
 msgid "Could not change the mode"
 msgstr "No se pudo cambiar el modo"
 
@@ -5941,6 +5947,9 @@ msgstr "Eliminar host"
 
 msgid "Delete image"
 msgstr "Eliminar imagen"
+
+msgid "Delete label"
+msgstr "Eliminar etiqueta"
 
 msgid "Delete local branch on workspace removal"
 msgstr "Eliminar la rama local al quitar el espacio de trabajo"
@@ -9400,8 +9409,14 @@ msgstr "Etiqueta"
 msgid "Label change"
 msgstr "Cambio de etiqueta"
 
+msgid "Label color"
+msgstr "Color de la etiqueta"
+
 msgid "Label is required."
 msgstr "La etiqueta es obligatoria."
+
+msgid "Label name"
+msgstr "Nombre de la etiqueta"
 
 msgid "Label name..."
 msgstr "Nombre de etiqueta..."
@@ -10055,6 +10070,9 @@ msgstr "Gestiona las integraciones en la app web para conectar y configurar serv
 
 msgid "Manage keys for MCP server access and external integrations like Claude Desktop or Claude Code. <0>Learn more<1/></0>"
 msgstr "Gestiona las claves de acceso a servidores MCP y a integraciones externas como Claude Desktop o Claude Code. <0>Más información<1/></0>"
+
+msgid "Manage labels…"
+msgstr "Gestionar etiquetas…"
 
 msgid "Manage members"
 msgstr "Gestionar miembros"
@@ -10718,6 +10736,9 @@ msgstr "Nuevo grupo desde el espacio de trabajo"
 
 msgid "New issue"
 msgstr "Nuevo issue"
+
+msgid "New label…"
+msgstr "Nueva etiqueta…"
 
 msgid "New page"
 msgstr "Nueva página"
@@ -13441,6 +13462,9 @@ msgstr "Pon el trabajo recurrente en un horario"
 
 msgid "Put recurring work on a schedule or an event. Agents run on their own and land in a workspace for you to review."
 msgstr "Programa el trabajo recurrente según un horario o un evento. Los agentes se ejecutan solos y el resultado llega a un espacio de trabajo para que lo revises."
+
+msgid "Put them on a workspace from its right-click menu, then filter the sidebar by clicking them under Workspaces. Agents can set them too."
+msgstr "Ponlas en un workspace desde su menú contextual y filtra la barra lateral haciendo clic en ellas bajo Workspaces. Los agentes también pueden ponerlas."
 
 msgid "px"
 msgstr "px"
@@ -19510,6 +19534,9 @@ msgstr "ID del espacio de trabajo"
 
 msgid "Workspace ID copied"
 msgstr "ID del espacio de trabajo copiado"
+
+msgid "Workspace labels"
+msgstr "Etiquetas de workspace"
 
 msgid "Workspace layout"
 msgstr "Diseño del espacio de trabajo"

@@ -3803,6 +3803,9 @@ msgstr "Xóa bộ lọc"
 msgid "Clear history"
 msgstr "Xóa lịch sử"
 
+msgid "Clear label filter"
+msgstr "Xóa bộ lọc nhãn"
+
 msgid "Clear list"
 msgstr "Xóa danh sách"
 
@@ -4912,6 +4915,9 @@ msgstr "Không thể phân nhánh cuộc trò chuyện"
 msgid "Could not change access"
 msgstr "Không thể thay đổi quyền truy cập"
 
+msgid "Could not change the labels"
+msgstr "Không thể thay đổi nhãn"
+
 msgid "Could not change the mode"
 msgstr "Không thể đổi chế độ"
 
@@ -5941,6 +5947,9 @@ msgstr "Xóa host"
 
 msgid "Delete image"
 msgstr "Xóa hình ảnh"
+
+msgid "Delete label"
+msgstr "Xóa nhãn"
 
 msgid "Delete local branch on workspace removal"
 msgstr "Xóa nhánh cục bộ khi gỡ workspace"
@@ -9400,8 +9409,14 @@ msgstr "Nhãn"
 msgid "Label change"
 msgstr "Thay đổi nhãn"
 
+msgid "Label color"
+msgstr "Màu nhãn"
+
 msgid "Label is required."
 msgstr "Bắt buộc phải có nhãn."
+
+msgid "Label name"
+msgstr "Tên nhãn"
 
 msgid "Label name..."
 msgstr "Tên nhãn..."
@@ -10055,6 +10070,9 @@ msgstr "Quản lý tích hợp trong ứng dụng web để kết nối và cấ
 
 msgid "Manage keys for MCP server access and external integrations like Claude Desktop or Claude Code. <0>Learn more<1/></0>"
 msgstr "Quản lý khóa để truy cập server MCP và các tích hợp bên ngoài như Claude Desktop hoặc Claude Code. <0>Tìm hiểu thêm<1/></0>"
+
+msgid "Manage labels…"
+msgstr "Quản lý nhãn…"
 
 msgid "Manage members"
 msgstr "Quản lý thành viên"
@@ -10718,6 +10736,9 @@ msgstr "Nhóm mới từ workspace"
 
 msgid "New issue"
 msgstr "Issue mới"
+
+msgid "New label…"
+msgstr "Nhãn mới…"
 
 msgid "New page"
 msgstr "Trang mới"
@@ -13441,6 +13462,9 @@ msgstr "Đưa việc lặp lại vào lịch"
 
 msgid "Put recurring work on a schedule or an event. Agents run on their own and land in a workspace for you to review."
 msgstr "Đặt công việc lặp lại theo lịch hoặc sự kiện. Agent tự chạy và kết quả nằm trong một workspace để bạn xem lại."
+
+msgid "Put them on a workspace from its right-click menu, then filter the sidebar by clicking them under Workspaces. Agents can set them too."
+msgstr "Gắn chúng cho workspace từ menu chuột phải, rồi lọc thanh bên bằng cách bấm vào chúng dưới Workspaces. Agent cũng có thể gắn."
 
 msgid "px"
 msgstr "px"
@@ -19510,6 +19534,9 @@ msgstr "ID workspace"
 
 msgid "Workspace ID copied"
 msgstr "Đã sao chép ID workspace"
+
+msgid "Workspace labels"
+msgstr "Nhãn workspace"
 
 msgid "Workspace layout"
 msgstr "Bố cục workspace"

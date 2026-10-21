@@ -3803,6 +3803,9 @@ msgstr "Сбросить фильтры"
 msgid "Clear history"
 msgstr "Очистить историю"
 
+msgid "Clear label filter"
+msgstr "Сбросить фильтр меток"
+
 msgid "Clear list"
 msgstr "Очистить список"
 
@@ -4912,6 +4915,9 @@ msgstr "Не удалось ответвить чат"
 msgid "Could not change access"
 msgstr "Не удалось изменить доступ"
 
+msgid "Could not change the labels"
+msgstr "Не удалось изменить метки"
+
 msgid "Could not change the mode"
 msgstr "Не удалось сменить режим"
 
@@ -5941,6 +5947,9 @@ msgstr "Удалить хост"
 
 msgid "Delete image"
 msgstr "Удалить изображение"
+
+msgid "Delete label"
+msgstr "Удалить метку"
 
 msgid "Delete local branch on workspace removal"
 msgstr "Удалять локальную ветку при удалении рабочей области"
@@ -9400,8 +9409,14 @@ msgstr "Метка"
 msgid "Label change"
 msgstr "Изменение метки"
 
+msgid "Label color"
+msgstr "Цвет метки"
+
 msgid "Label is required."
 msgstr "Название обязательно."
+
+msgid "Label name"
+msgstr "Название метки"
 
 msgid "Label name..."
 msgstr "Название метки..."
@@ -10055,6 +10070,9 @@ msgstr "Управляйте интеграциями в веб-приложен
 
 msgid "Manage keys for MCP server access and external integrations like Claude Desktop or Claude Code. <0>Learn more<1/></0>"
 msgstr "Управляйте ключами для доступа к серверу MCP и внешних интеграций вроде Claude Desktop или Claude Code. <0>Подробнее<1/></0>"
+
+msgid "Manage labels…"
+msgstr "Управлять метками…"
 
 msgid "Manage members"
 msgstr "Управление участниками"
@@ -10718,6 +10736,9 @@ msgstr "Новая группа из рабочей области"
 
 msgid "New issue"
 msgstr "Новая задача"
+
+msgid "New label…"
+msgstr "Новая метка…"
 
 msgid "New page"
 msgstr "Новая страница"
@@ -13441,6 +13462,9 @@ msgstr "Поставьте повторяющуюся работу на расп
 
 msgid "Put recurring work on a schedule or an event. Agents run on their own and land in a workspace for you to review."
 msgstr "Поставьте повторяющуюся работу на расписание или событие. Агенты работают сами, а результат приземляется в рабочую область для проверки."
+
+msgid "Put them on a workspace from its right-click menu, then filter the sidebar by clicking them under Workspaces. Agents can set them too."
+msgstr "Ставьте их на рабочее пространство через контекстное меню, затем фильтруйте боковую панель, нажимая на них под Workspaces. Агенты тоже могут их ставить."
 
 msgid "px"
 msgstr "px"
@@ -19510,6 +19534,9 @@ msgstr "ID рабочей области"
 
 msgid "Workspace ID copied"
 msgstr "ID рабочей области скопирован"
+
+msgid "Workspace labels"
+msgstr "Метки рабочих пространств"
 
 msgid "Workspace layout"
 msgstr "Раскладка рабочих областей"

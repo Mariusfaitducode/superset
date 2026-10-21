@@ -3803,6 +3803,9 @@ msgstr "Zrušit filtry"
 msgid "Clear history"
 msgstr "Vymazat historii"
 
+msgid "Clear label filter"
+msgstr "Zrušit filtr štítků"
+
 msgid "Clear list"
 msgstr "Vymazat seznam"
 
@@ -4912,6 +4915,9 @@ msgstr "Chat se nepodařilo rozvětvit"
 msgid "Could not change access"
 msgstr "Přístup se nepodařilo změnit"
 
+msgid "Could not change the labels"
+msgstr "Štítky se nepodařilo změnit"
+
 msgid "Could not change the mode"
 msgstr "Režim se nepodařilo změnit"
 
@@ -5941,6 +5947,9 @@ msgstr "Smazat hosta"
 
 msgid "Delete image"
 msgstr "Smazat obrázek"
+
+msgid "Delete label"
+msgstr "Smazat štítek"
 
 msgid "Delete local branch on workspace removal"
 msgstr "Smazat lokální větev při odstranění pracovního prostoru"
@@ -9400,8 +9409,14 @@ msgstr "Štítek"
 msgid "Label change"
 msgstr "Změna štítku"
 
+msgid "Label color"
+msgstr "Barva štítku"
+
 msgid "Label is required."
 msgstr "Popisek je povinný."
+
+msgid "Label name"
+msgstr "Název štítku"
 
 msgid "Label name..."
 msgstr "Název štítku..."
@@ -10055,6 +10070,9 @@ msgstr "Integrace spravujte ve webové aplikaci, kde služby připojíte a nasta
 
 msgid "Manage keys for MCP server access and external integrations like Claude Desktop or Claude Code. <0>Learn more<1/></0>"
 msgstr "Spravujte klíče pro přístup k MCP serveru a externí integrace, jako je Claude Desktop nebo Claude Code. <0>Zjistit více<1/></0>"
+
+msgid "Manage labels…"
+msgstr "Spravovat štítky…"
 
 msgid "Manage members"
 msgstr "Spravovat členy"
@@ -10718,6 +10736,9 @@ msgstr "Nová skupina z pracovního prostoru"
 
 msgid "New issue"
 msgstr "Nová issue"
+
+msgid "New label…"
+msgstr "Nový štítek…"
 
 msgid "New page"
 msgstr "Nová stránka"
@@ -13441,6 +13462,9 @@ msgstr "Naplánujte opakovanou práci"
 
 msgid "Put recurring work on a schedule or an event. Agents run on their own and land in a workspace for you to review."
 msgstr "Naplánujte opakující se práci podle rozvrhu nebo události. Agenti běží sami a výsledek skončí v pracovním prostoru, kde ho zkontrolujete."
+
+msgid "Put them on a workspace from its right-click menu, then filter the sidebar by clicking them under Workspaces. Agents can set them too."
+msgstr "Přidejte je k pracovnímu prostoru z kontextové nabídky a pak filtrujte postranní panel kliknutím na ně pod Workspaces. Mohou je nastavit i agenti."
 
 msgid "px"
 msgstr "px"
@@ -19510,6 +19534,9 @@ msgstr "ID pracovního prostoru"
 
 msgid "Workspace ID copied"
 msgstr "ID pracovního prostoru zkopírováno"
+
+msgid "Workspace labels"
+msgstr "Štítky pracovních prostorů"
 
 msgid "Workspace layout"
 msgstr "Rozvržení pracovních prostorů"

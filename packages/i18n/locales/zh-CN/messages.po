@@ -3803,6 +3803,9 @@ msgstr "清除筛选"
 msgid "Clear history"
 msgstr "清除历史"
 
+msgid "Clear label filter"
+msgstr "清除标签筛选"
+
 msgid "Clear list"
 msgstr "清空列表"
 
@@ -4912,6 +4915,9 @@ msgstr "无法为聊天创建分支"
 msgid "Could not change access"
 msgstr "无法更改访问权限"
 
+msgid "Could not change the labels"
+msgstr "无法更改标签"
+
 msgid "Could not change the mode"
 msgstr "无法更改模式"
 
@@ -5941,6 +5947,9 @@ msgstr "删除主机"
 
 msgid "Delete image"
 msgstr "删除图片"
+
+msgid "Delete label"
+msgstr "删除标签"
 
 msgid "Delete local branch on workspace removal"
 msgstr "移除工作区时删除本地分支"
@@ -9400,8 +9409,14 @@ msgstr "标签"
 msgid "Label change"
 msgstr "标签变更"
 
+msgid "Label color"
+msgstr "标签颜色"
+
 msgid "Label is required."
 msgstr "名称为必填项。"
+
+msgid "Label name"
+msgstr "标签名称"
 
 msgid "Label name..."
 msgstr "标签名称..."
@@ -10055,6 +10070,9 @@ msgstr "在网页应用中管理集成，以连接和配置服务。"
 
 msgid "Manage keys for MCP server access and external integrations like Claude Desktop or Claude Code. <0>Learn more<1/></0>"
 msgstr "管理用于MCP服务器访问以及Claude Desktop、Claude Code等外部集成的密钥。<0>了解更多<1/></0>"
+
+msgid "Manage labels…"
+msgstr "管理标签…"
 
 msgid "Manage members"
 msgstr "管理成员"
@@ -10718,6 +10736,9 @@ msgstr "以此工作区新建分组"
 
 msgid "New issue"
 msgstr "新建议题"
+
+msgid "New label…"
+msgstr "新标签…"
 
 msgid "New page"
 msgstr "新建页面"
@@ -13441,6 +13462,9 @@ msgstr "把重复的活儿排进日程"
 
 msgid "Put recurring work on a schedule or an event. Agents run on their own and land in a workspace for you to review."
 msgstr "按计划或事件触发重复性工作。智能体会自行运行，结果会落在一个工作区里供你审查。"
+
+msgid "Put them on a workspace from its right-click menu, then filter the sidebar by clicking them under Workspaces. Agents can set them too."
+msgstr "在工作区的右键菜单中添加，然后在 Workspaces 下点击它们来筛选侧边栏。智能体也可以设置。"
 
 msgid "px"
 msgstr "px"
@@ -19510,6 +19534,9 @@ msgstr "工作区ID"
 
 msgid "Workspace ID copied"
 msgstr "已复制工作区ID"
+
+msgid "Workspace labels"
+msgstr "工作区标签"
 
 msgid "Workspace layout"
 msgstr "工作区布局"

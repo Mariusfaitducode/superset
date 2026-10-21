@@ -3803,6 +3803,9 @@ msgstr "Filtreleri temizle"
 msgid "Clear history"
 msgstr "Geçmişi temizle"
 
+msgid "Clear label filter"
+msgstr "Etiket filtresini temizle"
+
 msgid "Clear list"
 msgstr "Listeyi temizle"
 
@@ -4912,6 +4915,9 @@ msgstr "Sohbet dallandırılamadı"
 msgid "Could not change access"
 msgstr "Erişim değiştirilemedi"
 
+msgid "Could not change the labels"
+msgstr "Etiketler değiştirilemedi"
+
 msgid "Could not change the mode"
 msgstr "Mod değiştirilemedi"
 
@@ -5941,6 +5947,9 @@ msgstr "Host'u sil"
 
 msgid "Delete image"
 msgstr "Görseli sil"
+
+msgid "Delete label"
+msgstr "Etiketi sil"
 
 msgid "Delete local branch on workspace removal"
 msgstr "Çalışma alanı kaldırılırken yerel dalı sil"
@@ -9400,8 +9409,14 @@ msgstr "Etiket"
 msgid "Label change"
 msgstr "Etiket değişikliği"
 
+msgid "Label color"
+msgstr "Etiket rengi"
+
 msgid "Label is required."
 msgstr "Etiket gereklidir."
+
+msgid "Label name"
+msgstr "Etiket adı"
 
 msgid "Label name..."
 msgstr "Etiket adı..."
@@ -10055,6 +10070,9 @@ msgstr "Hizmetleri bağlamak ve yapılandırmak için entegrasyonları web uygul
 
 msgid "Manage keys for MCP server access and external integrations like Claude Desktop or Claude Code. <0>Learn more<1/></0>"
 msgstr "MCP sunucusu erişimi ve Claude Desktop veya Claude Code gibi harici entegrasyonlar için anahtarları yönetin. <0>Daha fazla bilgi<1/></0>"
+
+msgid "Manage labels…"
+msgstr "Etiketleri yönet…"
 
 msgid "Manage members"
 msgstr "Üyeleri yönet"
@@ -10718,6 +10736,9 @@ msgstr "Çalışma alanından yeni grup"
 
 msgid "New issue"
 msgstr "Yeni issue"
+
+msgid "New label…"
+msgstr "Yeni etiket…"
 
 msgid "New page"
 msgstr "Yeni sayfa"
@@ -13441,6 +13462,9 @@ msgstr "Tekrarlayan işleri zamanlamaya alın"
 
 msgid "Put recurring work on a schedule or an event. Agents run on their own and land in a workspace for you to review."
 msgstr "Tekrarlayan işleri bir zamanlamaya veya olaya bağlayın. Ajanlar kendi başına çalışır ve sonuç, incelemeniz için bir çalışma alanına düşer."
+
+msgid "Put them on a workspace from its right-click menu, then filter the sidebar by clicking them under Workspaces. Agents can set them too."
+msgstr "Sağ tık menüsünden bir workspace'e ekleyin, ardından Workspaces altında tıklayarak kenar çubuğunu filtreleyin. Ajanlar da ekleyebilir."
 
 msgid "px"
 msgstr "px"
@@ -19510,6 +19534,9 @@ msgstr "Çalışma alanı kimliği"
 
 msgid "Workspace ID copied"
 msgstr "Çalışma alanı kimliği kopyalandı"
+
+msgid "Workspace labels"
+msgstr "Workspace etiketleri"
 
 msgid "Workspace layout"
 msgstr "Çalışma alanı düzeni"

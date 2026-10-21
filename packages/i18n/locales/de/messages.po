@@ -3803,6 +3803,9 @@ msgstr "Filter zurücksetzen"
 msgid "Clear history"
 msgstr "Verlauf löschen"
 
+msgid "Clear label filter"
+msgstr "Label-Filter zurücksetzen"
+
 msgid "Clear list"
 msgstr "Liste leeren"
 
@@ -4912,6 +4915,9 @@ msgstr "Der Chat konnte nicht verzweigt werden"
 msgid "Could not change access"
 msgstr "Zugriff konnte nicht geändert werden"
 
+msgid "Could not change the labels"
+msgstr "Labels konnten nicht geändert werden"
+
 msgid "Could not change the mode"
 msgstr "Modus konnte nicht geändert werden"
 
@@ -5941,6 +5947,9 @@ msgstr "Host löschen"
 
 msgid "Delete image"
 msgstr "Bild löschen"
+
+msgid "Delete label"
+msgstr "Label löschen"
 
 msgid "Delete local branch on workspace removal"
 msgstr "Lokalen Branch beim Entfernen des Arbeitsbereichs löschen"
@@ -9400,8 +9409,14 @@ msgstr "Label"
 msgid "Label change"
 msgstr "Label-Änderung"
 
+msgid "Label color"
+msgstr "Label-Farbe"
+
 msgid "Label is required."
 msgstr "Bezeichnung ist erforderlich."
+
+msgid "Label name"
+msgstr "Label-Name"
 
 msgid "Label name..."
 msgstr "Labelname..."
@@ -10055,6 +10070,9 @@ msgstr "Verwalte Integrationen in der Web-App, um Dienste zu verbinden und zu ko
 
 msgid "Manage keys for MCP server access and external integrations like Claude Desktop or Claude Code. <0>Learn more<1/></0>"
 msgstr "Verwalte Schlüssel für den MCP-Server-Zugriff und externe Integrationen wie Claude Desktop oder Claude Code. <0>Mehr erfahren<1/></0>"
+
+msgid "Manage labels…"
+msgstr "Labels verwalten…"
 
 msgid "Manage members"
 msgstr "Mitglieder verwalten"
@@ -10718,6 +10736,9 @@ msgstr "Neue Gruppe aus Arbeitsbereich"
 
 msgid "New issue"
 msgstr "Neues Issue"
+
+msgid "New label…"
+msgstr "Neues Label…"
 
 msgid "New page"
 msgstr "Neue Seite"
@@ -13441,6 +13462,9 @@ msgstr "Wiederkehrende Arbeit auf einen Zeitplan setzen"
 
 msgid "Put recurring work on a schedule or an event. Agents run on their own and land in a workspace for you to review."
 msgstr "Plane wiederkehrende Arbeit nach einem Zeitplan oder löse sie durch ein Ereignis aus. Agenten laufen von selbst und landen in einem Arbeitsbereich, den du prüfst."
+
+msgid "Put them on a workspace from its right-click menu, then filter the sidebar by clicking them under Workspaces. Agents can set them too."
+msgstr "Setze sie über das Rechtsklick-Menü eines Workspaces und filtere dann die Seitenleiste, indem du sie unter Workspaces anklickst. Agenten können sie ebenfalls setzen."
 
 msgid "px"
 msgstr "px"
@@ -19510,6 +19534,9 @@ msgstr "Arbeitsbereich-ID"
 
 msgid "Workspace ID copied"
 msgstr "Arbeitsbereich-ID kopiert"
+
+msgid "Workspace labels"
+msgstr "Workspace-Labels"
 
 msgid "Workspace layout"
 msgstr "Arbeitsbereich-Layout"

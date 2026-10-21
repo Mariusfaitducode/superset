@@ -3803,6 +3803,9 @@ msgstr "Clear filters"
 msgid "Clear history"
 msgstr "Clear history"
 
+msgid "Clear label filter"
+msgstr "Clear label filter"
+
 msgid "Clear list"
 msgstr "Clear list"
 
@@ -4912,6 +4915,9 @@ msgstr "Could not branch the chat"
 msgid "Could not change access"
 msgstr "Could not change access"
 
+msgid "Could not change the labels"
+msgstr "Could not change the labels"
+
 msgid "Could not change the mode"
 msgstr "Could not change the mode"
 
@@ -5941,6 +5947,9 @@ msgstr "Delete host"
 
 msgid "Delete image"
 msgstr "Delete image"
+
+msgid "Delete label"
+msgstr "Delete label"
 
 msgid "Delete local branch on workspace removal"
 msgstr "Delete local branch on workspace removal"
@@ -9400,8 +9409,14 @@ msgstr "Label"
 msgid "Label change"
 msgstr "Label change"
 
+msgid "Label color"
+msgstr "Label color"
+
 msgid "Label is required."
 msgstr "Label is required."
+
+msgid "Label name"
+msgstr "Label name"
 
 msgid "Label name..."
 msgstr "Label name..."
@@ -10055,6 +10070,9 @@ msgstr "Manage integrations in the web app to connect and configure services."
 
 msgid "Manage keys for MCP server access and external integrations like Claude Desktop or Claude Code. <0>Learn more<1/></0>"
 msgstr "Manage keys for MCP server access and external integrations like Claude Desktop or Claude Code. <0>Learn more<1/></0>"
+
+msgid "Manage labels…"
+msgstr "Manage labels…"
 
 msgid "Manage members"
 msgstr "Manage members"
@@ -10718,6 +10736,9 @@ msgstr "New group from workspace"
 
 msgid "New issue"
 msgstr "New issue"
+
+msgid "New label…"
+msgstr "New label…"
 
 msgid "New page"
 msgstr "New page"
@@ -13441,6 +13462,9 @@ msgstr "Put recurring work on a schedule"
 
 msgid "Put recurring work on a schedule or an event. Agents run on their own and land in a workspace for you to review."
 msgstr "Put recurring work on a schedule or an event. Agents run on their own and land in a workspace for you to review."
+
+msgid "Put them on a workspace from its right-click menu, then filter the sidebar by clicking them under Workspaces. Agents can set them too."
+msgstr "Put them on a workspace from its right-click menu, then filter the sidebar by clicking them under Workspaces. Agents can set them too."
 
 msgid "px"
 msgstr "px"
@@ -19510,6 +19534,9 @@ msgstr "Workspace ID"
 
 msgid "Workspace ID copied"
 msgstr "Workspace ID copied"
+
+msgid "Workspace labels"
+msgstr "Workspace labels"
 
 msgid "Workspace layout"
 msgstr "Workspace layout"
