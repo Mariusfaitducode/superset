@@ -236,6 +236,7 @@ function ConversationRow({
 					hostId={hostId}
 					terminalId={conversation.terminalId}
 					lastEventAt={conversation.since}
+					working={conversation.state === "working"}
 				/>
 				{showTodos && (
 					<button
