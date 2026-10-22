@@ -1176,6 +1176,9 @@ msgstr "{used} トークン"
 msgid "{used} used"
 msgstr "{used} 使用済み"
 
+msgid "{viewerCount} waiting on you · {othersCount} on others"
+msgstr "あなた待ち {viewerCount} 件 · 他の人待ち {othersCount} 件"
+
 msgid "{waiting} Waiting"
 msgstr "{waiting}件待機中"
 
@@ -3774,6 +3777,12 @@ msgstr "コメント、デザインモード、Pages から起動したエージ
 msgid "CI failed"
 msgstr "CIが失敗しました"
 
+msgid "CI failing"
+msgstr "CI 失敗"
+
+msgid "CI running"
+msgstr "CI 実行中"
+
 msgid "Clarify this"
 msgstr "これを明確にして"
 
@@ -4412,6 +4421,9 @@ msgstr "ワークスペースの実行コマンドを設定"
 
 msgid "Confirm before quitting"
 msgstr "終了前に確認"
+
+msgid "Conflicts"
+msgstr "コンフリクト"
 
 #. placeholder {0}: status.baseBranch
 msgid "Conflicts with {0}"
@@ -7928,6 +7940,9 @@ msgstr "LinkedInでフォロー"
 msgid "Follow us on X/Twitter"
 msgstr "X/Twitterでフォロー"
 
+msgid "Following"
+msgstr "フォロー中"
+
 msgid "Font family"
 msgstr "フォントファミリー"
 
@@ -11268,6 +11283,9 @@ msgstr "オープンなissueはありません。"
 msgid "No open pull requests found."
 msgstr "オープンなプルリクエストが見つかりません。"
 
+msgid "No open pull requests involve you."
+msgstr "あなたに関係するオープンなプルリクエストはありません。"
+
 msgid "No open pull requests."
 msgstr "オープンなプルリクエストはありません。"
 
@@ -12021,6 +12039,10 @@ msgstr "コマンドパレットを開く"
 
 msgid "Open comment on GitHub"
 msgstr "GitHubでコメントを開く"
+
+#. placeholder {0}: conversation.title
+msgid "Open conversation: {0}"
+msgstr "会話を開く: {0}"
 
 msgid "Open details"
 msgstr "詳細を開く"
@@ -13715,6 +13737,9 @@ msgstr "レビュー準備完了にできませんでした: {0}"
 
 msgid "Ready in"
 msgstr "対応済み"
+
+msgid "Ready to merge"
+msgstr "マージ可能"
 
 msgid "Ready to Merge"
 msgstr "マージ可能"
@@ -19169,6 +19194,9 @@ msgstr "チェックを待機中"
 msgid "Waiting for it to connect…"
 msgstr "接続を待っています…"
 
+msgid "Waiting for review"
+msgstr "レビュー待ち"
+
 msgid "Waiting for Review"
 msgstr "レビューを待機中"
 
@@ -19183,6 +19211,12 @@ msgstr "入力を待っています"
 
 msgid "Waiting for your reply"
 msgstr "返信待ちです"
+
+msgid "Waiting on others"
+msgstr "他の人待ち"
+
+msgid "Waiting on you"
+msgstr "あなた待ち"
 
 msgid "Waiting tint"
 msgstr "待機の色付け"

@@ -89,9 +89,19 @@ describe("workspaceCreation github procedures with mocked Octokit", () => {
 			calls.push({ method: "graphql", args: { query, variables } });
 			// Inner data object, no `{data}` envelope — octokit.graphql unwraps it.
 			return {
+				viewer: { login: "Me-User" },
 				repository: {
 					pr88: {
 						number: 88,
+						reviewDecision: "CHANGES_REQUESTED",
+						mergeable: "CONFLICTING",
+						author: { login: "alice" },
+						reviewRequests: {
+							nodes: [
+								{ requestedReviewer: { login: "me-user" } },
+								{ requestedReviewer: {} },
+							],
+						},
 						statusCheckRollup: {
 							contexts: {
 								pageInfo: { hasNextPage: false, endCursor: null },
@@ -389,6 +399,12 @@ describe("workspaceCreation github procedures with mocked Octokit", () => {
 			},
 		]);
 		expect(result.pullRequests[0].checksStatus).toBe("success");
+		expect(result.pullRequests[0]).toMatchObject({
+			reviewDecision: "CHANGES_REQUESTED",
+			mergeable: "CONFLICTING",
+			viewerIsAuthor: false,
+			reviewRequestedFromViewer: true,
+		});
 		const graphqlCall = calls.find((call) => call.method === "graphql");
 		expect(graphqlCall).toBeDefined();
 		expect(

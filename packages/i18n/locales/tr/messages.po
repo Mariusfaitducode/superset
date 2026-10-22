@@ -1176,6 +1176,9 @@ msgstr "{used} token"
 msgid "{used} used"
 msgstr "{used} kullanıldı"
 
+msgid "{viewerCount} waiting on you · {othersCount} on others"
+msgstr "{viewerCount} sizi bekliyor · {othersCount} başkalarını bekliyor"
+
 msgid "{waiting} Waiting"
 msgstr "{waiting} bekliyor"
 
@@ -3774,6 +3777,12 @@ msgstr "Yorumlardan, tasarım modundan ve Pages üzerinden başlatılan ajanlar�
 msgid "CI failed"
 msgstr "CI başarısız"
 
+msgid "CI failing"
+msgstr "CI başarısız"
+
+msgid "CI running"
+msgstr "CI çalışıyor"
+
 msgid "Clarify this"
 msgstr "Bunu netleştir"
 
@@ -4412,6 +4421,9 @@ msgstr "Çalışma alanı çalıştırma komutunu yapılandır"
 
 msgid "Confirm before quitting"
 msgstr "Çıkmadan önce onay iste"
+
+msgid "Conflicts"
+msgstr "Çakışmalar"
 
 #. placeholder {0}: status.baseBranch
 msgid "Conflicts with {0}"
@@ -7928,6 +7940,9 @@ msgstr "LinkedIn'de bizi takip edin"
 msgid "Follow us on X/Twitter"
 msgstr "X/Twitter'da bizi takip edin"
 
+msgid "Following"
+msgstr "Takip ediliyor"
+
 msgid "Font family"
 msgstr "Yazı tipi ailesi"
 
@@ -11268,6 +11283,9 @@ msgstr "Açık issue yok."
 msgid "No open pull requests found."
 msgstr "Açık pull request bulunamadı."
 
+msgid "No open pull requests involve you."
+msgstr "Sizi ilgilendiren açık pull request yok."
+
 msgid "No open pull requests."
 msgstr "Açık pull request yok."
 
@@ -12021,6 +12039,10 @@ msgstr "Komut paletini aç"
 
 msgid "Open comment on GitHub"
 msgstr "Yorumu GitHub'da aç"
+
+#. placeholder {0}: conversation.title
+msgid "Open conversation: {0}"
+msgstr "Konuşmayı aç: {0}"
 
 msgid "Open details"
 msgstr "Ayrıntıları aç"
@@ -13715,6 +13737,9 @@ msgstr "İncelemeye hazır olarak işaretlenemedi: {0}"
 
 msgid "Ready in"
 msgstr "Hazır olduğu yerler"
+
+msgid "Ready to merge"
+msgstr "Birleştirmeye hazır"
 
 msgid "Ready to Merge"
 msgstr "Birleştirmeye hazır"
@@ -19169,6 +19194,9 @@ msgstr "Kontroller bekleniyor"
 msgid "Waiting for it to connect…"
 msgstr "Bağlanması bekleniyor…"
 
+msgid "Waiting for review"
+msgstr "İnceleme bekleniyor"
+
 msgid "Waiting for Review"
 msgstr "İnceleme bekleniyor"
 
@@ -19183,6 +19211,12 @@ msgstr "Girdinizi bekliyor"
 
 msgid "Waiting for your reply"
 msgstr "Yanıtınızı bekliyor"
+
+msgid "Waiting on others"
+msgstr "Başkalarını bekliyor"
+
+msgid "Waiting on you"
+msgstr "Sizi bekliyor"
 
 msgid "Waiting tint"
 msgstr "Bekleme tonu"

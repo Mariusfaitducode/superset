@@ -1176,6 +1176,9 @@ msgstr "{used} token"
 msgid "{used} used"
 msgstr "Đã dùng {used}"
 
+msgid "{viewerCount} waiting on you · {othersCount} on others"
+msgstr "{viewerCount} đang chờ bạn · {othersCount} đang chờ người khác"
+
 msgid "{waiting} Waiting"
 msgstr "{waiting} đang chờ"
 
@@ -3774,6 +3777,12 @@ msgstr "Chọn nơi mở tác nhân được khởi chạy từ bình luận, ch
 msgid "CI failed"
 msgstr "CI thất bại"
 
+msgid "CI failing"
+msgstr "CI thất bại"
+
+msgid "CI running"
+msgstr "CI đang chạy"
+
 msgid "Clarify this"
 msgstr "Làm rõ điều này"
 
@@ -4412,6 +4421,9 @@ msgstr "Cấu hình lệnh chạy của workspace"
 
 msgid "Confirm before quitting"
 msgstr "Xác nhận trước khi thoát"
+
+msgid "Conflicts"
+msgstr "Xung đột"
 
 #. placeholder {0}: status.baseBranch
 msgid "Conflicts with {0}"
@@ -7928,6 +7940,9 @@ msgstr "Theo dõi chúng tôi trên LinkedIn"
 msgid "Follow us on X/Twitter"
 msgstr "Theo dõi chúng tôi trên X/Twitter"
 
+msgid "Following"
+msgstr "Đang theo dõi"
+
 msgid "Font family"
 msgstr "Họ font"
 
@@ -11268,6 +11283,9 @@ msgstr "Không có issue nào đang mở."
 msgid "No open pull requests found."
 msgstr "Không có pull request nào đang mở."
 
+msgid "No open pull requests involve you."
+msgstr "Không có pull request đang mở nào liên quan đến bạn."
+
 msgid "No open pull requests."
 msgstr "Không có pull request nào đang mở."
 
@@ -12021,6 +12039,10 @@ msgstr "Mở bảng lệnh"
 
 msgid "Open comment on GitHub"
 msgstr "Mở bình luận trên GitHub"
+
+#. placeholder {0}: conversation.title
+msgid "Open conversation: {0}"
+msgstr "Mở cuộc trò chuyện: {0}"
 
 msgid "Open details"
 msgstr "Mở chi tiết"
@@ -13715,6 +13737,9 @@ msgstr "Đánh dấu sẵn sàng để review thất bại: {0}"
 
 msgid "Ready in"
 msgstr "Sẵn sàng trong"
+
+msgid "Ready to merge"
+msgstr "Sẵn sàng hợp nhất"
 
 msgid "Ready to Merge"
 msgstr "Sẵn sàng merge"
@@ -19169,6 +19194,9 @@ msgstr "Đang chờ check"
 msgid "Waiting for it to connect…"
 msgstr "Đang chờ kết nối…"
 
+msgid "Waiting for review"
+msgstr "Đang chờ review"
+
 msgid "Waiting for Review"
 msgstr "Đang chờ review"
 
@@ -19183,6 +19211,12 @@ msgstr "Đang chờ bạn phản hồi"
 
 msgid "Waiting for your reply"
 msgstr "Đang chờ bạn trả lời"
+
+msgid "Waiting on others"
+msgstr "Đang chờ người khác"
+
+msgid "Waiting on you"
+msgstr "Đang chờ bạn"
 
 msgid "Waiting tint"
 msgstr "Sắc chờ"

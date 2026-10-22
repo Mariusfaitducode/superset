@@ -1176,6 +1176,9 @@ msgstr "{used} tokens"
 msgid "{used} used"
 msgstr "{used} gebruikt"
 
+msgid "{viewerCount} waiting on you · {othersCount} on others"
+msgstr "{viewerCount} wachten op jou · {othersCount} op anderen"
+
 msgid "{waiting} Waiting"
 msgstr "{waiting} wachten"
 
@@ -3774,6 +3777,12 @@ msgstr "Kies waar agents worden geopend die vanuit opmerkingen, de ontwerpmodus 
 msgid "CI failed"
 msgstr "CI mislukt"
 
+msgid "CI failing"
+msgstr "CI faalt"
+
+msgid "CI running"
+msgstr "CI draait"
+
 msgid "Clarify this"
 msgstr "Verduidelijk dit"
 
@@ -4412,6 +4421,9 @@ msgstr "Run-commando van werkruimte configureren"
 
 msgid "Confirm before quitting"
 msgstr "Bevestigen voor afsluiten"
+
+msgid "Conflicts"
+msgstr "Conflicten"
 
 #. placeholder {0}: status.baseBranch
 msgid "Conflicts with {0}"
@@ -7928,6 +7940,9 @@ msgstr "Volg ons op LinkedIn"
 msgid "Follow us on X/Twitter"
 msgstr "Volg ons op X/Twitter"
 
+msgid "Following"
+msgstr "Volgend"
+
 msgid "Font family"
 msgstr "Lettertype"
 
@@ -11268,6 +11283,9 @@ msgstr "Geen open issues."
 msgid "No open pull requests found."
 msgstr "Geen open pull requests gevonden."
 
+msgid "No open pull requests involve you."
+msgstr "Geen open pull requests waar je bij betrokken bent."
+
 msgid "No open pull requests."
 msgstr "Geen open pull requests."
 
@@ -12021,6 +12039,10 @@ msgstr "Opdrachtenpalet openen"
 
 msgid "Open comment on GitHub"
 msgstr "Opmerking openen op GitHub"
+
+#. placeholder {0}: conversation.title
+msgid "Open conversation: {0}"
+msgstr "Gesprek openen: {0}"
 
 msgid "Open details"
 msgstr "Details openen"
@@ -13715,6 +13737,9 @@ msgstr "Markeren als klaar voor review mislukt: {0}"
 
 msgid "Ready in"
 msgstr "Klaar in"
+
+msgid "Ready to merge"
+msgstr "Klaar om te mergen"
 
 msgid "Ready to Merge"
 msgstr "Klaar om te mergen"
@@ -19169,6 +19194,9 @@ msgstr "Wachten op checks"
 msgid "Waiting for it to connect…"
 msgstr "Wachten op verbinding…"
 
+msgid "Waiting for review"
+msgstr "Wacht op review"
+
 msgid "Waiting for Review"
 msgstr "Wachten op review"
 
@@ -19183,6 +19211,12 @@ msgstr "Wacht op je invoer"
 
 msgid "Waiting for your reply"
 msgstr "Wacht op je antwoord"
+
+msgid "Waiting on others"
+msgstr "Wacht op anderen"
+
+msgid "Waiting on you"
+msgstr "Wacht op jou"
 
 msgid "Waiting tint"
 msgstr "Wachtkleur"

@@ -1176,6 +1176,9 @@ msgstr "{used} токенов"
 msgid "{used} used"
 msgstr "Использовано {used}"
 
+msgid "{viewerCount} waiting on you · {othersCount} on others"
+msgstr "{viewerCount} ждут вас · {othersCount} ждут других"
+
 msgid "{waiting} Waiting"
 msgstr "Ожидают: {waiting}"
 
@@ -3774,6 +3777,12 @@ msgstr "Выберите, где открывать агентов, запуще
 msgid "CI failed"
 msgstr "CI упал"
 
+msgid "CI failing"
+msgstr "CI не проходит"
+
+msgid "CI running"
+msgstr "CI выполняется"
+
 msgid "Clarify this"
 msgstr "Уточнить это"
 
@@ -4412,6 +4421,9 @@ msgstr "Настроить команду запуска рабочей обла
 
 msgid "Confirm before quitting"
 msgstr "Подтверждать выход"
+
+msgid "Conflicts"
+msgstr "Конфликты"
 
 #. placeholder {0}: status.baseBranch
 msgid "Conflicts with {0}"
@@ -7928,6 +7940,9 @@ msgstr "Подписывайтесь на нас в LinkedIn"
 msgid "Follow us on X/Twitter"
 msgstr "Подписывайтесь на нас в X/Twitter"
 
+msgid "Following"
+msgstr "Отслеживается"
+
 msgid "Font family"
 msgstr "Гарнитура"
 
@@ -11268,6 +11283,9 @@ msgstr "Нет открытых задач."
 msgid "No open pull requests found."
 msgstr "Открытых пул-реквестов не найдено."
 
+msgid "No open pull requests involve you."
+msgstr "Нет открытых pull request, связанных с вами."
+
 msgid "No open pull requests."
 msgstr "Нет открытых пул-реквестов."
 
@@ -12021,6 +12039,10 @@ msgstr "Открыть палитру команд"
 
 msgid "Open comment on GitHub"
 msgstr "Открыть комментарий на GitHub"
+
+#. placeholder {0}: conversation.title
+msgid "Open conversation: {0}"
+msgstr "Открыть разговор: {0}"
 
 msgid "Open details"
 msgstr "Открыть подробности"
@@ -13715,6 +13737,9 @@ msgstr "Не удалось пометить как готово к ревью: 
 
 msgid "Ready in"
 msgstr "Готово в"
+
+msgid "Ready to merge"
+msgstr "Готов к слиянию"
 
 msgid "Ready to Merge"
 msgstr "Готов к слиянию"
@@ -19169,6 +19194,9 @@ msgstr "Ожидание проверок"
 msgid "Waiting for it to connect…"
 msgstr "Ожидание подключения…"
 
+msgid "Waiting for review"
+msgstr "Ожидает ревью"
+
 msgid "Waiting for Review"
 msgstr "Ожидание ревью"
 
@@ -19183,6 +19211,12 @@ msgstr "Ждёт вашего ответа"
 
 msgid "Waiting for your reply"
 msgstr "Ждёт вашего ответа"
+
+msgid "Waiting on others"
+msgstr "Ждут других"
+
+msgid "Waiting on you"
+msgstr "Ждут вас"
 
 msgid "Waiting tint"
 msgstr "Оттенок ожидания"

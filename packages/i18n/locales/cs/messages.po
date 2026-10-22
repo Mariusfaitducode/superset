@@ -1176,6 +1176,9 @@ msgstr "{used} tokenů"
 msgid "{used} used"
 msgstr "Využito {used}"
 
+msgid "{viewerCount} waiting on you · {othersCount} on others"
+msgstr "{viewerCount} čeká na vás · {othersCount} na ostatní"
+
 msgid "{waiting} Waiting"
 msgstr "Čeká: {waiting}"
 
@@ -3774,6 +3777,12 @@ msgstr "Vyberte, kde se otevřou agenti spuštění z komentářů, režimu náv
 msgid "CI failed"
 msgstr "CI selhalo"
 
+msgid "CI failing"
+msgstr "CI selhává"
+
+msgid "CI running"
+msgstr "CI běží"
+
 msgid "Clarify this"
 msgstr "Vyjasni to"
 
@@ -4412,6 +4421,9 @@ msgstr "Nastavit spouštěcí příkaz pracovního prostoru"
 
 msgid "Confirm before quitting"
 msgstr "Potvrdit před ukončením"
+
+msgid "Conflicts"
+msgstr "Konflikty"
 
 #. placeholder {0}: status.baseBranch
 msgid "Conflicts with {0}"
@@ -7928,6 +7940,9 @@ msgstr "Sledujte nás na LinkedInu"
 msgid "Follow us on X/Twitter"
 msgstr "Sledujte nás na X/Twitteru"
 
+msgid "Following"
+msgstr "Sleduji"
+
 msgid "Font family"
 msgstr "Rodina písma"
 
@@ -11268,6 +11283,9 @@ msgstr "Žádné otevřené issues."
 msgid "No open pull requests found."
 msgstr "Nenalezeny žádné otevřené pull requesty."
 
+msgid "No open pull requests involve you."
+msgstr "Žádný otevřený pull request se vás netýká."
+
 msgid "No open pull requests."
 msgstr "Žádné otevřené pull requesty."
 
@@ -12021,6 +12039,10 @@ msgstr "Otevřít paletu příkazů"
 
 msgid "Open comment on GitHub"
 msgstr "Otevřít komentář na GitHubu"
+
+#. placeholder {0}: conversation.title
+msgid "Open conversation: {0}"
+msgstr "Otevřít konverzaci: {0}"
 
 msgid "Open details"
 msgstr "Otevřít podrobnosti"
@@ -13715,6 +13737,9 @@ msgstr "Označení jako připravené k revizi se nezdařilo: {0}"
 
 msgid "Ready in"
 msgstr "Připraveno v"
+
+msgid "Ready to merge"
+msgstr "Připraveno ke sloučení"
 
 msgid "Ready to Merge"
 msgstr "Připraveno ke sloučení"
@@ -19169,6 +19194,9 @@ msgstr "Čeká na kontroly"
 msgid "Waiting for it to connect…"
 msgstr "Čeká se na připojení…"
 
+msgid "Waiting for review"
+msgstr "Čeká na review"
+
 msgid "Waiting for Review"
 msgstr "Čeká na revizi"
 
@@ -19183,6 +19211,12 @@ msgstr "Čeká na váš vstup"
 
 msgid "Waiting for your reply"
 msgstr "Čeká na vaši odpověď"
+
+msgid "Waiting on others"
+msgstr "Čeká na ostatní"
+
+msgid "Waiting on you"
+msgstr "Čeká na vás"
 
 msgid "Waiting tint"
 msgstr "Odstín čekání"

@@ -1176,6 +1176,9 @@ msgstr "{used} Token"
 msgid "{used} used"
 msgstr "已使用 {used}"
 
+msgid "{viewerCount} waiting on you · {othersCount} on others"
+msgstr "{viewerCount} 個等你處理 · {othersCount} 個等別人處理"
+
 msgid "{waiting} Waiting"
 msgstr "{waiting}人等待"
 
@@ -3774,6 +3777,12 @@ msgstr "選擇從留言、設計模式和 Pages 啟動的代理程式的開啟�
 msgid "CI failed"
 msgstr "CI失敗"
 
+msgid "CI failing"
+msgstr "CI 失敗"
+
+msgid "CI running"
+msgstr "CI 執行中"
+
 msgid "Clarify this"
 msgstr "闡明這裡"
 
@@ -4412,6 +4421,9 @@ msgstr "配置工作區執行命令"
 
 msgid "Confirm before quitting"
 msgstr "退出前確認"
+
+msgid "Conflicts"
+msgstr "衝突"
 
 #. placeholder {0}: status.baseBranch
 msgid "Conflicts with {0}"
@@ -7928,6 +7940,9 @@ msgstr "在LinkedIn上關注我們"
 msgid "Follow us on X/Twitter"
 msgstr "在X/Twitter上關注我們"
 
+msgid "Following"
+msgstr "追蹤中"
+
 msgid "Font family"
 msgstr "字型"
 
@@ -11268,6 +11283,9 @@ msgstr "沒有開啟的議題。"
 msgid "No open pull requests found."
 msgstr "未找到開啟的拉取請求。"
 
+msgid "No open pull requests involve you."
+msgstr "沒有與你相關的開啟中拉取請求。"
+
 msgid "No open pull requests."
 msgstr "沒有開啟的拉取請求。"
 
@@ -12021,6 +12039,10 @@ msgstr "開啟命令面板"
 
 msgid "Open comment on GitHub"
 msgstr "在GitHub上開啟評論"
+
+#. placeholder {0}: conversation.title
+msgid "Open conversation: {0}"
+msgstr "開啟對話：{0}"
 
 msgid "Open details"
 msgstr "開啟詳細資料"
@@ -13715,6 +13737,9 @@ msgstr "標記為可審查失敗：{0}"
 
 msgid "Ready in"
 msgstr "已就緒"
+
+msgid "Ready to merge"
+msgstr "可以合併"
 
 msgid "Ready to Merge"
 msgstr "可以合併"
@@ -19169,6 +19194,9 @@ msgstr "等待檢查"
 msgid "Waiting for it to connect…"
 msgstr "正在等待連線…"
 
+msgid "Waiting for review"
+msgstr "等待審查"
+
 msgid "Waiting for Review"
 msgstr "等待審查"
 
@@ -19183,6 +19211,12 @@ msgstr "等待你的輸入"
 
 msgid "Waiting for your reply"
 msgstr "等待你的回覆"
+
+msgid "Waiting on others"
+msgstr "等待他人"
+
+msgid "Waiting on you"
+msgstr "等你處理"
 
 msgid "Waiting tint"
 msgstr "等待著色"

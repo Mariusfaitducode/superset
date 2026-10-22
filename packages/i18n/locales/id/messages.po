@@ -1176,6 +1176,9 @@ msgstr "{used} token"
 msgid "{used} used"
 msgstr "{used} terpakai"
 
+msgid "{viewerCount} waiting on you · {othersCount} on others"
+msgstr "{viewerCount} menunggu Anda · {othersCount} menunggu orang lain"
+
 msgid "{waiting} Waiting"
 msgstr "{waiting} Menunggu"
 
@@ -3774,6 +3777,12 @@ msgstr "Pilih tempat membuka agen yang dimulai dari komentar, mode desain, dan P
 msgid "CI failed"
 msgstr "CI gagal"
 
+msgid "CI failing"
+msgstr "CI gagal"
+
+msgid "CI running"
+msgstr "CI berjalan"
+
 msgid "Clarify this"
 msgstr "Perjelas ini"
 
@@ -4412,6 +4421,9 @@ msgstr "Atur perintah run workspace"
 
 msgid "Confirm before quitting"
 msgstr "Konfirmasi sebelum keluar"
+
+msgid "Conflicts"
+msgstr "Konflik"
 
 #. placeholder {0}: status.baseBranch
 msgid "Conflicts with {0}"
@@ -7928,6 +7940,9 @@ msgstr "Ikuti kami di LinkedIn"
 msgid "Follow us on X/Twitter"
 msgstr "Ikuti kami di X/Twitter"
 
+msgid "Following"
+msgstr "Diikuti"
+
 msgid "Font family"
 msgstr "Keluarga font"
 
@@ -11268,6 +11283,9 @@ msgstr "Tidak ada issue terbuka."
 msgid "No open pull requests found."
 msgstr "Tidak ada pull request terbuka."
 
+msgid "No open pull requests involve you."
+msgstr "Tidak ada pull request terbuka yang melibatkan Anda."
+
 msgid "No open pull requests."
 msgstr "Tidak ada pull request terbuka."
 
@@ -12021,6 +12039,10 @@ msgstr "Buka Command Palette"
 
 msgid "Open comment on GitHub"
 msgstr "Buka komentar di GitHub"
+
+#. placeholder {0}: conversation.title
+msgid "Open conversation: {0}"
+msgstr "Buka percakapan: {0}"
 
 msgid "Open details"
 msgstr "Buka detail"
@@ -13715,6 +13737,9 @@ msgstr "Gagal menandai siap ditinjau: {0}"
 
 msgid "Ready in"
 msgstr "Siap di"
+
+msgid "Ready to merge"
+msgstr "Siap digabungkan"
 
 msgid "Ready to Merge"
 msgstr "Siap Di-merge"
@@ -19169,6 +19194,9 @@ msgstr "Menunggu Check"
 msgid "Waiting for it to connect…"
 msgstr "Menunggu terhubung…"
 
+msgid "Waiting for review"
+msgstr "Menunggu tinjauan"
+
 msgid "Waiting for Review"
 msgstr "Menunggu Review"
 
@@ -19183,6 +19211,12 @@ msgstr "Menunggu masukan Anda"
 
 msgid "Waiting for your reply"
 msgstr "Menunggu balasan Anda"
+
+msgid "Waiting on others"
+msgstr "Menunggu orang lain"
+
+msgid "Waiting on you"
+msgstr "Menunggu Anda"
 
 msgid "Waiting tint"
 msgstr "Warna tunggu"
