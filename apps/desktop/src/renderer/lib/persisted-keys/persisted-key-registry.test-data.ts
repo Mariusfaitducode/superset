@@ -194,6 +194,10 @@ export const PERSISTED_KEY_REGISTRY: ReadonlyArray<
 		["pull-requests-filter-state"],
 	],
 	[
+		"src/renderer/routes/_authenticated/_dashboard/pull-requests/stores/myPullRequestsStore/myPullRequestsStore.ts",
+		["my-pull-requests-state"],
+	],
+	[
 		"src/renderer/routes/_authenticated/_dashboard/pull-requests/stores/pullRequestsSplitViewStore/pullRequestsSplitViewStore.ts",
 		["pull-requests-split-view-state"],
 	],

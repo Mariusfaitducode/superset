@@ -1,8 +1,9 @@
 import { Trans, useLingui } from "@lingui/react/macro";
 import { Button } from "@superset/ui/button";
+import { cn } from "@superset/ui/utils";
 import { useQueries } from "@tanstack/react-query";
 import { useNavigate } from "@tanstack/react-router";
-import { type ReactNode, useMemo } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import { GoGitPullRequest } from "react-icons/go";
 import { LuRefreshCw } from "react-icons/lu";
 import {
@@ -10,27 +11,36 @@ import {
 	useAgentConversations,
 } from "renderer/hooks/useAgentConversations";
 import { useDebouncedValue } from "renderer/hooks/useDebouncedValue";
-import { pullRequestRefFromUrl } from "renderer/lib/github/pullRequestRef";
+import { electronTrpc } from "renderer/lib/electron-trpc";
+import { formatRelativeTime } from "renderer/lib/formatRelativeTime";
 import { getHostServiceClientByUrl } from "renderer/lib/host-service-client";
 import { serializeProjectFilters } from "renderer/routes/_authenticated/_dashboard/components/ProjectFilter/project-filter-utils";
 import {
 	groupProjectTargetsByHost,
+	type HostQueryTarget,
 	type ProjectQueryTarget,
 } from "renderer/routes/_authenticated/_dashboard/hooks/useProjectQueryTargets";
+import { useMyPullRequestsStore } from "renderer/routes/_authenticated/_dashboard/pull-requests/stores/myPullRequestsStore";
 import { usePullRequestsSplitViewStore } from "renderer/routes/_authenticated/_dashboard/pull-requests/stores/pullRequestsSplitViewStore";
+import type { MyPullRequestItem } from "renderer/routes/_authenticated/_dashboard/pull-requests/utils/describeMyPullRequest";
 import {
-	describeMyPullRequest,
-	type MyPullRequestReason,
-} from "renderer/routes/_authenticated/_dashboard/pull-requests/utils/describeMyPullRequest";
+	filterMyPullRequests,
+	type MyPullRequestStateFilter,
+} from "renderer/routes/_authenticated/_dashboard/pull-requests/utils/filterMyPullRequests";
 import {
 	branchKey,
 	indexWorkspacesByBranch,
 	pickWorkspaceConversation,
 } from "renderer/routes/_authenticated/_dashboard/pull-requests/utils/matchPullRequestWorkspace";
+import { prioritizeMyPullRequests } from "renderer/routes/_authenticated/_dashboard/pull-requests/utils/prioritizeMyPullRequests";
 import { navigateToV2Workspace } from "renderer/routes/_authenticated/_dashboard/utils/workspace-navigation";
 import { useHostWorkspaces } from "renderer/routes/_authenticated/providers/HostWorkspacesProvider";
-import { PullRequestRow } from "../PullRequestRow";
-import { MyPullRequestFooter } from "./components/MyPullRequestFooter";
+import {
+	MY_PULL_REQUEST_COLUMNS,
+	MyPullRequestRow,
+} from "./components/MyPullRequestRow";
+import { MyPullRequestsFilterBar } from "./components/MyPullRequestsFilterBar";
+import { actionLabels } from "./utils/myPullRequestLabels";
 
 interface MyPullRequestsContentProps {
 	projectFilters: string[];
@@ -40,13 +50,29 @@ interface MyPullRequestsContentProps {
 	searchQuery: string;
 	selectedPrNumber: number | null;
 	selectedPrProjectId: string | null;
-	repoSlugByProjectId: Map<string, string>;
 }
 
-// Two GitHub searches plus one GraphQL call per repo per host, only while
-// this view is on screen; react-query also pauses it in a hidden window.
+// Two GitHub searches plus one GraphQL call per 10 PRs, per host, only
+// while this view is on screen; react-query also pauses it in a hidden window.
 const REFRESH_INTERVAL_MS = 2 * 60_000;
-const MINE_LIMIT = 50;
+
+const SUMMARY_STATES: MyPullRequestStateFilter[] = [
+	"review-requested",
+	"changes-requested",
+	"ci-failing",
+	"conflicts",
+	"ready-to-merge",
+];
+
+function listMine(target: HostQueryTarget, cachedOnly: boolean) {
+	if (!target.hostUrl) return Promise.resolve(null);
+	return getHostServiceClientByUrl(
+		target.hostUrl,
+	).workspaceCreation.listMyPullRequests.query({
+		projectIds: target.projects.map((project) => project.projectId),
+		cachedOnly,
+	});
+}
 
 export function MyPullRequestsContent({
 	projectFilters,
@@ -56,63 +82,131 @@ export function MyPullRequestsContent({
 	searchQuery,
 	selectedPrNumber,
 	selectedPrProjectId,
-	repoSlugByProjectId,
 }: MyPullRequestsContentProps) {
 	const { t } = useLingui();
 	const navigate = useNavigate();
 	const expandDetail = usePullRequestsSplitViewStore((s) => s.expandDetail);
 	const debouncedQuery = useDebouncedValue(searchQuery, 200);
 	const hostTargets = useMemo(
-		() => groupProjectTargetsByHost(projectTargets),
+		() =>
+			groupProjectTargetsByHost(projectTargets).filter(
+				(target) => target.projects.length > 0,
+			),
 		[projectTargets],
 	);
+	const openUrl = electronTrpc.external.openUrl.useMutation();
 
+	// The host keeps its last answer in memory: show it at once, then let the
+	// GitHub round trip (several seconds) replace it.
+	const cachedResults = useQueries({
+		queries: hostTargets.map((target) => ({
+			queryKey: ["pullRequests", "mine", "cached", target.key, target.hostUrl],
+			queryFn: () => listMine(target, true),
+			enabled: !!target.hostUrl,
+			staleTime: Number.POSITIVE_INFINITY,
+			gcTime: 10 * 60_000,
+		})),
+	});
 	const results = useQueries({
 		queries: hostTargets.map((target) => ({
 			queryKey: ["pullRequests", "mine", target.key, target.hostUrl],
-			queryFn: async () => {
-				const firstProject = target.projects[0];
-				if (!target.hostUrl || !firstProject) return [];
-				const client = getHostServiceClientByUrl(target.hostUrl);
-				// GitHub search has no OR: `involves:@me` misses PRs where only
-				// my review is requested, so those come from a second search.
-				const search = (viewerRelationship: "involved" | "needs-review") =>
-					client.workspaceCreation.searchPullRequests.query({
-						projectId: firstProject.projectId,
-						projectIds: target.projects.map((project) => project.projectId),
-						viewerRelationship,
-						limit: MINE_LIMIT,
-						page: 1,
-					});
-				const pages = await Promise.all([
-					search("needs-review"),
-					search("involved"),
-				]);
-				const byKey = new Map<
-					string,
-					(typeof pages)[number]["pullRequests"][number]
-				>();
-				for (const pullRequest of pages.flatMap((page) => page.pullRequests)) {
-					const key = `${pullRequest.projectId}:${pullRequest.prNumber}`;
-					if (!byKey.has(key)) {
-						byKey.set(key, {
-							...pullRequest,
-							checks: pullRequest.checks ?? [],
-						});
-					}
-				}
-				return [...byKey.values()];
-			},
+			queryFn: () => listMine(target, false),
 			enabled: !!target.hostUrl,
 			staleTime: 60_000,
 			gcTime: 10 * 60_000,
 			refetchInterval: REFRESH_INTERVAL_MS,
 		})),
 	});
+	const shown = hostTargets.map(
+		(_, index) => results[index]?.data ?? cachedResults[index]?.data ?? null,
+	);
 
 	const isFetching = results.some((result) => result.isFetching);
 	const error = results.find((result) => result.error)?.error ?? null;
 	const refetch = () => Promise.all(results.map((result) => result.refetch()));
+
+	const pullRequests: MyPullRequestItem[] = shown.flatMap(
+		(result) => result?.pullRequests ?? [],
+	);
+	const oldestFetchedAt = shown.reduce<string | null>(
+		(oldest, result) =>
+			result && (!oldest || result.fetchedAt < oldest)
+				? result.fetchedAt
+				: oldest,
+		null,
+	);
+	const timings = shown.find((result) => result)?.timings ?? null;
+	const isIncomplete = shown.some((result) => result?.incomplete);
+	const hasData = shown.some((result) => result !== null);
+
+	// Logged in the renderer console so before/after numbers come from the
+	// real app rather than from a benchmark.
+	const mountedAt = useRef(performance.now());
+	const logged = useRef({ first: false, fresh: false });
+	const hasFresh = results.some((result) => result.data);
+	useEffect(() => {
+		if (!logged.current.first && hasData) {
+			logged.current.first = true;
+			console.info(
+				`[pull-requests:mine] first list after ${Math.round(performance.now() - mountedAt.current)} ms (${hasFresh ? "GitHub" : "host cache"})`,
+			);
+		}
+		if (!logged.current.fresh && hasFresh) {
+			logged.current.fresh = true;
+			console.info(
+				`[pull-requests:mine] fresh list after ${Math.round(performance.now() - mountedAt.current)} ms`,
+				timings,
+			);
+		}
+	}, [hasData, hasFresh, timings]);
+
+	const filters = useMyPullRequestsStore();
+	const { pinned, later, togglePinned, toggleLater, toggleState } = filters;
+
+	const dataVersion = shown.map((result) => result?.fetchedAt).join(",");
+	// biome-ignore lint/correctness/useExhaustiveDependencies: pullRequests is rebuilt every render; dataVersion tracks when it really changes
+	const { visible, counts } = useMemo(() => {
+		const query = debouncedQuery.trim().toLowerCase();
+		const matching = query
+			? pullRequests.filter((pr) =>
+					[
+						pr.title,
+						`#${pr.prNumber}`,
+						pr.details?.headRefName ?? "",
+						pr.repoFullName,
+						pr.authorLogin ?? "",
+					]
+						.join("\n")
+						.toLowerCase()
+						.includes(query),
+				)
+			: pullRequests;
+		return filterMyPullRequests(
+			matching,
+			{
+				repos: filters.repos,
+				roles: filters.roles,
+				states: filters.states,
+				age: filters.age,
+			},
+			Date.now(),
+		);
+	}, [
+		dataVersion,
+		debouncedQuery,
+		filters.repos,
+		filters.roles,
+		filters.states,
+		filters.age,
+	]);
+	const groups = useMemo(
+		() => prioritizeMyPullRequests(visible, { pinned, later }),
+		[visible, pinned, later],
+	);
+	const onViewerCount = groups
+		.filter((group) => group.action !== "later")
+		.flatMap((group) => group.rows)
+		.filter((row) => row.status.waitingOnViewer).length;
 
 	const { workspaces } = useHostWorkspaces();
 	const workspaceByBranch = useMemo(
@@ -120,44 +214,18 @@ export function MyPullRequestsContent({
 		[workspaces],
 	);
 	const conversations = useAgentConversations();
+	const groupLabel = actionLabels();
+	const summaryLabel: Record<MyPullRequestStateFilter, (n: number) => string> =
+		{
+			"review-requested": (n) => t`${n} to review`,
+			"changes-requested": (n) => t`${n} changes requested`,
+			"ci-failing": (n) => t`${n} CI failing`,
+			conflicts: (n) => t`${n} with conflicts`,
+			"ready-to-merge": (n) => t`${n} ready to merge`,
+			draft: (n) => t`${n} drafts`,
+		};
 
-	const rows = useMemo(() => {
-		const query = debouncedQuery.trim().toLowerCase();
-		const all = results.flatMap((result) => result.data ?? []);
-		return all
-			.map((pr) => ({ pr, status: describeMyPullRequest(pr) }))
-			.filter(({ pr }) => {
-				if (!query) return true;
-				const repoSlug = repoSlugByProjectId.get(pr.projectId) ?? "";
-				return [pr.title, `#${pr.prNumber}`, pr.headRefName ?? "", repoSlug]
-					.join("\n")
-					.toLowerCase()
-					.includes(query);
-			})
-			.sort(
-				(a, b) =>
-					Number(b.status.waitingOnViewer) - Number(a.status.waitingOnViewer) ||
-					(b.pr.updatedAt ?? "").localeCompare(a.pr.updatedAt ?? ""),
-			);
-	}, [results, debouncedQuery, repoSlugByProjectId]);
-	const onViewer = rows.filter((row) => row.status.waitingOnViewer);
-	const onOthers = rows.filter((row) => !row.status.waitingOnViewer);
-	const viewerCount = onViewer.length;
-	const othersCount = onOthers.length;
-
-	const reasonLabel: Record<MyPullRequestReason, string> = {
-		"review-requested": t`Review requested`,
-		conflicts: t`Conflicts`,
-		"ci-failing": t`CI failing`,
-		"changes-requested": t`Changes requested`,
-		draft: t`Draft`,
-		"ready-to-merge": t`Ready to merge`,
-		"ci-running": t`CI running`,
-		"awaiting-review": t`Waiting for review`,
-		following: t`Following`,
-	};
-
-	const handleOpenPreview = (pr: (typeof rows)[number]["pr"]) => {
+	const handleOpenPreview = (pr: MyPullRequestItem) => {
 		expandDetail();
 		navigate({
 			to: "/pull-requests/$prNumber",
@@ -165,7 +233,7 @@ export function MyPullRequestsContent({
 			search: {
 				search: searchQuery || undefined,
 				project: pr.projectId,
-				repo: pullRequestRefFromUrl(pr.url)?.repoFullName,
+				repo: pr.repoFullName,
 				projects: serializeProjectFilters(projectFilters),
 				state: "mine",
 			},
@@ -202,69 +270,58 @@ export function MyPullRequestsContent({
 		);
 	}
 
-	const isInitialLoad = isFetching && rows.length === 0;
-	const renderSection = (title: string, sectionRows: typeof rows): ReactNode =>
-		sectionRows.length > 0 && (
-			<section className="flex flex-col gap-1.5">
-				<h3 className="px-2 pt-1 text-[11px] font-medium text-muted-foreground">
-					{title} <span className="tabular-nums">{sectionRows.length}</span>
-				</h3>
-				{sectionRows.map(({ pr, status }) => {
-					const workspace = pr.headRefName
-						? workspaceByBranch.get(branchKey(pr.projectId, pr.headRefName))
-						: undefined;
-					const conversation = workspace
-						? pickWorkspaceConversation(conversations, workspace.id)
-						: null;
-					return (
-						<PullRequestRow
-							key={`${pr.projectId}:${pr.prNumber}`}
-							pr={pr}
-							repoSlug={repoSlugByProjectId.get(pr.projectId)}
-							isSelected={
-								selectedPrNumber === pr.prNumber &&
-								(selectedPrProjectId == null ||
-									selectedPrProjectId === pr.projectId)
-							}
-							onClick={() => handleOpenPreview(pr)}
-							footer={
-								<MyPullRequestFooter
-									status={status}
-									reasonLabel={reasonLabel}
-									workspace={workspace}
-									conversation={conversation}
-									onOpenWorkspace={(workspaceId) =>
-										void navigateToV2Workspace(workspaceId, navigate)
-									}
-									onOpenConversation={openConversation}
-								/>
-							}
-						/>
-					);
-				})}
-			</section>
-		);
+	const isInitialLoad = !hasData && (isFetching || !error);
+	const updatedAgo = oldestFetchedAt
+		? formatRelativeTime(Date.parse(oldestFetchedAt))
+		: null;
+	const timingsTitle = timings
+		? t`GitHub: search ${timings.searchMs} ms, details ${timings.detailsMs} ms, total ${timings.totalMs} ms`
+		: undefined;
 
 	return (
 		<div
 			className="@container flex h-full flex-col overflow-hidden"
 			aria-busy={isFetching}
 		>
-			<div className="flex shrink-0 items-center gap-2 border-b bg-muted/30 px-4 py-2">
-				<GoGitPullRequest className="size-3.5 text-muted-foreground" />
-				<span className="text-xs text-muted-foreground" aria-live="polite">
+			<div className="flex shrink-0 items-center gap-2 border-b bg-muted/30 px-3 py-1.5 text-xs">
+				<span className="shrink-0 font-medium" aria-live="polite">
 					{isInitialLoad ? (
 						<Trans>Loading…</Trans>
 					) : (
-						<Trans>
-							{viewerCount} waiting on you · {othersCount} on others
-						</Trans>
+						<Trans>{onViewerCount} waiting on you</Trans>
 					)}
+				</span>
+				<div className="flex min-w-0 flex-wrap items-center gap-x-1 text-muted-foreground">
+					{SUMMARY_STATES.filter((state) => counts.states[state] > 0).map(
+						(state) => (
+							<button
+								key={state}
+								type="button"
+								className={cn(
+									"rounded px-1 hover:bg-accent hover:text-foreground",
+									filters.states.includes(state) && "bg-accent text-foreground",
+								)}
+								onClick={() => toggleState(state)}
+							>
+								<span className="mr-1">·</span>
+								{summaryLabel[state](counts.states[state])}
+							</button>
+						),
+					)}
+				</div>
+				<span
+					className="ml-auto shrink-0 text-muted-foreground tabular-nums"
+					title={timingsTitle}
+				>
+					{isFetching && hasData ? (
+						<Trans>Refreshing…</Trans>
+					) : updatedAgo ? (
+						<Trans>Updated {updatedAgo} ago</Trans>
+					) : null}
 				</span>
 				<Button
 					variant="ghost"
 					size="icon-xs"
-					className="ml-auto"
 					title={t`Refresh`}
 					aria-label={t`Refresh pull requests`}
 					disabled={isFetching}
@@ -279,9 +336,10 @@ export function MyPullRequestsContent({
 					/>
 				</Button>
 			</div>
+			<MyPullRequestsFilterBar counts={counts} />
 
 			<div className="min-h-0 flex-1 overflow-y-auto">
-				{error && rows.length === 0 ? (
+				{error && !hasData ? (
 					<div className="flex cursor-text select-text flex-col items-start gap-3 px-4 py-4 text-sm text-destructive">
 						<span>{error.message}</span>
 						<Button variant="outline" size="sm" onClick={() => refetch()}>
@@ -295,28 +353,142 @@ export function MyPullRequestsContent({
 							<Trans>Loading pull requests…</Trans>
 						</span>
 					</div>
-				) : rows.length === 0 ? (
+				) : groups.length === 0 ? (
 					<div className="flex h-full items-center justify-center p-8">
 						<span className="text-sm text-muted-foreground">
-							<Trans>No open pull requests involve you.</Trans>
+							{pullRequests.length === 0 ? (
+								<Trans>No open pull requests involve you.</Trans>
+							) : (
+								<Trans>No pull request matches these filters.</Trans>
+							)}
 						</span>
 					</div>
 				) : (
-					<div className="flex flex-col gap-3 p-2">
-						{error && (
-							<div className="flex items-center gap-2 rounded-lg bg-destructive/5 px-4 py-2 text-xs text-destructive">
+					<div className="flex flex-col pb-2">
+						{(error || isIncomplete) && (
+							<div className="mx-2 mt-2 flex items-center gap-2 rounded-lg bg-destructive/5 px-3 py-1.5 text-xs text-destructive">
 								<span className="min-w-0 flex-1 cursor-text select-text truncate">
-									<Trans>
-										Some repositories could not be loaded: {error.message}
-									</Trans>
+									{error ? (
+										<Trans>Refresh failed: {error.message}</Trans>
+									) : (
+										<Trans>
+											Some repositories or details did not load; the list may be
+											incomplete.
+										</Trans>
+									)}
 								</span>
 								<Button variant="outline" size="xs" onClick={() => refetch()}>
 									<Trans>Retry</Trans>
 								</Button>
 							</div>
 						)}
-						{renderSection(t`Waiting on you`, onViewer)}
-						{renderSection(t`Waiting on others`, onOthers)}
+						<div className="sticky top-0 z-10 flex h-6 items-center gap-2 border-b bg-background px-4 text-[10px] text-muted-foreground uppercase tracking-wide">
+							<span className="w-4 shrink-0" />
+							<span className="w-3.5 shrink-0" />
+							<span className="min-w-0 flex-1">
+								<Trans>Pull request</Trans>
+							</span>
+							<span className={cn("shrink-0", MY_PULL_REQUEST_COLUMNS.why)}>
+								<Trans>Why here</Trans>
+							</span>
+							<span className={cn("shrink-0", MY_PULL_REQUEST_COLUMNS.ci)}>
+								<Trans>CI</Trans>
+							</span>
+							<span
+								className={cn("shrink-0", MY_PULL_REQUEST_COLUMNS.review)}
+								title={t`Review`}
+							>
+								<Trans>Rev</Trans>
+							</span>
+							<span
+								className={cn("shrink-0", MY_PULL_REQUEST_COLUMNS.conflicts)}
+							/>
+							<span
+								className={cn(
+									"shrink-0 text-right",
+									MY_PULL_REQUEST_COLUMNS.size,
+								)}
+								title={t`Lines changed`}
+							>
+								<Trans>Size</Trans>
+							</span>
+							<span
+								className={cn(
+									"shrink-0 text-right",
+									MY_PULL_REQUEST_COLUMNS.age,
+								)}
+								title={t`Opened`}
+							>
+								<Trans>Age</Trans>
+							</span>
+							<span
+								className={cn(
+									"shrink-0 text-right",
+									MY_PULL_REQUEST_COLUMNS.activity,
+								)}
+								title={t`Last activity`}
+							>
+								<Trans>Act.</Trans>
+							</span>
+							<span
+								className={cn("shrink-0", MY_PULL_REQUEST_COLUMNS.who)}
+								title={t`Who waits on you, or whom you wait on`}
+							>
+								<Trans>Who</Trans>
+							</span>
+							<span className={cn("shrink-0", MY_PULL_REQUEST_COLUMNS.link)} />
+							<span className={cn("shrink-0", MY_PULL_REQUEST_COLUMNS.menu)} />
+						</div>
+						{groups.map((group) => (
+							<section key={group.action} className="flex flex-col px-2">
+								<h3 className="flex items-baseline gap-2 px-2 pt-3 pb-1 text-[11px]">
+									<span className="font-medium text-foreground">
+										{groupLabel[group.action].title}
+									</span>
+									<span className="text-muted-foreground tabular-nums">
+										{group.rows.length}
+									</span>
+									<span className="truncate text-muted-foreground/70">
+										{groupLabel[group.action].hint}
+									</span>
+								</h3>
+								{group.rows.map((row) => {
+									const { pr } = row;
+									const headRefName = pr.details?.headRefName;
+									const workspace = headRefName
+										? workspaceByBranch.get(
+												branchKey(pr.projectId, headRefName),
+											)
+										: undefined;
+									const conversation = workspace
+										? pickWorkspaceConversation(conversations, workspace.id)
+										: null;
+									return (
+										<MyPullRequestRow
+											key={row.key}
+											row={row}
+											isSelected={
+												selectedPrNumber === pr.prNumber &&
+												(selectedPrProjectId == null ||
+													selectedPrProjectId === pr.projectId)
+											}
+											isPinned={pinned.includes(row.key)}
+											isLater={later.includes(row.key)}
+											workspace={workspace}
+											conversation={conversation}
+											onOpen={() => handleOpenPreview(pr)}
+											onTogglePinned={() => togglePinned(row.key)}
+											onToggleLater={() => toggleLater(row.key)}
+											onOpenOnGitHub={() => openUrl.mutate(pr.url)}
+											onOpenWorkspace={(workspaceId) =>
+												void navigateToV2Workspace(workspaceId, navigate)
+											}
+											onOpenConversation={openConversation}
+										/>
+									);
+								})}
+							</section>
+						))}
 					</div>
 				)}
 			</div>

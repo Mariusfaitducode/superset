@@ -300,7 +300,6 @@ export function PullRequestsView({
 						searchQuery={searchQuery}
 						selectedPrNumber={selectedPrNumber}
 						selectedPrProjectId={selectedPrProjectId}
-						repoSlugByProjectId={repoSlugByProjectId}
 					/>
 				) : (
 					<PullRequestsContent

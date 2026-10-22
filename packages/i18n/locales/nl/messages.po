@@ -721,6 +721,9 @@ msgstr "{actual} tot nu toe · ~{projected} verwacht"
 msgid "{agents} sessions resume when you open their workspace."
 msgstr "{agents}-sessies worden hervat wanneer je hun workspace opent."
 
+msgid "{author} waits for your review"
+msgstr "{author} wacht op je review"
+
 msgid "{behindCount, plural, one {Behind main by # commit, needs rebase} other {Behind main by # commits, needs rebase}}"
 msgstr "{behindCount, plural, one {# commit achter op main, rebase nodig} other {# commits achter op main, rebase nodig}}"
 
@@ -1011,6 +1014,24 @@ msgstr "{months}mnd geleden"
 msgid "{myFailedCount} of your automations failed their last run"
 msgstr "Bij {myFailedCount} van je automatiseringen is de laatste run mislukt"
 
+msgid "{n} changes requested"
+msgstr "{n} met gevraagde wijzigingen"
+
+msgid "{n} CI failing"
+msgstr "{n} met falende CI"
+
+msgid "{n} drafts"
+msgstr "{n} concepten"
+
+msgid "{n} ready to merge"
+msgstr "{n} klaar om te mergen"
+
+msgid "{n} to review"
+msgstr "{n} te reviewen"
+
+msgid "{n} with conflicts"
+msgstr "{n} met conflicten"
+
 msgid "{name} accounts"
 msgstr "{name}-accounts"
 
@@ -1031,6 +1052,9 @@ msgstr "{noun, select, person {Geef minstens één persoon op, of kies {choice}.
 
 msgid "{noun, select, repository {Specify at least one repository.} channel {Specify at least one channel.} reaction {Specify at least one reaction.} dataSource {Specify at least one data source.} team {Specify at least one team.} project {Specify at least one project.} calendar {Specify at least one calendar.} other {Specify at least one entry.}}"
 msgstr "{noun, select, repository {Geef minstens één repository op.} channel {Geef minstens één kanaal op.} reaction {Geef minstens één reactie op.} dataSource {Geef minstens één gegevensbron op.} team {Geef minstens één team op.} project {Geef minstens één project op.} calendar {Geef minstens één agenda op.} other {Geef minstens één item op.}}"
+
+msgid "{onViewerCount} waiting on you"
+msgstr "{onViewerCount} wachten op jou"
 
 msgid "{openCount} open"
 msgstr "{openCount} open"
@@ -1215,9 +1239,6 @@ msgstr "{used} tokens"
 msgid "{used} used"
 msgstr "{used} gebruikt"
 
-msgid "{viewerCount} waiting on you · {othersCount} on others"
-msgstr "{viewerCount} wachten op jou · {othersCount} op anderen"
-
 msgid "{waiting} Waiting"
 msgstr "{waiting} wachten"
 
@@ -1280,6 +1301,11 @@ msgstr "⇧-klik"
 #. placeholder {2}: changeset.files.length
 msgid "+{0} −{1} · {2, plural, one {# file} other {# files}}"
 msgstr "+{0} −{1} · {2, plural, one {# bestand} other {# bestanden}}"
+
+#. placeholder {0}: additions ?? 0
+#. placeholder {1}: deletions ?? 0
+msgid "+{0} −{1} lines"
+msgstr "+{0} −{1} regels"
 
 msgid "+{hidden} more"
 msgstr "+{hidden} meer"
@@ -1672,6 +1698,9 @@ msgstr "Prestaties"
 msgid "Acme Inc."
 msgstr "Acme Inc."
 
+msgid "Act."
+msgstr "Act."
+
 msgid "Action"
 msgstr "Actie"
 
@@ -1966,6 +1995,9 @@ msgstr "Ten opzichte van basis"
 
 msgid "Against Main"
 msgstr "Ten opzichte van main"
+
+msgid "Age"
+msgstr "Leeftijd"
 
 msgid "Agent"
 msgstr "Agent"
@@ -2418,6 +2450,9 @@ msgstr "Anthropic heeft dit token geweigerd."
 msgid "any account"
 msgstr "elk account"
 
+msgid "Any age"
+msgstr "Elke leeftijd"
+
 msgid "Any channel"
 msgstr "Elk kanaal"
 
@@ -2597,6 +2632,12 @@ msgstr "heeft goedgekeurd"
 
 msgid "Approved"
 msgstr "Goedgekeurd"
+
+msgid "Approved and green"
+msgstr "Goedgekeurd en groen"
+
+msgid "Approved and green, oldest first"
+msgstr "Goedgekeurd en groen, oudste eerst"
 
 msgid "Approved review"
 msgstr "Goedgekeurde review"
@@ -2989,6 +3030,9 @@ msgstr "Terug naar home"
 
 msgid "Back to Integrations"
 msgstr "Terug naar integraties"
+
+msgid "Back to its place"
+msgstr "Terug naar zijn plek"
 
 msgid "Back to Linear"
 msgstr "Terug naar Linear"
@@ -3643,6 +3687,9 @@ msgstr "Wijzigingen gevraagd"
 msgid "Changes Requested"
 msgstr "Wijzigingen gevraagd"
 
+msgid "Changes requested by {by}"
+msgstr "Wijzigingen gevraagd door {by}"
+
 msgid "Changes saved"
 msgstr "Wijzigingen opgeslagen"
 
@@ -3826,14 +3873,33 @@ msgstr "Kies wanneer Superset je een seintje geeft."
 msgid "Choose where agents started from comments, design mode, and Pages open."
 msgstr "Kies waar agents worden geopend die vanuit opmerkingen, de ontwerpmodus en Pages worden gestart."
 
+msgid "CI"
+msgstr "CI"
+
 msgid "CI failed"
 msgstr "CI mislukt"
 
 msgid "CI failing"
 msgstr "CI faalt"
 
+msgid "CI failing ({failed}/{total})"
+msgstr "CI faalt ({failed}/{total})"
+
+#. placeholder {0}: checks.failed
+#. placeholder {1}: checks.total
+msgid "CI failing: {0} of {1} checks"
+msgstr "CI faalt: {0} van {1} checks"
+
+msgid "CI green"
+msgstr "CI groen"
+
 msgid "CI running"
 msgstr "CI draait"
+
+#. placeholder {0}: checks.pending
+#. placeholder {1}: checks.total
+msgid "CI running: {0} of {1} checks"
+msgstr "CI loopt: {0} van {1} checks"
 
 msgid "Clarify this"
 msgstr "Verduidelijk dit"
@@ -4483,6 +4549,9 @@ msgstr "Conflicten"
 #. placeholder {0}: status.baseBranch
 msgid "Conflicts with {0}"
 msgstr "Conflicten met {0}"
+
+msgid "Conflicts with the base branch"
+msgstr "Conflicten met de basisbranch"
 
 msgid "Connect"
 msgstr "Verbinden"
@@ -6282,6 +6351,9 @@ msgstr "Details"
 msgid "Details are not available here, but the link still opens."
 msgstr "Details zijn hier niet beschikbaar, maar de link opent nog steeds."
 
+msgid "Details did not load"
+msgstr "Details niet geladen"
+
 msgid "Dev"
 msgstr "Dev"
 
@@ -7902,6 +7974,9 @@ msgstr "Zoek verouderde TODO/FIXME-opmerkingen en los de snelle op."
 msgid "Finder"
 msgstr "Finder"
 
+msgid "Finish"
+msgstr "Afmaken"
+
 msgid "Finish review"
 msgstr "Review afronden"
 
@@ -7916,6 +7991,9 @@ msgstr "klaar · 7s gewerkt"
 
 msgid "First repository by name"
 msgstr "Eerste repository op naam"
+
+msgid "Fix"
+msgstr "Repareren"
 
 msgid "Fix all failing checks"
 msgstr "Alle mislukte checks fixen"
@@ -8324,6 +8402,12 @@ msgstr "GitHub-gebruikersnaam..."
 
 msgid "GitHub username…"
 msgstr "GitHub-gebruikersnaam…"
+
+#. placeholder {0}: timings.searchMs
+#. placeholder {1}: timings.detailsMs
+#. placeholder {2}: timings.totalMs
+msgid "GitHub: search {0} ms, details {1} ms, total {2} ms"
+msgstr "GitHub: zoeken {0} ms, details {1} ms, totaal {2} ms"
 
 msgid "Give me an example"
 msgstr "Geef een voorbeeld"
@@ -9272,6 +9356,9 @@ msgstr "Uitgenodigd door"
 msgid "Invoices and payment method"
 msgstr "Facturen en betaalmethode"
 
+msgid "Involved"
+msgstr "Betrokken"
+
 msgid "iOS app"
 msgstr "iOS-app"
 
@@ -9598,6 +9685,9 @@ msgstr "Laatst actief"
 msgid "Last activity"
 msgstr "Laatste activiteit"
 
+msgid "Last activity {updatedAgo} ago"
+msgstr "Laatste activiteit {updatedAgo} geleden"
+
 #. placeholder {0}: formatDateTime(new Date(workspace.lastAgentEventAt), undefined)
 msgid "Last agent activity {0}"
 msgstr "Laatste agentactiviteit {0}"
@@ -9841,6 +9931,9 @@ msgstr "Linear beperkt het aantal verzoeken. Probeer het over een paar minuten o
 #. placeholder {1}: metadata.endLine
 msgid "Lines {0}–{1}"
 msgstr "Regels {0}–{1}"
+
+msgid "Lines changed"
+msgstr "Gewijzigde regels"
 
 msgid "Link"
 msgstr "Link"
@@ -10700,11 +10793,17 @@ msgstr "Naar het midden verplaatsen"
 msgid "Move to group"
 msgstr "Naar groep verplaatsen"
 
+msgid "Move to later"
+msgstr "Naar later verplaatsen"
+
 msgid "Move to Right Side"
 msgstr "Naar rechts verplaatsen"
 
 msgid "Move to Tab"
 msgstr "Verplaatsen naar tabblad"
+
+msgid "Moved down by you"
+msgstr "Door jou omlaag gezet"
 
 msgid "Multi-select"
 msgstr "Meerdere keuzes"
@@ -11158,6 +11257,9 @@ msgstr "Geen checks gerapporteerd."
 msgid "No Chrome, Brave, Arc, or other Chromium browsers were found."
 msgstr "Er zijn geen Chrome-, Brave-, Arc- of andere Chromium-browsers gevonden."
 
+msgid "No CI"
+msgstr "Geen CI"
+
 msgid "No Claude or Codex usage found on this machine yet. Join now and you'll appear once you've used an agent."
 msgstr "Nog geen Claude- of Codex-gebruik gevonden op deze machine. Doe nu mee, dan verschijn je zodra je een agent hebt gebruikt."
 
@@ -11519,6 +11621,9 @@ msgstr "Geen prompts gevonden."
 msgid "No public agent configs yet. This route is ready for future agent config listings."
 msgstr "Nog geen publieke agentconfiguraties. Deze route is klaar voor toekomstige vermeldingen."
 
+msgid "No pull request matches these filters."
+msgstr "Geen pull request voldoet aan deze filters."
+
 msgid "No pull requests found."
 msgstr "Geen pull requests gevonden."
 
@@ -11542,6 +11647,9 @@ msgstr "Geen resultaten voor “{query}”"
 
 msgid "No results found."
 msgstr "Geen resultaten gevonden."
+
+msgid "No reviewer requested"
+msgstr "Geen reviewer gevraagd"
 
 msgid "No Reviewers Assigned"
 msgstr "Geen reviewers toegewezen"
@@ -11928,6 +12036,15 @@ msgstr "Offline / local-first modus"
 
 msgid "Older"
 msgstr "Ouder"
+
+msgid "Older than a day"
+msgstr "Ouder dan een dag"
+
+msgid "Older than a month"
+msgstr "Ouder dan een maand"
+
+msgid "Older than a week"
+msgstr "Ouder dan een week"
 
 msgid "on {cores} cores"
 msgstr "op {cores} cores"
@@ -12553,6 +12670,10 @@ msgstr "Werkruimte van deze run openen"
 msgid "Open workspace"
 msgstr "Werkruimte openen"
 
+#. placeholder {0}: getV2WorkspaceDisplayName(workspace)
+msgid "Open workspace: {0}"
+msgstr "Workspace openen: {0}"
+
 msgid "Open your app."
 msgstr "Open je app."
 
@@ -12561,6 +12682,9 @@ msgstr "OpenAI heeft deze API-sleutel geweigerd."
 
 msgid "Opened"
 msgstr "Geopend"
+
+msgid "Opened {createdAgo} ago"
+msgstr "{createdAgo} geleden geopend"
 
 msgid "opened PR #841 for review"
 msgstr "PR #841 geopend voor review"
@@ -12694,6 +12818,9 @@ msgstr "Andere hosts"
 
 msgid "Other people are using this project. Type <0>{projectName}</0> to confirm."
 msgstr "Anderen gebruiken dit project. Typ <0>{projectName}</0> om te bevestigen."
+
+msgid "Other people's PRs you take part in, latest activity first"
+msgstr "PR's van anderen waaraan je meedoet, recentste activiteit eerst"
 
 msgid "Other Team Members"
 msgstr "Andere teamleden"
@@ -13104,11 +13231,17 @@ msgstr "Vastzetten"
 msgid "Pin feedback to a page and let the agent make the change."
 msgstr "Pin feedback op een pagina en laat de agent de wijziging maken."
 
+msgid "Pin to the top"
+msgstr "Bovenaan vastzetten"
+
 msgid "Pink"
 msgstr "Roze"
 
 msgid "Pinned"
 msgstr "Vastgezet"
+
+msgid "Pinned by you, last pinned first"
+msgstr "Door jou vastgezet, laatst vastgezet eerst"
 
 msgid "PK"
 msgstr "PK"
@@ -14040,6 +14173,10 @@ msgstr "Verwijst naar"
 msgid "Refresh"
 msgstr "Vernieuwen"
 
+#. placeholder {0}: error.message
+msgid "Refresh failed: {0}"
+msgstr "Vernieuwen mislukt: {0}"
+
 msgid "Refresh GitHub issues"
 msgstr "GitHub-issues vernieuwen"
 
@@ -14060,6 +14197,9 @@ msgstr "Wordt vernieuwd zodra Claude Code opnieuw draait."
 
 msgid "Refreshes when OpenCode next runs."
 msgstr "Wordt vernieuwd zodra OpenCode opnieuw draait."
+
+msgid "Refreshing…"
+msgstr "Vernieuwen…"
 
 msgid "Regenerate"
 msgstr "Opnieuw genereren"
@@ -14370,6 +14510,9 @@ msgstr "Antwoord aan {replyingTo}"
 
 msgid "repo"
 msgstr "repo"
+
+msgid "Repo"
+msgstr "Repo"
 
 msgid "Report"
 msgstr "Melden"
@@ -14734,6 +14877,9 @@ msgstr "Herbruikbare instructies die je agents automatisch oppikken"
 msgid "Reusable terminal launches. Click a script to edit or drag to reorder. Project setup, run, and teardown commands are lifecycle scripts."
 msgstr "Herbruikbare terminalstarts. Klik op een script om het te bewerken of sleep om te herordenen. Setup-, run- en teardown-commando's van projecten zijn lifecycle-scripts."
 
+msgid "Rev"
+msgstr "Rev"
+
 msgid "Reveal in Finder"
 msgstr "Tonen in Finder"
 
@@ -14809,6 +14955,9 @@ msgstr "heeft gereviewd"
 
 msgid "Reviewed by you"
 msgstr "Door jou gereviewd"
+
+msgid "Reviewer"
+msgstr "Reviewer"
 
 msgid "Reviewers"
 msgstr "Reviewers"
@@ -16365,6 +16514,9 @@ msgstr "Voor sommige modellen is een terugvaltarief gebruikt"
 msgid "Some repositories could not be loaded: {0}"
 msgstr "Sommige repository's konden niet worden geladen: {0}"
 
+msgid "Some repositories or details did not load; the list may be incomplete."
+msgstr "Sommige repositories of details zijn niet geladen; de lijst kan onvolledig zijn."
+
 msgid "Some sessions could not be killed"
 msgstr "Sommige sessies konden niet worden beëindigd"
 
@@ -16386,6 +16538,9 @@ msgstr "Iemand"
 #. js-lingui-explicit-id
 msgid "serverError.page.entryPathHeldByColleague"
 msgstr "Iemand anders heeft {entryPath} vanuit deze workspace al gepubliceerd. Publiceer met een expliciet pagina-id om een versie aan hun pagina toe te voegen, of verplaats het bestand."
+
+msgid "Someone is waiting on your review, longest wait first"
+msgstr "Iemand wacht op je review, langste wachttijd eerst"
 
 msgid "Someone on the Superset team will review this page. We only follow up if we need more from you."
 msgstr "Iemand van het Superset-team beoordeelt deze pagina. We nemen alleen contact op als we meer van je nodig hebben."
@@ -17651,6 +17806,9 @@ msgstr "De app is op {appVersion}, maar gekoppeld aan een hostservice die door i
 
 msgid "The associated device isn't reachable right now"
 msgstr "Het bijbehorende apparaat is nu niet bereikbaar"
+
+msgid "The author"
+msgstr "De auteur"
 
 msgid "The automation's owner can't use cloud workspaces in this organization anymore. Ask them to check their access, or run the automation on a device."
 msgstr "De eigenaar van de automatisering kan in deze organisatie geen cloudwerkruimtes meer gebruiken. Vraag diegene de toegang te controleren, of voer de automatisering uit op een apparaat."
@@ -19039,6 +19197,9 @@ msgstr "Bijgewerkt {0}"
 msgid "Updated {date}"
 msgstr "Bijgewerkt {date}"
 
+msgid "Updated {updatedAgo} ago"
+msgstr "{updatedAgo} geleden bijgewerkt"
+
 msgid "Updated {updatedRelative}"
 msgstr "Bijgewerkt {updatedRelative}"
 
@@ -19404,9 +19565,6 @@ msgstr "Wachten op checks"
 msgid "Waiting for it to connect…"
 msgstr "Wachten op verbinding…"
 
-msgid "Waiting for review"
-msgstr "Wacht op review"
-
 msgid "Waiting for Review"
 msgstr "Wachten op review"
 
@@ -19428,11 +19586,14 @@ msgstr "Wacht op je invoer"
 msgid "Waiting for your reply"
 msgstr "Wacht op je antwoord"
 
+msgid "Waiting on {reviewers}"
+msgstr "Wacht op {reviewers}"
+
 msgid "Waiting on others"
 msgstr "Wacht op anderen"
 
-msgid "Waiting on you"
-msgstr "Wacht op jou"
+msgid "Waiting on reviewers or CI, longest wait first"
+msgstr "Wacht op reviewers of CI, langste wachttijd eerst"
 
 msgid "Waiting tint"
 msgstr "Wachtkleur"
@@ -19710,11 +19871,20 @@ msgstr "Welke agents worden ondersteund?"
 msgid "Which AI coding agents are supported?"
 msgstr "Welke AI-coding agents worden ondersteund?"
 
+msgid "Who"
+msgstr "Wie"
+
 msgid "Who can open it"
 msgstr "Wie het kan openen"
 
+msgid "Who waits on you, or whom you wait on"
+msgstr "Wie op jou wacht, of op wie jij wacht"
+
 msgid "Whole Task"
 msgstr "Hele taak"
+
+msgid "Why here"
+msgstr "Waarom hier"
 
 msgid "Why, how, links…"
 msgstr "Waarom, hoe, links…"
@@ -20054,6 +20224,12 @@ msgstr "JIJ"
 msgid "You appear to be offline"
 msgstr "Je lijkt offline te zijn"
 
+msgid "You approved"
+msgstr "Je hebt goedgekeurd"
+
+msgid "You are involved"
+msgstr "Je bent betrokken"
+
 msgid "You are not a member of that organization."
 msgstr "Je bent geen lid van die organisatie."
 
@@ -20078,6 +20254,9 @@ msgstr "Je hebt geen positie tot {0} dagen gebruik tonen. De score start zodra h
 
 msgid "You are viewing version {version}, read-only"
 msgstr "Je bekijkt versie {version}, alleen-lezen"
+
+msgid "You asked for changes"
+msgstr "Je hebt wijzigingen gevraagd"
 
 msgid "You can attach up to {MAX_ATTACHMENTS} files"
 msgstr "Je kunt maximaal {MAX_ATTACHMENTS} bestanden toevoegen"
@@ -20124,6 +20303,9 @@ msgstr "Je moet deel uitmaken van een organisatie om accounts te verbinden."
 
 msgid "You need to be part of an organization to use integrations."
 msgstr "Je moet deel uitmaken van een organisatie om integraties te gebruiken."
+
+msgid "You reviewed"
+msgstr "Je hebt gereviewd"
 
 #. placeholder {0}: preview.rank
 #. placeholder {1}: preview.total
@@ -20202,6 +20384,9 @@ msgstr "Je code blijft standaard lokaal, met expliciete controle over gekoppelde
 msgid "Your download starts automatically. If it didn't, grab it here."
 msgstr "Je download start automatisch. Gebeurt dat niet, download dan hier."
 
+msgid "Your drafts"
+msgstr "Je concepten"
+
 msgid "Your email (optional)"
 msgstr "Je e-mailadres (optioneel)"
 
@@ -20231,6 +20416,9 @@ msgstr "Je organisatie heeft haar limiet voor cloudgebruik bereikt. Deze werkrui
 
 msgid "Your own accounts. Your organization's integrations let Superset reach its tools; connecting yours makes the work Superset does for you show up as you."
 msgstr "Je eigen accounts. De integraties van je organisatie geven Superset toegang tot haar tools; als je die van jou koppelt, verschijnt het werk dat Superset voor je doet onder jouw naam."
+
+msgid "Your PRs blocked on you: changes requested, then CI, then conflicts"
+msgstr "Je PR's die op jou wachten: gevraagde wijzigingen, dan CI, dan conflicten"
 
 msgid "Your rank"
 msgstr "Je positie"

@@ -721,7 +721,7 @@ const searchIssuesResponseSchema = z.object({
 	items: z.array(searchIssuesItemSchema),
 });
 
-async function ghApiSearchPullRequests(
+export async function ghApiSearchPullRequests(
 	execGh: ExecGh,
 	chunk: ProjectRepo[],
 	qualifiers: string,
@@ -783,7 +783,7 @@ async function ghApiSearchPullRequests(
 	return { items, totalCount: parsed.total_count, hasNextPage };
 }
 
-async function octokitSearchPullRequests(
+export async function octokitSearchPullRequests(
 	octokit: Octokit,
 	chunk: ProjectRepo[],
 	qualifiers: string,
