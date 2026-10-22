@@ -242,6 +242,16 @@ export class EventBus {
 		this.broadcast({ type: "agent:lifecycle", ...message });
 	}
 
+	broadcastHostStoreChanged(
+		store: Extract<ServerMessage, { type: "host-store:changed" }>["store"],
+	): void {
+		this.broadcast({
+			type: "host-store:changed",
+			store,
+			occurredAt: Date.now(),
+		});
+	}
+
 	/**
 	 * Fan out binding mutations that are not lifecycle hooks. Renderers refetch
 	 * status from the host, but notification controllers do not treat this as an

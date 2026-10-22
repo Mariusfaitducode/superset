@@ -252,6 +252,16 @@ export interface ChatSessionsChangedMessage {
 	occurredAt: number;
 }
 
+/**
+ * A host-kept store changed (to-dos or workspace labels), from the app or an
+ * agent's CLI: clients refetch it instead of polling.
+ */
+export interface HostStoreChangedMessage {
+	type: "host-store:changed";
+	store: "conversation-todos" | "workspace-labels";
+	occurredAt: number;
+}
+
 export type ServerMessage =
 	| FsEventsMessage
 	| GitChangedMessage
@@ -266,6 +276,7 @@ export type ServerMessage =
 	| TagFoldersChangedMessage
 	| PageWatchChangedMessage
 	| ChatSessionsChangedMessage
+	| HostStoreChangedMessage
 	| EventBusErrorMessage;
 
 /**
