@@ -17080,6 +17080,9 @@ msgstr "Ein Tab pro Befehl"
 msgid "Tab to fill"
 msgstr "Tab zum Ausfüllen"
 
+msgid "Tab: next workspace · ↑↓: pick a conversation · release Ctrl to open"
+msgstr "Tab: nächster Workspace · ↑↓: Unterhaltung wählen · Strg loslassen zum Öffnen"
+
 msgid "Table"
 msgstr "Tabelle"
 

@@ -17080,6 +17080,9 @@ msgstr "명령마다 탭"
 msgid "Tab to fill"
 msgstr "Tab으로 채우기"
 
+msgid "Tab: next workspace · ↑↓: pick a conversation · release Ctrl to open"
+msgstr "Tab: 다음 워크스페이스 · ↑↓: 대화 선택 · Ctrl을 놓으면 열림"
+
 msgid "Table"
 msgstr "테이블"
 

@@ -17080,6 +17080,9 @@ msgstr "Uma aba por comando"
 msgid "Tab to fill"
 msgstr "Tab para preencher"
 
+msgid "Tab: next workspace · ↑↓: pick a conversation · release Ctrl to open"
+msgstr "Tab: próximo workspace · ↑↓: escolher uma conversa · solte Ctrl para abrir"
+
 msgid "Table"
 msgstr "Tabela"
 

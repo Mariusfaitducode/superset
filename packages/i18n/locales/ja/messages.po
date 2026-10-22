@@ -17080,6 +17080,9 @@ msgstr "コマンドごとにタブ"
 msgid "Tab to fill"
 msgstr "Tabで入力"
 
+msgid "Tab: next workspace · ↑↓: pick a conversation · release Ctrl to open"
+msgstr "Tab: 次のワークスペース · ↑↓: 会話を選択 · Ctrl を離して開く"
+
 msgid "Table"
 msgstr "Table"
 

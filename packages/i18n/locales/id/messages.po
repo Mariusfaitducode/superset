@@ -17080,6 +17080,9 @@ msgstr "Satu tab per perintah"
 msgid "Tab to fill"
 msgstr "Tab untuk mengisi"
 
+msgid "Tab: next workspace · ↑↓: pick a conversation · release Ctrl to open"
+msgstr "Tab: workspace berikutnya · ↑↓: pilih percakapan · lepas Ctrl untuk membuka"
+
 msgid "Table"
 msgstr "Tabel"
 

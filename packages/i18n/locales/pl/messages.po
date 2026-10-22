@@ -17080,6 +17080,9 @@ msgstr "Karta na polecenie"
 msgid "Tab to fill"
 msgstr "Tab, aby uzupełnić"
 
+msgid "Tab: next workspace · ↑↓: pick a conversation · release Ctrl to open"
+msgstr "Tab: następny obszar roboczy · ↑↓: wybierz rozmowę · puść Ctrl, aby otworzyć"
+
 msgid "Table"
 msgstr "Tabela"
 
