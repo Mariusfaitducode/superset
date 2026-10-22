@@ -7,6 +7,7 @@ import { configRouter } from "./config";
 import { conversationTodosRouter } from "./conversation-todos";
 import { filesystemRouter } from "./filesystem";
 import { gitRouter } from "./git";
+import { gitGraphRouter } from "./git-graph";
 import { githubRouter } from "./github";
 import { healthRouter } from "./health";
 import { hostRouter } from "./host";
@@ -43,6 +44,7 @@ export const appRouter = router({
 	conversationTodos: conversationTodosRouter,
 	filesystem: filesystemRouter,
 	git: gitRouter,
+	gitGraph: gitGraphRouter,
 	github: githubRouter,
 	issues: issuesRouter,
 	linkPreview: linkPreviewRouter,
