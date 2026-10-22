@@ -1,7 +1,9 @@
 export {
 	describeMyPullRequest,
 	isReasonOnViewer,
-	type MyPullRequestInput,
+	type MyPullRequestDetails,
+	type MyPullRequestItem,
 	type MyPullRequestReason,
+	type MyPullRequestReviewState,
 	type MyPullRequestStatus,
 } from "./describeMyPullRequest";
