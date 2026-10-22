@@ -12,11 +12,28 @@ afterAll(() => {
 	rmSync(home, { recursive: true, force: true });
 });
 
+const agentSessions = new Map([["claude-term", "claude-session-1"]]);
+
 const caller = conversationTodosRouter.createCaller({
 	isAuthenticated: true,
+	terminalAgentStore: {
+		get: (terminalId: string) => {
+			const agentSessionId = agentSessions.get(terminalId);
+			return agentSessionId ? { agentSessionId } : undefined;
+		},
+	},
 } as unknown as HostServiceContext);
 
 describe("conversationTodosRouter", () => {
+	test("ties a to-do to the agent conversation of its terminal", async () => {
+		const todo = await caller.add({
+			workspaceId: "ws-agent",
+			terminalId: "claude-term",
+			text: "Follow me",
+		});
+		expect(todo.conversationId).toBe("claude-session-1");
+	});
+
 	test("adds as the user by default and lists by workspace", async () => {
 		const todo = await caller.add({
 			workspaceId: "ws",
