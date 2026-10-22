@@ -1828,6 +1828,9 @@ msgstr "Thêm nữa…"
 msgid "Add one from the menu in the sidebar to get started."
 msgstr "Thêm một agent từ menu ở thanh bên để bắt đầu."
 
+msgid "Add or paste notes…"
+msgstr "Thêm hoặc dán ghi chú…"
+
 msgid "Add people"
 msgstr "Thêm người"
 
@@ -1905,6 +1908,9 @@ msgstr "Đã thêm {added} tệp vào {where}"
 
 msgid "Added 1 file to {where}"
 msgstr "Đã thêm 1 tệp vào {where}"
+
+msgid "Added by an agent"
+msgstr "Do một tác tử thêm"
 
 msgid "Added by the agent"
 msgstr "Do agent thêm"
@@ -2109,6 +2115,10 @@ msgstr "Tất cả"
 msgctxt "log scope"
 msgid "All"
 msgstr "Tất cả"
+
+#. placeholder {0}: notes.length
+msgid "All {0}"
+msgstr "Tất cả {0}"
 
 #. placeholder {0}: history.projects.length
 msgid "All {0} →"
@@ -4986,6 +4996,9 @@ msgstr "Chi phí của bạn: $0"
 msgid "Could not add agent"
 msgstr "Không thể thêm tác nhân"
 
+msgid "Could not add the notes"
+msgstr "Không thể thêm ghi chú"
+
 msgid "Could not answer the agent"
 msgstr "Không thể trả lời agent"
 
@@ -5244,6 +5257,9 @@ msgstr "Không thể cập nhật skill"
 
 msgid "Could not update the branch"
 msgstr "Không thể cập nhật nhánh"
+
+msgid "Could not update the note"
+msgstr "Không thể cập nhật ghi chú"
 
 msgid "Could not update the to-do"
 msgstr "Không thể cập nhật việc cần làm"
@@ -6037,6 +6053,9 @@ msgstr "Xóa nhãn"
 msgid "Delete local branch on workspace removal"
 msgstr "Xóa nhánh cục bộ khi gỡ workspace"
 
+msgid "Delete note"
+msgstr "Xóa ghi chú"
+
 msgid "Delete organization"
 msgstr "Xóa tổ chức"
 
@@ -6667,6 +6686,9 @@ msgstr "Dropdown Menu"
 
 msgid "Dropdown, context, and application menus"
 msgstr "Menu thả xuống, menu ngữ cảnh và menu ứng dụng"
+
+msgid "Dropped"
+msgstr "Đã bỏ"
 
 msgid "Due"
 msgstr "Hạn"
@@ -8441,6 +8463,9 @@ msgstr "Có quyền truy cập"
 msgid "Has conflicts"
 msgstr "Có xung đột"
 
+msgid "Has details"
+msgstr "Có chi tiết"
+
 msgid "Has uncommitted changes"
 msgstr "Có thay đổi chưa commit"
 
@@ -9460,6 +9485,9 @@ msgstr "Tiếp tục chờ"
 
 msgid "Keep working"
 msgstr "Tiếp tục làm"
+
+msgid "Kept"
+msgstr "Giữ lại"
 
 msgid "Kept the new file — it changed after it was created"
 msgstr "Đã giữ tệp mới — nó đã thay đổi sau khi được tạo"
@@ -11367,6 +11395,12 @@ msgstr "Không có trình giả lập di động nào khả dụng ở đây. C�
 msgid "No name on file"
 msgstr "Chưa có tên nào được lưu"
 
+msgid "No notes match these filters."
+msgstr "Không có ghi chú nào khớp với bộ lọc này."
+
+msgid "No notes yet. Add them from the note button on a workspace in the sidebar, or ask an agent to run superset notes add."
+msgstr "Chưa có ghi chú. Thêm từ nút ghi chú của một workspace trong thanh bên, hoặc nhờ một agent chạy superset notes add."
+
 msgid "No one in {organizationName} matches. Type a full email to invite someone new."
 msgstr "Không có ai trong {organizationName} khớp. Nhập đầy đủ email để mời người mới."
 
@@ -11777,8 +11811,14 @@ msgstr "Không cập nhật"
 msgid "Note"
 msgstr "Lưu ý"
 
+msgid "Note details"
+msgstr "Chi tiết ghi chú"
+
 msgid "Notes"
 msgstr "Ghi chú"
+
+msgid "Notes: {activeCount} open"
+msgstr "Ghi chú: {activeCount} đang mở"
 
 msgid "Nothing here yet."
 msgstr "Chưa có gì ở đây."
@@ -12075,6 +12115,10 @@ msgstr "mở"
 msgid "Open"
 msgstr "Mở"
 
+msgctxt "note status"
+msgid "Open"
+msgstr "Đang mở"
+
 msgctxt "pull request or issue state"
 msgid "Open"
 msgstr "Đang mở"
@@ -12090,6 +12134,9 @@ msgstr "Mở {0}"
 #. placeholder {0}: plugin.interface.displayName
 msgid "Open {0} website"
 msgstr "Mở website {0}"
+
+msgid "Open {activeCount}"
+msgstr "Đang mở {activeCount}"
 
 msgid "Open {filePath}"
 msgstr "Mở {filePath}"
@@ -12306,6 +12353,9 @@ msgstr "Mở trong T3 Chat"
 msgid "Open in tab"
 msgstr "Mở trong tab"
 
+msgid "Open in the Notes view"
+msgstr "Mở trong chế độ xem Ghi chú"
+
 msgid "Open in…"
 msgstr "Mở trong…"
 
@@ -12490,6 +12540,9 @@ msgstr "Mở workspace của lần chạy"
 
 msgid "open the task in a workspace"
 msgstr "mở tác vụ trong một workspace"
+
+msgid "Open the workspace"
+msgstr "Mở workspace"
 
 msgid "Open the workspace in the app picked in the Open In menu (VS Code, Cursor, etc.)"
 msgstr "Mở workspace trong ứng dụng đã chọn ở menu \"Mở trong\" (VS Code, Cursor, v.v.)"
@@ -12859,6 +12912,9 @@ msgstr "Dán"
 
 msgid "Paste this into Superset CLI:"
 msgstr "Dán mã này vào Superset CLI:"
+
+msgid "Pasting several lines adds one note per line"
+msgstr "Dán nhiều dòng sẽ thêm một ghi chú cho mỗi dòng"
 
 msgid "Path"
 msgstr "Đường dẫn"
@@ -15251,6 +15307,9 @@ msgstr "Tìm trong Linear…"
 msgid "Search models"
 msgstr "Tìm mô hình"
 
+msgid "Search notes"
+msgstr "Tìm ghi chú"
+
 msgid "Search pages"
 msgstr "Tìm trang"
 
@@ -16689,6 +16748,10 @@ msgstr "Trạng thái"
 
 msgid "Status changed"
 msgstr "Trạng thái thay đổi"
+
+#. placeholder {0}: statusLabel[note.status]
+msgid "Status: {0}"
+msgstr "Trạng thái: {0}"
 
 msgid "Stay connected (refresh tokens)"
 msgstr "Duy trì kết nối (refresh token)"
@@ -19652,6 +19715,9 @@ msgstr "Ai có thể mở"
 
 msgid "Whole Task"
 msgstr "Trọn tác vụ"
+
+msgid "Why, how, links…"
+msgstr "Tại sao, cách làm, liên kết…"
 
 msgid "Width"
 msgstr "Chiều rộng"

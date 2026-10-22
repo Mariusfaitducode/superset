@@ -1828,6 +1828,9 @@ msgstr "Daha fazla ekle…"
 msgid "Add one from the menu in the sidebar to get started."
 msgstr "Başlamak için kenar çubuğundaki menüden bir tane ekleyin."
 
+msgid "Add or paste notes…"
+msgstr "Not ekle veya yapıştır…"
+
 msgid "Add people"
 msgstr "Kişi ekle"
 
@@ -1905,6 +1908,9 @@ msgstr "{where} konumuna {added} dosya eklendi"
 
 msgid "Added 1 file to {where}"
 msgstr "{where} konumuna 1 dosya eklendi"
+
+msgid "Added by an agent"
+msgstr "Bir ajan tarafından eklendi"
 
 msgid "Added by the agent"
 msgstr "Ajan tarafından eklendi"
@@ -2109,6 +2115,10 @@ msgstr "Tümü"
 msgctxt "log scope"
 msgid "All"
 msgstr "Tümü"
+
+#. placeholder {0}: notes.length
+msgid "All {0}"
+msgstr "Tümü {0}"
 
 #. placeholder {0}: history.projects.length
 msgid "All {0} →"
@@ -4986,6 +4996,9 @@ msgstr "Size maliyeti: $0"
 msgid "Could not add agent"
 msgstr "Ajan eklenemedi"
 
+msgid "Could not add the notes"
+msgstr "Notlar eklenemedi"
+
 msgid "Could not answer the agent"
 msgstr "Ajana yanıt verilemedi"
 
@@ -5244,6 +5257,9 @@ msgstr "Beceri güncellenemedi"
 
 msgid "Could not update the branch"
 msgstr "Dal güncellenemedi"
+
+msgid "Could not update the note"
+msgstr "Not güncellenemedi"
 
 msgid "Could not update the to-do"
 msgstr "Yapılacak güncellenemedi"
@@ -6037,6 +6053,9 @@ msgstr "Etiketi sil"
 msgid "Delete local branch on workspace removal"
 msgstr "Çalışma alanı kaldırılırken yerel dalı sil"
 
+msgid "Delete note"
+msgstr "Notu sil"
+
 msgid "Delete organization"
 msgstr "Kuruluşu sil"
 
@@ -6667,6 +6686,9 @@ msgstr "Açılır menü"
 
 msgid "Dropdown, context, and application menus"
 msgstr "Açılır, bağlam ve uygulama menüleri"
+
+msgid "Dropped"
+msgstr "Bırakıldı"
 
 msgid "Due"
 msgstr "Bitiş"
@@ -8441,6 +8463,9 @@ msgstr "Erişimi var"
 msgid "Has conflicts"
 msgstr "Çakışma var"
 
+msgid "Has details"
+msgstr "Ayrıntı var"
+
 msgid "Has uncommitted changes"
 msgstr "Commit'lenmemiş değişiklikler var"
 
@@ -9460,6 +9485,9 @@ msgstr "Beklemeye devam et"
 
 msgid "Keep working"
 msgstr "Çalışmaya devam et"
+
+msgid "Kept"
+msgstr "Tutuldu"
 
 msgid "Kept the new file — it changed after it was created"
 msgstr "Yeni dosya korundu — oluşturulduktan sonra değişti"
@@ -11367,6 +11395,12 @@ msgstr "Burada kullanılabilir bir mobil simülatör yok. Bulut korumalı alanı
 msgid "No name on file"
 msgstr "Kayıtlı ad yok"
 
+msgid "No notes match these filters."
+msgstr "Bu filtrelerle eşleşen not yok."
+
+msgid "No notes yet. Add them from the note button on a workspace in the sidebar, or ask an agent to run superset notes add."
+msgstr "Henüz not yok. Kenar çubuğundaki bir çalışma alanının not düğmesinden ekleyin veya bir ajandan superset notes add komutunu çalıştırmasını isteyin."
+
 msgid "No one in {organizationName} matches. Type a full email to invite someone new."
 msgstr "{organizationName} içinde eşleşen kimse yok. Yeni birini davet etmek için tam bir e-posta adresi yazın."
 
@@ -11777,8 +11811,14 @@ msgstr "Güncellenmiyor"
 msgid "Note"
 msgstr "Not"
 
+msgid "Note details"
+msgstr "Not ayrıntıları"
+
 msgid "Notes"
 msgstr "Notlar"
+
+msgid "Notes: {activeCount} open"
+msgstr "Notlar: {activeCount} açık"
 
 msgid "Nothing here yet."
 msgstr "Burada henüz bir şey yok."
@@ -12075,6 +12115,10 @@ msgstr "aç"
 msgid "Open"
 msgstr "Aç"
 
+msgctxt "note status"
+msgid "Open"
+msgstr "Açık"
+
 msgctxt "pull request or issue state"
 msgid "Open"
 msgstr "Açık"
@@ -12090,6 +12134,9 @@ msgstr "Aç: {0}"
 #. placeholder {0}: plugin.interface.displayName
 msgid "Open {0} website"
 msgstr "{0} web sitesini aç"
+
+msgid "Open {activeCount}"
+msgstr "Açık {activeCount}"
 
 msgid "Open {filePath}"
 msgstr "Aç: {filePath}"
@@ -12306,6 +12353,9 @@ msgstr "T3 Chat'te aç"
 msgid "Open in tab"
 msgstr "Sekmede aç"
 
+msgid "Open in the Notes view"
+msgstr "Notlar görünümünde aç"
+
 msgid "Open in…"
 msgstr "Şununla aç…"
 
@@ -12490,6 +12540,9 @@ msgstr "Çalıştırmanın çalışma alanını aç"
 
 msgid "open the task in a workspace"
 msgstr "görevi çalışma alanında açma"
+
+msgid "Open the workspace"
+msgstr "Çalışma alanını aç"
 
 msgid "Open the workspace in the app picked in the Open In menu (VS Code, Cursor, etc.)"
 msgstr "Çalışma alanını \"Şununla aç\" menüsünde seçilen uygulamada aç (VS Code, Cursor vb.)"
@@ -12859,6 +12912,9 @@ msgstr "Yapıştır"
 
 msgid "Paste this into Superset CLI:"
 msgstr "Bunu Superset CLI'ye yapıştırın:"
+
+msgid "Pasting several lines adds one note per line"
+msgstr "Birden çok satır yapıştırmak her satır için bir not ekler"
 
 msgid "Path"
 msgstr "Yol"
@@ -15251,6 +15307,9 @@ msgstr "Linear'da ara…"
 msgid "Search models"
 msgstr "Model ara"
 
+msgid "Search notes"
+msgstr "Notlarda ara"
+
 msgid "Search pages"
 msgstr "Sayfalarda ara"
 
@@ -16689,6 +16748,10 @@ msgstr "Durum"
 
 msgid "Status changed"
 msgstr "Durum değişti"
+
+#. placeholder {0}: statusLabel[note.status]
+msgid "Status: {0}"
+msgstr "Durum: {0}"
 
 msgid "Stay connected (refresh tokens)"
 msgstr "Bağlı kalma (yenileme token'ları)"
@@ -19652,6 +19715,9 @@ msgstr "Kimler açabilir"
 
 msgid "Whole Task"
 msgstr "Tüm görev"
+
+msgid "Why, how, links…"
+msgstr "Neden, nasıl, bağlantılar…"
 
 msgid "Width"
 msgstr "Genişlik"

@@ -1828,6 +1828,9 @@ msgstr "Добавить ещё…"
 msgid "Add one from the menu in the sidebar to get started."
 msgstr "Добавьте агента из меню в боковой панели, чтобы начать."
 
+msgid "Add or paste notes…"
+msgstr "Добавить или вставить заметки…"
+
 msgid "Add people"
 msgstr "Добавить людей"
 
@@ -1905,6 +1908,9 @@ msgstr "В {where} добавлено файлов: {added}"
 
 msgid "Added 1 file to {where}"
 msgstr "В {where} добавлен 1 файл"
+
+msgid "Added by an agent"
+msgstr "Добавлено агентом"
 
 msgid "Added by the agent"
 msgstr "Добавлено агентом"
@@ -2109,6 +2115,10 @@ msgstr "Все"
 msgctxt "log scope"
 msgid "All"
 msgstr "Все"
+
+#. placeholder {0}: notes.length
+msgid "All {0}"
+msgstr "Все {0}"
 
 #. placeholder {0}: history.projects.length
 msgid "All {0} →"
@@ -4986,6 +4996,9 @@ msgstr "Ваши затраты: $0"
 msgid "Could not add agent"
 msgstr "Не удалось добавить агента"
 
+msgid "Could not add the notes"
+msgstr "Не удалось добавить заметки"
+
 msgid "Could not answer the agent"
 msgstr "Не удалось ответить агенту"
 
@@ -5244,6 +5257,9 @@ msgstr "Не удалось обновить навык"
 
 msgid "Could not update the branch"
 msgstr "Не удалось обновить ветку"
+
+msgid "Could not update the note"
+msgstr "Не удалось обновить заметку"
 
 msgid "Could not update the to-do"
 msgstr "Не удалось обновить задачу"
@@ -6037,6 +6053,9 @@ msgstr "Удалить метку"
 msgid "Delete local branch on workspace removal"
 msgstr "Удалять локальную ветку при удалении рабочей области"
 
+msgid "Delete note"
+msgstr "Удалить заметку"
+
 msgid "Delete organization"
 msgstr "Удалить организацию"
 
@@ -6667,6 +6686,9 @@ msgstr "Выпадающее меню"
 
 msgid "Dropdown, context, and application menus"
 msgstr "Выпадающие, контекстные и прикладные меню"
+
+msgid "Dropped"
+msgstr "Отброшена"
 
 msgid "Due"
 msgstr "Срок"
@@ -8441,6 +8463,9 @@ msgstr "Есть доступ"
 msgid "Has conflicts"
 msgstr "Есть конфликты"
 
+msgid "Has details"
+msgstr "Есть подробности"
+
 msgid "Has uncommitted changes"
 msgstr "Есть незакоммиченные изменения"
 
@@ -9460,6 +9485,9 @@ msgstr "Продолжить ждать"
 
 msgid "Keep working"
 msgstr "Продолжить работу"
+
+msgid "Kept"
+msgstr "Оставлена"
 
 msgid "Kept the new file — it changed after it was created"
 msgstr "Новый файл сохранён — он изменился после создания"
@@ -11367,6 +11395,12 @@ msgstr "Здесь нет доступного мобильного симуля
 msgid "No name on file"
 msgstr "Имя не указано"
 
+msgid "No notes match these filters."
+msgstr "Нет заметок, подходящих под эти фильтры."
+
+msgid "No notes yet. Add them from the note button on a workspace in the sidebar, or ask an agent to run superset notes add."
+msgstr "Заметок пока нет. Добавьте их кнопкой заметок у рабочего пространства на боковой панели или попросите агента выполнить superset notes add."
+
 msgid "No one in {organizationName} matches. Type a full email to invite someone new."
 msgstr "В {organizationName} никто не найден. Введите полный email, чтобы пригласить нового человека."
 
@@ -11777,8 +11811,14 @@ msgstr "Нет обновлений"
 msgid "Note"
 msgstr "Примечание"
 
+msgid "Note details"
+msgstr "Подробности заметки"
+
 msgid "Notes"
 msgstr "Заметки"
+
+msgid "Notes: {activeCount} open"
+msgstr "Заметки: открыто {activeCount}"
 
 msgid "Nothing here yet."
 msgstr "Здесь пока пусто."
@@ -12075,6 +12115,10 @@ msgstr "открыть"
 msgid "Open"
 msgstr "Открыть"
 
+msgctxt "note status"
+msgid "Open"
+msgstr "Открыта"
+
 msgctxt "pull request or issue state"
 msgid "Open"
 msgstr "Открыто"
@@ -12090,6 +12134,9 @@ msgstr "Открыть {0}"
 #. placeholder {0}: plugin.interface.displayName
 msgid "Open {0} website"
 msgstr "Открыть сайт {0}"
+
+msgid "Open {activeCount}"
+msgstr "Открытые {activeCount}"
 
 msgid "Open {filePath}"
 msgstr "Открыть {filePath}"
@@ -12306,6 +12353,9 @@ msgstr "Открыть в T3 Chat"
 msgid "Open in tab"
 msgstr "Открыть во вкладке"
 
+msgid "Open in the Notes view"
+msgstr "Открыть в разделе заметок"
+
 msgid "Open in…"
 msgstr "Открыть в…"
 
@@ -12490,6 +12540,9 @@ msgstr "Открыть рабочую область запуска"
 
 msgid "open the task in a workspace"
 msgstr "открыть задачу в рабочей области"
+
+msgid "Open the workspace"
+msgstr "Открыть рабочее пространство"
 
 msgid "Open the workspace in the app picked in the Open In menu (VS Code, Cursor, etc.)"
 msgstr "Открыть рабочую область в приложении, выбранном в меню «Открыть в» (VS Code, Cursor и др.)"
@@ -12859,6 +12912,9 @@ msgstr "Вставить"
 
 msgid "Paste this into Superset CLI:"
 msgstr "Вставьте это в Superset CLI:"
+
+msgid "Pasting several lines adds one note per line"
+msgstr "Вставка нескольких строк добавляет по заметке на строку"
 
 msgid "Path"
 msgstr "Путь"
@@ -15251,6 +15307,9 @@ msgstr "Поиск в Linear…"
 msgid "Search models"
 msgstr "Поиск моделей"
 
+msgid "Search notes"
+msgstr "Поиск заметок"
+
 msgid "Search pages"
 msgstr "Поиск страниц"
 
@@ -16689,6 +16748,10 @@ msgstr "Статус"
 
 msgid "Status changed"
 msgstr "Статус изменён"
+
+#. placeholder {0}: statusLabel[note.status]
+msgid "Status: {0}"
+msgstr "Статус: {0}"
 
 msgid "Stay connected (refresh tokens)"
 msgstr "оставаться подключённым (токены обновления)"
@@ -19652,6 +19715,9 @@ msgstr "Кто может открыть"
 
 msgid "Whole Task"
 msgstr "Задача целиком"
+
+msgid "Why, how, links…"
+msgstr "Зачем, как, ссылки…"
 
 msgid "Width"
 msgstr "Ширина"

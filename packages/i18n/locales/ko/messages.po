@@ -1828,6 +1828,9 @@ msgstr "더 추가…"
 msgid "Add one from the menu in the sidebar to get started."
 msgstr "사이드바 메뉴에서 하나 추가해 시작하세요."
 
+msgid "Add or paste notes…"
+msgstr "메모 추가 또는 붙여넣기…"
+
 msgid "Add people"
 msgstr "사람 추가"
 
@@ -1905,6 +1908,9 @@ msgstr "{where}에 파일 {added}개를 추가했습니다"
 
 msgid "Added 1 file to {where}"
 msgstr "{where}에 파일 1개를 추가했습니다"
+
+msgid "Added by an agent"
+msgstr "에이전트가 추가함"
 
 msgid "Added by the agent"
 msgstr "에이전트가 추가함"
@@ -2109,6 +2115,10 @@ msgstr "전체"
 msgctxt "log scope"
 msgid "All"
 msgstr "전체"
+
+#. placeholder {0}: notes.length
+msgid "All {0}"
+msgstr "전체 {0}"
 
 #. placeholder {0}: history.projects.length
 msgid "All {0} →"
@@ -4986,6 +4996,9 @@ msgstr "실제 비용: $0"
 msgid "Could not add agent"
 msgstr "에이전트를 추가하지 못했습니다"
 
+msgid "Could not add the notes"
+msgstr "메모를 추가할 수 없습니다"
+
 msgid "Could not answer the agent"
 msgstr "에이전트에 응답할 수 없습니다"
 
@@ -5244,6 +5257,9 @@ msgstr "스킬을 업데이트할 수 없습니다"
 
 msgid "Could not update the branch"
 msgstr "브랜치를 업데이트할 수 없습니다"
+
+msgid "Could not update the note"
+msgstr "메모를 업데이트할 수 없습니다"
 
 msgid "Could not update the to-do"
 msgstr "할 일을 업데이트할 수 없습니다"
@@ -6037,6 +6053,9 @@ msgstr "라벨 삭제"
 msgid "Delete local branch on workspace removal"
 msgstr "워크스페이스 삭제 시 로컬 브랜치 삭제"
 
+msgid "Delete note"
+msgstr "메모 삭제"
+
 msgid "Delete organization"
 msgstr "조직 삭제"
 
@@ -6667,6 +6686,9 @@ msgstr "드롭다운 메뉴"
 
 msgid "Dropdown, context, and application menus"
 msgstr "드롭다운, 컨텍스트, 애플리케이션 메뉴"
+
+msgid "Dropped"
+msgstr "제외됨"
 
 msgid "Due"
 msgstr "마감"
@@ -8441,6 +8463,9 @@ msgstr "접근 권한 있음"
 msgid "Has conflicts"
 msgstr "충돌 있음"
 
+msgid "Has details"
+msgstr "세부 정보 있음"
+
 msgid "Has uncommitted changes"
 msgstr "커밋되지 않은 변경 사항 있음"
 
@@ -9460,6 +9485,9 @@ msgstr "계속 기다리기"
 
 msgid "Keep working"
 msgstr "계속 작업"
+
+msgid "Kept"
+msgstr "유지"
 
 msgid "Kept the new file — it changed after it was created"
 msgstr "새 파일을 유지했습니다 — 생성 후 내용이 바뀌었습니다"
@@ -11367,6 +11395,12 @@ msgstr "여기에서 사용할 수 있는 모바일 시뮬레이터가 없습니
 msgid "No name on file"
 msgstr "등록된 이름 없음"
 
+msgid "No notes match these filters."
+msgstr "이 필터와 일치하는 메모가 없습니다."
+
+msgid "No notes yet. Add them from the note button on a workspace in the sidebar, or ask an agent to run superset notes add."
+msgstr "아직 메모가 없습니다. 사이드바에서 워크스페이스의 메모 버튼으로 추가하거나, 에이전트에게 superset notes add 실행을 요청하세요."
+
 msgid "No one in {organizationName} matches. Type a full email to invite someone new."
 msgstr "{organizationName}에 일치하는 사람이 없습니다. 새로운 사람을 초대하려면 전체 이메일 주소를 입력하세요."
 
@@ -11777,8 +11811,14 @@ msgstr "업데이트 없음"
 msgid "Note"
 msgstr "참고"
 
+msgid "Note details"
+msgstr "메모 세부 정보"
+
 msgid "Notes"
 msgstr "노트"
+
+msgid "Notes: {activeCount} open"
+msgstr "메모: 열린 항목 {activeCount}개"
 
 msgid "Nothing here yet."
 msgstr "아직 아무것도 없습니다."
@@ -12075,6 +12115,10 @@ msgstr "열기"
 msgid "Open"
 msgstr "열기"
 
+msgctxt "note status"
+msgid "Open"
+msgstr "열림"
+
 msgctxt "pull request or issue state"
 msgid "Open"
 msgstr "열림"
@@ -12090,6 +12134,9 @@ msgstr "{0} 열기"
 #. placeholder {0}: plugin.interface.displayName
 msgid "Open {0} website"
 msgstr "{0} 웹사이트 열기"
+
+msgid "Open {activeCount}"
+msgstr "열림 {activeCount}"
 
 msgid "Open {filePath}"
 msgstr "{filePath} 열기"
@@ -12306,6 +12353,9 @@ msgstr "T3 Chat에서 열기"
 msgid "Open in tab"
 msgstr "탭에서 열기"
 
+msgid "Open in the Notes view"
+msgstr "메모 보기에서 열기"
+
 msgid "Open in…"
 msgstr "다음으로 열기…"
 
@@ -12490,6 +12540,9 @@ msgstr "실행의 워크스페이스 열기"
 
 msgid "open the task in a workspace"
 msgstr "워크스페이스에서 작업을 열"
+
+msgid "Open the workspace"
+msgstr "워크스페이스 열기"
 
 msgid "Open the workspace in the app picked in the Open In menu (VS Code, Cursor, etc.)"
 msgstr "'다음에서 열기' 메뉴에서 선택한 앱(VS Code, Cursor 등)에서 워크스페이스를 엽니다"
@@ -12859,6 +12912,9 @@ msgstr "붙여넣기"
 
 msgid "Paste this into Superset CLI:"
 msgstr "Superset CLI에 붙여 넣으세요:"
+
+msgid "Pasting several lines adds one note per line"
+msgstr "여러 줄을 붙여넣으면 줄마다 메모가 하나씩 추가됩니다"
 
 msgid "Path"
 msgstr "경로"
@@ -15251,6 +15307,9 @@ msgstr "Linear 검색…"
 msgid "Search models"
 msgstr "모델 검색"
 
+msgid "Search notes"
+msgstr "메모 검색"
+
 msgid "Search pages"
 msgstr "페이지 검색"
 
@@ -16689,6 +16748,10 @@ msgstr "상태"
 
 msgid "Status changed"
 msgstr "상태 변경됨"
+
+#. placeholder {0}: statusLabel[note.status]
+msgid "Status: {0}"
+msgstr "상태: {0}"
 
 msgid "Stay connected (refresh tokens)"
 msgstr "연결 유지 (리프레시 토큰)"
@@ -19652,6 +19715,9 @@ msgstr "열 수 있는 사람"
 
 msgid "Whole Task"
 msgstr "작업 완수"
+
+msgid "Why, how, links…"
+msgstr "이유, 방법, 링크…"
 
 msgid "Width"
 msgstr "너비"

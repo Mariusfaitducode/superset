@@ -1828,6 +1828,9 @@ msgstr "Meer toevoegen…"
 msgid "Add one from the menu in the sidebar to get started."
 msgstr "Voeg er een toe via het menu in de zijbalk om te beginnen."
 
+msgid "Add or paste notes…"
+msgstr "Notities toevoegen of plakken…"
+
 msgid "Add people"
 msgstr "Personen toevoegen"
 
@@ -1905,6 +1908,9 @@ msgstr "{added} bestanden toegevoegd aan {where}"
 
 msgid "Added 1 file to {where}"
 msgstr "1 bestand toegevoegd aan {where}"
+
+msgid "Added by an agent"
+msgstr "Toegevoegd door een agent"
 
 msgid "Added by the agent"
 msgstr "Toegevoegd door de agent"
@@ -2109,6 +2115,10 @@ msgstr "Alle"
 msgctxt "log scope"
 msgid "All"
 msgstr "Alle"
+
+#. placeholder {0}: notes.length
+msgid "All {0}"
+msgstr "Alle {0}"
 
 #. placeholder {0}: history.projects.length
 msgid "All {0} →"
@@ -4986,6 +4996,9 @@ msgstr "Kosten voor jou: $0"
 msgid "Could not add agent"
 msgstr "Kon agent niet toevoegen"
 
+msgid "Could not add the notes"
+msgstr "Kan de notities niet toevoegen"
+
 msgid "Could not answer the agent"
 msgstr "Kan de agent niet antwoorden"
 
@@ -5244,6 +5257,9 @@ msgstr "Kan skill niet bijwerken"
 
 msgid "Could not update the branch"
 msgstr "Kan de branch niet bijwerken"
+
+msgid "Could not update the note"
+msgstr "Kan de notitie niet bijwerken"
 
 msgid "Could not update the to-do"
 msgstr "Kan de to-do niet bijwerken"
@@ -6037,6 +6053,9 @@ msgstr "Label verwijderen"
 msgid "Delete local branch on workspace removal"
 msgstr "Lokale branch verwijderen bij verwijderen werkruimte"
 
+msgid "Delete note"
+msgstr "Notitie verwijderen"
+
 msgid "Delete organization"
 msgstr "Organisatie verwijderen"
 
@@ -6667,6 +6686,9 @@ msgstr "Dropdownmenu"
 
 msgid "Dropdown, context, and application menus"
 msgstr "Dropdown-, context- en applicatiemenu's"
+
+msgid "Dropped"
+msgstr "Laten vallen"
 
 msgid "Due"
 msgstr "Deadline"
@@ -8441,6 +8463,9 @@ msgstr "Heeft toegang"
 msgid "Has conflicts"
 msgstr "Heeft conflicten"
 
+msgid "Has details"
+msgstr "Heeft details"
+
 msgid "Has uncommitted changes"
 msgstr "Heeft niet-gecommitte wijzigingen"
 
@@ -9460,6 +9485,9 @@ msgstr "Blijven wachten"
 
 msgid "Keep working"
 msgstr "Doorwerken"
+
+msgid "Kept"
+msgstr "Behouden"
 
 msgid "Kept the new file — it changed after it was created"
 msgstr "Nieuw bestand behouden — het is na het aanmaken gewijzigd"
@@ -11367,6 +11395,12 @@ msgstr "Hier is geen mobiele simulator beschikbaar. Hiervoor is een EAS-simulato
 msgid "No name on file"
 msgstr "Geen naam bekend"
 
+msgid "No notes match these filters."
+msgstr "Geen notities komen overeen met deze filters."
+
+msgid "No notes yet. Add them from the note button on a workspace in the sidebar, or ask an agent to run superset notes add."
+msgstr "Nog geen notities. Voeg ze toe via de notitieknop van een workspace in de zijbalk, of vraag een agent superset notes add uit te voeren."
+
 msgid "No one in {organizationName} matches. Type a full email to invite someone new."
 msgstr "Niemand in {organizationName} komt overeen. Typ een volledig e-mailadres om iemand nieuw uit te nodigen."
 
@@ -11777,8 +11811,14 @@ msgstr "Geen updates"
 msgid "Note"
 msgstr "Opmerking"
 
+msgid "Note details"
+msgstr "Notitiedetails"
+
 msgid "Notes"
 msgstr "Notities"
+
+msgid "Notes: {activeCount} open"
+msgstr "Notities: {activeCount} open"
 
 msgid "Nothing here yet."
 msgstr "Hier is nog niets."
@@ -12075,6 +12115,10 @@ msgstr "openen"
 msgid "Open"
 msgstr "Openen"
 
+msgctxt "note status"
+msgid "Open"
+msgstr "Open"
+
 msgctxt "pull request or issue state"
 msgid "Open"
 msgstr "Open"
@@ -12090,6 +12134,9 @@ msgstr "{0} openen"
 #. placeholder {0}: plugin.interface.displayName
 msgid "Open {0} website"
 msgstr "Website van {0} openen"
+
+msgid "Open {activeCount}"
+msgstr "Open {activeCount}"
 
 msgid "Open {filePath}"
 msgstr "{filePath} openen"
@@ -12306,6 +12353,9 @@ msgstr "Openen in T3 Chat"
 msgid "Open in tab"
 msgstr "Openen in tabblad"
 
+msgid "Open in the Notes view"
+msgstr "Openen in de notitieweergave"
+
 msgid "Open in…"
 msgstr "Openen in…"
 
@@ -12490,6 +12540,9 @@ msgstr "De werkruimte van de run openen"
 
 msgid "open the task in a workspace"
 msgstr "de taak in een werkruimte openen"
+
+msgid "Open the workspace"
+msgstr "Workspace openen"
 
 msgid "Open the workspace in the app picked in the Open In menu (VS Code, Cursor, etc.)"
 msgstr "De werkruimte openen in de app die is gekozen in het menu 'Openen in' (VS Code, Cursor, enz.)"
@@ -12859,6 +12912,9 @@ msgstr "Plakken"
 
 msgid "Paste this into Superset CLI:"
 msgstr "Plak dit in de Superset-CLI:"
+
+msgid "Pasting several lines adds one note per line"
+msgstr "Meerdere regels plakken voegt één notitie per regel toe"
 
 msgid "Path"
 msgstr "Pad"
@@ -15251,6 +15307,9 @@ msgstr "Linear doorzoeken…"
 msgid "Search models"
 msgstr "Modellen zoeken"
 
+msgid "Search notes"
+msgstr "Notities zoeken"
+
 msgid "Search pages"
 msgstr "Pagina's zoeken"
 
@@ -16689,6 +16748,10 @@ msgstr "Status"
 
 msgid "Status changed"
 msgstr "Status gewijzigd"
+
+#. placeholder {0}: statusLabel[note.status]
+msgid "Status: {0}"
+msgstr "Status: {0}"
 
 msgid "Stay connected (refresh tokens)"
 msgstr "Verbonden blijven (refresh-tokens)"
@@ -19652,6 +19715,9 @@ msgstr "Wie het kan openen"
 
 msgid "Whole Task"
 msgstr "Hele taak"
+
+msgid "Why, how, links…"
+msgstr "Waarom, hoe, links…"
 
 msgid "Width"
 msgstr "Breedte"

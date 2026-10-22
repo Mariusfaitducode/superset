@@ -32,6 +32,10 @@ import type {
 	DashboardSidebarWorkspacePullRequest,
 } from "../../../../types";
 import { WorkspaceLabelPills } from "../../../WorkspaceLabels";
+import {
+	WorkspaceNotesBadge,
+	WorkspaceNotesPanel,
+} from "../../../WorkspaceNotes";
 import { DashboardSidebarConversationList } from "../DashboardSidebarExpandedWorkspaceRow/components/DashboardSidebarConversationList";
 import { DashboardSidebarPortsChip } from "../DashboardSidebarExpandedWorkspaceRow/components/DashboardSidebarPortsChip";
 import { DashboardSidebarRowEventBoundary } from "../DashboardSidebarExpandedWorkspaceRow/components/DashboardSidebarRowEventBoundary";
@@ -402,6 +406,10 @@ export const DashboardSidebarLegacyExpandedWorkspaceRow = forwardRef<
 									<DashboardSidebarWorkspaceQueuedBadge
 										workspaceId={workspace.id}
 									/>
+									<WorkspaceNotesBadge
+										workspaceId={workspace.id}
+										hostId={workspace.hostId}
+									/>
 									{isActive &&
 										diffStats &&
 										(diffStats.additions > 0 || diffStats.deletions > 0) && (
@@ -466,6 +474,14 @@ export const DashboardSidebarLegacyExpandedWorkspaceRow = forwardRef<
 						</div>
 					</div>
 				</div>
+				{!isPending && (
+					<WorkspaceNotesPanel
+						workspaceId={workspace.id}
+						hostId={workspace.hostId}
+						isInSection={isInSection}
+						indentation={resolvedIndentation}
+					/>
+				)}
 				{!isPending && (
 					<DashboardSidebarConversationList
 						workspaceId={workspace.id}

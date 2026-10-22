@@ -1828,6 +1828,9 @@ msgstr "さらに追加…"
 msgid "Add one from the menu in the sidebar to get started."
 msgstr "サイドバーのメニューから追加して始めましょう。"
 
+msgid "Add or paste notes…"
+msgstr "メモを追加または貼り付け…"
+
 msgid "Add people"
 msgstr "ユーザーを追加"
 
@@ -1905,6 +1908,9 @@ msgstr "{added}件のファイルを{where}に追加しました"
 
 msgid "Added 1 file to {where}"
 msgstr "1件のファイルを{where}に追加しました"
+
+msgid "Added by an agent"
+msgstr "エージェントが追加"
 
 msgid "Added by the agent"
 msgstr "エージェントが追加"
@@ -2109,6 +2115,10 @@ msgstr "すべて"
 msgctxt "log scope"
 msgid "All"
 msgstr "すべて"
+
+#. placeholder {0}: notes.length
+msgid "All {0}"
+msgstr "すべて {0}"
 
 #. placeholder {0}: history.projects.length
 msgid "All {0} →"
@@ -4986,6 +4996,9 @@ msgstr "実際のコスト: $0"
 msgid "Could not add agent"
 msgstr "エージェントを追加できませんでした"
 
+msgid "Could not add the notes"
+msgstr "メモを追加できませんでした"
+
 msgid "Could not answer the agent"
 msgstr "エージェントに応答できませんでした"
 
@@ -5244,6 +5257,9 @@ msgstr "スキルを更新できませんでした"
 
 msgid "Could not update the branch"
 msgstr "ブランチを更新できませんでした"
+
+msgid "Could not update the note"
+msgstr "メモを更新できませんでした"
 
 msgid "Could not update the to-do"
 msgstr "To-doを更新できませんでした"
@@ -6037,6 +6053,9 @@ msgstr "ラベルを削除"
 msgid "Delete local branch on workspace removal"
 msgstr "ワークスペース削除時にローカルブランチも削除"
 
+msgid "Delete note"
+msgstr "メモを削除"
+
 msgid "Delete organization"
 msgstr "組織を削除"
 
@@ -6667,6 +6686,9 @@ msgstr "Dropdown Menu"
 
 msgid "Dropdown, context, and application menus"
 msgstr "ドロップダウン、コンテキスト、アプリケーションメニュー"
+
+msgid "Dropped"
+msgstr "却下"
 
 msgid "Due"
 msgstr "期限"
@@ -8441,6 +8463,9 @@ msgstr "アクセス権あり"
 msgid "Has conflicts"
 msgstr "コンフリクトあり"
 
+msgid "Has details"
+msgstr "詳細あり"
+
 msgid "Has uncommitted changes"
 msgstr "未コミットの変更があります"
 
@@ -9460,6 +9485,9 @@ msgstr "待ち続ける"
 
 msgid "Keep working"
 msgstr "作業を続ける"
+
+msgid "Kept"
+msgstr "採用"
 
 msgid "Kept the new file — it changed after it was created"
 msgstr "新しいファイルを保持しました — 作成後に変更されています"
@@ -11367,6 +11395,12 @@ msgstr "ここで利用できるモバイルシミュレーターがありませ
 msgid "No name on file"
 msgstr "登録された名前はありません"
 
+msgid "No notes match these filters."
+msgstr "これらのフィルターに一致するメモはありません。"
+
+msgid "No notes yet. Add them from the note button on a workspace in the sidebar, or ask an agent to run superset notes add."
+msgstr "まだメモはありません。サイドバーのワークスペースのメモボタンから追加するか、エージェントに superset notes add を実行するよう依頼してください。"
+
 msgid "No one in {organizationName} matches. Type a full email to invite someone new."
 msgstr "{organizationName}に一致するユーザーはいません。新しいユーザーを招待するには、メールアドレスをすべて入力してください。"
 
@@ -11777,8 +11811,14 @@ msgstr "更新なし"
 msgid "Note"
 msgstr "メモ"
 
+msgid "Note details"
+msgstr "メモの詳細"
+
 msgid "Notes"
 msgstr "ノート"
+
+msgid "Notes: {activeCount} open"
+msgstr "メモ: 未処理 {activeCount} 件"
 
 msgid "Nothing here yet."
 msgstr "まだ何もありません。"
@@ -12075,6 +12115,10 @@ msgstr "開く"
 msgid "Open"
 msgstr "開く"
 
+msgctxt "note status"
+msgid "Open"
+msgstr "未処理"
+
 msgctxt "pull request or issue state"
 msgid "Open"
 msgstr "オープン"
@@ -12090,6 +12134,9 @@ msgstr "{0}を開く"
 #. placeholder {0}: plugin.interface.displayName
 msgid "Open {0} website"
 msgstr "{0} のウェブサイトを開く"
+
+msgid "Open {activeCount}"
+msgstr "未決 {activeCount}"
 
 msgid "Open {filePath}"
 msgstr "{filePath}を開く"
@@ -12306,6 +12353,9 @@ msgstr "T3 Chatで開く"
 msgid "Open in tab"
 msgstr "タブで開く"
 
+msgid "Open in the Notes view"
+msgstr "メモビューで開く"
+
 msgid "Open in…"
 msgstr "アプリで開く…"
 
@@ -12490,6 +12540,9 @@ msgstr "実行のワークスペースを開く"
 
 msgid "open the task in a workspace"
 msgstr "タスクをワークスペースで開く"
+
+msgid "Open the workspace"
+msgstr "ワークスペースを開く"
 
 msgid "Open the workspace in the app picked in the Open In menu (VS Code, Cursor, etc.)"
 msgstr "「開く」メニューで選んだアプリ (VS Code、Cursorなど) でワークスペースを開く"
@@ -12859,6 +12912,9 @@ msgstr "貼り付け"
 
 msgid "Paste this into Superset CLI:"
 msgstr "これをSuperset CLIに貼り付けてください:"
+
+msgid "Pasting several lines adds one note per line"
+msgstr "複数行を貼り付けると 1 行ごとにメモが追加されます"
 
 msgid "Path"
 msgstr "パス"
@@ -15251,6 +15307,9 @@ msgstr "Linearを検索…"
 msgid "Search models"
 msgstr "モデルを検索"
 
+msgid "Search notes"
+msgstr "メモを検索"
+
 msgid "Search pages"
 msgstr "ページを検索"
 
@@ -16689,6 +16748,10 @@ msgstr "ステータス"
 
 msgid "Status changed"
 msgstr "ステータス変更"
+
+#. placeholder {0}: statusLabel[note.status]
+msgid "Status: {0}"
+msgstr "ステータス: {0}"
 
 msgid "Stay connected (refresh tokens)"
 msgstr "接続の維持(リフレッシュトークン)"
@@ -19652,6 +19715,9 @@ msgstr "開ける人"
 
 msgid "Whole Task"
 msgstr "タスク完遂"
+
+msgid "Why, how, links…"
+msgstr "理由、方法、リンク…"
 
 msgid "Width"
 msgstr "幅"

@@ -1828,6 +1828,9 @@ msgstr "Add more…"
 msgid "Add one from the menu in the sidebar to get started."
 msgstr "Add one from the menu in the sidebar to get started."
 
+msgid "Add or paste notes…"
+msgstr "Add or paste notes…"
+
 msgid "Add people"
 msgstr "Add people"
 
@@ -1905,6 +1908,9 @@ msgstr "Added {added} files to {where}"
 
 msgid "Added 1 file to {where}"
 msgstr "Added 1 file to {where}"
+
+msgid "Added by an agent"
+msgstr "Added by an agent"
 
 msgid "Added by the agent"
 msgstr "Added by the agent"
@@ -2109,6 +2115,10 @@ msgstr "All"
 msgctxt "log scope"
 msgid "All"
 msgstr "All"
+
+#. placeholder {0}: notes.length
+msgid "All {0}"
+msgstr "All {0}"
 
 #. placeholder {0}: history.projects.length
 msgid "All {0} →"
@@ -4986,6 +4996,9 @@ msgstr "Cost to you: $0"
 msgid "Could not add agent"
 msgstr "Could not add agent"
 
+msgid "Could not add the notes"
+msgstr "Could not add the notes"
+
 msgid "Could not answer the agent"
 msgstr "Could not answer the agent"
 
@@ -5244,6 +5257,9 @@ msgstr "Could not update skill"
 
 msgid "Could not update the branch"
 msgstr "Could not update the branch"
+
+msgid "Could not update the note"
+msgstr "Could not update the note"
 
 msgid "Could not update the to-do"
 msgstr "Could not update the to-do"
@@ -6037,6 +6053,9 @@ msgstr "Delete label"
 msgid "Delete local branch on workspace removal"
 msgstr "Delete local branch on workspace removal"
 
+msgid "Delete note"
+msgstr "Delete note"
+
 msgid "Delete organization"
 msgstr "Delete organization"
 
@@ -6667,6 +6686,9 @@ msgstr "Dropdown Menu"
 
 msgid "Dropdown, context, and application menus"
 msgstr "Dropdown, context, and application menus"
+
+msgid "Dropped"
+msgstr "Dropped"
 
 msgid "Due"
 msgstr "Due"
@@ -8441,6 +8463,9 @@ msgstr "Has access"
 msgid "Has conflicts"
 msgstr "Has conflicts"
 
+msgid "Has details"
+msgstr "Has details"
+
 msgid "Has uncommitted changes"
 msgstr "Has uncommitted changes"
 
@@ -9460,6 +9485,9 @@ msgstr "Keep waiting"
 
 msgid "Keep working"
 msgstr "Keep working"
+
+msgid "Kept"
+msgstr "Kept"
 
 msgid "Kept the new file — it changed after it was created"
 msgstr "Kept the new file — it changed after it was created"
@@ -11367,6 +11395,12 @@ msgstr "No mobile simulator available here. This needs either an EAS simulator o
 msgid "No name on file"
 msgstr "No name on file"
 
+msgid "No notes match these filters."
+msgstr "No notes match these filters."
+
+msgid "No notes yet. Add them from the note button on a workspace in the sidebar, or ask an agent to run superset notes add."
+msgstr "No notes yet. Add them from the note button on a workspace in the sidebar, or ask an agent to run superset notes add."
+
 msgid "No one in {organizationName} matches. Type a full email to invite someone new."
 msgstr "No one in {organizationName} matches. Type a full email to invite someone new."
 
@@ -11777,8 +11811,14 @@ msgstr "Not updating"
 msgid "Note"
 msgstr "Note"
 
+msgid "Note details"
+msgstr "Note details"
+
 msgid "Notes"
 msgstr "Notes"
+
+msgid "Notes: {activeCount} open"
+msgstr "Notes: {activeCount} open"
 
 msgid "Nothing here yet."
 msgstr "Nothing here yet."
@@ -12075,6 +12115,10 @@ msgstr "open"
 msgid "Open"
 msgstr "Open"
 
+msgctxt "note status"
+msgid "Open"
+msgstr "Open"
+
 msgctxt "pull request or issue state"
 msgid "Open"
 msgstr "Open"
@@ -12090,6 +12134,9 @@ msgstr "Open {0}"
 #. placeholder {0}: plugin.interface.displayName
 msgid "Open {0} website"
 msgstr "Open {0} website"
+
+msgid "Open {activeCount}"
+msgstr "Open {activeCount}"
 
 msgid "Open {filePath}"
 msgstr "Open {filePath}"
@@ -12306,6 +12353,9 @@ msgstr "Open in T3 Chat"
 msgid "Open in tab"
 msgstr "Open in tab"
 
+msgid "Open in the Notes view"
+msgstr "Open in the Notes view"
+
 msgid "Open in…"
 msgstr "Open in…"
 
@@ -12490,6 +12540,9 @@ msgstr "Open the run's workspace"
 
 msgid "open the task in a workspace"
 msgstr "open the task in a workspace"
+
+msgid "Open the workspace"
+msgstr "Open the workspace"
 
 msgid "Open the workspace in the app picked in the Open In menu (VS Code, Cursor, etc.)"
 msgstr "Open the workspace in the app picked in the Open In menu (VS Code, Cursor, etc.)"
@@ -12859,6 +12912,9 @@ msgstr "Paste"
 
 msgid "Paste this into Superset CLI:"
 msgstr "Paste this into Superset CLI:"
+
+msgid "Pasting several lines adds one note per line"
+msgstr "Pasting several lines adds one note per line"
 
 msgid "Path"
 msgstr "Path"
@@ -15251,6 +15307,9 @@ msgstr "Search Linear…"
 msgid "Search models"
 msgstr "Search models"
 
+msgid "Search notes"
+msgstr "Search notes"
+
 msgid "Search pages"
 msgstr "Search pages"
 
@@ -16689,6 +16748,10 @@ msgstr "Status"
 
 msgid "Status changed"
 msgstr "Status changed"
+
+#. placeholder {0}: statusLabel[note.status]
+msgid "Status: {0}"
+msgstr "Status: {0}"
 
 msgid "Stay connected (refresh tokens)"
 msgstr "Stay connected (refresh tokens)"
@@ -19652,6 +19715,9 @@ msgstr "Who can open it"
 
 msgid "Whole Task"
 msgstr "Whole Task"
+
+msgid "Why, how, links…"
+msgstr "Why, how, links…"
 
 msgid "Width"
 msgstr "Width"

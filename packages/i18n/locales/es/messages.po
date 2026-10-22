@@ -1828,6 +1828,9 @@ msgstr "Añadir más…"
 msgid "Add one from the menu in the sidebar to get started."
 msgstr "Añade uno desde el menú de la barra lateral para empezar."
 
+msgid "Add or paste notes…"
+msgstr "Añadir o pegar notas…"
+
 msgid "Add people"
 msgstr "Añadir personas"
 
@@ -1905,6 +1908,9 @@ msgstr "Se añadieron {added} archivos a {where}"
 
 msgid "Added 1 file to {where}"
 msgstr "Se añadió 1 archivo a {where}"
+
+msgid "Added by an agent"
+msgstr "Añadida por un agente"
 
 msgid "Added by the agent"
 msgstr "Añadido por el agente"
@@ -2109,6 +2115,10 @@ msgstr "Todas"
 msgctxt "log scope"
 msgid "All"
 msgstr "Todos"
+
+#. placeholder {0}: notes.length
+msgid "All {0}"
+msgstr "Todas {0}"
 
 #. placeholder {0}: history.projects.length
 msgid "All {0} →"
@@ -4986,6 +4996,9 @@ msgstr "Coste para ti: $0"
 msgid "Could not add agent"
 msgstr "No se pudo añadir el agente"
 
+msgid "Could not add the notes"
+msgstr "No se pudieron añadir las notas"
+
 msgid "Could not answer the agent"
 msgstr "No se pudo responder al agente"
 
@@ -5244,6 +5257,9 @@ msgstr "No se pudo actualizar la skill"
 
 msgid "Could not update the branch"
 msgstr "No se pudo actualizar la rama"
+
+msgid "Could not update the note"
+msgstr "No se pudo actualizar la nota"
 
 msgid "Could not update the to-do"
 msgstr "No se pudo actualizar la tarea"
@@ -6037,6 +6053,9 @@ msgstr "Eliminar etiqueta"
 msgid "Delete local branch on workspace removal"
 msgstr "Eliminar la rama local al quitar el espacio de trabajo"
 
+msgid "Delete note"
+msgstr "Eliminar nota"
+
 msgid "Delete organization"
 msgstr "Eliminar la organización"
 
@@ -6667,6 +6686,9 @@ msgstr "Menú desplegable"
 
 msgid "Dropdown, context, and application menus"
 msgstr "Menús desplegables, contextuales y de aplicación"
+
+msgid "Dropped"
+msgstr "Descartada"
 
 msgid "Due"
 msgstr "Vence"
@@ -8441,6 +8463,9 @@ msgstr "Tiene acceso"
 msgid "Has conflicts"
 msgstr "Tiene conflictos"
 
+msgid "Has details"
+msgstr "Tiene detalles"
+
 msgid "Has uncommitted changes"
 msgstr "Tiene cambios sin commit"
 
@@ -9460,6 +9485,9 @@ msgstr "Seguir esperando"
 
 msgid "Keep working"
 msgstr "Seguir trabajando"
+
+msgid "Kept"
+msgstr "Conservada"
 
 msgid "Kept the new file — it changed after it was created"
 msgstr "Se conservó el archivo nuevo: cambió después de crearse"
@@ -11367,6 +11395,12 @@ msgstr "No hay ningún simulador móvil disponible aquí. Se necesita un simulad
 msgid "No name on file"
 msgstr "No hay ningún nombre registrado"
 
+msgid "No notes match these filters."
+msgstr "Ninguna nota coincide con estos filtros."
+
+msgid "No notes yet. Add them from the note button on a workspace in the sidebar, or ask an agent to run superset notes add."
+msgstr "Aún no hay notas. Añádelas desde el botón de notas de un espacio de trabajo en la barra lateral, o pide a un agente que ejecute superset notes add."
+
 msgid "No one in {organizationName} matches. Type a full email to invite someone new."
 msgstr "Nadie en {organizationName} coincide. Escribe un correo completo para invitar a alguien nuevo."
 
@@ -11777,8 +11811,14 @@ msgstr "Sin actualizar"
 msgid "Note"
 msgstr "Nota"
 
+msgid "Note details"
+msgstr "Detalles de la nota"
+
 msgid "Notes"
 msgstr "Notas"
+
+msgid "Notes: {activeCount} open"
+msgstr "Notas: {activeCount} abiertas"
 
 msgid "Nothing here yet."
 msgstr "Aquí todavía no hay nada."
@@ -12075,6 +12115,10 @@ msgstr "abrir"
 msgid "Open"
 msgstr "Abrir"
 
+msgctxt "note status"
+msgid "Open"
+msgstr "Abierta"
+
 msgctxt "pull request or issue state"
 msgid "Open"
 msgstr "Abierto"
@@ -12090,6 +12134,9 @@ msgstr "Abrir {0}"
 #. placeholder {0}: plugin.interface.displayName
 msgid "Open {0} website"
 msgstr "Abrir el sitio web de {0}"
+
+msgid "Open {activeCount}"
+msgstr "Abiertas {activeCount}"
 
 msgid "Open {filePath}"
 msgstr "Abrir {filePath}"
@@ -12306,6 +12353,9 @@ msgstr "Abrir en T3 Chat"
 msgid "Open in tab"
 msgstr "Abrir en una pestaña"
 
+msgid "Open in the Notes view"
+msgstr "Abrir en la vista de notas"
+
 msgid "Open in…"
 msgstr "Abrir en…"
 
@@ -12490,6 +12540,9 @@ msgstr "Abrir el espacio de trabajo de la ejecución"
 
 msgid "open the task in a workspace"
 msgstr "abrir la tarea en un espacio de trabajo"
+
+msgid "Open the workspace"
+msgstr "Abrir el espacio de trabajo"
 
 msgid "Open the workspace in the app picked in the Open In menu (VS Code, Cursor, etc.)"
 msgstr "Abrir el espacio de trabajo en la app elegida en el menú «Abrir en» (VS Code, Cursor, etc.)"
@@ -12859,6 +12912,9 @@ msgstr "Pegar"
 
 msgid "Paste this into Superset CLI:"
 msgstr "Pega esto en la CLI de Superset:"
+
+msgid "Pasting several lines adds one note per line"
+msgstr "Pegar varias líneas añade una nota por línea"
 
 msgid "Path"
 msgstr "Ruta"
@@ -15251,6 +15307,9 @@ msgstr "Buscar en Linear…"
 msgid "Search models"
 msgstr "Buscar modelos"
 
+msgid "Search notes"
+msgstr "Buscar notas"
+
 msgid "Search pages"
 msgstr "Buscar páginas"
 
@@ -16689,6 +16748,10 @@ msgstr "Estado"
 
 msgid "Status changed"
 msgstr "Estado modificado"
+
+#. placeholder {0}: statusLabel[note.status]
+msgid "Status: {0}"
+msgstr "Estado: {0}"
 
 msgid "Stay connected (refresh tokens)"
 msgstr "Mantener la conexión (tokens de actualización)"
@@ -19652,6 +19715,9 @@ msgstr "Quién puede acceder"
 
 msgid "Whole Task"
 msgstr "Tarea completa"
+
+msgid "Why, how, links…"
+msgstr "Por qué, cómo, enlaces…"
 
 msgid "Width"
 msgstr "Anchura"
