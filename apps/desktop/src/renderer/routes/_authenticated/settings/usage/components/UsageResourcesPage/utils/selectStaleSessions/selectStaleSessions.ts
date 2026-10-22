@@ -12,11 +12,11 @@ export function getLastAnsweredAt(session: AgentSessionRow): number | null {
  * a session that is working, running a shell or waiting on a prompt is never
  * closed in bulk.
  */
-export function selectStaleSessions(
-	sessions: AgentSessionRow[],
+export function selectStaleSessions<T extends AgentSessionRow>(
+	sessions: T[],
 	hours: number,
 	now: number,
-): AgentSessionRow[] {
+): T[] {
 	return sessions
 		.filter((session) => {
 			if (session.status !== "idle") return false;
