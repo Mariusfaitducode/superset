@@ -4,9 +4,8 @@ import {
 } from "@superset/shared/agent-catalog";
 import { eq } from "@tanstack/db";
 import { useLiveQuery } from "@tanstack/react-db";
-import { useQuery } from "@tanstack/react-query";
-import { useMemo } from "react";
-import { getHostServiceClientByUrl } from "renderer/lib/host-service-client";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
+import { useEffect, useMemo } from "react";
 import { useSidebarWorkspaceStatus } from "renderer/routes/_authenticated/_dashboard/components/DashboardSidebar/providers/DashboardSidebarWorkspaceStatusProvider";
 import { useCollections } from "renderer/routes/_authenticated/providers/CollectionsProvider";
 import { useHostWorkspaces } from "renderer/routes/_authenticated/providers/HostWorkspacesProvider";
@@ -17,6 +16,12 @@ import {
 } from "../utils/conversation-state";
 import { pickConversationTitle } from "../utils/conversation-title";
 import { terminalTabNames } from "../utils/terminal-tab-names";
+import {
+	hostTerminalTitlesQuery,
+	hostTerminalTitlesQueryKey,
+} from "./hostTerminalTitles";
+
+export { cleanTitle } from "./hostTerminalTitles";
 
 export interface SidebarSubagent {
 	id: string;
@@ -35,15 +40,6 @@ export interface SidebarConversation {
 	turnStartedAt: number | null;
 	startedAt: number;
 	queuedPrompts: number;
-}
-
-// Agents prefix their terminal title with a spinner or status glyph; the
-// conversation's state already shows, so the glyph is noise.
-const LEADING_GLYPHS = /^[^\p{L}\p{N}~/.([{"'`]+/u;
-
-export function cleanTitle(title: string | null | undefined): string | null {
-	const cleaned = title?.replace(LEADING_GLYPHS, "").trim();
-	return cleaned ? cleaned : null;
 }
 
 /**
@@ -71,19 +67,10 @@ function trackTurnStart(
 	return lastEventAt;
 }
 
-interface SessionTitles {
-	customTitle: string | null;
-	runtimeTitle: string | null;
-}
-
-export function conversationTitlesQueryKey(workspaceId: string) {
-	return ["sidebar-conversation-titles", workspaceId] as const;
-}
-
 /**
- * One entry per live agent in the workspace, oldest first. Host titles are
- * read only for workspaces that have agents, since the sidebar lists every
- * workspace all day.
+ * One entry per live agent in the workspace, oldest first. Titles come from
+ * one read per host shared by every row, and only while some listed
+ * workspace has agents.
  */
 export function useWorkspaceConversations({
 	workspaceId,
@@ -114,30 +101,27 @@ export function useWorkspaceConversations({
 		? null
 		: cache.resolveHostUrl(hostId);
 
-	const bindingsKey = [...bindings.keys()].sort().join(",");
+	const queryClient = useQueryClient();
 	const titlesQuery = useQuery({
-		queryKey: [...conversationTitlesQueryKey(workspaceId), bindingsKey],
+		...hostTerminalTitlesQuery(hostUrl),
 		enabled: enabled && hostUrl !== null && bindings.size > 0,
-		queryFn: async () => {
-			if (!hostUrl) return new Map<string, SessionTitles>();
-			const { sessions } = await getHostServiceClientByUrl(
-				hostUrl,
-			).terminal.list.query({ workspaceId });
-			return new Map(
-				sessions.map((session): [string, SessionTitles] => [
-					session.terminalId,
-					{
-						customTitle: cleanTitle(session.customTitle),
-						runtimeTitle: cleanTitle(session.title),
-					},
-				]),
-			);
-		},
 		// Agents retitle their terminal as the topic changes.
 		refetchInterval: 15_000,
-		staleTime: 10_000,
 	});
 	const titles = titlesQuery.data;
+
+	// A new agent's title is read now rather than at the next poll.
+	const bindingsKey = [...bindings.keys()].sort().join(",");
+	const hasTitles = titles !== undefined;
+	// biome-ignore lint/correctness/useExhaustiveDependencies: titles is read on a bindings change only
+	useEffect(() => {
+		if (!hasTitles || !bindingsKey || !titles) return;
+		if (bindingsKey.split(",").every((id) => titles.has(id))) return;
+		void queryClient.invalidateQueries(
+			{ queryKey: hostTerminalTitlesQueryKey(hostUrl) },
+			{ cancelRefetch: false },
+		);
+	}, [bindingsKey, hasTitles, hostUrl, queryClient]);
 
 	return useMemo(() => {
 		const conversations: SidebarConversation[] = [];
