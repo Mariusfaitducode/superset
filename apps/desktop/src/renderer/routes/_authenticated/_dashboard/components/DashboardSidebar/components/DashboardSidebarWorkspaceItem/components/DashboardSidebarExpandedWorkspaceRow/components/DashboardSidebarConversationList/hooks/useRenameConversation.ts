@@ -2,7 +2,7 @@ import { useQueryClient } from "@tanstack/react-query";
 import { useCallback } from "react";
 import { getHostServiceClientByUrl } from "renderer/lib/host-service-client";
 import { useHostWorkspaces } from "renderer/routes/_authenticated/providers/HostWorkspacesProvider";
-import { conversationTitlesQueryKey } from "./useWorkspaceConversations";
+import { hostTerminalTitlesQueryKey } from "./hostTerminalTitles";
 
 /**
  * Names the conversation's terminal session on its host, as the terminal's
@@ -31,7 +31,7 @@ export function useRenameConversation({
 				title,
 			});
 			await queryClient.invalidateQueries({
-				queryKey: conversationTitlesQueryKey(workspaceId),
+				queryKey: hostTerminalTitlesQueryKey(hostUrl),
 			});
 		},
 		[hostUrl, queryClient, workspaceId],
