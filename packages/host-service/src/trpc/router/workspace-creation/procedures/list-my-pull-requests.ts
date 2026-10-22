@@ -49,9 +49,32 @@ const RELATIONSHIP_QUALIFIERS = [
 ];
 const SEARCH_PAGE_SIZE = 100;
 
+// The last answer per project set, so a reopened view shows it at once and
+// refreshes behind. Lives as long as the host process; a few entries cover
+// the project filters in use.
+const MAX_CACHED_RESULTS = 4;
+const lastResults = new Map<string, MyPullRequestsResult>();
+
+function rememberResult(key: string, result: MyPullRequestsResult): void {
+	lastResults.delete(key);
+	lastResults.set(key, result);
+	for (const oldest of lastResults.keys()) {
+		if (lastResults.size <= MAX_CACHED_RESULTS) break;
+		lastResults.delete(oldest);
+	}
+}
+
 export const listMyPullRequests = protectedProcedure
-	.input(z.object({ projectIds: z.array(z.string()).min(1).max(200) }))
-	.query(async ({ ctx, input }): Promise<MyPullRequestsResult> => {
+	.input(
+		z.object({
+			projectIds: z.array(z.string()).min(1).max(200),
+			/** Answer from memory only, without calling GitHub. */
+			cachedOnly: z.boolean().optional(),
+		}),
+	)
+	.query(async ({ ctx, input }): Promise<MyPullRequestsResult | null> => {
+		const cacheKey = [...input.projectIds].sort().join(",");
+		if (input.cachedOnly) return lastResults.get(cacheKey) ?? null;
 		const startedAt = performance.now();
 		const projectRepos = await resolveProjectRepos(
 			input.projectIds,
@@ -185,7 +208,7 @@ export const listMyPullRequests = protectedProcedure
 			const pullRequests = [...byKey.values()].sort((a, b) =>
 				(b.updatedAt ?? "").localeCompare(a.updatedAt ?? ""),
 			);
-			return {
+			const result: MyPullRequestsResult = {
 				pullRequests,
 				fetchedAt: new Date().toISOString(),
 				incomplete:
@@ -198,6 +221,8 @@ export const listMyPullRequests = protectedProcedure
 					totalMs: Math.round(performance.now() - startedAt),
 				},
 			};
+			rememberResult(cacheKey, result);
+			return result;
 		} catch (error) {
 			throw githubRequestError(error, ctx.credentials);
 		}

@@ -1,1 +1,0 @@
-export { MyPullRequestFooter } from "./MyPullRequestFooter";
