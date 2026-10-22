@@ -293,6 +293,7 @@ function ConversationRow({
 					terminalId={conversation.terminalId}
 					todos={todos ?? []}
 					actions={todoActions}
+					onClose={() => setTodosOpen(false)}
 				/>
 			)}
 		</li>
