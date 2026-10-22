@@ -33,6 +33,23 @@ export interface GraphWorktree {
 	isMain: boolean;
 }
 
+export interface GitGraphOverview {
+	repoPath: string;
+	/** Short name of the checked-out branch of the main checkout. */
+	headBranch: string | null;
+	refs: GraphRef[];
+	worktrees: GraphWorktree[];
+	/** Changed files in the main checkout. */
+	uncommittedCount: number;
+}
+
+export interface GitGraphLog {
+	commits: GraphCommit[];
+	/** More commits exist past `limit`. */
+	hasMore: boolean;
+	durationMs: number;
+}
+
 export const FIELD_SEPARATOR = "\x1f";
 export const RECORD_SEPARATOR = "\x1e";
 
