@@ -39,14 +39,21 @@ export function watchAgentConversations({
 	db,
 	agentStore,
 	todoStore,
+	onMoved,
 }: {
 	db: HostDb;
 	agentStore: TerminalAgentStore;
 	todoStore: ConversationTodoStore;
+	/** Tells clients that to-dos changed terminal, so they show up right away. */
+	onMoved?: () => void;
 }): () => void {
 	const follow = (workspaceId?: string) => {
 		try {
-			followConversations(todoStore, readBindings(db, workspaceId));
+			const moved = followConversations(
+				todoStore,
+				readBindings(db, workspaceId),
+			);
+			if (moved > 0) onMoved?.();
 		} catch (error) {
 			console.warn(
 				"[conversation-todos] failed to follow conversations",
