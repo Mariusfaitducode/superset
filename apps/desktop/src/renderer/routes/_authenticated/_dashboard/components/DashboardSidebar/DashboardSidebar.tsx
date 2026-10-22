@@ -332,6 +332,11 @@ export function DashboardSidebar({
 					);
 		return filterDashboardSidebarProjects(labelFiltered, projectFilterQuery);
 	}, [hostFilteredGroups, projectFilterQuery, activeLabels, keepLabeled]);
+	// Pinned and session rows sit above the projects; when the label filter
+	// keeps some of them, an empty-state line below would contradict them.
+	const labelMatchesShownAbove =
+		activeLabels.length > 0 &&
+		displayedPinnedWorkspaces.length + displayedSessionWorkspaces.length > 0;
 	const displayedProjectIds = useMemo(
 		() => displayedGroups.map((project) => project.id),
 		[displayedGroups],
@@ -648,15 +653,20 @@ export function DashboardSidebar({
 											)}
 											{!isCollapsed &&
 												isFilterActive &&
-												displayedGroups.length === 0 && (
+												displayedGroups.length === 0 &&
+												!labelMatchesShownAbove && (
 													<div className="select-text cursor-text px-4 py-2 text-xs text-muted-foreground">
 														{trimmedFilterQuery !== ""
 															? t({
 																	message: `No projects match "${trimmedFilterQuery}"`,
 																})
-															: hostFilter === "cloud"
-																? t({ message: "No cloud workspaces" })
-																: t({ message: "No local workspaces" })}
+															: activeLabels.length > 0
+																? t({
+																		message: "No workspace has these labels",
+																	})
+																: hostFilter === "cloud"
+																	? t({ message: "No cloud workspaces" })
+																	: t({ message: "No local workspaces" })}
 													</div>
 												)}
 										</OverflowFadeContainer>

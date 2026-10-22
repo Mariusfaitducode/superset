@@ -11515,6 +11515,9 @@ msgstr "Chưa có phiên bản nào"
 msgid "No versions yet."
 msgstr "Chưa có phiên bản nào."
 
+msgid "No workspace has these labels"
+msgstr "Không có workspace nào có các nhãn này"
+
 msgid "No workspace run command configured"
 msgstr "Chưa cấu hình lệnh chạy cho workspace"
 

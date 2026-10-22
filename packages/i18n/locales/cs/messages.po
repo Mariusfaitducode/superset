@@ -11515,6 +11515,9 @@ msgstr "Zatím žádné verze"
 msgid "No versions yet."
 msgstr "Zatím žádné verze."
 
+msgid "No workspace has these labels"
+msgstr "Žádný pracovní prostor nemá tyto štítky"
+
 msgid "No workspace run command configured"
 msgstr "Není nastavený žádný spouštěcí příkaz pracovního prostoru"
 

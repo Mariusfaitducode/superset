@@ -11515,6 +11515,9 @@ msgstr "Ancora nessuna versione"
 msgid "No versions yet."
 msgstr "Ancora nessuna versione."
 
+msgid "No workspace has these labels"
+msgstr "Nessun workspace ha queste etichette"
+
 msgid "No workspace run command configured"
 msgstr "Nessun comando di esecuzione del workspace configurato"
 

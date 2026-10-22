@@ -11515,6 +11515,9 @@ msgstr "Belum ada versi"
 msgid "No versions yet."
 msgstr "Belum ada versi."
 
+msgid "No workspace has these labels"
+msgstr "Tidak ada workspace dengan label ini"
+
 msgid "No workspace run command configured"
 msgstr "Tidak ada perintah run workspace yang dikonfigurasi"
 

@@ -11515,6 +11515,9 @@ msgstr "Henüz sürüm yok"
 msgid "No versions yet."
 msgstr "Henüz sürüm yok."
 
+msgid "No workspace has these labels"
+msgstr "Bu etiketlere sahip çalışma alanı yok"
+
 msgid "No workspace run command configured"
 msgstr "Yapılandırılmış çalışma alanı çalıştırma komutu yok"
 

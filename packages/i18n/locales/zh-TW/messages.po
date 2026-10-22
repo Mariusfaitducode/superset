@@ -11515,6 +11515,9 @@ msgstr "還沒有版本"
 msgid "No versions yet."
 msgstr "還沒有任何版本。"
 
+msgid "No workspace has these labels"
+msgstr "沒有工作區帶有這些標籤"
+
 msgid "No workspace run command configured"
 msgstr "未配置工作區執行命令"
 

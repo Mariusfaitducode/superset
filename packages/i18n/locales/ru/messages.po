@@ -11515,6 +11515,9 @@ msgstr "Версий пока нет"
 msgid "No versions yet."
 msgstr "Версий пока нет."
 
+msgid "No workspace has these labels"
+msgstr "Нет рабочих пространств с этими метками"
+
 msgid "No workspace run command configured"
 msgstr "Команда запуска рабочей области не настроена"
 
