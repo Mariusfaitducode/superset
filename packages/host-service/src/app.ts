@@ -244,6 +244,7 @@ export function createApp(options: CreateAppOptions): CreateAppResult {
 		db,
 		agentStore: terminalAgentStore,
 		todoStore: getConversationTodoStore(),
+		onMoved: () => eventBus.broadcastHostStoreChanged("conversation-todos"),
 	});
 
 	const pageWatch = new PageWatchManager({
