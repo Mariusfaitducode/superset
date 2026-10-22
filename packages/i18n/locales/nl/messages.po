@@ -11629,6 +11629,9 @@ msgstr "Nog geen versies"
 msgid "No versions yet."
 msgstr "Nog geen versies."
 
+msgid "No workspace has these labels"
+msgstr "Geen workspace heeft deze labels"
+
 msgid "No workspace run command configured"
 msgstr "Geen run-commando voor de werkruimte geconfigureerd"
 

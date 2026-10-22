@@ -11629,6 +11629,9 @@ msgstr "아직 버전이 없습니다"
 msgid "No versions yet."
 msgstr "아직 버전이 없습니다."
 
+msgid "No workspace has these labels"
+msgstr "이 라벨이 있는 워크스페이스가 없습니다"
+
 msgid "No workspace run command configured"
 msgstr "설정된 워크스페이스 실행 명령이 없습니다"
 

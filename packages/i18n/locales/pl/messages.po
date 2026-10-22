@@ -11629,6 +11629,9 @@ msgstr "Brak wersji"
 msgid "No versions yet."
 msgstr "Brak wersji."
 
+msgid "No workspace has these labels"
+msgstr "Żaden obszar roboczy nie ma tych etykiet"
+
 msgid "No workspace run command configured"
 msgstr "Nie skonfigurowano polecenia uruchamiania obszaru roboczego"
 

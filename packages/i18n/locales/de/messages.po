@@ -11629,6 +11629,9 @@ msgstr "Noch keine Versionen"
 msgid "No versions yet."
 msgstr "Noch keine Versionen."
 
+msgid "No workspace has these labels"
+msgstr "Kein Workspace hat diese Labels"
+
 msgid "No workspace run command configured"
 msgstr "Kein Run-Befehl für den Arbeitsbereich konfiguriert"
 
