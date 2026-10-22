@@ -34,6 +34,7 @@ export interface MyPullRequestDetails {
 	/** Users and teams whose review is still requested. */
 	pendingReviewers: string[];
 	reviews: MyPullRequestReview[];
+	viewerReview: MyPullRequestReview["state"] | null;
 }
 
 // One query per repo costs ~6.5 s for 40 PRs and gets close to the gh
@@ -254,6 +255,18 @@ export function parseDetailsResponse(
 				!!viewerLogin &&
 				event?.requestedReviewer?.login?.toLowerCase() === viewerLogin,
 		);
+		const reviews: MyPullRequestReview[] = (
+			node.latestOpinionatedReviews?.nodes ?? []
+		).flatMap((review) =>
+			review?.author && REVIEW_STATES.has(review.state)
+				? [
+						{
+							login: review.author.login,
+							state: review.state as MyPullRequestReview["state"],
+						},
+					]
+				: [],
+		);
 		details.set(node.number, {
 			createdAt: node.createdAt ?? null,
 			additions: node.additions ?? null,
@@ -275,16 +288,10 @@ export function parseDetailsResponse(
 				: null,
 			reviewRequestedAt: viewerRequests.at(-1)?.createdAt ?? null,
 			pendingReviewers,
-			reviews: (node.latestOpinionatedReviews?.nodes ?? []).flatMap((review) =>
-				review?.author && REVIEW_STATES.has(review.state)
-					? [
-							{
-								login: review.author.login,
-								state: review.state as MyPullRequestReview["state"],
-							},
-						]
-					: [],
-			),
+			reviews,
+			viewerReview:
+				reviews.find((review) => review.login.toLowerCase() === viewerLogin)
+					?.state ?? null,
 		});
 	}
 	return details;

@@ -88,6 +88,7 @@ describe("parseDetailsResponse", () => {
 			reviewRequestedAt: "2026-10-21T12:00:00Z",
 			pendingReviewers: ["Me-User", "core"],
 			reviews: [{ login: "bob", state: "CHANGES_REQUESTED" }],
+			viewerReview: null,
 		});
 	});
 
@@ -104,6 +105,7 @@ describe("parseDetailsResponse", () => {
 			viewerIsAuthor: true,
 			reviewRequestedFromViewer: false,
 			reviewRequestedAt: null,
+			viewerReview: null,
 			checks: { status: "none", failed: 0, pending: 0, total: 0 },
 		});
 	});
