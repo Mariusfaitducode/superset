@@ -4,8 +4,8 @@ import {
 } from "@superset/shared/agent-catalog";
 import { eq } from "@tanstack/db";
 import { useLiveQuery } from "@tanstack/react-db";
-import { useQuery } from "@tanstack/react-query";
-import { useMemo } from "react";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
+import { useEffect, useMemo, useRef } from "react";
 import { getHostServiceClientByUrl } from "renderer/lib/host-service-client";
 import { useSidebarWorkspaceStatus } from "renderer/routes/_authenticated/_dashboard/components/DashboardSidebar/providers/DashboardSidebarWorkspaceStatusProvider";
 import { useCollections } from "renderer/routes/_authenticated/providers/CollectionsProvider";
@@ -76,14 +76,15 @@ interface SessionTitles {
 	runtimeTitle: string | null;
 }
 
-export function conversationTitlesQueryKey(workspaceId: string) {
-	return ["sidebar-conversation-titles", workspaceId] as const;
+export function conversationTitlesQueryKey(hostUrl: string | null) {
+	return ["sidebar-conversation-titles", hostUrl] as const;
 }
 
 /**
- * One entry per live agent in the workspace, oldest first. Host titles are
- * read only for workspaces that have agents, since the sidebar lists every
- * workspace all day.
+ * One entry per live agent in the workspace, oldest first. Titles come from
+ * one host-wide session list shared by every row on that host, and only
+ * while some row there has agents: the sidebar lists every workspace all
+ * day.
  */
 export function useWorkspaceConversations({
 	workspaceId,
@@ -114,15 +115,28 @@ export function useWorkspaceConversations({
 		? null
 		: cache.resolveHostUrl(hostId);
 
+	// A new agent's title is not in the host's last list yet. Skipped on
+	// mount, when every row on the host would ask at once.
 	const bindingsKey = [...bindings.keys()].sort().join(",");
+	const seenBindingsKey = useRef(bindingsKey);
+	const queryClient = useQueryClient();
+	useEffect(() => {
+		if (seenBindingsKey.current === bindingsKey) return;
+		seenBindingsKey.current = bindingsKey;
+		if (!bindingsKey || !hostUrl) return;
+		void queryClient.invalidateQueries(
+			{ queryKey: conversationTitlesQueryKey(hostUrl) },
+			{ cancelRefetch: false },
+		);
+	}, [bindingsKey, hostUrl, queryClient]);
+
 	const titlesQuery = useQuery({
-		queryKey: [...conversationTitlesQueryKey(workspaceId), bindingsKey],
+		queryKey: conversationTitlesQueryKey(hostUrl),
 		enabled: enabled && hostUrl !== null && bindings.size > 0,
 		queryFn: async () => {
 			if (!hostUrl) return new Map<string, SessionTitles>();
-			const { sessions } = await getHostServiceClientByUrl(
-				hostUrl,
-			).terminal.list.query({ workspaceId });
+			const { sessions } =
+				await getHostServiceClientByUrl(hostUrl).terminal.list.query();
 			return new Map(
 				sessions.map((session): [string, SessionTitles] => [
 					session.terminalId,

@@ -1,17 +1,18 @@
 import { useQuery } from "@tanstack/react-query";
 import {
+	type HostConversationTodo,
+	useHostConversationTodos,
+} from "renderer/hooks/host-service/useHostConversationTodos";
+import {
 	getHostServiceClientByUrl,
 	type HostServiceClient,
 } from "renderer/lib/host-service-client";
-import { isMissingProcedureError } from "renderer/lib/isMissingProcedureError";
 import { useHostWorkspaces } from "renderer/routes/_authenticated/providers/HostWorkspacesProvider";
 
 export type HostAgentBinding = Awaited<
 	ReturnType<HostServiceClient["terminalAgents"]["list"]["query"]>
 >[number];
-export type HostTodo = Awaited<
-	ReturnType<HostServiceClient["conversationTodos"]["list"]["query"]>
->[number];
+export type HostTodo = HostConversationTodo;
 
 function useHostUrl(hostId: string): string | null {
 	const { cache } = useHostWorkspaces();
@@ -37,27 +38,8 @@ export function useHostAgentBindings(hostId: string): HostAgentBinding[] {
 	return query.data ?? [];
 }
 
-const hostsWithoutTodos = new Set<string>();
-
+/** The same host-wide list the sidebar rows read. */
 export function useHostTodos(hostId: string): HostTodo[] {
-	const hostUrl = useHostUrl(hostId);
-	const query = useQuery({
-		queryKey: ["workspace-insights", "todos", hostUrl],
-		enabled: hostUrl !== null && !hostsWithoutTodos.has(hostUrl),
-		queryFn: async (): Promise<HostTodo[]> => {
-			if (!hostUrl) return [];
-			try {
-				return await getHostServiceClientByUrl(
-					hostUrl,
-				).conversationTodos.list.query({});
-			} catch (error) {
-				if (!isMissingProcedureError(error)) throw error;
-				hostsWithoutTodos.add(hostUrl);
-				return [];
-			}
-		},
-		refetchInterval: 15_000,
-		staleTime: 10_000,
-	});
+	const query = useHostConversationTodos(useHostUrl(hostId));
 	return query.data ?? [];
 }

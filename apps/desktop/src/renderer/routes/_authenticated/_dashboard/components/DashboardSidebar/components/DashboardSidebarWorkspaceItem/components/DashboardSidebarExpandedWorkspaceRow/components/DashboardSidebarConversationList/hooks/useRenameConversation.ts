@@ -31,7 +31,7 @@ export function useRenameConversation({
 				title,
 			});
 			await queryClient.invalidateQueries({
-				queryKey: conversationTitlesQueryKey(workspaceId),
+				queryKey: conversationTitlesQueryKey(hostUrl),
 			});
 		},
 		[hostUrl, queryClient, workspaceId],
