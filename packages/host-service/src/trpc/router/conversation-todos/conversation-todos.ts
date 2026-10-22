@@ -8,6 +8,7 @@ import {
 	TodoNotFoundError,
 	TodoPermissionError,
 } from "../../../conversation-todos";
+import type { HostServiceContext } from "../../../types";
 import { protectedProcedure, router } from "../../index";
 
 let store: ConversationTodoStore | null = null;
@@ -29,6 +30,13 @@ function run<T>(action: () => T): T {
 		}
 		throw error;
 	}
+}
+
+/** Runs a change and tells every client, so none has to poll for it. */
+function change<T>(ctx: HostServiceContext, action: () => T): T {
+	const result = run(action);
+	ctx.eventBus.broadcastHostStoreChanged("conversation-todos");
+	return result;
 }
 
 // The app acts as the user; agents say so through the CLI.
@@ -73,7 +81,7 @@ export const conversationTodosRouter = router({
 				link: link.optional(),
 			}),
 		)
-		.mutation(({ input }) => run(() => getStore().add(input))),
+		.mutation(({ ctx, input }) => change(ctx, () => getStore().add(input))),
 
 	update: protectedProcedure
 		.input(
@@ -87,25 +95,25 @@ export const conversationTodosRouter = router({
 				link: link.optional(),
 			}),
 		)
-		.mutation(({ input: { actor, id, ...fields } }) =>
-			run(() => getStore().update(actor, id, fields)),
+		.mutation(({ ctx, input: { actor, id, ...fields } }) =>
+			change(ctx, () => getStore().update(actor, id, fields)),
 		),
 
 	setDone: protectedProcedure
 		.input(z.object({ actor, id: z.string(), done: z.boolean() }))
-		.mutation(({ input }) =>
-			run(() => getStore().setDone(input.actor, input.id, input.done)),
+		.mutation(({ ctx, input }) =>
+			change(ctx, () => getStore().setDone(input.actor, input.id, input.done)),
 		),
 
 	remove: protectedProcedure
 		.input(z.object({ actor, id: z.string() }))
-		.mutation(({ input }) =>
-			run(() => getStore().remove(input.actor, input.id)),
+		.mutation(({ ctx, input }) =>
+			change(ctx, () => getStore().remove(input.actor, input.id)),
 		),
 
 	clearDone: protectedProcedure
 		.input(z.object({ actor, terminalId: z.string() }))
-		.mutation(({ input }) =>
-			run(() => getStore().clearDone(input.actor, input.terminalId)),
+		.mutation(({ ctx, input }) =>
+			change(ctx, () => getStore().clearDone(input.actor, input.terminalId)),
 		),
 });

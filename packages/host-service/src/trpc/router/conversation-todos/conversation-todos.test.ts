@@ -12,8 +12,12 @@ afterAll(() => {
 	rmSync(home, { recursive: true, force: true });
 });
 
+const changed: string[] = [];
 const caller = conversationTodosRouter.createCaller({
 	isAuthenticated: true,
+	eventBus: {
+		broadcastHostStoreChanged: (store: string) => changed.push(store),
+	},
 } as unknown as HostServiceContext);
 
 describe("conversationTodosRouter", () => {
@@ -41,6 +45,21 @@ describe("conversationTodosRouter", () => {
 			(await caller.setDone({ actor: "agent", id: todo.id, done: true }))
 				.doneBy,
 		).toBe("agent");
+	});
+
+	test("tells clients when to-dos change, not on a read or a refusal", async () => {
+		changed.length = 0;
+		const todo = await caller.add({
+			workspaceId: "ws",
+			terminalId: "term",
+			text: "Ping",
+		});
+		await caller.list({});
+		await expect(
+			caller.remove({ actor: "agent", id: todo.id }),
+		).rejects.toMatchObject({ code: "FORBIDDEN" });
+		await caller.remove({ id: todo.id });
+		expect(changed).toEqual(["conversation-todos", "conversation-todos"]);
 	});
 
 	test("answers NOT_FOUND for an unknown id", async () => {
