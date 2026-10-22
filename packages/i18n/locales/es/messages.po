@@ -17218,6 +17218,9 @@ msgstr "Una pestaña por comando"
 msgid "Tab to fill"
 msgstr "Tab para completar"
 
+msgid "Tab: next workspace · ↑↓: pick a conversation · release Ctrl to open"
+msgstr "Tab: siguiente espacio de trabajo · ↑↓: elegir una conversación · suelta Ctrl para abrir"
+
 msgid "Table"
 msgstr "Tabla"
 

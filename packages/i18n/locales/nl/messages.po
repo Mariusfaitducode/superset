@@ -17218,6 +17218,9 @@ msgstr "Tabblad per commando"
 msgid "Tab to fill"
 msgstr "Tab om in te vullen"
 
+msgid "Tab: next workspace · ↑↓: pick a conversation · release Ctrl to open"
+msgstr "Tab: volgende workspace · ↑↓: kies een gesprek · laat Ctrl los om te openen"
+
 msgid "Table"
 msgstr "Tabel"
 

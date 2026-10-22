@@ -17218,6 +17218,9 @@ msgstr "Komut başına sekme"
 msgid "Tab to fill"
 msgstr "Doldurmak için Tab"
 
+msgid "Tab: next workspace · ↑↓: pick a conversation · release Ctrl to open"
+msgstr "Tab: sonraki çalışma alanı · ↑↓: konuşma seç · açmak için Ctrl'yi bırakın"
+
 msgid "Table"
 msgstr "Tablo"
 

@@ -17218,6 +17218,9 @@ msgstr "Karta na příkaz"
 msgid "Tab to fill"
 msgstr "Tab pro doplnění"
 
+msgid "Tab: next workspace · ↑↓: pick a conversation · release Ctrl to open"
+msgstr "Tab: další pracovní prostor · ↑↓: vybrat konverzaci · uvolněním Ctrl otevřete"
+
 msgid "Table"
 msgstr "Tabulka"
 

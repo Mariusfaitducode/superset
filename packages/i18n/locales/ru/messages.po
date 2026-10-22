@@ -17218,6 +17218,9 @@ msgstr "Вкладка на команду"
 msgid "Tab to fill"
 msgstr "Tab — подставить"
 
+msgid "Tab: next workspace · ↑↓: pick a conversation · release Ctrl to open"
+msgstr "Tab: следующее рабочее пространство · ↑↓: выбрать разговор · отпустите Ctrl, чтобы открыть"
+
 msgid "Table"
 msgstr "Таблица"
 

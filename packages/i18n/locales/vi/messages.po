@@ -17218,6 +17218,9 @@ msgstr "Mỗi lệnh một tab"
 msgid "Tab to fill"
 msgstr "Tab để điền"
 
+msgid "Tab: next workspace · ↑↓: pick a conversation · release Ctrl to open"
+msgstr "Tab: workspace tiếp theo · ↑↓: chọn cuộc trò chuyện · thả Ctrl để mở"
+
 msgid "Table"
 msgstr "Table"
 

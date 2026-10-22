@@ -17218,6 +17218,9 @@ msgstr "每条命令一个标签页"
 msgid "Tab to fill"
 msgstr "按 Tab 填充"
 
+msgid "Tab: next workspace · ↑↓: pick a conversation · release Ctrl to open"
+msgstr "Tab：下一个工作区 · ↑↓：选择对话 · 松开 Ctrl 打开"
+
 msgid "Table"
 msgstr "表格"
 

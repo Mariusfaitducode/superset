@@ -17218,6 +17218,9 @@ msgstr "Un onglet par commande"
 msgid "Tab to fill"
 msgstr "Tab pour compléter"
 
+msgid "Tab: next workspace · ↑↓: pick a conversation · release Ctrl to open"
+msgstr "Tab : workspace suivant · ↑↓ : choisir une conversation · relâchez Ctrl pour ouvrir"
+
 msgid "Table"
 msgstr "Tableau"
 
