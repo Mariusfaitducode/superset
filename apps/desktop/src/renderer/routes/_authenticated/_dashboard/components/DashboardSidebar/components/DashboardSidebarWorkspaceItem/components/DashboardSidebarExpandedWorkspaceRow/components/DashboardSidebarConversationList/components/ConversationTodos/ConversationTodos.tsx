@@ -298,16 +298,19 @@ function TodoItem({
 /**
  * One conversation's to-dos, shared with its agent: the agent's own are
  * marked, and so are the user's it checked. Click the text to edit it, the
- * menu for priority, type, due day and link.
+ * menu for priority, type, due day and link. Opens ready to type; Escape
+ * clears the draft, then closes.
  */
 export function ConversationTodos({
 	terminalId,
 	todos,
 	actions,
+	onClose,
 }: {
 	terminalId: string;
 	todos: ConversationTodo[];
 	actions: TodoActions;
+	onClose: () => void;
 }) {
 	const { t } = useLingui();
 	const [text, setText] = useState("");
@@ -316,6 +319,12 @@ export function ConversationTodos({
 	const failed = t`Could not update the to-do`;
 
 	const onKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
+		if (event.key === "Escape") {
+			event.stopPropagation();
+			if (text) setText("");
+			else onClose();
+			return;
+		}
 		if (event.key !== "Enter" || event.nativeEvent.isComposing) return;
 		if (!text.trim()) return;
 		report(actions.add(terminalId, text), failed);
@@ -338,6 +347,8 @@ export function ConversationTodos({
 			)}
 			<div className="flex h-6 items-center gap-1.5">
 				<input
+					// biome-ignore lint/a11y/noAutofocus: the user just opened the to-dos to add one
+					autoFocus
 					value={text}
 					onChange={(event) => setText(event.target.value)}
 					onKeyDown={onKeyDown}
