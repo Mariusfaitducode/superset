@@ -17,7 +17,8 @@ if [ -z "$TARGET" ] || [[ "$TARGET" == marius-v* ]]; then
 	echo "downloading release $TAG"
 	gh release download "$TAG" -R "$REPO" -p '*.zip' -D "$DIR"
 else
-	RUN=$(gh run list -R "$REPO" -w "Fork build" -b "$TARGET" -s success -L 1 --json databaseId -q '.[0].databaseId')
+	# Filter client-side: gh's `-w "Fork build"` and `-s success` filters sometimes come back empty.
+	RUN=$(gh run list -R "$REPO" -b "$TARGET" -L 40 --json databaseId,workflowName,conclusion -q '[.[] | select(.workflowName == "Fork build" and .conclusion == "success")][0].databaseId // empty')
 	[ -n "$RUN" ] || { echo "no successful build on $TARGET yet"; exit 1; }
 	echo "downloading build $RUN of $TARGET"
 	gh run download "$RUN" -R "$REPO" -n superset-app -D "$DIR"
