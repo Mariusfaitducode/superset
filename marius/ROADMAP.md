@@ -27,6 +27,8 @@ Kept by the agents working on this fork and read on every Mac. Updated at each s
 - **Richer workspaces view**: built, to validate. Cards show labels, agent dots and the top open to-do; filter by label; columns by status or by label.
 - Later: general agent, MCP, features behind the paid gate.
 - Propose upstream what works (issue superset-sh/superset#8634).
+- **CLI ahead of the app** (ideas inbox, 2026-10-22): `superset notes` exists in the CLI but the installed host answers "No procedure found on path workspaceNotes.list". The CLI should detect a missing procedure and say "update the app" instead of failing.
+- **Agents' ideas inbox**: agents log friction and feature ideas with `superset notes add "Superset idea: …"`, or in `~/.claude/superset-ideas.md` until notes work; the coordinator moves them here. (2026-10-22: "`todos add` says Not logged in while `list` works" is fixed by `fix/local-cli-without-login`.)
 
 ## How we work
 
