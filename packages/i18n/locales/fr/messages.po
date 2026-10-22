@@ -1215,6 +1215,9 @@ msgstr "{used} tokens"
 msgid "{used} used"
 msgstr "{used} utilisés"
 
+msgid "{viewerCount} waiting on you · {othersCount} on others"
+msgstr "{viewerCount} en attente de vous · {othersCount} des autres"
+
 msgid "{waiting} Waiting"
 msgstr "{waiting} en attente"
 
@@ -3816,6 +3819,12 @@ msgstr "Choisissez où ouvrir les agents lancés depuis les commentaires, le mod
 msgid "CI failed"
 msgstr "CI en échec"
 
+msgid "CI failing"
+msgstr "CI en échec"
+
+msgid "CI running"
+msgstr "CI en cours"
+
 msgid "Clarify this"
 msgstr "Clarifier ceci"
 
@@ -4457,6 +4466,9 @@ msgstr "Configurer la commande d'exécution de l'espace de travail"
 
 msgid "Confirm before quitting"
 msgstr "Confirmer avant de quitter"
+
+msgid "Conflicts"
+msgstr "Conflits"
 
 #. placeholder {0}: status.baseBranch
 msgid "Conflicts with {0}"
@@ -7982,6 +7994,9 @@ msgstr "Suivez-nous sur LinkedIn"
 msgid "Follow us on X/Twitter"
 msgstr "Suivez-nous sur X/Twitter"
 
+msgid "Following"
+msgstr "Suivi"
+
 msgid "Font family"
 msgstr "Police"
 
@@ -11364,6 +11379,9 @@ msgstr "Aucune issue ouverte."
 msgid "No open pull requests found."
 msgstr "Aucune pull request ouverte trouvée."
 
+msgid "No open pull requests involve you."
+msgstr "Aucune pull request ouverte ne vous concerne."
+
 msgid "No open pull requests."
 msgstr "Aucune pull request ouverte."
 
@@ -12126,6 +12144,10 @@ msgstr "Ouvrir la palette de commandes"
 
 msgid "Open comment on GitHub"
 msgstr "Ouvrir le commentaire sur GitHub"
+
+#. placeholder {0}: conversation.title
+msgid "Open conversation: {0}"
+msgstr "Ouvrir la conversation : {0}"
 
 msgid "Open details"
 msgstr "Ouvrir les détails"
@@ -13829,6 +13851,9 @@ msgstr "Échec du marquage comme prêt pour la revue : {0}"
 
 msgid "Ready in"
 msgstr "Prêt dans"
+
+msgid "Ready to merge"
+msgstr "Prête à fusionner"
 
 msgid "Ready to Merge"
 msgstr "Prête à fusionner"
@@ -19313,6 +19338,9 @@ msgstr "En attente des vérifications"
 msgid "Waiting for it to connect…"
 msgstr "En attente de la connexion…"
 
+msgid "Waiting for review"
+msgstr "En attente de revue"
+
 msgid "Waiting for Review"
 msgstr "En attente de revue"
 
@@ -19333,6 +19361,12 @@ msgstr "En attente de votre réponse"
 
 msgid "Waiting for your reply"
 msgstr "Attend ta réponse"
+
+msgid "Waiting on others"
+msgstr "En attente des autres"
+
+msgid "Waiting on you"
+msgstr "En attente de vous"
 
 msgid "Waiting tint"
 msgstr "Teinte d'attente"

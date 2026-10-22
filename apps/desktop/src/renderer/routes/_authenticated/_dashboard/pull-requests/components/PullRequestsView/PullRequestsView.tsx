@@ -11,6 +11,7 @@ import {
 	pullRequestsSearchFromFilters,
 	usePullRequestsFilterStore,
 } from "../../stores/pullRequestsFilterStore";
+import { MyPullRequestsContent } from "./components/MyPullRequestsContent";
 import { PullRequestsContent } from "./components/PullRequestsContent";
 import { PullRequestsTopBar } from "./components/PullRequestsTopBar";
 
@@ -19,7 +20,7 @@ interface PullRequestsViewProps {
 	initialProjects?: string[];
 	initialAuthor?: string;
 	initialReview?: string;
-	initialState?: "open" | "all" | "merged";
+	initialState?: "open" | "all" | "merged" | "mine";
 	/** The PR currently open in the detail pane, if any — filter/search
 	 *  changes navigate back to it instead of collapsing the detail pane. */
 	selectedPrNumber?: number | null;
@@ -47,12 +48,14 @@ export function PullRequestsView({
 		reviewFilter: storedReviewFilter,
 		includeClosed: storedIncludeClosed,
 		mergedOnly: storedMergedOnly,
+		mineOnly: storedMineOnly,
 		setSearch: storeSetSearch,
 		setProjectFilters: storeSetProjectFilters,
 		setAuthorFilter: storeSetAuthorFilter,
 		setReviewFilter: storeSetReviewFilter,
 		setIncludeClosed: storeSetIncludeClosed,
 		setMergedOnly: storeSetMergedOnly,
+		setMineOnly: storeSetMineOnly,
 	} = usePullRequestsFilterStore();
 	const [searchQuery, setSearchQuery] = useState(initialSearch ?? storedSearch);
 	const projectFilters = initialProjects ?? storedProjectFilters;
@@ -70,6 +73,8 @@ export function PullRequestsView({
 			: initialState === "all" || initialState === "merged";
 	const mergedOnly =
 		initialState === undefined ? storedMergedOnly : initialState === "merged";
+	const mineOnly =
+		initialState === undefined ? storedMineOnly : initialState === "mine";
 	// Filter/search changes must not collapse an open detail pane.
 	const navigateTo = useCallback(
 		(search: Record<string, string>) =>
@@ -112,6 +117,7 @@ export function PullRequestsView({
 			review?: PullRequestReviewFilter | null;
 			includeClosed?: boolean;
 			mergedOnly?: boolean;
+			mineOnly?: boolean;
 		}) =>
 			pullRequestsSearchFromFilters({
 				search: overrides.search ?? searchQuery,
@@ -125,11 +131,13 @@ export function PullRequestsView({
 					overrides.review !== undefined ? overrides.review : reviewFilter,
 				includeClosed: overrides.includeClosed ?? includeClosed,
 				mergedOnly: overrides.mergedOnly ?? mergedOnly,
+				mineOnly: overrides.mineOnly ?? mineOnly,
 			}),
 		[
 			authorFilter,
 			includeClosed,
 			mergedOnly,
+			mineOnly,
 			projectFilters,
 			reviewFilter,
 			searchQuery,
@@ -163,6 +171,10 @@ export function PullRequestsView({
 	useEffect(() => {
 		storeSetMergedOnly(mergedOnly);
 	}, [mergedOnly, storeSetMergedOnly]);
+
+	useEffect(() => {
+		storeSetMineOnly(mineOnly);
+	}, [mineOnly, storeSetMineOnly]);
 
 	const projects = useMemo(
 		() =>
@@ -218,17 +230,22 @@ export function PullRequestsView({
 		navigateTo(buildSearch({ projects }));
 	};
 
-	/** Drives the All / Open / Merged segmented control as one control. */
-	const handleStateFilterChange = (next: "open" | "all" | "merged") => {
+	/** Drives the Mine / All / Open / Merged segmented control as one control. */
+	const handleStateFilterChange = (
+		next: "open" | "all" | "merged" | "mine",
+	) => {
 		cancelPendingSearchNavigation();
-		const nextIncludeClosed = next !== "open";
+		const nextMineOnly = next === "mine";
+		const nextIncludeClosed = next === "all" || next === "merged";
 		const nextMergedOnly = next === "merged";
+		storeSetMineOnly(nextMineOnly);
 		storeSetIncludeClosed(nextIncludeClosed);
 		storeSetMergedOnly(nextMergedOnly);
 		navigateTo(
 			buildSearch({
 				includeClosed: nextIncludeClosed,
 				mergedOnly: nextMergedOnly,
+				mineOnly: nextMineOnly,
 			}),
 		);
 	};
@@ -247,11 +264,13 @@ export function PullRequestsView({
 		navigateTo(buildSearch({ review: nextReview }));
 	};
 
-	const stateFilter: "open" | "all" | "merged" = mergedOnly
-		? "merged"
-		: includeClosed
-			? "all"
-			: "open";
+	const stateFilter: "open" | "all" | "merged" | "mine" = mineOnly
+		? "mine"
+		: mergedOnly
+			? "merged"
+			: includeClosed
+				? "all"
+				: "open";
 
 	return (
 		<div
@@ -272,20 +291,33 @@ export function PullRequestsView({
 				onStateFilterChange={handleStateFilterChange}
 			/>
 			<div className="flex min-h-0 min-w-0 flex-1 flex-col overflow-hidden">
-				<PullRequestsContent
-					projectFilters={projectFilters}
-					projectTargets={projectTargets}
-					areProjectsReady={areProjectsReady}
-					hasProjects={projects.length > 0}
-					searchQuery={searchQuery}
-					authorFilter={authorFilter}
-					reviewFilter={reviewFilter}
-					includeClosed={includeClosed}
-					mergedOnly={mergedOnly}
-					selectedPrNumber={selectedPrNumber}
-					selectedPrProjectId={selectedPrProjectId}
-					repoSlugByProjectId={repoSlugByProjectId}
-				/>
+				{mineOnly ? (
+					<MyPullRequestsContent
+						projectFilters={projectFilters}
+						projectTargets={projectTargets}
+						areProjectsReady={areProjectsReady}
+						hasProjects={projects.length > 0}
+						searchQuery={searchQuery}
+						selectedPrNumber={selectedPrNumber}
+						selectedPrProjectId={selectedPrProjectId}
+						repoSlugByProjectId={repoSlugByProjectId}
+					/>
+				) : (
+					<PullRequestsContent
+						projectFilters={projectFilters}
+						projectTargets={projectTargets}
+						areProjectsReady={areProjectsReady}
+						hasProjects={projects.length > 0}
+						searchQuery={searchQuery}
+						authorFilter={authorFilter}
+						reviewFilter={reviewFilter}
+						includeClosed={includeClosed}
+						mergedOnly={mergedOnly}
+						selectedPrNumber={selectedPrNumber}
+						selectedPrProjectId={selectedPrProjectId}
+						repoSlugByProjectId={repoSlugByProjectId}
+					/>
+				)}
 			</div>
 		</div>
 	);

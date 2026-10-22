@@ -1215,6 +1215,9 @@ msgstr "{used} 토큰"
 msgid "{used} used"
 msgstr "{used} 사용됨"
 
+msgid "{viewerCount} waiting on you · {othersCount} on others"
+msgstr "내 차례 {viewerCount}개 · 다른 사람 차례 {othersCount}개"
+
 msgid "{waiting} Waiting"
 msgstr "{waiting}명 대기 중"
 
@@ -3816,6 +3819,12 @@ msgstr "댓글, 디자인 모드 및 Pages에서 시작한 에이전트를 열 �
 msgid "CI failed"
 msgstr "CI 실패"
 
+msgid "CI failing"
+msgstr "CI 실패"
+
+msgid "CI running"
+msgstr "CI 실행 중"
+
 msgid "Clarify this"
 msgstr "이것을 명확히 해 주세요"
 
@@ -4457,6 +4466,9 @@ msgstr "워크스페이스 실행 명령 구성"
 
 msgid "Confirm before quitting"
 msgstr "종료 전 확인"
+
+msgid "Conflicts"
+msgstr "충돌"
 
 #. placeholder {0}: status.baseBranch
 msgid "Conflicts with {0}"
@@ -7982,6 +7994,9 @@ msgstr "LinkedIn에서 팔로우하기"
 msgid "Follow us on X/Twitter"
 msgstr "X/Twitter에서 팔로우하기"
 
+msgid "Following"
+msgstr "팔로우 중"
+
 msgid "Font family"
 msgstr "글꼴"
 
@@ -11364,6 +11379,9 @@ msgstr "열린 이슈가 없습니다."
 msgid "No open pull requests found."
 msgstr "열린 풀 리퀘스트를 찾을 수 없습니다."
 
+msgid "No open pull requests involve you."
+msgstr "나와 관련된 열린 풀 리퀘스트가 없습니다."
+
 msgid "No open pull requests."
 msgstr "열린 풀 리퀘스트가 없습니다."
 
@@ -12126,6 +12144,10 @@ msgstr "명령 팔레트 열기"
 
 msgid "Open comment on GitHub"
 msgstr "GitHub에서 코멘트 열기"
+
+#. placeholder {0}: conversation.title
+msgid "Open conversation: {0}"
+msgstr "대화 열기: {0}"
 
 msgid "Open details"
 msgstr "세부 정보 열기"
@@ -13829,6 +13851,9 @@ msgstr "리뷰 준비 완료 표시 실패: {0}"
 
 msgid "Ready in"
 msgstr "준비 완료"
+
+msgid "Ready to merge"
+msgstr "병합 준비됨"
 
 msgid "Ready to Merge"
 msgstr "머지 준비됨"
@@ -19313,6 +19338,9 @@ msgstr "검사 대기 중"
 msgid "Waiting for it to connect…"
 msgstr "연결을 기다리는 중…"
 
+msgid "Waiting for review"
+msgstr "리뷰 대기 중"
+
 msgid "Waiting for Review"
 msgstr "리뷰 대기 중"
 
@@ -19333,6 +19361,12 @@ msgstr "입력을 기다리는 중"
 
 msgid "Waiting for your reply"
 msgstr "답변을 기다리는 중"
+
+msgid "Waiting on others"
+msgstr "다른 사람 대기 중"
+
+msgid "Waiting on you"
+msgstr "내 차례"
 
 msgid "Waiting tint"
 msgstr "대기 색조"

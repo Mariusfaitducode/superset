@@ -54,6 +54,38 @@ interface PullRequestResult {
 	additions: number | null;
 	deletions: number | null;
 	headRefName: string | null;
+	reviewDecision: GitHubPullRequestReviewDecision;
+	mergeable: PullRequestMergeable | null;
+	/** null when the viewer is unknown (only the GraphQL pass resolves it). */
+	viewerIsAuthor: boolean | null;
+	reviewRequestedFromViewer: boolean | null;
+}
+
+type PullRequestMergeable = "MERGEABLE" | "CONFLICTING" | "UNKNOWN";
+
+const UNKNOWN_VIEWER_FIELDS = {
+	reviewDecision: null,
+	mergeable: null,
+	viewerIsAuthor: null,
+	reviewRequestedFromViewer: null,
+} as const;
+
+function toReviewDecision(
+	value: string | null | undefined,
+): GitHubPullRequestReviewDecision {
+	return value === "APPROVED" ||
+		value === "CHANGES_REQUESTED" ||
+		value === "REVIEW_REQUIRED"
+		? value
+		: null;
+}
+
+function toMergeable(
+	value: string | null | undefined,
+): PullRequestMergeable | null {
+	return value === "MERGEABLE" || value === "CONFLICTING" || value === "UNKNOWN"
+		? value
+		: null;
 }
 
 export interface PullRequestsPage {
@@ -116,6 +148,7 @@ const viewerRelationshipSchema = z.enum([
 	"needs-review",
 	"reviewed",
 	"authored",
+	"involved",
 ]);
 type ViewerRelationship = z.infer<typeof viewerRelationshipSchema>;
 
@@ -126,6 +159,7 @@ const VIEWER_RELATIONSHIP_QUALIFIERS: Record<ViewerRelationship, string> = {
 	"needs-review": "user-review-requested:@me",
 	reviewed: "reviewed-by:@me -user-review-requested:@me",
 	authored: "author:@me",
+	involved: "involves:@me",
 };
 
 const searchPullRequestsInputSchema = githubSearchInputSchema
@@ -225,10 +259,11 @@ const ghPrViewSchema = z.object({
 	additions: z.number().optional(),
 	deletions: z.number().optional(),
 	headRefName: z.string().optional(),
+	mergeable: z.string().nullable().optional(),
 });
 
 const PR_VIEW_FIELDS =
-	"number,title,url,state,isDraft,author,mergedAt,updatedAt,statusCheckRollup,reviewDecision,reviewRequests,latestReviews,additions,deletions,headRefName";
+	"number,title,url,state,isDraft,author,mergedAt,updatedAt,statusCheckRollup,reviewDecision,reviewRequests,latestReviews,additions,deletions,headRefName,mergeable";
 
 interface GhDirectLookupReview {
 	decision: string | null;
@@ -273,6 +308,9 @@ async function ghDirectLookup(
 			additions: pr.additions ?? null,
 			deletions: pr.deletions ?? null,
 			headRefName: pr.headRefName ?? null,
+			...UNKNOWN_VIEWER_FIELDS,
+			reviewDecision: toReviewDecision(pr.reviewDecision),
+			mergeable: toMergeable(pr.mergeable),
 		},
 		review: {
 			decision: pr.reviewDecision || null,
@@ -355,6 +393,24 @@ async function ghDirectLookupMatchesViewerRelationship(
 	review: GhDirectLookupReview,
 	relationship: ViewerRelationship,
 ): Promise<boolean> {
+	// Mentions and comments are not checked here: a direct lookup only knows
+	// the author, review requests and reviews.
+	if (relationship === "involved") {
+		for (const narrower of ["authored", "needs-review", "reviewed"] as const) {
+			if (
+				await ghDirectLookupMatchesViewerRelationship(
+					execGh,
+					repo,
+					pullRequest,
+					review,
+					narrower,
+				)
+			) {
+				return true;
+			}
+		}
+		return false;
+	}
 	if (relationship === "authored") {
 		const viewerRaw = await execGh(["api", "user"], {
 			cwd: repo.repoPath ?? undefined,
@@ -516,6 +572,21 @@ async function octokitDirectLookupMatchesViewerRelationship(
 	pr: OctokitPullRequest,
 	relationship: ViewerRelationship,
 ): Promise<boolean> {
+	if (relationship === "involved") {
+		for (const narrower of ["authored", "needs-review", "reviewed"] as const) {
+			if (
+				await octokitDirectLookupMatchesViewerRelationship(
+					octokit,
+					repo,
+					pr,
+					narrower,
+				)
+			) {
+				return true;
+			}
+		}
+		return false;
+	}
 	if (relationship === "authored") {
 		const { data: viewer } = await octokit.users.getAuthenticated();
 		return (pr.user?.login ?? "").toLowerCase() === viewer.login.toLowerCase();
@@ -619,6 +690,13 @@ async function octokitDirectLookupRow(
 		additions: pr.additions ?? null,
 		deletions: pr.deletions ?? null,
 		headRefName: pr.head?.ref ?? null,
+		...UNKNOWN_VIEWER_FIELDS,
+		mergeable:
+			pr.mergeable == null
+				? "UNKNOWN"
+				: pr.mergeable
+					? "MERGEABLE"
+					: "CONFLICTING",
 	};
 }
 
@@ -696,6 +774,7 @@ async function ghApiSearchPullRequests(
 					additions: null,
 					deletions: null,
 					headRefName: null,
+					...UNKNOWN_VIEWER_FIELDS,
 				},
 			];
 		});
@@ -745,6 +824,7 @@ async function octokitSearchPullRequests(
 					additions: null,
 					deletions: null,
 					headRefName: null,
+					...UNKNOWN_VIEWER_FIELDS,
 				},
 			];
 		});
@@ -754,6 +834,7 @@ async function octokitSearchPullRequests(
 }
 
 const checksGraphqlDataSchema = z.object({
+	viewer: z.object({ login: z.string() }).nullable().optional(),
 	repository: z
 		.record(
 			z.string(),
@@ -763,6 +844,24 @@ const checksGraphqlDataSchema = z.object({
 					additions: z.number().optional(),
 					deletions: z.number().optional(),
 					headRefName: z.string().optional(),
+					reviewDecision: z.string().nullable().optional(),
+					mergeable: z.string().nullable().optional(),
+					author: z.object({ login: z.string() }).nullable().optional(),
+					reviewRequests: z
+						.object({
+							nodes: z.array(
+								z
+									.object({
+										requestedReviewer: z
+											.object({ login: z.string().optional() })
+											.nullable()
+											.optional(),
+									})
+									.nullable(),
+							),
+						})
+						.nullable()
+						.optional(),
 					statusCheckRollup: z
 						.object({
 							contexts: z.object({
@@ -788,7 +887,13 @@ type RunChecksGraphqlQuery = (
 
 type PullRequestGraphqlDetails = Pick<
 	PullRequestResult,
-	"additions" | "deletions" | "headRefName"
+	| "additions"
+	| "deletions"
+	| "headRefName"
+	| "reviewDecision"
+	| "mergeable"
+	| "viewerIsAuthor"
+	| "reviewRequestedFromViewer"
 >;
 
 async function getPullRequestChecksViaGraphql(
@@ -825,6 +930,12 @@ async function getPullRequestChecksViaGraphql(
 				additions
 				deletions
 				headRefName
+				reviewDecision
+				mergeable
+				author { login }
+				reviewRequests(first: 20) {
+					nodes { requestedReviewer { ... on User { login } } }
+				}
 				statusCheckRollup {
 					contexts(first: 100${cursor ? `, after: $cursor${number}` : ""}) {
 						pageInfo { hasNextPage endCursor }
@@ -851,6 +962,7 @@ async function getPullRequestChecksViaGraphql(
 			)
 			.join("\n");
 		const query = `query($owner: String!, $name: String!${cursorDefinitions ? `, ${cursorDefinitions}` : ""}) {
+		viewer { login }
 		repository(owner: $owner, name: $name) {
 			${selections}
 		}
@@ -866,8 +978,10 @@ async function getPullRequestChecksViaGraphql(
 		// `gh api graphql` returns the full `{ data: ... }` envelope;
 		// octokit.graphql resolves to the inner data object.
 		const data = isRecord(raw) && isRecord(raw.data) ? raw.data : raw;
-		const repository = checksGraphqlDataSchema.parse(data).repository;
+		const parsed = checksGraphqlDataSchema.parse(data);
+		const repository = parsed.repository;
 		if (!repository) return new Map();
+		const viewerLogin = parsed.viewer?.login.toLowerCase() ?? null;
 
 		const nextCursors = new Map<number, string | null>();
 		for (const pullRequest of Object.values(repository)) {
@@ -883,6 +997,18 @@ async function getPullRequestChecksViaGraphql(
 				additions: pullRequest.additions ?? null,
 				deletions: pullRequest.deletions ?? null,
 				headRefName: pullRequest.headRefName ?? null,
+				reviewDecision: toReviewDecision(pullRequest.reviewDecision),
+				mergeable: toMergeable(pullRequest.mergeable),
+				viewerIsAuthor:
+					viewerLogin && pullRequest.author
+						? pullRequest.author.login.toLowerCase() === viewerLogin
+						: null,
+				reviewRequestedFromViewer: viewerLogin
+					? (pullRequest.reviewRequests?.nodes ?? []).some(
+							(node) =>
+								node?.requestedReviewer?.login?.toLowerCase() === viewerLogin,
+						)
+					: null,
 			});
 			const pageInfo = pullRequest.statusCheckRollup?.contexts.pageInfo;
 			if (pageInfo?.hasNextPage) {
@@ -910,6 +1036,7 @@ async function getPullRequestChecksViaGraphql(
 				additions: null,
 				deletions: null,
 				headRefName: null,
+				...UNKNOWN_VIEWER_FIELDS,
 			};
 			return [pullRequestNumber, { checks, checksStatus, ...details }] as const;
 		}),
@@ -943,8 +1070,9 @@ async function ghGetPullRequestChecks(
 
 type PullRequestChecksInfo = Pick<
 	PullRequestResult,
-	"checks" | "checksStatus" | "additions" | "deletions" | "headRefName"
->;
+	"checks" | "checksStatus"
+> &
+	PullRequestGraphqlDetails;
 
 /**
  * Enrich a merged page with checks: one GraphQL batch per repo that has

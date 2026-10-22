@@ -30,7 +30,7 @@ export type PullRequestsSearch = {
 	projects?: string;
 	author?: string;
 	review?: string;
-	state?: "open" | "all" | "merged";
+	state?: "open" | "all" | "merged" | "mine";
 };
 
 export const Route = createFileRoute(
@@ -44,7 +44,7 @@ export const Route = createFileRoute(
 		projects: typeof search.projects === "string" ? search.projects : undefined,
 		author: typeof search.author === "string" ? search.author : undefined,
 		review: typeof search.review === "string" ? search.review : undefined,
-		state: ["open", "all", "merged"].includes(search.state as string)
+		state: ["open", "all", "merged", "mine"].includes(search.state as string)
 			? (search.state as PullRequestsSearch["state"])
 			: undefined,
 	}),

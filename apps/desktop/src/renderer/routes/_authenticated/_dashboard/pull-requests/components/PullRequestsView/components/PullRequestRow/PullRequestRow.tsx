@@ -1,5 +1,6 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@superset/ui/avatar";
 import { cn } from "@superset/ui/utils";
+import type { ReactNode } from "react";
 import { formatRelativeTime } from "renderer/lib/formatRelativeTime";
 import { PullRequestChecksSummary } from "renderer/routes/_authenticated/_dashboard/pull-requests/components/PullRequestChecksSummary";
 import type { PullRequestCheck } from "renderer/routes/_authenticated/_dashboard/pull-requests/components/pull-request-checks";
@@ -31,6 +32,7 @@ interface PullRequestRowProps {
 	repoSlug: string | undefined;
 	isSelected: boolean;
 	onClick: () => void;
+	footer?: ReactNode;
 }
 
 export function PullRequestRow({
@@ -38,6 +40,7 @@ export function PullRequestRow({
 	repoSlug,
 	isSelected,
 	onClick,
+	footer,
 }: PullRequestRowProps) {
 	const state = normalizePRState(pr.state, pr.isDraft);
 	const hasDiffStat = pr.additions != null || pr.deletions != null;
@@ -99,6 +102,7 @@ export function PullRequestRow({
 						</>
 					)}
 				</div>
+				{footer}
 			</div>
 			<div className="flex shrink-0 flex-col items-end gap-0.5 text-xs text-muted-foreground">
 				<div className="flex items-center gap-2">

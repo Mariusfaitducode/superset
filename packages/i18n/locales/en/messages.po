@@ -1215,6 +1215,9 @@ msgstr "{used} tokens"
 msgid "{used} used"
 msgstr "{used} used"
 
+msgid "{viewerCount} waiting on you · {othersCount} on others"
+msgstr "{viewerCount} waiting on you · {othersCount} on others"
+
 msgid "{waiting} Waiting"
 msgstr "{waiting} Waiting"
 
@@ -3816,6 +3819,12 @@ msgstr "Choose where agents started from comments, design mode, and Pages open."
 msgid "CI failed"
 msgstr "CI failed"
 
+msgid "CI failing"
+msgstr "CI failing"
+
+msgid "CI running"
+msgstr "CI running"
+
 msgid "Clarify this"
 msgstr "Clarify this"
 
@@ -4457,6 +4466,9 @@ msgstr "Configure workspace run command"
 
 msgid "Confirm before quitting"
 msgstr "Confirm before quitting"
+
+msgid "Conflicts"
+msgstr "Conflicts"
 
 #. placeholder {0}: status.baseBranch
 msgid "Conflicts with {0}"
@@ -7982,6 +7994,9 @@ msgstr "Follow us on LinkedIn"
 msgid "Follow us on X/Twitter"
 msgstr "Follow us on X/Twitter"
 
+msgid "Following"
+msgstr "Following"
+
 msgid "Font family"
 msgstr "Font family"
 
@@ -11364,6 +11379,9 @@ msgstr "No open issues."
 msgid "No open pull requests found."
 msgstr "No open pull requests found."
 
+msgid "No open pull requests involve you."
+msgstr "No open pull requests involve you."
+
 msgid "No open pull requests."
 msgstr "No open pull requests."
 
@@ -12126,6 +12144,10 @@ msgstr "Open Command Palette"
 
 msgid "Open comment on GitHub"
 msgstr "Open comment on GitHub"
+
+#. placeholder {0}: conversation.title
+msgid "Open conversation: {0}"
+msgstr "Open conversation: {0}"
 
 msgid "Open details"
 msgstr "Open details"
@@ -13829,6 +13851,9 @@ msgstr "Ready for review failed: {0}"
 
 msgid "Ready in"
 msgstr "Ready in"
+
+msgid "Ready to merge"
+msgstr "Ready to merge"
 
 msgid "Ready to Merge"
 msgstr "Ready to Merge"
@@ -19313,6 +19338,9 @@ msgstr "Waiting for Checks"
 msgid "Waiting for it to connect…"
 msgstr "Waiting for it to connect…"
 
+msgid "Waiting for review"
+msgstr "Waiting for review"
+
 msgid "Waiting for Review"
 msgstr "Waiting for Review"
 
@@ -19333,6 +19361,12 @@ msgstr "Waiting for your input"
 
 msgid "Waiting for your reply"
 msgstr "Waiting for your reply"
+
+msgid "Waiting on others"
+msgstr "Waiting on others"
+
+msgid "Waiting on you"
+msgstr "Waiting on you"
 
 msgid "Waiting tint"
 msgstr "Waiting tint"
