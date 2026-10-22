@@ -1,0 +1,1 @@
+export { closeTerminal } from "./closeTerminal";

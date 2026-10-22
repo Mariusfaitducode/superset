@@ -34,6 +34,9 @@ msgstr "./"
 msgid ".sh"
 msgstr ".sh"
 
+msgid "· none right now"
+msgstr "· сейчас нет"
+
 msgid "· updated {updatedAgo}"
 msgstr "· обновлено {updatedAgo}"
 
@@ -603,6 +606,9 @@ msgstr "{0}% от всех токенов · {1} токенов"
 msgid "{0}% of total cost · {1} tokens · * at API list rates"
 msgstr "{0}% от общей стоимости · {1} токенов · * по прайс-листу API"
 
+msgid "{activeCount, plural, one {# session is working or waiting for you: it stops mid-task.} other {# sessions are working or waiting for you: they stop mid-task.}}"
+msgstr "{activeCount, plural, one {# сессия работает или ждёт вас: она остановится посреди задачи.} few {# сессии работают или ждут вас: они остановятся посреди задачи.} many {# сессий работают или ждут вас: они остановятся посреди задачи.} other {# сессии работают или ждут вас: они остановятся посреди задачи.}}"
+
 msgid "{actor} added the label {label}"
 msgstr "{actor} добавил(а) метку {label}"
 
@@ -721,6 +727,9 @@ msgstr "{behindCount, plural, one {Отстаёт от main на # коммит,
 msgid "{branchPosition} of {totalBranches}"
 msgstr "{branchPosition} из {totalBranches}"
 
+msgid "{closed, plural, one {Closed # session} other {Closed # sessions}}"
+msgstr "{closed, plural, one {Закрыта # сессия} few {Закрыто # сессии} many {Закрыто # сессий} other {Закрыто # сессии}}"
+
 msgid "{closedCount, plural, one {Closed # port} other {Closed # ports}}"
 msgstr "{closedCount, plural, one {Закрыт # порт} few {Закрыто # порта} many {Закрыто # портов} other {Закрыто # порта}}"
 
@@ -745,6 +754,9 @@ msgstr "Аккаунт {connectorName}"
 
 msgid "{cookieCount} cookies — forget this site"
 msgstr "{cookieCount} cookies — забыть этот сайт"
+
+msgid "{count, plural, one {· # session, {freed}} other {· # sessions, {freed}}}"
+msgstr "{count, plural, one {· # сессия, {freed}} few {· # сессии, {freed}} many {· # сессий, {freed}} other {· # сессии, {freed}}}"
 
 msgid "{count, plural, one {# active port — show details} other {# active ports — show details}}"
 msgstr "{count, plural, one {# активный порт — показать детали} few {# активных порта — показать детали} many {# активных портов — показать детали} other {# активных портов — показать детали}}"
@@ -775,6 +787,15 @@ msgstr "{count, plural, one {# worktree в этом репозитории не 
 
 msgid "{count, plural, one {added a commit} other {added # commits}}"
 msgstr "{count, plural, one {добавил(а) коммит} few {добавил(а) # коммита} many {добавил(а) # коммитов} other {добавил(а) # коммита}}"
+
+msgid "{count, plural, one {Close # session?} other {Close # sessions?}}"
+msgstr "{count, plural, one {Закрыть # сессию?} few {Закрыть # сессии?} many {Закрыть # сессий?} other {Закрыть # сессии?}}"
+
+msgid "{count, plural, one {Close # session…} other {Close # sessions…}}"
+msgstr "{count, plural, one {Закрыть # сессию…} few {Закрыть # сессии…} many {Закрыть # сессий…} other {Закрыть # сессии…}}"
+
+msgid "{count, plural, one {Close # session} other {Close # sessions}}"
+msgstr "{count, plural, one {Закрыть # сессию} few {Закрыть # сессии} many {Закрыть # сессий} other {Закрыть # сессии}}"
 
 msgid "{count, plural, one {Created # workspace} other {Created # workspaces}}"
 msgstr "{count, plural, one {Создана # рабочая область} few {Создано # рабочие области} many {Создано # рабочих областей} other {Создано # рабочей области}}"
@@ -839,6 +860,9 @@ msgstr "{current} из {total}"
 msgid "{currentPage} of {totalBranches}"
 msgstr "{currentPage} из {totalBranches}"
 
+msgid "{days, plural, one {# day} other {# days}}"
+msgstr "{days, plural, one {# день} few {# дня} many {# дней} other {# дня}}"
+
 msgid "{days} at {time}"
 msgstr "{days} в {time}"
 
@@ -872,6 +896,9 @@ msgstr "{entryPath} в этом рабочем пространстве уже �
 
 msgid "{failed, plural, one {# failed} other {# failed}}"
 msgstr "{failed, plural, one {# не пройдено} few {# не пройдено} many {# не пройдено} other {# не пройдено}}"
+
+msgid "{failed, plural, one {# session could not be closed} other {# sessions could not be closed}}"
+msgstr "{failed, plural, one {Не удалось закрыть # сессию} few {Не удалось закрыть # сессии} many {Не удалось закрыть # сессий} other {Не удалось закрыть # сессии}}"
 
 msgid "{failing} of {total} check failing"
 msgstr "{failing} из {total} проверки не пройдена"
@@ -914,6 +941,9 @@ msgstr "{hostName} офлайн"
 
 msgid "{hotkeyText} to hide"
 msgstr "{hotkeyText} — скрыть"
+
+msgid "{hours} h"
+msgstr "{hours} ч"
 
 msgid "{hours}h"
 msgstr "{hours} ч."
@@ -1005,6 +1035,9 @@ msgstr "{noun, select, repository {Укажите хотя бы один реп�
 msgid "{openCount} open"
 msgstr "{openCount} открыто"
 
+msgid "{orphanCount, plural, one {# process · {total}} other {# processes · {total}}}"
+msgstr "{orphanCount, plural, one {# процесс · {total}} few {# процесса · {total}} many {# процессов · {total}} other {# процесса · {total}}}"
+
 msgid "{pageTitle} can read and change data in your {pluginLabel} account as you, including in future versions of this page. It can send what it reads to other websites. Only allow pages you trust."
 msgstr "{pageTitle} может от вашего имени читать и изменять данные в вашем аккаунте {pluginLabel}, в том числе в будущих версиях этой страницы. Прочитанное она может отправить на другие сайты. Разрешайте только страницам, которым доверяете."
 
@@ -1058,6 +1091,9 @@ msgstr "{presetLabel} сброшен к значениям по умолчани
 msgid "{previewSize}px · {0} line height"
 msgstr "{previewSize}px · высота строки {0}"
 
+msgid "{processCount, plural, one {# process} other {# processes}}"
+msgstr "{processCount, plural, one {# процесс} few {# процесса} many {# процессов} other {# процесса}}"
+
 msgid "{provider} logo"
 msgstr "логотип {provider}"
 
@@ -1092,6 +1128,9 @@ msgstr "{seconds} с назад"
 
 msgid "{selectedCount} selected"
 msgstr "Выбрано: {selectedCount}"
+
+msgid "{sessionCount, plural, one {# session · {total}} other {# sessions · {total}}}"
+msgstr "{sessionCount, plural, one {# сессия · {total}} few {# сессии · {total}} many {# сессий · {total}} other {# сессии · {total}}}"
 
 msgid "{share}% human"
 msgstr "{share}% человека"
@@ -3514,6 +3553,9 @@ msgstr "Изменить исполнителя"
 msgid "Change avatar"
 msgstr "Сменить аватар"
 
+msgid "Change how long without an answer"
+msgstr "Изменить время без ответа"
+
 msgid "Change icon"
 msgstr "Изменить значок"
 
@@ -4104,6 +4146,9 @@ msgstr "Закрыт"
 msgctxt "pull request or issue state"
 msgid "Closed"
 msgstr "Закрыто"
+
+msgid "Closed {title}"
+msgstr "Закрыто: {title}"
 
 msgid "Closing these ports will end the processes using them."
 msgstr "Закрытие этих портов завершит использующие их процессы."
@@ -4875,6 +4920,9 @@ msgstr "Скопировать относительный путь"
 msgid "Copy Relative Path"
 msgstr "Скопировать относительный путь"
 
+msgid "Copy resume command"
+msgstr "Копировать команду возобновления"
+
 msgid "Copy Selection"
 msgstr "Скопировать выделенное"
 
@@ -5124,6 +5172,9 @@ msgstr "Не удалось возобновить"
 
 msgid "Could not resume the chat"
 msgstr "Не удалось продолжить чат"
+
+msgid "Could not resume the session"
+msgstr "Не удалось возобновить сессию"
 
 msgid "Could not send"
 msgstr "Не удалось отправить"
@@ -5430,9 +5481,6 @@ msgstr "Не удалось проверить"
 
 msgid "CPU"
 msgstr "CPU"
-
-msgid "CPU cores"
-msgstr "Ядра CPU"
 
 msgid "Create"
 msgstr "Создать"
@@ -6206,6 +6254,9 @@ msgstr "Сведения здесь недоступны, но ссылка вс
 msgid "Dev"
 msgstr "Dev"
 
+msgid "Dev servers and tools whose agent or terminal is gone"
+msgstr "Dev-серверы и инструменты, чей агент или терминал больше не существует"
+
 msgid "Dev sign in"
 msgstr "Dev-вход"
 
@@ -6442,6 +6493,9 @@ msgstr "Сохранить изменения, внесённые в {0}?"
 
 msgid "Do you want to save the changes you made to {name}?"
 msgstr "Сохранить изменения, внесённые в {name}?"
+
+msgid "Docker VM"
+msgstr "VM Docker"
 
 msgid "Docs"
 msgstr "Документация"
@@ -8042,6 +8096,9 @@ msgstr "Бесплатно"
 msgid "Free for everyone"
 msgstr "Бесплатно для всех"
 
+msgid "Frees about {freed}. Each one can be resumed later from “Recently closed”."
+msgstr "Освобождает около {freed}. Каждую можно позже возобновить из раздела «Недавно закрытые»."
+
 msgid "Frequently<0/>asked questions"
 msgstr "Частые<0/>вопросы"
 
@@ -8718,6 +8775,9 @@ msgstr "Простаивает"
 msgid "Idle · branch pushed"
 msgstr "Простаивает · ветка отправлена"
 
+msgid "Idle agents I haven't answered for"
+msgstr "Простаивающие агенты без моего ответа дольше"
+
 msgid "Idle conversations"
 msgstr "Неактивные беседы"
 
@@ -9284,6 +9344,9 @@ msgstr "Собственная ветка и собственная копия �
 msgid "Its replies go with it."
 msgstr "Ответы тоже будут удалены."
 
+msgid "Its whole process tree gets SIGTERM, then SIGKILL after 3 seconds."
+msgstr "Всё его дерево процессов получает SIGTERM, а через 3 секунды — SIGKILL."
+
 msgid "Its workspaces and terminals are unavailable until it restarts — use the Superset tray menu > Host Service > Restart."
 msgstr "Её рабочие области и терминалы недоступны до перезапуска — откройте меню Superset в трее > Host Service > Restart."
 
@@ -9403,6 +9466,9 @@ msgstr "Горячие клавиши"
 
 msgid "Kill"
 msgstr "Завершить"
+
+msgid "Kill {pendingName} (pid {pendingPid})?"
+msgstr "Завершить {pendingName} (pid {pendingPid})?"
 
 msgid "Kill all"
 msgstr "Завершить все"
@@ -9637,6 +9703,9 @@ msgstr "Организация покинута"
 msgid "Left team"
 msgstr "Команда покинута"
 
+msgid "Leftover processes"
+msgstr "Оставшиеся процессы"
+
 msgid "Legal"
 msgstr "Правовое"
 
@@ -9823,6 +9892,9 @@ msgstr "Вживую"
 msgid "Live · local machine · every 2 s"
 msgstr "Вживую · локальная машина · каждые 2 с"
 
+msgid "Live · measured in {measuredMs} ms"
+msgstr "Вживую · измерено за {measuredMs} мс"
+
 msgid "Live in the app."
 msgstr "Уже в приложении."
 
@@ -9832,7 +9904,7 @@ msgstr "Живой предпросмотр"
 msgid "llms.txt (index for AI agents)"
 msgstr "llms.txt (индекс для AI-агентов)"
 
-msgid "Load (1 m)"
+msgid "Load (1 min)"
 msgstr "Нагрузка (1 мин)"
 
 msgid "load agent settings"
@@ -10017,6 +10089,9 @@ msgstr "Просмотр задач"
 
 msgid "Looking for a mobile simulator…"
 msgstr "Поиск мобильного симулятора…"
+
+msgid "Looking for agents…"
+msgstr "Поиск агентов…"
 
 msgid "Looking for installed browsers…"
 msgstr "Поиск установленных браузеров…"
@@ -10275,6 +10350,15 @@ msgstr "Участники не могут изменять роли"
 
 msgid "Memory"
 msgstr "Память"
+
+msgid "Memory is critical: close agents now"
+msgstr "Критическая нехватка памяти: закройте агенты сейчас"
+
+msgid "Memory is tight: close idle agents before starting another"
+msgstr "Памяти мало: закройте простаивающие агенты, прежде чем запускать новый"
+
+msgid "Memory pressure unknown"
+msgstr "Нагрузка на память неизвестна"
 
 msgid "Memory share"
 msgstr "Доля памяти"
@@ -10601,6 +10685,12 @@ msgstr "Микрофон выключен"
 
 msgid "My Agent"
 msgstr "Мой агент"
+
+msgid "My last message"
+msgstr "Моё последнее сообщение"
+
+msgid "My last msg"
+msgstr "Моё посл. сообщ."
 
 msgid "My Tasks"
 msgstr "Мои задачи"
@@ -10961,6 +11051,9 @@ msgstr "Разговоров агентов пока нет."
 msgid "No agent is configured on this host"
 msgstr "На этом хосте не настроен ни один агент"
 
+msgid "No agent running"
+msgstr "Нет запущенных агентов"
+
 #. placeholder {0}: host.name
 msgid "No agents configured on {0}"
 msgstr "На {0} не настроено ни одного агента"
@@ -11198,6 +11291,9 @@ msgstr "Метки не найдены."
 
 msgid "No lead"
 msgstr "Без руководителя"
+
+msgid "No leftover processes from closed agents"
+msgstr "Нет оставшихся процессов от закрытых агентов"
 
 msgid "No listening agents"
 msgstr "Нет агентов, получающих комментарии"
@@ -11611,6 +11707,9 @@ msgstr "Не выдано"
 msgid "Not included"
 msgstr "Не входит"
 
+msgid "Not killed: the process is gone or no longer an orphan"
+msgstr "Не завершён: процесс уже не существует или больше не осиротевший"
+
 msgid "Not loaded"
 msgstr "Не загружено"
 
@@ -11631,6 +11730,9 @@ msgstr "События пока не приходят: Microsoft Graph откл�
 
 msgid "Not reviewed by you"
 msgstr "Не проверено вами"
+
+msgid "Not running"
+msgstr "Не запущена"
 
 msgid "Not sent"
 msgstr "Не отправлено"
@@ -11765,6 +11867,9 @@ msgstr "Офлайн / local-first режим"
 
 msgid "Older"
 msgstr "Ранее"
+
+msgid "on {cores} cores"
+msgstr "на {cores} ядрах"
 
 msgid "on {offScopeHostName} — won't run here"
 msgstr "на {offScopeHostName} — здесь не запустится"
@@ -12276,6 +12381,9 @@ msgstr "Открыть недавние"
 
 msgid "Open roles"
 msgstr "Вакансии"
+
+msgid "Open session"
+msgstr "Открыть сессию"
 
 msgid "Open session in"
 msgstr "Открыть сессию в"
@@ -12905,6 +13013,9 @@ msgstr "Выберите агента для установки одной ст�
 
 msgid "PID"
 msgstr "PID"
+
+msgid "pid {orphanPid}"
+msgstr "pid {orphanPid}"
 
 msgid "Pin"
 msgstr "Закрепить"
@@ -13604,6 +13715,9 @@ msgstr "Radix поворачивает обёртку стрелки подск�
 msgid "Radix Tooltip docs"
 msgstr "Документация Radix Tooltip"
 
+msgid "RAM in use"
+msgstr "Используемая RAM"
+
 msgid "RAM Share"
 msgstr "Доля RAM"
 
@@ -13760,6 +13874,9 @@ msgstr "Недавние PR"
 
 msgid "Recent pull requests"
 msgstr "Недавние пул-реквесты"
+
+msgid "Recently closed"
+msgstr "Недавно закрытые"
 
 msgid "Recently deleted"
 msgstr "Недавно удалённые"
@@ -14481,6 +14598,12 @@ msgstr "Аргументы возобновления"
 msgid "Resume automation"
 msgstr "Возобновить автоматизацию"
 
+msgid "Resume reopens the conversation where it stopped"
+msgstr "Возобновление открывает разговор с того места, где он остановился"
+
+msgid "Resume them from “Recently closed”"
+msgstr "Возобновите их из раздела «Недавно закрытые»"
+
 #. placeholder {0}: candidate.agentLabel
 msgid "Resuming {0}…"
 msgstr "Возобновление {0}…"
@@ -14657,6 +14780,9 @@ msgstr "Роль обновлена"
 msgid "Roll back an agent session to any checkpoint, conversation and file changes together."
 msgstr "Откатите сессию агента к любой контрольной точке — вместе с диалогом и изменениями файлов."
 
+msgid "Room for another agent"
+msgstr "Есть место для ещё одного агента"
+
 msgid "Rotate"
 msgstr "Повернуть"
 
@@ -14796,6 +14922,9 @@ msgstr "Выполняется"
 
 msgid "Running \"{name}\" now"
 msgstr "«{name}» запускается"
+
+msgid "Running a command"
+msgstr "Выполняет команду"
 
 msgid "Running agents on this profile lose access."
 msgstr "Работающие агенты этого профиля потеряют доступ."
@@ -15718,6 +15847,9 @@ msgstr "Сочетание уже используется"
 msgid "Show"
 msgstr "Показать"
 
+msgid "Show {hiddenCount} more"
+msgstr "Показать ещё {hiddenCount}"
+
 msgid "Show a confirmation dialog when quitting the app"
 msgstr "Показывать подтверждение при выходе из приложения"
 
@@ -16197,6 +16329,9 @@ msgstr "скоро"
 
 msgid "Sort"
 msgstr "Сортировка"
+
+msgid "Sort agents"
+msgstr "Сортировать агентов"
 
 msgid "Sort by"
 msgstr "Сортировать по"
@@ -16890,6 +17025,9 @@ msgstr "Демо Superset Страницы"
 msgid "Superset Plugins"
 msgstr "Superset Плагины"
 
+msgid "Superset processes"
+msgstr "Процессы Superset"
+
 msgid "Superset raised an $11.5M seed round led by Union Square Ventures, with Y Combinator and Paul Graham. TechCrunch named it one of the standout startups from YC Demo Day."
 msgstr "Superset привлёк 11,5 млн долларов в посевном раунде под руководством Union Square Ventures при участии Y Combinator и Пола Грэма. TechCrunch назвал Superset одним из самых заметных стартапов YC Demo Day."
 
@@ -16944,6 +17082,9 @@ msgstr "Регулярность"
 
 msgid "Sustain · active days in 30"
 msgstr "Регулярность · активных дней из 30"
+
+msgid "Swap"
+msgstr "Swap"
 
 msgid "Switch agents. Keep your workflow"
 msgstr "Меняйте агентов. Процесс остаётся"
@@ -17058,9 +17199,6 @@ msgstr "Системная"
 
 msgid "System design"
 msgstr "Системный дизайн"
-
-msgid "System memory"
-msgstr "Системная память"
 
 msgid "System RAM share"
 msgstr "Доля системной RAM"
@@ -18649,6 +18787,9 @@ msgstr "Неизвестный проект"
 msgid "Unknown Project"
 msgstr "Неизвестный проект"
 
+msgid "Unknown state"
+msgstr "Неизвестное состояние"
+
 msgid "Unknown user"
 msgstr "Неизвестный пользователь"
 
@@ -19177,6 +19318,12 @@ msgstr "Ожидание входа…"
 
 msgid "Waiting for the subagent's first message…"
 msgstr "Ожидание первого сообщения субагента…"
+
+msgid "Waiting for you"
+msgstr "Ждёт вас"
+
+msgid "Waiting for you · {waitingFor}"
+msgstr "Ждёт вас · {waitingFor}"
 
 msgid "Waiting for your input"
 msgstr "Ждёт вашего ответа"

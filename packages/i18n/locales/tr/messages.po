@@ -34,6 +34,9 @@ msgstr "./"
 msgid ".sh"
 msgstr ".sh"
 
+msgid "· none right now"
+msgstr "· şu anda yok"
+
 msgid "· updated {updatedAgo}"
 msgstr "· güncelleme {updatedAgo}"
 
@@ -603,6 +606,9 @@ msgstr "tüm token'ların %{0} kadarı · {1} token"
 msgid "{0}% of total cost · {1} tokens · * at API list rates"
 msgstr "toplam maliyetin %{0} kadarı · {1} token · * API liste fiyatlarıyla"
 
+msgid "{activeCount, plural, one {# session is working or waiting for you: it stops mid-task.} other {# sessions are working or waiting for you: they stop mid-task.}}"
+msgstr "{activeCount, plural, one {# oturum çalışıyor veya sizi bekliyor: görevin ortasında durur.} other {# oturum çalışıyor veya sizi bekliyor: görevin ortasında durur.}}"
+
 msgid "{actor} added the label {label}"
 msgstr "{actor} {label} etiketini ekledi"
 
@@ -721,6 +727,9 @@ msgstr "{behindCount, plural, one {main dalının # commit gerisinde, rebase ger
 msgid "{branchPosition} of {totalBranches}"
 msgstr "{totalBranches} içinden {branchPosition}"
 
+msgid "{closed, plural, one {Closed # session} other {Closed # sessions}}"
+msgstr "{closed, plural, one {# oturum kapatıldı} other {# oturum kapatıldı}}"
+
 msgid "{closedCount, plural, one {Closed # port} other {Closed # ports}}"
 msgstr "{closedCount, plural, one {# port kapatıldı} other {# port kapatıldı}}"
 
@@ -745,6 +754,9 @@ msgstr "{connectorName} hesabı"
 
 msgid "{cookieCount} cookies — forget this site"
 msgstr "{cookieCount} çerez — bu siteyi unut"
+
+msgid "{count, plural, one {· # session, {freed}} other {· # sessions, {freed}}}"
+msgstr "{count, plural, one {· # oturum, {freed}} other {· # oturum, {freed}}}"
 
 msgid "{count, plural, one {# active port — show details} other {# active ports — show details}}"
 msgstr "{count, plural, one {# etkin port — ayrıntıları göster} other {# etkin port — ayrıntıları göster}}"
@@ -775,6 +787,15 @@ msgstr "{count, plural, one {Bu depodaki # worktree'nin çalışma alanı yok. �
 
 msgid "{count, plural, one {added a commit} other {added # commits}}"
 msgstr "{count, plural, one {bir commit ekledi} other {# commit ekledi}}"
+
+msgid "{count, plural, one {Close # session?} other {Close # sessions?}}"
+msgstr "{count, plural, one {# oturum kapatılsın mı?} other {# oturum kapatılsın mı?}}"
+
+msgid "{count, plural, one {Close # session…} other {Close # sessions…}}"
+msgstr "{count, plural, one {# oturumu kapat…} other {# oturumu kapat…}}"
+
+msgid "{count, plural, one {Close # session} other {Close # sessions}}"
+msgstr "{count, plural, one {# oturumu kapat} other {# oturumu kapat}}"
 
 msgid "{count, plural, one {Created # workspace} other {Created # workspaces}}"
 msgstr "{count, plural, one {# çalışma alanı oluşturuldu} other {# çalışma alanı oluşturuldu}}"
@@ -839,6 +860,9 @@ msgstr "{current} / {total}"
 msgid "{currentPage} of {totalBranches}"
 msgstr "{totalBranches} içinden {currentPage}"
 
+msgid "{days, plural, one {# day} other {# days}}"
+msgstr "{days, plural, one {# gün} other {# gün}}"
+
 msgid "{days} at {time}"
 msgstr "{days}, saat {time}"
 
@@ -872,6 +896,9 @@ msgstr "Bu çalışma alanındaki {entryPath} başka bir organizasyonda zaten sa
 
 msgid "{failed, plural, one {# failed} other {# failed}}"
 msgstr "{failed, plural, one {# başarısız} other {# başarısız}}"
+
+msgid "{failed, plural, one {# session could not be closed} other {# sessions could not be closed}}"
+msgstr "{failed, plural, one {# oturum kapatılamadı} other {# oturum kapatılamadı}}"
 
 msgid "{failing} of {total} check failing"
 msgstr "{total} kontrolden {failing} tanesi başarısız"
@@ -914,6 +941,9 @@ msgstr "{hostName} çevrimdışı"
 
 msgid "{hotkeyText} to hide"
 msgstr "gizlemek için {hotkeyText}"
+
+msgid "{hours} h"
+msgstr "{hours} sa"
 
 msgid "{hours}h"
 msgstr "{hours}sa"
@@ -1005,6 +1035,9 @@ msgstr "{noun, select, repository {En az bir depo belirtin.} channel {En az bir 
 msgid "{openCount} open"
 msgstr "{openCount} açık"
 
+msgid "{orphanCount, plural, one {# process · {total}} other {# processes · {total}}}"
+msgstr "{orphanCount, plural, one {# süreç · {total}} other {# süreç · {total}}}"
+
 msgid "{pageTitle} can read and change data in your {pluginLabel} account as you, including in future versions of this page. It can send what it reads to other websites. Only allow pages you trust."
 msgstr "{pageTitle}, sizin adınıza {pluginLabel} hesabınızdaki verileri okuyabilir ve değiştirebilir; bu, sayfanın gelecek sürümlerini de kapsar. Okuduklarını başka web sitelerine gönderebilir. Yalnızca güvendiğiniz sayfalara izin verin."
 
@@ -1058,6 +1091,9 @@ msgstr "{presetLabel} varsayılanlara sıfırlandı"
 msgid "{previewSize}px · {0} line height"
 msgstr "{previewSize}px · {0} satır yüksekliği"
 
+msgid "{processCount, plural, one {# process} other {# processes}}"
+msgstr "{processCount, plural, one {# süreç} other {# süreç}}"
+
 msgid "{provider} logo"
 msgstr "{provider} logosu"
 
@@ -1092,6 +1128,9 @@ msgstr "{seconds}sn önce"
 
 msgid "{selectedCount} selected"
 msgstr "{selectedCount} seçildi"
+
+msgid "{sessionCount, plural, one {# session · {total}} other {# sessions · {total}}}"
+msgstr "{sessionCount, plural, one {# oturum · {total}} other {# oturum · {total}}}"
 
 msgid "{share}% human"
 msgstr "%{share} insan"
@@ -3514,6 +3553,9 @@ msgstr "Atananı değiştir"
 msgid "Change avatar"
 msgstr "Avatarı değiştir"
 
+msgid "Change how long without an answer"
+msgstr "Yanıtsız kalma süresini değiştir"
+
 msgid "Change icon"
 msgstr "Simgeyi değiştir"
 
@@ -4104,6 +4146,9 @@ msgstr "Kapalı"
 msgctxt "pull request or issue state"
 msgid "Closed"
 msgstr "Kapalı"
+
+msgid "Closed {title}"
+msgstr "{title} kapatıldı"
 
 msgid "Closing these ports will end the processes using them."
 msgstr "Bu portları kapatmak, onları kullanan süreçleri sonlandırır."
@@ -4875,6 +4920,9 @@ msgstr "Göreli yolu kopyala"
 msgid "Copy Relative Path"
 msgstr "Göreli yolu kopyala"
 
+msgid "Copy resume command"
+msgstr "Devam komutunu kopyala"
+
 msgid "Copy Selection"
 msgstr "Seçimi kopyala"
 
@@ -5124,6 +5172,9 @@ msgstr "Devam ettirilemedi"
 
 msgid "Could not resume the chat"
 msgstr "Sohbete devam edilemedi"
+
+msgid "Could not resume the session"
+msgstr "Oturum sürdürülemedi"
 
 msgid "Could not send"
 msgstr "Gönderilemedi"
@@ -5430,9 +5481,6 @@ msgstr "Doğrulanamadı"
 
 msgid "CPU"
 msgstr "CPU"
-
-msgid "CPU cores"
-msgstr "CPU çekirdeği"
 
 msgid "Create"
 msgstr "Oluştur"
@@ -6206,6 +6254,9 @@ msgstr "Ayrıntılar burada görüntülenemiyor, ancak bağlantı yine de açıl
 msgid "Dev"
 msgstr "Geliştirme"
 
+msgid "Dev servers and tools whose agent or terminal is gone"
+msgstr "Ajanı veya terminali artık olmayan geliştirme sunucuları ve araçları"
+
 msgid "Dev sign in"
 msgstr "Dev oturum açma"
 
@@ -6442,6 +6493,9 @@ msgstr "{0} dosyasında yaptığınız değişiklikleri kaydetmek istiyor musunu
 
 msgid "Do you want to save the changes you made to {name}?"
 msgstr "{name} dosyasında yaptığınız değişiklikleri kaydetmek istiyor musunuz?"
+
+msgid "Docker VM"
+msgstr "Docker VM"
 
 msgid "Docs"
 msgstr "Belgeler"
@@ -8042,6 +8096,9 @@ msgstr "Ücretsiz"
 msgid "Free for everyone"
 msgstr "Herkes için ücretsiz"
 
+msgid "Frees about {freed}. Each one can be resumed later from “Recently closed”."
+msgstr "Yaklaşık {freed} boşaltır. Her biri daha sonra “Son kapatılanlar” bölümünden sürdürülebilir."
+
 msgid "Frequently<0/>asked questions"
 msgstr "Sık sorulan<0/>sorular"
 
@@ -8718,6 +8775,9 @@ msgstr "Boşta"
 msgid "Idle · branch pushed"
 msgstr "Boşta · dal push edildi"
 
+msgid "Idle agents I haven't answered for"
+msgstr "Yanıt vermediğim boştaki ajanlar, süre:"
+
 msgid "Idle conversations"
 msgstr "Boştaki konuşmalar"
 
@@ -9284,6 +9344,9 @@ msgstr "Kendi dalı ve dosyaların kendi kopyası"
 msgid "Its replies go with it."
 msgstr "Yanıtları da silinir."
 
+msgid "Its whole process tree gets SIGTERM, then SIGKILL after 3 seconds."
+msgstr "Tüm süreç ağacına SIGTERM, 3 saniye sonra da SIGKILL gönderilir."
+
 msgid "Its workspaces and terminals are unavailable until it restarts — use the Superset tray menu > Host Service > Restart."
 msgstr "Yeniden başlayana kadar çalışma alanları ve terminalleri kullanılamaz — Superset tepsi menüsünde Host hizmeti > Yeniden başlat yolunu kullanın."
 
@@ -9403,6 +9466,9 @@ msgstr "Klavye kısayolları"
 
 msgid "Kill"
 msgstr "Sonlandır"
+
+msgid "Kill {pendingName} (pid {pendingPid})?"
+msgstr "{pendingName} (pid {pendingPid}) sonlandırılsın mı?"
 
 msgid "Kill all"
 msgstr "Tümünü sonlandır"
@@ -9637,6 +9703,9 @@ msgstr "Kuruluştan ayrılındı"
 msgid "Left team"
 msgstr "Takımdan ayrılındı"
 
+msgid "Leftover processes"
+msgstr "Artakalan süreçler"
+
 msgid "Legal"
 msgstr "Yasal"
 
@@ -9823,6 +9892,9 @@ msgstr "Canlı"
 msgid "Live · local machine · every 2 s"
 msgstr "Canlı · yerel makine · her 2 sn"
 
+msgid "Live · measured in {measuredMs} ms"
+msgstr "Canlı · {measuredMs} ms içinde ölçüldü"
+
 msgid "Live in the app."
 msgstr "Uygulamada yayında."
 
@@ -9832,7 +9904,7 @@ msgstr "Canlı önizleme"
 msgid "llms.txt (index for AI agents)"
 msgstr "llms.txt (AI ajanları için dizin)"
 
-msgid "Load (1 m)"
+msgid "Load (1 min)"
 msgstr "Yük (1 dk)"
 
 msgid "load agent settings"
@@ -10017,6 +10089,9 @@ msgstr "Görevlere bakılıyor"
 
 msgid "Looking for a mobile simulator…"
 msgstr "Mobil simülatör aranıyor…"
+
+msgid "Looking for agents…"
+msgstr "Ajanlar aranıyor…"
 
 msgid "Looking for installed browsers…"
 msgstr "Kurulu tarayıcılar aranıyor…"
@@ -10275,6 +10350,15 @@ msgstr "Üyeler rolleri değiştiremez"
 
 msgid "Memory"
 msgstr "Bellek"
+
+msgid "Memory is critical: close agents now"
+msgstr "Bellek kritik: ajanları şimdi kapatın"
+
+msgid "Memory is tight: close idle agents before starting another"
+msgstr "Bellek sıkışık: başka bir ajan başlatmadan önce boştaki ajanları kapatın"
+
+msgid "Memory pressure unknown"
+msgstr "Bellek baskısı bilinmiyor"
 
 msgid "Memory share"
 msgstr "Bellek payı"
@@ -10601,6 +10685,12 @@ msgstr "Sessizde"
 
 msgid "My Agent"
 msgstr "Ajanım"
+
+msgid "My last message"
+msgstr "Son mesajım"
+
+msgid "My last msg"
+msgstr "Son msjım"
 
 msgid "My Tasks"
 msgstr "Görevlerim"
@@ -10961,6 +11051,9 @@ msgstr "Henüz ajan konuşması yok."
 msgid "No agent is configured on this host"
 msgstr "Bu ana makinede yapılandırılmış bir ajan yok"
 
+msgid "No agent running"
+msgstr "Çalışan ajan yok"
+
 #. placeholder {0}: host.name
 msgid "No agents configured on {0}"
 msgstr "{0} üzerinde yapılandırılmış ajan yok"
@@ -11198,6 +11291,9 @@ msgstr "Etiket bulunamadı."
 
 msgid "No lead"
 msgstr "Lider yok"
+
+msgid "No leftover processes from closed agents"
+msgstr "Kapatılan ajanlardan artakalan süreç yok"
 
 msgid "No listening agents"
 msgstr "Dinleyen ajan yok"
@@ -11611,6 +11707,9 @@ msgstr "Verilmedi"
 msgid "Not included"
 msgstr "Dahil değil"
 
+msgid "Not killed: the process is gone or no longer an orphan"
+msgstr "Sonlandırılmadı: süreç artık yok veya artık öksüz değil"
+
 msgid "Not loaded"
 msgstr "Yüklenmedi"
 
@@ -11631,6 +11730,9 @@ msgstr "Henüz olay alınmıyor: Microsoft Graph bildirim aboneliklerini reddett
 
 msgid "Not reviewed by you"
 msgstr "Sizin incelemediğiniz"
+
+msgid "Not running"
+msgstr "Çalışmıyor"
 
 msgid "Not sent"
 msgstr "Gönderilmedi"
@@ -11765,6 +11867,9 @@ msgstr "Çevrimdışı / yerel öncelikli mod"
 
 msgid "Older"
 msgstr "Daha eski"
+
+msgid "on {cores} cores"
+msgstr "{cores} çekirdekte"
 
 msgid "on {offScopeHostName} — won't run here"
 msgstr "{offScopeHostName} üzerinde — burada çalışmaz"
@@ -12276,6 +12381,9 @@ msgstr "Son kullanılanı aç"
 
 msgid "Open roles"
 msgstr "Açık pozisyonlar"
+
+msgid "Open session"
+msgstr "Oturumu aç"
 
 msgid "Open session in"
 msgstr "Oturumu şurada aç"
@@ -12905,6 +13013,9 @@ msgstr "Tek satırlık kurulum için ajanınızı seçin veya yapılandırmayı 
 
 msgid "PID"
 msgstr "PID"
+
+msgid "pid {orphanPid}"
+msgstr "pid {orphanPid}"
 
 msgid "Pin"
 msgstr "Sabitle"
@@ -13604,6 +13715,9 @@ msgstr "Radix, tooltip ok sarmalayıcısını her yön için döndürür,"
 msgid "Radix Tooltip docs"
 msgstr "Radix Tooltip belgeleri"
 
+msgid "RAM in use"
+msgstr "Kullanımdaki RAM"
+
 msgid "RAM Share"
 msgstr "RAM payı"
 
@@ -13760,6 +13874,9 @@ msgstr "Son PR'lar"
 
 msgid "Recent pull requests"
 msgstr "Son pull request'ler"
+
+msgid "Recently closed"
+msgstr "Son kapatılanlar"
 
 msgid "Recently deleted"
 msgstr "Son silinenler"
@@ -14481,6 +14598,12 @@ msgstr "Sürdürme argümanları"
 msgid "Resume automation"
 msgstr "Otomasyonu sürdür"
 
+msgid "Resume reopens the conversation where it stopped"
+msgstr "Sürdür, konuşmayı kaldığı yerden yeniden açar"
+
+msgid "Resume them from “Recently closed”"
+msgstr "Bunları “Son kapatılanlar” bölümünden sürdürün"
+
 #. placeholder {0}: candidate.agentLabel
 msgid "Resuming {0}…"
 msgstr "{0} sürdürülüyor…"
@@ -14657,6 +14780,9 @@ msgstr "Rol güncellendi"
 msgid "Roll back an agent session to any checkpoint, conversation and file changes together."
 msgstr "Bir ajan oturumunu, konuşma ve dosya değişiklikleriyle birlikte herhangi bir kontrol noktasına geri alın."
 
+msgid "Room for another agent"
+msgstr "Bir ajan için daha yer var"
+
 msgid "Rotate"
 msgstr "Döndür"
 
@@ -14796,6 +14922,9 @@ msgstr "Çalışıyor"
 
 msgid "Running \"{name}\" now"
 msgstr "\"{name}\" şimdi çalıştırılıyor"
+
+msgid "Running a command"
+msgstr "Komut çalıştırıyor"
 
 msgid "Running agents on this profile lose access."
 msgstr "Bu profildeki çalışan ajanlar erişimini kaybeder."
@@ -15718,6 +15847,9 @@ msgstr "Kısayol zaten kullanımda"
 msgid "Show"
 msgstr "Göster"
 
+msgid "Show {hiddenCount} more"
+msgstr "{hiddenCount} tane daha göster"
+
 msgid "Show a confirmation dialog when quitting the app"
 msgstr "Uygulamadan çıkarken onay penceresi göster"
 
@@ -16197,6 +16329,9 @@ msgstr "yakında"
 
 msgid "Sort"
 msgstr "Sırala"
+
+msgid "Sort agents"
+msgstr "Ajanları sırala"
 
 msgid "Sort by"
 msgstr "Sıralama ölçütü"
@@ -16890,6 +17025,9 @@ msgstr "Superset Sayfalar demosu"
 msgid "Superset Plugins"
 msgstr "Superset Eklentileri"
 
+msgid "Superset processes"
+msgstr "Superset süreçleri"
+
 msgid "Superset raised an $11.5M seed round led by Union Square Ventures, with Y Combinator and Paul Graham. TechCrunch named it one of the standout startups from YC Demo Day."
 msgstr "Superset, Union Square Ventures liderliğinde, Y Combinator ve Paul Graham'ın katılımıyla 11,5 milyon dolarlık tohum yatırımı aldı. TechCrunch, Superset'i YC Demo Day'in öne çıkan girişimlerinden biri olarak gösterdi."
 
@@ -16944,6 +17082,9 @@ msgstr "Süreklilik"
 
 msgid "Sustain · active days in 30"
 msgstr "Süreklilik · 30 günde etkin gün"
+
+msgid "Swap"
+msgstr "Swap"
 
 msgid "Switch agents. Keep your workflow"
 msgstr "Ajan değiştirin. İş akışınızı koruyun"
@@ -17058,9 +17199,6 @@ msgstr "Sistem"
 
 msgid "System design"
 msgstr "Sistem tasarımı"
-
-msgid "System memory"
-msgstr "Sistem belleği"
 
 msgid "System RAM share"
 msgstr "Sistem RAM payı"
@@ -18649,6 +18787,9 @@ msgstr "Bilinmeyen proje"
 msgid "Unknown Project"
 msgstr "Bilinmeyen proje"
 
+msgid "Unknown state"
+msgstr "Bilinmeyen durum"
+
 msgid "Unknown user"
 msgstr "Bilinmeyen kullanıcı"
 
@@ -19177,6 +19318,12 @@ msgstr "Oturum açma bekleniyor…"
 
 msgid "Waiting for the subagent's first message…"
 msgstr "Alt ajanın ilk mesajı bekleniyor…"
+
+msgid "Waiting for you"
+msgstr "Sizi bekliyor"
+
+msgid "Waiting for you · {waitingFor}"
+msgstr "Sizi bekliyor · {waitingFor}"
 
 msgid "Waiting for your input"
 msgstr "Girdinizi bekliyor"

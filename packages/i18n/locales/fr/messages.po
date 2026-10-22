@@ -34,6 +34,9 @@ msgstr "./"
 msgid ".sh"
 msgstr ".sh"
 
+msgid "· none right now"
+msgstr "· aucun pour l'instant"
+
 msgid "· updated {updatedAgo}"
 msgstr "· mise à jour {updatedAgo}"
 
@@ -603,6 +606,9 @@ msgstr "{0} % de tous les tokens · {1} tokens"
 msgid "{0}% of total cost · {1} tokens · * at API list rates"
 msgstr "{0} % du coût total · {1} tokens · * aux tarifs publics de l'API"
 
+msgid "{activeCount, plural, one {# session is working or waiting for you: it stops mid-task.} other {# sessions are working or waiting for you: they stop mid-task.}}"
+msgstr "{activeCount, plural, one {# session travaille ou vous attend : elle s'arrête en pleine tâche.} other {# sessions travaillent ou vous attendent : elles s'arrêtent en pleine tâche.}}"
+
 msgid "{actor} added the label {label}"
 msgstr "{actor} a ajouté le libellé {label}"
 
@@ -721,6 +727,9 @@ msgstr "{behindCount, plural, one {En retard de # commit sur main, rebase néces
 msgid "{branchPosition} of {totalBranches}"
 msgstr "{branchPosition} sur {totalBranches}"
 
+msgid "{closed, plural, one {Closed # session} other {Closed # sessions}}"
+msgstr "{closed, plural, one {Session fermée : #} other {Sessions fermées : #}}"
+
 msgid "{closedCount, plural, one {Closed # port} other {Closed # ports}}"
 msgstr "{closedCount, plural, one {# port fermé} other {# ports fermés}}"
 
@@ -745,6 +754,9 @@ msgstr "Compte {connectorName}"
 
 msgid "{cookieCount} cookies — forget this site"
 msgstr "{cookieCount} cookies — oublier ce site"
+
+msgid "{count, plural, one {· # session, {freed}} other {· # sessions, {freed}}}"
+msgstr "{count, plural, one {· # session, {freed}} other {· # sessions, {freed}}}"
 
 msgid "{count, plural, one {# active port — show details} other {# active ports — show details}}"
 msgstr "{count, plural, one {# port actif — afficher les détails} other {# ports actifs — afficher les détails}}"
@@ -775,6 +787,15 @@ msgstr "{count, plural, one {# worktree de ce dépôt n'a pas d'espace de travai
 
 msgid "{count, plural, one {added a commit} other {added # commits}}"
 msgstr "{count, plural, one {a ajouté un commit} other {a ajouté # commits}}"
+
+msgid "{count, plural, one {Close # session?} other {Close # sessions?}}"
+msgstr "{count, plural, one {Fermer # session ?} other {Fermer # sessions ?}}"
+
+msgid "{count, plural, one {Close # session…} other {Close # sessions…}}"
+msgstr "{count, plural, one {Fermer # session…} other {Fermer # sessions…}}"
+
+msgid "{count, plural, one {Close # session} other {Close # sessions}}"
+msgstr "{count, plural, one {Fermer # session} other {Fermer # sessions}}"
 
 msgid "{count, plural, one {Created # workspace} other {Created # workspaces}}"
 msgstr "{count, plural, one {# espace de travail créé} other {# espaces de travail créés}}"
@@ -839,6 +860,9 @@ msgstr "{current} sur {total}"
 msgid "{currentPage} of {totalBranches}"
 msgstr "{currentPage} sur {totalBranches}"
 
+msgid "{days, plural, one {# day} other {# days}}"
+msgstr "{days, plural, one {# jour} other {# jours}}"
+
 msgid "{days} at {time}"
 msgstr "{days} à {time}"
 
@@ -872,6 +896,9 @@ msgstr "{entryPath} de cet espace de travail est déjà publié comme page dans 
 
 msgid "{failed, plural, one {# failed} other {# failed}}"
 msgstr "{failed, plural, one {# en échec} other {# en échec}}"
+
+msgid "{failed, plural, one {# session could not be closed} other {# sessions could not be closed}}"
+msgstr "{failed, plural, one {# session n'a pas pu être fermée} other {# sessions n'ont pas pu être fermées}}"
 
 msgid "{failing} of {total} check failing"
 msgstr "{failing} vérification sur {total} en échec"
@@ -914,6 +941,9 @@ msgstr "{hostName} est hors ligne"
 
 msgid "{hotkeyText} to hide"
 msgstr "{hotkeyText} pour masquer"
+
+msgid "{hours} h"
+msgstr "{hours} h"
 
 msgid "{hours}h"
 msgstr "{hours} h"
@@ -1005,6 +1035,9 @@ msgstr "{noun, select, repository {Indiquez au moins un dépôt.} channel {Indiq
 msgid "{openCount} open"
 msgstr "{openCount} ouvertes"
 
+msgid "{orphanCount, plural, one {# process · {total}} other {# processes · {total}}}"
+msgstr "{orphanCount, plural, one {# processus · {total}} other {# processus · {total}}}"
+
 msgid "{pageTitle} can read and change data in your {pluginLabel} account as you, including in future versions of this page. It can send what it reads to other websites. Only allow pages you trust."
 msgstr "{pageTitle} peut lire et modifier les données de votre compte {pluginLabel} en votre nom, y compris dans les futures versions de cette page. Elle peut envoyer ce qu’elle lit à d’autres sites web. N’autorisez que les pages de confiance."
 
@@ -1058,6 +1091,9 @@ msgstr "{presetLabel} réinitialisé aux valeurs par défaut"
 msgid "{previewSize}px · {0} line height"
 msgstr "{previewSize} px · interligne {0}"
 
+msgid "{processCount, plural, one {# process} other {# processes}}"
+msgstr "{processCount, plural, one {# processus} other {# processus}}"
+
 msgid "{provider} logo"
 msgstr "Logo {provider}"
 
@@ -1092,6 +1128,9 @@ msgstr "il y a {seconds} s"
 
 msgid "{selectedCount} selected"
 msgstr "{selectedCount} sélectionnées"
+
+msgid "{sessionCount, plural, one {# session · {total}} other {# sessions · {total}}}"
+msgstr "{sessionCount, plural, one {# session · {total}} other {# sessions · {total}}}"
 
 msgid "{share}% human"
 msgstr "{share} % humain"
@@ -3514,6 +3553,9 @@ msgstr "Changer l'assigné"
 msgid "Change avatar"
 msgstr "Changer d'avatar"
 
+msgid "Change how long without an answer"
+msgstr "Modifier la durée sans réponse"
+
 msgid "Change icon"
 msgstr "Changer l’icône"
 
@@ -4104,6 +4146,9 @@ msgstr "Fermée"
 msgctxt "pull request or issue state"
 msgid "Closed"
 msgstr "Fermée"
+
+msgid "Closed {title}"
+msgstr "Fermée : {title}"
 
 msgid "Closing these ports will end the processes using them."
 msgstr "Fermer ces ports mettra fin aux processus qui les utilisent."
@@ -4875,6 +4920,9 @@ msgstr "Copier le chemin relatif"
 msgid "Copy Relative Path"
 msgstr "Copier le chemin relatif"
 
+msgid "Copy resume command"
+msgstr "Copier la commande de reprise"
+
 msgid "Copy Selection"
 msgstr "Copier la sélection"
 
@@ -5124,6 +5172,9 @@ msgstr "Impossible de reprendre"
 
 msgid "Could not resume the chat"
 msgstr "Impossible de reprendre la discussion"
+
+msgid "Could not resume the session"
+msgstr "Impossible de reprendre la session"
 
 msgid "Could not send"
 msgstr "Échec de l'envoi"
@@ -5430,9 +5481,6 @@ msgstr "Vérification impossible"
 
 msgid "CPU"
 msgstr "CPU"
-
-msgid "CPU cores"
-msgstr "Cœurs CPU"
 
 msgid "Create"
 msgstr "Créer"
@@ -6206,6 +6254,9 @@ msgstr "Les détails ne sont pas disponibles ici, mais le lien s'ouvre quand mê
 msgid "Dev"
 msgstr "Dev"
 
+msgid "Dev servers and tools whose agent or terminal is gone"
+msgstr "Serveurs de dev et outils dont l'agent ou le terminal a disparu"
+
 msgid "Dev sign in"
 msgstr "Connexion dev"
 
@@ -6442,6 +6493,9 @@ msgstr "Voulez-vous enregistrer les modifications apportées à {0} ?"
 
 msgid "Do you want to save the changes you made to {name}?"
 msgstr "Voulez-vous enregistrer les modifications apportées à {name} ?"
+
+msgid "Docker VM"
+msgstr "VM Docker"
 
 msgid "Docs"
 msgstr "Docs"
@@ -8042,6 +8096,9 @@ msgstr "Free"
 msgid "Free for everyone"
 msgstr "Gratuit pour tout le monde"
 
+msgid "Frees about {freed}. Each one can be resumed later from “Recently closed”."
+msgstr "Libère environ {freed}. Chacune pourra être reprise plus tard depuis « Fermées récemment »."
+
 msgid "Frequently<0/>asked questions"
 msgstr "Questions<0/>fréquentes"
 
@@ -8718,6 +8775,9 @@ msgstr "Inactif"
 msgid "Idle · branch pushed"
 msgstr "Inactif · branche poussée"
 
+msgid "Idle agents I haven't answered for"
+msgstr "Agents inactifs sans réponse de ma part depuis"
+
 msgid "Idle conversations"
 msgstr "Conversations inactives"
 
@@ -9284,6 +9344,9 @@ msgstr "Sa propre branche et sa propre copie des fichiers"
 msgid "Its replies go with it."
 msgstr "Ses réponses seront aussi supprimées."
 
+msgid "Its whole process tree gets SIGTERM, then SIGKILL after 3 seconds."
+msgstr "Toute son arborescence de processus reçoit SIGTERM, puis SIGKILL au bout de 3 secondes."
+
 msgid "Its workspaces and terminals are unavailable until it restarts — use the Superset tray menu > Host Service > Restart."
 msgstr "Ses espaces de travail et terminaux sont indisponibles jusqu'à son redémarrage — utilisez le menu de la barre d'état Superset > Service hôte > Redémarrer."
 
@@ -9403,6 +9466,9 @@ msgstr "Raccourcis clavier"
 
 msgid "Kill"
 msgstr "Arrêter"
+
+msgid "Kill {pendingName} (pid {pendingPid})?"
+msgstr "Tuer {pendingName} (pid {pendingPid}) ?"
 
 msgid "Kill all"
 msgstr "Tout arrêter"
@@ -9637,6 +9703,9 @@ msgstr "Organisation quittée"
 msgid "Left team"
 msgstr "Équipe quittée"
 
+msgid "Leftover processes"
+msgstr "Processus résiduels"
+
 msgid "Legal"
 msgstr "Mentions légales"
 
@@ -9823,6 +9892,9 @@ msgstr "En direct"
 msgid "Live · local machine · every 2 s"
 msgstr "En direct · machine locale · toutes les 2 s"
 
+msgid "Live · measured in {measuredMs} ms"
+msgstr "En direct · mesuré en {measuredMs} ms"
+
 msgid "Live in the app."
 msgstr "Disponible dans l'application."
 
@@ -9832,7 +9904,7 @@ msgstr "Aperçu en direct"
 msgid "llms.txt (index for AI agents)"
 msgstr "llms.txt (index pour les agents IA)"
 
-msgid "Load (1 m)"
+msgid "Load (1 min)"
 msgstr "Charge (1 min)"
 
 msgid "load agent settings"
@@ -10017,6 +10089,9 @@ msgstr "Consultation des tâches"
 
 msgid "Looking for a mobile simulator…"
 msgstr "Recherche d’un simulateur mobile…"
+
+msgid "Looking for agents…"
+msgstr "Recherche des agents…"
 
 msgid "Looking for installed browsers…"
 msgstr "Recherche des navigateurs installés…"
@@ -10275,6 +10350,15 @@ msgstr "Les membres ne peuvent pas modifier les rôles"
 
 msgid "Memory"
 msgstr "Mémoire"
+
+msgid "Memory is critical: close agents now"
+msgstr "Mémoire critique : fermez des agents maintenant"
+
+msgid "Memory is tight: close idle agents before starting another"
+msgstr "Mémoire presque pleine : fermez les agents inactifs avant d'en lancer un autre"
+
+msgid "Memory pressure unknown"
+msgstr "Pression mémoire inconnue"
 
 msgid "Memory share"
 msgstr "Part de mémoire"
@@ -10601,6 +10685,12 @@ msgstr "Micro coupé"
 
 msgid "My Agent"
 msgstr "Mon agent"
+
+msgid "My last message"
+msgstr "Mon dernier message"
+
+msgid "My last msg"
+msgstr "Mon dernier msg"
 
 msgid "My Tasks"
 msgstr "Mes tâches"
@@ -10961,6 +11051,9 @@ msgstr "Aucune conversation d'agent pour l'instant."
 msgid "No agent is configured on this host"
 msgstr "Aucun agent n'est configuré sur cet hôte"
 
+msgid "No agent running"
+msgstr "Aucun agent en cours"
+
 #. placeholder {0}: host.name
 msgid "No agents configured on {0}"
 msgstr "Aucun agent configuré sur {0}"
@@ -11198,6 +11291,9 @@ msgstr "Aucune étiquette trouvée."
 
 msgid "No lead"
 msgstr "Aucun responsable"
+
+msgid "No leftover processes from closed agents"
+msgstr "Aucun processus résiduel d'agents fermés"
 
 msgid "No listening agents"
 msgstr "Aucun agent à l’écoute"
@@ -11611,6 +11707,9 @@ msgstr "Non accordée"
 msgid "Not included"
 msgstr "Non inclus"
 
+msgid "Not killed: the process is gone or no longer an orphan"
+msgstr "Non tué : le processus a disparu ou n'est plus orphelin"
+
 msgid "Not loaded"
 msgstr "Non chargée"
 
@@ -11631,6 +11730,9 @@ msgstr "Aucun événement reçu pour l'instant : Microsoft Graph a refusé les a
 
 msgid "Not reviewed by you"
 msgstr "Non revues par vous"
+
+msgid "Not running"
+msgstr "Arrêtée"
 
 msgid "Not sent"
 msgstr "Non envoyé"
@@ -11765,6 +11867,9 @@ msgstr "Mode hors ligne / local d'abord"
 
 msgid "Older"
 msgstr "Plus ancien"
+
+msgid "on {cores} cores"
+msgstr "sur {cores} cœurs"
 
 msgid "on {offScopeHostName} — won't run here"
 msgstr "sur {offScopeHostName} — ne s'exécutera pas ici"
@@ -12276,6 +12381,9 @@ msgstr "Ouvrir récent"
 
 msgid "Open roles"
 msgstr "Postes ouverts"
+
+msgid "Open session"
+msgstr "Ouvrir la session"
 
 msgid "Open session in"
 msgstr "Ouvrir la session dans"
@@ -12905,6 +13013,9 @@ msgstr "Choisissez votre agent pour une installation en une ligne, ou copiez la 
 
 msgid "PID"
 msgstr "PID"
+
+msgid "pid {orphanPid}"
+msgstr "pid {orphanPid}"
 
 msgid "Pin"
 msgstr "Épingler"
@@ -13604,6 +13715,9 @@ msgstr "Radix fait pivoter le conteneur de la flèche du tooltip selon le côté
 msgid "Radix Tooltip docs"
 msgstr "Documentation Radix Tooltip"
 
+msgid "RAM in use"
+msgstr "RAM utilisée"
+
 msgid "RAM Share"
 msgstr "Part de RAM"
 
@@ -13760,6 +13874,9 @@ msgstr "Pull requests récentes"
 
 msgid "Recent pull requests"
 msgstr "Pull requests récentes"
+
+msgid "Recently closed"
+msgstr "Fermées récemment"
 
 msgid "Recently deleted"
 msgstr "Supprimés récemment"
@@ -14481,6 +14598,12 @@ msgstr "Arguments de reprise"
 msgid "Resume automation"
 msgstr "Reprendre l'automatisation"
 
+msgid "Resume reopens the conversation where it stopped"
+msgstr "Reprendre rouvre la conversation là où elle s'est arrêtée"
+
+msgid "Resume them from “Recently closed”"
+msgstr "Reprenez-les depuis « Fermées récemment »"
+
 #. placeholder {0}: candidate.agentLabel
 msgid "Resuming {0}…"
 msgstr "Reprise de {0}…"
@@ -14657,6 +14780,9 @@ msgstr "Rôle mis à jour"
 msgid "Roll back an agent session to any checkpoint, conversation and file changes together."
 msgstr "Ramenez une session d'agent à n'importe quel point de contrôle, conversation et changements de fichiers compris."
 
+msgid "Room for another agent"
+msgstr "De la place pour un autre agent"
+
 msgid "Rotate"
 msgstr "Faire pivoter"
 
@@ -14796,6 +14922,9 @@ msgstr "En cours"
 
 msgid "Running \"{name}\" now"
 msgstr "Exécution de « {name} » en cours"
+
+msgid "Running a command"
+msgstr "Exécute une commande"
 
 msgid "Running agents on this profile lose access."
 msgstr "Les agents en cours sur ce profil perdent l'accès."
@@ -15718,6 +15847,9 @@ msgstr "Raccourci déjà utilisé"
 msgid "Show"
 msgstr "Afficher"
 
+msgid "Show {hiddenCount} more"
+msgstr "Afficher {hiddenCount} de plus"
+
 msgid "Show a confirmation dialog when quitting the app"
 msgstr "Afficher une boîte de dialogue de confirmation à la fermeture de l'application"
 
@@ -16197,6 +16329,9 @@ msgstr "bientôt"
 
 msgid "Sort"
 msgstr "Tri"
+
+msgid "Sort agents"
+msgstr "Trier les agents"
 
 msgid "Sort by"
 msgstr "Trier par"
@@ -16890,6 +17025,9 @@ msgstr "Démo de Superset Pages"
 msgid "Superset Plugins"
 msgstr "Plugins Superset"
 
+msgid "Superset processes"
+msgstr "Processus Superset"
+
 msgid "Superset raised an $11.5M seed round led by Union Square Ventures, with Y Combinator and Paul Graham. TechCrunch named it one of the standout startups from YC Demo Day."
 msgstr "Superset a levé un tour de table d’amorçage de 11,5 millions de dollars mené par Union Square Ventures, avec Y Combinator et Paul Graham. TechCrunch l’a cité parmi les startups les plus remarquables du YC Demo Day."
 
@@ -16944,6 +17082,9 @@ msgstr "Régularité"
 
 msgid "Sustain · active days in 30"
 msgstr "Régularité · jours actifs sur 30"
+
+msgid "Swap"
+msgstr "Swap"
 
 msgid "Switch agents. Keep your workflow"
 msgstr "Changez d'agent. Gardez votre flux de travail"
@@ -17058,9 +17199,6 @@ msgstr "Système"
 
 msgid "System design"
 msgstr "Conception de système"
-
-msgid "System memory"
-msgstr "Mémoire système"
 
 msgid "System RAM share"
 msgstr "Part de la RAM système"
@@ -18649,6 +18787,9 @@ msgstr "Projet inconnu"
 msgid "Unknown Project"
 msgstr "Projet inconnu"
 
+msgid "Unknown state"
+msgstr "État inconnu"
+
 msgid "Unknown user"
 msgstr "Utilisateur inconnu"
 
@@ -19177,6 +19318,12 @@ msgstr "En attente de la connexion…"
 
 msgid "Waiting for the subagent's first message…"
 msgstr "En attente du premier message du sous-agent…"
+
+msgid "Waiting for you"
+msgstr "Vous attend"
+
+msgid "Waiting for you · {waitingFor}"
+msgstr "Vous attend · {waitingFor}"
 
 msgid "Waiting for your input"
 msgstr "En attente de votre réponse"

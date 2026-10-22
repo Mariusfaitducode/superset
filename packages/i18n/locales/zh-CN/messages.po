@@ -34,6 +34,9 @@ msgstr "./"
 msgid ".sh"
 msgstr ".sh"
 
+msgid "· none right now"
+msgstr "· 目前没有"
+
 msgid "· updated {updatedAgo}"
 msgstr "· 更新于{updatedAgo}"
 
@@ -603,6 +606,9 @@ msgstr "占全部token的{0}% · {1}个token"
 msgid "{0}% of total cost · {1} tokens · * at API list rates"
 msgstr "占总费用的{0}% · {1}个token · * 按API标价计算"
 
+msgid "{activeCount, plural, one {# session is working or waiting for you: it stops mid-task.} other {# sessions are working or waiting for you: they stop mid-task.}}"
+msgstr "{activeCount, plural, one {# 个会话正在工作或等待你回复：它们会在任务中途停止。} other {# 个会话正在工作或等待你回复：它们会在任务中途停止。}}"
+
 msgid "{actor} added the label {label}"
 msgstr "{actor} 添加了标签 {label}"
 
@@ -721,6 +727,9 @@ msgstr "{behindCount, plural, one {落后main #个提交，需要变基} other {
 msgid "{branchPosition} of {totalBranches}"
 msgstr "{branchPosition}/{totalBranches}"
 
+msgid "{closed, plural, one {Closed # session} other {Closed # sessions}}"
+msgstr "{closed, plural, one {已关闭 # 个会话} other {已关闭 # 个会话}}"
+
 msgid "{closedCount, plural, one {Closed # port} other {Closed # ports}}"
 msgstr "{closedCount, plural, one {已关闭#个端口} other {已关闭#个端口}}"
 
@@ -745,6 +754,9 @@ msgstr "{connectorName} 账号"
 
 msgid "{cookieCount} cookies — forget this site"
 msgstr "{cookieCount}个cookie——忘记此站点"
+
+msgid "{count, plural, one {· # session, {freed}} other {· # sessions, {freed}}}"
+msgstr "{count, plural, one {· # 个会话，{freed}} other {· # 个会话，{freed}}}"
 
 msgid "{count, plural, one {# active port — show details} other {# active ports — show details}}"
 msgstr "{count, plural, one {#个活动端口 — 显示详情} other {#个活动端口 — 显示详情}}"
@@ -775,6 +787,15 @@ msgstr "{count, plural, one {此仓库中有#个worktree没有对应的工作区
 
 msgid "{count, plural, one {added a commit} other {added # commits}}"
 msgstr "{count, plural, one {添加了#个提交} other {添加了#个提交}}"
+
+msgid "{count, plural, one {Close # session?} other {Close # sessions?}}"
+msgstr "{count, plural, one {关闭 # 个会话？} other {关闭 # 个会话？}}"
+
+msgid "{count, plural, one {Close # session…} other {Close # sessions…}}"
+msgstr "{count, plural, one {关闭 # 个会话…} other {关闭 # 个会话…}}"
+
+msgid "{count, plural, one {Close # session} other {Close # sessions}}"
+msgstr "{count, plural, one {关闭 # 个会话} other {关闭 # 个会话}}"
 
 msgid "{count, plural, one {Created # workspace} other {Created # workspaces}}"
 msgstr "{count, plural, one {已创建#个工作区} other {已创建#个工作区}}"
@@ -839,6 +860,9 @@ msgstr "第 {current} 项，共 {total} 项"
 msgid "{currentPage} of {totalBranches}"
 msgstr "{currentPage}/{totalBranches}"
 
+msgid "{days, plural, one {# day} other {# days}}"
+msgstr "{days, plural, one {# 天} other {# 天}}"
+
 msgid "{days} at {time}"
 msgstr "{days}{time}"
 
@@ -872,6 +896,9 @@ msgstr "该工作区中的 {entryPath} 已在另一个组织中发布为页面�
 
 msgid "{failed, plural, one {# failed} other {# failed}}"
 msgstr "{failed, plural, one {#项失败} other {#项失败}}"
+
+msgid "{failed, plural, one {# session could not be closed} other {# sessions could not be closed}}"
+msgstr "{failed, plural, one {# 个会话无法关闭} other {# 个会话无法关闭}}"
 
 msgid "{failing} of {total} check failing"
 msgstr "{total}项检查中有{failing}项失败"
@@ -914,6 +941,9 @@ msgstr "{hostName}已离线"
 
 msgid "{hotkeyText} to hide"
 msgstr "按{hotkeyText}隐藏"
+
+msgid "{hours} h"
+msgstr "{hours} 小时"
 
 msgid "{hours}h"
 msgstr "{hours}小时"
@@ -1005,6 +1035,9 @@ msgstr "{noun, select, repository {请至少指定一个仓库。} channel {请�
 msgid "{openCount} open"
 msgstr "{openCount}项已开启"
 
+msgid "{orphanCount, plural, one {# process · {total}} other {# processes · {total}}}"
+msgstr "{orphanCount, plural, one {# 个进程 · {total}} other {# 个进程 · {total}}}"
+
 msgid "{pageTitle} can read and change data in your {pluginLabel} account as you, including in future versions of this page. It can send what it reads to other websites. Only allow pages you trust."
 msgstr "{pageTitle} 可以以你的身份读取和更改你的 {pluginLabel} 账户中的数据，包括此页面的未来版本。它可以把读取的内容发送到其他网站。只允许你信任的页面。"
 
@@ -1058,6 +1091,9 @@ msgstr "{presetLabel}已重置为默认值"
 msgid "{previewSize}px · {0} line height"
 msgstr "{previewSize}px · 行高{0}"
 
+msgid "{processCount, plural, one {# process} other {# processes}}"
+msgstr "{processCount, plural, one {# 个进程} other {# 个进程}}"
+
 msgid "{provider} logo"
 msgstr "{provider}标志"
 
@@ -1092,6 +1128,9 @@ msgstr "{seconds}秒前"
 
 msgid "{selectedCount} selected"
 msgstr "已选择{selectedCount}项"
+
+msgid "{sessionCount, plural, one {# session · {total}} other {# sessions · {total}}}"
+msgstr "{sessionCount, plural, one {# 个会话 · {total}} other {# 个会话 · {total}}}"
 
 msgid "{share}% human"
 msgstr "人类{share}%"
@@ -3514,6 +3553,9 @@ msgstr "更改负责人"
 msgid "Change avatar"
 msgstr "更换头像"
 
+msgid "Change how long without an answer"
+msgstr "更改未回复时长"
+
 msgid "Change icon"
 msgstr "更改图标"
 
@@ -4104,6 +4146,9 @@ msgstr "已关闭"
 msgctxt "pull request or issue state"
 msgid "Closed"
 msgstr "已关闭"
+
+msgid "Closed {title}"
+msgstr "已关闭 {title}"
 
 msgid "Closing these ports will end the processes using them."
 msgstr "关闭这些端口会结束正在使用它们的进程。"
@@ -4875,6 +4920,9 @@ msgstr "复制相对路径"
 msgid "Copy Relative Path"
 msgstr "复制相对路径"
 
+msgid "Copy resume command"
+msgstr "复制恢复命令"
+
 msgid "Copy Selection"
 msgstr "复制所选内容"
 
@@ -5124,6 +5172,9 @@ msgstr "无法继续"
 
 msgid "Could not resume the chat"
 msgstr "无法继续聊天"
+
+msgid "Could not resume the session"
+msgstr "无法恢复会话"
 
 msgid "Could not send"
 msgstr "无法发送"
@@ -5430,9 +5481,6 @@ msgstr "无法确认"
 
 msgid "CPU"
 msgstr "CPU"
-
-msgid "CPU cores"
-msgstr "CPU核心"
 
 msgid "Create"
 msgstr "创建"
@@ -6206,6 +6254,9 @@ msgstr "此处无法显示详情，但链接仍可打开。"
 msgid "Dev"
 msgstr "开发"
 
+msgid "Dev servers and tools whose agent or terminal is gone"
+msgstr "智能体或终端已不存在的开发服务器和工具"
+
 msgid "Dev sign in"
 msgstr "开发登录"
 
@@ -6442,6 +6493,9 @@ msgstr "是否保存对{0}所做的更改？"
 
 msgid "Do you want to save the changes you made to {name}?"
 msgstr "是否保存对{name}所做的更改？"
+
+msgid "Docker VM"
+msgstr "Docker VM"
 
 msgid "Docs"
 msgstr "文档"
@@ -8042,6 +8096,9 @@ msgstr "免费版"
 msgid "Free for everyone"
 msgstr "对所有人免费"
 
+msgid "Frees about {freed}. Each one can be resumed later from “Recently closed”."
+msgstr "约可释放 {freed}。每个会话之后都可以从“最近关闭”中恢复。"
+
 msgid "Frequently<0/>asked questions"
 msgstr "常见<0/>问题"
 
@@ -8718,6 +8775,9 @@ msgstr "空闲"
 msgid "Idle · branch pushed"
 msgstr "空闲 · 分支已推送"
 
+msgid "Idle agents I haven't answered for"
+msgstr "我未回复的空闲智能体，已超过"
+
 msgid "Idle conversations"
 msgstr "空闲对话"
 
@@ -9284,6 +9344,9 @@ msgstr "独立的分支和文件副本"
 msgid "Its replies go with it."
 msgstr "其回复也会一并删除。"
 
+msgid "Its whole process tree gets SIGTERM, then SIGKILL after 3 seconds."
+msgstr "其整个进程树会收到 SIGTERM，3 秒后再收到 SIGKILL。"
+
 msgid "Its workspaces and terminals are unavailable until it restarts — use the Superset tray menu > Host Service > Restart."
 msgstr "在它重启之前，其工作区和终端都不可用，请使用Superset托盘菜单 > 主机服务 > 重启。"
 
@@ -9403,6 +9466,9 @@ msgstr "键盘快捷键"
 
 msgid "Kill"
 msgstr "终止"
+
+msgid "Kill {pendingName} (pid {pendingPid})?"
+msgstr "终止 {pendingName}（pid {pendingPid}）？"
 
 msgid "Kill all"
 msgstr "全部终止"
@@ -9637,6 +9703,9 @@ msgstr "已退出组织"
 msgid "Left team"
 msgstr "已退出团队"
 
+msgid "Leftover processes"
+msgstr "残留进程"
+
 msgid "Legal"
 msgstr "法律"
 
@@ -9823,6 +9892,9 @@ msgstr "实时"
 msgid "Live · local machine · every 2 s"
 msgstr "实时 · 本机 · 每2秒"
 
+msgid "Live · measured in {measuredMs} ms"
+msgstr "实时 · 测量耗时 {measuredMs} ms"
+
 msgid "Live in the app."
 msgstr "已在应用中上线。"
 
@@ -9832,8 +9904,8 @@ msgstr "实时预览"
 msgid "llms.txt (index for AI agents)"
 msgstr "llms.txt（面向AI智能体的索引）"
 
-msgid "Load (1 m)"
-msgstr "负载（1分钟）"
+msgid "Load (1 min)"
+msgstr "负载（1 分钟）"
 
 msgid "load agent settings"
 msgstr "加载智能体设置"
@@ -10017,6 +10089,9 @@ msgstr "正在查看任务"
 
 msgid "Looking for a mobile simulator…"
 msgstr "正在查找移动模拟器…"
+
+msgid "Looking for agents…"
+msgstr "正在查找智能体…"
 
 msgid "Looking for installed browsers…"
 msgstr "正在查找已安装的浏览器…"
@@ -10275,6 +10350,15 @@ msgstr "成员不能修改角色"
 
 msgid "Memory"
 msgstr "内存"
+
+msgid "Memory is critical: close agents now"
+msgstr "内存严重不足：请立即关闭智能体"
+
+msgid "Memory is tight: close idle agents before starting another"
+msgstr "内存紧张：启动新智能体前请先关闭空闲智能体"
+
+msgid "Memory pressure unknown"
+msgstr "内存压力未知"
 
 msgid "Memory share"
 msgstr "内存占比"
@@ -10601,6 +10685,12 @@ msgstr "已静音"
 
 msgid "My Agent"
 msgstr "我的智能体"
+
+msgid "My last message"
+msgstr "我的最后一条消息"
+
+msgid "My last msg"
+msgstr "我的最后消息"
 
 msgid "My Tasks"
 msgstr "我的任务"
@@ -10961,6 +11051,9 @@ msgstr "还没有智能体对话。"
 msgid "No agent is configured on this host"
 msgstr "此主机上未配置任何智能体"
 
+msgid "No agent running"
+msgstr "没有正在运行的智能体"
+
 #. placeholder {0}: host.name
 msgid "No agents configured on {0}"
 msgstr "{0}上没有配置智能体"
@@ -11198,6 +11291,9 @@ msgstr "未找到标签。"
 
 msgid "No lead"
 msgstr "无负责人"
+
+msgid "No leftover processes from closed agents"
+msgstr "已关闭智能体没有残留进程"
 
 msgid "No listening agents"
 msgstr "没有监听智能体"
@@ -11611,6 +11707,9 @@ msgstr "未授予"
 msgid "Not included"
 msgstr "不包含"
 
+msgid "Not killed: the process is gone or no longer an orphan"
+msgstr "未终止：进程已不存在或不再是孤立进程"
+
 msgid "Not loaded"
 msgstr "未加载"
 
@@ -11631,6 +11730,9 @@ msgstr "尚未接收到事件：Microsoft Graph拒绝了通知订阅。请检查
 
 msgid "Not reviewed by you"
 msgstr "你还没有审查"
+
+msgid "Not running"
+msgstr "未运行"
 
 msgid "Not sent"
 msgstr "未发送"
@@ -11765,6 +11867,9 @@ msgstr "离线/本地优先模式"
 
 msgid "Older"
 msgstr "更早"
+
+msgid "on {cores} cores"
+msgstr "共 {cores} 核"
 
 msgid "on {offScopeHostName} — won't run here"
 msgstr "在{offScopeHostName}上，不会在这里运行"
@@ -12276,6 +12381,9 @@ msgstr "打开最近使用"
 
 msgid "Open roles"
 msgstr "空缺职位"
+
+msgid "Open session"
+msgstr "打开会话"
 
 msgid "Open session in"
 msgstr "会话打开位置"
@@ -12905,6 +13013,9 @@ msgstr "选择你的智能体获取一行安装命令，或者手动复制配置
 
 msgid "PID"
 msgstr "PID"
+
+msgid "pid {orphanPid}"
+msgstr "pid {orphanPid}"
 
 msgid "Pin"
 msgstr "置顶"
@@ -13604,6 +13715,9 @@ msgstr "Radix会按不同方向旋转tooltip的箭头容器，"
 msgid "Radix Tooltip docs"
 msgstr "Radix Tooltip文档"
 
+msgid "RAM in use"
+msgstr "已用 RAM"
+
 msgid "RAM Share"
 msgstr "RAM占比"
 
@@ -13760,6 +13874,9 @@ msgstr "最近的PR"
 
 msgid "Recent pull requests"
 msgstr "最近的拉取请求"
+
+msgid "Recently closed"
+msgstr "最近关闭"
 
 msgid "Recently deleted"
 msgstr "最近删除"
@@ -14481,6 +14598,12 @@ msgstr "恢复参数"
 msgid "Resume automation"
 msgstr "恢复自动化"
 
+msgid "Resume reopens the conversation where it stopped"
+msgstr "恢复会从中断处重新打开对话"
+
+msgid "Resume them from “Recently closed”"
+msgstr "可从“最近关闭”中恢复它们"
+
 #. placeholder {0}: candidate.agentLabel
 msgid "Resuming {0}…"
 msgstr "正在恢复{0}…"
@@ -14657,6 +14780,9 @@ msgstr "角色已更新"
 msgid "Roll back an agent session to any checkpoint, conversation and file changes together."
 msgstr "把智能体会话回滚到任意检查点，对话和文件改动一起回退。"
 
+msgid "Room for another agent"
+msgstr "还可以再启动一个智能体"
+
 msgid "Rotate"
 msgstr "旋转"
 
@@ -14796,6 +14922,9 @@ msgstr "运行中"
 
 msgid "Running \"{name}\" now"
 msgstr "正在立即运行“{name}”"
+
+msgid "Running a command"
+msgstr "正在运行命令"
 
 msgid "Running agents on this profile lose access."
 msgstr "使用此配置文件运行中的智能体将失去访问权限。"
@@ -15718,6 +15847,9 @@ msgstr "快捷键已被使用"
 msgid "Show"
 msgstr "显示"
 
+msgid "Show {hiddenCount} more"
+msgstr "再显示 {hiddenCount} 个"
+
 msgid "Show a confirmation dialog when quitting the app"
 msgstr "退出应用时显示确认对话框"
 
@@ -16197,6 +16329,9 @@ msgstr "即将"
 
 msgid "Sort"
 msgstr "排序"
+
+msgid "Sort agents"
+msgstr "排序智能体"
 
 msgid "Sort by"
 msgstr "排序方式"
@@ -16890,6 +17025,9 @@ msgstr "Superset 页面演示"
 msgid "Superset Plugins"
 msgstr "Superset 插件"
 
+msgid "Superset processes"
+msgstr "Superset 进程"
+
 msgid "Superset raised an $11.5M seed round led by Union Square Ventures, with Y Combinator and Paul Graham. TechCrunch named it one of the standout startups from YC Demo Day."
 msgstr "Superset 完成了 1150 万美元的种子轮融资，由 Union Square Ventures 领投，Y Combinator 和 Paul Graham 参投。TechCrunch 将其评为 YC Demo Day 的杰出初创公司之一。"
 
@@ -16944,6 +17082,9 @@ msgstr "持续"
 
 msgid "Sustain · active days in 30"
 msgstr "持续性 · 30 天内的活跃天数"
+
+msgid "Swap"
+msgstr "交换空间"
 
 msgid "Switch agents. Keep your workflow"
 msgstr "换智能体，不换工作流"
@@ -17058,9 +17199,6 @@ msgstr "跟随系统"
 
 msgid "System design"
 msgstr "系统设计"
-
-msgid "System memory"
-msgstr "系统内存"
 
 msgid "System RAM share"
 msgstr "系统RAM占比"
@@ -18649,6 +18787,9 @@ msgstr "未知项目"
 msgid "Unknown Project"
 msgstr "未知项目"
 
+msgid "Unknown state"
+msgstr "未知状态"
+
 msgid "Unknown user"
 msgstr "未知用户"
 
@@ -19177,6 +19318,12 @@ msgstr "等待登录…"
 
 msgid "Waiting for the subagent's first message…"
 msgstr "正在等待子智能体的第一条消息…"
+
+msgid "Waiting for you"
+msgstr "等待你回复"
+
+msgid "Waiting for you · {waitingFor}"
+msgstr "等待你回复 · {waitingFor}"
 
 msgid "Waiting for your input"
 msgstr "等待你的输入"

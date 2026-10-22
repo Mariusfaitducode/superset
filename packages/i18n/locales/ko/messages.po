@@ -34,6 +34,9 @@ msgstr "./"
 msgid ".sh"
 msgstr ".sh"
 
+msgid "· none right now"
+msgstr "· 현재 없음"
+
 msgid "· updated {updatedAgo}"
 msgstr "· {updatedAgo}에 업데이트"
 
@@ -603,6 +606,9 @@ msgstr "전체 토큰의 {0}% · 토큰 {1}개"
 msgid "{0}% of total cost · {1} tokens · * at API list rates"
 msgstr "전체 비용의 {0}% · 토큰 {1}개 · * API 정가 기준"
 
+msgid "{activeCount, plural, one {# session is working or waiting for you: it stops mid-task.} other {# sessions are working or waiting for you: they stop mid-task.}}"
+msgstr "{activeCount, plural, one {세션 #개가 작업 중이거나 응답을 기다리고 있습니다: 작업 도중에 중단됩니다.} other {세션 #개가 작업 중이거나 응답을 기다리고 있습니다: 작업 도중에 중단됩니다.}}"
+
 msgid "{actor} added the label {label}"
 msgstr "{actor} 님이 라벨 {label}을(를) 추가했습니다"
 
@@ -721,6 +727,9 @@ msgstr "{behindCount, plural, one {main보다 커밋 #개 뒤처짐, 리베이�
 msgid "{branchPosition} of {totalBranches}"
 msgstr "{totalBranches}개 중 {branchPosition}번째"
 
+msgid "{closed, plural, one {Closed # session} other {Closed # sessions}}"
+msgstr "{closed, plural, one {세션 #개를 닫았습니다} other {세션 #개를 닫았습니다}}"
+
 msgid "{closedCount, plural, one {Closed # port} other {Closed # ports}}"
 msgstr "{closedCount, plural, one {포트 #개를 닫았습니다} other {포트 #개를 닫았습니다}}"
 
@@ -745,6 +754,9 @@ msgstr "{connectorName} 계정"
 
 msgid "{cookieCount} cookies — forget this site"
 msgstr "쿠키 {cookieCount}개 — 이 사이트 잊기"
+
+msgid "{count, plural, one {· # session, {freed}} other {· # sessions, {freed}}}"
+msgstr "{count, plural, one {· 세션 #개, {freed}} other {· 세션 #개, {freed}}}"
 
 msgid "{count, plural, one {# active port — show details} other {# active ports — show details}}"
 msgstr "{count, plural, one {활성 포트 #개 — 세부 정보 표시} other {활성 포트 #개 — 세부 정보 표시}}"
@@ -775,6 +787,15 @@ msgstr "{count, plural, one {이 리포지토리의 worktree #개에 워크스�
 
 msgid "{count, plural, one {added a commit} other {added # commits}}"
 msgstr "{count, plural, one {커밋 #개 추가함} other {커밋 #개 추가함}}"
+
+msgid "{count, plural, one {Close # session?} other {Close # sessions?}}"
+msgstr "{count, plural, one {세션 #개를 닫을까요?} other {세션 #개를 닫을까요?}}"
+
+msgid "{count, plural, one {Close # session…} other {Close # sessions…}}"
+msgstr "{count, plural, one {세션 #개 닫기…} other {세션 #개 닫기…}}"
+
+msgid "{count, plural, one {Close # session} other {Close # sessions}}"
+msgstr "{count, plural, one {세션 #개 닫기} other {세션 #개 닫기}}"
 
 msgid "{count, plural, one {Created # workspace} other {Created # workspaces}}"
 msgstr "{count, plural, one {워크스페이스 #개를 만들었습니다} other {워크스페이스 #개를 만들었습니다}}"
@@ -839,6 +860,9 @@ msgstr "{total}개 중 {current}번째"
 msgid "{currentPage} of {totalBranches}"
 msgstr "{totalBranches} 중 {currentPage}"
 
+msgid "{days, plural, one {# day} other {# days}}"
+msgstr "{days, plural, one {#일} other {#일}}"
+
 msgid "{days} at {time}"
 msgstr "{days} {time}"
 
@@ -872,6 +896,9 @@ msgstr "이 워크스페이스의 {entryPath}는 다른 조직에서 이미 페�
 
 msgid "{failed, plural, one {# failed} other {# failed}}"
 msgstr "{failed, plural, one {#개 실패} other {#개 실패}}"
+
+msgid "{failed, plural, one {# session could not be closed} other {# sessions could not be closed}}"
+msgstr "{failed, plural, one {세션 #개를 닫지 못했습니다} other {세션 #개를 닫지 못했습니다}}"
 
 msgid "{failing} of {total} check failing"
 msgstr "검사 {total}개 중 {failing}개 실패"
@@ -914,6 +941,9 @@ msgstr "{hostName}이(가) 오프라인입니다"
 
 msgid "{hotkeyText} to hide"
 msgstr "{hotkeyText}로 숨기기"
+
+msgid "{hours} h"
+msgstr "{hours}시간"
 
 msgid "{hours}h"
 msgstr "{hours}시간"
@@ -1005,6 +1035,9 @@ msgstr "{noun, select, repository {리포지토리를 하나 이상 지정하세
 msgid "{openCount} open"
 msgstr "{openCount}개 열림"
 
+msgid "{orphanCount, plural, one {# process · {total}} other {# processes · {total}}}"
+msgstr "{orphanCount, plural, one {프로세스 #개 · {total}} other {프로세스 #개 · {total}}}"
+
 msgid "{pageTitle} can read and change data in your {pluginLabel} account as you, including in future versions of this page. It can send what it reads to other websites. Only allow pages you trust."
 msgstr "{pageTitle}은(는) 사용자 본인으로서 {pluginLabel} 계정의 데이터를 읽고 변경할 수 있으며, 이 페이지의 향후 버전에도 적용됩니다. 읽은 내용을 다른 웹사이트로 보낼 수 있습니다. 신뢰하는 페이지만 허용하세요."
 
@@ -1058,6 +1091,9 @@ msgstr "{presetLabel}이(가) 기본값으로 초기화되었습니다"
 msgid "{previewSize}px · {0} line height"
 msgstr "{previewSize}px · 줄 높이 {0}"
 
+msgid "{processCount, plural, one {# process} other {# processes}}"
+msgstr "{processCount, plural, one {프로세스 #개} other {프로세스 #개}}"
+
 msgid "{provider} logo"
 msgstr "{provider} 로고"
 
@@ -1092,6 +1128,9 @@ msgstr "{seconds}초 전"
 
 msgid "{selectedCount} selected"
 msgstr "{selectedCount}개 선택됨"
+
+msgid "{sessionCount, plural, one {# session · {total}} other {# sessions · {total}}}"
+msgstr "{sessionCount, plural, one {세션 #개 · {total}} other {세션 #개 · {total}}}"
 
 msgid "{share}% human"
 msgstr "사람 {share}%"
@@ -3514,6 +3553,9 @@ msgstr "담당자 변경"
 msgid "Change avatar"
 msgstr "아바타 변경"
 
+msgid "Change how long without an answer"
+msgstr "응답 없는 시간 변경"
+
 msgid "Change icon"
 msgstr "아이콘 변경"
 
@@ -4104,6 +4146,9 @@ msgstr "닫힘"
 msgctxt "pull request or issue state"
 msgid "Closed"
 msgstr "닫힘"
+
+msgid "Closed {title}"
+msgstr "{title} 닫음"
 
 msgid "Closing these ports will end the processes using them."
 msgstr "이 포트들을 닫으면 해당 포트를 사용하는 프로세스가 종료됩니다."
@@ -4875,6 +4920,9 @@ msgstr "상대 경로 복사"
 msgid "Copy Relative Path"
 msgstr "상대 경로 복사"
 
+msgid "Copy resume command"
+msgstr "재개 명령 복사"
+
 msgid "Copy Selection"
 msgstr "선택 항목 복사"
 
@@ -5124,6 +5172,9 @@ msgstr "재개할 수 없습니다"
 
 msgid "Could not resume the chat"
 msgstr "채팅을 재개할 수 없습니다"
+
+msgid "Could not resume the session"
+msgstr "세션을 재개할 수 없습니다"
 
 msgid "Could not send"
 msgstr "보낼 수 없습니다"
@@ -5430,9 +5481,6 @@ msgstr "확인할 수 없음"
 
 msgid "CPU"
 msgstr "CPU"
-
-msgid "CPU cores"
-msgstr "CPU 코어"
 
 msgid "Create"
 msgstr "만들기"
@@ -6206,6 +6254,9 @@ msgstr "여기서는 세부 정보를 볼 수 없지만 링크는 열립니다."
 msgid "Dev"
 msgstr "개발"
 
+msgid "Dev servers and tools whose agent or terminal is gone"
+msgstr "에이전트나 터미널이 사라진 개발 서버와 도구"
+
 msgid "Dev sign in"
 msgstr "개발용 로그인"
 
@@ -6442,6 +6493,9 @@ msgstr "{0}에 대한 변경 사항을 저장할까요?"
 
 msgid "Do you want to save the changes you made to {name}?"
 msgstr "{name}에 대한 변경 사항을 저장할까요?"
+
+msgid "Docker VM"
+msgstr "Docker VM"
 
 msgid "Docs"
 msgstr "문서"
@@ -8042,6 +8096,9 @@ msgstr "무료"
 msgid "Free for everyone"
 msgstr "누구나 무료"
 
+msgid "Frees about {freed}. Each one can be resumed later from “Recently closed”."
+msgstr "약 {freed}를 확보합니다. 각 세션은 나중에 “최근 닫음”에서 재개할 수 있습니다."
+
 msgid "Frequently<0/>asked questions"
 msgstr "자주 묻는<0/>질문"
 
@@ -8718,6 +8775,9 @@ msgstr "대기 중"
 msgid "Idle · branch pushed"
 msgstr "유휴 · 브랜치 푸시됨"
 
+msgid "Idle agents I haven't answered for"
+msgstr "내가 답하지 않은 대기 중 에이전트, 경과 시간:"
+
 msgid "Idle conversations"
 msgstr "유휴 대화"
 
@@ -9284,6 +9344,9 @@ msgstr "독립된 브랜치와 파일 사본"
 msgid "Its replies go with it."
 msgstr "답글도 함께 삭제됩니다."
 
+msgid "Its whole process tree gets SIGTERM, then SIGKILL after 3 seconds."
+msgstr "전체 프로세스 트리에 SIGTERM을 보내고, 3초 후 SIGKILL을 보냅니다."
+
 msgid "Its workspaces and terminals are unavailable until it restarts — use the Superset tray menu > Host Service > Restart."
 msgstr "다시 시작할 때까지 해당 워크스페이스와 터미널을 사용할 수 없습니다. Superset 트레이 메뉴 > 호스트 서비스 > 다시 시작을 사용하세요."
 
@@ -9403,6 +9466,9 @@ msgstr "키보드 단축키"
 
 msgid "Kill"
 msgstr "종료"
+
+msgid "Kill {pendingName} (pid {pendingPid})?"
+msgstr "{pendingName}(pid {pendingPid})을(를) 종료할까요?"
 
 msgid "Kill all"
 msgstr "모두 종료"
@@ -9637,6 +9703,9 @@ msgstr "조직에서 나갔습니다"
 msgid "Left team"
 msgstr "팀에서 나갔습니다"
 
+msgid "Leftover processes"
+msgstr "남은 프로세스"
+
 msgid "Legal"
 msgstr "법적 고지"
 
@@ -9823,6 +9892,9 @@ msgstr "실시간"
 msgid "Live · local machine · every 2 s"
 msgstr "실시간 · 로컬 머신 · 2초마다"
 
+msgid "Live · measured in {measuredMs} ms"
+msgstr "실시간 · {measuredMs} ms 동안 측정"
+
 msgid "Live in the app."
 msgstr "앱에서 사용할 수 있습니다."
 
@@ -9832,7 +9904,7 @@ msgstr "실시간 미리보기"
 msgid "llms.txt (index for AI agents)"
 msgstr "llms.txt (AI 에이전트용 색인)"
 
-msgid "Load (1 m)"
+msgid "Load (1 min)"
 msgstr "부하 (1분)"
 
 msgid "load agent settings"
@@ -10017,6 +10089,9 @@ msgstr "작업 확인 중"
 
 msgid "Looking for a mobile simulator…"
 msgstr "모바일 시뮬레이터를 찾는 중…"
+
+msgid "Looking for agents…"
+msgstr "에이전트 찾는 중…"
 
 msgid "Looking for installed browsers…"
 msgstr "설치된 브라우저를 찾는 중…"
@@ -10275,6 +10350,15 @@ msgstr "멤버는 역할을 변경할 수 없습니다"
 
 msgid "Memory"
 msgstr "메모리"
+
+msgid "Memory is critical: close agents now"
+msgstr "메모리 위험: 지금 에이전트를 닫으세요"
+
+msgid "Memory is tight: close idle agents before starting another"
+msgstr "메모리 부족: 다른 에이전트를 시작하기 전에 대기 중인 에이전트를 닫으세요"
+
+msgid "Memory pressure unknown"
+msgstr "메모리 압력 알 수 없음"
 
 msgid "Memory share"
 msgstr "메모리 점유율"
@@ -10601,6 +10685,12 @@ msgstr "음소거됨"
 
 msgid "My Agent"
 msgstr "내 에이전트"
+
+msgid "My last message"
+msgstr "내 마지막 메시지"
+
+msgid "My last msg"
+msgstr "내 마지막 메시지"
 
 msgid "My Tasks"
 msgstr "내 작업"
@@ -10961,6 +11051,9 @@ msgstr "아직 에이전트 대화가 없습니다."
 msgid "No agent is configured on this host"
 msgstr "이 호스트에 구성된 에이전트가 없습니다"
 
+msgid "No agent running"
+msgstr "실행 중인 에이전트 없음"
+
 #. placeholder {0}: host.name
 msgid "No agents configured on {0}"
 msgstr "{0}에 설정된 에이전트가 없습니다"
@@ -11198,6 +11291,9 @@ msgstr "레이블을 찾을 수 없습니다."
 
 msgid "No lead"
 msgstr "리드 없음"
+
+msgid "No leftover processes from closed agents"
+msgstr "닫힌 에이전트의 남은 프로세스 없음"
 
 msgid "No listening agents"
 msgstr "댓글 수신 에이전트 없음"
@@ -11611,6 +11707,9 @@ msgstr "허용 안 됨"
 msgid "Not included"
 msgstr "미포함"
 
+msgid "Not killed: the process is gone or no longer an orphan"
+msgstr "종료되지 않음: 프로세스가 이미 없거나 더 이상 고아 프로세스가 아닙니다"
+
 msgid "Not loaded"
 msgstr "로드 안 됨"
 
@@ -11631,6 +11730,9 @@ msgstr "아직 이벤트를 받지 못하고 있습니다. Microsoft Graph가 �
 
 msgid "Not reviewed by you"
 msgstr "내가 리뷰하지 않음"
+
+msgid "Not running"
+msgstr "실행 중 아님"
 
 msgid "Not sent"
 msgstr "전송되지 않음"
@@ -11765,6 +11867,9 @@ msgstr "오프라인 / 로컬 우선 모드"
 
 msgid "Older"
 msgstr "이전"
+
+msgid "on {cores} cores"
+msgstr "{cores}코어 기준"
 
 msgid "on {offScopeHostName} — won't run here"
 msgstr "{offScopeHostName}에 있음 — 여기서는 실행되지 않습니다"
@@ -12276,6 +12381,9 @@ msgstr "최근 항목 열기"
 
 msgid "Open roles"
 msgstr "채용 공고"
+
+msgid "Open session"
+msgstr "세션 열기"
 
 msgid "Open session in"
 msgstr "세션 열기 위치"
@@ -12905,6 +13013,9 @@ msgstr "한 줄 설치를 위해 에이전트를 고르거나 설정을 직접 �
 
 msgid "PID"
 msgstr "PID"
+
+msgid "pid {orphanPid}"
+msgstr "pid {orphanPid}"
 
 msgid "Pin"
 msgstr "고정"
@@ -13604,6 +13715,9 @@ msgstr "Radix는 툴팁 화살표 래퍼를 방향에 따라 회전시키므로,
 msgid "Radix Tooltip docs"
 msgstr "Radix Tooltip 문서"
 
+msgid "RAM in use"
+msgstr "사용 중인 RAM"
+
 msgid "RAM Share"
 msgstr "RAM 점유율"
 
@@ -13760,6 +13874,9 @@ msgstr "최근 PR"
 
 msgid "Recent pull requests"
 msgstr "최근 풀 리퀘스트"
+
+msgid "Recently closed"
+msgstr "최근 닫음"
 
 msgid "Recently deleted"
 msgstr "최근 삭제됨"
@@ -14481,6 +14598,12 @@ msgstr "재개 인수"
 msgid "Resume automation"
 msgstr "자동화 재개"
 
+msgid "Resume reopens the conversation where it stopped"
+msgstr "재개하면 멈춘 지점에서 대화를 다시 엽니다"
+
+msgid "Resume them from “Recently closed”"
+msgstr "“최근 닫음”에서 재개하세요"
+
 #. placeholder {0}: candidate.agentLabel
 msgid "Resuming {0}…"
 msgstr "{0}을(를) 재개하는 중…"
@@ -14657,6 +14780,9 @@ msgstr "역할을 변경했습니다"
 msgid "Roll back an agent session to any checkpoint, conversation and file changes together."
 msgstr "에이전트 세션을 어떤 체크포인트로든 되돌립니다. 대화와 파일 변경을 함께 되돌립니다."
 
+msgid "Room for another agent"
+msgstr "에이전트를 하나 더 실행할 여유가 있습니다"
+
 msgid "Rotate"
 msgstr "회전"
 
@@ -14796,6 +14922,9 @@ msgstr "실행 중"
 
 msgid "Running \"{name}\" now"
 msgstr "\"{name}\"을(를) 지금 실행 중"
+
+msgid "Running a command"
+msgstr "명령 실행 중"
 
 msgid "Running agents on this profile lose access."
 msgstr "이 프로필에서 실행 중인 에이전트는 접근 권한을 잃습니다."
@@ -15718,6 +15847,9 @@ msgstr "이미 사용 중인 단축키"
 msgid "Show"
 msgstr "표시"
 
+msgid "Show {hiddenCount} more"
+msgstr "{hiddenCount}개 더 보기"
+
 msgid "Show a confirmation dialog when quitting the app"
 msgstr "앱을 종료할 때 확인 대화 상자를 표시합니다"
 
@@ -16197,6 +16329,9 @@ msgstr "곧"
 
 msgid "Sort"
 msgstr "정렬"
+
+msgid "Sort agents"
+msgstr "에이전트 정렬"
 
 msgid "Sort by"
 msgstr "정렬 기준"
@@ -16890,6 +17025,9 @@ msgstr "Superset 페이지 데모"
 msgid "Superset Plugins"
 msgstr "Superset 플러그인"
 
+msgid "Superset processes"
+msgstr "Superset 프로세스"
+
 msgid "Superset raised an $11.5M seed round led by Union Square Ventures, with Y Combinator and Paul Graham. TechCrunch named it one of the standout startups from YC Demo Day."
 msgstr "Superset은 Union Square Ventures가 리드하고 Y Combinator와 Paul Graham이 참여한 1,150만 달러 규모의 시드 라운드를 유치했습니다. TechCrunch는 Superset을 YC Demo Day의 주목할 만한 스타트업 중 하나로 선정했습니다."
 
@@ -16944,6 +17082,9 @@ msgstr "지속"
 
 msgid "Sustain · active days in 30"
 msgstr "지속성 · 30일 중 활동 일수"
+
+msgid "Swap"
+msgstr "스왑"
 
 msgid "Switch agents. Keep your workflow"
 msgstr "에이전트는 바꾸고, 워크플로는 그대로"
@@ -17058,9 +17199,6 @@ msgstr "시스템"
 
 msgid "System design"
 msgstr "시스템 설계"
-
-msgid "System memory"
-msgstr "시스템 메모리"
 
 msgid "System RAM share"
 msgstr "시스템 RAM 점유율"
@@ -18649,6 +18787,9 @@ msgstr "알 수 없는 프로젝트"
 msgid "Unknown Project"
 msgstr "알 수 없는 프로젝트"
 
+msgid "Unknown state"
+msgstr "알 수 없는 상태"
+
 msgid "Unknown user"
 msgstr "알 수 없는 사용자"
 
@@ -19177,6 +19318,12 @@ msgstr "로그인 대기 중…"
 
 msgid "Waiting for the subagent's first message…"
 msgstr "서브 에이전트의 첫 메시지를 기다리는 중…"
+
+msgid "Waiting for you"
+msgstr "응답 대기 중"
+
+msgid "Waiting for you · {waitingFor}"
+msgstr "응답 대기 중 · {waitingFor}"
 
 msgid "Waiting for your input"
 msgstr "입력을 기다리는 중"

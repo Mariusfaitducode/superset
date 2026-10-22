@@ -34,6 +34,9 @@ msgstr "./"
 msgid ".sh"
 msgstr ".sh"
 
+msgid "· none right now"
+msgstr "· momentálně žádné"
+
 msgid "· updated {updatedAgo}"
 msgstr "· aktualizováno {updatedAgo}"
 
@@ -603,6 +606,9 @@ msgstr "{0} % všech tokenů · {1} tokenů"
 msgid "{0}% of total cost · {1} tokens · * at API list rates"
 msgstr "{0} % celkových nákladů · {1} tokenů · * v ceníkových sazbách API"
 
+msgid "{activeCount, plural, one {# session is working or waiting for you: it stops mid-task.} other {# sessions are working or waiting for you: they stop mid-task.}}"
+msgstr "{activeCount, plural, one {# relace pracuje nebo na vás čeká: zastaví se uprostřed úkolu.} few {# relace pracují nebo na vás čekají: zastaví se uprostřed úkolu.} many {# relace pracuje nebo na vás čeká: zastaví se uprostřed úkolu.} other {# relací pracuje nebo na vás čeká: zastaví se uprostřed úkolu.}}"
+
 msgid "{actor} added the label {label}"
 msgstr "{actor} přidal(a) štítek {label}"
 
@@ -721,6 +727,9 @@ msgstr "{behindCount, plural, one {Zaostává za main o # commit, je potřeba re
 msgid "{branchPosition} of {totalBranches}"
 msgstr "{branchPosition} z {totalBranches}"
 
+msgid "{closed, plural, one {Closed # session} other {Closed # sessions}}"
+msgstr "{closed, plural, one {Zavřena # relace} few {Zavřeny # relace} many {Zavřeno # relace} other {Zavřeno # relací}}"
+
 msgid "{closedCount, plural, one {Closed # port} other {Closed # ports}}"
 msgstr "{closedCount, plural, one {Zavřen # port} few {Zavřeny # porty} many {Zavřeno # portu} other {Zavřeno # portů}}"
 
@@ -745,6 +754,9 @@ msgstr "Účet {connectorName}"
 
 msgid "{cookieCount} cookies — forget this site"
 msgstr "{cookieCount} cookies — zapomenout tento web"
+
+msgid "{count, plural, one {· # session, {freed}} other {· # sessions, {freed}}}"
+msgstr "{count, plural, one {· # relace, {freed}} few {· # relace, {freed}} many {· # relace, {freed}} other {· # relací, {freed}}}"
 
 msgid "{count, plural, one {# active port — show details} other {# active ports — show details}}"
 msgstr "{count, plural, one {# aktivní port — zobrazit podrobnosti} few {# aktivní porty — zobrazit podrobnosti} many {# aktivního portu — zobrazit podrobnosti} other {# aktivních portů — zobrazit podrobnosti}}"
@@ -775,6 +787,15 @@ msgstr "{count, plural, one {# worktree v tomto repozitáři nemá pracovní pro
 
 msgid "{count, plural, one {added a commit} other {added # commits}}"
 msgstr "{count, plural, one {přidal(a) commit} few {přidal(a) # commity} many {přidal(a) # commitu} other {přidal(a) # commitů}}"
+
+msgid "{count, plural, one {Close # session?} other {Close # sessions?}}"
+msgstr "{count, plural, one {Zavřít # relaci?} few {Zavřít # relace?} many {Zavřít # relace?} other {Zavřít # relací?}}"
+
+msgid "{count, plural, one {Close # session…} other {Close # sessions…}}"
+msgstr "{count, plural, one {Zavřít # relaci…} few {Zavřít # relace…} many {Zavřít # relace…} other {Zavřít # relací…}}"
+
+msgid "{count, plural, one {Close # session} other {Close # sessions}}"
+msgstr "{count, plural, one {Zavřít # relaci} few {Zavřít # relace} many {Zavřít # relace} other {Zavřít # relací}}"
 
 msgid "{count, plural, one {Created # workspace} other {Created # workspaces}}"
 msgstr "{count, plural, one {Vytvořen # pracovní prostor} few {Vytvořeny # pracovní prostory} many {Vytvořeno # pracovního prostoru} other {Vytvořeno # pracovních prostorů}}"
@@ -839,6 +860,9 @@ msgstr "{current} z {total}"
 msgid "{currentPage} of {totalBranches}"
 msgstr "{currentPage} z {totalBranches}"
 
+msgid "{days, plural, one {# day} other {# days}}"
+msgstr "{days, plural, one {# den} few {# dny} many {# dne} other {# dní}}"
+
 msgid "{days} at {time}"
 msgstr "{days} v {time}"
 
@@ -872,6 +896,9 @@ msgstr "{entryPath} v tomto workspace je už publikovaný jako stránka v jiné 
 
 msgid "{failed, plural, one {# failed} other {# failed}}"
 msgstr "{failed, plural, one {# selhalo} few {# selhalo} many {# selhalo} other {# selhalo}}"
+
+msgid "{failed, plural, one {# session could not be closed} other {# sessions could not be closed}}"
+msgstr "{failed, plural, one {# relaci nebylo možné zavřít} few {# relace nebylo možné zavřít} many {# relace nebylo možné zavřít} other {# relací nebylo možné zavřít}}"
 
 msgid "{failing} of {total} check failing"
 msgstr "Selhává {failing} z {total} kontroly"
@@ -914,6 +941,9 @@ msgstr "{hostName} je offline"
 
 msgid "{hotkeyText} to hide"
 msgstr "{hotkeyText} skryje"
+
+msgid "{hours} h"
+msgstr "{hours} h"
 
 msgid "{hours}h"
 msgstr "{hours} h"
@@ -1005,6 +1035,9 @@ msgstr "{noun, select, repository {Zadejte alespoň jeden repozitář.} channel 
 msgid "{openCount} open"
 msgstr "{openCount} otevřených"
 
+msgid "{orphanCount, plural, one {# process · {total}} other {# processes · {total}}}"
+msgstr "{orphanCount, plural, one {# proces · {total}} few {# procesy · {total}} many {# procesu · {total}} other {# procesů · {total}}}"
+
 msgid "{pageTitle} can read and change data in your {pluginLabel} account as you, including in future versions of this page. It can send what it reads to other websites. Only allow pages you trust."
 msgstr "{pageTitle} může vaším jménem číst a měnit data ve vašem účtu {pluginLabel}, a to i v budoucích verzích této stránky. Co načte, může odeslat na jiné weby. Povolte jen stránky, kterým důvěřujete."
 
@@ -1058,6 +1091,9 @@ msgstr "{presetLabel} obnoveno na výchozí"
 msgid "{previewSize}px · {0} line height"
 msgstr "{previewSize} px · výška řádku {0}"
 
+msgid "{processCount, plural, one {# process} other {# processes}}"
+msgstr "{processCount, plural, one {# proces} few {# procesy} many {# procesu} other {# procesů}}"
+
 msgid "{provider} logo"
 msgstr "logo {provider}"
 
@@ -1092,6 +1128,9 @@ msgstr "před {seconds} s"
 
 msgid "{selectedCount} selected"
 msgstr "vybráno: {selectedCount}"
+
+msgid "{sessionCount, plural, one {# session · {total}} other {# sessions · {total}}}"
+msgstr "{sessionCount, plural, one {# relace · {total}} few {# relace · {total}} many {# relace · {total}} other {# relací · {total}}}"
 
 msgid "{share}% human"
 msgstr "{share} % člověk"
@@ -3514,6 +3553,9 @@ msgstr "Změnit řešitele"
 msgid "Change avatar"
 msgstr "Změnit avatar"
 
+msgid "Change how long without an answer"
+msgstr "Změnit dobu bez odpovědi"
+
 msgid "Change icon"
 msgstr "Změnit ikonu"
 
@@ -4104,6 +4146,9 @@ msgstr "Uzavřený"
 msgctxt "pull request or issue state"
 msgid "Closed"
 msgstr "Uzavřeno"
+
+msgid "Closed {title}"
+msgstr "Zavřeno: {title}"
 
 msgid "Closing these ports will end the processes using them."
 msgstr "Zavřením těchto portů ukončíte procesy, které je používají."
@@ -4875,6 +4920,9 @@ msgstr "Kopírovat relativní cestu"
 msgid "Copy Relative Path"
 msgstr "Kopírovat relativní cestu"
 
+msgid "Copy resume command"
+msgstr "Kopírovat příkaz pro obnovení"
+
 msgid "Copy Selection"
 msgstr "Kopírovat výběr"
 
@@ -5124,6 +5172,9 @@ msgstr "Pokračování se nezdařilo"
 
 msgid "Could not resume the chat"
 msgstr "V chatu se nepodařilo pokračovat"
+
+msgid "Could not resume the session"
+msgstr "Relaci se nepodařilo obnovit"
 
 msgid "Could not send"
 msgstr "Nepodařilo se odeslat"
@@ -5430,9 +5481,6 @@ msgstr "Nelze ověřit"
 
 msgid "CPU"
 msgstr "CPU"
-
-msgid "CPU cores"
-msgstr "Jádra CPU"
 
 msgid "Create"
 msgstr "Vytvořit"
@@ -6206,6 +6254,9 @@ msgstr "Podrobnosti zde nejsou k dispozici, ale odkaz se přesto otevře."
 msgid "Dev"
 msgstr "Vývoj"
 
+msgid "Dev servers and tools whose agent or terminal is gone"
+msgstr "Vývojové servery a nástroje, jejichž agent nebo terminál už neexistuje"
+
 msgid "Dev sign in"
 msgstr "Vývojářské přihlášení"
 
@@ -6442,6 +6493,9 @@ msgstr "Chcete uložit změny provedené v {0}?"
 
 msgid "Do you want to save the changes you made to {name}?"
 msgstr "Chcete uložit změny provedené v {name}?"
+
+msgid "Docker VM"
+msgstr "Docker VM"
 
 msgid "Docs"
 msgstr "Dokumentace"
@@ -8042,6 +8096,9 @@ msgstr "Free"
 msgid "Free for everyone"
 msgstr "Zdarma pro všechny"
 
+msgid "Frees about {freed}. Each one can be resumed later from “Recently closed”."
+msgstr "Uvolní přibližně {freed}. Každou lze později obnovit ze sekce „Nedávno zavřené“."
+
 msgid "Frequently<0/>asked questions"
 msgstr "Často<0/>kladené otázky"
 
@@ -8718,6 +8775,9 @@ msgstr "Nečinný"
 msgid "Idle · branch pushed"
 msgstr "Nečinné · větev odeslána"
 
+msgid "Idle agents I haven't answered for"
+msgstr "Nečinní agenti bez mé odpovědi po dobu"
+
 msgid "Idle conversations"
 msgstr "Nečinné konverzace"
 
@@ -9284,6 +9344,9 @@ msgstr "Vlastní větev a vlastní kopie souborů"
 msgid "Its replies go with it."
 msgstr "Smažou se i odpovědi."
 
+msgid "Its whole process tree gets SIGTERM, then SIGKILL after 3 seconds."
+msgstr "Celý jeho strom procesů dostane SIGTERM a po 3 sekundách SIGKILL."
+
 msgid "Its workspaces and terminals are unavailable until it restarts — use the Superset tray menu > Host Service > Restart."
 msgstr "Její pracovní prostory a terminály nebudou dostupné, dokud se nerestartuje — použijte nabídku Superset na liště > Host Service > Restart."
 
@@ -9403,6 +9466,9 @@ msgstr "Klávesové zkratky"
 
 msgid "Kill"
 msgstr "Ukončit"
+
+msgid "Kill {pendingName} (pid {pendingPid})?"
+msgstr "Ukončit {pendingName} (pid {pendingPid})?"
 
 msgid "Kill all"
 msgstr "Ukončit vše"
@@ -9637,6 +9703,9 @@ msgstr "Organizace opuštěna"
 msgid "Left team"
 msgstr "Tým opuštěn"
 
+msgid "Leftover processes"
+msgstr "Zbylé procesy"
+
 msgid "Legal"
 msgstr "Právní informace"
 
@@ -9823,6 +9892,9 @@ msgstr "Živě"
 msgid "Live · local machine · every 2 s"
 msgstr "Živě · tento počítač · každé 2 s"
 
+msgid "Live · measured in {measuredMs} ms"
+msgstr "Živě · změřeno za {measuredMs} ms"
+
 msgid "Live in the app."
 msgstr "Živě v aplikaci."
 
@@ -9832,8 +9904,8 @@ msgstr "Živý náhled"
 msgid "llms.txt (index for AI agents)"
 msgstr "llms.txt (index pro AI agenty)"
 
-msgid "Load (1 m)"
-msgstr "Zátěž (1 m)"
+msgid "Load (1 min)"
+msgstr "Zátěž (1 min)"
 
 msgid "load agent settings"
 msgstr "načíst nastavení agenta"
@@ -10017,6 +10089,9 @@ msgstr "Prochází se úkoly"
 
 msgid "Looking for a mobile simulator…"
 msgstr "Hledám mobilní simulátor…"
+
+msgid "Looking for agents…"
+msgstr "Hledání agentů…"
 
 msgid "Looking for installed browsers…"
 msgstr "Hledám nainstalované prohlížeče…"
@@ -10275,6 +10350,15 @@ msgstr "Členové nemohou měnit role"
 
 msgid "Memory"
 msgstr "Paměť"
+
+msgid "Memory is critical: close agents now"
+msgstr "Kritický stav paměti: zavřete agenty hned"
+
+msgid "Memory is tight: close idle agents before starting another"
+msgstr "Paměti je málo: před spuštěním dalšího agenta zavřete nečinné agenty"
+
+msgid "Memory pressure unknown"
+msgstr "Tlak na paměť neznámý"
 
 msgid "Memory share"
 msgstr "Podíl paměti"
@@ -10601,6 +10685,12 @@ msgstr "Ztlumeno"
 
 msgid "My Agent"
 msgstr "Můj agent"
+
+msgid "My last message"
+msgstr "Moje poslední zpráva"
+
+msgid "My last msg"
+msgstr "Má posl. zpráva"
 
 msgid "My Tasks"
 msgstr "Moje úkoly"
@@ -10961,6 +11051,9 @@ msgstr "Zatím žádné konverzace agentů."
 msgid "No agent is configured on this host"
 msgstr "Na tomto hostiteli není nakonfigurován žádný agent"
 
+msgid "No agent running"
+msgstr "Neběží žádný agent"
+
 #. placeholder {0}: host.name
 msgid "No agents configured on {0}"
 msgstr "Na {0} nejsou nastavení žádní agenti"
@@ -11198,6 +11291,9 @@ msgstr "Nebyly nalezeny žádné štítky."
 
 msgid "No lead"
 msgstr "Bez vedoucího"
+
+msgid "No leftover processes from closed agents"
+msgstr "Žádné zbylé procesy po zavřených agentech"
 
 msgid "No listening agents"
 msgstr "Žádní naslouchající agenti"
@@ -11611,6 +11707,9 @@ msgstr "Nepovoleno"
 msgid "Not included"
 msgstr "Není zahrnuto"
 
+msgid "Not killed: the process is gone or no longer an orphan"
+msgstr "Neukončeno: proces už neexistuje nebo už není osiřelý"
+
 msgid "Not loaded"
 msgstr "Nenačteno"
 
@@ -11631,6 +11730,9 @@ msgstr "Zatím nepřicházejí žádné události: Microsoft Graph odmítl odbě
 
 msgid "Not reviewed by you"
 msgstr "Bez vaší revize"
+
+msgid "Not running"
+msgstr "Neběží"
 
 msgid "Not sent"
 msgstr "Neodesláno"
@@ -11765,6 +11867,9 @@ msgstr "Offline / local-first režim"
 
 msgid "Older"
 msgstr "Starší"
+
+msgid "on {cores} cores"
+msgstr "na {cores} jádrech"
 
 msgid "on {offScopeHostName} — won't run here"
 msgstr "na {offScopeHostName} — tady nepoběží"
@@ -12276,6 +12381,9 @@ msgstr "Otevřít nedávné"
 
 msgid "Open roles"
 msgstr "Otevřené pozice"
+
+msgid "Open session"
+msgstr "Otevřít relaci"
 
 msgid "Open session in"
 msgstr "Otevřít relaci v"
@@ -12905,6 +13013,9 @@ msgstr "Vyberte svého agenta pro instalaci na jeden řádek, nebo konfiguraci z
 
 msgid "PID"
 msgstr "PID"
+
+msgid "pid {orphanPid}"
+msgstr "pid {orphanPid}"
 
 msgid "Pin"
 msgstr "Připnout"
@@ -13604,6 +13715,9 @@ msgstr "Radix otáčí obal šipky tooltipu podle strany,"
 msgid "Radix Tooltip docs"
 msgstr "Dokumentace Radix Tooltip"
 
+msgid "RAM in use"
+msgstr "Využitá RAM"
+
 msgid "RAM Share"
 msgstr "Podíl RAM"
 
@@ -13760,6 +13874,9 @@ msgstr "Nedávné PR"
 
 msgid "Recent pull requests"
 msgstr "Nedávné pull requesty"
+
+msgid "Recently closed"
+msgstr "Nedávno zavřené"
 
 msgid "Recently deleted"
 msgstr "Nedávno smazané"
@@ -14481,6 +14598,12 @@ msgstr "Argumenty pro pokračování"
 msgid "Resume automation"
 msgstr "Pokračovat v automatizaci"
 
+msgid "Resume reopens the conversation where it stopped"
+msgstr "Pokračovat znovu otevře konverzaci tam, kde skončila"
+
+msgid "Resume them from “Recently closed”"
+msgstr "Obnovte je ze sekce „Nedávno zavřené“"
+
 #. placeholder {0}: candidate.agentLabel
 msgid "Resuming {0}…"
 msgstr "Obnovuji {0}…"
@@ -14657,6 +14780,9 @@ msgstr "Role změněna"
 msgid "Roll back an agent session to any checkpoint, conversation and file changes together."
 msgstr "Vraťte relaci agenta k libovolnému kontrolnímu bodu, konverzaci i změny souborů zároveň."
 
+msgid "Room for another agent"
+msgstr "Je místo pro dalšího agenta"
+
 msgid "Rotate"
 msgstr "Otočit"
 
@@ -14796,6 +14922,9 @@ msgstr "Běží"
 
 msgid "Running \"{name}\" now"
 msgstr "Spouštím „{name}“"
+
+msgid "Running a command"
+msgstr "Spouští příkaz"
 
 msgid "Running agents on this profile lose access."
 msgstr "Běžící agenti na tomto profilu ztratí přístup."
@@ -15718,6 +15847,9 @@ msgstr "Zkratka se už používá"
 msgid "Show"
 msgstr "Zobrazit"
 
+msgid "Show {hiddenCount} more"
+msgstr "Zobrazit dalších {hiddenCount}"
+
 msgid "Show a confirmation dialog when quitting the app"
 msgstr "Zobrazit před ukončením aplikace potvrzovací dialog"
 
@@ -16197,6 +16329,9 @@ msgstr "brzy"
 
 msgid "Sort"
 msgstr "Řazení"
+
+msgid "Sort agents"
+msgstr "Seřadit agenty"
 
 msgid "Sort by"
 msgstr "Řadit podle"
@@ -16890,6 +17025,9 @@ msgstr "Ukázka Superset Stránky"
 msgid "Superset Plugins"
 msgstr "Pluginy Superset"
 
+msgid "Superset processes"
+msgstr "Procesy Superset"
+
 msgid "Superset raised an $11.5M seed round led by Union Square Ventures, with Y Combinator and Paul Graham. TechCrunch named it one of the standout startups from YC Demo Day."
 msgstr "Superset získal 11,5 milionu dolarů v seed kole, které vedl fond Union Square Ventures za účasti Y Combinatoru a Paula Grahama. TechCrunch ho zařadil mezi nejvýraznější startupy YC Demo Day."
 
@@ -16944,6 +17082,9 @@ msgstr "Vytrvalost"
 
 msgid "Sustain · active days in 30"
 msgstr "Pravidelnost · aktivní dny z 30"
+
+msgid "Swap"
+msgstr "Swap"
 
 msgid "Switch agents. Keep your workflow"
 msgstr "Vyměňte agenta. Workflow zůstane"
@@ -17058,9 +17199,6 @@ msgstr "Systémový"
 
 msgid "System design"
 msgstr "Návrh systému"
-
-msgid "System memory"
-msgstr "Systémová paměť"
 
 msgid "System RAM share"
 msgstr "Podíl systémové RAM"
@@ -18649,6 +18787,9 @@ msgstr "Neznámý projekt"
 msgid "Unknown Project"
 msgstr "Neznámý projekt"
 
+msgid "Unknown state"
+msgstr "Neznámý stav"
+
 msgid "Unknown user"
 msgstr "Neznámý uživatel"
 
@@ -19177,6 +19318,12 @@ msgstr "Čeká se na přihlášení…"
 
 msgid "Waiting for the subagent's first message…"
 msgstr "Čekání na první zprávu subagenta…"
+
+msgid "Waiting for you"
+msgstr "Čeká na vás"
+
+msgid "Waiting for you · {waitingFor}"
+msgstr "Čeká na vás · {waitingFor}"
 
 msgid "Waiting for your input"
 msgstr "Čeká na váš vstup"

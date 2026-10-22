@@ -34,6 +34,9 @@ msgstr "./"
 msgid ".sh"
 msgstr ".sh"
 
+msgid "· none right now"
+msgstr "· momenteel geen"
+
 msgid "· updated {updatedAgo}"
 msgstr "· bijgewerkt {updatedAgo}"
 
@@ -603,6 +606,9 @@ msgstr "{0}% van alle tokens · {1} tokens"
 msgid "{0}% of total cost · {1} tokens · * at API list rates"
 msgstr "{0}% van de totale kosten · {1} tokens · * tegen API-lijstprijzen"
 
+msgid "{activeCount, plural, one {# session is working or waiting for you: it stops mid-task.} other {# sessions are working or waiting for you: they stop mid-task.}}"
+msgstr "{activeCount, plural, one {# sessie werkt of wacht op jou: die stopt midden in de taak.} other {# sessies werken of wachten op jou: die stoppen midden in de taak.}}"
+
 msgid "{actor} added the label {label}"
 msgstr "{actor} heeft het label {label} toegevoegd"
 
@@ -721,6 +727,9 @@ msgstr "{behindCount, plural, one {# commit achter op main, rebase nodig} other 
 msgid "{branchPosition} of {totalBranches}"
 msgstr "{branchPosition} van {totalBranches}"
 
+msgid "{closed, plural, one {Closed # session} other {Closed # sessions}}"
+msgstr "{closed, plural, one {# sessie gesloten} other {# sessies gesloten}}"
+
 msgid "{closedCount, plural, one {Closed # port} other {Closed # ports}}"
 msgstr "{closedCount, plural, one {# poort gesloten} other {# poorten gesloten}}"
 
@@ -745,6 +754,9 @@ msgstr "{connectorName}-account"
 
 msgid "{cookieCount} cookies — forget this site"
 msgstr "{cookieCount} cookies — deze site vergeten"
+
+msgid "{count, plural, one {· # session, {freed}} other {· # sessions, {freed}}}"
+msgstr "{count, plural, one {· # sessie, {freed}} other {· # sessies, {freed}}}"
 
 msgid "{count, plural, one {# active port — show details} other {# active ports — show details}}"
 msgstr "{count, plural, one {# actieve poort — details tonen} other {# actieve poorten — details tonen}}"
@@ -775,6 +787,15 @@ msgstr "{count, plural, one {# worktree in deze repository heeft geen werkruimte
 
 msgid "{count, plural, one {added a commit} other {added # commits}}"
 msgstr "{count, plural, one {heeft een commit toegevoegd} other {heeft # commits toegevoegd}}"
+
+msgid "{count, plural, one {Close # session?} other {Close # sessions?}}"
+msgstr "{count, plural, one {# sessie sluiten?} other {# sessies sluiten?}}"
+
+msgid "{count, plural, one {Close # session…} other {Close # sessions…}}"
+msgstr "{count, plural, one {# sessie sluiten…} other {# sessies sluiten…}}"
+
+msgid "{count, plural, one {Close # session} other {Close # sessions}}"
+msgstr "{count, plural, one {# sessie sluiten} other {# sessies sluiten}}"
 
 msgid "{count, plural, one {Created # workspace} other {Created # workspaces}}"
 msgstr "{count, plural, one {# werkruimte aangemaakt} other {# werkruimtes aangemaakt}}"
@@ -839,6 +860,9 @@ msgstr "{current} van {total}"
 msgid "{currentPage} of {totalBranches}"
 msgstr "{currentPage} van {totalBranches}"
 
+msgid "{days, plural, one {# day} other {# days}}"
+msgstr "{days, plural, one {# dag} other {# dagen}}"
+
 msgid "{days} at {time}"
 msgstr "{days} om {time}"
 
@@ -872,6 +896,9 @@ msgstr "{entryPath} in deze workspace is al gepubliceerd als pagina in een ander
 
 msgid "{failed, plural, one {# failed} other {# failed}}"
 msgstr "{failed, plural, one {# mislukt} other {# mislukt}}"
+
+msgid "{failed, plural, one {# session could not be closed} other {# sessions could not be closed}}"
+msgstr "{failed, plural, one {# sessie kon niet worden gesloten} other {# sessies konden niet worden gesloten}}"
 
 msgid "{failing} of {total} check failing"
 msgstr "{failing} van {total} check mislukt"
@@ -914,6 +941,9 @@ msgstr "{hostName} is offline"
 
 msgid "{hotkeyText} to hide"
 msgstr "{hotkeyText} om te verbergen"
+
+msgid "{hours} h"
+msgstr "{hours} u"
 
 msgid "{hours}h"
 msgstr "{hours}u"
@@ -1005,6 +1035,9 @@ msgstr "{noun, select, repository {Geef minstens één repository op.} channel {
 msgid "{openCount} open"
 msgstr "{openCount} open"
 
+msgid "{orphanCount, plural, one {# process · {total}} other {# processes · {total}}}"
+msgstr "{orphanCount, plural, one {# proces · {total}} other {# processen · {total}}}"
+
 msgid "{pageTitle} can read and change data in your {pluginLabel} account as you, including in future versions of this page. It can send what it reads to other websites. Only allow pages you trust."
 msgstr "{pageTitle} kan namens jou gegevens in je {pluginLabel}-account lezen en wijzigen, ook in toekomstige versies van deze pagina. Wat de pagina leest, kan ze naar andere websites sturen. Sta alleen pagina’s toe die je vertrouwt."
 
@@ -1058,6 +1091,9 @@ msgstr "{presetLabel} teruggezet naar standaardwaarden"
 msgid "{previewSize}px · {0} line height"
 msgstr "{previewSize}px · regelhoogte {0}"
 
+msgid "{processCount, plural, one {# process} other {# processes}}"
+msgstr "{processCount, plural, one {# proces} other {# processen}}"
+
 msgid "{provider} logo"
 msgstr "logo van {provider}"
 
@@ -1092,6 +1128,9 @@ msgstr "{seconds}s geleden"
 
 msgid "{selectedCount} selected"
 msgstr "{selectedCount} geselecteerd"
+
+msgid "{sessionCount, plural, one {# session · {total}} other {# sessions · {total}}}"
+msgstr "{sessionCount, plural, one {# sessie · {total}} other {# sessies · {total}}}"
 
 msgid "{share}% human"
 msgstr "{share}% mens"
@@ -3514,6 +3553,9 @@ msgstr "Toegewezen persoon wijzigen"
 msgid "Change avatar"
 msgstr "Avatar wijzigen"
 
+msgid "Change how long without an answer"
+msgstr "Duur zonder antwoord wijzigen"
+
 msgid "Change icon"
 msgstr "Pictogram wijzigen"
 
@@ -4104,6 +4146,9 @@ msgstr "Gesloten"
 msgctxt "pull request or issue state"
 msgid "Closed"
 msgstr "Gesloten"
+
+msgid "Closed {title}"
+msgstr "{title} gesloten"
 
 msgid "Closing these ports will end the processes using them."
 msgstr "Als je deze poorten sluit, worden de processen die ze gebruiken beëindigd."
@@ -4875,6 +4920,9 @@ msgstr "Relatief pad kopiëren"
 msgid "Copy Relative Path"
 msgstr "Relatief pad kopiëren"
 
+msgid "Copy resume command"
+msgstr "Hervattingscommando kopiëren"
+
 msgid "Copy Selection"
 msgstr "Selectie kopiëren"
 
@@ -5124,6 +5172,9 @@ msgstr "Kan niet hervatten"
 
 msgid "Could not resume the chat"
 msgstr "Kan de chat niet hervatten"
+
+msgid "Could not resume the session"
+msgstr "Kan de sessie niet hervatten"
 
 msgid "Could not send"
 msgstr "Versturen mislukt"
@@ -5430,9 +5481,6 @@ msgstr "Kon het niet verifiëren"
 
 msgid "CPU"
 msgstr "CPU"
-
-msgid "CPU cores"
-msgstr "CPU-cores"
 
 msgid "Create"
 msgstr "Aanmaken"
@@ -6206,6 +6254,9 @@ msgstr "Details zijn hier niet beschikbaar, maar de link opent nog steeds."
 msgid "Dev"
 msgstr "Dev"
 
+msgid "Dev servers and tools whose agent or terminal is gone"
+msgstr "Dev-servers en tools waarvan de agent of terminal niet meer bestaat"
+
 msgid "Dev sign in"
 msgstr "Dev-login"
 
@@ -6442,6 +6493,9 @@ msgstr "Wil je de wijzigingen in {0} opslaan?"
 
 msgid "Do you want to save the changes you made to {name}?"
 msgstr "Wil je de wijzigingen in {name} opslaan?"
+
+msgid "Docker VM"
+msgstr "Docker-VM"
 
 msgid "Docs"
 msgstr "Docs"
@@ -8042,6 +8096,9 @@ msgstr "Free"
 msgid "Free for everyone"
 msgstr "Gratis voor iedereen"
 
+msgid "Frees about {freed}. Each one can be resumed later from “Recently closed”."
+msgstr "Maakt ongeveer {freed} vrij. Elke sessie kan later worden hervat vanuit ‘Recent gesloten’."
+
 msgid "Frequently<0/>asked questions"
 msgstr "Veelgestelde<0/>vragen"
 
@@ -8718,6 +8775,9 @@ msgstr "Inactief"
 msgid "Idle · branch pushed"
 msgstr "Inactief · branch gepusht"
 
+msgid "Idle agents I haven't answered for"
+msgstr "Inactieve agents zonder antwoord van mij sinds"
+
 msgid "Idle conversations"
 msgstr "Inactieve gesprekken"
 
@@ -9284,6 +9344,9 @@ msgstr "Een eigen branch en een eigen kopie van de bestanden"
 msgid "Its replies go with it."
 msgstr "De antwoorden worden ook verwijderd."
 
+msgid "Its whole process tree gets SIGTERM, then SIGKILL after 3 seconds."
+msgstr "De hele procesboom krijgt SIGTERM, en na 3 seconden SIGKILL."
+
 msgid "Its workspaces and terminals are unavailable until it restarts — use the Superset tray menu > Host Service > Restart."
 msgstr "De werkruimtes en terminals zijn niet beschikbaar tot de service opnieuw start — gebruik het Superset-menu in de menubalk > Hostservice > Opnieuw starten."
 
@@ -9403,6 +9466,9 @@ msgstr "Sneltoetsen"
 
 msgid "Kill"
 msgstr "Beëindigen"
+
+msgid "Kill {pendingName} (pid {pendingPid})?"
+msgstr "{pendingName} (pid {pendingPid}) beëindigen?"
 
 msgid "Kill all"
 msgstr "Alles beëindigen"
@@ -9637,6 +9703,9 @@ msgstr "Organisatie verlaten"
 msgid "Left team"
 msgstr "Team verlaten"
 
+msgid "Leftover processes"
+msgstr "Achtergebleven processen"
+
 msgid "Legal"
 msgstr "Juridisch"
 
@@ -9823,6 +9892,9 @@ msgstr "Live"
 msgid "Live · local machine · every 2 s"
 msgstr "Live · lokale machine · elke 2 s"
 
+msgid "Live · measured in {measuredMs} ms"
+msgstr "Live · gemeten in {measuredMs} ms"
+
 msgid "Live in the app."
 msgstr "Live in de app."
 
@@ -9832,8 +9904,8 @@ msgstr "Live preview"
 msgid "llms.txt (index for AI agents)"
 msgstr "llms.txt (index voor AI-agents)"
 
-msgid "Load (1 m)"
-msgstr "Belasting (1 m)"
+msgid "Load (1 min)"
+msgstr "Belasting (1 min)"
 
 msgid "load agent settings"
 msgstr "agentinstellingen laden"
@@ -10017,6 +10089,9 @@ msgstr "Taken worden bekeken"
 
 msgid "Looking for a mobile simulator…"
 msgstr "Zoeken naar een mobiele simulator…"
+
+msgid "Looking for agents…"
+msgstr "Agents zoeken…"
 
 msgid "Looking for installed browsers…"
 msgstr "Zoeken naar geïnstalleerde browsers…"
@@ -10275,6 +10350,15 @@ msgstr "Leden kunnen rollen niet wijzigen"
 
 msgid "Memory"
 msgstr "Geheugen"
+
+msgid "Memory is critical: close agents now"
+msgstr "Geheugen kritiek: sluit nu agents"
+
+msgid "Memory is tight: close idle agents before starting another"
+msgstr "Geheugen krap: sluit inactieve agents voordat je er nog een start"
+
+msgid "Memory pressure unknown"
+msgstr "Geheugendruk onbekend"
 
 msgid "Memory share"
 msgstr "Geheugenaandeel"
@@ -10601,6 +10685,12 @@ msgstr "Gedempt"
 
 msgid "My Agent"
 msgstr "Mijn agent"
+
+msgid "My last message"
+msgstr "Mijn laatste bericht"
+
+msgid "My last msg"
+msgstr "Mijn laatste ber."
 
 msgid "My Tasks"
 msgstr "Mijn taken"
@@ -10961,6 +11051,9 @@ msgstr "Nog geen agentgesprekken."
 msgid "No agent is configured on this host"
 msgstr "Er is geen agent geconfigureerd op deze host"
 
+msgid "No agent running"
+msgstr "Geen agent actief"
+
 #. placeholder {0}: host.name
 msgid "No agents configured on {0}"
 msgstr "Geen agents geconfigureerd op {0}"
@@ -11198,6 +11291,9 @@ msgstr "Geen labels gevonden."
 
 msgid "No lead"
 msgstr "Geen leider"
+
+msgid "No leftover processes from closed agents"
+msgstr "Geen achtergebleven processen van gesloten agents"
 
 msgid "No listening agents"
 msgstr "Geen luisterende agents"
@@ -11611,6 +11707,9 @@ msgstr "Niet verleend"
 msgid "Not included"
 msgstr "Niet inbegrepen"
 
+msgid "Not killed: the process is gone or no longer an orphan"
+msgstr "Niet beëindigd: het proces bestaat niet meer of is niet meer verweesd"
+
 msgid "Not loaded"
 msgstr "Niet geladen"
 
@@ -11631,6 +11730,9 @@ msgstr "Er komen nog geen gebeurtenissen binnen: Microsoft Graph heeft de meldin
 
 msgid "Not reviewed by you"
 msgstr "Niet door jou gereviewd"
+
+msgid "Not running"
+msgstr "Niet actief"
 
 msgid "Not sent"
 msgstr "Niet verzonden"
@@ -11765,6 +11867,9 @@ msgstr "Offline / local-first modus"
 
 msgid "Older"
 msgstr "Ouder"
+
+msgid "on {cores} cores"
+msgstr "op {cores} cores"
 
 msgid "on {offScopeHostName} — won't run here"
 msgstr "op {offScopeHostName} — draait hier niet"
@@ -12276,6 +12381,9 @@ msgstr "Recent openen"
 
 msgid "Open roles"
 msgstr "Openstaande vacatures"
+
+msgid "Open session"
+msgstr "Sessie openen"
 
 msgid "Open session in"
 msgstr "Sessie openen in"
@@ -12905,6 +13013,9 @@ msgstr "Kies je agent voor een installatie in één regel, of kopieer de configu
 
 msgid "PID"
 msgstr "PID"
+
+msgid "pid {orphanPid}"
+msgstr "pid {orphanPid}"
 
 msgid "Pin"
 msgstr "Vastzetten"
@@ -13604,6 +13715,9 @@ msgstr "Radix roteert de wrapper van de tooltip-pijl per zijde,"
 msgid "Radix Tooltip docs"
 msgstr "Radix Tooltip-docs"
 
+msgid "RAM in use"
+msgstr "RAM in gebruik"
+
 msgid "RAM Share"
 msgstr "RAM-aandeel"
 
@@ -13760,6 +13874,9 @@ msgstr "Recente PR's"
 
 msgid "Recent pull requests"
 msgstr "Recente pull requests"
+
+msgid "Recently closed"
+msgstr "Recent gesloten"
 
 msgid "Recently deleted"
 msgstr "Onlangs verwijderd"
@@ -14481,6 +14598,12 @@ msgstr "Resume-argumenten"
 msgid "Resume automation"
 msgstr "Automatisering hervatten"
 
+msgid "Resume reopens the conversation where it stopped"
+msgstr "Hervatten heropent het gesprek waar het stopte"
+
+msgid "Resume them from “Recently closed”"
+msgstr "Hervat ze vanuit ‘Recent gesloten’"
+
 #. placeholder {0}: candidate.agentLabel
 msgid "Resuming {0}…"
 msgstr "{0} hervatten…"
@@ -14657,6 +14780,9 @@ msgstr "Rol bijgewerkt"
 msgid "Roll back an agent session to any checkpoint, conversation and file changes together."
 msgstr "Draai een agentsessie terug naar elk checkpoint, gesprek en bestandswijzigingen samen."
 
+msgid "Room for another agent"
+msgstr "Ruimte voor nog een agent"
+
 msgid "Rotate"
 msgstr "Draaien"
 
@@ -14796,6 +14922,9 @@ msgstr "Bezig"
 
 msgid "Running \"{name}\" now"
 msgstr "\"{name}\" wordt nu uitgevoerd"
+
+msgid "Running a command"
+msgstr "Voert een commando uit"
 
 msgid "Running agents on this profile lose access."
 msgstr "Draaiende agents op dit profiel verliezen toegang."
@@ -15718,6 +15847,9 @@ msgstr "Sneltoets al in gebruik"
 msgid "Show"
 msgstr "Tonen"
 
+msgid "Show {hiddenCount} more"
+msgstr "Nog {hiddenCount} tonen"
+
 msgid "Show a confirmation dialog when quitting the app"
 msgstr "Toon een bevestiging bij het afsluiten van de app"
 
@@ -16197,6 +16329,9 @@ msgstr "binnenkort"
 
 msgid "Sort"
 msgstr "Sorteren"
+
+msgid "Sort agents"
+msgstr "Agents sorteren"
 
 msgid "Sort by"
 msgstr "Sorteren op"
@@ -16890,6 +17025,9 @@ msgstr "Demo van Superset Pagina's"
 msgid "Superset Plugins"
 msgstr "Superset Plugins"
 
+msgid "Superset processes"
+msgstr "Superset-processen"
+
 msgid "Superset raised an $11.5M seed round led by Union Square Ventures, with Y Combinator and Paul Graham. TechCrunch named it one of the standout startups from YC Demo Day."
 msgstr "Superset haalde een seedronde van 11,5 miljoen dollar op onder leiding van Union Square Ventures, met Y Combinator en Paul Graham. TechCrunch noemde het een van de opvallendste startups van YC Demo Day."
 
@@ -16944,6 +17082,9 @@ msgstr "Volhouden"
 
 msgid "Sustain · active days in 30"
 msgstr "Continuïteit · actieve dagen van 30"
+
+msgid "Swap"
+msgstr "Swap"
 
 msgid "Switch agents. Keep your workflow"
 msgstr "Wissel van agent. Houd je workflow"
@@ -17058,9 +17199,6 @@ msgstr "Systeem"
 
 msgid "System design"
 msgstr "Systeemontwerp"
-
-msgid "System memory"
-msgstr "Systeemgeheugen"
 
 msgid "System RAM share"
 msgstr "Aandeel systeem-RAM"
@@ -18649,6 +18787,9 @@ msgstr "Onbekend project"
 msgid "Unknown Project"
 msgstr "Onbekend project"
 
+msgid "Unknown state"
+msgstr "Onbekende status"
+
 msgid "Unknown user"
 msgstr "Onbekende gebruiker"
 
@@ -19177,6 +19318,12 @@ msgstr "Wachten op login…"
 
 msgid "Waiting for the subagent's first message…"
 msgstr "Wachten op het eerste bericht van de subagent…"
+
+msgid "Waiting for you"
+msgstr "Wacht op jou"
+
+msgid "Waiting for you · {waitingFor}"
+msgstr "Wacht op jou · {waitingFor}"
 
 msgid "Waiting for your input"
 msgstr "Wacht op je invoer"

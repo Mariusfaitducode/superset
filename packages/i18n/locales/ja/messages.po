@@ -34,6 +34,9 @@ msgstr "./"
 msgid ".sh"
 msgstr ".sh"
 
+msgid "· none right now"
+msgstr "· 現在なし"
+
 msgid "· updated {updatedAgo}"
 msgstr "· {updatedAgo}に更新"
 
@@ -603,6 +606,9 @@ msgstr "全トークンの{0}% · {1}トークン"
 msgid "{0}% of total cost · {1} tokens · * at API list rates"
 msgstr "総コストの{0}% · {1}トークン · * API定価換算"
 
+msgid "{activeCount, plural, one {# session is working or waiting for you: it stops mid-task.} other {# sessions are working or waiting for you: they stop mid-task.}}"
+msgstr "{activeCount, plural, one {# 件のセッションが作業中か返信待ちです。タスクの途中で停止します。} other {# 件のセッションが作業中か返信待ちです。タスクの途中で停止します。}}"
+
 msgid "{actor} added the label {label}"
 msgstr "{actor}がラベル {label} を追加しました"
 
@@ -721,6 +727,9 @@ msgstr "{behindCount, plural, one {mainより#コミット遅れています。�
 msgid "{branchPosition} of {totalBranches}"
 msgstr "{totalBranches}件中{branchPosition}件目"
 
+msgid "{closed, plural, one {Closed # session} other {Closed # sessions}}"
+msgstr "{closed, plural, one {# 件のセッションを閉じました} other {# 件のセッションを閉じました}}"
+
 msgid "{closedCount, plural, one {Closed # port} other {Closed # ports}}"
 msgstr "{closedCount, plural, one {#個のポートを閉じました} other {#個のポートを閉じました}}"
 
@@ -745,6 +754,9 @@ msgstr "{connectorName} アカウント"
 
 msgid "{cookieCount} cookies — forget this site"
 msgstr "{cookieCount}件のCookie — このサイトを削除"
+
+msgid "{count, plural, one {· # session, {freed}} other {· # sessions, {freed}}}"
+msgstr "{count, plural, one {· # 件のセッション、{freed}} other {· # 件のセッション、{freed}}}"
 
 msgid "{count, plural, one {# active port — show details} other {# active ports — show details}}"
 msgstr "{count, plural, one {#個のアクティブなポート — 詳細を表示} other {#個のアクティブなポート — 詳細を表示}}"
@@ -775,6 +787,15 @@ msgstr "{count, plural, one {このリポジトリの#件のワークツリー�
 
 msgid "{count, plural, one {added a commit} other {added # commits}}"
 msgstr "{count, plural, one {が#件のコミットを追加しました} other {が#件のコミットを追加しました}}"
+
+msgid "{count, plural, one {Close # session?} other {Close # sessions?}}"
+msgstr "{count, plural, one {# 件のセッションを閉じますか？} other {# 件のセッションを閉じますか？}}"
+
+msgid "{count, plural, one {Close # session…} other {Close # sessions…}}"
+msgstr "{count, plural, one {# 件のセッションを閉じる…} other {# 件のセッションを閉じる…}}"
+
+msgid "{count, plural, one {Close # session} other {Close # sessions}}"
+msgstr "{count, plural, one {# 件のセッションを閉じる} other {# 件のセッションを閉じる}}"
 
 msgid "{count, plural, one {Created # workspace} other {Created # workspaces}}"
 msgstr "{count, plural, one {#件のワークスペースを作成しました} other {#件のワークスペースを作成しました}}"
@@ -839,6 +860,9 @@ msgstr "{total} 件中 {current} 件目"
 msgid "{currentPage} of {totalBranches}"
 msgstr "{currentPage}/{totalBranches}"
 
+msgid "{days, plural, one {# day} other {# days}}"
+msgstr "{days, plural, one {# 日} other {# 日}}"
+
 msgid "{days} at {time}"
 msgstr "{days} {time}"
 
@@ -872,6 +896,9 @@ msgstr "このワークスペースの {entryPath} は、別の組織のペー�
 
 msgid "{failed, plural, one {# failed} other {# failed}}"
 msgstr "{failed, plural, one {#件失敗} other {#件失敗}}"
+
+msgid "{failed, plural, one {# session could not be closed} other {# sessions could not be closed}}"
+msgstr "{failed, plural, one {# 件のセッションを閉じられませんでした} other {# 件のセッションを閉じられませんでした}}"
 
 msgid "{failing} of {total} check failing"
 msgstr "{total}件中{failing}件のチェックが失敗"
@@ -914,6 +941,9 @@ msgstr "{hostName}はオフラインです"
 
 msgid "{hotkeyText} to hide"
 msgstr "{hotkeyText}で隠す"
+
+msgid "{hours} h"
+msgstr "{hours} 時間"
 
 msgid "{hours}h"
 msgstr "{hours}時間"
@@ -1005,6 +1035,9 @@ msgstr "{noun, select, repository {リポジトリを1つ以上指定してく�
 msgid "{openCount} open"
 msgstr "{openCount}件通過"
 
+msgid "{orphanCount, plural, one {# process · {total}} other {# processes · {total}}}"
+msgstr "{orphanCount, plural, one {# 件のプロセス · {total}} other {# 件のプロセス · {total}}}"
+
 msgid "{pageTitle} can read and change data in your {pluginLabel} account as you, including in future versions of this page. It can send what it reads to other websites. Only allow pages you trust."
 msgstr "{pageTitle} は、あなたとして {pluginLabel} アカウントのデータを読み取り、変更できます。このページの今後のバージョンも含みます。読み取った内容を他のウェブサイトに送信できます。信頼できるページだけを許可してください。"
 
@@ -1058,6 +1091,9 @@ msgstr "{presetLabel}をデフォルトに戻しました"
 msgid "{previewSize}px · {0} line height"
 msgstr "{previewSize}px · 行の高さ {0}"
 
+msgid "{processCount, plural, one {# process} other {# processes}}"
+msgstr "{processCount, plural, one {# 件のプロセス} other {# 件のプロセス}}"
+
 msgid "{provider} logo"
 msgstr "{provider}のロゴ"
 
@@ -1092,6 +1128,9 @@ msgstr "{seconds}秒前"
 
 msgid "{selectedCount} selected"
 msgstr "{selectedCount}件選択中"
+
+msgid "{sessionCount, plural, one {# session · {total}} other {# sessions · {total}}}"
+msgstr "{sessionCount, plural, one {# 件のセッション · {total}} other {# 件のセッション · {total}}}"
 
 msgid "{share}% human"
 msgstr "人間{share}%"
@@ -3514,6 +3553,9 @@ msgstr "担当者を変更"
 msgid "Change avatar"
 msgstr "アバターを変更"
 
+msgid "Change how long without an answer"
+msgstr "未返信の時間を変更"
+
 msgid "Change icon"
 msgstr "アイコンを変更"
 
@@ -4104,6 +4146,9 @@ msgstr "クローズ済み"
 msgctxt "pull request or issue state"
 msgid "Closed"
 msgstr "クローズ済み"
+
+msgid "Closed {title}"
+msgstr "{title} を閉じました"
 
 msgid "Closing these ports will end the processes using them."
 msgstr "これらのポートを閉じると、使用中のプロセスが終了します。"
@@ -4875,6 +4920,9 @@ msgstr "相対パスをコピー"
 msgid "Copy Relative Path"
 msgstr "相対パスをコピー"
 
+msgid "Copy resume command"
+msgstr "再開コマンドをコピー"
+
 msgid "Copy Selection"
 msgstr "選択範囲をコピー"
 
@@ -5124,6 +5172,9 @@ msgstr "再開できませんでした"
 
 msgid "Could not resume the chat"
 msgstr "チャットを再開できませんでした"
+
+msgid "Could not resume the session"
+msgstr "セッションを再開できませんでした"
 
 msgid "Could not send"
 msgstr "送信できませんでした"
@@ -5430,9 +5481,6 @@ msgstr "確認できませんでした"
 
 msgid "CPU"
 msgstr "CPU"
-
-msgid "CPU cores"
-msgstr "CPUコア数"
 
 msgid "Create"
 msgstr "作成"
@@ -6206,6 +6254,9 @@ msgstr "ここでは詳細を表示できませんが、リンクは開けます
 msgid "Dev"
 msgstr "開発"
 
+msgid "Dev servers and tools whose agent or terminal is gone"
+msgstr "エージェントまたはターミナルが終了した開発サーバーとツール"
+
 msgid "Dev sign in"
 msgstr "開発用サインイン"
 
@@ -6442,6 +6493,9 @@ msgstr "{0}への変更を保存しますか?"
 
 msgid "Do you want to save the changes you made to {name}?"
 msgstr "{name}への変更を保存しますか?"
+
+msgid "Docker VM"
+msgstr "Docker VM"
 
 msgid "Docs"
 msgstr "ドキュメント"
@@ -8042,6 +8096,9 @@ msgstr "Free"
 msgid "Free for everyone"
 msgstr "誰でも無料"
 
+msgid "Frees about {freed}. Each one can be resumed later from “Recently closed”."
+msgstr "約 {freed} を解放します。各セッションは後で「最近閉じたセッション」から再開できます。"
+
 msgid "Frequently<0/>asked questions"
 msgstr "よくある<0/>ご質問"
 
@@ -8718,6 +8775,9 @@ msgstr "アイドル"
 msgid "Idle · branch pushed"
 msgstr "アイドル · ブランチをプッシュ済み"
 
+msgid "Idle agents I haven't answered for"
+msgstr "自分が返信していないアイドル状態のエージェント、経過時間:"
+
 msgid "Idle conversations"
 msgstr "アイドル状態の会話"
 
@@ -9284,6 +9344,9 @@ msgstr "独自のブランチとファイルのコピー"
 msgid "Its replies go with it."
 msgstr "返信も一緒に削除されます。"
 
+msgid "Its whole process tree gets SIGTERM, then SIGKILL after 3 seconds."
+msgstr "プロセスツリー全体に SIGTERM を送り、3 秒後に SIGKILL を送ります。"
+
 msgid "Its workspaces and terminals are unavailable until it restarts — use the Superset tray menu > Host Service > Restart."
 msgstr "再起動するまで、そのワークスペースとターミナルは利用できません — Supersetのトレイメニューから「ホストサービス」>「再起動」を実行してください。"
 
@@ -9403,6 +9466,9 @@ msgstr "キーボードショートカット"
 
 msgid "Kill"
 msgstr "終了"
+
+msgid "Kill {pendingName} (pid {pendingPid})?"
+msgstr "{pendingName} (pid {pendingPid}) を終了しますか？"
 
 msgid "Kill all"
 msgstr "すべて終了"
@@ -9637,6 +9703,9 @@ msgstr "組織から退出しました"
 msgid "Left team"
 msgstr "チームから退出しました"
 
+msgid "Leftover processes"
+msgstr "残っているプロセス"
+
 msgid "Legal"
 msgstr "法務"
 
@@ -9823,6 +9892,9 @@ msgstr "ライブ"
 msgid "Live · local machine · every 2 s"
 msgstr "ライブ · ローカルマシン · 2秒ごと"
 
+msgid "Live · measured in {measuredMs} ms"
+msgstr "ライブ · {measuredMs} ms で測定"
+
 msgid "Live in the app."
 msgstr "アプリで利用できます。"
 
@@ -9832,8 +9904,8 @@ msgstr "ライブプレビュー"
 msgid "llms.txt (index for AI agents)"
 msgstr "llms.txt(AIエージェント向けの索引)"
 
-msgid "Load (1 m)"
-msgstr "負荷 (1分)"
+msgid "Load (1 min)"
+msgstr "負荷 (1 分)"
 
 msgid "load agent settings"
 msgstr "エージェント設定を読み込む"
@@ -10017,6 +10089,9 @@ msgstr "タスクを確認中"
 
 msgid "Looking for a mobile simulator…"
 msgstr "モバイルシミュレーターを検索中…"
+
+msgid "Looking for agents…"
+msgstr "エージェントを検索中…"
 
 msgid "Looking for installed browsers…"
 msgstr "インストール済みブラウザを検索中…"
@@ -10275,6 +10350,15 @@ msgstr "メンバーはロールを変更できません"
 
 msgid "Memory"
 msgstr "メモリ"
+
+msgid "Memory is critical: close agents now"
+msgstr "メモリが危険な状態です: 今すぐエージェントを閉じてください"
+
+msgid "Memory is tight: close idle agents before starting another"
+msgstr "メモリが不足気味です: 別のエージェントを起動する前にアイドル状態のエージェントを閉じてください"
+
+msgid "Memory pressure unknown"
+msgstr "メモリプレッシャー不明"
 
 msgid "Memory share"
 msgstr "メモリシェア"
@@ -10601,6 +10685,12 @@ msgstr "ミュート中"
 
 msgid "My Agent"
 msgstr "マイエージェント"
+
+msgid "My last message"
+msgstr "自分の最後のメッセージ"
+
+msgid "My last msg"
+msgstr "自分の最終メッセージ"
 
 msgid "My Tasks"
 msgstr "マイタスク"
@@ -10961,6 +11051,9 @@ msgstr "エージェントの会話はまだありません。"
 msgid "No agent is configured on this host"
 msgstr "このホストにはエージェントが設定されていません"
 
+msgid "No agent running"
+msgstr "実行中のエージェントはありません"
+
 #. placeholder {0}: host.name
 msgid "No agents configured on {0}"
 msgstr "{0}にはエージェントが設定されていません"
@@ -11198,6 +11291,9 @@ msgstr "ラベルが見つかりません。"
 
 msgid "No lead"
 msgstr "リードなし"
+
+msgid "No leftover processes from closed agents"
+msgstr "閉じたエージェントの残りプロセスはありません"
 
 msgid "No listening agents"
 msgstr "コメントを受け取るエージェントはいません"
@@ -11611,6 +11707,9 @@ msgstr "未許可"
 msgid "Not included"
 msgstr "含まれない"
 
+msgid "Not killed: the process is gone or no longer an orphan"
+msgstr "終了されませんでした：プロセスがすでに存在しないか、孤立プロセスではなくなりました"
+
 msgid "Not loaded"
 msgstr "未読み込み"
 
@@ -11631,6 +11730,9 @@ msgstr "まだイベントを受信していません: Microsoft Graphが通知�
 
 msgid "Not reviewed by you"
 msgstr "自分がレビューしていない"
+
+msgid "Not running"
+msgstr "停止中"
 
 msgid "Not sent"
 msgstr "未送信"
@@ -11765,6 +11867,9 @@ msgstr "オフライン/ローカルファーストモード"
 
 msgid "Older"
 msgstr "それ以前"
+
+msgid "on {cores} cores"
+msgstr "{cores} コア"
 
 msgid "on {offScopeHostName} — won't run here"
 msgstr "{offScopeHostName}上 — ここでは実行されません"
@@ -12276,6 +12381,9 @@ msgstr "最近使った項目を開く"
 
 msgid "Open roles"
 msgstr "募集中のポジション"
+
+msgid "Open session"
+msgstr "セッションを開く"
 
 msgid "Open session in"
 msgstr "セッションを開く場所"
@@ -12905,6 +13013,9 @@ msgstr "エージェントを選べば1行でインストールできます。�
 
 msgid "PID"
 msgstr "PID"
+
+msgid "pid {orphanPid}"
+msgstr "pid {orphanPid}"
 
 msgid "Pin"
 msgstr "ピン留め"
@@ -13604,6 +13715,9 @@ msgstr "Radixはtooltipの矢印ラッパーを辺ごとに回転させるため
 msgid "Radix Tooltip docs"
 msgstr "Radix Tooltipのドキュメント"
 
+msgid "RAM in use"
+msgstr "使用中の RAM"
+
 msgid "RAM Share"
 msgstr "RAMシェア"
 
@@ -13760,6 +13874,9 @@ msgstr "最近のPR"
 
 msgid "Recent pull requests"
 msgstr "最近のプルリクエスト"
+
+msgid "Recently closed"
+msgstr "最近閉じたセッション"
 
 msgid "Recently deleted"
 msgstr "最近削除した項目"
@@ -14481,6 +14598,12 @@ msgstr "再開時の引数"
 msgid "Resume automation"
 msgstr "オートメーションを再開"
 
+msgid "Resume reopens the conversation where it stopped"
+msgstr "再開すると、停止した時点から会話を再び開きます"
+
+msgid "Resume them from “Recently closed”"
+msgstr "「最近閉じたセッション」から再開できます"
+
 #. placeholder {0}: candidate.agentLabel
 msgid "Resuming {0}…"
 msgstr "{0}を再開中…"
@@ -14657,6 +14780,9 @@ msgstr "ロールを更新しました"
 msgid "Roll back an agent session to any checkpoint, conversation and file changes together."
 msgstr "エージェントのセッションを任意のチェックポイントまで巻き戻せます。会話とファイルの変更をまとめて。"
 
+msgid "Room for another agent"
+msgstr "別のエージェントを起動する余裕があります"
+
 msgid "Rotate"
 msgstr "回転"
 
@@ -14796,6 +14922,9 @@ msgstr "実行中"
 
 msgid "Running \"{name}\" now"
 msgstr "「{name}」を今すぐ実行します"
+
+msgid "Running a command"
+msgstr "コマンドを実行中"
 
 msgid "Running agents on this profile lose access."
 msgstr "このプロファイルで実行中のエージェントはアクセスを失います。"
@@ -15718,6 +15847,9 @@ msgstr "ショートカットは使用中です"
 msgid "Show"
 msgstr "表示"
 
+msgid "Show {hiddenCount} more"
+msgstr "さらに {hiddenCount} 件表示"
+
 msgid "Show a confirmation dialog when quitting the app"
 msgstr "アプリ終了時に確認ダイアログを表示"
 
@@ -16197,6 +16329,9 @@ msgstr "まもなく"
 
 msgid "Sort"
 msgstr "並べ替え"
+
+msgid "Sort agents"
+msgstr "エージェントを並べ替え"
 
 msgid "Sort by"
 msgstr "並び替え"
@@ -16890,6 +17025,9 @@ msgstr "Superset ページのデモ"
 msgid "Superset Plugins"
 msgstr "Superset プラグイン"
 
+msgid "Superset processes"
+msgstr "Superset のプロセス"
+
 msgid "Superset raised an $11.5M seed round led by Union Square Ventures, with Y Combinator and Paul Graham. TechCrunch named it one of the standout startups from YC Demo Day."
 msgstr "Superset は、Union Square Ventures がリードし、Y Combinator と Paul Graham が参加した 1,150 万ドルのシードラウンドを調達しました。TechCrunch は Superset を YC Demo Day の注目スタートアップの 1 社に選びました。"
 
@@ -16944,6 +17082,9 @@ msgstr "継続"
 
 msgid "Sustain · active days in 30"
 msgstr "継続 · 30日間のアクティブ日数"
+
+msgid "Swap"
+msgstr "スワップ"
 
 msgid "Switch agents. Keep your workflow"
 msgstr "エージェントは替える。ワークフローはそのまま"
@@ -17058,9 +17199,6 @@ msgstr "システム"
 
 msgid "System design"
 msgstr "システム設計"
-
-msgid "System memory"
-msgstr "システムメモリ"
 
 msgid "System RAM share"
 msgstr "システムRAMシェア"
@@ -18649,6 +18787,9 @@ msgstr "不明なプロジェクト"
 msgid "Unknown Project"
 msgstr "不明なプロジェクト"
 
+msgid "Unknown state"
+msgstr "不明な状態"
+
 msgid "Unknown user"
 msgstr "不明なユーザー"
 
@@ -19177,6 +19318,12 @@ msgstr "サインインを待機中…"
 
 msgid "Waiting for the subagent's first message…"
 msgstr "サブエージェントの最初のメッセージを待っています…"
+
+msgid "Waiting for you"
+msgstr "返信待ち"
+
+msgid "Waiting for you · {waitingFor}"
+msgstr "返信待ち · {waitingFor}"
 
 msgid "Waiting for your input"
 msgstr "入力を待っています"
