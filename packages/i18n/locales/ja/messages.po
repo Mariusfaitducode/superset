@@ -1786,6 +1786,9 @@ msgstr "さらに追加…"
 msgid "Add one from the menu in the sidebar to get started."
 msgstr "サイドバーのメニューから追加して始めましょう。"
 
+msgid "Add or paste ideas…"
+msgstr "アイデアを追加または貼り付け…"
+
 msgid "Add people"
 msgstr "ユーザーを追加"
 
@@ -1863,6 +1866,9 @@ msgstr "{added}件のファイルを{where}に追加しました"
 
 msgid "Added 1 file to {where}"
 msgstr "1件のファイルを{where}に追加しました"
+
+msgid "Added by an agent"
+msgstr "エージェントが追加"
 
 msgid "Added by the agent"
 msgstr "エージェントが追加"
@@ -2067,6 +2073,10 @@ msgstr "すべて"
 msgctxt "log scope"
 msgid "All"
 msgstr "すべて"
+
+#. placeholder {0}: ideas.length
+msgid "All {0}"
+msgstr "すべて {0}"
 
 #. placeholder {0}: history.projects.length
 msgid "All {0} →"
@@ -4926,6 +4936,9 @@ msgstr "実際のコスト: $0"
 msgid "Could not add agent"
 msgstr "エージェントを追加できませんでした"
 
+msgid "Could not add the ideas"
+msgstr "アイデアを追加できませんでした"
+
 msgid "Could not answer the agent"
 msgstr "エージェントに応答できませんでした"
 
@@ -5181,6 +5194,9 @@ msgstr "スキルを更新できませんでした"
 
 msgid "Could not update the branch"
 msgstr "ブランチを更新できませんでした"
+
+msgid "Could not update the idea"
+msgstr "アイデアを更新できませんでした"
 
 msgid "Could not update the to-do"
 msgstr "To-doを更新できませんでした"
@@ -5968,6 +5984,9 @@ msgstr "グループを削除"
 msgid "Delete host"
 msgstr "ホストを削除"
 
+msgid "Delete idea"
+msgstr "アイデアを削除"
+
 msgid "Delete image"
 msgstr "画像を削除"
 
@@ -6601,6 +6620,9 @@ msgstr "Dropdown Menu"
 
 msgid "Dropdown, context, and application menus"
 msgstr "ドロップダウン、コンテキスト、アプリケーションメニュー"
+
+msgid "Dropped"
+msgstr "却下"
 
 msgid "Due"
 msgstr "期限"
@@ -8363,6 +8385,9 @@ msgstr "ハードリロード"
 msgid "Hardware Keyboard"
 msgstr "ハードウェアキーボード"
 
+msgid "Has a note"
+msgstr "メモあり"
+
 msgid "Has access"
 msgstr "アクセス権あり"
 
@@ -8708,6 +8733,15 @@ msgstr "IDをコピーしました"
 
 msgid "IDE"
 msgstr "IDE"
+
+msgid "Idea details"
+msgstr "アイデアの詳細"
+
+msgid "Ideas"
+msgstr "アイデア"
+
+msgid "Ideas: {activeCount} open"
+msgstr "アイデア: 未決 {activeCount} 件"
 
 msgid "Identity"
 msgstr "識別情報"
@@ -9382,6 +9416,9 @@ msgstr "待ち続ける"
 
 msgid "Keep working"
 msgstr "作業を続ける"
+
+msgid "Kept"
+msgstr "採用"
 
 msgid "Kept the new file — it changed after it was created"
 msgstr "新しいファイルを保持しました — 作成後に変更されています"
@@ -11949,6 +11986,10 @@ msgstr "開く"
 msgid "Open"
 msgstr "開く"
 
+msgctxt "idea status"
+msgid "Open"
+msgstr "未決"
+
 msgctxt "pull request or issue state"
 msgid "Open"
 msgstr "オープン"
@@ -11964,6 +12005,9 @@ msgstr "{0}を開く"
 #. placeholder {0}: plugin.interface.displayName
 msgid "Open {0} website"
 msgstr "{0} のウェブサイトを開く"
+
+msgid "Open {activeCount}"
+msgstr "未決 {activeCount}"
 
 msgid "Open {filePath}"
 msgstr "{filePath}を開く"
@@ -12726,6 +12770,9 @@ msgstr "貼り付け"
 
 msgid "Paste this into Superset CLI:"
 msgstr "これをSuperset CLIに貼り付けてください:"
+
+msgid "Pasting several lines adds one idea per line"
+msgstr "複数行を貼り付けると、1行ごとにアイデアが追加されます"
 
 msgid "Path"
 msgstr "パス"
@@ -16527,6 +16574,10 @@ msgstr "ステータス"
 msgid "Status changed"
 msgstr "ステータス変更"
 
+#. placeholder {0}: statusLabel[idea.status]
+msgid "Status: {0}"
+msgstr "ステータス: {0}"
+
 msgid "Stay connected (refresh tokens)"
 msgstr "接続の維持(リフレッシュトークン)"
 
@@ -19465,6 +19516,9 @@ msgstr "開ける人"
 
 msgid "Whole Task"
 msgstr "タスク完遂"
+
+msgid "Why, how, links…"
+msgstr "理由、方法、リンク…"
 
 msgid "Width"
 msgstr "幅"

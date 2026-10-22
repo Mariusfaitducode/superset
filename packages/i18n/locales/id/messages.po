@@ -1786,6 +1786,9 @@ msgstr "Tambah lagi…"
 msgid "Add one from the menu in the sidebar to get started."
 msgstr "Tambahkan satu dari menu di sidebar untuk memulai."
 
+msgid "Add or paste ideas…"
+msgstr "Tambah atau tempel ide…"
+
 msgid "Add people"
 msgstr "Tambah orang"
 
@@ -1863,6 +1866,9 @@ msgstr "Menambahkan {added} file ke {where}"
 
 msgid "Added 1 file to {where}"
 msgstr "Menambahkan 1 file ke {where}"
+
+msgid "Added by an agent"
+msgstr "Ditambahkan oleh agen"
 
 msgid "Added by the agent"
 msgstr "Ditambahkan oleh agen"
@@ -2067,6 +2073,10 @@ msgstr "Semua"
 msgctxt "log scope"
 msgid "All"
 msgstr "Semua"
+
+#. placeholder {0}: ideas.length
+msgid "All {0}"
+msgstr "Semua {0}"
 
 #. placeholder {0}: history.projects.length
 msgid "All {0} →"
@@ -4926,6 +4936,9 @@ msgstr "Biaya untuk Anda: $0"
 msgid "Could not add agent"
 msgstr "Tidak dapat menambahkan agen"
 
+msgid "Could not add the ideas"
+msgstr "Tidak dapat menambahkan ide"
+
 msgid "Could not answer the agent"
 msgstr "Tidak dapat menjawab agen"
 
@@ -5181,6 +5194,9 @@ msgstr "Tidak bisa memperbarui skill"
 
 msgid "Could not update the branch"
 msgstr "Tidak bisa memperbarui branch"
+
+msgid "Could not update the idea"
+msgstr "Tidak dapat memperbarui ide"
 
 msgid "Could not update the to-do"
 msgstr "Tidak dapat memperbarui to-do"
@@ -5968,6 +5984,9 @@ msgstr "Hapus grup"
 msgid "Delete host"
 msgstr "Hapus host"
 
+msgid "Delete idea"
+msgstr "Hapus ide"
+
 msgid "Delete image"
 msgstr "Hapus gambar"
 
@@ -6601,6 +6620,9 @@ msgstr "Menu Dropdown"
 
 msgid "Dropdown, context, and application menus"
 msgstr "Menu dropdown, konteks, dan aplikasi"
+
+msgid "Dropped"
+msgstr "Dibatalkan"
 
 msgid "Due"
 msgstr "Tenggat"
@@ -8363,6 +8385,9 @@ msgstr "Muat ulang paksa"
 msgid "Hardware Keyboard"
 msgstr "Keyboard Fisik"
 
+msgid "Has a note"
+msgstr "Ada catatan"
+
 msgid "Has access"
 msgstr "Punya akses"
 
@@ -8708,6 +8733,15 @@ msgstr "ID disalin"
 
 msgid "IDE"
 msgstr "IDE"
+
+msgid "Idea details"
+msgstr "Detail ide"
+
+msgid "Ideas"
+msgstr "Ide"
+
+msgid "Ideas: {activeCount} open"
+msgstr "Ide: {activeCount} terbuka"
 
 msgid "Identity"
 msgstr "Identitas"
@@ -9382,6 +9416,9 @@ msgstr "Tunggu saja"
 
 msgid "Keep working"
 msgstr "Lanjut bekerja"
+
+msgid "Kept"
+msgstr "Disimpan"
 
 msgid "Kept the new file — it changed after it was created"
 msgstr "File baru dipertahankan — isinya berubah setelah dibuat"
@@ -11949,6 +11986,10 @@ msgstr "buka"
 msgid "Open"
 msgstr "Buka"
 
+msgctxt "idea status"
+msgid "Open"
+msgstr "Terbuka"
+
 msgctxt "pull request or issue state"
 msgid "Open"
 msgstr "Terbuka"
@@ -11964,6 +12005,9 @@ msgstr "Buka {0}"
 #. placeholder {0}: plugin.interface.displayName
 msgid "Open {0} website"
 msgstr "Buka situs web {0}"
+
+msgid "Open {activeCount}"
+msgstr "Terbuka {activeCount}"
 
 msgid "Open {filePath}"
 msgstr "Buka {filePath}"
@@ -12726,6 +12770,9 @@ msgstr "Tempel"
 
 msgid "Paste this into Superset CLI:"
 msgstr "Tempel ini ke Superset CLI:"
+
+msgid "Pasting several lines adds one idea per line"
+msgstr "Menempel beberapa baris menambahkan satu ide per baris"
 
 msgid "Path"
 msgstr "Path"
@@ -16527,6 +16574,10 @@ msgstr "Status"
 msgid "Status changed"
 msgstr "Status berubah"
 
+#. placeholder {0}: statusLabel[idea.status]
+msgid "Status: {0}"
+msgstr "Status: {0}"
+
 msgid "Stay connected (refresh tokens)"
 msgstr "Tetap terhubung (refresh token)"
 
@@ -19465,6 +19516,9 @@ msgstr "Siapa yang bisa membuka"
 
 msgid "Whole Task"
 msgstr "Tugas utuh"
+
+msgid "Why, how, links…"
+msgstr "Mengapa, bagaimana, tautan…"
 
 msgid "Width"
 msgstr "Lebar"

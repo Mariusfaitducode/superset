@@ -1786,6 +1786,9 @@ msgstr "Meer toevoegen…"
 msgid "Add one from the menu in the sidebar to get started."
 msgstr "Voeg er een toe via het menu in de zijbalk om te beginnen."
 
+msgid "Add or paste ideas…"
+msgstr "Ideeën toevoegen of plakken…"
+
 msgid "Add people"
 msgstr "Personen toevoegen"
 
@@ -1863,6 +1866,9 @@ msgstr "{added} bestanden toegevoegd aan {where}"
 
 msgid "Added 1 file to {where}"
 msgstr "1 bestand toegevoegd aan {where}"
+
+msgid "Added by an agent"
+msgstr "Toegevoegd door een agent"
 
 msgid "Added by the agent"
 msgstr "Toegevoegd door de agent"
@@ -2067,6 +2073,10 @@ msgstr "Alle"
 msgctxt "log scope"
 msgid "All"
 msgstr "Alle"
+
+#. placeholder {0}: ideas.length
+msgid "All {0}"
+msgstr "Alle {0}"
 
 #. placeholder {0}: history.projects.length
 msgid "All {0} →"
@@ -4926,6 +4936,9 @@ msgstr "Kosten voor jou: $0"
 msgid "Could not add agent"
 msgstr "Kon agent niet toevoegen"
 
+msgid "Could not add the ideas"
+msgstr "Kon de ideeën niet toevoegen"
+
 msgid "Could not answer the agent"
 msgstr "Kan de agent niet antwoorden"
 
@@ -5181,6 +5194,9 @@ msgstr "Kan skill niet bijwerken"
 
 msgid "Could not update the branch"
 msgstr "Kan de branch niet bijwerken"
+
+msgid "Could not update the idea"
+msgstr "Kon het idee niet bijwerken"
 
 msgid "Could not update the to-do"
 msgstr "Kan de to-do niet bijwerken"
@@ -5968,6 +5984,9 @@ msgstr "Groep verwijderen"
 msgid "Delete host"
 msgstr "Host verwijderen"
 
+msgid "Delete idea"
+msgstr "Idee verwijderen"
+
 msgid "Delete image"
 msgstr "Afbeelding verwijderen"
 
@@ -6601,6 +6620,9 @@ msgstr "Dropdownmenu"
 
 msgid "Dropdown, context, and application menus"
 msgstr "Dropdown-, context- en applicatiemenu's"
+
+msgid "Dropped"
+msgstr "Laten vallen"
 
 msgid "Due"
 msgstr "Deadline"
@@ -8363,6 +8385,9 @@ msgstr "Hard herladen"
 msgid "Hardware Keyboard"
 msgstr "Hardwaretoetsenbord"
 
+msgid "Has a note"
+msgstr "Heeft een notitie"
+
 msgid "Has access"
 msgstr "Heeft toegang"
 
@@ -8708,6 +8733,15 @@ msgstr "ID gekopieerd"
 
 msgid "IDE"
 msgstr "IDE"
+
+msgid "Idea details"
+msgstr "Ideedetails"
+
+msgid "Ideas"
+msgstr "Ideeën"
+
+msgid "Ideas: {activeCount} open"
+msgstr "Ideeën: {activeCount} open"
 
 msgid "Identity"
 msgstr "Identiteit"
@@ -9382,6 +9416,9 @@ msgstr "Blijven wachten"
 
 msgid "Keep working"
 msgstr "Doorwerken"
+
+msgid "Kept"
+msgstr "Behouden"
 
 msgid "Kept the new file — it changed after it was created"
 msgstr "Nieuw bestand behouden — het is na het aanmaken gewijzigd"
@@ -11949,6 +11986,10 @@ msgstr "openen"
 msgid "Open"
 msgstr "Openen"
 
+msgctxt "idea status"
+msgid "Open"
+msgstr "Open"
+
 msgctxt "pull request or issue state"
 msgid "Open"
 msgstr "Open"
@@ -11964,6 +12005,9 @@ msgstr "{0} openen"
 #. placeholder {0}: plugin.interface.displayName
 msgid "Open {0} website"
 msgstr "Website van {0} openen"
+
+msgid "Open {activeCount}"
+msgstr "Open {activeCount}"
 
 msgid "Open {filePath}"
 msgstr "{filePath} openen"
@@ -12726,6 +12770,9 @@ msgstr "Plakken"
 
 msgid "Paste this into Superset CLI:"
 msgstr "Plak dit in de Superset-CLI:"
+
+msgid "Pasting several lines adds one idea per line"
+msgstr "Meerdere regels plakken voegt één idee per regel toe"
 
 msgid "Path"
 msgstr "Pad"
@@ -16527,6 +16574,10 @@ msgstr "Status"
 msgid "Status changed"
 msgstr "Status gewijzigd"
 
+#. placeholder {0}: statusLabel[idea.status]
+msgid "Status: {0}"
+msgstr "Status: {0}"
+
 msgid "Stay connected (refresh tokens)"
 msgstr "Verbonden blijven (refresh-tokens)"
 
@@ -19465,6 +19516,9 @@ msgstr "Wie het kan openen"
 
 msgid "Whole Task"
 msgstr "Hele taak"
+
+msgid "Why, how, links…"
+msgstr "Waarom, hoe, links…"
 
 msgid "Width"
 msgstr "Breedte"

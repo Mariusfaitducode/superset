@@ -31,6 +31,10 @@ import type {
 	DashboardSidebarWorkspaceIndentation,
 	DashboardSidebarWorkspacePullRequest,
 } from "../../../../types";
+import {
+	WorkspaceIdeasBadge,
+	WorkspaceIdeasPanel,
+} from "../../../WorkspaceIdeas";
 import { WorkspaceLabelPills } from "../../../WorkspaceLabels";
 import { DashboardSidebarConversationList } from "../DashboardSidebarExpandedWorkspaceRow/components/DashboardSidebarConversationList";
 import { DashboardSidebarPortsChip } from "../DashboardSidebarExpandedWorkspaceRow/components/DashboardSidebarPortsChip";
@@ -402,6 +406,10 @@ export const DashboardSidebarLegacyExpandedWorkspaceRow = forwardRef<
 									<DashboardSidebarWorkspaceQueuedBadge
 										workspaceId={workspace.id}
 									/>
+									<WorkspaceIdeasBadge
+										workspaceId={workspace.id}
+										hostId={workspace.hostId}
+									/>
 									{isActive &&
 										diffStats &&
 										(diffStats.additions > 0 || diffStats.deletions > 0) && (
@@ -466,6 +474,14 @@ export const DashboardSidebarLegacyExpandedWorkspaceRow = forwardRef<
 						</div>
 					</div>
 				</div>
+				{!isPending && (
+					<WorkspaceIdeasPanel
+						workspaceId={workspace.id}
+						hostId={workspace.hostId}
+						isInSection={isInSection}
+						indentation={resolvedIndentation}
+					/>
+				)}
 				{!isPending && (
 					<DashboardSidebarConversationList
 						workspaceId={workspace.id}

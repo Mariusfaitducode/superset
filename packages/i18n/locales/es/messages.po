@@ -1786,6 +1786,9 @@ msgstr "Añadir más…"
 msgid "Add one from the menu in the sidebar to get started."
 msgstr "Añade uno desde el menú de la barra lateral para empezar."
 
+msgid "Add or paste ideas…"
+msgstr "Añade o pega ideas…"
+
 msgid "Add people"
 msgstr "Añadir personas"
 
@@ -1863,6 +1866,9 @@ msgstr "Se añadieron {added} archivos a {where}"
 
 msgid "Added 1 file to {where}"
 msgstr "Se añadió 1 archivo a {where}"
+
+msgid "Added by an agent"
+msgstr "Añadida por un agente"
 
 msgid "Added by the agent"
 msgstr "Añadido por el agente"
@@ -2067,6 +2073,10 @@ msgstr "Todas"
 msgctxt "log scope"
 msgid "All"
 msgstr "Todos"
+
+#. placeholder {0}: ideas.length
+msgid "All {0}"
+msgstr "Todas {0}"
 
 #. placeholder {0}: history.projects.length
 msgid "All {0} →"
@@ -4926,6 +4936,9 @@ msgstr "Coste para ti: $0"
 msgid "Could not add agent"
 msgstr "No se pudo añadir el agente"
 
+msgid "Could not add the ideas"
+msgstr "No se pudieron añadir las ideas"
+
 msgid "Could not answer the agent"
 msgstr "No se pudo responder al agente"
 
@@ -5181,6 +5194,9 @@ msgstr "No se pudo actualizar la skill"
 
 msgid "Could not update the branch"
 msgstr "No se pudo actualizar la rama"
+
+msgid "Could not update the idea"
+msgstr "No se pudo actualizar la idea"
 
 msgid "Could not update the to-do"
 msgstr "No se pudo actualizar la tarea"
@@ -5968,6 +5984,9 @@ msgstr "Eliminar grupo"
 msgid "Delete host"
 msgstr "Eliminar host"
 
+msgid "Delete idea"
+msgstr "Eliminar idea"
+
 msgid "Delete image"
 msgstr "Eliminar imagen"
 
@@ -6601,6 +6620,9 @@ msgstr "Menú desplegable"
 
 msgid "Dropdown, context, and application menus"
 msgstr "Menús desplegables, contextuales y de aplicación"
+
+msgid "Dropped"
+msgstr "Descartada"
 
 msgid "Due"
 msgstr "Vence"
@@ -8363,6 +8385,9 @@ msgstr "Recarga forzada"
 msgid "Hardware Keyboard"
 msgstr "Teclado físico"
 
+msgid "Has a note"
+msgstr "Tiene una nota"
+
 msgid "Has access"
 msgstr "Tiene acceso"
 
@@ -8708,6 +8733,15 @@ msgstr "ID copiado"
 
 msgid "IDE"
 msgstr "IDE"
+
+msgid "Idea details"
+msgstr "Detalles de la idea"
+
+msgid "Ideas"
+msgstr "Ideas"
+
+msgid "Ideas: {activeCount} open"
+msgstr "Ideas: {activeCount} abiertas"
 
 msgid "Identity"
 msgstr "Identidad"
@@ -9382,6 +9416,9 @@ msgstr "Seguir esperando"
 
 msgid "Keep working"
 msgstr "Seguir trabajando"
+
+msgid "Kept"
+msgstr "Conservada"
 
 msgid "Kept the new file — it changed after it was created"
 msgstr "Se conservó el archivo nuevo: cambió después de crearse"
@@ -11949,6 +11986,10 @@ msgstr "abrir"
 msgid "Open"
 msgstr "Abrir"
 
+msgctxt "idea status"
+msgid "Open"
+msgstr "Abierta"
+
 msgctxt "pull request or issue state"
 msgid "Open"
 msgstr "Abierto"
@@ -11964,6 +12005,9 @@ msgstr "Abrir {0}"
 #. placeholder {0}: plugin.interface.displayName
 msgid "Open {0} website"
 msgstr "Abrir el sitio web de {0}"
+
+msgid "Open {activeCount}"
+msgstr "Abiertas {activeCount}"
 
 msgid "Open {filePath}"
 msgstr "Abrir {filePath}"
@@ -12726,6 +12770,9 @@ msgstr "Pegar"
 
 msgid "Paste this into Superset CLI:"
 msgstr "Pega esto en la CLI de Superset:"
+
+msgid "Pasting several lines adds one idea per line"
+msgstr "Pegar varias líneas añade una idea por línea"
 
 msgid "Path"
 msgstr "Ruta"
@@ -16527,6 +16574,10 @@ msgstr "Estado"
 msgid "Status changed"
 msgstr "Estado modificado"
 
+#. placeholder {0}: statusLabel[idea.status]
+msgid "Status: {0}"
+msgstr "Estado: {0}"
+
 msgid "Stay connected (refresh tokens)"
 msgstr "Mantener la conexión (tokens de actualización)"
 
@@ -19465,6 +19516,9 @@ msgstr "Quién puede acceder"
 
 msgid "Whole Task"
 msgstr "Tarea completa"
+
+msgid "Why, how, links…"
+msgstr "Por qué, cómo, enlaces…"
 
 msgid "Width"
 msgstr "Anchura"
