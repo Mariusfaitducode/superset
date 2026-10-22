@@ -1786,6 +1786,9 @@ msgstr "Thêm nữa…"
 msgid "Add one from the menu in the sidebar to get started."
 msgstr "Thêm một agent từ menu ở thanh bên để bắt đầu."
 
+msgid "Add or paste ideas…"
+msgstr "Thêm hoặc dán ý tưởng…"
+
 msgid "Add people"
 msgstr "Thêm người"
 
@@ -1863,6 +1866,9 @@ msgstr "Đã thêm {added} tệp vào {where}"
 
 msgid "Added 1 file to {where}"
 msgstr "Đã thêm 1 tệp vào {where}"
+
+msgid "Added by an agent"
+msgstr "Do một tác tử thêm"
 
 msgid "Added by the agent"
 msgstr "Do agent thêm"
@@ -2067,6 +2073,10 @@ msgstr "Tất cả"
 msgctxt "log scope"
 msgid "All"
 msgstr "Tất cả"
+
+#. placeholder {0}: ideas.length
+msgid "All {0}"
+msgstr "Tất cả {0}"
 
 #. placeholder {0}: history.projects.length
 msgid "All {0} →"
@@ -4926,6 +4936,9 @@ msgstr "Chi phí của bạn: $0"
 msgid "Could not add agent"
 msgstr "Không thể thêm tác nhân"
 
+msgid "Could not add the ideas"
+msgstr "Không thể thêm ý tưởng"
+
 msgid "Could not answer the agent"
 msgstr "Không thể trả lời agent"
 
@@ -5181,6 +5194,9 @@ msgstr "Không thể cập nhật skill"
 
 msgid "Could not update the branch"
 msgstr "Không thể cập nhật nhánh"
+
+msgid "Could not update the idea"
+msgstr "Không thể cập nhật ý tưởng"
 
 msgid "Could not update the to-do"
 msgstr "Không thể cập nhật việc cần làm"
@@ -5968,6 +5984,9 @@ msgstr "Xóa nhóm"
 msgid "Delete host"
 msgstr "Xóa host"
 
+msgid "Delete idea"
+msgstr "Xóa ý tưởng"
+
 msgid "Delete image"
 msgstr "Xóa hình ảnh"
 
@@ -6601,6 +6620,9 @@ msgstr "Dropdown Menu"
 
 msgid "Dropdown, context, and application menus"
 msgstr "Menu thả xuống, menu ngữ cảnh và menu ứng dụng"
+
+msgid "Dropped"
+msgstr "Đã bỏ"
 
 msgid "Due"
 msgstr "Hạn"
@@ -8363,6 +8385,9 @@ msgstr "Tải lại cứng"
 msgid "Hardware Keyboard"
 msgstr "Bàn phím cứng"
 
+msgid "Has a note"
+msgstr "Có ghi chú"
+
 msgid "Has access"
 msgstr "Có quyền truy cập"
 
@@ -8708,6 +8733,15 @@ msgstr "Đã sao chép ID"
 
 msgid "IDE"
 msgstr "IDE"
+
+msgid "Idea details"
+msgstr "Chi tiết ý tưởng"
+
+msgid "Ideas"
+msgstr "Ý tưởng"
+
+msgid "Ideas: {activeCount} open"
+msgstr "Ý tưởng: {activeCount} đang mở"
 
 msgid "Identity"
 msgstr "Định danh"
@@ -9382,6 +9416,9 @@ msgstr "Tiếp tục chờ"
 
 msgid "Keep working"
 msgstr "Tiếp tục làm"
+
+msgid "Kept"
+msgstr "Giữ lại"
 
 msgid "Kept the new file — it changed after it was created"
 msgstr "Đã giữ tệp mới — nó đã thay đổi sau khi được tạo"
@@ -11949,6 +11986,10 @@ msgstr "mở"
 msgid "Open"
 msgstr "Mở"
 
+msgctxt "idea status"
+msgid "Open"
+msgstr "Đang mở"
+
 msgctxt "pull request or issue state"
 msgid "Open"
 msgstr "Đang mở"
@@ -11964,6 +12005,9 @@ msgstr "Mở {0}"
 #. placeholder {0}: plugin.interface.displayName
 msgid "Open {0} website"
 msgstr "Mở website {0}"
+
+msgid "Open {activeCount}"
+msgstr "Đang mở {activeCount}"
 
 msgid "Open {filePath}"
 msgstr "Mở {filePath}"
@@ -12726,6 +12770,9 @@ msgstr "Dán"
 
 msgid "Paste this into Superset CLI:"
 msgstr "Dán mã này vào Superset CLI:"
+
+msgid "Pasting several lines adds one idea per line"
+msgstr "Dán nhiều dòng sẽ thêm một ý tưởng cho mỗi dòng"
 
 msgid "Path"
 msgstr "Đường dẫn"
@@ -16527,6 +16574,10 @@ msgstr "Trạng thái"
 msgid "Status changed"
 msgstr "Trạng thái thay đổi"
 
+#. placeholder {0}: statusLabel[idea.status]
+msgid "Status: {0}"
+msgstr "Trạng thái: {0}"
+
 msgid "Stay connected (refresh tokens)"
 msgstr "Duy trì kết nối (refresh token)"
 
@@ -19465,6 +19516,9 @@ msgstr "Ai có thể mở"
 
 msgid "Whole Task"
 msgstr "Trọn tác vụ"
+
+msgid "Why, how, links…"
+msgstr "Tại sao, cách làm, liên kết…"
 
 msgid "Width"
 msgstr "Chiều rộng"

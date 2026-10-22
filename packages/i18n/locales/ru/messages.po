@@ -1786,6 +1786,9 @@ msgstr "Добавить ещё…"
 msgid "Add one from the menu in the sidebar to get started."
 msgstr "Добавьте агента из меню в боковой панели, чтобы начать."
 
+msgid "Add or paste ideas…"
+msgstr "Добавьте или вставьте идеи…"
+
 msgid "Add people"
 msgstr "Добавить людей"
 
@@ -1863,6 +1866,9 @@ msgstr "В {where} добавлено файлов: {added}"
 
 msgid "Added 1 file to {where}"
 msgstr "В {where} добавлен 1 файл"
+
+msgid "Added by an agent"
+msgstr "Добавлено агентом"
 
 msgid "Added by the agent"
 msgstr "Добавлено агентом"
@@ -2067,6 +2073,10 @@ msgstr "Все"
 msgctxt "log scope"
 msgid "All"
 msgstr "Все"
+
+#. placeholder {0}: ideas.length
+msgid "All {0}"
+msgstr "Все {0}"
 
 #. placeholder {0}: history.projects.length
 msgid "All {0} →"
@@ -4926,6 +4936,9 @@ msgstr "Ваши затраты: $0"
 msgid "Could not add agent"
 msgstr "Не удалось добавить агента"
 
+msgid "Could not add the ideas"
+msgstr "Не удалось добавить идеи"
+
 msgid "Could not answer the agent"
 msgstr "Не удалось ответить агенту"
 
@@ -5181,6 +5194,9 @@ msgstr "Не удалось обновить навык"
 
 msgid "Could not update the branch"
 msgstr "Не удалось обновить ветку"
+
+msgid "Could not update the idea"
+msgstr "Не удалось обновить идею"
 
 msgid "Could not update the to-do"
 msgstr "Не удалось обновить задачу"
@@ -5968,6 +5984,9 @@ msgstr "Удалить группу"
 msgid "Delete host"
 msgstr "Удалить хост"
 
+msgid "Delete idea"
+msgstr "Удалить идею"
+
 msgid "Delete image"
 msgstr "Удалить изображение"
 
@@ -6601,6 +6620,9 @@ msgstr "Выпадающее меню"
 
 msgid "Dropdown, context, and application menus"
 msgstr "Выпадающие, контекстные и прикладные меню"
+
+msgid "Dropped"
+msgstr "Отброшена"
 
 msgid "Due"
 msgstr "Срок"
@@ -8363,6 +8385,9 @@ msgstr "Жёсткая перезагрузка"
 msgid "Hardware Keyboard"
 msgstr "Аппаратная клавиатура"
 
+msgid "Has a note"
+msgstr "Есть заметка"
+
 msgid "Has access"
 msgstr "Есть доступ"
 
@@ -8708,6 +8733,15 @@ msgstr "ID скопирован"
 
 msgid "IDE"
 msgstr "IDE"
+
+msgid "Idea details"
+msgstr "Подробности идеи"
+
+msgid "Ideas"
+msgstr "Идеи"
+
+msgid "Ideas: {activeCount} open"
+msgstr "Идеи: открытых {activeCount}"
 
 msgid "Identity"
 msgstr "Идентификация"
@@ -9382,6 +9416,9 @@ msgstr "Продолжить ждать"
 
 msgid "Keep working"
 msgstr "Продолжить работу"
+
+msgid "Kept"
+msgstr "Оставлена"
 
 msgid "Kept the new file — it changed after it was created"
 msgstr "Новый файл сохранён — он изменился после создания"
@@ -11949,6 +11986,10 @@ msgstr "открыть"
 msgid "Open"
 msgstr "Открыть"
 
+msgctxt "idea status"
+msgid "Open"
+msgstr "Открыта"
+
 msgctxt "pull request or issue state"
 msgid "Open"
 msgstr "Открыто"
@@ -11964,6 +12005,9 @@ msgstr "Открыть {0}"
 #. placeholder {0}: plugin.interface.displayName
 msgid "Open {0} website"
 msgstr "Открыть сайт {0}"
+
+msgid "Open {activeCount}"
+msgstr "Открытые {activeCount}"
 
 msgid "Open {filePath}"
 msgstr "Открыть {filePath}"
@@ -12726,6 +12770,9 @@ msgstr "Вставить"
 
 msgid "Paste this into Superset CLI:"
 msgstr "Вставьте это в Superset CLI:"
+
+msgid "Pasting several lines adds one idea per line"
+msgstr "При вставке нескольких строк добавляется по идее на строку"
 
 msgid "Path"
 msgstr "Путь"
@@ -16527,6 +16574,10 @@ msgstr "Статус"
 msgid "Status changed"
 msgstr "Статус изменён"
 
+#. placeholder {0}: statusLabel[idea.status]
+msgid "Status: {0}"
+msgstr "Статус: {0}"
+
 msgid "Stay connected (refresh tokens)"
 msgstr "оставаться подключённым (токены обновления)"
 
@@ -19465,6 +19516,9 @@ msgstr "Кто может открыть"
 
 msgid "Whole Task"
 msgstr "Задача целиком"
+
+msgid "Why, how, links…"
+msgstr "Зачем, как, ссылки…"
 
 msgid "Width"
 msgstr "Ширина"

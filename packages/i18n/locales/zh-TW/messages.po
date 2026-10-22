@@ -1786,6 +1786,9 @@ msgstr "新增更多…"
 msgid "Add one from the menu in the sidebar to get started."
 msgstr "從側邊欄選單中新增一個即可開始。"
 
+msgid "Add or paste ideas…"
+msgstr "新增或貼上想法…"
+
 msgid "Add people"
 msgstr "新增人員"
 
@@ -1863,6 +1866,9 @@ msgstr "已向{where}新增{added}個檔案"
 
 msgid "Added 1 file to {where}"
 msgstr "已向{where}新增1個檔案"
+
+msgid "Added by an agent"
+msgstr "由代理新增"
 
 msgid "Added by the agent"
 msgstr "由代理新增"
@@ -2067,6 +2073,10 @@ msgstr "全部"
 msgctxt "log scope"
 msgid "All"
 msgstr "全部"
+
+#. placeholder {0}: ideas.length
+msgid "All {0}"
+msgstr "全部 {0}"
 
 #. placeholder {0}: history.projects.length
 msgid "All {0} →"
@@ -4926,6 +4936,9 @@ msgstr "你的費用：$0"
 msgid "Could not add agent"
 msgstr "無法新增代理程式"
 
+msgid "Could not add the ideas"
+msgstr "無法新增想法"
+
 msgid "Could not answer the agent"
 msgstr "無法回覆代理程式"
 
@@ -5181,6 +5194,9 @@ msgstr "無法更新技能"
 
 msgid "Could not update the branch"
 msgstr "無法更新分支"
+
+msgid "Could not update the idea"
+msgstr "無法更新想法"
 
 msgid "Could not update the to-do"
 msgstr "無法更新待辦"
@@ -5968,6 +5984,9 @@ msgstr "刪除群組"
 msgid "Delete host"
 msgstr "刪除主機"
 
+msgid "Delete idea"
+msgstr "刪除想法"
+
 msgid "Delete image"
 msgstr "刪除圖片"
 
@@ -6601,6 +6620,9 @@ msgstr "下拉選單"
 
 msgid "Dropdown, context, and application menus"
 msgstr "下拉選單、右鍵選單和應用程式選單"
+
+msgid "Dropped"
+msgstr "已放棄"
 
 msgid "Due"
 msgstr "截止"
@@ -8363,6 +8385,9 @@ msgstr "強制重新載入"
 msgid "Hardware Keyboard"
 msgstr "硬體鍵盤"
 
+msgid "Has a note"
+msgstr "有備註"
+
 msgid "Has access"
 msgstr "有存取權限"
 
@@ -8708,6 +8733,15 @@ msgstr "已複製ID"
 
 msgid "IDE"
 msgstr "IDE"
+
+msgid "Idea details"
+msgstr "想法詳細資訊"
+
+msgid "Ideas"
+msgstr "想法"
+
+msgid "Ideas: {activeCount} open"
+msgstr "想法：{activeCount} 個未處理"
 
 msgid "Identity"
 msgstr "身份"
@@ -9382,6 +9416,9 @@ msgstr "繼續等待"
 
 msgid "Keep working"
 msgstr "繼續工作"
+
+msgid "Kept"
+msgstr "已保留"
 
 msgid "Kept the new file — it changed after it was created"
 msgstr "已保留新檔案 — 它在建立後發生了更改"
@@ -11949,6 +11986,10 @@ msgstr "開啟"
 msgid "Open"
 msgstr "開啟"
 
+msgctxt "idea status"
+msgid "Open"
+msgstr "未處理"
+
 msgctxt "pull request or issue state"
 msgid "Open"
 msgstr "開放"
@@ -11964,6 +12005,9 @@ msgstr "開啟{0}"
 #. placeholder {0}: plugin.interface.displayName
 msgid "Open {0} website"
 msgstr "開啟 {0} 官網"
+
+msgid "Open {activeCount}"
+msgstr "未處理 {activeCount}"
 
 msgid "Open {filePath}"
 msgstr "開啟{filePath}"
@@ -12726,6 +12770,9 @@ msgstr "貼上"
 
 msgid "Paste this into Superset CLI:"
 msgstr "把它貼上到Superset CLI："
+
+msgid "Pasting several lines adds one idea per line"
+msgstr "貼上多行時每行新增一個想法"
 
 msgid "Path"
 msgstr "路徑"
@@ -16527,6 +16574,10 @@ msgstr "狀態"
 msgid "Status changed"
 msgstr "狀態變更"
 
+#. placeholder {0}: statusLabel[idea.status]
+msgid "Status: {0}"
+msgstr "狀態：{0}"
+
 msgid "Stay connected (refresh tokens)"
 msgstr "保持連線（重新整理權杖）"
 
@@ -19465,6 +19516,9 @@ msgstr "誰可以開啟"
 
 msgid "Whole Task"
 msgstr "整任務"
+
+msgid "Why, how, links…"
+msgstr "原因、做法、連結…"
 
 msgid "Width"
 msgstr "寬度"

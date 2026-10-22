@@ -1786,6 +1786,9 @@ msgstr "Daha fazla ekle…"
 msgid "Add one from the menu in the sidebar to get started."
 msgstr "Başlamak için kenar çubuğundaki menüden bir tane ekleyin."
 
+msgid "Add or paste ideas…"
+msgstr "Fikir ekleyin veya yapıştırın…"
+
 msgid "Add people"
 msgstr "Kişi ekle"
 
@@ -1863,6 +1866,9 @@ msgstr "{where} konumuna {added} dosya eklendi"
 
 msgid "Added 1 file to {where}"
 msgstr "{where} konumuna 1 dosya eklendi"
+
+msgid "Added by an agent"
+msgstr "Bir ajan tarafından eklendi"
 
 msgid "Added by the agent"
 msgstr "Ajan tarafından eklendi"
@@ -2067,6 +2073,10 @@ msgstr "Tümü"
 msgctxt "log scope"
 msgid "All"
 msgstr "Tümü"
+
+#. placeholder {0}: ideas.length
+msgid "All {0}"
+msgstr "Tümü {0}"
 
 #. placeholder {0}: history.projects.length
 msgid "All {0} →"
@@ -4926,6 +4936,9 @@ msgstr "Size maliyeti: $0"
 msgid "Could not add agent"
 msgstr "Ajan eklenemedi"
 
+msgid "Could not add the ideas"
+msgstr "Fikirler eklenemedi"
+
 msgid "Could not answer the agent"
 msgstr "Ajana yanıt verilemedi"
 
@@ -5181,6 +5194,9 @@ msgstr "Beceri güncellenemedi"
 
 msgid "Could not update the branch"
 msgstr "Dal güncellenemedi"
+
+msgid "Could not update the idea"
+msgstr "Fikir güncellenemedi"
 
 msgid "Could not update the to-do"
 msgstr "Yapılacak güncellenemedi"
@@ -5968,6 +5984,9 @@ msgstr "Grubu sil"
 msgid "Delete host"
 msgstr "Host'u sil"
 
+msgid "Delete idea"
+msgstr "Fikri sil"
+
 msgid "Delete image"
 msgstr "Görseli sil"
 
@@ -6601,6 +6620,9 @@ msgstr "Açılır menü"
 
 msgid "Dropdown, context, and application menus"
 msgstr "Açılır, bağlam ve uygulama menüleri"
+
+msgid "Dropped"
+msgstr "Bırakıldı"
 
 msgid "Due"
 msgstr "Bitiş"
@@ -8363,6 +8385,9 @@ msgstr "Sert yeniden yükleme"
 msgid "Hardware Keyboard"
 msgstr "Donanım Klavyesi"
 
+msgid "Has a note"
+msgstr "Notu var"
+
 msgid "Has access"
 msgstr "Erişimi var"
 
@@ -8708,6 +8733,15 @@ msgstr "Kimlik kopyalandı"
 
 msgid "IDE"
 msgstr "IDE"
+
+msgid "Idea details"
+msgstr "Fikir ayrıntıları"
+
+msgid "Ideas"
+msgstr "Fikirler"
+
+msgid "Ideas: {activeCount} open"
+msgstr "Fikirler: {activeCount} açık"
 
 msgid "Identity"
 msgstr "Kimlik"
@@ -9382,6 +9416,9 @@ msgstr "Beklemeye devam et"
 
 msgid "Keep working"
 msgstr "Çalışmaya devam et"
+
+msgid "Kept"
+msgstr "Tutuldu"
 
 msgid "Kept the new file — it changed after it was created"
 msgstr "Yeni dosya korundu — oluşturulduktan sonra değişti"
@@ -11949,6 +11986,10 @@ msgstr "aç"
 msgid "Open"
 msgstr "Aç"
 
+msgctxt "idea status"
+msgid "Open"
+msgstr "Açık"
+
 msgctxt "pull request or issue state"
 msgid "Open"
 msgstr "Açık"
@@ -11964,6 +12005,9 @@ msgstr "Aç: {0}"
 #. placeholder {0}: plugin.interface.displayName
 msgid "Open {0} website"
 msgstr "{0} web sitesini aç"
+
+msgid "Open {activeCount}"
+msgstr "Açık {activeCount}"
 
 msgid "Open {filePath}"
 msgstr "Aç: {filePath}"
@@ -12726,6 +12770,9 @@ msgstr "Yapıştır"
 
 msgid "Paste this into Superset CLI:"
 msgstr "Bunu Superset CLI'ye yapıştırın:"
+
+msgid "Pasting several lines adds one idea per line"
+msgstr "Birden çok satır yapıştırmak her satır için bir fikir ekler"
 
 msgid "Path"
 msgstr "Yol"
@@ -16527,6 +16574,10 @@ msgstr "Durum"
 msgid "Status changed"
 msgstr "Durum değişti"
 
+#. placeholder {0}: statusLabel[idea.status]
+msgid "Status: {0}"
+msgstr "Durum: {0}"
+
 msgid "Stay connected (refresh tokens)"
 msgstr "Bağlı kalma (yenileme token'ları)"
 
@@ -19465,6 +19516,9 @@ msgstr "Kimler açabilir"
 
 msgid "Whole Task"
 msgstr "Tüm görev"
+
+msgid "Why, how, links…"
+msgstr "Neden, nasıl, bağlantılar…"
 
 msgid "Width"
 msgstr "Genişlik"

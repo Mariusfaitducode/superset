@@ -1786,6 +1786,9 @@ msgstr "Přidat další…"
 msgid "Add one from the menu in the sidebar to get started."
 msgstr "Začněte tím, že jednoho přidáte z nabídky v postranním panelu."
 
+msgid "Add or paste ideas…"
+msgstr "Přidejte nebo vložte nápady…"
+
 msgid "Add people"
 msgstr "Přidat lidi"
 
@@ -1863,6 +1866,9 @@ msgstr "Přidáno {added} souborů do {where}"
 
 msgid "Added 1 file to {where}"
 msgstr "Přidán 1 soubor do {where}"
+
+msgid "Added by an agent"
+msgstr "Přidal agent"
 
 msgid "Added by the agent"
 msgstr "Přidal agent"
@@ -2067,6 +2073,10 @@ msgstr "Vše"
 msgctxt "log scope"
 msgid "All"
 msgstr "Vše"
+
+#. placeholder {0}: ideas.length
+msgid "All {0}"
+msgstr "Vše {0}"
 
 #. placeholder {0}: history.projects.length
 msgid "All {0} →"
@@ -4926,6 +4936,9 @@ msgstr "Vaše náklady: 0 $"
 msgid "Could not add agent"
 msgstr "Agenta se nepodařilo přidat"
 
+msgid "Could not add the ideas"
+msgstr "Nápady se nepodařilo přidat"
+
 msgid "Could not answer the agent"
 msgstr "Agentovi se nepodařilo odpovědět"
 
@@ -5181,6 +5194,9 @@ msgstr "Skill se nepodařilo aktualizovat"
 
 msgid "Could not update the branch"
 msgstr "Nepodařilo se aktualizovat větev"
+
+msgid "Could not update the idea"
+msgstr "Nápad se nepodařilo upravit"
 
 msgid "Could not update the to-do"
 msgstr "Úkol se nepodařilo upravit"
@@ -5968,6 +5984,9 @@ msgstr "Smazat skupinu"
 msgid "Delete host"
 msgstr "Smazat hosta"
 
+msgid "Delete idea"
+msgstr "Smazat nápad"
+
 msgid "Delete image"
 msgstr "Smazat obrázek"
 
@@ -6601,6 +6620,9 @@ msgstr "Rozbalovací nabídka"
 
 msgid "Dropdown, context, and application menus"
 msgstr "Rozbalovací, kontextové a aplikační nabídky"
+
+msgid "Dropped"
+msgstr "Zahozený"
 
 msgid "Due"
 msgstr "Termín"
@@ -8363,6 +8385,9 @@ msgstr "Vynucené načtení znovu"
 msgid "Hardware Keyboard"
 msgstr "Hardwarová klávesnice"
 
+msgid "Has a note"
+msgstr "Má poznámku"
+
 msgid "Has access"
 msgstr "Má přístup"
 
@@ -8708,6 +8733,15 @@ msgstr "ID zkopírováno"
 
 msgid "IDE"
 msgstr "IDE"
+
+msgid "Idea details"
+msgstr "Podrobnosti nápadu"
+
+msgid "Ideas"
+msgstr "Nápady"
+
+msgid "Ideas: {activeCount} open"
+msgstr "Nápady: {activeCount} otevřených"
 
 msgid "Identity"
 msgstr "Identita"
@@ -9382,6 +9416,9 @@ msgstr "Počkat dál"
 
 msgid "Keep working"
 msgstr "Pokračovat v práci"
+
+msgid "Kept"
+msgstr "Ponechaný"
 
 msgid "Kept the new file — it changed after it was created"
 msgstr "Nový soubor byl zachován — po vytvoření se změnil"
@@ -11949,6 +11986,10 @@ msgstr "otevřít"
 msgid "Open"
 msgstr "Otevřít"
 
+msgctxt "idea status"
+msgid "Open"
+msgstr "Otevřený"
+
 msgctxt "pull request or issue state"
 msgid "Open"
 msgstr "Otevřeno"
@@ -11964,6 +12005,9 @@ msgstr "Otevřít {0}"
 #. placeholder {0}: plugin.interface.displayName
 msgid "Open {0} website"
 msgstr "Otevřít web {0}"
+
+msgid "Open {activeCount}"
+msgstr "Otevřené {activeCount}"
 
 msgid "Open {filePath}"
 msgstr "Otevřít {filePath}"
@@ -12726,6 +12770,9 @@ msgstr "Vložit"
 
 msgid "Paste this into Superset CLI:"
 msgstr "Vložte to do Superset CLI:"
+
+msgid "Pasting several lines adds one idea per line"
+msgstr "Vložení více řádků přidá jeden nápad na řádek"
 
 msgid "Path"
 msgstr "Cesta"
@@ -16527,6 +16574,10 @@ msgstr "Stav"
 msgid "Status changed"
 msgstr "Změna stavu"
 
+#. placeholder {0}: statusLabel[idea.status]
+msgid "Status: {0}"
+msgstr "Stav: {0}"
+
 msgid "Stay connected (refresh tokens)"
 msgstr "zůstat připojená (obnovovací tokeny)"
 
@@ -19465,6 +19516,9 @@ msgstr "Kdo to může otevřít"
 
 msgid "Whole Task"
 msgstr "Celý úkol"
+
+msgid "Why, how, links…"
+msgstr "Proč, jak, odkazy…"
 
 msgid "Width"
 msgstr "Šířka"
