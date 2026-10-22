@@ -472,6 +472,10 @@ msgstr "{0} bu makinede kurulu, ancak hesabınızda değil"
 msgid "{0} more — refine your search"
 msgstr "{0} tane daha — aramanızı daraltın"
 
+#. placeholder {0}: section.hidden
+msgid "{0} more, refine the search"
+msgstr "{0} tane daha, aramayı daraltın"
+
 #. placeholder {0}: index + 1
 #. placeholder {1}: pages.length
 msgctxt "question progress"
@@ -508,6 +512,10 @@ msgstr "{0} proje"
 #. placeholder {0}: conversation.queuedPrompts
 msgid "{0} queued messages"
 msgstr "Kuyrukta {0} mesaj"
+
+#. placeholder {0}: selected.length
+msgid "{0} refs"
+msgstr "{0} ref"
 
 #. placeholder {0}: tally.running
 msgid "{0} Running"
@@ -1698,6 +1706,9 @@ msgstr "Proje Ayarları'nda bir yaşam döngüsü çalıştırma betiği ekleyin
 msgid "Add a project to see GitHub issues."
 msgstr "GitHub issue'larını görmek için bir proje ekleyin."
 
+msgid "Add a project to see its git graph."
+msgstr "Git grafiğini görmek için bir proje ekleyin."
+
 msgid "Add a project to see pull requests."
 msgstr "Pull request'leri görmek için bir proje ekleyin."
 
@@ -2088,6 +2099,9 @@ msgstr "Tüm atananlar"
 
 msgid "All authors"
 msgstr "Tüm yazarlar"
+
+msgid "All branches"
+msgstr "Tüm dallar"
 
 msgid "All changes saved"
 msgstr "Tüm değişiklikler kaydedildi"
@@ -4763,6 +4777,10 @@ msgstr "Kopyalandı!"
 msgid "Copy"
 msgstr "Kopyala"
 
+#. placeholder {0}: commit.hash
+msgid "Copy {0}"
+msgstr "{0} kopyala"
+
 msgid "Copy agent session ID"
 msgstr "Ajan oturum kimliğini kopyala"
 
@@ -5831,6 +5849,9 @@ msgstr "Veri ve API'ler"
 
 msgid "Data display"
 msgstr "Veri gösterimi"
+
+msgid "Date"
+msgstr "Tarih"
 
 msgid "Date created"
 msgstr "Oluşturulma tarihi"
@@ -8183,6 +8204,9 @@ msgstr "Git ve worktree'ler"
 msgid "Git author name"
 msgstr "Git yazar adı"
 
+msgid "Git graph"
+msgstr "Git grafiği"
+
 msgid "GitHub"
 msgstr "GitHub"
 
@@ -8296,6 +8320,9 @@ msgstr "Superset'in ihtiyaç duyduğu işletim sistemi izinlerini verin."
 
 msgid "Granted"
 msgstr "Verildi"
+
+msgid "Graph"
+msgstr "Grafik"
 
 msgid "Grayscale"
 msgstr "Gri Tonlama"
@@ -8893,6 +8920,10 @@ msgstr "Devam ediyor"
 
 msgid "In Progress"
 msgstr "Devam ediyor"
+
+#. placeholder {0}: badge.syncedRemotes.join(", ")
+msgid "In sync with {0}"
+msgstr "{0} ile senkron"
 
 msgid "In the Superset desktop app, open <0>Settings → Appearance → Theme</0>."
 msgstr "Superset masaüstü uygulamasında <0>Ayarlar → Görünüm → Tema</0> bölümünü açın."
@@ -9835,6 +9866,9 @@ msgstr "llms.txt (AI ajanları için dizin)"
 msgid "Load (1 m)"
 msgstr "Yük (1 dk)"
 
+msgid "Load {PAGE_SIZE} more commits"
+msgstr "{PAGE_SIZE} commit daha yükle"
+
 msgid "load agent settings"
 msgstr "ajan ayarlarını yükleme"
 
@@ -9892,6 +9926,9 @@ msgstr "GitHub ayrıntıları yükleniyor"
 msgid "Loading groups…"
 msgstr "Gruplar yükleniyor…"
 
+msgid "Loading history…"
+msgstr "Geçmiş yükleniyor…"
+
 msgid "Loading issue…"
 msgstr "Issue yükleniyor…"
 
@@ -9948,6 +9985,9 @@ msgstr "Yükleniyor…"
 
 msgid "Local"
 msgstr "Yerel"
+
+msgid "Local branches"
+msgstr "Yerel dallar"
 
 msgid "Local Device"
 msgstr "Yerel cihaz"
@@ -10355,6 +10395,9 @@ msgstr "Mesaj"
 msgid "Message in channel"
 msgstr "Kanalda mesaj"
 
+msgid "Message, author, hash, branch"
+msgstr "Mesaj, yazar, hash, dal"
+
 msgid "Message..."
 msgstr "Mesaj..."
 
@@ -10604,6 +10647,9 @@ msgstr "Ajanım"
 
 msgid "My Tasks"
 msgstr "Görevlerim"
+
+msgid "My worktrees"
+msgstr "Worktree'lerim"
 
 msgid "Mystery Machinist"
 msgstr "Gizemli Makinist"
@@ -11057,6 +11103,9 @@ msgstr "Henüz yorum yok."
 
 msgid "No comments yet. Turn on comment mode and click anything on the page to start one."
 msgstr "Henüz yorum yok. Yorum modunu açıp sayfadaki herhangi bir öğeye tıklayarak başlayın."
+
+msgid "No commits for these filters."
+msgstr "Bu filtreler için commit yok."
 
 msgid "No commits on this branch yet."
 msgstr "Bu dalda henüz commit yok."
@@ -11766,6 +11815,9 @@ msgstr "Çevrimdışı / yerel öncelikli mod"
 msgid "Older"
 msgstr "Daha eski"
 
+msgid "on {headBranch}"
+msgstr "{headBranch} üzerinde"
+
 msgid "on {offScopeHostName} — won't run here"
 msgstr "{offScopeHostName} üzerinde — burada çalışmaz"
 
@@ -11858,6 +11910,9 @@ msgstr "Planı yalnızca kuruluş sahibi değiştirebilir. Yükseltme için sahi
 
 msgid "Only available on macOS."
 msgstr "Yalnızca macOS'ta kullanılabilir."
+
+msgid "Only branches with a worktree or a conversation"
+msgstr "Yalnızca worktree veya konuşması olan dallar"
 
 msgid "Only host owners can change membership"
 msgstr "Üyeliği yalnızca host sahipleri değiştirebilir"
@@ -12021,6 +12076,10 @@ msgstr "Komut paletini aç"
 
 msgid "Open comment on GitHub"
 msgstr "Yorumu GitHub'da aç"
+
+#. placeholder {0}: conversation.title
+msgid "Open conversation: {0}"
+msgstr "Konuşmayı aç: {0}"
 
 msgid "Open details"
 msgstr "Ayrıntıları aç"
@@ -13839,6 +13898,10 @@ msgstr "Referanslar"
 msgid "Refresh"
 msgstr "Yenile"
 
+#. placeholder {0}: log.data.durationMs
+msgid "Refresh (last load {0} ms)"
+msgstr "Yenile (son yükleme {0} ms)"
+
 msgid "Refresh GitHub issues"
 msgstr "GitHub issue'larını yenile"
 
@@ -13937,6 +14000,9 @@ msgstr "Uzaktan erişim"
 
 msgid "Remote Access may be off"
 msgstr "Uzaktan erişim kapalı olabilir"
+
+msgid "Remote branches"
+msgstr "Uzak dallar"
 
 msgid "Remote MCP server — connects over HTTP"
 msgstr "Uzak MCP sunucusu — HTTP üzerinden bağlanır"
@@ -15028,6 +15094,9 @@ msgstr "Yazar ara…"
 msgid "Search automations"
 msgstr "Otomasyonlarda ara"
 
+msgid "Search branches and tags"
+msgstr "Dal ve etiket ara"
+
 msgid "Search branches..."
 msgstr "Dal ara..."
 
@@ -15727,6 +15796,9 @@ msgstr "Sohbet giriş alanında bir mikrofon göster. Codex ChatGPT'de oturum a�
 msgid "Show a Usage button in the home sidebar, under Pull requests"
 msgstr "Ana sayfa kenar çubuğunda, pull request'lerin altında bir Kullanım düğmesi göster"
 
+msgid "Show all"
+msgstr "Tümünü göster"
+
 msgid "Show all {count}"
 msgstr "Tümünü göster ({count})"
 
@@ -15820,6 +15892,10 @@ msgstr "Daha fazla göster"
 msgid "Show on Sidebar"
 msgstr "Kenar çubuğunda göster"
 
+#. placeholder {0}: badge.label
+msgid "Show only {0}"
+msgstr "Yalnızca {0} göster"
+
 msgid "Show open items"
 msgstr "Açık öğeleri göster"
 
@@ -15876,6 +15952,9 @@ msgstr "Kenar çubuğunda kullanım sekmesini göster"
 
 msgid "showArrow opt-in"
 msgstr "showArrow açık"
+
+msgid "Showing the latest {MAX_COMMITS} commits. Filter by branch to go further back."
+msgstr "Son {MAX_COMMITS} commit gösteriliyor. Daha eskisi için dala göre filtreleyin."
 
 msgid "Shown"
 msgstr "Gösterilen"
@@ -17091,6 +17170,9 @@ msgstr "şu sütunlarla tablo"
 
 msgid "Tabs"
 msgstr "Sekmeler"
+
+msgid "Tags"
+msgstr "Etiketler"
 
 msgid "Tailwind v4 theme reference"
 msgstr "Tailwind v4 tema referansı"
@@ -18572,6 +18654,9 @@ msgstr "Commit'lenmemiş · Push edilmemiş"
 msgid "Uncommitted changes"
 msgstr "Commit'lenmemiş değişiklikler"
 
+msgid "Uncommitted changes ({uncommitted})"
+msgstr "Commit edilmemiş değişiklikler ({uncommitted})"
+
 msgid "Uncommitted changes, on top of {base}"
 msgstr "Commit edilmemiş değişiklikler, {base} üzerinde"
 
@@ -19690,8 +19775,14 @@ msgstr "Worktree açıldı"
 msgid "Worktree out of sync"
 msgstr "Worktree eşitlenmemiş"
 
+msgid "Worktree: {worktreePath}"
+msgstr "Worktree: {worktreePath}"
+
 msgid "Worktrees"
 msgstr "Worktree'ler"
+
+msgid "Worktrees and conversations"
+msgstr "Worktree'ler ve konuşmalar"
 
 msgid "Worktrees are removed from disk; workspaces on the project's checkout only close. Files in the checkout stay as they are."
 msgstr "Worktree'ler diskten kaldırılır; projenin checkout'undaki çalışma alanları yalnızca kapanır. Checkout'taki dosyalar olduğu gibi kalır."

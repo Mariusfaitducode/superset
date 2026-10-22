@@ -472,6 +472,10 @@ msgstr "{0} 已在本機設定，但未在你的帳戶中設定"
 msgid "{0} more — refine your search"
 msgstr "還有{0}個——請細化搜尋"
 
+#. placeholder {0}: section.hidden
+msgid "{0} more, refine the search"
+msgstr "還有 {0} 個，請細化搜尋"
+
 #. placeholder {0}: index + 1
 #. placeholder {1}: pages.length
 msgctxt "question progress"
@@ -508,6 +512,10 @@ msgstr "{0}個專案"
 #. placeholder {0}: conversation.queuedPrompts
 msgid "{0} queued messages"
 msgstr "{0} 則排隊訊息"
+
+#. placeholder {0}: selected.length
+msgid "{0} refs"
+msgstr "{0} 個 ref"
 
 #. placeholder {0}: tally.running
 msgid "{0} Running"
@@ -1698,6 +1706,9 @@ msgstr "在專案設定中新增生命週期執行指令碼，或將某個終端
 msgid "Add a project to see GitHub issues."
 msgstr "新增專案以檢視GitHub議題。"
 
+msgid "Add a project to see its git graph."
+msgstr "新增專案以查看其 Git 圖。"
+
 msgid "Add a project to see pull requests."
 msgstr "新增一個專案來檢視拉取請求。"
 
@@ -2088,6 +2099,9 @@ msgstr "全部負責人"
 
 msgid "All authors"
 msgstr "所有作者"
+
+msgid "All branches"
+msgstr "所有分支"
 
 msgid "All changes saved"
 msgstr "所有更改已儲存"
@@ -4763,6 +4777,10 @@ msgstr "已複製！"
 msgid "Copy"
 msgstr "複製"
 
+#. placeholder {0}: commit.hash
+msgid "Copy {0}"
+msgstr "複製 {0}"
+
 msgid "Copy agent session ID"
 msgstr "複製代理程式會話ID"
 
@@ -5831,6 +5849,9 @@ msgstr "資料與 API"
 
 msgid "Data display"
 msgstr "資料展示"
+
+msgid "Date"
+msgstr "日期"
 
 msgid "Date created"
 msgstr "建立日期"
@@ -8183,6 +8204,9 @@ msgstr "Git與worktree"
 msgid "Git author name"
 msgstr "Git作者名"
 
+msgid "Git graph"
+msgstr "Git 圖"
+
 msgid "GitHub"
 msgstr "GitHub"
 
@@ -8296,6 +8320,9 @@ msgstr "授予Superset所需的系統權限。"
 
 msgid "Granted"
 msgstr "已授予"
+
+msgid "Graph"
+msgstr "圖"
 
 msgid "Grayscale"
 msgstr "灰階"
@@ -8893,6 +8920,10 @@ msgstr "進行中"
 
 msgid "In Progress"
 msgstr "進行中"
+
+#. placeholder {0}: badge.syncedRemotes.join(", ")
+msgid "In sync with {0}"
+msgstr "與 {0} 同步"
 
 msgid "In the Superset desktop app, open <0>Settings → Appearance → Theme</0>."
 msgstr "在Superset桌面應用程式中開啟<0>設定 → 外觀 → 主題</0>。"
@@ -9835,6 +9866,9 @@ msgstr "llms.txt（面向AI代理程式的索引）"
 msgid "Load (1 m)"
 msgstr "負載（1分鐘）"
 
+msgid "Load {PAGE_SIZE} more commits"
+msgstr "再載入 {PAGE_SIZE} 個提交"
+
 msgid "load agent settings"
 msgstr "載入代理程式設定"
 
@@ -9892,6 +9926,9 @@ msgstr "正在載入 GitHub 詳細資料"
 msgid "Loading groups…"
 msgstr "正在載入群組…"
 
+msgid "Loading history…"
+msgstr "正在載入歷史…"
+
 msgid "Loading issue…"
 msgstr "正在載入議題…"
 
@@ -9948,6 +9985,9 @@ msgstr "正在載入…"
 
 msgid "Local"
 msgstr "本地"
+
+msgid "Local branches"
+msgstr "本機分支"
 
 msgid "Local Device"
 msgstr "本地裝置"
@@ -10355,6 +10395,9 @@ msgstr "訊息"
 msgid "Message in channel"
 msgstr "頻道中的訊息"
 
+msgid "Message, author, hash, branch"
+msgstr "訊息、作者、雜湊、分支"
+
 msgid "Message..."
 msgstr "訊息..."
 
@@ -10604,6 +10647,9 @@ msgstr "我的代理程式"
 
 msgid "My Tasks"
 msgstr "我的任務"
+
+msgid "My worktrees"
+msgstr "我的工作樹"
 
 msgid "Mystery Machinist"
 msgstr "神秘機械師"
@@ -11057,6 +11103,9 @@ msgstr "暫無評論。"
 
 msgid "No comments yet. Turn on comment mode and click anything on the page to start one."
 msgstr "還沒有評論。開啟評論模式，點擊頁面上的任何元素即可開始。"
+
+msgid "No commits for these filters."
+msgstr "沒有符合篩選條件的提交。"
 
 msgid "No commits on this branch yet."
 msgstr "此分支上還沒有提交。"
@@ -11766,6 +11815,9 @@ msgstr "離線/本地優先模式"
 msgid "Older"
 msgstr "更早"
 
+msgid "on {headBranch}"
+msgstr "位於 {headBranch}"
+
 msgid "on {offScopeHostName} — won't run here"
 msgstr "在{offScopeHostName}上，不會在這裡執行"
 
@@ -11858,6 +11910,9 @@ msgstr "只有組織擁有者才能變更方案，請聯絡擁有者升級。"
 
 msgid "Only available on macOS."
 msgstr "僅在macOS上可用。"
+
+msgid "Only branches with a worktree or a conversation"
+msgstr "僅顯示有工作樹或對話的分支"
 
 msgid "Only host owners can change membership"
 msgstr "只有主機擁有者才能更改成員關係"
@@ -12021,6 +12076,10 @@ msgstr "開啟命令面板"
 
 msgid "Open comment on GitHub"
 msgstr "在GitHub上開啟評論"
+
+#. placeholder {0}: conversation.title
+msgid "Open conversation: {0}"
+msgstr "開啟對話：{0}"
 
 msgid "Open details"
 msgstr "開啟詳細資料"
@@ -13839,6 +13898,10 @@ msgstr "引用"
 msgid "Refresh"
 msgstr "重新整理"
 
+#. placeholder {0}: log.data.durationMs
+msgid "Refresh (last load {0} ms)"
+msgstr "重新整理（上次載入 {0} ms）"
+
 msgid "Refresh GitHub issues"
 msgstr "重新整理GitHub議題"
 
@@ -13937,6 +14000,9 @@ msgstr "遠端存取"
 
 msgid "Remote Access may be off"
 msgstr "遠端存取可能已關閉"
+
+msgid "Remote branches"
+msgstr "遠端分支"
 
 msgid "Remote MCP server — connects over HTTP"
 msgstr "遠端MCP伺服器，通過HTTP連線"
@@ -15028,6 +15094,9 @@ msgstr "搜尋作者…"
 msgid "Search automations"
 msgstr "搜尋自動化"
 
+msgid "Search branches and tags"
+msgstr "搜尋分支和標籤"
+
 msgid "Search branches..."
 msgstr "搜尋分支..."
 
@@ -15727,6 +15796,9 @@ msgstr "在聊天輸入框中顯示麥克風。如果 Codex 已登入 ChatGPT，
 msgid "Show a Usage button in the home sidebar, under Pull requests"
 msgstr "在首頁側邊欄的「拉取請求」下方顯示「用量」按鈕"
 
+msgid "Show all"
+msgstr "顯示全部"
+
 msgid "Show all {count}"
 msgstr "顯示全部{count}條"
 
@@ -15820,6 +15892,10 @@ msgstr "顯示更多"
 msgid "Show on Sidebar"
 msgstr "顯示於側邊欄"
 
+#. placeholder {0}: badge.label
+msgid "Show only {0}"
+msgstr "僅顯示 {0}"
+
 msgid "Show open items"
 msgstr "只顯示開啟的條目"
 
@@ -15876,6 +15952,9 @@ msgstr "在側邊欄顯示用量分頁"
 
 msgid "showArrow opt-in"
 msgstr "showArrow按需開啟"
+
+msgid "Showing the latest {MAX_COMMITS} commits. Filter by branch to go further back."
+msgstr "顯示最近 {MAX_COMMITS} 個提交。依分支篩選可查看更早的。"
 
 msgid "Shown"
 msgstr "已顯示"
@@ -17091,6 +17170,9 @@ msgstr "表格，包含"
 
 msgid "Tabs"
 msgstr "分頁"
+
+msgid "Tags"
+msgstr "標籤"
 
 msgid "Tailwind v4 theme reference"
 msgstr "Tailwind v4主題參考"
@@ -18572,6 +18654,9 @@ msgstr "未提交 · 未推送"
 msgid "Uncommitted changes"
 msgstr "未提交的更改"
 
+msgid "Uncommitted changes ({uncommitted})"
+msgstr "未提交的變更（{uncommitted}）"
+
 msgid "Uncommitted changes, on top of {base}"
 msgstr "未提交的變更，基於 {base}"
 
@@ -19690,8 +19775,14 @@ msgstr "worktree已開啟"
 msgid "Worktree out of sync"
 msgstr "worktree不同步"
 
+msgid "Worktree: {worktreePath}"
+msgstr "工作樹：{worktreePath}"
+
 msgid "Worktrees"
 msgstr "Worktree"
+
+msgid "Worktrees and conversations"
+msgstr "工作樹和對話"
 
 msgid "Worktrees are removed from disk; workspaces on the project's checkout only close. Files in the checkout stay as they are."
 msgstr "worktree 會從磁碟中移除；位於專案簽出上的工作區僅會關閉。簽出中的檔案保持不變。"

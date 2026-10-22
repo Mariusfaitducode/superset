@@ -19,6 +19,7 @@ import {
 	LuCloud,
 	LuFileText,
 	LuGauge,
+	LuGitGraph,
 	LuLayers,
 	LuPlus,
 	LuPuzzle,
@@ -178,6 +179,7 @@ export function DashboardSidebarHeader({
 		to: "/pull-requests",
 		fuzzy: true,
 	});
+	const isGitGraphOpen = !!matchRoute({ to: "/git-graph", fuzzy: true });
 	const isAutomationsOpen = !!matchRoute({ to: "/automations", fuzzy: true });
 	const isPluginsOpen = !!matchRoute({ to: "/plugins", fuzzy: true });
 	const isPagesOpen = !!matchRoute({ to: "/pages", fuzzy: true });
@@ -290,6 +292,10 @@ export function DashboardSidebarHeader({
 				mergedOnly: lastPullRequestsMergedOnly,
 			}),
 		});
+	};
+
+	const handleGitGraphClick = () => {
+		navigate({ to: "/git-graph" });
 	};
 
 	const handleUsageClick = () => {
@@ -524,6 +530,30 @@ export function DashboardSidebarHeader({
 						</TooltipTrigger>
 						<TooltipContent side="right">
 							<Trans>Pull requests</Trans>
+						</TooltipContent>
+					</Tooltip>
+
+					<Tooltip delayDuration={300}>
+						<TooltipTrigger asChild>
+							<button
+								type="button"
+								onClick={handleGitGraphClick}
+								aria-label={t({
+									message: "Git graph",
+								})}
+								aria-current={isGitGraphOpen ? "page" : undefined}
+								className={cn(
+									"flex size-7 items-center justify-center rounded-md transition-colors",
+									isGitGraphOpen
+										? "bg-fill-selected text-muted-foreground"
+										: "text-muted-foreground hover:bg-fill-hover",
+								)}
+							>
+								<LuGitGraph className="size-3.5" />
+							</button>
+						</TooltipTrigger>
+						<TooltipContent side="right">
+							<Trans>Git graph</Trans>
 						</TooltipContent>
 					</Tooltip>
 
@@ -858,6 +888,26 @@ export function DashboardSidebarHeader({
 				<GoGitPullRequest className="size-4 shrink-0 text-muted-foreground" />
 				<span className="flex-1 text-left">
 					<Trans>Pull requests</Trans>
+				</span>
+			</button>
+
+			<button
+				type="button"
+				onClick={handleGitGraphClick}
+				aria-label={t({
+					message: "Git graph",
+				})}
+				aria-current={isGitGraphOpen ? "page" : undefined}
+				className={cn(
+					"flex h-7 w-full items-center gap-2 rounded-md px-2 text-[13px] font-medium transition-colors",
+					isGitGraphOpen
+						? "bg-fill-selected text-foreground"
+						: "text-muted-foreground hover:bg-fill-hover hover:text-foreground",
+				)}
+			>
+				<LuGitGraph className="size-4 shrink-0 text-muted-foreground" />
+				<span className="flex-1 text-left">
+					<Trans>Git graph</Trans>
 				</span>
 			</button>
 

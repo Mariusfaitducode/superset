@@ -472,6 +472,10 @@ msgstr "{0} está configurado nesta máquina, mas não na sua conta"
 msgid "{0} more — refine your search"
 msgstr "mais {0} — refine sua busca"
 
+#. placeholder {0}: section.hidden
+msgid "{0} more, refine the search"
+msgstr "mais {0}, refine a busca"
+
 #. placeholder {0}: index + 1
 #. placeholder {1}: pages.length
 msgctxt "question progress"
@@ -508,6 +512,10 @@ msgstr "{0} projetos"
 #. placeholder {0}: conversation.queuedPrompts
 msgid "{0} queued messages"
 msgstr "{0} mensagens na fila"
+
+#. placeholder {0}: selected.length
+msgid "{0} refs"
+msgstr "{0} refs"
 
 #. placeholder {0}: tally.running
 msgid "{0} Running"
@@ -1698,6 +1706,9 @@ msgstr "Adicione um script de execução de ciclo de vida nas Configurações do
 msgid "Add a project to see GitHub issues."
 msgstr "Adicione um projeto para ver as issues do GitHub."
 
+msgid "Add a project to see its git graph."
+msgstr "Adicione um projeto para ver o grafo git."
+
 msgid "Add a project to see pull requests."
 msgstr "Adicione um projeto para ver os pull requests."
 
@@ -2088,6 +2099,9 @@ msgstr "Todos os responsáveis"
 
 msgid "All authors"
 msgstr "Todos os autores"
+
+msgid "All branches"
+msgstr "Todas as branches"
 
 msgid "All changes saved"
 msgstr "Todas as alterações salvas"
@@ -4763,6 +4777,10 @@ msgstr "Copiado!"
 msgid "Copy"
 msgstr "Copiar"
 
+#. placeholder {0}: commit.hash
+msgid "Copy {0}"
+msgstr "Copiar {0}"
+
 msgid "Copy agent session ID"
 msgstr "Copiar o ID da sessão do agente"
 
@@ -5831,6 +5849,9 @@ msgstr "Dados e APIs"
 
 msgid "Data display"
 msgstr "Exibição de dados"
+
+msgid "Date"
+msgstr "Data"
 
 msgid "Date created"
 msgstr "Data de criação"
@@ -8183,6 +8204,9 @@ msgstr "Git e worktrees"
 msgid "Git author name"
 msgstr "Nome do autor no Git"
 
+msgid "Git graph"
+msgstr "Grafo git"
+
 msgid "GitHub"
 msgstr "GitHub"
 
@@ -8296,6 +8320,9 @@ msgstr "Conceda as permissões do sistema de que o Superset precisa."
 
 msgid "Granted"
 msgstr "Concedida"
+
+msgid "Graph"
+msgstr "Grafo"
 
 msgid "Grayscale"
 msgstr "Escala de cinza"
@@ -8893,6 +8920,10 @@ msgstr "Em andamento"
 
 msgid "In Progress"
 msgstr "Em andamento"
+
+#. placeholder {0}: badge.syncedRemotes.join(", ")
+msgid "In sync with {0}"
+msgstr "Sincronizado com {0}"
 
 msgid "In the Superset desktop app, open <0>Settings → Appearance → Theme</0>."
 msgstr "No app de desktop do Superset, abra <0>Configurações → Aparência → Tema</0>."
@@ -9835,6 +9866,9 @@ msgstr "llms.txt (índice para agentes de IA)"
 msgid "Load (1 m)"
 msgstr "Carga (1 min)"
 
+msgid "Load {PAGE_SIZE} more commits"
+msgstr "Carregar mais {PAGE_SIZE} commits"
+
 msgid "load agent settings"
 msgstr "carregar as configurações do agente"
 
@@ -9892,6 +9926,9 @@ msgstr "Carregando detalhes do GitHub"
 msgid "Loading groups…"
 msgstr "Carregando grupos…"
 
+msgid "Loading history…"
+msgstr "Carregando histórico…"
+
 msgid "Loading issue…"
 msgstr "Carregando a issue…"
 
@@ -9948,6 +9985,9 @@ msgstr "Carregando…"
 
 msgid "Local"
 msgstr "Local"
+
+msgid "Local branches"
+msgstr "Branches locais"
 
 msgid "Local Device"
 msgstr "Dispositivo local"
@@ -10355,6 +10395,9 @@ msgstr "Mensagem"
 msgid "Message in channel"
 msgstr "Mensagem no canal"
 
+msgid "Message, author, hash, branch"
+msgstr "Mensagem, autor, hash, branch"
+
 msgid "Message..."
 msgstr "Mensagem..."
 
@@ -10604,6 +10647,9 @@ msgstr "Meu agente"
 
 msgid "My Tasks"
 msgstr "Minhas tarefas"
+
+msgid "My worktrees"
+msgstr "Minhas worktrees"
 
 msgid "Mystery Machinist"
 msgstr "Maquinista Misterioso"
@@ -11057,6 +11103,9 @@ msgstr "Nenhum comentário ainda."
 
 msgid "No comments yet. Turn on comment mode and click anything on the page to start one."
 msgstr "Ainda não há comentários. Ative o modo de comentário e clique em qualquer elemento da página para começar um."
+
+msgid "No commits for these filters."
+msgstr "Nenhum commit para estes filtros."
 
 msgid "No commits on this branch yet."
 msgstr "Nenhum commit nesta branch ainda."
@@ -11766,6 +11815,9 @@ msgstr "Modo offline / local-first"
 msgid "Older"
 msgstr "Mais antigo"
 
+msgid "on {headBranch}"
+msgstr "em {headBranch}"
+
 msgid "on {offScopeHostName} — won't run here"
 msgstr "em {offScopeHostName} — não vai rodar aqui"
 
@@ -11858,6 +11910,9 @@ msgstr "Só um proprietário da organização pode mudar o plano. Peça ao seu p
 
 msgid "Only available on macOS."
 msgstr "Disponível apenas no macOS."
+
+msgid "Only branches with a worktree or a conversation"
+msgstr "Só branches com worktree ou conversa"
 
 msgid "Only host owners can change membership"
 msgstr "Só proprietários do host podem alterar quem tem acesso"
@@ -12021,6 +12076,10 @@ msgstr "Abrir a paleta de comandos"
 
 msgid "Open comment on GitHub"
 msgstr "Abrir o comentário no GitHub"
+
+#. placeholder {0}: conversation.title
+msgid "Open conversation: {0}"
+msgstr "Abrir conversa: {0}"
 
 msgid "Open details"
 msgstr "Abrir detalhes"
@@ -13839,6 +13898,10 @@ msgstr "Referencia"
 msgid "Refresh"
 msgstr "Atualizar"
 
+#. placeholder {0}: log.data.durationMs
+msgid "Refresh (last load {0} ms)"
+msgstr "Atualizar (última carga {0} ms)"
+
 msgid "Refresh GitHub issues"
 msgstr "Atualizar as issues do GitHub"
 
@@ -13937,6 +14000,9 @@ msgstr "Acesso remoto"
 
 msgid "Remote Access may be off"
 msgstr "O acesso remoto pode estar desativado"
+
+msgid "Remote branches"
+msgstr "Branches remotas"
 
 msgid "Remote MCP server — connects over HTTP"
 msgstr "Servidor MCP remoto — conecta por HTTP"
@@ -15028,6 +15094,9 @@ msgstr "Buscar autores…"
 msgid "Search automations"
 msgstr "Buscar automações"
 
+msgid "Search branches and tags"
+msgstr "Buscar branches e tags"
+
 msgid "Search branches..."
 msgstr "Buscar branches..."
 
@@ -15727,6 +15796,9 @@ msgstr "Mostrar um microfone no campo do chat. A fala é transcrita pelo ChatGPT
 msgid "Show a Usage button in the home sidebar, under Pull requests"
 msgstr "Mostra um botão “Uso” na barra lateral da página inicial, abaixo de “Pull requests”"
 
+msgid "Show all"
+msgstr "Mostrar tudo"
+
 msgid "Show all {count}"
 msgstr "Mostrar todos os {count}"
 
@@ -15820,6 +15892,10 @@ msgstr "Mostrar mais"
 msgid "Show on Sidebar"
 msgstr "Mostrar na barra lateral"
 
+#. placeholder {0}: badge.label
+msgid "Show only {0}"
+msgstr "Mostrar só {0}"
+
 msgid "Show open items"
 msgstr "Mostrar itens abertos"
 
@@ -15876,6 +15952,9 @@ msgstr "Mostrar aba de uso na barra lateral"
 
 msgid "showArrow opt-in"
 msgstr "showArrow opcional"
+
+msgid "Showing the latest {MAX_COMMITS} commits. Filter by branch to go further back."
+msgstr "Mostrando os últimos {MAX_COMMITS} commits. Filtre por branch para ir mais longe."
 
 msgid "Shown"
 msgstr "Exibidos"
@@ -17091,6 +17170,9 @@ msgstr "tabela com"
 
 msgid "Tabs"
 msgstr "Abas"
+
+msgid "Tags"
+msgstr "Tags"
 
 msgid "Tailwind v4 theme reference"
 msgstr "Referência de tema do Tailwind v4"
@@ -18572,6 +18654,9 @@ msgstr "Sem commit · Sem push"
 msgid "Uncommitted changes"
 msgstr "Alterações sem commit"
 
+msgid "Uncommitted changes ({uncommitted})"
+msgstr "Alterações não commitadas ({uncommitted})"
+
 msgid "Uncommitted changes, on top of {base}"
 msgstr "Alterações não commitadas, sobre {base}"
 
@@ -19690,8 +19775,14 @@ msgstr "Worktree aberta"
 msgid "Worktree out of sync"
 msgstr "Worktree fora de sincronia"
 
+msgid "Worktree: {worktreePath}"
+msgstr "Worktree: {worktreePath}"
+
 msgid "Worktrees"
 msgstr "Worktrees"
+
+msgid "Worktrees and conversations"
+msgstr "Worktrees e conversas"
 
 msgid "Worktrees are removed from disk; workspaces on the project's checkout only close. Files in the checkout stay as they are."
 msgstr "Os worktrees são removidos do disco; as áreas de trabalho no checkout do projeto apenas são fechadas. Os arquivos do checkout permanecem como estão."

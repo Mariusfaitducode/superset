@@ -472,6 +472,10 @@ msgstr "{0} sudah disiapkan di mesin ini, tetapi tidak di akun Anda"
 msgid "{0} more — refine your search"
 msgstr "{0} lagi — persempit pencarian Anda"
 
+#. placeholder {0}: section.hidden
+msgid "{0} more, refine the search"
+msgstr "{0} lainnya, perjelas pencarian"
+
 #. placeholder {0}: index + 1
 #. placeholder {1}: pages.length
 msgctxt "question progress"
@@ -508,6 +512,10 @@ msgstr "{0} proyek"
 #. placeholder {0}: conversation.queuedPrompts
 msgid "{0} queued messages"
 msgstr "{0} pesan dalam antrean"
+
+#. placeholder {0}: selected.length
+msgid "{0} refs"
+msgstr "{0} ref"
 
 #. placeholder {0}: tally.running
 msgid "{0} Running"
@@ -1698,6 +1706,9 @@ msgstr "Tambahkan skrip run lifecycle di Pengaturan Proyek atau tandai sebuah sk
 msgid "Add a project to see GitHub issues."
 msgstr "Tambahkan proyek untuk melihat issue GitHub."
 
+msgid "Add a project to see its git graph."
+msgstr "Tambahkan proyek untuk melihat grafik git-nya."
+
 msgid "Add a project to see pull requests."
 msgstr "Tambahkan proyek untuk melihat pull request."
 
@@ -2088,6 +2099,9 @@ msgstr "Semua penerima tugas"
 
 msgid "All authors"
 msgstr "Semua penulis"
+
+msgid "All branches"
+msgstr "Semua branch"
 
 msgid "All changes saved"
 msgstr "Semua perubahan tersimpan"
@@ -4763,6 +4777,10 @@ msgstr "Tersalin!"
 msgid "Copy"
 msgstr "Salin"
 
+#. placeholder {0}: commit.hash
+msgid "Copy {0}"
+msgstr "Salin {0}"
+
 msgid "Copy agent session ID"
 msgstr "Salin ID sesi agen"
 
@@ -5831,6 +5849,9 @@ msgstr "Data & API"
 
 msgid "Data display"
 msgstr "Tampilan data"
+
+msgid "Date"
+msgstr "Tanggal"
 
 msgid "Date created"
 msgstr "Tanggal dibuat"
@@ -8183,6 +8204,9 @@ msgstr "Git & Worktree"
 msgid "Git author name"
 msgstr "Nama author Git"
 
+msgid "Git graph"
+msgstr "Grafik git"
+
 msgid "GitHub"
 msgstr "GitHub"
 
@@ -8296,6 +8320,9 @@ msgstr "Berikan izin OS yang dibutuhkan Superset."
 
 msgid "Granted"
 msgstr "Diberikan"
+
+msgid "Graph"
+msgstr "Grafik"
 
 msgid "Grayscale"
 msgstr "Skala abu-abu"
@@ -8893,6 +8920,10 @@ msgstr "Sedang berjalan"
 
 msgid "In Progress"
 msgstr "Sedang berjalan"
+
+#. placeholder {0}: badge.syncedRemotes.join(", ")
+msgid "In sync with {0}"
+msgstr "Sinkron dengan {0}"
 
 msgid "In the Superset desktop app, open <0>Settings → Appearance → Theme</0>."
 msgstr "Di aplikasi desktop Superset, buka <0>Pengaturan → Tampilan → Tema</0>."
@@ -9835,6 +9866,9 @@ msgstr "llms.txt (indeks untuk agen AI)"
 msgid "Load (1 m)"
 msgstr "Beban (1 mnt)"
 
+msgid "Load {PAGE_SIZE} more commits"
+msgstr "Muat {PAGE_SIZE} commit lagi"
+
 msgid "load agent settings"
 msgstr "memuat pengaturan agen"
 
@@ -9892,6 +9926,9 @@ msgstr "Memuat detail GitHub"
 msgid "Loading groups…"
 msgstr "Memuat grup…"
 
+msgid "Loading history…"
+msgstr "Memuat riwayat…"
+
 msgid "Loading issue…"
 msgstr "Memuat issue…"
 
@@ -9948,6 +9985,9 @@ msgstr "Memuat…"
 
 msgid "Local"
 msgstr "Lokal"
+
+msgid "Local branches"
+msgstr "Branch lokal"
 
 msgid "Local Device"
 msgstr "Perangkat Lokal"
@@ -10355,6 +10395,9 @@ msgstr "Pesan"
 msgid "Message in channel"
 msgstr "Pesan di channel"
 
+msgid "Message, author, hash, branch"
+msgstr "Pesan, penulis, hash, branch"
+
 msgid "Message..."
 msgstr "Pesan..."
 
@@ -10604,6 +10647,9 @@ msgstr "Agen Saya"
 
 msgid "My Tasks"
 msgstr "Tugas Saya"
+
+msgid "My worktrees"
+msgstr "Worktree saya"
 
 msgid "Mystery Machinist"
 msgstr "Masinis Misterius"
@@ -11057,6 +11103,9 @@ msgstr "Belum ada komentar."
 
 msgid "No comments yet. Turn on comment mode and click anything on the page to start one."
 msgstr "Belum ada komentar. Aktifkan mode komentar lalu klik apa pun di halaman untuk memulai."
+
+msgid "No commits for these filters."
+msgstr "Tidak ada commit untuk filter ini."
 
 msgid "No commits on this branch yet."
 msgstr "Belum ada commit di branch ini."
@@ -11766,6 +11815,9 @@ msgstr "Mode offline / local-first"
 msgid "Older"
 msgstr "Lebih lama"
 
+msgid "on {headBranch}"
+msgstr "di {headBranch}"
+
 msgid "on {offScopeHostName} — won't run here"
 msgstr "di {offScopeHostName} — tidak akan berjalan di sini"
 
@@ -11858,6 +11910,9 @@ msgstr "Hanya pemilik organisasi yang bisa mengubah paket. Minta pemilik Anda un
 
 msgid "Only available on macOS."
 msgstr "Hanya tersedia di macOS."
+
+msgid "Only branches with a worktree or a conversation"
+msgstr "Hanya branch dengan worktree atau percakapan"
 
 msgid "Only host owners can change membership"
 msgstr "Hanya pemilik host yang bisa mengubah keanggotaan"
@@ -12021,6 +12076,10 @@ msgstr "Buka Command Palette"
 
 msgid "Open comment on GitHub"
 msgstr "Buka komentar di GitHub"
+
+#. placeholder {0}: conversation.title
+msgid "Open conversation: {0}"
+msgstr "Buka percakapan: {0}"
 
 msgid "Open details"
 msgstr "Buka detail"
@@ -13839,6 +13898,10 @@ msgstr "Mereferensikan"
 msgid "Refresh"
 msgstr "Segarkan"
 
+#. placeholder {0}: log.data.durationMs
+msgid "Refresh (last load {0} ms)"
+msgstr "Muat ulang (terakhir {0} ms)"
+
 msgid "Refresh GitHub issues"
 msgstr "Segarkan issue GitHub"
 
@@ -13937,6 +14000,9 @@ msgstr "Akses Jarak Jauh"
 
 msgid "Remote Access may be off"
 msgstr "Akses Jarak Jauh mungkin nonaktif"
+
+msgid "Remote branches"
+msgstr "Branch remote"
 
 msgid "Remote MCP server — connects over HTTP"
 msgstr "Server MCP remote — terhubung lewat HTTP"
@@ -15028,6 +15094,9 @@ msgstr "Cari penulis…"
 msgid "Search automations"
 msgstr "Cari otomatisasi"
 
+msgid "Search branches and tags"
+msgstr "Cari branch dan tag"
+
 msgid "Search branches..."
 msgstr "Cari branch..."
 
@@ -15727,6 +15796,9 @@ msgstr "Tampilkan mikrofon di kolom chat. Ucapan ditranskripsi oleh ChatGPT jika
 msgid "Show a Usage button in the home sidebar, under Pull requests"
 msgstr "Tampilkan tombol Penggunaan di sidebar beranda, di bawah Pull request"
 
+msgid "Show all"
+msgstr "Tampilkan semua"
+
 msgid "Show all {count}"
 msgstr "Tampilkan semua {count}"
 
@@ -15820,6 +15892,10 @@ msgstr "Tampilkan selengkapnya"
 msgid "Show on Sidebar"
 msgstr "Tampilkan di Sidebar"
 
+#. placeholder {0}: badge.label
+msgid "Show only {0}"
+msgstr "Tampilkan hanya {0}"
+
 msgid "Show open items"
 msgstr "Tampilkan item yang terbuka"
 
@@ -15876,6 +15952,9 @@ msgstr "Tampilkan tab penggunaan di bilah samping"
 
 msgid "showArrow opt-in"
 msgstr "showArrow opsional"
+
+msgid "Showing the latest {MAX_COMMITS} commits. Filter by branch to go further back."
+msgstr "Menampilkan {MAX_COMMITS} commit terbaru. Filter per branch untuk melihat lebih lama."
 
 msgid "Shown"
 msgstr "Ditampilkan"
@@ -17091,6 +17170,9 @@ msgstr "tabel dengan"
 
 msgid "Tabs"
 msgstr "Tab"
+
+msgid "Tags"
+msgstr "Tag"
 
 msgid "Tailwind v4 theme reference"
 msgstr "Referensi tema Tailwind v4"
@@ -18572,6 +18654,9 @@ msgstr "Belum di-commit · Belum di-push"
 msgid "Uncommitted changes"
 msgstr "Perubahan yang belum di-commit"
 
+msgid "Uncommitted changes ({uncommitted})"
+msgstr "Perubahan belum di-commit ({uncommitted})"
+
 msgid "Uncommitted changes, on top of {base}"
 msgstr "Perubahan belum di-commit, di atas {base}"
 
@@ -19690,8 +19775,14 @@ msgstr "Worktree dibuka"
 msgid "Worktree out of sync"
 msgstr "Worktree tidak sinkron"
 
+msgid "Worktree: {worktreePath}"
+msgstr "Worktree: {worktreePath}"
+
 msgid "Worktrees"
 msgstr "Worktree"
+
+msgid "Worktrees and conversations"
+msgstr "Worktree dan percakapan"
 
 msgid "Worktrees are removed from disk; workspaces on the project's checkout only close. Files in the checkout stay as they are."
 msgstr "Worktree dihapus dari disk; workspace di checkout proyek hanya ditutup. File di checkout tetap seperti semula."
