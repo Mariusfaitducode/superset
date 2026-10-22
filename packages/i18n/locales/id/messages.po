@@ -1786,8 +1786,8 @@ msgstr "Tambah lagi…"
 msgid "Add one from the menu in the sidebar to get started."
 msgstr "Tambahkan satu dari menu di sidebar untuk memulai."
 
-msgid "Add or paste ideas…"
-msgstr "Tambah atau tempel ide…"
+msgid "Add or paste notes…"
+msgstr "Tambah atau tempel catatan…"
 
 msgid "Add people"
 msgstr "Tambah orang"
@@ -2074,7 +2074,7 @@ msgctxt "log scope"
 msgid "All"
 msgstr "Semua"
 
-#. placeholder {0}: ideas.length
+#. placeholder {0}: notes.length
 msgid "All {0}"
 msgstr "Semua {0}"
 
@@ -4936,8 +4936,8 @@ msgstr "Biaya untuk Anda: $0"
 msgid "Could not add agent"
 msgstr "Tidak dapat menambahkan agen"
 
-msgid "Could not add the ideas"
-msgstr "Tidak dapat menambahkan ide"
+msgid "Could not add the notes"
+msgstr "Tidak dapat menambahkan catatan"
 
 msgid "Could not answer the agent"
 msgstr "Tidak dapat menjawab agen"
@@ -5195,8 +5195,8 @@ msgstr "Tidak bisa memperbarui skill"
 msgid "Could not update the branch"
 msgstr "Tidak bisa memperbarui branch"
 
-msgid "Could not update the idea"
-msgstr "Tidak dapat memperbarui ide"
+msgid "Could not update the note"
+msgstr "Tidak dapat memperbarui catatan"
 
 msgid "Could not update the to-do"
 msgstr "Tidak dapat memperbarui to-do"
@@ -5984,9 +5984,6 @@ msgstr "Hapus grup"
 msgid "Delete host"
 msgstr "Hapus host"
 
-msgid "Delete idea"
-msgstr "Hapus ide"
-
 msgid "Delete image"
 msgstr "Hapus gambar"
 
@@ -5995,6 +5992,9 @@ msgstr "Hapus label"
 
 msgid "Delete local branch on workspace removal"
 msgstr "Hapus branch lokal saat workspace dihapus"
+
+msgid "Delete note"
+msgstr "Hapus catatan"
 
 msgid "Delete organization"
 msgstr "Hapus organisasi"
@@ -8385,14 +8385,14 @@ msgstr "Muat ulang paksa"
 msgid "Hardware Keyboard"
 msgstr "Keyboard Fisik"
 
-msgid "Has a note"
-msgstr "Ada catatan"
-
 msgid "Has access"
 msgstr "Punya akses"
 
 msgid "Has conflicts"
 msgstr "Ada konflik"
+
+msgid "Has details"
+msgstr "Ada detail"
 
 msgid "Has uncommitted changes"
 msgstr "Ada perubahan yang belum di-commit"
@@ -8733,15 +8733,6 @@ msgstr "ID disalin"
 
 msgid "IDE"
 msgstr "IDE"
-
-msgid "Idea details"
-msgstr "Detail ide"
-
-msgid "Ideas"
-msgstr "Ide"
-
-msgid "Ideas: {activeCount} open"
-msgstr "Ide: {activeCount} terbuka"
 
 msgid "Identity"
 msgstr "Identitas"
@@ -11293,6 +11284,12 @@ msgstr "Tidak ada simulator seluler yang tersedia di sini. Diperlukan simulator 
 msgid "No name on file"
 msgstr "Tidak ada nama tersimpan"
 
+msgid "No notes match these filters."
+msgstr "Tidak ada catatan yang cocok dengan filter ini."
+
+msgid "No notes yet. Add them from the note button on a workspace in the sidebar, or ask an agent to run superset notes add."
+msgstr "Belum ada catatan. Tambahkan dari tombol catatan pada workspace di bilah samping, atau minta agen menjalankan superset notes add."
+
 msgid "No one in {organizationName} matches. Type a full email to invite someone new."
 msgstr "Tidak ada yang cocok di {organizationName}. Ketik email lengkap untuk mengundang orang baru."
 
@@ -11691,8 +11688,14 @@ msgstr "Tidak diperbarui"
 msgid "Note"
 msgstr "Catatan"
 
+msgid "Note details"
+msgstr "Detail catatan"
+
 msgid "Notes"
 msgstr "Catatan"
+
+msgid "Notes: {activeCount} open"
+msgstr "Catatan: {activeCount} terbuka"
 
 msgid "Nothing here yet."
 msgstr "Belum ada apa-apa di sini."
@@ -11986,7 +11989,7 @@ msgstr "buka"
 msgid "Open"
 msgstr "Buka"
 
-msgctxt "idea status"
+msgctxt "note status"
 msgid "Open"
 msgstr "Terbuka"
 
@@ -12220,6 +12223,9 @@ msgstr "Buka di T3 Chat"
 msgid "Open in tab"
 msgstr "Buka di tab"
 
+msgid "Open in the Notes view"
+msgstr "Buka di tampilan Catatan"
+
 msgid "Open in…"
 msgstr "Buka di…"
 
@@ -12401,6 +12407,9 @@ msgstr "Buka workspace run ini"
 
 msgid "open the task in a workspace"
 msgstr "membuka tugas di workspace"
+
+msgid "Open the workspace"
+msgstr "Buka workspace"
 
 msgid "Open the workspace in the app picked in the Open In menu (VS Code, Cursor, etc.)"
 msgstr "Buka workspace di aplikasi yang dipilih di menu \"Buka di\" (VS Code, Cursor, dll.)"
@@ -12771,8 +12780,8 @@ msgstr "Tempel"
 msgid "Paste this into Superset CLI:"
 msgstr "Tempel ini ke Superset CLI:"
 
-msgid "Pasting several lines adds one idea per line"
-msgstr "Menempel beberapa baris menambahkan satu ide per baris"
+msgid "Pasting several lines adds one note per line"
+msgstr "Menempel beberapa baris menambahkan satu catatan per baris"
 
 msgid "Path"
 msgstr "Path"
@@ -15141,6 +15150,9 @@ msgstr "Cari di Linear…"
 msgid "Search models"
 msgstr "Cari model"
 
+msgid "Search notes"
+msgstr "Cari catatan"
+
 msgid "Search pages"
 msgstr "Cari halaman"
 
@@ -16574,7 +16586,7 @@ msgstr "Status"
 msgid "Status changed"
 msgstr "Status berubah"
 
-#. placeholder {0}: statusLabel[idea.status]
+#. placeholder {0}: statusLabel[note.status]
 msgid "Status: {0}"
 msgstr "Status: {0}"
 

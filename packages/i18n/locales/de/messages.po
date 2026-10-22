@@ -1786,8 +1786,8 @@ msgstr "Weitere hinzufügen…"
 msgid "Add one from the menu in the sidebar to get started."
 msgstr "Füge über das Menü in der Seitenleiste einen hinzu, um loszulegen."
 
-msgid "Add or paste ideas…"
-msgstr "Ideen hinzufügen oder einfügen…"
+msgid "Add or paste notes…"
+msgstr "Notizen hinzufügen oder einfügen…"
 
 msgid "Add people"
 msgstr "Personen hinzufügen"
@@ -2074,7 +2074,7 @@ msgctxt "log scope"
 msgid "All"
 msgstr "Alle"
 
-#. placeholder {0}: ideas.length
+#. placeholder {0}: notes.length
 msgid "All {0}"
 msgstr "Alle {0}"
 
@@ -4936,8 +4936,8 @@ msgstr "Deine Kosten: 0 $"
 msgid "Could not add agent"
 msgstr "Agent konnte nicht hinzugefügt werden"
 
-msgid "Could not add the ideas"
-msgstr "Die Ideen konnten nicht hinzugefügt werden"
+msgid "Could not add the notes"
+msgstr "Die Notizen konnten nicht hinzugefügt werden"
 
 msgid "Could not answer the agent"
 msgstr "Antwort an den Agenten nicht möglich"
@@ -5195,8 +5195,8 @@ msgstr "Skill konnte nicht aktualisiert werden"
 msgid "Could not update the branch"
 msgstr "Branch konnte nicht aktualisiert werden"
 
-msgid "Could not update the idea"
-msgstr "Die Idee konnte nicht aktualisiert werden"
+msgid "Could not update the note"
+msgstr "Die Notiz konnte nicht aktualisiert werden"
 
 msgid "Could not update the to-do"
 msgstr "To-do konnte nicht aktualisiert werden"
@@ -5984,9 +5984,6 @@ msgstr "Gruppe löschen"
 msgid "Delete host"
 msgstr "Host löschen"
 
-msgid "Delete idea"
-msgstr "Idee löschen"
-
 msgid "Delete image"
 msgstr "Bild löschen"
 
@@ -5995,6 +5992,9 @@ msgstr "Label löschen"
 
 msgid "Delete local branch on workspace removal"
 msgstr "Lokalen Branch beim Entfernen des Arbeitsbereichs löschen"
+
+msgid "Delete note"
+msgstr "Notiz löschen"
 
 msgid "Delete organization"
 msgstr "Organisation löschen"
@@ -8385,14 +8385,14 @@ msgstr "Hart neu laden"
 msgid "Hardware Keyboard"
 msgstr "Hardwaretastatur"
 
-msgid "Has a note"
-msgstr "Hat eine Notiz"
-
 msgid "Has access"
 msgstr "Hat Zugriff"
 
 msgid "Has conflicts"
 msgstr "Hat Konflikte"
+
+msgid "Has details"
+msgstr "Hat Details"
 
 msgid "Has uncommitted changes"
 msgstr "Hat nicht committete Änderungen"
@@ -8733,15 +8733,6 @@ msgstr "ID kopiert"
 
 msgid "IDE"
 msgstr "IDE"
-
-msgid "Idea details"
-msgstr "Ideendetails"
-
-msgid "Ideas"
-msgstr "Ideen"
-
-msgid "Ideas: {activeCount} open"
-msgstr "Ideen: {activeCount} offen"
 
 msgid "Identity"
 msgstr "Identität"
@@ -11293,6 +11284,12 @@ msgstr "Hier ist kein mobiler Simulator verfügbar. Dafür ist entweder ein EAS-
 msgid "No name on file"
 msgstr "Kein Name hinterlegt"
 
+msgid "No notes match these filters."
+msgstr "Keine Notizen entsprechen diesen Filtern."
+
+msgid "No notes yet. Add them from the note button on a workspace in the sidebar, or ask an agent to run superset notes add."
+msgstr "Noch keine Notizen. Füge sie über die Notiz-Schaltfläche eines Workspaces in der Seitenleiste hinzu oder bitte einen Agenten, superset notes add auszuführen."
+
 msgid "No one in {organizationName} matches. Type a full email to invite someone new."
 msgstr "Niemand in {organizationName} passt. Gib eine vollständige E-Mail-Adresse ein, um jemand Neues einzuladen."
 
@@ -11691,8 +11688,14 @@ msgstr "Keine Updates"
 msgid "Note"
 msgstr "Hinweis"
 
+msgid "Note details"
+msgstr "Notizdetails"
+
 msgid "Notes"
 msgstr "Notizen"
+
+msgid "Notes: {activeCount} open"
+msgstr "Notizen: {activeCount} offen"
 
 msgid "Nothing here yet."
 msgstr "Hier ist noch nichts."
@@ -11986,7 +11989,7 @@ msgstr "öffnen"
 msgid "Open"
 msgstr "Öffnen"
 
-msgctxt "idea status"
+msgctxt "note status"
 msgid "Open"
 msgstr "Offen"
 
@@ -12220,6 +12223,9 @@ msgstr "In T3 Chat öffnen"
 msgid "Open in tab"
 msgstr "In Tab öffnen"
 
+msgid "Open in the Notes view"
+msgstr "In der Notizansicht öffnen"
+
 msgid "Open in…"
 msgstr "Öffnen in…"
 
@@ -12401,6 +12407,9 @@ msgstr "Arbeitsbereich des Laufs öffnen"
 
 msgid "open the task in a workspace"
 msgstr "die Aufgabe in einem Arbeitsbereich öffnen"
+
+msgid "Open the workspace"
+msgstr "Workspace öffnen"
 
 msgid "Open the workspace in the app picked in the Open In menu (VS Code, Cursor, etc.)"
 msgstr "Den Arbeitsbereich in der im Menü „Öffnen in“ gewählten App öffnen (VS Code, Cursor usw.)"
@@ -12771,8 +12780,8 @@ msgstr "Einfügen"
 msgid "Paste this into Superset CLI:"
 msgstr "Füge das in die Superset-CLI ein:"
 
-msgid "Pasting several lines adds one idea per line"
-msgstr "Beim Einfügen mehrerer Zeilen wird pro Zeile eine Idee hinzugefügt"
+msgid "Pasting several lines adds one note per line"
+msgstr "Mehrere eingefügte Zeilen ergeben je eine Notiz pro Zeile"
 
 msgid "Path"
 msgstr "Pfad"
@@ -15141,6 +15150,9 @@ msgstr "Linear durchsuchen…"
 msgid "Search models"
 msgstr "Modelle suchen"
 
+msgid "Search notes"
+msgstr "Notizen durchsuchen"
+
 msgid "Search pages"
 msgstr "Seiten durchsuchen"
 
@@ -16574,7 +16586,7 @@ msgstr "Status"
 msgid "Status changed"
 msgstr "Status geändert"
 
-#. placeholder {0}: statusLabel[idea.status]
+#. placeholder {0}: statusLabel[note.status]
 msgid "Status: {0}"
 msgstr "Status: {0}"
 

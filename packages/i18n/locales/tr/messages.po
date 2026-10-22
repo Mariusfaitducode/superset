@@ -1786,8 +1786,8 @@ msgstr "Daha fazla ekle…"
 msgid "Add one from the menu in the sidebar to get started."
 msgstr "Başlamak için kenar çubuğundaki menüden bir tane ekleyin."
 
-msgid "Add or paste ideas…"
-msgstr "Fikir ekleyin veya yapıştırın…"
+msgid "Add or paste notes…"
+msgstr "Not ekle veya yapıştır…"
 
 msgid "Add people"
 msgstr "Kişi ekle"
@@ -2074,7 +2074,7 @@ msgctxt "log scope"
 msgid "All"
 msgstr "Tümü"
 
-#. placeholder {0}: ideas.length
+#. placeholder {0}: notes.length
 msgid "All {0}"
 msgstr "Tümü {0}"
 
@@ -4936,8 +4936,8 @@ msgstr "Size maliyeti: $0"
 msgid "Could not add agent"
 msgstr "Ajan eklenemedi"
 
-msgid "Could not add the ideas"
-msgstr "Fikirler eklenemedi"
+msgid "Could not add the notes"
+msgstr "Notlar eklenemedi"
 
 msgid "Could not answer the agent"
 msgstr "Ajana yanıt verilemedi"
@@ -5195,8 +5195,8 @@ msgstr "Beceri güncellenemedi"
 msgid "Could not update the branch"
 msgstr "Dal güncellenemedi"
 
-msgid "Could not update the idea"
-msgstr "Fikir güncellenemedi"
+msgid "Could not update the note"
+msgstr "Not güncellenemedi"
 
 msgid "Could not update the to-do"
 msgstr "Yapılacak güncellenemedi"
@@ -5984,9 +5984,6 @@ msgstr "Grubu sil"
 msgid "Delete host"
 msgstr "Host'u sil"
 
-msgid "Delete idea"
-msgstr "Fikri sil"
-
 msgid "Delete image"
 msgstr "Görseli sil"
 
@@ -5995,6 +5992,9 @@ msgstr "Etiketi sil"
 
 msgid "Delete local branch on workspace removal"
 msgstr "Çalışma alanı kaldırılırken yerel dalı sil"
+
+msgid "Delete note"
+msgstr "Notu sil"
 
 msgid "Delete organization"
 msgstr "Kuruluşu sil"
@@ -8385,14 +8385,14 @@ msgstr "Sert yeniden yükleme"
 msgid "Hardware Keyboard"
 msgstr "Donanım Klavyesi"
 
-msgid "Has a note"
-msgstr "Notu var"
-
 msgid "Has access"
 msgstr "Erişimi var"
 
 msgid "Has conflicts"
 msgstr "Çakışma var"
+
+msgid "Has details"
+msgstr "Ayrıntı var"
 
 msgid "Has uncommitted changes"
 msgstr "Commit'lenmemiş değişiklikler var"
@@ -8733,15 +8733,6 @@ msgstr "Kimlik kopyalandı"
 
 msgid "IDE"
 msgstr "IDE"
-
-msgid "Idea details"
-msgstr "Fikir ayrıntıları"
-
-msgid "Ideas"
-msgstr "Fikirler"
-
-msgid "Ideas: {activeCount} open"
-msgstr "Fikirler: {activeCount} açık"
 
 msgid "Identity"
 msgstr "Kimlik"
@@ -11293,6 +11284,12 @@ msgstr "Burada kullanılabilir bir mobil simülatör yok. Bulut korumalı alanı
 msgid "No name on file"
 msgstr "Kayıtlı ad yok"
 
+msgid "No notes match these filters."
+msgstr "Bu filtrelerle eşleşen not yok."
+
+msgid "No notes yet. Add them from the note button on a workspace in the sidebar, or ask an agent to run superset notes add."
+msgstr "Henüz not yok. Kenar çubuğundaki bir çalışma alanının not düğmesinden ekleyin veya bir ajandan superset notes add komutunu çalıştırmasını isteyin."
+
 msgid "No one in {organizationName} matches. Type a full email to invite someone new."
 msgstr "{organizationName} içinde eşleşen kimse yok. Yeni birini davet etmek için tam bir e-posta adresi yazın."
 
@@ -11691,8 +11688,14 @@ msgstr "Güncellenmiyor"
 msgid "Note"
 msgstr "Not"
 
+msgid "Note details"
+msgstr "Not ayrıntıları"
+
 msgid "Notes"
 msgstr "Notlar"
+
+msgid "Notes: {activeCount} open"
+msgstr "Notlar: {activeCount} açık"
 
 msgid "Nothing here yet."
 msgstr "Burada henüz bir şey yok."
@@ -11986,7 +11989,7 @@ msgstr "aç"
 msgid "Open"
 msgstr "Aç"
 
-msgctxt "idea status"
+msgctxt "note status"
 msgid "Open"
 msgstr "Açık"
 
@@ -12220,6 +12223,9 @@ msgstr "T3 Chat'te aç"
 msgid "Open in tab"
 msgstr "Sekmede aç"
 
+msgid "Open in the Notes view"
+msgstr "Notlar görünümünde aç"
+
 msgid "Open in…"
 msgstr "Şununla aç…"
 
@@ -12401,6 +12407,9 @@ msgstr "Çalıştırmanın çalışma alanını aç"
 
 msgid "open the task in a workspace"
 msgstr "görevi çalışma alanında açma"
+
+msgid "Open the workspace"
+msgstr "Çalışma alanını aç"
 
 msgid "Open the workspace in the app picked in the Open In menu (VS Code, Cursor, etc.)"
 msgstr "Çalışma alanını \"Şununla aç\" menüsünde seçilen uygulamada aç (VS Code, Cursor vb.)"
@@ -12771,8 +12780,8 @@ msgstr "Yapıştır"
 msgid "Paste this into Superset CLI:"
 msgstr "Bunu Superset CLI'ye yapıştırın:"
 
-msgid "Pasting several lines adds one idea per line"
-msgstr "Birden çok satır yapıştırmak her satır için bir fikir ekler"
+msgid "Pasting several lines adds one note per line"
+msgstr "Birden çok satır yapıştırmak her satır için bir not ekler"
 
 msgid "Path"
 msgstr "Yol"
@@ -15141,6 +15150,9 @@ msgstr "Linear'da ara…"
 msgid "Search models"
 msgstr "Model ara"
 
+msgid "Search notes"
+msgstr "Notlarda ara"
+
 msgid "Search pages"
 msgstr "Sayfalarda ara"
 
@@ -16574,7 +16586,7 @@ msgstr "Durum"
 msgid "Status changed"
 msgstr "Durum değişti"
 
-#. placeholder {0}: statusLabel[idea.status]
+#. placeholder {0}: statusLabel[note.status]
 msgid "Status: {0}"
 msgstr "Durum: {0}"
 

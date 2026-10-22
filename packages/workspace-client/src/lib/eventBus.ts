@@ -26,7 +26,8 @@ type EventType =
 	| "project:changed"
 	| "tag-folders:changed"
 	| "page-watch:changed"
-	| "chat:sessions-changed";
+	| "chat:sessions-changed"
+	| "workspace-notes:changed";
 
 interface FsEventsPayload {
 	events: FsWatchEvent[];
@@ -122,6 +123,10 @@ export interface ChatSessionsChangedPayload {
 	occurredAt: number;
 }
 
+export interface WorkspaceNotesChangedPayload {
+	occurredAt: number;
+}
+
 type TagFoldersChangedMessage = Extract<
 	ServerMessage,
 	{ type: "tag-folders:changed" }
@@ -177,7 +182,12 @@ type EventListener<T extends EventType> = T extends "fs:events"
 															workspaceId: string,
 															payload: ChatSessionsChangedPayload,
 														) => void
-													: never;
+													: T extends "workspace-notes:changed"
+														? (
+																workspaceId: string,
+																payload: WorkspaceNotesChangedPayload,
+															) => void
+														: never;
 
 interface ListenerEntry {
 	type: EventType;
@@ -318,7 +328,8 @@ function handleMessage(state: ConnectionState, data: unknown): void {
 			message.type === "workspace:create-settled" ||
 			message.type === "workspace:naming-failed" ||
 			message.type === "page-watch:changed" ||
-			message.type === "chat:sessions-changed"
+			message.type === "chat:sessions-changed" ||
+			message.type === "workspace-notes:changed"
 				? message.workspaceId
 				: message.type === "project:changed"
 					? message.projectId
@@ -399,6 +410,11 @@ function handleMessage(state: ConnectionState, data: unknown): void {
 			});
 		} else if (message.type === "chat:sessions-changed") {
 			(entry.callback as EventListener<"chat:sessions-changed">)(
+				message.workspaceId,
+				{ occurredAt: message.occurredAt },
+			);
+		} else if (message.type === "workspace-notes:changed") {
+			(entry.callback as EventListener<"workspace-notes:changed">)(
 				message.workspaceId,
 				{ occurredAt: message.occurredAt },
 			);

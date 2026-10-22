@@ -1786,8 +1786,8 @@ msgstr "新增更多…"
 msgid "Add one from the menu in the sidebar to get started."
 msgstr "從側邊欄選單中新增一個即可開始。"
 
-msgid "Add or paste ideas…"
-msgstr "新增或貼上想法…"
+msgid "Add or paste notes…"
+msgstr "新增或貼上筆記…"
 
 msgid "Add people"
 msgstr "新增人員"
@@ -2074,7 +2074,7 @@ msgctxt "log scope"
 msgid "All"
 msgstr "全部"
 
-#. placeholder {0}: ideas.length
+#. placeholder {0}: notes.length
 msgid "All {0}"
 msgstr "全部 {0}"
 
@@ -4936,8 +4936,8 @@ msgstr "你的費用：$0"
 msgid "Could not add agent"
 msgstr "無法新增代理程式"
 
-msgid "Could not add the ideas"
-msgstr "無法新增想法"
+msgid "Could not add the notes"
+msgstr "無法新增筆記"
 
 msgid "Could not answer the agent"
 msgstr "無法回覆代理程式"
@@ -5195,8 +5195,8 @@ msgstr "無法更新技能"
 msgid "Could not update the branch"
 msgstr "無法更新分支"
 
-msgid "Could not update the idea"
-msgstr "無法更新想法"
+msgid "Could not update the note"
+msgstr "無法更新筆記"
 
 msgid "Could not update the to-do"
 msgstr "無法更新待辦"
@@ -5984,9 +5984,6 @@ msgstr "刪除群組"
 msgid "Delete host"
 msgstr "刪除主機"
 
-msgid "Delete idea"
-msgstr "刪除想法"
-
 msgid "Delete image"
 msgstr "刪除圖片"
 
@@ -5995,6 +5992,9 @@ msgstr "刪除標籤"
 
 msgid "Delete local branch on workspace removal"
 msgstr "移除工作區時刪除本地分支"
+
+msgid "Delete note"
+msgstr "刪除筆記"
 
 msgid "Delete organization"
 msgstr "刪除組織"
@@ -8385,14 +8385,14 @@ msgstr "強制重新載入"
 msgid "Hardware Keyboard"
 msgstr "硬體鍵盤"
 
-msgid "Has a note"
-msgstr "有備註"
-
 msgid "Has access"
 msgstr "有存取權限"
 
 msgid "Has conflicts"
 msgstr "有衝突"
+
+msgid "Has details"
+msgstr "有詳細資訊"
 
 msgid "Has uncommitted changes"
 msgstr "有未提交的改動"
@@ -8733,15 +8733,6 @@ msgstr "已複製ID"
 
 msgid "IDE"
 msgstr "IDE"
-
-msgid "Idea details"
-msgstr "想法詳細資訊"
-
-msgid "Ideas"
-msgstr "想法"
-
-msgid "Ideas: {activeCount} open"
-msgstr "想法：{activeCount} 個未處理"
 
 msgid "Identity"
 msgstr "身份"
@@ -11293,6 +11284,12 @@ msgstr "此處沒有可用的行動模擬器。需要雲端沙盒上的 EAS 模�
 msgid "No name on file"
 msgstr "未登記姓名"
 
+msgid "No notes match these filters."
+msgstr "沒有符合這些篩選條件的筆記。"
+
+msgid "No notes yet. Add them from the note button on a workspace in the sidebar, or ask an agent to run superset notes add."
+msgstr "還沒有筆記。可從側邊欄中工作區的筆記按鈕新增，或請代理執行 superset notes add。"
+
 msgid "No one in {organizationName} matches. Type a full email to invite someone new."
 msgstr "{organizationName} 中沒有相符的人。輸入完整電子郵件地址即可邀請新成員。"
 
@@ -11691,8 +11688,14 @@ msgstr "未更新"
 msgid "Note"
 msgstr "注意"
 
+msgid "Note details"
+msgstr "筆記詳細資訊"
+
 msgid "Notes"
 msgstr "筆記"
+
+msgid "Notes: {activeCount} open"
+msgstr "筆記：{activeCount} 則未完成"
 
 msgid "Nothing here yet."
 msgstr "這裡還沒有內容。"
@@ -11986,9 +11989,9 @@ msgstr "開啟"
 msgid "Open"
 msgstr "開啟"
 
-msgctxt "idea status"
+msgctxt "note status"
 msgid "Open"
-msgstr "未處理"
+msgstr "未完成"
 
 msgctxt "pull request or issue state"
 msgid "Open"
@@ -12220,6 +12223,9 @@ msgstr "在T3 Chat中開啟"
 msgid "Open in tab"
 msgstr "在分頁中開啟"
 
+msgid "Open in the Notes view"
+msgstr "在筆記檢視中開啟"
+
 msgid "Open in…"
 msgstr "開啟方式…"
 
@@ -12401,6 +12407,9 @@ msgstr "開啟這次執行的工作區"
 
 msgid "open the task in a workspace"
 msgstr "在工作區中開啟任務"
+
+msgid "Open the workspace"
+msgstr "開啟工作區"
 
 msgid "Open the workspace in the app picked in the Open In menu (VS Code, Cursor, etc.)"
 msgstr "在「開啟方式」選單中選定的應用（VS Code、Cursor等）中開啟工作區"
@@ -12771,8 +12780,8 @@ msgstr "貼上"
 msgid "Paste this into Superset CLI:"
 msgstr "把它貼上到Superset CLI："
 
-msgid "Pasting several lines adds one idea per line"
-msgstr "貼上多行時每行新增一個想法"
+msgid "Pasting several lines adds one note per line"
+msgstr "貼上多行會每行新增一則筆記"
 
 msgid "Path"
 msgstr "路徑"
@@ -15141,6 +15150,9 @@ msgstr "搜尋Linear…"
 msgid "Search models"
 msgstr "搜尋模型"
 
+msgid "Search notes"
+msgstr "搜尋筆記"
+
 msgid "Search pages"
 msgstr "搜尋頁面"
 
@@ -16574,7 +16586,7 @@ msgstr "狀態"
 msgid "Status changed"
 msgstr "狀態變更"
 
-#. placeholder {0}: statusLabel[idea.status]
+#. placeholder {0}: statusLabel[note.status]
 msgid "Status: {0}"
 msgstr "狀態：{0}"
 

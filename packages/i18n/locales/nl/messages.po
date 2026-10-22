@@ -1786,8 +1786,8 @@ msgstr "Meer toevoegen…"
 msgid "Add one from the menu in the sidebar to get started."
 msgstr "Voeg er een toe via het menu in de zijbalk om te beginnen."
 
-msgid "Add or paste ideas…"
-msgstr "Ideeën toevoegen of plakken…"
+msgid "Add or paste notes…"
+msgstr "Notities toevoegen of plakken…"
 
 msgid "Add people"
 msgstr "Personen toevoegen"
@@ -2074,7 +2074,7 @@ msgctxt "log scope"
 msgid "All"
 msgstr "Alle"
 
-#. placeholder {0}: ideas.length
+#. placeholder {0}: notes.length
 msgid "All {0}"
 msgstr "Alle {0}"
 
@@ -4936,8 +4936,8 @@ msgstr "Kosten voor jou: $0"
 msgid "Could not add agent"
 msgstr "Kon agent niet toevoegen"
 
-msgid "Could not add the ideas"
-msgstr "Kon de ideeën niet toevoegen"
+msgid "Could not add the notes"
+msgstr "Kan de notities niet toevoegen"
 
 msgid "Could not answer the agent"
 msgstr "Kan de agent niet antwoorden"
@@ -5195,8 +5195,8 @@ msgstr "Kan skill niet bijwerken"
 msgid "Could not update the branch"
 msgstr "Kan de branch niet bijwerken"
 
-msgid "Could not update the idea"
-msgstr "Kon het idee niet bijwerken"
+msgid "Could not update the note"
+msgstr "Kan de notitie niet bijwerken"
 
 msgid "Could not update the to-do"
 msgstr "Kan de to-do niet bijwerken"
@@ -5984,9 +5984,6 @@ msgstr "Groep verwijderen"
 msgid "Delete host"
 msgstr "Host verwijderen"
 
-msgid "Delete idea"
-msgstr "Idee verwijderen"
-
 msgid "Delete image"
 msgstr "Afbeelding verwijderen"
 
@@ -5995,6 +5992,9 @@ msgstr "Label verwijderen"
 
 msgid "Delete local branch on workspace removal"
 msgstr "Lokale branch verwijderen bij verwijderen werkruimte"
+
+msgid "Delete note"
+msgstr "Notitie verwijderen"
 
 msgid "Delete organization"
 msgstr "Organisatie verwijderen"
@@ -8385,14 +8385,14 @@ msgstr "Hard herladen"
 msgid "Hardware Keyboard"
 msgstr "Hardwaretoetsenbord"
 
-msgid "Has a note"
-msgstr "Heeft een notitie"
-
 msgid "Has access"
 msgstr "Heeft toegang"
 
 msgid "Has conflicts"
 msgstr "Heeft conflicten"
+
+msgid "Has details"
+msgstr "Heeft details"
 
 msgid "Has uncommitted changes"
 msgstr "Heeft niet-gecommitte wijzigingen"
@@ -8733,15 +8733,6 @@ msgstr "ID gekopieerd"
 
 msgid "IDE"
 msgstr "IDE"
-
-msgid "Idea details"
-msgstr "Ideedetails"
-
-msgid "Ideas"
-msgstr "Ideeën"
-
-msgid "Ideas: {activeCount} open"
-msgstr "Ideeën: {activeCount} open"
 
 msgid "Identity"
 msgstr "Identiteit"
@@ -11293,6 +11284,12 @@ msgstr "Hier is geen mobiele simulator beschikbaar. Hiervoor is een EAS-simulato
 msgid "No name on file"
 msgstr "Geen naam bekend"
 
+msgid "No notes match these filters."
+msgstr "Geen notities komen overeen met deze filters."
+
+msgid "No notes yet. Add them from the note button on a workspace in the sidebar, or ask an agent to run superset notes add."
+msgstr "Nog geen notities. Voeg ze toe via de notitieknop van een workspace in de zijbalk, of vraag een agent superset notes add uit te voeren."
+
 msgid "No one in {organizationName} matches. Type a full email to invite someone new."
 msgstr "Niemand in {organizationName} komt overeen. Typ een volledig e-mailadres om iemand nieuw uit te nodigen."
 
@@ -11691,8 +11688,14 @@ msgstr "Geen updates"
 msgid "Note"
 msgstr "Opmerking"
 
+msgid "Note details"
+msgstr "Notitiedetails"
+
 msgid "Notes"
 msgstr "Notities"
+
+msgid "Notes: {activeCount} open"
+msgstr "Notities: {activeCount} open"
 
 msgid "Nothing here yet."
 msgstr "Hier is nog niets."
@@ -11986,7 +11989,7 @@ msgstr "openen"
 msgid "Open"
 msgstr "Openen"
 
-msgctxt "idea status"
+msgctxt "note status"
 msgid "Open"
 msgstr "Open"
 
@@ -12220,6 +12223,9 @@ msgstr "Openen in T3 Chat"
 msgid "Open in tab"
 msgstr "Openen in tabblad"
 
+msgid "Open in the Notes view"
+msgstr "Openen in de notitieweergave"
+
 msgid "Open in…"
 msgstr "Openen in…"
 
@@ -12401,6 +12407,9 @@ msgstr "De werkruimte van de run openen"
 
 msgid "open the task in a workspace"
 msgstr "de taak in een werkruimte openen"
+
+msgid "Open the workspace"
+msgstr "Workspace openen"
 
 msgid "Open the workspace in the app picked in the Open In menu (VS Code, Cursor, etc.)"
 msgstr "De werkruimte openen in de app die is gekozen in het menu 'Openen in' (VS Code, Cursor, enz.)"
@@ -12771,8 +12780,8 @@ msgstr "Plakken"
 msgid "Paste this into Superset CLI:"
 msgstr "Plak dit in de Superset-CLI:"
 
-msgid "Pasting several lines adds one idea per line"
-msgstr "Meerdere regels plakken voegt één idee per regel toe"
+msgid "Pasting several lines adds one note per line"
+msgstr "Meerdere regels plakken voegt één notitie per regel toe"
 
 msgid "Path"
 msgstr "Pad"
@@ -15141,6 +15150,9 @@ msgstr "Linear doorzoeken…"
 msgid "Search models"
 msgstr "Modellen zoeken"
 
+msgid "Search notes"
+msgstr "Notities zoeken"
+
 msgid "Search pages"
 msgstr "Pagina's zoeken"
 
@@ -16574,7 +16586,7 @@ msgstr "Status"
 msgid "Status changed"
 msgstr "Status gewijzigd"
 
-#. placeholder {0}: statusLabel[idea.status]
+#. placeholder {0}: statusLabel[note.status]
 msgid "Status: {0}"
 msgstr "Status: {0}"
 

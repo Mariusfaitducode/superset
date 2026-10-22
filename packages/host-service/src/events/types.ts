@@ -252,6 +252,13 @@ export interface ChatSessionsChangedMessage {
 	occurredAt: number;
 }
 
+/** A workspace's notes changed, from the app or an agent's CLI; refetch them. */
+export interface WorkspaceNotesChangedMessage {
+	type: "workspace-notes:changed";
+	workspaceId: string;
+	occurredAt: number;
+}
+
 export type ServerMessage =
 	| FsEventsMessage
 	| GitChangedMessage
@@ -266,6 +273,7 @@ export type ServerMessage =
 	| TagFoldersChangedMessage
 	| PageWatchChangedMessage
 	| ChatSessionsChangedMessage
+	| WorkspaceNotesChangedMessage
 	| EventBusErrorMessage;
 
 /**

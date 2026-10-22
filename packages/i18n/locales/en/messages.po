@@ -1786,8 +1786,8 @@ msgstr "Add more…"
 msgid "Add one from the menu in the sidebar to get started."
 msgstr "Add one from the menu in the sidebar to get started."
 
-msgid "Add or paste ideas…"
-msgstr "Add or paste ideas…"
+msgid "Add or paste notes…"
+msgstr "Add or paste notes…"
 
 msgid "Add people"
 msgstr "Add people"
@@ -2074,7 +2074,7 @@ msgctxt "log scope"
 msgid "All"
 msgstr "All"
 
-#. placeholder {0}: ideas.length
+#. placeholder {0}: notes.length
 msgid "All {0}"
 msgstr "All {0}"
 
@@ -4936,8 +4936,8 @@ msgstr "Cost to you: $0"
 msgid "Could not add agent"
 msgstr "Could not add agent"
 
-msgid "Could not add the ideas"
-msgstr "Could not add the ideas"
+msgid "Could not add the notes"
+msgstr "Could not add the notes"
 
 msgid "Could not answer the agent"
 msgstr "Could not answer the agent"
@@ -5195,8 +5195,8 @@ msgstr "Could not update skill"
 msgid "Could not update the branch"
 msgstr "Could not update the branch"
 
-msgid "Could not update the idea"
-msgstr "Could not update the idea"
+msgid "Could not update the note"
+msgstr "Could not update the note"
 
 msgid "Could not update the to-do"
 msgstr "Could not update the to-do"
@@ -5984,9 +5984,6 @@ msgstr "Delete group"
 msgid "Delete host"
 msgstr "Delete host"
 
-msgid "Delete idea"
-msgstr "Delete idea"
-
 msgid "Delete image"
 msgstr "Delete image"
 
@@ -5995,6 +5992,9 @@ msgstr "Delete label"
 
 msgid "Delete local branch on workspace removal"
 msgstr "Delete local branch on workspace removal"
+
+msgid "Delete note"
+msgstr "Delete note"
 
 msgid "Delete organization"
 msgstr "Delete organization"
@@ -8385,14 +8385,14 @@ msgstr "Hard reload"
 msgid "Hardware Keyboard"
 msgstr "Hardware Keyboard"
 
-msgid "Has a note"
-msgstr "Has a note"
-
 msgid "Has access"
 msgstr "Has access"
 
 msgid "Has conflicts"
 msgstr "Has conflicts"
+
+msgid "Has details"
+msgstr "Has details"
 
 msgid "Has uncommitted changes"
 msgstr "Has uncommitted changes"
@@ -8733,15 +8733,6 @@ msgstr "ID copied"
 
 msgid "IDE"
 msgstr "IDE"
-
-msgid "Idea details"
-msgstr "Idea details"
-
-msgid "Ideas"
-msgstr "Ideas"
-
-msgid "Ideas: {activeCount} open"
-msgstr "Ideas: {activeCount} open"
 
 msgid "Identity"
 msgstr "Identity"
@@ -11293,6 +11284,12 @@ msgstr "No mobile simulator available here. This needs either an EAS simulator o
 msgid "No name on file"
 msgstr "No name on file"
 
+msgid "No notes match these filters."
+msgstr "No notes match these filters."
+
+msgid "No notes yet. Add them from the note button on a workspace in the sidebar, or ask an agent to run superset notes add."
+msgstr "No notes yet. Add them from the note button on a workspace in the sidebar, or ask an agent to run superset notes add."
+
 msgid "No one in {organizationName} matches. Type a full email to invite someone new."
 msgstr "No one in {organizationName} matches. Type a full email to invite someone new."
 
@@ -11691,8 +11688,14 @@ msgstr "Not updating"
 msgid "Note"
 msgstr "Note"
 
+msgid "Note details"
+msgstr "Note details"
+
 msgid "Notes"
 msgstr "Notes"
+
+msgid "Notes: {activeCount} open"
+msgstr "Notes: {activeCount} open"
 
 msgid "Nothing here yet."
 msgstr "Nothing here yet."
@@ -11986,7 +11989,7 @@ msgstr "open"
 msgid "Open"
 msgstr "Open"
 
-msgctxt "idea status"
+msgctxt "note status"
 msgid "Open"
 msgstr "Open"
 
@@ -12220,6 +12223,9 @@ msgstr "Open in T3 Chat"
 msgid "Open in tab"
 msgstr "Open in tab"
 
+msgid "Open in the Notes view"
+msgstr "Open in the Notes view"
+
 msgid "Open in…"
 msgstr "Open in…"
 
@@ -12401,6 +12407,9 @@ msgstr "Open the run's workspace"
 
 msgid "open the task in a workspace"
 msgstr "open the task in a workspace"
+
+msgid "Open the workspace"
+msgstr "Open the workspace"
 
 msgid "Open the workspace in the app picked in the Open In menu (VS Code, Cursor, etc.)"
 msgstr "Open the workspace in the app picked in the Open In menu (VS Code, Cursor, etc.)"
@@ -12771,8 +12780,8 @@ msgstr "Paste"
 msgid "Paste this into Superset CLI:"
 msgstr "Paste this into Superset CLI:"
 
-msgid "Pasting several lines adds one idea per line"
-msgstr "Pasting several lines adds one idea per line"
+msgid "Pasting several lines adds one note per line"
+msgstr "Pasting several lines adds one note per line"
 
 msgid "Path"
 msgstr "Path"
@@ -15141,6 +15150,9 @@ msgstr "Search Linear…"
 msgid "Search models"
 msgstr "Search models"
 
+msgid "Search notes"
+msgstr "Search notes"
+
 msgid "Search pages"
 msgstr "Search pages"
 
@@ -16574,7 +16586,7 @@ msgstr "Status"
 msgid "Status changed"
 msgstr "Status changed"
 
-#. placeholder {0}: statusLabel[idea.status]
+#. placeholder {0}: statusLabel[note.status]
 msgid "Status: {0}"
 msgstr "Status: {0}"
 

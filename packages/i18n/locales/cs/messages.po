@@ -1786,8 +1786,8 @@ msgstr "Přidat další…"
 msgid "Add one from the menu in the sidebar to get started."
 msgstr "Začněte tím, že jednoho přidáte z nabídky v postranním panelu."
 
-msgid "Add or paste ideas…"
-msgstr "Přidejte nebo vložte nápady…"
+msgid "Add or paste notes…"
+msgstr "Přidat nebo vložit poznámky…"
 
 msgid "Add people"
 msgstr "Přidat lidi"
@@ -2074,7 +2074,7 @@ msgctxt "log scope"
 msgid "All"
 msgstr "Vše"
 
-#. placeholder {0}: ideas.length
+#. placeholder {0}: notes.length
 msgid "All {0}"
 msgstr "Vše {0}"
 
@@ -4936,8 +4936,8 @@ msgstr "Vaše náklady: 0 $"
 msgid "Could not add agent"
 msgstr "Agenta se nepodařilo přidat"
 
-msgid "Could not add the ideas"
-msgstr "Nápady se nepodařilo přidat"
+msgid "Could not add the notes"
+msgstr "Poznámky se nepodařilo přidat"
 
 msgid "Could not answer the agent"
 msgstr "Agentovi se nepodařilo odpovědět"
@@ -5195,8 +5195,8 @@ msgstr "Skill se nepodařilo aktualizovat"
 msgid "Could not update the branch"
 msgstr "Nepodařilo se aktualizovat větev"
 
-msgid "Could not update the idea"
-msgstr "Nápad se nepodařilo upravit"
+msgid "Could not update the note"
+msgstr "Poznámku se nepodařilo upravit"
 
 msgid "Could not update the to-do"
 msgstr "Úkol se nepodařilo upravit"
@@ -5984,9 +5984,6 @@ msgstr "Smazat skupinu"
 msgid "Delete host"
 msgstr "Smazat hosta"
 
-msgid "Delete idea"
-msgstr "Smazat nápad"
-
 msgid "Delete image"
 msgstr "Smazat obrázek"
 
@@ -5995,6 +5992,9 @@ msgstr "Smazat štítek"
 
 msgid "Delete local branch on workspace removal"
 msgstr "Smazat lokální větev při odstranění pracovního prostoru"
+
+msgid "Delete note"
+msgstr "Smazat poznámku"
 
 msgid "Delete organization"
 msgstr "Smazat organizaci"
@@ -8385,14 +8385,14 @@ msgstr "Vynucené načtení znovu"
 msgid "Hardware Keyboard"
 msgstr "Hardwarová klávesnice"
 
-msgid "Has a note"
-msgstr "Má poznámku"
-
 msgid "Has access"
 msgstr "Má přístup"
 
 msgid "Has conflicts"
 msgstr "Má konflikty"
+
+msgid "Has details"
+msgstr "Obsahuje podrobnosti"
 
 msgid "Has uncommitted changes"
 msgstr "Obsahuje necommitnuté změny"
@@ -8733,15 +8733,6 @@ msgstr "ID zkopírováno"
 
 msgid "IDE"
 msgstr "IDE"
-
-msgid "Idea details"
-msgstr "Podrobnosti nápadu"
-
-msgid "Ideas"
-msgstr "Nápady"
-
-msgid "Ideas: {activeCount} open"
-msgstr "Nápady: {activeCount} otevřených"
 
 msgid "Identity"
 msgstr "Identita"
@@ -11293,6 +11284,12 @@ msgstr "Zde není k dispozici žádný mobilní simulátor. Je potřeba simulát
 msgid "No name on file"
 msgstr "Není uloženo žádné jméno"
 
+msgid "No notes match these filters."
+msgstr "Těmto filtrům neodpovídají žádné poznámky."
+
+msgid "No notes yet. Add them from the note button on a workspace in the sidebar, or ask an agent to run superset notes add."
+msgstr "Zatím žádné poznámky. Přidejte je tlačítkem poznámek u pracovního prostoru v postranním panelu, nebo požádejte agenta, ať spustí superset notes add."
+
 msgid "No one in {organizationName} matches. Type a full email to invite someone new."
 msgstr "V {organizationName} nikdo neodpovídá. Zadejte celou e-mailovou adresu a pozvěte někoho nového."
 
@@ -11691,8 +11688,14 @@ msgstr "Bez aktualizací"
 msgid "Note"
 msgstr "Poznámka"
 
+msgid "Note details"
+msgstr "Podrobnosti poznámky"
+
 msgid "Notes"
 msgstr "Poznámky"
+
+msgid "Notes: {activeCount} open"
+msgstr "Poznámky: {activeCount} otevřených"
 
 msgid "Nothing here yet."
 msgstr "Zatím tu nic není."
@@ -11986,9 +11989,9 @@ msgstr "otevřít"
 msgid "Open"
 msgstr "Otevřít"
 
-msgctxt "idea status"
+msgctxt "note status"
 msgid "Open"
-msgstr "Otevřený"
+msgstr "Otevřená"
 
 msgctxt "pull request or issue state"
 msgid "Open"
@@ -12220,6 +12223,9 @@ msgstr "Otevřít v T3 Chat"
 msgid "Open in tab"
 msgstr "Otevřít na kartě"
 
+msgid "Open in the Notes view"
+msgstr "Otevřít v zobrazení Poznámky"
+
 msgid "Open in…"
 msgstr "Otevřít v…"
 
@@ -12401,6 +12407,9 @@ msgstr "Otevřít pracovní prostor běhu"
 
 msgid "open the task in a workspace"
 msgstr "otevřít úkol v pracovním prostoru"
+
+msgid "Open the workspace"
+msgstr "Otevřít pracovní prostor"
 
 msgid "Open the workspace in the app picked in the Open In menu (VS Code, Cursor, etc.)"
 msgstr "Otevřít pracovní prostor v aplikaci vybrané v nabídce „Otevřít v“ (VS Code, Cursor atd.)"
@@ -12771,8 +12780,8 @@ msgstr "Vložit"
 msgid "Paste this into Superset CLI:"
 msgstr "Vložte to do Superset CLI:"
 
-msgid "Pasting several lines adds one idea per line"
-msgstr "Vložení více řádků přidá jeden nápad na řádek"
+msgid "Pasting several lines adds one note per line"
+msgstr "Vložení více řádků přidá jednu poznámku na řádek"
 
 msgid "Path"
 msgstr "Cesta"
@@ -15141,6 +15150,9 @@ msgstr "Hledat v Linearu…"
 msgid "Search models"
 msgstr "Hledat modely"
 
+msgid "Search notes"
+msgstr "Hledat poznámky"
+
 msgid "Search pages"
 msgstr "Hledat stránky"
 
@@ -16574,7 +16586,7 @@ msgstr "Stav"
 msgid "Status changed"
 msgstr "Změna stavu"
 
-#. placeholder {0}: statusLabel[idea.status]
+#. placeholder {0}: statusLabel[note.status]
 msgid "Status: {0}"
 msgstr "Stav: {0}"
 
