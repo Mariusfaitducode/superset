@@ -1,7 +1,7 @@
 import { TRPCError } from "@trpc/server";
 import { z } from "zod";
 import {
-	ConversationTodoStore,
+	getConversationTodoStore,
 	TODO_ACTORS,
 	TODO_KINDS,
 	TODO_PRIORITIES,
@@ -11,12 +11,7 @@ import {
 import type { HostServiceContext } from "../../../types";
 import { protectedProcedure, router } from "../../index";
 
-let store: ConversationTodoStore | null = null;
-
-function getStore(): ConversationTodoStore {
-	store ??= new ConversationTodoStore();
-	return store;
-}
+const getStore = getConversationTodoStore;
 
 function run<T>(action: () => T): T {
 	try {
@@ -81,7 +76,16 @@ export const conversationTodosRouter = router({
 				link: link.optional(),
 			}),
 		)
-		.mutation(({ ctx, input }) => change(ctx, () => getStore().add(input))),
+		.mutation(({ ctx, input }) =>
+			change(ctx, () =>
+				getStore().add({
+					...input,
+					conversationId:
+						ctx.terminalAgentStore.get(input.terminalId)?.agentSessionId ??
+						null,
+				}),
+			),
+		),
 
 	update: protectedProcedure
 		.input(
