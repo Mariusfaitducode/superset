@@ -24,11 +24,13 @@ export function ConversationStats({
 	hostId,
 	terminalId,
 	lastEventAt,
+	working,
 }: {
 	workspaceId: string;
 	hostId: string;
 	terminalId: string;
 	lastEventAt: number;
+	working: boolean;
 }) {
 	const { t } = useLingui();
 	const {
@@ -44,6 +46,7 @@ export function ConversationStats({
 		hostId,
 		terminalId,
 		lastEventAt,
+		working,
 		enabled: showStats,
 	});
 	if (!stats) return null;
