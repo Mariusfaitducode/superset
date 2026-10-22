@@ -28,6 +28,9 @@ Kept by the agents working on this fork and read on every Mac. Updated at each s
 - Later: general agent, MCP, features behind the paid gate.
 - Propose upstream what works (issue superset-sh/superset#8634).
 - **CLI ahead of the app** (ideas inbox, 2026-10-22): `superset notes` exists in the CLI but the installed host answers "No procedure found on path workspaceNotes.list". The CLI should detect a missing procedure and say "update the app" instead of failing.
+- **`superset --help` hides the fork's commands** (2026-10-22): `todos`, `labels` and `notes` work but are not listed, so an agent told to check `superset --help` never finds them. List them under their own group ("Fork: to-dos, labels, notes").
+- **Settings build line reads like the base release** (2026-10-22): on `build/next` Marius read "on top of marius-v1.39.0-4" and thought he was still on v4. Lead with "Test build build/next" and list the PRs it contains.
+- **PR view v2** (after testing #14): filters, faster, everything readable at a glance, prioritize. Prompt for its agent: `marius/prompts/pr-view-v2.md`. Continues on `feature/pr-view` (PR #14, not merged yet).
 - **Agents' ideas inbox**: agents log friction and feature ideas with `superset notes add "Superset idea: …"`, or in `~/.claude/superset-ideas.md` until notes work; the coordinator moves them here. (2026-10-22: "`todos add` says Not logged in while `list` works" is fixed by `fix/local-cli-without-login`.)
 
 ## How we work
