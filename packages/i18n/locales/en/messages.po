@@ -1955,6 +1955,9 @@ msgstr "Agent is working"
 msgid "Agent launch configuration"
 msgstr "Agent launch configuration"
 
+msgid "Agent permissions"
+msgstr "Agent permissions"
+
 msgid "Agent picker (Claude, Codex, Cursor…) used by every session-creation flow"
 msgstr "Agent picker (Claude, Codex, Cursor…) used by every session-creation flow"
 
@@ -2002,6 +2005,9 @@ msgstr "Agents"
 
 msgid "Agents complete routine tickets with no mid-task intervention."
 msgstr "Agents complete routine tickets with no mid-task intervention."
+
+msgid "Agents here may, without asking:"
+msgstr "Agents here may, without asking:"
 
 msgid "Agents load their own preview, drive the UI, and attach screenshot proof before marking work ready for review."
 msgstr "Agents load their own preview, drive the UI, and attach screenshot proof before marking work ready for review."
@@ -4951,6 +4957,9 @@ msgstr "Could not branch the chat"
 msgid "Could not change access"
 msgstr "Could not change access"
 
+msgid "Could not change the agent permissions"
+msgstr "Could not change the agent permissions"
+
 msgid "Could not change the labels"
 msgstr "Could not change the labels"
 
@@ -6941,6 +6950,9 @@ msgstr "Every {day} at {time}"
 
 msgid "Every agent runs in its own Git worktree and branch, keeping working files separate. Changes can still conflict when merged. You watch, review, and merge them all from one window."
 msgstr "Every agent runs in its own Git worktree and branch, keeping working files separate. Changes can still conflict when merged. You watch, review, and merge them all from one window."
+
+msgid "Every agent started in this workspace gets it."
+msgstr "Every agent started in this workspace gets it."
 
 msgid "Every axis is carrying its weight for the next tier. Hold it and the tier follows."
 msgstr "Every axis is carrying its weight for the next tier. Hold it and the tier follows."
@@ -10192,6 +10204,9 @@ msgstr "Mark as Unread"
 msgid "Mark as viewed"
 msgstr "Mark as viewed"
 
+msgid "Mark its PR ready for review"
+msgstr "Mark its PR ready for review"
+
 msgid "Mark Ready"
 msgstr "Mark Ready"
 
@@ -12021,6 +12036,9 @@ msgstr "Open {parentLabel}"
 msgid "Open {path} in file pane"
 msgstr "Open {path} in file pane"
 
+msgid "Open a draft PR"
+msgstr "Open a draft PR"
+
 msgid "Open a multiline prompt composer for the active terminal"
 msgstr "Open a multiline prompt composer for the active terminal"
 
@@ -12974,6 +12992,9 @@ msgstr "Pink"
 msgid "Pinned"
 msgstr "Pinned"
 
+msgid "Pinned context"
+msgstr "Pinned context"
+
 msgid "PK"
 msgstr "PK"
 
@@ -13098,6 +13119,9 @@ msgstr "Post"
 
 msgid "Post comment"
 msgstr "Post comment"
+
+msgid "Post GitHub comments"
+msgstr "Post GitHub comments"
 
 msgid "Post reply"
 msgstr "Post reply"
@@ -13559,6 +13583,9 @@ msgstr "Push"
 #. placeholder {0}: error.message
 msgid "Push failed: {0}"
 msgstr "Push failed: {0}"
+
+msgid "Push its own branch"
+msgstr "Push its own branch"
 
 msgid "Pushed"
 msgstr "Pushed"
@@ -14216,6 +14243,9 @@ msgstr "Replaced 1 file in {where}"
 
 msgid "Reply"
 msgstr "Reply"
+
+msgid "Reply to review bots"
+msgstr "Reply to review bots"
 
 msgid "Reply to thread…"
 msgstr "Reply to thread…"
@@ -14939,6 +14969,9 @@ msgstr "Save preferences"
 
 msgid "Save profile"
 msgstr "Save profile"
+
+msgid "Save Slack drafts"
+msgstr "Save Slack drafts"
 
 msgid "save the agent"
 msgstr "save the agent"

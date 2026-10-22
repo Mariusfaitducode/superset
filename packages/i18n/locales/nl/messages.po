@@ -1955,6 +1955,9 @@ msgstr "Agent is bezig"
 msgid "Agent launch configuration"
 msgstr "Startconfiguratie van de agent"
 
+msgid "Agent permissions"
+msgstr "Agentrechten"
+
 msgid "Agent picker (Claude, Codex, Cursor…) used by every session-creation flow"
 msgstr "Agentkiezer (Claude, Codex, Cursor…) die elke flow voor sessiecreatie gebruikt"
 
@@ -2002,6 +2005,9 @@ msgstr "Agents"
 
 msgid "Agents complete routine tickets with no mid-task intervention."
 msgstr "Agents voltooien routinetickets zonder tussentijds ingrijpen."
+
+msgid "Agents here may, without asking:"
+msgstr "Agents hier mogen, zonder te vragen:"
 
 msgid "Agents load their own preview, drive the UI, and attach screenshot proof before marking work ready for review."
 msgstr "Agents laden hun eigen preview, bedienen de UI en voegen screenshotbewijs toe voordat ze werk klaarzetten voor review."
@@ -4951,6 +4957,9 @@ msgstr "Kan de chat niet vertakken"
 msgid "Could not change access"
 msgstr "Kan toegang niet wijzigen"
 
+msgid "Could not change the agent permissions"
+msgstr "Kan de agentrechten niet wijzigen"
+
 msgid "Could not change the labels"
 msgstr "Kan de labels niet wijzigen"
 
@@ -6941,6 +6950,9 @@ msgstr "Elke {day} om {time}"
 
 msgid "Every agent runs in its own Git worktree and branch, keeping working files separate. Changes can still conflict when merged. You watch, review, and merge them all from one window."
 msgstr "Elke agent draait in een eigen Git-worktree en branch, zodat werkbestanden gescheiden blijven. Bij het samenvoegen van wijzigingen kunnen nog steeds conflicten ontstaan. Je volgt, beoordeelt en voegt alles samen vanuit één venster."
+
+msgid "Every agent started in this workspace gets it."
+msgstr "Elke agent die in deze werkruimte start, krijgt dit."
 
 msgid "Every axis is carrying its weight for the next tier. Hold it and the tier follows."
 msgstr "Elke as draagt zijn deel bij voor het volgende niveau. Houd dit vast en het niveau volgt."
@@ -10192,6 +10204,9 @@ msgstr "Markeren als ongelezen"
 msgid "Mark as viewed"
 msgstr "Markeren als bekeken"
 
+msgid "Mark its PR ready for review"
+msgstr "Zijn PR als klaar voor review markeren"
+
 msgid "Mark Ready"
 msgstr "Markeren als klaar"
 
@@ -12021,6 +12036,9 @@ msgstr "{parentLabel} openen"
 msgid "Open {path} in file pane"
 msgstr "{path} openen in bestandspaneel"
 
+msgid "Open a draft PR"
+msgstr "Een concept-PR openen"
+
 msgid "Open a multiline prompt composer for the active terminal"
 msgstr "Een prompt-editor met meerdere regels openen voor de actieve terminal"
 
@@ -12974,6 +12992,9 @@ msgstr "Roze"
 msgid "Pinned"
 msgstr "Vastgezet"
 
+msgid "Pinned context"
+msgstr "Vastgezette context"
+
 msgid "PK"
 msgstr "PK"
 
@@ -13098,6 +13119,9 @@ msgstr "Posten"
 
 msgid "Post comment"
 msgstr "Opmerking plaatsen"
+
+msgid "Post GitHub comments"
+msgstr "GitHub-opmerkingen plaatsen"
 
 msgid "Post reply"
 msgstr "Antwoord plaatsen"
@@ -13559,6 +13583,9 @@ msgstr "Pushen"
 #. placeholder {0}: error.message
 msgid "Push failed: {0}"
 msgstr "Push mislukt: {0}"
+
+msgid "Push its own branch"
+msgstr "Zijn eigen branch pushen"
 
 msgid "Pushed"
 msgstr "Gepusht"
@@ -14216,6 +14243,9 @@ msgstr "1 bestand vervangen in {where}"
 
 msgid "Reply"
 msgstr "Antwoorden"
+
+msgid "Reply to review bots"
+msgstr "Reviewbots beantwoorden"
 
 msgid "Reply to thread…"
 msgstr "Reageren op thread…"
@@ -14939,6 +14969,9 @@ msgstr "Voorkeuren opslaan"
 
 msgid "Save profile"
 msgstr "Profiel opslaan"
+
+msgid "Save Slack drafts"
+msgstr "Slack-concepten opslaan"
 
 msgid "save the agent"
 msgstr "de agent opslaan"

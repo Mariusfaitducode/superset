@@ -1955,6 +1955,9 @@ msgstr "에이전트 작업 중"
 msgid "Agent launch configuration"
 msgstr "에이전트 실행 구성"
 
+msgid "Agent permissions"
+msgstr "에이전트 권한"
+
 msgid "Agent picker (Claude, Codex, Cursor…) used by every session-creation flow"
 msgstr "모든 세션 생성 흐름에서 쓰는 에이전트 선택기(Claude, Codex, Cursor…)"
 
@@ -2002,6 +2005,9 @@ msgstr "에이전트"
 
 msgid "Agents complete routine tickets with no mid-task intervention."
 msgstr "에이전트가 작업 중간 개입 없이 일상적인 티켓을 완료합니다."
+
+msgid "Agents here may, without asking:"
+msgstr "여기 에이전트가 묻지 않고 할 수 있는 일:"
 
 msgid "Agents load their own preview, drive the UI, and attach screenshot proof before marking work ready for review."
 msgstr "에이전트가 직접 미리 보기를 띄우고, UI를 조작하고, 리뷰 준비 표시를 하기 전에 스크린샷 증거를 첨부합니다."
@@ -4951,6 +4957,9 @@ msgstr "채팅을 분기할 수 없습니다"
 msgid "Could not change access"
 msgstr "접근 권한을 변경할 수 없습니다"
 
+msgid "Could not change the agent permissions"
+msgstr "에이전트 권한을 변경할 수 없습니다"
+
 msgid "Could not change the labels"
 msgstr "라벨을 변경할 수 없습니다"
 
@@ -6941,6 +6950,9 @@ msgstr "매주 {day} {time}"
 
 msgid "Every agent runs in its own Git worktree and branch, keeping working files separate. Changes can still conflict when merged. You watch, review, and merge them all from one window."
 msgstr "각 에이전트는 자체 Git worktree와 브랜치에서 실행되어 작업 파일이 분리됩니다. 변경 사항을 병합할 때는 여전히 충돌이 발생할 수 있습니다. 하나의 창에서 모든 작업을 모니터링하고 검토하고 병합할 수 있습니다."
+
+msgid "Every agent started in this workspace gets it."
+msgstr "이 워크스페이스에서 시작하는 모든 에이전트가 받습니다."
 
 msgid "Every axis is carrying its weight for the next tier. Hold it and the tier follows."
 msgstr "모든 축이 다음 등급을 향해 제 몫을 하고 있습니다. 이대로 유지하면 등급은 따라옵니다."
@@ -10192,6 +10204,9 @@ msgstr "읽지 않음으로 표시"
 msgid "Mark as viewed"
 msgstr "확인함으로 표시"
 
+msgid "Mark its PR ready for review"
+msgstr "PR을 리뷰 준비 완료로 표시"
+
 msgid "Mark Ready"
 msgstr "준비됨으로 표시"
 
@@ -12021,6 +12036,9 @@ msgstr "{parentLabel} 열기"
 msgid "Open {path} in file pane"
 msgstr "파일 패널에서 {path} 열기"
 
+msgid "Open a draft PR"
+msgstr "초안 PR 열기"
+
 msgid "Open a multiline prompt composer for the active terminal"
 msgstr "활성 터미널의 여러 줄 프롬프트 작성기를 엽니다"
 
@@ -12974,6 +12992,9 @@ msgstr "분홍"
 msgid "Pinned"
 msgstr "고정됨"
 
+msgid "Pinned context"
+msgstr "고정된 컨텍스트"
+
 msgid "PK"
 msgstr "PK"
 
@@ -13098,6 +13119,9 @@ msgstr "게시"
 
 msgid "Post comment"
 msgstr "댓글 게시"
+
+msgid "Post GitHub comments"
+msgstr "GitHub 댓글 게시"
 
 msgid "Post reply"
 msgstr "답글 게시"
@@ -13559,6 +13583,9 @@ msgstr "푸시"
 #. placeholder {0}: error.message
 msgid "Push failed: {0}"
 msgstr "푸시 실패: {0}"
+
+msgid "Push its own branch"
+msgstr "자기 브랜치 푸시"
 
 msgid "Pushed"
 msgstr "푸시됨"
@@ -14216,6 +14243,9 @@ msgstr "{where}에서 파일 1개를 바꿨습니다"
 
 msgid "Reply"
 msgstr "답글"
+
+msgid "Reply to review bots"
+msgstr "리뷰 봇에 답글 달기"
 
 msgid "Reply to thread…"
 msgstr "스레드에 답글…"
@@ -14939,6 +14969,9 @@ msgstr "환경설정 저장"
 
 msgid "Save profile"
 msgstr "프로필 저장"
+
+msgid "Save Slack drafts"
+msgstr "Slack 초안 저장"
 
 msgid "save the agent"
 msgstr "에이전트를 저장할"
