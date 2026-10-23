@@ -1,4 +1,4 @@
-import { useQueryClient } from "@tanstack/react-query";
+import { type QueryKey, useQueryClient } from "@tanstack/react-query";
 import { useCallback, useEffect, useMemo } from "react";
 import {
 	type ConversationTodo,
@@ -24,8 +24,18 @@ export interface TodoActions {
 	add: (terminalId: string, text: string) => Promise<void>;
 	update: (id: string, fields: TodoFields) => Promise<void>;
 	setDone: (id: string, done: boolean) => Promise<void>;
-	remove: (id: string) => Promise<void>;
+	/** Nothing is deleted: the to-do moves to the conversation's archive. */
+	archive: (id: string) => Promise<void>;
+	restore: (id: string) => Promise<void>;
 	clearDone: (terminalId: string) => Promise<void>;
+	/**
+	 * A conversation's archived to-dos, read only when the user opens them.
+	 * The key sits under the host's to-dos key, so every change refreshes it.
+	 */
+	archivedQuery: (terminalId: string) => {
+		queryKey: QueryKey;
+		queryFn: () => Promise<ConversationTodo[]>;
+	};
 }
 
 const importing = new Set<string>();
@@ -147,11 +157,24 @@ export function useWorkspaceTodos({
 				mutate((client) => client.update.mutate({ id, ...fields })),
 			setDone: (id, done) =>
 				mutate((client) => client.setDone.mutate({ id, done })),
-			remove: (id) => mutate((client) => client.remove.mutate({ id })),
+			archive: (id) => mutate((client) => client.archive.mutate({ id })),
+			restore: (id) => mutate((client) => client.restore.mutate({ id })),
 			clearDone: (terminalId) =>
 				mutate((client) => client.clearDone.mutate({ terminalId })),
+			archivedQuery: (terminalId) => ({
+				queryKey: [...queryKey, "archived", terminalId],
+				queryFn: async () => {
+					if (!hostUrl) return [];
+					const archived = await getHostServiceClientByUrl(
+						hostUrl,
+					).conversationTodos.list.query({ terminalId, archived: true });
+					return archived.sort(
+						(a, b) => (b.archivedAt ?? 0) - (a.archivedAt ?? 0),
+					);
+				},
+			}),
 		}),
-		[mutate, workspaceId],
+		[mutate, workspaceId, hostUrl, queryKey],
 	);
 
 	return { available: query.data != null, byTerminal, actions };

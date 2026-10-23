@@ -2716,6 +2716,9 @@ msgstr "Arsipkan environment"
 msgid "Archive failed"
 msgstr "Pengarsipan gagal"
 
+msgid "Archive to-do"
+msgstr "Arsipkan tugas"
+
 msgid "Archive workspace"
 msgstr "Arsipkan workspace"
 
@@ -2730,6 +2733,9 @@ msgstr "Diarsipkan · {0}"
 #. placeholder {0}: formatCompactRelativeTime(workspace.deletedAt, now)
 msgid "Archived {0}"
 msgstr "Diarsipkan {0}"
+
+msgid "Archived to-dos"
+msgstr "Tugas yang diarsipkan"
 
 msgid "Are you sure you want to delete this file? This action cannot be undone."
 msgstr "Yakin ingin menghapus file ini? Tindakan ini tidak bisa dibatalkan."
@@ -5342,6 +5348,9 @@ msgstr "Tidak dapat menyelesaikan komentar ini"
 msgid "Could not restart the host service"
 msgstr "Tidak dapat memulai ulang layanan host"
 
+msgid "Could not restore the to-do"
+msgstr "Tidak dapat memulihkan tugas"
+
 msgid "Could not resume"
 msgstr "Tidak dapat melanjutkan"
 
@@ -6263,9 +6272,6 @@ msgstr "Hapus workspace ini?"
 
 msgid "Delete thread"
 msgstr "Hapus thread"
-
-msgid "Delete to-do"
-msgstr "Hapus tugas"
 
 msgid "Delete without checking"
 msgstr "Hapus tanpa memeriksa"
@@ -11397,6 +11403,9 @@ msgstr "Belum ada agen."
 
 msgid "No API keys yet."
 msgstr "Belum ada kunci API."
+
+msgid "No archived to-dos"
+msgstr "Tidak ada tugas yang diarsipkan"
 
 msgid "No archived workspaces"
 msgstr "Tidak ada workspace yang diarsipkan"

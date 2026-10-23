@@ -2716,6 +2716,9 @@ msgstr "Umgebung archivieren"
 msgid "Archive failed"
 msgstr "Archivieren fehlgeschlagen"
 
+msgid "Archive to-do"
+msgstr "Aufgabe archivieren"
+
 msgid "Archive workspace"
 msgstr "Arbeitsbereich archivieren"
 
@@ -2730,6 +2733,9 @@ msgstr "Archiviert · {0}"
 #. placeholder {0}: formatCompactRelativeTime(workspace.deletedAt, now)
 msgid "Archived {0}"
 msgstr "Archiviert {0}"
+
+msgid "Archived to-dos"
+msgstr "Archivierte Aufgaben"
 
 msgid "Are you sure you want to delete this file? This action cannot be undone."
 msgstr "Willst du diese Datei wirklich löschen? Das lässt sich nicht rückgängig machen."
@@ -5342,6 +5348,9 @@ msgstr "Dieser Kommentar konnte nicht erledigt werden"
 msgid "Could not restart the host service"
 msgstr "Der Host-Dienst konnte nicht neu gestartet werden"
 
+msgid "Could not restore the to-do"
+msgstr "Aufgabe konnte nicht wiederhergestellt werden"
+
 msgid "Could not resume"
 msgstr "Fortsetzen nicht möglich"
 
@@ -6263,9 +6272,6 @@ msgstr "Diesen Arbeitsbereich löschen?"
 
 msgid "Delete thread"
 msgstr "Thread löschen"
-
-msgid "Delete to-do"
-msgstr "To-do löschen"
 
 msgid "Delete without checking"
 msgstr "Ohne Prüfung löschen"
@@ -11397,6 +11403,9 @@ msgstr "Noch keine Agenten."
 
 msgid "No API keys yet."
 msgstr "Noch keine API-Schlüssel."
+
+msgid "No archived to-dos"
+msgstr "Keine archivierten Aufgaben"
 
 msgid "No archived workspaces"
 msgstr "Keine archivierten Arbeitsbereiche"
