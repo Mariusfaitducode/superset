@@ -91,7 +91,11 @@ export class ConversationTodoStore {
 
 	/** The open list by default; `archived` gives the archived ones instead. */
 	list(
-		filter: { workspaceId?: string; terminalId?: string; archived?: boolean } = {},
+		filter: {
+			workspaceId?: string;
+			terminalId?: string;
+			archived?: boolean;
+		} = {},
 	) {
 		const archived = filter.archived ?? false;
 		return this.load().filter(
