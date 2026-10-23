@@ -2006,6 +2006,9 @@ msgstr "일정이나 트리거로 실행되는 에이전트"
 msgid "Agents on your phone"
 msgstr "휴대폰에서 쓰는 에이전트"
 
+msgid "Agents put their hand-overs here with superset report: work to review, decisions, drafts to approve, blockers."
+msgstr "에이전트가 superset report로 인계 사항을 여기에 둡니다: 검토할 작업, 결정, 승인할 초안, 차단 요소."
+
 msgid "Agents remember what they learn about your codebase, so every new session starts warm."
 msgstr "에이전트가 코드베이스에 대해 배운 내용을 기억하므로 새 세션이 처음부터 맥락을 갖고 시작합니다."
 
@@ -2017,6 +2020,9 @@ msgstr "에이전트는 Linear 도구를 호출할 때 이 계정을 사용합�
 
 msgid "Agents' to-dos"
 msgstr "에이전트의 할 일"
+
+msgid "Agents' to-dos for you"
+msgstr "에이전트가 남긴 할 일"
 
 msgid "Aggregate agent usage across every developer on the Superset leaderboard — tokens, cost, cache behaviour and which models people actually reach for."
 msgstr "Superset 리더보드에 참여한 모든 개발자의 에이전트 사용량 집계 — 토큰, 비용, 캐시 동작, 그리고 실제로 많이 쓰이는 모델입니다."
@@ -2348,8 +2354,14 @@ msgstr "익명의 조립공"
 msgid "another device"
 msgstr "다른 기기"
 
+msgid "answer"
+msgstr "답변"
+
 msgid "Answer any questions in the terminal below, such as a password."
 msgstr "아래 터미널에서 비밀번호 등 질문에 답하세요."
+
+msgid "Answer the agent"
+msgstr "에이전트에게 답변"
 
 msgid "Answer this question on desktop, or skip it."
 msgstr "이 질문은 데스크톱에서 답하거나 건너뛰세요."
@@ -2531,8 +2543,14 @@ msgctxt "job application"
 msgid "Apply"
 msgstr "지원"
 
+msgid "approve"
+msgstr "승인"
+
 msgid "Approve"
 msgstr "승인"
+
+msgid "Approve and send"
+msgstr "승인 후 보내기"
 
 msgid "Approve edits"
 msgstr "편집 승인"
@@ -3068,8 +3086,14 @@ msgstr "블록"
 msgid "blocked"
 msgstr "차단됨"
 
+msgid "Blocked"
+msgstr "차단됨"
+
 msgid "Blocked by Branch Rules"
 msgstr "브랜치 규칙으로 차단됨"
+
+msgid "Blocked, see the Desk"
+msgstr "차단됨, Desk 확인"
 
 msgid "Blockquote"
 msgstr "인용구"
@@ -3632,6 +3656,9 @@ msgstr "업데이트 확인"
 
 msgid "Check for Updates..."
 msgstr "업데이트 확인..."
+
+msgid "Check off"
+msgstr "완료 표시"
 
 msgid "Check on running agents and read what they changed from your iPhone or iPad."
 msgstr "iPhone이나 iPad에서 실행 중인 에이전트를 확인하고 변경 내용을 읽어 보세요."
@@ -5056,6 +5083,9 @@ msgstr "브랜치 \"{1}\"을(를) 찾기 위해 {0}에 연결할 수 없습니�
 msgid "Could not reach a mobile simulator."
 msgstr "모바일 시뮬레이터에 연결할 수 없습니다."
 
+msgid "Could not reach the conversation"
+msgstr "대화에 연결할 수 없습니다"
+
 msgid "Could not reach the desktop."
 msgstr "데스크톱에 연결할 수 없습니다."
 
@@ -5862,6 +5892,12 @@ msgstr "디버그"
 msgid "Debug with production stack traces"
 msgstr "프로덕션 스택 트레이스로 디버깅"
 
+msgid "Decision waiting on the Desk"
+msgstr "Desk에서 결정 대기 중"
+
+msgid "Decisions"
+msgstr "결정"
+
 msgid "default"
 msgstr "기본"
 
@@ -6182,6 +6218,12 @@ msgstr "디자인 모드 실패"
 msgid "Design review"
 msgstr "디자인 리뷰"
 
+msgid "Desk"
+msgstr "Desk"
+
+msgid "Desk, {count} waiting on you"
+msgstr "Desk, {count}개가 대기 중"
+
 msgid "Desktop"
 msgstr "데스크톱"
 
@@ -6387,6 +6429,9 @@ msgstr "네트워크에 있는 개발 서버를 찾아 연결합니다."
 msgid "Disk version"
 msgstr "디스크 버전"
 
+msgid "dismiss"
+msgstr "닫기"
+
 msgid "Dismiss"
 msgstr "닫기"
 
@@ -6554,11 +6599,20 @@ msgstr "초안 · 파일"
 msgid "Draft · line {0}"
 msgstr "초안 · {0}번 줄"
 
+msgid "Draft for {draftTarget}"
+msgstr "{draftTarget}용 초안"
+
 msgid "Draft opened"
 msgstr "초안 열림"
 
+msgid "Draft waiting on the Desk"
+msgstr "Desk에서 초안 대기 중"
+
 msgid "drafted 3 support replies"
 msgstr "지원 답변 3건 초안 작성"
+
+msgid "Drafts to approve"
+msgstr "승인할 초안"
 
 msgid "Drag to reorder"
 msgstr "끌어서 순서 변경"
@@ -7927,6 +7981,9 @@ msgstr "LinkedIn에서 팔로우하기"
 
 msgid "Follow us on X/Twitter"
 msgstr "X/Twitter에서 팔로우하기"
+
+msgid "Follow-up for the agent (optional)"
+msgstr "에이전트에게 후속 요청 (선택)"
 
 msgid "Font family"
 msgstr "글꼴"
@@ -10167,6 +10224,9 @@ msgstr "확인함으로 표시"
 msgid "Mark Ready"
 msgstr "준비됨으로 표시"
 
+msgid "Mark reviewed"
+msgstr "검토 완료로 표시"
+
 msgid "Markdown"
 msgstr "Markdown"
 
@@ -10560,6 +10620,9 @@ msgstr "대부분의 개발자"
 
 msgid "Most of software history"
 msgstr "소프트웨어 역사의 대부분"
+
+msgid "move"
+msgstr "이동"
 
 msgid "Move"
 msgstr "이동"
@@ -11678,6 +11741,9 @@ msgstr "최근 30일 동안 게시된 사용량이 아직 없습니다. 이 기�
 msgid "Nothing running"
 msgstr "실행 중인 항목 없음"
 
+msgid "Nothing waits on you."
+msgstr "대기 중인 항목이 없습니다."
+
 msgid "Nothing was missed"
 msgstr "놓친 실행이 없습니다"
 
@@ -12021,6 +12087,9 @@ msgstr "명령 팔레트 열기"
 
 msgid "Open comment on GitHub"
 msgstr "GitHub에서 코멘트 열기"
+
+msgid "Open conversation"
+msgstr "대화 열기"
 
 msgid "Open details"
 msgstr "세부 정보 열기"
@@ -12408,6 +12477,9 @@ msgstr "Superset의 설정 → 계정에서 참여하세요."
 
 msgid "Opt-out"
 msgstr "수집 거부"
+
+msgid "option"
+msgstr "옵션"
 
 msgid "Option shortcuts may prevent typing special characters"
 msgstr "Option 단축키는 특수 문자 입력을 방해할 수 있습니다"
@@ -13712,6 +13784,9 @@ msgstr "리뷰 준비됨"
 #. placeholder {0}: error.message
 msgid "Ready for review failed: {0}"
 msgstr "리뷰 준비 완료 표시 실패: {0}"
+
+msgid "Ready for review on the Desk"
+msgstr "Desk에서 검토 준비됨"
 
 msgid "Ready in"
 msgstr "준비 완료"
@@ -15414,6 +15489,9 @@ msgstr "터미널에서 텍스트를 선택하면 끝의 공백이 제거된 상
 
 msgid "Send"
 msgstr "보내기"
+
+msgid "Send (⌘Enter)"
+msgstr "보내기 (⌘Enter)"
 
 msgid "Send an invitation to join {organizationName}. Expires in 48 hours."
 msgstr "{organizationName}에 참여하도록 초대를 보냅니다. 48시간 후 만료됩니다."
@@ -18163,6 +18241,9 @@ msgstr "다른 에이전트 대화를 재개하려면 해당 폴더에서 다음
 
 msgid "To-do details"
 msgstr "할 일 세부 정보"
+
+msgid "To-do on the Desk"
+msgstr "Desk에 할 일 있음"
 
 msgid "To-dos"
 msgstr "할 일"

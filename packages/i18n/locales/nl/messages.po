@@ -2006,6 +2006,9 @@ msgstr "Agents op een schema of trigger"
 msgid "Agents on your phone"
 msgstr "Agents op je telefoon"
 
+msgid "Agents put their hand-overs here with superset report: work to review, decisions, drafts to approve, blockers."
+msgstr "Agents zetten hun overdrachten hier met superset report: werk om te beoordelen, beslissingen, concepten om goed te keuren, blokkades."
+
 msgid "Agents remember what they learn about your codebase, so every new session starts warm."
 msgstr "Agents onthouden wat ze over je codebase leren, zodat elke nieuwe sessie met context begint."
 
@@ -2017,6 +2020,9 @@ msgstr "Agents gebruiken dit account wanneer ze Linear-tools aanroepen."
 
 msgid "Agents' to-dos"
 msgstr "To-do's van agents"
+
+msgid "Agents' to-dos for you"
+msgstr "To-do's van agents voor jou"
 
 msgid "Aggregate agent usage across every developer on the Superset leaderboard — tokens, cost, cache behaviour and which models people actually reach for."
 msgstr "Totaal agentgebruik van alle developers op het Superset-leaderboard — tokens, kosten, cachegedrag en welke modellen mensen echt gebruiken."
@@ -2348,8 +2354,14 @@ msgstr "Anonieme Assembleur"
 msgid "another device"
 msgstr "een ander apparaat"
 
+msgid "answer"
+msgstr "antwoorden"
+
 msgid "Answer any questions in the terminal below, such as a password."
 msgstr "Beantwoord vragen in de terminal hieronder, zoals een wachtwoord."
+
+msgid "Answer the agent"
+msgstr "Agent antwoorden"
 
 msgid "Answer this question on desktop, or skip it."
 msgstr "Beantwoord deze vraag op desktop, of sla hem over."
@@ -2531,8 +2543,14 @@ msgctxt "job application"
 msgid "Apply"
 msgstr "Solliciteer"
 
+msgid "approve"
+msgstr "goedkeuren"
+
 msgid "Approve"
 msgstr "Goedkeuren"
+
+msgid "Approve and send"
+msgstr "Goedkeuren en verzenden"
 
 msgid "Approve edits"
 msgstr "Bewerkingen goedkeuren"
@@ -3068,8 +3086,14 @@ msgstr "Blok"
 msgid "blocked"
 msgstr "geblokkeerd"
 
+msgid "Blocked"
+msgstr "Geblokkeerd"
+
 msgid "Blocked by Branch Rules"
 msgstr "Geblokkeerd door branchregels"
+
+msgid "Blocked, see the Desk"
+msgstr "Geblokkeerd, zie de Desk"
 
 msgid "Blockquote"
 msgstr "Citaat"
@@ -3632,6 +3656,9 @@ msgstr "Controleren op updates"
 
 msgid "Check for Updates..."
 msgstr "Controleren op updates..."
+
+msgid "Check off"
+msgstr "Afvinken"
 
 msgid "Check on running agents and read what they changed from your iPhone or iPad."
 msgstr "Bekijk lopende agents en lees op je iPhone of iPad wat ze hebben veranderd."
@@ -5056,6 +5083,9 @@ msgstr "Kon {0} niet bereiken om branch \"{1}\" te zoeken. Controleer je verbind
 msgid "Could not reach a mobile simulator."
 msgstr "Kan geen mobiele simulator bereiken."
 
+msgid "Could not reach the conversation"
+msgstr "Kan het gesprek niet bereiken"
+
 msgid "Could not reach the desktop."
 msgstr "Kan het bureaublad niet bereiken."
 
@@ -5862,6 +5892,12 @@ msgstr "Debug"
 msgid "Debug with production stack traces"
 msgstr "Debug met stack traces uit productie"
 
+msgid "Decision waiting on the Desk"
+msgstr "Beslissing wacht op de Desk"
+
+msgid "Decisions"
+msgstr "Beslissingen"
+
 msgid "default"
 msgstr "standaard"
 
@@ -6182,6 +6218,12 @@ msgstr "Designmodus mislukt"
 msgid "Design review"
 msgstr "Designreview"
 
+msgid "Desk"
+msgstr "Desk"
+
+msgid "Desk, {count} waiting on you"
+msgstr "Desk, {count} wachten op jou"
+
 msgid "Desktop"
 msgstr "Bureaublad"
 
@@ -6387,6 +6429,9 @@ msgstr "Ontwikkelservers op je netwerk vinden en ermee verbinden."
 msgid "Disk version"
 msgstr "Versie op schijf"
 
+msgid "dismiss"
+msgstr "negeren"
+
 msgid "Dismiss"
 msgstr "Sluiten"
 
@@ -6554,11 +6599,20 @@ msgstr "Concept · bestand"
 msgid "Draft · line {0}"
 msgstr "Concept · regel {0}"
 
+msgid "Draft for {draftTarget}"
+msgstr "Concept voor {draftTarget}"
+
 msgid "Draft opened"
 msgstr "Draft geopend"
 
+msgid "Draft waiting on the Desk"
+msgstr "Concept wacht op de Desk"
+
 msgid "drafted 3 support replies"
 msgstr "3 supportantwoorden opgesteld"
+
+msgid "Drafts to approve"
+msgstr "Concepten om goed te keuren"
 
 msgid "Drag to reorder"
 msgstr "Sleep om te herordenen"
@@ -7927,6 +7981,9 @@ msgstr "Volg ons op LinkedIn"
 
 msgid "Follow us on X/Twitter"
 msgstr "Volg ons op X/Twitter"
+
+msgid "Follow-up for the agent (optional)"
+msgstr "Vervolg voor de agent (optioneel)"
 
 msgid "Font family"
 msgstr "Lettertype"
@@ -10167,6 +10224,9 @@ msgstr "Markeren als bekeken"
 msgid "Mark Ready"
 msgstr "Markeren als klaar"
 
+msgid "Mark reviewed"
+msgstr "Markeren als beoordeeld"
+
 msgid "Markdown"
 msgstr "Markdown"
 
@@ -10560,6 +10620,9 @@ msgstr "de meeste ontwikkelaars"
 
 msgid "Most of software history"
 msgstr "Het grootste deel van de softwaregeschiedenis"
+
+msgid "move"
+msgstr "verplaatsen"
 
 msgid "Move"
 msgstr "Verplaatsen"
@@ -11678,6 +11741,9 @@ msgstr "Nog niets gepubliceerd in de laatste 30 dagen. Je positie verschijnt zod
 msgid "Nothing running"
 msgstr "Er draait niets"
 
+msgid "Nothing waits on you."
+msgstr "Niets wacht op jou."
+
 msgid "Nothing was missed"
 msgstr "Er is niets gemist"
 
@@ -12021,6 +12087,9 @@ msgstr "Opdrachtenpalet openen"
 
 msgid "Open comment on GitHub"
 msgstr "Opmerking openen op GitHub"
+
+msgid "Open conversation"
+msgstr "Gesprek openen"
 
 msgid "Open details"
 msgstr "Details openen"
@@ -12408,6 +12477,9 @@ msgstr "Doe mee vanuit Superset bij Instellingen → Account."
 
 msgid "Opt-out"
 msgstr "Weigeren"
+
+msgid "option"
+msgstr "optie"
 
 msgid "Option shortcuts may prevent typing special characters"
 msgstr "Option-sneltoetsen kunnen het typen van speciale tekens blokkeren"
@@ -13712,6 +13784,9 @@ msgstr "Klaar voor review"
 #. placeholder {0}: error.message
 msgid "Ready for review failed: {0}"
 msgstr "Markeren als klaar voor review mislukt: {0}"
+
+msgid "Ready for review on the Desk"
+msgstr "Klaar voor beoordeling op de Desk"
 
 msgid "Ready in"
 msgstr "Klaar in"
@@ -15414,6 +15489,9 @@ msgstr "Tekst selecteren in een terminal kopieert die meteen naar het klembord, 
 
 msgid "Send"
 msgstr "Versturen"
+
+msgid "Send (⌘Enter)"
+msgstr "Verzenden (⌘Enter)"
 
 msgid "Send an invitation to join {organizationName}. Expires in 48 hours."
 msgstr "Stuur een uitnodiging om lid te worden van {organizationName}. Verloopt na 48 uur."
@@ -18163,6 +18241,9 @@ msgstr "Voer dit uit in de map om een ander agentgesprek te hervatten:"
 
 msgid "To-do details"
 msgstr "To-do-details"
+
+msgid "To-do on the Desk"
+msgstr "To-do op de Desk"
 
 msgid "To-dos"
 msgstr "To-do's"

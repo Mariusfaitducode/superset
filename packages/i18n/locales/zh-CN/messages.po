@@ -2006,6 +2006,9 @@ msgstr "按计划或触发器运行的智能体"
 msgid "Agents on your phone"
 msgstr "手机上的智能体"
 
+msgid "Agents put their hand-overs here with superset report: work to review, decisions, drafts to approve, blockers."
+msgstr "智能体通过 superset report 将交接放在这里：待审阅的工作、决策、待批准的草稿、阻碍。"
+
 msgid "Agents remember what they learn about your codebase, so every new session starts warm."
 msgstr "智能体会记住它们对你代码库的了解，让每个新会话一开始就有上下文。"
 
@@ -2017,6 +2020,9 @@ msgstr "智能体调用 Linear 工具时会使用此账号。"
 
 msgid "Agents' to-dos"
 msgstr "智能体的待办"
+
+msgid "Agents' to-dos for you"
+msgstr "智能体给你的待办"
 
 msgid "Aggregate agent usage across every developer on the Superset leaderboard — tokens, cost, cache behaviour and which models people actually reach for."
 msgstr "Superset 排行榜上所有开发者的智能体使用汇总 —— token、成本、缓存表现，以及大家实际常用的模型。"
@@ -2348,8 +2354,14 @@ msgstr "匿名装配工"
 msgid "another device"
 msgstr "另一台设备"
 
+msgid "answer"
+msgstr "回答"
+
 msgid "Answer any questions in the terminal below, such as a password."
 msgstr "请在下方终端中回答提问，例如输入密码。"
+
+msgid "Answer the agent"
+msgstr "回复智能体"
 
 msgid "Answer this question on desktop, or skip it."
 msgstr "请在桌面端回答此问题，或跳过。"
@@ -2531,8 +2543,14 @@ msgctxt "job application"
 msgid "Apply"
 msgstr "申请"
 
+msgid "approve"
+msgstr "批准"
+
 msgid "Approve"
 msgstr "批准"
+
+msgid "Approve and send"
+msgstr "批准并发送"
 
 msgid "Approve edits"
 msgstr "批准编辑"
@@ -3068,8 +3086,14 @@ msgstr "方块"
 msgid "blocked"
 msgstr "已阻止"
 
+msgid "Blocked"
+msgstr "受阻"
+
 msgid "Blocked by Branch Rules"
 msgstr "被分支规则阻止"
+
+msgid "Blocked, see the Desk"
+msgstr "受阻，请查看 Desk"
 
 msgid "Blockquote"
 msgstr "引用块"
@@ -3632,6 +3656,9 @@ msgstr "检查更新"
 
 msgid "Check for Updates..."
 msgstr "检查更新..."
+
+msgid "Check off"
+msgstr "勾选"
 
 msgid "Check on running agents and read what they changed from your iPhone or iPad."
 msgstr "在 iPhone 或 iPad 上查看运行中的智能体，并阅读它们做出的更改。"
@@ -5056,6 +5083,9 @@ msgstr "无法连接 {0} 以查找分支“{1}”。请检查网络连接和对 
 msgid "Could not reach a mobile simulator."
 msgstr "无法连接到移动模拟器。"
 
+msgid "Could not reach the conversation"
+msgstr "无法连接到对话"
+
 msgid "Could not reach the desktop."
 msgstr "无法连接到桌面。"
 
@@ -5862,6 +5892,12 @@ msgstr "调试"
 msgid "Debug with production stack traces"
 msgstr "用生产环境堆栈跟踪调试"
 
+msgid "Decision waiting on the Desk"
+msgstr "Desk 上有待做的决策"
+
+msgid "Decisions"
+msgstr "决策"
+
 msgid "default"
 msgstr "默认"
 
@@ -6182,6 +6218,12 @@ msgstr "设计模式失败"
 msgid "Design review"
 msgstr "设计评审"
 
+msgid "Desk"
+msgstr "Desk"
+
+msgid "Desk, {count} waiting on you"
+msgstr "Desk，{count} 项等待你处理"
+
 msgid "Desktop"
 msgstr "桌面端"
 
@@ -6387,6 +6429,9 @@ msgstr "发现并连接你网络中的开发服务器。"
 msgid "Disk version"
 msgstr "磁盘版本"
 
+msgid "dismiss"
+msgstr "忽略"
+
 msgid "Dismiss"
 msgstr "忽略"
 
@@ -6554,11 +6599,20 @@ msgstr "草稿 · 文件"
 msgid "Draft · line {0}"
 msgstr "草稿 · 第{0}行"
 
+msgid "Draft for {draftTarget}"
+msgstr "用于 {draftTarget} 的草稿"
+
 msgid "Draft opened"
 msgstr "创建了草稿"
 
+msgid "Draft waiting on the Desk"
+msgstr "Desk 上有待批准的草稿"
+
 msgid "drafted 3 support replies"
 msgstr "起草了3条支持回复"
+
+msgid "Drafts to approve"
+msgstr "待批准的草稿"
 
 msgid "Drag to reorder"
 msgstr "拖动以重新排序"
@@ -7927,6 +7981,9 @@ msgstr "在LinkedIn上关注我们"
 
 msgid "Follow us on X/Twitter"
 msgstr "在X/Twitter上关注我们"
+
+msgid "Follow-up for the agent (optional)"
+msgstr "给智能体的后续（可选）"
 
 msgid "Font family"
 msgstr "字体"
@@ -10167,6 +10224,9 @@ msgstr "标记为已查看"
 msgid "Mark Ready"
 msgstr "标记为待审查"
 
+msgid "Mark reviewed"
+msgstr "标记为已审阅"
+
 msgid "Markdown"
 msgstr "Markdown"
 
@@ -10560,6 +10620,9 @@ msgstr "多数开发者"
 
 msgid "Most of software history"
 msgstr "软件史的大部分时间"
+
+msgid "move"
+msgstr "移动"
 
 msgid "Move"
 msgstr "移动"
@@ -11678,6 +11741,9 @@ msgstr "最近30天还没有已公开的数据。待本机用量同步后，你�
 msgid "Nothing running"
 msgstr "没有正在运行的内容"
 
+msgid "Nothing waits on you."
+msgstr "没有等待你处理的事项。"
+
 msgid "Nothing was missed"
 msgstr "没有错过的运行"
 
@@ -12021,6 +12087,9 @@ msgstr "打开命令面板"
 
 msgid "Open comment on GitHub"
 msgstr "在GitHub上打开评论"
+
+msgid "Open conversation"
+msgstr "打开对话"
 
 msgid "Open details"
 msgstr "打开详情"
@@ -12408,6 +12477,9 @@ msgstr "在Superset的“设置 → 账户”中选择加入。"
 
 msgid "Opt-out"
 msgstr "拒绝"
+
+msgid "option"
+msgstr "选项"
 
 msgid "Option shortcuts may prevent typing special characters"
 msgstr "Option快捷键可能会影响特殊字符的输入"
@@ -13712,6 +13784,9 @@ msgstr "待审查"
 #. placeholder {0}: error.message
 msgid "Ready for review failed: {0}"
 msgstr "标记为可评审失败：{0}"
+
+msgid "Ready for review on the Desk"
+msgstr "Desk 上待审阅"
 
 msgid "Ready in"
 msgstr "已就绪"
@@ -15414,6 +15489,9 @@ msgstr "在终端中选中文本后立即复制到剪贴板，并去除行尾空
 
 msgid "Send"
 msgstr "发送"
+
+msgid "Send (⌘Enter)"
+msgstr "发送 (⌘Enter)"
 
 msgid "Send an invitation to join {organizationName}. Expires in 48 hours."
 msgstr "发送加入{organizationName}的邀请。48小时后过期。"
@@ -18163,6 +18241,9 @@ msgstr "要恢复其他与智能体的对话，请在其文件夹中运行："
 
 msgid "To-do details"
 msgstr "待办详情"
+
+msgid "To-do on the Desk"
+msgstr "Desk 上有待办"
 
 msgid "To-dos"
 msgstr "待办"

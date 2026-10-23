@@ -2006,6 +2006,9 @@ msgstr "Агенты по расписанию или триггеру"
 msgid "Agents on your phone"
 msgstr "Агенты на телефоне"
 
+msgid "Agents put their hand-overs here with superset report: work to review, decisions, drafts to approve, blockers."
+msgstr "Агенты оставляют здесь свои передачи через superset report: работу на проверку, решения, черновики на утверждение, блокеры."
+
 msgid "Agents remember what they learn about your codebase, so every new session starts warm."
 msgstr "Агенты запоминают, что узнали о вашей кодовой базе, поэтому каждая новая сессия начинается с контекстом."
 
@@ -2017,6 +2020,9 @@ msgstr "Агенты используют этот аккаунт, когда в
 
 msgid "Agents' to-dos"
 msgstr "Задачи агентов"
+
+msgid "Agents' to-dos for you"
+msgstr "Задачи от агентов для вас"
 
 msgid "Aggregate agent usage across every developer on the Superset leaderboard — tokens, cost, cache behaviour and which models people actually reach for."
 msgstr "Совокупное использование агентов всеми разработчиками в лидерборде Superset — токены, стоимость, поведение кеша и модели, к которым люди действительно обращаются."
@@ -2348,8 +2354,14 @@ msgstr "Анонимный сборщик"
 msgid "another device"
 msgstr "другое устройство"
 
+msgid "answer"
+msgstr "ответить"
+
 msgid "Answer any questions in the terminal below, such as a password."
 msgstr "Отвечайте на вопросы в терминале ниже, например введите пароль."
+
+msgid "Answer the agent"
+msgstr "Ответить агенту"
 
 msgid "Answer this question on desktop, or skip it."
 msgstr "Ответьте на этот вопрос на компьютере или пропустите его."
@@ -2531,8 +2543,14 @@ msgctxt "job application"
 msgid "Apply"
 msgstr "Откликнуться"
 
+msgid "approve"
+msgstr "утвердить"
+
 msgid "Approve"
 msgstr "Одобрить"
+
+msgid "Approve and send"
+msgstr "Утвердить и отправить"
 
 msgid "Approve edits"
 msgstr "Одобрять правки"
@@ -3068,8 +3086,14 @@ msgstr "Блок"
 msgid "blocked"
 msgstr "заблокирован"
 
+msgid "Blocked"
+msgstr "Заблокировано"
+
 msgid "Blocked by Branch Rules"
 msgstr "Заблокирован правилами ветки"
+
+msgid "Blocked, see the Desk"
+msgstr "Заблокировано, см. Desk"
 
 msgid "Blockquote"
 msgstr "Цитата"
@@ -3632,6 +3656,9 @@ msgstr "Проверить обновления"
 
 msgid "Check for Updates..."
 msgstr "Проверить обновления..."
+
+msgid "Check off"
+msgstr "Отметить"
 
 msgid "Check on running agents and read what they changed from your iPhone or iPad."
 msgstr "Проверяйте запущенных агентов и смотрите, что они изменили, с iPhone или iPad."
@@ -5056,6 +5083,9 @@ msgstr "Не удалось подключиться к {0}, чтобы найт
 msgid "Could not reach a mobile simulator."
 msgstr "Не удалось подключиться к мобильному симулятору."
 
+msgid "Could not reach the conversation"
+msgstr "Не удалось связаться с беседой"
+
 msgid "Could not reach the desktop."
 msgstr "Не удалось подключиться к рабочему столу."
 
@@ -5862,6 +5892,12 @@ msgstr "Отладка"
 msgid "Debug with production stack traces"
 msgstr "Отладка по стек-трейсам из продакшена"
 
+msgid "Decision waiting on the Desk"
+msgstr "Решение ждёт в Desk"
+
+msgid "Decisions"
+msgstr "Решения"
+
 msgid "default"
 msgstr "по умолчанию"
 
@@ -6182,6 +6218,12 @@ msgstr "Режим дизайна не сработал"
 msgid "Design review"
 msgstr "Дизайн-ревью"
 
+msgid "Desk"
+msgstr "Desk"
+
+msgid "Desk, {count} waiting on you"
+msgstr "Desk, {count} ждут вас"
+
 msgid "Desktop"
 msgstr "Десктоп"
 
@@ -6387,6 +6429,9 @@ msgstr "Находить серверы разработки в вашей се�
 msgid "Disk version"
 msgstr "Версия на диске"
 
+msgid "dismiss"
+msgstr "отклонить"
+
 msgid "Dismiss"
 msgstr "Закрыть"
 
@@ -6554,11 +6599,20 @@ msgstr "Черновик · файл"
 msgid "Draft · line {0}"
 msgstr "Черновик · строка {0}"
 
+msgid "Draft for {draftTarget}"
+msgstr "Черновик для {draftTarget}"
+
 msgid "Draft opened"
 msgstr "Открыт черновик"
 
+msgid "Draft waiting on the Desk"
+msgstr "Черновик ждёт в Desk"
+
 msgid "drafted 3 support replies"
 msgstr "подготовил 3 ответа поддержки"
+
+msgid "Drafts to approve"
+msgstr "Черновики на утверждение"
 
 msgid "Drag to reorder"
 msgstr "Перетащите, чтобы изменить порядок"
@@ -7927,6 +7981,9 @@ msgstr "Подписывайтесь на нас в LinkedIn"
 
 msgid "Follow us on X/Twitter"
 msgstr "Подписывайтесь на нас в X/Twitter"
+
+msgid "Follow-up for the agent (optional)"
+msgstr "Продолжение для агента (необязательно)"
 
 msgid "Font family"
 msgstr "Гарнитура"
@@ -10167,6 +10224,9 @@ msgstr "Отметить как просмотренный"
 msgid "Mark Ready"
 msgstr "Отметить готовым"
 
+msgid "Mark reviewed"
+msgstr "Отметить как проверенное"
+
 msgid "Markdown"
 msgstr "Markdown"
 
@@ -10560,6 +10620,9 @@ msgstr "большинство разработчиков"
 
 msgid "Most of software history"
 msgstr "Почти вся история софта"
+
+msgid "move"
+msgstr "перейти"
 
 msgid "Move"
 msgstr "Перемещение"
@@ -11678,6 +11741,9 @@ msgstr "За последние 30 дней ещё ничего не опубл�
 msgid "Nothing running"
 msgstr "Ничего не запущено"
 
+msgid "Nothing waits on you."
+msgstr "Ничего вас не ждёт."
+
 msgid "Nothing was missed"
 msgstr "Ничего не пропущено"
 
@@ -12021,6 +12087,9 @@ msgstr "Открыть палитру команд"
 
 msgid "Open comment on GitHub"
 msgstr "Открыть комментарий на GitHub"
+
+msgid "Open conversation"
+msgstr "Открыть беседу"
 
 msgid "Open details"
 msgstr "Открыть подробности"
@@ -12408,6 +12477,9 @@ msgstr "Подключитесь в Superset: Настройки → Аккау�
 
 msgid "Opt-out"
 msgstr "Отказаться"
+
+msgid "option"
+msgstr "вариант"
 
 msgid "Option shortcuts may prevent typing special characters"
 msgstr "Сочетания с Option могут мешать вводу специальных символов"
@@ -13712,6 +13784,9 @@ msgstr "Готово к ревью"
 #. placeholder {0}: error.message
 msgid "Ready for review failed: {0}"
 msgstr "Не удалось пометить как готово к ревью: {0}"
+
+msgid "Ready for review on the Desk"
+msgstr "Готово к проверке в Desk"
 
 msgid "Ready in"
 msgstr "Готово в"
@@ -15414,6 +15489,9 @@ msgstr "Выделенный в терминале текст сразу коп�
 
 msgid "Send"
 msgstr "Отправить"
+
+msgid "Send (⌘Enter)"
+msgstr "Отправить (⌘Enter)"
 
 msgid "Send an invitation to join {organizationName}. Expires in 48 hours."
 msgstr "Отправьте приглашение в {organizationName}. Действует 48 часов."
@@ -18163,6 +18241,9 @@ msgstr "Чтобы возобновить другой разговор с аг�
 
 msgid "To-do details"
 msgstr "Подробности задачи"
+
+msgid "To-do on the Desk"
+msgstr "Задача в Desk"
 
 msgid "To-dos"
 msgstr "Задачи"

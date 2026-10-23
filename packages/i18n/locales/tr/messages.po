@@ -2006,6 +2006,9 @@ msgstr "Zamanlamayla veya tetikleyiciyle çalışan ajanlar"
 msgid "Agents on your phone"
 msgstr "Telefonunuzda ajanlar"
 
+msgid "Agents put their hand-overs here with superset report: work to review, decisions, drafts to approve, blockers."
+msgstr "Ajanlar devirlerini superset report ile buraya bırakır: incelenecek iş, kararlar, onaylanacak taslaklar, engeller."
+
 msgid "Agents remember what they learn about your codebase, so every new session starts warm."
 msgstr "Ajanlar kod tabanınız hakkında öğrendiklerini hatırlar, böylece her yeni oturum bağlamla başlar."
 
@@ -2017,6 +2020,9 @@ msgstr "Ajanlar Linear araçlarını çağırırken bu hesabı kullanır."
 
 msgid "Agents' to-dos"
 msgstr "Ajanların yapılacakları"
+
+msgid "Agents' to-dos for you"
+msgstr "Ajanların sizin için yapılacakları"
 
 msgid "Aggregate agent usage across every developer on the Superset leaderboard — tokens, cost, cache behaviour and which models people actually reach for."
 msgstr "Superset liderlik tablosundaki her geliştiricinin toplam ajan kullanımı — token, maliyet, önbellek davranışı ve insanların gerçekte tercih ettiği modeller."
@@ -2348,8 +2354,14 @@ msgstr "Anonim Montajcı"
 msgid "another device"
 msgstr "başka bir cihaz"
 
+msgid "answer"
+msgstr "yanıtla"
+
 msgid "Answer any questions in the terminal below, such as a password."
 msgstr "Aşağıdaki terminalde parola gibi soruları yanıtla."
+
+msgid "Answer the agent"
+msgstr "Ajana yanıt ver"
 
 msgid "Answer this question on desktop, or skip it."
 msgstr "Bu soruyu masaüstünde yanıtlayın veya atlayın."
@@ -2531,8 +2543,14 @@ msgctxt "job application"
 msgid "Apply"
 msgstr "Başvur"
 
+msgid "approve"
+msgstr "onayla"
+
 msgid "Approve"
 msgstr "Onayla"
+
+msgid "Approve and send"
+msgstr "Onayla ve gönder"
 
 msgid "Approve edits"
 msgstr "Düzenlemeleri onayla"
@@ -3068,8 +3086,14 @@ msgstr "Blok"
 msgid "blocked"
 msgstr "engellendi"
 
+msgid "Blocked"
+msgstr "Engellendi"
+
 msgid "Blocked by Branch Rules"
 msgstr "Dal kurallarınca engellendi"
+
+msgid "Blocked, see the Desk"
+msgstr "Engellendi, Desk'e bakın"
 
 msgid "Blockquote"
 msgstr "Alıntı"
@@ -3632,6 +3656,9 @@ msgstr "Güncellemeleri denetle"
 
 msgid "Check for Updates..."
 msgstr "Güncellemeleri denetle..."
+
+msgid "Check off"
+msgstr "İşaretle"
 
 msgid "Check on running agents and read what they changed from your iPhone or iPad."
 msgstr "Çalışan ajanları kontrol edin ve neleri değiştirdiklerini iPhone veya iPad'inizden okuyun."
@@ -5056,6 +5083,9 @@ msgstr "\"{1}\" dalını aramak için {0} adresine ulaşılamadı. Bağlantını
 msgid "Could not reach a mobile simulator."
 msgstr "Bir mobil simülatöre ulaşılamadı."
 
+msgid "Could not reach the conversation"
+msgstr "Konuşmaya ulaşılamadı"
+
 msgid "Could not reach the desktop."
 msgstr "Masaüstüne ulaşılamadı."
 
@@ -5862,6 +5892,12 @@ msgstr "Hata ayıklama"
 msgid "Debug with production stack traces"
 msgstr "Üretim yığın izleriyle hata ayıklayın"
 
+msgid "Decision waiting on the Desk"
+msgstr "Karar Desk'te bekliyor"
+
+msgid "Decisions"
+msgstr "Kararlar"
+
 msgid "default"
 msgstr "varsayılan"
 
@@ -6182,6 +6218,12 @@ msgstr "Tasarım modu başarısız"
 msgid "Design review"
 msgstr "Tasarım incelemesi"
 
+msgid "Desk"
+msgstr "Desk"
+
+msgid "Desk, {count} waiting on you"
+msgstr "Desk, {count} sizi bekliyor"
+
 msgid "Desktop"
 msgstr "Masaüstü"
 
@@ -6387,6 +6429,9 @@ msgstr "Ağınızdaki geliştirme sunucularını bulun ve bağlanın."
 msgid "Disk version"
 msgstr "Diskteki sürüm"
 
+msgid "dismiss"
+msgstr "kapat"
+
 msgid "Dismiss"
 msgstr "Kapat"
 
@@ -6554,11 +6599,20 @@ msgstr "Taslak · dosya"
 msgid "Draft · line {0}"
 msgstr "Taslak · {0}. satır"
 
+msgid "Draft for {draftTarget}"
+msgstr "{draftTarget} için taslak"
+
 msgid "Draft opened"
 msgstr "Taslak açıldı"
 
+msgid "Draft waiting on the Desk"
+msgstr "Taslak Desk'te bekliyor"
+
 msgid "drafted 3 support replies"
 msgstr "3 destek yanıtı taslağı hazırladı"
+
+msgid "Drafts to approve"
+msgstr "Onaylanacak taslaklar"
 
 msgid "Drag to reorder"
 msgstr "Sıralamak için sürükleyin"
@@ -7927,6 +7981,9 @@ msgstr "LinkedIn'de bizi takip edin"
 
 msgid "Follow us on X/Twitter"
 msgstr "X/Twitter'da bizi takip edin"
+
+msgid "Follow-up for the agent (optional)"
+msgstr "Ajan için devam notu (isteğe bağlı)"
 
 msgid "Font family"
 msgstr "Yazı tipi ailesi"
@@ -10167,6 +10224,9 @@ msgstr "Görüldü olarak işaretle"
 msgid "Mark Ready"
 msgstr "Hazır işaretle"
 
+msgid "Mark reviewed"
+msgstr "İncelendi olarak işaretle"
+
 msgid "Markdown"
 msgstr "Markdown"
 
@@ -10560,6 +10620,9 @@ msgstr "çoğu geliştirici"
 
 msgid "Most of software history"
 msgstr "Yazılım tarihinin çoğu"
+
+msgid "move"
+msgstr "geç"
 
 msgid "Move"
 msgstr "Gezin"
@@ -11678,6 +11741,9 @@ msgstr "Son 30 günde henüz hiçbir şey yayınlanmadı. Bu makinedeki kullanı
 msgid "Nothing running"
 msgstr "Çalışan bir şey yok"
 
+msgid "Nothing waits on you."
+msgstr "Sizi bekleyen bir şey yok."
+
 msgid "Nothing was missed"
 msgstr "Hiçbir şey kaçırılmadı"
 
@@ -12021,6 +12087,9 @@ msgstr "Komut paletini aç"
 
 msgid "Open comment on GitHub"
 msgstr "Yorumu GitHub'da aç"
+
+msgid "Open conversation"
+msgstr "Konuşmayı aç"
 
 msgid "Open details"
 msgstr "Ayrıntıları aç"
@@ -12408,6 +12477,9 @@ msgstr "Superset'te Ayarlar → Hesap bölümünden katılın."
 
 msgid "Opt-out"
 msgstr "Vazgeç"
+
+msgid "option"
+msgstr "seçenek"
 
 msgid "Option shortcuts may prevent typing special characters"
 msgstr "Option kısayolları özel karakter yazmayı engelleyebilir"
@@ -13712,6 +13784,9 @@ msgstr "İncelemeye hazır"
 #. placeholder {0}: error.message
 msgid "Ready for review failed: {0}"
 msgstr "İncelemeye hazır olarak işaretlenemedi: {0}"
+
+msgid "Ready for review on the Desk"
+msgstr "Desk'te incelemeye hazır"
 
 msgid "Ready in"
 msgstr "Hazır olduğu yerler"
@@ -15414,6 +15489,9 @@ msgstr "Terminalde metin seçmek, sondaki boşluklar kırpılmış olarak panoya
 
 msgid "Send"
 msgstr "Gönder"
+
+msgid "Send (⌘Enter)"
+msgstr "Gönder (⌘Enter)"
 
 msgid "Send an invitation to join {organizationName}. Expires in 48 hours."
 msgstr "{organizationName} kuruluşuna katılmak için davet gönderin. 48 saat içinde sona erer."
@@ -18163,6 +18241,9 @@ msgstr "Başka bir ajan konuşmasını sürdürmek için klasöründe şunu çal
 
 msgid "To-do details"
 msgstr "Yapılacak ayrıntıları"
+
+msgid "To-do on the Desk"
+msgstr "Desk'te yapılacak"
 
 msgid "To-dos"
 msgstr "Yapılacaklar"

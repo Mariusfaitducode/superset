@@ -1,0 +1,1 @@
+export { deskMessage } from "./deskMessage";

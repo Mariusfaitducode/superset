@@ -2006,6 +2006,9 @@ msgstr "Agen terjadwal atau dengan pemicu"
 msgid "Agents on your phone"
 msgstr "Agen di ponsel Anda"
 
+msgid "Agents put their hand-overs here with superset report: work to review, decisions, drafts to approve, blockers."
+msgstr "Agen menaruh serah terima mereka di sini dengan superset report: pekerjaan untuk ditinjau, keputusan, draf untuk disetujui, hambatan."
+
 msgid "Agents remember what they learn about your codebase, so every new session starts warm."
 msgstr "Agen mengingat apa yang mereka pelajari tentang codebase Anda, sehingga setiap sesi baru dimulai dengan konteks."
 
@@ -2017,6 +2020,9 @@ msgstr "Agen memakai akun ini saat memanggil tool Linear."
 
 msgid "Agents' to-dos"
 msgstr "To-do agen"
+
+msgid "Agents' to-dos for you"
+msgstr "To-do dari agen untuk Anda"
 
 msgid "Aggregate agent usage across every developer on the Superset leaderboard — tokens, cost, cache behaviour and which models people actually reach for."
 msgstr "Agregat penggunaan agen dari seluruh developer di papan peringkat Superset — token, biaya, perilaku cache, dan model yang benar-benar dipakai orang."
@@ -2348,8 +2354,14 @@ msgstr "Perakit Anonim"
 msgid "another device"
 msgstr "perangkat lain"
 
+msgid "answer"
+msgstr "jawab"
+
 msgid "Answer any questions in the terminal below, such as a password."
 msgstr "Jawab pertanyaan di terminal di bawah, misalnya kata sandi."
+
+msgid "Answer the agent"
+msgstr "Jawab agen"
 
 msgid "Answer this question on desktop, or skip it."
 msgstr "Jawab pertanyaan ini di desktop, atau lewati."
@@ -2531,8 +2543,14 @@ msgctxt "job application"
 msgid "Apply"
 msgstr "Lamar"
 
+msgid "approve"
+msgstr "setujui"
+
 msgid "Approve"
 msgstr "Setujui"
+
+msgid "Approve and send"
+msgstr "Setujui dan kirim"
 
 msgid "Approve edits"
 msgstr "Setujui suntingan"
@@ -3068,8 +3086,14 @@ msgstr "Blok"
 msgid "blocked"
 msgstr "terblokir"
 
+msgid "Blocked"
+msgstr "Terhambat"
+
 msgid "Blocked by Branch Rules"
 msgstr "Terblokir oleh Aturan Branch"
+
+msgid "Blocked, see the Desk"
+msgstr "Terhambat, lihat Desk"
 
 msgid "Blockquote"
 msgstr "Kutipan blok"
@@ -3632,6 +3656,9 @@ msgstr "Periksa Pembaruan"
 
 msgid "Check for Updates..."
 msgstr "Periksa Pembaruan..."
+
+msgid "Check off"
+msgstr "Centang"
 
 msgid "Check on running agents and read what they changed from your iPhone or iPad."
 msgstr "Pantau agen yang sedang berjalan dan baca apa yang mereka ubah dari iPhone atau iPad Anda."
@@ -5056,6 +5083,9 @@ msgstr "Tidak dapat menjangkau {0} untuk mencari branch \"{1}\". Periksa koneksi
 msgid "Could not reach a mobile simulator."
 msgstr "Tidak dapat menjangkau simulator seluler."
 
+msgid "Could not reach the conversation"
+msgstr "Tidak dapat menjangkau percakapan"
+
 msgid "Could not reach the desktop."
 msgstr "Tidak dapat menjangkau desktop."
 
@@ -5862,6 +5892,12 @@ msgstr "Debug"
 msgid "Debug with production stack traces"
 msgstr "Debug dengan stack trace produksi"
 
+msgid "Decision waiting on the Desk"
+msgstr "Keputusan menunggu di Desk"
+
+msgid "Decisions"
+msgstr "Keputusan"
+
 msgid "default"
 msgstr "bawaan"
 
@@ -6182,6 +6218,12 @@ msgstr "Mode desain gagal"
 msgid "Design review"
 msgstr "Tinjauan desain"
 
+msgid "Desk"
+msgstr "Desk"
+
+msgid "Desk, {count} waiting on you"
+msgstr "Desk, {count} menunggu Anda"
+
 msgid "Desktop"
 msgstr "Desktop"
 
@@ -6387,6 +6429,9 @@ msgstr "Menemukan dan terhubung ke server pengembangan di jaringan Anda."
 msgid "Disk version"
 msgstr "Versi di disk"
 
+msgid "dismiss"
+msgstr "abaikan"
+
 msgid "Dismiss"
 msgstr "Tutup"
 
@@ -6554,11 +6599,20 @@ msgstr "Draf · file"
 msgid "Draft · line {0}"
 msgstr "Draf · baris {0}"
 
+msgid "Draft for {draftTarget}"
+msgstr "Draf untuk {draftTarget}"
+
 msgid "Draft opened"
 msgstr "Draf dibuka"
 
+msgid "Draft waiting on the Desk"
+msgstr "Draf menunggu di Desk"
+
 msgid "drafted 3 support replies"
 msgstr "menyusun 3 draf balasan dukungan"
+
+msgid "Drafts to approve"
+msgstr "Draf untuk disetujui"
 
 msgid "Drag to reorder"
 msgstr "Seret untuk mengurutkan ulang"
@@ -7927,6 +7981,9 @@ msgstr "Ikuti kami di LinkedIn"
 
 msgid "Follow us on X/Twitter"
 msgstr "Ikuti kami di X/Twitter"
+
+msgid "Follow-up for the agent (optional)"
+msgstr "Tindak lanjut untuk agen (opsional)"
 
 msgid "Font family"
 msgstr "Keluarga font"
@@ -10167,6 +10224,9 @@ msgstr "Tandai sudah dilihat"
 msgid "Mark Ready"
 msgstr "Tandai Siap"
 
+msgid "Mark reviewed"
+msgstr "Tandai sudah ditinjau"
+
 msgid "Markdown"
 msgstr "Markdown"
 
@@ -10560,6 +10620,9 @@ msgstr "sebagian besar developer"
 
 msgid "Most of software history"
 msgstr "Sebagian besar sejarah perangkat lunak"
+
+msgid "move"
+msgstr "pindah"
 
 msgid "Move"
 msgstr "Pindah"
@@ -11678,6 +11741,9 @@ msgstr "Belum ada yang dipublikasikan dalam 30 hari terakhir. Peringkat Anda mun
 msgid "Nothing running"
 msgstr "Tidak ada yang berjalan"
 
+msgid "Nothing waits on you."
+msgstr "Tidak ada yang menunggu Anda."
+
 msgid "Nothing was missed"
 msgstr "Tidak ada yang terlewat"
 
@@ -12021,6 +12087,9 @@ msgstr "Buka Command Palette"
 
 msgid "Open comment on GitHub"
 msgstr "Buka komentar di GitHub"
+
+msgid "Open conversation"
+msgstr "Buka percakapan"
 
 msgid "Open details"
 msgstr "Buka detail"
@@ -12408,6 +12477,9 @@ msgstr "Ikut serta dari Superset di Pengaturan → Akun."
 
 msgid "Opt-out"
 msgstr "Tolak"
+
+msgid "option"
+msgstr "opsi"
 
 msgid "Option shortcuts may prevent typing special characters"
 msgstr "Pintasan Option bisa menghalangi pengetikan karakter khusus"
@@ -13712,6 +13784,9 @@ msgstr "Siap Direview"
 #. placeholder {0}: error.message
 msgid "Ready for review failed: {0}"
 msgstr "Gagal menandai siap ditinjau: {0}"
+
+msgid "Ready for review on the Desk"
+msgstr "Siap ditinjau di Desk"
 
 msgid "Ready in"
 msgstr "Siap di"
@@ -15414,6 +15489,9 @@ msgstr "Memilih teks di terminal langsung menyalinnya ke clipboard, tanpa spasi 
 
 msgid "Send"
 msgstr "Kirim"
+
+msgid "Send (⌘Enter)"
+msgstr "Kirim (⌘Enter)"
 
 msgid "Send an invitation to join {organizationName}. Expires in 48 hours."
 msgstr "Kirim undangan untuk bergabung ke {organizationName}. Kedaluwarsa dalam 48 jam."
@@ -18163,6 +18241,9 @@ msgstr "Untuk melanjutkan percakapan agen lain, jalankan ini di foldernya:"
 
 msgid "To-do details"
 msgstr "Detail to-do"
+
+msgid "To-do on the Desk"
+msgstr "To-do di Desk"
 
 msgid "To-dos"
 msgstr "Tugas"
