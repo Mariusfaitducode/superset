@@ -15,6 +15,7 @@ import { useRef } from "react";
 import { GoGitPullRequest } from "react-icons/go";
 import { HiOutlineClipboardDocumentList } from "react-icons/hi2";
 import {
+	LuBuilding2,
 	LuClock,
 	LuCloud,
 	LuFileText,
@@ -181,6 +182,7 @@ export function DashboardSidebarHeader({
 	const isAutomationsOpen = !!matchRoute({ to: "/automations", fuzzy: true });
 	const isPluginsOpen = !!matchRoute({ to: "/plugins", fuzzy: true });
 	const isPagesOpen = !!matchRoute({ to: "/pages", fuzzy: true });
+	const isOfficeOpen = !!matchRoute({ to: "/office", fuzzy: true });
 	// `?? false`: the hook returns undefined until PostHog flags resolve.
 	// Dev builds bypass the flag — the local dev account isn't in the
 	// @superset.sh release condition.
@@ -272,6 +274,10 @@ export function DashboardSidebarHeader({
 
 	const handlePagesClick = () => {
 		navigate({ to: "/pages" });
+	};
+
+	const handleOfficeClick = () => {
+		navigate({ to: "/office" });
 	};
 
 	const handlePluginsClick = () => {
@@ -524,6 +530,30 @@ export function DashboardSidebarHeader({
 						</TooltipTrigger>
 						<TooltipContent side="right">
 							<Trans>Pull requests</Trans>
+						</TooltipContent>
+					</Tooltip>
+
+					<Tooltip delayDuration={300}>
+						<TooltipTrigger asChild>
+							<button
+								type="button"
+								onClick={handleOfficeClick}
+								aria-label={t({
+									message: "Office",
+								})}
+								aria-current={isOfficeOpen ? "page" : undefined}
+								className={cn(
+									"flex size-7 items-center justify-center rounded-md transition-colors",
+									isOfficeOpen
+										? "bg-fill-selected text-muted-foreground"
+										: "text-muted-foreground hover:bg-fill-hover",
+								)}
+							>
+								<LuBuilding2 className="size-3.5" strokeWidth={1.5} />
+							</button>
+						</TooltipTrigger>
+						<TooltipContent side="right">
+							<Trans>Office</Trans>
 						</TooltipContent>
 					</Tooltip>
 
@@ -858,6 +888,29 @@ export function DashboardSidebarHeader({
 				<GoGitPullRequest className="size-4 shrink-0 text-muted-foreground" />
 				<span className="flex-1 text-left">
 					<Trans>Pull requests</Trans>
+				</span>
+			</button>
+
+			<button
+				type="button"
+				onClick={handleOfficeClick}
+				aria-label={t({
+					message: "Office",
+				})}
+				aria-current={isOfficeOpen ? "page" : undefined}
+				className={cn(
+					"flex h-7 w-full items-center gap-2 rounded-md px-2 text-[13px] font-medium transition-colors",
+					isOfficeOpen
+						? "bg-fill-selected text-foreground"
+						: "text-muted-foreground hover:bg-fill-hover hover:text-foreground",
+				)}
+			>
+				<LuBuilding2
+					className="size-4 shrink-0 text-muted-foreground"
+					strokeWidth={1.5}
+				/>
+				<span className="flex-1 text-left">
+					<Trans>Office</Trans>
 				</span>
 			</button>
 

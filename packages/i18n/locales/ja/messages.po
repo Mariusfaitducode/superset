@@ -10961,6 +10961,9 @@ msgstr "エージェントの会話はまだありません。"
 msgid "No agent is configured on this host"
 msgstr "このホストにはエージェントが設定されていません"
 
+msgid "No agent is running. Start one in a workspace and it takes a desk here."
+msgstr "実行中のエージェントはありません。ワークスペースで起動すると、ここにデスクが用意されます。"
+
 #. placeholder {0}: host.name
 msgid "No agents configured on {0}"
 msgstr "{0}にはエージェントが設定されていません"
@@ -11171,6 +11174,9 @@ msgstr "アイコンなし"
 
 msgid "No icons match."
 msgstr "一致するアイコンはありません。"
+
+msgid "No integration connected yet."
+msgstr "まだ接続済みの連携はありません。"
 
 msgid "No Internet Connection"
 msgstr "インターネット接続がありません"
@@ -11743,6 +11749,9 @@ msgstr "全トークン中"
 msgid "Off"
 msgstr "オフ"
 
+msgid "Office"
+msgstr "オフィス"
+
 #. placeholder {0}: COMPANY.NAME
 msgid "Official documentation for {0}, the app for running 100+ coding agents in parallel."
 msgstr "100以上のコーディングエージェントを並列実行できるアプリ、{0}の公式ドキュメント。"
@@ -11958,6 +11967,7 @@ msgid "Open"
 msgstr "オープン"
 
 #. placeholder {0}: linkedAgent?.label ?? t({ message: "agent settings", })
+#. placeholder {0}: workspace.name
 msgid "Open {0}"
 msgstr "{0}を開く"
 
@@ -12303,6 +12313,9 @@ msgstr "システム設定を開く"
 
 msgid "Open task {title}"
 msgstr "タスク{title}を開く"
+
+msgid "Open terminal"
+msgstr "ターミナルを開く"
 
 msgid "Open Terminal"
 msgstr "ターミナルを開く"
@@ -17874,6 +17887,9 @@ msgstr "このホストはまだバージョンを報告していません。"
 
 msgid "This host is behind the app you are using. Workspaces still open, but newer features may fail on it."
 msgstr "このホストは使用中のアプリより古いバージョンです。ワークスペースは開けますが、新しい機能は動作しない可能性があります。"
+
+msgid "This host is too old to keep to-dos."
+msgstr "このホストは古すぎて ToDo を保存できません。"
 
 msgid "This host needs an update"
 msgstr "このホストは更新が必要です"

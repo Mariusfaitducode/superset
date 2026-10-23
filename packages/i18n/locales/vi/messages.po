@@ -10961,6 +10961,9 @@ msgstr "Chưa có cuộc trò chuyện nào của agent."
 msgid "No agent is configured on this host"
 msgstr "Không có tác nhân nào được cấu hình trên máy chủ này"
 
+msgid "No agent is running. Start one in a workspace and it takes a desk here."
+msgstr "Không có agent nào đang chạy. Hãy khởi động một agent trong workspace và nó sẽ ngồi vào bàn ở đây."
+
 #. placeholder {0}: host.name
 msgid "No agents configured on {0}"
 msgstr "Chưa cấu hình agent nào trên {0}"
@@ -11171,6 +11174,9 @@ msgstr "Không có biểu tượng"
 
 msgid "No icons match."
 msgstr "Không có biểu tượng phù hợp."
+
+msgid "No integration connected yet."
+msgstr "Chưa có tích hợp nào được kết nối."
 
 msgid "No Internet Connection"
 msgstr "Không có kết nối internet"
@@ -11743,6 +11749,9 @@ msgstr "trên tổng số token"
 msgid "Off"
 msgstr "Tắt"
 
+msgid "Office"
+msgstr "Văn phòng"
+
 #. placeholder {0}: COMPANY.NAME
 msgid "Official documentation for {0}, the app for running 100+ coding agents in parallel."
 msgstr "Tài liệu chính thức của {0}, ứng dụng chạy song song hơn 100 agent lập trình."
@@ -11958,6 +11967,7 @@ msgid "Open"
 msgstr "Đang mở"
 
 #. placeholder {0}: linkedAgent?.label ?? t({ message: "agent settings", })
+#. placeholder {0}: workspace.name
 msgid "Open {0}"
 msgstr "Mở {0}"
 
@@ -12303,6 +12313,9 @@ msgstr "Mở System Settings"
 
 msgid "Open task {title}"
 msgstr "Mở tác vụ {title}"
+
+msgid "Open terminal"
+msgstr "Mở terminal"
 
 msgid "Open Terminal"
 msgstr "Mở terminal"
@@ -17874,6 +17887,9 @@ msgstr "Máy chủ này chưa báo cáo phiên bản."
 
 msgid "This host is behind the app you are using. Workspaces still open, but newer features may fail on it."
 msgstr "Máy chủ này cũ hơn ứng dụng bạn đang dùng. Workspace vẫn mở được nhưng các tính năng mới có thể lỗi."
+
+msgid "This host is too old to keep to-dos."
+msgstr "Máy chủ này quá cũ để lưu việc cần làm."
 
 msgid "This host needs an update"
 msgstr "Host này cần được cập nhật"

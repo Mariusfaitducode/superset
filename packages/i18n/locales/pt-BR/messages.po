@@ -10961,6 +10961,9 @@ msgstr "Ainda não há conversas de agentes."
 msgid "No agent is configured on this host"
 msgstr "Nenhum agente está configurado neste host"
 
+msgid "No agent is running. Start one in a workspace and it takes a desk here."
+msgstr "Nenhum agente em execução. Inicie um em uma área de trabalho e ele ocupará uma mesa aqui."
+
 #. placeholder {0}: host.name
 msgid "No agents configured on {0}"
 msgstr "Nenhum agente configurado em {0}"
@@ -11171,6 +11174,9 @@ msgstr "Sem ícone"
 
 msgid "No icons match."
 msgstr "Nenhum ícone corresponde."
+
+msgid "No integration connected yet."
+msgstr "Nenhuma integração conectada ainda."
 
 msgid "No Internet Connection"
 msgstr "Sem conexão com a internet"
@@ -11743,6 +11749,9 @@ msgstr "de todos os tokens"
 msgid "Off"
 msgstr "Desligado"
 
+msgid "Office"
+msgstr "Escritório"
+
 #. placeholder {0}: COMPANY.NAME
 msgid "Official documentation for {0}, the app for running 100+ coding agents in parallel."
 msgstr "Documentação oficial do {0}, o aplicativo para executar mais de 100 agentes de programação em paralelo."
@@ -11958,6 +11967,7 @@ msgid "Open"
 msgstr "Aberto"
 
 #. placeholder {0}: linkedAgent?.label ?? t({ message: "agent settings", })
+#. placeholder {0}: workspace.name
 msgid "Open {0}"
 msgstr "Abrir {0}"
 
@@ -12303,6 +12313,9 @@ msgstr "Abrir Ajustes do Sistema"
 
 msgid "Open task {title}"
 msgstr "Abrir a tarefa {title}"
+
+msgid "Open terminal"
+msgstr "Abrir terminal"
 
 msgid "Open Terminal"
 msgstr "Abrir terminal"
@@ -17874,6 +17887,9 @@ msgstr "Este host ainda não informou uma versão."
 
 msgid "This host is behind the app you are using. Workspaces still open, but newer features may fail on it."
 msgstr "Este host está atrás do app que você usa. Os workspaces ainda abrem, mas recursos mais novos podem falhar nele."
+
+msgid "This host is too old to keep to-dos."
+msgstr "Este host é antigo demais para guardar tarefas."
 
 msgid "This host needs an update"
 msgstr "Este host precisa de atualização"
