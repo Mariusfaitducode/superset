@@ -357,6 +357,11 @@ msgstr "{0} — hãy thử menu khay Superset > Dịch vụ host > Khởi độn
 msgid "{0} · behind"
 msgstr "{0} · cũ"
 
+#. placeholder {0}: decimal(mean)
+#. placeholder {1}: count(peak)
+msgid "{0} · peak {1}"
+msgstr "{0} · đỉnh {1}"
+
 #. placeholder {0}: creator.name
 #. placeholder {0}: option.name
 msgid "{0} (you)"
@@ -557,6 +562,10 @@ msgstr "{0} đấu {1}"
 #. placeholder {0}: file.path
 msgid "{0} was deleted in this change."
 msgstr "{0} đã bị xóa trong thay đổi này."
+
+#. placeholder {0}: formatNumber(option / 7)
+msgid "{0} weeks"
+msgstr "{0} tuần"
 
 #. placeholder {0}: winner?.name
 #. placeholder {1}: result.events.length
@@ -2015,6 +2024,15 @@ msgstr "Số agent chạy cùng lúc"
 msgid "Agents use this account when they call Linear tools."
 msgstr "Agent dùng tài khoản này khi gọi các công cụ Linear."
 
+msgid "Agents waiting (peak)"
+msgstr "Tác tử đang chờ (đỉnh)"
+
+msgid "Agents waiting on you"
+msgstr "Tác tử đang chờ bạn"
+
+msgid "Agents working at once"
+msgstr "Tác tử làm việc cùng lúc"
+
 msgid "Agents' to-dos"
 msgstr "Việc cần làm của agent"
 
@@ -2979,6 +2997,9 @@ msgstr "Đưa kiểu chip vào thẳng tooltip.tsx"
 
 msgid "Bar"
 msgstr "Thanh"
+
+msgid "Bare go-aheads"
+msgstr "Chỉ bật đèn xanh"
 
 msgid "Base branch"
 msgstr "Nhánh gốc"
@@ -4911,6 +4932,9 @@ msgstr "Hãy sao chép khóa ngay — bạn sẽ không xem lại được nữa
 msgid "Copyright or trademark"
 msgstr "Bản quyền hoặc nhãn hiệu"
 
+msgid "Corrections"
+msgstr "Chỉnh sửa"
+
 msgid "Cost"
 msgstr "Chi phí"
 
@@ -5315,6 +5339,9 @@ msgstr "Không kết nối được với không gian làm việc đám mây nà
 
 msgid "Couldn't reach workspace"
 msgstr "Không kết nối được workspace"
+
+msgid "Couldn't read the transcripts on this host."
+msgstr "Không thể đọc bản ghi trên máy chủ này."
 
 msgid "Couldn't read this terminal's context."
 msgstr "Không đọc được ngữ cảnh của terminal này."
@@ -7829,6 +7856,9 @@ msgstr "đã xong · làm trong 7s"
 msgid "First repository by name"
 msgstr "Repository đầu tiên theo tên"
 
+msgid "First scan of your transcripts, numbers are partial…"
+msgstr "Đang quét bản ghi lần đầu, số liệu chưa đầy đủ…"
+
 msgid "Fix all failing checks"
 msgstr "Sửa mọi check đang lỗi"
 
@@ -8060,6 +8090,9 @@ msgstr "Từ một dự án hackathon đến không gian làm việc cho các ag
 msgid "From GitHub"
 msgstr "Từ GitHub"
 
+msgid "From your Claude Code transcripts on this machine. Automations and prompts written by agents are left out."
+msgstr "Từ bản ghi Claude Code trên máy này. Bỏ qua tự động hóa và lời nhắc do tác tử viết."
+
 msgid "Front matter hidden — switch to Markdown to edit it"
 msgstr "Front matter đang ẩn — chuyển sang Markdown để sửa"
 
@@ -8284,6 +8317,13 @@ msgstr "Tới Superset"
 
 msgid "Go to workspace"
 msgstr "Đi tới workspace"
+
+msgid "Go-aheads"
+msgstr "Đèn xanh"
+
+#. placeholder {0}: tile.target
+msgid "Goal {0}"
+msgstr "Mục tiêu {0}"
 
 msgid "Google did not grant lasting access. Remove Superset from your Google account's third-party access and try again."
 msgstr "Google không cấp quyền truy cập lâu dài. Hãy gỡ Superset khỏi phần truy cập của bên thứ ba trong tài khoản Google của bạn rồi thử lại."
@@ -8987,6 +9027,9 @@ msgstr "token đầu vào, cache và đầu ra"
 msgid "Inputs"
 msgstr "Đầu vào"
 
+msgid "Insights"
+msgstr "Thông tin chi tiết"
+
 msgid "Insights from the Superset team about parallel coding agents and developer productivity."
 msgstr "Góc nhìn từ đội ngũ Superset về coding agent chạy song song và năng suất của lập trình viên."
 
@@ -9523,6 +9566,10 @@ msgstr "Cập nhật lần cuối: {lastUpdated}"
 msgid "Last used"
 msgstr "Dùng lần cuối"
 
+#. placeholder {0}: tile.previous
+msgid "Last week {0}"
+msgstr "Tuần trước {0}"
+
 msgid "Late 2026"
 msgstr "Cuối 2026"
 
@@ -9828,6 +9875,9 @@ msgstr "Đã có trong ứng dụng."
 
 msgid "Live preview"
 msgstr "Xem trước trực tiếp"
+
+msgid "Live sessions per day"
+msgstr "Phiên hoạt động mỗi ngày"
 
 msgid "llms.txt (index for AI agents)"
 msgstr "llms.txt (chỉ mục cho agent AI)"
@@ -10237,6 +10287,9 @@ msgstr "Đang đo ngữ cảnh sẽ gửi tới {0}…"
 msgid "Media kit"
 msgstr "Bộ tài liệu báo chí"
 
+msgid "Median reply time (daytime)"
+msgstr "Thời gian trả lời trung vị (ban ngày)"
+
 msgid "Median ticket-to-production time under one day for routine work."
 msgstr "Thời gian trung vị từ ticket đến production dưới một ngày cho việc thường ngày."
 
@@ -10360,6 +10413,9 @@ msgstr "Tin nhắn..."
 
 msgid "Messages"
 msgstr "Tin nhắn"
+
+msgid "Messages per working day"
+msgstr "Tin nhắn mỗi ngày làm việc"
 
 msgid "Microphone"
 msgstr "Micrô"
@@ -10578,6 +10634,9 @@ msgstr "Chuyển sang bên phải"
 
 msgid "Move to Tab"
 msgstr "Chuyển sang tab"
+
+msgid "Msgs / day"
+msgstr "Tin / ngày"
 
 msgid "Multi-select"
 msgstr "Chọn nhiều"
@@ -12788,6 +12847,9 @@ msgstr "Người ngoài {organizationName} sẽ mất quyền truy cập và li�
 msgid "People with access"
 msgstr "Những người có quyền truy cập"
 
+msgid "Per day"
+msgstr "Theo ngày"
+
 msgid "per merged PR"
 msgstr "mỗi PR được merge"
 
@@ -12799,6 +12861,9 @@ msgstr "mỗi phiên"
 
 msgid "per user/month"
 msgstr "mỗi người/tháng"
+
+msgid "Per week"
+msgstr "Theo tuần"
 
 msgid "Per-repo agent memory"
 msgstr "Bộ nhớ agent theo từng repository"
@@ -13693,6 +13758,9 @@ msgstr "Đọc mã nguồn và mọi pull request."
 
 msgid "Reading {what}"
 msgstr "Đang đọc {what}"
+
+msgid "Reading new transcript lines…"
+msgstr "Đang đọc các dòng bản ghi mới…"
 
 msgid "Reading the page"
 msgstr "Đang đọc trang"
@@ -15535,6 +15603,9 @@ msgstr "Phiên"
 msgid "Sessions · top {0} by cost"
 msgstr "Phiên · {0} phiên tốn nhiều nhất"
 
+msgid "Sessions / day"
+msgstr "Phiên / ngày"
+
 #. placeholder {0}: color.name
 msgid "Set color to {0}"
 msgstr "Đặt màu thành {0}"
@@ -16526,6 +16597,9 @@ msgstr "Trạng thái"
 
 msgid "Status changed"
 msgstr "Trạng thái thay đổi"
+
+msgid "Status questions"
+msgstr "Câu hỏi tiến độ"
 
 msgid "Stay connected (refresh tokens)"
 msgstr "Duy trì kết nối (refresh token)"
@@ -17878,6 +17952,9 @@ msgstr "Máy chủ này cũ hơn ứng dụng bạn đang dùng. Workspace vẫn
 msgid "This host needs an update"
 msgstr "Host này cần được cập nhật"
 
+msgid "This host runs an older Superset. Update the app to see insights."
+msgstr "Máy chủ này chạy Superset cũ. Hãy cập nhật ứng dụng để xem thông tin chi tiết."
+
 msgid "This invitation has already been accepted."
 msgstr "Lời mời này đã được chấp nhận."
 
@@ -19155,6 +19232,9 @@ msgstr "VS Code"
 msgid "Wait for workspace setup before starting agents"
 msgstr "Chờ setup workspace xong rồi mới khởi động agent"
 
+msgid "Waiting"
+msgstr "Đang chờ"
+
 #. placeholder {0}: names.a
 #. placeholder {1}: names.b
 msgid "waiting for {0} and {1}…"
@@ -19300,6 +19380,9 @@ msgstr "Website"
 
 msgid "Week"
 msgstr "Tuần"
+
+msgid "Week of"
+msgstr "Tuần từ"
 
 msgid "Week of {formatted}"
 msgstr "Tuần {formatted}"
@@ -19963,6 +20046,9 @@ msgstr "Liên kết GitHub của bạn lấy từ tài khoản bạn đã đăng
 
 msgid "Your last payment failed. Update your payment method to keep Pro."
 msgstr "Lần thanh toán gần nhất không thành công. Hãy cập nhật phương thức thanh toán để giữ Pro."
+
+msgid "Your messages per project"
+msgstr "Tin nhắn của bạn theo dự án"
 
 msgid "Your name"
 msgstr "Tên của bạn"

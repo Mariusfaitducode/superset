@@ -357,6 +357,11 @@ msgstr "{0} — Supersetのトレイメニュー > ホストサービス > 再�
 msgid "{0} · behind"
 msgstr "{0} · 古い"
 
+#. placeholder {0}: decimal(mean)
+#. placeholder {1}: count(peak)
+msgid "{0} · peak {1}"
+msgstr "{0} · ピーク {1}"
+
 #. placeholder {0}: creator.name
 #. placeholder {0}: option.name
 msgid "{0} (you)"
@@ -557,6 +562,10 @@ msgstr "{0} 対 {1}"
 #. placeholder {0}: file.path
 msgid "{0} was deleted in this change."
 msgstr "{0}はこの変更で削除されました。"
+
+#. placeholder {0}: formatNumber(option / 7)
+msgid "{0} weeks"
+msgstr "{0} 週間"
 
 #. placeholder {0}: winner?.name
 #. placeholder {1}: result.events.length
@@ -2015,6 +2024,15 @@ msgstr "同時に動かしているエージェント数"
 msgid "Agents use this account when they call Linear tools."
 msgstr "エージェントは、Linearのツールを呼び出すときにこのアカウントを使います。"
 
+msgid "Agents waiting (peak)"
+msgstr "待機中のエージェント（ピーク）"
+
+msgid "Agents waiting on you"
+msgstr "あなたを待つエージェント"
+
+msgid "Agents working at once"
+msgstr "同時に作業中のエージェント"
+
 msgid "Agents' to-dos"
 msgstr "エージェントのTo-do"
 
@@ -2979,6 +2997,9 @@ msgstr "チップスタイルをtooltip.tsxに組み込む"
 
 msgid "Bar"
 msgstr "バー"
+
+msgid "Bare go-aheads"
+msgstr "単なるゴーサイン"
 
 msgid "Base branch"
 msgstr "ベースブランチ"
@@ -4911,6 +4932,9 @@ msgstr "キーを今すぐコピーしてください — 後で再表示する�
 msgid "Copyright or trademark"
 msgstr "著作権または商標"
 
+msgid "Corrections"
+msgstr "修正"
+
 msgid "Cost"
 msgstr "コスト"
 
@@ -5315,6 +5339,9 @@ msgstr "このクラウドワークスペースに接続できませんでした
 
 msgid "Couldn't reach workspace"
 msgstr "ワークスペースに接続できませんでした"
+
+msgid "Couldn't read the transcripts on this host."
+msgstr "このホストのトランスクリプトを読み込めませんでした。"
 
 msgid "Couldn't read this terminal's context."
 msgstr "このターミナルのコンテキストを読み取れませんでした。"
@@ -7829,6 +7856,9 @@ msgstr "完了 · 7秒稼働"
 msgid "First repository by name"
 msgstr "名前順で最初のリポジトリ"
 
+msgid "First scan of your transcripts, numbers are partial…"
+msgstr "トランスクリプトを初回スキャン中です。数値は暫定です…"
+
 msgid "Fix all failing checks"
 msgstr "失敗したチェックをすべて修正"
 
@@ -8060,6 +8090,9 @@ msgstr "ハッカソンのプロジェクトから、並列コーディングエ
 msgid "From GitHub"
 msgstr "GitHub から"
 
+msgid "From your Claude Code transcripts on this machine. Automations and prompts written by agents are left out."
+msgstr "このマシン上の Claude Code のトランスクリプトから算出。自動化とエージェントが書いたプロンプトは除外しています。"
+
 msgid "Front matter hidden — switch to Markdown to edit it"
 msgstr "フロントマターは非表示です — 編集するにはMarkdownに切り替えてください"
 
@@ -8284,6 +8317,13 @@ msgstr "Supersetへ移動"
 
 msgid "Go to workspace"
 msgstr "ワークスペースへ移動"
+
+msgid "Go-aheads"
+msgstr "ゴーサイン"
+
+#. placeholder {0}: tile.target
+msgid "Goal {0}"
+msgstr "目標 {0}"
 
 msgid "Google did not grant lasting access. Remove Superset from your Google account's third-party access and try again."
 msgstr "Googleが継続的なアクセスを許可しませんでした。GoogleアカウントのサードパーティアクセスからSupersetを削除して、もう一度お試しください。"
@@ -8987,6 +9027,9 @@ msgstr "入力・キャッシュ・出力トークン"
 msgid "Inputs"
 msgstr "入力"
 
+msgid "Insights"
+msgstr "インサイト"
+
 msgid "Insights from the Superset team about parallel coding agents and developer productivity."
 msgstr "並列コーディングエージェントと開発者の生産性について、Supersetチームからの知見。"
 
@@ -9523,6 +9566,10 @@ msgstr "最終更新: {lastUpdated}"
 msgid "Last used"
 msgstr "前回使用"
 
+#. placeholder {0}: tile.previous
+msgid "Last week {0}"
+msgstr "先週 {0}"
+
 msgid "Late 2026"
 msgstr "2026年後半"
 
@@ -9828,6 +9875,9 @@ msgstr "アプリで利用できます。"
 
 msgid "Live preview"
 msgstr "ライブプレビュー"
+
+msgid "Live sessions per day"
+msgstr "1日あたりのアクティブなセッション"
 
 msgid "llms.txt (index for AI agents)"
 msgstr "llms.txt(AIエージェント向けの索引)"
@@ -10237,6 +10287,9 @@ msgstr "{0} に送るコンテキストを計測しています…"
 msgid "Media kit"
 msgstr "メディアキット"
 
+msgid "Median reply time (daytime)"
+msgstr "返信時間の中央値（日中）"
+
 msgid "Median ticket-to-production time under one day for routine work."
 msgstr "定型作業のチケットから本番までの時間が中央値で1日未満。"
 
@@ -10360,6 +10413,9 @@ msgstr "メッセージ..."
 
 msgid "Messages"
 msgstr "メッセージ"
+
+msgid "Messages per working day"
+msgstr "営業日あたりのメッセージ"
 
 msgid "Microphone"
 msgstr "マイク"
@@ -10578,6 +10634,9 @@ msgstr "右側に移動"
 
 msgid "Move to Tab"
 msgstr "タブに移動"
+
+msgid "Msgs / day"
+msgstr "件 / 日"
 
 msgid "Multi-select"
 msgstr "複数選択"
@@ -12788,6 +12847,9 @@ msgstr "{organizationName}外のユーザーはアクセスできなくなり、
 msgid "People with access"
 msgstr "アクセスできるユーザー"
 
+msgid "Per day"
+msgstr "日別"
+
 msgid "per merged PR"
 msgstr "マージされたPRあたり"
 
@@ -12799,6 +12861,9 @@ msgstr "セッションあたり"
 
 msgid "per user/month"
 msgstr "1ユーザーあたり月額"
+
+msgid "Per week"
+msgstr "週別"
 
 msgid "Per-repo agent memory"
 msgstr "リポジトリごとのエージェントメモリ"
@@ -13693,6 +13758,9 @@ msgstr "ソースコードとすべてのプルリクエストを読む。"
 
 msgid "Reading {what}"
 msgstr "{what} を読み取り中"
+
+msgid "Reading new transcript lines…"
+msgstr "新しいトランスクリプト行を読み込み中…"
 
 msgid "Reading the page"
 msgstr "ページを読み込み中"
@@ -15535,6 +15603,9 @@ msgstr "セッション"
 msgid "Sessions · top {0} by cost"
 msgstr "セッション · コスト上位{0}件"
 
+msgid "Sessions / day"
+msgstr "セッション / 日"
+
 #. placeholder {0}: color.name
 msgid "Set color to {0}"
 msgstr "色を{0}に設定"
@@ -16526,6 +16597,9 @@ msgstr "ステータス"
 
 msgid "Status changed"
 msgstr "ステータス変更"
+
+msgid "Status questions"
+msgstr "進捗の確認"
 
 msgid "Stay connected (refresh tokens)"
 msgstr "接続の維持(リフレッシュトークン)"
@@ -17878,6 +17952,9 @@ msgstr "このホストは使用中のアプリより古いバージョンです
 msgid "This host needs an update"
 msgstr "このホストは更新が必要です"
 
+msgid "This host runs an older Superset. Update the app to see insights."
+msgstr "このホストは古い Superset を実行しています。インサイトを見るにはアプリを更新してください。"
+
 msgid "This invitation has already been accepted."
 msgstr "この招待はすでに承諾されています。"
 
@@ -19155,6 +19232,9 @@ msgstr "VS Code"
 msgid "Wait for workspace setup before starting agents"
 msgstr "エージェント起動前にワークスペースのセットアップを待つ"
 
+msgid "Waiting"
+msgstr "待機中"
+
 #. placeholder {0}: names.a
 #. placeholder {1}: names.b
 msgid "waiting for {0} and {1}…"
@@ -19300,6 +19380,9 @@ msgstr "ウェブサイト"
 
 msgid "Week"
 msgstr "週"
+
+msgid "Week of"
+msgstr "週の開始日"
 
 msgid "Week of {formatted}"
 msgstr "{formatted}の週"
@@ -19963,6 +20046,9 @@ msgstr "GitHub のリンクはサインインしたアカウントから取得�
 
 msgid "Your last payment failed. Update your payment method to keep Pro."
 msgstr "前回の支払いに失敗しました。Pro を継続するには支払い方法を更新してください。"
+
+msgid "Your messages per project"
+msgstr "プロジェクト別のあなたのメッセージ"
 
 msgid "Your name"
 msgstr "あなたの名前"
