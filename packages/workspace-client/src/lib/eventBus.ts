@@ -27,6 +27,7 @@ type EventType =
 	| "tag-folders:changed"
 	| "page-watch:changed"
 	| "chat:sessions-changed"
+	| "host-store:changed"
 	| "workspace-notes:changed";
 
 interface FsEventsPayload {
@@ -138,6 +139,11 @@ export interface TagFoldersChangedPayload {
 	occurredAt: TagFoldersChangedMessage["occurredAt"];
 }
 
+export interface HostStoreChangedPayload {
+	store: Extract<ServerMessage, { type: "host-store:changed" }>["store"];
+	occurredAt: number;
+}
+
 type EventListener<T extends EventType> = T extends "fs:events"
 	? (workspaceId: string, payload: FsEventsPayload) => void
 	: T extends "git:changed"
@@ -182,12 +188,17 @@ type EventListener<T extends EventType> = T extends "fs:events"
 															workspaceId: string,
 															payload: ChatSessionsChangedPayload,
 														) => void
-													: T extends "workspace-notes:changed"
+													: T extends "host-store:changed"
 														? (
-																workspaceId: string,
-																payload: WorkspaceNotesChangedPayload,
+																scope: null,
+																payload: HostStoreChangedPayload,
 															) => void
-														: never;
+														: T extends "workspace-notes:changed"
+															? (
+																	workspaceId: string,
+																	payload: WorkspaceNotesChangedPayload,
+																) => void
+															: never;
 
 interface ListenerEntry {
 	type: EventType;
@@ -421,6 +432,11 @@ function handleMessage(state: ConnectionState, data: unknown): void {
 		} else if (message.type === "tag-folders:changed") {
 			(entry.callback as EventListener<"tag-folders:changed">)(message.scope, {
 				settings: message.settings,
+				occurredAt: message.occurredAt,
+			});
+		} else if (message.type === "host-store:changed") {
+			(entry.callback as EventListener<"host-store:changed">)(null, {
+				store: message.store,
 				occurredAt: message.occurredAt,
 			});
 		}

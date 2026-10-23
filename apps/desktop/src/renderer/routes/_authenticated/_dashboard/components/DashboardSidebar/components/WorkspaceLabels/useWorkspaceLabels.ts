@@ -1,5 +1,9 @@
 import { useQueries, useQuery, useQueryClient } from "@tanstack/react-query";
-import { useCallback, useMemo } from "react";
+import { useCallback, useEffect, useMemo } from "react";
+import {
+	holdHostStoreRefresh,
+	useHostStoreRefresh,
+} from "renderer/hooks/host-service/useHostStoreRefresh";
 import {
 	getHostServiceClientByUrl,
 	type HostServiceClient,
@@ -30,8 +34,9 @@ function labelsQuery(hostUrl: string | null, enabled = true) {
 				return null;
 			}
 		},
-		// Agents label their workspace from the CLI.
-		refetchInterval: 15_000,
+		// The host says when labels change; this only covers a missed event or
+		// a host that predates it.
+		refetchInterval: 60_000,
 		staleTime: 10_000,
 	};
 }
@@ -54,6 +59,12 @@ export function useHostLabels(hostId: string | null) {
 	const resolveHostUrl = useResolveHostUrl();
 	const hostUrl = hostId ? resolveHostUrl(hostId) : null;
 	const query = useQuery(labelsQuery(hostUrl));
+	useHostStoreRefresh({
+		hostUrl,
+		store: "workspace-labels",
+		queryKey: labelsQueryKey(hostUrl),
+		enabled: true,
+	});
 
 	const mutate = useCallback(
 		async (
@@ -101,6 +112,26 @@ export function useLabelsByHost(
 	const resolveHostUrl = useResolveHostUrl();
 	const key = [...new Set(hostIds)].sort().join(",");
 	const unique = useMemo(() => (key ? key.split(",") : []), [key]);
+	const queryClient = useQueryClient();
+	useEffect(() => {
+		if (!enabled) return;
+		const releases = unique.flatMap((hostId) => {
+			const hostUrl = resolveHostUrl(hostId);
+			return hostUrl
+				? [
+						holdHostStoreRefresh(
+							hostUrl,
+							"workspace-labels",
+							queryClient,
+							labelsQueryKey(hostUrl),
+						),
+					]
+				: [];
+		});
+		return () => {
+			for (const release of releases) release();
+		};
+	}, [enabled, unique, resolveHostUrl, queryClient]);
 	// A stable `combine` keeps the map, and the filters built on it, from
 	// being rebuilt on every render.
 	const combine = useCallback(

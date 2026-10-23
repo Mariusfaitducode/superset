@@ -236,6 +236,7 @@ function ConversationRow({
 					hostId={hostId}
 					terminalId={conversation.terminalId}
 					lastEventAt={conversation.since}
+					working={conversation.state === "working"}
 				/>
 				{showTodos && (
 					<button
@@ -292,6 +293,7 @@ function ConversationRow({
 					terminalId={conversation.terminalId}
 					todos={todos ?? []}
 					actions={todoActions}
+					onClose={() => setTodosOpen(false)}
 				/>
 			)}
 		</li>

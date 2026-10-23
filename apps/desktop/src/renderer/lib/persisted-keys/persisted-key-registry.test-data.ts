@@ -134,6 +134,10 @@ export const PERSISTED_KEY_REGISTRY: ReadonlyArray<
 		"src/renderer/stores/conversation-recency/store.ts",
 		["conversation-recency-v1"],
 	],
+	[
+		"src/renderer/routes/_authenticated/settings/usage/components/UsageResourcesPage/stores/agentCleanup/store.ts",
+		["agent-cleanup-v1"],
+	],
 	["src/renderer/stores/workspace-recency/store.ts", ["workspace-recency-v1"]],
 	[
 		"src/renderer/routes/_authenticated/_dashboard/v2-workspaces/stores/workspacesLabelView/store.ts",
@@ -188,6 +192,10 @@ export const PERSISTED_KEY_REGISTRY: ReadonlyArray<
 	[
 		"src/renderer/routes/_authenticated/_dashboard/pull-requests/stores/pullRequestsFilterStore/pullRequestsFilterStore.ts",
 		["pull-requests-filter-state"],
+	],
+	[
+		"src/renderer/routes/_authenticated/_dashboard/pull-requests/stores/myPullRequestsStore/myPullRequestsStore.ts",
+		["my-pull-requests-state"],
 	],
 	[
 		"src/renderer/routes/_authenticated/_dashboard/pull-requests/stores/pullRequestsSplitViewStore/pullRequestsSplitViewStore.ts",

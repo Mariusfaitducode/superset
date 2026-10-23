@@ -1,5 +1,6 @@
 import type { BrowserWindow } from "electron";
 import { router } from "..";
+import { createAgentResourcesRouter } from "./agent-resources";
 import { createAnalyticsRouter } from "./analytics";
 import { createAuthRouter } from "./auth";
 import { createAutoUpdateRouter } from "./auto-update";
@@ -56,6 +57,7 @@ export const createAppRouter = (getWindow: () => BrowserWindow | null) => {
 		ports: createPortsRouter(),
 		portForwards: createPortForwardsRouter(),
 		resourceMetrics: createResourceMetricsRouter(),
+		agentResources: createAgentResourcesRouter(),
 		menu: createMenuRouter(),
 		external: createExternalRouter(),
 		githubStar: createGithubStarRouter(),

@@ -22,6 +22,12 @@ export interface ConversationTodo {
 	id: string;
 	workspaceId: string;
 	terminalId: string;
+	/**
+	 * The agent's own session id. A resumed agent runs in a new terminal under
+	 * the same id, so this is what ties a to-do to its conversation. Absent on
+	 * to-dos written before it existed, and on terminals without an agent.
+	 */
+	conversationId?: string | null;
 	text: string;
 	done: boolean;
 	author: TodoActor;
@@ -87,6 +93,7 @@ export class ConversationTodoStore {
 		actor: TodoActor;
 		workspaceId: string;
 		terminalId: string;
+		conversationId?: string | null;
 		text: string;
 		priority?: TodoPriority;
 		kind?: TodoKind;
@@ -100,6 +107,7 @@ export class ConversationTodoStore {
 			id: randomUUID(),
 			workspaceId: input.workspaceId,
 			terminalId: input.terminalId,
+			conversationId: input.conversationId ?? null,
 			text,
 			done: false,
 			author: input.actor,
@@ -141,6 +149,45 @@ export class ConversationTodoStore {
 		const todo = this.get(id);
 		this.assertOwns(actor, todo, "delete");
 		this.save(this.load().filter((item) => item.id !== id));
+	}
+
+	/**
+	 * Moves a conversation's to-dos to the terminal it now runs in. To-dos
+	 * that predate `conversationId` are recognised by the terminals the
+	 * conversation ran in before (`formerTerminalIds`), and get stamped.
+	 * Returns how many moved.
+	 */
+	followConversation(input: {
+		conversationId: string;
+		terminalId: string;
+		workspaceId: string;
+		formerTerminalIds: readonly string[];
+	}): number {
+		const known = new Set([...input.formerTerminalIds, input.terminalId]);
+		let changed = false;
+		let moved = 0;
+		const todos = this.load().map((todo) => {
+			const belongs = todo.conversationId
+				? todo.conversationId === input.conversationId
+				: known.has(todo.terminalId);
+			if (
+				!belongs ||
+				(todo.terminalId === input.terminalId &&
+					todo.conversationId === input.conversationId)
+			) {
+				return todo;
+			}
+			changed = true;
+			if (todo.terminalId !== input.terminalId) moved++;
+			return {
+				...todo,
+				conversationId: input.conversationId,
+				terminalId: input.terminalId,
+				workspaceId: input.workspaceId,
+			};
+		});
+		if (changed) this.save(todos);
+		return moved;
 	}
 
 	/** Removes the checked to-dos of a conversation that the actor may delete. */
@@ -213,8 +260,9 @@ export class ConversationTodoStore {
 	}
 }
 
-// Terminal ids never come back, so once the cap is reached the conversation
-// touched longest ago goes first.
+// A conversation's to-dos follow it to its latest terminal, so old terminal
+// ids never come back: once the cap is reached the conversation touched
+// longest ago goes first.
 function bound(todos: ConversationTodo[]): ConversationTodo[] {
 	const byTerminal = new Map<string, ConversationTodo[]>();
 	for (const todo of todos) {
