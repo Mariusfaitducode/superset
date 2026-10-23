@@ -475,6 +475,10 @@ msgstr "{0} đã được thiết lập trên máy này, nhưng chưa có trên 
 msgid "{0} more — refine your search"
 msgstr "còn {0} nữa — hãy thu hẹp tìm kiếm"
 
+#. placeholder {0}: section.hidden
+msgid "{0} more, refine the search"
+msgstr "còn {0}, hãy thu hẹp tìm kiếm"
+
 #. placeholder {0}: index + 1
 #. placeholder {1}: pages.length
 msgctxt "question progress"
@@ -511,6 +515,10 @@ msgstr "{0} dự án"
 #. placeholder {0}: conversation.queuedPrompts
 msgid "{0} queued messages"
 msgstr "{0} tin nhắn đang chờ"
+
+#. placeholder {0}: selected.length
+msgid "{0} refs"
+msgstr "{0} ref"
 
 #. placeholder {0}: tally.running
 msgid "{0} Running"
@@ -1769,6 +1777,9 @@ msgstr "Hãy thêm một script chạy vòng đời trong Cài đặt dự án h
 msgid "Add a project to see GitHub issues."
 msgstr "Thêm một dự án để xem issue GitHub."
 
+msgid "Add a project to see its git graph."
+msgstr "Thêm dự án để xem đồ thị git."
+
 msgid "Add a project to see pull requests."
 msgstr "Thêm một dự án để xem pull request."
 
@@ -2172,6 +2183,9 @@ msgstr "Tất cả người phụ trách"
 
 msgid "All authors"
 msgstr "Tất cả tác giả"
+
+msgid "All branches"
+msgstr "Tất cả nhánh"
 
 msgid "All changes saved"
 msgstr "Đã lưu mọi thay đổi"
@@ -4899,6 +4913,10 @@ msgstr "Đã sao chép!"
 msgid "Copy"
 msgstr "Sao chép"
 
+#. placeholder {0}: commit.hash
+msgid "Copy {0}"
+msgstr "Sao chép {0}"
+
 msgid "Copy agent session ID"
 msgstr "Sao chép ID phiên agent"
 
@@ -5976,6 +5994,9 @@ msgstr "Dữ liệu & API"
 
 msgid "Data display"
 msgstr "Hiển thị dữ liệu"
+
+msgid "Date"
+msgstr "Ngày"
 
 msgid "Date created"
 msgstr "Ngày tạo"
@@ -8355,6 +8376,9 @@ msgstr "Git & Worktree"
 msgid "Git author name"
 msgstr "Tên tác giả Git"
 
+msgid "Git graph"
+msgstr "Đồ thị git"
+
 msgid "GitHub"
 msgstr "GitHub"
 
@@ -8474,6 +8498,9 @@ msgstr "Cấp các quyền hệ điều hành mà Superset cần."
 
 msgid "Granted"
 msgstr "Đã cấp"
+
+msgid "Graph"
+msgstr "Đồ thị"
 
 msgid "Grayscale"
 msgstr "Thang độ xám"
@@ -9077,6 +9104,10 @@ msgstr "Đang thực hiện"
 
 msgid "In Progress"
 msgstr "Đang thực hiện"
+
+#. placeholder {0}: badge.syncedRemotes.join(", ")
+msgid "In sync with {0}"
+msgstr "Đồng bộ với {0}"
 
 msgid "In the Superset desktop app, open <0>Settings → Appearance → Theme</0>."
 msgstr "Trong ứng dụng Superset trên máy tính, mở <0>Cài đặt → Giao diện → Chủ đề</0>."
@@ -10043,6 +10074,9 @@ msgstr "llms.txt (chỉ mục cho agent AI)"
 msgid "Load (1 min)"
 msgstr "Tải (1 phút)"
 
+msgid "Load {PAGE_SIZE} more commits"
+msgstr "Tải thêm {PAGE_SIZE} commit"
+
 msgid "load agent settings"
 msgstr "tải cài đặt agent"
 
@@ -10100,6 +10134,9 @@ msgstr "Đang tải chi tiết từ GitHub"
 msgid "Loading groups…"
 msgstr "Đang tải nhóm…"
 
+msgid "Loading history…"
+msgstr "Đang tải lịch sử…"
+
 msgid "Loading issue…"
 msgstr "Đang tải issue…"
 
@@ -10156,6 +10193,9 @@ msgstr "Đang tải…"
 
 msgid "Local"
 msgstr "Cục bộ"
+
+msgid "Local branches"
+msgstr "Nhánh cục bộ"
 
 msgid "Local Device"
 msgstr "Thiết bị cục bộ"
@@ -10575,6 +10615,9 @@ msgstr "Tin nhắn"
 msgid "Message in channel"
 msgstr "Tin nhắn trong kênh"
 
+msgid "Message, author, hash, branch"
+msgstr "Thông điệp, tác giả, hash, nhánh"
+
 msgid "Message..."
 msgstr "Tin nhắn..."
 
@@ -10836,6 +10879,9 @@ msgstr "Tin cuối của tôi"
 
 msgid "My Tasks"
 msgstr "Tác vụ của tôi"
+
+msgid "My worktrees"
+msgstr "Worktree của tôi"
 
 msgid "Mystery Machinist"
 msgstr "Thợ máy bí ẩn"
@@ -11295,6 +11341,9 @@ msgstr "Chưa có bình luận nào."
 
 msgid "No comments yet. Turn on comment mode and click anything on the page to start one."
 msgstr "Chưa có bình luận nào. Bật chế độ bình luận rồi nhấp vào bất kỳ phần nào của trang để bắt đầu."
+
+msgid "No commits for these filters."
+msgstr "Không có commit cho bộ lọc này."
 
 msgid "No commits on this branch yet."
 msgstr "Chưa có commit nào trên nhánh này."
@@ -12049,6 +12098,9 @@ msgstr "Hơn một tuần"
 msgid "on {cores} cores"
 msgstr "trên {cores} lõi"
 
+msgid "on {headBranch}"
+msgstr "trên {headBranch}"
+
 msgid "on {offScopeHostName} — won't run here"
 msgstr "trên {offScopeHostName} — sẽ không chạy ở đây"
 
@@ -12141,6 +12193,9 @@ msgstr "Chỉ chủ sở hữu tổ chức mới đổi được gói. Hãy nh�
 
 msgid "Only available on macOS."
 msgstr "Chỉ có trên macOS."
+
+msgid "Only branches with a worktree or a conversation"
+msgstr "Chỉ các nhánh có worktree hoặc cuộc trò chuyện"
 
 msgid "Only host owners can change membership"
 msgstr "Chỉ chủ sở hữu host mới thay đổi được thành viên"
@@ -14173,6 +14228,10 @@ msgstr "Tham chiếu"
 msgid "Refresh"
 msgstr "Làm mới"
 
+#. placeholder {0}: log.data.durationMs
+msgid "Refresh (last load {0} ms)"
+msgstr "Làm mới (lần tải cuối {0} ms)"
+
 #. placeholder {0}: error.message
 msgid "Refresh failed: {0}"
 msgstr "Làm mới thất bại: {0}"
@@ -14278,6 +14337,9 @@ msgstr "Truy cập từ xa"
 
 msgid "Remote Access may be off"
 msgstr "Truy cập từ xa có thể đang tắt"
+
+msgid "Remote branches"
+msgstr "Nhánh từ xa"
 
 msgid "Remote MCP server — connects over HTTP"
 msgstr "Server MCP từ xa — kết nối qua HTTP"
@@ -15390,6 +15452,9 @@ msgstr "Tìm tác giả…"
 msgid "Search automations"
 msgstr "Tìm tự động hóa"
 
+msgid "Search branches and tags"
+msgstr "Tìm nhánh và tag"
+
 msgid "Search branches..."
 msgstr "Tìm nhánh..."
 
@@ -16095,6 +16160,9 @@ msgstr "Hiển thị micrô trong ô soạn chat. Giọng nói được ChatGPT 
 msgid "Show a Usage button in the home sidebar, under Pull requests"
 msgstr "Hiện nút Mức sử dụng trong thanh bên trang chủ, bên dưới Pull request"
 
+msgid "Show all"
+msgstr "Hiện tất cả"
+
 msgid "Show all {count}"
 msgstr "Hiện tất cả {count}"
 
@@ -16188,6 +16256,10 @@ msgstr "Hiện thêm"
 msgid "Show on Sidebar"
 msgstr "Hiển thị trên thanh bên"
 
+#. placeholder {0}: badge.label
+msgid "Show only {0}"
+msgstr "Chỉ hiện {0}"
+
 msgid "Show open items"
 msgstr "Chỉ hiện mục đang mở"
 
@@ -16244,6 +16316,9 @@ msgstr "Hiển thị thẻ mức sử dụng trên thanh bên"
 
 msgid "showArrow opt-in"
 msgstr "bật showArrow"
+
+msgid "Showing the latest {MAX_COMMITS} commits. Filter by branch to go further back."
+msgstr "Đang hiện {MAX_COMMITS} commit mới nhất. Lọc theo nhánh để xem xa hơn."
 
 msgid "Shown"
 msgstr "Đang hiển thị"
@@ -17478,6 +17553,9 @@ msgstr "bảng với"
 
 msgid "Tabs"
 msgstr "Tabs"
+
+msgid "Tags"
+msgstr "Tag"
 
 msgid "Tailwind v4 theme reference"
 msgstr "Tham chiếu theme Tailwind v4"
@@ -18962,6 +19040,9 @@ msgstr "Chưa commit · Chưa push"
 msgid "Uncommitted changes"
 msgstr "Thay đổi chưa commit"
 
+msgid "Uncommitted changes ({uncommitted})"
+msgstr "Thay đổi chưa commit ({uncommitted})"
+
 msgid "Uncommitted changes, on top of {base}"
 msgstr "Thay đổi chưa commit, dựa trên {base}"
 
@@ -20113,8 +20194,14 @@ msgstr "Đã mở worktree"
 msgid "Worktree out of sync"
 msgstr "Worktree không còn đồng bộ"
 
+msgid "Worktree: {worktreePath}"
+msgstr "Worktree: {worktreePath}"
+
 msgid "Worktrees"
 msgstr "Worktree"
+
+msgid "Worktrees and conversations"
+msgstr "Worktree và cuộc trò chuyện"
 
 msgid "Worktrees are removed from disk; workspaces on the project's checkout only close. Files in the checkout stay as they are."
 msgstr "Các worktree bị xóa khỏi ổ đĩa; các workspace trên checkout của dự án chỉ được đóng. Tệp trong checkout vẫn giữ nguyên."
