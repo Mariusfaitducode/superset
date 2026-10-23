@@ -11376,6 +11376,9 @@ msgstr "尚無代理對話。"
 msgid "No agent is configured on this host"
 msgstr "此主機上未設定任何代理程式"
 
+msgid "No agent is running. Start one in a workspace and it takes a desk here."
+msgstr "沒有正在執行的代理程式。在工作區中啟動一個，它就會在這裡佔一張桌子。"
+
 msgid "No agent running"
 msgstr "沒有正在執行的代理程式"
 
@@ -11595,6 +11598,9 @@ msgstr "無圖示"
 
 msgid "No icons match."
 msgstr "沒有符合的圖示。"
+
+msgid "No integration connected yet."
+msgstr "尚未連結任何整合。"
 
 msgid "No Internet Connection"
 msgstr "無網路連線"
@@ -12203,6 +12209,9 @@ msgstr "佔全部token"
 msgid "Off"
 msgstr "關閉"
 
+msgid "Office"
+msgstr "辦公室"
+
 #. placeholder {0}: COMPANY.NAME
 msgid "Official documentation for {0}, the app for running 100+ coding agents in parallel."
 msgstr "{0} 官方文件。這款應用程式可並行運行 100 多個編程代理。"
@@ -12440,6 +12449,7 @@ msgid "Open"
 msgstr "開啟"
 
 #. placeholder {0}: linkedAgent?.label ?? t({ message: "agent settings", })
+#. placeholder {0}: workspace.name
 msgid "Open {0}"
 msgstr "開啟{0}"
 
@@ -12804,6 +12814,9 @@ msgstr "開啟系統設定"
 
 msgid "Open task {title}"
 msgstr "開啟任務{title}"
+
+msgid "Open terminal"
+msgstr "開啟終端機"
 
 msgid "Open Terminal"
 msgstr "開啟終端"
@@ -18527,6 +18540,9 @@ msgstr "此主機尚未回報版本。"
 
 msgid "This host is behind the app you are using. Workspaces still open, but newer features may fail on it."
 msgstr "此主機落後於你正在使用的應用程式。工作區仍可開啟，但較新的功能可能無法使用。"
+
+msgid "This host is too old to keep to-dos."
+msgstr "此主機版本過舊，無法儲存待辦事項。"
 
 msgid "This host needs an update"
 msgstr "此主機需要更新"

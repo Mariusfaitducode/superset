@@ -11376,6 +11376,9 @@ msgstr "Zatím žádné konverzace agentů."
 msgid "No agent is configured on this host"
 msgstr "Na tomto hostiteli není nakonfigurován žádný agent"
 
+msgid "No agent is running. Start one in a workspace and it takes a desk here."
+msgstr "Neběží žádný agent. Spusťte ho v pracovním prostoru a usedne tady ke stolu."
+
 msgid "No agent running"
 msgstr "Neběží žádný agent"
 
@@ -11595,6 +11598,9 @@ msgstr "Bez ikony"
 
 msgid "No icons match."
 msgstr "Žádné ikony neodpovídají."
+
+msgid "No integration connected yet."
+msgstr "Zatím není připojena žádná integrace."
 
 msgid "No Internet Connection"
 msgstr "Bez připojení k internetu"
@@ -12203,6 +12209,9 @@ msgstr "ze všech tokenů"
 msgid "Off"
 msgstr "Vypnuto"
 
+msgid "Office"
+msgstr "Kancelář"
+
 #. placeholder {0}: COMPANY.NAME
 msgid "Official documentation for {0}, the app for running 100+ coding agents in parallel."
 msgstr "Oficiální dokumentace {0}, aplikace pro paralelní spouštění více než 100 programovacích agentů."
@@ -12440,6 +12449,7 @@ msgid "Open"
 msgstr "Otevřený"
 
 #. placeholder {0}: linkedAgent?.label ?? t({ message: "agent settings", })
+#. placeholder {0}: workspace.name
 msgid "Open {0}"
 msgstr "Otevřít {0}"
 
@@ -12804,6 +12814,9 @@ msgstr "Otevřít Nastavení systému"
 
 msgid "Open task {title}"
 msgstr "Otevřít úkol {title}"
+
+msgid "Open terminal"
+msgstr "Otevřít terminál"
 
 msgid "Open Terminal"
 msgstr "Otevřít terminál"
@@ -18527,6 +18540,9 @@ msgstr "Tento hostitel zatím nenahlásil verzi."
 
 msgid "This host is behind the app you are using. Workspaces still open, but newer features may fail on it."
 msgstr "Tento hostitel zaostává za aplikací, kterou používáte. Pracovní prostory se stále otevřou, ale novější funkce na něm mohou selhat."
+
+msgid "This host is too old to keep to-dos."
+msgstr "Tento hostitel je příliš starý na ukládání úkolů."
 
 msgid "This host needs an update"
 msgstr "Tento host potřebuje aktualizaci"

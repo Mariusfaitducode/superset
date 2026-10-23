@@ -11376,6 +11376,9 @@ msgstr "Belum ada percakapan agen."
 msgid "No agent is configured on this host"
 msgstr "Tidak ada agen yang dikonfigurasi di host ini"
 
+msgid "No agent is running. Start one in a workspace and it takes a desk here."
+msgstr "Tidak ada agen yang berjalan. Mulai satu di workspace dan ia akan menempati meja di sini."
+
 msgid "No agent running"
 msgstr "Tidak ada agen yang berjalan"
 
@@ -11595,6 +11598,9 @@ msgstr "Tanpa ikon"
 
 msgid "No icons match."
 msgstr "Tidak ada ikon yang cocok."
+
+msgid "No integration connected yet."
+msgstr "Belum ada integrasi yang terhubung."
 
 msgid "No Internet Connection"
 msgstr "Tidak Ada Koneksi Internet"
@@ -12203,6 +12209,9 @@ msgstr "dari semua token"
 msgid "Off"
 msgstr "Mati"
 
+msgid "Office"
+msgstr "Kantor"
+
 #. placeholder {0}: COMPANY.NAME
 msgid "Official documentation for {0}, the app for running 100+ coding agents in parallel."
 msgstr "Dokumentasi resmi {0}, aplikasi untuk menjalankan lebih dari 100 agen pemrograman secara paralel."
@@ -12440,6 +12449,7 @@ msgid "Open"
 msgstr "Buka"
 
 #. placeholder {0}: linkedAgent?.label ?? t({ message: "agent settings", })
+#. placeholder {0}: workspace.name
 msgid "Open {0}"
 msgstr "Buka {0}"
 
@@ -12804,6 +12814,9 @@ msgstr "Buka System Settings"
 
 msgid "Open task {title}"
 msgstr "Buka tugas {title}"
+
+msgid "Open terminal"
+msgstr "Buka terminal"
 
 msgid "Open Terminal"
 msgstr "Buka Terminal"
@@ -18527,6 +18540,9 @@ msgstr "Host ini belum melaporkan versi."
 
 msgid "This host is behind the app you are using. Workspaces still open, but newer features may fail on it."
 msgstr "Host ini tertinggal dari aplikasi yang Anda gunakan. Workspace masih terbuka, tetapi fitur baru mungkin gagal di sana."
+
+msgid "This host is too old to keep to-dos."
+msgstr "Host ini terlalu lama untuk menyimpan daftar tugas."
 
 msgid "This host needs an update"
 msgstr "Host ini perlu diperbarui"
