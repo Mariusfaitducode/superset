@@ -6,11 +6,18 @@ import { useNavigate } from "@tanstack/react-router";
 import { type SyntheticEvent, useState } from "react";
 import { LuBot, LuListChecks, LuMessageSquarePlus } from "react-icons/lu";
 import { usePresetIcon } from "renderer/assets/app-icons/preset-icons";
+import { useHostAgentReports } from "renderer/hooks/host-service/useHostAgentReports";
 import { useNow } from "renderer/hooks/useNow";
+import { ReportKindIcon } from "renderer/routes/_authenticated/_dashboard/components/ReportKindIcon";
+import {
+	DESK_GROUPS,
+	type DeskGroup,
+} from "renderer/routes/_authenticated/_dashboard/hooks/useDeskQueue";
 import {
 	buildSubagentSearch,
 	navigateToV2Workspace,
 } from "renderer/routes/_authenticated/_dashboard/utils/workspace-navigation";
+import { useHostWorkspaces } from "renderer/routes/_authenticated/providers/HostWorkspacesProvider";
 import { RenameInput } from "renderer/screens/main/components/WorkspaceSidebar/RenameInput";
 import {
 	useSidebarPreference,
@@ -99,10 +106,13 @@ function ConversationRow({
 	conversation,
 	todos,
 	todoActions,
+	reportKind,
 }: {
 	workspaceId: string;
 	hostId: string;
 	conversation: SidebarConversation;
+	/** The most pressing open report of the conversation, if any. */
+	reportKind: DeskGroup | null;
 	/** Null when the host is too old to keep to-dos. */
 	todos: ConversationTodo[] | null;
 	todoActions: TodoActions;
@@ -124,6 +134,14 @@ function ConversationRow({
 	const urgentTodos = (todos ?? []).some(
 		(todo) => !todo.done && todo.priority === "high",
 	);
+
+	const reportLabel: Record<DeskGroup, string> = {
+		decision: t`Decision waiting on the Desk`,
+		draft: t`Draft waiting on the Desk`,
+		blocked: t`Blocked, see the Desk`,
+		done: t`Ready for review on the Desk`,
+		todo: t`To-do on the Desk`,
+	};
 
 	const stateLabel: Record<ConversationState, string> = {
 		working: t`Working`,
@@ -221,6 +239,15 @@ function ConversationRow({
 							{conversation.title}
 						</span>
 					</button>
+				)}
+				{reportKind && (
+					<span
+						role="img"
+						aria-label={reportLabel[reportKind]}
+						title={reportLabel[reportKind]}
+					>
+						<ReportKindIcon kind={reportKind} className="size-3" />
+					</span>
 				)}
 				{showQueuedPrompts && conversation.queuedPrompts > 0 && (
 					<span
@@ -344,6 +371,31 @@ export function DashboardSidebarConversationList({
 			: list.filter((todo) => todo.author !== "agent");
 	};
 
+	const { cache } = useHostWorkspaces();
+	const reports = useHostAgentReports(
+		cache.isSandboxHost(hostId) ? null : cache.resolveHostUrl(hostId),
+		showConversations && conversations.length > 0,
+	).data;
+	const reportKindFor = (terminalId: string): DeskGroup | null => {
+		let best: DeskGroup | null = null;
+		for (const report of reports ?? []) {
+			if (
+				report.terminalId !== terminalId ||
+				report.status !== "open" ||
+				report.kind === "progress"
+			) {
+				continue;
+			}
+			if (
+				best === null ||
+				DESK_GROUPS.indexOf(report.kind) < DESK_GROUPS.indexOf(best)
+			) {
+				best = report.kind;
+			}
+		}
+		return best;
+	};
+
 	if (!showConversations || conversations.length === 0) return null;
 
 	return (
@@ -372,6 +424,7 @@ export function DashboardSidebarConversationList({
 						conversation={conversation}
 						todos={todosFor(conversation.terminalId)}
 						todoActions={todos.actions}
+						reportKind={reportKindFor(conversation.terminalId)}
 					/>
 				))}
 			</ul>

@@ -2086,6 +2086,9 @@ msgstr "Agents on a schedule or trigger"
 msgid "Agents on your phone"
 msgstr "Agents on your phone"
 
+msgid "Agents put their hand-overs here with superset report: work to review, decisions, drafts to approve, blockers."
+msgstr "Agents put their hand-overs here with superset report: work to review, decisions, drafts to approve, blockers."
+
 msgid "Agents remember what they learn about your codebase, so every new session starts warm."
 msgstr "Agents remember what they learn about your codebase, so every new session starts warm."
 
@@ -2097,6 +2100,9 @@ msgstr "Agents use this account when they call Linear tools."
 
 msgid "Agents' to-dos"
 msgstr "Agents' to-dos"
+
+msgid "Agents' to-dos for you"
+msgstr "Agents' to-dos for you"
 
 msgid "Aggregate agent usage across every developer on the Superset leaderboard — tokens, cost, cache behaviour and which models people actually reach for."
 msgstr "Aggregate agent usage across every developer on the Superset leaderboard — tokens, cost, cache behaviour and which models people actually reach for."
@@ -2432,8 +2438,14 @@ msgstr "Anonymous Assembler"
 msgid "another device"
 msgstr "another device"
 
+msgid "answer"
+msgstr "answer"
+
 msgid "Answer any questions in the terminal below, such as a password."
 msgstr "Answer any questions in the terminal below, such as a password."
+
+msgid "Answer the agent"
+msgstr "Answer the agent"
 
 msgid "Answer this question on desktop, or skip it."
 msgstr "Answer this question on desktop, or skip it."
@@ -2618,8 +2630,14 @@ msgctxt "job application"
 msgid "Apply"
 msgstr "Apply"
 
+msgid "approve"
+msgstr "approve"
+
 msgid "Approve"
 msgstr "Approve"
+
+msgid "Approve and send"
+msgstr "Approve and send"
 
 msgid "Approve edits"
 msgstr "Approve edits"
@@ -3164,8 +3182,14 @@ msgstr "Block"
 msgid "blocked"
 msgstr "blocked"
 
+msgid "Blocked"
+msgstr "Blocked"
+
 msgid "Blocked by Branch Rules"
 msgstr "Blocked by Branch Rules"
+
+msgid "Blocked, see the Desk"
+msgstr "Blocked, see the Desk"
 
 msgid "Blockquote"
 msgstr "Blockquote"
@@ -3734,6 +3758,9 @@ msgstr "Check for Updates"
 
 msgid "Check for Updates..."
 msgstr "Check for Updates..."
+
+msgid "Check off"
+msgstr "Check off"
 
 msgid "Check on running agents and read what they changed from your iPhone or iPad."
 msgstr "Check on running agents and read what they changed from your iPhone or iPad."
@@ -5198,6 +5225,9 @@ msgstr "Could not reach {0} to look for branch \"{1}\". Check your connection an
 msgid "Could not reach a mobile simulator."
 msgstr "Could not reach a mobile simulator."
 
+msgid "Could not reach the conversation"
+msgstr "Could not reach the conversation"
+
 msgid "Could not reach the desktop."
 msgstr "Could not reach the desktop."
 
@@ -6007,6 +6037,12 @@ msgstr "Debug"
 msgid "Debug with production stack traces"
 msgstr "Debug with production stack traces"
 
+msgid "Decision waiting on the Desk"
+msgstr "Decision waiting on the Desk"
+
+msgid "Decisions"
+msgstr "Decisions"
+
 msgid "default"
 msgstr "default"
 
@@ -6330,6 +6366,12 @@ msgstr "Design mode failed"
 msgid "Design review"
 msgstr "Design review"
 
+msgid "Desk"
+msgstr "Desk"
+
+msgid "Desk, {count} waiting on you"
+msgstr "Desk, {count} waiting on you"
+
 msgid "Desktop"
 msgstr "Desktop"
 
@@ -6541,6 +6583,9 @@ msgstr "Discover and connect to development servers on your network."
 msgid "Disk version"
 msgstr "Disk version"
 
+msgid "dismiss"
+msgstr "dismiss"
+
 msgid "Dismiss"
 msgstr "Dismiss"
 
@@ -6711,11 +6756,20 @@ msgstr "Draft · file"
 msgid "Draft · line {0}"
 msgstr "Draft · line {0}"
 
+msgid "Draft for {draftTarget}"
+msgstr "Draft for {draftTarget}"
+
 msgid "Draft opened"
 msgstr "Draft opened"
 
+msgid "Draft waiting on the Desk"
+msgstr "Draft waiting on the Desk"
+
 msgid "drafted 3 support replies"
 msgstr "drafted 3 support replies"
+
+msgid "Drafts to approve"
+msgstr "Drafts to approve"
 
 msgid "Drag to reorder"
 msgstr "Drag to reorder"
@@ -8093,6 +8147,9 @@ msgstr "Follow us on LinkedIn"
 
 msgid "Follow us on X/Twitter"
 msgstr "Follow us on X/Twitter"
+
+msgid "Follow-up for the agent (optional)"
+msgstr "Follow-up for the agent (optional)"
 
 msgid "Following"
 msgstr "Following"
@@ -10378,6 +10435,9 @@ msgstr "Mark as viewed"
 msgid "Mark Ready"
 msgstr "Mark Ready"
 
+msgid "Mark reviewed"
+msgstr "Mark reviewed"
+
 msgid "Markdown"
 msgstr "Markdown"
 
@@ -10780,6 +10840,9 @@ msgstr "most developers"
 
 msgid "Most of software history"
 msgstr "Most of software history"
+
+msgid "move"
+msgstr "move"
 
 msgid "Move"
 msgstr "Move"
@@ -11949,6 +12012,9 @@ msgstr "Nothing published in the last 30 days yet. Your rank appears once usage 
 msgid "Nothing running"
 msgstr "Nothing running"
 
+msgid "Nothing waits on you."
+msgstr "Nothing waits on you."
+
 msgid "Nothing was missed"
 msgstr "Nothing was missed"
 
@@ -12311,6 +12377,9 @@ msgstr "Open Command Palette"
 
 msgid "Open comment on GitHub"
 msgstr "Open comment on GitHub"
+
+msgid "Open conversation"
+msgstr "Open conversation"
 
 #. placeholder {0}: conversation.title
 msgid "Open conversation: {0}"
@@ -12718,6 +12787,9 @@ msgstr "Opt in from Superset under Settings → Account."
 
 msgid "Opt-out"
 msgstr "Opt-out"
+
+msgid "option"
+msgstr "option"
 
 msgid "Option shortcuts may prevent typing special characters"
 msgstr "Option shortcuts may prevent typing special characters"
@@ -14040,6 +14112,9 @@ msgstr "Ready for Review"
 #. placeholder {0}: error.message
 msgid "Ready for review failed: {0}"
 msgstr "Ready for review failed: {0}"
+
+msgid "Ready for review on the Desk"
+msgstr "Ready for review on the Desk"
 
 msgid "Ready in"
 msgstr "Ready in"
@@ -15779,6 +15854,9 @@ msgstr "Selecting text in a terminal copies it to the clipboard right away, with
 
 msgid "Send"
 msgstr "Send"
+
+msgid "Send (⌘Enter)"
+msgstr "Send (⌘Enter)"
 
 msgid "Send an invitation to join {organizationName}. Expires in 48 hours."
 msgstr "Send an invitation to join {organizationName}. Expires in 48 hours."
@@ -18553,6 +18631,9 @@ msgstr "To resume another agent conversation, run this in its folder:"
 
 msgid "To-do details"
 msgstr "To-do details"
+
+msgid "To-do on the Desk"
+msgstr "To-do on the Desk"
 
 msgid "To-dos"
 msgstr "To-dos"

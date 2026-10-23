@@ -17,26 +17,12 @@ export function hostConversationTodosQueryKey(hostUrl: string | null) {
 }
 
 /**
- * Every to-do of a host in one read, shared by all sidebar rows and the
- * Workspaces page. The host says when they change; the slow poll only
- * covers a missed event or a host that predates it. Null data on hosts too
- * old to keep to-dos.
+ * The query for every to-do of a host, for callers that read several hosts
+ * at once. Null data on hosts too old to keep to-dos.
  */
-export function useHostConversationTodos(
-	hostUrl: string | null,
-	enabled: boolean,
-) {
-	const queryKey = hostConversationTodosQueryKey(hostUrl);
-	const active = enabled && hostUrl !== null && !hostsWithoutTodos.has(hostUrl);
-	useHostStoreRefresh({
-		hostUrl,
-		store: "conversation-todos",
-		queryKey,
-		enabled: active,
-	});
-	return useQuery({
-		queryKey,
-		enabled: active,
+export function hostConversationTodosQuery(hostUrl: string | null) {
+	return {
+		queryKey: hostConversationTodosQueryKey(hostUrl),
 		queryFn: async (): Promise<ConversationTodo[] | null> => {
 			if (!hostUrl) return null;
 			try {
@@ -51,6 +37,34 @@ export function useHostConversationTodos(
 		},
 		refetchInterval: 60_000,
 		staleTime: 5_000,
+	};
+}
+
+export function hostKeepsTodos(hostUrl: string | null): boolean {
+	return hostUrl !== null && !hostsWithoutTodos.has(hostUrl);
+}
+
+/**
+ * Every to-do of a host in one read, shared by all sidebar rows and the
+ * Workspaces page. The host says when they change; the slow poll only
+ * covers a missed event or a host that predates it. Null data on hosts too
+ * old to keep to-dos.
+ */
+export function useHostConversationTodos(
+	hostUrl: string | null,
+	enabled: boolean,
+) {
+	const query = hostConversationTodosQuery(hostUrl);
+	const active = enabled && hostKeepsTodos(hostUrl);
+	useHostStoreRefresh({
+		hostUrl,
+		store: "conversation-todos",
+		queryKey: query.queryKey,
+		enabled: active,
+	});
+	return useQuery({
+		...query,
+		enabled: active,
 		placeholderData: (previous) => previous,
 	});
 }

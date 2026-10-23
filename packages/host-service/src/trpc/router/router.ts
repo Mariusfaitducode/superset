@@ -1,4 +1,5 @@
 import { router } from "../index";
+import { agentReportsRouter } from "./agent-reports";
 import { agentToolingRouter } from "./agent-tooling";
 import { agentsRouter } from "./agents";
 import { attachmentsRouter } from "./attachments";
@@ -34,6 +35,7 @@ import { workspaceNotesRouter } from "./workspace-notes";
 import { workspacesRouter } from "./workspaces";
 
 export const appRouter = router({
+	agentReports: agentReportsRouter,
 	agents: agentsRouter,
 	agentTooling: agentToolingRouter,
 	attachments: attachmentsRouter,
