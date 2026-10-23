@@ -2660,6 +2660,9 @@ msgstr "Архивировать окружение"
 msgid "Archive failed"
 msgstr "Не удалось архивировать"
 
+msgid "Archive to-do"
+msgstr "Архивировать задачу"
+
 msgid "Archive workspace"
 msgstr "Архивировать рабочую область"
 
@@ -2674,6 +2677,9 @@ msgstr "В архиве · {0}"
 #. placeholder {0}: formatCompactRelativeTime(workspace.deletedAt, now)
 msgid "Archived {0}"
 msgstr "В архиве {0}"
+
+msgid "Archived to-dos"
+msgstr "Архивные задачи"
 
 msgid "Are you sure you want to delete this file? This action cannot be undone."
 msgstr "Точно удалить этот файл? Действие нельзя отменить."
@@ -5261,6 +5267,9 @@ msgstr "Не удалось закрыть этот комментарий"
 msgid "Could not restart the host service"
 msgstr "Не удалось перезапустить службу хоста"
 
+msgid "Could not restore the to-do"
+msgstr "Не удалось восстановить задачу"
+
 msgid "Could not resume"
 msgstr "Не удалось возобновить"
 
@@ -6170,9 +6179,6 @@ msgstr "Удалить эту рабочую область?"
 
 msgid "Delete thread"
 msgstr "Удалить ветку"
-
-msgid "Delete to-do"
-msgstr "Удалить задачу"
 
 msgid "Delete without checking"
 msgstr "Удалить без проверки"
@@ -11214,6 +11220,9 @@ msgstr "Агентов пока нет."
 
 msgid "No API keys yet."
 msgstr "Ключей API пока нет."
+
+msgid "No archived to-dos"
+msgstr "Нет архивных задач"
 
 msgid "No archived workspaces"
 msgstr "Нет архивированных рабочих областей"

@@ -3,11 +3,14 @@ import { Button } from "@superset/ui/button";
 import { Input } from "@superset/ui/input";
 import { Popover, PopoverContent, PopoverTrigger } from "@superset/ui/popover";
 import { toast } from "@superset/ui/sonner";
+import { useQuery } from "@tanstack/react-query";
 import { ToggleGroup, ToggleGroupItem } from "@superset/ui/toggle-group";
 import { cn } from "@superset/ui/utils";
 import { type KeyboardEvent, type ReactNode, useState } from "react";
 import type { IconType } from "react-icons";
 import {
+	LuArchive,
+	LuArchiveRestore,
 	LuBot,
 	LuCheck,
 	LuCode,
@@ -16,6 +19,7 @@ import {
 	LuGitPullRequest,
 	LuMessageSquare,
 } from "react-icons/lu";
+import { formatRelativeTime } from "renderer/lib/formatRelativeTime";
 import type {
 	ConversationTodo,
 	TodoActions,
@@ -66,11 +70,11 @@ function Field({ label, children }: { label: string; children: ReactNode }) {
 function TodoDetails({
 	todo,
 	onChange,
-	onDelete,
+	onArchive,
 }: {
 	todo: ConversationTodo;
 	onChange: (fields: TodoFields) => void;
-	onDelete: () => void;
+	onArchive: () => void;
 }) {
 	const { t } = useLingui();
 	const [link, setLink] = useState(todo.link ?? "");
@@ -161,10 +165,11 @@ function TodoDetails({
 			<Button
 				variant="ghost"
 				size="sm"
-				onClick={onDelete}
-				className="h-7 w-full text-xs text-red-500 hover:text-red-500"
+				onClick={onArchive}
+				className="h-7 w-full gap-1.5 text-xs text-muted-foreground"
 			>
-				{t`Delete to-do`}
+				<LuArchive className="size-3" />
+				{t`Archive to-do`}
 			</Button>
 		</div>
 	);
@@ -287,7 +292,7 @@ function TodoItem({
 						onChange={(fields) =>
 							report(actions.update(todo.id, fields), failed)
 						}
-						onDelete={() => report(actions.remove(todo.id), failed)}
+						onArchive={() => report(actions.archive(todo.id), failed)}
 					/>
 				</PopoverContent>
 			</Popover>
@@ -295,11 +300,71 @@ function TodoItem({
 	);
 }
 
+/** Read only while open; restoring puts the to-do back in the list. */
+function ArchivedTodos({
+	terminalId,
+	actions,
+}: {
+	terminalId: string;
+	actions: TodoActions;
+}) {
+	const { t } = useLingui();
+	const { data, isPending } = useQuery(actions.archivedQuery(terminalId));
+	const failed = t`Could not restore the to-do`;
+
+	if (isPending) return null;
+	if (!data?.length) {
+		return (
+			<p className="h-6 px-1 text-[11px] leading-6 text-muted-foreground/70">
+				{t`No archived to-dos`}
+			</p>
+		);
+	}
+	return (
+		<ul className="flex flex-col">
+			{data.map((todo) => (
+				<li
+					key={todo.id}
+					className="group/archived flex h-6 items-center gap-1.5 rounded-sm pr-1 pl-1 hover:bg-muted/60"
+				>
+					<span
+						title={todo.text}
+						className={cn(
+							"min-w-0 flex-1 truncate text-xs text-muted-foreground",
+							todo.done && "line-through",
+						)}
+					>
+						{todo.text}
+					</span>
+					{todo.archivedAt != null && (
+						<span
+							className="shrink-0 text-[10px] text-muted-foreground/70 tabular-nums"
+							title={new Date(todo.archivedAt).toLocaleString()}
+						>
+							{formatRelativeTime(todo.archivedAt)}
+						</span>
+					)}
+					<button
+						type="button"
+						aria-label={t`Restore`}
+						title={t`Restore`}
+						onClick={() => report(actions.restore(todo.id), failed)}
+						className="shrink-0 rounded-sm p-0.5 text-muted-foreground opacity-0 hover:bg-muted hover:text-foreground focus-visible:opacity-100 group-hover/archived:opacity-100"
+					>
+						<LuArchiveRestore className="size-3" />
+					</button>
+				</li>
+			))}
+		</ul>
+	);
+}
+
 /**
  * One conversation's to-dos, shared with its agent: the agent's own are
  * marked, and so are the user's it checked. Click the text to edit it, the
  * menu for priority, type, due day and link. Opens ready to type; Escape
- * clears the draft, then closes.
+ * clears the draft, then closes. Closed to-dos are archived, behind the
+ * archive button.
  */
 export function ConversationTodos({
 	terminalId,
@@ -314,6 +379,7 @@ export function ConversationTodos({
 }) {
 	const { t } = useLingui();
 	const [text, setText] = useState("");
+	const [showArchived, setShowArchived] = useState(false);
 	const today = localDay(new Date());
 	const doneCount = todos.filter((todo) => todo.done).length;
 	const failed = t`Could not update the to-do`;
@@ -364,7 +430,25 @@ export function ConversationTodos({
 						{t`Clear ${doneCount} done`}
 					</button>
 				)}
+				<button
+					type="button"
+					aria-pressed={showArchived}
+					aria-label={t`Archived to-dos`}
+					title={t`Archived to-dos`}
+					onClick={() => setShowArchived((shown) => !shown)}
+					className={cn(
+						"shrink-0 rounded-sm p-0.5 hover:bg-muted hover:text-foreground",
+						showArchived ? "text-foreground" : "text-muted-foreground/50",
+					)}
+				>
+					<LuArchive className="size-3" />
+				</button>
 			</div>
+			{showArchived && (
+				<div className="mt-0.5 border-t border-border/60 pt-0.5">
+					<ArchivedTodos terminalId={terminalId} actions={actions} />
+				</div>
+			)}
 		</div>
 	);
 }

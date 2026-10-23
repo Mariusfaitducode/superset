@@ -3,7 +3,8 @@ import { command } from "../../../lib/command";
 import { localTodosClient, resolveTodoId, todoActor } from "../../../lib/todos";
 
 export default command({
-	description: "Delete a to-do. Agents can only delete their own",
+	description:
+		"Archive a to-do: it leaves the list but is kept (`todos list --archived`, `todos restore`). Agents can only archive their own",
 	args: [
 		positional("id")
 			.required()
@@ -12,7 +13,7 @@ export default command({
 	run: async ({ ctx, args }) => {
 		const client = await localTodosClient(ctx);
 		const id = resolveTodoId(args.id as string, await client.list.query({}));
-		await client.remove.mutate({ actor: todoActor(), id });
-		return { data: { id }, message: `Deleted ${id.slice(0, 8)}` };
+		const todo = await client.archive.mutate({ actor: todoActor(), id });
+		return { data: todo, message: `Archived ${todo.text}` };
 	},
 });

@@ -48,14 +48,18 @@ export function todoConversation(
 }
 
 /** Accepts the short id `todos list` prints, as long as it is unambiguous. */
-export function resolveTodoId(idOrPrefix: string, todos: Todo[]): string {
+export function resolveTodoId(
+	idOrPrefix: string,
+	todos: Todo[],
+	hint = "Run: superset todos list --all",
+): string {
 	const matches = todos.filter((todo) => todo.id.startsWith(idOrPrefix));
 	if (matches.length === 1 && matches[0]) return matches[0].id;
 	throw new CLIError(
 		matches.length === 0
 			? `To-do not found: ${idOrPrefix}`
 			: `Several to-dos start with ${idOrPrefix}`,
-		"Run: superset todos list --all",
+		hint,
 	);
 }
 

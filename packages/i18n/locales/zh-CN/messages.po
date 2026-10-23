@@ -2660,6 +2660,9 @@ msgstr "归档环境"
 msgid "Archive failed"
 msgstr "归档失败"
 
+msgid "Archive to-do"
+msgstr "归档待办"
+
 msgid "Archive workspace"
 msgstr "归档工作区"
 
@@ -2674,6 +2677,9 @@ msgstr "已归档 · {0}"
 #. placeholder {0}: formatCompactRelativeTime(workspace.deletedAt, now)
 msgid "Archived {0}"
 msgstr "已归档 {0}"
+
+msgid "Archived to-dos"
+msgstr "已归档的待办"
 
 msgid "Are you sure you want to delete this file? This action cannot be undone."
 msgstr "确定要删除此文件吗？此操作无法撤销。"
@@ -5261,6 +5267,9 @@ msgstr "无法解决此评论"
 msgid "Could not restart the host service"
 msgstr "无法重启主机服务"
 
+msgid "Could not restore the to-do"
+msgstr "无法恢复待办"
+
 msgid "Could not resume"
 msgstr "无法继续"
 
@@ -6170,9 +6179,6 @@ msgstr "删除这个工作区？"
 
 msgid "Delete thread"
 msgstr "删除讨论串"
-
-msgid "Delete to-do"
-msgstr "删除待办"
 
 msgid "Delete without checking"
 msgstr "不检查直接删除"
@@ -11214,6 +11220,9 @@ msgstr "暂无智能体。"
 
 msgid "No API keys yet."
 msgstr "暂无API密钥。"
+
+msgid "No archived to-dos"
+msgstr "没有已归档的待办"
 
 msgid "No archived workspaces"
 msgstr "没有已归档的工作区"
