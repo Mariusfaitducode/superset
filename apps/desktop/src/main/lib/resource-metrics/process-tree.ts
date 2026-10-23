@@ -72,6 +72,25 @@ export async function captureProcessSnapshot(): Promise<ProcessSnapshot> {
 	return { byPid, childrenOf };
 }
 
+let sharedSnapshot: { at: number; snapshot: Promise<ProcessSnapshot> } | null =
+	null;
+
+/**
+ * Share one `ps` scan between the views that poll at the same time (the
+ * resource tree and the agent sessions both refresh every 2 s).
+ */
+export function captureSharedProcessSnapshot(
+	maxAgeMs: number,
+): Promise<ProcessSnapshot> {
+	const now = Date.now();
+	if (sharedSnapshot && now - sharedSnapshot.at <= maxAgeMs) {
+		return sharedSnapshot.snapshot;
+	}
+	const snapshot = captureProcessSnapshot();
+	sharedSnapshot = { at: now, snapshot };
+	return snapshot;
+}
+
 /**
  * Return every PID that is a descendant of `rootPid` (including
  * `rootPid` itself), provided the PID exists in the snapshot.

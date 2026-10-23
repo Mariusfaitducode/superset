@@ -105,6 +105,27 @@ describe("eventBus", () => {
 		expect(received).toEqual([["ws-1", { occurredAt: 2 }]]);
 	});
 
+	it("delivers host-store:changed to every listener, whatever its workspace", async () => {
+		const host = makeHostServer();
+		const bus = getEventBus(host.hostUrl, () => "tok");
+		const received: unknown[] = [];
+		cleanups.push(
+			bus.on("host-store:changed", "*", (_scope, payload) =>
+				received.push(payload),
+			),
+		);
+		cleanups.push(() => host.server.stop(true));
+
+		await waitFor(() => host.clientCount() === 1);
+		host.push({
+			type: "host-store:changed",
+			store: "conversation-todos",
+			occurredAt: 3,
+		});
+		await waitFor(() => received.length === 1);
+		expect(received).toEqual([{ store: "conversation-todos", occurredAt: 3 }]);
+	});
+
 	it("shares one connection per hostUrl across handles", async () => {
 		const host = makeHostServer();
 		const busA = getEventBus(host.hostUrl, () => "tok");

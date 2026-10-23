@@ -12,8 +12,12 @@ afterAll(() => {
 	rmSync(home, { recursive: true, force: true });
 });
 
+const changed: string[] = [];
 const caller = workspaceLabelsRouter.createCaller({
 	isAuthenticated: true,
+	eventBus: {
+		broadcastHostStoreChanged: (store: string) => changed.push(store),
+	},
 } as unknown as HostServiceContext);
 
 describe("workspaceLabelsRouter", () => {
@@ -26,6 +30,15 @@ describe("workspaceLabelsRouter", () => {
 			labelIds: [today.id],
 		});
 		expect((await caller.list()).assignments).toEqual({ ws: [today.id] });
+	});
+
+	test("tells clients when labels change, not when they are read", async () => {
+		changed.length = 0;
+		await caller.list();
+		expect(changed).toEqual([]);
+		const label = await caller.createLabel({ name: "Later", color: "gray" });
+		await caller.deleteLabel({ id: label.id });
+		expect(changed).toEqual(["workspace-labels", "workspace-labels"]);
 	});
 
 	test("answers BAD_REQUEST for a duplicate name", async () => {

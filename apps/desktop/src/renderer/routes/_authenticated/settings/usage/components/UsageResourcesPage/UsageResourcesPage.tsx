@@ -41,6 +41,7 @@ import {
 	sortWorkspaces,
 } from "renderer/routes/_authenticated/_dashboard/components/TopBar/components/ResourceConsumption/utils/workspaceGrouping";
 import { ResourceSparkline } from "renderer/routes/_authenticated/components/ResourceSparkline";
+import { AgentResourcesSection } from "./components/AgentResourcesSection";
 import { useResourceSampleBuffer } from "./hooks/useResourceSampleBuffer";
 
 const SORT_LABELS: Record<SortOption, MessageDescriptor> = {
@@ -161,7 +162,7 @@ function SystemOverview({ snapshot }: { snapshot: ResourceMetricsSnapshot }) {
 
 	return (
 		<div className="flex flex-col gap-2">
-			<div className="grid grid-cols-3 gap-x-4 gap-y-1 border-y py-2 md:grid-cols-6">
+			<div className="grid grid-cols-3 gap-x-4 gap-y-1 border-y py-2">
 				<Stat
 					label={t({
 						message: "Superset CPU",
@@ -179,24 +180,6 @@ function SystemOverview({ snapshot }: { snapshot: ResourceMetricsSnapshot }) {
 						message: "System RAM share",
 					})}
 					value={formatPercent(trackedSharePercent)}
-				/>
-				<Stat
-					label={t({
-						message: "System memory",
-					})}
-					value={`${formatMemory(host.usedMemory)} · ${formatPercent(host.memoryUsagePercent)}`}
-				/>
-				<Stat
-					label={t({
-						message: "CPU cores",
-					})}
-					value={String(host.cpuCoreCount)}
-				/>
-				<Stat
-					label={t({
-						message: "Load (1 m)",
-					})}
-					value={host.loadAverage1m.toFixed(2)}
 				/>
 			</div>
 			<div
@@ -308,7 +291,16 @@ export function UsageResourcesPage() {
 
 	return (
 		<div className="mx-auto flex min-h-full w-full max-w-5xl flex-col gap-3 px-6 py-4">
-			<div className="flex items-center gap-2">
+			<AgentResourcesSection
+				surface={surface}
+				resources={snapshot}
+				onOpenTerminal={navigateToPane}
+			/>
+
+			<div className="mt-3 flex items-center gap-2">
+				<h3 className="text-[13px] font-medium">
+					<Trans>Superset processes</Trans>
+				</h3>
 				<span className="ml-auto flex items-center gap-1.5 text-[10px] text-muted-foreground">
 					<span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
 					<Trans>Live · local machine · every 2 s</Trans>

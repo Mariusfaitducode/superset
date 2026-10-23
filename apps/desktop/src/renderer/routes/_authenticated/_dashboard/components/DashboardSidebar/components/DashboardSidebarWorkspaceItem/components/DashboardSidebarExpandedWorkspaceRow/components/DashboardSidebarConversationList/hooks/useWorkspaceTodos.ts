@@ -1,17 +1,19 @@
-import { useQuery, useQueryClient } from "@tanstack/react-query";
+import { useQueryClient } from "@tanstack/react-query";
 import { useCallback, useEffect, useMemo } from "react";
+import {
+	type ConversationTodo,
+	hostConversationTodosQueryKey,
+	useHostConversationTodos,
+} from "renderer/hooks/host-service/useHostConversationTodos";
 import {
 	getHostServiceClientByUrl,
 	type HostServiceClient,
 } from "renderer/lib/host-service-client";
-import { isMissingProcedureError } from "renderer/lib/isMissingProcedureError";
 import { useHostWorkspaces } from "renderer/routes/_authenticated/providers/HostWorkspacesProvider";
 import { useConversationTodosStore } from "renderer/stores/conversation-todos";
 import { compareTodos } from "../utils/todo-order";
 
-export type ConversationTodo = Awaited<
-	ReturnType<HostServiceClient["conversationTodos"]["list"]["query"]>
->[number];
+export type { ConversationTodo };
 
 export type TodoFields = Omit<
 	Parameters<HostServiceClient["conversationTodos"]["update"]["mutate"]>[0],
@@ -26,7 +28,6 @@ export interface TodoActions {
 	clearDone: (terminalId: string) => Promise<void>;
 }
 
-const hostsWithoutTodos = new Set<string>();
 const importing = new Set<string>();
 
 /**
@@ -70,7 +71,7 @@ async function importLocalTodos(
 
 /**
  * The to-dos of a workspace's conversations, from their host, where agents
- * read and write them too. Polled, since agents change them from the CLI.
+ * read and write them too. Every row reads from one per-host query.
  * `available` is false on hosts too old to keep to-dos.
  */
 export function useWorkspaceTodos({
@@ -90,33 +91,13 @@ export function useWorkspaceTodos({
 		? null
 		: cache.resolveHostUrl(hostId);
 	const queryKey = useMemo(
-		() => ["sidebar-conversation-todos", hostUrl, workspaceId],
-		[hostUrl, workspaceId],
+		() => hostConversationTodosQueryKey(hostUrl),
+		[hostUrl],
 	);
-
-	const query = useQuery({
-		queryKey,
-		enabled:
-			enabled &&
-			hostUrl !== null &&
-			terminalIds.length > 0 &&
-			!hostsWithoutTodos.has(hostUrl),
-		queryFn: async (): Promise<ConversationTodo[] | null> => {
-			if (!hostUrl) return null;
-			try {
-				return await getHostServiceClientByUrl(
-					hostUrl,
-				).conversationTodos.list.query({ workspaceId });
-			} catch (error) {
-				if (!isMissingProcedureError(error)) throw error;
-				hostsWithoutTodos.add(hostUrl);
-				return null;
-			}
-		},
-		refetchInterval: 10_000,
-		staleTime: 5_000,
-		placeholderData: (previous) => previous,
-	});
+	const query = useHostConversationTodos(
+		hostUrl,
+		enabled && terminalIds.length > 0,
+	);
 
 	const terminalKey = terminalIds.join(",");
 	const loaded = query.data != null;
@@ -134,13 +115,14 @@ export function useWorkspaceTodos({
 	const byTerminal = useMemo(() => {
 		const map = new Map<string, ConversationTodo[]>();
 		for (const todo of query.data ?? []) {
+			if (todo.workspaceId !== workspaceId) continue;
 			const list = map.get(todo.terminalId) ?? [];
 			list.push(todo);
 			map.set(todo.terminalId, list);
 		}
 		for (const list of map.values()) list.sort(compareTodos);
 		return map;
-	}, [query.data]);
+	}, [query.data, workspaceId]);
 
 	const mutate = useCallback(
 		async (
