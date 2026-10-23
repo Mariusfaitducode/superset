@@ -42,6 +42,7 @@ import { ConversationSwitcher } from "./components/ConversationSwitcher";
 import { CrossVersionMismatchState } from "./components/CrossVersionMismatchState";
 import { RemotePortForwarder } from "./components/RemotePortForwarder";
 import { SaveAsEnvironmentMount } from "./components/SaveAsEnvironmentMount";
+import { TaskMonitor } from "./components/TaskMonitor";
 import { TopBar } from "./components/TopBar";
 import { useShowsAppTopBar } from "./hooks/useShowsAppTopBar";
 
@@ -253,6 +254,7 @@ function DashboardLayout() {
 				<div className="flex h-full w-full overflow-hidden">
 					<CommandPaletteHost />
 					<ConversationSwitcher />
+					<TaskMonitor />
 					{sidebarOutsideColumn && sidebarPanel}
 					<div className="flex flex-1 flex-col min-w-0 min-h-0">
 						{showsAppTopBar && <TopBar />}

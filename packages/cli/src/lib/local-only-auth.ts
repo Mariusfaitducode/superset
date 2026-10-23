@@ -8,7 +8,12 @@ import type { ResolvedAuth } from "./resolve-auth";
  * its own and borrows the host's token, which times out when the machine is
  * loaded, so these fall back to running without one instead of failing.
  */
-export const LOCAL_HOST_COMMANDS = new Set(["todos", "labels"]);
+export const LOCAL_HOST_COMMANDS = new Set([
+	"todos",
+	"labels",
+	"track",
+	"tracks",
+]);
 
 export function localOnlyAuth(): ResolvedAuth {
 	const stored = readConfig();

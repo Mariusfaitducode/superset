@@ -10,7 +10,12 @@ afterEach(() => {
 
 describe("localOnlyAuth", () => {
 	test("covers only the commands that talk to the local host", () => {
-		expect([...LOCAL_HOST_COMMANDS].sort()).toEqual(["labels", "todos"]);
+		expect([...LOCAL_HOST_COMMANDS].sort()).toEqual([
+			"labels",
+			"todos",
+			"track",
+			"tracks",
+		]);
 	});
 
 	test("takes the organization of the terminal it runs in", () => {
