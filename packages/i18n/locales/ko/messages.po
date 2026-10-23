@@ -475,6 +475,10 @@ msgstr "{0}이(가) 이 컴퓨터에는 설정되어 있지만 계정에는 없�
 msgid "{0} more — refine your search"
 msgstr "{0}개 더 있습니다 — 검색어를 좁혀 보세요"
 
+#. placeholder {0}: section.hidden
+msgid "{0} more, refine the search"
+msgstr "{0}개 더, 검색을 좁히세요"
+
 #. placeholder {0}: index + 1
 #. placeholder {1}: pages.length
 msgctxt "question progress"
@@ -511,6 +515,10 @@ msgstr "프로젝트 {0}개"
 #. placeholder {0}: conversation.queuedPrompts
 msgid "{0} queued messages"
 msgstr "대기 중인 메시지 {0}개"
+
+#. placeholder {0}: selected.length
+msgid "{0} refs"
+msgstr "ref {0}개"
 
 #. placeholder {0}: tally.running
 msgid "{0} Running"
@@ -1769,6 +1777,9 @@ msgstr "프로젝트 설정에서 라이프사이클 실행 스크립트를 추�
 msgid "Add a project to see GitHub issues."
 msgstr "GitHub 이슈를 보려면 프로젝트를 추가하세요."
 
+msgid "Add a project to see its git graph."
+msgstr "프로젝트를 추가하면 git 그래프를 볼 수 있습니다."
+
 msgid "Add a project to see pull requests."
 msgstr "풀 리퀘스트를 보려면 프로젝트를 추가하세요."
 
@@ -2172,6 +2183,9 @@ msgstr "모든 담당자"
 
 msgid "All authors"
 msgstr "모든 작성자"
+
+msgid "All branches"
+msgstr "모든 브랜치"
 
 msgid "All changes saved"
 msgstr "모든 변경 사항 저장됨"
@@ -4899,6 +4913,10 @@ msgstr "복사됨!"
 msgid "Copy"
 msgstr "복사"
 
+#. placeholder {0}: commit.hash
+msgid "Copy {0}"
+msgstr "{0} 복사"
+
 msgid "Copy agent session ID"
 msgstr "에이전트 세션 ID 복사"
 
@@ -5976,6 +5994,9 @@ msgstr "데이터 및 API"
 
 msgid "Data display"
 msgstr "데이터 표시"
+
+msgid "Date"
+msgstr "날짜"
 
 msgid "Date created"
 msgstr "생성일"
@@ -8355,6 +8376,9 @@ msgstr "Git 및 worktree"
 msgid "Git author name"
 msgstr "Git 작성자 이름"
 
+msgid "Git graph"
+msgstr "Git 그래프"
+
 msgid "GitHub"
 msgstr "GitHub"
 
@@ -8474,6 +8498,9 @@ msgstr "Superset에 필요한 OS 권한을 허용합니다."
 
 msgid "Granted"
 msgstr "허용됨"
+
+msgid "Graph"
+msgstr "그래프"
 
 msgid "Grayscale"
 msgstr "흑백 음영"
@@ -9077,6 +9104,10 @@ msgstr "진행 중"
 
 msgid "In Progress"
 msgstr "진행 중"
+
+#. placeholder {0}: badge.syncedRemotes.join(", ")
+msgid "In sync with {0}"
+msgstr "{0}와 동기화됨"
 
 msgid "In the Superset desktop app, open <0>Settings → Appearance → Theme</0>."
 msgstr "Superset 데스크톱 앱에서 <0>설정 → 모양 → 테마</0>를 여세요."
@@ -10043,6 +10074,9 @@ msgstr "llms.txt (AI 에이전트용 색인)"
 msgid "Load (1 min)"
 msgstr "부하 (1분)"
 
+msgid "Load {PAGE_SIZE} more commits"
+msgstr "커밋 {PAGE_SIZE}개 더 불러오기"
+
 msgid "load agent settings"
 msgstr "에이전트 설정을 불러올"
 
@@ -10100,6 +10134,9 @@ msgstr "GitHub 세부 정보 불러오는 중"
 msgid "Loading groups…"
 msgstr "그룹 불러오는 중…"
 
+msgid "Loading history…"
+msgstr "기록 불러오는 중…"
+
 msgid "Loading issue…"
 msgstr "이슈 불러오는 중…"
 
@@ -10156,6 +10193,9 @@ msgstr "불러오는 중…"
 
 msgid "Local"
 msgstr "로컬"
+
+msgid "Local branches"
+msgstr "로컬 브랜치"
 
 msgid "Local Device"
 msgstr "로컬 기기"
@@ -10575,6 +10615,9 @@ msgstr "메시지"
 msgid "Message in channel"
 msgstr "채널 내 메시지"
 
+msgid "Message, author, hash, branch"
+msgstr "메시지, 작성자, 해시, 브랜치"
+
 msgid "Message..."
 msgstr "메시지..."
 
@@ -10836,6 +10879,9 @@ msgstr "내 마지막 메시지"
 
 msgid "My Tasks"
 msgstr "내 작업"
+
+msgid "My worktrees"
+msgstr "내 워크트리"
 
 msgid "Mystery Machinist"
 msgstr "수수께끼의 기계공"
@@ -11295,6 +11341,9 @@ msgstr "아직 코멘트가 없습니다."
 
 msgid "No comments yet. Turn on comment mode and click anything on the page to start one."
 msgstr "아직 댓글이 없습니다. 댓글 모드를 켜고 페이지의 아무 곳이나 클릭해 시작하세요."
+
+msgid "No commits for these filters."
+msgstr "이 필터에 해당하는 커밋이 없습니다."
 
 msgid "No commits on this branch yet."
 msgstr "이 브랜치에는 아직 커밋이 없습니다."
@@ -12049,6 +12098,9 @@ msgstr "일주일 이상"
 msgid "on {cores} cores"
 msgstr "{cores}코어 기준"
 
+msgid "on {headBranch}"
+msgstr "{headBranch}에서"
+
 msgid "on {offScopeHostName} — won't run here"
 msgstr "{offScopeHostName}에 있음 — 여기서는 실행되지 않습니다"
 
@@ -12141,6 +12193,9 @@ msgstr "플랜은 조직 소유자만 변경할 수 있습니다. 소유자에�
 
 msgid "Only available on macOS."
 msgstr "macOS에서만 사용할 수 있습니다."
+
+msgid "Only branches with a worktree or a conversation"
+msgstr "워크트리나 대화가 있는 브랜치만"
 
 msgid "Only host owners can change membership"
 msgstr "호스트 소유자만 멤버십을 변경할 수 있습니다"
@@ -14173,6 +14228,10 @@ msgstr "참조"
 msgid "Refresh"
 msgstr "새로 고침"
 
+#. placeholder {0}: log.data.durationMs
+msgid "Refresh (last load {0} ms)"
+msgstr "새로 고침 (마지막 {0} ms)"
+
 #. placeholder {0}: error.message
 msgid "Refresh failed: {0}"
 msgstr "새로 고침 실패: {0}"
@@ -14278,6 +14337,9 @@ msgstr "원격 액세스"
 
 msgid "Remote Access may be off"
 msgstr "원격 액세스가 꺼져 있을 수 있습니다"
+
+msgid "Remote branches"
+msgstr "원격 브랜치"
 
 msgid "Remote MCP server — connects over HTTP"
 msgstr "원격 MCP 서버 — HTTP로 연결합니다"
@@ -15390,6 +15452,9 @@ msgstr "작성자 검색…"
 msgid "Search automations"
 msgstr "자동화 검색"
 
+msgid "Search branches and tags"
+msgstr "브랜치와 태그 검색"
+
 msgid "Search branches..."
 msgstr "브랜치 검색..."
 
@@ -16095,6 +16160,9 @@ msgstr "채팅 입력창에 마이크를 표시합니다. Codex가 ChatGPT에 �
 msgid "Show a Usage button in the home sidebar, under Pull requests"
 msgstr "홈 사이드바의 풀 리퀘스트 아래에 사용량 버튼을 표시합니다"
 
+msgid "Show all"
+msgstr "모두 표시"
+
 msgid "Show all {count}"
 msgstr "{count}개 모두 보기"
 
@@ -16188,6 +16256,10 @@ msgstr "더 보기"
 msgid "Show on Sidebar"
 msgstr "사이드바에 표시"
 
+#. placeholder {0}: badge.label
+msgid "Show only {0}"
+msgstr "{0}만 표시"
+
 msgid "Show open items"
 msgstr "열린 항목 표시"
 
@@ -16244,6 +16316,9 @@ msgstr "사이드바에 사용량 탭 표시"
 
 msgid "showArrow opt-in"
 msgstr "showArrow 선택 사용"
+
+msgid "Showing the latest {MAX_COMMITS} commits. Filter by branch to go further back."
+msgstr "최근 커밋 {MAX_COMMITS}개 표시 중. 더 이전은 브랜치로 필터링하세요."
 
 msgid "Shown"
 msgstr "표시됨"
@@ -17478,6 +17553,9 @@ msgstr "다음 열의 표"
 
 msgid "Tabs"
 msgstr "탭"
+
+msgid "Tags"
+msgstr "태그"
 
 msgid "Tailwind v4 theme reference"
 msgstr "Tailwind v4 테마 참고 문서"
@@ -18962,6 +19040,9 @@ msgstr "커밋 안 됨 · 푸시 안 됨"
 msgid "Uncommitted changes"
 msgstr "커밋되지 않은 변경 사항"
 
+msgid "Uncommitted changes ({uncommitted})"
+msgstr "커밋되지 않은 변경 ({uncommitted})"
+
 msgid "Uncommitted changes, on top of {base}"
 msgstr "커밋되지 않은 변경, {base} 위"
 
@@ -20113,8 +20194,14 @@ msgstr "worktree를 열었습니다"
 msgid "Worktree out of sync"
 msgstr "worktree가 동기화되지 않음"
 
+msgid "Worktree: {worktreePath}"
+msgstr "워크트리: {worktreePath}"
+
 msgid "Worktrees"
 msgstr "worktree"
+
+msgid "Worktrees and conversations"
+msgstr "워크트리와 대화"
 
 msgid "Worktrees are removed from disk; workspaces on the project's checkout only close. Files in the checkout stay as they are."
 msgstr "worktree는 디스크에서 제거되며, 프로젝트 체크아웃에 있는 워크스페이스는 닫히기만 합니다. 체크아웃의 파일은 그대로 유지됩니다."

@@ -475,6 +475,10 @@ msgstr "{0} is ingesteld op deze machine, maar niet op je account"
 msgid "{0} more — refine your search"
 msgstr "Nog {0} — verfijn je zoekopdracht"
 
+#. placeholder {0}: section.hidden
+msgid "{0} more, refine the search"
+msgstr "{0} meer, verfijn de zoekopdracht"
+
 #. placeholder {0}: index + 1
 #. placeholder {1}: pages.length
 msgctxt "question progress"
@@ -511,6 +515,10 @@ msgstr "{0} projecten"
 #. placeholder {0}: conversation.queuedPrompts
 msgid "{0} queued messages"
 msgstr "{0} berichten in de wachtrij"
+
+#. placeholder {0}: selected.length
+msgid "{0} refs"
+msgstr "{0} refs"
 
 #. placeholder {0}: tally.running
 msgid "{0} Running"
@@ -1769,6 +1777,9 @@ msgstr "Voeg een lifecycle-runscript toe in de projectinstellingen of markeer ee
 msgid "Add a project to see GitHub issues."
 msgstr "Voeg een project toe om GitHub-issues te zien."
 
+msgid "Add a project to see its git graph."
+msgstr "Voeg een project toe om de git-graaf te zien."
+
 msgid "Add a project to see pull requests."
 msgstr "Voeg een project toe om pull requests te zien."
 
@@ -2172,6 +2183,9 @@ msgstr "Alle personen"
 
 msgid "All authors"
 msgstr "Alle auteurs"
+
+msgid "All branches"
+msgstr "Alle branches"
 
 msgid "All changes saved"
 msgstr "Alle wijzigingen opgeslagen"
@@ -4899,6 +4913,10 @@ msgstr "Gekopieerd!"
 msgid "Copy"
 msgstr "Kopiëren"
 
+#. placeholder {0}: commit.hash
+msgid "Copy {0}"
+msgstr "{0} kopiëren"
+
 msgid "Copy agent session ID"
 msgstr "Agentsessie-ID kopiëren"
 
@@ -5976,6 +5994,9 @@ msgstr "Data en API's"
 
 msgid "Data display"
 msgstr "Gegevensweergave"
+
+msgid "Date"
+msgstr "Datum"
 
 msgid "Date created"
 msgstr "Aanmaakdatum"
@@ -8355,6 +8376,9 @@ msgstr "Git en worktrees"
 msgid "Git author name"
 msgstr "Naam van git-auteur"
 
+msgid "Git graph"
+msgstr "Git-graaf"
+
 msgid "GitHub"
 msgstr "GitHub"
 
@@ -8474,6 +8498,9 @@ msgstr "Geef Superset de OS-rechten die het nodig heeft."
 
 msgid "Granted"
 msgstr "Verleend"
+
+msgid "Graph"
+msgstr "Graaf"
 
 msgid "Grayscale"
 msgstr "Grijstinten"
@@ -9077,6 +9104,10 @@ msgstr "Bezig"
 
 msgid "In Progress"
 msgstr "Bezig"
+
+#. placeholder {0}: badge.syncedRemotes.join(", ")
+msgid "In sync with {0}"
+msgstr "Gelijk met {0}"
 
 msgid "In the Superset desktop app, open <0>Settings → Appearance → Theme</0>."
 msgstr "Open in de Superset-desktopapp <0>Instellingen → Uiterlijk → Thema</0>."
@@ -10043,6 +10074,9 @@ msgstr "llms.txt (index voor AI-agents)"
 msgid "Load (1 min)"
 msgstr "Belasting (1 min)"
 
+msgid "Load {PAGE_SIZE} more commits"
+msgstr "Nog {PAGE_SIZE} commits laden"
+
 msgid "load agent settings"
 msgstr "agentinstellingen laden"
 
@@ -10100,6 +10134,9 @@ msgstr "GitHub-details laden"
 msgid "Loading groups…"
 msgstr "Groepen laden…"
 
+msgid "Loading history…"
+msgstr "Geschiedenis laden…"
+
 msgid "Loading issue…"
 msgstr "Issue laden…"
 
@@ -10156,6 +10193,9 @@ msgstr "Laden…"
 
 msgid "Local"
 msgstr "Lokaal"
+
+msgid "Local branches"
+msgstr "Lokale branches"
 
 msgid "Local Device"
 msgstr "Lokaal apparaat"
@@ -10575,6 +10615,9 @@ msgstr "Bericht"
 msgid "Message in channel"
 msgstr "Bericht in kanaal"
 
+msgid "Message, author, hash, branch"
+msgstr "Bericht, auteur, hash, branch"
+
 msgid "Message..."
 msgstr "Bericht..."
 
@@ -10836,6 +10879,9 @@ msgstr "Mijn laatste ber."
 
 msgid "My Tasks"
 msgstr "Mijn taken"
+
+msgid "My worktrees"
+msgstr "Mijn worktrees"
 
 msgid "Mystery Machinist"
 msgstr "Mysterieuze Machinist"
@@ -11295,6 +11341,9 @@ msgstr "Nog geen opmerkingen."
 
 msgid "No comments yet. Turn on comment mode and click anything on the page to start one."
 msgstr "Nog geen opmerkingen. Zet de opmerkingsmodus aan en klik op iets op de pagina om er een te plaatsen."
+
+msgid "No commits for these filters."
+msgstr "Geen commits voor deze filters."
 
 msgid "No commits on this branch yet."
 msgstr "Nog geen commits op deze branch."
@@ -12049,6 +12098,9 @@ msgstr "Ouder dan een week"
 msgid "on {cores} cores"
 msgstr "op {cores} cores"
 
+msgid "on {headBranch}"
+msgstr "op {headBranch}"
+
 msgid "on {offScopeHostName} — won't run here"
 msgstr "op {offScopeHostName} — draait hier niet"
 
@@ -12141,6 +12193,9 @@ msgstr "Alleen een eigenaar van de organisatie kan het plan wijzigen. Vraag de j
 
 msgid "Only available on macOS."
 msgstr "Alleen beschikbaar op macOS."
+
+msgid "Only branches with a worktree or a conversation"
+msgstr "Alleen branches met een worktree of gesprek"
 
 msgid "Only host owners can change membership"
 msgstr "Alleen eigenaren van de host kunnen het lidmaatschap wijzigen"
@@ -14173,6 +14228,10 @@ msgstr "Verwijst naar"
 msgid "Refresh"
 msgstr "Vernieuwen"
 
+#. placeholder {0}: log.data.durationMs
+msgid "Refresh (last load {0} ms)"
+msgstr "Vernieuwen (laatste keer {0} ms)"
+
 #. placeholder {0}: error.message
 msgid "Refresh failed: {0}"
 msgstr "Vernieuwen mislukt: {0}"
@@ -14278,6 +14337,9 @@ msgstr "Externe toegang"
 
 msgid "Remote Access may be off"
 msgstr "Externe toegang staat mogelijk uit"
+
+msgid "Remote branches"
+msgstr "Remote branches"
 
 msgid "Remote MCP server — connects over HTTP"
 msgstr "Externe MCP-server — verbindt via HTTP"
@@ -15390,6 +15452,9 @@ msgstr "Auteurs zoeken…"
 msgid "Search automations"
 msgstr "Automatiseringen zoeken"
 
+msgid "Search branches and tags"
+msgstr "Branches en tags zoeken"
+
 msgid "Search branches..."
 msgstr "Branches zoeken..."
 
@@ -16095,6 +16160,9 @@ msgstr "Een microfoon in het chatinvoerveld tonen. Spraak wordt getranscribeerd 
 msgid "Show a Usage button in the home sidebar, under Pull requests"
 msgstr "Toon een knop Gebruik in de zijbalk van het startscherm, onder Pull requests"
 
+msgid "Show all"
+msgstr "Alles tonen"
+
 msgid "Show all {count}"
 msgstr "Alle {count} tonen"
 
@@ -16188,6 +16256,10 @@ msgstr "Meer tonen"
 msgid "Show on Sidebar"
 msgstr "In de zijbalk tonen"
 
+#. placeholder {0}: badge.label
+msgid "Show only {0}"
+msgstr "Alleen {0} tonen"
+
 msgid "Show open items"
 msgstr "Open items tonen"
 
@@ -16244,6 +16316,9 @@ msgstr "Gebruikstabblad tonen in zijbalk"
 
 msgid "showArrow opt-in"
 msgstr "showArrow inschakelen"
+
+msgid "Showing the latest {MAX_COMMITS} commits. Filter by branch to go further back."
+msgstr "De laatste {MAX_COMMITS} commits. Filter op branch om verder terug te gaan."
 
 msgid "Shown"
 msgstr "Weergegeven"
@@ -17478,6 +17553,9 @@ msgstr "tabel met"
 
 msgid "Tabs"
 msgstr "Tabbladen"
+
+msgid "Tags"
+msgstr "Tags"
 
 msgid "Tailwind v4 theme reference"
 msgstr "Tailwind v4-themareferentie"
@@ -18962,6 +19040,9 @@ msgstr "Niet gecommit · Niet gepusht"
 msgid "Uncommitted changes"
 msgstr "Niet-gecommitte wijzigingen"
 
+msgid "Uncommitted changes ({uncommitted})"
+msgstr "Niet-gecommitte wijzigingen ({uncommitted})"
+
 msgid "Uncommitted changes, on top of {base}"
 msgstr "Niet-gecommitte wijzigingen, bovenop {base}"
 
@@ -20113,8 +20194,14 @@ msgstr "Worktree geopend"
 msgid "Worktree out of sync"
 msgstr "Worktree niet in sync"
 
+msgid "Worktree: {worktreePath}"
+msgstr "Worktree: {worktreePath}"
+
 msgid "Worktrees"
 msgstr "Worktrees"
+
+msgid "Worktrees and conversations"
+msgstr "Worktrees en gesprekken"
 
 msgid "Worktrees are removed from disk; workspaces on the project's checkout only close. Files in the checkout stay as they are."
 msgstr "Worktrees worden van de schijf verwijderd; werkruimtes op de checkout van het project worden alleen gesloten. Bestanden in de checkout blijven ongewijzigd."
