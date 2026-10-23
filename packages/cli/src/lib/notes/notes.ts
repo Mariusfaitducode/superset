@@ -8,6 +8,7 @@ export type Note = Awaited<
 >[number];
 
 export const NOTE_STATUSES = ["open", "kept", "dropped", "done"] as const;
+export const NOTE_KINDS = ["note", "context"] as const;
 
 /** The workspace the command runs in, unless the flag names another. */
 export function noteWorkspace(
@@ -40,6 +41,7 @@ export function noteRows(notes: Note[]) {
 	return notes.map((note) => ({
 		id: note.id.slice(0, 8),
 		status: note.status,
+		kind: note.kind,
 		by: note.createdBy,
 		text: note.details ? `${note.text} — ${note.details}` : note.text,
 	}));

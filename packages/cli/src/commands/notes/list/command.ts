@@ -13,8 +13,8 @@ export default command({
 	display: (data) =>
 		table(
 			noteRows((data ?? []) as Parameters<typeof noteRows>[0]),
-			["id", "status", "by", "text"],
-			["ID", "STATUS", "BY", "TEXT"],
+			["id", "status", "kind", "by", "text"],
+			["ID", "STATUS", "KIND", "BY", "TEXT"],
 		),
 	run: async ({ ctx, options }) => {
 		const notes = await (await localNotesClient(ctx)).list.query(
