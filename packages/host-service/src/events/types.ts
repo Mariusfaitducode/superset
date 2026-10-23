@@ -253,12 +253,12 @@ export interface ChatSessionsChangedMessage {
 }
 
 /**
- * A host-kept store changed (to-dos or workspace labels), from the app or an
- * agent's CLI: clients refetch it instead of polling.
+ * A host-kept store changed (to-dos, workspace labels or agent reports), from
+ * the app or an agent's CLI: clients refetch it instead of polling.
  */
 export interface HostStoreChangedMessage {
 	type: "host-store:changed";
-	store: "conversation-todos" | "workspace-labels";
+	store: "conversation-todos" | "workspace-labels" | "agent-reports";
 	occurredAt: number;
 }
 

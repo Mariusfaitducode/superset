@@ -2112,6 +2112,9 @@ msgstr "依排程或觸發器執行的代理程式"
 msgid "Agents on your phone"
 msgstr "手機上的代理程式"
 
+msgid "Agents put their hand-overs here with superset report: work to review, decisions, drafts to approve, blockers."
+msgstr "代理透過 superset report 將交接放在這裡：待審閱的工作、決策、待核准的草稿、阻礙。"
+
 msgid "Agents remember what they learn about your codebase, so every new session starts warm."
 msgstr "代理程式會記住它們對你程式碼庫的了解，讓每個新會話一開始就有脈絡。"
 
@@ -2132,6 +2135,9 @@ msgstr "同時工作的代理"
 
 msgid "Agents' to-dos"
 msgstr "代理的待辦"
+
+msgid "Agents' to-dos for you"
+msgstr "代理給你的待辦"
 
 msgid "Aggregate agent usage across every developer on the Superset leaderboard — tokens, cost, cache behaviour and which models people actually reach for."
 msgstr "Superset 排行榜上所有開發者的彙總代理使用量 — tokens、成本、快取行為，以及大家實際選用的模型。"
@@ -2470,8 +2476,14 @@ msgstr "匿名組裝工"
 msgid "another device"
 msgstr "另一臺裝置"
 
+msgid "answer"
+msgstr "回答"
+
 msgid "Answer any questions in the terminal below, such as a password."
 msgstr "請在下方終端機中回答問題，例如輸入密碼。"
+
+msgid "Answer the agent"
+msgstr "回覆代理"
 
 msgid "Answer this question on desktop, or skip it."
 msgstr "請在桌面版回答此問題，或略過。"
@@ -2656,8 +2668,14 @@ msgctxt "job application"
 msgid "Apply"
 msgstr "應徵"
 
+msgid "approve"
+msgstr "核准"
+
 msgid "Approve"
 msgstr "批准"
+
+msgid "Approve and send"
+msgstr "核准並傳送"
 
 msgid "Approve edits"
 msgstr "批准編輯"
@@ -3205,8 +3223,14 @@ msgstr "方塊"
 msgid "blocked"
 msgstr "已阻止"
 
+msgid "Blocked"
+msgstr "受阻"
+
 msgid "Blocked by Branch Rules"
 msgstr "被分支規則阻止"
+
+msgid "Blocked, see the Desk"
+msgstr "受阻，請查看 Desk"
 
 msgid "Blockquote"
 msgstr "引用塊"
@@ -3775,6 +3799,9 @@ msgstr "檢查更新"
 
 msgid "Check for Updates..."
 msgstr "檢查更新..."
+
+msgid "Check off"
+msgstr "勾選"
 
 msgid "Check on running agents and read what they changed from your iPhone or iPad."
 msgstr "在 iPhone 或 iPad 上查看執行中的 agent，並閱讀它們做出的變更。"
@@ -5249,6 +5276,9 @@ msgstr "無法連線至 {0} 以尋找分支「{1}」。請檢查網路連線與 
 msgid "Could not reach a mobile simulator."
 msgstr "無法連線至行動模擬器。"
 
+msgid "Could not reach the conversation"
+msgstr "無法連線到對話"
+
 msgid "Could not reach the desktop."
 msgstr "無法連線至桌面。"
 
@@ -6064,6 +6094,12 @@ msgstr "除錯"
 msgid "Debug with production stack traces"
 msgstr "用正式環境堆疊追蹤除錯"
 
+msgid "Decision waiting on the Desk"
+msgstr "Desk 上有待做的決策"
+
+msgid "Decisions"
+msgstr "決策"
+
 msgid "default"
 msgstr "預設"
 
@@ -6387,6 +6423,12 @@ msgstr "設計模式失敗"
 msgid "Design review"
 msgstr "設計審查"
 
+msgid "Desk"
+msgstr "Desk"
+
+msgid "Desk, {count} waiting on you"
+msgstr "Desk，{count} 項等待你處理"
+
 msgid "Desktop"
 msgstr "桌面"
 
@@ -6598,6 +6640,9 @@ msgstr "發現並連線你網路中的開發伺服器。"
 msgid "Disk version"
 msgstr "磁碟版本"
 
+msgid "dismiss"
+msgstr "忽略"
+
 msgid "Dismiss"
 msgstr "忽略"
 
@@ -6768,11 +6813,20 @@ msgstr "草稿 · 檔案"
 msgid "Draft · line {0}"
 msgstr "草稿 · 第{0}行"
 
+msgid "Draft for {draftTarget}"
+msgstr "用於 {draftTarget} 的草稿"
+
 msgid "Draft opened"
 msgstr "建立了草稿"
 
+msgid "Draft waiting on the Desk"
+msgstr "Desk 上有待核准的草稿"
+
 msgid "drafted 3 support replies"
 msgstr "起草了3條支援回覆"
+
+msgid "Drafts to approve"
+msgstr "待核准的草稿"
 
 msgid "Drag to reorder"
 msgstr "拖曳以重新排序"
@@ -8156,6 +8210,9 @@ msgstr "在LinkedIn上關注我們"
 
 msgid "Follow us on X/Twitter"
 msgstr "在X/Twitter上關注我們"
+
+msgid "Follow-up for the agent (optional)"
+msgstr "給代理的後續（選填）"
 
 msgid "Following"
 msgstr "追蹤中"
@@ -10483,6 +10540,9 @@ msgstr "將其 PR 標記為可審查"
 msgid "Mark Ready"
 msgstr "標記為待審查"
 
+msgid "Mark reviewed"
+msgstr "標記為已審閱"
+
 msgid "Markdown"
 msgstr "Markdown"
 
@@ -10894,6 +10954,9 @@ msgstr "多數開發者"
 
 msgid "Most of software history"
 msgstr "軟體史的大部分時間"
+
+msgid "move"
+msgstr "移動"
 
 msgid "Move"
 msgstr "移動"
@@ -12072,6 +12135,9 @@ msgstr "最近 30 天尚未發佈任何資料。這台機器的用量同步後�
 msgid "Nothing running"
 msgstr "沒有正在執行的項目"
 
+msgid "Nothing waits on you."
+msgstr "沒有等待你處理的事項。"
+
 msgid "Nothing was missed"
 msgstr "沒有錯過的執行"
 
@@ -12443,6 +12509,9 @@ msgstr "開啟命令面板"
 
 msgid "Open comment on GitHub"
 msgstr "在GitHub上開啟評論"
+
+msgid "Open conversation"
+msgstr "開啟對話"
 
 #. placeholder {0}: conversation.title
 msgid "Open conversation: {0}"
@@ -12850,6 +12919,9 @@ msgstr "在Superset的「設定 → 帳戶」中選擇加入。"
 
 msgid "Opt-out"
 msgstr "拒絕"
+
+msgid "option"
+msgstr "選項"
 
 msgid "Option shortcuts may prevent typing special characters"
 msgstr "Option快速鍵可能會影響特殊字元的輸入"
@@ -14190,6 +14262,9 @@ msgstr "待審查"
 #. placeholder {0}: error.message
 msgid "Ready for review failed: {0}"
 msgstr "標記為可審查失敗：{0}"
+
+msgid "Ready for review on the Desk"
+msgstr "Desk 上待審閱"
 
 msgid "Ready in"
 msgstr "已就緒"
@@ -15945,6 +16020,9 @@ msgstr "在終端中選取文字後立即複製到剪貼簿，並移除結尾空
 
 msgid "Send"
 msgstr "傳送"
+
+msgid "Send (⌘Enter)"
+msgstr "傳送 (⌘Enter)"
 
 msgid "Send an invitation to join {organizationName}. Expires in 48 hours."
 msgstr "傳送加入{organizationName}的邀請。48小時後過期。"
@@ -18741,6 +18819,9 @@ msgstr "若要恢復其他與代理的對話，請在其資料夾中執行："
 
 msgid "To-do details"
 msgstr "待辦詳細資料"
+
+msgid "To-do on the Desk"
+msgstr "Desk 上有待辦"
 
 msgid "To-dos"
 msgstr "待辦"
