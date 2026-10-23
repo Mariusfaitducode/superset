@@ -2660,6 +2660,9 @@ msgstr "環境をアーカイブ"
 msgid "Archive failed"
 msgstr "アーカイブに失敗しました"
 
+msgid "Archive to-do"
+msgstr "ToDoをアーカイブ"
+
 msgid "Archive workspace"
 msgstr "ワークスペースをアーカイブ"
 
@@ -2674,6 +2677,9 @@ msgstr "アーカイブ済み · {0}"
 #. placeholder {0}: formatCompactRelativeTime(workspace.deletedAt, now)
 msgid "Archived {0}"
 msgstr "アーカイブ済み {0}"
+
+msgid "Archived to-dos"
+msgstr "アーカイブ済みのToDo"
 
 msgid "Are you sure you want to delete this file? This action cannot be undone."
 msgstr "このファイルを削除してもよろしいですか?この操作は元に戻せません。"
@@ -5261,6 +5267,9 @@ msgstr "このコメントを解決できませんでした"
 msgid "Could not restart the host service"
 msgstr "ホストサービスを再起動できませんでした"
 
+msgid "Could not restore the to-do"
+msgstr "ToDoを復元できませんでした"
+
 msgid "Could not resume"
 msgstr "再開できませんでした"
 
@@ -6170,9 +6179,6 @@ msgstr "このワークスペースを削除しますか?"
 
 msgid "Delete thread"
 msgstr "スレッドを削除"
-
-msgid "Delete to-do"
-msgstr "To-doを削除"
 
 msgid "Delete without checking"
 msgstr "確認せずに削除"
@@ -11214,6 +11220,9 @@ msgstr "エージェントはまだありません。"
 
 msgid "No API keys yet."
 msgstr "APIキーはまだありません。"
+
+msgid "No archived to-dos"
+msgstr "アーカイブ済みのToDoはありません"
 
 msgid "No archived workspaces"
 msgstr "アーカイブ済みのワークスペースはありません"

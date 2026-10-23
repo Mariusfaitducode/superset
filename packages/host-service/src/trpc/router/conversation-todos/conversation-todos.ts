@@ -58,6 +58,7 @@ export const conversationTodosRouter = router({
 				.object({
 					workspaceId: z.string().optional(),
 					terminalId: z.string().optional(),
+					archived: z.boolean().optional(),
 				})
 				.default({}),
 		)
@@ -109,10 +110,23 @@ export const conversationTodosRouter = router({
 			change(ctx, () => getStore().setDone(input.actor, input.id, input.done)),
 		),
 
+	archive: protectedProcedure
+		.input(z.object({ actor, id: z.string() }))
+		.mutation(({ ctx, input }) =>
+			change(ctx, () => getStore().archive(input.actor, input.id)),
+		),
+
+	/** The name `archive` had when it deleted; kept for older CLIs and apps. */
 	remove: protectedProcedure
 		.input(z.object({ actor, id: z.string() }))
 		.mutation(({ ctx, input }) =>
-			change(ctx, () => getStore().remove(input.actor, input.id)),
+			change(ctx, () => getStore().archive(input.actor, input.id)),
+		),
+
+	restore: protectedProcedure
+		.input(z.object({ actor, id: z.string() }))
+		.mutation(({ ctx, input }) =>
+			change(ctx, () => getStore().restore(input.actor, input.id)),
 		),
 
 	clearDone: protectedProcedure

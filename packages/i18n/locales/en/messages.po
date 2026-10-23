@@ -2660,6 +2660,9 @@ msgstr "Archive environment"
 msgid "Archive failed"
 msgstr "Archive failed"
 
+msgid "Archive to-do"
+msgstr "Archive to-do"
+
 msgid "Archive workspace"
 msgstr "Archive workspace"
 
@@ -2674,6 +2677,9 @@ msgstr "Archived · {0}"
 #. placeholder {0}: formatCompactRelativeTime(workspace.deletedAt, now)
 msgid "Archived {0}"
 msgstr "Archived {0}"
+
+msgid "Archived to-dos"
+msgstr "Archived to-dos"
 
 msgid "Are you sure you want to delete this file? This action cannot be undone."
 msgstr "Are you sure you want to delete this file? This action cannot be undone."
@@ -5261,6 +5267,9 @@ msgstr "Could not resolve this comment"
 msgid "Could not restart the host service"
 msgstr "Could not restart the host service"
 
+msgid "Could not restore the to-do"
+msgstr "Could not restore the to-do"
+
 msgid "Could not resume"
 msgstr "Could not resume"
 
@@ -6170,9 +6179,6 @@ msgstr "Delete this workspace?"
 
 msgid "Delete thread"
 msgstr "Delete thread"
-
-msgid "Delete to-do"
-msgstr "Delete to-do"
 
 msgid "Delete without checking"
 msgstr "Delete without checking"
@@ -11214,6 +11220,9 @@ msgstr "No agents yet."
 
 msgid "No API keys yet."
 msgstr "No API keys yet."
+
+msgid "No archived to-dos"
+msgstr "No archived to-dos"
 
 msgid "No archived workspaces"
 msgstr "No archived workspaces"

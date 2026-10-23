@@ -10,6 +10,7 @@ export default command({
 		workspace: string().desc("Only this workspace's conversations"),
 		terminal: string().desc("Only this conversation (terminal ID)"),
 		open: boolean().desc("Hide the checked ones"),
+		archived: boolean().desc("The archived to-dos instead of the list"),
 	},
 	display: (data) =>
 		table(
@@ -23,6 +24,7 @@ export default command({
 				? undefined
 				: process.env.SUPERSET_TERMINAL_ID;
 		const todos = await (await localTodosClient(ctx)).list.query({
+			...(options.archived ? { archived: true } : {}),
 			...(options.workspace ? { workspaceId: options.workspace } : {}),
 			...((options.terminal ?? ownTerminal)
 				? { terminalId: options.terminal ?? ownTerminal }

@@ -2660,6 +2660,9 @@ msgstr "Lưu trữ environment"
 msgid "Archive failed"
 msgstr "Lưu trữ thất bại"
 
+msgid "Archive to-do"
+msgstr "Lưu trữ việc cần làm"
+
 msgid "Archive workspace"
 msgstr "Lưu trữ workspace"
 
@@ -2674,6 +2677,9 @@ msgstr "Đã lưu trữ · {0}"
 #. placeholder {0}: formatCompactRelativeTime(workspace.deletedAt, now)
 msgid "Archived {0}"
 msgstr "Đã lưu trữ {0}"
+
+msgid "Archived to-dos"
+msgstr "Việc cần làm đã lưu trữ"
 
 msgid "Are you sure you want to delete this file? This action cannot be undone."
 msgstr "Bạn chắc chắn muốn xóa tệp này? Không thể hoàn tác."
@@ -5261,6 +5267,9 @@ msgstr "Không thể giải quyết bình luận này"
 msgid "Could not restart the host service"
 msgstr "Không thể khởi động lại dịch vụ máy chủ"
 
+msgid "Could not restore the to-do"
+msgstr "Không thể khôi phục việc cần làm"
+
 msgid "Could not resume"
 msgstr "Không thể tiếp tục"
 
@@ -6170,9 +6179,6 @@ msgstr "Xóa workspace này?"
 
 msgid "Delete thread"
 msgstr "Xóa luồng"
-
-msgid "Delete to-do"
-msgstr "Xóa việc cần làm"
 
 msgid "Delete without checking"
 msgstr "Xóa mà không kiểm tra"
@@ -11214,6 +11220,9 @@ msgstr "Chưa có agent nào."
 
 msgid "No API keys yet."
 msgstr "Chưa có khóa API nào."
+
+msgid "No archived to-dos"
+msgstr "Không có việc cần làm đã lưu trữ"
 
 msgid "No archived workspaces"
 msgstr "Không có workspace nào đã lưu trữ"
