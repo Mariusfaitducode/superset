@@ -2029,6 +2029,9 @@ msgstr "Ajan çalışıyor"
 msgid "Agent launch configuration"
 msgstr "Ajan başlatma yapılandırması"
 
+msgid "Agent permissions"
+msgstr "Ajan izinleri"
+
 msgid "Agent picker (Claude, Codex, Cursor…) used by every session-creation flow"
 msgstr "Her oturum oluşturma akışının kullandığı ajan seçici (Claude, Codex, Cursor…)"
 
@@ -2076,6 +2079,9 @@ msgstr "Ajanlar"
 
 msgid "Agents complete routine tickets with no mid-task intervention."
 msgstr "Ajanlar rutin biletleri görev ortasında müdahale olmadan tamamlar."
+
+msgid "Agents here may, without asking:"
+msgstr "Buradaki ajanlar sormadan şunları yapabilir:"
 
 msgid "Agents load their own preview, drive the UI, and attach screenshot proof before marking work ready for review."
 msgstr "Ajanlar kendi önizlemelerini yükler, arayüzü kullanır ve işi incelemeye hazır işaretlemeden önce ekran görüntüsü kanıtı ekler."
@@ -5080,6 +5086,9 @@ msgstr "Sohbet dallandırılamadı"
 msgid "Could not change access"
 msgstr "Erişim değiştirilemedi"
 
+msgid "Could not change the agent permissions"
+msgstr "Ajan izinleri değiştirilemedi"
+
 msgid "Could not change the labels"
 msgstr "Etiketler değiştirilemedi"
 
@@ -7079,6 +7088,9 @@ msgstr "Her {day} saat {time}"
 
 msgid "Every agent runs in its own Git worktree and branch, keeping working files separate. Changes can still conflict when merged. You watch, review, and merge them all from one window."
 msgstr "Her ajan kendi Git worktree ve dalında çalışır, böylece çalışma dosyaları ayrı kalır. Değişiklikler birleştirilirken yine de çakışmalar oluşabilir. Hepsini tek bir pencereden izler, inceler ve birleştirirsiniz."
+
+msgid "Every agent started in this workspace gets it."
+msgstr "Bu çalışma alanında başlatılan her ajan bunu alır."
 
 msgid "Every axis is carrying its weight for the next tier. Hold it and the tier follows."
 msgstr "Her eksen bir sonraki katman için üzerine düşeni yapıyor. Bunu sürdür, katman kendiliğinden gelir."
@@ -10375,6 +10387,9 @@ msgstr "Okunmadı olarak işaretle"
 msgid "Mark as viewed"
 msgstr "Görüldü olarak işaretle"
 
+msgid "Mark its PR ready for review"
+msgstr "PR'ını incelemeye hazır olarak işaretlemek"
+
 msgid "Mark Ready"
 msgstr "Hazır işaretle"
 
@@ -12264,6 +12279,9 @@ msgstr "{parentLabel} aç"
 msgid "Open {path} in file pane"
 msgstr "{path} dosyasını dosya bölmesinde aç"
 
+msgid "Open a draft PR"
+msgstr "Taslak PR açmak"
+
 msgid "Open a multiline prompt composer for the active terminal"
 msgstr "Etkin terminal için çok satırlı istem düzenleyicisini aç"
 
@@ -13243,6 +13261,9 @@ msgstr "Sabitlenmiş"
 msgid "Pinned by you, last pinned first"
 msgstr "Sizin sabitledikleriniz, son sabitlenen önce"
 
+msgid "Pinned context"
+msgstr "Sabitlenmiş bağlam"
+
 msgid "PK"
 msgstr "PK"
 
@@ -13367,6 +13388,9 @@ msgstr "Paylaş"
 
 msgid "Post comment"
 msgstr "Yorum gönder"
+
+msgid "Post GitHub comments"
+msgstr "GitHub yorumları göndermek"
 
 msgid "Post reply"
 msgstr "Yanıt gönder"
@@ -13828,6 +13852,9 @@ msgstr "Push"
 #. placeholder {0}: error.message
 msgid "Push failed: {0}"
 msgstr "Push başarısız: {0}"
+
+msgid "Push its own branch"
+msgstr "Kendi dalını push etmek"
 
 msgid "Pushed"
 msgstr "Push edildi"
@@ -14501,6 +14528,9 @@ msgstr "{where} konumunda 1 dosya değiştirildi"
 
 msgid "Reply"
 msgstr "Yanıtla"
+
+msgid "Reply to review bots"
+msgstr "İnceleme botlarına yanıt vermek"
 
 msgid "Reply to thread…"
 msgstr "Konuya yanıt verin…"
@@ -15245,6 +15275,9 @@ msgstr "Tercihleri kaydet"
 
 msgid "Save profile"
 msgstr "Profili kaydet"
+
+msgid "Save Slack drafts"
+msgstr "Slack taslakları kaydetmek"
 
 msgid "save the agent"
 msgstr "ajanı kaydetme"

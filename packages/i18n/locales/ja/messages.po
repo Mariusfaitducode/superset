@@ -2029,6 +2029,9 @@ msgstr "エージェントが作業中です"
 msgid "Agent launch configuration"
 msgstr "エージェント起動設定"
 
+msgid "Agent permissions"
+msgstr "エージェントの権限"
+
 msgid "Agent picker (Claude, Codex, Cursor…) used by every session-creation flow"
 msgstr "すべてのセッション作成フローで使うエージェントピッカー(Claude、Codex、Cursor…)"
 
@@ -2076,6 +2079,9 @@ msgstr "エージェント"
 
 msgid "Agents complete routine tickets with no mid-task intervention."
 msgstr "エージェントが定型チケットを途中の介入なしに完了する。"
+
+msgid "Agents here may, without asking:"
+msgstr "ここのエージェントが確認なしでできること:"
 
 msgid "Agents load their own preview, drive the UI, and attach screenshot proof before marking work ready for review."
 msgstr "エージェントが自らプレビューを開き、UIを操作し、レビュー待ちにする前にスクリーンショットの証拠を添付します。"
@@ -5080,6 +5086,9 @@ msgstr "チャットを分岐できませんでした"
 msgid "Could not change access"
 msgstr "アクセスを変更できませんでした"
 
+msgid "Could not change the agent permissions"
+msgstr "エージェントの権限を変更できませんでした"
+
 msgid "Could not change the labels"
 msgstr "ラベルを変更できませんでした"
 
@@ -7079,6 +7088,9 @@ msgstr "毎週{day} {time}"
 
 msgid "Every agent runs in its own Git worktree and branch, keeping working files separate. Changes can still conflict when merged. You watch, review, and merge them all from one window."
 msgstr "各エージェントは専用の Git worktree とブランチで動作し、作業ファイルを分離します。変更のマージ時には競合が発生することがあります。すべての作業の監視、レビュー、マージを1つのウィンドウで行えます。"
+
+msgid "Every agent started in this workspace gets it."
+msgstr "このワークスペースで起動したすべてのエージェントが受け取ります。"
 
 msgid "Every axis is carrying its weight for the next tier. Hold it and the tier follows."
 msgstr "すべての軸が次のティアのために働いています。これを維持すればティアは付いてきます。"
@@ -10375,6 +10387,9 @@ msgstr "未読にする"
 msgid "Mark as viewed"
 msgstr "確認済みにする"
 
+msgid "Mark its PR ready for review"
+msgstr "PR をレビュー可能にする"
+
 msgid "Mark Ready"
 msgstr "レビュー可能にする"
 
@@ -12264,6 +12279,9 @@ msgstr "{parentLabel}を開く"
 msgid "Open {path} in file pane"
 msgstr "{path}をファイルペインで開く"
 
+msgid "Open a draft PR"
+msgstr "ドラフト PR を作成する"
+
 msgid "Open a multiline prompt composer for the active terminal"
 msgstr "アクティブなターミナル用の複数行プロンプト入力を開く"
 
@@ -13243,6 +13261,9 @@ msgstr "ピン留め済み"
 msgid "Pinned by you, last pinned first"
 msgstr "あなたが固定、最新順"
 
+msgid "Pinned context"
+msgstr "固定されたコンテキスト"
+
 msgid "PK"
 msgstr "PK"
 
@@ -13367,6 +13388,9 @@ msgstr "ポスト"
 
 msgid "Post comment"
 msgstr "コメントを投稿"
+
+msgid "Post GitHub comments"
+msgstr "GitHub にコメントを投稿する"
 
 msgid "Post reply"
 msgstr "返信を投稿"
@@ -13828,6 +13852,9 @@ msgstr "プッシュ"
 #. placeholder {0}: error.message
 msgid "Push failed: {0}"
 msgstr "プッシュに失敗しました: {0}"
+
+msgid "Push its own branch"
+msgstr "自身のブランチをプッシュする"
 
 msgid "Pushed"
 msgstr "プッシュ"
@@ -14501,6 +14528,9 @@ msgstr "1件のファイルを{where}で置き換えました"
 
 msgid "Reply"
 msgstr "返信"
+
+msgid "Reply to review bots"
+msgstr "レビューボットに返信する"
 
 msgid "Reply to thread…"
 msgstr "スレッドに返信…"
@@ -15245,6 +15275,9 @@ msgstr "設定を保存"
 
 msgid "Save profile"
 msgstr "プロフィールを保存"
+
+msgid "Save Slack drafts"
+msgstr "Slack の下書きを保存する"
 
 msgid "save the agent"
 msgstr "エージェントを保存する"
