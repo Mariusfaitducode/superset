@@ -360,6 +360,11 @@ msgstr "{0} — probeer het Superset-menu in de menubalk > Hostservice > Opnieuw
 msgid "{0} · behind"
 msgstr "{0} · verouderd"
 
+#. placeholder {0}: decimal(mean)
+#. placeholder {1}: count(peak)
+msgid "{0} · peak {1}"
+msgstr "{0} · piek {1}"
+
 #. placeholder {0}: creator.name
 #. placeholder {0}: option.name
 msgid "{0} (you)"
@@ -560,6 +565,10 @@ msgstr "{0} tegen {1}"
 #. placeholder {0}: file.path
 msgid "{0} was deleted in this change."
 msgstr "{0} is verwijderd in deze wijziging."
+
+#. placeholder {0}: formatNumber(option / 7)
+msgid "{0} weeks"
+msgstr "{0} weken"
 
 #. placeholder {0}: winner?.name
 #. placeholder {1}: result.events.length
@@ -2095,6 +2104,15 @@ msgstr "Agents die tegelijk draaien"
 msgid "Agents use this account when they call Linear tools."
 msgstr "Agents gebruiken dit account wanneer ze Linear-tools aanroepen."
 
+msgid "Agents waiting (peak)"
+msgstr "Wachtende agents (piek)"
+
+msgid "Agents waiting on you"
+msgstr "Agents die op je wachten"
+
+msgid "Agents working at once"
+msgstr "Agents die tegelijk werken"
+
 msgid "Agents' to-dos"
 msgstr "To-do's van agents"
 
@@ -3075,6 +3093,9 @@ msgstr "De chipstijl inbakken in tooltip.tsx"
 
 msgid "Bar"
 msgstr "Streep"
+
+msgid "Bare go-aheads"
+msgstr "Kale akkoorden"
 
 msgid "Base branch"
 msgstr "Basisbranch"
@@ -5050,6 +5071,9 @@ msgstr "Kopieer je sleutel nu — je kunt hem later niet meer zien."
 msgid "Copyright or trademark"
 msgstr "Auteursrecht of handelsmerk"
 
+msgid "Corrections"
+msgstr "Correcties"
+
 msgid "Cost"
 msgstr "Kosten"
 
@@ -5463,6 +5487,9 @@ msgstr "Kan deze cloudwerkruimte niet bereiken. Mogelijk wordt deze nog gewekt �
 
 msgid "Couldn't reach workspace"
 msgstr "Kan werkruimte niet bereiken"
+
+msgid "Couldn't read the transcripts on this host."
+msgstr "Kan de transcripten op deze host niet lezen."
 
 msgid "Couldn't read this terminal's context."
 msgstr "De context van deze terminal kon niet worden gelezen."
@@ -7992,6 +8019,9 @@ msgstr "klaar · 7s gewerkt"
 msgid "First repository by name"
 msgstr "Eerste repository op naam"
 
+msgid "First scan of your transcripts, numbers are partial…"
+msgstr "Eerste scan van je transcripten, cijfers zijn onvolledig…"
+
 msgid "Fix"
 msgstr "Repareren"
 
@@ -8232,6 +8262,9 @@ msgstr "Van hackathonproject tot de werkplek voor parallelle coding agents."
 msgid "From GitHub"
 msgstr "Van GitHub"
 
+msgid "From your Claude Code transcripts on this machine. Automations and prompts written by agents are left out."
+msgstr "Uit je Claude Code-transcripten op deze computer. Automatiseringen en prompts die door agents zijn geschreven, tellen niet mee."
+
 msgid "Front matter hidden — switch to Markdown to edit it"
 msgstr "Front matter verborgen — schakel over naar Markdown om die te bewerken"
 
@@ -8462,6 +8495,13 @@ msgstr "Naar Superset"
 
 msgid "Go to workspace"
 msgstr "Naar werkruimte"
+
+msgid "Go-aheads"
+msgstr "Akkoorden"
+
+#. placeholder {0}: tile.target
+msgid "Goal {0}"
+msgstr "Doel {0}"
 
 msgid "Google did not grant lasting access. Remove Superset from your Google account's third-party access and try again."
 msgstr "Google heeft geen blijvende toegang verleend. Verwijder Superset uit de externe toegang van je Google-account en probeer het opnieuw."
@@ -9171,6 +9211,9 @@ msgstr "input-, cache- en outputtokens"
 msgid "Inputs"
 msgstr "Invoervelden"
 
+msgid "Insights"
+msgstr "Inzichten"
+
 msgid "Insights from the Superset team about parallel coding agents and developer productivity."
 msgstr "Inzichten van het Superset-team over parallelle coding agents en productiviteit van ontwikkelaars."
 
@@ -9722,6 +9765,10 @@ msgstr "Laatst bijgewerkt: {lastUpdated}"
 msgid "Last used"
 msgstr "Laatst gebruikt"
 
+#. placeholder {0}: tile.previous
+msgid "Last week {0}"
+msgstr "Vorige week {0}"
+
 msgid "Late 2026"
 msgstr "Eind 2026"
 
@@ -10036,6 +10083,9 @@ msgstr "Live in de app."
 
 msgid "Live preview"
 msgstr "Live preview"
+
+msgid "Live sessions per day"
+msgstr "Actieve sessies per dag"
 
 msgid "llms.txt (index for AI agents)"
 msgstr "llms.txt (index voor AI-agents)"
@@ -10448,6 +10498,9 @@ msgstr "Context voor {0} wordt gemeten…"
 msgid "Media kit"
 msgstr "Mediakit"
 
+msgid "Median reply time (daytime)"
+msgstr "Mediane reactietijd (overdag)"
+
 msgid "Median ticket-to-production time under one day for routine work."
 msgstr "Mediane tijd van ticket tot productie onder één dag voor routinewerk."
 
@@ -10580,6 +10633,9 @@ msgstr "Bericht..."
 
 msgid "Messages"
 msgstr "Berichten"
+
+msgid "Messages per working day"
+msgstr "Berichten per werkdag"
 
 msgid "Microphone"
 msgstr "Microfoon"
@@ -10804,6 +10860,9 @@ msgstr "Verplaatsen naar tabblad"
 
 msgid "Moved down by you"
 msgstr "Door jou omlaag gezet"
+
+msgid "Msgs / day"
+msgstr "Ber. / dag"
 
 msgid "Multi-select"
 msgstr "Meerdere keuzes"
@@ -13104,6 +13163,9 @@ msgstr "Personen buiten {organizationName} verliezen de toegang en de openbare l
 msgid "People with access"
 msgstr "Personen met toegang"
 
+msgid "Per day"
+msgstr "Per dag"
+
 msgid "per merged PR"
 msgstr "per gemergede PR"
 
@@ -13115,6 +13177,9 @@ msgstr "per sessie"
 
 msgid "per user/month"
 msgstr "per gebruiker/maand"
+
+msgid "Per week"
+msgstr "Per week"
 
 msgid "Per-repo agent memory"
 msgstr "Agentgeheugen per repository"
@@ -14021,6 +14086,9 @@ msgstr "Lees de broncode en elke pull request."
 
 msgid "Reading {what}"
 msgstr "{what} lezen"
+
+msgid "Reading new transcript lines…"
+msgstr "Nieuwe transcriptregels lezen…"
 
 msgid "Reading the page"
 msgstr "Pagina wordt gelezen"
@@ -15900,6 +15968,9 @@ msgstr "Sessies"
 msgid "Sessions · top {0} by cost"
 msgstr "Sessies · top {0} op kosten"
 
+msgid "Sessions / day"
+msgstr "Sessies / dag"
+
 #. placeholder {0}: color.name
 msgid "Set color to {0}"
 msgstr "Kleur instellen op {0}"
@@ -16903,6 +16974,9 @@ msgstr "Status"
 
 msgid "Status changed"
 msgstr "Status gewijzigd"
+
+msgid "Status questions"
+msgstr "Statusvragen"
 
 #. placeholder {0}: statusLabel[note.status]
 msgid "Status: {0}"
@@ -18268,6 +18342,9 @@ msgstr "Deze host loopt achter op de app die je gebruikt. Werkruimtes openen nog
 msgid "This host needs an update"
 msgstr "Deze host heeft een update nodig"
 
+msgid "This host runs an older Superset. Update the app to see insights."
+msgstr "Deze host draait een oudere Superset. Werk de app bij om inzichten te zien."
+
 msgid "This invitation has already been accepted."
 msgstr "Deze uitnodiging is al geaccepteerd."
 
@@ -19551,6 +19628,9 @@ msgstr "VS Code"
 msgid "Wait for workspace setup before starting agents"
 msgstr "Wachten op werkruimte-setup voordat agents starten"
 
+msgid "Waiting"
+msgstr "Wachtend"
+
 #. placeholder {0}: names.a
 #. placeholder {1}: names.b
 msgid "waiting for {0} and {1}…"
@@ -19711,6 +19791,9 @@ msgstr "Website"
 
 msgid "Week"
 msgstr "Week"
+
+msgid "Week of"
+msgstr "Week van"
 
 msgid "Week of {formatted}"
 msgstr "Week van {formatted}"
@@ -20401,6 +20484,9 @@ msgstr "Je GitHub-link komt van het account waarmee je bent ingelogd, daarom sta
 
 msgid "Your last payment failed. Update your payment method to keep Pro."
 msgstr "Je laatste betaling is mislukt. Werk je betaalmethode bij om Pro te behouden."
+
+msgid "Your messages per project"
+msgstr "Je berichten per project"
 
 msgid "Your name"
 msgstr "Je naam"

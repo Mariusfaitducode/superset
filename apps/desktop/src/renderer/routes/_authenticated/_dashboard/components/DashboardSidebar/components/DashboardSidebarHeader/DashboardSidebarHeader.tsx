@@ -15,6 +15,7 @@ import { useRef } from "react";
 import { GoGitPullRequest } from "react-icons/go";
 import { HiOutlineClipboardDocumentList } from "react-icons/hi2";
 import {
+	LuActivity,
 	LuClock,
 	LuCloud,
 	LuFileText,
@@ -180,6 +181,7 @@ export function DashboardSidebarHeader({
 		fuzzy: true,
 	});
 	const isAutomationsOpen = !!matchRoute({ to: "/automations", fuzzy: true });
+	const isInsightsOpen = !!matchRoute({ to: "/insights", fuzzy: true });
 	const isPluginsOpen = !!matchRoute({ to: "/plugins", fuzzy: true });
 	const isPagesOpen = !!matchRoute({ to: "/pages", fuzzy: true });
 	const isNotesOpen = !!matchRoute({ to: "/notes", fuzzy: true });
@@ -296,6 +298,10 @@ export function DashboardSidebarHeader({
 				mergedOnly: lastPullRequestsMergedOnly,
 			}),
 		});
+	};
+
+	const handleInsightsClick = () => {
+		navigate({ to: "/insights" });
 	};
 
 	const handleUsageClick = () => {
@@ -530,6 +536,30 @@ export function DashboardSidebarHeader({
 						</TooltipTrigger>
 						<TooltipContent side="right">
 							<Trans>Pull requests</Trans>
+						</TooltipContent>
+					</Tooltip>
+
+					<Tooltip delayDuration={300}>
+						<TooltipTrigger asChild>
+							<button
+								type="button"
+								onClick={handleInsightsClick}
+								aria-label={t({
+									message: "Insights",
+								})}
+								aria-current={isInsightsOpen ? "page" : undefined}
+								className={cn(
+									"flex size-7 items-center justify-center rounded-md transition-colors",
+									isInsightsOpen
+										? "bg-fill-selected text-muted-foreground"
+										: "text-muted-foreground hover:bg-fill-hover",
+								)}
+							>
+								<LuActivity className="size-3.5" strokeWidth={1.5} />
+							</button>
+						</TooltipTrigger>
+						<TooltipContent side="right">
+							<Trans>Insights</Trans>
 						</TooltipContent>
 					</Tooltip>
 
@@ -888,6 +918,29 @@ export function DashboardSidebarHeader({
 				<GoGitPullRequest className="size-4 shrink-0 text-muted-foreground" />
 				<span className="flex-1 text-left">
 					<Trans>Pull requests</Trans>
+				</span>
+			</button>
+
+			<button
+				type="button"
+				onClick={handleInsightsClick}
+				aria-label={t({
+					message: "Insights",
+				})}
+				aria-current={isInsightsOpen ? "page" : undefined}
+				className={cn(
+					"flex h-7 w-full items-center gap-2 rounded-md px-2 text-[13px] font-medium transition-colors",
+					isInsightsOpen
+						? "bg-fill-selected text-foreground"
+						: "text-muted-foreground hover:bg-fill-hover hover:text-foreground",
+				)}
+			>
+				<LuActivity
+					className="size-4 shrink-0 text-muted-foreground"
+					strokeWidth={1.5}
+				/>
+				<span className="flex-1 text-left">
+					<Trans>Insights</Trans>
 				</span>
 			</button>
 
