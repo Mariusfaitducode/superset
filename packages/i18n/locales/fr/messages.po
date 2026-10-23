@@ -427,6 +427,11 @@ msgstr "{0} activé"
 msgid "{0} ending in {1}"
 msgstr "{0} se terminant par {1}"
 
+#. placeholder {0}: summary.failed
+#. placeholder {1}: summary.running
+msgid "{0} failed, {1} running"
+msgstr "{0} en échec, {1} en cours"
+
 #. placeholder {0}: collisions.length
 msgid "{0} files already exist in {where}. Do you want to replace them?"
 msgstr "{0} fichiers existent déjà dans {where}. Voulez-vous les remplacer ?"
@@ -525,6 +530,10 @@ msgstr "{0} messages en file d'attente"
 msgid "{0} refs"
 msgstr "{0} refs"
 
+#. placeholder {0}: summary.running
+msgid "{0} running"
+msgstr "{0} en cours"
+
 #. placeholder {0}: tally.running
 msgid "{0} Running"
 msgstr "{0} en cours"
@@ -602,6 +611,11 @@ msgstr "{0}/{1}"
 #. placeholder {1}: tally.total
 msgid "{0}/{1} Checks Passing"
 msgstr "{0}/{1} vérifications réussies"
+
+#. placeholder {0}: progress.done
+#. placeholder {1}: progress.total
+msgid "{0}/{1} jobs"
+msgstr "{0}/{1} jobs"
 
 #. placeholder {0}: summary.passed
 #. placeholder {1}: summary.total
@@ -1163,6 +1177,9 @@ msgstr "{repositoryFullName} n'est pas sur {installedAccountLogin}, où la GitHu
 
 msgid "{repositoryFullName} isn't shared with the Superset GitHub App yet."
 msgstr "{repositoryFullName} n'est pas encore partagé avec la GitHub App Superset."
+
+msgid "{running} running"
+msgstr "{running} en cours"
 
 msgid "{seconds}s ago"
 msgstr "il y a {seconds} s"
@@ -2096,6 +2113,9 @@ msgstr "Aperçus pilotés par l'agent"
 
 msgid "Agents"
 msgstr "Agents"
+
+msgid "Agents add a card here with superset track when they wait on something long: a CI run, a build, a deploy."
+msgstr "Les agents ajoutent ici une carte avec superset track quand ils attendent quelque chose de long : une CI, un build, un déploiement."
 
 msgid "Agents complete routine tickets with no mid-task intervention."
 msgstr "Les agents terminent les tickets courants sans intervention en cours de tâche."
@@ -4190,6 +4210,9 @@ msgstr "Fermer tous les ports de {0}"
 msgid "Close all ports in this workspace"
 msgstr "Fermer tous les ports de cet espace de travail"
 
+msgid "Close and archive"
+msgstr "Fermer et archiver"
+
 msgid "Close Browser"
 msgstr "Fermer le navigateur"
 
@@ -5419,6 +5442,9 @@ msgstr "Impossible de mettre à jour la branche"
 
 msgid "Could not update the note"
 msgstr "Impossible de mettre à jour la note"
+
+msgid "Could not update the task"
+msgstr "Impossible de mettre à jour la tâche"
 
 msgid "Could not update the to-do"
 msgstr "Impossible de mettre à jour la to-do"
@@ -8520,6 +8546,9 @@ msgstr "GitHub a refusé la fusion"
 msgid "GitHub sign-in needed"
 msgstr "Connexion à GitHub requise"
 
+msgid "GitHub stopped answering"
+msgstr "GitHub ne répond plus"
+
 msgid "GitHub sync requires the Pro plan."
 msgstr "La synchronisation GitHub nécessite le forfait Pro."
 
@@ -11404,6 +11433,8 @@ msgstr "Aucun agent pour l'instant."
 msgid "No API keys yet."
 msgstr "Aucune clé API pour l'instant."
 
+msgid "No archived tasks"
+
 msgid "No archived to-dos"
 msgstr "Aucune tâche archivée"
 
@@ -11691,6 +11722,10 @@ msgstr "Aucun simulateur mobile disponible ici. Il faut un simulateur EAS dans u
 
 msgid "No name on file"
 msgstr "Aucun nom enregistré"
+
+#. placeholder {0}: formatElapsed(now - task.updatedAt)
+msgid "No news for {0}"
+msgstr "Aucune nouvelle depuis {0}"
 
 msgid "No notes match these filters."
 msgstr "Aucune note ne correspond à ces filtres."
@@ -12128,6 +12163,9 @@ msgstr "Rien pour l'instant."
 
 msgid "Nothing here."
 msgstr "Rien ici."
+
+msgid "Nothing is being tracked"
+msgstr "Rien n'est suivi"
 
 msgid "Nothing is running. Archive it and create a new one."
 msgstr "Rien ne tourne. Archivez-le et créez-en un nouveau."
@@ -12849,6 +12887,10 @@ msgstr "Ouvrir des terminaux et donner des instructions aux agents"
 
 msgid "Open the Changes pane in a new tab, or focus the existing one"
 msgstr "Ouvre le panneau des modifications dans un nouvel onglet, ou active celui existant"
+
+#. placeholder {0}: task.title
+msgid "Open the conversation of {0}"
+msgstr "Ouvrir la conversation de {0}"
 
 msgid "Open the global command palette"
 msgstr "Ouvrir la palette de commandes globale"
@@ -15400,6 +15442,10 @@ msgstr "En cours"
 msgid "Running \"{name}\" now"
 msgstr "Exécution de « {name} » en cours"
 
+#. placeholder {0}: task.ci.currentJob
+msgid "Running {0}"
+msgstr "{0} en cours"
+
 msgid "Running a command"
 msgstr "Exécute une commande"
 
@@ -16641,6 +16687,9 @@ msgstr "Connexion..."
 msgid "Signup works. The welcome screen loads and the console is clean."
 msgstr "L'inscription fonctionne. L'écran d'accueil se charge et la console est propre."
 
+msgid "Silent"
+msgstr "Silencieuse"
+
 msgid "Simple pricing for every team"
 msgstr "Une tarification simple pour chaque équipe"
 
@@ -17797,6 +17846,14 @@ msgstr "targetHostId ne correspond pas à l'hôte de l'espace de travail"
 msgid "Task"
 msgstr "Tâche"
 
+#. placeholder {0}: task.title
+msgid "Task done: {0}"
+msgstr "Tâche terminée : {0}"
+
+#. placeholder {0}: task.title
+msgid "Task failed: {0}"
+msgstr "Tâche en échec : {0}"
+
 msgid "Task ID copied"
 msgstr "ID de la tâche copié"
 
@@ -18064,11 +18121,20 @@ msgstr "L'agent prend en charge une tâche du ticket au diff. L'humain relit le 
 msgid "The agent stopped while resuming the conversation."
 msgstr "L'agent s'est arrêté pendant la reprise de la conversation."
 
+msgid "The agent stopped working"
+msgstr "L'agent ne travaille plus"
+
 msgid "The agent this automation was set to run no longer exists on its host — the host's agents may have been reset or removed. Re-select an agent in the automation's settings."
 msgstr "L'agent que cette automatisation devait exécuter n'existe plus sur son hôte — les agents de l'hôte ont peut-être été réinitialisés ou supprimés. Sélectionnez à nouveau un agent dans les paramètres de l'automatisation."
 
+msgid "The agent waits for a permission"
+msgstr "L'agent attend une autorisation"
+
 msgid "The agent watching the page reads each comment. It updates the page and replies in the thread."
 msgstr "L'agent qui suit la page lit chaque commentaire. Il met la page à jour et répond dans le fil."
+
+msgid "The agent's session ended"
+msgstr "La session de l'agent est terminée"
 
 msgid "The app is free to download. It requires iOS 26 or later and Superset Pro. Android is next."
 msgstr "L’app est gratuite à télécharger. Elle nécessite iOS 26 ou version ultérieure et Superset Pro. Android arrive ensuite."
@@ -19020,6 +19086,9 @@ msgstr "Traque ce test instable…"
 
 msgid "Track tasks in"
 msgstr "Suivre les tâches dans"
+
+msgid "Tracked tasks"
+msgstr "Tâches suivies"
 
 msgid "Tracking"
 msgstr "Suivi"

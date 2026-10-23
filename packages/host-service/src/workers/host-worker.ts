@@ -8,6 +8,7 @@ import { startGitDirectoryWorker } from "./git-directory-worker.ts";
 import { gitTasks } from "./tasks/git.ts";
 import { harnessTasks } from "./tasks/harness.ts";
 import { insightsTasks } from "./tasks/insights.ts";
+import { trackTasks } from "./tasks/track.ts";
 import { usageTasks } from "./tasks/usage.ts";
 import { watcherTasks } from "./tasks/watcher.ts";
 import { killAndReapTrackedChildren } from "./worker-child-tracker.ts";
@@ -28,6 +29,7 @@ for (const def of [
 	...gitTasks,
 	...harnessTasks,
 	...insightsTasks,
+	...trackTasks,
 	...usageTasks,
 	...watcherTasks,
 ]) {

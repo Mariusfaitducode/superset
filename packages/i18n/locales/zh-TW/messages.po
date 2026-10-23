@@ -427,6 +427,11 @@ msgstr "{0}已啟用"
 msgid "{0} ending in {1}"
 msgstr "{0}，尾號{1}"
 
+#. placeholder {0}: summary.failed
+#. placeholder {1}: summary.running
+msgid "{0} failed, {1} running"
+msgstr "{0} 個失敗，{1} 個執行中"
+
 #. placeholder {0}: collisions.length
 msgid "{0} files already exist in {where}. Do you want to replace them?"
 msgstr "{where}中已存在{0}個檔案。是否要替換它們？"
@@ -525,6 +530,10 @@ msgstr "{0} 則排隊訊息"
 msgid "{0} refs"
 msgstr "{0} 個 ref"
 
+#. placeholder {0}: summary.running
+msgid "{0} running"
+msgstr "{0} 個執行中"
+
 #. placeholder {0}: tally.running
 msgid "{0} Running"
 msgstr "{0}項執行中"
@@ -602,6 +611,11 @@ msgstr "{0}/{1}"
 #. placeholder {1}: tally.total
 msgid "{0}/{1} Checks Passing"
 msgstr "{1}項檢查中{0}項通過"
+
+#. placeholder {0}: progress.done
+#. placeholder {1}: progress.total
+msgid "{0}/{1} jobs"
+msgstr "{0}/{1} 個作業"
 
 #. placeholder {0}: summary.passed
 #. placeholder {1}: summary.total
@@ -1163,6 +1177,9 @@ msgstr "{repositoryFullName} 不在 {installedAccountLogin} 上，而本組織�
 
 msgid "{repositoryFullName} isn't shared with the Superset GitHub App yet."
 msgstr "{repositoryFullName} 尚未與 Superset GitHub App 共用。"
+
+msgid "{running} running"
+msgstr "{running} 個執行中"
 
 msgid "{seconds}s ago"
 msgstr "{seconds}秒前"
@@ -2096,6 +2113,9 @@ msgstr "由代理程式驅動的預覽"
 
 msgid "Agents"
 msgstr "代理程式"
+
+msgid "Agents add a card here with superset track when they wait on something long: a CI run, a build, a deploy."
+msgstr "代理在等待耗時任務（CI 執行、建置、部署）時，會用 superset track 在這裡新增卡片。"
 
 msgid "Agents complete routine tickets with no mid-task intervention."
 msgstr "代理程式無需中途干預即可完成常規工單。"
@@ -4190,6 +4210,9 @@ msgstr "關閉{0}的全部埠"
 msgid "Close all ports in this workspace"
 msgstr "關閉此工作區中的全部埠"
 
+msgid "Close and archive"
+msgstr "關閉並封存"
+
 msgid "Close Browser"
 msgstr "關閉瀏覽器"
 
@@ -5419,6 +5442,9 @@ msgstr "無法更新分支"
 
 msgid "Could not update the note"
 msgstr "無法更新筆記"
+
+msgid "Could not update the task"
+msgstr "無法更新任務"
 
 msgid "Could not update the to-do"
 msgstr "無法更新待辦"
@@ -8520,6 +8546,9 @@ msgstr "GitHub拒絕了此次合併"
 msgid "GitHub sign-in needed"
 msgstr "需要登入 GitHub"
 
+msgid "GitHub stopped answering"
+msgstr "GitHub 停止回應"
+
 msgid "GitHub sync requires the Pro plan."
 msgstr "GitHub同步需要Pro方案。"
 
@@ -11404,6 +11433,9 @@ msgstr "暫無代理程式。"
 msgid "No API keys yet."
 msgstr "暫無API金鑰。"
 
+msgid "No archived tasks"
+msgstr "沒有已封存的任務"
+
 msgid "No archived to-dos"
 msgstr "沒有已封存的待辦"
 
@@ -11691,6 +11723,10 @@ msgstr "此處沒有可用的行動模擬器。需要雲端沙盒上的 EAS 模�
 
 msgid "No name on file"
 msgstr "未登記姓名"
+
+#. placeholder {0}: formatElapsed(now - task.updatedAt)
+msgid "No news for {0}"
+msgstr "{0} 無更新"
 
 msgid "No notes match these filters."
 msgstr "沒有符合這些篩選條件的筆記。"
@@ -12128,6 +12164,9 @@ msgstr "這裡還沒有內容。"
 
 msgid "Nothing here."
 msgstr "這裡沒有內容。"
+
+msgid "Nothing is being tracked"
+msgstr "沒有正在追蹤的任務"
 
 msgid "Nothing is running. Archive it and create a new one."
 msgstr "沒有任何東西在執行。封存它，再建一個。"
@@ -12849,6 +12888,10 @@ msgstr "開啟終端機並向代理程式下達指令"
 
 msgid "Open the Changes pane in a new tab, or focus the existing one"
 msgstr "在新分頁中開啟更改面板，或聚焦現有面板"
+
+#. placeholder {0}: task.title
+msgid "Open the conversation of {0}"
+msgstr "開啟 {0} 的對話"
 
 msgid "Open the global command palette"
 msgstr "開啟全域性命令面板"
@@ -15400,6 +15443,10 @@ msgstr "執行中"
 msgid "Running \"{name}\" now"
 msgstr "正在立即執行「{name}」"
 
+#. placeholder {0}: task.ci.currentJob
+msgid "Running {0}"
+msgstr "正在執行 {0}"
+
 msgid "Running a command"
 msgstr "正在執行指令"
 
@@ -16641,6 +16688,9 @@ msgstr "正在登入..."
 msgid "Signup works. The welcome screen loads and the console is clean."
 msgstr "註冊正常。歡迎畫面已載入，主控台沒有錯誤。"
 
+msgid "Silent"
+msgstr "無動靜"
+
 msgid "Simple pricing for every team"
 msgstr "適合每支團隊的簡單定價"
 
@@ -17797,6 +17847,14 @@ msgstr "targetHostId與該工作區的主機不匹配"
 msgid "Task"
 msgstr "任務"
 
+#. placeholder {0}: task.title
+msgid "Task done: {0}"
+msgstr "任務完成：{0}"
+
+#. placeholder {0}: task.title
+msgid "Task failed: {0}"
+msgstr "任務失敗：{0}"
+
 msgid "Task ID copied"
 msgstr "已複製任務 ID"
 
@@ -18064,11 +18122,20 @@ msgstr "代理程式從工單一路負責到差異。人類審查結果，而不
 msgid "The agent stopped while resuming the conversation."
 msgstr "恢復對話時代理已停止。"
 
+msgid "The agent stopped working"
+msgstr "代理已停止工作"
+
 msgid "The agent this automation was set to run no longer exists on its host — the host's agents may have been reset or removed. Re-select an agent in the automation's settings."
 msgstr "這個自動化原本要執行的代理程式在它的主機上已不存在，該主機的代理程式可能被重置或刪除了。請在自動化的設定中重新選擇一個代理程式。"
 
+msgid "The agent waits for a permission"
+msgstr "代理正在等待權限"
+
 msgid "The agent watching the page reads each comment. It updates the page and replies in the thread."
 msgstr "關注該頁面的代理程式會讀取每則留言，更新頁面並在討論串中回覆。"
+
+msgid "The agent's session ended"
+msgstr "代理的工作階段已結束"
 
 msgid "The app is free to download. It requires iOS 26 or later and Superset Pro. Android is next."
 msgstr "此 App 可免費下載。需要 iOS 26 或更新版本以及 Superset Pro。接下來將推出 Android 版。"
@@ -19020,6 +19087,9 @@ msgstr "揪出那個不穩定的測試…"
 
 msgid "Track tasks in"
 msgstr "任務管理位置"
+
+msgid "Tracked tasks"
+msgstr "追蹤的任務"
 
 msgid "Tracking"
 msgstr "已追蹤"

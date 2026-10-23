@@ -28,6 +28,7 @@ import { systemRouter } from "./system";
 import { tagFoldersRouter } from "./tag-folders";
 import { terminalRouter } from "./terminal";
 import { terminalAgentsRouter } from "./terminal-agents";
+import { trackedTasksRouter } from "./tracked-tasks";
 import { usageRouter } from "./usage";
 import { workspaceRouter } from "./workspace";
 import { workspaceCleanupRouter } from "./workspace-cleanup";
@@ -73,6 +74,7 @@ export const appRouter = router({
 	workspaceCleanup: workspaceCleanupRouter,
 	workspaceCreation: workspaceCreationRouter,
 	workspaceNotes: workspaceNotesRouter,
+	trackedTasks: trackedTasksRouter,
 	workspaceLabels: workspaceLabelsRouter,
 	workspaceGrants: workspaceGrantsRouter,
 });

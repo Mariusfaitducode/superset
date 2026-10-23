@@ -427,6 +427,11 @@ msgstr "Đã bật {0}"
 msgid "{0} ending in {1}"
 msgstr "{0} kết thúc bằng {1}"
 
+#. placeholder {0}: summary.failed
+#. placeholder {1}: summary.running
+msgid "{0} failed, {1} running"
+msgstr "{0} thất bại, {1} đang chạy"
+
 #. placeholder {0}: collisions.length
 msgid "{0} files already exist in {where}. Do you want to replace them?"
 msgstr "{0} tệp đã tồn tại trong {where}. Bạn có muốn thay thế chúng không?"
@@ -525,6 +530,10 @@ msgstr "{0} tin nhắn đang chờ"
 msgid "{0} refs"
 msgstr "{0} ref"
 
+#. placeholder {0}: summary.running
+msgid "{0} running"
+msgstr "{0} đang chạy"
+
 #. placeholder {0}: tally.running
 msgid "{0} Running"
 msgstr "{0} đang chạy"
@@ -602,6 +611,11 @@ msgstr "{0}/{1}"
 #. placeholder {1}: tally.total
 msgid "{0}/{1} Checks Passing"
 msgstr "{0}/{1} check đã qua"
+
+#. placeholder {0}: progress.done
+#. placeholder {1}: progress.total
+msgid "{0}/{1} jobs"
+msgstr "{0}/{1} job"
 
 #. placeholder {0}: summary.passed
 #. placeholder {1}: summary.total
@@ -1163,6 +1177,9 @@ msgstr "{repositoryFullName} không nằm trong {installedAccountLogin}, nơi Gi
 
 msgid "{repositoryFullName} isn't shared with the Superset GitHub App yet."
 msgstr "{repositoryFullName} chưa được chia sẻ với GitHub App của Superset."
+
+msgid "{running} running"
+msgstr "{running} đang chạy"
 
 msgid "{seconds}s ago"
 msgstr "{seconds} giây trước"
@@ -2096,6 +2113,9 @@ msgstr "Bản xem trước do agent điều khiển"
 
 msgid "Agents"
 msgstr "Agent"
+
+msgid "Agents add a card here with superset track when they wait on something long: a CI run, a build, a deploy."
+msgstr "Agent thêm thẻ ở đây bằng superset track khi chờ việc gì lâu: lần chạy CI, bản build, triển khai."
 
 msgid "Agents complete routine tickets with no mid-task intervention."
 msgstr "Agent hoàn thành các ticket thường ngày mà không cần can thiệp giữa chừng."
@@ -4190,6 +4210,9 @@ msgstr "Đóng tất cả cổng của {0}"
 msgid "Close all ports in this workspace"
 msgstr "Đóng tất cả cổng trong workspace này"
 
+msgid "Close and archive"
+msgstr "Đóng và lưu trữ"
+
 msgid "Close Browser"
 msgstr "Đóng trình duyệt"
 
@@ -5419,6 +5442,9 @@ msgstr "Không thể cập nhật nhánh"
 
 msgid "Could not update the note"
 msgstr "Không thể cập nhật ghi chú"
+
+msgid "Could not update the task"
+msgstr "Không thể cập nhật tác vụ"
 
 msgid "Could not update the to-do"
 msgstr "Không thể cập nhật việc cần làm"
@@ -8520,6 +8546,9 @@ msgstr "GitHub từ chối merge"
 msgid "GitHub sign-in needed"
 msgstr "Cần đăng nhập GitHub"
 
+msgid "GitHub stopped answering"
+msgstr "GitHub ngừng phản hồi"
+
 msgid "GitHub sync requires the Pro plan."
 msgstr "Đồng bộ GitHub yêu cầu gói Pro."
 
@@ -11404,6 +11433,9 @@ msgstr "Chưa có agent nào."
 msgid "No API keys yet."
 msgstr "Chưa có khóa API nào."
 
+msgid "No archived tasks"
+msgstr "Không có tác vụ đã lưu trữ"
+
 msgid "No archived to-dos"
 msgstr "Không có việc cần làm đã lưu trữ"
 
@@ -11691,6 +11723,10 @@ msgstr "Không có trình giả lập di động nào khả dụng ở đây. C�
 
 msgid "No name on file"
 msgstr "Chưa có tên nào được lưu"
+
+#. placeholder {0}: formatElapsed(now - task.updatedAt)
+msgid "No news for {0}"
+msgstr "Không có tin trong {0}"
 
 msgid "No notes match these filters."
 msgstr "Không có ghi chú nào khớp với bộ lọc này."
@@ -12128,6 +12164,9 @@ msgstr "Chưa có gì ở đây."
 
 msgid "Nothing here."
 msgstr "Không có gì ở đây."
+
+msgid "Nothing is being tracked"
+msgstr "Không có gì đang được theo dõi"
 
 msgid "Nothing is running. Archive it and create a new one."
 msgstr "Không có gì đang chạy. Hãy lưu trữ nó và tạo cái mới."
@@ -12849,6 +12888,10 @@ msgstr "Mở terminal và giao việc cho tác nhân"
 
 msgid "Open the Changes pane in a new tab, or focus the existing one"
 msgstr "Mở bảng thay đổi trong tab mới, hoặc chuyển tiêu điểm đến bảng hiện có"
+
+#. placeholder {0}: task.title
+msgid "Open the conversation of {0}"
+msgstr "Mở cuộc trò chuyện của {0}"
 
 msgid "Open the global command palette"
 msgstr "Mở bảng lệnh toàn cục"
@@ -15400,6 +15443,10 @@ msgstr "Đang chạy"
 msgid "Running \"{name}\" now"
 msgstr "Đang chạy \"{name}\""
 
+#. placeholder {0}: task.ci.currentJob
+msgid "Running {0}"
+msgstr "Đang chạy {0}"
+
 msgid "Running a command"
 msgstr "Đang chạy lệnh"
 
@@ -16641,6 +16688,9 @@ msgstr "Đang đăng nhập..."
 msgid "Signup works. The welcome screen loads and the console is clean."
 msgstr "Đăng ký hoạt động tốt. Màn hình chào mừng tải xong và console không có lỗi."
 
+msgid "Silent"
+msgstr "Im lặng"
+
 msgid "Simple pricing for every team"
 msgstr "Giá đơn giản cho mọi đội ngũ"
 
@@ -17797,6 +17847,14 @@ msgstr "targetHostId không khớp với host của workspace"
 msgid "Task"
 msgstr "Tác vụ"
 
+#. placeholder {0}: task.title
+msgid "Task done: {0}"
+msgstr "Tác vụ hoàn tất: {0}"
+
+#. placeholder {0}: task.title
+msgid "Task failed: {0}"
+msgstr "Tác vụ thất bại: {0}"
+
 msgid "Task ID copied"
 msgstr "Đã sao chép ID tác vụ"
 
@@ -18064,11 +18122,20 @@ msgstr "Agent làm chủ một tác vụ từ ticket đến diff. Con người r
 msgid "The agent stopped while resuming the conversation."
 msgstr "Tác tử đã dừng khi đang tiếp tục cuộc trò chuyện."
 
+msgid "The agent stopped working"
+msgstr "Agent đã ngừng làm việc"
+
 msgid "The agent this automation was set to run no longer exists on its host — the host's agents may have been reset or removed. Re-select an agent in the automation's settings."
 msgstr "Agent mà tự động hóa này được đặt để chạy không còn tồn tại trên host của nó — agent của host có thể đã bị đặt lại hoặc gỡ bỏ. Hãy chọn lại agent trong cài đặt của tự động hóa."
 
+msgid "The agent waits for a permission"
+msgstr "Agent đang chờ cấp quyền"
+
 msgid "The agent watching the page reads each comment. It updates the page and replies in the thread."
 msgstr "Agent theo dõi trang sẽ đọc từng bình luận. Agent cập nhật trang và trả lời trong luồng."
+
+msgid "The agent's session ended"
+msgstr "Phiên của agent đã kết thúc"
 
 msgid "The app is free to download. It requires iOS 26 or later and Superset Pro. Android is next."
 msgstr "Ứng dụng được tải miễn phí. Yêu cầu iOS 26 trở lên và Superset Pro. Tiếp theo sẽ là Android."
@@ -19020,6 +19087,9 @@ msgstr "Truy ra bài test chập chờn đó…"
 
 msgid "Track tasks in"
 msgstr "Theo dõi công việc trong"
+
+msgid "Tracked tasks"
+msgstr "Tác vụ được theo dõi"
 
 msgid "Tracking"
 msgstr "Theo dõi"

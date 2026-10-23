@@ -427,6 +427,11 @@ msgstr "{0} etkin"
 msgid "{0} ending in {1}"
 msgstr "{1} ile biten {0}"
 
+#. placeholder {0}: summary.failed
+#. placeholder {1}: summary.running
+msgid "{0} failed, {1} running"
+msgstr "{0} başarısız, {1} çalışıyor"
+
 #. placeholder {0}: collisions.length
 msgid "{0} files already exist in {where}. Do you want to replace them?"
 msgstr "{where} konumunda {0} dosya zaten var. Bunları değiştirmek istiyor musunuz?"
@@ -525,6 +530,10 @@ msgstr "Kuyrukta {0} mesaj"
 msgid "{0} refs"
 msgstr "{0} ref"
 
+#. placeholder {0}: summary.running
+msgid "{0} running"
+msgstr "{0} çalışıyor"
+
 #. placeholder {0}: tally.running
 msgid "{0} Running"
 msgstr "{0} çalışıyor"
@@ -602,6 +611,11 @@ msgstr "{0}/{1}"
 #. placeholder {1}: tally.total
 msgid "{0}/{1} Checks Passing"
 msgstr "{0}/{1} kontrol geçiyor"
+
+#. placeholder {0}: progress.done
+#. placeholder {1}: progress.total
+msgid "{0}/{1} jobs"
+msgstr "{0}/{1} iş"
 
 #. placeholder {0}: summary.passed
 #. placeholder {1}: summary.total
@@ -1163,6 +1177,9 @@ msgstr "{repositoryFullName}, bu organizasyonun GitHub App'inin kurulu olduğu {
 
 msgid "{repositoryFullName} isn't shared with the Superset GitHub App yet."
 msgstr "{repositoryFullName} henüz Superset GitHub App ile paylaşılmadı."
+
+msgid "{running} running"
+msgstr "{running} çalışıyor"
 
 msgid "{seconds}s ago"
 msgstr "{seconds}sn önce"
@@ -2096,6 +2113,9 @@ msgstr "Ajanın yönettiği önizlemeler"
 
 msgid "Agents"
 msgstr "Ajanlar"
+
+msgid "Agents add a card here with superset track when they wait on something long: a CI run, a build, a deploy."
+msgstr "Ajanlar uzun bir şey beklerken superset track ile buraya kart ekler: CI çalıştırması, derleme, dağıtım."
 
 msgid "Agents complete routine tickets with no mid-task intervention."
 msgstr "Ajanlar rutin biletleri görev ortasında müdahale olmadan tamamlar."
@@ -4190,6 +4210,9 @@ msgstr "{0} için tüm portları kapat"
 msgid "Close all ports in this workspace"
 msgstr "Bu çalışma alanındaki tüm portları kapat"
 
+msgid "Close and archive"
+msgstr "Kapat ve arşivle"
+
 msgid "Close Browser"
 msgstr "Tarayıcıyı kapat"
 
@@ -5419,6 +5442,9 @@ msgstr "Dal güncellenemedi"
 
 msgid "Could not update the note"
 msgstr "Not güncellenemedi"
+
+msgid "Could not update the task"
+msgstr "Görev güncellenemedi"
 
 msgid "Could not update the to-do"
 msgstr "Yapılacak güncellenemedi"
@@ -8520,6 +8546,9 @@ msgstr "GitHub birleştirmeyi reddetti"
 msgid "GitHub sign-in needed"
 msgstr "GitHub oturumu açmanız gerekiyor"
 
+msgid "GitHub stopped answering"
+msgstr "GitHub yanıt vermiyor"
+
 msgid "GitHub sync requires the Pro plan."
 msgstr "GitHub eşitlemesi Pro planı gerektirir."
 
@@ -11404,6 +11433,8 @@ msgstr "Henüz ajan yok."
 msgid "No API keys yet."
 msgstr "Henüz API anahtarı yok."
 
+msgid "No archived tasks"
+
 msgid "No archived to-dos"
 msgstr "Arşivlenen görev yok"
 
@@ -11691,6 +11722,10 @@ msgstr "Burada kullanılabilir bir mobil simülatör yok. Bulut korumalı alanı
 
 msgid "No name on file"
 msgstr "Kayıtlı ad yok"
+
+#. placeholder {0}: formatElapsed(now - task.updatedAt)
+msgid "No news for {0}"
+msgstr "{0} süredir haber yok"
 
 msgid "No notes match these filters."
 msgstr "Bu filtrelerle eşleşen not yok."
@@ -12128,6 +12163,9 @@ msgstr "Burada henüz bir şey yok."
 
 msgid "Nothing here."
 msgstr "Burada bir şey yok."
+
+msgid "Nothing is being tracked"
+msgstr "Takip edilen bir şey yok"
 
 msgid "Nothing is running. Archive it and create a new one."
 msgstr "Hiçbir şey çalışmıyor. Bunu arşivleyip yeni bir tane oluşturun."
@@ -12849,6 +12887,10 @@ msgstr "Terminal açabilir ve ajanlara komut verebilir"
 
 msgid "Open the Changes pane in a new tab, or focus the existing one"
 msgstr "Değişiklikler panelini yeni sekmede açar veya mevcut olana odaklanır"
+
+#. placeholder {0}: task.title
+msgid "Open the conversation of {0}"
+msgstr "{0} konuşmasını aç"
 
 msgid "Open the global command palette"
 msgstr "Genel komut paletini aç"
@@ -15400,6 +15442,10 @@ msgstr "Çalışıyor"
 msgid "Running \"{name}\" now"
 msgstr "\"{name}\" şimdi çalıştırılıyor"
 
+#. placeholder {0}: task.ci.currentJob
+msgid "Running {0}"
+msgstr "{0} çalışıyor"
+
 msgid "Running a command"
 msgstr "Komut çalıştırıyor"
 
@@ -16641,6 +16687,9 @@ msgstr "Oturum açılıyor..."
 msgid "Signup works. The welcome screen loads and the console is clean."
 msgstr "Kayıt çalışıyor. Hoş geldiniz ekranı yükleniyor ve konsol temiz."
 
+msgid "Silent"
+msgstr "Sessiz"
+
 msgid "Simple pricing for every team"
 msgstr "Her takım için basit fiyatlandırma"
 
@@ -17797,6 +17846,14 @@ msgstr "targetHostId, çalışma alanının host'uyla eşleşmiyor"
 msgid "Task"
 msgstr "Görev"
 
+#. placeholder {0}: task.title
+msgid "Task done: {0}"
+msgstr "Görev tamamlandı: {0}"
+
+#. placeholder {0}: task.title
+msgid "Task failed: {0}"
+msgstr "Görev başarısız: {0}"
+
 msgid "Task ID copied"
 msgstr "Görev kimliği kopyalandı"
 
@@ -18064,11 +18121,20 @@ msgstr "Ajan, bir görevi biletten farka kadar sahiplenir. İnsan tuş vuruşlar
 msgid "The agent stopped while resuming the conversation."
 msgstr "Ajan, konuşmayı sürdürürken durdu."
 
+msgid "The agent stopped working"
+msgstr "Ajan çalışmayı bıraktı"
+
 msgid "The agent this automation was set to run no longer exists on its host — the host's agents may have been reset or removed. Re-select an agent in the automation's settings."
 msgstr "Bu otomasyonun çalıştırılacağı ajan, host'unda artık yok — host'un ajanları sıfırlanmış veya kaldırılmış olabilir. Otomasyonun ayarlarından yeni bir ajan seçin."
 
+msgid "The agent waits for a permission"
+msgstr "Ajan bir izin bekliyor"
+
 msgid "The agent watching the page reads each comment. It updates the page and replies in the thread."
 msgstr "Sayfayı izleyen ajan her yorumu okur. Sayfayı günceller ve konuda yanıt verir."
+
+msgid "The agent's session ended"
+msgstr "Ajanın oturumu sona erdi"
 
 msgid "The app is free to download. It requires iOS 26 or later and Superset Pro. Android is next."
 msgstr "Uygulama ücretsiz indirilebilir. iOS 26 veya sonrası ve Superset Pro gerekir. Sırada Android var."
@@ -19020,6 +19086,9 @@ msgstr "Şu kararsız testin izini sür…"
 
 msgid "Track tasks in"
 msgstr "Görevleri şurada takip et"
+
+msgid "Tracked tasks"
+msgstr "Takip edilen görevler"
 
 msgid "Tracking"
 msgstr "İzleme"
