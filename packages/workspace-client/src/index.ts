@@ -19,6 +19,7 @@ export {
 	type TerminalLifecyclePayload,
 	type WorkspaceChangedPayload,
 	type WorkspaceCreateSettledPayload,
+	type WorkspaceNotesChangedPayload,
 	type WorkspaceSnapshotPayload,
 } from "./lib/eventBus";
 export {

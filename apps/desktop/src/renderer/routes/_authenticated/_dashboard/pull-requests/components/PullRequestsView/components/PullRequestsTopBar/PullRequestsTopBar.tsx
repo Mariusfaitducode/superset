@@ -13,7 +13,7 @@ import type { PullRequestReviewFilter } from "renderer/routes/_authenticated/_da
 import { AuthorFilter } from "./components/AuthorFilter";
 import { ReviewFilter } from "./components/ReviewFilter";
 
-type PullRequestsStateFilter = "open" | "all" | "merged";
+type PullRequestsStateFilter = "open" | "all" | "merged" | "mine";
 
 interface PullRequestsTopBarProps {
 	searchQuery: string;
@@ -51,6 +51,12 @@ export function PullRequestsTopBar({
 		label: string;
 	}> = [
 		{
+			value: "mine",
+			label: t({
+				message: "Mine",
+			}),
+		},
+		{
 			value: "all",
 			label: t({
 				message: "All",
@@ -70,10 +76,12 @@ export function PullRequestsTopBar({
 			}),
 		},
 	];
+	const isMine = stateFilter === "mine";
+	// The Mine view picks its own author and review relationship.
 	const activeFilterCount = [
 		projectFilters.length > 0,
-		!!authorFilter,
-		!!reviewFilter,
+		!isMine && !!authorFilter,
+		!isMine && !!reviewFilter,
 	].filter(Boolean).length;
 
 	return (
@@ -170,25 +178,29 @@ export function PullRequestsTopBar({
 								alwaysShowLabel
 							/>
 						</div>
-						<div className="flex items-center justify-between gap-2">
-							<span className="text-xs text-muted-foreground">
-								<Trans>Author</Trans>
-							</span>
-							<AuthorFilter
-								value={authorFilter}
-								onChange={onAuthorFilterChange}
-								projectTargets={projectTargets}
-							/>
-						</div>
-						<div className="flex items-center justify-between gap-2">
-							<span className="text-xs text-muted-foreground">
-								<Trans>Reviews</Trans>
-							</span>
-							<ReviewFilter
-								value={reviewFilter}
-								onChange={onReviewFilterChange}
-							/>
-						</div>
+						{!isMine && (
+							<>
+								<div className="flex items-center justify-between gap-2">
+									<span className="text-xs text-muted-foreground">
+										<Trans>Author</Trans>
+									</span>
+									<AuthorFilter
+										value={authorFilter}
+										onChange={onAuthorFilterChange}
+										projectTargets={projectTargets}
+									/>
+								</div>
+								<div className="flex items-center justify-between gap-2">
+									<span className="text-xs text-muted-foreground">
+										<Trans>Reviews</Trans>
+									</span>
+									<ReviewFilter
+										value={reviewFilter}
+										onChange={onReviewFilterChange}
+									/>
+								</div>
+							</>
+						)}
 					</PopoverContent>
 				</Popover>
 			</div>

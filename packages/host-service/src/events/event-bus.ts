@@ -307,6 +307,15 @@ export class EventBus {
 		this.broadcast({ type: "page-watch:changed", ...message });
 	}
 
+	broadcastWorkspaceNotesChanged(
+		message: Omit<
+			Extract<ServerMessage, { type: "workspace-notes:changed" }>,
+			"type"
+		>,
+	): void {
+		this.broadcast({ type: "workspace-notes:changed", ...message });
+	}
+
 	/**
 	 * Fan out workspace lifecycle changes (create/rename/delete) from the
 	 * host-owned workspaces table. Broadcast to all clients — list consumers

@@ -20,12 +20,15 @@ interface PullRequestsFilterState {
 	/** Narrows further to merged-only — independent of includeClosed, which
 	 *  the "is:merged" qualifier takes precedence over on the backend. */
 	mergedOnly: boolean;
+	/** The "Mine" view: open PRs I'm part of, grouped by who they wait on. */
+	mineOnly: boolean;
 	setSearch: (search: string) => void;
 	setProjectFilters: (projectFilters: string[]) => void;
 	setAuthorFilter: (authorFilter: string | null) => void;
 	setReviewFilter: (reviewFilter: PullRequestReviewFilter | null) => void;
 	setIncludeClosed: (includeClosed: boolean) => void;
 	setMergedOnly: (mergedOnly: boolean) => void;
+	setMineOnly: (mineOnly: boolean) => void;
 }
 
 type PersistedPullRequestsFilterState = Pick<
@@ -35,6 +38,7 @@ type PersistedPullRequestsFilterState = Pick<
 	| "reviewFilter"
 	| "includeClosed"
 	| "mergedOnly"
+	| "mineOnly"
 >;
 
 export function migratePullRequestsFilterState(
@@ -54,6 +58,7 @@ export function migratePullRequestsFilterState(
 		reviewFilter: normalizePullRequestReviewFilter(state.reviewFilter),
 		includeClosed: state.includeClosed === true,
 		mergedOnly: state.mergedOnly === true,
+		mineOnly: state.mineOnly === true,
 	};
 }
 
@@ -66,6 +71,7 @@ export const usePullRequestsFilterStore = create<PullRequestsFilterState>()(
 			reviewFilter: null,
 			includeClosed: false,
 			mergedOnly: false,
+			mineOnly: false,
 			setSearch: (search) => set({ search }),
 			// Bail on equal content: views sync filters back through an effect,
 			// so an always-fresh array here becomes an infinite update loop.
@@ -84,10 +90,11 @@ export const usePullRequestsFilterStore = create<PullRequestsFilterState>()(
 				}),
 			setIncludeClosed: (includeClosed) => set({ includeClosed }),
 			setMergedOnly: (mergedOnly) => set({ mergedOnly }),
+			setMineOnly: (mineOnly) => set({ mineOnly }),
 		}),
 		{
 			name: "pull-requests-filter-state",
-			version: 7,
+			version: 8,
 			migrate: migratePullRequestsFilterState,
 			partialize: (state) => ({
 				projectFilters: state.projectFilters,
@@ -95,6 +102,7 @@ export const usePullRequestsFilterStore = create<PullRequestsFilterState>()(
 				reviewFilter: state.reviewFilter,
 				includeClosed: state.includeClosed,
 				mergedOnly: state.mergedOnly,
+				mineOnly: state.mineOnly,
 			}),
 		},
 	),
@@ -107,6 +115,7 @@ interface PullRequestsFilters {
 	reviewFilter: PullRequestReviewFilter | null;
 	includeClosed: boolean;
 	mergedOnly: boolean;
+	mineOnly?: boolean;
 }
 
 export function pullRequestsSearchFromFilters(
@@ -118,7 +127,8 @@ export function pullRequestsSearchFromFilters(
 	if (projects) search.projects = projects;
 	if (filters.authorFilter) search.author = filters.authorFilter;
 	if (filters.reviewFilter) search.review = filters.reviewFilter;
-	if (filters.mergedOnly) search.state = "merged";
+	if (filters.mineOnly) search.state = "mine";
+	else if (filters.mergedOnly) search.state = "merged";
 	else if (filters.includeClosed) search.state = "all";
 	return search;
 }

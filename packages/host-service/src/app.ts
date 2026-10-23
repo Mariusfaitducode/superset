@@ -22,6 +22,10 @@ import {
 	promptChatSession,
 	registerChatV3Routes,
 } from "./chat-v3";
+import {
+	getConversationTodoStore,
+	watchAgentConversations,
+} from "./conversation-todos";
 import { createDb, type HostDb } from "./db";
 import { EventBus, GitWatcher, registerEventBusRoute } from "./events";
 import { agentIsBusy, PageWatchManager } from "./page-watch/index.ts";
@@ -236,6 +240,12 @@ export function createApp(options: CreateAppOptions): CreateAppResult {
 		);
 	}
 	const terminalAgentStore = new TerminalAgentStore(terminalAgentPersistence);
+	watchAgentConversations({
+		db,
+		agentStore: terminalAgentStore,
+		todoStore: getConversationTodoStore(),
+		onMoved: () => eventBus.broadcastHostStoreChanged("conversation-todos"),
+	});
 
 	const pageWatch = new PageWatchManager({
 		api: {

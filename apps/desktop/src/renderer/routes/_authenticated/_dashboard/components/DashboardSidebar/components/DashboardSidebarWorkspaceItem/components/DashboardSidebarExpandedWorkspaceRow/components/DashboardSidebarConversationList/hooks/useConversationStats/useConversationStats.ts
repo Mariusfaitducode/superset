@@ -18,19 +18,23 @@ const hostsWithoutSessionStats = new Set<string>();
 
 /**
  * The conversation's context use and token totals from its host. Hosts too
- * old to have `sessionStats` answer null and are not asked again.
+ * old to have `sessionStats` answer null and are not asked again. Every agent
+ * event changes `lastEventAt` and reads again; between events only a working
+ * agent's numbers move, so only it is polled.
  */
 export function useConversationStats({
 	workspaceId,
 	hostId,
 	terminalId,
 	lastEventAt,
+	working,
 	enabled,
 }: {
 	workspaceId: string;
 	hostId: string;
 	terminalId: string;
 	lastEventAt: number;
+	working: boolean;
 	enabled: boolean;
 }): ConversationStats | null {
 	const { cache } = useHostWorkspaces();
@@ -61,7 +65,7 @@ export function useConversationStats({
 			}
 		},
 		placeholderData: (previous) => previous,
-		refetchInterval: 30_000,
+		refetchInterval: working ? 30_000 : false,
 		staleTime: 15_000,
 		retry: hostServiceQueryRetry,
 		retryDelay: hostServiceQueryRetryDelay,

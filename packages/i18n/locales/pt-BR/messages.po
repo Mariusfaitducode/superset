@@ -34,6 +34,9 @@ msgstr "./"
 msgid ".sh"
 msgstr ".sh"
 
+msgid "· none right now"
+msgstr "· nenhum no momento"
+
 msgid "· updated {updatedAgo}"
 msgstr "· atualizada {updatedAgo}"
 
@@ -603,6 +606,9 @@ msgstr "{0}% de todos os tokens · {1} tokens"
 msgid "{0}% of total cost · {1} tokens · * at API list rates"
 msgstr "{0}% do custo total · {1} tokens · * a preços de tabela da API"
 
+msgid "{activeCount, plural, one {# session is working or waiting for you: it stops mid-task.} other {# sessions are working or waiting for you: they stop mid-task.}}"
+msgstr "{activeCount, plural, one {# sessão está trabalhando ou esperando por você: ela para no meio da tarefa.} other {# sessões estão trabalhando ou esperando por você: elas param no meio da tarefa.}}"
+
 msgid "{actor} added the label {label}"
 msgstr "{actor} adicionou o rótulo {label}"
 
@@ -715,11 +721,17 @@ msgstr "{actual} até agora · ~{projected} projetadas"
 msgid "{agents} sessions resume when you open their workspace."
 msgstr "As sessões de {agents} são retomadas quando você abre o workspace delas."
 
+msgid "{author} waits for your review"
+msgstr "{author} aguarda sua revisão"
+
 msgid "{behindCount, plural, one {Behind main by # commit, needs rebase} other {Behind main by # commits, needs rebase}}"
 msgstr "{behindCount, plural, one {# commit atrás da main, precisa de rebase} other {# commits atrás da main, precisa de rebase}}"
 
 msgid "{branchPosition} of {totalBranches}"
 msgstr "{branchPosition} de {totalBranches}"
+
+msgid "{closed, plural, one {Closed # session} other {Closed # sessions}}"
+msgstr "{closed, plural, one {# sessão fechada} other {# sessões fechadas}}"
 
 msgid "{closedCount, plural, one {Closed # port} other {Closed # ports}}"
 msgstr "{closedCount, plural, one {# porta fechada} other {# portas fechadas}}"
@@ -745,6 +757,9 @@ msgstr "Conta do {connectorName}"
 
 msgid "{cookieCount} cookies — forget this site"
 msgstr "{cookieCount} cookies — esquecer este site"
+
+msgid "{count, plural, one {· # session, {freed}} other {· # sessions, {freed}}}"
+msgstr "{count, plural, one {· # sessão, {freed}} other {· # sessões, {freed}}}"
 
 msgid "{count, plural, one {# active port — show details} other {# active ports — show details}}"
 msgstr "{count, plural, one {# porta ativa — mostrar detalhes} other {# portas ativas — mostrar detalhes}}"
@@ -775,6 +790,15 @@ msgstr "{count, plural, one {# worktree deste repositório não tem área de tra
 
 msgid "{count, plural, one {added a commit} other {added # commits}}"
 msgstr "{count, plural, one {adicionou um commit} other {adicionou # commits}}"
+
+msgid "{count, plural, one {Close # session?} other {Close # sessions?}}"
+msgstr "{count, plural, one {Fechar # sessão?} other {Fechar # sessões?}}"
+
+msgid "{count, plural, one {Close # session…} other {Close # sessions…}}"
+msgstr "{count, plural, one {Fechar # sessão…} other {Fechar # sessões…}}"
+
+msgid "{count, plural, one {Close # session} other {Close # sessions}}"
+msgstr "{count, plural, one {Fechar # sessão} other {Fechar # sessões}}"
 
 msgid "{count, plural, one {Created # workspace} other {Created # workspaces}}"
 msgstr "{count, plural, one {# área de trabalho criada} other {# áreas de trabalho criadas}}"
@@ -839,6 +863,9 @@ msgstr "{current} de {total}"
 msgid "{currentPage} of {totalBranches}"
 msgstr "{currentPage} de {totalBranches}"
 
+msgid "{days, plural, one {# day} other {# days}}"
+msgstr "{days, plural, one {# dia} other {# dias}}"
+
 msgid "{days} at {time}"
 msgstr "{days} às {time}"
 
@@ -872,6 +899,9 @@ msgstr "{entryPath} neste workspace já está publicado como página em outra or
 
 msgid "{failed, plural, one {# failed} other {# failed}}"
 msgstr "{failed, plural, one {# falhou} other {# falharam}}"
+
+msgid "{failed, plural, one {# session could not be closed} other {# sessions could not be closed}}"
+msgstr "{failed, plural, one {Não foi possível fechar # sessão} other {Não foi possível fechar # sessões}}"
 
 msgid "{failing} of {total} check failing"
 msgstr "{failing} de {total} verificação falhando"
@@ -914,6 +944,9 @@ msgstr "{hostName} está offline"
 
 msgid "{hotkeyText} to hide"
 msgstr "{hotkeyText} para ocultar"
+
+msgid "{hours} h"
+msgstr "{hours} h"
 
 msgid "{hours}h"
 msgstr "{hours}h"
@@ -981,6 +1014,24 @@ msgstr "há {months}mês"
 msgid "{myFailedCount} of your automations failed their last run"
 msgstr "Suas automações com falha na última execução: {myFailedCount}"
 
+msgid "{n} changes requested"
+msgstr "{n} com alterações solicitadas"
+
+msgid "{n} CI failing"
+msgstr "{n} com CI falhando"
+
+msgid "{n} drafts"
+msgstr "{n} rascunhos"
+
+msgid "{n} ready to merge"
+msgstr "{n} prontos para merge"
+
+msgid "{n} to review"
+msgstr "{n} para revisar"
+
+msgid "{n} with conflicts"
+msgstr "{n} com conflitos"
+
 msgid "{name} accounts"
 msgstr "Contas do {name}"
 
@@ -1002,8 +1053,14 @@ msgstr "{noun, select, person {Especifique pelo menos uma pessoa, ou escolha {ch
 msgid "{noun, select, repository {Specify at least one repository.} channel {Specify at least one channel.} reaction {Specify at least one reaction.} dataSource {Specify at least one data source.} team {Specify at least one team.} project {Specify at least one project.} calendar {Specify at least one calendar.} other {Specify at least one entry.}}"
 msgstr "{noun, select, repository {Especifique pelo menos um repositório.} channel {Especifique pelo menos um canal.} reaction {Especifique pelo menos uma reação.} dataSource {Especifique pelo menos uma fonte de dados.} team {Especifique pelo menos uma equipe.} project {Especifique pelo menos um projeto.} calendar {Especifique pelo menos um calendário.} other {Especifique pelo menos um item.}}"
 
+msgid "{onViewerCount} waiting on you"
+msgstr "{onViewerCount} aguardam você"
+
 msgid "{openCount} open"
 msgstr "{openCount} abertos"
+
+msgid "{orphanCount, plural, one {# process · {total}} other {# processes · {total}}}"
+msgstr "{orphanCount, plural, one {# processo · {total}} other {# processos · {total}}}"
 
 msgid "{pageTitle} can read and change data in your {pluginLabel} account as you, including in future versions of this page. It can send what it reads to other websites. Only allow pages you trust."
 msgstr "{pageTitle} pode ler e alterar dados da sua conta do {pluginLabel} em seu nome, inclusive em versões futuras desta página. Ela pode enviar o que ler para outros sites. Permita apenas páginas em que você confia."
@@ -1058,6 +1115,9 @@ msgstr "{presetLabel} redefinido para os padrões"
 msgid "{previewSize}px · {0} line height"
 msgstr "{previewSize}px · altura de linha {0}"
 
+msgid "{processCount, plural, one {# process} other {# processes}}"
+msgstr "{processCount, plural, one {# processo} other {# processos}}"
+
 msgid "{provider} logo"
 msgstr "logo da {provider}"
 
@@ -1092,6 +1152,9 @@ msgstr "há {seconds}s"
 
 msgid "{selectedCount} selected"
 msgstr "{selectedCount} selecionadas"
+
+msgid "{sessionCount, plural, one {# session · {total}} other {# sessions · {total}}}"
+msgstr "{sessionCount, plural, one {# sessão · {total}} other {# sessões · {total}}}"
 
 msgid "{share}% human"
 msgstr "{share}% humano"
@@ -1238,6 +1301,11 @@ msgstr "⇧ clique"
 #. placeholder {2}: changeset.files.length
 msgid "+{0} −{1} · {2, plural, one {# file} other {# files}}"
 msgstr "+{0} −{1} · {2, plural, one {# arquivo} other {# arquivos}}"
+
+#. placeholder {0}: additions ?? 0
+#. placeholder {1}: deletions ?? 0
+msgid "+{0} −{1} lines"
+msgstr "+{0} −{1} linhas"
 
 msgid "+{hidden} more"
 msgstr "+{hidden} mais"
@@ -1630,6 +1698,9 @@ msgstr "Conquistas"
 msgid "Acme Inc."
 msgstr "Acme Inc."
 
+msgid "Act."
+msgstr "Ativ."
+
 msgid "Action"
 msgstr "Ação"
 
@@ -1786,6 +1857,9 @@ msgstr "Adicionar mais…"
 msgid "Add one from the menu in the sidebar to get started."
 msgstr "Adicione um pelo menu da barra lateral para começar."
 
+msgid "Add or paste notes…"
+msgstr "Adicionar ou colar notas…"
+
 msgid "Add people"
 msgstr "Adicionar pessoas"
 
@@ -1864,6 +1938,9 @@ msgstr "{added} arquivos adicionados a {where}"
 msgid "Added 1 file to {where}"
 msgstr "1 arquivo adicionado a {where}"
 
+msgid "Added by an agent"
+msgstr "Adicionada por um agente"
+
 msgid "Added by the agent"
 msgstr "Adicionado pelo agente"
 
@@ -1918,6 +1995,9 @@ msgstr "Em relação à base"
 
 msgid "Against Main"
 msgstr "Em relação à main"
+
+msgid "Age"
+msgstr "Idade"
 
 msgid "Agent"
 msgstr "Agente"
@@ -2073,6 +2153,10 @@ msgstr "Todas"
 msgctxt "log scope"
 msgid "All"
 msgstr "Todos"
+
+#. placeholder {0}: notes.length
+msgid "All {0}"
+msgstr "Todas {0}"
 
 #. placeholder {0}: history.projects.length
 msgid "All {0} →"
@@ -2378,6 +2462,9 @@ msgstr "A Anthropic recusou este token."
 msgid "any account"
 msgstr "qualquer conta"
 
+msgid "Any age"
+msgstr "Qualquer idade"
+
 msgid "Any channel"
 msgstr "Qualquer canal"
 
@@ -2563,6 +2650,12 @@ msgstr "aprovou"
 
 msgid "Approved"
 msgstr "Aprovada"
+
+msgid "Approved and green"
+msgstr "Aprovado e verde"
+
+msgid "Approved and green, oldest first"
+msgstr "Aprovados e verdes, mais antigos primeiro"
 
 msgid "Approved review"
 msgstr "Revisão aprovada"
@@ -2955,6 +3048,9 @@ msgstr "Voltar para o início"
 
 msgid "Back to Integrations"
 msgstr "Voltar para as integrações"
+
+msgid "Back to its place"
+msgstr "Voltar ao lugar"
 
 msgid "Back to Linear"
 msgstr "Voltar para o Linear"
@@ -3538,6 +3634,9 @@ msgstr "Alterar responsável"
 msgid "Change avatar"
 msgstr "Trocar o avatar"
 
+msgid "Change how long without an answer"
+msgstr "Alterar o tempo sem resposta"
+
 msgid "Change icon"
 msgstr "Alterar ícone"
 
@@ -3611,6 +3710,9 @@ msgstr "Alterações solicitadas"
 
 msgid "Changes Requested"
 msgstr "Alterações solicitadas"
+
+msgid "Changes requested by {by}"
+msgstr "Alterações solicitadas por {by}"
 
 msgid "Changes saved"
 msgstr "Alterações salvas"
@@ -3798,8 +3900,33 @@ msgstr "Escolha quando o Superset te avisa."
 msgid "Choose where agents started from comments, design mode, and Pages open."
 msgstr "Escolha onde abrir os agentes iniciados em comentários, no modo de design e no Pages."
 
+msgid "CI"
+msgstr "CI"
+
 msgid "CI failed"
 msgstr "CI falhou"
+
+msgid "CI failing"
+msgstr "CI falhando"
+
+msgid "CI failing ({failed}/{total})"
+msgstr "CI falhando ({failed}/{total})"
+
+#. placeholder {0}: checks.failed
+#. placeholder {1}: checks.total
+msgid "CI failing: {0} of {1} checks"
+msgstr "CI falhando: {0} de {1} verificações"
+
+msgid "CI green"
+msgstr "CI verde"
+
+msgid "CI running"
+msgstr "CI em execução"
+
+#. placeholder {0}: checks.pending
+#. placeholder {1}: checks.total
+msgid "CI running: {0} of {1} checks"
+msgstr "CI em execução: {0} de {1} verificações"
 
 msgid "Clarify this"
 msgstr "Esclareça isto"
@@ -4132,6 +4259,9 @@ msgctxt "pull request or issue state"
 msgid "Closed"
 msgstr "Fechado"
 
+msgid "Closed {title}"
+msgstr "Fechada: {title}"
+
 msgid "Closing these ports will end the processes using them."
 msgstr "Fechar estas portas vai encerrar os processos que as usam."
 
@@ -4440,9 +4570,15 @@ msgstr "Configurar o comando de execução da área de trabalho"
 msgid "Confirm before quitting"
 msgstr "Confirmar antes de encerrar"
 
+msgid "Conflicts"
+msgstr "Conflitos"
+
 #. placeholder {0}: status.baseBranch
 msgid "Conflicts with {0}"
 msgstr "Conflitos com {0}"
+
+msgid "Conflicts with the base branch"
+msgstr "Conflitos com a branch base"
 
 msgid "Connect"
 msgstr "Conectar"
@@ -4902,6 +5038,9 @@ msgstr "Copiar o caminho relativo"
 msgid "Copy Relative Path"
 msgstr "Copiar o caminho relativo"
 
+msgid "Copy resume command"
+msgstr "Copiar comando de retomada"
+
 msgid "Copy Selection"
 msgstr "Copiar seleção"
 
@@ -4952,6 +5091,9 @@ msgstr "Custo para você: US$ 0"
 
 msgid "Could not add agent"
 msgstr "Não foi possível adicionar o agente"
+
+msgid "Could not add the notes"
+msgstr "Não foi possível adicionar as notas"
 
 msgid "Could not answer the agent"
 msgstr "Não foi possível responder ao agente"
@@ -5155,6 +5297,9 @@ msgstr "Não foi possível retomar"
 msgid "Could not resume the chat"
 msgstr "Não foi possível retomar o chat"
 
+msgid "Could not resume the session"
+msgstr "Não foi possível retomar a sessão"
+
 msgid "Could not send"
 msgstr "Não foi possível enviar"
 
@@ -5211,6 +5356,9 @@ msgstr "Não foi possível atualizar a skill"
 
 msgid "Could not update the branch"
 msgstr "Não foi possível atualizar a branch"
+
+msgid "Could not update the note"
+msgstr "Não foi possível atualizar a nota"
 
 msgid "Could not update the to-do"
 msgstr "Não foi possível atualizar a tarefa"
@@ -5460,9 +5608,6 @@ msgstr "Não foi possível verificar"
 
 msgid "CPU"
 msgstr "CPU"
-
-msgid "CPU cores"
-msgstr "Núcleos de CPU"
 
 msgid "Create"
 msgstr "Criar"
@@ -6013,6 +6158,9 @@ msgstr "Excluir rótulo"
 msgid "Delete local branch on workspace removal"
 msgstr "Excluir a branch local ao remover a área de trabalho"
 
+msgid "Delete note"
+msgstr "Excluir nota"
+
 msgid "Delete organization"
 msgstr "Excluir organização"
 
@@ -6245,8 +6393,14 @@ msgstr "Detalhes"
 msgid "Details are not available here, but the link still opens."
 msgstr "Os detalhes não estão disponíveis aqui, mas o link ainda abre."
 
+msgid "Details did not load"
+msgstr "Detalhes não carregaram"
+
 msgid "Dev"
 msgstr "Dev"
+
+msgid "Dev servers and tools whose agent or terminal is gone"
+msgstr "Servidores de desenvolvimento e ferramentas cujo agente ou terminal não existe mais"
 
 msgid "Dev sign in"
 msgstr "Login de dev"
@@ -6488,6 +6642,9 @@ msgstr "Quer salvar as alterações que você fez em {0}?"
 msgid "Do you want to save the changes you made to {name}?"
 msgstr "Quer salvar as alterações que você fez em {name}?"
 
+msgid "Docker VM"
+msgstr "VM do Docker"
+
 msgid "Docs"
 msgstr "Documentação"
 
@@ -6655,6 +6812,9 @@ msgstr "Menu suspenso"
 
 msgid "Dropdown, context, and application menus"
 msgstr "Menus suspensos, de contexto e de aplicativo"
+
+msgid "Dropped"
+msgstr "Descartada"
 
 msgid "Due"
 msgstr "Prazo"
@@ -7868,6 +8028,9 @@ msgstr "Encontre comentários TODO/FIXME antigos e resolva os rápidos."
 msgid "Finder"
 msgstr "Finder"
 
+msgid "Finish"
+msgstr "Finalizar"
+
 msgid "Finish review"
 msgstr "Concluir revisão"
 
@@ -7882,6 +8045,9 @@ msgstr "terminou · trabalhou por 7s"
 
 msgid "First repository by name"
 msgstr "Primeiro repositório por nome"
+
+msgid "Fix"
+msgstr "Corrigir"
 
 msgid "Fix all failing checks"
 msgstr "Corrigir todas as verificações com falha"
@@ -7984,6 +8150,9 @@ msgstr "Siga a gente no X/Twitter"
 
 msgid "Follow-up for the agent (optional)"
 msgstr "Acompanhamento para o agente (opcional)"
+
+msgid "Following"
+msgstr "Acompanhando"
 
 msgid "Font family"
 msgstr "Família da fonte"
@@ -8098,6 +8267,9 @@ msgstr "Grátis"
 
 msgid "Free for everyone"
 msgstr "Grátis para todo mundo"
+
+msgid "Frees about {freed}. Each one can be resumed later from “Recently closed”."
+msgstr "Libera cerca de {freed}. Cada uma pode ser retomada depois em “Fechadas recentemente”."
 
 msgid "Frequently<0/>asked questions"
 msgstr "Perguntas<0/>frequentes"
@@ -8288,6 +8460,12 @@ msgstr "Nome de usuário do GitHub..."
 msgid "GitHub username…"
 msgstr "Usuário do GitHub…"
 
+#. placeholder {0}: timings.searchMs
+#. placeholder {1}: timings.detailsMs
+#. placeholder {2}: timings.totalMs
+msgid "GitHub: search {0} ms, details {1} ms, total {2} ms"
+msgstr "GitHub: busca {0} ms, detalhes {1} ms, total {2} ms"
+
 msgid "Give me an example"
 msgstr "Dê um exemplo"
 
@@ -8425,6 +8603,9 @@ msgstr "Tem acesso"
 
 msgid "Has conflicts"
 msgstr "Tem conflitos"
+
+msgid "Has details"
+msgstr "Tem detalhes"
 
 msgid "Has uncommitted changes"
 msgstr "Tem alterações sem commit"
@@ -8774,6 +8955,9 @@ msgstr "Ocioso"
 
 msgid "Idle · branch pushed"
 msgstr "Ocioso · push da branch feito"
+
+msgid "Idle agents I haven't answered for"
+msgstr "Agentes ociosos sem resposta minha há"
 
 msgid "Idle conversations"
 msgstr "Conversas inativas"
@@ -9229,6 +9413,9 @@ msgstr "Convidado por"
 msgid "Invoices and payment method"
 msgstr "Faturas e forma de pagamento"
 
+msgid "Involved"
+msgstr "Envolvido"
+
 msgid "iOS app"
 msgstr "App para iOS"
 
@@ -9341,6 +9528,9 @@ msgstr "Sua própria branch e sua própria cópia dos arquivos"
 msgid "Its replies go with it."
 msgstr "As respostas também serão excluídas."
 
+msgid "Its whole process tree gets SIGTERM, then SIGKILL after 3 seconds."
+msgstr "Toda a árvore de processos recebe SIGTERM e, após 3 segundos, SIGKILL."
+
 msgid "Its workspaces and terminals are unavailable until it restarts — use the Superset tray menu > Host Service > Restart."
 msgstr "As áreas de trabalho e os terminais dele ficam indisponíveis até reiniciar — use o menu da bandeja do Superset > Serviço do host > Reiniciar."
 
@@ -9440,6 +9630,9 @@ msgstr "Continuar esperando"
 msgid "Keep working"
 msgstr "Continuar trabalhando"
 
+msgid "Kept"
+msgstr "Mantida"
+
 msgid "Kept the new file — it changed after it was created"
 msgstr "O novo arquivo foi mantido — ele mudou depois de criado"
 
@@ -9460,6 +9653,9 @@ msgstr "Atalhos de teclado"
 
 msgid "Kill"
 msgstr "Encerrar"
+
+msgid "Kill {pendingName} (pid {pendingPid})?"
+msgstr "Encerrar {pendingName} (pid {pendingPid})?"
 
 msgid "Kill all"
 msgstr "Encerrar todas"
@@ -9545,6 +9741,9 @@ msgstr "Última atividade"
 
 msgid "Last activity"
 msgstr "Última atividade"
+
+msgid "Last activity {updatedAgo} ago"
+msgstr "Última atividade há {updatedAgo}"
 
 #. placeholder {0}: formatDateTime(new Date(workspace.lastAgentEventAt), undefined)
 msgid "Last agent activity {0}"
@@ -9694,6 +9893,9 @@ msgstr "Você saiu da organização"
 msgid "Left team"
 msgstr "Você saiu da equipe"
 
+msgid "Leftover processes"
+msgstr "Processos remanescentes"
+
 msgid "Legal"
 msgstr "Jurídico"
 
@@ -9786,6 +9988,9 @@ msgstr "O Linear está limitando as solicitações. Tente novamente em alguns mi
 #. placeholder {1}: metadata.endLine
 msgid "Lines {0}–{1}"
 msgstr "Linhas {0}–{1}"
+
+msgid "Lines changed"
+msgstr "Linhas alteradas"
 
 msgid "Link"
 msgstr "Link"
@@ -9880,6 +10085,9 @@ msgstr "Ao vivo"
 msgid "Live · local machine · every 2 s"
 msgstr "Ao vivo · máquina local · a cada 2 s"
 
+msgid "Live · measured in {measuredMs} ms"
+msgstr "Ao vivo · medido em {measuredMs} ms"
+
 msgid "Live in the app."
 msgstr "No ar no app."
 
@@ -9889,7 +10097,7 @@ msgstr "Prévia ao vivo"
 msgid "llms.txt (index for AI agents)"
 msgstr "llms.txt (índice para agentes de IA)"
 
-msgid "Load (1 m)"
+msgid "Load (1 min)"
 msgstr "Carga (1 min)"
 
 msgid "load agent settings"
@@ -10074,6 +10282,9 @@ msgstr "Consultando as tarefas"
 
 msgid "Looking for a mobile simulator…"
 msgstr "Procurando um simulador móvel…"
+
+msgid "Looking for agents…"
+msgstr "Procurando agentes…"
 
 msgid "Looking for installed browsers…"
 msgstr "Procurando navegadores instalados…"
@@ -10335,6 +10546,15 @@ msgstr "Membros não podem alterar papéis"
 
 msgid "Memory"
 msgstr "Memória"
+
+msgid "Memory is critical: close agents now"
+msgstr "Memória crítica: feche agentes agora"
+
+msgid "Memory is tight: close idle agents before starting another"
+msgstr "Memória apertada: feche agentes ociosos antes de iniciar outro"
+
+msgid "Memory pressure unknown"
+msgstr "Pressão de memória desconhecida"
 
 msgid "Memory share"
 msgstr "Participação na memória"
@@ -10636,11 +10856,17 @@ msgstr "Mover para o centro"
 msgid "Move to group"
 msgstr "Mover para grupo"
 
+msgid "Move to later"
+msgstr "Mover para depois"
+
 msgid "Move to Right Side"
 msgstr "Mover para a direita"
 
 msgid "Move to Tab"
 msgstr "Mover para a aba"
+
+msgid "Moved down by you"
+msgstr "Movidos para baixo por você"
 
 msgid "Multi-select"
 msgstr "Múltipla escolha"
@@ -10664,6 +10890,12 @@ msgstr "Silenciado"
 
 msgid "My Agent"
 msgstr "Meu agente"
+
+msgid "My last message"
+msgstr "Minha última mensagem"
+
+msgid "My last msg"
+msgstr "Minha última msg"
 
 msgid "My Tasks"
 msgstr "Minhas tarefas"
@@ -11024,6 +11256,9 @@ msgstr "Ainda não há conversas de agentes."
 msgid "No agent is configured on this host"
 msgstr "Nenhum agente está configurado neste host"
 
+msgid "No agent running"
+msgstr "Nenhum agente em execução"
+
 #. placeholder {0}: host.name
 msgid "No agents configured on {0}"
 msgstr "Nenhum agente configurado em {0}"
@@ -11084,6 +11319,9 @@ msgstr "Nenhuma verificação reportada."
 
 msgid "No Chrome, Brave, Arc, or other Chromium browsers were found."
 msgstr "Nenhum navegador Chrome, Brave, Arc ou outro baseado em Chromium foi encontrado."
+
+msgid "No CI"
+msgstr "Sem CI"
 
 msgid "No Claude or Codex usage found on this machine yet. Join now and you'll appear once you've used an agent."
 msgstr "Nenhum uso do Claude ou do Codex encontrado nesta máquina ainda. Entre agora e você aparecerá assim que usar um agente."
@@ -11262,6 +11500,9 @@ msgstr "Nenhum rótulo encontrado."
 msgid "No lead"
 msgstr "Sem responsável"
 
+msgid "No leftover processes from closed agents"
+msgstr "Nenhum processo remanescente de agentes fechados"
+
 msgid "No listening agents"
 msgstr "Nenhum agente recebendo comentários"
 
@@ -11319,6 +11560,12 @@ msgstr "Nenhum simulador móvel disponível aqui. É necessário um simulador do
 msgid "No name on file"
 msgstr "Nenhum nome cadastrado"
 
+msgid "No notes match these filters."
+msgstr "Nenhuma nota corresponde a esses filtros."
+
+msgid "No notes yet. Add them from the note button on a workspace in the sidebar, or ask an agent to run superset notes add."
+msgstr "Ainda não há notas. Adicione-as pelo botão de notas de um workspace na barra lateral, ou peça a um agente para executar superset notes add."
+
 msgid "No one in {organizationName} matches. Type a full email to invite someone new."
 msgstr "Ninguém em {organizationName} corresponde. Digite um e-mail completo para convidar alguém novo."
 
@@ -11330,6 +11577,9 @@ msgstr "Nenhuma issue aberta."
 
 msgid "No open pull requests found."
 msgstr "Nenhum pull request aberto encontrado."
+
+msgid "No open pull requests involve you."
+msgstr "Nenhum pull request aberto envolve você."
 
 msgid "No open pull requests."
 msgstr "Nenhum pull request aberto."
@@ -11434,6 +11684,9 @@ msgstr "Nenhum prompt encontrado."
 msgid "No public agent configs yet. This route is ready for future agent config listings."
 msgstr "Nenhuma configuração de agente pública ainda. Esta rota já está pronta para futuras listagens."
 
+msgid "No pull request matches these filters."
+msgstr "Nenhum pull request corresponde a estes filtros."
+
 msgid "No pull requests found."
 msgstr "Nenhum pull request encontrado."
 
@@ -11457,6 +11710,9 @@ msgstr "Nenhum resultado para “{query}”"
 
 msgid "No results found."
 msgstr "Nenhum resultado encontrado."
+
+msgid "No reviewer requested"
+msgstr "Nenhum revisor solicitado"
 
 msgid "No Reviewers Assigned"
 msgstr "Nenhuma pessoa revisora designada"
@@ -11578,6 +11834,9 @@ msgstr "Nenhuma versão ainda"
 msgid "No versions yet."
 msgstr "Nenhuma versão ainda."
 
+msgid "No workspace has these labels"
+msgstr "Nenhum workspace tem estes rótulos"
+
 msgid "No workspace run command configured"
 msgstr "Nenhum comando de execução configurado para a área de trabalho"
 
@@ -11674,6 +11933,9 @@ msgstr "Não concedida"
 msgid "Not included"
 msgstr "Não incluído"
 
+msgid "Not killed: the process is gone or no longer an orphan"
+msgstr "Não encerrado: o processo não existe mais ou não é mais órfão"
+
 msgid "Not loaded"
 msgstr "Não carregado"
 
@@ -11694,6 +11956,9 @@ msgstr "Ainda não recebendo eventos: o Microsoft Graph recusou as assinaturas d
 
 msgid "Not reviewed by you"
 msgstr "Não revisados por você"
+
+msgid "Not running"
+msgstr "Parada"
 
 msgid "Not sent"
 msgstr "Não enviado"
@@ -11717,8 +11982,14 @@ msgstr "Sem atualização"
 msgid "Note"
 msgstr "Observação"
 
+msgid "Note details"
+msgstr "Detalhes da nota"
+
 msgid "Notes"
 msgstr "Notas"
+
+msgid "Notes: {activeCount} open"
+msgstr "Notas: {activeCount} abertas"
 
 msgid "Nothing here yet."
 msgstr "Nada aqui ainda."
@@ -11831,6 +12102,18 @@ msgstr "Modo offline / local-first"
 
 msgid "Older"
 msgstr "Mais antigo"
+
+msgid "Older than a day"
+msgstr "Mais de um dia"
+
+msgid "Older than a month"
+msgstr "Mais de um mês"
+
+msgid "Older than a week"
+msgstr "Mais de uma semana"
+
+msgid "on {cores} cores"
+msgstr "em {cores} núcleos"
 
 msgid "on {offScopeHostName} — won't run here"
 msgstr "em {offScopeHostName} — não vai rodar aqui"
@@ -12015,6 +12298,10 @@ msgstr "abrir"
 msgid "Open"
 msgstr "Abrir"
 
+msgctxt "note status"
+msgid "Open"
+msgstr "Aberta"
+
 msgctxt "pull request or issue state"
 msgid "Open"
 msgstr "Aberto"
@@ -12030,6 +12317,9 @@ msgstr "Abrir {0}"
 #. placeholder {0}: plugin.interface.displayName
 msgid "Open {0} website"
 msgstr "Abrir o site de {0}"
+
+msgid "Open {activeCount}"
+msgstr "Abertas {activeCount}"
 
 msgid "Open {filePath}"
 msgstr "Abrir {filePath}"
@@ -12090,6 +12380,10 @@ msgstr "Abrir o comentário no GitHub"
 
 msgid "Open conversation"
 msgstr "Abrir conversa"
+
+#. placeholder {0}: conversation.title
+msgid "Open conversation: {0}"
+msgstr "Abrir conversa: {0}"
 
 msgid "Open details"
 msgstr "Abrir detalhes"
@@ -12245,6 +12539,9 @@ msgstr "Abrir no T3 Chat"
 msgid "Open in tab"
 msgstr "Abrir na aba"
 
+msgid "Open in the Notes view"
+msgstr "Abrir na visualização de notas"
+
 msgid "Open in…"
 msgstr "Abrir em…"
 
@@ -12346,6 +12643,9 @@ msgstr "Abrir recente"
 msgid "Open roles"
 msgstr "Vagas abertas"
 
+msgid "Open session"
+msgstr "Abrir sessão"
+
 msgid "Open session in"
 msgstr "Abrir sessão em"
 
@@ -12427,6 +12727,9 @@ msgstr "Abrir a área de trabalho da execução"
 msgid "open the task in a workspace"
 msgstr "abrir a tarefa em uma área de trabalho"
 
+msgid "Open the workspace"
+msgstr "Abrir o workspace"
+
 msgid "Open the workspace in the app picked in the Open In menu (VS Code, Cursor, etc.)"
 msgstr "Abrir a área de trabalho no app escolhido no menu \"Abrir em\" (VS Code, Cursor etc.)"
 
@@ -12436,6 +12739,10 @@ msgstr "Abrir a área de trabalho desta execução"
 msgid "Open workspace"
 msgstr "Abrir área de trabalho"
 
+#. placeholder {0}: getV2WorkspaceDisplayName(workspace)
+msgid "Open workspace: {0}"
+msgstr "Abrir workspace: {0}"
+
 msgid "Open your app."
 msgstr "Abra seu app."
 
@@ -12444,6 +12751,9 @@ msgstr "A OpenAI recusou esta chave de API."
 
 msgid "Opened"
 msgstr "Aberto"
+
+msgid "Opened {createdAgo} ago"
+msgstr "Aberto há {createdAgo}"
 
 msgid "opened PR #841 for review"
 msgstr "abriu o PR #841 para revisão"
@@ -12580,6 +12890,9 @@ msgstr "Outros hosts"
 
 msgid "Other people are using this project. Type <0>{projectName}</0> to confirm."
 msgstr "Outras pessoas estão usando este projeto. Digite <0>{projectName}</0> para confirmar."
+
+msgid "Other people's PRs you take part in, latest activity first"
+msgstr "PRs de outras pessoas em que você participa, atividade mais recente primeiro"
 
 msgid "Other Team Members"
 msgstr "Outras pessoas do time"
@@ -12799,6 +13112,9 @@ msgstr "Colar"
 msgid "Paste this into Superset CLI:"
 msgstr "Cole isto na CLI do Superset:"
 
+msgid "Pasting several lines adds one note per line"
+msgstr "Colar várias linhas adiciona uma nota por linha"
+
 msgid "Path"
 msgstr "Caminho"
 
@@ -12978,17 +13294,26 @@ msgstr "Escolha seu agente para uma instalação em uma linha ou copie a configu
 msgid "PID"
 msgstr "PID"
 
+msgid "pid {orphanPid}"
+msgstr "pid {orphanPid}"
+
 msgid "Pin"
 msgstr "Fixar"
 
 msgid "Pin feedback to a page and let the agent make the change."
 msgstr "Fixe feedback em uma página e deixe o agente fazer a mudança."
 
+msgid "Pin to the top"
+msgstr "Fixar no topo"
+
 msgid "Pink"
 msgstr "Rosa"
 
 msgid "Pinned"
 msgstr "Fixadas"
+
+msgid "Pinned by you, last pinned first"
+msgstr "Fixados por você, o último primeiro"
 
 msgid "PK"
 msgstr "PK"
@@ -13676,6 +14001,9 @@ msgstr "O Radix gira o wrapper da seta do tooltip conforme o lado,"
 msgid "Radix Tooltip docs"
 msgstr "Documentação do Radix Tooltip"
 
+msgid "RAM in use"
+msgstr "RAM em uso"
+
 msgid "RAM Share"
 msgstr "Parcela da RAM"
 
@@ -13791,6 +14119,9 @@ msgstr "Pronto para revisão no Desk"
 msgid "Ready in"
 msgstr "Pronto em"
 
+msgid "Ready to merge"
+msgstr "Pronto para mesclar"
+
 msgid "Ready to Merge"
 msgstr "Pronto para merge"
 
@@ -13835,6 +14166,9 @@ msgstr "PRs recentes"
 
 msgid "Recent pull requests"
 msgstr "Pull requests recentes"
+
+msgid "Recently closed"
+msgstr "Fechadas recentemente"
 
 msgid "Recently deleted"
 msgstr "Excluídos recentemente"
@@ -13914,6 +14248,10 @@ msgstr "Referencia"
 msgid "Refresh"
 msgstr "Atualizar"
 
+#. placeholder {0}: error.message
+msgid "Refresh failed: {0}"
+msgstr "Falha ao atualizar: {0}"
+
 msgid "Refresh GitHub issues"
 msgstr "Atualizar as issues do GitHub"
 
@@ -13934,6 +14272,9 @@ msgstr "Atualiza na próxima execução do Claude Code."
 
 msgid "Refreshes when OpenCode next runs."
 msgstr "Atualiza na próxima execução do OpenCode."
+
+msgid "Refreshing…"
+msgstr "Atualizando…"
 
 msgid "Regenerate"
 msgstr "Gerar novamente"
@@ -14244,6 +14585,9 @@ msgstr "Respondendo a {replyingTo}"
 
 msgid "repo"
 msgstr "repo"
+
+msgid "Repo"
+msgstr "Repo"
 
 msgid "Report"
 msgstr "Denunciar"
@@ -14556,6 +14900,12 @@ msgstr "Argumentos de retomada"
 msgid "Resume automation"
 msgstr "Retomar automação"
 
+msgid "Resume reopens the conversation where it stopped"
+msgstr "Retomar reabre a conversa onde ela parou"
+
+msgid "Resume them from “Recently closed”"
+msgstr "Retome-as em “Fechadas recentemente”"
+
 #. placeholder {0}: candidate.agentLabel
 msgid "Resuming {0}…"
 msgstr "Retomando {0}…"
@@ -14601,6 +14951,9 @@ msgstr "Instruções reutilizáveis que seus agentes adotam automaticamente"
 
 msgid "Reusable terminal launches. Click a script to edit or drag to reorder. Project setup, run, and teardown commands are lifecycle scripts."
 msgstr "Execuções de terminal reutilizáveis. Clique em um script para editar ou arraste para reordenar. Os comandos de setup, execução e teardown do projeto são scripts de ciclo de vida."
+
+msgid "Rev"
+msgstr "Rev"
 
 msgid "Reveal in Finder"
 msgstr "Mostrar no Finder"
@@ -14678,6 +15031,9 @@ msgstr "revisou"
 msgid "Reviewed by you"
 msgstr "Revisados por você"
 
+msgid "Reviewer"
+msgstr "Revisor"
+
 msgid "Reviewers"
 msgstr "Revisores"
 
@@ -14731,6 +15087,9 @@ msgstr "Cargo atualizado"
 
 msgid "Roll back an agent session to any checkpoint, conversation and file changes together."
 msgstr "Volte uma sessão de agente para qualquer checkpoint, conversa e alterações de arquivo juntas."
+
+msgid "Room for another agent"
+msgstr "Há espaço para outro agente"
 
 msgid "Rotate"
 msgstr "Girar"
@@ -14871,6 +15230,9 @@ msgstr "Em execução"
 
 msgid "Running \"{name}\" now"
 msgstr "Executando \"{name}\" agora"
+
+msgid "Running a command"
+msgstr "Executando um comando"
 
 msgid "Running agents on this profile lose access."
 msgstr "Os agentes em execução neste perfil perdem o acesso."
@@ -15168,6 +15530,9 @@ msgstr "Buscar no Linear…"
 
 msgid "Search models"
 msgstr "Buscar modelos"
+
+msgid "Search notes"
+msgstr "Pesquisar notas"
 
 msgid "Search pages"
 msgstr "Buscar páginas"
@@ -15796,6 +16161,9 @@ msgstr "Atalho já em uso"
 msgid "Show"
 msgstr "Mostrar"
 
+msgid "Show {hiddenCount} more"
+msgstr "Mostrar mais {hiddenCount}"
+
 msgid "Show a confirmation dialog when quitting the app"
 msgstr "Mostra uma confirmação ao encerrar o app"
 
@@ -16224,6 +16592,9 @@ msgstr "Alguns modelos foram precificados com uma taxa de reserva"
 msgid "Some repositories could not be loaded: {0}"
 msgstr "Alguns repositórios não puderam ser carregados: {0}"
 
+msgid "Some repositories or details did not load; the list may be incomplete."
+msgstr "Alguns repositórios ou detalhes não carregaram; a lista pode estar incompleta."
+
 msgid "Some sessions could not be killed"
 msgstr "Algumas sessões não puderam ser encerradas"
 
@@ -16245,6 +16616,9 @@ msgstr "Alguém"
 #. js-lingui-explicit-id
 msgid "serverError.page.entryPathHeldByColleague"
 msgstr "Outra pessoa já publicou {entryPath} deste workspace. Publique com um id de página explícito para adicionar uma versão à página dela, ou mova o arquivo."
+
+msgid "Someone is waiting on your review, longest wait first"
+msgstr "Alguém aguarda sua revisão, espera mais longa primeiro"
 
 msgid "Someone on the Superset team will review this page. We only follow up if we need more from you."
 msgstr "Alguém da equipe Superset vai analisar esta página. Só entraremos em contato se precisarmos de mais informações."
@@ -16275,6 +16649,9 @@ msgstr "em breve"
 
 msgid "Sort"
 msgstr "Ordenar"
+
+msgid "Sort agents"
+msgstr "Ordenar agentes"
 
 msgid "Sort by"
 msgstr "Ordenar por"
@@ -16604,6 +16981,10 @@ msgstr "Status"
 
 msgid "Status changed"
 msgstr "Status alterado"
+
+#. placeholder {0}: statusLabel[note.status]
+msgid "Status: {0}"
+msgstr "Status: {0}"
 
 msgid "Stay connected (refresh tokens)"
 msgstr "Manter a conexão (refresh tokens)"
@@ -16968,6 +17349,9 @@ msgstr "Demo do Superset Páginas"
 msgid "Superset Plugins"
 msgstr "Plugins do Superset"
 
+msgid "Superset processes"
+msgstr "Processos do Superset"
+
 msgid "Superset raised an $11.5M seed round led by Union Square Ventures, with Y Combinator and Paul Graham. TechCrunch named it one of the standout startups from YC Demo Day."
 msgstr "O Superset captou uma rodada seed de US$ 11,5 milhões liderada pela Union Square Ventures, com Y Combinator e Paul Graham. O TechCrunch o apontou como uma das startups de destaque do YC Demo Day."
 
@@ -17022,6 +17406,9 @@ msgstr "Constância"
 
 msgid "Sustain · active days in 30"
 msgstr "Constância · dias ativos em 30"
+
+msgid "Swap"
+msgstr "Swap"
 
 msgid "Switch agents. Keep your workflow"
 msgstr "Troque de agente. Mantenha seu fluxo"
@@ -17137,9 +17524,6 @@ msgstr "Sistema"
 msgid "System design"
 msgstr "Design de sistemas"
 
-msgid "System memory"
-msgstr "Memória do sistema"
-
 msgid "System RAM share"
 msgstr "Parcela da RAM do sistema"
 
@@ -17157,6 +17541,9 @@ msgstr "Uma aba por comando"
 
 msgid "Tab to fill"
 msgstr "Tab para preencher"
+
+msgid "Tab: next workspace · ↑↓: pick a conversation · release Ctrl to open"
+msgstr "Tab: próximo workspace · ↑↓: escolher uma conversa · solte Ctrl para abrir"
 
 msgid "Table"
 msgstr "Tabela"
@@ -17497,6 +17884,9 @@ msgstr "O app está na {appVersion}, mas conectado a um serviço de host iniciad
 
 msgid "The associated device isn't reachable right now"
 msgstr "O dispositivo associado não está acessível agora"
+
+msgid "The author"
+msgstr "O autor"
 
 msgid "The automation's owner can't use cloud workspaces in this organization anymore. Ask them to check their access, or run the automation on a device."
 msgstr "O proprietário da automação não pode mais usar áreas de trabalho na nuvem nesta organização. Peça para ele verificar o acesso ou execute a automação em um dispositivo."
@@ -18730,6 +19120,9 @@ msgstr "Projeto desconhecido"
 msgid "Unknown Project"
 msgstr "Projeto desconhecido"
 
+msgid "Unknown state"
+msgstr "Estado desconhecido"
+
 msgid "Unknown user"
 msgstr "Usuário desconhecido"
 
@@ -18884,6 +19277,9 @@ msgstr "Atualizado {0}"
 
 msgid "Updated {date}"
 msgstr "Atualizado em {date}"
+
+msgid "Updated {updatedAgo} ago"
+msgstr "Atualizado há {updatedAgo}"
 
 msgid "Updated {updatedRelative}"
 msgstr "Atualizado {updatedRelative}"
@@ -19259,11 +19655,26 @@ msgstr "Aguardando o login…"
 msgid "Waiting for the subagent's first message…"
 msgstr "Aguardando a primeira mensagem do subagente…"
 
+msgid "Waiting for you"
+msgstr "Esperando por você"
+
+msgid "Waiting for you · {waitingFor}"
+msgstr "Esperando por você · {waitingFor}"
+
 msgid "Waiting for your input"
 msgstr "Aguardando sua resposta"
 
 msgid "Waiting for your reply"
 msgstr "Aguardando sua resposta"
+
+msgid "Waiting on {reviewers}"
+msgstr "Aguardando {reviewers}"
+
+msgid "Waiting on others"
+msgstr "Aguardando outros"
+
+msgid "Waiting on reviewers or CI, longest wait first"
+msgstr "Aguardando revisores ou CI, espera mais longa primeiro"
 
 msgid "Waiting tint"
 msgstr "Tom de espera"
@@ -19541,11 +19952,23 @@ msgstr "Quais agentes são suportados?"
 msgid "Which AI coding agents are supported?"
 msgstr "Quais agentes de código com IA são suportados?"
 
+msgid "Who"
+msgstr "Quem"
+
 msgid "Who can open it"
 msgstr "Quem pode abrir"
 
+msgid "Who waits on you, or whom you wait on"
+msgstr "Quem aguarda você, ou quem você aguarda"
+
 msgid "Whole Task"
 msgstr "Tarefa inteira"
+
+msgid "Why here"
+msgstr "Por que aqui"
+
+msgid "Why, how, links…"
+msgstr "Por quê, como, links…"
 
 msgid "Width"
 msgstr "Largura"
@@ -19882,6 +20305,12 @@ msgstr "VOCÊ"
 msgid "You appear to be offline"
 msgstr "Parece que você está offline"
 
+msgid "You approved"
+msgstr "Você aprovou"
+
+msgid "You are involved"
+msgstr "Você está envolvido"
+
 msgid "You are not a member of that organization."
 msgstr "Você não é membro dessa organização."
 
@@ -19906,6 +20335,9 @@ msgstr "Você fica sem classificação até que {0} dias tenham atividade. A pon
 
 msgid "You are viewing version {version}, read-only"
 msgstr "Você está vendo a versão {version}, somente leitura"
+
+msgid "You asked for changes"
+msgstr "Você pediu alterações"
 
 msgid "You can attach up to {MAX_ATTACHMENTS} files"
 msgstr "Você pode anexar até {MAX_ATTACHMENTS} arquivos"
@@ -19952,6 +20384,9 @@ msgstr "Você precisa fazer parte de uma organização para conectar contas."
 
 msgid "You need to be part of an organization to use integrations."
 msgstr "Você precisa fazer parte de uma organização para usar integrações."
+
+msgid "You reviewed"
+msgstr "Você revisou"
 
 #. placeholder {0}: preview.rank
 #. placeholder {1}: preview.total
@@ -20030,6 +20465,9 @@ msgstr "Seu código fica local por padrão, com controle explícito sobre os ser
 msgid "Your download starts automatically. If it didn't, grab it here."
 msgstr "Seu download começa automaticamente. Se não começou, baixe aqui."
 
+msgid "Your drafts"
+msgstr "Seus rascunhos"
+
 msgid "Your email (optional)"
 msgstr "Seu e-mail (opcional)"
 
@@ -20059,6 +20497,9 @@ msgstr "Sua organização atingiu o limite de uso na nuvem. Esta área de trabal
 
 msgid "Your own accounts. Your organization's integrations let Superset reach its tools; connecting yours makes the work Superset does for you show up as you."
 msgstr "Suas próprias contas. As integrações da sua organização permitem que o Superset acesse as ferramentas dela; conectar as suas faz o trabalho que o Superset faz por você aparecer em seu nome."
+
+msgid "Your PRs blocked on you: changes requested, then CI, then conflicts"
+msgstr "Seus PRs travados por você: alterações solicitadas, depois CI, depois conflitos"
 
 msgid "Your rank"
 msgstr "Sua posição"

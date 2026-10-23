@@ -2,7 +2,7 @@ import os from "node:os";
 import { app } from "electron";
 import pidusage from "pidusage";
 import {
-	captureProcessSnapshot,
+	captureSharedProcessSnapshot,
 	enrichWithPhysFootprint,
 	getSubtreePids,
 	getSubtreeResources,
@@ -269,7 +269,7 @@ async function collectResourceMetricsNow({
 
 	// Single atomic snapshot: tree structure + resource data from one `ps`
 	// call, eliminating the race between pidtree and pidusage.
-	const processSnapshot = await captureProcessSnapshot();
+	const processSnapshot = await captureSharedProcessSnapshot(1000);
 
 	// Collect all subtree PIDs so we can enrich them in bulk.
 	const allSubtreePids: number[] = [];
