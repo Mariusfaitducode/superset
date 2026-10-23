@@ -1,1 +1,4 @@
-export { OfficeWorkspaceSource } from "./OfficeWorkspaceSource";
+export {
+	type OfficeWorkspaceReport,
+	OfficeWorkspaceSource,
+} from "./OfficeWorkspaceSource";

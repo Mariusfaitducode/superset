@@ -119,7 +119,7 @@ export function OfficeFloor({
 
 	const [selection, setSelection] = useState<Selection | null>(null);
 
-	const { scene, seats } = useMemo(() => {
+	const { scene, seats, islands } = useMemo(() => {
 		const rows = staffed.map((workspace) => ({
 			workspace,
 			conversations: reports.get(workspace.id)?.conversations ?? [],
@@ -178,7 +178,7 @@ export function OfficeFloor({
 			agents,
 			devices: providers.length,
 		};
-		return { scene, seats };
+		return { scene, seats, islands };
 	}, [
 		staffed,
 		reports,
@@ -244,7 +244,7 @@ export function OfficeFloor({
 								scale={scale}
 								reducedMotion={reducedMotion}
 							/>
-							{scene.islands.map(({ island, workspace }) => (
+							{islands.map(({ island, workspace }) => (
 								<button
 									key={island.id}
 									type="button"

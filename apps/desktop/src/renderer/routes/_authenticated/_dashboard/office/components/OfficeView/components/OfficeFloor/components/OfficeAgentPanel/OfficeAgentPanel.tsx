@@ -83,6 +83,7 @@ export function OfficeAgentPanel({
 						terminalId={conversation.terminalId}
 						todos={list}
 						actions={todos.actions}
+						onClose={onClose}
 					/>
 				) : (
 					<p className="text-xs text-muted-foreground">
