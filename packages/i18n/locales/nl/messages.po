@@ -11437,6 +11437,7 @@ msgid "No API keys yet."
 msgstr "Nog geen API-sleutels."
 
 msgid "No archived tasks"
+msgstr "Geen gearchiveerde taken"
 
 msgid "No archived to-dos"
 msgstr "Geen gearchiveerde taken"

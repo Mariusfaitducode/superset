@@ -11437,6 +11437,7 @@ msgid "No API keys yet."
 msgstr "Henüz API anahtarı yok."
 
 msgid "No archived tasks"
+msgstr "Arşivlenen görev yok"
 
 msgid "No archived to-dos"
 msgstr "Arşivlenen görev yok"

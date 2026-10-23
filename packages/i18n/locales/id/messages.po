@@ -11437,6 +11437,7 @@ msgid "No API keys yet."
 msgstr "Belum ada kunci API."
 
 msgid "No archived tasks"
+msgstr "Tidak ada tugas yang diarsipkan"
 
 msgid "No archived to-dos"
 msgstr "Tidak ada tugas yang diarsipkan"
