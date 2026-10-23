@@ -37,7 +37,7 @@ SHIPIT="$HOME/Library/Caches/com.superset.desktop.ShipIt"
 
 osascript -e 'tell application "Superset" to quit' || true
 # Superset may ask to confirm quitting while agents run; give the user time to answer.
-for _ in $(seq 1 300); do
+for _ in $(seq 1 1800); do
   main_running || break
   sleep 1
 done
