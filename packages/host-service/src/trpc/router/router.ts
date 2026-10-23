@@ -11,6 +11,7 @@ import { gitGraphRouter } from "./git-graph";
 import { githubRouter } from "./github";
 import { healthRouter } from "./health";
 import { hostRouter } from "./host";
+import { insightsRouter } from "./insights";
 import { issuesRouter } from "./issues";
 import { linkPreviewRouter } from "./link-preview";
 import { mobileRouter } from "./mobile";
@@ -42,6 +43,7 @@ export const appRouter = router({
 	browser: browserRouter,
 	health: healthRouter,
 	host: hostRouter,
+	insights: insightsRouter,
 	config: configRouter,
 	conversationTodos: conversationTodosRouter,
 	filesystem: filesystemRouter,
