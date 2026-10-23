@@ -69,6 +69,20 @@ describe("pullRequestsSearchFromFilters", () => {
 			}),
 		).toEqual({ state: "merged" });
 	});
+
+	test("the Mine view wins over the other states", () => {
+		expect(
+			pullRequestsSearchFromFilters({
+				search: "",
+				projectFilters: [],
+				authorFilter: null,
+				reviewFilter: null,
+				includeClosed: true,
+				mergedOnly: true,
+				mineOnly: true,
+			}),
+		).toEqual({ state: "mine" });
+	});
 });
 
 describe("migratePullRequestsFilterState", () => {
@@ -94,6 +108,7 @@ describe("migratePullRequestsFilterState", () => {
 				reviewFilter: "review:approved",
 				includeClosed: "true",
 				mergedOnly: "true",
+				mineOnly: "true",
 			}),
 		).toMatchObject({
 			projectFilters: ["project-1"],
@@ -101,6 +116,7 @@ describe("migratePullRequestsFilterState", () => {
 			reviewFilter: null,
 			includeClosed: false,
 			mergedOnly: false,
+			mineOnly: false,
 		});
 		expect(migratePullRequestsFilterState(null)).toMatchObject({
 			projectFilters: [],

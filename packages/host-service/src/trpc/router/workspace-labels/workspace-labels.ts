@@ -1,5 +1,6 @@
 import { TRPCError } from "@trpc/server";
 import { z } from "zod";
+import type { HostServiceContext } from "../../../types";
 import {
 	LABEL_COLORS,
 	WorkspaceLabelError,
@@ -25,6 +26,13 @@ function run<T>(action: () => T): T {
 	}
 }
 
+/** Runs a change and tells every client, so none has to poll for it. */
+function change<T>(ctx: HostServiceContext, action: () => T): T {
+	const result = run(action);
+	ctx.eventBus.broadcastHostStoreChanged("workspace-labels");
+	return result;
+}
+
 const name = z.string().trim().min(1).max(40);
 const color = z.enum(LABEL_COLORS);
 
@@ -34,8 +42,8 @@ export const workspaceLabelsRouter = router({
 
 	createLabel: protectedProcedure
 		.input(z.object({ name, color }))
-		.mutation(({ input }) =>
-			run(() => getStore().createLabel(input.name, input.color)),
+		.mutation(({ ctx, input }) =>
+			change(ctx, () => getStore().createLabel(input.name, input.color)),
 		),
 
 	updateLabel: protectedProcedure
@@ -46,13 +54,15 @@ export const workspaceLabelsRouter = router({
 				color: color.optional(),
 			}),
 		)
-		.mutation(({ input: { id, ...fields } }) =>
-			run(() => getStore().updateLabel(id, fields)),
+		.mutation(({ ctx, input: { id, ...fields } }) =>
+			change(ctx, () => getStore().updateLabel(id, fields)),
 		),
 
 	deleteLabel: protectedProcedure
 		.input(z.object({ id: z.string() }))
-		.mutation(({ input }) => run(() => getStore().deleteLabel(input.id))),
+		.mutation(({ ctx, input }) =>
+			change(ctx, () => getStore().deleteLabel(input.id)),
+		),
 
 	/** Replaces the workspace's labels. */
 	setWorkspaceLabels: protectedProcedure
@@ -62,7 +72,9 @@ export const workspaceLabelsRouter = router({
 				labelIds: z.array(z.string()).max(50),
 			}),
 		)
-		.mutation(({ input }) =>
-			getStore().setWorkspaceLabels(input.workspaceId, input.labelIds),
+		.mutation(({ ctx, input }) =>
+			change(ctx, () =>
+				getStore().setWorkspaceLabels(input.workspaceId, input.labelIds),
+			),
 		),
 });

@@ -30,6 +30,7 @@ import { workspaceRouter } from "./workspace";
 import { workspaceCleanupRouter } from "./workspace-cleanup";
 import { workspaceCreationRouter } from "./workspace-creation";
 import { workspaceLabelsRouter } from "./workspace-labels";
+import { workspaceNotesRouter } from "./workspace-notes";
 import { workspacesRouter } from "./workspaces";
 
 export const appRouter = router({
@@ -64,6 +65,7 @@ export const appRouter = router({
 	workspaces: workspacesRouter,
 	workspaceCleanup: workspaceCleanupRouter,
 	workspaceCreation: workspaceCreationRouter,
+	workspaceNotes: workspaceNotesRouter,
 	workspaceLabels: workspaceLabelsRouter,
 });
 

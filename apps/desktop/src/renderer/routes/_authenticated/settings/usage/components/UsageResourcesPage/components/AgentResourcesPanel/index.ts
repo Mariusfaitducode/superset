@@ -1,0 +1,1 @@
+export { AgentResourcesPanel } from "./AgentResourcesPanel";

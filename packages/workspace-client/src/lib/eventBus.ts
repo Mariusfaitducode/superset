@@ -26,7 +26,9 @@ type EventType =
 	| "project:changed"
 	| "tag-folders:changed"
 	| "page-watch:changed"
-	| "chat:sessions-changed";
+	| "chat:sessions-changed"
+	| "host-store:changed"
+	| "workspace-notes:changed";
 
 interface FsEventsPayload {
 	events: FsWatchEvent[];
@@ -122,6 +124,10 @@ export interface ChatSessionsChangedPayload {
 	occurredAt: number;
 }
 
+export interface WorkspaceNotesChangedPayload {
+	occurredAt: number;
+}
+
 type TagFoldersChangedMessage = Extract<
 	ServerMessage,
 	{ type: "tag-folders:changed" }
@@ -131,6 +137,11 @@ export interface TagFoldersChangedPayload {
 	/** The scope's full set after the change — empty when all were removed. */
 	settings: TagFoldersChangedMessage["settings"];
 	occurredAt: TagFoldersChangedMessage["occurredAt"];
+}
+
+export interface HostStoreChangedPayload {
+	store: Extract<ServerMessage, { type: "host-store:changed" }>["store"];
+	occurredAt: number;
 }
 
 type EventListener<T extends EventType> = T extends "fs:events"
@@ -177,7 +188,17 @@ type EventListener<T extends EventType> = T extends "fs:events"
 															workspaceId: string,
 															payload: ChatSessionsChangedPayload,
 														) => void
-													: never;
+													: T extends "host-store:changed"
+														? (
+																scope: null,
+																payload: HostStoreChangedPayload,
+															) => void
+														: T extends "workspace-notes:changed"
+															? (
+																	workspaceId: string,
+																	payload: WorkspaceNotesChangedPayload,
+																) => void
+															: never;
 
 interface ListenerEntry {
 	type: EventType;
@@ -318,7 +339,8 @@ function handleMessage(state: ConnectionState, data: unknown): void {
 			message.type === "workspace:create-settled" ||
 			message.type === "workspace:naming-failed" ||
 			message.type === "page-watch:changed" ||
-			message.type === "chat:sessions-changed"
+			message.type === "chat:sessions-changed" ||
+			message.type === "workspace-notes:changed"
 				? message.workspaceId
 				: message.type === "project:changed"
 					? message.projectId
@@ -402,9 +424,19 @@ function handleMessage(state: ConnectionState, data: unknown): void {
 				message.workspaceId,
 				{ occurredAt: message.occurredAt },
 			);
+		} else if (message.type === "workspace-notes:changed") {
+			(entry.callback as EventListener<"workspace-notes:changed">)(
+				message.workspaceId,
+				{ occurredAt: message.occurredAt },
+			);
 		} else if (message.type === "tag-folders:changed") {
 			(entry.callback as EventListener<"tag-folders:changed">)(message.scope, {
 				settings: message.settings,
+				occurredAt: message.occurredAt,
+			});
+		} else if (message.type === "host-store:changed") {
+			(entry.callback as EventListener<"host-store:changed">)(null, {
+				store: message.store,
 				occurredAt: message.occurredAt,
 			});
 		}

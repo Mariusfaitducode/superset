@@ -7,7 +7,8 @@ on:
   # Every PR, so stacked PRs (based on another feature branch) are checked too.
   pull_request:
   push:
-    branches: ["marius/main"]
+    # build/** too: a test build gets checked while GitHub builds it.
+    branches: ["marius/main", "build/**"]
 
 concurrency:
   group: marius-ci-${{ github.ref }}

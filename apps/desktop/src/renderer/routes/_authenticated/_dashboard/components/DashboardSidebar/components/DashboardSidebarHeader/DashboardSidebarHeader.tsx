@@ -24,6 +24,7 @@ import {
 	LuPlus,
 	LuPuzzle,
 	LuSearch,
+	LuStickyNote,
 } from "react-icons/lu";
 import {
 	VscFolderOpened,
@@ -182,6 +183,7 @@ export function DashboardSidebarHeader({
 	const isAutomationsOpen = !!matchRoute({ to: "/automations", fuzzy: true });
 	const isPluginsOpen = !!matchRoute({ to: "/plugins", fuzzy: true });
 	const isPagesOpen = !!matchRoute({ to: "/pages", fuzzy: true });
+	const isNotesOpen = !!matchRoute({ to: "/notes", fuzzy: true });
 	const isOfficeOpen = !!matchRoute({ to: "/office", fuzzy: true });
 	// `?? false`: the hook returns undefined until PostHog flags resolve.
 	// Dev builds bypass the flag — the local dev account isn't in the
@@ -274,6 +276,10 @@ export function DashboardSidebarHeader({
 
 	const handlePagesClick = () => {
 		navigate({ to: "/pages" });
+	};
+
+	const handleNotesClick = () => {
+		navigate({ to: "/notes" });
 	};
 
 	const handleOfficeClick = () => {
@@ -533,30 +539,6 @@ export function DashboardSidebarHeader({
 						</TooltipContent>
 					</Tooltip>
 
-					<Tooltip delayDuration={300}>
-						<TooltipTrigger asChild>
-							<button
-								type="button"
-								onClick={handleOfficeClick}
-								aria-label={t({
-									message: "Office",
-								})}
-								aria-current={isOfficeOpen ? "page" : undefined}
-								className={cn(
-									"flex size-7 items-center justify-center rounded-md transition-colors",
-									isOfficeOpen
-										? "bg-fill-selected text-muted-foreground"
-										: "text-muted-foreground hover:bg-fill-hover",
-								)}
-							>
-								<LuBuilding2 className="size-3.5" strokeWidth={1.5} />
-							</button>
-						</TooltipTrigger>
-						<TooltipContent side="right">
-							<Trans>Office</Trans>
-						</TooltipContent>
-					</Tooltip>
-
 					{isUsageInSidebarEnabled && (
 						<Tooltip delayDuration={300}>
 							<TooltipTrigger asChild>
@@ -598,6 +580,54 @@ export function DashboardSidebarHeader({
 						</TooltipTrigger>
 						<TooltipContent side="right">
 							<Trans>Pages</Trans>
+						</TooltipContent>
+					</Tooltip>
+
+					<Tooltip delayDuration={300}>
+						<TooltipTrigger asChild>
+							<button
+								type="button"
+								onClick={handleNotesClick}
+								aria-label={t({
+									message: "Notes",
+								})}
+								aria-current={isNotesOpen ? "page" : undefined}
+								className={cn(
+									"flex size-7 items-center justify-center rounded-md transition-colors",
+									isNotesOpen
+										? "bg-fill-selected text-muted-foreground"
+										: "text-muted-foreground hover:bg-fill-hover",
+								)}
+							>
+								<LuStickyNote className="size-3.5" strokeWidth={1.5} />
+							</button>
+						</TooltipTrigger>
+						<TooltipContent side="right">
+							<Trans>Notes</Trans>
+						</TooltipContent>
+					</Tooltip>
+
+					<Tooltip delayDuration={300}>
+						<TooltipTrigger asChild>
+							<button
+								type="button"
+								onClick={handleOfficeClick}
+								aria-label={t({
+									message: "Office",
+								})}
+								aria-current={isOfficeOpen ? "page" : undefined}
+								className={cn(
+									"flex size-7 items-center justify-center rounded-md transition-colors",
+									isOfficeOpen
+										? "bg-fill-selected text-muted-foreground"
+										: "text-muted-foreground hover:bg-fill-hover",
+								)}
+							>
+								<LuBuilding2 className="size-3.5" strokeWidth={1.5} />
+							</button>
+						</TooltipTrigger>
+						<TooltipContent side="right">
+							<Trans>Office</Trans>
 						</TooltipContent>
 					</Tooltip>
 
@@ -891,29 +921,6 @@ export function DashboardSidebarHeader({
 				</span>
 			</button>
 
-			<button
-				type="button"
-				onClick={handleOfficeClick}
-				aria-label={t({
-					message: "Office",
-				})}
-				aria-current={isOfficeOpen ? "page" : undefined}
-				className={cn(
-					"flex h-7 w-full items-center gap-2 rounded-md px-2 text-[13px] font-medium transition-colors",
-					isOfficeOpen
-						? "bg-fill-selected text-foreground"
-						: "text-muted-foreground hover:bg-fill-hover hover:text-foreground",
-				)}
-			>
-				<LuBuilding2
-					className="size-4 shrink-0 text-muted-foreground"
-					strokeWidth={1.5}
-				/>
-				<span className="flex-1 text-left">
-					<Trans>Office</Trans>
-				</span>
-			</button>
-
 			{isUsageInSidebarEnabled && (
 				<button
 					type="button"
@@ -953,6 +960,52 @@ export function DashboardSidebarHeader({
 				/>
 				<span className="flex-1 text-left">
 					<Trans>Pages</Trans>
+				</span>
+			</button>
+
+			<button
+				type="button"
+				onClick={handleNotesClick}
+				aria-label={t({
+					message: "Notes",
+				})}
+				aria-current={isNotesOpen ? "page" : undefined}
+				className={cn(
+					"flex h-7 w-full items-center gap-2 rounded-md px-2 text-[13px] font-medium transition-colors",
+					isNotesOpen
+						? "bg-fill-selected text-foreground"
+						: "text-muted-foreground hover:bg-fill-hover hover:text-foreground",
+				)}
+			>
+				<LuStickyNote
+					className="size-4 shrink-0 text-muted-foreground"
+					strokeWidth={1.5}
+				/>
+				<span className="flex-1 text-left">
+					<Trans>Notes</Trans>
+				</span>
+			</button>
+
+			<button
+				type="button"
+				onClick={handleOfficeClick}
+				aria-label={t({
+					message: "Office",
+				})}
+				aria-current={isOfficeOpen ? "page" : undefined}
+				className={cn(
+					"flex h-7 w-full items-center gap-2 rounded-md px-2 text-[13px] font-medium transition-colors",
+					isOfficeOpen
+						? "bg-fill-selected text-foreground"
+						: "text-muted-foreground hover:bg-fill-hover hover:text-foreground",
+				)}
+			>
+				<LuBuilding2
+					className="size-4 shrink-0 text-muted-foreground"
+					strokeWidth={1.5}
+				/>
+				<span className="flex-1 text-left">
+					<Trans>Office</Trans>
 				</span>
 			</button>
 

@@ -33,6 +33,10 @@ import type {
 	DashboardSidebarWorkspacePullRequest,
 } from "../../../../types";
 import { WorkspaceLabelPills } from "../../../WorkspaceLabels";
+import {
+	WorkspaceNotesBadge,
+	WorkspaceNotesPanel,
+} from "../../../WorkspaceNotes";
 import { DashboardSidebarWorkspaceQueuedBadge } from "../DashboardSidebarWorkspaceQueuedBadge";
 import { DashboardSidebarConversationList } from "./components/DashboardSidebarConversationList";
 import { DashboardSidebarPortsChip } from "./components/DashboardSidebarPortsChip";
@@ -383,6 +387,10 @@ export const DashboardSidebarExpandedWorkspaceRow = forwardRef<
 									<DashboardSidebarWorkspaceQueuedBadge
 										workspaceId={workspace.id}
 									/>
+									<WorkspaceNotesBadge
+										workspaceId={workspace.id}
+										hostId={workspace.hostId}
+									/>
 								</>
 							)}
 							<div className="grid items-center justify-items-end [&>*]:col-start-1 [&>*]:row-start-1">
@@ -451,6 +459,14 @@ export const DashboardSidebarExpandedWorkspaceRow = forwardRef<
 						</div>
 					</div>
 				</div>
+				{!isPending && (
+					<WorkspaceNotesPanel
+						workspaceId={workspace.id}
+						hostId={workspace.hostId}
+						isInSection={isInSection}
+						indentation={resolvedIndentation}
+					/>
+				)}
 				{!isPending && (
 					<DashboardSidebarConversationList
 						workspaceId={workspace.id}
