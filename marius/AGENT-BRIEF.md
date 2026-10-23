@@ -16,6 +16,7 @@ Read this, then `marius/README.md` and `marius/ROADMAP.md` ("How we work"). You 
 - **Git:** commits as `Mariusfaitducode <105292058+Mariusfaitducode@users.noreply.github.com>` (already the repo config), conventional format, ending with `Co-Authored-By: Claude …`. Pushing your own feature branch and opening its PR are part of your job; nothing else gets pushed.
 - **English** in code, comments, commits, PR titles and descriptions. French with Marius.
 - **Texts in Marius's name** (PR description, comments): load the `my-voice` skill, show him the exact text, wait for his OK.
+- **Archive, never delete:** closing a to-do, card or any record the user sees archives it (status, date, who) and an "Archived" view finds it again.
 - **Be honest:** say what you verified and what you did not. Marius validates the UI himself.
 - **Use the fork's tools:** start with `superset todos list --open`; keep your own to-dos and Marius's action items with `superset todos add`; set your workspace label with `superset labels` (`In progress` while working, `Waiting` when you need Marius, off when done). Anything in Superset that slows you down or a feature you wish it had: log it without stopping (`superset notes add "Superset idea: …"`, or a dated line in `~/.claude/superset-ideas.md` when notes aren't available).
 

@@ -15,7 +15,7 @@ Kept by the agents working on this fork and read on every Mac. Updated at each s
 
 ## Backlog
 
-- **Background task card**: a card on the conversation that says what the agent is doing and how far it is, with a progress bar. The agent updates it, the same way as to-dos. First use: following a prototype's disk cleanup instead of polling Grafana by hand. A metric curve can come later.
+- **Task monitor** (was "Background task card", 2026-10-23): agents declare long waits with `superset track`, the host follows GitHub Actions runs itself, a TopBar button opens a right-hand panel of cards (steps, progress, silence badge). Cards stay until Marius closes them. Agent session "Fork · Task monitor", worktree `~/CodeProjects/superset-monitor`, prompt `marius/prompts/task-monitor.md`. Two PRs: `feature/todos-archive` then `feature/task-monitor`.
 - **Test build `build/next` (2026-10-22)**: `marius/main` + #9, #10, #11, #12, #13, #14, #15, #16, #17. Fork CI and Fork build green on 176b4f7c15. Waiting for Marius's test; nothing merged.
 - **PR view** (#14, `feature/pr-view`): "Mine" tab on the Pull Requests page, waiting on me / on others, CI, reviews, conflicts, link to the PR's conversation or workspace. Fixes "no GitHub remote" when the remote URL holds a token. In build/next, to test.
 - **Agents in Resources** (#9, `feature/agent-resources`): live sessions, memory, close the forgotten ones. In build/next, to test.
@@ -34,6 +34,8 @@ Kept by the agents working on this fork and read on every Mac. Updated at each s
 - **Agents' ideas inbox**: agents log friction and feature ideas with `superset notes add "Superset idea: …"`, or in `~/.claude/superset-ideas.md` until notes work; the coordinator moves them here. (2026-10-22: "`todos add` says Not logged in while `list` works" is fixed by `fix/local-cli-without-login`.)
 
 ## How we work
+
+**Nothing is deleted, it is archived** (Marius, 2026-10-23): closing a card, a to-do or any record keeps it with an archived status and date, findable in an "Archived" view.
 
 1. **One feature, one agent.** Each feature gets a dedicated agent in its own worktree (`~/CodeProjects/superset-<feature>`) and branch off `marius/main`. It agrees the design with Marius first, then loops until its PR is done: English everywhere, targeted tests only, Fork CI green on GitHub, no local app builds (memory).
 2. **Integration branch.** The coordinator rebuilds `build/next` from `marius/main` plus every finished PR, fixes conflicts and red CI, and GitHub builds it. Marius installs it with `./marius/install-from-ci.sh build/next` and tests everything together.
