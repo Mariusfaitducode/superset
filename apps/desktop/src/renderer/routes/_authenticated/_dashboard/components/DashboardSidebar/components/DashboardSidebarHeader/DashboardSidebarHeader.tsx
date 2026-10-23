@@ -80,6 +80,7 @@ import {
 	useOpenTemplateGalleryModal,
 } from "renderer/stores/add-repository-modal";
 import { COLLAPSED_WORKSPACE_SIDEBAR_WIDTH } from "renderer/stores/workspace-sidebar-state";
+import { DeskNavButton } from "./components/DeskNavButton";
 
 interface DashboardSidebarHeaderProps {
 	isCollapsed?: boolean;
@@ -405,6 +406,8 @@ export function DashboardSidebarHeader({
 							<Trans>Workspaces</Trans>
 						</TooltipContent>
 					</Tooltip>
+
+					<DeskNavButton isCollapsed />
 
 					{isCloudEnabled && (
 						<Tooltip delayDuration={300}>
@@ -836,6 +839,8 @@ export function DashboardSidebarHeader({
 					<Trans>Workspaces</Trans>
 				</span>
 			</button>
+
+			<DeskNavButton isCollapsed={false} />
 
 			{isCloudEnabled && (
 				<button

@@ -2112,6 +2112,9 @@ msgstr "スケジュールやトリガーで動くエージェント"
 msgid "Agents on your phone"
 msgstr "スマホで使うエージェント"
 
+msgid "Agents put their hand-overs here with superset report: work to review, decisions, drafts to approve, blockers."
+msgstr "エージェントは superset report で引き継ぎをここに置きます: レビュー待ちの作業、判断、承認待ちの下書き、ブロッカー。"
+
 msgid "Agents remember what they learn about your codebase, so every new session starts warm."
 msgstr "エージェントがコードベースについて学んだことを記憶するため、新しいセッションは最初から文脈を持って始まります。"
 
@@ -2132,6 +2135,9 @@ msgstr "同時に作業中のエージェント"
 
 msgid "Agents' to-dos"
 msgstr "エージェントのTo-do"
+
+msgid "Agents' to-dos for you"
+msgstr "エージェントからあなたへの To-do"
 
 msgid "Aggregate agent usage across every developer on the Superset leaderboard — tokens, cost, cache behaviour and which models people actually reach for."
 msgstr "Supersetリーダーボード上の全開発者を横断したエージェント利用の集計 — トークン、コスト、キャッシュの挙動、実際に選ばれているモデル。"
@@ -2470,8 +2476,14 @@ msgstr "匿名の組立工"
 msgid "another device"
 msgstr "別のデバイス"
 
+msgid "answer"
+msgstr "回答"
+
 msgid "Answer any questions in the terminal below, such as a password."
 msgstr "パスワードなど、下のターミナルでの質問に答えてください。"
+
+msgid "Answer the agent"
+msgstr "エージェントに回答"
 
 msgid "Answer this question on desktop, or skip it."
 msgstr "この質問はデスクトップで回答するか、スキップしてください。"
@@ -2656,8 +2668,14 @@ msgctxt "job application"
 msgid "Apply"
 msgstr "応募"
 
+msgid "approve"
+msgstr "承認"
+
 msgid "Approve"
 msgstr "承認"
+
+msgid "Approve and send"
+msgstr "承認して送信"
 
 msgid "Approve edits"
 msgstr "編集を承認"
@@ -3205,8 +3223,14 @@ msgstr "ブロック"
 msgid "blocked"
 msgstr "ブロック"
 
+msgid "Blocked"
+msgstr "ブロック中"
+
 msgid "Blocked by Branch Rules"
 msgstr "ブランチルールによりブロック"
+
+msgid "Blocked, see the Desk"
+msgstr "ブロック中、Desk を確認"
 
 msgid "Blockquote"
 msgstr "引用"
@@ -3775,6 +3799,9 @@ msgstr "アップデートを確認"
 
 msgid "Check for Updates..."
 msgstr "アップデートを確認..."
+
+msgid "Check off"
+msgstr "チェック"
 
 msgid "Check on running agents and read what they changed from your iPhone or iPad."
 msgstr "実行中のエージェントの状況を確認し、変更内容を iPhone や iPad から読めます。"
@@ -5249,6 +5276,9 @@ msgstr "ブランチ「{1}」を探すために {0} に接続できませんで�
 msgid "Could not reach a mobile simulator."
 msgstr "モバイルシミュレーターに接続できませんでした。"
 
+msgid "Could not reach the conversation"
+msgstr "会話に届きませんでした"
+
 msgid "Could not reach the desktop."
 msgstr "デスクトップに接続できませんでした。"
 
@@ -6064,6 +6094,12 @@ msgstr "デバッグ"
 msgid "Debug with production stack traces"
 msgstr "本番のスタックトレースでデバッグ"
 
+msgid "Decision waiting on the Desk"
+msgstr "Desk で判断待ち"
+
+msgid "Decisions"
+msgstr "判断"
+
 msgid "default"
 msgstr "デフォルト"
 
@@ -6387,6 +6423,12 @@ msgstr "デザインモードに失敗しました"
 msgid "Design review"
 msgstr "デザインレビュー"
 
+msgid "Desk"
+msgstr "Desk"
+
+msgid "Desk, {count} waiting on you"
+msgstr "Desk、{count} 件があなた待ち"
+
 msgid "Desktop"
 msgstr "デスクトップ"
 
@@ -6598,6 +6640,9 @@ msgstr "ネットワーク上の開発サーバーを検出して接続します
 msgid "Disk version"
 msgstr "ディスク上のバージョン"
 
+msgid "dismiss"
+msgstr "却下"
+
 msgid "Dismiss"
 msgstr "閉じる"
 
@@ -6768,11 +6813,20 @@ msgstr "下書き · ファイル"
 msgid "Draft · line {0}"
 msgstr "下書き · {0}行目"
 
+msgid "Draft for {draftTarget}"
+msgstr "{draftTarget} 用の下書き"
+
 msgid "Draft opened"
 msgstr "ドラフト作成"
 
+msgid "Draft waiting on the Desk"
+msgstr "Desk で下書きが承認待ち"
+
 msgid "drafted 3 support replies"
 msgstr "サポート返信を3件下書き"
+
+msgid "Drafts to approve"
+msgstr "承認待ちの下書き"
 
 msgid "Drag to reorder"
 msgstr "ドラッグして並べ替え"
@@ -8156,6 +8210,9 @@ msgstr "LinkedInでフォロー"
 
 msgid "Follow us on X/Twitter"
 msgstr "X/Twitterでフォロー"
+
+msgid "Follow-up for the agent (optional)"
+msgstr "エージェントへのフォローアップ (任意)"
 
 msgid "Following"
 msgstr "フォロー中"
@@ -10483,6 +10540,9 @@ msgstr "PR をレビュー可能にする"
 msgid "Mark Ready"
 msgstr "レビュー可能にする"
 
+msgid "Mark reviewed"
+msgstr "レビュー済みにする"
+
 msgid "Markdown"
 msgstr "Markdown"
 
@@ -10894,6 +10954,9 @@ msgstr "大半の開発者"
 
 msgid "Most of software history"
 msgstr "ソフトウェアの歴史のほとんど"
+
+msgid "move"
+msgstr "移動"
 
 msgid "Move"
 msgstr "移動"
@@ -12072,6 +12135,9 @@ msgstr "直近30日に公開された実績はまだありません。このマ�
 msgid "Nothing running"
 msgstr "実行中のものはありません"
 
+msgid "Nothing waits on you."
+msgstr "あなた待ちのものはありません。"
+
 msgid "Nothing was missed"
 msgstr "未実行はありません"
 
@@ -12443,6 +12509,9 @@ msgstr "コマンドパレットを開く"
 
 msgid "Open comment on GitHub"
 msgstr "GitHubでコメントを開く"
+
+msgid "Open conversation"
+msgstr "会話を開く"
 
 #. placeholder {0}: conversation.title
 msgid "Open conversation: {0}"
@@ -12850,6 +12919,9 @@ msgstr "Supersetの設定 → アカウントから参加できます。"
 
 msgid "Opt-out"
 msgstr "オプトアウト"
+
+msgid "option"
+msgstr "選択肢"
 
 msgid "Option shortcuts may prevent typing special characters"
 msgstr "Optionのショートカットは特殊文字の入力を妨げる場合があります"
@@ -14190,6 +14262,9 @@ msgstr "レビュー待ち"
 #. placeholder {0}: error.message
 msgid "Ready for review failed: {0}"
 msgstr "レビュー準備完了にできませんでした: {0}"
+
+msgid "Ready for review on the Desk"
+msgstr "Desk でレビュー待ち"
 
 msgid "Ready in"
 msgstr "対応済み"
@@ -15945,6 +16020,9 @@ msgstr "ターミナルでテキストを選択すると、行末の空白を取
 
 msgid "Send"
 msgstr "送信"
+
+msgid "Send (⌘Enter)"
+msgstr "送信 (⌘Enter)"
 
 msgid "Send an invitation to join {organizationName}. Expires in 48 hours."
 msgstr "{organizationName}への招待を送ります。48時間で失効します。"
@@ -18741,6 +18819,9 @@ msgstr "別のエージェントとの会話を再開するには、そのフォ
 
 msgid "To-do details"
 msgstr "To-doの詳細"
+
+msgid "To-do on the Desk"
+msgstr "Desk に To-do あり"
 
 msgid "To-dos"
 msgstr "To-do"
