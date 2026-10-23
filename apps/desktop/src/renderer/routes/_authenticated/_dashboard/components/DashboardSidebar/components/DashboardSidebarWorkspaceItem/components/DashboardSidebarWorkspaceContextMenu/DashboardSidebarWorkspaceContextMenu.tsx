@@ -37,6 +37,7 @@ import { useDashboardSidebarPortKill } from "../../../../hooks/useDashboardSideb
 import { useProjectTagFolderSections } from "../../../../hooks/useProjectTagFolderSections";
 import { useDashboardSidebarHoverActions } from "../../../../providers/DashboardSidebarHoverProvider";
 import { useDashboardSidebarWorkspacePorts } from "../../../../providers/DashboardSidebarPortsProvider";
+import { WorkspaceGrantsSubmenu } from "../../../WorkspaceGrants";
 import { WorkspaceLabelsSubmenu } from "../../../WorkspaceLabels";
 
 interface DashboardSidebarWorkspaceContextMenuProps {
@@ -205,6 +206,7 @@ export function DashboardSidebarWorkspaceContextMenu({
 					<>
 						<ContextMenuSeparator />
 						<WorkspaceLabelsSubmenu workspaceId={workspaceId} hostId={hostId} />
+						<WorkspaceGrantsSubmenu workspaceId={workspaceId} hostId={hostId} />
 					</>
 				)}
 				{/* Group actions mutate placement (sectionId/tabOrder), which a pinned

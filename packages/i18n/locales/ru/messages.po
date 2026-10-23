@@ -2029,6 +2029,9 @@ msgstr "Агент работает"
 msgid "Agent launch configuration"
 msgstr "Конфигурация запуска агента"
 
+msgid "Agent permissions"
+msgstr "Разрешения агентов"
+
 msgid "Agent picker (Claude, Codex, Cursor…) used by every session-creation flow"
 msgstr "Выбор агента (Claude, Codex, Cursor…), используемый во всех сценариях создания сессий"
 
@@ -2076,6 +2079,9 @@ msgstr "Агенты"
 
 msgid "Agents complete routine tickets with no mid-task intervention."
 msgstr "Агенты закрывают рутинные тикеты без вмешательства по ходу задачи."
+
+msgid "Agents here may, without asking:"
+msgstr "Агенты здесь могут без вопросов:"
 
 msgid "Agents load their own preview, drive the UI, and attach screenshot proof before marking work ready for review."
 msgstr "Агенты сами открывают свой предпросмотр, управляют интерфейсом и прикладывают скриншоты как доказательство, прежде чем отметить работу готовой к ревью."
@@ -5080,6 +5086,9 @@ msgstr "Не удалось ответвить чат"
 msgid "Could not change access"
 msgstr "Не удалось изменить доступ"
 
+msgid "Could not change the agent permissions"
+msgstr "Не удалось изменить разрешения агентов"
+
 msgid "Could not change the labels"
 msgstr "Не удалось изменить метки"
 
@@ -7079,6 +7088,9 @@ msgstr "Каждую неделю: {day}, в {time}"
 
 msgid "Every agent runs in its own Git worktree and branch, keeping working files separate. Changes can still conflict when merged. You watch, review, and merge them all from one window."
 msgstr "Каждый агент работает в собственном Git worktree и ветке, поэтому рабочие файлы остаются раздельными. При слиянии изменений всё ещё возможны конфликты. Вы отслеживаете, проверяете и объединяете всё в одном окне."
+
+msgid "Every agent started in this workspace gets it."
+msgstr "Её получает каждый агент, запущенный в этом рабочем пространстве."
 
 msgid "Every axis is carrying its weight for the next tier. Hold it and the tier follows."
 msgstr "Каждая ось работает на следующий уровень. Удержите это — уровень придёт сам."
@@ -10375,6 +10387,9 @@ msgstr "Отметить как непрочитанное"
 msgid "Mark as viewed"
 msgstr "Отметить как просмотренный"
 
+msgid "Mark its PR ready for review"
+msgstr "Отметить свой PR как готовый к ревью"
+
 msgid "Mark Ready"
 msgstr "Отметить готовым"
 
@@ -12264,6 +12279,9 @@ msgstr "Открыть {parentLabel}"
 msgid "Open {path} in file pane"
 msgstr "Открыть {path} в панели файла"
 
+msgid "Open a draft PR"
+msgstr "Открыть черновой PR"
+
 msgid "Open a multiline prompt composer for the active terminal"
 msgstr "Открыть многострочный редактор промпта для активного терминала"
 
@@ -13243,6 +13261,9 @@ msgstr "Закреплённые"
 msgid "Pinned by you, last pinned first"
 msgstr "Закреплены вами, последние сверху"
 
+msgid "Pinned context"
+msgstr "Закреплённый контекст"
+
 msgid "PK"
 msgstr "PK"
 
@@ -13367,6 +13388,9 @@ msgstr "Опубликовать"
 
 msgid "Post comment"
 msgstr "Отправить комментарий"
+
+msgid "Post GitHub comments"
+msgstr "Публиковать комментарии в GitHub"
 
 msgid "Post reply"
 msgstr "Отправить ответ"
@@ -13828,6 +13852,9 @@ msgstr "Запушить"
 #. placeholder {0}: error.message
 msgid "Push failed: {0}"
 msgstr "Не удалось запушить: {0}"
+
+msgid "Push its own branch"
+msgstr "Пушить свою ветку"
 
 msgid "Pushed"
 msgstr "Новые коммиты"
@@ -14501,6 +14528,9 @@ msgstr "В {where} заменён 1 файл"
 
 msgid "Reply"
 msgstr "Ответить"
+
+msgid "Reply to review bots"
+msgstr "Отвечать ботам ревью"
 
 msgid "Reply to thread…"
 msgstr "Ответить в ветке…"
@@ -15245,6 +15275,9 @@ msgstr "Сохранить настройки"
 
 msgid "Save profile"
 msgstr "Сохранить профиль"
+
+msgid "Save Slack drafts"
+msgstr "Сохранять черновики в Slack"
 
 msgid "save the agent"
 msgstr "сохранить агента"

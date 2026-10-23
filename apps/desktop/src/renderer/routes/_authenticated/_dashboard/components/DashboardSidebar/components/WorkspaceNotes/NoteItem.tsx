@@ -17,6 +17,7 @@ import {
 	LuCircle,
 	LuCircleCheck,
 	LuEllipsis,
+	LuPin,
 	LuStar,
 } from "react-icons/lu";
 import { NoteDetails } from "./NoteDetails";
@@ -123,6 +124,12 @@ export function NoteItem({
 					</DropdownMenuRadioGroup>
 				</DropdownMenuContent>
 			</DropdownMenu>
+			{note.kind === "context" && (
+				<LuPin
+					className="size-3 shrink-0 text-sky-500"
+					aria-label={t`Pinned context`}
+				/>
+			)}
 			{note.createdBy === "agent" && (
 				<LuBot
 					className="size-3 shrink-0 text-violet-500"
@@ -184,6 +191,9 @@ export function NoteItem({
 						note={note}
 						onDetailsChange={(details) =>
 							reportNoteError(actions.update(note.id, { details }), failed)
+						}
+						onKindChange={(kind) =>
+							reportNoteError(actions.update(note.id, { kind }), failed)
 						}
 						onDelete={() => reportNoteError(actions.remove(note.id), failed)}
 					/>

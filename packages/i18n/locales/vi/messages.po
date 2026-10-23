@@ -2029,6 +2029,9 @@ msgstr "Agent đang làm việc"
 msgid "Agent launch configuration"
 msgstr "Cấu hình khởi chạy agent"
 
+msgid "Agent permissions"
+msgstr "Quyền của agent"
+
 msgid "Agent picker (Claude, Codex, Cursor…) used by every session-creation flow"
 msgstr "Bộ chọn agent (Claude, Codex, Cursor…) dùng trong mọi luồng tạo phiên"
 
@@ -2076,6 +2079,9 @@ msgstr "Agent"
 
 msgid "Agents complete routine tickets with no mid-task intervention."
 msgstr "Agent hoàn thành các ticket thường ngày mà không cần can thiệp giữa chừng."
+
+msgid "Agents here may, without asking:"
+msgstr "Agent ở đây được phép, không cần hỏi:"
 
 msgid "Agents load their own preview, drive the UI, and attach screenshot proof before marking work ready for review."
 msgstr "Agent tự mở bản xem trước, thao tác giao diện và đính kèm ảnh chụp làm bằng chứng trước khi đánh dấu sẵn sàng review."
@@ -5080,6 +5086,9 @@ msgstr "Không thể phân nhánh cuộc trò chuyện"
 msgid "Could not change access"
 msgstr "Không thể thay đổi quyền truy cập"
 
+msgid "Could not change the agent permissions"
+msgstr "Không thể thay đổi quyền của agent"
+
 msgid "Could not change the labels"
 msgstr "Không thể thay đổi nhãn"
 
@@ -7079,6 +7088,9 @@ msgstr "{day} hằng tuần, lúc {time}"
 
 msgid "Every agent runs in its own Git worktree and branch, keeping working files separate. Changes can still conflict when merged. You watch, review, and merge them all from one window."
 msgstr "Mỗi agent chạy trong worktree và nhánh Git riêng, giữ các tệp làm việc tách biệt. Xung đột vẫn có thể xảy ra khi hợp nhất thay đổi. Bạn theo dõi, xem xét và hợp nhất tất cả từ một cửa sổ."
+
+msgid "Every agent started in this workspace gets it."
+msgstr "Mọi agent khởi chạy trong workspace này đều nhận được."
 
 msgid "Every axis is carrying its weight for the next tier. Hold it and the tier follows."
 msgstr "Mọi trục đều đang góp sức cho hạng tiếp theo. Giữ được như vậy thì hạng sẽ tới."
@@ -10375,6 +10387,9 @@ msgstr "Đánh dấu chưa đọc"
 msgid "Mark as viewed"
 msgstr "Đánh dấu đã xem"
 
+msgid "Mark its PR ready for review"
+msgstr "Đánh dấu PR sẵn sàng để review"
+
 msgid "Mark Ready"
 msgstr "Đánh dấu sẵn sàng"
 
@@ -12264,6 +12279,9 @@ msgstr "Mở {parentLabel}"
 msgid "Open {path} in file pane"
 msgstr "Mở {path} trong khung tệp"
 
+msgid "Open a draft PR"
+msgstr "Mở PR nháp"
+
 msgid "Open a multiline prompt composer for the active terminal"
 msgstr "Mở ô soạn prompt nhiều dòng cho terminal đang mở"
 
@@ -13243,6 +13261,9 @@ msgstr "Đã ghim"
 msgid "Pinned by you, last pinned first"
 msgstr "Bạn đã ghim, ghim gần nhất trước"
 
+msgid "Pinned context"
+msgstr "Ngữ cảnh đã ghim"
+
 msgid "PK"
 msgstr "PK"
 
@@ -13367,6 +13388,9 @@ msgstr "Đăng"
 
 msgid "Post comment"
 msgstr "Đăng bình luận"
+
+msgid "Post GitHub comments"
+msgstr "Đăng bình luận GitHub"
 
 msgid "Post reply"
 msgstr "Đăng trả lời"
@@ -13828,6 +13852,9 @@ msgstr "Push"
 #. placeholder {0}: error.message
 msgid "Push failed: {0}"
 msgstr "Push thất bại: {0}"
+
+msgid "Push its own branch"
+msgstr "Push nhánh của chính nó"
 
 msgid "Pushed"
 msgstr "Đã push"
@@ -14501,6 +14528,9 @@ msgstr "Đã thay thế 1 tệp trong {where}"
 
 msgid "Reply"
 msgstr "Trả lời"
+
+msgid "Reply to review bots"
+msgstr "Trả lời bot review"
 
 msgid "Reply to thread…"
 msgstr "Trả lời luồng…"
@@ -15245,6 +15275,9 @@ msgstr "Lưu tùy chọn"
 
 msgid "Save profile"
 msgstr "Lưu hồ sơ"
+
+msgid "Save Slack drafts"
+msgstr "Lưu bản nháp Slack"
 
 msgid "save the agent"
 msgstr "lưu agent"

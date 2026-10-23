@@ -18,6 +18,7 @@ const note = (
 	workspaceId,
 	text: id,
 	details: null,
+	kind: "note",
 	status: "open",
 	createdBy: "user",
 	createdAt: 1,

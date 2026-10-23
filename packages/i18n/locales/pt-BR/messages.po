@@ -2029,6 +2029,9 @@ msgstr "Agente trabalhando"
 msgid "Agent launch configuration"
 msgstr "Configuração de execução do agente"
 
+msgid "Agent permissions"
+msgstr "Permissões dos agentes"
+
 msgid "Agent picker (Claude, Codex, Cursor…) used by every session-creation flow"
 msgstr "Seletor de agente (Claude, Codex, Cursor…) usado em todo fluxo de criação de sessão"
 
@@ -2076,6 +2079,9 @@ msgstr "Agentes"
 
 msgid "Agents complete routine tickets with no mid-task intervention."
 msgstr "Os agentes concluem tickets rotineiros sem intervenção no meio da tarefa."
+
+msgid "Agents here may, without asking:"
+msgstr "Os agentes aqui podem, sem perguntar:"
 
 msgid "Agents load their own preview, drive the UI, and attach screenshot proof before marking work ready for review."
 msgstr "Os agentes carregam a própria prévia, usam a interface e anexam capturas de tela como prova antes de marcar o trabalho como pronto para revisão."
@@ -5080,6 +5086,9 @@ msgstr "Não foi possível ramificar o chat"
 msgid "Could not change access"
 msgstr "Não foi possível alterar o acesso"
 
+msgid "Could not change the agent permissions"
+msgstr "Não foi possível alterar as permissões dos agentes"
+
 msgid "Could not change the labels"
 msgstr "Não foi possível alterar os rótulos"
 
@@ -7079,6 +7088,9 @@ msgstr "Cada {day}, às {time}"
 
 msgid "Every agent runs in its own Git worktree and branch, keeping working files separate. Changes can still conflict when merged. You watch, review, and merge them all from one window."
 msgstr "Cada agente é executado em seu próprio worktree e branch do Git, mantendo os arquivos de trabalho separados. Ainda podem ocorrer conflitos ao mesclar as alterações. Você acompanha, revisa e mescla tudo em uma única janela."
+
+msgid "Every agent started in this workspace gets it."
+msgstr "Todo agente iniciado neste workspace recebe isso."
 
 msgid "Every axis is carrying its weight for the next tier. Hold it and the tier follows."
 msgstr "Cada eixo está fazendo a sua parte para o próximo nível. Mantenha assim e o nível vem."
@@ -10375,6 +10387,9 @@ msgstr "Marcar como não lida"
 msgid "Mark as viewed"
 msgstr "Marcar como visto"
 
+msgid "Mark its PR ready for review"
+msgstr "Marcar o PR como pronto para revisão"
+
 msgid "Mark Ready"
 msgstr "Marcar como pronto"
 
@@ -12264,6 +12279,9 @@ msgstr "Abrir {parentLabel}"
 msgid "Open {path} in file pane"
 msgstr "Abrir {path} no painel de arquivos"
 
+msgid "Open a draft PR"
+msgstr "Abrir um PR em rascunho"
+
 msgid "Open a multiline prompt composer for the active terminal"
 msgstr "Abrir um editor de prompt multilinha para o terminal ativo"
 
@@ -13243,6 +13261,9 @@ msgstr "Fixadas"
 msgid "Pinned by you, last pinned first"
 msgstr "Fixados por você, o último primeiro"
 
+msgid "Pinned context"
+msgstr "Contexto fixado"
+
 msgid "PK"
 msgstr "PK"
 
@@ -13367,6 +13388,9 @@ msgstr "Publicar"
 
 msgid "Post comment"
 msgstr "Publicar comentário"
+
+msgid "Post GitHub comments"
+msgstr "Publicar comentários no GitHub"
 
 msgid "Post reply"
 msgstr "Publicar resposta"
@@ -13828,6 +13852,9 @@ msgstr "Push"
 #. placeholder {0}: error.message
 msgid "Push failed: {0}"
 msgstr "Falha no push: {0}"
+
+msgid "Push its own branch"
+msgstr "Fazer push do próprio branch"
 
 msgid "Pushed"
 msgstr "Push realizado"
@@ -14501,6 +14528,9 @@ msgstr "1 arquivo substituído em {where}"
 
 msgid "Reply"
 msgstr "Responder"
+
+msgid "Reply to review bots"
+msgstr "Responder aos bots de revisão"
 
 msgid "Reply to thread…"
 msgstr "Responder à thread…"
@@ -15245,6 +15275,9 @@ msgstr "Salvar preferências"
 
 msgid "Save profile"
 msgstr "Salvar perfil"
+
+msgid "Save Slack drafts"
+msgstr "Salvar rascunhos do Slack"
 
 msgid "save the agent"
 msgstr "salvar o agente"

@@ -6,8 +6,12 @@ import {
 	type WorkspaceNote,
 } from "./notes";
 
-const note = (id: string, status: NoteStatus, createdAt: number) =>
-	({ id, status, createdAt }) as WorkspaceNote;
+const note = (
+	id: string,
+	status: NoteStatus,
+	createdAt: number,
+	kind: WorkspaceNote["kind"] = "note",
+) => ({ id, status, createdAt, kind }) as WorkspaceNote;
 
 describe("parseNoteLines", () => {
 	test("makes one note per line, without bullets or numbers", () => {
@@ -48,6 +52,19 @@ describe("sortNotes", () => {
 			"kept",
 			"dropped",
 			"done",
+		]);
+	});
+
+	test("puts pinned context first among the active notes", () => {
+		const sorted = sortNotes([
+			note("open", "open", 1),
+			note("closed-pin", "done", 0, "context"),
+			note("pin", "kept", 2, "context"),
+		]);
+		expect(sorted.map((item) => item.id)).toEqual([
+			"pin",
+			"open",
+			"closed-pin",
 		]);
 	});
 });
