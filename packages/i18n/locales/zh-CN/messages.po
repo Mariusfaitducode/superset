@@ -11411,6 +11411,9 @@ msgstr "还没有智能体对话。"
 msgid "No agent is configured on this host"
 msgstr "此主机上未配置任何智能体"
 
+msgid "No agent is running. Start one in a workspace and it takes a desk here."
+msgstr "没有正在运行的智能体。在工作区中启动一个，它就会在这里占一张桌子。"
+
 msgid "No agent running"
 msgstr "没有正在运行的智能体"
 
@@ -11636,6 +11639,9 @@ msgstr "无图标"
 
 msgid "No icons match."
 msgstr "没有匹配的图标。"
+
+msgid "No integration connected yet."
+msgstr "尚未连接任何集成。"
 
 msgid "No Internet Connection"
 msgstr "无网络连接"
@@ -12251,6 +12257,9 @@ msgstr "占全部token"
 msgid "Off"
 msgstr "关闭"
 
+msgid "Office"
+msgstr "办公室"
+
 #. placeholder {0}: COMPANY.NAME
 msgid "Official documentation for {0}, the app for running 100+ coding agents in parallel."
 msgstr "{0} 官方文档。这款应用可并行运行 100 多个编程代理。"
@@ -12488,6 +12497,7 @@ msgid "Open"
 msgstr "开启"
 
 #. placeholder {0}: linkedAgent?.label ?? t({ message: "agent settings", })
+#. placeholder {0}: workspace.name
 msgid "Open {0}"
 msgstr "打开{0}"
 
@@ -12852,6 +12862,9 @@ msgstr "打开系统设置"
 
 msgid "Open task {title}"
 msgstr "打开任务{title}"
+
+msgid "Open terminal"
+msgstr "打开终端"
 
 msgid "Open Terminal"
 msgstr "打开终端"
@@ -18603,6 +18616,9 @@ msgstr "此主机尚未报告版本。"
 
 msgid "This host is behind the app you are using. Workspaces still open, but newer features may fail on it."
 msgstr "此主机落后于你正在使用的应用。工作区仍可打开，但较新的功能可能无法使用。"
+
+msgid "This host is too old to keep to-dos."
+msgstr "此主机版本过旧，无法保存待办事项。"
 
 msgid "This host needs an update"
 msgstr "此主机需要更新"

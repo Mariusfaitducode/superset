@@ -11411,6 +11411,9 @@ msgstr "No agent conversations yet."
 msgid "No agent is configured on this host"
 msgstr "No agent is configured on this host"
 
+msgid "No agent is running. Start one in a workspace and it takes a desk here."
+msgstr "No agent is running. Start one in a workspace and it takes a desk here."
+
 msgid "No agent running"
 msgstr "No agent running"
 
@@ -11636,6 +11639,9 @@ msgstr "No icon"
 
 msgid "No icons match."
 msgstr "No icons match."
+
+msgid "No integration connected yet."
+msgstr "No integration connected yet."
 
 msgid "No Internet Connection"
 msgstr "No Internet Connection"
@@ -12251,6 +12257,9 @@ msgstr "of all tokens"
 msgid "Off"
 msgstr "Off"
 
+msgid "Office"
+msgstr "Office"
+
 #. placeholder {0}: COMPANY.NAME
 msgid "Official documentation for {0}, the app for running 100+ coding agents in parallel."
 msgstr "Official documentation for {0}, the app for running 100+ coding agents in parallel."
@@ -12488,6 +12497,7 @@ msgid "Open"
 msgstr "Open"
 
 #. placeholder {0}: linkedAgent?.label ?? t({ message: "agent settings", })
+#. placeholder {0}: workspace.name
 msgid "Open {0}"
 msgstr "Open {0}"
 
@@ -12852,6 +12862,9 @@ msgstr "Open System Settings"
 
 msgid "Open task {title}"
 msgstr "Open task {title}"
+
+msgid "Open terminal"
+msgstr "Open terminal"
 
 msgid "Open Terminal"
 msgstr "Open Terminal"
@@ -18603,6 +18616,9 @@ msgstr "This host has not reported a version yet."
 
 msgid "This host is behind the app you are using. Workspaces still open, but newer features may fail on it."
 msgstr "This host is behind the app you are using. Workspaces still open, but newer features may fail on it."
+
+msgid "This host is too old to keep to-dos."
+msgstr "This host is too old to keep to-dos."
 
 msgid "This host needs an update"
 msgstr "This host needs an update"

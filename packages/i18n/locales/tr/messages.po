@@ -11411,6 +11411,9 @@ msgstr "Henüz ajan konuşması yok."
 msgid "No agent is configured on this host"
 msgstr "Bu ana makinede yapılandırılmış bir ajan yok"
 
+msgid "No agent is running. Start one in a workspace and it takes a desk here."
+msgstr "Çalışan ajan yok. Bir çalışma alanında başlatın, burada bir masaya otursun."
+
 msgid "No agent running"
 msgstr "Çalışan ajan yok"
 
@@ -11635,6 +11638,9 @@ msgstr "Simge yok"
 
 msgid "No icons match."
 msgstr "Eşleşen simge yok."
+
+msgid "No integration connected yet."
+msgstr "Henüz bağlı entegrasyon yok."
 
 msgid "No Internet Connection"
 msgstr "İnternet bağlantısı yok"
@@ -12250,6 +12256,9 @@ msgstr "tüm token'ların"
 msgid "Off"
 msgstr "Kapalı"
 
+msgid "Office"
+msgstr "Ofis"
+
 #. placeholder {0}: COMPANY.NAME
 msgid "Official documentation for {0}, the app for running 100+ coding agents in parallel."
 msgstr "100'den fazla kodlama ajanını paralel çalıştıran {0} uygulamasının resmi belgeleri."
@@ -12487,6 +12496,7 @@ msgid "Open"
 msgstr "Açık"
 
 #. placeholder {0}: linkedAgent?.label ?? t({ message: "agent settings", })
+#. placeholder {0}: workspace.name
 msgid "Open {0}"
 msgstr "Aç: {0}"
 
@@ -12851,6 +12861,9 @@ msgstr "Sistem Ayarları'nı aç"
 
 msgid "Open task {title}"
 msgstr "Görevi aç: {title}"
+
+msgid "Open terminal"
+msgstr "Terminali aç"
 
 msgid "Open Terminal"
 msgstr "Terminali aç"
@@ -18602,6 +18615,9 @@ msgstr "Bu ana makine henüz bir sürüm bildirmedi."
 
 msgid "This host is behind the app you are using. Workspaces still open, but newer features may fail on it."
 msgstr "Bu ana makine kullandığınız uygulamanın gerisinde. Çalışma alanları hâlâ açılıyor ama yeni özellikler üzerinde çalışmayabilir."
+
+msgid "This host is too old to keep to-dos."
+msgstr "Bu ana bilgisayar yapılacakları saklamak için çok eski."
 
 msgid "This host needs an update"
 msgstr "Bu host'un güncellenmesi gerekiyor"
