@@ -1,0 +1,4 @@
+interface:
+  display_name: "Desk Report"
+  short_description: "Hand work over on the user's Desk"
+  default_prompt: "Use $report to put this on my Desk for review."

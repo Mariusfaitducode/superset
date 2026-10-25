@@ -1,6 +1,6 @@
 ---
 name: notes
-description: Read and add to the notes pinned to your Superset workspace (ideas, findings, things to do later), which the user sees under the workspace in the app's sidebar and in the Notes view. Use at the start of a task to see what the user has in mind for this workspace, when you think of something worth doing later that is out of scope now, when you finish something the user noted, or when asked "what notes do we have", "note this idea", "add it to the notes". Not for work to do now (that is a to-do: `superset todos`).
+description: Read and add to the notes pinned to your Superset workspace (ideas, findings, things to do later), which the user sees under the workspace in the app's sidebar and in the Notes view. Use when starting a task, to see what the user has in mind for this workspace, when you think of something worth doing later that is out of scope now, when you finish something the user noted, or when asked "what notes do we have", "note this idea", "add it to the notes". Not for work to do now (that is a to-do: `superset todos`).
 argument-hint: what to read, add, or mark done
 allowed-tools: Bash(superset:*)
 ---

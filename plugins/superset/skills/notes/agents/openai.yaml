@@ -1,0 +1,4 @@
+interface:
+  display_name: "Workspace Notes"
+  short_description: "Read and add notes pinned to the workspace"
+  default_prompt: "Use $notes to show the notes of this workspace."

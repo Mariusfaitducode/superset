@@ -1,6 +1,6 @@
 ---
 name: grants
-description: Read what the user lets the agents of your Superset workspace do without asking (push its own branch, open a draft PR, mark it ready, reply to review bots, post GitHub comments, save Slack drafts), and print the start-of-session context with pinned briefs. Use before anything that leaves the machine (git push, gh pr create/ready/comment, a Slack draft), at session start when no context was injected, or when asked "what am I allowed to do", "can I push", "grant this workspace…".
+description: Read what the user lets the agents of your Superset workspace do without asking (push its own branch, open a draft PR, mark it ready, reply to review bots, post GitHub comments, save Slack drafts), and print the start-of-session context with pinned briefs. Use when about to do anything that leaves the machine (git push, gh pr create/ready/comment, a Slack draft), at session start when no context was injected, or when asked "what am I allowed to do", "can I push", "grant this workspace…".
 argument-hint: the action you are about to take, or grants to set for another workspace
 allowed-tools: Bash(superset:*)
 ---

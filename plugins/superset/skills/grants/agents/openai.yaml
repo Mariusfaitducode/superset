@@ -1,0 +1,4 @@
+interface:
+  display_name: "Agent Grants"
+  short_description: "See what you may do without asking"
+  default_prompt: "Use $grants to check what I let agents do in this workspace."

@@ -1,6 +1,6 @@
 ---
 name: todos
-description: Read and update the to-do list of your Superset conversation, which the user sees in the app's sidebar, and see the other conversations' to-dos on this machine. Use at the start of a task to check what the user listed for you, when you finish something the user listed, to record follow-ups the user should see, or when asked "what's on my list", "add a to-do", "check that off", "what are the other agents doing". Not for your own step-by-step plan inside a turn (keep using your built-in task list for that).
+description: Read and update the to-do list of your Superset conversation, which the user sees in the app's sidebar, and see the other conversations' to-dos on this machine. Use when starting a task, to check what the user listed for you, when you finish something the user listed, to record follow-ups the user should see, or when asked "what's on my list", "add a to-do", "check that off", "what are the other agents doing". Not for your own step-by-step plan inside a turn (keep using your built-in task list for that).
 argument-hint: what to read, add, or check off
 allowed-tools: Bash(superset:*)
 ---
