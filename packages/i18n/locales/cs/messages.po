@@ -2086,6 +2086,9 @@ msgstr "Agenti podle plánu nebo spouštěče"
 msgid "Agents on your phone"
 msgstr "Agenti ve vašem telefonu"
 
+msgid "Agents put their hand-overs here with superset report: work to review, decisions, drafts to approve, blockers."
+msgstr "Agenti sem dávají své předávky pomocí superset report: práci ke kontrole, rozhodnutí, koncepty ke schválení, překážky."
+
 msgid "Agents remember what they learn about your codebase, so every new session starts warm."
 msgstr "Agenti si pamatují, co se naučí o vašem kódu, takže každá nová relace začíná s kontextem."
 
@@ -2097,6 +2100,9 @@ msgstr "Agenti používají tento účet, když volají nástroje Linear."
 
 msgid "Agents' to-dos"
 msgstr "Úkoly agentů"
+
+msgid "Agents' to-dos for you"
+msgstr "Úkoly od agentů pro vás"
 
 msgid "Aggregate agent usage across every developer on the Superset leaderboard — tokens, cost, cache behaviour and which models people actually reach for."
 msgstr "Souhrnné využití agentů napříč všemi vývojáři v žebříčku Superset — tokeny, náklady, chování cache a modely, po kterých lidé skutečně sahají."
@@ -2432,8 +2438,14 @@ msgstr "Anonymní montér"
 msgid "another device"
 msgstr "jiné zařízení"
 
+msgid "answer"
+msgstr "odpovědět"
+
 msgid "Answer any questions in the terminal below, such as a password."
 msgstr "Odpovězte na dotazy v terminálu níže, například heslo."
+
+msgid "Answer the agent"
+msgstr "Odpovědět agentovi"
 
 msgid "Answer this question on desktop, or skip it."
 msgstr "Odpovězte na tuto otázku na počítači, nebo ji přeskočte."
@@ -2618,8 +2630,14 @@ msgctxt "job application"
 msgid "Apply"
 msgstr "Přihlásit se"
 
+msgid "approve"
+msgstr "schválit"
+
 msgid "Approve"
 msgstr "Schválit"
+
+msgid "Approve and send"
+msgstr "Schválit a odeslat"
 
 msgid "Approve edits"
 msgstr "Schvalovat úpravy"
@@ -3170,8 +3188,14 @@ msgstr "Blok"
 msgid "blocked"
 msgstr "zablokováno"
 
+msgid "Blocked"
+msgstr "Zablokováno"
+
 msgid "Blocked by Branch Rules"
 msgstr "Zablokováno pravidly větve"
+
+msgid "Blocked, see the Desk"
+msgstr "Zablokováno, viz Desk"
 
 msgid "Blockquote"
 msgstr "Citace"
@@ -3740,6 +3764,9 @@ msgstr "Zkontrolovat aktualizace"
 
 msgid "Check for Updates..."
 msgstr "Zkontrolovat aktualizace..."
+
+msgid "Check off"
+msgstr "Odškrtnout"
 
 msgid "Check on running agents and read what they changed from your iPhone or iPad."
 msgstr "Kontrolujte běžící agenty a čtěte, co změnili, na iPhonu nebo iPadu."
@@ -5204,6 +5231,9 @@ msgstr "Nepodařilo se spojit s {0} a vyhledat větev „{1}“. Zkontrolujte p�
 msgid "Could not reach a mobile simulator."
 msgstr "Nepodařilo se připojit k mobilnímu simulátoru."
 
+msgid "Could not reach the conversation"
+msgstr "Konverzace není dostupná"
+
 msgid "Could not reach the desktop."
 msgstr "K ploše se nepodařilo připojit."
 
@@ -6016,6 +6046,12 @@ msgstr "Debug"
 msgid "Debug with production stack traces"
 msgstr "Ladění s produkčními stack trace"
 
+msgid "Decision waiting on the Desk"
+msgstr "Rozhodnutí čeká na Desku"
+
+msgid "Decisions"
+msgstr "Rozhodnutí"
+
 msgid "default"
 msgstr "výchozí"
 
@@ -6336,6 +6372,12 @@ msgstr "Režim designu selhal"
 msgid "Design review"
 msgstr "Design review"
 
+msgid "Desk"
+msgstr "Desk"
+
+msgid "Desk, {count} waiting on you"
+msgstr "Desk, {count} čeká na vás"
+
 msgid "Desktop"
 msgstr "Plocha"
 
@@ -6547,6 +6589,9 @@ msgstr "Najít vývojové servery ve vaší síti a připojit se k nim."
 msgid "Disk version"
 msgstr "Verze na disku"
 
+msgid "dismiss"
+msgstr "zavřít"
+
 msgid "Dismiss"
 msgstr "Zavřít"
 
@@ -6717,11 +6762,20 @@ msgstr "Koncept · soubor"
 msgid "Draft · line {0}"
 msgstr "Koncept · řádek {0}"
 
+msgid "Draft for {draftTarget}"
+msgstr "Koncept pro {draftTarget}"
+
 msgid "Draft opened"
 msgstr "Otevřen koncept"
 
+msgid "Draft waiting on the Desk"
+msgstr "Koncept čeká na Desku"
+
 msgid "drafted 3 support replies"
 msgstr "připravil 3 odpovědi podpoře"
+
+msgid "Drafts to approve"
+msgstr "Koncepty ke schválení"
 
 msgid "Drag to reorder"
 msgstr "Přetažením změníte pořadí"
@@ -8099,6 +8153,9 @@ msgstr "Sledujte nás na LinkedInu"
 
 msgid "Follow us on X/Twitter"
 msgstr "Sledujte nás na X/Twitteru"
+
+msgid "Follow-up for the agent (optional)"
+msgstr "Pokračování pro agenta (volitelné)"
 
 msgid "Following"
 msgstr "Sleduji"
@@ -10384,6 +10441,9 @@ msgstr "Označit jako zobrazené"
 msgid "Mark Ready"
 msgstr "Označit jako připravené"
 
+msgid "Mark reviewed"
+msgstr "Označit jako zkontrolované"
+
 msgid "Markdown"
 msgstr "Markdown"
 
@@ -10786,6 +10846,9 @@ msgstr "většina vývojářů"
 
 msgid "Most of software history"
 msgstr "Většina historie softwaru"
+
+msgid "move"
+msgstr "přesun"
 
 msgid "Move"
 msgstr "Pohyb"
@@ -11958,6 +12021,9 @@ msgstr "Za posledních 30 dní zatím nebylo nic publikováno. Vaše pozice se o
 msgid "Nothing running"
 msgstr "Nic neběží"
 
+msgid "Nothing waits on you."
+msgstr "Nic na vás nečeká."
+
 msgid "Nothing was missed"
 msgstr "Nic nebylo zmeškáno"
 
@@ -12320,6 +12386,9 @@ msgstr "Otevřít paletu příkazů"
 
 msgid "Open comment on GitHub"
 msgstr "Otevřít komentář na GitHubu"
+
+msgid "Open conversation"
+msgstr "Otevřít konverzaci"
 
 #. placeholder {0}: conversation.title
 msgid "Open conversation: {0}"
@@ -12727,6 +12796,9 @@ msgstr "Zapněte to v Superset v Nastavení → Účet."
 
 msgid "Opt-out"
 msgstr "Odmítnout"
+
+msgid "option"
+msgstr "volba"
 
 msgid "Option shortcuts may prevent typing special characters"
 msgstr "Zkratky s Option mohou bránit psaní speciálních znaků"
@@ -14049,6 +14121,9 @@ msgstr "Připraveno k revizi"
 #. placeholder {0}: error.message
 msgid "Ready for review failed: {0}"
 msgstr "Označení jako připravené k revizi se nezdařilo: {0}"
+
+msgid "Ready for review on the Desk"
+msgstr "Připraveno ke kontrole na Desku"
 
 msgid "Ready in"
 msgstr "Připraveno v"
@@ -15788,6 +15863,9 @@ msgstr "Výběr textu v terminálu ho hned zkopíruje do schránky, bez koncový
 
 msgid "Send"
 msgstr "Odeslat"
+
+msgid "Send (⌘Enter)"
+msgstr "Odeslat (⌘Enter)"
 
 msgid "Send an invitation to join {organizationName}. Expires in 48 hours."
 msgstr "Pošlete pozvánku do {organizationName}. Platnost vyprší za 48 hodin."
@@ -18562,6 +18640,9 @@ msgstr "Chcete-li obnovit jinou konverzaci s agentem, spusťte toto v její slo�
 
 msgid "To-do details"
 msgstr "Podrobnosti úkolu"
+
+msgid "To-do on the Desk"
+msgstr "Úkol na Desku"
 
 msgid "To-dos"
 msgstr "Úkoly"

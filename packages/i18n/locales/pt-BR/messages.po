@@ -2086,6 +2086,9 @@ msgstr "Agentes por agenda ou gatilho"
 msgid "Agents on your phone"
 msgstr "Agentes no seu celular"
 
+msgid "Agents put their hand-overs here with superset report: work to review, decisions, drafts to approve, blockers."
+msgstr "Os agentes deixam aqui suas entregas com superset report: trabalho para revisar, decisões, rascunhos para aprovar, bloqueios."
+
 msgid "Agents remember what they learn about your codebase, so every new session starts warm."
 msgstr "Os agentes lembram o que aprendem sobre sua base de código, então cada nova sessão já começa com contexto."
 
@@ -2097,6 +2100,9 @@ msgstr "Os agentes usam esta conta quando chamam as ferramentas do Linear."
 
 msgid "Agents' to-dos"
 msgstr "Tarefas dos agentes"
+
+msgid "Agents' to-dos for you"
+msgstr "Tarefas dos agentes para você"
 
 msgid "Aggregate agent usage across every developer on the Superset leaderboard — tokens, cost, cache behaviour and which models people actually reach for."
 msgstr "Uso agregado de agentes por todos os desenvolvedores do ranking do Superset — tokens, custo, comportamento de cache e quais modelos as pessoas realmente usam."
@@ -2432,8 +2438,14 @@ msgstr "Montador Anônimo"
 msgid "another device"
 msgstr "outro dispositivo"
 
+msgid "answer"
+msgstr "responder"
+
 msgid "Answer any questions in the terminal below, such as a password."
 msgstr "Responda às perguntas no terminal abaixo, como uma senha."
+
+msgid "Answer the agent"
+msgstr "Responder ao agente"
 
 msgid "Answer this question on desktop, or skip it."
 msgstr "Responda esta pergunta no desktop ou pule-a."
@@ -2618,8 +2630,14 @@ msgctxt "job application"
 msgid "Apply"
 msgstr "Candidatar-se"
 
+msgid "approve"
+msgstr "aprovar"
+
 msgid "Approve"
 msgstr "Aprovar"
+
+msgid "Approve and send"
+msgstr "Aprovar e enviar"
 
 msgid "Approve edits"
 msgstr "Aprovar edições"
@@ -3170,8 +3188,14 @@ msgstr "Bloco"
 msgid "blocked"
 msgstr "bloqueada"
 
+msgid "Blocked"
+msgstr "Bloqueado"
+
 msgid "Blocked by Branch Rules"
 msgstr "Bloqueado por regras da branch"
+
+msgid "Blocked, see the Desk"
+msgstr "Bloqueado, veja o Desk"
 
 msgid "Blockquote"
 msgstr "Citação"
@@ -3740,6 +3764,9 @@ msgstr "Verificar atualizações"
 
 msgid "Check for Updates..."
 msgstr "Verificar atualizações..."
+
+msgid "Check off"
+msgstr "Marcar como feito"
 
 msgid "Check on running agents and read what they changed from your iPhone or iPad."
 msgstr "Acompanhe os agentes em execução e leia o que eles mudaram pelo seu iPhone ou iPad."
@@ -5204,6 +5231,9 @@ msgstr "Não foi possível acessar {0} para procurar o branch \"{1}\". Verifique
 msgid "Could not reach a mobile simulator."
 msgstr "Não foi possível acessar um simulador móvel."
 
+msgid "Could not reach the conversation"
+msgstr "Não foi possível alcançar a conversa"
+
 msgid "Could not reach the desktop."
 msgstr "Não foi possível acessar a área de trabalho."
 
@@ -6016,6 +6046,12 @@ msgstr "Depuração"
 msgid "Debug with production stack traces"
 msgstr "Depure com stack traces de produção"
 
+msgid "Decision waiting on the Desk"
+msgstr "Decisão aguardando no Desk"
+
+msgid "Decisions"
+msgstr "Decisões"
+
 msgid "default"
 msgstr "padrão"
 
@@ -6336,6 +6372,12 @@ msgstr "Falha no modo design"
 msgid "Design review"
 msgstr "Revisão de design"
 
+msgid "Desk"
+msgstr "Desk"
+
+msgid "Desk, {count} waiting on you"
+msgstr "Desk, {count} aguardando você"
+
 msgid "Desktop"
 msgstr "Área de trabalho"
 
@@ -6547,6 +6589,9 @@ msgstr "Descobrir e conectar a servidores de desenvolvimento na sua rede."
 msgid "Disk version"
 msgstr "Versão no disco"
 
+msgid "dismiss"
+msgstr "descartar"
+
 msgid "Dismiss"
 msgstr "Dispensar"
 
@@ -6717,11 +6762,20 @@ msgstr "Rascunho · arquivo"
 msgid "Draft · line {0}"
 msgstr "Rascunho · linha {0}"
 
+msgid "Draft for {draftTarget}"
+msgstr "Rascunho para {draftTarget}"
+
 msgid "Draft opened"
 msgstr "Rascunho aberto"
 
+msgid "Draft waiting on the Desk"
+msgstr "Rascunho aguardando no Desk"
+
 msgid "drafted 3 support replies"
 msgstr "escreveu 3 respostas de suporte"
+
+msgid "Drafts to approve"
+msgstr "Rascunhos para aprovar"
 
 msgid "Drag to reorder"
 msgstr "Arraste para reordenar"
@@ -8099,6 +8153,9 @@ msgstr "Siga a gente no LinkedIn"
 
 msgid "Follow us on X/Twitter"
 msgstr "Siga a gente no X/Twitter"
+
+msgid "Follow-up for the agent (optional)"
+msgstr "Acompanhamento para o agente (opcional)"
 
 msgid "Following"
 msgstr "Acompanhando"
@@ -10384,6 +10441,9 @@ msgstr "Marcar como visto"
 msgid "Mark Ready"
 msgstr "Marcar como pronto"
 
+msgid "Mark reviewed"
+msgstr "Marcar como revisado"
+
 msgid "Markdown"
 msgstr "Markdown"
 
@@ -10786,6 +10846,9 @@ msgstr "a maioria das pessoas desenvolvedoras"
 
 msgid "Most of software history"
 msgstr "Quase toda a história do software"
+
+msgid "move"
+msgstr "mover"
 
 msgid "Move"
 msgstr "Mover"
@@ -11958,6 +12021,9 @@ msgstr "Nada publicado nos últimos 30 dias ainda. Sua posição aparece assim q
 msgid "Nothing running"
 msgstr "Nada em execução"
 
+msgid "Nothing waits on you."
+msgstr "Nada aguarda você."
+
 msgid "Nothing was missed"
 msgstr "Nada foi perdido"
 
@@ -12320,6 +12386,9 @@ msgstr "Abrir a paleta de comandos"
 
 msgid "Open comment on GitHub"
 msgstr "Abrir o comentário no GitHub"
+
+msgid "Open conversation"
+msgstr "Abrir conversa"
 
 #. placeholder {0}: conversation.title
 msgid "Open conversation: {0}"
@@ -12727,6 +12796,9 @@ msgstr "Participe pelo Superset em Configurações → Conta."
 
 msgid "Opt-out"
 msgstr "Não aceitar"
+
+msgid "option"
+msgstr "opção"
 
 msgid "Option shortcuts may prevent typing special characters"
 msgstr "Atalhos com Option podem impedir a digitação de caracteres especiais"
@@ -14049,6 +14121,9 @@ msgstr "Pronto para revisão"
 #. placeholder {0}: error.message
 msgid "Ready for review failed: {0}"
 msgstr "Falha ao marcar como pronto para revisão: {0}"
+
+msgid "Ready for review on the Desk"
+msgstr "Pronto para revisão no Desk"
 
 msgid "Ready in"
 msgstr "Pronto em"
@@ -15788,6 +15863,9 @@ msgstr "Selecionar texto em um terminal copia na hora para a área de transferê
 
 msgid "Send"
 msgstr "Enviar"
+
+msgid "Send (⌘Enter)"
+msgstr "Enviar (⌘Enter)"
 
 msgid "Send an invitation to join {organizationName}. Expires in 48 hours."
 msgstr "Envie um convite para entrar em {organizationName}. Expira em 48 horas."
@@ -18562,6 +18640,9 @@ msgstr "Para retomar outra conversa com um agente, execute isto na pasta dela:"
 
 msgid "To-do details"
 msgstr "Detalhes da tarefa"
+
+msgid "To-do on the Desk"
+msgstr "Tarefa no Desk"
 
 msgid "To-dos"
 msgstr "Tarefas"

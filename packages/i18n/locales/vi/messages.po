@@ -2086,6 +2086,9 @@ msgstr "Agent chạy theo lịch hoặc trigger"
 msgid "Agents on your phone"
 msgstr "Agent trên điện thoại của bạn"
 
+msgid "Agents put their hand-overs here with superset report: work to review, decisions, drafts to approve, blockers."
+msgstr "Các agent đặt bàn giao của họ ở đây bằng superset report: công việc cần xem xét, quyết định, bản nháp cần duyệt, vướng mắc."
+
 msgid "Agents remember what they learn about your codebase, so every new session starts warm."
 msgstr "Agent ghi nhớ những gì chúng học được về codebase của bạn, nên mỗi phiên mới đều bắt đầu với sẵn ngữ cảnh."
 
@@ -2097,6 +2100,9 @@ msgstr "Agent dùng tài khoản này khi gọi các công cụ Linear."
 
 msgid "Agents' to-dos"
 msgstr "Việc cần làm của agent"
+
+msgid "Agents' to-dos for you"
+msgstr "Việc cần làm từ agent cho bạn"
 
 msgid "Aggregate agent usage across every developer on the Superset leaderboard — tokens, cost, cache behaviour and which models people actually reach for."
 msgstr "Tổng hợp mức sử dụng agent của mọi lập trình viên trên bảng xếp hạng Superset — token, chi phí, hành vi cache và những mô hình mọi người thực sự dùng."
@@ -2432,8 +2438,14 @@ msgstr "Thợ lắp ráp ẩn danh"
 msgid "another device"
 msgstr "thiết bị khác"
 
+msgid "answer"
+msgstr "trả lời"
+
 msgid "Answer any questions in the terminal below, such as a password."
 msgstr "Trả lời các câu hỏi trong terminal bên dưới, chẳng hạn mật khẩu."
+
+msgid "Answer the agent"
+msgstr "Trả lời agent"
 
 msgid "Answer this question on desktop, or skip it."
 msgstr "Trả lời câu hỏi này trên máy tính, hoặc bỏ qua."
@@ -2618,8 +2630,14 @@ msgctxt "job application"
 msgid "Apply"
 msgstr "Ứng tuyển"
 
+msgid "approve"
+msgstr "duyệt"
+
 msgid "Approve"
 msgstr "Duyệt"
+
+msgid "Approve and send"
+msgstr "Duyệt và gửi"
 
 msgid "Approve edits"
 msgstr "Duyệt chỉnh sửa"
@@ -3170,8 +3188,14 @@ msgstr "Khối"
 msgid "blocked"
 msgstr "bị chặn"
 
+msgid "Blocked"
+msgstr "Bị chặn"
+
 msgid "Blocked by Branch Rules"
 msgstr "Bị chặn bởi quy tắc nhánh"
+
+msgid "Blocked, see the Desk"
+msgstr "Bị chặn, xem Desk"
 
 msgid "Blockquote"
 msgstr "Trích dẫn"
@@ -3740,6 +3764,9 @@ msgstr "Kiểm tra cập nhật"
 
 msgid "Check for Updates..."
 msgstr "Kiểm tra cập nhật..."
+
+msgid "Check off"
+msgstr "Đánh dấu xong"
 
 msgid "Check on running agents and read what they changed from your iPhone or iPad."
 msgstr "Kiểm tra các agent đang chạy và đọc những gì chúng đã thay đổi từ iPhone hoặc iPad."
@@ -5204,6 +5231,9 @@ msgstr "Không thể kết nối tới {0} để tìm nhánh \"{1}\". Hãy kiể
 msgid "Could not reach a mobile simulator."
 msgstr "Không thể kết nối tới trình giả lập di động."
 
+msgid "Could not reach the conversation"
+msgstr "Không thể kết nối cuộc trò chuyện"
+
 msgid "Could not reach the desktop."
 msgstr "Không thể kết nối tới màn hình nền."
 
@@ -6016,6 +6046,12 @@ msgstr "Debug"
 msgid "Debug with production stack traces"
 msgstr "Gỡ lỗi bằng stack trace từ production"
 
+msgid "Decision waiting on the Desk"
+msgstr "Quyết định đang chờ trên Desk"
+
+msgid "Decisions"
+msgstr "Quyết định"
+
 msgid "default"
 msgstr "mặc định"
 
@@ -6336,6 +6372,12 @@ msgstr "Chế độ thiết kế thất bại"
 msgid "Design review"
 msgstr "Duyệt thiết kế"
 
+msgid "Desk"
+msgstr "Desk"
+
+msgid "Desk, {count} waiting on you"
+msgstr "Desk, {count} đang chờ bạn"
+
 msgid "Desktop"
 msgstr "Màn hình nền"
 
@@ -6547,6 +6589,9 @@ msgstr "Phát hiện và kết nối tới các server phát triển trong mạn
 msgid "Disk version"
 msgstr "Phiên bản trên đĩa"
 
+msgid "dismiss"
+msgstr "bỏ qua"
+
 msgid "Dismiss"
 msgstr "Bỏ qua"
 
@@ -6717,11 +6762,20 @@ msgstr "Nháp · tệp"
 msgid "Draft · line {0}"
 msgstr "Nháp · dòng {0}"
 
+msgid "Draft for {draftTarget}"
+msgstr "Bản nháp cho {draftTarget}"
+
 msgid "Draft opened"
 msgstr "Mở bản nháp"
 
+msgid "Draft waiting on the Desk"
+msgstr "Bản nháp đang chờ trên Desk"
+
 msgid "drafted 3 support replies"
 msgstr "đã soạn 3 câu trả lời hỗ trợ"
+
+msgid "Drafts to approve"
+msgstr "Bản nháp cần duyệt"
 
 msgid "Drag to reorder"
 msgstr "Kéo để sắp xếp lại"
@@ -8099,6 +8153,9 @@ msgstr "Theo dõi chúng tôi trên LinkedIn"
 
 msgid "Follow us on X/Twitter"
 msgstr "Theo dõi chúng tôi trên X/Twitter"
+
+msgid "Follow-up for the agent (optional)"
+msgstr "Yêu cầu tiếp theo cho agent (tùy chọn)"
 
 msgid "Following"
 msgstr "Đang theo dõi"
@@ -10384,6 +10441,9 @@ msgstr "Đánh dấu đã xem"
 msgid "Mark Ready"
 msgstr "Đánh dấu sẵn sàng"
 
+msgid "Mark reviewed"
+msgstr "Đánh dấu đã xem xét"
+
 msgid "Markdown"
 msgstr "Markdown"
 
@@ -10786,6 +10846,9 @@ msgstr "phần lớn lập trình viên"
 
 msgid "Most of software history"
 msgstr "Gần như suốt lịch sử phần mềm"
+
+msgid "move"
+msgstr "di chuyển"
 
 msgid "Move"
 msgstr "Di chuyển"
@@ -11958,6 +12021,9 @@ msgstr "Chưa có gì được công khai trong 30 ngày qua. Thứ hạng của
 msgid "Nothing running"
 msgstr "Không có gì đang chạy"
 
+msgid "Nothing waits on you."
+msgstr "Không có gì đang chờ bạn."
+
 msgid "Nothing was missed"
 msgstr "Không có lần chạy nào bị bỏ lỡ"
 
@@ -12320,6 +12386,9 @@ msgstr "Mở bảng lệnh"
 
 msgid "Open comment on GitHub"
 msgstr "Mở bình luận trên GitHub"
+
+msgid "Open conversation"
+msgstr "Mở cuộc trò chuyện"
 
 #. placeholder {0}: conversation.title
 msgid "Open conversation: {0}"
@@ -12727,6 +12796,9 @@ msgstr "Tham gia từ Superset trong Cài đặt → Tài khoản."
 
 msgid "Opt-out"
 msgstr "Từ chối"
+
+msgid "option"
+msgstr "lựa chọn"
 
 msgid "Option shortcuts may prevent typing special characters"
 msgstr "Phím tắt Option có thể cản trở việc gõ ký tự đặc biệt"
@@ -14049,6 +14121,9 @@ msgstr "Sẵn sàng review"
 #. placeholder {0}: error.message
 msgid "Ready for review failed: {0}"
 msgstr "Đánh dấu sẵn sàng để review thất bại: {0}"
+
+msgid "Ready for review on the Desk"
+msgstr "Sẵn sàng xem xét trên Desk"
 
 msgid "Ready in"
 msgstr "Sẵn sàng trong"
@@ -15788,6 +15863,9 @@ msgstr "Chọn văn bản trong terminal sẽ sao chép ngay vào clipboard, đ�
 
 msgid "Send"
 msgstr "Gửi"
+
+msgid "Send (⌘Enter)"
+msgstr "Gửi (⌘Enter)"
 
 msgid "Send an invitation to join {organizationName}. Expires in 48 hours."
 msgstr "Gửi lời mời tham gia {organizationName}. Hết hạn sau 48 giờ."
@@ -18562,6 +18640,9 @@ msgstr "Để tiếp tục một cuộc trò chuyện khác với agent, hãy ch
 
 msgid "To-do details"
 msgstr "Chi tiết việc cần làm"
+
+msgid "To-do on the Desk"
+msgstr "Việc cần làm trên Desk"
 
 msgid "To-dos"
 msgstr "Việc cần làm"
