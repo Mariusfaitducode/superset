@@ -1,0 +1,4 @@
+interface:
+  display_name: "Conversation To-dos"
+  short_description: "Read and update this conversation's to-dos"
+  default_prompt: "Use $todos to show what is on my list for this conversation."

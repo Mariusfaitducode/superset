@@ -1,6 +1,6 @@
 ---
 name: report
-description: Hand work over to the user through their Superset Desk instead of a message in the chat. Use whenever you stop and need the user: work ready for review (a PR, a fix, a page), a choice only they can make, a text to send in their name (Slack, GitHub, Notion, email), or a blocker that needs their access or action. Also when asked to "report", "hand over", "put it on my Desk". Not for questions you can answer from the code, the git history or memory.
+description: Hand work over to the user through their Superset Desk instead of a message in the chat. Use when you stop and need the user: work ready for review (a PR, a fix, a page), a choice only they can make, a text to send in their name (Slack, GitHub, Notion, email), or a blocker that needs their access or action. Also when asked to "report", "hand over", "put it on my Desk". Not for questions you can answer from the code, the git history or memory.
 argument-hint: the kind of hand-over (done, decision, draft, blocked)
 allowed-tools: Bash(superset:*)
 ---

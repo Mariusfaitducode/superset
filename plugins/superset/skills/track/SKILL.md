@@ -1,6 +1,6 @@
 ---
 name: track
-description: Follow a long wait as a card in the Superset app's task monitor (TopBar button), so the user sees its progress without reading your terminal. Use for any wait longer than about 2 minutes, such as a CI run, a build, a deploy, a migration, a long test suite, a disk cleanup or a slow command, and when the user asks to "track", "follow" or "monitor" something. For GitHub Actions the host follows the run itself, so you don't loop on it.
+description: Follow a long wait as a card in the Superset app's task monitor (TopBar button), so the user sees its progress without reading your terminal. Use when waiting longer than about 2 minutes on something, such as a CI run, a build, a deploy, a migration, a long test suite, a disk cleanup or a slow command, and when the user asks to "track", "follow" or "monitor" something. For GitHub Actions the host follows the run itself, so you don't loop on it.
 argument-hint: what you are waiting on
 allowed-tools: Bash(superset:*)
 ---

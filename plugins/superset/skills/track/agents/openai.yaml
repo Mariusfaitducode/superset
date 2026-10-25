@@ -1,0 +1,4 @@
+interface:
+  display_name: "Track a Wait"
+  short_description: "Follow a long wait in the task monitor"
+  default_prompt: "Use $track to follow this build in the task monitor."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Workspace Labels"
+  short_description: "Read and set the workspace's labels"
+  default_prompt: "Use $workspace-labels to mark this workspace as in progress."
