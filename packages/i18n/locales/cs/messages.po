@@ -2116,6 +2116,9 @@ msgstr "AI · Stav"
 msgid "AI authentication failed. Please check your AI settings."
 msgstr "Ověření AI selhalo. Zkontrolujte prosím nastavení AI."
 
+msgid "Airy"
+msgstr "Vzdušné"
+
 msgid "Alert"
 msgstr "Upozornění"
 
@@ -3049,6 +3052,9 @@ msgstr "Podporují nás"
 msgid "Background"
 msgstr "Pozadí"
 
+msgid "Background of the open conversation."
+msgstr "Pozadí otevřené konverzace."
+
 msgid "Background processes"
 msgstr "Procesy na pozadí"
 
@@ -3354,6 +3360,9 @@ msgstr "Vyvíjíme veřejně"
 msgid "Build the future of Superset in the cloud"
 msgstr "Tvořte budoucnost Superset v cloudu"
 
+msgid "Build the settings page"
+msgstr "Vytvořit stránku nastavení"
+
 msgid "Build your own"
 msgstr "Vytvořte vlastní"
 
@@ -3471,6 +3480,9 @@ msgstr "Kalendář"
 
 msgid "Calendar and Gmail triggers in this organization will stop firing until an account is connected again."
 msgstr "Spouštěče Kalendáře a Gmailu v této organizaci se přestanou spouštět, dokud znovu nepřipojíte účet."
+
+msgid "Calendar sync"
+msgstr "Synchronizace kalendáře"
 
 msgid "Camera access is not allowed"
 msgstr "Přístup k fotoaparátu není povolen"
@@ -3858,11 +3870,11 @@ msgstr "Zvolte, jak se soubory otevírají, když není žádný panel náhledu"
 msgid "Choose how the Changes view opens from the top bar"
 msgstr "Zvolte, jak se zobrazení změn otevírá z horní lišty"
 
+msgid "Choose how the sidebar looks and what it shows under each workspace. Right-click a project or a group for its own options."
+msgstr "Vyberte, jak postranní panel vypadá a co ukazuje pod každým pracovním prostorem. Kliknutím pravým tlačítkem na projekt nebo skupinu získáte jejich vlastní možnosti."
+
 msgid "Choose how to open file paths when Cmd+clicking in the terminal"
 msgstr "Zvolte, jak se otevírají cesty k souborům při Cmd+kliknutí v terminálu"
-
-msgid "Choose what the sidebar shows under each workspace."
-msgstr "Vyberte, co postranní panel zobrazuje pod každým pracovním prostorem."
 
 msgid "Choose what to clear from the in-app browser."
 msgstr "Vyberte, co se má z vestavěného prohlížeče vymazat."
@@ -4343,6 +4355,16 @@ msgstr "Barva"
 msgid "Color Filter"
 msgstr "Barevný filtr"
 
+#. placeholder {0}: stateLabel[key]
+msgid "Color for {0}"
+msgstr "Barva pro {0}"
+
+msgid "Colorblind-safe"
+msgstr "Pro barvoslepé"
+
+msgid "Colors of the agent state dots, in the sidebar and the switchers."
+msgstr "Barvy teček stavu agentů v postranním panelu a přepínačích."
+
 msgid "Columns"
 msgstr "Sloupce"
 
@@ -4463,6 +4485,12 @@ msgstr "Komunikace"
 
 msgid "Community"
 msgstr "Komunita"
+
+msgid "Compact"
+msgstr "Kompaktní"
+
+msgid "Compact conversations"
+msgstr "Kompaktní konverzace"
 
 msgid "Company"
 msgstr "Firma"
@@ -4785,6 +4813,9 @@ msgstr "Kontaktujte nás"
 msgid "Contains this text..."
 msgstr "Obsahuje tento text..."
 
+msgid "Content"
+msgstr "Obsah"
+
 msgid "Context"
 msgstr "Kontext"
 
@@ -4840,6 +4871,9 @@ msgstr "Pokračování v relaci agenta vyžaduje připnutý pracovní prostor"
 
 msgid "continuing the last session"
 msgstr "pokračováním v poslední relaci"
+
+msgid "Contrast"
+msgstr "Kontrast"
 
 msgid "Contributions"
 msgstr "Příspěvky"
@@ -6270,6 +6304,9 @@ msgstr "Degradovat sami sebe?"
 msgid "Denied"
 msgstr "Odmítnuto"
 
+msgid "Density"
+msgstr "Hustota"
+
 msgid "Deny"
 msgstr "Odmítnout"
 
@@ -7229,6 +7266,9 @@ msgstr "Prozkoumat"
 msgid "Explore Pages"
 msgstr "Prozkoumat Stránky"
 
+msgid "Explore the codebase"
+msgstr "Prozkoumat kód"
+
 msgid "Explored"
 msgstr "Prozkoumáno"
 
@@ -7869,6 +7909,9 @@ msgstr "soubory k vyloučení (glob)"
 msgid "files to include (glob)"
 msgstr "soubory k zahrnutí (glob)"
 
+msgid "Fill"
+msgstr "Výplň"
+
 msgid "Fill out the contact form on this page and our team will reach out to learn about your needs and walk you through next steps."
 msgstr "Vyplňte kontaktní formulář na této stránce a náš tým se vám ozve, aby poznal vaše potřeby a provedl vás dalšími kroky."
 
@@ -8010,6 +8053,9 @@ msgstr "Opravovat selhání CI"
 msgid "Fix findings"
 msgstr "Opravit nálezy"
 
+msgid "Fix the flaky test"
+msgstr "Opravit nestabilní test"
+
 msgid "fix-auth-redirect"
 msgstr "fix-auth-redirect"
 
@@ -8066,6 +8112,9 @@ msgstr "Zaměřit vyhledávací pole v zobrazení úkolů"
 
 msgid "Folder"
 msgstr "Složka"
+
+msgid "Folder color on conversations"
+msgstr "Barva složky na konverzacích"
 
 msgid "Folder is missing"
 msgstr "Složka chybí"
@@ -8523,6 +8572,9 @@ msgstr "Polovina sloučených změn je kód agenta bez úprav"
 msgid "Hand the browser to your agent."
 msgstr "Svěřte prohlížeč svému agentovi."
 
+msgid "Hand-picked colors stay when you change the palette."
+msgstr "Ručně vybrané barvy zůstanou i po změně palety."
+
 msgid "Handing to agent…"
 msgstr "Předává se agentovi…"
 
@@ -8574,6 +8626,9 @@ msgstr "Nadpis 3"
 msgid "Heart"
 msgstr "Srdce"
 
+msgid "Height of the rows and size of the conversation titles."
+msgstr "Výška řádků a velikost názvů konverzací."
+
 msgid "Help"
 msgstr "Nápověda"
 
@@ -8602,6 +8657,9 @@ msgstr "Skrýt"
 msgid "Hide checks"
 msgstr "Skrýt kontroly"
 
+msgid "Hide conversations"
+msgstr "Skrýt konverzace"
+
 msgid "Hide details"
 msgstr "Skrýt podrobnosti"
 
@@ -8628,6 +8686,9 @@ msgstr "Skrýt z postranního panelu"
 
 msgid "Hide from Sidebar"
 msgstr "Skrýt z postranního panelu"
+
+msgid "Hide idle conversations"
+msgstr "Skrýt nečinné konverzace"
 
 msgid "Hide log"
 msgstr "Skrýt log"
@@ -8656,8 +8717,14 @@ msgstr "Skrýt komentáře z revize"
 msgid "Hide sessions"
 msgstr "Skrýt relace"
 
+msgid "Hide subagents"
+msgstr "Skrýt podagenty"
+
 msgid "Hide text"
 msgstr "Skrýt text"
+
+msgid "Hide to-dos"
+msgstr "Skrýt úkoly"
 
 msgid "Hide unchanged regions"
 msgstr "Skrýt nezměněné části"
@@ -8670,6 +8737,9 @@ msgstr "Vysoká závažnost"
 
 msgid "High usage"
 msgstr "Vysoké využití"
+
+msgid "Highlight intensity"
+msgstr "Intenzita zvýraznění"
 
 msgid "history"
 msgstr "historie"
@@ -8806,11 +8876,17 @@ msgstr "Kolik skrytých terminálů zůstane plně načtených ({MIN_TERMINAL_PA
 msgid "How much agent work engineers are actually running — tokens, cost, models and sessions, published by people who opted in."
 msgstr "Kolik agentní práce inženýři skutečně spouštějí — tokeny, náklady, modely a sessions, publikováno lidmi, kteří se do toho přihlásili."
 
+msgid "How much secondary text and separators stand out."
+msgstr "Jak moc vynikají vedlejší texty a oddělovače."
+
 msgid "How should the agent's actions be approved?"
 msgstr "Jak schvalovat akce agenta?"
 
 msgid "How the command opens."
 msgstr "Jak se příkaz otevře."
+
+msgid "How the conversation shown in a pane stands out."
+msgstr "Jak vyniká konverzace zobrazená v panelu."
 
 msgid "How the prompt is delivered to the process."
 msgstr "Jak se prompt doručí procesu."
@@ -10703,6 +10779,9 @@ msgstr "Sledujte, řiďte a odblokujte své agenty z iPhonu nebo iPadu."
 msgid "Monitoring"
 msgstr "Monitoring"
 
+msgid "Monochrome"
+msgstr "Monochromatická"
+
 msgid "monorepo"
 msgstr "monorepo"
 
@@ -10933,6 +11012,9 @@ msgstr "Čeká na tebe"
 
 msgid "Needs your approval"
 msgstr "Čeká na vaše schválení"
+
+msgid "Neon"
+msgstr "Neon"
 
 msgid "Nerd Fonts"
 msgstr "Nerd Fonts"
@@ -12312,6 +12394,9 @@ msgstr "Otevřít paletu příkazů"
 msgid "Open comment on GitHub"
 msgstr "Otevřít komentář na GitHubu"
 
+msgid "Open conversation"
+msgstr "Otevřená konverzace"
+
 #. placeholder {0}: conversation.title
 msgid "Open conversation: {0}"
 msgstr "Otevřít konverzaci: {0}"
@@ -13155,6 +13240,9 @@ msgstr "Telefonní číslo"
 
 msgid "Pick {name} from the theme grid to apply it."
 msgstr "Vyberte {name} z mřížky motivů a použijte ho."
+
+msgid "Pick a color"
+msgstr "Vyberte barvu"
 
 msgid "Pick a different element"
 msgstr "Vybrat jiný prvek"
@@ -14228,6 +14316,9 @@ msgstr "Verze"
 msgid "Release control"
 msgstr "Uvolnit ovládání"
 
+msgid "Release notes"
+msgstr "Poznámky k vydání"
+
 msgid "Release notes draft"
 msgstr "Návrh poznámek k vydání"
 
@@ -14937,6 +15028,9 @@ msgstr "Vyžadována revize"
 
 msgid "Review syntax-highlighted diffs"
 msgstr "Kontrolujte diffy se zvýrazněním syntaxe"
+
+msgid "Review the pull request"
+msgstr "Zkontrolovat pull request"
 
 msgid "Review the result."
 msgstr "Zrevidujte výsledek."
@@ -16261,6 +16355,9 @@ msgstr "Zobrazuje se veřejně vedle vašeho jména."
 msgid "Shut down {0}"
 msgstr "Vypnout {0}"
 
+msgid "Side bar"
+msgstr "Boční pruh"
+
 msgid "Side by Side"
 msgstr "Vedle sebe"
 
@@ -16275,6 +16372,9 @@ msgstr "Karta postranního panelu"
 
 msgid "Sidebar file rows"
 msgstr "Řádky souborů v postranním panelu"
+
+msgid "Sidebar options"
+msgstr "Možnosti postranního panelu"
 
 msgid "Sidebar order"
 msgstr "Pořadí v panelu"
@@ -16500,6 +16600,9 @@ msgstr "V souladu se SOC 2 Type II. Vyžádejte si naši zprávu."
 
 msgid "SOC 2 Type II report"
 msgstr "Zpráva SOC 2 Type II"
+
+msgid "Soft"
+msgstr "Jemný"
 
 msgid "Some files are not an accepted type and were not added."
 msgstr "Některé soubory nemají povolený typ a nebyly přidány."
@@ -16892,6 +16995,9 @@ msgstr "Spustí v tomto pracovním prostoru novou relaci"
 msgid "State"
 msgstr "Stav"
 
+msgid "State colors"
+msgstr "Barvy stavů"
+
 msgid "Stats"
 msgstr "Statistiky"
 
@@ -16991,6 +17097,12 @@ msgstr "Přeškrtnuté"
 
 msgid "Strip redundant overrides at call sites"
 msgstr "Odstranit nadbytečné přepisy v místech volání"
+
+msgid "Stripe each conversation with its group's color, or its project's."
+msgstr "Označit každou konverzaci pruhem v barvě její skupiny nebo projektu."
+
+msgid "Stripe width"
+msgstr "Šířka pruhu"
 
 msgid "Strong"
 msgstr "Silné"
@@ -19316,6 +19428,9 @@ msgstr "Používejte Superset na telefonu s Pro."
 msgid "Use the desktop app to start running parallel coding agents."
 msgstr "Pro spouštění paralelních kódovacích agentů použijte desktopovou aplikaci."
 
+msgid "Use the palette's color"
+msgstr "Použít barvu palety"
+
 msgid "Use the Superset tray menu > Host Service > Restart, then retry."
 msgstr "Použijte nabídku Superset na liště > Host Service > Restart a zkuste to znovu."
 
@@ -19894,6 +20009,9 @@ msgstr "Šířka"
 
 msgid "Width · parallel sessions"
 msgstr "Šířka · souběžné relace"
+
+msgid "Width of the colored stripes: groups, side bar and folder colors."
+msgstr "Šířka barevných pruhů: skupiny, boční pruh a barvy složek."
 
 msgid "Window"
 msgstr "Okno"

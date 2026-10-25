@@ -2116,6 +2116,9 @@ msgstr "AI · 状态"
 msgid "AI authentication failed. Please check your AI settings."
 msgstr "AI认证失败。请检查你的AI设置。"
 
+msgid "Airy"
+msgstr "宽松"
+
 msgid "Alert"
 msgstr "警告"
 
@@ -3049,6 +3052,9 @@ msgstr "投资方"
 msgid "Background"
 msgstr "背景"
 
+msgid "Background of the open conversation."
+msgstr "打开的对话的背景。"
+
 msgid "Background processes"
 msgstr "后台进程"
 
@@ -3354,6 +3360,9 @@ msgstr "公开构建"
 msgid "Build the future of Superset in the cloud"
 msgstr "共创 Superset 的云端未来"
 
+msgid "Build the settings page"
+msgstr "构建设置页面"
+
 msgid "Build your own"
 msgstr "自己动手构建"
 
@@ -3471,6 +3480,9 @@ msgstr "日历"
 
 msgid "Calendar and Gmail triggers in this organization will stop firing until an account is connected again."
 msgstr "在重新连接账户之前，此组织中的日历和Gmail触发器将停止触发。"
+
+msgid "Calendar sync"
+msgstr "日历同步"
 
 msgid "Camera access is not allowed"
 msgstr "相机访问未获允许"
@@ -3858,11 +3870,11 @@ msgstr "选择在没有预览窗格时文件的打开方式"
 msgid "Choose how the Changes view opens from the top bar"
 msgstr "选择从顶栏打开更改视图的方式"
 
+msgid "Choose how the sidebar looks and what it shows under each workspace. Right-click a project or a group for its own options."
+msgstr "选择侧边栏的外观以及每个工作区下显示的内容。右键单击项目或分组可设置其专属选项。"
+
 msgid "Choose how to open file paths when Cmd+clicking in the terminal"
 msgstr "选择在终端中Cmd+点击文件路径时的打开方式"
-
-msgid "Choose what the sidebar shows under each workspace."
-msgstr "选择侧边栏在每个工作区下显示的内容。"
 
 msgid "Choose what to clear from the in-app browser."
 msgstr "选择要从应用内浏览器清除的内容。"
@@ -4343,6 +4355,16 @@ msgstr "颜色"
 msgid "Color Filter"
 msgstr "色彩滤镜"
 
+#. placeholder {0}: stateLabel[key]
+msgid "Color for {0}"
+msgstr "{0} 的颜色"
+
+msgid "Colorblind-safe"
+msgstr "色盲友好"
+
+msgid "Colors of the agent state dots, in the sidebar and the switchers."
+msgstr "侧边栏和切换器中代理状态圆点的颜色。"
+
 msgid "Columns"
 msgstr "列"
 
@@ -4463,6 +4485,12 @@ msgstr "沟通"
 
 msgid "Community"
 msgstr "社区"
+
+msgid "Compact"
+msgstr "紧凑"
+
+msgid "Compact conversations"
+msgstr "紧凑对话"
 
 msgid "Company"
 msgstr "公司"
@@ -4785,6 +4813,9 @@ msgstr "联系我们"
 msgid "Contains this text..."
 msgstr "包含此文本..."
 
+msgid "Content"
+msgstr "内容"
+
 msgid "Context"
 msgstr "上下文"
 
@@ -4840,6 +4871,9 @@ msgstr "继续智能体会话需要固定的工作区"
 
 msgid "continuing the last session"
 msgstr "继续上一个会话"
+
+msgid "Contrast"
+msgstr "对比度"
 
 msgid "Contributions"
 msgstr "贡献"
@@ -6270,6 +6304,9 @@ msgstr "降低自己的角色？"
 msgid "Denied"
 msgstr "已拒绝"
 
+msgid "Density"
+msgstr "密度"
+
 msgid "Deny"
 msgstr "拒绝"
 
@@ -7229,6 +7266,9 @@ msgstr "探索"
 msgid "Explore Pages"
 msgstr "了解页面"
 
+msgid "Explore the codebase"
+msgstr "探索代码库"
+
 msgid "Explored"
 msgstr "已探索"
 
@@ -7869,6 +7909,9 @@ msgstr "排除的文件（glob）"
 msgid "files to include (glob)"
 msgstr "包含的文件（glob）"
 
+msgid "Fill"
+msgstr "填充"
+
 msgid "Fill out the contact form on this page and our team will reach out to learn about your needs and walk you through next steps."
 msgstr "填写本页的联系表单，我们的团队会与你联系，了解需求并说明后续步骤。"
 
@@ -8010,6 +8053,9 @@ msgstr "修复CI失败"
 msgid "Fix findings"
 msgstr "修复评审问题"
 
+msgid "Fix the flaky test"
+msgstr "修复不稳定的测试"
+
 msgid "fix-auth-redirect"
 msgstr "fix-auth-redirect"
 
@@ -8066,6 +8112,9 @@ msgstr "聚焦任务视图中的搜索框"
 
 msgid "Folder"
 msgstr "文件夹"
+
+msgid "Folder color on conversations"
+msgstr "在对话上显示文件夹颜色"
 
 msgid "Folder is missing"
 msgstr "文件夹不存在"
@@ -8523,6 +8572,9 @@ msgstr "一半的合并变更是零修改的智能体代码"
 msgid "Hand the browser to your agent."
 msgstr "把浏览器交给你的智能体。"
 
+msgid "Hand-picked colors stay when you change the palette."
+msgstr "手动选择的颜色在更换调色板时保留。"
+
 msgid "Handing to agent…"
 msgstr "正在交给智能体…"
 
@@ -8574,6 +8626,9 @@ msgstr "标题3"
 msgid "Heart"
 msgstr "心形"
 
+msgid "Height of the rows and size of the conversation titles."
+msgstr "行高和对话标题大小。"
+
 msgid "Help"
 msgstr "帮助"
 
@@ -8602,6 +8657,9 @@ msgstr "隐藏"
 msgid "Hide checks"
 msgstr "隐藏检查"
 
+msgid "Hide conversations"
+msgstr "隐藏对话"
+
 msgid "Hide details"
 msgstr "隐藏详情"
 
@@ -8628,6 +8686,9 @@ msgstr "从侧边栏隐藏"
 
 msgid "Hide from Sidebar"
 msgstr "从侧边栏隐藏"
+
+msgid "Hide idle conversations"
+msgstr "隐藏空闲对话"
 
 msgid "Hide log"
 msgstr "隐藏日志"
@@ -8656,8 +8717,14 @@ msgstr "隐藏审查评论"
 msgid "Hide sessions"
 msgstr "隐藏会话"
 
+msgid "Hide subagents"
+msgstr "隐藏子代理"
+
 msgid "Hide text"
 msgstr "隐藏文本"
+
+msgid "Hide to-dos"
+msgstr "隐藏待办"
 
 msgid "Hide unchanged regions"
 msgstr "隐藏未更改区域"
@@ -8670,6 +8737,9 @@ msgstr "高严重性"
 
 msgid "High usage"
 msgstr "用量高"
+
+msgid "Highlight intensity"
+msgstr "高亮强度"
 
 msgid "history"
 msgstr "历史"
@@ -8806,11 +8876,17 @@ msgstr "有多少个隐藏终端保持完整加载（{MIN_TERMINAL_PARKED_RUNTIM
 msgid "How much agent work engineers are actually running — tokens, cost, models and sessions, published by people who opted in."
 msgstr "工程师实际运行了多少智能体工作量 —— token、成本、模型与会话，由自愿公开的用户提供。"
 
+msgid "How much secondary text and separators stand out."
+msgstr "次要文字和分隔线的醒目程度。"
+
 msgid "How should the agent's actions be approved?"
 msgstr "智能体的操作应如何批准？"
 
 msgid "How the command opens."
 msgstr "命令的打开方式。"
+
+msgid "How the conversation shown in a pane stands out."
+msgstr "面板中显示的对话如何突出。"
 
 msgid "How the prompt is delivered to the process."
 msgstr "提示词如何传递给进程。"
@@ -10703,6 +10779,9 @@ msgstr "在 iPhone 或 iPad 上监控、引导智能体，并为它们解除阻�
 msgid "Monitoring"
 msgstr "监控"
 
+msgid "Monochrome"
+msgstr "单色"
+
 msgid "monorepo"
 msgstr "monorepo"
 
@@ -10933,6 +11012,9 @@ msgstr "需要你"
 
 msgid "Needs your approval"
 msgstr "需要你的批准"
+
+msgid "Neon"
+msgstr "霓虹"
 
 msgid "Nerd Fonts"
 msgstr "Nerd Fonts"
@@ -12312,6 +12394,9 @@ msgstr "打开命令面板"
 msgid "Open comment on GitHub"
 msgstr "在GitHub上打开评论"
 
+msgid "Open conversation"
+msgstr "打开的对话"
+
 #. placeholder {0}: conversation.title
 msgid "Open conversation: {0}"
 msgstr "打开对话：{0}"
@@ -13155,6 +13240,9 @@ msgstr "电话号码"
 
 msgid "Pick {name} from the theme grid to apply it."
 msgstr "在主题网格中选择{name}即可应用。"
+
+msgid "Pick a color"
+msgstr "选择颜色"
 
 msgid "Pick a different element"
 msgstr "选择其他元素"
@@ -14228,6 +14316,9 @@ msgstr "发布"
 msgid "Release control"
 msgstr "释放控制"
 
+msgid "Release notes"
+msgstr "发行说明"
+
 msgid "Release notes draft"
 msgstr "发布说明草稿"
 
@@ -14937,6 +15028,9 @@ msgstr "需要审查"
 
 msgid "Review syntax-highlighted diffs"
 msgstr "审查带语法高亮的差异"
+
+msgid "Review the pull request"
+msgstr "审阅拉取请求"
 
 msgid "Review the result."
 msgstr "审查结果。"
@@ -16261,6 +16355,9 @@ msgstr "会与你的名字一起公开显示。"
 msgid "Shut down {0}"
 msgstr "关闭 {0}"
 
+msgid "Side bar"
+msgstr "侧边条"
+
 msgid "Side by Side"
 msgstr "并排"
 
@@ -16275,6 +16372,9 @@ msgstr "侧边栏卡片"
 
 msgid "Sidebar file rows"
 msgstr "侧边栏文件行"
+
+msgid "Sidebar options"
+msgstr "侧边栏选项"
 
 msgid "Sidebar order"
 msgstr "侧边栏顺序"
@@ -16500,6 +16600,9 @@ msgstr "已通过SOC 2 Type II合规。可索取报告。"
 
 msgid "SOC 2 Type II report"
 msgstr "SOC 2 Type II报告"
+
+msgid "Soft"
+msgstr "柔和"
 
 msgid "Some files are not an accepted type and were not added."
 msgstr "部分文件的类型不被允许，未添加。"
@@ -16892,6 +16995,9 @@ msgstr "在这个工作区里开一个新会话"
 msgid "State"
 msgstr "状态"
 
+msgid "State colors"
+msgstr "状态颜色"
+
 msgid "Stats"
 msgstr "统计"
 
@@ -16991,6 +17097,12 @@ msgstr "删除线"
 
 msgid "Strip redundant overrides at call sites"
 msgstr "移除调用处多余的样式覆盖"
+
+msgid "Stripe each conversation with its group's color, or its project's."
+msgstr "用分组或项目的颜色为每个对话加上色条。"
+
+msgid "Stripe width"
+msgstr "色条宽度"
 
 msgid "Strong"
 msgstr "强"
@@ -19316,6 +19428,9 @@ msgstr "通过 Pro 在手机上使用 Superset。"
 msgid "Use the desktop app to start running parallel coding agents."
 msgstr "使用桌面应用开始并行运行编码智能体。"
 
+msgid "Use the palette's color"
+msgstr "使用调色板的颜色"
+
 msgid "Use the Superset tray menu > Host Service > Restart, then retry."
 msgstr "请使用Superset托盘菜单 > 主机服务 > 重启，然后重试。"
 
@@ -19894,6 +20009,9 @@ msgstr "宽度"
 
 msgid "Width · parallel sessions"
 msgstr "宽度 · 并行会话数"
+
+msgid "Width of the colored stripes: groups, side bar and folder colors."
+msgstr "彩色条的宽度：分组、侧边条和文件夹颜色。"
 
 msgid "Window"
 msgstr "窗口"

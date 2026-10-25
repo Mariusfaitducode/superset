@@ -1,5 +1,7 @@
 export interface DashboardSidebarSectionActionsProps {
 	color: string | null;
+	/** Set to offer the group's sidebar options. */
+	groupId?: string;
 	onRename: () => void;
 	onSetColor?: (color: string | null) => void;
 	onDelete: () => void;

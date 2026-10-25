@@ -2116,6 +2116,9 @@ msgstr "AI · 상태"
 msgid "AI authentication failed. Please check your AI settings."
 msgstr "AI 인증에 실패했습니다. AI 설정을 확인해 주세요."
 
+msgid "Airy"
+msgstr "여유 있게"
+
 msgid "Alert"
 msgstr "경고"
 
@@ -3049,6 +3052,9 @@ msgstr "투자자"
 msgid "Background"
 msgstr "배경"
 
+msgid "Background of the open conversation."
+msgstr "열려 있는 대화의 배경입니다."
+
 msgid "Background processes"
 msgstr "백그라운드 프로세스"
 
@@ -3354,6 +3360,9 @@ msgstr "공개적으로 개발합니다"
 msgid "Build the future of Superset in the cloud"
 msgstr "클라우드에서 Superset의 미래를 함께 만드세요"
 
+msgid "Build the settings page"
+msgstr "설정 페이지 만들기"
+
 msgid "Build your own"
 msgstr "직접 만들기"
 
@@ -3471,6 +3480,9 @@ msgstr "캘린더"
 
 msgid "Calendar and Gmail triggers in this organization will stop firing until an account is connected again."
 msgstr "계정을 다시 연결할 때까지 이 조직의 Calendar 및 Gmail 트리거가 실행되지 않습니다."
+
+msgid "Calendar sync"
+msgstr "캘린더 동기화"
 
 msgid "Camera access is not allowed"
 msgstr "카메라 접근이 허용되지 않았습니다"
@@ -3858,11 +3870,11 @@ msgstr "미리보기 패널이 없을 때 파일을 여는 방식을 선택합�
 msgid "Choose how the Changes view opens from the top bar"
 msgstr "상단 바에서 변경 사항 보기를 여는 방식을 선택합니다"
 
+msgid "Choose how the sidebar looks and what it shows under each workspace. Right-click a project or a group for its own options."
+msgstr "사이드바의 모양과 각 워크스페이스 아래에 표시할 내용을 선택합니다. 프로젝트나 그룹을 오른쪽 클릭하면 개별 옵션이 있습니다."
+
 msgid "Choose how to open file paths when Cmd+clicking in the terminal"
 msgstr "터미널에서 Cmd+클릭할 때 파일 경로를 여는 방식을 선택하세요"
-
-msgid "Choose what the sidebar shows under each workspace."
-msgstr "각 워크스페이스 아래에 사이드바가 표시할 항목을 선택하세요."
 
 msgid "Choose what to clear from the in-app browser."
 msgstr "인앱 브라우저에서 삭제할 항목을 선택하세요."
@@ -4343,6 +4355,16 @@ msgstr "색상"
 msgid "Color Filter"
 msgstr "색상 필터"
 
+#. placeholder {0}: stateLabel[key]
+msgid "Color for {0}"
+msgstr "{0} 색상"
+
+msgid "Colorblind-safe"
+msgstr "색각 이상 친화"
+
+msgid "Colors of the agent state dots, in the sidebar and the switchers."
+msgstr "사이드바와 전환기에 표시되는 에이전트 상태 점의 색상입니다."
+
 msgid "Columns"
 msgstr "열"
 
@@ -4463,6 +4485,12 @@ msgstr "커뮤니케이션"
 
 msgid "Community"
 msgstr "커뮤니티"
+
+msgid "Compact"
+msgstr "좁게"
+
+msgid "Compact conversations"
+msgstr "대화를 좁게"
 
 msgid "Company"
 msgstr "회사"
@@ -4785,6 +4813,9 @@ msgstr "문의하기"
 msgid "Contains this text..."
 msgstr "이 텍스트를 포함..."
 
+msgid "Content"
+msgstr "내용"
+
 msgid "Context"
 msgstr "컨텍스트"
 
@@ -4840,6 +4871,9 @@ msgstr "에이전트 세션을 계속하려면 고정된 워크스페이스가 �
 
 msgid "continuing the last session"
 msgstr "마지막 세션을 계속"
+
+msgid "Contrast"
+msgstr "대비"
 
 msgid "Contributions"
 msgstr "기여"
@@ -6270,6 +6304,9 @@ msgstr "자신을 강등할까요?"
 msgid "Denied"
 msgstr "거부됨"
 
+msgid "Density"
+msgstr "밀도"
+
 msgid "Deny"
 msgstr "거부"
 
@@ -7229,6 +7266,9 @@ msgstr "살펴보기"
 msgid "Explore Pages"
 msgstr "페이지 살펴보기"
 
+msgid "Explore the codebase"
+msgstr "코드베이스 살펴보기"
+
 msgid "Explored"
 msgstr "탐색 완료"
 
@@ -7869,6 +7909,9 @@ msgstr "제외할 파일(glob)"
 msgid "files to include (glob)"
 msgstr "포함할 파일(glob)"
 
+msgid "Fill"
+msgstr "채우기"
+
 msgid "Fill out the contact form on this page and our team will reach out to learn about your needs and walk you through next steps."
 msgstr "이 페이지의 문의 양식을 작성해 주시면 담당 팀이 연락드려 필요한 사항을 파악하고 다음 단계를 안내해 드립니다."
 
@@ -8010,6 +8053,9 @@ msgstr "CI 실패 수정"
 msgid "Fix findings"
 msgstr "지적 사항 수정"
 
+msgid "Fix the flaky test"
+msgstr "불안정한 테스트 고치기"
+
 msgid "fix-auth-redirect"
 msgstr "fix-auth-redirect"
 
@@ -8066,6 +8112,9 @@ msgstr "작업 보기의 검색 입력창에 포커스합니다"
 
 msgid "Folder"
 msgstr "폴더"
+
+msgid "Folder color on conversations"
+msgstr "대화에 폴더 색상"
 
 msgid "Folder is missing"
 msgstr "폴더가 없습니다"
@@ -8523,6 +8572,9 @@ msgstr "머지된 변경의 절반이 수정 없는 에이전트 코드"
 msgid "Hand the browser to your agent."
 msgstr "브라우저를 에이전트에게 맡기세요."
 
+msgid "Hand-picked colors stay when you change the palette."
+msgstr "직접 고른 색상은 팔레트를 바꿔도 유지됩니다."
+
 msgid "Handing to agent…"
 msgstr "에이전트에게 넘기는 중…"
 
@@ -8574,6 +8626,9 @@ msgstr "제목 3"
 msgid "Heart"
 msgstr "하트"
 
+msgid "Height of the rows and size of the conversation titles."
+msgstr "행 높이와 대화 제목 크기입니다."
+
 msgid "Help"
 msgstr "도움말"
 
@@ -8602,6 +8657,9 @@ msgstr "숨기기"
 msgid "Hide checks"
 msgstr "검사 숨기기"
 
+msgid "Hide conversations"
+msgstr "대화 숨기기"
+
 msgid "Hide details"
 msgstr "상세 정보 숨기기"
 
@@ -8628,6 +8686,9 @@ msgstr "사이드바에서 숨기기"
 
 msgid "Hide from Sidebar"
 msgstr "사이드바에서 숨기기"
+
+msgid "Hide idle conversations"
+msgstr "유휴 대화 숨기기"
 
 msgid "Hide log"
 msgstr "로그 숨기기"
@@ -8656,8 +8717,14 @@ msgstr "리뷰 코멘트 숨기기"
 msgid "Hide sessions"
 msgstr "세션 숨기기"
 
+msgid "Hide subagents"
+msgstr "하위 에이전트 숨기기"
+
 msgid "Hide text"
 msgstr "텍스트 숨기기"
+
+msgid "Hide to-dos"
+msgstr "할 일 숨기기"
 
 msgid "Hide unchanged regions"
 msgstr "변경되지 않은 부분 숨기기"
@@ -8670,6 +8737,9 @@ msgstr "심각도 높음"
 
 msgid "High usage"
 msgstr "사용량 높음"
+
+msgid "Highlight intensity"
+msgstr "강조 강도"
 
 msgid "history"
 msgstr "기록"
@@ -8806,11 +8876,17 @@ msgstr "숨겨진 터미널을 몇 개까지 완전히 불러온 상태로 둘�
 msgid "How much agent work engineers are actually running — tokens, cost, models and sessions, published by people who opted in."
 msgstr "엔지니어들이 실제로 돌리는 에이전트 작업량 — 참여를 선택한 사용자들이 공개한 토큰, 비용, 모델, 세션 데이터입니다."
 
+msgid "How much secondary text and separators stand out."
+msgstr "보조 텍스트와 구분선이 얼마나 눈에 띄는지입니다."
+
 msgid "How should the agent's actions be approved?"
 msgstr "에이전트의 작업을 어떻게 승인할까요?"
 
 msgid "How the command opens."
 msgstr "명령이 열리는 방식입니다."
+
+msgid "How the conversation shown in a pane stands out."
+msgstr "패널에 표시된 대화를 강조하는 방식입니다."
 
 msgid "How the prompt is delivered to the process."
 msgstr "프로세스에 프롬프트를 전달하는 방식입니다."
@@ -10703,6 +10779,9 @@ msgstr "iPhone이나 iPad에서 에이전트를 모니터링하고, 방향을 �
 msgid "Monitoring"
 msgstr "모니터링"
 
+msgid "Monochrome"
+msgstr "단색"
+
 msgid "monorepo"
 msgstr "monorepo"
 
@@ -10933,6 +11012,9 @@ msgstr "확인 필요"
 
 msgid "Needs your approval"
 msgstr "승인이 필요합니다"
+
+msgid "Neon"
+msgstr "네온"
 
 msgid "Nerd Fonts"
 msgstr "Nerd Fonts"
@@ -12312,6 +12394,9 @@ msgstr "명령 팔레트 열기"
 msgid "Open comment on GitHub"
 msgstr "GitHub에서 코멘트 열기"
 
+msgid "Open conversation"
+msgstr "열린 대화"
+
 #. placeholder {0}: conversation.title
 msgid "Open conversation: {0}"
 msgstr "대화 열기: {0}"
@@ -13155,6 +13240,9 @@ msgstr "전화번호"
 
 msgid "Pick {name} from the theme grid to apply it."
 msgstr "테마 목록에서 {name}을(를) 선택해 적용하세요."
+
+msgid "Pick a color"
+msgstr "색상 선택"
 
 msgid "Pick a different element"
 msgstr "다른 요소 선택"
@@ -14228,6 +14316,9 @@ msgstr "릴리스"
 msgid "Release control"
 msgstr "제어 해제"
 
+msgid "Release notes"
+msgstr "릴리스 노트"
+
 msgid "Release notes draft"
 msgstr "릴리스 노트 초안"
 
@@ -14937,6 +15028,9 @@ msgstr "리뷰 필요"
 
 msgid "Review syntax-highlighted diffs"
 msgstr "구문 강조된 diff 리뷰"
+
+msgid "Review the pull request"
+msgstr "풀 리퀘스트 검토하기"
 
 msgid "Review the result."
 msgstr "결과를 리뷰하세요."
@@ -16261,6 +16355,9 @@ msgstr "이름과 함께 공개적으로 표시됩니다."
 msgid "Shut down {0}"
 msgstr "{0} 종료"
 
+msgid "Side bar"
+msgstr "측면 막대"
+
 msgid "Side by Side"
 msgstr "나란히 보기"
 
@@ -16275,6 +16372,9 @@ msgstr "사이드바 카드"
 
 msgid "Sidebar file rows"
 msgstr "사이드바 파일 행"
+
+msgid "Sidebar options"
+msgstr "사이드바 옵션"
 
 msgid "Sidebar order"
 msgstr "사이드바 순서"
@@ -16500,6 +16600,9 @@ msgstr "SOC 2 Type II 준수. 보고서를 요청하세요."
 
 msgid "SOC 2 Type II report"
 msgstr "SOC 2 Type II 보고서"
+
+msgid "Soft"
+msgstr "부드럽게"
 
 msgid "Some files are not an accepted type and were not added."
 msgstr "일부 파일이 허용되지 않는 형식이라 추가되지 않았습니다."
@@ -16892,6 +16995,9 @@ msgstr "이 워크스페이스에서 새 세션을 시작합니다"
 msgid "State"
 msgstr "상태"
 
+msgid "State colors"
+msgstr "상태 색상"
+
 msgid "Stats"
 msgstr "통계"
 
@@ -16991,6 +17097,12 @@ msgstr "취소선"
 
 msgid "Strip redundant overrides at call sites"
 msgstr "호출 지점의 중복 재정의 제거"
+
+msgid "Stripe each conversation with its group's color, or its project's."
+msgstr "각 대화에 그룹 또는 프로젝트 색상 줄을 표시합니다."
+
+msgid "Stripe width"
+msgstr "줄 두께"
 
 msgid "Strong"
 msgstr "강하게"
@@ -19316,6 +19428,9 @@ msgstr "Pro로 휴대폰에서 Superset을 사용하세요."
 msgid "Use the desktop app to start running parallel coding agents."
 msgstr "데스크톱 앱에서 병렬 코딩 에이전트를 실행하세요."
 
+msgid "Use the palette's color"
+msgstr "팔레트 색상 사용"
+
 msgid "Use the Superset tray menu > Host Service > Restart, then retry."
 msgstr "Superset 트레이 메뉴 > Host Service > Restart를 사용한 뒤 다시 시도하세요."
 
@@ -19894,6 +20009,9 @@ msgstr "너비"
 
 msgid "Width · parallel sessions"
 msgstr "너비 · 병렬 세션"
+
+msgid "Width of the colored stripes: groups, side bar and folder colors."
+msgstr "색상 줄의 두께: 그룹, 측면 막대, 폴더 색상."
 
 msgid "Window"
 msgstr "창"

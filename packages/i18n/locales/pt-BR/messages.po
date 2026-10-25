@@ -2116,6 +2116,9 @@ msgstr "IA · Status"
 msgid "AI authentication failed. Please check your AI settings."
 msgstr "Falha na autenticação de IA. Verifique suas configurações de IA."
 
+msgid "Airy"
+msgstr "Espaçoso"
+
 msgid "Alert"
 msgstr "Alerta"
 
@@ -3049,6 +3052,9 @@ msgstr "Com o apoio de"
 msgid "Background"
 msgstr "Fundo"
 
+msgid "Background of the open conversation."
+msgstr "Fundo da conversa aberta."
+
 msgid "Background processes"
 msgstr "Processos em segundo plano"
 
@@ -3354,6 +3360,9 @@ msgstr "Construir em público"
 msgid "Build the future of Superset in the cloud"
 msgstr "Construa o futuro do Superset na nuvem"
 
+msgid "Build the settings page"
+msgstr "Criar a página de configurações"
+
 msgid "Build your own"
 msgstr "Crie o seu"
 
@@ -3471,6 +3480,9 @@ msgstr "Calendário"
 
 msgid "Calendar and Gmail triggers in this organization will stop firing until an account is connected again."
 msgstr "Os gatilhos do Agenda e do Gmail nesta organização param de disparar até uma conta ser conectada de novo."
+
+msgid "Calendar sync"
+msgstr "Sincronização do calendário"
 
 msgid "Camera access is not allowed"
 msgstr "O acesso à câmera não é permitido"
@@ -3858,11 +3870,11 @@ msgstr "Escolha como os arquivos abrem quando não há painel de prévia"
 msgid "Choose how the Changes view opens from the top bar"
 msgstr "Escolha como a visualização de alterações abre pela barra superior"
 
+msgid "Choose how the sidebar looks and what it shows under each workspace. Right-click a project or a group for its own options."
+msgstr "Escolha a aparência da barra lateral e o que ela mostra em cada workspace. Clique com o botão direito em um projeto ou grupo para ver as opções dele."
+
 msgid "Choose how to open file paths when Cmd+clicking in the terminal"
 msgstr "Escolha como abrir caminhos de arquivo ao dar Cmd+clique no terminal"
-
-msgid "Choose what the sidebar shows under each workspace."
-msgstr "Escolha o que a barra lateral mostra abaixo de cada workspace."
 
 msgid "Choose what to clear from the in-app browser."
 msgstr "Escolha o que limpar do navegador do app."
@@ -4343,6 +4355,16 @@ msgstr "Cor"
 msgid "Color Filter"
 msgstr "Filtro de cor"
 
+#. placeholder {0}: stateLabel[key]
+msgid "Color for {0}"
+msgstr "Cor para {0}"
+
+msgid "Colorblind-safe"
+msgstr "Para daltônicos"
+
+msgid "Colors of the agent state dots, in the sidebar and the switchers."
+msgstr "Cores dos pontos de estado dos agentes, na barra lateral e nos alternadores."
+
 msgid "Columns"
 msgstr "Colunas"
 
@@ -4463,6 +4485,12 @@ msgstr "Comunicação"
 
 msgid "Community"
 msgstr "Comunidade"
+
+msgid "Compact"
+msgstr "Compacto"
+
+msgid "Compact conversations"
+msgstr "Conversas compactas"
 
 msgid "Company"
 msgstr "Empresa"
@@ -4785,6 +4813,9 @@ msgstr "Fale conosco"
 msgid "Contains this text..."
 msgstr "Contém este texto..."
 
+msgid "Content"
+msgstr "Conteúdo"
+
 msgid "Context"
 msgstr "Contexto"
 
@@ -4840,6 +4871,9 @@ msgstr "Continuar uma sessão de agente exige uma área de trabalho fixada"
 
 msgid "continuing the last session"
 msgstr "continuando a última sessão"
+
+msgid "Contrast"
+msgstr "Contraste"
 
 msgid "Contributions"
 msgstr "Contribuições"
@@ -6270,6 +6304,9 @@ msgstr "Rebaixar você mesmo?"
 msgid "Denied"
 msgstr "Negado"
 
+msgid "Density"
+msgstr "Densidade"
+
 msgid "Deny"
 msgstr "Negar"
 
@@ -7229,6 +7266,9 @@ msgstr "Explorar"
 msgid "Explore Pages"
 msgstr "Explorar Páginas"
 
+msgid "Explore the codebase"
+msgstr "Explorar o código"
+
 msgid "Explored"
 msgstr "Explorado"
 
@@ -7869,6 +7909,9 @@ msgstr "arquivos a excluir (glob)"
 msgid "files to include (glob)"
 msgstr "arquivos a incluir (glob)"
 
+msgid "Fill"
+msgstr "Preenchimento"
+
 msgid "Fill out the contact form on this page and our team will reach out to learn about your needs and walk you through next steps."
 msgstr "Preencha o formulário de contato desta página e nosso time entra em contato para entender sua necessidade e explicar os próximos passos."
 
@@ -8010,6 +8053,9 @@ msgstr "Corrigir falhas de CI"
 msgid "Fix findings"
 msgstr "Corrigir apontamentos"
 
+msgid "Fix the flaky test"
+msgstr "Corrigir o teste instável"
+
 msgid "fix-auth-redirect"
 msgstr "fix-auth-redirect"
 
@@ -8066,6 +8112,9 @@ msgstr "Focar o campo de busca na visualização de tarefas"
 
 msgid "Folder"
 msgstr "Pasta"
+
+msgid "Folder color on conversations"
+msgstr "Cor da pasta nas conversas"
 
 msgid "Folder is missing"
 msgstr "A pasta não existe"
@@ -8523,6 +8572,9 @@ msgstr "Metade das mudanças mescladas é código de agente sem edição"
 msgid "Hand the browser to your agent."
 msgstr "Entregue o navegador ao seu agente."
 
+msgid "Hand-picked colors stay when you change the palette."
+msgstr "As cores escolhidas à mão permanecem ao trocar a paleta."
+
 msgid "Handing to agent…"
 msgstr "Entregando ao agente…"
 
@@ -8574,6 +8626,9 @@ msgstr "Título 3"
 msgid "Heart"
 msgstr "Coração"
 
+msgid "Height of the rows and size of the conversation titles."
+msgstr "Altura das linhas e tamanho dos títulos das conversas."
+
 msgid "Help"
 msgstr "Ajuda"
 
@@ -8602,6 +8657,9 @@ msgstr "Ocultar"
 msgid "Hide checks"
 msgstr "Ocultar verificações"
 
+msgid "Hide conversations"
+msgstr "Ocultar conversas"
+
 msgid "Hide details"
 msgstr "Ocultar detalhes"
 
@@ -8628,6 +8686,9 @@ msgstr "Ocultar da barra lateral"
 
 msgid "Hide from Sidebar"
 msgstr "Ocultar da barra lateral"
+
+msgid "Hide idle conversations"
+msgstr "Ocultar conversas ociosas"
 
 msgid "Hide log"
 msgstr "Ocultar log"
@@ -8656,8 +8717,14 @@ msgstr "Ocultar os comentários de revisão"
 msgid "Hide sessions"
 msgstr "Ocultar sessões"
 
+msgid "Hide subagents"
+msgstr "Ocultar subagentes"
+
 msgid "Hide text"
 msgstr "Ocultar texto"
+
+msgid "Hide to-dos"
+msgstr "Ocultar tarefas"
 
 msgid "Hide unchanged regions"
 msgstr "Ocultar as regiões sem alteração"
@@ -8670,6 +8737,9 @@ msgstr "Gravidade alta"
 
 msgid "High usage"
 msgstr "Uso alto"
+
+msgid "Highlight intensity"
+msgstr "Intensidade do destaque"
 
 msgid "history"
 msgstr "histórico"
@@ -8806,11 +8876,17 @@ msgstr "Quantos terminais ocultos ficam totalmente carregados ({MIN_TERMINAL_PAR
 msgid "How much agent work engineers are actually running — tokens, cost, models and sessions, published by people who opted in."
 msgstr "Quanto trabalho com agentes os engenheiros realmente executam — tokens, custo, modelos e sessões, publicados por quem optou por participar."
 
+msgid "How much secondary text and separators stand out."
+msgstr "O quanto o texto secundário e os separadores se destacam."
+
 msgid "How should the agent's actions be approved?"
 msgstr "Como as ações do agente devem ser aprovadas?"
 
 msgid "How the command opens."
 msgstr "Como o comando abre."
+
+msgid "How the conversation shown in a pane stands out."
+msgstr "Como a conversa exibida em um painel se destaca."
 
 msgid "How the prompt is delivered to the process."
 msgstr "Como o prompt é entregue ao processo."
@@ -10703,6 +10779,9 @@ msgstr "Acompanhe, oriente e desbloqueie seus agentes pelo iPhone ou iPad."
 msgid "Monitoring"
 msgstr "Monitoramento"
 
+msgid "Monochrome"
+msgstr "Monocromático"
+
 msgid "monorepo"
 msgstr "monorepo"
 
@@ -10933,6 +11012,9 @@ msgstr "Precisa de você"
 
 msgid "Needs your approval"
 msgstr "Precisa da sua aprovação"
+
+msgid "Neon"
+msgstr "Neon"
 
 msgid "Nerd Fonts"
 msgstr "Nerd Fonts"
@@ -12312,6 +12394,9 @@ msgstr "Abrir a paleta de comandos"
 msgid "Open comment on GitHub"
 msgstr "Abrir o comentário no GitHub"
 
+msgid "Open conversation"
+msgstr "Conversa aberta"
+
 #. placeholder {0}: conversation.title
 msgid "Open conversation: {0}"
 msgstr "Abrir conversa: {0}"
@@ -13155,6 +13240,9 @@ msgstr "Telefone"
 
 msgid "Pick {name} from the theme grid to apply it."
 msgstr "Escolha {name} na grade de temas para aplicá-lo."
+
+msgid "Pick a color"
+msgstr "Escolher uma cor"
 
 msgid "Pick a different element"
 msgstr "Escolher outro elemento"
@@ -14228,6 +14316,9 @@ msgstr "Versão"
 msgid "Release control"
 msgstr "Liberar o controle"
 
+msgid "Release notes"
+msgstr "Notas de versão"
+
 msgid "Release notes draft"
 msgstr "Rascunho das notas de versão"
 
@@ -14937,6 +15028,9 @@ msgstr "Revisão obrigatória"
 
 msgid "Review syntax-highlighted diffs"
 msgstr "Revise diffs com destaque de sintaxe"
+
+msgid "Review the pull request"
+msgstr "Revisar o pull request"
 
 msgid "Review the result."
 msgstr "Revise o resultado."
@@ -16261,6 +16355,9 @@ msgstr "Exibido publicamente junto ao seu nome."
 msgid "Shut down {0}"
 msgstr "Desligar {0}"
 
+msgid "Side bar"
+msgstr "Barra lateral"
+
 msgid "Side by Side"
 msgstr "Lado a lado"
 
@@ -16275,6 +16372,9 @@ msgstr "Sidebar Card"
 
 msgid "Sidebar file rows"
 msgstr "Linhas de arquivo da barra lateral"
+
+msgid "Sidebar options"
+msgstr "Opções da barra lateral"
 
 msgid "Sidebar order"
 msgstr "Ordem da barra lateral"
@@ -16500,6 +16600,9 @@ msgstr "Em conformidade com SOC 2 Tipo II. Solicite nosso relatório."
 
 msgid "SOC 2 Type II report"
 msgstr "Relatório SOC 2 Tipo II"
+
+msgid "Soft"
+msgstr "Suave"
 
 msgid "Some files are not an accepted type and were not added."
 msgstr "Alguns arquivos não são de um tipo aceito e não foram adicionados."
@@ -16892,6 +16995,9 @@ msgstr "Inicia uma sessão nova nesta área de trabalho"
 msgid "State"
 msgstr "Estado"
 
+msgid "State colors"
+msgstr "Cores dos estados"
+
 msgid "Stats"
 msgstr "Estatísticas"
 
@@ -16991,6 +17097,12 @@ msgstr "Tachado"
 
 msgid "Strip redundant overrides at call sites"
 msgstr "Remover sobrescritas redundantes nos pontos de chamada"
+
+msgid "Stripe each conversation with its group's color, or its project's."
+msgstr "Marca cada conversa com a cor do seu grupo ou do seu projeto."
+
+msgid "Stripe width"
+msgstr "Largura da faixa"
 
 msgid "Strong"
 msgstr "Forte"
@@ -19316,6 +19428,9 @@ msgstr "Use o Superset no celular com o Pro."
 msgid "Use the desktop app to start running parallel coding agents."
 msgstr "Use o app de desktop para rodar agentes de código em paralelo."
 
+msgid "Use the palette's color"
+msgstr "Usar a cor da paleta"
+
 msgid "Use the Superset tray menu > Host Service > Restart, then retry."
 msgstr "Use o menu da bandeja do Superset > Serviço do host > Reiniciar e tente de novo."
 
@@ -19894,6 +20009,9 @@ msgstr "Largura"
 
 msgid "Width · parallel sessions"
 msgstr "Amplitude · sessões paralelas"
+
+msgid "Width of the colored stripes: groups, side bar and folder colors."
+msgstr "Largura das faixas coloridas: grupos, barra lateral e cores das pastas."
 
 msgid "Window"
 msgstr "Janela"

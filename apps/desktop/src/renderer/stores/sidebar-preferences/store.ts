@@ -1,9 +1,10 @@
 import { create } from "zustand";
 import { devtools, persist } from "zustand/middleware";
+import type { SidebarAppearance, StateColorKey } from "./appearance";
 
 export type WaitingTint = "off" | "subtle" | "strong";
 
-export interface SidebarPreferences {
+export interface SidebarPreferences extends SidebarAppearance {
 	showConversations: boolean;
 	/** Conversations whose agent has not started a turn yet. */
 	showIdleConversations: boolean;
@@ -33,15 +34,31 @@ export const DEFAULT_SIDEBAR_PREFERENCES: SidebarPreferences = {
 	showSubagents: true,
 	showQueuedPrompts: true,
 	waitingTint: "subtle",
+	density: "normal",
+	contrast: "normal",
+	activeMarker: "outline",
+	markerIntensity: "normal",
+	bandWidth: 3,
+	statePalette: "default",
+	stateColors: {},
+	folderColorOnConversations: false,
 };
+
+type AppearanceKey = Exclude<keyof SidebarAppearance, "stateColors">;
 
 interface SidebarPreferencesState extends SidebarPreferences {
 	setPreference: (key: SidebarPreferenceKey, value: boolean) => void;
 	setWaitingTint: (waitingTint: WaitingTint) => void;
+	setAppearance: <Key extends AppearanceKey>(
+		key: Key,
+		value: SidebarAppearance[Key],
+	) => void;
+	/** Null goes back to the palette's color. */
+	setStateColor: (key: StateColorKey, color: string | null) => void;
 	reset: () => void;
 }
 
-/** What the sidebar shows under each workspace. A fixed-size singleton. */
+/** What the sidebar shows under each workspace, and how. A fixed-size singleton. */
 export const useSidebarPreferencesStore = create<SidebarPreferencesState>()(
 	devtools(
 		persist(
@@ -49,6 +66,14 @@ export const useSidebarPreferencesStore = create<SidebarPreferencesState>()(
 				...DEFAULT_SIDEBAR_PREFERENCES,
 				setPreference: (key, value) => set({ [key]: value }),
 				setWaitingTint: (waitingTint) => set({ waitingTint }),
+				setAppearance: (key, value) => set({ [key]: value }),
+				setStateColor: (key, color) =>
+					set((state) => {
+						const { [key]: _previous, ...rest } = state.stateColors;
+						return {
+							stateColors: color === null ? rest : { ...rest, [key]: color },
+						};
+					}),
 				reset: () => set(DEFAULT_SIDEBAR_PREFERENCES),
 			}),
 			{
@@ -71,6 +96,8 @@ export const useSidebarPreferencesStore = create<SidebarPreferencesState>()(
 				partialize: ({
 					setPreference: _setPreference,
 					setWaitingTint: _setWaitingTint,
+					setAppearance: _setAppearance,
+					setStateColor: _setStateColor,
 					reset: _reset,
 					...preferences
 				}) => preferences,

@@ -33,6 +33,7 @@ import { isInCloudSidebar } from "renderer/routes/_authenticated/_dashboard/util
 import { useDashboardSidebarState } from "renderer/routes/_authenticated/hooks/useDashboardSidebarState";
 import { useLocalHostService } from "renderer/routes/_authenticated/providers/LocalHostServiceProvider";
 import { useReleaseNotesCardStore } from "renderer/stores/release-notes-card";
+import { useSidebarPreference } from "renderer/stores/sidebar-preferences";
 import { useSidebarSectionsCollapseStore } from "renderer/stores/sidebar-sections-collapse";
 import { useV2NotificationStore } from "renderer/stores/v2-notifications";
 import { useWorkspaceLabelFilterStore } from "renderer/stores/workspace-label-filter";
@@ -173,6 +174,7 @@ export function DashboardSidebar({
 	isCollapsed = false,
 }: DashboardSidebarProps) {
 	const { t } = useLingui();
+	const sidebarContrast = useSidebarPreference("contrast");
 	const inlineCloudWorkspaces = useNewDashboardSidebarEnabled();
 	const {
 		groups,
@@ -577,7 +579,10 @@ export function DashboardSidebar({
 									isProjectDragDisabled={isProjectDragDisabled}
 									isChildDragDisabled={isChildDragDisabled}
 								>
-									<div className="flex h-full flex-col border-r border-border bg-sidebar dark:bg-muted/35">
+									<div
+										data-sb-contrast={sidebarContrast}
+										className="flex h-full flex-col border-r border-border bg-sidebar dark:bg-muted/35"
+									>
 										<DashboardSidebarHeader isCollapsed={isCollapsed} />
 
 										<OverflowFadeContainer

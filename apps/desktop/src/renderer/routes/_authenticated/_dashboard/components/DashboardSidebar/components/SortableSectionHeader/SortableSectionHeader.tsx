@@ -94,13 +94,14 @@ export function SortableSectionHeader({
 				transition,
 				opacity: isDragging ? 0.5 : undefined,
 				boxShadow: hasColor
-					? `inset 3px 0 ${section.color}`
+					? `inset var(--sb-band) 0 ${section.color}`
 					: "inset 2px 0 var(--color-border)",
 			}}
 			{...getBlockedDragProps(isChildDragDisabled)}
 		>
 			<DashboardSidebarSectionContextMenu
 				color={section.color}
+				groupId={section.id}
 				onRename={startRename}
 				onSetColor={(color) => setSectionColor(section.id, color)}
 				onDelete={() => onDelete(section.id)}
@@ -131,6 +132,7 @@ export function SortableSectionHeader({
 					actions={
 						<DashboardSidebarSectionActionsDropdown
 							color={section.color}
+							groupId={section.id}
 							onRename={startRename}
 							onSetColor={(color) => setSectionColor(section.id, color)}
 							onDelete={() => onDelete(section.id)}

@@ -2116,6 +2116,9 @@ msgstr "AI · статус"
 msgid "AI authentication failed. Please check your AI settings."
 msgstr "Не удалось выполнить аутентификацию AI. Проверьте настройки AI."
 
+msgid "Airy"
+msgstr "Свободно"
+
 msgid "Alert"
 msgstr "Оповещение"
 
@@ -3049,6 +3052,9 @@ msgstr "Нас поддерживают"
 msgid "Background"
 msgstr "Фон"
 
+msgid "Background of the open conversation."
+msgstr "Фон открытого диалога."
+
 msgid "Background processes"
 msgstr "Фоновые процессы"
 
@@ -3354,6 +3360,9 @@ msgstr "Работаем открыто"
 msgid "Build the future of Superset in the cloud"
 msgstr "Создайте будущее Superset в облаке"
 
+msgid "Build the settings page"
+msgstr "Сделать страницу настроек"
+
 msgid "Build your own"
 msgstr "Создайте свой"
 
@@ -3471,6 +3480,9 @@ msgstr "Календарь"
 
 msgid "Calendar and Gmail triggers in this organization will stop firing until an account is connected again."
 msgstr "Триггеры Календаря и Gmail в этой организации перестанут срабатывать, пока аккаунт не подключат снова."
+
+msgid "Calendar sync"
+msgstr "Синхронизация календаря"
 
 msgid "Camera access is not allowed"
 msgstr "Доступ к камере запрещён"
@@ -3858,11 +3870,11 @@ msgstr "Выберите, как открывать файлы, когда не�
 msgid "Choose how the Changes view opens from the top bar"
 msgstr "Выберите, как открывается представление изменений из верхней панели"
 
+msgid "Choose how the sidebar looks and what it shows under each workspace. Right-click a project or a group for its own options."
+msgstr "Выберите, как выглядит боковая панель и что она показывает под каждым рабочим пространством. Щёлкните правой кнопкой по проекту или группе, чтобы открыть их собственные параметры."
+
 msgid "Choose how to open file paths when Cmd+clicking in the terminal"
 msgstr "Выберите, как открывать пути файлов при Cmd+клике в терминале"
-
-msgid "Choose what the sidebar shows under each workspace."
-msgstr "Выберите, что боковая панель показывает под каждым рабочим пространством."
 
 msgid "Choose what to clear from the in-app browser."
 msgstr "Выберите, что очистить во встроенном браузере."
@@ -4343,6 +4355,16 @@ msgstr "Цвет"
 msgid "Color Filter"
 msgstr "Цветовой фильтр"
 
+#. placeholder {0}: stateLabel[key]
+msgid "Color for {0}"
+msgstr "Цвет для {0}"
+
+msgid "Colorblind-safe"
+msgstr "Для дальтоников"
+
+msgid "Colors of the agent state dots, in the sidebar and the switchers."
+msgstr "Цвета точек состояния агентов в боковой панели и переключателях."
+
 msgid "Columns"
 msgstr "Колонки"
 
@@ -4463,6 +4485,12 @@ msgstr "Коммуникация"
 
 msgid "Community"
 msgstr "Сообщество"
+
+msgid "Compact"
+msgstr "Компактно"
+
+msgid "Compact conversations"
+msgstr "Компактные диалоги"
 
 msgid "Company"
 msgstr "Компания"
@@ -4785,6 +4813,9 @@ msgstr "Связаться с нами"
 msgid "Contains this text..."
 msgstr "Содержит этот текст..."
 
+msgid "Content"
+msgstr "Содержимое"
+
 msgid "Context"
 msgstr "Контекст"
 
@@ -4840,6 +4871,9 @@ msgstr "Для продолжения сессии агента нужно за�
 
 msgid "continuing the last session"
 msgstr "продолжая последнюю сессию"
+
+msgid "Contrast"
+msgstr "Контраст"
 
 msgid "Contributions"
 msgstr "Вклад"
@@ -6270,6 +6304,9 @@ msgstr "Понизить себя?"
 msgid "Denied"
 msgstr "Отклонено"
 
+msgid "Density"
+msgstr "Плотность"
+
 msgid "Deny"
 msgstr "Отклонить"
 
@@ -7229,6 +7266,9 @@ msgstr "Обзор"
 msgid "Explore Pages"
 msgstr "Открыть Страницы"
 
+msgid "Explore the codebase"
+msgstr "Изучить кодовую базу"
+
 msgid "Explored"
 msgstr "Изучено"
 
@@ -7869,6 +7909,9 @@ msgstr "исключаемые файлы (glob)"
 msgid "files to include (glob)"
 msgstr "включаемые файлы (glob)"
 
+msgid "Fill"
+msgstr "Заливка"
+
 msgid "Fill out the contact form on this page and our team will reach out to learn about your needs and walk you through next steps."
 msgstr "Заполните форму на этой странице, и наша команда свяжется с вами, чтобы узнать о ваших задачах и рассказать о следующих шагах."
 
@@ -8010,6 +8053,9 @@ msgstr "Чинить падения CI"
 msgid "Fix findings"
 msgstr "Исправить замечания"
 
+msgid "Fix the flaky test"
+msgstr "Починить нестабильный тест"
+
 msgid "fix-auth-redirect"
 msgstr "fix-auth-redirect"
 
@@ -8066,6 +8112,9 @@ msgstr "Фокус на поле поиска в разделе задач"
 
 msgid "Folder"
 msgstr "Папка"
+
+msgid "Folder color on conversations"
+msgstr "Цвет папки у диалогов"
 
 msgid "Folder is missing"
 msgstr "Папка отсутствует"
@@ -8523,6 +8572,9 @@ msgstr "Половина объединённых изменений — аге�
 msgid "Hand the browser to your agent."
 msgstr "Доверьте браузер своему агенту."
 
+msgid "Hand-picked colors stay when you change the palette."
+msgstr "Выбранные вручную цвета сохраняются при смене палитры."
+
 msgid "Handing to agent…"
 msgstr "Передача агенту…"
 
@@ -8574,6 +8626,9 @@ msgstr "Заголовок 3"
 msgid "Heart"
 msgstr "Сердце"
 
+msgid "Height of the rows and size of the conversation titles."
+msgstr "Высота строк и размер заголовков диалогов."
+
 msgid "Help"
 msgstr "Помощь"
 
@@ -8602,6 +8657,9 @@ msgstr "Скрыть"
 msgid "Hide checks"
 msgstr "Скрыть проверки"
 
+msgid "Hide conversations"
+msgstr "Скрыть диалоги"
+
 msgid "Hide details"
 msgstr "Скрыть детали"
 
@@ -8628,6 +8686,9 @@ msgstr "Скрыть из боковой панели"
 
 msgid "Hide from Sidebar"
 msgstr "Скрыть с боковой панели"
+
+msgid "Hide idle conversations"
+msgstr "Скрыть неактивные диалоги"
 
 msgid "Hide log"
 msgstr "Скрыть лог"
@@ -8656,8 +8717,14 @@ msgstr "Скрыть комментарии ревью"
 msgid "Hide sessions"
 msgstr "Скрыть сессии"
 
+msgid "Hide subagents"
+msgstr "Скрыть субагентов"
+
 msgid "Hide text"
 msgstr "Скрыть текст"
+
+msgid "Hide to-dos"
+msgstr "Скрыть задачи"
 
 msgid "Hide unchanged regions"
 msgstr "Скрыть неизменённые участки"
@@ -8670,6 +8737,9 @@ msgstr "Высокая серьёзность"
 
 msgid "High usage"
 msgstr "Высокое потребление"
+
+msgid "Highlight intensity"
+msgstr "Яркость выделения"
 
 msgid "history"
 msgstr "история"
@@ -8806,11 +8876,17 @@ msgstr "Сколько скрытых терминалов остаются по
 msgid "How much agent work engineers are actually running — tokens, cost, models and sessions, published by people who opted in."
 msgstr "Сколько работы агентов инженеры действительно запускают — токены, стоимость, модели и сессии, опубликованные теми, кто дал согласие."
 
+msgid "How much secondary text and separators stand out."
+msgstr "Насколько заметны второстепенный текст и разделители."
+
 msgid "How should the agent's actions be approved?"
 msgstr "Как одобрять действия агента?"
 
 msgid "How the command opens."
 msgstr "Как открывается команда."
+
+msgid "How the conversation shown in a pane stands out."
+msgstr "Как выделяется диалог, открытый в панели."
 
 msgid "How the prompt is delivered to the process."
 msgstr "Как промпт передаётся процессу."
@@ -10703,6 +10779,9 @@ msgstr "Следите за агентами, направляйте их и с�
 msgid "Monitoring"
 msgstr "Мониторинг"
 
+msgid "Monochrome"
+msgstr "Монохром"
+
 msgid "monorepo"
 msgstr "monorepo"
 
@@ -10933,6 +11012,9 @@ msgstr "Ждёт вас"
 
 msgid "Needs your approval"
 msgstr "Нужно ваше одобрение"
+
+msgid "Neon"
+msgstr "Неон"
 
 msgid "Nerd Fonts"
 msgstr "Nerd Fonts"
@@ -12312,6 +12394,9 @@ msgstr "Открыть палитру команд"
 msgid "Open comment on GitHub"
 msgstr "Открыть комментарий на GitHub"
 
+msgid "Open conversation"
+msgstr "Открытый диалог"
+
 #. placeholder {0}: conversation.title
 msgid "Open conversation: {0}"
 msgstr "Открыть разговор: {0}"
@@ -13155,6 +13240,9 @@ msgstr "Телефон"
 
 msgid "Pick {name} from the theme grid to apply it."
 msgstr "Выберите {name} в сетке тем, чтобы применить."
+
+msgid "Pick a color"
+msgstr "Выбрать цвет"
 
 msgid "Pick a different element"
 msgstr "Выбрать другой элемент"
@@ -14228,6 +14316,9 @@ msgstr "Релиз"
 msgid "Release control"
 msgstr "Отпустить управление"
 
+msgid "Release notes"
+msgstr "Примечания к выпуску"
+
 msgid "Release notes draft"
 msgstr "Черновик заметок о релизе"
 
@@ -14937,6 +15028,9 @@ msgstr "Требуется ревью"
 
 msgid "Review syntax-highlighted diffs"
 msgstr "Проверяйте diff с подсветкой синтаксиса"
+
+msgid "Review the pull request"
+msgstr "Проверить пул-реквест"
 
 msgid "Review the result."
 msgstr "Проверьте результат."
@@ -16261,6 +16355,9 @@ msgstr "Показывается публично рядом с вашим им�
 msgid "Shut down {0}"
 msgstr "Выключить {0}"
 
+msgid "Side bar"
+msgstr "Боковая полоса"
+
 msgid "Side by Side"
 msgstr "Рядом"
 
@@ -16275,6 +16372,9 @@ msgstr "Карточка боковой панели"
 
 msgid "Sidebar file rows"
 msgstr "Строки файлов в боковой панели"
+
+msgid "Sidebar options"
+msgstr "Параметры боковой панели"
 
 msgid "Sidebar order"
 msgstr "Порядок в боковой панели"
@@ -16500,6 +16600,9 @@ msgstr "Соответствие SOC 2 Type II. Запросите отчёт."
 
 msgid "SOC 2 Type II report"
 msgstr "Отчёт SOC 2 Type II"
+
+msgid "Soft"
+msgstr "Мягкий"
 
 msgid "Some files are not an accepted type and were not added."
 msgstr "Некоторые файлы не подходят по типу и не были добавлены."
@@ -16892,6 +16995,9 @@ msgstr "Запускает новую сессию в этой рабочей о
 msgid "State"
 msgstr "Состояние"
 
+msgid "State colors"
+msgstr "Цвета состояний"
+
 msgid "Stats"
 msgstr "Статистика"
 
@@ -16991,6 +17097,12 @@ msgstr "Зачёркнутый"
 
 msgid "Strip redundant overrides at call sites"
 msgstr "Убрать лишние переопределения в местах вызова"
+
+msgid "Stripe each conversation with its group's color, or its project's."
+msgstr "Отмечать каждый диалог полосой цвета его группы или проекта."
+
+msgid "Stripe width"
+msgstr "Ширина полосы"
 
 msgid "Strong"
 msgstr "Сильный"
@@ -19316,6 +19428,9 @@ msgstr "Используйте Superset на телефоне с Pro."
 msgid "Use the desktop app to start running parallel coding agents."
 msgstr "Используйте десктопное приложение, чтобы запускать параллельных кодовых агентов."
 
+msgid "Use the palette's color"
+msgstr "Использовать цвет палитры"
+
 msgid "Use the Superset tray menu > Host Service > Restart, then retry."
 msgstr "Откройте меню Superset в трее > Host Service > Restart, затем повторите."
 
@@ -19894,6 +20009,9 @@ msgstr "Ширина"
 
 msgid "Width · parallel sessions"
 msgstr "Ширина · параллельных сессий"
+
+msgid "Width of the colored stripes: groups, side bar and folder colors."
+msgstr "Ширина цветных полос: группы, боковая полоса и цвета папок."
 
 msgid "Window"
 msgstr "Окно"
