@@ -1,7 +1,13 @@
 import { afterEach, beforeEach, describe, expect, test } from "bun:test";
-import { mkdtempSync, readFileSync, rmSync } from "node:fs";
+import {
+	mkdirSync,
+	mkdtempSync,
+	readFileSync,
+	rmSync,
+	writeFileSync,
+} from "node:fs";
 import { tmpdir } from "node:os";
-import { join } from "node:path";
+import { dirname, join } from "node:path";
 import {
 	ConversationTodoStore,
 	MAX_TODOS_PER_CONVERSATION,
@@ -121,6 +127,106 @@ describe("ConversationTodoStore", () => {
 	test("starts empty on a missing or broken file", () => {
 		expect(new ConversationTodoStore(join(dir, "none.json")).list()).toEqual(
 			[],
+		);
+	});
+
+	test("keeps the rich fields of a to-do the user does by hand", () => {
+		const todo = store.add({
+			...where,
+			actor: "agent",
+			text: "Mail Paul the beta invite",
+			kind: "mail",
+			steps: [" Check the address ", "", "Send it"],
+			draft: "  Hi Paul,\n\nHere is your invite.  ",
+			recipient: " paul@example.com ",
+			channel: "email",
+		});
+		expect(todo).toMatchObject({
+			kind: "mail",
+			steps: ["Check the address", "Send it"],
+			draft: "Hi Paul,\n\nHere is your invite.",
+			recipient: "paul@example.com",
+			channel: "email",
+		});
+		const updated = store.update("agent", todo.id, {
+			steps: [],
+			draft: null,
+			channel: " ",
+			kind: "post",
+		});
+		expect(updated).toMatchObject({
+			kind: "post",
+			steps: [],
+			draft: null,
+			recipient: "paul@example.com",
+			channel: null,
+		});
+		expect(new ConversationTodoStore(filePath).list(where)[0]).toEqual(updated);
+	});
+
+	test("defaults the rich fields to empty", () => {
+		expect(store.add({ ...where, actor: "user", text: "x" })).toMatchObject({
+			steps: [],
+			draft: null,
+			recipient: null,
+			channel: null,
+		});
+	});
+
+	test("refuses too many or too long steps", () => {
+		expect(() =>
+			store.add({
+				...where,
+				actor: "agent",
+				text: "x",
+				steps: Array.from({ length: 13 }, (_, i) => `s${i}`),
+			}),
+		).toThrow(/at most 12 steps/);
+		expect(() =>
+			store.add({
+				...where,
+				actor: "agent",
+				text: "x",
+				steps: ["a".repeat(301)],
+			}),
+		).toThrow();
+	});
+
+	test("reads a file written before the rich fields", () => {
+		mkdirSync(dirname(filePath), { recursive: true });
+		writeFileSync(
+			filePath,
+			JSON.stringify({
+				version: 1,
+				todos: [
+					{
+						id: "old",
+						...where,
+						text: "Old one",
+						done: false,
+						author: "user",
+						doneBy: null,
+						priority: "normal",
+						kind: "review",
+						dueOn: null,
+						link: null,
+						createdAt: 1,
+						updatedAt: 1,
+					},
+				],
+			}),
+		);
+		const old = new ConversationTodoStore(filePath);
+		expect(old.list()[0]).toMatchObject({
+			id: "old",
+			kind: "review",
+			steps: [],
+			draft: null,
+			recipient: null,
+			channel: null,
+		});
+		expect(old.update("user", "old", { recipient: "Ana" }).recipient).toBe(
+			"Ana",
 		);
 	});
 });

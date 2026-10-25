@@ -4,6 +4,7 @@ import {
 	getConversationTodoStore,
 	TODO_ACTORS,
 	TODO_KINDS,
+	TODO_LIMITS,
 	TODO_PRIORITIES,
 	TodoNotFoundError,
 	TodoPermissionError,
@@ -45,6 +46,13 @@ const link = z
 	.url({ protocol: /^https?$/ })
 	.max(2_000)
 	.nullable();
+// Rich fields for what the user does by hand: a mail, a call, a post.
+const steps = z
+	.array(z.string().trim().max(TODO_LIMITS.step))
+	.max(TODO_LIMITS.steps);
+const draft = z.string().max(TODO_LIMITS.draft).nullable();
+const recipient = z.string().trim().max(TODO_LIMITS.recipient).nullable();
+const channel = z.string().trim().max(TODO_LIMITS.channel).nullable();
 
 /**
  * Per-conversation to-dos shared by the user and the agents of this host.
@@ -74,6 +82,10 @@ export const conversationTodosRouter = router({
 				kind: z.enum(TODO_KINDS).optional(),
 				dueOn: dueOn.optional(),
 				link: link.optional(),
+				steps: steps.optional(),
+				draft: draft.optional(),
+				recipient: recipient.optional(),
+				channel: channel.optional(),
 			}),
 		)
 		.mutation(({ ctx, input }) =>
@@ -97,6 +109,10 @@ export const conversationTodosRouter = router({
 				kind: z.enum(TODO_KINDS).optional(),
 				dueOn: dueOn.optional(),
 				link: link.optional(),
+				steps: steps.optional(),
+				draft: draft.optional(),
+				recipient: recipient.optional(),
+				channel: channel.optional(),
 			}),
 		)
 		.mutation(({ ctx, input: { actor, id, ...fields } }) =>

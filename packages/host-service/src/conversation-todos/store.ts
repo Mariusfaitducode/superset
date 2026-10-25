@@ -10,8 +10,25 @@ import { homedir } from "node:os";
 import { dirname, join } from "node:path";
 
 export const TODO_PRIORITIES = ["high", "normal", "low"] as const;
-export const TODO_KINDS = ["code", "message", "review", "other"] as const;
+export const TODO_KINDS = [
+	"code",
+	"message",
+	"review",
+	"other",
+	"mail",
+	"contact",
+	"post",
+	"meeting",
+] as const;
 export const TODO_ACTORS = ["user", "agent"] as const;
+
+export const TODO_LIMITS = {
+	steps: 12,
+	step: 300,
+	draft: 4_000,
+	recipient: 300,
+	channel: 100,
+} as const;
 
 export type TodoPriority = (typeof TODO_PRIORITIES)[number];
 export type TodoKind = (typeof TODO_KINDS)[number];
@@ -38,6 +55,14 @@ export interface ConversationTodo {
 	/** Calendar day, `YYYY-MM-DD`. */
 	dueOn: string | null;
 	link: string | null;
+	/** Ordered steps the user follows to get it done. */
+	steps: string[];
+	/** A ready-to-send text: the mail, message or post itself. */
+	draft: string | null;
+	/** Who it goes to: a person, an address, a team. */
+	recipient: string | null;
+	/** Where it goes: email, LinkedIn, Slack… */
+	channel: string | null;
 	createdAt: number;
 	updatedAt: number;
 }
@@ -48,6 +73,10 @@ export interface TodoFields {
 	kind?: TodoKind;
 	dueOn?: string | null;
 	link?: string | null;
+	steps?: string[];
+	draft?: string | null;
+	recipient?: string | null;
+	channel?: string | null;
 }
 
 export class TodoPermissionError extends Error {}
@@ -99,6 +128,10 @@ export class ConversationTodoStore {
 		kind?: TodoKind;
 		dueOn?: string | null;
 		link?: string | null;
+		steps?: string[];
+		draft?: string | null;
+		recipient?: string | null;
+		channel?: string | null;
 	}): ConversationTodo {
 		const text = input.text.trim();
 		if (!text) throw new Error("A to-do needs some text");
@@ -116,6 +149,10 @@ export class ConversationTodoStore {
 			kind: input.kind ?? "other",
 			dueOn: input.dueOn ?? null,
 			link: input.link ?? null,
+			steps: cleanSteps(input.steps ?? []),
+			draft: cleanText(input.draft, "draft"),
+			recipient: cleanText(input.recipient, "recipient"),
+			channel: cleanText(input.channel, "channel"),
 			createdAt: at,
 			updatedAt: at,
 		};
@@ -137,6 +174,18 @@ export class ConversationTodoStore {
 			...(fields.kind ? { kind: fields.kind } : {}),
 			...(fields.dueOn !== undefined ? { dueOn: fields.dueOn } : {}),
 			...(fields.link !== undefined ? { link: fields.link } : {}),
+			...(fields.steps !== undefined
+				? { steps: cleanSteps(fields.steps) }
+				: {}),
+			...(fields.draft !== undefined
+				? { draft: cleanText(fields.draft, "draft") }
+				: {}),
+			...(fields.recipient !== undefined
+				? { recipient: cleanText(fields.recipient, "recipient") }
+				: {}),
+			...(fields.channel !== undefined
+				? { channel: cleanText(fields.channel, "channel") }
+				: {}),
 		});
 	}
 
@@ -234,7 +283,9 @@ export class ConversationTodoStore {
 		if (this.todos) return this.todos;
 		try {
 			const file = JSON.parse(readFileSync(this.filePath, "utf8")) as TodoFile;
-			this.todos = Array.isArray(file.todos) ? file.todos : [];
+			this.todos = Array.isArray(file.todos)
+				? file.todos.map(withDefaults)
+				: [];
 		} catch {
 			this.todos = [];
 		}
@@ -258,6 +309,43 @@ export class ConversationTodoStore {
 			throw error;
 		}
 	}
+}
+
+// Files written before the rich fields existed lack them.
+function withDefaults(todo: ConversationTodo): ConversationTodo {
+	return {
+		...todo,
+		steps: Array.isArray(todo.steps) ? todo.steps : [],
+		draft: todo.draft ?? null,
+		recipient: todo.recipient ?? null,
+		channel: todo.channel ?? null,
+	};
+}
+
+function cleanSteps(steps: readonly string[]): string[] {
+	const kept = steps.map((step) => step.trim()).filter(Boolean);
+	if (kept.length > TODO_LIMITS.steps) {
+		throw new Error(`A to-do has at most ${TODO_LIMITS.steps} steps`);
+	}
+	if (kept.some((step) => step.length > TODO_LIMITS.step)) {
+		throw new Error(`A step has at most ${TODO_LIMITS.step} characters`);
+	}
+	return kept;
+}
+
+/** Trims a text field; empty clears it. */
+function cleanText(
+	value: string | null | undefined,
+	field: "draft" | "recipient" | "channel",
+): string | null {
+	const text = value?.trim();
+	if (!text) return null;
+	if (text.length > TODO_LIMITS[field]) {
+		throw new Error(
+			`The ${field} has at most ${TODO_LIMITS[field]} characters`,
+		);
+	}
+	return text;
 }
 
 // A conversation's to-dos follow it to its latest terminal, so old terminal
