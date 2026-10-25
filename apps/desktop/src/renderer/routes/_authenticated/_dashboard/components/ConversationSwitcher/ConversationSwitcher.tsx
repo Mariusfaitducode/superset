@@ -195,7 +195,7 @@ function SwitcherContent({
 					<Kbd>↵</Kbd> <Trans>Open</Trans>
 				</span>
 				<span>
-					<Kbd>esc</Kbd> <Trans>Close</Trans>
+					<Kbd>{"esc"}</Kbd> <Trans>Close</Trans>
 				</span>
 				<span className="ml-auto">
 					<Trans>⌘K ↵ goes back to the previous conversation</Trans>
