@@ -1,4 +1,4 @@
-/** The link as an http(s) URL, or null: agents write these links. */
+/** The link as an http(s) URL, or null: agents write the links the app shows. */
 export function httpLink(link: string | null | undefined): string | null {
 	if (!link) return null;
 	try {

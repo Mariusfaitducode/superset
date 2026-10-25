@@ -20,13 +20,13 @@ import {
 	LuMessageSquare,
 } from "react-icons/lu";
 import { formatRelativeTime } from "renderer/lib/formatRelativeTime";
+import { httpLink } from "renderer/lib/httpLink";
 import type {
 	ConversationTodo,
 	TodoActions,
 	TodoFields,
 } from "../../hooks/useWorkspaceTodos";
 import { dueState, localDay } from "../../utils/todo-order";
-import { httpLink } from "./utils/httpLink";
 
 type Priority = ConversationTodo["priority"];
 type Kind = ConversationTodo["kind"];

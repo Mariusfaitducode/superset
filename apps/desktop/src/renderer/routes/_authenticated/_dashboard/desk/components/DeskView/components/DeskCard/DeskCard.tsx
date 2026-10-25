@@ -19,6 +19,7 @@ import {
 	LuX,
 } from "react-icons/lu";
 import { useNow } from "renderer/hooks/useNow";
+import { httpLink } from "renderer/lib/httpLink";
 import { ReportKindIcon } from "renderer/routes/_authenticated/_dashboard/components/ReportKindIcon";
 import type { DeskItem } from "renderer/routes/_authenticated/_dashboard/hooks/useDeskQueue";
 import type { DeskActions } from "../../hooks/useDeskActions";
@@ -50,6 +51,11 @@ export function DeskCard({
 	const cardRef = useRef<HTMLElement>(null);
 	const replyRef = useRef<HTMLTextAreaElement>(null);
 	const report = item.source === "report" ? item.report : null;
+	const reportLinks = (report?.links ?? []).flatMap((link) => {
+		const href = httpLink(link);
+		return href ? [href] : [];
+	});
+	const todoLink = item.source === "todo" ? httpLink(item.todo.link) : null;
 	const draftText = report?.draft?.text ?? "";
 	const [reply, setReply] = useState("");
 	const [draft, setDraft] = useState(draftText);
@@ -177,9 +183,9 @@ export function DeskCard({
 				</p>
 			)}
 
-			{(report?.links.length ?? 0) > 0 && (
+			{reportLinks.length > 0 && (
 				<div className="flex flex-wrap gap-1.5">
-					{report?.links.map((link) => (
+					{reportLinks.map((link) => (
 						<a
 							key={link}
 							href={link}
@@ -197,9 +203,9 @@ export function DeskCard({
 				</div>
 			)}
 
-			{item.source === "todo" && item.todo.link && (
+			{todoLink && (
 				<a
-					href={item.todo.link}
+					href={todoLink}
 					target="_blank"
 					rel="noreferrer noopener"
 					onClick={(event) => event.stopPropagation()}
@@ -207,7 +213,7 @@ export function DeskCard({
 				>
 					<LuExternalLink className="size-3 shrink-0" />
 					<span className="truncate">
-						{item.todo.link.replace(/^https?:\/\//, "")}
+						{todoLink.replace(/^https?:\/\//, "")}
 					</span>
 				</a>
 			)}
