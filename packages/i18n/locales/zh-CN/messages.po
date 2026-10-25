@@ -360,6 +360,11 @@ msgstr "{0} — 请尝试Superset托盘菜单 > 主机服务 > 重启。"
 msgid "{0} · behind"
 msgstr "{0} · 落后"
 
+#. placeholder {0}: decimal(mean)
+#. placeholder {1}: count(peak)
+msgid "{0} · peak {1}"
+msgstr "{0} · 峰值 {1}"
+
 #. placeholder {0}: creator.name
 #. placeholder {0}: option.name
 msgid "{0} (you)"
@@ -560,6 +565,10 @@ msgstr "{0} 对战 {1}"
 #. placeholder {0}: file.path
 msgid "{0} was deleted in this change."
 msgstr "{0}已在此更改中被删除。"
+
+#. placeholder {0}: formatNumber(option / 7)
+msgid "{0} weeks"
+msgstr "{0} 周"
 
 #. placeholder {0}: winner?.name
 #. placeholder {1}: result.events.length
@@ -2098,6 +2107,15 @@ msgstr "同时运行的智能体数"
 msgid "Agents use this account when they call Linear tools."
 msgstr "智能体调用 Linear 工具时会使用此账号。"
 
+msgid "Agents waiting (peak)"
+msgstr "等待中的智能体（峰值）"
+
+msgid "Agents waiting on you"
+msgstr "等你回复的智能体"
+
+msgid "Agents working at once"
+msgstr "同时工作的智能体"
+
 msgid "Agents' to-dos"
 msgstr "智能体的待办"
 
@@ -3099,6 +3117,9 @@ msgstr "把chip样式内置到tooltip.tsx"
 
 msgid "Bar"
 msgstr "竖线"
+
+msgid "Bare go-aheads"
+msgstr "单纯放行"
 
 msgid "Base branch"
 msgstr "基础分支"
@@ -5083,6 +5104,9 @@ msgstr "请立即复制你的密钥，之后将无法再次查看。"
 msgid "Copyright or trademark"
 msgstr "版权或商标"
 
+msgid "Corrections"
+msgstr "纠正"
+
 msgid "Cost"
 msgstr "费用"
 
@@ -5502,6 +5526,9 @@ msgstr "无法连接到此云工作区。它可能仍在唤醒中——请重试
 
 msgid "Couldn't reach workspace"
 msgstr "无法连接到工作区"
+
+msgid "Couldn't read the transcripts on this host."
+msgstr "无法读取此主机上的对话记录。"
 
 msgid "Couldn't read this terminal's context."
 msgstr "无法读取该终端的上下文。"
@@ -8052,6 +8079,9 @@ msgstr "已完成 · 用时7秒"
 msgid "First repository by name"
 msgstr "按名称排序的第一个仓库"
 
+msgid "First scan of your transcripts, numbers are partial…"
+msgstr "正在首次扫描对话记录，数据尚不完整…"
+
 msgid "Fix"
 msgstr "修复"
 
@@ -8295,6 +8325,9 @@ msgstr "从一个黑客松项目，到并行编程智能体的工作空间。"
 msgid "From GitHub"
 msgstr "来自 GitHub"
 
+msgid "From your Claude Code transcripts on this machine. Automations and prompts written by agents are left out."
+msgstr "来自本机上的 Claude Code 对话记录。不含自动化任务和智能体编写的提示。"
+
 msgid "Front matter hidden — switch to Markdown to edit it"
 msgstr "已隐藏front matter，切换到Markdown可编辑"
 
@@ -8525,6 +8558,13 @@ msgstr "前往Superset"
 
 msgid "Go to workspace"
 msgstr "前往工作区"
+
+msgid "Go-aheads"
+msgstr "放行"
+
+#. placeholder {0}: tile.target
+msgid "Goal {0}"
+msgstr "目标 {0}"
 
 msgid "Google did not grant lasting access. Remove Superset from your Google account's third-party access and try again."
 msgstr "Google没有授予持久访问权限。请在你的Google账户的第三方访问中移除Superset，然后重试。"
@@ -9234,6 +9274,9 @@ msgstr "输入、缓存和输出token"
 msgid "Inputs"
 msgstr "输入"
 
+msgid "Insights"
+msgstr "洞察"
+
 msgid "Insights from the Superset team about parallel coding agents and developer productivity."
 msgstr "来自Superset团队的洞见，关于并行编码智能体与开发者效率。"
 
@@ -9785,6 +9828,10 @@ msgstr "最后更新：{lastUpdated}"
 msgid "Last used"
 msgstr "上次使用"
 
+#. placeholder {0}: tile.previous
+msgid "Last week {0}"
+msgstr "上周 {0}"
+
 msgid "Late 2026"
 msgstr "2026年末"
 
@@ -10099,6 +10146,9 @@ msgstr "已在应用中上线。"
 
 msgid "Live preview"
 msgstr "实时预览"
+
+msgid "Live sessions per day"
+msgstr "每天活跃会话"
 
 msgid "llms.txt (index for AI agents)"
 msgstr "llms.txt（面向AI智能体的索引）"
@@ -10514,6 +10564,9 @@ msgstr "正在统计要发送给 {0} 的上下文…"
 msgid "Media kit"
 msgstr "媒体资料包"
 
+msgid "Median reply time (daytime)"
+msgstr "回复时间中位数（白天）"
+
 msgid "Median ticket-to-production time under one day for routine work."
 msgstr "常规工作从工单到上线的中位耗时不足一天。"
 
@@ -10646,6 +10699,9 @@ msgstr "消息..."
 
 msgid "Messages"
 msgstr "消息"
+
+msgid "Messages per working day"
+msgstr "每个工作日的消息"
 
 msgid "Microphone"
 msgstr "麦克风"
@@ -10873,6 +10929,9 @@ msgstr "移动到标签页"
 
 msgid "Moved down by you"
 msgstr "你移到下方的"
+
+msgid "Msgs / day"
+msgstr "消息 / 天"
 
 msgid "Multi-select"
 msgstr "多选"
@@ -13185,6 +13244,9 @@ msgstr "{organizationName} 以外的人将失去访问权限，公开链接也�
 msgid "People with access"
 msgstr "有访问权限的人"
 
+msgid "Per day"
+msgstr "按天"
+
 msgid "per merged PR"
 msgstr "每个合并 PR"
 
@@ -13196,6 +13258,9 @@ msgstr "每次会话"
 
 msgid "per user/month"
 msgstr "每用户/月"
+
+msgid "Per week"
+msgstr "按周"
 
 msgid "Per-repo agent memory"
 msgstr "按仓库的智能体记忆"
@@ -14102,6 +14167,9 @@ msgstr "阅读源代码和每一个拉取请求。"
 
 msgid "Reading {what}"
 msgstr "正在读取 {what}"
+
+msgid "Reading new transcript lines…"
+msgstr "正在读取新的记录行…"
 
 msgid "Reading the page"
 msgstr "正在读取页面"
@@ -15987,6 +16055,9 @@ msgstr "会话"
 msgid "Sessions · top {0} by cost"
 msgstr "会话 · 按费用排名前{0}"
 
+msgid "Sessions / day"
+msgstr "会话 / 天"
+
 #. placeholder {0}: color.name
 msgid "Set color to {0}"
 msgstr "将颜色设为{0}"
@@ -16990,6 +17061,9 @@ msgstr "状态"
 
 msgid "Status changed"
 msgstr "状态变更"
+
+msgid "Status questions"
+msgstr "进度询问"
 
 #. placeholder {0}: statusLabel[note.status]
 msgid "Status: {0}"
@@ -18355,6 +18429,9 @@ msgstr "此主机落后于你正在使用的应用。工作区仍可打开，但
 msgid "This host needs an update"
 msgstr "此主机需要更新"
 
+msgid "This host runs an older Superset. Update the app to see insights."
+msgstr "此主机运行的是旧版 Superset。请更新应用以查看洞察。"
+
 msgid "This invitation has already been accepted."
 msgstr "这个邀请已被接受。"
 
@@ -19641,6 +19718,9 @@ msgstr "VS Code"
 msgid "Wait for workspace setup before starting agents"
 msgstr "启动智能体前等待工作区设置完成"
 
+msgid "Waiting"
+msgstr "等待中"
+
 #. placeholder {0}: names.a
 #. placeholder {1}: names.b
 msgid "waiting for {0} and {1}…"
@@ -19801,6 +19881,9 @@ msgstr "官网"
 
 msgid "Week"
 msgstr "按周"
+
+msgid "Week of"
+msgstr "周起始"
 
 msgid "Week of {formatted}"
 msgstr "{formatted}当周"
@@ -20491,6 +20574,9 @@ msgstr "你的 GitHub 链接来自登录所用的账号，因此显示为已验�
 
 msgid "Your last payment failed. Update your payment method to keep Pro."
 msgstr "上次付款失败。请更新支付方式以继续使用 Pro。"
+
+msgid "Your messages per project"
+msgstr "你在各项目中的消息"
 
 msgid "Your name"
 msgstr "你的姓名"

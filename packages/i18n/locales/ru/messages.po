@@ -360,6 +360,11 @@ msgstr "{0} — попробуйте меню Superset в трее > Host Servic
 msgid "{0} · behind"
 msgstr "{0} · устарел"
 
+#. placeholder {0}: decimal(mean)
+#. placeholder {1}: count(peak)
+msgid "{0} · peak {1}"
+msgstr "{0} · пик {1}"
+
 #. placeholder {0}: creator.name
 #. placeholder {0}: option.name
 msgid "{0} (you)"
@@ -560,6 +565,10 @@ msgstr "{0} против {1}"
 #. placeholder {0}: file.path
 msgid "{0} was deleted in this change."
 msgstr "{0} был удалён в этом изменении."
+
+#. placeholder {0}: formatNumber(option / 7)
+msgid "{0} weeks"
+msgstr "{0} нед."
 
 #. placeholder {0}: winner?.name
 #. placeholder {1}: result.events.length
@@ -2098,6 +2107,15 @@ msgstr "Агентов запущено одновременно"
 msgid "Agents use this account when they call Linear tools."
 msgstr "Агенты используют этот аккаунт, когда вызывают инструменты Linear."
 
+msgid "Agents waiting (peak)"
+msgstr "Ожидающие агенты (пик)"
+
+msgid "Agents waiting on you"
+msgstr "Агенты ждут вас"
+
+msgid "Agents working at once"
+msgstr "Агенты, работающие одновременно"
+
 msgid "Agents' to-dos"
 msgstr "Задачи агентов"
 
@@ -3099,6 +3117,9 @@ msgstr "Вшиваем стиль чипа в tooltip.tsx"
 
 msgid "Bar"
 msgstr "Полоска"
+
+msgid "Bare go-aheads"
+msgstr "Голые «давай»"
 
 msgid "Base branch"
 msgstr "Базовая ветка"
@@ -5083,6 +5104,9 @@ msgstr "Скопируйте ключ сейчас — увидеть его с�
 msgid "Copyright or trademark"
 msgstr "Авторские права или товарный знак"
 
+msgid "Corrections"
+msgstr "Исправления"
+
 msgid "Cost"
 msgstr "Стоимость"
 
@@ -5502,6 +5526,9 @@ msgstr "Не удалось подключиться к этому облачн�
 
 msgid "Couldn't reach workspace"
 msgstr "Не удалось подключиться к рабочей области"
+
+msgid "Couldn't read the transcripts on this host."
+msgstr "Не удалось прочитать транскрипты на этом хосте."
 
 msgid "Couldn't read this terminal's context."
 msgstr "Не удалось прочитать контекст этого терминала."
@@ -8052,6 +8079,9 @@ msgstr "завершил · работал 7 с"
 msgid "First repository by name"
 msgstr "Первый репозиторий по имени"
 
+msgid "First scan of your transcripts, numbers are partial…"
+msgstr "Первое сканирование транскриптов, цифры неполные…"
+
 msgid "Fix"
 msgstr "Исправить"
 
@@ -8295,6 +8325,9 @@ msgstr "От проекта с хакатона до рабочего прост
 msgid "From GitHub"
 msgstr "Из GitHub"
 
+msgid "From your Claude Code transcripts on this machine. Automations and prompts written by agents are left out."
+msgstr "По вашим транскриптам Claude Code на этом компьютере. Автоматизации и промпты, написанные агентами, не учитываются."
+
 msgid "Front matter hidden — switch to Markdown to edit it"
 msgstr "Front matter скрыт — переключитесь на Markdown, чтобы его изменить"
 
@@ -8525,6 +8558,13 @@ msgstr "Перейти в Superset"
 
 msgid "Go to workspace"
 msgstr "Перейти в рабочую область"
+
+msgid "Go-aheads"
+msgstr "«Давай»"
+
+#. placeholder {0}: tile.target
+msgid "Goal {0}"
+msgstr "Цель {0}"
 
 msgid "Google did not grant lasting access. Remove Superset from your Google account's third-party access and try again."
 msgstr "Google не выдал длительный доступ. Удалите Superset из стороннего доступа в аккаунте Google и повторите."
@@ -9234,6 +9274,9 @@ msgstr "токены ввода, кеша и вывода"
 msgid "Inputs"
 msgstr "Поля ввода"
 
+msgid "Insights"
+msgstr "Аналитика"
+
 msgid "Insights from the Superset team about parallel coding agents and developer productivity."
 msgstr "Мысли команды Superset о параллельных кодовых агентах и продуктивности разработчиков."
 
@@ -9785,6 +9828,10 @@ msgstr "Обновлено: {lastUpdated}"
 msgid "Last used"
 msgstr "Использовался последним"
 
+#. placeholder {0}: tile.previous
+msgid "Last week {0}"
+msgstr "Прошлая неделя {0}"
+
 msgid "Late 2026"
 msgstr "Конец 2026"
 
@@ -10099,6 +10146,9 @@ msgstr "Уже в приложении."
 
 msgid "Live preview"
 msgstr "Живой предпросмотр"
+
+msgid "Live sessions per day"
+msgstr "Активных сессий в день"
 
 msgid "llms.txt (index for AI agents)"
 msgstr "llms.txt (индекс для AI-агентов)"
@@ -10514,6 +10564,9 @@ msgstr "Измеряем контекст для отправки агенту {
 msgid "Media kit"
 msgstr "Медиакит"
 
+msgid "Median reply time (daytime)"
+msgstr "Медианное время ответа (днём)"
+
 msgid "Median ticket-to-production time under one day for routine work."
 msgstr "Медианное время от тикета до продакшена — меньше суток для рутинной работы."
 
@@ -10646,6 +10699,9 @@ msgstr "Сообщение..."
 
 msgid "Messages"
 msgstr "Сообщения"
+
+msgid "Messages per working day"
+msgstr "Сообщений за рабочий день"
 
 msgid "Microphone"
 msgstr "Микрофон"
@@ -10873,6 +10929,9 @@ msgstr "Переместить во вкладку"
 
 msgid "Moved down by you"
 msgstr "Опущены вами"
+
+msgid "Msgs / day"
+msgstr "Сообщ. / день"
 
 msgid "Multi-select"
 msgstr "Множественный выбор"
@@ -13185,6 +13244,9 @@ msgstr "Люди вне {organizationName} потеряют доступ, а п�
 msgid "People with access"
 msgstr "У кого есть доступ"
 
+msgid "Per day"
+msgstr "По дням"
+
 msgid "per merged PR"
 msgstr "за смерженный PR"
 
@@ -13196,6 +13258,9 @@ msgstr "за сессию"
 
 msgid "per user/month"
 msgstr "за пользователя в месяц"
+
+msgid "Per week"
+msgstr "По неделям"
 
 msgid "Per-repo agent memory"
 msgstr "Память агентов для каждого репозитория"
@@ -14102,6 +14167,9 @@ msgstr "Читайте исходный код и каждый pull request."
 
 msgid "Reading {what}"
 msgstr "Читаю {what}"
+
+msgid "Reading new transcript lines…"
+msgstr "Чтение новых строк транскриптов…"
 
 msgid "Reading the page"
 msgstr "Чтение страницы"
@@ -15987,6 +16055,9 @@ msgstr "Сессии"
 msgid "Sessions · top {0} by cost"
 msgstr "Сессии · топ {0} по стоимости"
 
+msgid "Sessions / day"
+msgstr "Сессий / день"
+
 #. placeholder {0}: color.name
 msgid "Set color to {0}"
 msgstr "Установить цвет {0}"
@@ -16990,6 +17061,9 @@ msgstr "Статус"
 
 msgid "Status changed"
 msgstr "Статус изменён"
+
+msgid "Status questions"
+msgstr "Вопросы о статусе"
 
 #. placeholder {0}: statusLabel[note.status]
 msgid "Status: {0}"
@@ -18355,6 +18429,9 @@ msgstr "Этот хост отстаёт от используемого при�
 msgid "This host needs an update"
 msgstr "Этому хосту нужно обновление"
 
+msgid "This host runs an older Superset. Update the app to see insights."
+msgstr "На этом хосте старая версия Superset. Обновите приложение, чтобы увидеть аналитику."
+
 msgid "This invitation has already been accepted."
 msgstr "Это приглашение уже принято."
 
@@ -19641,6 +19718,9 @@ msgstr "VS Code"
 msgid "Wait for workspace setup before starting agents"
 msgstr "Ждать настройки рабочей области перед запуском агентов"
 
+msgid "Waiting"
+msgstr "Ожидают"
+
 #. placeholder {0}: names.a
 #. placeholder {1}: names.b
 msgid "waiting for {0} and {1}…"
@@ -19801,6 +19881,9 @@ msgstr "Сайт"
 
 msgid "Week"
 msgstr "Неделя"
+
+msgid "Week of"
+msgstr "Неделя с"
 
 msgid "Week of {formatted}"
 msgstr "Неделя с {formatted}"
@@ -20491,6 +20574,9 @@ msgstr "Ссылка на GitHub берётся из аккаунта, чере�
 
 msgid "Your last payment failed. Update your payment method to keep Pro."
 msgstr "Последний платёж не прошёл. Обновите способ оплаты, чтобы сохранить Pro."
+
+msgid "Your messages per project"
+msgstr "Ваши сообщения по проектам"
 
 msgid "Your name"
 msgstr "Ваше имя"
