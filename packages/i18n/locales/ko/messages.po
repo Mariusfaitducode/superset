@@ -107,6 +107,7 @@ msgstr "{0, plural, one {활성 포트 #개 — 세부 정보 숨기기} other {
 msgid "{0, plural, one {# active port — show details} other {# active ports — show details}}"
 msgstr "{0, plural, one {활성 포트 #개 — 세부 정보 표시} other {활성 포트 #개 — 세부 정보 표시}}"
 
+#. placeholder {0}: metrics.agents.active
 #. placeholder {0}: person.runningAgentCount
 msgid "{0, plural, one {# agent} other {# agents}}"
 msgstr "{0, plural, other {에이전트 #개}}"
@@ -5050,6 +5051,9 @@ msgstr "지금 키를 복사하세요 — 다시 볼 수 없습니다."
 msgid "Copyright or trademark"
 msgstr "저작권 또는 상표"
 
+msgid "Cores"
+msgstr "코어"
+
 msgid "Cost"
 msgstr "비용"
 
@@ -5230,6 +5234,9 @@ msgstr "끌어다 놓은 파일을 읽을 수 없습니다"
 
 msgid "Could not read the Google account. Please try again."
 msgstr "Google 계정을 읽을 수 없습니다. 다시 시도해 주세요."
+
+msgid "Could not read the host's load."
+msgstr "호스트 부하를 읽을 수 없습니다."
 
 msgid "Could not record cloud workspace"
 msgstr "클라우드 워크스페이스를 기록할 수 없습니다"
@@ -8574,6 +8581,9 @@ msgstr "제목 3"
 msgid "Heart"
 msgstr "하트"
 
+msgid "Heaviest workspaces"
+msgstr "가장 무거운 워크스페이스"
+
 msgid "Help"
 msgstr "도움말"
 
@@ -10040,11 +10050,17 @@ msgstr "실시간 미리보기"
 msgid "llms.txt (index for AI agents)"
 msgstr "llms.txt (AI 에이전트용 색인)"
 
+msgid "Load"
+msgstr "부하"
+
 msgid "Load (1 min)"
 msgstr "부하 (1분)"
 
 msgid "load agent settings"
 msgstr "에이전트 설정을 불러올"
+
+msgid "Load average"
+msgstr "평균 부하"
 
 msgid "Load diff"
 msgstr "차이 불러오기"
@@ -13929,6 +13945,9 @@ msgstr "Radix는 툴팁 화살표 래퍼를 방향에 따라 회전시키므로,
 msgid "Radix Tooltip docs"
 msgstr "Radix Tooltip 문서"
 
+msgid "RAM"
+msgstr "RAM"
+
 msgid "RAM in use"
 msgstr "사용 중인 RAM"
 
@@ -14278,6 +14297,12 @@ msgstr "원격 액세스"
 
 msgid "Remote Access may be off"
 msgstr "원격 액세스가 꺼져 있을 수 있습니다"
+
+msgid "Remote host load"
+msgstr "원격 호스트 부하"
+
+msgid "Remote hosts"
+msgstr "원격 호스트"
 
 msgid "Remote MCP server — connects over HTTP"
 msgstr "원격 MCP 서버 — HTTP로 연결합니다"
@@ -15971,6 +15996,10 @@ msgstr "설정 → 원격 액세스 → “릴레이를 통해 이 기기에 원
 
 msgid "Settings are not available for this device"
 msgstr "이 기기에서는 설정을 사용할 수 없습니다"
+
+#. placeholder {0}: host.name
+msgid "Settings for {0}"
+msgstr "{0} 설정"
 
 msgid "Settings..."
 msgstr "설정..."
@@ -17913,6 +17942,9 @@ msgstr "호스트가 15분 이내에 다시 연결되지 않았습니다."
 msgid "The host hasn't answered."
 msgstr "호스트가 응답하지 않았습니다."
 
+msgid "The host is offline."
+msgstr "호스트가 오프라인입니다."
+
 msgid "The host is online. Pick it when you create a workspace."
 msgstr "호스트가 온라인입니다. 워크스페이스를 만들 때 선택하세요."
 
@@ -18267,6 +18299,9 @@ msgstr "이 호스트는 사용 중인 앱보다 뒤처져 있습니다. 워크�
 
 msgid "This host needs an update"
 msgstr "이 호스트에 업데이트가 필요합니다"
+
+msgid "This host runs an older host service. Update it to see its load."
+msgstr "이 호스트는 이전 host service를 실행 중입니다. 부하를 보려면 업데이트하세요."
 
 msgid "This invitation has already been accepted."
 msgstr "이 초대는 이미 수락되었습니다."
@@ -19071,6 +19106,9 @@ msgstr "알림 음소거 해제"
 
 msgid "Unnamed key"
 msgstr "이름 없는 키"
+
+msgid "Unnamed workspace"
+msgstr "이름 없는 워크스페이스"
 
 msgid "Unpaid"
 msgstr "미결제"

@@ -107,6 +107,7 @@ msgstr "{0, plural, one {# port aktif — sembunyikan detail} other {# port akti
 msgid "{0, plural, one {# active port — show details} other {# active ports — show details}}"
 msgstr "{0, plural, one {# port aktif — tampilkan detail} other {# port aktif — tampilkan detail}}"
 
+#. placeholder {0}: metrics.agents.active
 #. placeholder {0}: person.runningAgentCount
 msgid "{0, plural, one {# agent} other {# agents}}"
 msgstr "{0, plural, other {# agen}}"
@@ -5050,6 +5051,9 @@ msgstr "Salin kunci Anda sekarang — Anda tidak akan bisa melihatnya lagi."
 msgid "Copyright or trademark"
 msgstr "Hak cipta atau merek dagang"
 
+msgid "Cores"
+msgstr "Inti"
+
 msgid "Cost"
 msgstr "Biaya"
 
@@ -5230,6 +5234,9 @@ msgstr "Tidak bisa membaca file yang dilepas"
 
 msgid "Could not read the Google account. Please try again."
 msgstr "Tidak bisa membaca akun Google. Silakan coba lagi."
+
+msgid "Could not read the host's load."
+msgstr "Tidak dapat membaca beban host."
 
 msgid "Could not record cloud workspace"
 msgstr "Tidak bisa mencatat workspace cloud"
@@ -8574,6 +8581,9 @@ msgstr "Judul 3"
 msgid "Heart"
 msgstr "Hati"
 
+msgid "Heaviest workspaces"
+msgstr "Workspace terberat"
+
 msgid "Help"
 msgstr "Bantuan"
 
@@ -10040,11 +10050,17 @@ msgstr "Pratinjau langsung"
 msgid "llms.txt (index for AI agents)"
 msgstr "llms.txt (indeks untuk agen AI)"
 
+msgid "Load"
+msgstr "Beban"
+
 msgid "Load (1 min)"
 msgstr "Beban (1 mnt)"
 
 msgid "load agent settings"
 msgstr "memuat pengaturan agen"
+
+msgid "Load average"
+msgstr "Rata-rata beban"
 
 msgid "Load diff"
 msgstr "Muat diff"
@@ -13929,6 +13945,9 @@ msgstr "Radix memutar pembungkus panah tooltip per sisi,"
 msgid "Radix Tooltip docs"
 msgstr "Dokumentasi Radix Tooltip"
 
+msgid "RAM"
+msgstr "RAM"
+
 msgid "RAM in use"
 msgstr "RAM terpakai"
 
@@ -14278,6 +14297,12 @@ msgstr "Akses Jarak Jauh"
 
 msgid "Remote Access may be off"
 msgstr "Akses Jarak Jauh mungkin nonaktif"
+
+msgid "Remote host load"
+msgstr "Beban host jarak jauh"
+
+msgid "Remote hosts"
+msgstr "Host jarak jauh"
 
 msgid "Remote MCP server — connects over HTTP"
 msgstr "Server MCP remote — terhubung lewat HTTP"
@@ -15971,6 +15996,10 @@ msgstr "Pengaturan → Akses Jarak Jauh → “Izinkan akses jarak jauh ke peran
 
 msgid "Settings are not available for this device"
 msgstr "Pengaturan tidak tersedia untuk perangkat ini"
+
+#. placeholder {0}: host.name
+msgid "Settings for {0}"
+msgstr "Pengaturan untuk {0}"
 
 msgid "Settings..."
 msgstr "Pengaturan..."
@@ -17913,6 +17942,9 @@ msgstr "Host tidak kembali dalam lima belas menit."
 msgid "The host hasn't answered."
 msgstr "Host tidak merespons."
 
+msgid "The host is offline."
+msgstr "Host sedang offline."
+
 msgid "The host is online. Pick it when you create a workspace."
 msgstr "Host sudah online. Pilih host ini saat membuat workspace."
 
@@ -18267,6 +18299,9 @@ msgstr "Host ini tertinggal dari aplikasi yang Anda gunakan. Workspace masih ter
 
 msgid "This host needs an update"
 msgstr "Host ini perlu diperbarui"
+
+msgid "This host runs an older host service. Update it to see its load."
+msgstr "Host ini menjalankan host service versi lama. Perbarui untuk melihat bebannya."
 
 msgid "This invitation has already been accepted."
 msgstr "Undangan ini sudah diterima."
@@ -19071,6 +19106,9 @@ msgstr "Nyalakan notifikasi"
 
 msgid "Unnamed key"
 msgstr "Kunci tanpa nama"
+
+msgid "Unnamed workspace"
+msgstr "Workspace tanpa nama"
 
 msgid "Unpaid"
 msgstr "Belum dibayar"

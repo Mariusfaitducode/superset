@@ -107,6 +107,7 @@ msgstr "{0, plural, one {# actieve poort — details verbergen} other {# actieve
 msgid "{0, plural, one {# active port — show details} other {# active ports — show details}}"
 msgstr "{0, plural, one {# actieve poort — details tonen} other {# actieve poorten — details tonen}}"
 
+#. placeholder {0}: metrics.agents.active
 #. placeholder {0}: person.runningAgentCount
 msgid "{0, plural, one {# agent} other {# agents}}"
 msgstr "{0, plural, one {# agent} other {# agents}}"
@@ -5050,6 +5051,9 @@ msgstr "Kopieer je sleutel nu — je kunt hem later niet meer zien."
 msgid "Copyright or trademark"
 msgstr "Auteursrecht of handelsmerk"
 
+msgid "Cores"
+msgstr "Kernen"
+
 msgid "Cost"
 msgstr "Kosten"
 
@@ -5230,6 +5234,9 @@ msgstr "Kan de neergezette bestanden niet lezen"
 
 msgid "Could not read the Google account. Please try again."
 msgstr "Kan het Google-account niet uitlezen. Probeer het opnieuw."
+
+msgid "Could not read the host's load."
+msgstr "Kan de belasting van de host niet lezen."
 
 msgid "Could not record cloud workspace"
 msgstr "Kan cloudwerkruimte niet vastleggen"
@@ -8574,6 +8581,9 @@ msgstr "Kop 3"
 msgid "Heart"
 msgstr "Hart"
 
+msgid "Heaviest workspaces"
+msgstr "Zwaarste workspaces"
+
 msgid "Help"
 msgstr "Help"
 
@@ -10040,11 +10050,17 @@ msgstr "Live preview"
 msgid "llms.txt (index for AI agents)"
 msgstr "llms.txt (index voor AI-agents)"
 
+msgid "Load"
+msgstr "Belasting"
+
 msgid "Load (1 min)"
 msgstr "Belasting (1 min)"
 
 msgid "load agent settings"
 msgstr "agentinstellingen laden"
+
+msgid "Load average"
+msgstr "Gemiddelde belasting"
 
 msgid "Load diff"
 msgstr "Diff laden"
@@ -13929,6 +13945,9 @@ msgstr "Radix roteert de wrapper van de tooltip-pijl per zijde,"
 msgid "Radix Tooltip docs"
 msgstr "Radix Tooltip-docs"
 
+msgid "RAM"
+msgstr "RAM"
+
 msgid "RAM in use"
 msgstr "RAM in gebruik"
 
@@ -14278,6 +14297,12 @@ msgstr "Externe toegang"
 
 msgid "Remote Access may be off"
 msgstr "Externe toegang staat mogelijk uit"
+
+msgid "Remote host load"
+msgstr "Belasting van externe hosts"
+
+msgid "Remote hosts"
+msgstr "Externe hosts"
 
 msgid "Remote MCP server — connects over HTTP"
 msgstr "Externe MCP-server — verbindt via HTTP"
@@ -15971,6 +15996,10 @@ msgstr "Instellingen → Externe toegang → “Externe toegang tot dit apparaat
 
 msgid "Settings are not available for this device"
 msgstr "Instellingen zijn niet beschikbaar voor dit apparaat"
+
+#. placeholder {0}: host.name
+msgid "Settings for {0}"
+msgstr "Instellingen voor {0}"
 
 msgid "Settings..."
 msgstr "Instellingen..."
@@ -17913,6 +17942,9 @@ msgstr "De host was na vijftien minuten nog niet terug."
 msgid "The host hasn't answered."
 msgstr "De host heeft niet geantwoord."
 
+msgid "The host is offline."
+msgstr "De host is offline."
+
 msgid "The host is online. Pick it when you create a workspace."
 msgstr "De host is online. Kies hem wanneer je een werkruimte aanmaakt."
 
@@ -18267,6 +18299,9 @@ msgstr "Deze host loopt achter op de app die je gebruikt. Werkruimtes openen nog
 
 msgid "This host needs an update"
 msgstr "Deze host heeft een update nodig"
+
+msgid "This host runs an older host service. Update it to see its load."
+msgstr "Deze host draait een oudere host service. Werk deze bij om de belasting te zien."
 
 msgid "This invitation has already been accepted."
 msgstr "Deze uitnodiging is al geaccepteerd."
@@ -19071,6 +19106,9 @@ msgstr "Dempen van meldingen opheffen"
 
 msgid "Unnamed key"
 msgstr "Naamloze sleutel"
+
+msgid "Unnamed workspace"
+msgstr "Naamloze workspace"
 
 msgid "Unpaid"
 msgstr "Onbetaald"

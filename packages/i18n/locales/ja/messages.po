@@ -107,6 +107,7 @@ msgstr "{0, plural, one {#個のアクティブなポート — 詳細を隠す}
 msgid "{0, plural, one {# active port — show details} other {# active ports — show details}}"
 msgstr "{0, plural, one {#個のアクティブなポート — 詳細を表示} other {#個のアクティブなポート — 詳細を表示}}"
 
+#. placeholder {0}: metrics.agents.active
 #. placeholder {0}: person.runningAgentCount
 msgid "{0, plural, one {# agent} other {# agents}}"
 msgstr "{0, plural, other {エージェント # 件}}"
@@ -5050,6 +5051,9 @@ msgstr "キーを今すぐコピーしてください — 後で再表示する�
 msgid "Copyright or trademark"
 msgstr "著作権または商標"
 
+msgid "Cores"
+msgstr "コア"
+
 msgid "Cost"
 msgstr "コスト"
 
@@ -5230,6 +5234,9 @@ msgstr "ドロップされたファイルを読み取れませんでした"
 
 msgid "Could not read the Google account. Please try again."
 msgstr "Googleアカウントを読み取れませんでした。もう一度お試しください。"
+
+msgid "Could not read the host's load."
+msgstr "ホストの負荷を読み取れませんでした。"
 
 msgid "Could not record cloud workspace"
 msgstr "クラウドワークスペースを記録できませんでした"
@@ -8574,6 +8581,9 @@ msgstr "見出し3"
 msgid "Heart"
 msgstr "ハート"
 
+msgid "Heaviest workspaces"
+msgstr "負荷の大きいワークスペース"
+
 msgid "Help"
 msgstr "ヘルプ"
 
@@ -10040,11 +10050,17 @@ msgstr "ライブプレビュー"
 msgid "llms.txt (index for AI agents)"
 msgstr "llms.txt(AIエージェント向けの索引)"
 
+msgid "Load"
+msgstr "負荷"
+
 msgid "Load (1 min)"
 msgstr "負荷 (1 分)"
 
 msgid "load agent settings"
 msgstr "エージェント設定を読み込む"
+
+msgid "Load average"
+msgstr "ロードアベレージ"
 
 msgid "Load diff"
 msgstr "差分を読み込む"
@@ -13929,6 +13945,9 @@ msgstr "Radixはtooltipの矢印ラッパーを辺ごとに回転させるため
 msgid "Radix Tooltip docs"
 msgstr "Radix Tooltipのドキュメント"
 
+msgid "RAM"
+msgstr "RAM"
+
 msgid "RAM in use"
 msgstr "使用中の RAM"
 
@@ -14278,6 +14297,12 @@ msgstr "リモートアクセス"
 
 msgid "Remote Access may be off"
 msgstr "リモートアクセスがオフかもしれません"
+
+msgid "Remote host load"
+msgstr "リモートホストの負荷"
+
+msgid "Remote hosts"
+msgstr "リモートホスト"
 
 msgid "Remote MCP server — connects over HTTP"
 msgstr "リモートMCPサーバー — HTTP経由で接続"
@@ -15971,6 +15996,10 @@ msgstr "設定 → リモートアクセス →「リレー経由でこのデバ
 
 msgid "Settings are not available for this device"
 msgstr "このデバイスでは設定を利用できません"
+
+#. placeholder {0}: host.name
+msgid "Settings for {0}"
+msgstr "{0} の設定"
 
 msgid "Settings..."
 msgstr "設定..."
@@ -17913,6 +17942,9 @@ msgstr "ホストが15分以内に復帰しませんでした。"
 msgid "The host hasn't answered."
 msgstr "ホストからの応答がありません。"
 
+msgid "The host is offline."
+msgstr "ホストはオフラインです。"
+
 msgid "The host is online. Pick it when you create a workspace."
 msgstr "ホストはオンラインです。ワークスペースを作成するときに選択してください。"
 
@@ -18267,6 +18299,9 @@ msgstr "このホストは使用中のアプリより古いバージョンです
 
 msgid "This host needs an update"
 msgstr "このホストは更新が必要です"
+
+msgid "This host runs an older host service. Update it to see its load."
+msgstr "このホストは古い host service を実行しています。負荷を表示するには更新してください。"
 
 msgid "This invitation has already been accepted."
 msgstr "この招待はすでに承諾されています。"
@@ -19071,6 +19106,9 @@ msgstr "通知のミュートを解除"
 
 msgid "Unnamed key"
 msgstr "名称未設定のキー"
+
+msgid "Unnamed workspace"
+msgstr "名前のないワークスペース"
 
 msgid "Unpaid"
 msgstr "未払い"

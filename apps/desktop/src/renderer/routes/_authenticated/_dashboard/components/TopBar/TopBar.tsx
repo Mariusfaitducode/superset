@@ -8,6 +8,7 @@ import { useZoomFactor } from "renderer/hooks/useZoomFactor";
 import { electronTrpc } from "renderer/lib/electron-trpc";
 import { useWorkspaceSidebarStore } from "renderer/stores/workspace-sidebar-state";
 import { AppMenuButton } from "../AppMenuButton";
+import { HostMonitor } from "../HostMonitor";
 import { NavigationControls } from "../NavigationControls";
 import { PortsDropdown } from "../PortsDropdown";
 import { SidebarToggle } from "../SidebarToggle";
@@ -71,6 +72,7 @@ export function TopBar() {
 				{/* When the expanded sidebar hosts the chrome, its header also hosts
 				    the ports pill — don't render a duplicate here. */}
 				{!sidebarHostsChrome && <PortsDropdown />}
+				{!sidebarHostsChrome && <HostMonitor variant="full" align="end" />}
 				{!isOnline && (
 					<div className="flex items-center gap-1.5 text-xs text-muted-foreground bg-muted px-2 py-1 rounded">
 						<HiOutlineWifi className="size-3.5" />

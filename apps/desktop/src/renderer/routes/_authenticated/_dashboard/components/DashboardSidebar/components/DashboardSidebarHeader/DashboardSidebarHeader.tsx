@@ -46,6 +46,7 @@ import { cloudTrpc } from "renderer/lib/cloud-trpc";
 import { electronTrpc } from "renderer/lib/electron-trpc";
 import { useFolderFirstImport } from "renderer/routes/_authenticated/_dashboard/components/AddRepositoryModals/hooks/useFolderFirstImport";
 import { AppMenuButton } from "renderer/routes/_authenticated/_dashboard/components/AppMenuButton";
+import { HostMonitor } from "renderer/routes/_authenticated/_dashboard/components/HostMonitor";
 import { NavigationControls } from "renderer/routes/_authenticated/_dashboard/components/NavigationControls";
 import { OfflineBadge } from "renderer/routes/_authenticated/_dashboard/components/OfflineBadge";
 import { PortsDropdown } from "renderer/routes/_authenticated/_dashboard/components/PortsDropdown";
@@ -721,6 +722,7 @@ export function DashboardSidebarHeader({
 					{/* Lives here (persistent chrome) rather than the workspace tab
 					    bar, which remounts on every navigation. */}
 					<PortsDropdown align="start" />
+					<HostMonitor />
 					<OfflineBadge />
 				</ZoomStable>
 				<div className="drag h-full min-w-0 flex-1" />

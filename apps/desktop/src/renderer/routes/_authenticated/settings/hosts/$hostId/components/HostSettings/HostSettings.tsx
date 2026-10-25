@@ -18,6 +18,7 @@ import type { CandidateRow } from "./components/AddMemberDropdown";
 import { AddMemberDropdown } from "./components/AddMemberDropdown";
 import { DeleteHostSection } from "./components/DeleteHostSection";
 import { HostHeader } from "./components/HostHeader";
+import { HostMetricsSection } from "./components/HostMetricsSection";
 import { HostServiceSection } from "./components/HostServiceSection";
 import type { MemberRowData } from "./components/MembersTable";
 import { MembersTable } from "./components/MembersTable";
@@ -186,6 +187,11 @@ export function HostSettings({ hostId }: HostSettingsProps) {
 						installSource: host.installSource,
 					}}
 					lastSeenAt={lastSeenAt}
+				/>
+
+				<HostMetricsSection
+					hostUrl={hostUrl}
+					isOnline={hostIsOnline || hostId === machineId}
 				/>
 
 				<WorktreeLocationSection

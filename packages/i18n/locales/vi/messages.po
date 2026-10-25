@@ -107,6 +107,7 @@ msgstr "{0, plural, one {# cổng đang hoạt động — ẩn chi tiết} othe
 msgid "{0, plural, one {# active port — show details} other {# active ports — show details}}"
 msgstr "{0, plural, one {# cổng đang hoạt động — hiện chi tiết} other {# cổng đang hoạt động — hiện chi tiết}}"
 
+#. placeholder {0}: metrics.agents.active
 #. placeholder {0}: person.runningAgentCount
 msgid "{0, plural, one {# agent} other {# agents}}"
 msgstr "{0, plural, other {# agent}}"
@@ -5050,6 +5051,9 @@ msgstr "Hãy sao chép khóa ngay — bạn sẽ không xem lại được nữa
 msgid "Copyright or trademark"
 msgstr "Bản quyền hoặc nhãn hiệu"
 
+msgid "Cores"
+msgstr "Lõi"
+
 msgid "Cost"
 msgstr "Chi phí"
 
@@ -5230,6 +5234,9 @@ msgstr "Không thể đọc các tệp đã thả"
 
 msgid "Could not read the Google account. Please try again."
 msgstr "Không đọc được tài khoản Google. Vui lòng thử lại."
+
+msgid "Could not read the host's load."
+msgstr "Không thể đọc tải của máy chủ."
 
 msgid "Could not record cloud workspace"
 msgstr "Không thể ghi nhận workspace trên cloud"
@@ -8574,6 +8581,9 @@ msgstr "Tiêu đề 3"
 msgid "Heart"
 msgstr "Trái tim"
 
+msgid "Heaviest workspaces"
+msgstr "Workspace nặng nhất"
+
 msgid "Help"
 msgstr "Trợ giúp"
 
@@ -10040,11 +10050,17 @@ msgstr "Xem trước trực tiếp"
 msgid "llms.txt (index for AI agents)"
 msgstr "llms.txt (chỉ mục cho agent AI)"
 
+msgid "Load"
+msgstr "Tải"
+
 msgid "Load (1 min)"
 msgstr "Tải (1 phút)"
 
 msgid "load agent settings"
 msgstr "tải cài đặt agent"
+
+msgid "Load average"
+msgstr "Tải trung bình"
 
 msgid "Load diff"
 msgstr "Tải diff"
@@ -13929,6 +13945,9 @@ msgstr "Radix xoay lớp bọc mũi tên tooltip theo từng phía,"
 msgid "Radix Tooltip docs"
 msgstr "Tài liệu Radix Tooltip"
 
+msgid "RAM"
+msgstr "RAM"
+
 msgid "RAM in use"
 msgstr "RAM đang dùng"
 
@@ -14278,6 +14297,12 @@ msgstr "Truy cập từ xa"
 
 msgid "Remote Access may be off"
 msgstr "Truy cập từ xa có thể đang tắt"
+
+msgid "Remote host load"
+msgstr "Tải máy chủ từ xa"
+
+msgid "Remote hosts"
+msgstr "Máy chủ từ xa"
 
 msgid "Remote MCP server — connects over HTTP"
 msgstr "Server MCP từ xa — kết nối qua HTTP"
@@ -15971,6 +15996,10 @@ msgstr "Cài đặt → Truy cập từ xa → “Cho phép truy cập từ xa v
 
 msgid "Settings are not available for this device"
 msgstr "Không có cài đặt cho thiết bị này"
+
+#. placeholder {0}: host.name
+msgid "Settings for {0}"
+msgstr "Cài đặt cho {0}"
 
 msgid "Settings..."
 msgstr "Cài đặt..."
@@ -17913,6 +17942,9 @@ msgstr "Máy chủ không hoạt động trở lại trong vòng mười lăm ph
 msgid "The host hasn't answered."
 msgstr "Host không phản hồi."
 
+msgid "The host is offline."
+msgstr "Máy chủ đang ngoại tuyến."
+
 msgid "The host is online. Pick it when you create a workspace."
 msgstr "Host đã trực tuyến. Hãy chọn nó khi tạo workspace."
 
@@ -18267,6 +18299,9 @@ msgstr "Máy chủ này cũ hơn ứng dụng bạn đang dùng. Workspace vẫn
 
 msgid "This host needs an update"
 msgstr "Host này cần được cập nhật"
+
+msgid "This host runs an older host service. Update it to see its load."
+msgstr "Máy chủ này chạy host service cũ. Hãy cập nhật để xem tải."
 
 msgid "This invitation has already been accepted."
 msgstr "Lời mời này đã được chấp nhận."
@@ -19071,6 +19106,9 @@ msgstr "Bật lại thông báo"
 
 msgid "Unnamed key"
 msgstr "Khóa chưa đặt tên"
+
+msgid "Unnamed workspace"
+msgstr "Workspace chưa đặt tên"
 
 msgid "Unpaid"
 msgstr "Chưa thanh toán"

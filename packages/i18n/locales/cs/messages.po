@@ -107,6 +107,7 @@ msgstr "{0, plural, one {# aktivní port — skrýt podrobnosti} few {# aktivní
 msgid "{0, plural, one {# active port — show details} other {# active ports — show details}}"
 msgstr "{0, plural, one {# aktivní port — zobrazit podrobnosti} few {# aktivní porty — zobrazit podrobnosti} many {# aktivního portu — zobrazit podrobnosti} other {# aktivních portů — zobrazit podrobnosti}}"
 
+#. placeholder {0}: metrics.agents.active
 #. placeholder {0}: person.runningAgentCount
 msgid "{0, plural, one {# agent} other {# agents}}"
 msgstr "{0, plural, one {# agent} few {# agenti} many {# agenta} other {# agentů}}"
@@ -5050,6 +5051,9 @@ msgstr "Zkopírujte si klíč teď — už ho znovu neuvidíte."
 msgid "Copyright or trademark"
 msgstr "Autorská práva nebo ochranná známka"
 
+msgid "Cores"
+msgstr "Jádra"
+
 msgid "Cost"
 msgstr "Náklady"
 
@@ -5230,6 +5234,9 @@ msgstr "Přetažené soubory se nepodařilo přečíst"
 
 msgid "Could not read the Google account. Please try again."
 msgstr "Nepodařilo se přečíst účet Google. Zkuste to prosím znovu."
+
+msgid "Could not read the host's load."
+msgstr "Zatížení hostitele se nepodařilo načíst."
 
 msgid "Could not record cloud workspace"
 msgstr "Nepodařilo se zaznamenat cloudový pracovní prostor"
@@ -8574,6 +8581,9 @@ msgstr "Nadpis 3"
 msgid "Heart"
 msgstr "Srdce"
 
+msgid "Heaviest workspaces"
+msgstr "Nejnáročnější pracovní prostory"
+
 msgid "Help"
 msgstr "Nápověda"
 
@@ -10040,11 +10050,17 @@ msgstr "Živý náhled"
 msgid "llms.txt (index for AI agents)"
 msgstr "llms.txt (index pro AI agenty)"
 
+msgid "Load"
+msgstr "Zatížení"
+
 msgid "Load (1 min)"
 msgstr "Zátěž (1 min)"
 
 msgid "load agent settings"
 msgstr "načíst nastavení agenta"
+
+msgid "Load average"
+msgstr "Průměrné zatížení"
 
 msgid "Load diff"
 msgstr "Načíst diff"
@@ -13929,6 +13945,9 @@ msgstr "Radix otáčí obal šipky tooltipu podle strany,"
 msgid "Radix Tooltip docs"
 msgstr "Dokumentace Radix Tooltip"
 
+msgid "RAM"
+msgstr "RAM"
+
 msgid "RAM in use"
 msgstr "Využitá RAM"
 
@@ -14278,6 +14297,12 @@ msgstr "Vzdálený přístup"
 
 msgid "Remote Access may be off"
 msgstr "Vzdálený přístup může být vypnutý"
+
+msgid "Remote host load"
+msgstr "Zatížení vzdálených hostitelů"
+
+msgid "Remote hosts"
+msgstr "Vzdálení hostitelé"
 
 msgid "Remote MCP server — connects over HTTP"
 msgstr "Vzdálený MCP server — připojuje se přes HTTP"
@@ -15971,6 +15996,10 @@ msgstr "Nastavení → Vzdálený přístup → „Povolit vzdálený přístup 
 
 msgid "Settings are not available for this device"
 msgstr "Nastavení nejsou pro toto zařízení dostupná"
+
+#. placeholder {0}: host.name
+msgid "Settings for {0}"
+msgstr "Nastavení pro {0}"
 
 msgid "Settings..."
 msgstr "Nastavení..."
@@ -17913,6 +17942,9 @@ msgstr "Hostitel se neobnovil do patnácti minut."
 msgid "The host hasn't answered."
 msgstr "Host neodpověděl."
 
+msgid "The host is offline."
+msgstr "Hostitel je offline."
+
 msgid "The host is online. Pick it when you create a workspace."
 msgstr "Host je online. Vyberte ho při vytváření pracovního prostoru."
 
@@ -18267,6 +18299,9 @@ msgstr "Tento hostitel zaostává za aplikací, kterou používáte. Pracovní p
 
 msgid "This host needs an update"
 msgstr "Tento host potřebuje aktualizaci"
+
+msgid "This host runs an older host service. Update it to see its load."
+msgstr "Tento hostitel používá starší host service. Aktualizujte ji, abyste viděli jeho zatížení."
 
 msgid "This invitation has already been accepted."
 msgstr "Tato pozvánka už byla přijata."
@@ -19071,6 +19106,9 @@ msgstr "Zrušit ztlumení oznámení"
 
 msgid "Unnamed key"
 msgstr "Nepojmenovaný klíč"
+
+msgid "Unnamed workspace"
+msgstr "Nepojmenovaný pracovní prostor"
 
 msgid "Unpaid"
 msgstr "Nezaplacená"

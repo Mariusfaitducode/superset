@@ -107,6 +107,7 @@ msgstr "{0, plural, one {#個活動埠 — 隱藏詳情} other {#個活動埠 �
 msgid "{0, plural, one {# active port — show details} other {# active ports — show details}}"
 msgstr "{0, plural, one {#個活動埠 — 顯示詳情} other {#個活動埠 — 顯示詳情}}"
 
+#. placeholder {0}: metrics.agents.active
 #. placeholder {0}: person.runningAgentCount
 msgid "{0, plural, one {# agent} other {# agents}}"
 msgstr "{0, plural, other {# 個代理}}"
@@ -5050,6 +5051,9 @@ msgstr "請立即複製你的金鑰，之後將無法再次檢視。"
 msgid "Copyright or trademark"
 msgstr "著作權或商標"
 
+msgid "Cores"
+msgstr "核心"
+
 msgid "Cost"
 msgstr "費用"
 
@@ -5230,6 +5234,9 @@ msgstr "無法讀取拖入的檔案"
 
 msgid "Could not read the Google account. Please try again."
 msgstr "無法讀取該Google帳戶。請重試。"
+
+msgid "Could not read the host's load."
+msgstr "無法讀取主機負載。"
 
 msgid "Could not record cloud workspace"
 msgstr "無法記錄雲端工作區"
@@ -8574,6 +8581,9 @@ msgstr "標題3"
 msgid "Heart"
 msgstr "心形"
 
+msgid "Heaviest workspaces"
+msgstr "佔用最多的工作區"
+
 msgid "Help"
 msgstr "幫助"
 
@@ -10040,11 +10050,17 @@ msgstr "即時預覽"
 msgid "llms.txt (index for AI agents)"
 msgstr "llms.txt（面向AI代理程式的索引）"
 
+msgid "Load"
+msgstr "負載"
+
 msgid "Load (1 min)"
 msgstr "負載（1 分鐘）"
 
 msgid "load agent settings"
 msgstr "載入代理程式設定"
+
+msgid "Load average"
+msgstr "平均負載"
 
 msgid "Load diff"
 msgstr "載入差異"
@@ -13929,6 +13945,9 @@ msgstr "Radix會按不同方向旋轉tooltip的箭頭容器，"
 msgid "Radix Tooltip docs"
 msgstr "Radix Tooltip文件"
 
+msgid "RAM"
+msgstr "記憶體"
+
 msgid "RAM in use"
 msgstr "已用 RAM"
 
@@ -14278,6 +14297,12 @@ msgstr "遠端存取"
 
 msgid "Remote Access may be off"
 msgstr "遠端存取可能已關閉"
+
+msgid "Remote host load"
+msgstr "遠端主機負載"
+
+msgid "Remote hosts"
+msgstr "遠端主機"
 
 msgid "Remote MCP server — connects over HTTP"
 msgstr "遠端MCP伺服器，通過HTTP連線"
@@ -15971,6 +15996,10 @@ msgstr "設定 → 遠端存取 → 「允許遠端工作區通過中繼存取�
 
 msgid "Settings are not available for this device"
 msgstr "此裝置無法使用設定"
+
+#. placeholder {0}: host.name
+msgid "Settings for {0}"
+msgstr "{0} 的設定"
 
 msgid "Settings..."
 msgstr "設定..."
@@ -17913,6 +17942,9 @@ msgstr "主機未在十五分鐘內恢復。"
 msgid "The host hasn't answered."
 msgstr "主機未回應。"
 
+msgid "The host is offline."
+msgstr "主機處於離線狀態。"
+
 msgid "The host is online. Pick it when you create a workspace."
 msgstr "主機已上線。建立工作區時選擇它。"
 
@@ -18267,6 +18299,9 @@ msgstr "此主機落後於你正在使用的應用程式。工作區仍可開啟
 
 msgid "This host needs an update"
 msgstr "此主機需要更新"
+
+msgid "This host runs an older host service. Update it to see its load."
+msgstr "此主機執行的是舊版 host service。請更新以查看其負載。"
 
 msgid "This invitation has already been accepted."
 msgstr "這個邀請已被接受。"
@@ -19071,6 +19106,9 @@ msgstr "取消靜音通知"
 
 msgid "Unnamed key"
 msgstr "未命名金鑰"
+
+msgid "Unnamed workspace"
+msgstr "未命名工作區"
 
 msgid "Unpaid"
 msgstr "未支付"

@@ -107,6 +107,7 @@ msgstr "{0, plural, one {# porta ativa — ocultar detalhes} other {# portas ati
 msgid "{0, plural, one {# active port — show details} other {# active ports — show details}}"
 msgstr "{0, plural, one {# porta ativa — mostrar detalhes} other {# portas ativas — mostrar detalhes}}"
 
+#. placeholder {0}: metrics.agents.active
 #. placeholder {0}: person.runningAgentCount
 msgid "{0, plural, one {# agent} other {# agents}}"
 msgstr "{0, plural, one {# agente} other {# agentes}}"
@@ -5050,6 +5051,9 @@ msgstr "Copie sua chave agora — você não vai poder vê-la de novo."
 msgid "Copyright or trademark"
 msgstr "Direitos autorais ou marca registrada"
 
+msgid "Cores"
+msgstr "Núcleos"
+
 msgid "Cost"
 msgstr "Custo"
 
@@ -5230,6 +5234,9 @@ msgstr "Não foi possível ler os arquivos soltos"
 
 msgid "Could not read the Google account. Please try again."
 msgstr "Não foi possível ler a conta Google. Tente novamente."
+
+msgid "Could not read the host's load."
+msgstr "Não foi possível ler a carga do host."
 
 msgid "Could not record cloud workspace"
 msgstr "Não foi possível registrar a área de trabalho na nuvem"
@@ -8574,6 +8581,9 @@ msgstr "Título 3"
 msgid "Heart"
 msgstr "Coração"
 
+msgid "Heaviest workspaces"
+msgstr "Workspaces mais pesados"
+
 msgid "Help"
 msgstr "Ajuda"
 
@@ -10040,11 +10050,17 @@ msgstr "Prévia ao vivo"
 msgid "llms.txt (index for AI agents)"
 msgstr "llms.txt (índice para agentes de IA)"
 
+msgid "Load"
+msgstr "Carga"
+
 msgid "Load (1 min)"
 msgstr "Carga (1 min)"
 
 msgid "load agent settings"
 msgstr "carregar as configurações do agente"
+
+msgid "Load average"
+msgstr "Carga média"
 
 msgid "Load diff"
 msgstr "Carregar o diff"
@@ -13929,6 +13945,9 @@ msgstr "O Radix gira o wrapper da seta do tooltip conforme o lado,"
 msgid "Radix Tooltip docs"
 msgstr "Documentação do Radix Tooltip"
 
+msgid "RAM"
+msgstr "RAM"
+
 msgid "RAM in use"
 msgstr "RAM em uso"
 
@@ -14278,6 +14297,12 @@ msgstr "Acesso remoto"
 
 msgid "Remote Access may be off"
 msgstr "O acesso remoto pode estar desativado"
+
+msgid "Remote host load"
+msgstr "Carga dos hosts remotos"
+
+msgid "Remote hosts"
+msgstr "Hosts remotos"
 
 msgid "Remote MCP server — connects over HTTP"
 msgstr "Servidor MCP remoto — conecta por HTTP"
@@ -15971,6 +15996,10 @@ msgstr "Configurações → Acesso remoto → “Permitir acesso remoto a este d
 
 msgid "Settings are not available for this device"
 msgstr "As configurações não estão disponíveis para este dispositivo"
+
+#. placeholder {0}: host.name
+msgid "Settings for {0}"
+msgstr "Configurações de {0}"
 
 msgid "Settings..."
 msgstr "Configurações..."
@@ -17913,6 +17942,9 @@ msgstr "O host não voltou a ficar disponível em quinze minutos."
 msgid "The host hasn't answered."
 msgstr "O host não respondeu."
 
+msgid "The host is offline."
+msgstr "O host está offline."
+
 msgid "The host is online. Pick it when you create a workspace."
 msgstr "O host está online. Escolha-o ao criar uma área de trabalho."
 
@@ -18267,6 +18299,9 @@ msgstr "Este host está atrás do app que você usa. Os workspaces ainda abrem, 
 
 msgid "This host needs an update"
 msgstr "Este host precisa de atualização"
+
+msgid "This host runs an older host service. Update it to see its load."
+msgstr "Este host executa um host service antigo. Atualize-o para ver a carga."
 
 msgid "This invitation has already been accepted."
 msgstr "Este convite já foi aceito."
@@ -19071,6 +19106,9 @@ msgstr "Reativar notificações"
 
 msgid "Unnamed key"
 msgstr "Chave sem nome"
+
+msgid "Unnamed workspace"
+msgstr "Workspace sem nome"
 
 msgid "Unpaid"
 msgstr "Não paga"
