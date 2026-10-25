@@ -485,6 +485,10 @@ msgstr "{0} はこのマシンには設定されていますが、アカウン�
 msgid "{0} more — refine your search"
 msgstr "他{0}件 — 検索条件を絞ってください"
 
+#. placeholder {0}: section.hidden
+msgid "{0} more, refine the search"
+msgstr "他 {0} 件、検索を絞り込んでください"
+
 #. placeholder {0}: index + 1
 #. placeholder {1}: pages.length
 msgctxt "question progress"
@@ -521,6 +525,10 @@ msgstr "{0}件のプロジェクト"
 #. placeholder {0}: conversation.queuedPrompts
 msgid "{0} queued messages"
 msgstr "{0} 件のキュー済みメッセージ"
+
+#. placeholder {0}: selected.length
+msgid "{0} refs"
+msgstr "{0} 個の ref"
 
 #. placeholder {0}: summary.running
 msgid "{0} running"
@@ -1795,6 +1803,9 @@ msgstr "プロジェクト設定でライフサイクルの実行スクリプト
 msgid "Add a project to see GitHub issues."
 msgstr "プロジェクトを追加するとGitHub issueが表示されます。"
 
+msgid "Add a project to see its git graph."
+msgstr "プロジェクトを追加すると Git グラフが表示されます。"
+
 msgid "Add a project to see pull requests."
 msgstr "プロジェクトを追加するとプルリクエストが表示されます。"
 
@@ -2222,6 +2233,9 @@ msgstr "すべての担当者"
 
 msgid "All authors"
 msgstr "すべての作成者"
+
+msgid "All branches"
+msgstr "すべてのブランチ"
 
 msgid "All changes saved"
 msgstr "すべての変更を保存しました"
@@ -4982,6 +4996,10 @@ msgstr "コピーしました!"
 msgid "Copy"
 msgstr "コピー"
 
+#. placeholder {0}: commit.hash
+msgid "Copy {0}"
+msgstr "{0} をコピー"
+
 msgid "Copy agent session ID"
 msgstr "エージェントセッションIDをコピー"
 
@@ -6077,6 +6095,9 @@ msgstr "データとAPI"
 
 msgid "Data display"
 msgstr "データ表示"
+
+msgid "Date"
+msgstr "日付"
 
 msgid "Date created"
 msgstr "作成日"
@@ -8489,6 +8510,9 @@ msgstr "Gitとワークツリー"
 msgid "Git author name"
 msgstr "Gitの作成者名"
 
+msgid "Git graph"
+msgstr "Git グラフ"
+
 msgid "GitHub"
 msgstr "GitHub"
 
@@ -8618,6 +8642,9 @@ msgstr "Supersetに必要なOS権限を許可します。"
 
 msgid "Granted"
 msgstr "許可済み"
+
+msgid "Graph"
+msgstr "グラフ"
 
 msgid "Grayscale"
 msgstr "グレイスケール"
@@ -9221,6 +9248,10 @@ msgstr "進行中"
 
 msgid "In Progress"
 msgstr "進行中"
+
+#. placeholder {0}: badge.syncedRemotes.join(", ")
+msgid "In sync with {0}"
+msgstr "{0} と同期済み"
 
 msgid "In the Superset desktop app, open <0>Settings → Appearance → Theme</0>."
 msgstr "Supersetデスクトップアプリで<0>設定 → 外観 → テーマ</0>を開きます。"
@@ -10197,6 +10228,9 @@ msgstr "llms.txt(AIエージェント向けの索引)"
 msgid "Load (1 min)"
 msgstr "負荷 (1 分)"
 
+msgid "Load {PAGE_SIZE} more commits"
+msgstr "さらに {PAGE_SIZE} 件のコミットを読み込む"
+
 msgid "load agent settings"
 msgstr "エージェント設定を読み込む"
 
@@ -10254,6 +10288,9 @@ msgstr "GitHubの詳細を読み込み中"
 msgid "Loading groups…"
 msgstr "グループを読み込み中…"
 
+msgid "Loading history…"
+msgstr "履歴を読み込み中…"
+
 msgid "Loading issue…"
 msgstr "Issueを読み込み中…"
 
@@ -10310,6 +10347,9 @@ msgstr "読み込み中…"
 
 msgid "Local"
 msgstr "ローカル"
+
+msgid "Local branches"
+msgstr "ローカルブランチ"
 
 msgid "Local Device"
 msgstr "ローカルデバイス"
@@ -10738,6 +10778,9 @@ msgstr "メッセージ"
 msgid "Message in channel"
 msgstr "チャンネルのメッセージ"
 
+msgid "Message, author, hash, branch"
+msgstr "メッセージ、作成者、ハッシュ、ブランチ"
+
 msgid "Message..."
 msgstr "メッセージ..."
 
@@ -11008,6 +11051,9 @@ msgstr "自分の最終メッセージ"
 
 msgid "My Tasks"
 msgstr "マイタスク"
+
+msgid "My worktrees"
+msgstr "自分のワークツリー"
 
 msgid "Mystery Machinist"
 msgstr "謎の機械工"
@@ -11473,6 +11519,9 @@ msgstr "コメントはまだありません。"
 
 msgid "No comments yet. Turn on comment mode and click anything on the page to start one."
 msgstr "まだコメントはありません。コメントモードをオンにして、ページ上の要素をクリックすると開始できます。"
+
+msgid "No commits for these filters."
+msgstr "このフィルターに該当するコミットはありません。"
 
 msgid "No commits on this branch yet."
 msgstr "このブランチにはまだコミットがありません。"
@@ -12237,6 +12286,9 @@ msgstr "1週間以上前"
 msgid "on {cores} cores"
 msgstr "{cores} コア"
 
+msgid "on {headBranch}"
+msgstr "{headBranch} 上"
+
 msgid "on {offScopeHostName} — won't run here"
 msgstr "{offScopeHostName}上 — ここでは実行されません"
 
@@ -12329,6 +12381,9 @@ msgstr "プランを変更できるのは組織のオーナーのみです。オ
 
 msgid "Only available on macOS."
 msgstr "macOSでのみ利用できます。"
+
+msgid "Only branches with a worktree or a conversation"
+msgstr "ワークツリーか会話があるブランチのみ"
 
 msgid "Only host owners can change membership"
 msgstr "メンバーシップを変更できるのはホストのオーナーのみです"
@@ -14395,6 +14450,10 @@ msgstr "参照先"
 msgid "Refresh"
 msgstr "更新"
 
+#. placeholder {0}: log.data.durationMs
+msgid "Refresh (last load {0} ms)"
+msgstr "更新 (前回 {0} ms)"
+
 #. placeholder {0}: error.message
 msgid "Refresh failed: {0}"
 msgstr "更新に失敗しました: {0}"
@@ -14500,6 +14559,9 @@ msgstr "リモートアクセス"
 
 msgid "Remote Access may be off"
 msgstr "リモートアクセスがオフかもしれません"
+
+msgid "Remote branches"
+msgstr "リモートブランチ"
 
 msgid "Remote MCP server — connects over HTTP"
 msgstr "リモートMCPサーバー — HTTP経由で接続"
@@ -15622,6 +15684,9 @@ msgstr "作成者を検索…"
 msgid "Search automations"
 msgstr "オートメーションを検索"
 
+msgid "Search branches and tags"
+msgstr "ブランチとタグを検索"
+
 msgid "Search branches..."
 msgstr "ブランチを検索..."
 
@@ -16333,6 +16398,9 @@ msgstr "チャットの入力欄にマイクを表示します。Codex が ChatG
 msgid "Show a Usage button in the home sidebar, under Pull requests"
 msgstr "ホームのサイドバーの「プルリクエスト」の下に「使用量」ボタンを表示"
 
+msgid "Show all"
+msgstr "すべて表示"
+
 msgid "Show all {count}"
 msgstr "{count}件すべて表示"
 
@@ -16426,6 +16494,10 @@ msgstr "もっと見る"
 msgid "Show on Sidebar"
 msgstr "サイドバーに表示"
 
+#. placeholder {0}: badge.label
+msgid "Show only {0}"
+msgstr "{0} のみ表示"
+
 msgid "Show open items"
 msgstr "オープンな項目を表示"
 
@@ -16482,6 +16554,9 @@ msgstr "サイドバーに使用状況タブを表示"
 
 msgid "showArrow opt-in"
 msgstr "showArrowで有効化"
+
+msgid "Showing the latest {MAX_COMMITS} commits. Filter by branch to go further back."
+msgstr "最新 {MAX_COMMITS} 件のコミットを表示中。さらに遡るにはブランチで絞り込んでください。"
 
 msgid "Shown"
 msgstr "表示中"
@@ -17722,6 +17797,9 @@ msgstr "次の列の表:"
 
 msgid "Tabs"
 msgstr "Tabs"
+
+msgid "Tags"
+msgstr "タグ"
 
 msgid "Tailwind v4 theme reference"
 msgstr "Tailwind v4のテーマリファレンス"
@@ -19232,6 +19310,9 @@ msgstr "未コミット · 未プッシュ"
 msgid "Uncommitted changes"
 msgstr "未コミットの変更"
 
+msgid "Uncommitted changes ({uncommitted})"
+msgstr "未コミットの変更 ({uncommitted})"
+
 msgid "Uncommitted changes, on top of {base}"
 msgstr "未コミットの変更、{base} の上"
 
@@ -20389,8 +20470,14 @@ msgstr "ワークツリーを開きました"
 msgid "Worktree out of sync"
 msgstr "ワークツリーが同期していません"
 
+msgid "Worktree: {worktreePath}"
+msgstr "ワークツリー: {worktreePath}"
+
 msgid "Worktrees"
 msgstr "ワークツリー"
+
+msgid "Worktrees and conversations"
+msgstr "ワークツリーと会話"
 
 msgid "Worktrees are removed from disk; workspaces on the project's checkout only close. Files in the checkout stay as they are."
 msgstr "ワークツリーはディスクから削除され、プロジェクトのチェックアウト上のワークスペースは閉じるだけです。チェックアウト内のファイルはそのまま残ります。"

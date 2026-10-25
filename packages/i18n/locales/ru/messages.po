@@ -485,6 +485,10 @@ msgstr "{0} настроен на этом компьютере, но не в в
 msgid "{0} more — refine your search"
 msgstr "ещё {0} — уточните запрос"
 
+#. placeholder {0}: section.hidden
+msgid "{0} more, refine the search"
+msgstr "ещё {0}, уточните поиск"
+
 #. placeholder {0}: index + 1
 #. placeholder {1}: pages.length
 msgctxt "question progress"
@@ -521,6 +525,10 @@ msgstr "{0} проектов"
 #. placeholder {0}: conversation.queuedPrompts
 msgid "{0} queued messages"
 msgstr "{0} сообщений в очереди"
+
+#. placeholder {0}: selected.length
+msgid "{0} refs"
+msgstr "{0} ссылок"
 
 #. placeholder {0}: summary.running
 msgid "{0} running"
@@ -1795,6 +1803,9 @@ msgstr "Добавьте скрипт запуска в настройках п�
 msgid "Add a project to see GitHub issues."
 msgstr "Добавьте проект, чтобы видеть задачи GitHub."
 
+msgid "Add a project to see its git graph."
+msgstr "Добавьте проект, чтобы увидеть его git-граф."
+
 msgid "Add a project to see pull requests."
 msgstr "Добавьте проект, чтобы видеть пул-реквесты."
 
@@ -2222,6 +2233,9 @@ msgstr "Все исполнители"
 
 msgid "All authors"
 msgstr "Все авторы"
+
+msgid "All branches"
+msgstr "Все ветки"
 
 msgid "All changes saved"
 msgstr "Все изменения сохранены"
@@ -4982,6 +4996,10 @@ msgstr "Скопировано!"
 msgid "Copy"
 msgstr "Копировать"
 
+#. placeholder {0}: commit.hash
+msgid "Copy {0}"
+msgstr "Копировать {0}"
+
 msgid "Copy agent session ID"
 msgstr "Скопировать ID сессии агента"
 
@@ -6077,6 +6095,9 @@ msgstr "Данные и API"
 
 msgid "Data display"
 msgstr "Отображение данных"
+
+msgid "Date"
+msgstr "Дата"
 
 msgid "Date created"
 msgstr "Дате создания"
@@ -8489,6 +8510,9 @@ msgstr "Git и worktree"
 msgid "Git author name"
 msgstr "Имя автора Git"
 
+msgid "Git graph"
+msgstr "Git-граф"
+
 msgid "GitHub"
 msgstr "GitHub"
 
@@ -8618,6 +8642,9 @@ msgstr "Выдайте разрешения ОС, нужные Superset."
 
 msgid "Granted"
 msgstr "Выдано"
+
+msgid "Graph"
+msgstr "Граф"
 
 msgid "Grayscale"
 msgstr "Оттенки серого"
@@ -9221,6 +9248,10 @@ msgstr "В работе"
 
 msgid "In Progress"
 msgstr "В работе"
+
+#. placeholder {0}: badge.syncedRemotes.join(", ")
+msgid "In sync with {0}"
+msgstr "Синхронно с {0}"
 
 msgid "In the Superset desktop app, open <0>Settings → Appearance → Theme</0>."
 msgstr "В приложении Superset откройте <0>Настройки → Внешний вид → Тема</0>."
@@ -10197,6 +10228,9 @@ msgstr "llms.txt (индекс для AI-агентов)"
 msgid "Load (1 min)"
 msgstr "Нагрузка (1 мин)"
 
+msgid "Load {PAGE_SIZE} more commits"
+msgstr "Загрузить ещё {PAGE_SIZE} коммитов"
+
 msgid "load agent settings"
 msgstr "загрузить настройки агента"
 
@@ -10254,6 +10288,9 @@ msgstr "Загрузка сведений из GitHub"
 msgid "Loading groups…"
 msgstr "Загрузка групп…"
 
+msgid "Loading history…"
+msgstr "Загрузка истории…"
+
 msgid "Loading issue…"
 msgstr "Загрузка задачи…"
 
@@ -10310,6 +10347,9 @@ msgstr "Загрузка…"
 
 msgid "Local"
 msgstr "Локальная"
+
+msgid "Local branches"
+msgstr "Локальные ветки"
 
 msgid "Local Device"
 msgstr "Локальное устройство"
@@ -10738,6 +10778,9 @@ msgstr "Сообщение"
 msgid "Message in channel"
 msgstr "Сообщение в канале"
 
+msgid "Message, author, hash, branch"
+msgstr "Сообщение, автор, хеш, ветка"
+
 msgid "Message..."
 msgstr "Сообщение..."
 
@@ -11008,6 +11051,9 @@ msgstr "Моё посл. сообщ."
 
 msgid "My Tasks"
 msgstr "Мои задачи"
+
+msgid "My worktrees"
+msgstr "Мои worktree"
 
 msgid "Mystery Machinist"
 msgstr "Загадочный станочник"
@@ -11473,6 +11519,9 @@ msgstr "Комментариев пока нет."
 
 msgid "No comments yet. Turn on comment mode and click anything on the page to start one."
 msgstr "Комментариев пока нет. Включите режим комментирования и нажмите на любой элемент страницы, чтобы оставить комментарий."
+
+msgid "No commits for these filters."
+msgstr "Нет коммитов для этих фильтров."
 
 msgid "No commits on this branch yet."
 msgstr "В этой ветке пока нет коммитов."
@@ -12237,6 +12286,9 @@ msgstr "Старше недели"
 msgid "on {cores} cores"
 msgstr "на {cores} ядрах"
 
+msgid "on {headBranch}"
+msgstr "в {headBranch}"
+
 msgid "on {offScopeHostName} — won't run here"
 msgstr "на {offScopeHostName} — здесь не запустится"
 
@@ -12329,6 +12381,9 @@ msgstr "Менять тариф может только владелец орг�
 
 msgid "Only available on macOS."
 msgstr "Доступно только в macOS."
+
+msgid "Only branches with a worktree or a conversation"
+msgstr "Только ветки с worktree или беседой"
 
 msgid "Only host owners can change membership"
 msgstr "Изменять состав участников может только владелец хоста"
@@ -14395,6 +14450,10 @@ msgstr "Ссылается на"
 msgid "Refresh"
 msgstr "Обновить"
 
+#. placeholder {0}: log.data.durationMs
+msgid "Refresh (last load {0} ms)"
+msgstr "Обновить (последняя загрузка {0} мс)"
+
 #. placeholder {0}: error.message
 msgid "Refresh failed: {0}"
 msgstr "Не удалось обновить: {0}"
@@ -14500,6 +14559,9 @@ msgstr "Удалённый доступ"
 
 msgid "Remote Access may be off"
 msgstr "Возможно, удалённый доступ выключен"
+
+msgid "Remote branches"
+msgstr "Удалённые ветки"
 
 msgid "Remote MCP server — connects over HTTP"
 msgstr "Удалённый сервер MCP — подключается по HTTP"
@@ -15622,6 +15684,9 @@ msgstr "Поиск авторов…"
 msgid "Search automations"
 msgstr "Поиск автоматизаций"
 
+msgid "Search branches and tags"
+msgstr "Поиск веток и тегов"
+
 msgid "Search branches..."
 msgstr "Поиск веток..."
 
@@ -16333,6 +16398,9 @@ msgstr "Показывать микрофон в поле ввода чата. �
 msgid "Show a Usage button in the home sidebar, under Pull requests"
 msgstr "Показывать кнопку «Использование» в боковой панели главного экрана под пул-реквестами"
 
+msgid "Show all"
+msgstr "Показать все"
+
 msgid "Show all {count}"
 msgstr "Показать все {count}"
 
@@ -16426,6 +16494,10 @@ msgstr "Показать больше"
 msgid "Show on Sidebar"
 msgstr "Показать на боковой панели"
 
+#. placeholder {0}: badge.label
+msgid "Show only {0}"
+msgstr "Показать только {0}"
+
 msgid "Show open items"
 msgstr "Показывать только открытые"
 
@@ -16482,6 +16554,9 @@ msgstr "Показывать вкладку использования на бо
 
 msgid "showArrow opt-in"
 msgstr "showArrow по желанию"
+
+msgid "Showing the latest {MAX_COMMITS} commits. Filter by branch to go further back."
+msgstr "Последние {MAX_COMMITS} коммитов. Отфильтруйте по ветке, чтобы уйти глубже."
 
 msgid "Shown"
 msgstr "Показанные"
@@ -17722,6 +17797,9 @@ msgstr "таблица с"
 
 msgid "Tabs"
 msgstr "Вкладки"
+
+msgid "Tags"
+msgstr "Теги"
 
 msgid "Tailwind v4 theme reference"
 msgstr "Справочник тем Tailwind v4"
@@ -19232,6 +19310,9 @@ msgstr "Незакоммиченное · Неотправленное"
 msgid "Uncommitted changes"
 msgstr "Незакоммиченные изменения"
 
+msgid "Uncommitted changes ({uncommitted})"
+msgstr "Незакоммиченные изменения ({uncommitted})"
+
 msgid "Uncommitted changes, on top of {base}"
 msgstr "Незакоммиченные изменения, поверх {base}"
 
@@ -20389,8 +20470,14 @@ msgstr "Worktree открыт"
 msgid "Worktree out of sync"
 msgstr "Worktree рассинхронизирован"
 
+msgid "Worktree: {worktreePath}"
+msgstr "Worktree: {worktreePath}"
+
 msgid "Worktrees"
 msgstr "Worktree"
+
+msgid "Worktrees and conversations"
+msgstr "Worktree и беседы"
 
 msgid "Worktrees are removed from disk; workspaces on the project's checkout only close. Files in the checkout stay as they are."
 msgstr "Worktree удаляются с диска; рабочие области на checkout проекта только закрываются. Файлы в checkout останутся без изменений."

@@ -485,6 +485,10 @@ msgstr "{0} je nastaven na tomto počítači, ale ne ve vašem účtu"
 msgid "{0} more — refine your search"
 msgstr "Ještě {0} — upřesněte hledání"
 
+#. placeholder {0}: section.hidden
+msgid "{0} more, refine the search"
+msgstr "{0} dalších, upřesněte hledání"
+
 #. placeholder {0}: index + 1
 #. placeholder {1}: pages.length
 msgctxt "question progress"
@@ -521,6 +525,10 @@ msgstr "{0} projektů"
 #. placeholder {0}: conversation.queuedPrompts
 msgid "{0} queued messages"
 msgstr "{0} zpráv ve frontě"
+
+#. placeholder {0}: selected.length
+msgid "{0} refs"
+msgstr "{0} refů"
 
 #. placeholder {0}: summary.running
 msgid "{0} running"
@@ -1795,6 +1803,9 @@ msgstr "Přidejte lifecycle run skript v nastavení projektu, nebo označte term
 msgid "Add a project to see GitHub issues."
 msgstr "Přidejte projekt a uvidíte GitHub issues."
 
+msgid "Add a project to see its git graph."
+msgstr "Přidejte projekt a uvidíte jeho git graf."
+
 msgid "Add a project to see pull requests."
 msgstr "Přidejte projekt a uvidíte pull requesty."
 
@@ -2222,6 +2233,9 @@ msgstr "Všichni řešitelé"
 
 msgid "All authors"
 msgstr "Všichni autoři"
+
+msgid "All branches"
+msgstr "Všechny větve"
 
 msgid "All changes saved"
 msgstr "Všechny změny uloženy"
@@ -4982,6 +4996,10 @@ msgstr "Zkopírováno!"
 msgid "Copy"
 msgstr "Kopírovat"
 
+#. placeholder {0}: commit.hash
+msgid "Copy {0}"
+msgstr "Kopírovat {0}"
+
 msgid "Copy agent session ID"
 msgstr "Kopírovat ID relace agenta"
 
@@ -6077,6 +6095,9 @@ msgstr "Data a API"
 
 msgid "Data display"
 msgstr "Zobrazení dat"
+
+msgid "Date"
+msgstr "Datum"
 
 msgid "Date created"
 msgstr "Datum vytvoření"
@@ -8489,6 +8510,9 @@ msgstr "Git a worktree"
 msgid "Git author name"
 msgstr "Jméno autora v Gitu"
 
+msgid "Git graph"
+msgstr "Git graf"
+
 msgid "GitHub"
 msgstr "GitHub"
 
@@ -8618,6 +8642,9 @@ msgstr "Udělte systémová oprávnění, která Superset potřebuje."
 
 msgid "Granted"
 msgstr "Povoleno"
+
+msgid "Graph"
+msgstr "Graf"
 
 msgid "Grayscale"
 msgstr "Stupně šedi"
@@ -9221,6 +9248,10 @@ msgstr "Probíhá"
 
 msgid "In Progress"
 msgstr "Probíhá"
+
+#. placeholder {0}: badge.syncedRemotes.join(", ")
+msgid "In sync with {0}"
+msgstr "Synchronizováno s {0}"
 
 msgid "In the Superset desktop app, open <0>Settings → Appearance → Theme</0>."
 msgstr "V desktopové aplikaci Superset otevřete <0>Nastavení → Vzhled → Motiv</0>."
@@ -10197,6 +10228,9 @@ msgstr "llms.txt (index pro AI agenty)"
 msgid "Load (1 min)"
 msgstr "Zátěž (1 min)"
 
+msgid "Load {PAGE_SIZE} more commits"
+msgstr "Načíst dalších {PAGE_SIZE} commitů"
+
 msgid "load agent settings"
 msgstr "načíst nastavení agenta"
 
@@ -10254,6 +10288,9 @@ msgstr "Načítání podrobností z GitHubu"
 msgid "Loading groups…"
 msgstr "Načítám skupiny…"
 
+msgid "Loading history…"
+msgstr "Načítání historie…"
+
 msgid "Loading issue…"
 msgstr "Načítám issue…"
 
@@ -10310,6 +10347,9 @@ msgstr "Načítání…"
 
 msgid "Local"
 msgstr "Lokální"
+
+msgid "Local branches"
+msgstr "Lokální větve"
 
 msgid "Local Device"
 msgstr "Lokální zařízení"
@@ -10738,6 +10778,9 @@ msgstr "Zpráva"
 msgid "Message in channel"
 msgstr "Zpráva v kanálu"
 
+msgid "Message, author, hash, branch"
+msgstr "Zpráva, autor, hash, větev"
+
 msgid "Message..."
 msgstr "Zpráva..."
 
@@ -11008,6 +11051,9 @@ msgstr "Má posl. zpráva"
 
 msgid "My Tasks"
 msgstr "Moje úkoly"
+
+msgid "My worktrees"
+msgstr "Moje worktrees"
 
 msgid "Mystery Machinist"
 msgstr "Záhadný strojník"
@@ -11473,6 +11519,9 @@ msgstr "Zatím žádné komentáře."
 
 msgid "No comments yet. Turn on comment mode and click anything on the page to start one."
 msgstr "Zatím žádné komentáře. Zapněte režim komentářů a kliknutím na cokoli na stránce začněte."
+
+msgid "No commits for these filters."
+msgstr "Pro tyto filtry žádné commity."
 
 msgid "No commits on this branch yet."
 msgstr "V této větvi zatím nejsou žádné commity."
@@ -12237,6 +12286,9 @@ msgstr "Starší než týden"
 msgid "on {cores} cores"
 msgstr "na {cores} jádrech"
 
+msgid "on {headBranch}"
+msgstr "na {headBranch}"
+
 msgid "on {offScopeHostName} — won't run here"
 msgstr "na {offScopeHostName} — tady nepoběží"
 
@@ -12329,6 +12381,9 @@ msgstr "Tarif může změnit jen vlastník organizace. Požádejte ho o přechod
 
 msgid "Only available on macOS."
 msgstr "Dostupné jen na macOS."
+
+msgid "Only branches with a worktree or a conversation"
+msgstr "Jen větve s worktree nebo konverzací"
 
 msgid "Only host owners can change membership"
 msgstr "Členství mohou měnit jen vlastníci hosta"
@@ -14395,6 +14450,10 @@ msgstr "Reference"
 msgid "Refresh"
 msgstr "Obnovit"
 
+#. placeholder {0}: log.data.durationMs
+msgid "Refresh (last load {0} ms)"
+msgstr "Obnovit (poslední načtení {0} ms)"
+
 #. placeholder {0}: error.message
 msgid "Refresh failed: {0}"
 msgstr "Obnovení selhalo: {0}"
@@ -14500,6 +14559,9 @@ msgstr "Vzdálený přístup"
 
 msgid "Remote Access may be off"
 msgstr "Vzdálený přístup může být vypnutý"
+
+msgid "Remote branches"
+msgstr "Vzdálené větve"
 
 msgid "Remote MCP server — connects over HTTP"
 msgstr "Vzdálený MCP server — připojuje se přes HTTP"
@@ -15622,6 +15684,9 @@ msgstr "Hledat autory…"
 msgid "Search automations"
 msgstr "Hledat automatizace"
 
+msgid "Search branches and tags"
+msgstr "Hledat větve a tagy"
+
 msgid "Search branches..."
 msgstr "Hledat větve..."
 
@@ -16333,6 +16398,9 @@ msgstr "Zobrazit v editoru chatu mikrofon. Řeč přepisuje ChatGPT, pokud je k 
 msgid "Show a Usage button in the home sidebar, under Pull requests"
 msgstr "Zobrazovat tlačítko Využití v postranním panelu domovské obrazovky pod pull requesty"
 
+msgid "Show all"
+msgstr "Zobrazit vše"
+
 msgid "Show all {count}"
 msgstr "Zobrazit všech {count}"
 
@@ -16426,6 +16494,10 @@ msgstr "Zobrazit více"
 msgid "Show on Sidebar"
 msgstr "Zobrazit na postranním panelu"
 
+#. placeholder {0}: badge.label
+msgid "Show only {0}"
+msgstr "Zobrazit jen {0}"
+
 msgid "Show open items"
 msgstr "Zobrazit otevřené položky"
 
@@ -16482,6 +16554,9 @@ msgstr "Zobrazit kartu využití v postranním panelu"
 
 msgid "showArrow opt-in"
 msgstr "showArrow zapnuto"
+
+msgid "Showing the latest {MAX_COMMITS} commits. Filter by branch to go further back."
+msgstr "Zobrazeno posledních {MAX_COMMITS} commitů. Pro starší filtrujte podle větve."
 
 msgid "Shown"
 msgstr "Zobrazené"
@@ -17722,6 +17797,9 @@ msgstr "tabulka s"
 
 msgid "Tabs"
 msgstr "Karty"
+
+msgid "Tags"
+msgstr "Tagy"
 
 msgid "Tailwind v4 theme reference"
 msgstr "Reference motivu Tailwind v4"
@@ -19232,6 +19310,9 @@ msgstr "Necommitnuto · Neodesláno"
 msgid "Uncommitted changes"
 msgstr "Necommitnuté změny"
 
+msgid "Uncommitted changes ({uncommitted})"
+msgstr "Necommitnuté změny ({uncommitted})"
+
 msgid "Uncommitted changes, on top of {base}"
 msgstr "Necommitnuté změny, nad {base}"
 
@@ -20389,8 +20470,14 @@ msgstr "Worktree otevřen"
 msgid "Worktree out of sync"
 msgstr "Worktree není synchronizovaný"
 
+msgid "Worktree: {worktreePath}"
+msgstr "Worktree: {worktreePath}"
+
 msgid "Worktrees"
 msgstr "Worktrees"
+
+msgid "Worktrees and conversations"
+msgstr "Worktrees a konverzace"
 
 msgid "Worktrees are removed from disk; workspaces on the project's checkout only close. Files in the checkout stay as they are."
 msgstr "Worktree se odstraní z disku; pracovní prostory na checkoutu projektu se pouze zavřou. Soubory v checkoutu zůstanou beze změny."
