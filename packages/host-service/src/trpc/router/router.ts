@@ -31,6 +31,7 @@ import { usageRouter } from "./usage";
 import { workspaceRouter } from "./workspace";
 import { workspaceCleanupRouter } from "./workspace-cleanup";
 import { workspaceCreationRouter } from "./workspace-creation";
+import { workspaceGrantsRouter } from "./workspace-grants";
 import { workspaceLabelsRouter } from "./workspace-labels";
 import { workspaceNotesRouter } from "./workspace-notes";
 import { workspacesRouter } from "./workspaces";
@@ -71,6 +72,7 @@ export const appRouter = router({
 	workspaceCreation: workspaceCreationRouter,
 	workspaceNotes: workspaceNotesRouter,
 	workspaceLabels: workspaceLabelsRouter,
+	workspaceGrants: workspaceGrantsRouter,
 });
 
 export type AppRouter = typeof appRouter;

@@ -2038,6 +2038,9 @@ msgstr "代理程式正在工作"
 msgid "Agent launch configuration"
 msgstr "代理程式啟動配置"
 
+msgid "Agent permissions"
+msgstr "代理權限"
+
 msgid "Agent picker (Claude, Codex, Cursor…) used by every session-creation flow"
 msgstr "代理程式選擇器（Claude、Codex、Cursor…），所有建立會話的流程都在用"
 
@@ -2085,6 +2088,9 @@ msgstr "代理程式"
 
 msgid "Agents complete routine tickets with no mid-task intervention."
 msgstr "代理程式無需中途干預即可完成常規工單。"
+
+msgid "Agents here may, without asking:"
+msgstr "此處的代理無需詢問即可："
 
 msgid "Agents load their own preview, drive the UI, and attach screenshot proof before marking work ready for review."
 msgstr "代理程式自己載入預覽、操作介面，並在標記為待審查之前附上截圖證據。"
@@ -5137,6 +5143,9 @@ msgstr "無法為聊天建立分支"
 msgid "Could not change access"
 msgstr "無法變更存取權限"
 
+msgid "Could not change the agent permissions"
+msgstr "無法變更代理權限"
+
 msgid "Could not change the labels"
 msgstr "無法變更標籤"
 
@@ -7166,6 +7175,9 @@ msgstr "每{day} {time}"
 
 msgid "Every agent runs in its own Git worktree and branch, keeping working files separate. Changes can still conflict when merged. You watch, review, and merge them all from one window."
 msgstr "每個代理都在各自的 Git worktree 和分支中執行，讓工作檔案保持獨立。合併變更時仍可能發生衝突。你可以在同一個視窗中監控、審查並合併所有變更。"
+
+msgid "Every agent started in this workspace gets it."
+msgstr "在此工作區啟動的每個代理都會收到它。"
 
 msgid "Every axis is carrying its weight for the next tier. Hold it and the tier follows."
 msgstr "每個維度都在為下一等級出力。保持住，等級自然會來。"
@@ -10488,6 +10500,9 @@ msgstr "標為未讀"
 msgid "Mark as viewed"
 msgstr "標記為已檢視"
 
+msgid "Mark its PR ready for review"
+msgstr "將其 PR 標記為可審查"
+
 msgid "Mark Ready"
 msgstr "標記為待審查"
 
@@ -12398,6 +12413,9 @@ msgstr "開啟 {parentLabel}"
 msgid "Open {path} in file pane"
 msgstr "在檔案面板中開啟{path}"
 
+msgid "Open a draft PR"
+msgstr "建立草稿 PR"
+
 msgid "Open a multiline prompt composer for the active terminal"
 msgstr "為目前終端開啟多行提示詞編輯器"
 
@@ -13389,6 +13407,9 @@ msgstr "已置頂"
 msgid "Pinned by you, last pinned first"
 msgstr "你置頂的，最近置頂在前"
 
+msgid "Pinned context"
+msgstr "釘選的上下文"
+
 msgid "PK"
 msgstr "PK"
 
@@ -13513,6 +13534,9 @@ msgstr "釋出"
 
 msgid "Post comment"
 msgstr "發表評論"
+
+msgid "Post GitHub comments"
+msgstr "發布 GitHub 留言"
 
 msgid "Post reply"
 msgstr "發表回覆"
@@ -13974,6 +13998,9 @@ msgstr "推送"
 #. placeholder {0}: error.message
 msgid "Push failed: {0}"
 msgstr "推送失敗：{0}"
+
+msgid "Push its own branch"
+msgstr "推送自己的分支"
 
 msgid "Pushed"
 msgstr "已推送"
@@ -14653,6 +14680,9 @@ msgstr "已替換{where}中的1個檔案"
 
 msgid "Reply"
 msgstr "回覆"
+
+msgid "Reply to review bots"
+msgstr "回覆審查機器人"
 
 msgid "Reply to thread…"
 msgstr "回覆討論串…"
@@ -15397,6 +15427,9 @@ msgstr "儲存偏好設定"
 
 msgid "Save profile"
 msgstr "儲存個人資料"
+
+msgid "Save Slack drafts"
+msgstr "儲存 Slack 草稿"
 
 msgid "save the agent"
 msgstr "儲存代理程式"

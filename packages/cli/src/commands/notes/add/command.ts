@@ -1,4 +1,4 @@
-import { positional, string } from "@superset/cli-framework";
+import { boolean, positional, string } from "@superset/cli-framework";
 import { command } from "../../../lib/command";
 import {
 	clearable,
@@ -8,10 +8,14 @@ import {
 } from "../../../lib/notes";
 
 export default command({
-	description: "Add a note to this workspace",
+	description:
+		"Add a note to this workspace. --context pins it: every agent started here gets it",
 	args: [positional("text").required().desc("The note, in a short line")],
 	options: {
 		details: string().desc("More detail"),
+		context: boolean().desc(
+			"Pinned context (a brief, a decision): every agent here gets it at start",
+		),
 		workspace: string().desc("Workspace ID (default: this terminal's)"),
 	},
 	run: async ({ ctx, args, options }) => {
@@ -19,7 +23,13 @@ export default command({
 		const [note] = await (await localNotesClient(ctx)).add.mutate({
 			actor: noteActor(),
 			workspaceId: noteWorkspace(options.workspace ?? undefined),
-			items: [{ text: args.text as string, ...(details ? { details } : {}) }],
+			items: [
+				{
+					text: args.text as string,
+					...(details ? { details } : {}),
+					...(options.context ? { kind: "context" as const } : {}),
+				},
+			],
 		});
 		return {
 			data: note,
