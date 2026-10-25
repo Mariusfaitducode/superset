@@ -113,4 +113,49 @@ describe("conversationTodosRouter", () => {
 			}),
 		).rejects.toThrow();
 	});
+
+	test("accepts and updates the rich fields", async () => {
+		const todo = await caller.add({
+			actor: "agent",
+			workspaceId: "ws",
+			terminalId: "term",
+			text: "Post the launch on LinkedIn",
+			kind: "post",
+			steps: ["Add the screenshot", "Publish at 9am"],
+			draft: "We just shipped…",
+			channel: "LinkedIn",
+		});
+		expect(todo).toMatchObject({
+			kind: "post",
+			steps: ["Add the screenshot", "Publish at 9am"],
+			recipient: null,
+			channel: "LinkedIn",
+		});
+		const updated = await caller.update({
+			actor: "agent",
+			id: todo.id,
+			kind: "meeting",
+			recipient: "Marketing team",
+			steps: ["Book a room"],
+		});
+		expect(updated).toMatchObject({
+			kind: "meeting",
+			recipient: "Marketing team",
+			steps: ["Book a room"],
+			draft: "We just shipped…",
+		});
+	});
+
+	test("rejects rich fields over their limits", async () => {
+		const base = { workspaceId: "ws", terminalId: "term", text: "x" };
+		await expect(
+			caller.add({ ...base, steps: Array.from({ length: 13 }, () => "s") }),
+		).rejects.toThrow();
+		await expect(
+			caller.add({ ...base, draft: "a".repeat(4_001) }),
+		).rejects.toThrow();
+		await expect(
+			caller.add({ ...base, channel: "a".repeat(101) }),
+		).rejects.toThrow();
+	});
 });
