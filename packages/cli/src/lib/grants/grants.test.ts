@@ -4,7 +4,7 @@ import { findGrants, type Grant, grantActor, grantWorkspace } from "./grants";
 const available = [
 	{ id: "push-own-branch", description: "Push" },
 	{ id: "slack-draft", description: "Draft" },
-] as Grant[];
+] as unknown as Grant[];
 
 describe("grants CLI helpers", () => {
 	test("finds grants by id, ignoring case", () => {

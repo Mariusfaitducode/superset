@@ -427,6 +427,11 @@ msgstr "{0} 활성화됨"
 msgid "{0} ending in {1}"
 msgstr "{0} 끝자리 {1}"
 
+#. placeholder {0}: summary.failed
+#. placeholder {1}: summary.running
+msgid "{0} failed, {1} running"
+msgstr "{0}개 실패, {1}개 실행 중"
+
 #. placeholder {0}: collisions.length
 msgid "{0} files already exist in {where}. Do you want to replace them?"
 msgstr "{where}에 파일 {0}개가 이미 있습니다. 바꿀까요?"
@@ -517,6 +522,10 @@ msgstr "프로젝트 {0}개"
 msgid "{0} queued messages"
 msgstr "대기 중인 메시지 {0}개"
 
+#. placeholder {0}: summary.running
+msgid "{0} running"
+msgstr "{0}개 실행 중"
+
 #. placeholder {0}: tally.running
 msgid "{0} Running"
 msgstr "{0}개 실행 중"
@@ -594,6 +603,11 @@ msgstr "{0}/{1}"
 #. placeholder {1}: tally.total
 msgid "{0}/{1} Checks Passing"
 msgstr "검사 {1}개 중 {0}개 통과"
+
+#. placeholder {0}: progress.done
+#. placeholder {1}: progress.total
+msgid "{0}/{1} jobs"
+msgstr "{0}/{1} 작업"
 
 #. placeholder {0}: summary.passed
 #. placeholder {1}: summary.total
@@ -1155,6 +1169,9 @@ msgstr "{repositoryFullName}은(는) 이 조직의 GitHub App이 설치된 {inst
 
 msgid "{repositoryFullName} isn't shared with the Superset GitHub App yet."
 msgstr "{repositoryFullName}은(는) 아직 Superset GitHub App과 공유되지 않았습니다."
+
+msgid "{running} running"
+msgstr "{running}개 실행 중"
 
 msgid "{seconds}s ago"
 msgstr "{seconds}초 전"
@@ -2085,6 +2102,9 @@ msgstr "에이전트가 조작하는 미리보기"
 
 msgid "Agents"
 msgstr "에이전트"
+
+msgid "Agents add a card here with superset track when they wait on something long: a CI run, a build, a deploy."
+msgstr "에이전트는 CI 실행, 빌드, 배포처럼 오래 걸리는 작업을 기다릴 때 superset track으로 여기에 카드를 추가합니다."
 
 msgid "Agents complete routine tickets with no mid-task intervention."
 msgstr "에이전트가 작업 중간 개입 없이 일상적인 티켓을 완료합니다."
@@ -4176,6 +4196,9 @@ msgstr "{0}의 모든 포트 닫기"
 msgid "Close all ports in this workspace"
 msgstr "이 워크스페이스의 모든 포트 닫기"
 
+msgid "Close and archive"
+msgstr "닫고 보관"
+
 msgid "Close Browser"
 msgstr "브라우저 닫기"
 
@@ -5401,6 +5424,9 @@ msgstr "브랜치를 업데이트할 수 없습니다"
 
 msgid "Could not update the note"
 msgstr "메모를 업데이트할 수 없습니다"
+
+msgid "Could not update the task"
+msgstr "작업을 업데이트할 수 없습니다"
 
 msgid "Could not update the to-do"
 msgstr "할 일을 업데이트할 수 없습니다"
@@ -8496,6 +8522,9 @@ msgstr "GitHub가 머지를 거부했습니다"
 msgid "GitHub sign-in needed"
 msgstr "GitHub 로그인이 필요합니다"
 
+msgid "GitHub stopped answering"
+msgstr "GitHub가 응답하지 않습니다"
+
 msgid "GitHub sync requires the Pro plan."
 msgstr "GitHub 동기화에는 Pro 플랜이 필요합니다."
 
@@ -11358,6 +11387,9 @@ msgstr "아직 에이전트가 없습니다."
 msgid "No API keys yet."
 msgstr "아직 API 키가 없습니다."
 
+msgid "No archived tasks"
+msgstr "보관된 작업이 없습니다"
+
 msgid "No archived to-dos"
 msgstr "보관된 할 일이 없습니다"
 
@@ -11642,6 +11674,10 @@ msgstr "여기에서 사용할 수 있는 모바일 시뮬레이터가 없습니
 
 msgid "No name on file"
 msgstr "등록된 이름 없음"
+
+#. placeholder {0}: formatElapsed(now - task.updatedAt)
+msgid "No news for {0}"
+msgstr "{0} 동안 소식 없음"
 
 msgid "No notes match these filters."
 msgstr "이 필터와 일치하는 메모가 없습니다."
@@ -12079,6 +12115,9 @@ msgstr "아직 아무것도 없습니다."
 
 msgid "Nothing here."
 msgstr "아무것도 없습니다."
+
+msgid "Nothing is being tracked"
+msgstr "추적 중인 항목이 없습니다"
 
 msgid "Nothing is running. Archive it and create a new one."
 msgstr "실행 중인 것이 없습니다. 보관하고 새로 만드세요."
@@ -12794,6 +12833,10 @@ msgstr "터미널을 열고 에이전트에 지시"
 
 msgid "Open the Changes pane in a new tab, or focus the existing one"
 msgstr "변경 패널을 새 탭에서 열거나 기존 패널에 포커스합니다"
+
+#. placeholder {0}: task.title
+msgid "Open the conversation of {0}"
+msgstr "{0}의 대화 열기"
 
 msgid "Open the global command palette"
 msgstr "전역 명령 팔레트를 엽니다"
@@ -15338,6 +15381,10 @@ msgstr "실행 중"
 msgid "Running \"{name}\" now"
 msgstr "\"{name}\"을(를) 지금 실행 중"
 
+#. placeholder {0}: task.ci.currentJob
+msgid "Running {0}"
+msgstr "{0} 실행 중"
+
 msgid "Running a command"
 msgstr "명령 실행 중"
 
@@ -16566,6 +16613,9 @@ msgstr "로그인하는 중..."
 msgid "Signup works. The welcome screen loads and the console is clean."
 msgstr "가입이 잘 됩니다. 환영 화면이 열리고 콘솔에 오류가 없습니다."
 
+msgid "Silent"
+msgstr "응답 없음"
+
 msgid "Simple pricing for every team"
 msgstr "모든 팀을 위한 간단한 가격"
 
@@ -17719,6 +17769,14 @@ msgstr "targetHostId가 워크스페이스의 호스트와 일치하지 않습�
 msgid "Task"
 msgstr "작업"
 
+#. placeholder {0}: task.title
+msgid "Task done: {0}"
+msgstr "작업 완료: {0}"
+
+#. placeholder {0}: task.title
+msgid "Task failed: {0}"
+msgstr "작업 실패: {0}"
+
 msgid "Task ID copied"
 msgstr "작업 ID를 복사했습니다"
 
@@ -17986,11 +18044,20 @@ msgstr "에이전트가 티켓부터 차이까지 작업을 맡습니다. 사람
 msgid "The agent stopped while resuming the conversation."
 msgstr "대화를 재개하는 중에 에이전트가 중지되었습니다."
 
+msgid "The agent stopped working"
+msgstr "에이전트가 작업을 멈췄습니다"
+
 msgid "The agent this automation was set to run no longer exists on its host — the host's agents may have been reset or removed. Re-select an agent in the automation's settings."
 msgstr "이 자동화가 실행하도록 설정된 에이전트가 해당 호스트에 더 이상 존재하지 않습니다. 호스트의 에이전트가 초기화되었거나 제거되었을 수 있습니다. 자동화 설정에서 에이전트를 다시 선택하세요."
 
+msgid "The agent waits for a permission"
+msgstr "에이전트가 권한을 기다리고 있습니다"
+
 msgid "The agent watching the page reads each comment. It updates the page and replies in the thread."
 msgstr "페이지를 지켜보는 에이전트가 각 댓글을 읽고 페이지를 업데이트한 뒤 스레드에 답합니다."
+
+msgid "The agent's session ended"
+msgstr "에이전트 세션이 종료되었습니다"
 
 msgid "The app is free to download. It requires iOS 26 or later and Superset Pro. Android is next."
 msgstr "앱은 무료로 다운로드할 수 있습니다. iOS 26 이상과 Superset Pro가 필요합니다. 다음은 Android입니다."
@@ -18942,6 +19009,9 @@ msgstr "불안정한 테스트 추적하기…"
 
 msgid "Track tasks in"
 msgstr "작업 관리 위치"
+
+msgid "Tracked tasks"
+msgstr "추적 중인 작업"
 
 msgid "Tracking"
 msgstr "추적 기간"

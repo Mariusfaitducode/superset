@@ -14,6 +14,7 @@ import { electronTrpc } from "renderer/lib/electron-trpc";
 import { reportRendererError } from "renderer/lib/report-renderer-error";
 import { RightSidebarToggle } from "renderer/routes/_authenticated/_dashboard/components/RightSidebarToggle";
 import { StateScreenShell } from "renderer/routes/_authenticated/_dashboard/components/StateScreenShell";
+import { TaskMonitorButton } from "renderer/routes/_authenticated/_dashboard/components/TaskMonitor";
 import { WindowChrome } from "renderer/routes/_authenticated/_dashboard/components/WindowChrome";
 import { WindowControlsInset } from "renderer/routes/_authenticated/_dashboard/components/WindowControlsInset";
 import {
@@ -704,6 +705,7 @@ function V2WorkspaceContent() {
 											)}
 										>
 											<CloudWorkspaceTabBarControls workspaceId={workspaceId} />
+											<TaskMonitorButton className="mx-0.5" />
 											{activityMenu}
 											{isRightPaneAreaEnabled ? (
 												!sidebarOpen && (

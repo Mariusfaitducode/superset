@@ -12,7 +12,7 @@ const grants = {
 	workspaces: {
 		ws: { grants: ["push-own-branch"], updatedAt: 1, updatedBy: "user" },
 	},
-} as GrantsState;
+} as unknown as GrantsState;
 
 const note = (fields: Partial<Note>) =>
 	({ kind: "note", status: "open", details: null, ...fields }) as Note;
