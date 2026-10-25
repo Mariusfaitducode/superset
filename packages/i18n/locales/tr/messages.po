@@ -2177,6 +2177,9 @@ msgstr "AI · Durum"
 msgid "AI authentication failed. Please check your AI settings."
 msgstr "AI kimlik doğrulaması başarısız. Lütfen AI ayarlarınızı kontrol edin."
 
+msgid "Airy"
+msgstr "Ferah"
+
 msgid "Alert"
 msgstr "Uyarı"
 
@@ -3131,6 +3134,9 @@ msgstr "Destekçilerimiz"
 msgid "Background"
 msgstr "Arka plan"
 
+msgid "Background of the open conversation."
+msgstr "Açık konuşmanın arka planı."
+
 msgid "Background processes"
 msgstr "Arka plan işlemleri"
 
@@ -3445,6 +3451,9 @@ msgstr "Herkesin gözü önünde geliştiriyoruz"
 msgid "Build the future of Superset in the cloud"
 msgstr "Superset’in buluttaki geleceğini inşa edin"
 
+msgid "Build the settings page"
+msgstr "Ayarlar sayfasını oluştur"
+
 msgid "Build your own"
 msgstr "Kendinizinkini oluşturun"
 
@@ -3562,6 +3571,9 @@ msgstr "Takvim"
 
 msgid "Calendar and Gmail triggers in this organization will stop firing until an account is connected again."
 msgstr "Bu kuruluştaki Calendar ve Gmail tetikleyicileri, yeniden bir hesap bağlanana kadar tetiklenmeyi durdurur."
+
+msgid "Calendar sync"
+msgstr "Takvim eşitleme"
 
 msgid "Camera access is not allowed"
 msgstr "Kamera erişimine izin verilmiyor"
@@ -3952,11 +3964,11 @@ msgstr "Önizleme bölmesi yokken dosyaların nasıl açılacağını seçin"
 msgid "Choose how the Changes view opens from the top bar"
 msgstr "Değişiklikler görünümünün üst çubuktan nasıl açılacağını seçin"
 
+msgid "Choose how the sidebar looks and what it shows under each workspace. Right-click a project or a group for its own options."
+msgstr "Kenar çubuğunun görünümünü ve her çalışma alanının altında ne göstereceğini seçin. Kendi seçenekleri için bir projeye veya gruba sağ tıklayın."
+
 msgid "Choose how to open file paths when Cmd+clicking in the terminal"
 msgstr "Terminalde Cmd+tıkladığınızda dosya yollarının nasıl açılacağını seçin"
-
-msgid "Choose what the sidebar shows under each workspace."
-msgstr "Kenar çubuğunun her çalışma alanının altında ne göstereceğini seçin."
 
 msgid "Choose what to clear from the in-app browser."
 msgstr "Uygulama içi tarayıcıdan neyin temizleneceğini seçin."
@@ -4440,6 +4452,16 @@ msgstr "Renk"
 msgid "Color Filter"
 msgstr "Renk Filtresi"
 
+#. placeholder {0}: stateLabel[key]
+msgid "Color for {0}"
+msgstr "{0} için renk"
+
+msgid "Colorblind-safe"
+msgstr "Renk körlüğüne uygun"
+
+msgid "Colors of the agent state dots, in the sidebar and the switchers."
+msgstr "Kenar çubuğunda ve geçiş ekranlarında ajan durum noktalarının renkleri."
+
 msgid "Columns"
 msgstr "Sütunlar"
 
@@ -4560,6 +4582,12 @@ msgstr "İletişim"
 
 msgid "Community"
 msgstr "Topluluk"
+
+msgid "Compact"
+msgstr "Sıkı"
+
+msgid "Compact conversations"
+msgstr "Sıkı konuşmalar"
 
 msgid "Company"
 msgstr "Şirket"
@@ -4882,6 +4910,9 @@ msgstr "Bize ulaşın"
 msgid "Contains this text..."
 msgstr "Şu metni içerir..."
 
+msgid "Content"
+msgstr "İçerik"
+
 msgid "Context"
 msgstr "Bağlam"
 
@@ -4937,6 +4968,9 @@ msgstr "Bir aracı oturumunu sürdürmek için sabitlenmiş bir çalışma alan�
 
 msgid "continuing the last session"
 msgstr "son oturumu sürdürerek"
+
+msgid "Contrast"
+msgstr "Kontrast"
 
 msgid "Contributions"
 msgstr "Katkılar"
@@ -6395,6 +6429,9 @@ msgstr "Kendi rolünüzü düşürmek mi istiyorsunuz?"
 msgid "Denied"
 msgstr "Reddedildi"
 
+msgid "Density"
+msgstr "Yoğunluk"
+
 msgid "Deny"
 msgstr "Reddet"
 
@@ -7375,6 +7412,9 @@ msgstr "Keşfet"
 msgid "Explore Pages"
 msgstr "Sayfaları keşfet"
 
+msgid "Explore the codebase"
+msgstr "Kod tabanını keşfet"
+
 msgid "Explored"
 msgstr "İncelendi"
 
@@ -8015,6 +8055,9 @@ msgstr "hariç tutulacak dosyalar (glob)"
 msgid "files to include (glob)"
 msgstr "dahil edilecek dosyalar (glob)"
 
+msgid "Fill"
+msgstr "Dolgu"
+
 msgid "Fill out the contact form on this page and our team will reach out to learn about your needs and walk you through next steps."
 msgstr "Bu sayfadaki iletişim formunu doldurun; ekibimiz ihtiyaçlarınızı öğrenmek ve sonraki adımları anlatmak için sizinle iletişime geçsin."
 
@@ -8159,6 +8202,9 @@ msgstr "CI hatalarını düzelt"
 msgid "Fix findings"
 msgstr "Bulguları düzelt"
 
+msgid "Fix the flaky test"
+msgstr "Kararsız testi düzelt"
+
 msgid "fix-auth-redirect"
 msgstr "fix-auth-redirect"
 
@@ -8215,6 +8261,9 @@ msgstr "Görevler görünümündeki arama girişine odaklan"
 
 msgid "Folder"
 msgstr "Klasör"
+
+msgid "Folder color on conversations"
+msgstr "Konuşmalarda klasör rengi"
 
 msgid "Folder is missing"
 msgstr "Klasör eksik"
@@ -8694,6 +8743,9 @@ msgstr "Birleştirilen değişikliklerin yarısı sıfır düzenlemeli ajan kodu
 msgid "Hand the browser to your agent."
 msgstr "Tarayıcıyı ajanınıza bırakın."
 
+msgid "Hand-picked colors stay when you change the palette."
+msgstr "Elle seçilen renkler palet değişince korunur."
+
 msgid "Handing to agent…"
 msgstr "Ajana devrediliyor…"
 
@@ -8745,6 +8797,9 @@ msgstr "Başlık 3"
 msgid "Heart"
 msgstr "Kalp"
 
+msgid "Height of the rows and size of the conversation titles."
+msgstr "Satır yüksekliği ve konuşma başlıklarının boyutu."
+
 msgid "Help"
 msgstr "Yardım"
 
@@ -8773,6 +8828,9 @@ msgstr "Gizle"
 msgid "Hide checks"
 msgstr "Kontrolleri gizle"
 
+msgid "Hide conversations"
+msgstr "Konuşmaları gizle"
+
 msgid "Hide details"
 msgstr "Ayrıntıları gizle"
 
@@ -8799,6 +8857,9 @@ msgstr "Kenar çubuğunda gizle"
 
 msgid "Hide from Sidebar"
 msgstr "Kenar çubuğundan gizle"
+
+msgid "Hide idle conversations"
+msgstr "Boşta konuşmaları gizle"
 
 msgid "Hide log"
 msgstr "Günlüğü gizle"
@@ -8827,8 +8888,14 @@ msgstr "İnceleme yorumlarını gizle"
 msgid "Hide sessions"
 msgstr "Oturumları gizle"
 
+msgid "Hide subagents"
+msgstr "Alt ajanları gizle"
+
 msgid "Hide text"
 msgstr "Metni gizle"
+
+msgid "Hide to-dos"
+msgstr "Yapılacakları gizle"
 
 msgid "Hide unchanged regions"
 msgstr "Değişmeyen bölgeleri gizle"
@@ -8841,6 +8908,9 @@ msgstr "Yüksek önem"
 
 msgid "High usage"
 msgstr "Yüksek kullanım"
+
+msgid "Highlight intensity"
+msgstr "Vurgu yoğunluğu"
 
 msgid "history"
 msgstr "geçmiş"
@@ -8977,11 +9047,17 @@ msgstr "Kaç gizli terminalin tam yüklü kalacağı ({MIN_TERMINAL_PARKED_RUNTI
 msgid "How much agent work engineers are actually running — tokens, cost, models and sessions, published by people who opted in."
 msgstr "Mühendislerin gerçekte ne kadar ajan işi çalıştırdığı — katılmayı seçen kişilerce yayımlanan token, maliyet, model ve oturum verileri."
 
+msgid "How much secondary text and separators stand out."
+msgstr "İkincil metin ve ayırıcıların ne kadar öne çıktığı."
+
 msgid "How should the agent's actions be approved?"
 msgstr "Ajanın işlemleri nasıl onaylansın?"
 
 msgid "How the command opens."
 msgstr "Komutun nasıl açılacağı."
+
+msgid "How the conversation shown in a pane stands out."
+msgstr "Bir bölmede gösterilen konuşmanın nasıl öne çıktığı."
 
 msgid "How the prompt is delivered to the process."
 msgstr "İstemin sürece nasıl iletileceği."
@@ -10912,6 +10988,9 @@ msgstr "Ajanlarınızı iPhone veya iPad'inizden izleyin, yönlendirin ve önler
 msgid "Monitoring"
 msgstr "İzleme"
 
+msgid "Monochrome"
+msgstr "Tek renk"
+
 msgid "monorepo"
 msgstr "monorepo"
 
@@ -11151,6 +11230,9 @@ msgstr "Seni bekliyor"
 
 msgid "Needs your approval"
 msgstr "Onayınızı bekliyor"
+
+msgid "Neon"
+msgstr "Neon"
 
 msgid "Nerd Fonts"
 msgstr "Nerd Fonts"
@@ -13418,6 +13500,9 @@ msgstr "Telefon numarası"
 msgid "Pick {name} from the theme grid to apply it."
 msgstr "Uygulamak için tema ızgarasından {name} temasını seçin."
 
+msgid "Pick a color"
+msgstr "Renk seç"
+
 msgid "Pick a different element"
 msgstr "Farklı bir öğe seç"
 
@@ -14509,6 +14594,9 @@ msgstr "Sürüm"
 msgid "Release control"
 msgstr "Kontrolü bırak"
 
+msgid "Release notes"
+msgstr "Sürüm notları"
+
 msgid "Release notes draft"
 msgstr "Sürüm notları taslağı"
 
@@ -15224,6 +15312,9 @@ msgstr "İnceleme gerekli"
 
 msgid "Review syntax-highlighted diffs"
 msgstr "Sözdizimi vurgulu diff'leri inceleyin"
+
+msgid "Review the pull request"
+msgstr "Pull request'i incele"
 
 msgid "Review the result."
 msgstr "Sonucu inceleyin."
@@ -16574,6 +16665,9 @@ msgstr "Adınızın yanında herkese açık gösterilir."
 msgid "Shut down {0}"
 msgstr "{0} cihazını kapat"
 
+msgid "Side bar"
+msgstr "Yan çubuk"
+
 msgid "Side by Side"
 msgstr "Yan yana"
 
@@ -16588,6 +16682,9 @@ msgstr "Kenar çubuğu kartı"
 
 msgid "Sidebar file rows"
 msgstr "Kenar çubuğu dosya satırları"
+
+msgid "Sidebar options"
+msgstr "Kenar çubuğu seçenekleri"
 
 msgid "Sidebar order"
 msgstr "Kenar çubuğu sırası"
@@ -16816,6 +16913,9 @@ msgstr "SOC 2 Type II uyumlu. Raporumuzu talep edin."
 
 msgid "SOC 2 Type II report"
 msgstr "SOC 2 Type II raporu"
+
+msgid "Soft"
+msgstr "Yumuşak"
 
 msgid "Some files are not an accepted type and were not added."
 msgstr "Bazı dosyalar kabul edilen türde değil ve eklenmedi."
@@ -17208,6 +17308,9 @@ msgstr "Bu çalışma alanında yeni bir oturum başlatır"
 msgid "State"
 msgstr "Durum"
 
+msgid "State colors"
+msgstr "Durum renkleri"
+
 msgid "Stats"
 msgstr "İstatistikler"
 
@@ -17310,6 +17413,12 @@ msgstr "Üstü çizili"
 
 msgid "Strip redundant overrides at call sites"
 msgstr "Çağrı noktalarındaki gereksiz geçersiz kılmaları kaldır"
+
+msgid "Stripe each conversation with its group's color, or its project's."
+msgstr "Her konuşmayı grubunun veya projesinin rengiyle şeritle."
+
+msgid "Stripe width"
+msgstr "Şerit genişliği"
 
 msgid "Strong"
 msgstr "Güçlü"
@@ -19667,6 +19776,9 @@ msgstr "Pro ile Superset’i telefonunuzda kullanın."
 msgid "Use the desktop app to start running parallel coding agents."
 msgstr "Paralel kodlama ajanları çalıştırmaya başlamak için masaüstü uygulamasını kullanın."
 
+msgid "Use the palette's color"
+msgstr "Paletin rengini kullan"
+
 msgid "Use the Superset tray menu > Host Service > Restart, then retry."
 msgstr "Superset tepsi menüsünde Host hizmeti > Yeniden başlat yolunu kullanın, sonra yeniden deneyin."
 
@@ -20251,6 +20363,9 @@ msgstr "Genişlik"
 
 msgid "Width · parallel sessions"
 msgstr "Genişlik · paralel oturumlar"
+
+msgid "Width of the colored stripes: groups, side bar and folder colors."
+msgstr "Renkli şeritlerin genişliği: gruplar, yan çubuk ve klasör renkleri."
 
 msgid "Window"
 msgstr "Pencere"

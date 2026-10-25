@@ -19,6 +19,7 @@ import {
 	PROJECT_COLOR_DEFAULT,
 	PROJECT_COLORS,
 } from "shared/constants/project-colors";
+import { SidebarFolderOptionsSubmenu } from "../../../../../SidebarFolderOptionsSubmenu";
 import type {
 	DashboardSidebarSectionActionsProps,
 	SectionActionsMenuKind,
@@ -31,6 +32,7 @@ interface SectionActionsMenuItemsProps
 
 export function SectionActionsMenuItems({
 	color,
+	groupId,
 	kind,
 	onRename,
 	onSetColor,
@@ -154,6 +156,12 @@ export function SectionActionsMenuItems({
 						{colorItems}
 					</DropdownMenuSubContent>
 				</DropdownMenuSub>
+			) : null}
+			{groupId ? (
+				<SidebarFolderOptionsSubmenu
+					folder={{ kind: "group", id: groupId }}
+					kind={kind}
+				/>
 			) : null}
 			{onHide
 				? renderItem({

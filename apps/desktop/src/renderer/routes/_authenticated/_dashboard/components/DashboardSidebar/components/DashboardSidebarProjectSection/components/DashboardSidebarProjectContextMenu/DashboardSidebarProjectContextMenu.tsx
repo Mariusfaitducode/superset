@@ -21,6 +21,7 @@ import {
 } from "react-icons/lu";
 import { useV2UserPreferences } from "renderer/hooks/useV2UserPreferences";
 import type { DashboardSidebarProject } from "../../../../types";
+import { SidebarFolderOptionsSubmenu } from "../../../SidebarFolderOptionsSubmenu";
 
 interface DashboardSidebarProjectContextMenuProps {
 	projectId: string;
@@ -100,6 +101,10 @@ export function DashboardSidebarProjectContextMenu({
 						<ContextMenuSeparator />
 					</>
 				)}
+				<SidebarFolderOptionsSubmenu
+					folder={{ kind: "project", id: projectId }}
+					kind="context"
+				/>
 				<ContextMenuItem onSelect={onHide}>
 					<LuEyeOff className="size-4 mr-2" />
 					<Trans>Hide from Sidebar</Trans>

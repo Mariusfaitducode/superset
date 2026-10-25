@@ -47,6 +47,7 @@ import { useForwardedHotkeys } from "renderer/routes/_authenticated/hooks/useFor
 import { useZoomHotkeys } from "renderer/routes/_authenticated/hooks/useZoomHotkeys";
 import { WorkspaceInitEffects } from "renderer/screens/main/components/WorkspaceInitEffects";
 import { useSettingsStore } from "renderer/stores/settings-state";
+import { useApplySidebarAppearance } from "renderer/stores/sidebar-preferences";
 import { useTabsStore } from "renderer/stores/tabs/store";
 import { useAgentHookListener } from "renderer/stores/tabs/useAgentHookListener";
 import { setPaneWorkspaceRunState } from "renderer/stores/tabs/workspace-run";
@@ -203,6 +204,7 @@ function AuthenticatedLayout() {
 
 	useZoomHotkeys();
 	useForwardedHotkeys();
+	useApplySidebarAppearance();
 
 	// Menu navigation subscription
 	electronTrpc.menu.subscribe.useSubscription(undefined, {

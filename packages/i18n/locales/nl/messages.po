@@ -2177,6 +2177,9 @@ msgstr "AI · Status"
 msgid "AI authentication failed. Please check your AI settings."
 msgstr "AI-authenticatie mislukt. Controleer je AI-instellingen."
 
+msgid "Airy"
+msgstr "Ruim"
+
 msgid "Alert"
 msgstr "Alert"
 
@@ -3131,6 +3134,9 @@ msgstr "Gesteund door"
 msgid "Background"
 msgstr "Achtergrond"
 
+msgid "Background of the open conversation."
+msgstr "Achtergrond van het geopende gesprek."
+
 msgid "Background processes"
 msgstr "Achtergrondprocessen"
 
@@ -3445,6 +3451,9 @@ msgstr "Bouwen in het openbaar"
 msgid "Build the future of Superset in the cloud"
 msgstr "Bouw aan de toekomst van Superset in de cloud"
 
+msgid "Build the settings page"
+msgstr "De instellingenpagina bouwen"
+
 msgid "Build your own"
 msgstr "Bouw je eigen"
 
@@ -3562,6 +3571,9 @@ msgstr "Agenda"
 
 msgid "Calendar and Gmail triggers in this organization will stop firing until an account is connected again."
 msgstr "Calendar- en Gmail-triggers in deze organisatie stoppen tot er weer een account is verbonden."
+
+msgid "Calendar sync"
+msgstr "Agendasynchronisatie"
 
 msgid "Camera access is not allowed"
 msgstr "Toegang tot de camera is niet toegestaan"
@@ -3952,11 +3964,11 @@ msgstr "Kies hoe bestanden openen als er geen previewpaneel is"
 msgid "Choose how the Changes view opens from the top bar"
 msgstr "Kies hoe de weergave Wijzigingen vanuit de bovenbalk wordt geopend"
 
+msgid "Choose how the sidebar looks and what it shows under each workspace. Right-click a project or a group for its own options."
+msgstr "Kies hoe de zijbalk eruitziet en wat hij onder elke workspace toont. Klik met rechts op een project of groep voor eigen opties."
+
 msgid "Choose how to open file paths when Cmd+clicking in the terminal"
 msgstr "Kies hoe bestandspaden openen bij Cmd+klik in de terminal"
-
-msgid "Choose what the sidebar shows under each workspace."
-msgstr "Kies wat de zijbalk onder elke workspace toont."
 
 msgid "Choose what to clear from the in-app browser."
 msgstr "Kies wat je uit de ingebouwde browser wilt wissen."
@@ -4440,6 +4452,16 @@ msgstr "Kleur"
 msgid "Color Filter"
 msgstr "Kleurfilter"
 
+#. placeholder {0}: stateLabel[key]
+msgid "Color for {0}"
+msgstr "Kleur voor {0}"
+
+msgid "Colorblind-safe"
+msgstr "Kleurenblindvriendelijk"
+
+msgid "Colors of the agent state dots, in the sidebar and the switchers."
+msgstr "Kleuren van de statusstippen van agents, in de zijbalk en de wisselaars."
+
 msgid "Columns"
 msgstr "Kolommen"
 
@@ -4560,6 +4582,12 @@ msgstr "Communicatie"
 
 msgid "Community"
 msgstr "Community"
+
+msgid "Compact"
+msgstr "Compact"
+
+msgid "Compact conversations"
+msgstr "Compacte gesprekken"
 
 msgid "Company"
 msgstr "Bedrijf"
@@ -4882,6 +4910,9 @@ msgstr "Contact opnemen"
 msgid "Contains this text..."
 msgstr "Bevat deze tekst..."
 
+msgid "Content"
+msgstr "Inhoud"
+
 msgid "Context"
 msgstr "Context"
 
@@ -4937,6 +4968,9 @@ msgstr "Een agentsessie voortzetten vereist een vastgezette workspace"
 
 msgid "continuing the last session"
 msgstr "de laatste sessie voortzetten"
+
+msgid "Contrast"
+msgstr "Contrast"
 
 msgid "Contributions"
 msgstr "Bijdragen"
@@ -6395,6 +6429,9 @@ msgstr "Jezelf degraderen?"
 msgid "Denied"
 msgstr "Geweigerd"
 
+msgid "Density"
+msgstr "Dichtheid"
+
 msgid "Deny"
 msgstr "Weigeren"
 
@@ -7375,6 +7412,9 @@ msgstr "Ontdekken"
 msgid "Explore Pages"
 msgstr "Ontdek Pagina's"
 
+msgid "Explore the codebase"
+msgstr "De codebase verkennen"
+
 msgid "Explored"
 msgstr "Verkend"
 
@@ -8015,6 +8055,9 @@ msgstr "uit te sluiten bestanden (glob)"
 msgid "files to include (glob)"
 msgstr "op te nemen bestanden (glob)"
 
+msgid "Fill"
+msgstr "Vulling"
+
 msgid "Fill out the contact form on this page and our team will reach out to learn about your needs and walk you through next steps."
 msgstr "Vul het contactformulier op deze pagina in, dan neemt ons team contact op om je wensen te bespreken en je door de volgende stappen te leiden."
 
@@ -8159,6 +8202,9 @@ msgstr "CI-fouten fixen"
 msgid "Fix findings"
 msgstr "Bevindingen oplossen"
 
+msgid "Fix the flaky test"
+msgstr "De wankele test repareren"
+
 msgid "fix-auth-redirect"
 msgstr "fix-auth-redirect"
 
@@ -8215,6 +8261,9 @@ msgstr "Het zoekveld in de takenweergave focussen"
 
 msgid "Folder"
 msgstr "Map"
+
+msgid "Folder color on conversations"
+msgstr "Mapkleur op gesprekken"
 
 msgid "Folder is missing"
 msgstr "Map ontbreekt"
@@ -8694,6 +8743,9 @@ msgstr "Helft van de gemergede wijzigingen is agentcode zonder bewerkingen"
 msgid "Hand the browser to your agent."
 msgstr "Geef de browser aan je agent."
 
+msgid "Hand-picked colors stay when you change the palette."
+msgstr "Zelf gekozen kleuren blijven als je het palet wijzigt."
+
 msgid "Handing to agent…"
 msgstr "Overdragen aan agent…"
 
@@ -8745,6 +8797,9 @@ msgstr "Kop 3"
 msgid "Heart"
 msgstr "Hart"
 
+msgid "Height of the rows and size of the conversation titles."
+msgstr "Hoogte van de rijen en grootte van de gesprekstitels."
+
 msgid "Help"
 msgstr "Help"
 
@@ -8773,6 +8828,9 @@ msgstr "Verbergen"
 msgid "Hide checks"
 msgstr "Checks verbergen"
 
+msgid "Hide conversations"
+msgstr "Gesprekken verbergen"
+
 msgid "Hide details"
 msgstr "Details verbergen"
 
@@ -8799,6 +8857,9 @@ msgstr "Verbergen in zijbalk"
 
 msgid "Hide from Sidebar"
 msgstr "Uit de zijbalk verbergen"
+
+msgid "Hide idle conversations"
+msgstr "Inactieve gesprekken verbergen"
 
 msgid "Hide log"
 msgstr "Log verbergen"
@@ -8827,8 +8888,14 @@ msgstr "Reviewopmerkingen verbergen"
 msgid "Hide sessions"
 msgstr "Sessies verbergen"
 
+msgid "Hide subagents"
+msgstr "Subagents verbergen"
+
 msgid "Hide text"
 msgstr "Tekst verbergen"
+
+msgid "Hide to-dos"
+msgstr "To-do's verbergen"
 
 msgid "Hide unchanged regions"
 msgstr "Ongewijzigde stukken verbergen"
@@ -8841,6 +8908,9 @@ msgstr "Hoge ernst"
 
 msgid "High usage"
 msgstr "Hoog gebruik"
+
+msgid "Highlight intensity"
+msgstr "Markeringssterkte"
 
 msgid "history"
 msgstr "geschiedenis"
@@ -8977,11 +9047,17 @@ msgstr "Hoeveel verborgen terminals volledig geladen blijven ({MIN_TERMINAL_PARK
 msgid "How much agent work engineers are actually running — tokens, cost, models and sessions, published by people who opted in."
 msgstr "Hoeveel agentwerk engineers daadwerkelijk draaien — tokens, kosten, modellen en sessies, gepubliceerd door mensen die zich hebben aangemeld."
 
+msgid "How much secondary text and separators stand out."
+msgstr "Hoe sterk secundaire tekst en scheidingslijnen opvallen."
+
 msgid "How should the agent's actions be approved?"
 msgstr "Hoe moeten de acties van de agent worden goedgekeurd?"
 
 msgid "How the command opens."
 msgstr "Hoe het commando opent."
+
+msgid "How the conversation shown in a pane stands out."
+msgstr "Hoe het gesprek dat in een paneel staat opvalt."
 
 msgid "How the prompt is delivered to the process."
 msgstr "Hoe de prompt bij het proces wordt afgeleverd."
@@ -10912,6 +10988,9 @@ msgstr "Volg, stuur en deblokkeer je agents vanaf je iPhone of iPad."
 msgid "Monitoring"
 msgstr "Monitoring"
 
+msgid "Monochrome"
+msgstr "Monochroom"
+
 msgid "monorepo"
 msgstr "monorepo"
 
@@ -11151,6 +11230,9 @@ msgstr "Wacht op jou"
 
 msgid "Needs your approval"
 msgstr "Wacht op je goedkeuring"
+
+msgid "Neon"
+msgstr "Neon"
 
 msgid "Nerd Fonts"
 msgstr "Nerd Fonts"
@@ -13418,6 +13500,9 @@ msgstr "Telefoonnummer"
 msgid "Pick {name} from the theme grid to apply it."
 msgstr "Kies {name} in het themaraster om het toe te passen."
 
+msgid "Pick a color"
+msgstr "Kies een kleur"
+
 msgid "Pick a different element"
 msgstr "Kies een ander element"
 
@@ -14509,6 +14594,9 @@ msgstr "Release"
 msgid "Release control"
 msgstr "Besturing loslaten"
 
+msgid "Release notes"
+msgstr "Releasenotes"
+
 msgid "Release notes draft"
 msgstr "Concept van releasenotes"
 
@@ -15224,6 +15312,9 @@ msgstr "Review vereist"
 
 msgid "Review syntax-highlighted diffs"
 msgstr "Review diffs met syntaxmarkering"
+
+msgid "Review the pull request"
+msgstr "De pull request reviewen"
 
 msgid "Review the result."
 msgstr "Review het resultaat."
@@ -16574,6 +16665,9 @@ msgstr "Wordt publiek naast je naam getoond."
 msgid "Shut down {0}"
 msgstr "{0} afsluiten"
 
+msgid "Side bar"
+msgstr "Zijbalk"
+
 msgid "Side by Side"
 msgstr "Naast elkaar"
 
@@ -16588,6 +16682,9 @@ msgstr "Sidebar Card"
 
 msgid "Sidebar file rows"
 msgstr "Bestandsrijen in de zijbalk"
+
+msgid "Sidebar options"
+msgstr "Zijbalkopties"
 
 msgid "Sidebar order"
 msgstr "Volgorde zijbalk"
@@ -16816,6 +16913,9 @@ msgstr "SOC 2 Type II-compliant. Vraag ons rapport aan."
 
 msgid "SOC 2 Type II report"
 msgstr "SOC 2 Type II-rapport"
+
+msgid "Soft"
+msgstr "Zacht"
 
 msgid "Some files are not an accepted type and were not added."
 msgstr "Sommige bestanden hebben geen toegestaan type en zijn niet toegevoegd."
@@ -17208,6 +17308,9 @@ msgstr "Start een nieuwe sessie in deze werkruimte"
 msgid "State"
 msgstr "Status"
 
+msgid "State colors"
+msgstr "Statuskleuren"
+
 msgid "Stats"
 msgstr "Statistieken"
 
@@ -17310,6 +17413,12 @@ msgstr "Doorhalen"
 
 msgid "Strip redundant overrides at call sites"
 msgstr "Overbodige overrides bij aanroepplekken verwijderen"
+
+msgid "Stripe each conversation with its group's color, or its project's."
+msgstr "Geef elk gesprek een streep in de kleur van zijn groep of project."
+
+msgid "Stripe width"
+msgstr "Streepbreedte"
 
 msgid "Strong"
 msgstr "Sterk"
@@ -19667,6 +19776,9 @@ msgstr "Gebruik Superset op je telefoon met Pro."
 msgid "Use the desktop app to start running parallel coding agents."
 msgstr "Gebruik de desktop-app om parallelle coding agents te draaien."
 
+msgid "Use the palette's color"
+msgstr "Kleur van het palet gebruiken"
+
 msgid "Use the Superset tray menu > Host Service > Restart, then retry."
 msgstr "Gebruik het Superset-menu in de menubalk > Hostservice > Opnieuw starten en probeer het opnieuw."
 
@@ -20251,6 +20363,9 @@ msgstr "Breedte"
 
 msgid "Width · parallel sessions"
 msgstr "Breedte · parallelle sessies"
+
+msgid "Width of the colored stripes: groups, side bar and folder colors."
+msgstr "Breedte van de gekleurde strepen: groepen, zijbalk en mapkleuren."
 
 msgid "Window"
 msgstr "Venster"

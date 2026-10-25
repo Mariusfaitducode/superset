@@ -123,6 +123,10 @@ export const PERSISTED_KEY_REGISTRY: ReadonlyArray<
 		["sidebar-preferences-v1"],
 	],
 	[
+		"src/renderer/stores/sidebar-folder-options/store.ts",
+		["sidebar-folder-options-v1"],
+	],
+	[
 		"src/renderer/stores/workspace-label-filter/store.ts",
 		["workspace-label-filter-v1"],
 	],
