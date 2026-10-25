@@ -107,6 +107,7 @@ msgstr "{0, plural, one {# active port — hide details} other {# active ports �
 msgid "{0, plural, one {# active port — show details} other {# active ports — show details}}"
 msgstr "{0, plural, one {# active port — show details} other {# active ports — show details}}"
 
+#. placeholder {0}: metrics.agents.active
 #. placeholder {0}: person.runningAgentCount
 msgid "{0, plural, one {# agent} other {# agents}}"
 msgstr "{0, plural, one {# agent} other {# agents}}"
@@ -5050,6 +5051,9 @@ msgstr "Copy your key now — you won't be able to see it again."
 msgid "Copyright or trademark"
 msgstr "Copyright or trademark"
 
+msgid "Cores"
+msgstr "Cores"
+
 msgid "Cost"
 msgstr "Cost"
 
@@ -5230,6 +5234,9 @@ msgstr "Could not read the dropped files"
 
 msgid "Could not read the Google account. Please try again."
 msgstr "Could not read the Google account. Please try again."
+
+msgid "Could not read the host's load."
+msgstr "Could not read the host's load."
 
 msgid "Could not record cloud workspace"
 msgstr "Could not record cloud workspace"
@@ -8574,6 +8581,9 @@ msgstr "Heading 3"
 msgid "Heart"
 msgstr "Heart"
 
+msgid "Heaviest workspaces"
+msgstr "Heaviest workspaces"
+
 msgid "Help"
 msgstr "Help"
 
@@ -10040,11 +10050,17 @@ msgstr "Live preview"
 msgid "llms.txt (index for AI agents)"
 msgstr "llms.txt (index for AI agents)"
 
+msgid "Load"
+msgstr "Load"
+
 msgid "Load (1 min)"
 msgstr "Load (1 min)"
 
 msgid "load agent settings"
 msgstr "load agent settings"
+
+msgid "Load average"
+msgstr "Load average"
 
 msgid "Load diff"
 msgstr "Load diff"
@@ -13929,6 +13945,9 @@ msgstr "Radix rotates the tooltip arrow wrapper per side,"
 msgid "Radix Tooltip docs"
 msgstr "Radix Tooltip docs"
 
+msgid "RAM"
+msgstr "RAM"
+
 msgid "RAM in use"
 msgstr "RAM in use"
 
@@ -14278,6 +14297,12 @@ msgstr "Remote Access"
 
 msgid "Remote Access may be off"
 msgstr "Remote Access may be off"
+
+msgid "Remote host load"
+msgstr "Remote host load"
+
+msgid "Remote hosts"
+msgstr "Remote hosts"
 
 msgid "Remote MCP server — connects over HTTP"
 msgstr "Remote MCP server — connects over HTTP"
@@ -15971,6 +15996,10 @@ msgstr "Settings → Remote Access → “Allow remote access to this device via
 
 msgid "Settings are not available for this device"
 msgstr "Settings are not available for this device"
+
+#. placeholder {0}: host.name
+msgid "Settings for {0}"
+msgstr "Settings for {0}"
 
 msgid "Settings..."
 msgstr "Settings..."
@@ -17913,6 +17942,9 @@ msgstr "The host did not come back within fifteen minutes."
 msgid "The host hasn't answered."
 msgstr "The host hasn't answered."
 
+msgid "The host is offline."
+msgstr "The host is offline."
+
 msgid "The host is online. Pick it when you create a workspace."
 msgstr "The host is online. Pick it when you create a workspace."
 
@@ -18267,6 +18299,9 @@ msgstr "This host is behind the app you are using. Workspaces still open, but ne
 
 msgid "This host needs an update"
 msgstr "This host needs an update"
+
+msgid "This host runs an older host service. Update it to see its load."
+msgstr "This host runs an older host service. Update it to see its load."
 
 msgid "This invitation has already been accepted."
 msgstr "This invitation has already been accepted."
@@ -19071,6 +19106,9 @@ msgstr "Unmute notifications"
 
 msgid "Unnamed key"
 msgstr "Unnamed key"
+
+msgid "Unnamed workspace"
+msgstr "Unnamed workspace"
 
 msgid "Unpaid"
 msgstr "Unpaid"

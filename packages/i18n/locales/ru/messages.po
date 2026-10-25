@@ -107,6 +107,7 @@ msgstr "{0, plural, one {# активный порт — скрыть детал
 msgid "{0, plural, one {# active port — show details} other {# active ports — show details}}"
 msgstr "{0, plural, one {# активный порт — показать детали} few {# активных порта — показать детали} many {# активных портов — показать детали} other {# активных портов — показать детали}}"
 
+#. placeholder {0}: metrics.agents.active
 #. placeholder {0}: person.runningAgentCount
 msgid "{0, plural, one {# agent} other {# agents}}"
 msgstr "{0, plural, one {# агент} few {# агента} many {# агентов} other {# агента}}"
@@ -5050,6 +5051,9 @@ msgstr "Скопируйте ключ сейчас — увидеть его с�
 msgid "Copyright or trademark"
 msgstr "Авторские права или товарный знак"
 
+msgid "Cores"
+msgstr "Ядра"
+
 msgid "Cost"
 msgstr "Стоимость"
 
@@ -5230,6 +5234,9 @@ msgstr "Не удалось прочитать перетащенные файл
 
 msgid "Could not read the Google account. Please try again."
 msgstr "Не удалось прочитать аккаунт Google. Попробуйте ещё раз."
+
+msgid "Could not read the host's load."
+msgstr "Не удалось получить нагрузку хоста."
 
 msgid "Could not record cloud workspace"
 msgstr "Не удалось записать облачную рабочую область"
@@ -8574,6 +8581,9 @@ msgstr "Заголовок 3"
 msgid "Heart"
 msgstr "Сердце"
 
+msgid "Heaviest workspaces"
+msgstr "Самые тяжёлые рабочие пространства"
+
 msgid "Help"
 msgstr "Помощь"
 
@@ -10040,11 +10050,17 @@ msgstr "Живой предпросмотр"
 msgid "llms.txt (index for AI agents)"
 msgstr "llms.txt (индекс для AI-агентов)"
 
+msgid "Load"
+msgstr "Нагрузка"
+
 msgid "Load (1 min)"
 msgstr "Нагрузка (1 мин)"
 
 msgid "load agent settings"
 msgstr "загрузить настройки агента"
+
+msgid "Load average"
+msgstr "Средняя нагрузка"
 
 msgid "Load diff"
 msgstr "Загрузить diff"
@@ -13929,6 +13945,9 @@ msgstr "Radix поворачивает обёртку стрелки подск�
 msgid "Radix Tooltip docs"
 msgstr "Документация Radix Tooltip"
 
+msgid "RAM"
+msgstr "ОЗУ"
+
 msgid "RAM in use"
 msgstr "Используемая RAM"
 
@@ -14278,6 +14297,12 @@ msgstr "Удалённый доступ"
 
 msgid "Remote Access may be off"
 msgstr "Возможно, удалённый доступ выключен"
+
+msgid "Remote host load"
+msgstr "Нагрузка удалённых хостов"
+
+msgid "Remote hosts"
+msgstr "Удалённые хосты"
 
 msgid "Remote MCP server — connects over HTTP"
 msgstr "Удалённый сервер MCP — подключается по HTTP"
@@ -15971,6 +15996,10 @@ msgstr "Настройки → Удалённый доступ → «Разре�
 
 msgid "Settings are not available for this device"
 msgstr "Настройки недоступны для этого устройства"
+
+#. placeholder {0}: host.name
+msgid "Settings for {0}"
+msgstr "Настройки {0}"
 
 msgid "Settings..."
 msgstr "Настройки..."
@@ -17913,6 +17942,9 @@ msgstr "Хост не восстановил работу в течение пя
 msgid "The host hasn't answered."
 msgstr "Хост не ответил."
 
+msgid "The host is offline."
+msgstr "Хост не в сети."
+
 msgid "The host is online. Pick it when you create a workspace."
 msgstr "Хост в сети. Выберите его при создании рабочей области."
 
@@ -18267,6 +18299,9 @@ msgstr "Этот хост отстаёт от используемого при�
 
 msgid "This host needs an update"
 msgstr "Этому хосту нужно обновление"
+
+msgid "This host runs an older host service. Update it to see its load."
+msgstr "На этом хосте старая версия host service. Обновите её, чтобы видеть нагрузку."
 
 msgid "This invitation has already been accepted."
 msgstr "Это приглашение уже принято."
@@ -19071,6 +19106,9 @@ msgstr "Включить уведомления"
 
 msgid "Unnamed key"
 msgstr "Ключ без названия"
+
+msgid "Unnamed workspace"
+msgstr "Рабочее пространство без названия"
 
 msgid "Unpaid"
 msgstr "Не оплачен"

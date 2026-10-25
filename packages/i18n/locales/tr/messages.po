@@ -107,6 +107,7 @@ msgstr "{0, plural, one {# etkin port — ayrıntıları gizle} other {# etkin p
 msgid "{0, plural, one {# active port — show details} other {# active ports — show details}}"
 msgstr "{0, plural, one {# etkin port — ayrıntıları göster} other {# etkin port — ayrıntıları göster}}"
 
+#. placeholder {0}: metrics.agents.active
 #. placeholder {0}: person.runningAgentCount
 msgid "{0, plural, one {# agent} other {# agents}}"
 msgstr "{0, plural, one {# ajan} other {# ajan}}"
@@ -5050,6 +5051,9 @@ msgstr "Anahtarınızı şimdi kopyalayın — bir daha göremezsiniz."
 msgid "Copyright or trademark"
 msgstr "Telif hakkı veya ticari marka"
 
+msgid "Cores"
+msgstr "Çekirdekler"
+
 msgid "Cost"
 msgstr "Maliyet"
 
@@ -5230,6 +5234,9 @@ msgstr "Bırakılan dosyalar okunamadı"
 
 msgid "Could not read the Google account. Please try again."
 msgstr "Google hesabı okunamadı. Lütfen yeniden deneyin."
+
+msgid "Could not read the host's load."
+msgstr "Ana makine yükü okunamadı."
 
 msgid "Could not record cloud workspace"
 msgstr "Bulut çalışma alanı kaydedilemedi"
@@ -8574,6 +8581,9 @@ msgstr "Başlık 3"
 msgid "Heart"
 msgstr "Kalp"
 
+msgid "Heaviest workspaces"
+msgstr "En ağır çalışma alanları"
+
 msgid "Help"
 msgstr "Yardım"
 
@@ -10040,11 +10050,17 @@ msgstr "Canlı önizleme"
 msgid "llms.txt (index for AI agents)"
 msgstr "llms.txt (AI ajanları için dizin)"
 
+msgid "Load"
+msgstr "Yük"
+
 msgid "Load (1 min)"
 msgstr "Yük (1 dk)"
 
 msgid "load agent settings"
 msgstr "ajan ayarlarını yükleme"
+
+msgid "Load average"
+msgstr "Ortalama yük"
 
 msgid "Load diff"
 msgstr "Farkı yükle"
@@ -13929,6 +13945,9 @@ msgstr "Radix, tooltip ok sarmalayıcısını her yön için döndürür,"
 msgid "Radix Tooltip docs"
 msgstr "Radix Tooltip belgeleri"
 
+msgid "RAM"
+msgstr "RAM"
+
 msgid "RAM in use"
 msgstr "Kullanımdaki RAM"
 
@@ -14278,6 +14297,12 @@ msgstr "Uzaktan erişim"
 
 msgid "Remote Access may be off"
 msgstr "Uzaktan erişim kapalı olabilir"
+
+msgid "Remote host load"
+msgstr "Uzak ana makine yükü"
+
+msgid "Remote hosts"
+msgstr "Uzak ana makineler"
 
 msgid "Remote MCP server — connects over HTTP"
 msgstr "Uzak MCP sunucusu — HTTP üzerinden bağlanır"
@@ -15971,6 +15996,10 @@ msgstr "Ayarlar → Uzaktan erişim → “Bu cihaza röle üzerinden uzaktan er
 
 msgid "Settings are not available for this device"
 msgstr "Bu cihaz için ayarlar kullanılamıyor"
+
+#. placeholder {0}: host.name
+msgid "Settings for {0}"
+msgstr "{0} ayarları"
 
 msgid "Settings..."
 msgstr "Ayarlar..."
@@ -17913,6 +17942,9 @@ msgstr "Ana makine on beş dakika içinde geri gelmedi."
 msgid "The host hasn't answered."
 msgstr "Host yanıt vermedi."
 
+msgid "The host is offline."
+msgstr "Ana makine çevrimdışı."
+
 msgid "The host is online. Pick it when you create a workspace."
 msgstr "Host çevrimiçi. Bir çalışma alanı oluştururken onu seç."
 
@@ -18267,6 +18299,9 @@ msgstr "Bu ana makine kullandığınız uygulamanın gerisinde. Çalışma alanl
 
 msgid "This host needs an update"
 msgstr "Bu host'un güncellenmesi gerekiyor"
+
+msgid "This host runs an older host service. Update it to see its load."
+msgstr "Bu ana makine eski bir host service çalıştırıyor. Yükünü görmek için güncelleyin."
 
 msgid "This invitation has already been accepted."
 msgstr "Bu davet zaten kabul edilmiş."
@@ -19071,6 +19106,9 @@ msgstr "Bildirimlerin sesini aç"
 
 msgid "Unnamed key"
 msgstr "Adsız anahtar"
+
+msgid "Unnamed workspace"
+msgstr "Adsız çalışma alanı"
 
 msgid "Unpaid"
 msgstr "Ödenmemiş"

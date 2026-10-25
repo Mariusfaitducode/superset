@@ -6,6 +6,7 @@ import {
 	HOST_SERVICE_VERSION,
 } from "../../../install-source";
 import type { ApiAuthProvider } from "../../../providers/auth/types";
+import { readHostMetrics } from "../../../runtime/host-metrics";
 import type { ApiClient } from "../../../types";
 import { machineOnlyProcedure, protectedProcedure, router } from "../../index";
 import {
@@ -90,6 +91,17 @@ export const hostRouter = router({
 			uptime: process.uptime(),
 		};
 	}),
+	/**
+	 * Machine load for the host monitor: CPU, memory, agents and the
+	 * workspaces whose terminals hold the most memory. Works offline from
+	 * the cloud, unlike `info`.
+	 */
+	metrics: protectedProcedure.query(({ ctx }) =>
+		readHostMetrics({
+			db: ctx.db,
+			listAgents: () => ctx.terminalAgentStore.list(),
+		}),
+	),
 	/**
 	 * The API token of the account that runs this host, so the CLI in one of
 	 * its terminals acts as that account instead of its own login. The relay
