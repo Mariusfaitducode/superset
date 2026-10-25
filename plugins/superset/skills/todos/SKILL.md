@@ -30,6 +30,11 @@ conversation (`$SUPERSET_TERMINAL_ID`).
   and a `--draft` the user can send as is: the full mail, message or post in
   the user's language and voice, not a summary of it. Then tell the user the
   to-dos are on their list.
+- **Keep every list true, not only yours.** When the user says something is
+  done ("I opened the Apple Developer account", "I sent the mail"), run
+  `superset todos list --all` and check off every open to-do, in any
+  conversation, that this completes. If what they said unblocks another
+  conversation's to-dos, say which ones in your reply.
 
 ## Commands
 
