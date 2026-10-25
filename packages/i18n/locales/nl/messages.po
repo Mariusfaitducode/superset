@@ -2966,9 +2966,6 @@ msgstr "Automatiseringen vereisen een Pro- of Enterprise-abonnement. Als je down
 msgid "Automations require the Pro plan."
 msgstr "Automatiseringen vereisen het Pro-abonnement."
 
-msgid "Automations, {myFailedCount} failing"
-msgstr "Automatiseringen, {myFailedCount} mislukt"
-
 msgid "Autonomous"
 msgstr "Autonoom"
 
@@ -3657,6 +3654,9 @@ msgstr "Projectlocatie wijzigen"
 
 msgid "Change role"
 msgstr "Rol wijzigen"
+
+msgid "Change shortcuts"
+msgstr "Sneltoetsen wijzigen"
 
 msgid "Change state"
 msgstr "Status wijzigen"
@@ -9640,6 +9640,9 @@ msgstr "Docs actueel houden"
 msgid "Keep editing"
 msgstr "Verder bewerken"
 
+msgid "Keep the sidebar in Settings"
+msgstr "Zijbalk behouden in Instellingen"
+
 msgid "Keep typing an email to invite"
 msgstr "Typ verder een e-mailadres om uit te nodigen"
 
@@ -10577,6 +10580,9 @@ msgstr "Geheugenaandeel"
 
 msgid "Mention."
 msgstr "Noem."
+
+msgid "Menu"
+msgstr "Menu"
 
 msgid "Menubar"
 msgstr "Menubalk"
@@ -12373,6 +12379,9 @@ msgstr "App Store openen"
 msgid "Open as comment pane"
 msgstr "Openen als opmerkingenpaneel"
 
+msgid "Open Automations"
+msgstr "Automatiseringen openen"
+
 msgid "Open billing"
 msgstr "Facturering openen"
 
@@ -12387,6 +12396,9 @@ msgstr "Wijzigingen openen"
 
 msgid "Open Changes"
 msgstr "Wijzigingen openen"
+
+msgid "Open Cloud Workspaces"
+msgstr "Cloudworkspaces openen"
 
 msgid "Open Command Palette"
 msgstr "Opdrachtenpalet openen"
@@ -12602,14 +12614,23 @@ msgstr "Menu openen"
 msgid "Open navigation"
 msgstr "Navigatie openen"
 
+msgid "Open Notes"
+msgstr "Notities openen"
+
 msgid "Open on GitHub"
 msgstr "Openen op GitHub"
 
 msgid "Open Page in Default Browser"
 msgstr "Pagina openen in standaardbrowser"
 
+msgid "Open Pages"
+msgstr "Pagina's openen"
+
 msgid "Open pages and reply to comments from the Superset app on iPhone and iPad."
 msgstr "Open pages en reageer op opmerkingen in de Superset-app op iPhone en iPad."
+
+msgid "Open Plugins"
+msgstr "Plug-ins openen"
 
 msgid "Open Plugins in the Superset app and pick one. The install is saved to your account."
 msgstr "Open Plugins in de Superset-app en kies er een. De installatie wordt bij je account opgeslagen."
@@ -12653,6 +12674,9 @@ msgstr "Pull request-opties openen"
 msgid "Open pull requests"
 msgstr "Open pull requests"
 
+msgid "Open Pull Requests"
+msgstr "Pull requests openen"
+
 msgid "Open recent"
 msgstr "Recent openen"
 
@@ -12689,6 +12713,9 @@ msgstr "Systeeminstellingen openen"
 msgid "Open task {title}"
 msgstr "Taak {title} openen"
 
+msgid "Open Tasks"
+msgstr "Taken openen"
+
 msgid "Open Terminal"
 msgstr "Terminal openen"
 
@@ -12722,14 +12749,38 @@ msgstr "Terminalscript 9 openen"
 msgid "Open terminals and prompt agents"
 msgstr "Terminals openen en agents prompts geven"
 
+msgid "Open the automations"
+msgstr "Opent de automatiseringen"
+
 msgid "Open the Changes pane in a new tab, or focus the existing one"
 msgstr "Opent het wijzigingenpaneel in een nieuw tabblad, of focust het bestaande"
+
+msgid "Open the cloud workspaces"
+msgstr "Opent de cloudworkspaces"
 
 msgid "Open the global command palette"
 msgstr "Het globale opdrachtenpalet openen"
 
+msgid "Open the list of projects"
+msgstr "Opent de lijst met projecten"
+
+msgid "Open the list of workspaces"
+msgstr "Opent de lijst met workspaces"
+
 msgid "Open the new workspace modal"
 msgstr "Het venster voor een nieuwe werkruimte openen"
+
+msgid "Open the notes"
+msgstr "Opent de notities"
+
+msgid "Open the pages"
+msgstr "Opent de pagina's"
+
+msgid "Open the plugins"
+msgstr "Opent de plug-ins"
+
+msgid "Open the pull requests"
+msgstr "Opent de pull requests"
 
 msgid "Open the resource usage view in the command palette"
 msgstr "De weergave van resourcegebruik in het opdrachtenpalet openen"
@@ -12743,6 +12794,12 @@ msgstr "De werkruimte van de run openen"
 msgid "open the task in a workspace"
 msgstr "de taak in een werkruimte openen"
 
+msgid "Open the tasks"
+msgstr "Opent de taken"
+
+msgid "Open the usage page"
+msgstr "Opent de gebruikspagina"
+
 msgid "Open the workspace"
 msgstr "Workspace openen"
 
@@ -12752,12 +12809,18 @@ msgstr "De werkruimte openen in de app die is gekozen in het menu 'Openen in' (V
 msgid "Open this run's workspace"
 msgstr "Werkruimte van deze run openen"
 
+msgid "Open Usage"
+msgstr "Gebruik openen"
+
 msgid "Open workspace"
 msgstr "Werkruimte openen"
 
 #. placeholder {0}: getV2WorkspaceDisplayName(workspace)
 msgid "Open workspace: {0}"
 msgstr "Workspace openen: {0}"
+
+msgid "Open Workspaces"
+msgstr "Workspaces openen"
 
 msgid "Open your app."
 msgstr "Open je app."
@@ -13294,6 +13357,9 @@ msgstr "Kies hoe {label} inlogt binnen een sandbox. De inloggegevens gaan bij he
 
 msgid "Pick the best agent."
 msgstr "Kies de beste agent."
+
+msgid "Pick the entries of the menu at the top of the sidebar. Their shortcuts work even when an entry is hidden."
+msgstr "Kies de items van het menu bovenaan de zijbalk. Hun sneltoetsen werken ook als een item verborgen is."
 
 msgid "Pick the new project folder on {hostName}."
 msgstr "Kies de nieuwe projectmap op {hostName}."
@@ -16329,6 +16395,9 @@ msgstr "Toon de to-dolijst van elk gesprek, gedeeld met de agent."
 
 msgid "Show the triggering payload"
 msgstr "Activerende payload tonen"
+
+msgid "Show the workspace sidebar on the left while Settings is open."
+msgstr "Toon de workspace-zijbalk links zolang Instellingen open is."
 
 msgid "Show translation"
 msgstr "Vertaling tonen"

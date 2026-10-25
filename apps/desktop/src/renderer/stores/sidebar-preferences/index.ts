@@ -15,6 +15,11 @@ export {
 	stateColorVar,
 } from "./appearance";
 export {
+	NAV_ITEM_HOTKEY,
+	SIDEBAR_NAV_ITEMS,
+	type SidebarNavItemId,
+} from "./nav-items";
+export {
 	DEFAULT_SIDEBAR_PREFERENCES,
 	type SidebarPreferenceKey,
 	type SidebarPreferences,

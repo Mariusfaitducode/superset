@@ -2966,9 +2966,6 @@ msgstr "자동화에는 Pro 또는 Enterprise 요금제가 필요합니다. 다�
 msgid "Automations require the Pro plan."
 msgstr "자동화에는 Pro 플랜이 필요합니다."
 
-msgid "Automations, {myFailedCount} failing"
-msgstr "자동화, {myFailedCount}개 실패"
-
 msgid "Autonomous"
 msgstr "자율"
 
@@ -3657,6 +3654,9 @@ msgstr "프로젝트 위치 변경"
 
 msgid "Change role"
 msgstr "역할 변경"
+
+msgid "Change shortcuts"
+msgstr "단축키 변경"
 
 msgid "Change state"
 msgstr "상태 변경"
@@ -9640,6 +9640,9 @@ msgstr "문서 최신 상태 유지"
 msgid "Keep editing"
 msgstr "계속 편집"
 
+msgid "Keep the sidebar in Settings"
+msgstr "설정에서도 사이드바 유지"
+
 msgid "Keep typing an email to invite"
 msgstr "초대하려면 이메일을 계속 입력하세요"
 
@@ -10577,6 +10580,9 @@ msgstr "메모리 점유율"
 
 msgid "Mention."
 msgstr "멘션."
+
+msgid "Menu"
+msgstr "메뉴"
 
 msgid "Menubar"
 msgstr "메뉴 바"
@@ -12373,6 +12379,9 @@ msgstr "App Store 열기"
 msgid "Open as comment pane"
 msgstr "코멘트 패널으로 열기"
 
+msgid "Open Automations"
+msgstr "자동화 열기"
+
 msgid "Open billing"
 msgstr "결제 열기"
 
@@ -12387,6 +12396,9 @@ msgstr "변경 열기"
 
 msgid "Open Changes"
 msgstr "변경 열기"
+
+msgid "Open Cloud Workspaces"
+msgstr "클라우드 워크스페이스 열기"
 
 msgid "Open Command Palette"
 msgstr "명령 팔레트 열기"
@@ -12602,14 +12614,23 @@ msgstr "메뉴 열기"
 msgid "Open navigation"
 msgstr "내비게이션 열기"
 
+msgid "Open Notes"
+msgstr "노트 열기"
+
 msgid "Open on GitHub"
 msgstr "GitHub에서 열기"
 
 msgid "Open Page in Default Browser"
 msgstr "기본 브라우저에서 페이지 열기"
 
+msgid "Open Pages"
+msgstr "페이지 열기"
+
 msgid "Open pages and reply to comments from the Superset app on iPhone and iPad."
 msgstr "iPhone 및 iPad용 Superset 앱에서 페이지를 열고 댓글에 답글을 남기세요."
+
+msgid "Open Plugins"
+msgstr "플러그인 열기"
 
 msgid "Open Plugins in the Superset app and pick one. The install is saved to your account."
 msgstr "Superset 앱에서 플러그인을 열고 하나를 고르세요. 설치 내역은 계정에 저장됩니다."
@@ -12653,6 +12674,9 @@ msgstr "풀 리퀘스트 옵션 열기"
 msgid "Open pull requests"
 msgstr "열린 풀 리퀘스트"
 
+msgid "Open Pull Requests"
+msgstr "풀 리퀘스트 열기"
+
 msgid "Open recent"
 msgstr "최근 항목 열기"
 
@@ -12689,6 +12713,9 @@ msgstr "시스템 설정 열기"
 msgid "Open task {title}"
 msgstr "{title} 작업 열기"
 
+msgid "Open Tasks"
+msgstr "작업 열기"
+
 msgid "Open Terminal"
 msgstr "터미널 열기"
 
@@ -12722,14 +12749,38 @@ msgstr "터미널 스크립트 9 열기"
 msgid "Open terminals and prompt agents"
 msgstr "터미널을 열고 에이전트에 지시"
 
+msgid "Open the automations"
+msgstr "자동화를 엽니다"
+
 msgid "Open the Changes pane in a new tab, or focus the existing one"
 msgstr "변경 패널을 새 탭에서 열거나 기존 패널에 포커스합니다"
+
+msgid "Open the cloud workspaces"
+msgstr "클라우드 워크스페이스를 엽니다"
 
 msgid "Open the global command palette"
 msgstr "전역 명령 팔레트를 엽니다"
 
+msgid "Open the list of projects"
+msgstr "프로젝트 목록을 엽니다"
+
+msgid "Open the list of workspaces"
+msgstr "워크스페이스 목록을 엽니다"
+
 msgid "Open the new workspace modal"
 msgstr "새 워크스페이스 모달을 엽니다"
+
+msgid "Open the notes"
+msgstr "노트를 엽니다"
+
+msgid "Open the pages"
+msgstr "페이지를 엽니다"
+
+msgid "Open the plugins"
+msgstr "플러그인을 엽니다"
+
+msgid "Open the pull requests"
+msgstr "풀 리퀘스트를 엽니다"
 
 msgid "Open the resource usage view in the command palette"
 msgstr "명령 팔레트에서 리소스 사용량 보기를 엽니다"
@@ -12743,6 +12794,12 @@ msgstr "실행의 워크스페이스 열기"
 msgid "open the task in a workspace"
 msgstr "워크스페이스에서 작업을 열"
 
+msgid "Open the tasks"
+msgstr "작업을 엽니다"
+
+msgid "Open the usage page"
+msgstr "사용량 페이지를 엽니다"
+
 msgid "Open the workspace"
 msgstr "워크스페이스 열기"
 
@@ -12752,12 +12809,18 @@ msgstr "'다음에서 열기' 메뉴에서 선택한 앱(VS Code, Cursor 등)에
 msgid "Open this run's workspace"
 msgstr "이 실행의 워크스페이스 열기"
 
+msgid "Open Usage"
+msgstr "사용량 열기"
+
 msgid "Open workspace"
 msgstr "워크스페이스 열기"
 
 #. placeholder {0}: getV2WorkspaceDisplayName(workspace)
 msgid "Open workspace: {0}"
 msgstr "워크스페이스 열기: {0}"
+
+msgid "Open Workspaces"
+msgstr "워크스페이스 열기"
 
 msgid "Open your app."
 msgstr "앱을 여세요."
@@ -13294,6 +13357,9 @@ msgstr "샌드박스 안에서 {label}이(가) 로그인하는 방식을 고르�
 
 msgid "Pick the best agent."
 msgstr "최고의 에이전트를 고르세요."
+
+msgid "Pick the entries of the menu at the top of the sidebar. Their shortcuts work even when an entry is hidden."
+msgstr "사이드바 상단 메뉴의 항목을 선택합니다. 항목을 숨겨도 단축키는 작동합니다."
 
 msgid "Pick the new project folder on {hostName}."
 msgstr "{hostName}에서 새 프로젝트 폴더를 선택하세요."
@@ -16329,6 +16395,9 @@ msgstr "각 대화의 할 일 목록을 에이전트와 공유하여 표시합�
 
 msgid "Show the triggering payload"
 msgstr "트리거 페이로드 표시"
+
+msgid "Show the workspace sidebar on the left while Settings is open."
+msgstr "설정이 열려 있는 동안 왼쪽에 워크스페이스 사이드바를 표시합니다."
 
 msgid "Show translation"
 msgstr "번역 보기"

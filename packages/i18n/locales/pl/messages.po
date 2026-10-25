@@ -2966,9 +2966,6 @@ msgstr "Automatyzacje wymagają planu Pro lub Enterprise. Jeśli przejdziesz na 
 msgid "Automations require the Pro plan."
 msgstr "Automatyzacje wymagają planu Pro."
 
-msgid "Automations, {myFailedCount} failing"
-msgstr "Automatyzacje, nieudane: {myFailedCount}"
-
 msgid "Autonomous"
 msgstr "Autonomiczny"
 
@@ -3657,6 +3654,9 @@ msgstr "Zmień lokalizację projektu"
 
 msgid "Change role"
 msgstr "Zmień rolę"
+
+msgid "Change shortcuts"
+msgstr "Zmień skróty"
 
 msgid "Change state"
 msgstr "Zmień stan"
@@ -9640,6 +9640,9 @@ msgstr "Utrzymuj dokumentację aktualną"
 msgid "Keep editing"
 msgstr "Kontynuuj edycję"
 
+msgid "Keep the sidebar in Settings"
+msgstr "Zachowaj pasek boczny w Ustawieniach"
+
 msgid "Keep typing an email to invite"
 msgstr "Wpisuj dalej adres e-mail, aby zaprosić"
 
@@ -10577,6 +10580,9 @@ msgstr "Udział pamięci"
 
 msgid "Mention."
 msgstr "Wspomnij."
+
+msgid "Menu"
+msgstr "Menu"
 
 msgid "Menubar"
 msgstr "Pasek menu"
@@ -12373,6 +12379,9 @@ msgstr "Otwórz App Store"
 msgid "Open as comment pane"
 msgstr "Otwórz jako panel komentarzy"
 
+msgid "Open Automations"
+msgstr "Otwórz automatyzacje"
+
 msgid "Open billing"
 msgstr "Otwórz rozliczenia"
 
@@ -12387,6 +12396,9 @@ msgstr "Otwórz zmiany"
 
 msgid "Open Changes"
 msgstr "Otwórz zmiany"
+
+msgid "Open Cloud Workspaces"
+msgstr "Otwórz obszary robocze w chmurze"
 
 msgid "Open Command Palette"
 msgstr "Otwórz paletę poleceń"
@@ -12602,14 +12614,23 @@ msgstr "Otwórz menu"
 msgid "Open navigation"
 msgstr "Otwórz nawigację"
 
+msgid "Open Notes"
+msgstr "Otwórz notatki"
+
 msgid "Open on GitHub"
 msgstr "Otwórz na GitHub"
 
 msgid "Open Page in Default Browser"
 msgstr "Otwórz stronę w domyślnej przeglądarce"
 
+msgid "Open Pages"
+msgstr "Otwórz strony"
+
 msgid "Open pages and reply to comments from the Superset app on iPhone and iPad."
 msgstr "Otwieraj strony i odpowiadaj na komentarze w aplikacji Superset na iPhonie i iPadzie."
+
+msgid "Open Plugins"
+msgstr "Otwórz wtyczki"
 
 msgid "Open Plugins in the Superset app and pick one. The install is saved to your account."
 msgstr "Otwórz Wtyczki w aplikacji Superset i wybierz jedną. Instalacja zostanie zapisana na Twoim koncie."
@@ -12653,6 +12674,9 @@ msgstr "Otwórz opcje pull requesta"
 msgid "Open pull requests"
 msgstr "Otwarte pull requesty"
 
+msgid "Open Pull Requests"
+msgstr "Otwórz pull requesty"
+
 msgid "Open recent"
 msgstr "Otwórz ostatnie"
 
@@ -12689,6 +12713,9 @@ msgstr "Otwórz Ustawienia systemowe"
 msgid "Open task {title}"
 msgstr "Otwórz zadanie {title}"
 
+msgid "Open Tasks"
+msgstr "Otwórz zadania"
+
 msgid "Open Terminal"
 msgstr "Otwórz terminal"
 
@@ -12722,14 +12749,38 @@ msgstr "Otwórz skrypt terminala 9"
 msgid "Open terminals and prompt agents"
 msgstr "Otwieranie terminali i wydawanie poleceń agentom"
 
+msgid "Open the automations"
+msgstr "Otwiera automatyzacje"
+
 msgid "Open the Changes pane in a new tab, or focus the existing one"
 msgstr "Otwiera panel zmian w nowej karcie lub aktywuje istniejący"
+
+msgid "Open the cloud workspaces"
+msgstr "Otwiera obszary robocze w chmurze"
 
 msgid "Open the global command palette"
 msgstr "Otwórz globalną paletę poleceń"
 
+msgid "Open the list of projects"
+msgstr "Otwiera listę projektów"
+
+msgid "Open the list of workspaces"
+msgstr "Otwiera listę obszarów roboczych"
+
 msgid "Open the new workspace modal"
 msgstr "Otwórz okno nowego obszaru roboczego"
+
+msgid "Open the notes"
+msgstr "Otwiera notatki"
+
+msgid "Open the pages"
+msgstr "Otwiera strony"
+
+msgid "Open the plugins"
+msgstr "Otwiera wtyczki"
+
+msgid "Open the pull requests"
+msgstr "Otwiera pull requesty"
 
 msgid "Open the resource usage view in the command palette"
 msgstr "Otwórz widok zużycia zasobów w palecie poleceń"
@@ -12743,6 +12794,12 @@ msgstr "Otwórz obszar roboczy uruchomienia"
 msgid "open the task in a workspace"
 msgstr "otworzyć zadania w obszarze roboczym"
 
+msgid "Open the tasks"
+msgstr "Otwiera zadania"
+
+msgid "Open the usage page"
+msgstr "Otwiera stronę użycia"
+
 msgid "Open the workspace"
 msgstr "Otwórz obszar roboczy"
 
@@ -12752,12 +12809,18 @@ msgstr "Otwórz obszar roboczy w aplikacji wybranej w menu „Otwórz w” (VS C
 msgid "Open this run's workspace"
 msgstr "Otwórz obszar roboczy tego uruchomienia"
 
+msgid "Open Usage"
+msgstr "Otwórz użycie"
+
 msgid "Open workspace"
 msgstr "Otwórz obszar roboczy"
 
 #. placeholder {0}: getV2WorkspaceDisplayName(workspace)
 msgid "Open workspace: {0}"
 msgstr "Otwórz obszar roboczy: {0}"
+
+msgid "Open Workspaces"
+msgstr "Otwórz obszary robocze"
 
 msgid "Open your app."
 msgstr "Otwórz swoją aplikację."
@@ -13294,6 +13357,9 @@ msgstr "Wybierz, jak {label} loguje się wewnątrz piaskownicy. Poświadczenie t
 
 msgid "Pick the best agent."
 msgstr "Wybierz najlepszego agenta."
+
+msgid "Pick the entries of the menu at the top of the sidebar. Their shortcuts work even when an entry is hidden."
+msgstr "Wybierz pozycje menu u góry paska bocznego. Ich skróty działają nawet, gdy pozycja jest ukryta."
 
 msgid "Pick the new project folder on {hostName}."
 msgstr "Wybierz nowy folder projektu na {hostName}."
@@ -16329,6 +16395,9 @@ msgstr "Pokazuj listę zadań każdej rozmowy, współdzieloną z jej agentem."
 
 msgid "Show the triggering payload"
 msgstr "Pokaż ładunek wyzwalający"
+
+msgid "Show the workspace sidebar on the left while Settings is open."
+msgstr "Pokazuj pasek boczny obszarów roboczych po lewej, gdy Ustawienia są otwarte."
 
 msgid "Show translation"
 msgstr "Pokaż tłumaczenie"

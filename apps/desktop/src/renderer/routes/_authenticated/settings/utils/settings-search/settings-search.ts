@@ -84,6 +84,7 @@ export const SETTING_ITEM_ID = {
 	SIDEBAR_WAITING_TINT: "sidebar-waiting-tint",
 	SIDEBAR_WORKSPACE_LABELS: "sidebar-workspace-labels",
 	SIDEBAR_APPEARANCE: "sidebar-appearance",
+	SIDEBAR_MENU: "sidebar-menu",
 	SIDEBAR_STATE_COLORS: "sidebar-state-colors",
 
 	EXPERIMENTAL_V1_MIGRATION: "experimental-v1-migration",
@@ -254,6 +255,7 @@ export const SETTING_ITEM_VARIANT: Record<SettingItemId, SettingVariant> = {
 	[SETTING_ITEM_ID.SIDEBAR_WAITING_TINT]: "v2",
 	[SETTING_ITEM_ID.SIDEBAR_WORKSPACE_LABELS]: "v2",
 	[SETTING_ITEM_ID.SIDEBAR_APPEARANCE]: "v2",
+	[SETTING_ITEM_ID.SIDEBAR_MENU]: "v2",
 	[SETTING_ITEM_ID.SIDEBAR_STATE_COLORS]: "v2",
 
 	[SETTING_ITEM_ID.EXPERIMENTAL_V1_MIGRATION]: "v2",
@@ -1512,6 +1514,29 @@ export const SETTINGS_ITEMS: SettingsItem[] = [
 			"today",
 			"waiting",
 			"priority",
+		],
+	},
+	{
+		id: SETTING_ITEM_ID.SIDEBAR_MENU,
+		section: "sidebar",
+		title: "Sidebar menu",
+		description:
+			"Pick the menu entries of the sidebar, see their shortcuts, and keep the sidebar in Settings",
+		keywords: [
+			"sidebar",
+			"menu",
+			"navigation",
+			"shortcuts",
+			"hotkeys",
+			"workspaces",
+			"automations",
+			"tasks",
+			"pull requests",
+			"pages",
+			"notes",
+			"plugins",
+			"usage",
+			"settings",
 		],
 	},
 	{

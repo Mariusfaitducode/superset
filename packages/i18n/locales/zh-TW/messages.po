@@ -2966,9 +2966,6 @@ msgstr "自動化需要專業版或企業版方案。降級後，自動化會保
 msgid "Automations require the Pro plan."
 msgstr "自動化需要Pro方案。"
 
-msgid "Automations, {myFailedCount} failing"
-msgstr "自動化，{myFailedCount}個失敗"
-
 msgid "Autonomous"
 msgstr "自主"
 
@@ -3657,6 +3654,9 @@ msgstr "更改專案位置"
 
 msgid "Change role"
 msgstr "更改角色"
+
+msgid "Change shortcuts"
+msgstr "變更快速鍵"
 
 msgid "Change state"
 msgstr "變更狀態"
@@ -9640,6 +9640,9 @@ msgstr "讓文件保持最新"
 msgid "Keep editing"
 msgstr "繼續編輯"
 
+msgid "Keep the sidebar in Settings"
+msgstr "在設定中保留側邊欄"
+
 msgid "Keep typing an email to invite"
 msgstr "繼續輸入電子郵件以邀請"
 
@@ -10577,6 +10580,9 @@ msgstr "記憶體佔比"
 
 msgid "Mention."
 msgstr "提及。"
+
+msgid "Menu"
+msgstr "選單"
 
 msgid "Menubar"
 msgstr "選單欄"
@@ -12373,6 +12379,9 @@ msgstr "開啟 App Store"
 msgid "Open as comment pane"
 msgstr "作為評論面板開啟"
 
+msgid "Open Automations"
+msgstr "開啟自動化"
+
 msgid "Open billing"
 msgstr "開啟帳單"
 
@@ -12387,6 +12396,9 @@ msgstr "開啟更改"
 
 msgid "Open Changes"
 msgstr "開啟更改"
+
+msgid "Open Cloud Workspaces"
+msgstr "開啟雲端工作區"
 
 msgid "Open Command Palette"
 msgstr "開啟命令面板"
@@ -12602,14 +12614,23 @@ msgstr "開啟選單"
 msgid "Open navigation"
 msgstr "開啟導覽"
 
+msgid "Open Notes"
+msgstr "開啟筆記"
+
 msgid "Open on GitHub"
 msgstr "在GitHub上開啟"
 
 msgid "Open Page in Default Browser"
 msgstr "在預設瀏覽器中開啟頁面"
 
+msgid "Open Pages"
+msgstr "開啟頁面"
+
 msgid "Open pages and reply to comments from the Superset app on iPhone and iPad."
 msgstr "在 Superset 的 iPhone 和 iPad 應用程式中開啟頁面並回覆留言。"
+
+msgid "Open Plugins"
+msgstr "開啟外掛程式"
 
 msgid "Open Plugins in the Superset app and pick one. The install is saved to your account."
 msgstr "在 Superset 應用程式中開啟「外掛」並選擇一個。安裝紀錄會儲存到你的帳號。"
@@ -12653,6 +12674,9 @@ msgstr "開啟拉取請求選項"
 msgid "Open pull requests"
 msgstr "開啟的拉取請求"
 
+msgid "Open Pull Requests"
+msgstr "開啟拉取請求"
+
 msgid "Open recent"
 msgstr "開啟最近使用"
 
@@ -12689,6 +12713,9 @@ msgstr "開啟系統設定"
 msgid "Open task {title}"
 msgstr "開啟任務{title}"
 
+msgid "Open Tasks"
+msgstr "開啟任務"
+
 msgid "Open Terminal"
 msgstr "開啟終端"
 
@@ -12722,14 +12749,38 @@ msgstr "開啟終端指令碼9"
 msgid "Open terminals and prompt agents"
 msgstr "開啟終端機並向代理程式下達指令"
 
+msgid "Open the automations"
+msgstr "開啟自動化"
+
 msgid "Open the Changes pane in a new tab, or focus the existing one"
 msgstr "在新分頁中開啟更改面板，或聚焦現有面板"
+
+msgid "Open the cloud workspaces"
+msgstr "開啟雲端工作區"
 
 msgid "Open the global command palette"
 msgstr "開啟全域性命令面板"
 
+msgid "Open the list of projects"
+msgstr "開啟專案清單"
+
+msgid "Open the list of workspaces"
+msgstr "開啟工作區清單"
+
 msgid "Open the new workspace modal"
 msgstr "開啟新建工作區彈窗"
+
+msgid "Open the notes"
+msgstr "開啟筆記"
+
+msgid "Open the pages"
+msgstr "開啟頁面"
+
+msgid "Open the plugins"
+msgstr "開啟外掛程式"
+
+msgid "Open the pull requests"
+msgstr "開啟拉取請求"
 
 msgid "Open the resource usage view in the command palette"
 msgstr "在命令面板中開啟資源用量檢視"
@@ -12743,6 +12794,12 @@ msgstr "開啟這次執行的工作區"
 msgid "open the task in a workspace"
 msgstr "在工作區中開啟任務"
 
+msgid "Open the tasks"
+msgstr "開啟任務"
+
+msgid "Open the usage page"
+msgstr "開啟用量頁面"
+
 msgid "Open the workspace"
 msgstr "開啟工作區"
 
@@ -12752,12 +12809,18 @@ msgstr "在「開啟方式」選單中選定的應用（VS Code、Cursor等）�
 msgid "Open this run's workspace"
 msgstr "開啟此次執行的工作區"
 
+msgid "Open Usage"
+msgstr "開啟用量"
+
 msgid "Open workspace"
 msgstr "開啟工作區"
 
 #. placeholder {0}: getV2WorkspaceDisplayName(workspace)
 msgid "Open workspace: {0}"
 msgstr "開啟工作區：{0}"
+
+msgid "Open Workspaces"
+msgstr "開啟工作區"
 
 msgid "Open your app."
 msgstr "開啟你的應用程式。"
@@ -13294,6 +13357,9 @@ msgstr "選擇{label}在沙箱中的登入方式。憑證在啟動時交給代�
 
 msgid "Pick the best agent."
 msgstr "挑選最合適的代理程式。"
+
+msgid "Pick the entries of the menu at the top of the sidebar. Their shortcuts work even when an entry is hidden."
+msgstr "選擇側邊欄頂部選單中的項目。即使項目被隱藏，其快速鍵仍然有效。"
 
 msgid "Pick the new project folder on {hostName}."
 msgstr "在{hostName}上選擇新的專案資料夾。"
@@ -16329,6 +16395,9 @@ msgstr "顯示每個對話的待辦清單，與其代理共用。"
 
 msgid "Show the triggering payload"
 msgstr "顯示觸發酬載"
+
+msgid "Show the workspace sidebar on the left while Settings is open."
+msgstr "開啟設定時在左側顯示工作區側邊欄。"
 
 msgid "Show translation"
 msgstr "顯示譯文"

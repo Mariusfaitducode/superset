@@ -2966,9 +2966,6 @@ msgstr "Tự động hóa cần gói Pro hoặc Enterprise. Nếu bạn hạ gó
 msgid "Automations require the Pro plan."
 msgstr "Tự động hóa yêu cầu gói Pro."
 
-msgid "Automations, {myFailedCount} failing"
-msgstr "Tự động hóa, {myFailedCount} đang lỗi"
-
 msgid "Autonomous"
 msgstr "Tự chủ"
 
@@ -3657,6 +3654,9 @@ msgstr "Đổi vị trí dự án"
 
 msgid "Change role"
 msgstr "Đổi vai trò"
+
+msgid "Change shortcuts"
+msgstr "Đổi phím tắt"
 
 msgid "Change state"
 msgstr "Đổi trạng thái"
@@ -9640,6 +9640,9 @@ msgstr "Giữ tài liệu luôn mới"
 msgid "Keep editing"
 msgstr "Tiếp tục chỉnh sửa"
 
+msgid "Keep the sidebar in Settings"
+msgstr "Giữ thanh bên trong Cài đặt"
+
 msgid "Keep typing an email to invite"
 msgstr "Tiếp tục nhập email để mời"
 
@@ -10577,6 +10580,9 @@ msgstr "Tỷ lệ bộ nhớ"
 
 msgid "Mention."
 msgstr "Nhắc đến."
+
+msgid "Menu"
+msgstr "Menu"
 
 msgid "Menubar"
 msgstr "Menubar"
@@ -12373,6 +12379,9 @@ msgstr "Mở App Store"
 msgid "Open as comment pane"
 msgstr "Mở dạng khung bình luận"
 
+msgid "Open Automations"
+msgstr "Mở tự động hóa"
+
 msgid "Open billing"
 msgstr "Mở thanh toán"
 
@@ -12387,6 +12396,9 @@ msgstr "Mở thay đổi"
 
 msgid "Open Changes"
 msgstr "Mở thay đổi"
+
+msgid "Open Cloud Workspaces"
+msgstr "Mở workspace đám mây"
 
 msgid "Open Command Palette"
 msgstr "Mở bảng lệnh"
@@ -12602,14 +12614,23 @@ msgstr "Mở menu"
 msgid "Open navigation"
 msgstr "Mở điều hướng"
 
+msgid "Open Notes"
+msgstr "Mở ghi chú"
+
 msgid "Open on GitHub"
 msgstr "Mở trên GitHub"
 
 msgid "Open Page in Default Browser"
 msgstr "Mở trang trong trình duyệt mặc định"
 
+msgid "Open Pages"
+msgstr "Mở trang"
+
 msgid "Open pages and reply to comments from the Superset app on iPhone and iPad."
 msgstr "Mở trang và trả lời bình luận từ ứng dụng Superset trên iPhone và iPad."
+
+msgid "Open Plugins"
+msgstr "Mở plugin"
 
 msgid "Open Plugins in the Superset app and pick one. The install is saved to your account."
 msgstr "Mở Plugin trong ứng dụng Superset và chọn một plugin. Bản cài đặt được lưu vào tài khoản của bạn."
@@ -12653,6 +12674,9 @@ msgstr "Mở tùy chọn pull request"
 msgid "Open pull requests"
 msgstr "Pull request đang mở"
 
+msgid "Open Pull Requests"
+msgstr "Mở pull request"
+
 msgid "Open recent"
 msgstr "Mở gần đây"
 
@@ -12689,6 +12713,9 @@ msgstr "Mở System Settings"
 msgid "Open task {title}"
 msgstr "Mở tác vụ {title}"
 
+msgid "Open Tasks"
+msgstr "Mở tác vụ"
+
 msgid "Open Terminal"
 msgstr "Mở terminal"
 
@@ -12722,14 +12749,38 @@ msgstr "Mở script terminal 9"
 msgid "Open terminals and prompt agents"
 msgstr "Mở terminal và giao việc cho tác nhân"
 
+msgid "Open the automations"
+msgstr "Mở trang tự động hóa"
+
 msgid "Open the Changes pane in a new tab, or focus the existing one"
 msgstr "Mở bảng thay đổi trong tab mới, hoặc chuyển tiêu điểm đến bảng hiện có"
+
+msgid "Open the cloud workspaces"
+msgstr "Mở các workspace đám mây"
 
 msgid "Open the global command palette"
 msgstr "Mở bảng lệnh toàn cục"
 
+msgid "Open the list of projects"
+msgstr "Mở danh sách dự án"
+
+msgid "Open the list of workspaces"
+msgstr "Mở danh sách workspace"
+
 msgid "Open the new workspace modal"
 msgstr "Mở hộp thoại tạo workspace mới"
+
+msgid "Open the notes"
+msgstr "Mở ghi chú"
+
+msgid "Open the pages"
+msgstr "Mở các trang"
+
+msgid "Open the plugins"
+msgstr "Mở plugin"
+
+msgid "Open the pull requests"
+msgstr "Mở các pull request"
 
 msgid "Open the resource usage view in the command palette"
 msgstr "Mở khung tài nguyên trong bảng lệnh"
@@ -12743,6 +12794,12 @@ msgstr "Mở workspace của lần chạy"
 msgid "open the task in a workspace"
 msgstr "mở tác vụ trong một workspace"
 
+msgid "Open the tasks"
+msgstr "Mở tác vụ"
+
+msgid "Open the usage page"
+msgstr "Mở trang mức sử dụng"
+
 msgid "Open the workspace"
 msgstr "Mở workspace"
 
@@ -12752,12 +12809,18 @@ msgstr "Mở workspace trong ứng dụng đã chọn ở menu \"Mở trong\" (V
 msgid "Open this run's workspace"
 msgstr "Mở workspace của lần chạy này"
 
+msgid "Open Usage"
+msgstr "Mở mức sử dụng"
+
 msgid "Open workspace"
 msgstr "Mở workspace"
 
 #. placeholder {0}: getV2WorkspaceDisplayName(workspace)
 msgid "Open workspace: {0}"
 msgstr "Mở workspace: {0}"
+
+msgid "Open Workspaces"
+msgstr "Mở workspace"
 
 msgid "Open your app."
 msgstr "Mở ứng dụng của bạn."
@@ -13294,6 +13357,9 @@ msgstr "Chọn cách {label} đăng nhập bên trong sandbox. Thông tin xác t
 
 msgid "Pick the best agent."
 msgstr "Chọn agent tốt nhất."
+
+msgid "Pick the entries of the menu at the top of the sidebar. Their shortcuts work even when an entry is hidden."
+msgstr "Chọn các mục của menu ở đầu thanh bên. Phím tắt vẫn hoạt động kể cả khi mục bị ẩn."
 
 msgid "Pick the new project folder on {hostName}."
 msgstr "Chọn thư mục dự án mới trên {hostName}."
@@ -16329,6 +16395,9 @@ msgstr "Hiển thị danh sách việc cần làm của mỗi cuộc trò chuy�
 
 msgid "Show the triggering payload"
 msgstr "Hiển thị payload kích hoạt"
+
+msgid "Show the workspace sidebar on the left while Settings is open."
+msgstr "Hiển thị thanh bên workspace ở bên trái khi Cài đặt đang mở."
 
 msgid "Show translation"
 msgstr "Xem bản dịch"

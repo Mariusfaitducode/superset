@@ -2966,9 +2966,6 @@ msgstr "Для автоматизаций нужен тариф Pro или Enter
 msgid "Automations require the Pro plan."
 msgstr "Для автоматизаций нужен план Pro."
 
-msgid "Automations, {myFailedCount} failing"
-msgstr "Автоматизации, с ошибкой: {myFailedCount}"
-
 msgid "Autonomous"
 msgstr "Автономно"
 
@@ -3657,6 +3654,9 @@ msgstr "Изменить расположение проекта"
 
 msgid "Change role"
 msgstr "Сменить роль"
+
+msgid "Change shortcuts"
+msgstr "Изменить сочетания клавиш"
 
 msgid "Change state"
 msgstr "Изменить состояние"
@@ -9640,6 +9640,9 @@ msgstr "Держать документацию актуальной"
 msgid "Keep editing"
 msgstr "Продолжить редактирование"
 
+msgid "Keep the sidebar in Settings"
+msgstr "Оставлять боковую панель в настройках"
+
 msgid "Keep typing an email to invite"
 msgstr "Продолжайте вводить email, чтобы пригласить"
 
@@ -10577,6 +10580,9 @@ msgstr "Доля памяти"
 
 msgid "Mention."
 msgstr "Упомяните."
+
+msgid "Menu"
+msgstr "Меню"
 
 msgid "Menubar"
 msgstr "Строка меню"
@@ -12373,6 +12379,9 @@ msgstr "Открыть App Store"
 msgid "Open as comment pane"
 msgstr "Открыть как панель комментариев"
 
+msgid "Open Automations"
+msgstr "Открыть автоматизации"
+
 msgid "Open billing"
 msgstr "Открыть оплату"
 
@@ -12387,6 +12396,9 @@ msgstr "Открыть изменения"
 
 msgid "Open Changes"
 msgstr "Открыть изменения"
+
+msgid "Open Cloud Workspaces"
+msgstr "Открыть облачные рабочие пространства"
 
 msgid "Open Command Palette"
 msgstr "Открыть палитру команд"
@@ -12602,14 +12614,23 @@ msgstr "Открыть меню"
 msgid "Open navigation"
 msgstr "Открыть навигацию"
 
+msgid "Open Notes"
+msgstr "Открыть заметки"
+
 msgid "Open on GitHub"
 msgstr "Открыть на GitHub"
 
 msgid "Open Page in Default Browser"
 msgstr "Открыть страницу в браузере по умолчанию"
 
+msgid "Open Pages"
+msgstr "Открыть страницы"
+
 msgid "Open pages and reply to comments from the Superset app on iPhone and iPad."
 msgstr "Открывайте страницы и отвечайте на комментарии в приложении Superset на iPhone и iPad."
+
+msgid "Open Plugins"
+msgstr "Открыть плагины"
 
 msgid "Open Plugins in the Superset app and pick one. The install is saved to your account."
 msgstr "Откройте «Плагины» в приложении Superset и выберите один. Установка сохранится в вашем аккаунте."
@@ -12653,6 +12674,9 @@ msgstr "Открыть параметры пул-реквеста"
 msgid "Open pull requests"
 msgstr "Открытые пул-реквесты"
 
+msgid "Open Pull Requests"
+msgstr "Открыть пул-реквесты"
+
 msgid "Open recent"
 msgstr "Открыть недавние"
 
@@ -12689,6 +12713,9 @@ msgstr "Открыть Системные настройки"
 msgid "Open task {title}"
 msgstr "Открыть задачу {title}"
 
+msgid "Open Tasks"
+msgstr "Открыть задачи"
+
 msgid "Open Terminal"
 msgstr "Открыть терминал"
 
@@ -12722,14 +12749,38 @@ msgstr "Открыть скрипт терминала 9"
 msgid "Open terminals and prompt agents"
 msgstr "Открывать терминалы и давать задания агентам"
 
+msgid "Open the automations"
+msgstr "Открывает автоматизации"
+
 msgid "Open the Changes pane in a new tab, or focus the existing one"
 msgstr "Открывает панель изменений в новой вкладке или фокусирует существующую"
+
+msgid "Open the cloud workspaces"
+msgstr "Открывает облачные рабочие пространства"
 
 msgid "Open the global command palette"
 msgstr "Открыть глобальную палитру команд"
 
+msgid "Open the list of projects"
+msgstr "Открывает список проектов"
+
+msgid "Open the list of workspaces"
+msgstr "Открывает список рабочих пространств"
+
 msgid "Open the new workspace modal"
 msgstr "Открыть окно создания рабочей области"
+
+msgid "Open the notes"
+msgstr "Открывает заметки"
+
+msgid "Open the pages"
+msgstr "Открывает страницы"
+
+msgid "Open the plugins"
+msgstr "Открывает плагины"
+
+msgid "Open the pull requests"
+msgstr "Открывает пул-реквесты"
 
 msgid "Open the resource usage view in the command palette"
 msgstr "Открыть просмотр потребления ресурсов в палитре команд"
@@ -12743,6 +12794,12 @@ msgstr "Открыть рабочую область запуска"
 msgid "open the task in a workspace"
 msgstr "открыть задачу в рабочей области"
 
+msgid "Open the tasks"
+msgstr "Открывает задачи"
+
+msgid "Open the usage page"
+msgstr "Открывает страницу использования"
+
 msgid "Open the workspace"
 msgstr "Открыть рабочее пространство"
 
@@ -12752,12 +12809,18 @@ msgstr "Открыть рабочую область в приложении, в
 msgid "Open this run's workspace"
 msgstr "Открыть рабочую область этого запуска"
 
+msgid "Open Usage"
+msgstr "Открыть использование"
+
 msgid "Open workspace"
 msgstr "Открыть рабочую область"
 
 #. placeholder {0}: getV2WorkspaceDisplayName(workspace)
 msgid "Open workspace: {0}"
 msgstr "Открыть workspace: {0}"
+
+msgid "Open Workspaces"
+msgstr "Открыть рабочие пространства"
 
 msgid "Open your app."
 msgstr "Откройте приложение."
@@ -13294,6 +13357,9 @@ msgstr "Выберите, как {label} входит внутри песочн�
 
 msgid "Pick the best agent."
 msgstr "Выберите лучшего агента."
+
+msgid "Pick the entries of the menu at the top of the sidebar. Their shortcuts work even when an entry is hidden."
+msgstr "Выберите пункты меню в верхней части боковой панели. Их сочетания клавиш работают, даже если пункт скрыт."
 
 msgid "Pick the new project folder on {hostName}."
 msgstr "Выберите новую папку проекта на {hostName}."
@@ -16329,6 +16395,9 @@ msgstr "Показывать список задач каждой беседы, 
 
 msgid "Show the triggering payload"
 msgstr "Показать полезную нагрузку триггера"
+
+msgid "Show the workspace sidebar on the left while Settings is open."
+msgstr "Показывать боковую панель рабочих пространств слева, пока открыты настройки."
 
 msgid "Show translation"
 msgstr "Показать перевод"

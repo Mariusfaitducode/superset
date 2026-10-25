@@ -2966,9 +2966,6 @@ msgstr "自动化需要专业版或企业版套餐。降级后，自动化会保
 msgid "Automations require the Pro plan."
 msgstr "自动化需要Pro套餐。"
 
-msgid "Automations, {myFailedCount} failing"
-msgstr "自动化，{myFailedCount}个失败"
-
 msgid "Autonomous"
 msgstr "自主"
 
@@ -3657,6 +3654,9 @@ msgstr "更改项目位置"
 
 msgid "Change role"
 msgstr "更改角色"
+
+msgid "Change shortcuts"
+msgstr "更改快捷键"
 
 msgid "Change state"
 msgstr "更改状态"
@@ -9640,6 +9640,9 @@ msgstr "让文档保持最新"
 msgid "Keep editing"
 msgstr "继续编辑"
 
+msgid "Keep the sidebar in Settings"
+msgstr "在设置中保留侧边栏"
+
 msgid "Keep typing an email to invite"
 msgstr "继续输入邮箱以邀请"
 
@@ -10577,6 +10580,9 @@ msgstr "内存占比"
 
 msgid "Mention."
 msgstr "提及。"
+
+msgid "Menu"
+msgstr "菜单"
 
 msgid "Menubar"
 msgstr "菜单栏"
@@ -12373,6 +12379,9 @@ msgstr "打开 App Store"
 msgid "Open as comment pane"
 msgstr "作为评论面板打开"
 
+msgid "Open Automations"
+msgstr "打开自动化"
+
 msgid "Open billing"
 msgstr "打开账单"
 
@@ -12387,6 +12396,9 @@ msgstr "打开更改"
 
 msgid "Open Changes"
 msgstr "打开更改"
+
+msgid "Open Cloud Workspaces"
+msgstr "打开云工作区"
 
 msgid "Open Command Palette"
 msgstr "打开命令面板"
@@ -12602,14 +12614,23 @@ msgstr "打开菜单"
 msgid "Open navigation"
 msgstr "打开导航"
 
+msgid "Open Notes"
+msgstr "打开笔记"
+
 msgid "Open on GitHub"
 msgstr "在GitHub上打开"
 
 msgid "Open Page in Default Browser"
 msgstr "在默认浏览器中打开页面"
 
+msgid "Open Pages"
+msgstr "打开页面"
+
 msgid "Open pages and reply to comments from the Superset app on iPhone and iPad."
 msgstr "在 Superset 的 iPhone 和 iPad 应用中打开页面并回复评论。"
+
+msgid "Open Plugins"
+msgstr "打开插件"
 
 msgid "Open Plugins in the Superset app and pick one. The install is saved to your account."
 msgstr "在 Superset 应用中打开“插件”并选择一个。安装记录会保存到你的账号。"
@@ -12653,6 +12674,9 @@ msgstr "打开拉取请求选项"
 msgid "Open pull requests"
 msgstr "打开的拉取请求"
 
+msgid "Open Pull Requests"
+msgstr "打开拉取请求"
+
 msgid "Open recent"
 msgstr "打开最近使用"
 
@@ -12689,6 +12713,9 @@ msgstr "打开系统设置"
 msgid "Open task {title}"
 msgstr "打开任务{title}"
 
+msgid "Open Tasks"
+msgstr "打开任务"
+
 msgid "Open Terminal"
 msgstr "打开终端"
 
@@ -12722,14 +12749,38 @@ msgstr "打开终端脚本9"
 msgid "Open terminals and prompt agents"
 msgstr "打开终端并向智能体发出指令"
 
+msgid "Open the automations"
+msgstr "打开自动化"
+
 msgid "Open the Changes pane in a new tab, or focus the existing one"
 msgstr "在新标签页中打开更改面板，或聚焦现有面板"
+
+msgid "Open the cloud workspaces"
+msgstr "打开云工作区"
 
 msgid "Open the global command palette"
 msgstr "打开全局命令面板"
 
+msgid "Open the list of projects"
+msgstr "打开项目列表"
+
+msgid "Open the list of workspaces"
+msgstr "打开工作区列表"
+
 msgid "Open the new workspace modal"
 msgstr "打开新建工作区弹窗"
+
+msgid "Open the notes"
+msgstr "打开笔记"
+
+msgid "Open the pages"
+msgstr "打开页面"
+
+msgid "Open the plugins"
+msgstr "打开插件"
+
+msgid "Open the pull requests"
+msgstr "打开拉取请求"
 
 msgid "Open the resource usage view in the command palette"
 msgstr "在命令面板中打开资源用量视图"
@@ -12743,6 +12794,12 @@ msgstr "打开这次运行的工作区"
 msgid "open the task in a workspace"
 msgstr "在工作区中打开任务"
 
+msgid "Open the tasks"
+msgstr "打开任务"
+
+msgid "Open the usage page"
+msgstr "打开用量页面"
+
 msgid "Open the workspace"
 msgstr "打开工作区"
 
@@ -12752,12 +12809,18 @@ msgstr "在“打开方式”菜单中选定的应用（VS Code、Cursor等）�
 msgid "Open this run's workspace"
 msgstr "打开此次运行的工作区"
 
+msgid "Open Usage"
+msgstr "打开用量"
+
 msgid "Open workspace"
 msgstr "打开工作区"
 
 #. placeholder {0}: getV2WorkspaceDisplayName(workspace)
 msgid "Open workspace: {0}"
 msgstr "打开工作区：{0}"
+
+msgid "Open Workspaces"
+msgstr "打开工作区"
 
 msgid "Open your app."
 msgstr "打开你的应用。"
@@ -13294,6 +13357,9 @@ msgstr "选择{label}在沙箱中的登录方式。凭据在启动时交给智�
 
 msgid "Pick the best agent."
 msgstr "挑选最合适的智能体。"
+
+msgid "Pick the entries of the menu at the top of the sidebar. Their shortcuts work even when an entry is hidden."
+msgstr "选择侧边栏顶部菜单中的条目。即使条目被隐藏，其快捷键仍然有效。"
 
 msgid "Pick the new project folder on {hostName}."
 msgstr "在{hostName}上选择新的项目文件夹。"
@@ -16329,6 +16395,9 @@ msgstr "显示每个对话的待办列表，与其智能体共享。"
 
 msgid "Show the triggering payload"
 msgstr "显示触发负载"
+
+msgid "Show the workspace sidebar on the left while Settings is open."
+msgstr "打开设置时在左侧显示工作区侧边栏。"
 
 msgid "Show translation"
 msgstr "显示译文"

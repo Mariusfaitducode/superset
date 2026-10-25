@@ -1,6 +1,7 @@
 import { create } from "zustand";
 import { devtools, persist } from "zustand/middleware";
 import type { SidebarAppearance, StateColorKey } from "./appearance";
+import type { SidebarNavItemId } from "./nav-items";
 
 export type WaitingTint = "off" | "subtle" | "strong";
 
@@ -16,6 +17,10 @@ export interface SidebarPreferences extends SidebarAppearance {
 	showSubagents: boolean;
 	showQueuedPrompts: boolean;
 	waitingTint: WaitingTint;
+	/** Menu entries at the top of the sidebar that the user took out. */
+	hiddenNavItems: SidebarNavItemId[];
+	/** Keep the sidebar on the left of the Settings pages. */
+	keepSidebarInSettings: boolean;
 }
 
 export type SidebarPreferenceKey = {
@@ -42,6 +47,8 @@ export const DEFAULT_SIDEBAR_PREFERENCES: SidebarPreferences = {
 	statePalette: "default",
 	stateColors: {},
 	folderColorOnConversations: false,
+	hiddenNavItems: [],
+	keepSidebarInSettings: true,
 };
 
 type AppearanceKey = Exclude<keyof SidebarAppearance, "stateColors">;
@@ -53,6 +60,7 @@ interface SidebarPreferencesState extends SidebarPreferences {
 		key: Key,
 		value: SidebarAppearance[Key],
 	) => void;
+	setNavItemVisible: (item: SidebarNavItemId, visible: boolean) => void;
 	/** Null goes back to the palette's color. */
 	setStateColor: (key: StateColorKey, color: string | null) => void;
 	reset: () => void;
@@ -67,6 +75,12 @@ export const useSidebarPreferencesStore = create<SidebarPreferencesState>()(
 				setPreference: (key, value) => set({ [key]: value }),
 				setWaitingTint: (waitingTint) => set({ waitingTint }),
 				setAppearance: (key, value) => set({ [key]: value }),
+				setNavItemVisible: (item, visible) =>
+					set((state) => ({
+						hiddenNavItems: visible
+							? state.hiddenNavItems.filter((hidden) => hidden !== item)
+							: [...new Set([...state.hiddenNavItems, item])],
+					})),
 				setStateColor: (key, color) =>
 					set((state) => {
 						const { [key]: _previous, ...rest } = state.stateColors;
@@ -98,6 +112,7 @@ export const useSidebarPreferencesStore = create<SidebarPreferencesState>()(
 					setWaitingTint: _setWaitingTint,
 					setAppearance: _setAppearance,
 					setStateColor: _setStateColor,
+					setNavItemVisible: _setNavItemVisible,
 					reset: _reset,
 					...preferences
 				}) => preferences,

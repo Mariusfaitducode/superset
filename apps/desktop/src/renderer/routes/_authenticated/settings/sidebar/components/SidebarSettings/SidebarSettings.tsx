@@ -20,6 +20,7 @@ import {
 	type SettingItemId,
 } from "../../../utils/settings-search";
 import { SidebarAppearanceSettings } from "./components/SidebarAppearanceSettings";
+import { SidebarMenuSettings } from "./components/SidebarMenuSettings";
 import { WorkspaceLabelsSettings } from "./components/WorkspaceLabelsSettings";
 
 interface SidebarSettingsProps {
@@ -33,6 +34,7 @@ export function SidebarSettings({ visibleItems }: SidebarSettingsProps) {
 		SETTING_ITEM_ID.SIDEBAR_APPEARANCE,
 		visibleItems,
 	);
+	const showMenu = isItemVisible(SETTING_ITEM_ID.SIDEBAR_MENU, visibleItems);
 	const showStateColors = isItemVisible(
 		SETTING_ITEM_ID.SIDEBAR_STATE_COLORS,
 		visibleItems,
@@ -122,6 +124,14 @@ export function SidebarSettings({ visibleItems }: SidebarSettingsProps) {
 					<Trans>Reset to defaults</Trans>
 				</Button>
 			</div>
+			{showMenu && (
+				<section className="mb-8">
+					<h3 className="mb-1 text-sm font-semibold">
+						<Trans>Menu</Trans>
+					</h3>
+					<SidebarMenuSettings />
+				</section>
+			)}
 			{(showAppearance || showStateColors) && (
 				<section className="mb-8">
 					<h3 className="mb-1 text-sm font-semibold">

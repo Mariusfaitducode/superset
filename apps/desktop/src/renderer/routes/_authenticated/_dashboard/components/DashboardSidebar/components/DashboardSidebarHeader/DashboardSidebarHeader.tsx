@@ -11,7 +11,7 @@ import { Tooltip, TooltipContent, TooltipTrigger } from "@superset/ui/tooltip";
 import { cn } from "@superset/ui/utils";
 import { useMatchRoute, useNavigate } from "@tanstack/react-router";
 import { useFeatureFlagEnabled } from "posthog-js/react";
-import { useRef } from "react";
+import { type ReactNode, useRef } from "react";
 import { GoGitPullRequest } from "react-icons/go";
 import { HiOutlineClipboardDocumentList } from "react-icons/hi2";
 import {
@@ -77,7 +77,17 @@ import {
 	useOpenNewProjectModal,
 	useOpenTemplateGalleryModal,
 } from "renderer/stores/add-repository-modal";
+import {
+	NAV_ITEM_HOTKEY,
+	type SidebarNavItemId,
+	useSidebarPreference,
+} from "renderer/stores/sidebar-preferences";
 import { COLLAPSED_WORKSPACE_SIDEBAR_WIDTH } from "renderer/stores/workspace-sidebar-state";
+import { SidebarNavButton } from "./components/SidebarNavButton";
+import { SidebarNavHotkey } from "./components/SidebarNavHotkey";
+import { SidebarNavRailButton } from "./components/SidebarNavRailButton";
+
+const NAV_ICON_CLASS = "size-4 shrink-0 text-muted-foreground";
 
 interface DashboardSidebarHeaderProps {
 	isCollapsed?: boolean;
@@ -304,6 +314,134 @@ export function DashboardSidebarHeader({
 		navigate({ to: usageSectionPath(getUsageLastSection()) });
 	};
 
+	const hiddenNavItems = useSidebarPreference("hiddenNavItems");
+	const isNavItemShown = (id: SidebarNavItemId) => !hiddenNavItems.includes(id);
+	const navItems: {
+		id: Exclude<SidebarNavItemId, "search">;
+		label: string;
+		available: boolean;
+		isActive: boolean;
+		onClick: () => void;
+		icon: ReactNode;
+		railIcon: ReactNode;
+	}[] = [
+		{
+			id: "workspaces",
+			label: t({ message: "Workspaces" }),
+			available: true,
+			isActive: isWorkspacesListOpen,
+			onClick: handleWorkspacesClick,
+			icon: <LuLayers className={NAV_ICON_CLASS} strokeWidth={1.5} />,
+			railIcon: <LuLayers className="size-3.5" strokeWidth={1.5} />,
+		},
+		{
+			id: "cloudWorkspaces",
+			label: t({ message: "Cloud workspaces" }),
+			available: isCloudEnabled,
+			isActive: isCloudWorkspacesOpen,
+			onClick: handleCloudWorkspacesClick,
+			icon: <LuCloud className={NAV_ICON_CLASS} strokeWidth={1.5} />,
+			railIcon: <LuCloud className="size-3.5" strokeWidth={1.5} />,
+		},
+		{
+			id: "projects",
+			label: t({ message: "Projects" }),
+			available: isCloudEnabled,
+			isActive: isProjectsOpen,
+			onClick: handleProjectsClick,
+			icon: <ProjectGlyph className={NAV_ICON_CLASS} />,
+			railIcon: <ProjectGlyph className="size-3.5" />,
+		},
+		{
+			id: "automations",
+			label: t({ message: "Automations" }),
+			available: true,
+			isActive: isAutomationsOpen,
+			onClick: () => void handleAutomationsClick(),
+			icon: <LuClock className={NAV_ICON_CLASS} strokeWidth={1.5} />,
+			railIcon: <LuClock className="size-3.5" strokeWidth={1.5} />,
+		},
+		{
+			id: "tasks",
+			label: t({ message: "Tasks" }),
+			available: true,
+			isActive: isTasksOpen,
+			onClick: handleTasksClick,
+			icon: <HiOutlineClipboardDocumentList className={NAV_ICON_CLASS} />,
+			railIcon: <HiOutlineClipboardDocumentList className="size-3.5" />,
+		},
+		{
+			id: "pullRequests",
+			label: t({ message: "Pull requests" }),
+			available: true,
+			isActive: isPullRequestsOpen,
+			onClick: handlePullRequestsClick,
+			icon: <GoGitPullRequest className={NAV_ICON_CLASS} />,
+			railIcon: <GoGitPullRequest className="size-3.5" />,
+		},
+		{
+			id: "usage",
+			label: t({ message: "Usage" }),
+			available: isUsageInSidebarEnabled === true,
+			isActive: false,
+			onClick: handleUsageClick,
+			icon: <LuGauge className={NAV_ICON_CLASS} strokeWidth={1.5} />,
+			railIcon: <LuGauge className="size-3.5" strokeWidth={1.5} />,
+		},
+		{
+			id: "pages",
+			label: t({ message: "Pages" }),
+			available: true,
+			isActive: isPagesOpen,
+			onClick: handlePagesClick,
+			icon: <LuFileText className={NAV_ICON_CLASS} strokeWidth={1.5} />,
+			railIcon: <LuFileText className="size-3.5" strokeWidth={1.5} />,
+		},
+		{
+			id: "notes",
+			label: t({ message: "Notes" }),
+			available: true,
+			isActive: isNotesOpen,
+			onClick: handleNotesClick,
+			icon: <LuStickyNote className={NAV_ICON_CLASS} strokeWidth={1.5} />,
+			railIcon: <LuStickyNote className="size-3.5" strokeWidth={1.5} />,
+		},
+		{
+			id: "plugins",
+			label: t({ message: "Plugins" }),
+			available: isPluginsEnabled,
+			isActive: isPluginsOpen,
+			onClick: handlePluginsClick,
+			icon: <LuPuzzle className={NAV_ICON_CLASS} strokeWidth={1.5} />,
+			railIcon: <LuPuzzle className="size-3.5" strokeWidth={1.5} />,
+		},
+	];
+	const shownNavItems = navItems.filter(
+		(item) => item.available && isNavItemShown(item.id),
+	);
+	// Shortcuts work for hidden entries too.
+	const navHotkeys = navItems.map((item) => (
+		<SidebarNavHotkey
+			key={item.id}
+			hotkeyId={NAV_ITEM_HOTKEY[item.id]}
+			onTrigger={item.onClick}
+			enabled={item.available}
+		/>
+	));
+	const automationsFailedBadge =
+		myFailedCount > 0 ? (
+			<button
+				type="button"
+				onClick={handleFailedAutomationsClick}
+				title={t({
+					message: `${myFailedCount} of your automations failed their last run`,
+				})}
+				className="absolute right-2 top-1/2 flex h-4 min-w-4 -translate-y-1/2 items-center justify-center rounded-full bg-red-500/15 px-1 text-[10px] font-medium tabular-nums text-red-600 transition-colors hover:bg-red-500/25 dark:text-red-400"
+			>
+				{myFailedCount > 9 ? "9+" : myFailedCount}
+			</button>
+		) : undefined;
+
 	if (isCollapsed) {
 		return (
 			<div className="flex flex-col">
@@ -352,280 +490,49 @@ export function DashboardSidebarHeader({
 						</TooltipContent>
 					</Tooltip>
 
-					<Tooltip delayDuration={300}>
-						<TooltipTrigger asChild>
-							<button
-								type="button"
-								onPointerDown={handleSearchPointerDown}
-								onClick={handleSearchClick}
-								className="flex size-7 items-center justify-center rounded-md text-muted-foreground transition-colors hover:bg-fill-hover"
-							>
-								<LuSearch className="size-3.5" strokeWidth={1.5} />
-							</button>
-						</TooltipTrigger>
-						<TooltipContent side="right">
-							{searchShortcutText !== "Unassigned"
-								? t({
-										message: `Search (${searchShortcutText})`,
-									})
-								: t({
-										message: "Search",
-									})}
-						</TooltipContent>
-					</Tooltip>
-
-					<Tooltip delayDuration={300}>
-						<TooltipTrigger asChild>
-							<button
-								type="button"
-								onClick={handleWorkspacesClick}
-								className={cn(
-									"flex size-7 items-center justify-center rounded-md transition-colors",
-									isWorkspacesListOpen
-										? "bg-fill-selected text-muted-foreground"
-										: "text-muted-foreground hover:bg-fill-hover",
-								)}
-							>
-								<LuLayers className="size-3.5" strokeWidth={1.5} />
-							</button>
-						</TooltipTrigger>
-						<TooltipContent side="right">
-							<Trans>Workspaces</Trans>
-						</TooltipContent>
-					</Tooltip>
-
-					{isCloudEnabled && (
+					{isNavItemShown("search") && (
 						<Tooltip delayDuration={300}>
 							<TooltipTrigger asChild>
 								<button
 									type="button"
-									onClick={handleCloudWorkspacesClick}
-									aria-label={t({
-										message: "Cloud workspaces",
-									})}
-									aria-current={isCloudWorkspacesOpen ? "page" : undefined}
-									className={cn(
-										"flex size-7 items-center justify-center rounded-md transition-colors",
-										isCloudWorkspacesOpen
-											? "bg-fill-selected text-muted-foreground"
-											: "text-muted-foreground hover:bg-fill-hover",
-									)}
-								>
-									<LuCloud className="size-3.5" strokeWidth={1.5} />
-								</button>
-							</TooltipTrigger>
-							<TooltipContent side="right">
-								<Trans>Cloud workspaces</Trans>
-							</TooltipContent>
-						</Tooltip>
-					)}
-
-					{isCloudEnabled && (
-						<Tooltip delayDuration={300}>
-							<TooltipTrigger asChild>
-								<button
-									type="button"
-									onClick={handleProjectsClick}
-									aria-label={t({
-										message: "Projects",
-									})}
-									aria-current={isProjectsOpen ? "page" : undefined}
-									className={cn(
-										"flex size-7 items-center justify-center rounded-md transition-colors",
-										isProjectsOpen
-											? "bg-fill-selected text-muted-foreground"
-											: "text-muted-foreground hover:bg-fill-hover",
-									)}
-								>
-									<ProjectGlyph className="size-3.5" />
-								</button>
-							</TooltipTrigger>
-							<TooltipContent side="right">
-								<Trans>Projects</Trans>
-							</TooltipContent>
-						</Tooltip>
-					)}
-
-					<Tooltip delayDuration={300}>
-						<TooltipTrigger asChild>
-							<button
-								type="button"
-								onClick={handleAutomationsClick}
-								aria-label={
-									myFailedCount > 0
-										? t({
-												message: `Automations, ${myFailedCount} failing`,
-											})
-										: t({
-												message: "Automations",
-											})
-								}
-								className={cn(
-									"relative flex size-7 items-center justify-center rounded-md transition-colors",
-									isAutomationsOpen
-										? "bg-fill-selected text-muted-foreground"
-										: "text-muted-foreground hover:bg-fill-hover",
-								)}
-							>
-								<LuClock className="size-3.5" strokeWidth={1.5} />
-								{myFailedCount > 0 && (
-									<span
-										aria-hidden="true"
-										className="absolute right-1 top-1 size-1.5 rounded-full bg-red-500"
-									/>
-								)}
-							</button>
-						</TooltipTrigger>
-						<TooltipContent side="right">
-							{myFailedCount > 0 ? (
-								<Trans>Automations ({myFailedCount} failing)</Trans>
-							) : (
-								<Trans>Automations</Trans>
-							)}
-						</TooltipContent>
-					</Tooltip>
-
-					<Tooltip delayDuration={300}>
-						<TooltipTrigger asChild>
-							<button
-								type="button"
-								onClick={handleTasksClick}
-								aria-label={t({
-									message: "Tasks",
-								})}
-								aria-current={isTasksOpen ? "page" : undefined}
-								className={cn(
-									"flex size-7 items-center justify-center rounded-md transition-colors",
-									isTasksOpen
-										? "bg-fill-selected text-muted-foreground"
-										: "text-muted-foreground hover:bg-fill-hover",
-								)}
-							>
-								<HiOutlineClipboardDocumentList className="size-3.5" />
-							</button>
-						</TooltipTrigger>
-						<TooltipContent side="right">
-							<Trans>Tasks</Trans>
-						</TooltipContent>
-					</Tooltip>
-
-					<Tooltip delayDuration={300}>
-						<TooltipTrigger asChild>
-							<button
-								type="button"
-								onClick={handlePullRequestsClick}
-								aria-label={t({
-									message: "Pull requests",
-								})}
-								aria-current={isPullRequestsOpen ? "page" : undefined}
-								className={cn(
-									"flex size-7 items-center justify-center rounded-md transition-colors",
-									isPullRequestsOpen
-										? "bg-fill-selected text-muted-foreground"
-										: "text-muted-foreground hover:bg-fill-hover",
-								)}
-							>
-								<GoGitPullRequest className="size-3.5" />
-							</button>
-						</TooltipTrigger>
-						<TooltipContent side="right">
-							<Trans>Pull requests</Trans>
-						</TooltipContent>
-					</Tooltip>
-
-					{isUsageInSidebarEnabled && (
-						<Tooltip delayDuration={300}>
-							<TooltipTrigger asChild>
-								<button
-									type="button"
-									onClick={handleUsageClick}
-									aria-label={t({
-										message: "Usage",
-									})}
+									onPointerDown={handleSearchPointerDown}
+									onClick={handleSearchClick}
 									className="flex size-7 items-center justify-center rounded-md text-muted-foreground transition-colors hover:bg-fill-hover"
 								>
-									<LuGauge className="size-3.5" strokeWidth={1.5} />
+									<LuSearch className="size-3.5" strokeWidth={1.5} />
 								</button>
 							</TooltipTrigger>
 							<TooltipContent side="right">
-								<Trans>Usage</Trans>
+								{searchShortcutText !== "Unassigned"
+									? t({
+											message: `Search (${searchShortcutText})`,
+										})
+									: t({
+											message: "Search",
+										})}
 							</TooltipContent>
 						</Tooltip>
 					)}
 
-					<Tooltip delayDuration={300}>
-						<TooltipTrigger asChild>
-							<button
-								type="button"
-								onClick={handlePagesClick}
-								aria-label={t({
-									message: "Pages",
-								})}
-								aria-current={isPagesOpen ? "page" : undefined}
-								className={cn(
-									"flex size-7 items-center justify-center rounded-md transition-colors",
-									isPagesOpen
-										? "bg-fill-selected text-muted-foreground"
-										: "text-muted-foreground hover:bg-fill-hover",
-								)}
-							>
-								<LuFileText className="size-3.5" strokeWidth={1.5} />
-							</button>
-						</TooltipTrigger>
-						<TooltipContent side="right">
-							<Trans>Pages</Trans>
-						</TooltipContent>
-					</Tooltip>
-
-					<Tooltip delayDuration={300}>
-						<TooltipTrigger asChild>
-							<button
-								type="button"
-								onClick={handleNotesClick}
-								aria-label={t({
-									message: "Notes",
-								})}
-								aria-current={isNotesOpen ? "page" : undefined}
-								className={cn(
-									"flex size-7 items-center justify-center rounded-md transition-colors",
-									isNotesOpen
-										? "bg-fill-selected text-muted-foreground"
-										: "text-muted-foreground hover:bg-fill-hover",
-								)}
-							>
-								<LuStickyNote className="size-3.5" strokeWidth={1.5} />
-							</button>
-						</TooltipTrigger>
-						<TooltipContent side="right">
-							<Trans>Notes</Trans>
-						</TooltipContent>
-					</Tooltip>
-
-					{isPluginsEnabled && (
-						<Tooltip delayDuration={300}>
-							<TooltipTrigger asChild>
-								<button
-									type="button"
-									onClick={handlePluginsClick}
-									aria-label={t({
-										message: "Plugins",
-									})}
-									aria-current={isPluginsOpen ? "page" : undefined}
-									className={cn(
-										"flex size-7 items-center justify-center rounded-md transition-colors",
-										isPluginsOpen
-											? "bg-fill-selected text-muted-foreground"
-											: "text-muted-foreground hover:bg-fill-hover",
-									)}
-								>
-									<LuPuzzle className="size-3.5" strokeWidth={1.5} />
-								</button>
-							</TooltipTrigger>
-							<TooltipContent side="right">
-								<Trans>Plugins</Trans>
-							</TooltipContent>
-						</Tooltip>
-					)}
+					{shownNavItems.map((item) => (
+						<SidebarNavRailButton
+							key={item.id}
+							label={item.label}
+							tooltip={
+								item.id === "automations" && myFailedCount > 0
+									? t({
+											message: `Automations (${myFailedCount} failing)`,
+										})
+									: undefined
+							}
+							icon={item.railIcon}
+							hotkeyId={NAV_ITEM_HOTKEY[item.id]}
+							isActive={item.isActive}
+							onClick={item.onClick}
+							showAlertDot={item.id === "automations" && myFailedCount > 0}
+						/>
+					))}
+					{navHotkeys}
 
 					<DropdownMenu>
 						<Tooltip delayDuration={700}>
@@ -740,246 +647,38 @@ export function DashboardSidebarHeader({
 				<SidebarKbdHint label={shortcutText} />
 			</button>
 
-			<button
-				type="button"
-				onPointerDown={handleSearchPointerDown}
-				onClick={handleSearchClick}
-				className="group flex h-7 w-full items-center gap-2 rounded-md px-2 text-[13px] font-medium text-muted-foreground transition-colors hover:bg-fill-hover hover:text-foreground"
-			>
-				<LuSearch
-					className="size-4 shrink-0 text-muted-foreground"
-					strokeWidth={1.5}
-				/>
-				<span className="flex-1 text-left">
-					<Trans>Search</Trans>
-				</span>
-				{searchShortcutText !== "Unassigned" && (
-					<SidebarKbdHint label={searchShortcutText} />
-				)}
-			</button>
-
-			<button
-				type="button"
-				onClick={handleWorkspacesClick}
-				className={cn(
-					"flex h-7 w-full items-center gap-2 rounded-md px-2 text-[13px] font-medium transition-colors",
-					isWorkspacesListOpen
-						? "bg-fill-selected text-foreground"
-						: "text-muted-foreground hover:bg-fill-hover hover:text-foreground",
-				)}
-			>
-				<LuLayers
-					className="size-4 shrink-0 text-muted-foreground"
-					strokeWidth={1.5}
-				/>
-				<span className="flex-1 text-left">
-					<Trans>Workspaces</Trans>
-				</span>
-			</button>
-
-			{isCloudEnabled && (
+			{isNavItemShown("search") && (
 				<button
 					type="button"
-					onClick={handleCloudWorkspacesClick}
-					aria-current={isCloudWorkspacesOpen ? "page" : undefined}
-					className={cn(
-						"flex h-7 w-full items-center gap-2 rounded-md px-2 text-[13px] font-medium transition-colors",
-						isCloudWorkspacesOpen
-							? "bg-fill-selected text-foreground"
-							: "text-muted-foreground hover:bg-fill-hover hover:text-foreground",
-					)}
+					onPointerDown={handleSearchPointerDown}
+					onClick={handleSearchClick}
+					className="group flex h-[var(--sb-row-h)] w-full items-center gap-2 rounded-md px-2 text-[13px] font-medium text-muted-foreground transition-colors hover:bg-fill-hover hover:text-foreground"
 				>
-					<LuCloud
+					<LuSearch
 						className="size-4 shrink-0 text-muted-foreground"
 						strokeWidth={1.5}
 					/>
 					<span className="flex-1 text-left">
-						<Trans>Cloud workspaces</Trans>
+						<Trans>Search</Trans>
 					</span>
-				</button>
-			)}
-
-			{isCloudEnabled && (
-				<button
-					type="button"
-					onClick={handleProjectsClick}
-					aria-current={isProjectsOpen ? "page" : undefined}
-					className={cn(
-						"flex h-7 w-full items-center gap-2 rounded-md px-2 text-[13px] font-medium transition-colors",
-						isProjectsOpen
-							? "bg-fill-selected text-foreground"
-							: "text-muted-foreground hover:bg-fill-hover hover:text-foreground",
+					{searchShortcutText !== "Unassigned" && (
+						<SidebarKbdHint label={searchShortcutText} />
 					)}
-				>
-					<ProjectGlyph className="size-4 shrink-0 text-muted-foreground" />
-					<span className="flex-1 text-left">
-						<Trans>Projects</Trans>
-					</span>
 				</button>
 			)}
 
-			<div className="relative">
-				<button
-					type="button"
-					onClick={handleAutomationsClick}
-					className={cn(
-						"flex h-7 w-full items-center gap-2 rounded-md px-2 text-[13px] font-medium transition-colors",
-						isAutomationsOpen
-							? "bg-fill-selected text-foreground"
-							: "text-muted-foreground hover:bg-fill-hover hover:text-foreground",
-					)}
-				>
-					<LuClock
-						className="size-4 shrink-0 text-muted-foreground"
-						strokeWidth={1.5}
-					/>
-					<span className="flex-1 text-left">
-						<Trans>Automations</Trans>
-					</span>
-				</button>
-				{myFailedCount > 0 && (
-					<button
-						type="button"
-						onClick={handleFailedAutomationsClick}
-						title={t({
-							message: `${myFailedCount} of your automations failed their last run`,
-						})}
-						className="absolute right-2 top-1/2 flex h-4 min-w-4 -translate-y-1/2 items-center justify-center rounded-full bg-red-500/15 px-1 text-[10px] font-medium tabular-nums text-red-600 transition-colors hover:bg-red-500/25 dark:text-red-400"
-					>
-						{myFailedCount > 9 ? "9+" : myFailedCount}
-					</button>
-				)}
-			</div>
-
-			<button
-				type="button"
-				onClick={handleTasksClick}
-				aria-label={t({
-					message: "Tasks",
-				})}
-				aria-current={isTasksOpen ? "page" : undefined}
-				className={cn(
-					"flex h-7 w-full items-center gap-2 rounded-md px-2 text-[13px] font-medium transition-colors",
-					isTasksOpen
-						? "bg-fill-selected text-foreground"
-						: "text-muted-foreground hover:bg-fill-hover hover:text-foreground",
-				)}
-			>
-				<HiOutlineClipboardDocumentList className="size-4 shrink-0 text-muted-foreground" />
-				<span className="flex-1 text-left">
-					<Trans>Tasks</Trans>
-				</span>
-			</button>
-
-			<button
-				type="button"
-				onClick={handlePullRequestsClick}
-				aria-label={t({
-					message: "Pull requests",
-				})}
-				aria-current={isPullRequestsOpen ? "page" : undefined}
-				className={cn(
-					"flex h-7 w-full items-center gap-2 rounded-md px-2 text-[13px] font-medium transition-colors",
-					isPullRequestsOpen
-						? "bg-fill-selected text-foreground"
-						: "text-muted-foreground hover:bg-fill-hover hover:text-foreground",
-				)}
-			>
-				<GoGitPullRequest className="size-4 shrink-0 text-muted-foreground" />
-				<span className="flex-1 text-left">
-					<Trans>Pull requests</Trans>
-				</span>
-			</button>
-
-			{isUsageInSidebarEnabled && (
-				<button
-					type="button"
-					onClick={handleUsageClick}
-					aria-label={t({
-						message: "Usage",
-					})}
-					className="flex h-7 w-full items-center gap-2 rounded-md px-2 text-[13px] font-medium text-muted-foreground transition-colors hover:bg-fill-hover hover:text-foreground"
-				>
-					<LuGauge
-						className="size-4 shrink-0 text-muted-foreground"
-						strokeWidth={1.5}
-					/>
-					<span className="flex-1 text-left">
-						<Trans>Usage</Trans>
-					</span>
-				</button>
-			)}
-
-			<button
-				type="button"
-				onClick={handlePagesClick}
-				aria-label={t({
-					message: "Pages",
-				})}
-				aria-current={isPagesOpen ? "page" : undefined}
-				className={cn(
-					"flex h-7 w-full items-center gap-2 rounded-md px-2 text-[13px] font-medium transition-colors",
-					isPagesOpen
-						? "bg-fill-selected text-foreground"
-						: "text-muted-foreground hover:bg-fill-hover hover:text-foreground",
-				)}
-			>
-				<LuFileText
-					className="size-4 shrink-0 text-muted-foreground"
-					strokeWidth={1.5}
+			{shownNavItems.map((item) => (
+				<SidebarNavButton
+					key={item.id}
+					label={item.label}
+					icon={item.icon}
+					hotkeyId={NAV_ITEM_HOTKEY[item.id]}
+					isActive={item.isActive}
+					onClick={item.onClick}
+					badge={item.id === "automations" ? automationsFailedBadge : undefined}
 				/>
-				<span className="flex-1 text-left">
-					<Trans>Pages</Trans>
-				</span>
-			</button>
-
-			<button
-				type="button"
-				onClick={handleNotesClick}
-				aria-label={t({
-					message: "Notes",
-				})}
-				aria-current={isNotesOpen ? "page" : undefined}
-				className={cn(
-					"flex h-7 w-full items-center gap-2 rounded-md px-2 text-[13px] font-medium transition-colors",
-					isNotesOpen
-						? "bg-fill-selected text-foreground"
-						: "text-muted-foreground hover:bg-fill-hover hover:text-foreground",
-				)}
-			>
-				<LuStickyNote
-					className="size-4 shrink-0 text-muted-foreground"
-					strokeWidth={1.5}
-				/>
-				<span className="flex-1 text-left">
-					<Trans>Notes</Trans>
-				</span>
-			</button>
-
-			{isPluginsEnabled && (
-				<button
-					type="button"
-					onClick={handlePluginsClick}
-					aria-label={t({
-						message: "Plugins",
-					})}
-					aria-current={isPluginsOpen ? "page" : undefined}
-					className={cn(
-						"flex h-7 w-full items-center gap-2 rounded-md px-2 text-[13px] font-medium transition-colors",
-						isPluginsOpen
-							? "bg-fill-selected text-foreground"
-							: "text-muted-foreground hover:bg-fill-hover hover:text-foreground",
-					)}
-				>
-					<LuPuzzle
-						className="size-4 shrink-0 text-muted-foreground"
-						strokeWidth={1.5}
-					/>
-					<span className="flex-1 text-left">
-						<Trans>Plugins</Trans>
-					</span>
-				</button>
-			)}
+			))}
+			{navHotkeys}
 		</div>
 	);
 }
