@@ -2116,6 +2116,9 @@ msgstr "AI · 狀態"
 msgid "AI authentication failed. Please check your AI settings."
 msgstr "AI認證失敗。請檢查你的AI設定。"
 
+msgid "Airy"
+msgstr "寬鬆"
+
 msgid "Alert"
 msgstr "警告"
 
@@ -2963,9 +2966,6 @@ msgstr "自動化需要專業版或企業版方案。降級後，自動化會保
 msgid "Automations require the Pro plan."
 msgstr "自動化需要Pro方案。"
 
-msgid "Automations, {myFailedCount} failing"
-msgstr "自動化，{myFailedCount}個失敗"
-
 msgid "Autonomous"
 msgstr "自主"
 
@@ -3048,6 +3048,9 @@ msgstr "投資方"
 
 msgid "Background"
 msgstr "背景"
+
+msgid "Background of the open conversation."
+msgstr "開啟中對話的背景。"
 
 msgid "Background processes"
 msgstr "背景處理程序"
@@ -3354,6 +3357,9 @@ msgstr "公開建構"
 msgid "Build the future of Superset in the cloud"
 msgstr "共創 Superset 的雲端未來"
 
+msgid "Build the settings page"
+msgstr "建立設定頁面"
+
 msgid "Build your own"
 msgstr "自己動手打造"
 
@@ -3471,6 +3477,9 @@ msgstr "日曆"
 
 msgid "Calendar and Gmail triggers in this organization will stop firing until an account is connected again."
 msgstr "在重新連線帳戶之前，此組織中的日曆和Gmail觸發器將停止觸發。"
+
+msgid "Calendar sync"
+msgstr "行事曆同步"
 
 msgid "Camera access is not allowed"
 msgstr "相機存取未獲允許"
@@ -3645,6 +3654,9 @@ msgstr "更改專案位置"
 
 msgid "Change role"
 msgstr "更改角色"
+
+msgid "Change shortcuts"
+msgstr "變更快速鍵"
 
 msgid "Change state"
 msgstr "變更狀態"
@@ -3858,11 +3870,11 @@ msgstr "選擇在沒有預覽窗格時檔案的開啟方式"
 msgid "Choose how the Changes view opens from the top bar"
 msgstr "選擇從頂欄開啟變更檢視的方式"
 
+msgid "Choose how the sidebar looks and what it shows under each workspace. Right-click a project or a group for its own options."
+msgstr "選擇側邊欄的外觀以及每個工作區下顯示的內容。在專案或群組上按右鍵可設定其專屬選項。"
+
 msgid "Choose how to open file paths when Cmd+clicking in the terminal"
 msgstr "選擇在終端中Cmd+點選檔案路徑時的開啟方式"
-
-msgid "Choose what the sidebar shows under each workspace."
-msgstr "選擇側邊欄在每個工作區下方顯示的內容。"
 
 msgid "Choose what to clear from the in-app browser."
 msgstr "選擇要從應用程式內瀏覽器清除的內容。"
@@ -4343,6 +4355,16 @@ msgstr "顏色"
 msgid "Color Filter"
 msgstr "色彩濾鏡"
 
+#. placeholder {0}: stateLabel[key]
+msgid "Color for {0}"
+msgstr "{0} 的顏色"
+
+msgid "Colorblind-safe"
+msgstr "色盲友善"
+
+msgid "Colors of the agent state dots, in the sidebar and the switchers."
+msgstr "側邊欄和切換器中代理狀態圓點的顏色。"
+
 msgid "Columns"
 msgstr "欄"
 
@@ -4463,6 +4485,12 @@ msgstr "溝通"
 
 msgid "Community"
 msgstr "社群"
+
+msgid "Compact"
+msgstr "緊湊"
+
+msgid "Compact conversations"
+msgstr "緊湊對話"
 
 msgid "Company"
 msgstr "公司"
@@ -4785,6 +4813,9 @@ msgstr "聯絡我們"
 msgid "Contains this text..."
 msgstr "包含此文字..."
 
+msgid "Content"
+msgstr "內容"
+
 msgid "Context"
 msgstr "上下文"
 
@@ -4840,6 +4871,9 @@ msgstr "繼續代理程式工作階段需要已釘選的工作區"
 
 msgid "continuing the last session"
 msgstr "繼續上一個工作階段"
+
+msgid "Contrast"
+msgstr "對比度"
 
 msgid "Contributions"
 msgstr "貢獻"
@@ -6270,6 +6304,9 @@ msgstr "降低自己的角色？"
 msgid "Denied"
 msgstr "已拒絕"
 
+msgid "Density"
+msgstr "密度"
+
 msgid "Deny"
 msgstr "拒絕"
 
@@ -7229,6 +7266,9 @@ msgstr "探索"
 msgid "Explore Pages"
 msgstr "了解頁面"
 
+msgid "Explore the codebase"
+msgstr "探索程式碼庫"
+
 msgid "Explored"
 msgstr "已探索"
 
@@ -7869,6 +7909,9 @@ msgstr "排除的檔案（glob）"
 msgid "files to include (glob)"
 msgstr "包含的檔案（glob）"
 
+msgid "Fill"
+msgstr "填滿"
+
 msgid "Fill out the contact form on this page and our team will reach out to learn about your needs and walk you through next steps."
 msgstr "填寫本頁的聯絡表單，我們的團隊會與你聯絡，瞭解需求並說明後續步驟。"
 
@@ -8010,6 +8053,9 @@ msgstr "修復CI失敗"
 msgid "Fix findings"
 msgstr "修正審查問題"
 
+msgid "Fix the flaky test"
+msgstr "修正不穩定的測試"
+
 msgid "fix-auth-redirect"
 msgstr "fix-auth-redirect"
 
@@ -8066,6 +8112,9 @@ msgstr "聚焦任務檢視中的搜尋框"
 
 msgid "Folder"
 msgstr "資料夾"
+
+msgid "Folder color on conversations"
+msgstr "在對話上顯示資料夾顏色"
 
 msgid "Folder is missing"
 msgstr "資料夾不存在"
@@ -8523,6 +8572,9 @@ msgstr "一半的合併變更是零修改的代理程式程式碼"
 msgid "Hand the browser to your agent."
 msgstr "把瀏覽器交給你的代理程式。"
 
+msgid "Hand-picked colors stay when you change the palette."
+msgstr "手動選擇的顏色在更換調色盤時保留。"
+
 msgid "Handing to agent…"
 msgstr "正在交給代理程式…"
 
@@ -8574,6 +8626,9 @@ msgstr "標題3"
 msgid "Heart"
 msgstr "心形"
 
+msgid "Height of the rows and size of the conversation titles."
+msgstr "列高和對話標題大小。"
+
 msgid "Help"
 msgstr "幫助"
 
@@ -8602,6 +8657,9 @@ msgstr "隱藏"
 msgid "Hide checks"
 msgstr "隱藏檢查"
 
+msgid "Hide conversations"
+msgstr "隱藏對話"
+
 msgid "Hide details"
 msgstr "隱藏詳情"
 
@@ -8628,6 +8686,9 @@ msgstr "從側邊欄隱藏"
 
 msgid "Hide from Sidebar"
 msgstr "從側邊欄隱藏"
+
+msgid "Hide idle conversations"
+msgstr "隱藏閒置對話"
 
 msgid "Hide log"
 msgstr "隱藏日誌"
@@ -8656,8 +8717,14 @@ msgstr "隱藏審查評論"
 msgid "Hide sessions"
 msgstr "隱藏會話"
 
+msgid "Hide subagents"
+msgstr "隱藏子代理"
+
 msgid "Hide text"
 msgstr "隱藏文字"
+
+msgid "Hide to-dos"
+msgstr "隱藏待辦"
 
 msgid "Hide unchanged regions"
 msgstr "隱藏未更改區域"
@@ -8670,6 +8737,9 @@ msgstr "高嚴重性"
 
 msgid "High usage"
 msgstr "用量高"
+
+msgid "Highlight intensity"
+msgstr "醒目強度"
 
 msgid "history"
 msgstr "歷史"
@@ -8806,11 +8876,17 @@ msgstr "有多少個隱藏終端保持完整載入（{MIN_TERMINAL_PARKED_RUNTIM
 msgid "How much agent work engineers are actually running — tokens, cost, models and sessions, published by people who opted in."
 msgstr "工程師實際執行的代理工作量 — tokens、成本、模型與工作階段，由選擇公開的使用者提供。"
 
+msgid "How much secondary text and separators stand out."
+msgstr "次要文字和分隔線的醒目程度。"
+
 msgid "How should the agent's actions be approved?"
 msgstr "代理的操作應如何批准？"
 
 msgid "How the command opens."
 msgstr "命令的開啟方式。"
+
+msgid "How the conversation shown in a pane stands out."
+msgstr "窗格中顯示的對話如何突出。"
 
 msgid "How the prompt is delivered to the process."
 msgstr "提示詞如何傳遞給處理程序。"
@@ -9563,6 +9639,9 @@ msgstr "讓文件保持最新"
 
 msgid "Keep editing"
 msgstr "繼續編輯"
+
+msgid "Keep the sidebar in Settings"
+msgstr "在設定中保留側邊欄"
 
 msgid "Keep typing an email to invite"
 msgstr "繼續輸入電子郵件以邀請"
@@ -10502,6 +10581,9 @@ msgstr "記憶體佔比"
 msgid "Mention."
 msgstr "提及。"
 
+msgid "Menu"
+msgstr "選單"
+
 msgid "Menubar"
 msgstr "選單欄"
 
@@ -10702,6 +10784,9 @@ msgstr "從 iPhone 或 iPad 監控、引導代理程式，並為它們排除阻�
 
 msgid "Monitoring"
 msgstr "監控"
+
+msgid "Monochrome"
+msgstr "單色"
 
 msgid "monorepo"
 msgstr "monorepo"
@@ -10933,6 +11018,9 @@ msgstr "需要你"
 
 msgid "Needs your approval"
 msgstr "需要你的核准"
+
+msgid "Neon"
+msgstr "霓虹"
 
 msgid "Nerd Fonts"
 msgstr "Nerd Fonts"
@@ -12291,6 +12379,9 @@ msgstr "開啟 App Store"
 msgid "Open as comment pane"
 msgstr "作為評論面板開啟"
 
+msgid "Open Automations"
+msgstr "開啟自動化"
+
 msgid "Open billing"
 msgstr "開啟帳單"
 
@@ -12306,11 +12397,17 @@ msgstr "開啟更改"
 msgid "Open Changes"
 msgstr "開啟更改"
 
+msgid "Open Cloud Workspaces"
+msgstr "開啟雲端工作區"
+
 msgid "Open Command Palette"
 msgstr "開啟命令面板"
 
 msgid "Open comment on GitHub"
 msgstr "在GitHub上開啟評論"
+
+msgid "Open conversation"
+msgstr "開啟中的對話"
 
 #. placeholder {0}: conversation.title
 msgid "Open conversation: {0}"
@@ -12517,14 +12614,23 @@ msgstr "開啟選單"
 msgid "Open navigation"
 msgstr "開啟導覽"
 
+msgid "Open Notes"
+msgstr "開啟筆記"
+
 msgid "Open on GitHub"
 msgstr "在GitHub上開啟"
 
 msgid "Open Page in Default Browser"
 msgstr "在預設瀏覽器中開啟頁面"
 
+msgid "Open Pages"
+msgstr "開啟頁面"
+
 msgid "Open pages and reply to comments from the Superset app on iPhone and iPad."
 msgstr "在 Superset 的 iPhone 和 iPad 應用程式中開啟頁面並回覆留言。"
+
+msgid "Open Plugins"
+msgstr "開啟外掛程式"
 
 msgid "Open Plugins in the Superset app and pick one. The install is saved to your account."
 msgstr "在 Superset 應用程式中開啟「外掛」並選擇一個。安裝紀錄會儲存到你的帳號。"
@@ -12568,6 +12674,9 @@ msgstr "開啟拉取請求選項"
 msgid "Open pull requests"
 msgstr "開啟的拉取請求"
 
+msgid "Open Pull Requests"
+msgstr "開啟拉取請求"
+
 msgid "Open recent"
 msgstr "開啟最近使用"
 
@@ -12604,6 +12713,9 @@ msgstr "開啟系統設定"
 msgid "Open task {title}"
 msgstr "開啟任務{title}"
 
+msgid "Open Tasks"
+msgstr "開啟任務"
+
 msgid "Open Terminal"
 msgstr "開啟終端"
 
@@ -12637,14 +12749,38 @@ msgstr "開啟終端指令碼9"
 msgid "Open terminals and prompt agents"
 msgstr "開啟終端機並向代理程式下達指令"
 
+msgid "Open the automations"
+msgstr "開啟自動化"
+
 msgid "Open the Changes pane in a new tab, or focus the existing one"
 msgstr "在新分頁中開啟更改面板，或聚焦現有面板"
+
+msgid "Open the cloud workspaces"
+msgstr "開啟雲端工作區"
 
 msgid "Open the global command palette"
 msgstr "開啟全域性命令面板"
 
+msgid "Open the list of projects"
+msgstr "開啟專案清單"
+
+msgid "Open the list of workspaces"
+msgstr "開啟工作區清單"
+
 msgid "Open the new workspace modal"
 msgstr "開啟新建工作區彈窗"
+
+msgid "Open the notes"
+msgstr "開啟筆記"
+
+msgid "Open the pages"
+msgstr "開啟頁面"
+
+msgid "Open the plugins"
+msgstr "開啟外掛程式"
+
+msgid "Open the pull requests"
+msgstr "開啟拉取請求"
 
 msgid "Open the resource usage view in the command palette"
 msgstr "在命令面板中開啟資源用量檢視"
@@ -12658,6 +12794,12 @@ msgstr "開啟這次執行的工作區"
 msgid "open the task in a workspace"
 msgstr "在工作區中開啟任務"
 
+msgid "Open the tasks"
+msgstr "開啟任務"
+
+msgid "Open the usage page"
+msgstr "開啟用量頁面"
+
 msgid "Open the workspace"
 msgstr "開啟工作區"
 
@@ -12667,12 +12809,18 @@ msgstr "在「開啟方式」選單中選定的應用（VS Code、Cursor等）�
 msgid "Open this run's workspace"
 msgstr "開啟此次執行的工作區"
 
+msgid "Open Usage"
+msgstr "開啟用量"
+
 msgid "Open workspace"
 msgstr "開啟工作區"
 
 #. placeholder {0}: getV2WorkspaceDisplayName(workspace)
 msgid "Open workspace: {0}"
 msgstr "開啟工作區：{0}"
+
+msgid "Open Workspaces"
+msgstr "開啟工作區"
 
 msgid "Open your app."
 msgstr "開啟你的應用程式。"
@@ -13156,6 +13304,9 @@ msgstr "電話號碼"
 msgid "Pick {name} from the theme grid to apply it."
 msgstr "在主題網格中選擇{name}即可應用。"
 
+msgid "Pick a color"
+msgstr "選擇顏色"
+
 msgid "Pick a different element"
 msgstr "選擇其他元素"
 
@@ -13206,6 +13357,9 @@ msgstr "選擇{label}在沙箱中的登入方式。憑證在啟動時交給代�
 
 msgid "Pick the best agent."
 msgstr "挑選最合適的代理程式。"
+
+msgid "Pick the entries of the menu at the top of the sidebar. Their shortcuts work even when an entry is hidden."
+msgstr "選擇側邊欄頂部選單中的項目。即使項目被隱藏，其快速鍵仍然有效。"
 
 msgid "Pick the new project folder on {hostName}."
 msgstr "在{hostName}上選擇新的專案資料夾。"
@@ -14228,6 +14382,9 @@ msgstr "發行"
 msgid "Release control"
 msgstr "釋放控制"
 
+msgid "Release notes"
+msgstr "版本資訊"
+
 msgid "Release notes draft"
 msgstr "發布說明草稿"
 
@@ -14937,6 +15094,9 @@ msgstr "需要審查"
 
 msgid "Review syntax-highlighted diffs"
 msgstr "審查含語法醒目提示的差異"
+
+msgid "Review the pull request"
+msgstr "審閱拉取請求"
 
 msgid "Review the result."
 msgstr "審查結果。"
@@ -16236,6 +16396,9 @@ msgstr "顯示每個對話的待辦清單，與其代理共用。"
 msgid "Show the triggering payload"
 msgstr "顯示觸發酬載"
 
+msgid "Show the workspace sidebar on the left while Settings is open."
+msgstr "開啟設定時在左側顯示工作區側邊欄。"
+
 msgid "Show translation"
 msgstr "顯示譯文"
 
@@ -16261,6 +16424,9 @@ msgstr "會與你的名字一起公開顯示。"
 msgid "Shut down {0}"
 msgstr "關閉 {0}"
 
+msgid "Side bar"
+msgstr "側邊條"
+
 msgid "Side by Side"
 msgstr "並排"
 
@@ -16275,6 +16441,9 @@ msgstr "側邊欄卡片"
 
 msgid "Sidebar file rows"
 msgstr "側邊欄檔案行"
+
+msgid "Sidebar options"
+msgstr "側邊欄選項"
 
 msgid "Sidebar order"
 msgstr "側邊欄順序"
@@ -16500,6 +16669,9 @@ msgstr "已通過SOC 2 Type II合規。可索取報告。"
 
 msgid "SOC 2 Type II report"
 msgstr "SOC 2 Type II報告"
+
+msgid "Soft"
+msgstr "柔和"
 
 msgid "Some files are not an accepted type and were not added."
 msgstr "部分檔案的型別不被允許，未新增。"
@@ -16892,6 +17064,9 @@ msgstr "在這個工作區裡開一個新會話"
 msgid "State"
 msgstr "狀態"
 
+msgid "State colors"
+msgstr "狀態顏色"
+
 msgid "Stats"
 msgstr "統計"
 
@@ -16991,6 +17166,12 @@ msgstr "刪除線"
 
 msgid "Strip redundant overrides at call sites"
 msgstr "移除呼叫處多餘的樣式覆蓋"
+
+msgid "Stripe each conversation with its group's color, or its project's."
+msgstr "用群組或專案的顏色為每個對話加上色條。"
+
+msgid "Stripe width"
+msgstr "色條寬度"
 
 msgid "Strong"
 msgstr "強"
@@ -19316,6 +19497,9 @@ msgstr "透過 Pro 在手機上使用 Superset。"
 msgid "Use the desktop app to start running parallel coding agents."
 msgstr "使用桌面應用程式開始並行執行編碼代理程式。"
 
+msgid "Use the palette's color"
+msgstr "使用調色盤的顏色"
+
 msgid "Use the Superset tray menu > Host Service > Restart, then retry."
 msgstr "請使用Superset托盤選單 > 主機服務 > 重啟，然後重試。"
 
@@ -19894,6 +20078,9 @@ msgstr "寬度"
 
 msgid "Width · parallel sessions"
 msgstr "寬度 · 並行工作階段數"
+
+msgid "Width of the colored stripes: groups, side bar and folder colors."
+msgstr "彩色條的寬度：群組、側邊條和資料夾顏色。"
 
 msgid "Window"
 msgstr "視窗"

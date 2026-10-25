@@ -401,3 +401,29 @@
 html[data-pointer-passthrough] iframe {
 	pointer-events: none;
 }
+
+/* Sidebar appearance. Defaults here; Settings → Sidebar writes the user's
+   values on :root (useApplySidebarAppearance). */
+:root {
+	--sb-row-h: 28px;
+	--sb-conv-h: 24px;
+	--sb-conv-text: 12px;
+	--sb-band: 3px;
+	--sb-marker-fill: 10%;
+	--sb-state-working: #facc15;
+	--sb-state-request: #8b5cf6;
+	--sb-state-unseen: #22c55e;
+	--sb-state-seen: #3b82f6;
+	--sb-state-failed: #ef4444;
+	--sb-state-idle: #71717a;
+}
+
+[data-sb-contrast="soft"] {
+	--muted-foreground: color-mix(in oklab, var(--foreground) 45%, transparent);
+	--border: color-mix(in oklab, var(--foreground) 6%, transparent);
+}
+
+[data-sb-contrast="strong"] {
+	--muted-foreground: color-mix(in oklab, var(--foreground) 85%, transparent);
+	--border: color-mix(in oklab, var(--foreground) 22%, transparent);
+}

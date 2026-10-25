@@ -173,6 +173,7 @@ export function DashboardSidebarProjectSection({
 						<DashboardSidebarExpandedProjectContent
 							containerId={project.id}
 							projectId={project.id}
+							projectColor={project.color}
 							isCollapsed={project.isCollapsed}
 							workspaceShortcutLabels={workspaceShortcutLabels}
 							onWorkspaceHover={onWorkspaceHover}

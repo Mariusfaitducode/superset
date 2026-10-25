@@ -1004,6 +1004,146 @@ export const HOTKEYS_REGISTRY = {
 			message: "Open the resource usage view in the command palette",
 		}),
 	},
+	OPEN_WORKSPACES_PAGE: {
+		key: {
+			mac: L("meta+ctrl+1"),
+			windows: null,
+			linux: null,
+		},
+		label: msg({
+			message: "Open Workspaces",
+		}),
+		category: "Navigation",
+		description: msg({
+			message: "Open the list of workspaces",
+		}),
+	},
+	OPEN_CLOUD_WORKSPACES_PAGE: {
+		key: {
+			mac: L("meta+ctrl+2"),
+			windows: null,
+			linux: null,
+		},
+		label: msg({
+			message: "Open Cloud Workspaces",
+		}),
+		category: "Navigation",
+		description: msg({
+			message: "Open the cloud workspaces",
+		}),
+	},
+	OPEN_PROJECTS_PAGE: {
+		key: {
+			mac: L("meta+ctrl+3"),
+			windows: null,
+			linux: null,
+		},
+		label: msg({
+			message: "Open Projects",
+		}),
+		category: "Navigation",
+		description: msg({
+			message: "Open the list of projects",
+		}),
+	},
+	OPEN_AUTOMATIONS_PAGE: {
+		key: {
+			mac: L("meta+ctrl+4"),
+			windows: null,
+			linux: null,
+		},
+		label: msg({
+			message: "Open Automations",
+		}),
+		category: "Navigation",
+		description: msg({
+			message: "Open the automations",
+		}),
+	},
+	OPEN_TASKS_PAGE: {
+		key: {
+			mac: L("meta+ctrl+5"),
+			windows: null,
+			linux: null,
+		},
+		label: msg({
+			message: "Open Tasks",
+		}),
+		category: "Navigation",
+		description: msg({
+			message: "Open the tasks",
+		}),
+	},
+	OPEN_PULL_REQUESTS_PAGE: {
+		key: {
+			mac: L("meta+ctrl+6"),
+			windows: null,
+			linux: null,
+		},
+		label: msg({
+			message: "Open Pull Requests",
+		}),
+		category: "Navigation",
+		description: msg({
+			message: "Open the pull requests",
+		}),
+	},
+	OPEN_USAGE_PAGE: {
+		key: {
+			mac: L("meta+ctrl+7"),
+			windows: null,
+			linux: null,
+		},
+		label: msg({
+			message: "Open Usage",
+		}),
+		category: "Navigation",
+		description: msg({
+			message: "Open the usage page",
+		}),
+	},
+	OPEN_PAGES_PAGE: {
+		key: {
+			mac: L("meta+ctrl+8"),
+			windows: null,
+			linux: null,
+		},
+		label: msg({
+			message: "Open Pages",
+		}),
+		category: "Navigation",
+		description: msg({
+			message: "Open the pages",
+		}),
+	},
+	OPEN_NOTES_PAGE: {
+		key: {
+			mac: L("meta+ctrl+9"),
+			windows: null,
+			linux: null,
+		},
+		label: msg({
+			message: "Open Notes",
+		}),
+		category: "Navigation",
+		description: msg({
+			message: "Open the notes",
+		}),
+	},
+	OPEN_PLUGINS_PAGE: {
+		key: {
+			mac: L("meta+ctrl+0"),
+			windows: null,
+			linux: null,
+		},
+		label: msg({
+			message: "Open Plugins",
+		}),
+		category: "Navigation",
+		description: msg({
+			message: "Open the plugins",
+		}),
+	},
 } as const satisfies Record<string, HotkeyRegistryDefinition>;
 
 export type HotkeyId = keyof typeof HOTKEYS_REGISTRY;

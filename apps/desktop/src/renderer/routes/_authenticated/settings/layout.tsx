@@ -17,9 +17,11 @@ import {
 	useSettingsOriginRoute,
 	useSettingsSearchQuery,
 } from "renderer/stores/settings-state";
+import { useSidebarPreference } from "renderer/stores/sidebar-preferences";
 import { WindowControlsInset } from "../_dashboard/components/WindowControlsInset";
 import { ContentBoundary } from "../components/ContentBoundary";
 import { SearchResultsBanner } from "./components/SearchResultsBanner";
+import { SettingsAppSidebar } from "./components/SettingsAppSidebar";
 import {
 	FULL_WIDTH_SECTION_PATHS,
 	SettingsSidebar,
@@ -114,6 +116,8 @@ const NON_ROUTABLE_ESCAPE_PARENTS = new Set([
 
 function SettingsLayout() {
 	const isV2CloudEnabled = useIsV2CloudEnabled();
+	const keepSidebarInSettings = useSidebarPreference("keepSidebarInSettings");
+	const showsAppSidebar = isV2CloudEnabled && keepSidebarInSettings;
 	const mobileEnabled =
 		useFeatureFlagEnabled(FEATURE_FLAGS.MOBILE_LAUNCH) === true;
 	const cloudWorkspacesEnabled =
@@ -207,7 +211,8 @@ function SettingsLayout() {
 			    _dashboard route tree; CHECK_RESOURCES needs its own mount here so
 			    the hotkey and native "Resources" menu item still work in Settings. */}
 			<CheckResourcesHotkeyMount />
-			<SettingsSidebar />
+			{showsAppSidebar && <SettingsAppSidebar />}
+			<SettingsSidebar besideAppSidebar={showsAppSidebar} />
 			<div className="flex min-w-0 flex-1 flex-col overflow-hidden">
 				<div className="flex h-12 shrink-0">
 					<div className="drag h-full min-w-0 flex-1" />

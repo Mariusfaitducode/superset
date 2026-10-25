@@ -220,7 +220,7 @@ export const DashboardSidebarExpandedWorkspaceRow = forwardRef<
 					onFocus={handleRowFocus}
 					onBlur={handleRowBlur}
 					className={cn(
-						"group relative flex h-7 w-full items-center pr-2",
+						"group relative flex h-[var(--sb-row-h)] w-full items-center pr-2",
 						resolvedIndentation === "top-level"
 							? "pl-2"
 							: resolvedIndentation === "grouped"

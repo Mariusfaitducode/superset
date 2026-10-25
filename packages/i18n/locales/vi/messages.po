@@ -2116,6 +2116,9 @@ msgstr "AI · Trạng thái"
 msgid "AI authentication failed. Please check your AI settings."
 msgstr "Xác thực AI thất bại. Vui lòng kiểm tra cài đặt AI của bạn."
 
+msgid "Airy"
+msgstr "Thoáng"
+
 msgid "Alert"
 msgstr "Alert"
 
@@ -2963,9 +2966,6 @@ msgstr "Tự động hóa cần gói Pro hoặc Enterprise. Nếu bạn hạ gó
 msgid "Automations require the Pro plan."
 msgstr "Tự động hóa yêu cầu gói Pro."
 
-msgid "Automations, {myFailedCount} failing"
-msgstr "Tự động hóa, {myFailedCount} đang lỗi"
-
 msgid "Autonomous"
 msgstr "Tự chủ"
 
@@ -3048,6 +3048,9 @@ msgstr "Được hậu thuẫn bởi"
 
 msgid "Background"
 msgstr "Nền"
+
+msgid "Background of the open conversation."
+msgstr "Nền của cuộc trò chuyện đang mở."
 
 msgid "Background processes"
 msgstr "Tiến trình nền"
@@ -3354,6 +3357,9 @@ msgstr "Xây dựng công khai"
 msgid "Build the future of Superset in the cloud"
 msgstr "Xây dựng tương lai của Superset trên đám mây"
 
+msgid "Build the settings page"
+msgstr "Xây dựng trang cài đặt"
+
 msgid "Build your own"
 msgstr "Tự tạo plugin"
 
@@ -3471,6 +3477,9 @@ msgstr "Calendar"
 
 msgid "Calendar and Gmail triggers in this organization will stop firing until an account is connected again."
 msgstr "Các trigger Calendar và Gmail trong tổ chức này sẽ ngừng chạy cho đến khi kết nối lại một tài khoản."
+
+msgid "Calendar sync"
+msgstr "Đồng bộ lịch"
 
 msgid "Camera access is not allowed"
 msgstr "Không được phép truy cập camera"
@@ -3645,6 +3654,9 @@ msgstr "Đổi vị trí dự án"
 
 msgid "Change role"
 msgstr "Đổi vai trò"
+
+msgid "Change shortcuts"
+msgstr "Đổi phím tắt"
 
 msgid "Change state"
 msgstr "Đổi trạng thái"
@@ -3858,11 +3870,11 @@ msgstr "Chọn cách mở tệp khi chưa có khung xem trước"
 msgid "Choose how the Changes view opens from the top bar"
 msgstr "Chọn cách chế độ xem thay đổi mở từ thanh trên cùng"
 
+msgid "Choose how the sidebar looks and what it shows under each workspace. Right-click a project or a group for its own options."
+msgstr "Chọn giao diện thanh bên và nội dung hiển thị dưới mỗi workspace. Nhấp chuột phải vào một dự án hoặc nhóm để xem tùy chọn riêng."
+
 msgid "Choose how to open file paths when Cmd+clicking in the terminal"
 msgstr "Chọn cách mở đường dẫn tệp khi Cmd+nhấp trong terminal"
-
-msgid "Choose what the sidebar shows under each workspace."
-msgstr "Chọn những gì thanh bên hiển thị dưới mỗi không gian làm việc."
 
 msgid "Choose what to clear from the in-app browser."
 msgstr "Chọn thứ cần xóa khỏi trình duyệt trong ứng dụng."
@@ -4343,6 +4355,16 @@ msgstr "Màu"
 msgid "Color Filter"
 msgstr "Bộ lọc màu"
 
+#. placeholder {0}: stateLabel[key]
+msgid "Color for {0}"
+msgstr "Màu cho {0}"
+
+msgid "Colorblind-safe"
+msgstr "Thân thiện với người mù màu"
+
+msgid "Colors of the agent state dots, in the sidebar and the switchers."
+msgstr "Màu các chấm trạng thái của agent, trong thanh bên và bộ chuyển đổi."
+
 msgid "Columns"
 msgstr "Cột"
 
@@ -4463,6 +4485,12 @@ msgstr "Giao tiếp"
 
 msgid "Community"
 msgstr "Cộng đồng"
+
+msgid "Compact"
+msgstr "Gọn"
+
+msgid "Compact conversations"
+msgstr "Cuộc trò chuyện gọn"
 
 msgid "Company"
 msgstr "Công ty"
@@ -4785,6 +4813,9 @@ msgstr "Liên hệ"
 msgid "Contains this text..."
 msgstr "Chứa văn bản này..."
 
+msgid "Content"
+msgstr "Nội dung"
+
 msgid "Context"
 msgstr "Ngữ cảnh"
 
@@ -4840,6 +4871,9 @@ msgstr "Để tiếp tục phiên agent, cần ghim một workspace"
 
 msgid "continuing the last session"
 msgstr "tiếp tục phiên gần nhất"
+
+msgid "Contrast"
+msgstr "Độ tương phản"
 
 msgid "Contributions"
 msgstr "Đóng góp"
@@ -6270,6 +6304,9 @@ msgstr "Tự hạ quyền?"
 msgid "Denied"
 msgstr "Đã từ chối"
 
+msgid "Density"
+msgstr "Mật độ"
+
 msgid "Deny"
 msgstr "Từ chối"
 
@@ -7229,6 +7266,9 @@ msgstr "Khám phá"
 msgid "Explore Pages"
 msgstr "Khám phá Trang"
 
+msgid "Explore the codebase"
+msgstr "Khám phá mã nguồn"
+
 msgid "Explored"
 msgstr "Đã tìm hiểu"
 
@@ -7869,6 +7909,9 @@ msgstr "tệp cần loại trừ (glob)"
 msgid "files to include (glob)"
 msgstr "tệp cần bao gồm (glob)"
 
+msgid "Fill"
+msgstr "Tô nền"
+
 msgid "Fill out the contact form on this page and our team will reach out to learn about your needs and walk you through next steps."
 msgstr "Điền vào biểu mẫu liên hệ trên trang này và đội ngũ của chúng tôi sẽ liên hệ để tìm hiểu nhu cầu và hướng dẫn bạn các bước tiếp theo."
 
@@ -8010,6 +8053,9 @@ msgstr "Sửa lỗi CI"
 msgid "Fix findings"
 msgstr "Sửa các phát hiện"
 
+msgid "Fix the flaky test"
+msgstr "Sửa bài test chập chờn"
+
 msgid "fix-auth-redirect"
 msgstr "fix-auth-redirect"
 
@@ -8066,6 +8112,9 @@ msgstr "Chuyển focus tới ô tìm kiếm trong màn hình tác vụ"
 
 msgid "Folder"
 msgstr "Thư mục"
+
+msgid "Folder color on conversations"
+msgstr "Màu thư mục trên cuộc trò chuyện"
 
 msgid "Folder is missing"
 msgstr "Thiếu thư mục"
@@ -8523,6 +8572,9 @@ msgstr "Một nửa thay đổi được merge là code agent không cần chỉ
 msgid "Hand the browser to your agent."
 msgstr "Giao trình duyệt cho agent của bạn."
 
+msgid "Hand-picked colors stay when you change the palette."
+msgstr "Màu chọn tay được giữ khi bạn đổi bảng màu."
+
 msgid "Handing to agent…"
 msgstr "Đang giao cho agent…"
 
@@ -8574,6 +8626,9 @@ msgstr "Tiêu đề 3"
 msgid "Heart"
 msgstr "Trái tim"
 
+msgid "Height of the rows and size of the conversation titles."
+msgstr "Chiều cao hàng và cỡ tiêu đề cuộc trò chuyện."
+
 msgid "Help"
 msgstr "Trợ giúp"
 
@@ -8602,6 +8657,9 @@ msgstr "Ẩn"
 msgid "Hide checks"
 msgstr "Ẩn check"
 
+msgid "Hide conversations"
+msgstr "Ẩn cuộc trò chuyện"
+
 msgid "Hide details"
 msgstr "Ẩn chi tiết"
 
@@ -8628,6 +8686,9 @@ msgstr "Ẩn khỏi thanh bên"
 
 msgid "Hide from Sidebar"
 msgstr "Ẩn khỏi thanh bên"
+
+msgid "Hide idle conversations"
+msgstr "Ẩn cuộc trò chuyện nhàn rỗi"
 
 msgid "Hide log"
 msgstr "Ẩn log"
@@ -8656,8 +8717,14 @@ msgstr "Ẩn bình luận review"
 msgid "Hide sessions"
 msgstr "Ẩn phiên"
 
+msgid "Hide subagents"
+msgstr "Ẩn agent con"
+
 msgid "Hide text"
 msgstr "Ẩn văn bản"
+
+msgid "Hide to-dos"
+msgstr "Ẩn việc cần làm"
 
 msgid "Hide unchanged regions"
 msgstr "Ẩn các vùng không đổi"
@@ -8670,6 +8737,9 @@ msgstr "Mức độ nghiêm trọng cao"
 
 msgid "High usage"
 msgstr "Mức sử dụng rất cao"
+
+msgid "Highlight intensity"
+msgstr "Độ đậm làm nổi bật"
 
 msgid "history"
 msgstr "lịch sử"
@@ -8806,11 +8876,17 @@ msgstr "Số terminal ẩn được giữ tải đầy đủ ({MIN_TERMINAL_PARK
 msgid "How much agent work engineers are actually running — tokens, cost, models and sessions, published by people who opted in."
 msgstr "Khối lượng công việc agent mà các kỹ sư thực sự đang chạy — token, chi phí, mô hình và phiên, do những người chủ động chia sẻ công bố."
 
+msgid "How much secondary text and separators stand out."
+msgstr "Mức nổi bật của chữ phụ và đường phân cách."
+
 msgid "How should the agent's actions be approved?"
 msgstr "Thao tác của agent nên được phê duyệt thế nào?"
 
 msgid "How the command opens."
 msgstr "Cách mở lệnh."
+
+msgid "How the conversation shown in a pane stands out."
+msgstr "Cách làm nổi bật cuộc trò chuyện đang hiển thị trong khung."
 
 msgid "How the prompt is delivered to the process."
 msgstr "Cách prompt được đưa tới tiến trình."
@@ -9563,6 +9639,9 @@ msgstr "Giữ tài liệu luôn mới"
 
 msgid "Keep editing"
 msgstr "Tiếp tục chỉnh sửa"
+
+msgid "Keep the sidebar in Settings"
+msgstr "Giữ thanh bên trong Cài đặt"
 
 msgid "Keep typing an email to invite"
 msgstr "Tiếp tục nhập email để mời"
@@ -10502,6 +10581,9 @@ msgstr "Tỷ lệ bộ nhớ"
 msgid "Mention."
 msgstr "Nhắc đến."
 
+msgid "Menu"
+msgstr "Menu"
+
 msgid "Menubar"
 msgstr "Menubar"
 
@@ -10702,6 +10784,9 @@ msgstr "Theo dõi, điều hướng và gỡ vướng cho agent từ iPhone ho�
 
 msgid "Monitoring"
 msgstr "Giám sát"
+
+msgid "Monochrome"
+msgstr "Đơn sắc"
 
 msgid "monorepo"
 msgstr "monorepo"
@@ -10933,6 +11018,9 @@ msgstr "Cần bạn"
 
 msgid "Needs your approval"
 msgstr "Cần bạn phê duyệt"
+
+msgid "Neon"
+msgstr "Neon"
 
 msgid "Nerd Fonts"
 msgstr "Nerd Fonts"
@@ -12291,6 +12379,9 @@ msgstr "Mở App Store"
 msgid "Open as comment pane"
 msgstr "Mở dạng khung bình luận"
 
+msgid "Open Automations"
+msgstr "Mở tự động hóa"
+
 msgid "Open billing"
 msgstr "Mở thanh toán"
 
@@ -12306,11 +12397,17 @@ msgstr "Mở thay đổi"
 msgid "Open Changes"
 msgstr "Mở thay đổi"
 
+msgid "Open Cloud Workspaces"
+msgstr "Mở workspace đám mây"
+
 msgid "Open Command Palette"
 msgstr "Mở bảng lệnh"
 
 msgid "Open comment on GitHub"
 msgstr "Mở bình luận trên GitHub"
+
+msgid "Open conversation"
+msgstr "Cuộc trò chuyện đang mở"
 
 #. placeholder {0}: conversation.title
 msgid "Open conversation: {0}"
@@ -12517,14 +12614,23 @@ msgstr "Mở menu"
 msgid "Open navigation"
 msgstr "Mở điều hướng"
 
+msgid "Open Notes"
+msgstr "Mở ghi chú"
+
 msgid "Open on GitHub"
 msgstr "Mở trên GitHub"
 
 msgid "Open Page in Default Browser"
 msgstr "Mở trang trong trình duyệt mặc định"
 
+msgid "Open Pages"
+msgstr "Mở trang"
+
 msgid "Open pages and reply to comments from the Superset app on iPhone and iPad."
 msgstr "Mở trang và trả lời bình luận từ ứng dụng Superset trên iPhone và iPad."
+
+msgid "Open Plugins"
+msgstr "Mở plugin"
 
 msgid "Open Plugins in the Superset app and pick one. The install is saved to your account."
 msgstr "Mở Plugin trong ứng dụng Superset và chọn một plugin. Bản cài đặt được lưu vào tài khoản của bạn."
@@ -12568,6 +12674,9 @@ msgstr "Mở tùy chọn pull request"
 msgid "Open pull requests"
 msgstr "Pull request đang mở"
 
+msgid "Open Pull Requests"
+msgstr "Mở pull request"
+
 msgid "Open recent"
 msgstr "Mở gần đây"
 
@@ -12604,6 +12713,9 @@ msgstr "Mở System Settings"
 msgid "Open task {title}"
 msgstr "Mở tác vụ {title}"
 
+msgid "Open Tasks"
+msgstr "Mở tác vụ"
+
 msgid "Open Terminal"
 msgstr "Mở terminal"
 
@@ -12637,14 +12749,38 @@ msgstr "Mở script terminal 9"
 msgid "Open terminals and prompt agents"
 msgstr "Mở terminal và giao việc cho tác nhân"
 
+msgid "Open the automations"
+msgstr "Mở trang tự động hóa"
+
 msgid "Open the Changes pane in a new tab, or focus the existing one"
 msgstr "Mở bảng thay đổi trong tab mới, hoặc chuyển tiêu điểm đến bảng hiện có"
+
+msgid "Open the cloud workspaces"
+msgstr "Mở các workspace đám mây"
 
 msgid "Open the global command palette"
 msgstr "Mở bảng lệnh toàn cục"
 
+msgid "Open the list of projects"
+msgstr "Mở danh sách dự án"
+
+msgid "Open the list of workspaces"
+msgstr "Mở danh sách workspace"
+
 msgid "Open the new workspace modal"
 msgstr "Mở hộp thoại tạo workspace mới"
+
+msgid "Open the notes"
+msgstr "Mở ghi chú"
+
+msgid "Open the pages"
+msgstr "Mở các trang"
+
+msgid "Open the plugins"
+msgstr "Mở plugin"
+
+msgid "Open the pull requests"
+msgstr "Mở các pull request"
 
 msgid "Open the resource usage view in the command palette"
 msgstr "Mở khung tài nguyên trong bảng lệnh"
@@ -12658,6 +12794,12 @@ msgstr "Mở workspace của lần chạy"
 msgid "open the task in a workspace"
 msgstr "mở tác vụ trong một workspace"
 
+msgid "Open the tasks"
+msgstr "Mở tác vụ"
+
+msgid "Open the usage page"
+msgstr "Mở trang mức sử dụng"
+
 msgid "Open the workspace"
 msgstr "Mở workspace"
 
@@ -12667,12 +12809,18 @@ msgstr "Mở workspace trong ứng dụng đã chọn ở menu \"Mở trong\" (V
 msgid "Open this run's workspace"
 msgstr "Mở workspace của lần chạy này"
 
+msgid "Open Usage"
+msgstr "Mở mức sử dụng"
+
 msgid "Open workspace"
 msgstr "Mở workspace"
 
 #. placeholder {0}: getV2WorkspaceDisplayName(workspace)
 msgid "Open workspace: {0}"
 msgstr "Mở workspace: {0}"
+
+msgid "Open Workspaces"
+msgstr "Mở workspace"
 
 msgid "Open your app."
 msgstr "Mở ứng dụng của bạn."
@@ -13156,6 +13304,9 @@ msgstr "Số điện thoại"
 msgid "Pick {name} from the theme grid to apply it."
 msgstr "Chọn {name} trong lưới chủ đề để áp dụng."
 
+msgid "Pick a color"
+msgstr "Chọn màu"
+
 msgid "Pick a different element"
 msgstr "Chọn phần tử khác"
 
@@ -13206,6 +13357,9 @@ msgstr "Chọn cách {label} đăng nhập bên trong sandbox. Thông tin xác t
 
 msgid "Pick the best agent."
 msgstr "Chọn agent tốt nhất."
+
+msgid "Pick the entries of the menu at the top of the sidebar. Their shortcuts work even when an entry is hidden."
+msgstr "Chọn các mục của menu ở đầu thanh bên. Phím tắt vẫn hoạt động kể cả khi mục bị ẩn."
 
 msgid "Pick the new project folder on {hostName}."
 msgstr "Chọn thư mục dự án mới trên {hostName}."
@@ -14228,6 +14382,9 @@ msgstr "Phát hành"
 msgid "Release control"
 msgstr "Ngừng điều khiển"
 
+msgid "Release notes"
+msgstr "Ghi chú phát hành"
+
 msgid "Release notes draft"
 msgstr "Bản nháp ghi chú phát hành"
 
@@ -14937,6 +15094,9 @@ msgstr "Cần review"
 
 msgid "Review syntax-highlighted diffs"
 msgstr "Xem xét diff có tô sáng cú pháp"
+
+msgid "Review the pull request"
+msgstr "Xem lại pull request"
 
 msgid "Review the result."
 msgstr "Review kết quả."
@@ -16236,6 +16396,9 @@ msgstr "Hiển thị danh sách việc cần làm của mỗi cuộc trò chuy�
 msgid "Show the triggering payload"
 msgstr "Hiển thị payload kích hoạt"
 
+msgid "Show the workspace sidebar on the left while Settings is open."
+msgstr "Hiển thị thanh bên workspace ở bên trái khi Cài đặt đang mở."
+
 msgid "Show translation"
 msgstr "Xem bản dịch"
 
@@ -16261,6 +16424,9 @@ msgstr "Hiển thị công khai cùng với tên của bạn."
 msgid "Shut down {0}"
 msgstr "Tắt {0}"
 
+msgid "Side bar"
+msgstr "Vạch bên"
+
 msgid "Side by Side"
 msgstr "Cạnh nhau"
 
@@ -16275,6 +16441,9 @@ msgstr "Sidebar Card"
 
 msgid "Sidebar file rows"
 msgstr "Dòng tệp ở thanh bên"
+
+msgid "Sidebar options"
+msgstr "Tùy chọn thanh bên"
 
 msgid "Sidebar order"
 msgstr "Thứ tự thanh bên"
@@ -16500,6 +16669,9 @@ msgstr "Tuân thủ SOC 2 Type II. Yêu cầu báo cáo của chúng tôi."
 
 msgid "SOC 2 Type II report"
 msgstr "Báo cáo SOC 2 Type II"
+
+msgid "Soft"
+msgstr "Dịu"
 
 msgid "Some files are not an accepted type and were not added."
 msgstr "Một số tệp không thuộc loại được chấp nhận nên không được thêm."
@@ -16892,6 +17064,9 @@ msgstr "Bắt đầu một phiên mới trong workspace này"
 msgid "State"
 msgstr "Trạng thái"
 
+msgid "State colors"
+msgstr "Màu trạng thái"
+
 msgid "Stats"
 msgstr "Thống kê"
 
@@ -16991,6 +17166,12 @@ msgstr "Gạch ngang"
 
 msgid "Strip redundant overrides at call sites"
 msgstr "Bỏ các chỗ ghi đè thừa tại nơi gọi"
+
+msgid "Stripe each conversation with its group's color, or its project's."
+msgstr "Gắn vạch màu của nhóm hoặc dự án cho mỗi cuộc trò chuyện."
+
+msgid "Stripe width"
+msgstr "Độ dày vạch"
 
 msgid "Strong"
 msgstr "Mạnh"
@@ -19316,6 +19497,9 @@ msgstr "Dùng Superset trên điện thoại với Pro."
 msgid "Use the desktop app to start running parallel coding agents."
 msgstr "Dùng ứng dụng máy tính để chạy song song nhiều agent lập trình."
 
+msgid "Use the palette's color"
+msgstr "Dùng màu của bảng màu"
+
 msgid "Use the Superset tray menu > Host Service > Restart, then retry."
 msgstr "Dùng menu khay Superset > Host Service > Restart, rồi thử lại."
 
@@ -19894,6 +20078,9 @@ msgstr "Chiều rộng"
 
 msgid "Width · parallel sessions"
 msgstr "Chiều rộng · các phiên song song"
+
+msgid "Width of the colored stripes: groups, side bar and folder colors."
+msgstr "Độ dày các vạch màu: nhóm, vạch bên và màu thư mục."
 
 msgid "Window"
 msgstr "Cửa sổ"

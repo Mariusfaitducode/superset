@@ -12,9 +12,9 @@ describe("sidebar preferences", () => {
 	test("shows everything by default", () => {
 		const state = useSidebarPreferencesStore.getState();
 		expect(
-			Object.values(DEFAULT_SIDEBAR_PREFERENCES)
-				.filter((value) => typeof value === "boolean")
-				.every(Boolean),
+			Object.entries(DEFAULT_SIDEBAR_PREFERENCES)
+				.filter(([key]) => key.startsWith("show"))
+				.every(([, value]) => value === true),
 		).toBe(true);
 		expect(state.showConversations).toBe(true);
 	});
@@ -34,6 +34,16 @@ describe("sidebar preferences", () => {
 		const state = useSidebarPreferencesStore.getState();
 		expect(state.showTodos).toBe(true);
 		expect(state.waitingTint).toBe("subtle");
+	});
+
+	test("a hand-picked state color goes back to the palette's on null", () => {
+		const store = useSidebarPreferencesStore.getState();
+		store.setStateColor("working", "#123456");
+		store.setStateColor("failed", "#654321");
+		useSidebarPreferencesStore.getState().setStateColor("working", null);
+		expect(useSidebarPreferencesStore.getState().stateColors).toEqual({
+			failed: "#654321",
+		});
 	});
 
 	test("turns v1's tint switch into a tint level", async () => {
