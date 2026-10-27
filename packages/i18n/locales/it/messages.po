@@ -1620,6 +1620,9 @@ msgstr "In questo terminale c'è ancora un processo in esecuzione"
 msgid "A pull request always gets its own worktree"
 msgstr "Una pull request ha sempre un worktree tutto suo"
 
+msgid "A pull request goes to the project you moved it to, else to the first project whose rules match: a PR number first, then a label, then a keyword. The rest goes to Other. Separate values with commas."
+msgstr "Una pull request va nel progetto in cui l'hai spostata, altrimenti nel primo progetto le cui regole corrispondono: prima un numero di PR, poi un'etichetta, poi una parola chiave. Il resto va in Altro. Separa i valori con virgole."
+
 msgid "A rebuilt chat surface for driving agents: richer tool output, smoother steering, faster everything."
 msgstr "Una chat ricostruita per guidare gli agenti: output degli strumenti più ricco, correzioni di rotta più fluide, tutto più veloce."
 
@@ -3089,6 +3092,9 @@ msgstr "Torna alle pagine"
 
 msgid "Back to the leaderboard"
 msgstr "Torna alla classifica"
+
+msgid "Back to the project its rules pick"
+msgstr "Torna al progetto scelto dalle regole"
 
 msgid "Backed by"
 msgstr "Sostenuti da"
@@ -6115,6 +6121,10 @@ msgstr "Eliminare \"{projectName}\"?"
 msgid "Delete “{title}”?"
 msgstr "Eliminare “{title}”?"
 
+#. placeholder {0}: project.name
+msgid "Delete {0}"
+msgstr "Elimina {0}"
+
 #. placeholder {0}: organization.name
 #. placeholder {0}: secret.key
 msgid "Delete {0}?"
@@ -6818,6 +6828,9 @@ msgstr "Scadenza"
 msgid "Duration"
 msgstr "Durata"
 
+msgid "e.g. #2701, spore-bio/hub#3025"
+msgstr "es. #2701, spore-bio/hub#3025"
+
 msgid "e.g. Add dark mode, Fix checkout bug"
 msgstr "es. Aggiungi la modalità scura, Correggi il bug del checkout"
 
@@ -6909,6 +6922,9 @@ msgstr "Modifica su GitHub"
 
 msgid "Edit prefix"
 msgstr "Modifica il prefisso"
+
+msgid "Edit projects"
+msgstr "Modifica progetti"
 
 msgid "Edit Run Script"
 msgstr "Modifica lo script di esecuzione"
@@ -8429,6 +8445,9 @@ msgstr "Integrazione GitHub"
 msgid "GitHub issues"
 msgstr "Issue GitHub"
 
+msgid "GitHub labels, e.g. spore-app-redesign"
+msgstr "Etichette GitHub, es. spore-app-redesign"
+
 msgid "GitHub rate limit reached"
 msgstr "Limite di richieste GitHub raggiunto"
 
@@ -9138,6 +9157,9 @@ msgstr "Nell'app desktop di Superset, apri <0>Impostazioni → Aspetto → Tema<
 msgid "In the Superset desktop app, open Settings → Remote Access and turn on “Allow remote access to this device via relay”."
 msgstr "Nell'app desktop di Superset, apri Impostazioni → Accesso remoto e attiva “Consenti l'accesso remoto a questo dispositivo tramite relay”."
 
+msgid "In the title or branch, e.g. audit trail, e-signature"
+msgstr "Nel titolo o nel branch, es. audit trail, e-signature"
+
 msgid "In under a year, more than 145,000 developers across 180 countries have run Superset and created over 1.85 million agent workspaces."
 msgstr "In meno di un anno, oltre 145.000 sviluppatori in 180 paesi hanno usato Superset e creato più di 1,85 milioni di workspace di agenti."
 
@@ -9647,6 +9669,9 @@ msgstr "Scorciatoie da tastiera"
 
 msgid "Keyboard Shortcuts"
 msgstr "Scorciatoie da tastiera"
+
+msgid "Keywords"
+msgstr "Parole chiave"
 
 msgid "Kill"
 msgstr "Termina"
@@ -10841,6 +10866,10 @@ msgstr "Quasi tutta la storia del software"
 msgid "Move"
 msgstr "Sposta"
 
+#. placeholder {0}: project.name
+msgid "Move {0} up"
+msgstr "Sposta su {0}"
+
 msgid "Move {count} to Group"
 msgstr "Sposta {count} in un gruppo"
 
@@ -10853,11 +10882,17 @@ msgstr "Sposta in un gruppo"
 msgid "Move to later"
 msgstr "Sposta a dopo"
 
+msgid "Move to project…"
+msgstr "Sposta nel progetto…"
+
 msgid "Move to Right Side"
 msgstr "Sposta a destra"
 
 msgid "Move to Tab"
 msgstr "Sposta in una scheda"
+
+msgid "Move up"
+msgstr "Sposta su"
 
 msgid "Moved down by you"
 msgstr "Spostate in basso da te"
@@ -11075,6 +11110,9 @@ msgstr "Le nuove persone ricevono un invito via email a unirsi a {organizationNa
 
 msgid "New project"
 msgstr "Nuovo progetto"
+
+msgid "New project name"
+msgstr "Nome del nuovo progetto"
 
 msgid "New push to branch"
 msgstr "Nuovo push sul branch"
@@ -11635,6 +11673,9 @@ msgstr "Nessun progetto disponibile"
 
 msgid "No project selected"
 msgstr "Nessun progetto selezionato"
+
+msgid "No project yet: every pull request is in Other."
+msgstr "Ancora nessun progetto: tutte le pull request sono in Altro."
 
 msgid "No project<0>session</0>"
 msgstr "Nessun progetto<0>sessione</0>"
@@ -13883,6 +13924,9 @@ msgstr "Pull request"
 
 msgid "Pull Requests"
 msgstr "Pull request"
+
+msgid "Pull requests in this project now"
+msgstr "Pull request ora in questo progetto"
 
 msgid "Purple"
 msgstr "Viola"

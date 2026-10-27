@@ -1620,6 +1620,9 @@ msgstr "이 터미널에서 프로세스가 아직 실행 중입니다"
 msgid "A pull request always gets its own worktree"
 msgstr "풀 리퀘스트는 항상 자체 worktree를 갖습니다"
 
+msgid "A pull request goes to the project you moved it to, else to the first project whose rules match: a PR number first, then a label, then a keyword. The rest goes to Other. Separate values with commas."
+msgstr "풀 리퀘스트는 옮긴 프로젝트로 가고, 그렇지 않으면 규칙이 일치하는 첫 번째 프로젝트로 갑니다. PR 번호, 레이블, 키워드 순입니다. 나머지는 기타로 갑니다. 값은 쉼표로 구분하세요."
+
 msgid "A rebuilt chat surface for driving agents: richer tool output, smoother steering, faster everything."
 msgstr "에이전트를 다루기 위해 새로 만든 채팅 화면입니다. 더 풍부한 도구 출력, 더 매끄러운 조종, 전반적으로 더 빠른 속도."
 
@@ -3089,6 +3092,9 @@ msgstr "페이지로 돌아가기"
 
 msgid "Back to the leaderboard"
 msgstr "리더보드로 돌아가기"
+
+msgid "Back to the project its rules pick"
+msgstr "규칙이 고른 프로젝트로 되돌리기"
 
 msgid "Backed by"
 msgstr "투자자"
@@ -6115,6 +6121,10 @@ msgstr "\"{projectName}\"을(를) 삭제할까요?"
 msgid "Delete “{title}”?"
 msgstr "“{title}”을(를) 삭제할까요?"
 
+#. placeholder {0}: project.name
+msgid "Delete {0}"
+msgstr "{0} 삭제"
+
 #. placeholder {0}: organization.name
 #. placeholder {0}: secret.key
 msgid "Delete {0}?"
@@ -6818,6 +6828,9 @@ msgstr "마감"
 msgid "Duration"
 msgstr "소요 시간"
 
+msgid "e.g. #2701, spore-bio/hub#3025"
+msgstr "예: #2701, spore-bio/hub#3025"
+
 msgid "e.g. Add dark mode, Fix checkout bug"
 msgstr "예: 다크 모드 추가, 결제 버그 수정"
 
@@ -6909,6 +6922,9 @@ msgstr "GitHub에서 편집"
 
 msgid "Edit prefix"
 msgstr "접두사 편집"
+
+msgid "Edit projects"
+msgstr "프로젝트 편집"
 
 msgid "Edit Run Script"
 msgstr "실행 스크립트 편집"
@@ -8429,6 +8445,9 @@ msgstr "GitHub 연동"
 msgid "GitHub issues"
 msgstr "GitHub 이슈"
 
+msgid "GitHub labels, e.g. spore-app-redesign"
+msgstr "GitHub 레이블, 예: spore-app-redesign"
+
 msgid "GitHub rate limit reached"
 msgstr "GitHub 요청 한도에 도달했습니다"
 
@@ -9138,6 +9157,9 @@ msgstr "Superset 데스크톱 앱에서 <0>설정 → 모양 → 테마</0>를 �
 msgid "In the Superset desktop app, open Settings → Remote Access and turn on “Allow remote access to this device via relay”."
 msgstr "Superset 데스크톱 앱에서 설정 → 원격 액세스을 열고 “릴레이를 통해 이 기기에 원격 액세스 허용”을 켜세요."
 
+msgid "In the title or branch, e.g. audit trail, e-signature"
+msgstr "제목 또는 브랜치에서, 예: audit trail, e-signature"
+
 msgid "In under a year, more than 145,000 developers across 180 countries have run Superset and created over 1.85 million agent workspaces."
 msgstr "1년이 채 되지 않아 180개국의 145,000명 이상의 개발자가 Superset을 실행했고, 185만 개 이상의 에이전트 워크스페이스를 만들었습니다."
 
@@ -9647,6 +9669,9 @@ msgstr "키보드 단축키"
 
 msgid "Keyboard Shortcuts"
 msgstr "키보드 단축키"
+
+msgid "Keywords"
+msgstr "키워드"
 
 msgid "Kill"
 msgstr "종료"
@@ -10841,6 +10866,10 @@ msgstr "소프트웨어 역사의 대부분"
 msgid "Move"
 msgstr "이동"
 
+#. placeholder {0}: project.name
+msgid "Move {0} up"
+msgstr "{0} 위로 이동"
+
 msgid "Move {count} to Group"
 msgstr "{count}개를 그룹으로 이동"
 
@@ -10853,11 +10882,17 @@ msgstr "그룹으로 이동"
 msgid "Move to later"
 msgstr "나중으로 이동"
 
+msgid "Move to project…"
+msgstr "프로젝트로 이동…"
+
 msgid "Move to Right Side"
 msgstr "오른쪽으로 이동"
 
 msgid "Move to Tab"
 msgstr "탭으로 이동"
+
+msgid "Move up"
+msgstr "위로 이동"
 
 msgid "Moved down by you"
 msgstr "직접 내린 항목"
@@ -11075,6 +11110,9 @@ msgstr "새로운 사람은 {organizationName} 가입 초대 이메일을 받습
 
 msgid "New project"
 msgstr "새 프로젝트"
+
+msgid "New project name"
+msgstr "새 프로젝트 이름"
 
 msgid "New push to branch"
 msgstr "브랜치에 새 푸시"
@@ -11635,6 +11673,9 @@ msgstr "사용할 수 있는 프로젝트가 없습니다"
 
 msgid "No project selected"
 msgstr "선택된 프로젝트가 없습니다"
+
+msgid "No project yet: every pull request is in Other."
+msgstr "아직 프로젝트가 없습니다. 모든 풀 리퀘스트가 기타에 있습니다."
 
 msgid "No project<0>session</0>"
 msgstr "프로젝트 없음<0>세션</0>"
@@ -13883,6 +13924,9 @@ msgstr "풀 리퀘스트"
 
 msgid "Pull Requests"
 msgstr "풀 리퀘스트"
+
+msgid "Pull requests in this project now"
+msgstr "현재 이 프로젝트의 풀 리퀘스트"
 
 msgid "Purple"
 msgstr "보라"

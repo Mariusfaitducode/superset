@@ -1620,6 +1620,9 @@ msgstr "V tomto terminálu pořád běží proces"
 msgid "A pull request always gets its own worktree"
 msgstr "Pull request má vždy vlastní worktree"
 
+msgid "A pull request goes to the project you moved it to, else to the first project whose rules match: a PR number first, then a label, then a keyword. The rest goes to Other. Separate values with commas."
+msgstr "Pull request patří do projektu, kam jste ji přesunuli, jinak do prvního projektu, jehož pravidla odpovídají: nejdřív číslo PR, pak štítek, pak klíčové slovo. Zbytek patří do Ostatní. Hodnoty oddělujte čárkami."
+
 msgid "A rebuilt chat surface for driving agents: richer tool output, smoother steering, faster everything."
 msgstr "Přestavěné chatovací rozhraní pro řízení agentů: bohatší výstup nástrojů, plynulejší usměrňování, všechno rychlejší."
 
@@ -3089,6 +3092,9 @@ msgstr "Zpět na stránky"
 
 msgid "Back to the leaderboard"
 msgstr "Zpět na žebříček"
+
+msgid "Back to the project its rules pick"
+msgstr "Zpět do projektu podle pravidel"
 
 msgid "Backed by"
 msgstr "Podporují nás"
@@ -6115,6 +6121,10 @@ msgstr "Smazat „{projectName}“?"
 msgid "Delete “{title}”?"
 msgstr "Smazat „{title}“?"
 
+#. placeholder {0}: project.name
+msgid "Delete {0}"
+msgstr "Smazat {0}"
+
 #. placeholder {0}: organization.name
 #. placeholder {0}: secret.key
 msgid "Delete {0}?"
@@ -6818,6 +6828,9 @@ msgstr "Termín"
 msgid "Duration"
 msgstr "Trvání"
 
+msgid "e.g. #2701, spore-bio/hub#3025"
+msgstr "např. #2701, spore-bio/hub#3025"
+
 msgid "e.g. Add dark mode, Fix checkout bug"
 msgstr "např. Přidat tmavý režim, Opravit chybu v pokladně"
 
@@ -6909,6 +6922,9 @@ msgstr "Upravit na GitHubu"
 
 msgid "Edit prefix"
 msgstr "Upravit prefix"
+
+msgid "Edit projects"
+msgstr "Upravit projekty"
 
 msgid "Edit Run Script"
 msgstr "Upravit run skript"
@@ -8429,6 +8445,9 @@ msgstr "Integrace s GitHubem"
 msgid "GitHub issues"
 msgstr "GitHub issues"
 
+msgid "GitHub labels, e.g. spore-app-redesign"
+msgstr "Štítky GitHubu, např. spore-app-redesign"
+
 msgid "GitHub rate limit reached"
 msgstr "Dosažen limit požadavků GitHubu"
 
@@ -9138,6 +9157,9 @@ msgstr "V desktopové aplikaci Superset otevřete <0>Nastavení → Vzhled → M
 msgid "In the Superset desktop app, open Settings → Remote Access and turn on “Allow remote access to this device via relay”."
 msgstr "V desktopové aplikaci Superset otevřete Nastavení → Vzdálený přístup a zapněte „Povolit vzdálený přístup k tomuto zařízení přes relay“."
 
+msgid "In the title or branch, e.g. audit trail, e-signature"
+msgstr "V názvu nebo větvi, např. audit trail, e-signature"
+
 msgid "In under a year, more than 145,000 developers across 180 countries have run Superset and created over 1.85 million agent workspaces."
 msgstr "Za méně než rok spustilo Superset více než 145 000 vývojářů ze 180 zemí a vytvořilo přes 1,85 milionu pracovních prostorů agentů."
 
@@ -9647,6 +9669,9 @@ msgstr "Klávesové zkratky"
 
 msgid "Keyboard Shortcuts"
 msgstr "Klávesové zkratky"
+
+msgid "Keywords"
+msgstr "Klíčová slova"
 
 msgid "Kill"
 msgstr "Ukončit"
@@ -10841,6 +10866,10 @@ msgstr "Většina historie softwaru"
 msgid "Move"
 msgstr "Pohyb"
 
+#. placeholder {0}: project.name
+msgid "Move {0} up"
+msgstr "Posunout {0} nahoru"
+
 msgid "Move {count} to Group"
 msgstr "Přesunout {count} do skupiny"
 
@@ -10853,11 +10882,17 @@ msgstr "Přesunout do skupiny"
 msgid "Move to later"
 msgstr "Přesunout na později"
 
+msgid "Move to project…"
+msgstr "Přesunout do projektu…"
+
 msgid "Move to Right Side"
 msgstr "Přesunout doprava"
 
 msgid "Move to Tab"
 msgstr "Přesunout na kartu"
+
+msgid "Move up"
+msgstr "Posunout nahoru"
 
 msgid "Moved down by you"
 msgstr "Přesunuto dolů vámi"
@@ -11075,6 +11110,9 @@ msgstr "Noví lidé dostanou e-mailem pozvánku do {organizationName}. Uvidí to
 
 msgid "New project"
 msgstr "Nový projekt"
+
+msgid "New project name"
+msgstr "Název nového projektu"
 
 msgid "New push to branch"
 msgstr "Nový push do větve"
@@ -11635,6 +11673,9 @@ msgstr "Není dostupný žádný projekt"
 
 msgid "No project selected"
 msgstr "Není vybraný žádný projekt"
+
+msgid "No project yet: every pull request is in Other."
+msgstr "Zatím žádný projekt: všechny pull requesty jsou v Ostatní."
 
 msgid "No project<0>session</0>"
 msgstr "Bez projektu<0>relace</0>"
@@ -13883,6 +13924,9 @@ msgstr "Pull requesty"
 
 msgid "Pull Requests"
 msgstr "Pull requesty"
+
+msgid "Pull requests in this project now"
+msgstr "Pull requesty nyní v tomto projektu"
 
 msgid "Purple"
 msgstr "Fialová"

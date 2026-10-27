@@ -1620,6 +1620,9 @@ msgstr "このターミナルではプロセスがまだ実行中です"
 msgid "A pull request always gets its own worktree"
 msgstr "プルリクエストには常に専用のワークツリーが作られます"
 
+msgid "A pull request goes to the project you moved it to, else to the first project whose rules match: a PR number first, then a label, then a keyword. The rest goes to Other. Separate values with commas."
+msgstr "プルリクエストは、移動先のプロジェクトに入ります。移動していない場合は、ルールが一致する最初のプロジェクトに入ります（PR 番号、ラベル、キーワードの順）。残りは「その他」に入ります。値はカンマで区切ってください。"
+
 msgid "A rebuilt chat surface for driving agents: richer tool output, smoother steering, faster everything."
 msgstr "エージェントを操作するためのチャット画面を作り直します。ツール出力はより豊かに、誘導はよりスムーズに、すべてが速くなります。"
 
@@ -3089,6 +3092,9 @@ msgstr "ページ"
 
 msgid "Back to the leaderboard"
 msgstr "リーダーボードに戻る"
+
+msgid "Back to the project its rules pick"
+msgstr "ルールで決まるプロジェクトに戻す"
 
 msgid "Backed by"
 msgstr "支援者"
@@ -6115,6 +6121,10 @@ msgstr "「{projectName}」を削除しますか?"
 msgid "Delete “{title}”?"
 msgstr "「{title}」を削除しますか?"
 
+#. placeholder {0}: project.name
+msgid "Delete {0}"
+msgstr "{0} を削除"
+
 #. placeholder {0}: organization.name
 #. placeholder {0}: secret.key
 msgid "Delete {0}?"
@@ -6818,6 +6828,9 @@ msgstr "期限"
 msgid "Duration"
 msgstr "所要時間"
 
+msgid "e.g. #2701, spore-bio/hub#3025"
+msgstr "例: #2701, spore-bio/hub#3025"
+
 msgid "e.g. Add dark mode, Fix checkout bug"
 msgstr "例: ダークモードを追加、チェックアウトのバグを修正"
 
@@ -6909,6 +6922,9 @@ msgstr "GitHubで編集"
 
 msgid "Edit prefix"
 msgstr "プレフィックスを編集"
+
+msgid "Edit projects"
+msgstr "プロジェクトを編集"
 
 msgid "Edit Run Script"
 msgstr "実行スクリプトを編集"
@@ -8429,6 +8445,9 @@ msgstr "GitHub連携"
 msgid "GitHub issues"
 msgstr "GitHub issue"
 
+msgid "GitHub labels, e.g. spore-app-redesign"
+msgstr "GitHub のラベル（例: spore-app-redesign）"
+
 msgid "GitHub rate limit reached"
 msgstr "GitHub のレート制限に達しました"
 
@@ -9138,6 +9157,9 @@ msgstr "Supersetデスクトップアプリで<0>設定 → 外観 → テーマ
 msgid "In the Superset desktop app, open Settings → Remote Access and turn on “Allow remote access to this device via relay”."
 msgstr "Supersetデスクトップアプリで設定 → リモートアクセスを開き、「リレー経由でこのデバイスへのリモートアクセスを許可」をオンにしてください。"
 
+msgid "In the title or branch, e.g. audit trail, e-signature"
+msgstr "タイトルまたはブランチ内（例: audit trail, e-signature）"
+
 msgid "In under a year, more than 145,000 developers across 180 countries have run Superset and created over 1.85 million agent workspaces."
 msgstr "公開から 1 年足らずで、180 か国の 14 万 5,000 人以上の開発者が Superset を使い、185 万以上のエージェントワークスペースが作成されました。"
 
@@ -9647,6 +9669,9 @@ msgstr "キーボードショートカット"
 
 msgid "Keyboard Shortcuts"
 msgstr "キーボードショートカット"
+
+msgid "Keywords"
+msgstr "キーワード"
 
 msgid "Kill"
 msgstr "終了"
@@ -10841,6 +10866,10 @@ msgstr "ソフトウェアの歴史のほとんど"
 msgid "Move"
 msgstr "移動"
 
+#. placeholder {0}: project.name
+msgid "Move {0} up"
+msgstr "{0} を上へ"
+
 msgid "Move {count} to Group"
 msgstr "{count}件をグループへ移動"
 
@@ -10853,11 +10882,17 @@ msgstr "グループへ移動"
 msgid "Move to later"
 msgstr "後回しにする"
 
+msgid "Move to project…"
+msgstr "プロジェクトへ移動…"
+
 msgid "Move to Right Side"
 msgstr "右側に移動"
 
 msgid "Move to Tab"
 msgstr "タブに移動"
+
+msgid "Move up"
+msgstr "上へ移動"
 
 msgid "Moved down by you"
 msgstr "あなたが下げたもの"
@@ -11075,6 +11110,9 @@ msgstr "新しいユーザーには{organizationName}への招待メールが届
 
 msgid "New project"
 msgstr "新規プロジェクト"
+
+msgid "New project name"
+msgstr "新しいプロジェクト名"
 
 msgid "New push to branch"
 msgstr "ブランチへの新規プッシュ"
@@ -11635,6 +11673,9 @@ msgstr "利用できるプロジェクトがありません"
 
 msgid "No project selected"
 msgstr "プロジェクトが選択されていません"
+
+msgid "No project yet: every pull request is in Other."
+msgstr "プロジェクトはまだありません。すべてのプルリクエストは「その他」にあります。"
 
 msgid "No project<0>session</0>"
 msgstr "プロジェクトなし<0>セッション</0>"
@@ -13883,6 +13924,9 @@ msgstr "プルリクエスト"
 
 msgid "Pull Requests"
 msgstr "プルリクエスト"
+
+msgid "Pull requests in this project now"
+msgstr "現在このプロジェクトにあるプルリクエスト"
 
 msgid "Purple"
 msgstr "紫"
