@@ -547,10 +547,26 @@ msgstr "세션 {0}개를 종료했습니다"
 msgid "{0} terminated, {1} remaining"
 msgstr "{0}개 종료, {1}개 남음"
 
+#. placeholder {0}: project.toFix
+msgid "{0} to fix"
+msgstr "수정할 항목 {0}"
+
+#. placeholder {0}: project.toMerge
+msgid "{0} to merge"
+msgstr "병합할 항목 {0}"
+
 #. placeholder {0}: formatTokens(aboveGap > 0n ? aboveGap : 0n)
 #. placeholder {1}: formatNumber(above.rank)
 msgid "{0} to pass #{1}"
 msgstr "#{1}을 제치려면 {0}"
+
+#. placeholder {0}: project.toReview
+msgid "{0} to review"
+msgstr "리뷰할 항목 {0}"
+
+#. placeholder {0}: todos.length
+msgid "{0} to-dos:"
+msgstr "할 일 {0}개:"
 
 #. placeholder {0}: formatTokens(tokens)
 msgid "{0} tokens in the last 30 days. Publishing as <0>{handle}</0>."
@@ -578,6 +594,10 @@ msgstr "{0} 업데이트됨"
 #. placeholder {1}: right.name
 msgid "{0} vs {1}"
 msgstr "{0} 대 {1}"
+
+#. placeholder {0}: project.onViewer
+msgid "{0} waiting on you"
+msgstr "{0}개가 대기 중"
 
 #. placeholder {0}: file.path
 msgid "{0} was deleted in this change."
@@ -772,6 +792,9 @@ msgstr "{closedCount}개 닫힘"
 
 msgid "{commitCount, plural, one {# commit} other {# commits}}"
 msgstr "{commitCount, plural, one {커밋 #개} other {커밋 #개}}"
+
+msgid "{commitCount} commits"
+msgstr "커밋 {commitCount}개"
 
 #. placeholder {0}: relevant.length
 msgid "{completed} of {0} checks complete"
@@ -1429,11 +1452,17 @@ msgstr "$0"
 msgid "1"
 msgstr "1"
 
+msgid "1 commit"
+msgstr "커밋 1개"
+
 msgid "1 cookie — forget this site"
 msgstr "쿠키 1개 — 이 사이트 잊기"
 
 msgid "1 hr"
 msgstr "1시간"
+
+msgid "1 to-do:"
+msgstr "할 일 1개:"
 
 msgid "1 user"
 msgstr "사용자 1명"
@@ -2054,8 +2083,17 @@ msgstr "에이전트 대화"
 msgid "Agent credentials changed"
 msgstr "에이전트 자격 증명이 변경됨"
 
+msgid "Agent done, not read"
+msgstr "에이전트 완료, 읽지 않음"
+
+msgid "Agent failed"
+msgstr "에이전트 실패"
+
 msgid "Agent finished"
 msgstr "에이전트 완료"
+
+msgid "Agent idle"
+msgstr "에이전트 유휴"
 
 msgid "Agent Independence"
 msgstr "에이전트 독립성"
@@ -2065,6 +2103,9 @@ msgstr "에이전트 작업 중"
 
 msgid "Agent launch configuration"
 msgstr "에이전트 실행 구성"
+
+msgid "Agent needs permission"
+msgstr "에이전트 권한 필요"
 
 msgid "Agent permissions"
 msgstr "에이전트 권한"
@@ -2107,6 +2148,12 @@ msgstr "에이전트 설정"
 
 msgid "Agent usage rankings"
 msgstr "에이전트 사용량 순위"
+
+msgid "Agent waiting on you"
+msgstr "에이전트가 기다리는 중"
+
+msgid "Agent working"
+msgstr "에이전트 작업 중"
 
 msgid "Agent-driven previews"
 msgstr "에이전트가 조작하는 미리보기"
@@ -4517,6 +4564,9 @@ msgstr "이 페이지에 댓글 달기"
 
 msgid "Comment."
 msgstr "댓글."
+
+msgid "commented"
+msgstr "댓글 남김"
 
 msgid "Commented"
 msgstr "댓글 남김"
@@ -8664,6 +8714,10 @@ msgstr "그룹 작업"
 msgid "Group by"
 msgstr "그룹화 기준"
 
+#. placeholder {0}: grouping.label
+msgid "Group by {0}"
+msgstr "{0}별로 그룹화"
+
 msgid "Group new branches under a folder."
 msgstr "새 브랜치를 폴더 아래로 묶습니다."
 
@@ -9872,6 +9926,9 @@ msgstr "마지막 에이전트 활동 {0}"
 
 msgid "Last attached"
 msgstr "마지막 연결"
+
+msgid "Last commit {lastCommitAgo} ago"
+msgstr "마지막 커밋 {lastCommitAgo} 전"
 
 msgid "Last day of each month"
 msgstr "매월 마지막 날"
@@ -11316,6 +11373,9 @@ msgstr "다음"
 msgid "Next (Enter)"
 msgstr "다음 (Enter)"
 
+msgid "Next action"
+msgstr "다음 작업"
+
 msgid "Next branch"
 msgstr "다음 브랜치"
 
@@ -11978,6 +12038,9 @@ msgstr "테마를 찾을 수 없습니다."
 msgid "No themes were imported"
 msgstr "가져온 테마가 없습니다"
 
+msgid "No ticket"
+msgstr "티켓 없음"
+
 msgid "No triggers"
 msgstr "트리거 없음"
 
@@ -12209,6 +12272,9 @@ msgstr "알림"
 
 msgid "Notion is not configured for this environment."
 msgstr "이 환경에는 Notion이 설정되어 있지 않습니다."
+
+msgid "Notion page"
+msgstr "Notion 페이지"
 
 msgid "now"
 msgstr "방금"
@@ -15228,6 +15294,9 @@ msgstr "대기 중인 변경 사항을 검토합니다."
 
 msgid "Review pull requests inside Superset: diff pane, agent-assisted review, act on comments directly."
 msgstr "Superset 안에서 풀 리퀘스트를 리뷰하세요. 차이 창, 에이전트 보조 리뷰, 댓글에 대한 직접 처리까지."
+
+msgid "review requested"
+msgstr "리뷰 요청됨"
 
 msgid "Review requested"
 msgstr "리뷰 요청됨"
@@ -18879,8 +18948,16 @@ msgstr "스레드를 찾을 수 없습니다"
 msgid "Three steps · touches packages/ui and apps/desktop"
 msgstr "3단계 · packages/ui와 apps/desktop을 수정"
 
+#. placeholder {0}: name || ticket.url
+msgid "Ticket (closed): {0}"
+msgstr "티켓 (닫힘): {0}"
+
 msgid "Ticket to production under one day, median"
 msgstr "티켓부터 프로덕션까지 중앙값 하루 미만"
+
+#. placeholder {0}: name || ticket.url
+msgid "Ticket: {0}"
+msgstr "티켓: {0}"
 
 msgid "Tier"
 msgstr "등급"

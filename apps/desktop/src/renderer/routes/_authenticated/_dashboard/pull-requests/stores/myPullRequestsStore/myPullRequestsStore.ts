@@ -10,6 +10,8 @@ import {
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 
+export type MyPullRequestGrouping = "action" | "project";
+
 // Pins of merged PRs are never cleaned up one by one; the cap bounds them.
 const MAX_OVERRIDES = 100;
 
@@ -17,6 +19,7 @@ interface MyPullRequestsState extends MyPullRequestFilters {
 	/** Most recently pinned first. */
 	pinned: string[];
 	later: string[];
+	groupBy: MyPullRequestGrouping;
 	setRepos: (repos: string[]) => void;
 	toggleRole: (role: MyPullRequestRole) => void;
 	toggleState: (state: MyPullRequestStateFilter) => void;
@@ -24,11 +27,12 @@ interface MyPullRequestsState extends MyPullRequestFilters {
 	clearFilters: () => void;
 	togglePinned: (key: string) => void;
 	toggleLater: (key: string) => void;
+	setGroupBy: (groupBy: MyPullRequestGrouping) => void;
 }
 
 type PersistedMyPullRequestsState = Pick<
 	MyPullRequestsState,
-	"repos" | "roles" | "states" | "age" | "pinned" | "later"
+	"repos" | "roles" | "states" | "age" | "pinned" | "later" | "groupBy"
 >;
 
 function toggle<T>(list: T[], value: T): T[] {
@@ -61,6 +65,7 @@ export function migrateMyPullRequestsState(
 			: "any",
 		pinned: stringList(state.pinned).slice(0, MAX_OVERRIDES),
 		later: stringList(state.later).slice(0, MAX_OVERRIDES),
+		groupBy: state.groupBy === "project" ? "project" : "action",
 	};
 }
 
@@ -73,6 +78,7 @@ export const useMyPullRequestsStore = create<MyPullRequestsState>()(
 			age: "any",
 			pinned: [],
 			later: [],
+			groupBy: "action",
 			setRepos: (repos) => set({ repos }),
 			toggleRole: (role) =>
 				set((state) => ({ roles: toggle(state.roles, role) })),
@@ -94,10 +100,11 @@ export const useMyPullRequestsStore = create<MyPullRequestsState>()(
 						: [key, ...state.later].slice(0, MAX_OVERRIDES),
 					pinned: state.pinned.filter((item) => item !== key),
 				})),
+			setGroupBy: (groupBy) => set({ groupBy }),
 		}),
 		{
 			name: "my-pull-requests-state",
-			version: 1,
+			version: 2,
 			migrate: migrateMyPullRequestsState,
 			partialize: (state) => ({
 				repos: state.repos,
@@ -106,6 +113,7 @@ export const useMyPullRequestsStore = create<MyPullRequestsState>()(
 				age: state.age,
 				pinned: state.pinned,
 				later: state.later,
+				groupBy: state.groupBy,
 			}),
 		},
 	),

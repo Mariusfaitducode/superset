@@ -547,10 +547,26 @@ msgstr "{0} oturum sonlandırıldı"
 msgid "{0} terminated, {1} remaining"
 msgstr "{0} sonlandırıldı, {1} kaldı"
 
+#. placeholder {0}: project.toFix
+msgid "{0} to fix"
+msgstr "{0} düzeltilecek"
+
+#. placeholder {0}: project.toMerge
+msgid "{0} to merge"
+msgstr "{0} birleştirilecek"
+
 #. placeholder {0}: formatTokens(aboveGap > 0n ? aboveGap : 0n)
 #. placeholder {1}: formatNumber(above.rank)
 msgid "{0} to pass #{1}"
 msgstr "#{1} sırasını geçmek için {0}"
+
+#. placeholder {0}: project.toReview
+msgid "{0} to review"
+msgstr "{0} incelenecek"
+
+#. placeholder {0}: todos.length
+msgid "{0} to-dos:"
+msgstr "{0} yapılacak:"
 
 #. placeholder {0}: formatTokens(tokens)
 msgid "{0} tokens in the last 30 days. Publishing as <0>{handle}</0>."
@@ -578,6 +594,10 @@ msgstr "{0} güncellendi"
 #. placeholder {1}: right.name
 msgid "{0} vs {1}"
 msgstr "{0} - {1}"
+
+#. placeholder {0}: project.onViewer
+msgid "{0} waiting on you"
+msgstr "{0} sizi bekliyor"
 
 #. placeholder {0}: file.path
 msgid "{0} was deleted in this change."
@@ -772,6 +792,9 @@ msgstr "{closedCount} kapalı"
 
 msgid "{commitCount, plural, one {# commit} other {# commits}}"
 msgstr "{commitCount, plural, one {# commit} other {# commit}}"
+
+msgid "{commitCount} commits"
+msgstr "{commitCount} commit"
 
 #. placeholder {0}: relevant.length
 msgid "{completed} of {0} checks complete"
@@ -1429,11 +1452,17 @@ msgstr "$0"
 msgid "1"
 msgstr "1"
 
+msgid "1 commit"
+msgstr "1 commit"
+
 msgid "1 cookie — forget this site"
 msgstr "1 çerez — bu siteyi unut"
 
 msgid "1 hr"
 msgstr "1 sa"
+
+msgid "1 to-do:"
+msgstr "1 yapılacak:"
 
 msgid "1 user"
 msgstr "1 kullanıcı"
@@ -2054,8 +2083,17 @@ msgstr "Ajan konuşmaları"
 msgid "Agent credentials changed"
 msgstr "Ajan kimlik bilgileri değişti"
 
+msgid "Agent done, not read"
+msgstr "Ajan bitti, okunmadı"
+
+msgid "Agent failed"
+msgstr "Ajan başarısız"
+
 msgid "Agent finished"
 msgstr "Ajan bitirdi"
+
+msgid "Agent idle"
+msgstr "Ajan boşta"
 
 msgid "Agent Independence"
 msgstr "Ajan bağımsızlığı"
@@ -2065,6 +2103,9 @@ msgstr "Ajan çalışıyor"
 
 msgid "Agent launch configuration"
 msgstr "Ajan başlatma yapılandırması"
+
+msgid "Agent needs permission"
+msgstr "Ajan izin bekliyor"
 
 msgid "Agent permissions"
 msgstr "Ajan izinleri"
@@ -2107,6 +2148,12 @@ msgstr "ajan ayarları"
 
 msgid "Agent usage rankings"
 msgstr "Ajan kullanım sıralamaları"
+
+msgid "Agent waiting on you"
+msgstr "Ajan sizi bekliyor"
+
+msgid "Agent working"
+msgstr "Ajan çalışıyor"
 
 msgid "Agent-driven previews"
 msgstr "Ajanın yönettiği önizlemeler"
@@ -4517,6 +4564,9 @@ msgstr "Bu sayfaya yorum yap"
 
 msgid "Comment."
 msgstr "Yorum yapın."
+
+msgid "commented"
+msgstr "yorum yaptı"
 
 msgid "Commented"
 msgstr "Yorum yapıldı"
@@ -8664,6 +8714,10 @@ msgstr "Grup eylemleri"
 msgid "Group by"
 msgstr "Gruplama ölçütü"
 
+#. placeholder {0}: grouping.label
+msgid "Group by {0}"
+msgstr "{0} göre grupla"
+
 msgid "Group new branches under a folder."
 msgstr "Yeni dalları bir klasör altında toplayın."
 
@@ -9872,6 +9926,9 @@ msgstr "Son ajan etkinliği {0}"
 
 msgid "Last attached"
 msgstr "Son bağlanma"
+
+msgid "Last commit {lastCommitAgo} ago"
+msgstr "Son commit {lastCommitAgo} önce"
 
 msgid "Last day of each month"
 msgstr "Her ayın son günü"
@@ -11316,6 +11373,9 @@ msgstr "Sonraki"
 msgid "Next (Enter)"
 msgstr "Sonraki (Enter)"
 
+msgid "Next action"
+msgstr "Sonraki adım"
+
 msgid "Next branch"
 msgstr "Sonraki dal"
 
@@ -11978,6 +12038,9 @@ msgstr "Tema bulunamadı."
 msgid "No themes were imported"
 msgstr "Hiçbir tema içe aktarılmadı"
 
+msgid "No ticket"
+msgstr "Bilet yok"
+
 msgid "No triggers"
 msgstr "Tetikleyici yok"
 
@@ -12209,6 +12272,9 @@ msgstr "Bildirimler"
 
 msgid "Notion is not configured for this environment."
 msgstr "Notion bu ortam için yapılandırılmamış."
+
+msgid "Notion page"
+msgstr "Notion sayfası"
 
 msgid "now"
 msgstr "şimdi"
@@ -15228,6 +15294,9 @@ msgstr "Bekleyen değişiklikleri inceleyin."
 
 msgid "Review pull requests inside Superset: diff pane, agent-assisted review, act on comments directly."
 msgstr "Pull request'leri Superset içinde inceleyin: fark bölmesi, ajan destekli inceleme, yorumlara doğrudan müdahale."
+
+msgid "review requested"
+msgstr "inceleme istendi"
 
 msgid "Review requested"
 msgstr "İnceleme istendi"
@@ -18879,8 +18948,16 @@ msgstr "Konu bulunamadı"
 msgid "Three steps · touches packages/ui and apps/desktop"
 msgstr "Üç adım · packages/ui ve apps/desktop dizinlerine dokunur"
 
+#. placeholder {0}: name || ticket.url
+msgid "Ticket (closed): {0}"
+msgstr "Bilet (kapalı): {0}"
+
 msgid "Ticket to production under one day, median"
 msgstr "Biletten üretime bir günün altında, medyan"
+
+#. placeholder {0}: name || ticket.url
+msgid "Ticket: {0}"
+msgstr "Bilet: {0}"
 
 msgid "Tier"
 msgstr "Katman"

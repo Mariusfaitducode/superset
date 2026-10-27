@@ -547,10 +547,26 @@ msgstr "已終止{0}個會話"
 msgid "{0} terminated, {1} remaining"
 msgstr "已終止{0}個，剩餘{1}個"
 
+#. placeholder {0}: project.toFix
+msgid "{0} to fix"
+msgstr "{0} 個待修正"
+
+#. placeholder {0}: project.toMerge
+msgid "{0} to merge"
+msgstr "{0} 個待合併"
+
 #. placeholder {0}: formatTokens(aboveGap > 0n ? aboveGap : 0n)
 #. placeholder {1}: formatNumber(above.rank)
 msgid "{0} to pass #{1}"
 msgstr "再 {0} 即可超越 #{1}"
+
+#. placeholder {0}: project.toReview
+msgid "{0} to review"
+msgstr "{0} 個待審查"
+
+#. placeholder {0}: todos.length
+msgid "{0} to-dos:"
+msgstr "{0} 個待辦:"
 
 #. placeholder {0}: formatTokens(tokens)
 msgid "{0} tokens in the last 30 days. Publishing as <0>{handle}</0>."
@@ -578,6 +594,10 @@ msgstr "{0} 已更新"
 #. placeholder {1}: right.name
 msgid "{0} vs {1}"
 msgstr "{0} 對戰 {1}"
+
+#. placeholder {0}: project.onViewer
+msgid "{0} waiting on you"
+msgstr "{0} 個等你處理"
 
 #. placeholder {0}: file.path
 msgid "{0} was deleted in this change."
@@ -772,6 +792,9 @@ msgstr "{closedCount}項未開啟"
 
 msgid "{commitCount, plural, one {# commit} other {# commits}}"
 msgstr "{commitCount, plural, one {#個提交} other {#個提交}}"
+
+msgid "{commitCount} commits"
+msgstr "{commitCount} 個提交"
 
 #. placeholder {0}: relevant.length
 msgid "{completed} of {0} checks complete"
@@ -1429,11 +1452,17 @@ msgstr "$0"
 msgid "1"
 msgstr "1"
 
+msgid "1 commit"
+msgstr "1 個提交"
+
 msgid "1 cookie — forget this site"
 msgstr "1個cookie——忘記此站點"
 
 msgid "1 hr"
 msgstr "1 小時"
+
+msgid "1 to-do:"
+msgstr "1 個待辦:"
 
 msgid "1 user"
 msgstr "1個使用者"
@@ -2054,8 +2083,17 @@ msgstr "代理程式對話"
 msgid "Agent credentials changed"
 msgstr "代理憑證已變更"
 
+msgid "Agent done, not read"
+msgstr "代理已完成，未讀"
+
+msgid "Agent failed"
+msgstr "代理失敗"
+
 msgid "Agent finished"
 msgstr "代理程式已完成"
+
+msgid "Agent idle"
+msgstr "代理閒置"
 
 msgid "Agent Independence"
 msgstr "代理程式無關"
@@ -2065,6 +2103,9 @@ msgstr "代理程式正在工作"
 
 msgid "Agent launch configuration"
 msgstr "代理程式啟動配置"
+
+msgid "Agent needs permission"
+msgstr "代理需要權限"
 
 msgid "Agent permissions"
 msgstr "代理權限"
@@ -2107,6 +2148,12 @@ msgstr "代理程式設定"
 
 msgid "Agent usage rankings"
 msgstr "代理程式使用量排行"
+
+msgid "Agent waiting on you"
+msgstr "代理在等你"
+
+msgid "Agent working"
+msgstr "代理工作中"
 
 msgid "Agent-driven previews"
 msgstr "由代理程式驅動的預覽"
@@ -4517,6 +4564,9 @@ msgstr "評論這個頁面"
 
 msgid "Comment."
 msgstr "留言。"
+
+msgid "commented"
+msgstr "已留言"
 
 msgid "Commented"
 msgstr "已評論"
@@ -8664,6 +8714,10 @@ msgstr "群組操作"
 msgid "Group by"
 msgstr "分組方式"
 
+#. placeholder {0}: grouping.label
+msgid "Group by {0}"
+msgstr "依{0}分組"
+
 msgid "Group new branches under a folder."
 msgstr "將新分支歸入一個資料夾。"
 
@@ -9872,6 +9926,9 @@ msgstr "最近代理程式活動{0}"
 
 msgid "Last attached"
 msgstr "上次連線"
+
+msgid "Last commit {lastCommitAgo} ago"
+msgstr "最後提交於 {lastCommitAgo} 前"
 
 msgid "Last day of each month"
 msgstr "每月最後一天"
@@ -11316,6 +11373,9 @@ msgstr "下一頁"
 msgid "Next (Enter)"
 msgstr "下一個匹配項（Enter）"
 
+msgid "Next action"
+msgstr "下一步"
+
 msgid "Next branch"
 msgstr "下一個分支"
 
@@ -11978,6 +12038,9 @@ msgstr "未找到主題。"
 msgid "No themes were imported"
 msgstr "沒有匯入任何主題"
 
+msgid "No ticket"
+msgstr "無工單"
+
 msgid "No triggers"
 msgstr "沒有觸發器"
 
@@ -12209,6 +12272,9 @@ msgstr "通知"
 
 msgid "Notion is not configured for this environment."
 msgstr "目前環境未配置Notion。"
+
+msgid "Notion page"
+msgstr "Notion 頁面"
 
 msgid "now"
 msgstr "剛剛"
@@ -15228,6 +15294,9 @@ msgstr "審查待處理的更改。"
 
 msgid "Review pull requests inside Superset: diff pane, agent-assisted review, act on comments directly."
 msgstr "在Superset裡審查拉取請求：差異面板、代理程式輔助審查、直接處理評論。"
+
+msgid "review requested"
+msgstr "已請求審查"
 
 msgid "Review requested"
 msgstr "已請求審查"
@@ -18879,8 +18948,16 @@ msgstr "未找到討論串"
 msgid "Three steps · touches packages/ui and apps/desktop"
 msgstr "三個步驟 · 涉及packages/ui和apps/desktop"
 
+#. placeholder {0}: name || ticket.url
+msgid "Ticket (closed): {0}"
+msgstr "工單（已關閉）：{0}"
+
 msgid "Ticket to production under one day, median"
 msgstr "從工單到上線中位不足一天"
+
+#. placeholder {0}: name || ticket.url
+msgid "Ticket: {0}"
+msgstr "工單：{0}"
 
 msgid "Tier"
 msgstr "等級"

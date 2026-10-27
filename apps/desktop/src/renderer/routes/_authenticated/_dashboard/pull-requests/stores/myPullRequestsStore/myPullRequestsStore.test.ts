@@ -18,6 +18,13 @@ describe("migrateMyPullRequestsState", () => {
 			age: "any",
 			pinned: [],
 			later: [],
+			groupBy: "action",
 		});
+	});
+
+	it("keeps the project grouping", () => {
+		expect(migrateMyPullRequestsState({ groupBy: "project" }).groupBy).toBe(
+			"project",
+		);
 	});
 });

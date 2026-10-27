@@ -36,6 +36,7 @@ import {
 	type ResolvedGithubRepo,
 	resolveGithubRepo,
 } from "../shared/project-helpers";
+import { extractTicketLinks, type TicketLink } from "../shared/ticket-links";
 import type { ExecGh } from "../utils/exec-gh";
 
 interface PullRequestResult {
@@ -59,6 +60,8 @@ interface PullRequestResult {
 	/** null when the viewer is unknown (only the GraphQL pass resolves it). */
 	viewerIsAuthor: boolean | null;
 	reviewRequestedFromViewer: boolean | null;
+	/** Only from a search: the Notion/Linear/Jira links of its body. */
+	ticketLinks?: TicketLink[];
 }
 
 type PullRequestMergeable = "MERGEABLE" | "CONFLICTING" | "UNKNOWN";
@@ -714,6 +717,7 @@ const searchIssuesItemSchema = z.object({
 		.optional(),
 	updated_at: z.string().optional(),
 	repository_url: z.string().optional(),
+	body: z.string().nullable().optional(),
 });
 
 const searchIssuesResponseSchema = z.object({
@@ -775,6 +779,7 @@ export async function ghApiSearchPullRequests(
 					deletions: null,
 					headRefName: null,
 					...UNKNOWN_VIEWER_FIELDS,
+					ticketLinks: extractTicketLinks(item.body),
 				},
 			];
 		});
@@ -825,6 +830,7 @@ export async function octokitSearchPullRequests(
 					deletions: null,
 					headRefName: null,
 					...UNKNOWN_VIEWER_FIELDS,
+					ticketLinks: extractTicketLinks(item.body),
 				},
 			];
 		});

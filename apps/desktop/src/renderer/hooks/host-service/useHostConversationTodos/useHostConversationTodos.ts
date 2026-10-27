@@ -16,6 +16,22 @@ export function hostConversationTodosQueryKey(hostUrl: string | null) {
 	return ["host-conversation-todos", hostUrl] as const;
 }
 
+/** Null on hosts too old to keep to-dos; they are not asked again. */
+export async function fetchHostConversationTodos(
+	hostUrl: string,
+): Promise<ConversationTodo[] | null> {
+	if (hostsWithoutTodos.has(hostUrl)) return null;
+	try {
+		return await getHostServiceClientByUrl(
+			hostUrl,
+		).conversationTodos.list.query({});
+	} catch (error) {
+		if (!isMissingProcedureError(error)) throw error;
+		hostsWithoutTodos.add(hostUrl);
+		return null;
+	}
+}
+
 /**
  * The query for every to-do of a host, for callers that read several hosts
  * at once. Null data on hosts too old to keep to-dos.
@@ -23,18 +39,8 @@ export function hostConversationTodosQueryKey(hostUrl: string | null) {
 export function hostConversationTodosQuery(hostUrl: string | null) {
 	return {
 		queryKey: hostConversationTodosQueryKey(hostUrl),
-		queryFn: async (): Promise<ConversationTodo[] | null> => {
-			if (!hostUrl) return null;
-			try {
-				return await getHostServiceClientByUrl(
-					hostUrl,
-				).conversationTodos.list.query({});
-			} catch (error) {
-				if (!isMissingProcedureError(error)) throw error;
-				hostsWithoutTodos.add(hostUrl);
-				return null;
-			}
-		},
+		queryFn: (): Promise<ConversationTodo[] | null> =>
+			hostUrl ? fetchHostConversationTodos(hostUrl) : Promise.resolve(null),
 		refetchInterval: 60_000,
 		staleTime: 5_000,
 	};

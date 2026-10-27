@@ -1,5 +1,7 @@
 import { msg } from "@lingui/core/macro";
 import { i18n } from "@superset/i18n";
+import type { ConversationState } from "renderer/routes/_authenticated/_dashboard/components/DashboardSidebar/components/DashboardSidebarWorkspaceItem/components/DashboardSidebarExpandedWorkspaceRow/components/DashboardSidebarConversationList/utils/conversation-state";
+import type { PullRequestReviewerState } from "renderer/routes/_authenticated/_dashboard/pull-requests/utils/describePullRequestProgress";
 import type {
 	MyPullRequestAgeFilter,
 	MyPullRequestRole,
@@ -122,4 +124,27 @@ export function whyLabel(why: MyPullRequestWhy): string {
 		case "unknown":
 			return i18n._(msg`Details did not load`);
 	}
+}
+
+export function agentStateLabels(): Record<ConversationState, string> {
+	return {
+		working: i18n._(msg`Agent working`),
+		request: i18n._(msg`Agent needs permission`),
+		failed: i18n._(msg`Agent failed`),
+		unseen: i18n._(msg`Agent done, not read`),
+		seen: i18n._(msg`Agent waiting on you`),
+		idle: i18n._(msg`Agent idle`),
+	};
+}
+
+export function reviewerStateLabels(): Record<
+	PullRequestReviewerState,
+	string
+> {
+	return {
+		approved: i18n._(msg`approved`),
+		"changes-requested": i18n._(msg`requested changes`),
+		commented: i18n._(msg`commented`),
+		requested: i18n._(msg`review requested`),
+	};
 }

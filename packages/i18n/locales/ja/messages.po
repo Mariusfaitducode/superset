@@ -547,10 +547,26 @@ msgstr "{0}件のセッションを終了しました"
 msgid "{0} terminated, {1} remaining"
 msgstr "{0}件を終了、残り{1}件"
 
+#. placeholder {0}: project.toFix
+msgid "{0} to fix"
+msgstr "修正 {0}"
+
+#. placeholder {0}: project.toMerge
+msgid "{0} to merge"
+msgstr "マージ {0}"
+
 #. placeholder {0}: formatTokens(aboveGap > 0n ? aboveGap : 0n)
 #. placeholder {1}: formatNumber(above.rank)
 msgid "{0} to pass #{1}"
 msgstr "#{1}を抜くまで{0}"
+
+#. placeholder {0}: project.toReview
+msgid "{0} to review"
+msgstr "レビュー {0}"
+
+#. placeholder {0}: todos.length
+msgid "{0} to-dos:"
+msgstr "To-do {0} 件:"
 
 #. placeholder {0}: formatTokens(tokens)
 msgid "{0} tokens in the last 30 days. Publishing as <0>{handle}</0>."
@@ -578,6 +594,10 @@ msgstr "{0} を更新しました"
 #. placeholder {1}: right.name
 msgid "{0} vs {1}"
 msgstr "{0} 対 {1}"
+
+#. placeholder {0}: project.onViewer
+msgid "{0} waiting on you"
+msgstr "{0} 件があなた待ち"
 
 #. placeholder {0}: file.path
 msgid "{0} was deleted in this change."
@@ -772,6 +792,9 @@ msgstr "{closedCount}件未通過"
 
 msgid "{commitCount, plural, one {# commit} other {# commits}}"
 msgstr "{commitCount, plural, one {#件のコミット} other {#件のコミット}}"
+
+msgid "{commitCount} commits"
+msgstr "{commitCount} コミット"
 
 #. placeholder {0}: relevant.length
 msgid "{completed} of {0} checks complete"
@@ -1429,11 +1452,17 @@ msgstr "$0"
 msgid "1"
 msgstr "1"
 
+msgid "1 commit"
+msgstr "1 コミット"
+
 msgid "1 cookie — forget this site"
 msgstr "1件のCookie — このサイトを削除"
 
 msgid "1 hr"
 msgstr "1時間"
+
+msgid "1 to-do:"
+msgstr "To-do 1 件:"
 
 msgid "1 user"
 msgstr "1ユーザー"
@@ -2054,8 +2083,17 @@ msgstr "エージェントの会話"
 msgid "Agent credentials changed"
 msgstr "エージェントの認証情報が変更されました"
 
+msgid "Agent done, not read"
+msgstr "エージェント完了・未読"
+
+msgid "Agent failed"
+msgstr "エージェント失敗"
+
 msgid "Agent finished"
 msgstr "エージェントが完了しました"
+
+msgid "Agent idle"
+msgstr "エージェント待機中"
 
 msgid "Agent Independence"
 msgstr "エージェント非依存"
@@ -2065,6 +2103,9 @@ msgstr "エージェントが作業中です"
 
 msgid "Agent launch configuration"
 msgstr "エージェント起動設定"
+
+msgid "Agent needs permission"
+msgstr "エージェントが許可待ち"
 
 msgid "Agent permissions"
 msgstr "エージェントの権限"
@@ -2107,6 +2148,12 @@ msgstr "エージェント設定"
 
 msgid "Agent usage rankings"
 msgstr "エージェント使用量ランキング"
+
+msgid "Agent waiting on you"
+msgstr "エージェントがあなた待ち"
+
+msgid "Agent working"
+msgstr "エージェント作業中"
 
 msgid "Agent-driven previews"
 msgstr "エージェントが操作するプレビュー"
@@ -4517,6 +4564,9 @@ msgstr "このページにコメント"
 
 msgid "Comment."
 msgstr "コメント。"
+
+msgid "commented"
+msgstr "コメント済み"
 
 msgid "Commented"
 msgstr "コメント"
@@ -8664,6 +8714,10 @@ msgstr "グループの操作"
 msgid "Group by"
 msgstr "グループ化"
 
+#. placeholder {0}: grouping.label
+msgid "Group by {0}"
+msgstr "{0} でグループ化"
+
 msgid "Group new branches under a folder."
 msgstr "新しいブランチをフォルダにまとめます。"
 
@@ -9872,6 +9926,9 @@ msgstr "エージェントの最終アクティビティ {0}"
 
 msgid "Last attached"
 msgstr "最終接続"
+
+msgid "Last commit {lastCommitAgo} ago"
+msgstr "最終コミット {lastCommitAgo} 前"
 
 msgid "Last day of each month"
 msgstr "毎月末日"
@@ -11316,6 +11373,9 @@ msgstr "次へ"
 msgid "Next (Enter)"
 msgstr "次へ (Enter)"
 
+msgid "Next action"
+msgstr "次のアクション"
+
 msgid "Next branch"
 msgstr "次のブランチ"
 
@@ -11978,6 +12038,9 @@ msgstr "テーマが見つかりません。"
 msgid "No themes were imported"
 msgstr "インポートされたテーマはありません"
 
+msgid "No ticket"
+msgstr "チケットなし"
+
 msgid "No triggers"
 msgstr "トリガーなし"
 
@@ -12209,6 +12272,9 @@ msgstr "通知"
 
 msgid "Notion is not configured for this environment."
 msgstr "この環境ではNotionが設定されていません。"
+
+msgid "Notion page"
+msgstr "Notion ページ"
 
 msgid "now"
 msgstr "今"
@@ -15228,6 +15294,9 @@ msgstr "未反映の変更をレビューします。"
 
 msgid "Review pull requests inside Superset: diff pane, agent-assisted review, act on comments directly."
 msgstr "Supersetの中でプルリクエストをレビューできます。差分ペイン、エージェント支援のレビュー、コメントへの直接対応。"
+
+msgid "review requested"
+msgstr "レビュー依頼中"
 
 msgid "Review requested"
 msgstr "レビューリクエスト"
@@ -18879,8 +18948,16 @@ msgstr "スレッドが見つかりません"
 msgid "Three steps · touches packages/ui and apps/desktop"
 msgstr "3ステップ · packages/uiとapps/desktopに変更"
 
+#. placeholder {0}: name || ticket.url
+msgid "Ticket (closed): {0}"
+msgstr "チケット (クローズ): {0}"
+
 msgid "Ticket to production under one day, median"
 msgstr "チケットから本番まで中央値1日未満"
+
+#. placeholder {0}: name || ticket.url
+msgid "Ticket: {0}"
+msgstr "チケット: {0}"
 
 msgid "Tier"
 msgstr "ティア"
