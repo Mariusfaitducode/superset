@@ -525,10 +525,26 @@ msgstr "{0} oturum sonlandırıldı"
 msgid "{0} terminated, {1} remaining"
 msgstr "{0} sonlandırıldı, {1} kaldı"
 
+#. placeholder {0}: project.toFix
+msgid "{0} to fix"
+msgstr "{0} düzeltilecek"
+
+#. placeholder {0}: project.toMerge
+msgid "{0} to merge"
+msgstr "{0} birleştirilecek"
+
 #. placeholder {0}: formatTokens(aboveGap > 0n ? aboveGap : 0n)
 #. placeholder {1}: formatNumber(above.rank)
 msgid "{0} to pass #{1}"
 msgstr "#{1} sırasını geçmek için {0}"
+
+#. placeholder {0}: project.toReview
+msgid "{0} to review"
+msgstr "{0} incelenecek"
+
+#. placeholder {0}: todos.length
+msgid "{0} to-dos:"
+msgstr "{0} yapılacak:"
 
 #. placeholder {0}: formatTokens(tokens)
 msgid "{0} tokens in the last 30 days. Publishing as <0>{handle}</0>."
@@ -556,6 +572,10 @@ msgstr "{0} güncellendi"
 #. placeholder {1}: right.name
 msgid "{0} vs {1}"
 msgstr "{0} - {1}"
+
+#. placeholder {0}: project.onViewer
+msgid "{0} waiting on you"
+msgstr "{0} sizi bekliyor"
 
 #. placeholder {0}: file.path
 msgid "{0} was deleted in this change."
@@ -741,6 +761,9 @@ msgstr "{closedCount} kapalı"
 
 msgid "{commitCount, plural, one {# commit} other {# commits}}"
 msgstr "{commitCount, plural, one {# commit} other {# commit}}"
+
+msgid "{commitCount} commits"
+msgstr "{commitCount} commit"
 
 #. placeholder {0}: relevant.length
 msgid "{completed} of {0} checks complete"
@@ -1395,11 +1418,17 @@ msgstr "$0"
 msgid "1"
 msgstr "1"
 
+msgid "1 commit"
+msgstr "1 commit"
+
 msgid "1 cookie — forget this site"
 msgstr "1 çerez — bu siteyi unut"
 
 msgid "1 hr"
 msgstr "1 sa"
+
+msgid "1 to-do:"
+msgstr "1 yapılacak:"
 
 msgid "1 user"
 msgstr "1 kullanıcı"
@@ -1590,6 +1619,9 @@ msgstr "Bu terminalde hâlâ bir süreç çalışıyor"
 
 msgid "A pull request always gets its own worktree"
 msgstr "Bir pull request her zaman kendi worktree'sini alır"
+
+msgid "A pull request goes to the project you moved it to, else to the first project whose rules match: a PR number first, then a label, then a keyword. The rest goes to Other. Separate values with commas."
+msgstr "Bir pull request, taşıdığınız projeye gider; yoksa kuralları eşleşen ilk projeye: önce PR numarası, sonra etiket, sonra anahtar kelime. Geri kalanı Diğer'e gider. Değerleri virgülle ayırın."
 
 msgid "A rebuilt chat surface for driving agents: richer tool output, smoother steering, faster everything."
 msgstr "Ajanları yönetmek için yeniden yapılmış bir sohbet yüzeyi: daha zengin araç çıktısı, daha akıcı yönlendirme, her şey daha hızlı."
@@ -2017,8 +2049,17 @@ msgstr "Ajan konuşmaları"
 msgid "Agent credentials changed"
 msgstr "Ajan kimlik bilgileri değişti"
 
+msgid "Agent done, not read"
+msgstr "Ajan bitti, okunmadı"
+
+msgid "Agent failed"
+msgstr "Ajan başarısız"
+
 msgid "Agent finished"
 msgstr "Ajan bitirdi"
+
+msgid "Agent idle"
+msgstr "Ajan boşta"
 
 msgid "Agent Independence"
 msgstr "Ajan bağımsızlığı"
@@ -2028,6 +2069,9 @@ msgstr "Ajan çalışıyor"
 
 msgid "Agent launch configuration"
 msgstr "Ajan başlatma yapılandırması"
+
+msgid "Agent needs permission"
+msgstr "Ajan izin bekliyor"
 
 msgid "Agent picker (Claude, Codex, Cursor…) used by every session-creation flow"
 msgstr "Her oturum oluşturma akışının kullandığı ajan seçici (Claude, Codex, Cursor…)"
@@ -2067,6 +2111,12 @@ msgstr "ajan ayarları"
 
 msgid "Agent usage rankings"
 msgstr "Ajan kullanım sıralamaları"
+
+msgid "Agent waiting on you"
+msgstr "Ajan sizi bekliyor"
+
+msgid "Agent working"
+msgstr "Ajan çalışıyor"
 
 msgid "Agent-driven previews"
 msgstr "Ajanın yönettiği önizlemeler"
@@ -3042,6 +3092,9 @@ msgstr "Sayfalara dön"
 
 msgid "Back to the leaderboard"
 msgstr "Lider tablosuna dön"
+
+msgid "Back to the project its rules pick"
+msgstr "Kuralların seçtiği projeye geri dön"
 
 msgid "Backed by"
 msgstr "Destekçilerimiz"
@@ -4420,6 +4473,9 @@ msgstr "Bu sayfaya yorum yap"
 
 msgid "Comment."
 msgstr "Yorum yapın."
+
+msgid "commented"
+msgstr "yorum yaptı"
 
 msgid "Commented"
 msgstr "Yorum yapıldı"
@@ -6065,6 +6121,10 @@ msgstr "\"{projectName}\" silinsin mi?"
 msgid "Delete “{title}”?"
 msgstr "“{title}” silinsin mi?"
 
+#. placeholder {0}: project.name
+msgid "Delete {0}"
+msgstr "{0} sil"
+
 #. placeholder {0}: organization.name
 #. placeholder {0}: secret.key
 msgid "Delete {0}?"
@@ -6768,6 +6828,9 @@ msgstr "Bitiş"
 msgid "Duration"
 msgstr "Süre"
 
+msgid "e.g. #2701, spore-bio/hub#3025"
+msgstr "ör. #2701, spore-bio/hub#3025"
+
 msgid "e.g. Add dark mode, Fix checkout bug"
 msgstr "örn. Koyu mod ekle, Ödeme hatasını düzelt"
 
@@ -6859,6 +6922,9 @@ msgstr "GitHub'da düzenle"
 
 msgid "Edit prefix"
 msgstr "Ön eki düzenle"
+
+msgid "Edit projects"
+msgstr "Projeleri düzenle"
 
 msgid "Edit Run Script"
 msgstr "Çalıştırma betiğini düzenle"
@@ -8379,6 +8445,9 @@ msgstr "GitHub entegrasyonu"
 msgid "GitHub issues"
 msgstr "GitHub issue'ları"
 
+msgid "GitHub labels, e.g. spore-app-redesign"
+msgstr "GitHub etiketleri, ör. spore-app-redesign"
+
 msgid "GitHub rate limit reached"
 msgstr "GitHub istek sınırına ulaşıldı"
 
@@ -8492,6 +8561,10 @@ msgstr "Grup eylemleri"
 
 msgid "Group by"
 msgstr "Gruplama ölçütü"
+
+#. placeholder {0}: grouping.label
+msgid "Group by {0}"
+msgstr "{0} göre grupla"
 
 msgid "Group new branches under a folder."
 msgstr "Yeni dalları bir klasör altında toplayın."
@@ -9084,6 +9157,9 @@ msgstr "Superset masaüstü uygulamasında <0>Ayarlar → Görünüm → Tema</0
 msgid "In the Superset desktop app, open Settings → Remote Access and turn on “Allow remote access to this device via relay”."
 msgstr "Superset masaüstü uygulamasında Ayarlar → Uzaktan erişim bölümünü açın ve “Bu cihaza röle üzerinden uzaktan erişime izin ver” seçeneğini açın."
 
+msgid "In the title or branch, e.g. audit trail, e-signature"
+msgstr "Başlıkta veya dalda, ör. audit trail, e-signature"
+
 msgid "In under a year, more than 145,000 developers across 180 countries have run Superset and created over 1.85 million agent workspaces."
 msgstr "Bir yıldan kısa sürede 180 ülkeden 145.000'den fazla geliştirici Superset'i çalıştırdı ve 1,85 milyondan fazla ajan çalışma alanı oluşturdu."
 
@@ -9594,6 +9670,9 @@ msgstr "Klavye kısayolları"
 msgid "Keyboard Shortcuts"
 msgstr "Klavye kısayolları"
 
+msgid "Keywords"
+msgstr "Anahtar kelimeler"
+
 msgid "Kill"
 msgstr "Sonlandır"
 
@@ -9694,6 +9773,9 @@ msgstr "Son ajan etkinliği {0}"
 
 msgid "Last attached"
 msgstr "Son bağlanma"
+
+msgid "Last commit {lastCommitAgo} ago"
+msgstr "Son commit {lastCommitAgo} önce"
 
 msgid "Last day of each month"
 msgstr "Her ayın son günü"
@@ -10784,6 +10866,10 @@ msgstr "Yazılım tarihinin çoğu"
 msgid "Move"
 msgstr "Gezin"
 
+#. placeholder {0}: project.name
+msgid "Move {0} up"
+msgstr "{0} yukarı taşı"
+
 msgid "Move {count} to Group"
 msgstr "{count} öğeyi gruba taşı"
 
@@ -10796,11 +10882,17 @@ msgstr "Gruba taşı"
 msgid "Move to later"
 msgstr "Sonraya taşı"
 
+msgid "Move to project…"
+msgstr "Projeye taşı…"
+
 msgid "Move to Right Side"
 msgstr "Sağ tarafa taşı"
 
 msgid "Move to Tab"
 msgstr "Sekmeye taşı"
+
+msgid "Move up"
+msgstr "Yukarı taşı"
 
 msgid "Moved down by you"
 msgstr "Sizin tarafınızdan aşağı taşındı"
@@ -11019,6 +11111,9 @@ msgstr "Yeni kişiler {organizationName} kuruluşuna katılmak için e-posta dav
 msgid "New project"
 msgstr "Yeni proje"
 
+msgid "New project name"
+msgstr "Yeni proje adı"
+
 msgid "New push to branch"
 msgstr "Dala yeni push"
 
@@ -11097,6 +11192,9 @@ msgstr "Sonraki"
 
 msgid "Next (Enter)"
 msgstr "Sonraki (Enter)"
+
+msgid "Next action"
+msgstr "Sonraki adım"
 
 msgid "Next branch"
 msgstr "Sonraki dal"
@@ -11576,6 +11674,9 @@ msgstr "Kullanılabilir proje yok"
 msgid "No project selected"
 msgstr "Proje seçilmedi"
 
+msgid "No project yet: every pull request is in Other."
+msgstr "Henüz proje yok: tüm pull request'ler Diğer'de."
+
 msgid "No project<0>session</0>"
 msgstr "Proje yok<0>oturum</0>"
 
@@ -11740,6 +11841,9 @@ msgstr "Tema bulunamadı."
 
 msgid "No themes were imported"
 msgstr "Hiçbir tema içe aktarılmadı"
+
+msgid "No ticket"
+msgstr "Bilet yok"
 
 msgid "No triggers"
 msgstr "Tetikleyici yok"
@@ -11966,6 +12070,9 @@ msgstr "Bildirimler"
 
 msgid "Notion is not configured for this environment."
 msgstr "Notion bu ortam için yapılandırılmamış."
+
+msgid "Notion page"
+msgstr "Notion sayfası"
 
 msgid "now"
 msgstr "şimdi"
@@ -13818,6 +13925,9 @@ msgstr "Pull request'ler"
 msgid "Pull Requests"
 msgstr "Pull request'ler"
 
+msgid "Pull requests in this project now"
+msgstr "Şu an bu projedeki pull request'ler"
+
 msgid "Purple"
 msgstr "Mor"
 
@@ -14928,6 +15038,9 @@ msgstr "Bekleyen değişiklikleri inceleyin."
 
 msgid "Review pull requests inside Superset: diff pane, agent-assisted review, act on comments directly."
 msgstr "Pull request'leri Superset içinde inceleyin: fark bölmesi, ajan destekli inceleme, yorumlara doğrudan müdahale."
+
+msgid "review requested"
+msgstr "inceleme istendi"
 
 msgid "Review requested"
 msgstr "İnceleme istendi"
@@ -18521,8 +18634,16 @@ msgstr "Konu bulunamadı"
 msgid "Three steps · touches packages/ui and apps/desktop"
 msgstr "Üç adım · packages/ui ve apps/desktop dizinlerine dokunur"
 
+#. placeholder {0}: name || ticket.url
+msgid "Ticket (closed): {0}"
+msgstr "Bilet (kapalı): {0}"
+
 msgid "Ticket to production under one day, median"
 msgstr "Biletten üretime bir günün altında, medyan"
+
+#. placeholder {0}: name || ticket.url
+msgid "Ticket: {0}"
+msgstr "Bilet: {0}"
 
 msgid "Tier"
 msgstr "Katman"

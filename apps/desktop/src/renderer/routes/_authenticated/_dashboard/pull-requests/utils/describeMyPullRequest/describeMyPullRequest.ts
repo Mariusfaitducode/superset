@@ -47,6 +47,23 @@ export interface MyPullRequestDetails {
 	pendingReviewers: string[];
 	reviews: { login: string; state: MyPullRequestReviewState }[];
 	viewerReview: MyPullRequestReviewState | null;
+	/** Optional: hosts older than this field do not send them. */
+	commitCount?: number | null;
+	lastCommitAt?: string | null;
+	closingIssues?: MyPullRequestIssue[];
+}
+
+export interface MyPullRequestIssue {
+	number: number;
+	title: string;
+	url: string;
+	state: "OPEN" | "CLOSED";
+}
+
+export interface MyPullRequestTicketLink {
+	source: "notion" | "linear" | "jira";
+	url: string;
+	title: string | null;
 }
 
 /** Mirrors a row of the host's listMyPullRequests. */
@@ -59,6 +76,9 @@ export interface MyPullRequestItem {
 	isDraft: boolean;
 	authorLogin: string | null;
 	updatedAt: string | null;
+	ticketLinks?: MyPullRequestTicketLink[];
+	/** Missing from hosts older than the project grouping. */
+	labels?: string[];
 	/** null when GitHub did not return them for this PR. */
 	details: MyPullRequestDetails | null;
 }

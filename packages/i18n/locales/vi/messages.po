@@ -525,10 +525,26 @@ msgstr "Đã kết thúc {0} phiên"
 msgid "{0} terminated, {1} remaining"
 msgstr "Đã kết thúc {0}, còn lại {1}"
 
+#. placeholder {0}: project.toFix
+msgid "{0} to fix"
+msgstr "{0} cần sửa"
+
+#. placeholder {0}: project.toMerge
+msgid "{0} to merge"
+msgstr "{0} cần merge"
+
 #. placeholder {0}: formatTokens(aboveGap > 0n ? aboveGap : 0n)
 #. placeholder {1}: formatNumber(above.rank)
 msgid "{0} to pass #{1}"
 msgstr "{0} để vượt #{1}"
+
+#. placeholder {0}: project.toReview
+msgid "{0} to review"
+msgstr "{0} cần review"
+
+#. placeholder {0}: todos.length
+msgid "{0} to-dos:"
+msgstr "{0} việc cần làm:"
 
 #. placeholder {0}: formatTokens(tokens)
 msgid "{0} tokens in the last 30 days. Publishing as <0>{handle}</0>."
@@ -556,6 +572,10 @@ msgstr "Đã cập nhật {0}"
 #. placeholder {1}: right.name
 msgid "{0} vs {1}"
 msgstr "{0} đấu {1}"
+
+#. placeholder {0}: project.onViewer
+msgid "{0} waiting on you"
+msgstr "{0} đang chờ bạn"
 
 #. placeholder {0}: file.path
 msgid "{0} was deleted in this change."
@@ -741,6 +761,9 @@ msgstr "{closedCount} đã đóng"
 
 msgid "{commitCount, plural, one {# commit} other {# commits}}"
 msgstr "{commitCount, plural, one {# commit} other {# commit}}"
+
+msgid "{commitCount} commits"
+msgstr "{commitCount} commit"
 
 #. placeholder {0}: relevant.length
 msgid "{completed} of {0} checks complete"
@@ -1395,11 +1418,17 @@ msgstr "$0"
 msgid "1"
 msgstr "1"
 
+msgid "1 commit"
+msgstr "1 commit"
+
 msgid "1 cookie — forget this site"
 msgstr "1 cookie — quên trang này"
 
 msgid "1 hr"
 msgstr "1 giờ"
+
+msgid "1 to-do:"
+msgstr "1 việc cần làm:"
 
 msgid "1 user"
 msgstr "1 người dùng"
@@ -1590,6 +1619,9 @@ msgstr "Vẫn còn một tiến trình đang chạy trong terminal này"
 
 msgid "A pull request always gets its own worktree"
 msgstr "Pull request luôn có worktree riêng"
+
+msgid "A pull request goes to the project you moved it to, else to the first project whose rules match: a PR number first, then a label, then a keyword. The rest goes to Other. Separate values with commas."
+msgstr "Pull request vào dự án bạn đã chuyển nó tới, nếu không thì vào dự án đầu tiên có quy tắc khớp: trước hết là số PR, rồi nhãn, rồi từ khóa. Phần còn lại vào Khác. Phân tách các giá trị bằng dấu phẩy."
 
 msgid "A rebuilt chat surface for driving agents: richer tool output, smoother steering, faster everything."
 msgstr "Giao diện chat được dựng lại để điều khiển agent: output tool phong phú hơn, lái mượt hơn, mọi thứ nhanh hơn."
@@ -2017,8 +2049,17 @@ msgstr "Cuộc trò chuyện của agent"
 msgid "Agent credentials changed"
 msgstr "Thông tin xác thực của agent đã thay đổi"
 
+msgid "Agent done, not read"
+msgstr "Agent xong, chưa đọc"
+
+msgid "Agent failed"
+msgstr "Agent thất bại"
+
 msgid "Agent finished"
 msgstr "Agent đã xong"
+
+msgid "Agent idle"
+msgstr "Agent rảnh"
 
 msgid "Agent Independence"
 msgstr "Độc lập với agent"
@@ -2028,6 +2069,9 @@ msgstr "Agent đang làm việc"
 
 msgid "Agent launch configuration"
 msgstr "Cấu hình khởi chạy agent"
+
+msgid "Agent needs permission"
+msgstr "Agent cần cấp quyền"
 
 msgid "Agent picker (Claude, Codex, Cursor…) used by every session-creation flow"
 msgstr "Bộ chọn agent (Claude, Codex, Cursor…) dùng trong mọi luồng tạo phiên"
@@ -2067,6 +2111,12 @@ msgstr "cài đặt agent"
 
 msgid "Agent usage rankings"
 msgstr "Xếp hạng mức dùng agent"
+
+msgid "Agent waiting on you"
+msgstr "Agent đang chờ bạn"
+
+msgid "Agent working"
+msgstr "Agent đang làm"
 
 msgid "Agent-driven previews"
 msgstr "Bản xem trước do agent điều khiển"
@@ -3042,6 +3092,9 @@ msgstr "Quay lại danh sách trang"
 
 msgid "Back to the leaderboard"
 msgstr "Quay lại bảng xếp hạng"
+
+msgid "Back to the project its rules pick"
+msgstr "Trở về dự án theo quy tắc"
 
 msgid "Backed by"
 msgstr "Được hậu thuẫn bởi"
@@ -4420,6 +4473,9 @@ msgstr "Bình luận về trang này"
 
 msgid "Comment."
 msgstr "Bình luận."
+
+msgid "commented"
+msgstr "đã bình luận"
 
 msgid "Commented"
 msgstr "Đã bình luận"
@@ -6065,6 +6121,10 @@ msgstr "Xóa \"{projectName}\"?"
 msgid "Delete “{title}”?"
 msgstr "Xóa “{title}”?"
 
+#. placeholder {0}: project.name
+msgid "Delete {0}"
+msgstr "Xóa {0}"
+
 #. placeholder {0}: organization.name
 #. placeholder {0}: secret.key
 msgid "Delete {0}?"
@@ -6768,6 +6828,9 @@ msgstr "Hạn"
 msgid "Duration"
 msgstr "Thời lượng"
 
+msgid "e.g. #2701, spore-bio/hub#3025"
+msgstr "vd. #2701, spore-bio/hub#3025"
+
 msgid "e.g. Add dark mode, Fix checkout bug"
 msgstr "ví dụ: Thêm chế độ tối, Sửa lỗi thanh toán"
 
@@ -6859,6 +6922,9 @@ msgstr "Sửa trên GitHub"
 
 msgid "Edit prefix"
 msgstr "Sửa tiền tố"
+
+msgid "Edit projects"
+msgstr "Sửa dự án"
 
 msgid "Edit Run Script"
 msgstr "Sửa script chạy"
@@ -8379,6 +8445,9 @@ msgstr "Tích hợp GitHub"
 msgid "GitHub issues"
 msgstr "Issue GitHub"
 
+msgid "GitHub labels, e.g. spore-app-redesign"
+msgstr "Nhãn GitHub, vd. spore-app-redesign"
+
 msgid "GitHub rate limit reached"
 msgstr "Đã đạt giới hạn yêu cầu GitHub"
 
@@ -8492,6 +8561,10 @@ msgstr "Hành động nhóm"
 
 msgid "Group by"
 msgstr "Nhóm theo"
+
+#. placeholder {0}: grouping.label
+msgid "Group by {0}"
+msgstr "Nhóm theo {0}"
 
 msgid "Group new branches under a folder."
 msgstr "Gom các nhánh mới vào một thư mục."
@@ -9084,6 +9157,9 @@ msgstr "Trong ứng dụng Superset trên máy tính, mở <0>Cài đặt → Gi
 msgid "In the Superset desktop app, open Settings → Remote Access and turn on “Allow remote access to this device via relay”."
 msgstr "Trong ứng dụng Superset trên máy tính, mở Cài đặt → Truy cập từ xa và bật “Cho phép truy cập từ xa vào thiết bị này qua relay”."
 
+msgid "In the title or branch, e.g. audit trail, e-signature"
+msgstr "Trong tiêu đề hoặc nhánh, vd. audit trail, e-signature"
+
 msgid "In under a year, more than 145,000 developers across 180 countries have run Superset and created over 1.85 million agent workspaces."
 msgstr "Chưa đầy một năm, hơn 145.000 nhà phát triển tại 180 quốc gia đã chạy Superset và tạo hơn 1,85 triệu workspace agent."
 
@@ -9594,6 +9670,9 @@ msgstr "Phím tắt"
 msgid "Keyboard Shortcuts"
 msgstr "Phím tắt"
 
+msgid "Keywords"
+msgstr "Từ khóa"
+
 msgid "Kill"
 msgstr "Kết thúc"
 
@@ -9694,6 +9773,9 @@ msgstr "Agent hoạt động gần nhất {0}"
 
 msgid "Last attached"
 msgstr "Lần gắn cuối"
+
+msgid "Last commit {lastCommitAgo} ago"
+msgstr "Commit cuối {lastCommitAgo} trước"
 
 msgid "Last day of each month"
 msgstr "Ngày cuối mỗi tháng"
@@ -10784,6 +10866,10 @@ msgstr "Gần như suốt lịch sử phần mềm"
 msgid "Move"
 msgstr "Di chuyển"
 
+#. placeholder {0}: project.name
+msgid "Move {0} up"
+msgstr "Đưa {0} lên"
+
 msgid "Move {count} to Group"
 msgstr "Chuyển {count} vào nhóm"
 
@@ -10796,11 +10882,17 @@ msgstr "Chuyển vào nhóm"
 msgid "Move to later"
 msgstr "Để sau"
 
+msgid "Move to project…"
+msgstr "Chuyển sang dự án…"
+
 msgid "Move to Right Side"
 msgstr "Chuyển sang bên phải"
 
 msgid "Move to Tab"
 msgstr "Chuyển sang tab"
+
+msgid "Move up"
+msgstr "Đưa lên"
 
 msgid "Moved down by you"
 msgstr "Bạn đã chuyển xuống"
@@ -11019,6 +11111,9 @@ msgstr "Người mới sẽ nhận email mời tham gia {organizationName}. Họ
 msgid "New project"
 msgstr "Dự án mới"
 
+msgid "New project name"
+msgstr "Tên dự án mới"
+
 msgid "New push to branch"
 msgstr "Push mới lên nhánh"
 
@@ -11097,6 +11192,9 @@ msgstr "Tiếp"
 
 msgid "Next (Enter)"
 msgstr "Tiếp (Enter)"
+
+msgid "Next action"
+msgstr "Việc tiếp theo"
 
 msgid "Next branch"
 msgstr "Nhánh kế tiếp"
@@ -11576,6 +11674,9 @@ msgstr "Không có dự án nào"
 msgid "No project selected"
 msgstr "Chưa chọn dự án"
 
+msgid "No project yet: every pull request is in Other."
+msgstr "Chưa có dự án: mọi pull request đều ở Khác."
+
 msgid "No project<0>session</0>"
 msgstr "Không có dự án<0>phiên</0>"
 
@@ -11740,6 +11841,9 @@ msgstr "Không tìm thấy chủ đề nào."
 
 msgid "No themes were imported"
 msgstr "Không có theme nào được nhập"
+
+msgid "No ticket"
+msgstr "Không có ticket"
 
 msgid "No triggers"
 msgstr "Không có trigger"
@@ -11966,6 +12070,9 @@ msgstr "Thông báo"
 
 msgid "Notion is not configured for this environment."
 msgstr "Notion chưa được cấu hình cho môi trường này."
+
+msgid "Notion page"
+msgstr "Trang Notion"
 
 msgid "now"
 msgstr "vừa xong"
@@ -13818,6 +13925,9 @@ msgstr "Pull request"
 msgid "Pull Requests"
 msgstr "Pull request"
 
+msgid "Pull requests in this project now"
+msgstr "Pull request hiện trong dự án này"
+
 msgid "Purple"
 msgstr "Tím"
 
@@ -14928,6 +15038,9 @@ msgstr "Xem lại các thay đổi đang chờ."
 
 msgid "Review pull requests inside Superset: diff pane, agent-assisted review, act on comments directly."
 msgstr "Review pull request ngay trong Superset: khung diff, review có agent hỗ trợ, xử lý bình luận trực tiếp."
+
+msgid "review requested"
+msgstr "đã yêu cầu review"
 
 msgid "Review requested"
 msgstr "Yêu cầu review"
@@ -18521,8 +18634,16 @@ msgstr "Không tìm thấy luồng"
 msgid "Three steps · touches packages/ui and apps/desktop"
 msgstr "Ba bước · động tới packages/ui và apps/desktop"
 
+#. placeholder {0}: name || ticket.url
+msgid "Ticket (closed): {0}"
+msgstr "Ticket (đã đóng): {0}"
+
 msgid "Ticket to production under one day, median"
 msgstr "Từ ticket đến production dưới một ngày, tính trung vị"
+
+#. placeholder {0}: name || ticket.url
+msgid "Ticket: {0}"
+msgstr "Ticket: {0}"
 
 msgid "Tier"
 msgstr "Hạng"

@@ -525,10 +525,26 @@ msgstr "{0} sesi dihentikan"
 msgid "{0} terminated, {1} remaining"
 msgstr "{0} dihentikan, {1} tersisa"
 
+#. placeholder {0}: project.toFix
+msgid "{0} to fix"
+msgstr "{0} perlu diperbaiki"
+
+#. placeholder {0}: project.toMerge
+msgid "{0} to merge"
+msgstr "{0} siap digabung"
+
 #. placeholder {0}: formatTokens(aboveGap > 0n ? aboveGap : 0n)
 #. placeholder {1}: formatNumber(above.rank)
 msgid "{0} to pass #{1}"
 msgstr "{0} lagi untuk melewati #{1}"
+
+#. placeholder {0}: project.toReview
+msgid "{0} to review"
+msgstr "{0} perlu ditinjau"
+
+#. placeholder {0}: todos.length
+msgid "{0} to-dos:"
+msgstr "{0} tugas:"
 
 #. placeholder {0}: formatTokens(tokens)
 msgid "{0} tokens in the last 30 days. Publishing as <0>{handle}</0>."
@@ -556,6 +572,10 @@ msgstr "{0} diperbarui"
 #. placeholder {1}: right.name
 msgid "{0} vs {1}"
 msgstr "{0} melawan {1}"
+
+#. placeholder {0}: project.onViewer
+msgid "{0} waiting on you"
+msgstr "{0} menunggu Anda"
 
 #. placeholder {0}: file.path
 msgid "{0} was deleted in this change."
@@ -741,6 +761,9 @@ msgstr "{closedCount} tertutup"
 
 msgid "{commitCount, plural, one {# commit} other {# commits}}"
 msgstr "{commitCount, plural, one {# commit} other {# commit}}"
+
+msgid "{commitCount} commits"
+msgstr "{commitCount} commit"
 
 #. placeholder {0}: relevant.length
 msgid "{completed} of {0} checks complete"
@@ -1395,11 +1418,17 @@ msgstr "$0"
 msgid "1"
 msgstr "1"
 
+msgid "1 commit"
+msgstr "1 commit"
+
 msgid "1 cookie — forget this site"
 msgstr "1 cookie — lupakan situs ini"
 
 msgid "1 hr"
 msgstr "1 jam"
+
+msgid "1 to-do:"
+msgstr "1 tugas:"
 
 msgid "1 user"
 msgstr "1 pengguna"
@@ -1590,6 +1619,9 @@ msgstr "Masih ada proses yang berjalan di terminal ini"
 
 msgid "A pull request always gets its own worktree"
 msgstr "Pull request selalu mendapat worktree sendiri"
+
+msgid "A pull request goes to the project you moved it to, else to the first project whose rules match: a PR number first, then a label, then a keyword. The rest goes to Other. Separate values with commas."
+msgstr "Pull request masuk ke proyek tempat Anda memindahkannya, jika tidak ke proyek pertama yang aturannya cocok: nomor PR dulu, lalu label, lalu kata kunci. Sisanya masuk ke Lainnya. Pisahkan nilai dengan koma."
 
 msgid "A rebuilt chat surface for driving agents: richer tool output, smoother steering, faster everything."
 msgstr "Permukaan chat yang dibangun ulang untuk mengendalikan agen: output alat lebih kaya, pengarahan lebih halus, semuanya lebih cepat."
@@ -2017,8 +2049,17 @@ msgstr "Percakapan agen"
 msgid "Agent credentials changed"
 msgstr "Kredensial agen berubah"
 
+msgid "Agent done, not read"
+msgstr "Agen selesai, belum dibaca"
+
+msgid "Agent failed"
+msgstr "Agen gagal"
+
 msgid "Agent finished"
 msgstr "Agen selesai"
+
+msgid "Agent idle"
+msgstr "Agen diam"
 
 msgid "Agent Independence"
 msgstr "Independensi Agen"
@@ -2028,6 +2069,9 @@ msgstr "Agen sedang bekerja"
 
 msgid "Agent launch configuration"
 msgstr "Konfigurasi peluncuran agen"
+
+msgid "Agent needs permission"
+msgstr "Agen butuh izin"
 
 msgid "Agent picker (Claude, Codex, Cursor…) used by every session-creation flow"
 msgstr "Pemilih agen (Claude, Codex, Cursor…) yang dipakai tiap alur pembuatan sesi"
@@ -2067,6 +2111,12 @@ msgstr "pengaturan agen"
 
 msgid "Agent usage rankings"
 msgstr "Peringkat penggunaan agen"
+
+msgid "Agent waiting on you"
+msgstr "Agen menunggu Anda"
+
+msgid "Agent working"
+msgstr "Agen bekerja"
 
 msgid "Agent-driven previews"
 msgstr "Pratinjau yang digerakkan agen"
@@ -3042,6 +3092,9 @@ msgstr "Kembali ke halaman"
 
 msgid "Back to the leaderboard"
 msgstr "Kembali ke papan peringkat"
+
+msgid "Back to the project its rules pick"
+msgstr "Kembali ke proyek pilihan aturan"
 
 msgid "Backed by"
 msgstr "Didukung oleh"
@@ -4420,6 +4473,9 @@ msgstr "Komentari halaman ini"
 
 msgid "Comment."
 msgstr "Komentari."
+
+msgid "commented"
+msgstr "berkomentar"
 
 msgid "Commented"
 msgstr "Dikomentari"
@@ -6065,6 +6121,10 @@ msgstr "Hapus \"{projectName}\"?"
 msgid "Delete “{title}”?"
 msgstr "Hapus “{title}”?"
 
+#. placeholder {0}: project.name
+msgid "Delete {0}"
+msgstr "Hapus {0}"
+
 #. placeholder {0}: organization.name
 #. placeholder {0}: secret.key
 msgid "Delete {0}?"
@@ -6768,6 +6828,9 @@ msgstr "Tenggat"
 msgid "Duration"
 msgstr "Durasi"
 
+msgid "e.g. #2701, spore-bio/hub#3025"
+msgstr "mis. #2701, spore-bio/hub#3025"
+
 msgid "e.g. Add dark mode, Fix checkout bug"
 msgstr "mis. Tambah mode gelap, Perbaiki bug checkout"
 
@@ -6859,6 +6922,9 @@ msgstr "Edit di GitHub"
 
 msgid "Edit prefix"
 msgstr "Edit prefix"
+
+msgid "Edit projects"
+msgstr "Edit proyek"
 
 msgid "Edit Run Script"
 msgstr "Edit Skrip Run"
@@ -8379,6 +8445,9 @@ msgstr "Integrasi GitHub"
 msgid "GitHub issues"
 msgstr "Issue GitHub"
 
+msgid "GitHub labels, e.g. spore-app-redesign"
+msgstr "Label GitHub, mis. spore-app-redesign"
+
 msgid "GitHub rate limit reached"
 msgstr "Batas laju GitHub tercapai"
 
@@ -8492,6 +8561,10 @@ msgstr "Aksi grup"
 
 msgid "Group by"
 msgstr "Kelompokkan menurut"
+
+#. placeholder {0}: grouping.label
+msgid "Group by {0}"
+msgstr "Kelompokkan menurut {0}"
 
 msgid "Group new branches under a folder."
 msgstr "Kelompokkan branch baru di bawah satu folder."
@@ -9084,6 +9157,9 @@ msgstr "Di aplikasi desktop Superset, buka <0>Pengaturan → Tampilan → Tema</
 msgid "In the Superset desktop app, open Settings → Remote Access and turn on “Allow remote access to this device via relay”."
 msgstr "Di aplikasi desktop Superset, buka Pengaturan → Akses Jarak Jauh dan aktifkan “Izinkan akses jarak jauh ke perangkat ini melalui relay”."
 
+msgid "In the title or branch, e.g. audit trail, e-signature"
+msgstr "Di judul atau branch, mis. audit trail, e-signature"
+
 msgid "In under a year, more than 145,000 developers across 180 countries have run Superset and created over 1.85 million agent workspaces."
 msgstr "Dalam waktu kurang dari setahun, lebih dari 145.000 developer di 180 negara telah menjalankan Superset dan membuat lebih dari 1,85 juta workspace agen."
 
@@ -9594,6 +9670,9 @@ msgstr "Pintasan keyboard"
 msgid "Keyboard Shortcuts"
 msgstr "Pintasan Keyboard"
 
+msgid "Keywords"
+msgstr "Kata kunci"
+
 msgid "Kill"
 msgstr "Matikan"
 
@@ -9694,6 +9773,9 @@ msgstr "Aktivitas agen terakhir {0}"
 
 msgid "Last attached"
 msgstr "Terakhir terhubung"
+
+msgid "Last commit {lastCommitAgo} ago"
+msgstr "Commit terakhir {lastCommitAgo} lalu"
 
 msgid "Last day of each month"
 msgstr "Hari terakhir tiap bulan"
@@ -10784,6 +10866,10 @@ msgstr "Sebagian besar sejarah perangkat lunak"
 msgid "Move"
 msgstr "Pindah"
 
+#. placeholder {0}: project.name
+msgid "Move {0} up"
+msgstr "Naikkan {0}"
+
 msgid "Move {count} to Group"
 msgstr "Pindahkan {count} ke Grup"
 
@@ -10796,11 +10882,17 @@ msgstr "Pindahkan ke grup"
 msgid "Move to later"
 msgstr "Pindahkan ke nanti"
 
+msgid "Move to project…"
+msgstr "Pindahkan ke proyek…"
+
 msgid "Move to Right Side"
 msgstr "Pindahkan ke kanan"
 
 msgid "Move to Tab"
 msgstr "Pindahkan ke Tab"
+
+msgid "Move up"
+msgstr "Naikkan"
 
 msgid "Moved down by you"
 msgstr "Dipindahkan ke bawah oleh Anda"
@@ -11019,6 +11111,9 @@ msgstr "Orang baru akan menerima undangan email untuk bergabung ke {organization
 msgid "New project"
 msgstr "Proyek baru"
 
+msgid "New project name"
+msgstr "Nama proyek baru"
+
 msgid "New push to branch"
 msgstr "Push baru ke branch"
 
@@ -11097,6 +11192,9 @@ msgstr "Berikutnya"
 
 msgid "Next (Enter)"
 msgstr "Berikutnya (Enter)"
+
+msgid "Next action"
+msgstr "Tindakan berikutnya"
 
 msgid "Next branch"
 msgstr "Branch berikutnya"
@@ -11576,6 +11674,9 @@ msgstr "Tidak ada proyek tersedia"
 msgid "No project selected"
 msgstr "Tidak ada proyek yang dipilih"
 
+msgid "No project yet: every pull request is in Other."
+msgstr "Belum ada proyek: semua pull request ada di Lainnya."
+
 msgid "No project<0>session</0>"
 msgstr "Tanpa proyek<0>sesi</0>"
 
@@ -11740,6 +11841,9 @@ msgstr "Tidak ada tema ditemukan."
 
 msgid "No themes were imported"
 msgstr "Tidak ada tema yang diimpor"
+
+msgid "No ticket"
+msgstr "Tanpa tiket"
 
 msgid "No triggers"
 msgstr "Tanpa pemicu"
@@ -11966,6 +12070,9 @@ msgstr "Notifikasi"
 
 msgid "Notion is not configured for this environment."
 msgstr "Notion belum dikonfigurasi untuk environment ini."
+
+msgid "Notion page"
+msgstr "Halaman Notion"
 
 msgid "now"
 msgstr "sekarang"
@@ -13818,6 +13925,9 @@ msgstr "Pull request"
 msgid "Pull Requests"
 msgstr "Pull Request"
 
+msgid "Pull requests in this project now"
+msgstr "Pull request di proyek ini sekarang"
+
 msgid "Purple"
 msgstr "Ungu"
 
@@ -14928,6 +15038,9 @@ msgstr "Review perubahan yang tertunda."
 
 msgid "Review pull requests inside Superset: diff pane, agent-assisted review, act on comments directly."
 msgstr "Review pull request di dalam Superset: panel diff, review dibantu agen, tindak lanjuti komentar langsung."
+
+msgid "review requested"
+msgstr "review diminta"
 
 msgid "Review requested"
 msgstr "Review diminta"
@@ -18521,8 +18634,16 @@ msgstr "Thread tidak ditemukan"
 msgid "Three steps · touches packages/ui and apps/desktop"
 msgstr "Tiga langkah · menyentuh packages/ui dan apps/desktop"
 
+#. placeholder {0}: name || ticket.url
+msgid "Ticket (closed): {0}"
+msgstr "Tiket (ditutup): {0}"
+
 msgid "Ticket to production under one day, median"
 msgstr "Tiket ke produksi di bawah satu hari, median"
+
+#. placeholder {0}: name || ticket.url
+msgid "Ticket: {0}"
+msgstr "Tiket: {0}"
 
 msgid "Tier"
 msgstr "Tingkat"

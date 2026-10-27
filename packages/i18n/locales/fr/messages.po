@@ -525,10 +525,26 @@ msgstr "{0} sessions arrêtées"
 msgid "{0} terminated, {1} remaining"
 msgstr "{0} arrêtées, {1} restantes"
 
+#. placeholder {0}: project.toFix
+msgid "{0} to fix"
+msgstr "{0} à corriger"
+
+#. placeholder {0}: project.toMerge
+msgid "{0} to merge"
+msgstr "{0} à merger"
+
 #. placeholder {0}: formatTokens(aboveGap > 0n ? aboveGap : 0n)
 #. placeholder {1}: formatNumber(above.rank)
 msgid "{0} to pass #{1}"
 msgstr "{0} pour dépasser le n°{1}"
+
+#. placeholder {0}: project.toReview
+msgid "{0} to review"
+msgstr "{0} à relire"
+
+#. placeholder {0}: todos.length
+msgid "{0} to-dos:"
+msgstr "{0} to-dos :"
 
 #. placeholder {0}: formatTokens(tokens)
 msgid "{0} tokens in the last 30 days. Publishing as <0>{handle}</0>."
@@ -556,6 +572,10 @@ msgstr "{0} mis à jour"
 #. placeholder {1}: right.name
 msgid "{0} vs {1}"
 msgstr "{0} contre {1}"
+
+#. placeholder {0}: project.onViewer
+msgid "{0} waiting on you"
+msgstr "{0} t'attendent"
 
 #. placeholder {0}: file.path
 msgid "{0} was deleted in this change."
@@ -741,6 +761,9 @@ msgstr "{closedCount} fermées"
 
 msgid "{commitCount, plural, one {# commit} other {# commits}}"
 msgstr "{commitCount, plural, one {# commit} other {# commits}}"
+
+msgid "{commitCount} commits"
+msgstr "{commitCount} commits"
 
 #. placeholder {0}: relevant.length
 msgid "{completed} of {0} checks complete"
@@ -1395,11 +1418,17 @@ msgstr "$0"
 msgid "1"
 msgstr "1"
 
+msgid "1 commit"
+msgstr "1 commit"
+
 msgid "1 cookie — forget this site"
 msgstr "1 cookie — oublier ce site"
 
 msgid "1 hr"
 msgstr "1 h"
+
+msgid "1 to-do:"
+msgstr "1 to-do :"
 
 msgid "1 user"
 msgstr "1 utilisateur"
@@ -1590,6 +1619,9 @@ msgstr "Un processus est toujours en cours dans ce terminal"
 
 msgid "A pull request always gets its own worktree"
 msgstr "Une pull request a toujours son propre worktree"
+
+msgid "A pull request goes to the project you moved it to, else to the first project whose rules match: a PR number first, then a label, then a keyword. The rest goes to Other. Separate values with commas."
+msgstr "Une pull request va dans le projet où vous l'avez déplacée, sinon dans le premier projet dont les règles correspondent : d'abord un numéro de PR, puis un label, puis un mot-clé. Le reste va dans Autres. Séparez les valeurs par des virgules."
 
 msgid "A rebuilt chat surface for driving agents: richer tool output, smoother steering, faster everything."
 msgstr "Une surface de chat reconstruite pour piloter les agents : sortie d'outils plus riche, pilotage plus fluide, tout plus rapide."
@@ -2017,8 +2049,17 @@ msgstr "Conversations des agents"
 msgid "Agent credentials changed"
 msgstr "Les identifiants de l'agent ont changé"
 
+msgid "Agent done, not read"
+msgstr "Agent terminé, non lu"
+
+msgid "Agent failed"
+msgstr "Agent en échec"
+
 msgid "Agent finished"
 msgstr "Agent terminé"
+
+msgid "Agent idle"
+msgstr "Agent inactif"
 
 msgid "Agent Independence"
 msgstr "Indépendance des agents"
@@ -2028,6 +2069,9 @@ msgstr "L’agent travaille"
 
 msgid "Agent launch configuration"
 msgstr "Configuration de lancement de l'agent"
+
+msgid "Agent needs permission"
+msgstr "L'agent attend une permission"
 
 msgid "Agent picker (Claude, Codex, Cursor…) used by every session-creation flow"
 msgstr "Sélecteur d'agent (Claude, Codex, Cursor…) utilisé par tous les flux de création de session"
@@ -2067,6 +2111,12 @@ msgstr "paramètres de l'agent"
 
 msgid "Agent usage rankings"
 msgstr "Classements d'utilisation des agents"
+
+msgid "Agent waiting on you"
+msgstr "L'agent t'attend"
+
+msgid "Agent working"
+msgstr "Agent au travail"
 
 msgid "Agent-driven previews"
 msgstr "Aperçus pilotés par l'agent"
@@ -3042,6 +3092,9 @@ msgstr "Retour aux pages"
 
 msgid "Back to the leaderboard"
 msgstr "Retour au classement"
+
+msgid "Back to the project its rules pick"
+msgstr "Revenir au projet choisi par les règles"
 
 msgid "Backed by"
 msgstr "Ils nous soutiennent"
@@ -4420,6 +4473,9 @@ msgstr "Commenter cette page"
 
 msgid "Comment."
 msgstr "Commentez."
+
+msgid "commented"
+msgstr "a commenté"
 
 msgid "Commented"
 msgstr "Commentée"
@@ -6065,6 +6121,10 @@ msgstr "Supprimer « {projectName} » ?"
 msgid "Delete “{title}”?"
 msgstr "Supprimer « {title} » ?"
 
+#. placeholder {0}: project.name
+msgid "Delete {0}"
+msgstr "Supprimer {0}"
+
 #. placeholder {0}: organization.name
 #. placeholder {0}: secret.key
 msgid "Delete {0}?"
@@ -6768,6 +6828,9 @@ msgstr "Échéance"
 msgid "Duration"
 msgstr "Durée"
 
+msgid "e.g. #2701, spore-bio/hub#3025"
+msgstr "ex. #2701, spore-bio/hub#3025"
+
 msgid "e.g. Add dark mode, Fix checkout bug"
 msgstr "ex. Ajouter le mode sombre, Corriger le bug du paiement"
 
@@ -6859,6 +6922,9 @@ msgstr "Modifier sur GitHub"
 
 msgid "Edit prefix"
 msgstr "Modifier le préfixe"
+
+msgid "Edit projects"
+msgstr "Modifier les projets"
 
 msgid "Edit Run Script"
 msgstr "Modifier le script d'exécution"
@@ -8379,6 +8445,9 @@ msgstr "Intégration GitHub"
 msgid "GitHub issues"
 msgstr "Issues GitHub"
 
+msgid "GitHub labels, e.g. spore-app-redesign"
+msgstr "Labels GitHub, ex. spore-app-redesign"
+
 msgid "GitHub rate limit reached"
 msgstr "Limite de requêtes GitHub atteinte"
 
@@ -8492,6 +8561,10 @@ msgstr "Actions de groupe"
 
 msgid "Group by"
 msgstr "Regrouper par"
+
+#. placeholder {0}: grouping.label
+msgid "Group by {0}"
+msgstr "Grouper par {0}"
 
 msgid "Group new branches under a folder."
 msgstr "Regroupez les nouvelles branches dans un dossier."
@@ -9084,6 +9157,9 @@ msgstr "Dans l'application de bureau Superset, ouvrez <0>Paramètres → Apparen
 msgid "In the Superset desktop app, open Settings → Remote Access and turn on “Allow remote access to this device via relay”."
 msgstr "Dans l'application de bureau Superset, ouvrez Paramètres → Accès distant et activez « Autoriser l'accès distant à cet appareil via le relais »."
 
+msgid "In the title or branch, e.g. audit trail, e-signature"
+msgstr "Dans le titre ou la branche, ex. audit trail, e-signature"
+
 msgid "In under a year, more than 145,000 developers across 180 countries have run Superset and created over 1.85 million agent workspaces."
 msgstr "En moins d’un an, plus de 145 000 développeurs dans 180 pays ont utilisé Superset et créé plus de 1,85 million d’espaces de travail d’agents."
 
@@ -9594,6 +9670,9 @@ msgstr "Raccourcis clavier"
 msgid "Keyboard Shortcuts"
 msgstr "Raccourcis clavier"
 
+msgid "Keywords"
+msgstr "Mots-clés"
+
 msgid "Kill"
 msgstr "Arrêter"
 
@@ -9694,6 +9773,9 @@ msgstr "Dernière activité de l'agent {0}"
 
 msgid "Last attached"
 msgstr "Dernier attachement"
+
+msgid "Last commit {lastCommitAgo} ago"
+msgstr "Dernier commit il y a {lastCommitAgo}"
 
 msgid "Last day of each month"
 msgstr "Dernier jour de chaque mois"
@@ -10784,6 +10866,10 @@ msgstr "L'essentiel de l'histoire du logiciel"
 msgid "Move"
 msgstr "Déplacer"
 
+#. placeholder {0}: project.name
+msgid "Move {0} up"
+msgstr "Monter {0}"
+
 msgid "Move {count} to Group"
 msgstr "Déplacer {count} vers un groupe"
 
@@ -10796,11 +10882,17 @@ msgstr "Déplacer vers un groupe"
 msgid "Move to later"
 msgstr "Remettre à plus tard"
 
+msgid "Move to project…"
+msgstr "Déplacer vers le projet…"
+
 msgid "Move to Right Side"
 msgstr "Déplacer à droite"
 
 msgid "Move to Tab"
 msgstr "Déplacer vers un onglet"
+
+msgid "Move up"
+msgstr "Monter"
 
 msgid "Moved down by you"
 msgstr "Descendues par toi"
@@ -11019,6 +11111,9 @@ msgstr "Les nouvelles personnes reçoivent une invitation par e-mail à rejoindr
 msgid "New project"
 msgstr "Nouveau projet"
 
+msgid "New project name"
+msgstr "Nom du nouveau projet"
+
 msgid "New push to branch"
 msgstr "Nouveau push sur une branche"
 
@@ -11097,6 +11192,9 @@ msgstr "Suivant"
 
 msgid "Next (Enter)"
 msgstr "Suivant (Entrée)"
+
+msgid "Next action"
+msgstr "Prochaine action"
 
 msgid "Next branch"
 msgstr "Branche suivante"
@@ -11576,6 +11674,9 @@ msgstr "Aucun projet disponible"
 msgid "No project selected"
 msgstr "Aucun projet sélectionné"
 
+msgid "No project yet: every pull request is in Other."
+msgstr "Aucun projet pour l'instant : toutes les pull requests sont dans Autres."
+
 msgid "No project<0>session</0>"
 msgstr "Aucun projet<0>session</0>"
 
@@ -11740,6 +11841,9 @@ msgstr "Aucun thème trouvé."
 
 msgid "No themes were imported"
 msgstr "Aucun thème n'a été importé"
+
+msgid "No ticket"
+msgstr "Pas de ticket"
 
 msgid "No triggers"
 msgstr "Aucun déclencheur"
@@ -11966,6 +12070,9 @@ msgstr "Notifications"
 
 msgid "Notion is not configured for this environment."
 msgstr "Notion n'est pas configuré pour cet environnement."
+
+msgid "Notion page"
+msgstr "Page Notion"
 
 msgid "now"
 msgstr "à l'instant"
@@ -13818,6 +13925,9 @@ msgstr "Pull requests"
 msgid "Pull Requests"
 msgstr "Pull requests"
 
+msgid "Pull requests in this project now"
+msgstr "Pull requests actuellement dans ce projet"
+
 msgid "Purple"
 msgstr "Violet"
 
@@ -14928,6 +15038,9 @@ msgstr "Passer en revue les modifications en attente."
 
 msgid "Review pull requests inside Superset: diff pane, agent-assisted review, act on comments directly."
 msgstr "Passez vos pull requests en revue dans Superset : volet de diff, revue assistée par agent, action directe sur les commentaires."
+
+msgid "review requested"
+msgstr "relecture demandée"
 
 msgid "Review requested"
 msgstr "Revue demandée"
@@ -18521,8 +18634,16 @@ msgstr "Fil introuvable"
 msgid "Three steps · touches packages/ui and apps/desktop"
 msgstr "Trois étapes · touche packages/ui et apps/desktop"
 
+#. placeholder {0}: name || ticket.url
+msgid "Ticket (closed): {0}"
+msgstr "Ticket (fermé) : {0}"
+
 msgid "Ticket to production under one day, median"
 msgstr "Du ticket à la production en moins d'un jour, en médiane"
+
+#. placeholder {0}: name || ticket.url
+msgid "Ticket: {0}"
+msgstr "Ticket : {0}"
 
 msgid "Tier"
 msgstr "Offre"

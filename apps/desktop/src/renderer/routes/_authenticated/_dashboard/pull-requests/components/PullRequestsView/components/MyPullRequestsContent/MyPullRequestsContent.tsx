@@ -3,9 +3,14 @@ import { Button } from "@superset/ui/button";
 import { cn } from "@superset/ui/utils";
 import { useQueries } from "@tanstack/react-query";
 import { useNavigate } from "@tanstack/react-router";
-import { useEffect, useMemo, useRef } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { GoGitPullRequest } from "react-icons/go";
 import { LuRefreshCw } from "react-icons/lu";
+import {
+	type ConversationTodo,
+	fetchHostConversationTodos,
+	hostConversationTodosQueryKey,
+} from "renderer/hooks/host-service/useHostConversationTodos";
 import {
 	type AgentConversation,
 	useAgentConversations,
@@ -23,22 +28,30 @@ import {
 import { useMyPullRequestsStore } from "renderer/routes/_authenticated/_dashboard/pull-requests/stores/myPullRequestsStore";
 import { usePullRequestsSplitViewStore } from "renderer/routes/_authenticated/_dashboard/pull-requests/stores/pullRequestsSplitViewStore";
 import type { MyPullRequestItem } from "renderer/routes/_authenticated/_dashboard/pull-requests/utils/describeMyPullRequest";
+import { pullRequestTodos } from "renderer/routes/_authenticated/_dashboard/pull-requests/utils/describePullRequestProgress";
 import {
 	filterMyPullRequests,
 	type MyPullRequestStateFilter,
 } from "renderer/routes/_authenticated/_dashboard/pull-requests/utils/filterMyPullRequests";
+import { groupMyPullRequestsByProject } from "renderer/routes/_authenticated/_dashboard/pull-requests/utils/groupMyPullRequestsByProject";
 import {
 	branchKey,
 	indexWorkspacesByBranch,
 	pickWorkspaceConversation,
 } from "renderer/routes/_authenticated/_dashboard/pull-requests/utils/matchPullRequestWorkspace";
-import { prioritizeMyPullRequests } from "renderer/routes/_authenticated/_dashboard/pull-requests/utils/prioritizeMyPullRequests";
+import {
+	type PrioritizedPullRequest,
+	prioritizeMyPullRequests,
+} from "renderer/routes/_authenticated/_dashboard/pull-requests/utils/prioritizeMyPullRequests";
+import { assignPullRequestProject } from "renderer/routes/_authenticated/_dashboard/pull-requests/utils/pullRequestProjects";
 import { navigateToV2Workspace } from "renderer/routes/_authenticated/_dashboard/utils/workspace-navigation";
 import { useHostWorkspaces } from "renderer/routes/_authenticated/providers/HostWorkspacesProvider";
+import { MyPullRequestProjectsDialog } from "./components/MyPullRequestProjectsDialog";
 import {
 	MY_PULL_REQUEST_COLUMNS,
 	MyPullRequestRow,
 } from "./components/MyPullRequestRow";
+import { MyPullRequestStatusLine } from "./components/MyPullRequestStatusLine";
 import { MyPullRequestsFilterBar } from "./components/MyPullRequestsFilterBar";
 import { actionLabels } from "./utils/myPullRequestLabels";
 
@@ -64,13 +77,14 @@ const SUMMARY_STATES: MyPullRequestStateFilter[] = [
 	"ready-to-merge",
 ];
 
-function listMine(target: HostQueryTarget, cachedOnly: boolean) {
+function listMine(target: HostQueryTarget, mode: "cached" | "quick" | "full") {
 	if (!target.hostUrl) return Promise.resolve(null);
 	return getHostServiceClientByUrl(
 		target.hostUrl,
 	).workspaceCreation.listMyPullRequests.query({
 		projectIds: target.projects.map((project) => project.projectId),
-		cachedOnly,
+		cachedOnly: mode === "cached",
+		withoutDetails: mode === "quick",
 	});
 }
 
@@ -96,12 +110,12 @@ export function MyPullRequestsContent({
 	);
 	const openUrl = electronTrpc.external.openUrl.useMutation();
 
-	// The host keeps its last answer in memory: show it at once, then let the
-	// GitHub round trip (several seconds) replace it.
+	// The host keeps its last answer, on disk too: show it at once, then let
+	// the GitHub round trip (4-6 s for ~50 PRs) replace it.
 	const cachedResults = useQueries({
 		queries: hostTargets.map((target) => ({
 			queryKey: ["pullRequests", "mine", "cached", target.key, target.hostUrl],
-			queryFn: () => listMine(target, true),
+			queryFn: () => listMine(target, "cached"),
 			enabled: !!target.hostUrl,
 			staleTime: Number.POSITIVE_INFINITY,
 			gcTime: 10 * 60_000,
@@ -110,15 +124,34 @@ export function MyPullRequestsContent({
 	const results = useQueries({
 		queries: hostTargets.map((target) => ({
 			queryKey: ["pullRequests", "mine", target.key, target.hostUrl],
-			queryFn: () => listMine(target, false),
+			queryFn: () => listMine(target, "full"),
 			enabled: !!target.hostUrl,
 			staleTime: 60_000,
 			gcTime: 10 * 60_000,
 			refetchInterval: REFRESH_INTERVAL_MS,
 		})),
 	});
+	// Nothing cached yet (first use, new project set): the search alone takes
+	// about a second, so list the PRs while their details load.
+	const quickResults = useQueries({
+		queries: hostTargets.map((target, index) => ({
+			queryKey: ["pullRequests", "mine", "quick", target.key, target.hostUrl],
+			queryFn: () => listMine(target, "quick"),
+			enabled:
+				!!target.hostUrl &&
+				cachedResults[index]?.isSuccess === true &&
+				cachedResults[index]?.data === null &&
+				!results[index]?.data,
+			staleTime: Number.POSITIVE_INFINITY,
+			gcTime: 60_000,
+		})),
+	});
 	const shown = hostTargets.map(
-		(_, index) => results[index]?.data ?? cachedResults[index]?.data ?? null,
+		(_, index) =>
+			results[index]?.data ??
+			cachedResults[index]?.data ??
+			quickResults[index]?.data ??
+			null,
 	);
 
 	const isFetching = results.some((result) => result.isFetching);
@@ -144,11 +177,16 @@ export function MyPullRequestsContent({
 	const mountedAt = useRef(performance.now());
 	const logged = useRef({ first: false, fresh: false });
 	const hasFresh = results.some((result) => result.data);
+	const firstSource = hasFresh
+		? "GitHub"
+		: cachedResults.some((result) => result.data)
+			? "host cache"
+			: "search only";
 	useEffect(() => {
 		if (!logged.current.first && hasData) {
 			logged.current.first = true;
 			console.info(
-				`[pull-requests:mine] first list after ${Math.round(performance.now() - mountedAt.current)} ms (${hasFresh ? "GitHub" : "host cache"})`,
+				`[pull-requests:mine] first list after ${Math.round(performance.now() - mountedAt.current)} ms (${firstSource})`,
 			);
 		}
 		if (!logged.current.fresh && hasFresh) {
@@ -158,10 +196,22 @@ export function MyPullRequestsContent({
 				timings,
 			);
 		}
-	}, [hasData, hasFresh, timings]);
+	}, [hasData, hasFresh, timings, firstSource]);
 
 	const filters = useMyPullRequestsStore();
-	const { pinned, later, togglePinned, toggleLater, toggleState } = filters;
+	const {
+		pinned,
+		later,
+		togglePinned,
+		toggleLater,
+		toggleState,
+		groupBy,
+		projects,
+		projectMoves,
+		movePullRequestToProject,
+	} = filters;
+	const byProject = groupBy === "project";
+	const [isEditingProjects, setIsEditingProjects] = useState(false);
 
 	const dataVersion = shown.map((result) => result?.fetchedAt).join(",");
 	// biome-ignore lint/correctness/useExhaustiveDependencies: pullRequests is rebuilt every render; dataVersion tracks when it really changes
@@ -203,6 +253,17 @@ export function MyPullRequestsContent({
 		() => prioritizeMyPullRequests(visible, { pinned, later }),
 		[visible, pinned, later],
 	);
+	const projectGroups = useMemo(
+		() =>
+			byProject || isEditingProjects
+				? groupMyPullRequestsByProject(groups, projects, projectMoves)
+				: [],
+		[byProject, isEditingProjects, groups, projects, projectMoves],
+	);
+	const projectCounts = useMemo(
+		() => new Map(projectGroups.map((group) => [group.key, group.rows.length])),
+		[projectGroups],
+	);
 	const onViewerCount = groups
 		.filter((group) => group.action !== "later")
 		.flatMap((group) => group.rows)
@@ -214,6 +275,27 @@ export function MyPullRequestsContent({
 		[workspaces],
 	);
 	const conversations = useAgentConversations();
+	// Same per-host query as the sidebar, so it is usually already cached.
+	const todoResults = useQueries({
+		queries: hostTargets.map((target) => ({
+			queryKey: hostConversationTodosQueryKey(target.hostUrl),
+			queryFn: () =>
+				target.hostUrl
+					? fetchHostConversationTodos(target.hostUrl)
+					: Promise.resolve(null),
+			enabled: byProject && !!target.hostUrl,
+			refetchInterval: 60_000,
+			staleTime: 5_000,
+		})),
+	});
+	const todosVersion = todoResults
+		.map((result) => result.dataUpdatedAt)
+		.join(",");
+	// biome-ignore lint/correctness/useExhaustiveDependencies: todoResults is a new array every render; todosVersion tracks its data
+	const allTodos = useMemo<ConversationTodo[]>(
+		() => todoResults.flatMap((result) => result.data ?? []),
+		[todosVersion],
+	);
 	const groupLabel = actionLabels();
 	const summaryLabel: Record<MyPullRequestStateFilter, (n: number) => string> =
 		{
@@ -238,6 +320,59 @@ export function MyPullRequestsContent({
 				state: "mine",
 			},
 		});
+	};
+
+	const renderRow = (row: PrioritizedPullRequest) => {
+		const { pr } = row;
+		const headRefName = pr.details?.headRefName;
+		const workspace = headRefName
+			? workspaceByBranch.get(branchKey(pr.projectId, headRefName))
+			: undefined;
+		const conversation = workspace
+			? pickWorkspaceConversation(conversations, workspace.id)
+			: null;
+		return (
+			<MyPullRequestRow
+				key={row.key}
+				row={row}
+				isSelected={
+					selectedPrNumber === pr.prNumber &&
+					(selectedPrProjectId == null || selectedPrProjectId === pr.projectId)
+				}
+				isPinned={pinned.includes(row.key)}
+				isLater={later.includes(row.key)}
+				workspace={workspace}
+				conversation={conversation}
+				onOpen={() => handleOpenPreview(pr)}
+				onTogglePinned={() => togglePinned(row.key)}
+				onToggleLater={() => toggleLater(row.key)}
+				onOpenOnGitHub={() => openUrl.mutate(pr.url)}
+				onOpenWorkspace={(workspaceId) =>
+					void navigateToV2Workspace(workspaceId, navigate)
+				}
+				onOpenConversation={openConversation}
+				projects={projects}
+				projectId={assignPullRequestProject(pr, projects, projectMoves)}
+				isMovedByHand={row.key in projectMoves}
+				onMoveToProject={(projectId) =>
+					movePullRequestToProject(row.key, projectId)
+				}
+				statusLine={
+					byProject ? (
+						<MyPullRequestStatusLine
+							pr={pr}
+							conversation={conversation}
+							todos={pullRequestTodos(allTodos, {
+								workspaceId: workspace?.id ?? null,
+								url: pr.url,
+							})}
+							onOpenUrl={(url) => openUrl.mutate(url)}
+							onOpenConversation={openConversation}
+						/>
+					) : undefined
+				}
+			/>
+		);
 	};
 
 	const openConversation = (conversation: AgentConversation) => {
@@ -336,7 +471,16 @@ export function MyPullRequestsContent({
 					/>
 				</Button>
 			</div>
-			<MyPullRequestsFilterBar counts={counts} />
+			<MyPullRequestsFilterBar
+				counts={counts}
+				onEditProjects={() => setIsEditingProjects(true)}
+			/>
+			{isEditingProjects && (
+				<MyPullRequestProjectsDialog
+					counts={projectCounts}
+					onClose={() => setIsEditingProjects(false)}
+				/>
+			)}
 
 			<div className="min-h-0 flex-1 overflow-y-auto">
 				{error && !hasData ? (
@@ -439,56 +583,48 @@ export function MyPullRequestsContent({
 							<span className={cn("shrink-0", MY_PULL_REQUEST_COLUMNS.link)} />
 							<span className={cn("shrink-0", MY_PULL_REQUEST_COLUMNS.menu)} />
 						</div>
-						{groups.map((group) => (
-							<section key={group.action} className="flex flex-col px-2">
-								<h3 className="flex items-baseline gap-2 px-2 pt-3 pb-1 text-[11px]">
-									<span className="font-medium text-foreground">
-										{groupLabel[group.action].title}
-									</span>
-									<span className="text-muted-foreground tabular-nums">
-										{group.rows.length}
-									</span>
-									<span className="truncate text-muted-foreground/70">
-										{groupLabel[group.action].hint}
-									</span>
-								</h3>
-								{group.rows.map((row) => {
-									const { pr } = row;
-									const headRefName = pr.details?.headRefName;
-									const workspace = headRefName
-										? workspaceByBranch.get(
-												branchKey(pr.projectId, headRefName),
-											)
-										: undefined;
-									const conversation = workspace
-										? pickWorkspaceConversation(conversations, workspace.id)
-										: null;
-									return (
-										<MyPullRequestRow
-											key={row.key}
-											row={row}
-											isSelected={
-												selectedPrNumber === pr.prNumber &&
-												(selectedPrProjectId == null ||
-													selectedPrProjectId === pr.projectId)
-											}
-											isPinned={pinned.includes(row.key)}
-											isLater={later.includes(row.key)}
-											workspace={workspace}
-											conversation={conversation}
-											onOpen={() => handleOpenPreview(pr)}
-											onTogglePinned={() => togglePinned(row.key)}
-											onToggleLater={() => toggleLater(row.key)}
-											onOpenOnGitHub={() => openUrl.mutate(pr.url)}
-											onOpenWorkspace={(workspaceId) =>
-												void navigateToV2Workspace(workspaceId, navigate)
-											}
-											onOpenConversation={openConversation}
-										/>
-									);
-								})}
-							</section>
-						))}
+						{byProject
+							? projectGroups.map((project) => (
+									<section key={project.key} className="flex flex-col px-2">
+										<h3 className="flex items-baseline gap-2 px-2 pt-3 pb-1 text-[11px]">
+											<span className="font-medium text-foreground">
+												{project.name ?? t`Other`}
+											</span>
+											<span className="text-muted-foreground tabular-nums">
+												{project.rows.length}
+											</span>
+											<span className="truncate text-muted-foreground/70">
+												{[
+													project.onViewer > 0 &&
+														t`${project.onViewer} waiting on you`,
+													project.toReview > 0 &&
+														t`${project.toReview} to review`,
+													project.toFix > 0 && t`${project.toFix} to fix`,
+													project.toMerge > 0 && t`${project.toMerge} to merge`,
+												]
+													.filter(Boolean)
+													.join(" · ")}
+											</span>
+										</h3>
+										{project.rows.map(renderRow)}
+									</section>
+								))
+							: groups.map((group) => (
+									<section key={group.action} className="flex flex-col px-2">
+										<h3 className="flex items-baseline gap-2 px-2 pt-3 pb-1 text-[11px]">
+											<span className="font-medium text-foreground">
+												{groupLabel[group.action].title}
+											</span>
+											<span className="text-muted-foreground tabular-nums">
+												{group.rows.length}
+											</span>
+											<span className="truncate text-muted-foreground/70">
+												{groupLabel[group.action].hint}
+											</span>
+										</h3>
+										{group.rows.map(renderRow)}
+									</section>
+								))}
 					</div>
 				)}
 			</div>

@@ -36,6 +36,7 @@ import {
 	type ResolvedGithubRepo,
 	resolveGithubRepo,
 } from "../shared/project-helpers";
+import { extractTicketLinks, type TicketLink } from "../shared/ticket-links";
 import type { ExecGh } from "../utils/exec-gh";
 
 interface PullRequestResult {
@@ -59,6 +60,10 @@ interface PullRequestResult {
 	/** null when the viewer is unknown (only the GraphQL pass resolves it). */
 	viewerIsAuthor: boolean | null;
 	reviewRequestedFromViewer: boolean | null;
+	/** Only from a search: the Notion/Linear/Jira links of its body. */
+	ticketLinks?: TicketLink[];
+	/** Only from a search: label names. */
+	labels?: string[];
 }
 
 type PullRequestMergeable = "MERGEABLE" | "CONFLICTING" | "UNKNOWN";
@@ -714,7 +719,20 @@ const searchIssuesItemSchema = z.object({
 		.optional(),
 	updated_at: z.string().optional(),
 	repository_url: z.string().optional(),
+	body: z.string().nullable().optional(),
+	labels: z
+		.array(z.object({ name: z.string().optional() }).passthrough())
+		.optional(),
 });
+
+function labelNames(
+	labels: Array<{ name?: string } | string> | undefined,
+): string[] {
+	return (labels ?? []).flatMap((label) => {
+		const name = typeof label === "string" ? label : label.name;
+		return name ? [name] : [];
+	});
+}
 
 const searchIssuesResponseSchema = z.object({
 	total_count: z.number(),
@@ -775,6 +793,8 @@ export async function ghApiSearchPullRequests(
 					deletions: null,
 					headRefName: null,
 					...UNKNOWN_VIEWER_FIELDS,
+					ticketLinks: extractTicketLinks(item.body),
+					labels: labelNames(item.labels),
 				},
 			];
 		});
@@ -825,6 +845,8 @@ export async function octokitSearchPullRequests(
 					deletions: null,
 					headRefName: null,
 					...UNKNOWN_VIEWER_FIELDS,
+					ticketLinks: extractTicketLinks(item.body),
+					labels: labelNames(item.labels),
 				},
 			];
 		});

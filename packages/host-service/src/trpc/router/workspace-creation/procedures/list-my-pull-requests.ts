@@ -14,7 +14,12 @@ import {
 	type MyPullRequestDetails,
 	parseDetailsResponse,
 } from "../shared/my-pull-requests";
+import {
+	defaultMyPullRequestsCachePath,
+	MyPullRequestsCache,
+} from "../shared/my-pull-requests-cache";
 import { resolveGithubRepo } from "../shared/project-helpers";
+import type { TicketLink } from "../shared/ticket-links";
 import {
 	ghApiSearchPullRequests,
 	octokitSearchPullRequests,
@@ -29,7 +34,9 @@ export type MyPullRequest = {
 	isDraft: boolean;
 	authorLogin: string | null;
 	updatedAt: string | null;
-	/** null when the details call failed for this PR. */
+	ticketLinks: TicketLink[];
+	labels: string[];
+	/** null when the details call failed or was skipped for this PR. */
 	details: MyPullRequestDetails | null;
 };
 
@@ -38,6 +45,8 @@ export interface MyPullRequestsResult {
 	fetchedAt: string;
 	/** Some repos or details did not load, or a search hit its page size. */
 	incomplete: boolean;
+	/** Search only: details are still to come in a full answer. */
+	withoutDetails?: boolean;
 	timings: { searchMs: number; detailsMs: number; totalMs: number };
 }
 
@@ -49,19 +58,18 @@ const RELATIONSHIP_QUALIFIERS = [
 ];
 const SEARCH_PAGE_SIZE = 100;
 
-// The last answer per project set, so a reopened view shows it at once and
-// refreshes behind. Lives as long as the host process; a few entries cover
-// the project filters in use.
-const MAX_CACHED_RESULTS = 4;
-const lastResults = new Map<string, MyPullRequestsResult>();
+// Read lazily on the first call, so a test or a host without a home dir
+// never touches the disk at import.
+let cache: MyPullRequestsCache<MyPullRequestsResult> | null = null;
+function lastResults(): MyPullRequestsCache<MyPullRequestsResult> {
+	cache ??= new MyPullRequestsCache(defaultMyPullRequestsCachePath());
+	return cache;
+}
 
-function rememberResult(key: string, result: MyPullRequestsResult): void {
-	lastResults.delete(key);
-	lastResults.set(key, result);
-	for (const oldest of lastResults.keys()) {
-		if (lastResults.size <= MAX_CACHED_RESULTS) break;
-		lastResults.delete(oldest);
-	}
+function sortByUpdated(pullRequests: MyPullRequest[]): MyPullRequest[] {
+	return pullRequests.sort((a, b) =>
+		(b.updatedAt ?? "").localeCompare(a.updatedAt ?? ""),
+	);
 }
 
 export const listMyPullRequests = protectedProcedure
@@ -70,11 +78,16 @@ export const listMyPullRequests = protectedProcedure
 			projectIds: z.array(z.string()).min(1).max(200),
 			/** Answer from memory only, without calling GitHub. */
 			cachedOnly: z.boolean().optional(),
+			/**
+			 * Skip the per-PR details call: about a second instead of several,
+			 * for a first paint when nothing is cached. Not cached.
+			 */
+			withoutDetails: z.boolean().optional(),
 		}),
 	)
 	.query(async ({ ctx, input }): Promise<MyPullRequestsResult | null> => {
 		const cacheKey = [...input.projectIds].sort().join(",");
-		if (input.cachedOnly) return lastResults.get(cacheKey) ?? null;
+		if (input.cachedOnly) return lastResults().get(cacheKey);
 		const startedAt = performance.now();
 		const projectRepos = await resolveProjectRepos(
 			input.projectIds,
@@ -150,8 +163,24 @@ export const listMyPullRequests = protectedProcedure
 					isDraft: item.isDraft,
 					authorLogin: item.authorLogin,
 					updatedAt: item.updatedAt,
+					ticketLinks: item.ticketLinks ?? [],
+					labels: item.labels ?? [],
 					details: null,
 				});
+			}
+
+			if (input.withoutDetails) {
+				return {
+					pullRequests: sortByUpdated([...byKey.values()]),
+					fetchedAt: new Date().toISOString(),
+					incomplete: searchFailures.length > 0,
+					withoutDetails: true,
+					timings: {
+						searchMs: Math.round(searchMs),
+						detailsMs: 0,
+						totalMs: Math.round(performance.now() - startedAt),
+					},
+				};
 			}
 
 			const detailsStartedAt = performance.now();
@@ -205,9 +234,7 @@ export const listMyPullRequests = protectedProcedure
 			}
 			const detailsMs = performance.now() - detailsStartedAt;
 
-			const pullRequests = [...byKey.values()].sort((a, b) =>
-				(b.updatedAt ?? "").localeCompare(a.updatedAt ?? ""),
-			);
+			const pullRequests = sortByUpdated([...byKey.values()]);
 			const result: MyPullRequestsResult = {
 				pullRequests,
 				fetchedAt: new Date().toISOString(),
@@ -221,7 +248,7 @@ export const listMyPullRequests = protectedProcedure
 					totalMs: Math.round(performance.now() - startedAt),
 				},
 			};
-			rememberResult(cacheKey, result);
+			void lastResults().remember(cacheKey, result);
 			return result;
 		} catch (error) {
 			throw githubRequestError(error, ctx.credentials);

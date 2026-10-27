@@ -525,10 +525,26 @@ msgstr "已終止{0}個會話"
 msgid "{0} terminated, {1} remaining"
 msgstr "已終止{0}個，剩餘{1}個"
 
+#. placeholder {0}: project.toFix
+msgid "{0} to fix"
+msgstr "{0} 個待修正"
+
+#. placeholder {0}: project.toMerge
+msgid "{0} to merge"
+msgstr "{0} 個待合併"
+
 #. placeholder {0}: formatTokens(aboveGap > 0n ? aboveGap : 0n)
 #. placeholder {1}: formatNumber(above.rank)
 msgid "{0} to pass #{1}"
 msgstr "再 {0} 即可超越 #{1}"
+
+#. placeholder {0}: project.toReview
+msgid "{0} to review"
+msgstr "{0} 個待審查"
+
+#. placeholder {0}: todos.length
+msgid "{0} to-dos:"
+msgstr "{0} 個待辦:"
 
 #. placeholder {0}: formatTokens(tokens)
 msgid "{0} tokens in the last 30 days. Publishing as <0>{handle}</0>."
@@ -556,6 +572,10 @@ msgstr "{0} 已更新"
 #. placeholder {1}: right.name
 msgid "{0} vs {1}"
 msgstr "{0} 對戰 {1}"
+
+#. placeholder {0}: project.onViewer
+msgid "{0} waiting on you"
+msgstr "{0} 個等你處理"
 
 #. placeholder {0}: file.path
 msgid "{0} was deleted in this change."
@@ -741,6 +761,9 @@ msgstr "{closedCount}項未開啟"
 
 msgid "{commitCount, plural, one {# commit} other {# commits}}"
 msgstr "{commitCount, plural, one {#個提交} other {#個提交}}"
+
+msgid "{commitCount} commits"
+msgstr "{commitCount} 個提交"
 
 #. placeholder {0}: relevant.length
 msgid "{completed} of {0} checks complete"
@@ -1395,11 +1418,17 @@ msgstr "$0"
 msgid "1"
 msgstr "1"
 
+msgid "1 commit"
+msgstr "1 個提交"
+
 msgid "1 cookie — forget this site"
 msgstr "1個cookie——忘記此站點"
 
 msgid "1 hr"
 msgstr "1 小時"
+
+msgid "1 to-do:"
+msgstr "1 個待辦:"
 
 msgid "1 user"
 msgstr "1個使用者"
@@ -1590,6 +1619,9 @@ msgstr "此終端中仍有處理程序在執行"
 
 msgid "A pull request always gets its own worktree"
 msgstr "拉取請求總是使用自己的 worktree"
+
+msgid "A pull request goes to the project you moved it to, else to the first project whose rules match: a PR number first, then a label, then a keyword. The rest goes to Other. Separate values with commas."
+msgstr "拉取請求會進入你移動到的專案，否則進入第一個規則相符的專案：先看 PR 編號，再看標籤，最後看關鍵字。其餘的進入「其他」。多個值以逗號分隔。"
 
 msgid "A rebuilt chat surface for driving agents: richer tool output, smoother steering, faster everything."
 msgstr "重建的代理程式驅動聊天介面：更豐富的工具輸出、更順手的引導，一切都更快。"
@@ -2017,8 +2049,17 @@ msgstr "代理程式對話"
 msgid "Agent credentials changed"
 msgstr "代理憑證已變更"
 
+msgid "Agent done, not read"
+msgstr "代理已完成，未讀"
+
+msgid "Agent failed"
+msgstr "代理失敗"
+
 msgid "Agent finished"
 msgstr "代理程式已完成"
+
+msgid "Agent idle"
+msgstr "代理閒置"
 
 msgid "Agent Independence"
 msgstr "代理程式無關"
@@ -2028,6 +2069,9 @@ msgstr "代理程式正在工作"
 
 msgid "Agent launch configuration"
 msgstr "代理程式啟動配置"
+
+msgid "Agent needs permission"
+msgstr "代理需要權限"
 
 msgid "Agent picker (Claude, Codex, Cursor…) used by every session-creation flow"
 msgstr "代理程式選擇器（Claude、Codex、Cursor…），所有建立會話的流程都在用"
@@ -2067,6 +2111,12 @@ msgstr "代理程式設定"
 
 msgid "Agent usage rankings"
 msgstr "代理程式使用量排行"
+
+msgid "Agent waiting on you"
+msgstr "代理在等你"
+
+msgid "Agent working"
+msgstr "代理工作中"
 
 msgid "Agent-driven previews"
 msgstr "由代理程式驅動的預覽"
@@ -3042,6 +3092,9 @@ msgstr "返回頁面"
 
 msgid "Back to the leaderboard"
 msgstr "返回排行榜"
+
+msgid "Back to the project its rules pick"
+msgstr "回到規則選擇的專案"
 
 msgid "Backed by"
 msgstr "投資方"
@@ -4420,6 +4473,9 @@ msgstr "評論這個頁面"
 
 msgid "Comment."
 msgstr "留言。"
+
+msgid "commented"
+msgstr "已留言"
 
 msgid "Commented"
 msgstr "已評論"
@@ -6065,6 +6121,10 @@ msgstr "刪除「{projectName}」？"
 msgid "Delete “{title}”?"
 msgstr "刪除「{title}」？"
 
+#. placeholder {0}: project.name
+msgid "Delete {0}"
+msgstr "刪除 {0}"
+
 #. placeholder {0}: organization.name
 #. placeholder {0}: secret.key
 msgid "Delete {0}?"
@@ -6768,6 +6828,9 @@ msgstr "截止"
 msgid "Duration"
 msgstr "耗時"
 
+msgid "e.g. #2701, spore-bio/hub#3025"
+msgstr "例如 #2701, spore-bio/hub#3025"
+
 msgid "e.g. Add dark mode, Fix checkout bug"
 msgstr "例如：新增深色模式、修復結帳bug"
 
@@ -6859,6 +6922,9 @@ msgstr "在GitHub上編輯"
 
 msgid "Edit prefix"
 msgstr "編輯字首"
+
+msgid "Edit projects"
+msgstr "編輯專案"
 
 msgid "Edit Run Script"
 msgstr "編輯執行指令碼"
@@ -8379,6 +8445,9 @@ msgstr "GitHub整合"
 msgid "GitHub issues"
 msgstr "GitHub議題"
 
+msgid "GitHub labels, e.g. spore-app-redesign"
+msgstr "GitHub 標籤，例如 spore-app-redesign"
+
 msgid "GitHub rate limit reached"
 msgstr "已達到 GitHub 速率限制"
 
@@ -8492,6 +8561,10 @@ msgstr "群組操作"
 
 msgid "Group by"
 msgstr "分組方式"
+
+#. placeholder {0}: grouping.label
+msgid "Group by {0}"
+msgstr "依{0}分組"
 
 msgid "Group new branches under a folder."
 msgstr "將新分支歸入一個資料夾。"
@@ -9084,6 +9157,9 @@ msgstr "在Superset桌面應用程式中開啟<0>設定 → 外觀 → 主題</0
 msgid "In the Superset desktop app, open Settings → Remote Access and turn on “Allow remote access to this device via relay”."
 msgstr "在Superset桌面應用程式中開啟「設定 → 遠端存取」，開啟「允許遠端工作區通過中繼存取此裝置」。"
 
+msgid "In the title or branch, e.g. audit trail, e-signature"
+msgstr "在標題或分支中，例如 audit trail, e-signature"
+
 msgid "In under a year, more than 145,000 developers across 180 countries have run Superset and created over 1.85 million agent workspaces."
 msgstr "不到一年，來自 180 個國家、超過 145,000 名開發者執行過 Superset，並建立了超過 185 萬個 agent 工作區。"
 
@@ -9594,6 +9670,9 @@ msgstr "鍵盤快速鍵"
 msgid "Keyboard Shortcuts"
 msgstr "鍵盤快速鍵"
 
+msgid "Keywords"
+msgstr "關鍵字"
+
 msgid "Kill"
 msgstr "終止"
 
@@ -9694,6 +9773,9 @@ msgstr "最近代理程式活動{0}"
 
 msgid "Last attached"
 msgstr "上次連線"
+
+msgid "Last commit {lastCommitAgo} ago"
+msgstr "最後提交於 {lastCommitAgo} 前"
 
 msgid "Last day of each month"
 msgstr "每月最後一天"
@@ -10784,6 +10866,10 @@ msgstr "軟體史的大部分時間"
 msgid "Move"
 msgstr "移動"
 
+#. placeholder {0}: project.name
+msgid "Move {0} up"
+msgstr "上移 {0}"
+
 msgid "Move {count} to Group"
 msgstr "將{count}個移動到群組"
 
@@ -10796,11 +10882,17 @@ msgstr "移動到群組"
 msgid "Move to later"
 msgstr "移到稍後"
 
+msgid "Move to project…"
+msgstr "移動到專案…"
+
 msgid "Move to Right Side"
 msgstr "移到右側"
 
 msgid "Move to Tab"
 msgstr "移動到分頁"
+
+msgid "Move up"
+msgstr "上移"
 
 msgid "Moved down by you"
 msgstr "你移到下方的"
@@ -11019,6 +11111,9 @@ msgstr "新成員會收到加入 {organizationName} 的電子郵件邀請，加�
 msgid "New project"
 msgstr "新建專案"
 
+msgid "New project name"
+msgstr "新專案名稱"
+
 msgid "New push to branch"
 msgstr "向分支推送了新提交"
 
@@ -11097,6 +11192,9 @@ msgstr "下一頁"
 
 msgid "Next (Enter)"
 msgstr "下一個匹配項（Enter）"
+
+msgid "Next action"
+msgstr "下一步"
 
 msgid "Next branch"
 msgstr "下一個分支"
@@ -11576,6 +11674,9 @@ msgstr "沒有可用的專案"
 msgid "No project selected"
 msgstr "未選擇專案"
 
+msgid "No project yet: every pull request is in Other."
+msgstr "還沒有專案：所有拉取請求都在「其他」中。"
+
 msgid "No project<0>session</0>"
 msgstr "無專案<0>會話</0>"
 
@@ -11740,6 +11841,9 @@ msgstr "未找到主題。"
 
 msgid "No themes were imported"
 msgstr "沒有匯入任何主題"
+
+msgid "No ticket"
+msgstr "無工單"
 
 msgid "No triggers"
 msgstr "沒有觸發器"
@@ -11966,6 +12070,9 @@ msgstr "通知"
 
 msgid "Notion is not configured for this environment."
 msgstr "目前環境未配置Notion。"
+
+msgid "Notion page"
+msgstr "Notion 頁面"
 
 msgid "now"
 msgstr "剛剛"
@@ -13818,6 +13925,9 @@ msgstr "拉取請求"
 msgid "Pull Requests"
 msgstr "拉取請求"
 
+msgid "Pull requests in this project now"
+msgstr "目前在此專案中的拉取請求"
+
 msgid "Purple"
 msgstr "紫色"
 
@@ -14928,6 +15038,9 @@ msgstr "審查待處理的更改。"
 
 msgid "Review pull requests inside Superset: diff pane, agent-assisted review, act on comments directly."
 msgstr "在Superset裡審查拉取請求：差異面板、代理程式輔助審查、直接處理評論。"
+
+msgid "review requested"
+msgstr "已請求審查"
 
 msgid "Review requested"
 msgstr "已請求審查"
@@ -18521,8 +18634,16 @@ msgstr "未找到討論串"
 msgid "Three steps · touches packages/ui and apps/desktop"
 msgstr "三個步驟 · 涉及packages/ui和apps/desktop"
 
+#. placeholder {0}: name || ticket.url
+msgid "Ticket (closed): {0}"
+msgstr "工單（已關閉）：{0}"
+
 msgid "Ticket to production under one day, median"
 msgstr "從工單到上線中位不足一天"
+
+#. placeholder {0}: name || ticket.url
+msgid "Ticket: {0}"
+msgstr "工單：{0}"
 
 msgid "Tier"
 msgstr "等級"
