@@ -525,10 +525,26 @@ msgstr "Ukončeno relací: {0}"
 msgid "{0} terminated, {1} remaining"
 msgstr "{0} ukončeno, {1} zbývá"
 
+#. placeholder {0}: project.toFix
+msgid "{0} to fix"
+msgstr "{0} k opravě"
+
+#. placeholder {0}: project.toMerge
+msgid "{0} to merge"
+msgstr "{0} ke sloučení"
+
 #. placeholder {0}: formatTokens(aboveGap > 0n ? aboveGap : 0n)
 #. placeholder {1}: formatNumber(above.rank)
 msgid "{0} to pass #{1}"
 msgstr "{0} k předstižení #{1}"
+
+#. placeholder {0}: project.toReview
+msgid "{0} to review"
+msgstr "{0} k revizi"
+
+#. placeholder {0}: todos.length
+msgid "{0} to-dos:"
+msgstr "{0} úkolů:"
 
 #. placeholder {0}: formatTokens(tokens)
 msgid "{0} tokens in the last 30 days. Publishing as <0>{handle}</0>."
@@ -556,6 +572,10 @@ msgstr "{0} aktualizován"
 #. placeholder {1}: right.name
 msgid "{0} vs {1}"
 msgstr "{0} proti {1}"
+
+#. placeholder {0}: project.onViewer
+msgid "{0} waiting on you"
+msgstr "{0} čeká na vás"
 
 #. placeholder {0}: file.path
 msgid "{0} was deleted in this change."
@@ -741,6 +761,9 @@ msgstr "{closedCount} zavřených"
 
 msgid "{commitCount, plural, one {# commit} other {# commits}}"
 msgstr "{commitCount, plural, one {# commit} few {# commity} many {# commitu} other {# commitů}}"
+
+msgid "{commitCount} commits"
+msgstr "{commitCount} commitů"
 
 #. placeholder {0}: relevant.length
 msgid "{completed} of {0} checks complete"
@@ -1395,11 +1418,17 @@ msgstr "0 $"
 msgid "1"
 msgstr "1"
 
+msgid "1 commit"
+msgstr "1 commit"
+
 msgid "1 cookie — forget this site"
 msgstr "1 cookie — zapomenout tento web"
 
 msgid "1 hr"
 msgstr "1 h"
+
+msgid "1 to-do:"
+msgstr "1 úkol:"
 
 msgid "1 user"
 msgstr "1 uživatel"
@@ -2017,8 +2046,17 @@ msgstr "Konverzace agentů"
 msgid "Agent credentials changed"
 msgstr "Přihlašovací údaje agenta se změnily"
 
+msgid "Agent done, not read"
+msgstr "Agent hotov, nepřečteno"
+
+msgid "Agent failed"
+msgstr "Agent selhal"
+
 msgid "Agent finished"
 msgstr "Agent dokončil"
+
+msgid "Agent idle"
+msgstr "Agent nečinný"
 
 msgid "Agent Independence"
 msgstr "Nezávislost na agentovi"
@@ -2028,6 +2066,9 @@ msgstr "Agent pracuje"
 
 msgid "Agent launch configuration"
 msgstr "Konfigurace spuštění agenta"
+
+msgid "Agent needs permission"
+msgstr "Agent potřebuje povolení"
 
 msgid "Agent picker (Claude, Codex, Cursor…) used by every session-creation flow"
 msgstr "Výběr agenta (Claude, Codex, Cursor…) používaný ve všech tocích vytváření relace"
@@ -2067,6 +2108,12 @@ msgstr "nastavení agenta"
 
 msgid "Agent usage rankings"
 msgstr "Žebříček využití agentů"
+
+msgid "Agent waiting on you"
+msgstr "Agent čeká na vás"
+
+msgid "Agent working"
+msgstr "Agent pracuje"
 
 msgid "Agent-driven previews"
 msgstr "Náhledy řízené agenty"
@@ -4420,6 +4467,9 @@ msgstr "Okomentovat tuto stránku"
 
 msgid "Comment."
 msgstr "Komentujte."
+
+msgid "commented"
+msgstr "komentoval"
 
 msgid "Commented"
 msgstr "Okomentováno"
@@ -8493,6 +8543,10 @@ msgstr "Akce skupiny"
 msgid "Group by"
 msgstr "Seskupit podle"
 
+#. placeholder {0}: grouping.label
+msgid "Group by {0}"
+msgstr "Seskupit podle: {0}"
+
 msgid "Group new branches under a folder."
 msgstr "Seskupit nové větve pod složku."
 
@@ -9694,6 +9748,9 @@ msgstr "Poslední aktivita agenta {0}"
 
 msgid "Last attached"
 msgstr "Naposledy připojeno"
+
+msgid "Last commit {lastCommitAgo} ago"
+msgstr "Poslední commit před {lastCommitAgo}"
 
 msgid "Last day of each month"
 msgstr "Poslední den v měsíci"
@@ -11098,6 +11155,9 @@ msgstr "Další"
 msgid "Next (Enter)"
 msgstr "Další (Enter)"
 
+msgid "Next action"
+msgstr "Další krok"
+
 msgid "Next branch"
 msgstr "Další větev"
 
@@ -11741,6 +11801,9 @@ msgstr "Nenalezeny žádné motivy."
 msgid "No themes were imported"
 msgstr "Nebyly importovány žádné motivy"
 
+msgid "No ticket"
+msgstr "Bez tiketu"
+
 msgid "No triggers"
 msgstr "Žádné spouštěče"
 
@@ -11966,6 +12029,9 @@ msgstr "Oznámení"
 
 msgid "Notion is not configured for this environment."
 msgstr "Notion není pro toto prostředí nastavený."
+
+msgid "Notion page"
+msgstr "Stránka Notion"
 
 msgid "now"
 msgstr "teď"
@@ -14928,6 +14994,9 @@ msgstr "Zkontrolujte čekající změny."
 
 msgid "Review pull requests inside Superset: diff pane, agent-assisted review, act on comments directly."
 msgstr "Revidujte pull requesty přímo v Superset: panel rozdílů, revize s pomocí agenta, práce s komentáři na místě."
+
+msgid "review requested"
+msgstr "žádost o revizi"
 
 msgid "Review requested"
 msgstr "Vyžádána revize"
@@ -18521,8 +18590,16 @@ msgstr "Vlákno nenalezeno"
 msgid "Three steps · touches packages/ui and apps/desktop"
 msgstr "Tři kroky · dotýká se packages/ui a apps/desktop"
 
+#. placeholder {0}: name || ticket.url
+msgid "Ticket (closed): {0}"
+msgstr "Tiket (uzavřený): {0}"
+
 msgid "Ticket to production under one day, median"
 msgstr "Od ticketu do produkce pod jeden den, medián"
+
+#. placeholder {0}: name || ticket.url
+msgid "Ticket: {0}"
+msgstr "Tiket: {0}"
 
 msgid "Tier"
 msgstr "Tarif"

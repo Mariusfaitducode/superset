@@ -525,10 +525,26 @@ msgstr "{0} sessions arrêtées"
 msgid "{0} terminated, {1} remaining"
 msgstr "{0} arrêtées, {1} restantes"
 
+#. placeholder {0}: project.toFix
+msgid "{0} to fix"
+msgstr "{0} à corriger"
+
+#. placeholder {0}: project.toMerge
+msgid "{0} to merge"
+msgstr "{0} à merger"
+
 #. placeholder {0}: formatTokens(aboveGap > 0n ? aboveGap : 0n)
 #. placeholder {1}: formatNumber(above.rank)
 msgid "{0} to pass #{1}"
 msgstr "{0} pour dépasser le n°{1}"
+
+#. placeholder {0}: project.toReview
+msgid "{0} to review"
+msgstr "{0} à relire"
+
+#. placeholder {0}: todos.length
+msgid "{0} to-dos:"
+msgstr "{0} to-dos :"
 
 #. placeholder {0}: formatTokens(tokens)
 msgid "{0} tokens in the last 30 days. Publishing as <0>{handle}</0>."
@@ -556,6 +572,10 @@ msgstr "{0} mis à jour"
 #. placeholder {1}: right.name
 msgid "{0} vs {1}"
 msgstr "{0} contre {1}"
+
+#. placeholder {0}: project.onViewer
+msgid "{0} waiting on you"
+msgstr "{0} t'attendent"
 
 #. placeholder {0}: file.path
 msgid "{0} was deleted in this change."
@@ -741,6 +761,9 @@ msgstr "{closedCount} fermées"
 
 msgid "{commitCount, plural, one {# commit} other {# commits}}"
 msgstr "{commitCount, plural, one {# commit} other {# commits}}"
+
+msgid "{commitCount} commits"
+msgstr "{commitCount} commits"
 
 #. placeholder {0}: relevant.length
 msgid "{completed} of {0} checks complete"
@@ -1395,11 +1418,17 @@ msgstr "$0"
 msgid "1"
 msgstr "1"
 
+msgid "1 commit"
+msgstr "1 commit"
+
 msgid "1 cookie — forget this site"
 msgstr "1 cookie — oublier ce site"
 
 msgid "1 hr"
 msgstr "1 h"
+
+msgid "1 to-do:"
+msgstr "1 to-do :"
 
 msgid "1 user"
 msgstr "1 utilisateur"
@@ -2017,8 +2046,17 @@ msgstr "Conversations des agents"
 msgid "Agent credentials changed"
 msgstr "Les identifiants de l'agent ont changé"
 
+msgid "Agent done, not read"
+msgstr "Agent terminé, non lu"
+
+msgid "Agent failed"
+msgstr "Agent en échec"
+
 msgid "Agent finished"
 msgstr "Agent terminé"
+
+msgid "Agent idle"
+msgstr "Agent inactif"
 
 msgid "Agent Independence"
 msgstr "Indépendance des agents"
@@ -2028,6 +2066,9 @@ msgstr "L’agent travaille"
 
 msgid "Agent launch configuration"
 msgstr "Configuration de lancement de l'agent"
+
+msgid "Agent needs permission"
+msgstr "L'agent attend une permission"
 
 msgid "Agent picker (Claude, Codex, Cursor…) used by every session-creation flow"
 msgstr "Sélecteur d'agent (Claude, Codex, Cursor…) utilisé par tous les flux de création de session"
@@ -2067,6 +2108,12 @@ msgstr "paramètres de l'agent"
 
 msgid "Agent usage rankings"
 msgstr "Classements d'utilisation des agents"
+
+msgid "Agent waiting on you"
+msgstr "L'agent t'attend"
+
+msgid "Agent working"
+msgstr "Agent au travail"
 
 msgid "Agent-driven previews"
 msgstr "Aperçus pilotés par l'agent"
@@ -4420,6 +4467,9 @@ msgstr "Commenter cette page"
 
 msgid "Comment."
 msgstr "Commentez."
+
+msgid "commented"
+msgstr "a commenté"
 
 msgid "Commented"
 msgstr "Commentée"
@@ -8493,6 +8543,10 @@ msgstr "Actions de groupe"
 msgid "Group by"
 msgstr "Regrouper par"
 
+#. placeholder {0}: grouping.label
+msgid "Group by {0}"
+msgstr "Grouper par {0}"
+
 msgid "Group new branches under a folder."
 msgstr "Regroupez les nouvelles branches dans un dossier."
 
@@ -9694,6 +9748,9 @@ msgstr "Dernière activité de l'agent {0}"
 
 msgid "Last attached"
 msgstr "Dernier attachement"
+
+msgid "Last commit {lastCommitAgo} ago"
+msgstr "Dernier commit il y a {lastCommitAgo}"
 
 msgid "Last day of each month"
 msgstr "Dernier jour de chaque mois"
@@ -11098,6 +11155,9 @@ msgstr "Suivant"
 msgid "Next (Enter)"
 msgstr "Suivant (Entrée)"
 
+msgid "Next action"
+msgstr "Prochaine action"
+
 msgid "Next branch"
 msgstr "Branche suivante"
 
@@ -11741,6 +11801,9 @@ msgstr "Aucun thème trouvé."
 msgid "No themes were imported"
 msgstr "Aucun thème n'a été importé"
 
+msgid "No ticket"
+msgstr "Pas de ticket"
+
 msgid "No triggers"
 msgstr "Aucun déclencheur"
 
@@ -11966,6 +12029,9 @@ msgstr "Notifications"
 
 msgid "Notion is not configured for this environment."
 msgstr "Notion n'est pas configuré pour cet environnement."
+
+msgid "Notion page"
+msgstr "Page Notion"
 
 msgid "now"
 msgstr "à l'instant"
@@ -14928,6 +14994,9 @@ msgstr "Passer en revue les modifications en attente."
 
 msgid "Review pull requests inside Superset: diff pane, agent-assisted review, act on comments directly."
 msgstr "Passez vos pull requests en revue dans Superset : volet de diff, revue assistée par agent, action directe sur les commentaires."
+
+msgid "review requested"
+msgstr "relecture demandée"
 
 msgid "Review requested"
 msgstr "Revue demandée"
@@ -18521,8 +18590,16 @@ msgstr "Fil introuvable"
 msgid "Three steps · touches packages/ui and apps/desktop"
 msgstr "Trois étapes · touche packages/ui et apps/desktop"
 
+#. placeholder {0}: name || ticket.url
+msgid "Ticket (closed): {0}"
+msgstr "Ticket (fermé) : {0}"
+
 msgid "Ticket to production under one day, median"
 msgstr "Du ticket à la production en moins d'un jour, en médiane"
+
+#. placeholder {0}: name || ticket.url
+msgid "Ticket: {0}"
+msgstr "Ticket : {0}"
 
 msgid "Tier"
 msgstr "Offre"

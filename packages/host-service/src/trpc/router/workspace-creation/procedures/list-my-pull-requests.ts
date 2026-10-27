@@ -15,6 +15,7 @@ import {
 	parseDetailsResponse,
 } from "../shared/my-pull-requests";
 import { resolveGithubRepo } from "../shared/project-helpers";
+import type { TicketLink } from "../shared/ticket-links";
 import {
 	ghApiSearchPullRequests,
 	octokitSearchPullRequests,
@@ -29,6 +30,7 @@ export type MyPullRequest = {
 	isDraft: boolean;
 	authorLogin: string | null;
 	updatedAt: string | null;
+	ticketLinks: TicketLink[];
 	/** null when the details call failed for this PR. */
 	details: MyPullRequestDetails | null;
 };
@@ -150,6 +152,7 @@ export const listMyPullRequests = protectedProcedure
 					isDraft: item.isDraft,
 					authorLogin: item.authorLogin,
 					updatedAt: item.updatedAt,
+					ticketLinks: item.ticketLinks ?? [],
 					details: null,
 				});
 			}

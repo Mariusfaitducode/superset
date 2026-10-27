@@ -10,8 +10,11 @@ import {
 } from "@superset/ui/dropdown-menu";
 import { cn } from "@superset/ui/utils";
 import type { ReactNode } from "react";
-import { LuChevronDown } from "react-icons/lu";
-import { useMyPullRequestsStore } from "renderer/routes/_authenticated/_dashboard/pull-requests/stores/myPullRequestsStore";
+import { LuChevronDown, LuFolderGit2, LuListOrdered } from "react-icons/lu";
+import {
+	type MyPullRequestGrouping,
+	useMyPullRequestsStore,
+} from "renderer/routes/_authenticated/_dashboard/pull-requests/stores/myPullRequestsStore";
 import {
 	MY_PULL_REQUEST_AGES,
 	MY_PULL_REQUEST_ROLES,
@@ -82,7 +85,25 @@ export function MyPullRequestsFilterBar({
 		toggleState,
 		setAge,
 		clearFilters,
+		groupBy,
+		setGroupBy,
 	} = useMyPullRequestsStore();
+	const groupings: {
+		value: MyPullRequestGrouping;
+		label: string;
+		icon: ReactNode;
+	}[] = [
+		{
+			value: "action",
+			label: t`Next action`,
+			icon: <LuListOrdered className="size-3" />,
+		},
+		{
+			value: "project",
+			label: t`Project`,
+			icon: <LuFolderGit2 className="size-3" />,
+		},
+	];
 	const roleLabel = roleLabels();
 	const stateLabel = stateLabels();
 	const ageLabel = ageLabels();
@@ -178,6 +199,26 @@ export function MyPullRequestsFilterBar({
 					<Trans>Clear</Trans>
 				</Button>
 			)}
+			<fieldset className="ml-auto flex items-center gap-0.5 rounded-md border p-0.5">
+				<legend className="sr-only">{t`Group by`}</legend>
+				{groupings.map((grouping) => (
+					<Button
+						key={grouping.value}
+						variant="ghost"
+						size="xs"
+						aria-pressed={groupBy === grouping.value}
+						title={t`Group by ${grouping.label}`}
+						className={cn(
+							"h-5 gap-1 px-1.5 text-xs font-normal text-muted-foreground",
+							groupBy === grouping.value && "bg-accent text-foreground",
+						)}
+						onClick={() => setGroupBy(grouping.value)}
+					>
+						{grouping.icon}
+						{grouping.label}
+					</Button>
+				))}
+			</fieldset>
 		</div>
 	);
 }

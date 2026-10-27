@@ -7,6 +7,11 @@ import { useEffect, useMemo, useRef } from "react";
 import { GoGitPullRequest } from "react-icons/go";
 import { LuRefreshCw } from "react-icons/lu";
 import {
+	type ConversationTodo,
+	fetchHostConversationTodos,
+	hostConversationTodosQueryKey,
+} from "renderer/hooks/host-service/useHostConversationTodos";
+import {
 	type AgentConversation,
 	useAgentConversations,
 } from "renderer/hooks/useAgentConversations";
@@ -23,22 +28,28 @@ import {
 import { useMyPullRequestsStore } from "renderer/routes/_authenticated/_dashboard/pull-requests/stores/myPullRequestsStore";
 import { usePullRequestsSplitViewStore } from "renderer/routes/_authenticated/_dashboard/pull-requests/stores/pullRequestsSplitViewStore";
 import type { MyPullRequestItem } from "renderer/routes/_authenticated/_dashboard/pull-requests/utils/describeMyPullRequest";
+import { pullRequestTodos } from "renderer/routes/_authenticated/_dashboard/pull-requests/utils/describePullRequestProgress";
 import {
 	filterMyPullRequests,
 	type MyPullRequestStateFilter,
 } from "renderer/routes/_authenticated/_dashboard/pull-requests/utils/filterMyPullRequests";
+import { groupMyPullRequestsByProject } from "renderer/routes/_authenticated/_dashboard/pull-requests/utils/groupMyPullRequestsByProject";
 import {
 	branchKey,
 	indexWorkspacesByBranch,
 	pickWorkspaceConversation,
 } from "renderer/routes/_authenticated/_dashboard/pull-requests/utils/matchPullRequestWorkspace";
-import { prioritizeMyPullRequests } from "renderer/routes/_authenticated/_dashboard/pull-requests/utils/prioritizeMyPullRequests";
+import {
+	type PrioritizedPullRequest,
+	prioritizeMyPullRequests,
+} from "renderer/routes/_authenticated/_dashboard/pull-requests/utils/prioritizeMyPullRequests";
 import { navigateToV2Workspace } from "renderer/routes/_authenticated/_dashboard/utils/workspace-navigation";
 import { useHostWorkspaces } from "renderer/routes/_authenticated/providers/HostWorkspacesProvider";
 import {
 	MY_PULL_REQUEST_COLUMNS,
 	MyPullRequestRow,
 } from "./components/MyPullRequestRow";
+import { MyPullRequestStatusLine } from "./components/MyPullRequestStatusLine";
 import { MyPullRequestsFilterBar } from "./components/MyPullRequestsFilterBar";
 import { actionLabels } from "./utils/myPullRequestLabels";
 
@@ -161,7 +172,9 @@ export function MyPullRequestsContent({
 	}, [hasData, hasFresh, timings]);
 
 	const filters = useMyPullRequestsStore();
-	const { pinned, later, togglePinned, toggleLater, toggleState } = filters;
+	const { pinned, later, togglePinned, toggleLater, toggleState, groupBy } =
+		filters;
+	const byProject = groupBy === "project";
 
 	const dataVersion = shown.map((result) => result?.fetchedAt).join(",");
 	// biome-ignore lint/correctness/useExhaustiveDependencies: pullRequests is rebuilt every render; dataVersion tracks when it really changes
@@ -203,6 +216,20 @@ export function MyPullRequestsContent({
 		() => prioritizeMyPullRequests(visible, { pinned, later }),
 		[visible, pinned, later],
 	);
+	const projectGroups = useMemo(
+		() => (byProject ? groupMyPullRequestsByProject(groups) : []),
+		[byProject, groups],
+	);
+	const projectNames = useMemo(
+		() =>
+			new Map(
+				projectTargets.map((project) => [
+					project.projectId,
+					project.projectName,
+				]),
+			),
+		[projectTargets],
+	);
 	const onViewerCount = groups
 		.filter((group) => group.action !== "later")
 		.flatMap((group) => group.rows)
@@ -214,6 +241,27 @@ export function MyPullRequestsContent({
 		[workspaces],
 	);
 	const conversations = useAgentConversations();
+	// Same per-host query as the sidebar, so it is usually already cached.
+	const todoResults = useQueries({
+		queries: hostTargets.map((target) => ({
+			queryKey: hostConversationTodosQueryKey(target.hostUrl),
+			queryFn: () =>
+				target.hostUrl
+					? fetchHostConversationTodos(target.hostUrl)
+					: Promise.resolve(null),
+			enabled: byProject && !!target.hostUrl,
+			refetchInterval: 60_000,
+			staleTime: 5_000,
+		})),
+	});
+	const todosVersion = todoResults
+		.map((result) => result.dataUpdatedAt)
+		.join(",");
+	// biome-ignore lint/correctness/useExhaustiveDependencies: todoResults is a new array every render; todosVersion tracks its data
+	const allTodos = useMemo<ConversationTodo[]>(
+		() => todoResults.flatMap((result) => result.data ?? []),
+		[todosVersion],
+	);
 	const groupLabel = actionLabels();
 	const summaryLabel: Record<MyPullRequestStateFilter, (n: number) => string> =
 		{
@@ -238,6 +286,53 @@ export function MyPullRequestsContent({
 				state: "mine",
 			},
 		});
+	};
+
+	const renderRow = (row: PrioritizedPullRequest) => {
+		const { pr } = row;
+		const headRefName = pr.details?.headRefName;
+		const workspace = headRefName
+			? workspaceByBranch.get(branchKey(pr.projectId, headRefName))
+			: undefined;
+		const conversation = workspace
+			? pickWorkspaceConversation(conversations, workspace.id)
+			: null;
+		return (
+			<MyPullRequestRow
+				key={row.key}
+				row={row}
+				isSelected={
+					selectedPrNumber === pr.prNumber &&
+					(selectedPrProjectId == null || selectedPrProjectId === pr.projectId)
+				}
+				isPinned={pinned.includes(row.key)}
+				isLater={later.includes(row.key)}
+				workspace={workspace}
+				conversation={conversation}
+				onOpen={() => handleOpenPreview(pr)}
+				onTogglePinned={() => togglePinned(row.key)}
+				onToggleLater={() => toggleLater(row.key)}
+				onOpenOnGitHub={() => openUrl.mutate(pr.url)}
+				onOpenWorkspace={(workspaceId) =>
+					void navigateToV2Workspace(workspaceId, navigate)
+				}
+				onOpenConversation={openConversation}
+				statusLine={
+					byProject ? (
+						<MyPullRequestStatusLine
+							pr={pr}
+							conversation={conversation}
+							todos={pullRequestTodos(allTodos, {
+								workspaceId: workspace?.id ?? null,
+								url: pr.url,
+							})}
+							onOpenUrl={(url) => openUrl.mutate(url)}
+							onOpenConversation={openConversation}
+						/>
+					) : undefined
+				}
+			/>
+		);
 	};
 
 	const openConversation = (conversation: AgentConversation) => {
@@ -439,56 +534,50 @@ export function MyPullRequestsContent({
 							<span className={cn("shrink-0", MY_PULL_REQUEST_COLUMNS.link)} />
 							<span className={cn("shrink-0", MY_PULL_REQUEST_COLUMNS.menu)} />
 						</div>
-						{groups.map((group) => (
-							<section key={group.action} className="flex flex-col px-2">
-								<h3 className="flex items-baseline gap-2 px-2 pt-3 pb-1 text-[11px]">
-									<span className="font-medium text-foreground">
-										{groupLabel[group.action].title}
-									</span>
-									<span className="text-muted-foreground tabular-nums">
-										{group.rows.length}
-									</span>
-									<span className="truncate text-muted-foreground/70">
-										{groupLabel[group.action].hint}
-									</span>
-								</h3>
-								{group.rows.map((row) => {
-									const { pr } = row;
-									const headRefName = pr.details?.headRefName;
-									const workspace = headRefName
-										? workspaceByBranch.get(
-												branchKey(pr.projectId, headRefName),
-											)
-										: undefined;
-									const conversation = workspace
-										? pickWorkspaceConversation(conversations, workspace.id)
-										: null;
-									return (
-										<MyPullRequestRow
-											key={row.key}
-											row={row}
-											isSelected={
-												selectedPrNumber === pr.prNumber &&
-												(selectedPrProjectId == null ||
-													selectedPrProjectId === pr.projectId)
-											}
-											isPinned={pinned.includes(row.key)}
-											isLater={later.includes(row.key)}
-											workspace={workspace}
-											conversation={conversation}
-											onOpen={() => handleOpenPreview(pr)}
-											onTogglePinned={() => togglePinned(row.key)}
-											onToggleLater={() => toggleLater(row.key)}
-											onOpenOnGitHub={() => openUrl.mutate(pr.url)}
-											onOpenWorkspace={(workspaceId) =>
-												void navigateToV2Workspace(workspaceId, navigate)
-											}
-											onOpenConversation={openConversation}
-										/>
-									);
-								})}
-							</section>
-						))}
+						{byProject
+							? projectGroups.map((project) => (
+									<section key={project.key} className="flex flex-col px-2">
+										<h3 className="flex items-baseline gap-2 px-2 pt-3 pb-1 text-[11px]">
+											<span className="font-medium text-foreground">
+												{projectNames.get(project.projectId) ??
+													project.repoFullName}
+											</span>
+											<span className="text-muted-foreground tabular-nums">
+												{project.rows.length}
+											</span>
+											<span className="truncate text-muted-foreground/70">
+												{[
+													project.repoFullName,
+													project.onViewer > 0 &&
+														t`${project.onViewer} waiting on you`,
+													project.toReview > 0 &&
+														t`${project.toReview} to review`,
+													project.toFix > 0 && t`${project.toFix} to fix`,
+													project.toMerge > 0 && t`${project.toMerge} to merge`,
+												]
+													.filter(Boolean)
+													.join(" · ")}
+											</span>
+										</h3>
+										{project.rows.map(renderRow)}
+									</section>
+								))
+							: groups.map((group) => (
+									<section key={group.action} className="flex flex-col px-2">
+										<h3 className="flex items-baseline gap-2 px-2 pt-3 pb-1 text-[11px]">
+											<span className="font-medium text-foreground">
+												{groupLabel[group.action].title}
+											</span>
+											<span className="text-muted-foreground tabular-nums">
+												{group.rows.length}
+											</span>
+											<span className="truncate text-muted-foreground/70">
+												{groupLabel[group.action].hint}
+											</span>
+										</h3>
+										{group.rows.map(renderRow)}
+									</section>
+								))}
 					</div>
 				)}
 			</div>

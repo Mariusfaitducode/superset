@@ -525,10 +525,26 @@ msgstr "{0} sessies beëindigd"
 msgid "{0} terminated, {1} remaining"
 msgstr "{0} beëindigd, {1} over"
 
+#. placeholder {0}: project.toFix
+msgid "{0} to fix"
+msgstr "{0} te repareren"
+
+#. placeholder {0}: project.toMerge
+msgid "{0} to merge"
+msgstr "{0} te mergen"
+
 #. placeholder {0}: formatTokens(aboveGap > 0n ? aboveGap : 0n)
 #. placeholder {1}: formatNumber(above.rank)
 msgid "{0} to pass #{1}"
 msgstr "{0} om #{1} voorbij te gaan"
+
+#. placeholder {0}: project.toReview
+msgid "{0} to review"
+msgstr "{0} te reviewen"
+
+#. placeholder {0}: todos.length
+msgid "{0} to-dos:"
+msgstr "{0} taken:"
 
 #. placeholder {0}: formatTokens(tokens)
 msgid "{0} tokens in the last 30 days. Publishing as <0>{handle}</0>."
@@ -556,6 +572,10 @@ msgstr "{0} bijgewerkt"
 #. placeholder {1}: right.name
 msgid "{0} vs {1}"
 msgstr "{0} tegen {1}"
+
+#. placeholder {0}: project.onViewer
+msgid "{0} waiting on you"
+msgstr "{0} wachten op jou"
 
 #. placeholder {0}: file.path
 msgid "{0} was deleted in this change."
@@ -741,6 +761,9 @@ msgstr "{closedCount} gesloten"
 
 msgid "{commitCount, plural, one {# commit} other {# commits}}"
 msgstr "{commitCount, plural, one {# commit} other {# commits}}"
+
+msgid "{commitCount} commits"
+msgstr "{commitCount} commits"
 
 #. placeholder {0}: relevant.length
 msgid "{completed} of {0} checks complete"
@@ -1395,11 +1418,17 @@ msgstr "$0"
 msgid "1"
 msgstr "1"
 
+msgid "1 commit"
+msgstr "1 commit"
+
 msgid "1 cookie — forget this site"
 msgstr "1 cookie — deze site vergeten"
 
 msgid "1 hr"
 msgstr "1 u"
+
+msgid "1 to-do:"
+msgstr "1 taak:"
 
 msgid "1 user"
 msgstr "1 gebruiker"
@@ -2017,8 +2046,17 @@ msgstr "Agentgesprekken"
 msgid "Agent credentials changed"
 msgstr "Agentgegevens gewijzigd"
 
+msgid "Agent done, not read"
+msgstr "Agent klaar, niet gelezen"
+
+msgid "Agent failed"
+msgstr "Agent mislukt"
+
 msgid "Agent finished"
 msgstr "Agent klaar"
+
+msgid "Agent idle"
+msgstr "Agent inactief"
 
 msgid "Agent Independence"
 msgstr "Agentonafhankelijkheid"
@@ -2028,6 +2066,9 @@ msgstr "Agent is bezig"
 
 msgid "Agent launch configuration"
 msgstr "Startconfiguratie van de agent"
+
+msgid "Agent needs permission"
+msgstr "Agent wacht op toestemming"
 
 msgid "Agent picker (Claude, Codex, Cursor…) used by every session-creation flow"
 msgstr "Agentkiezer (Claude, Codex, Cursor…) die elke flow voor sessiecreatie gebruikt"
@@ -2067,6 +2108,12 @@ msgstr "agentinstellingen"
 
 msgid "Agent usage rankings"
 msgstr "Ranglijst van agentgebruik"
+
+msgid "Agent waiting on you"
+msgstr "Agent wacht op jou"
+
+msgid "Agent working"
+msgstr "Agent aan het werk"
 
 msgid "Agent-driven previews"
 msgstr "Previews aangestuurd door agents"
@@ -4420,6 +4467,9 @@ msgstr "Reageren op deze pagina"
 
 msgid "Comment."
 msgstr "Reageer."
+
+msgid "commented"
+msgstr "heeft gereageerd"
 
 msgid "Commented"
 msgstr "Opmerking geplaatst"
@@ -8493,6 +8543,10 @@ msgstr "Groepsacties"
 msgid "Group by"
 msgstr "Groeperen op"
 
+#. placeholder {0}: grouping.label
+msgid "Group by {0}"
+msgstr "Groeperen op {0}"
+
 msgid "Group new branches under a folder."
 msgstr "Groepeer nieuwe branches onder een map."
 
@@ -9694,6 +9748,9 @@ msgstr "Laatste agentactiviteit {0}"
 
 msgid "Last attached"
 msgstr "Laatst gekoppeld"
+
+msgid "Last commit {lastCommitAgo} ago"
+msgstr "Laatste commit {lastCommitAgo} geleden"
 
 msgid "Last day of each month"
 msgstr "Laatste dag van elke maand"
@@ -11098,6 +11155,9 @@ msgstr "Volgende"
 msgid "Next (Enter)"
 msgstr "Volgende (Enter)"
 
+msgid "Next action"
+msgstr "Volgende actie"
+
 msgid "Next branch"
 msgstr "Volgende branch"
 
@@ -11741,6 +11801,9 @@ msgstr "Geen thema's gevonden."
 msgid "No themes were imported"
 msgstr "Er zijn geen thema's geïmporteerd"
 
+msgid "No ticket"
+msgstr "Geen ticket"
+
 msgid "No triggers"
 msgstr "Geen triggers"
 
@@ -11966,6 +12029,9 @@ msgstr "Meldingen"
 
 msgid "Notion is not configured for this environment."
 msgstr "Notion is niet geconfigureerd voor deze omgeving."
+
+msgid "Notion page"
+msgstr "Notion-pagina"
 
 msgid "now"
 msgstr "nu"
@@ -14928,6 +14994,9 @@ msgstr "Openstaande wijzigingen reviewen."
 
 msgid "Review pull requests inside Superset: diff pane, agent-assisted review, act on comments directly."
 msgstr "Review pull requests in Superset: diff-paneel, review met hulp van een agent, direct reageren op opmerkingen."
+
+msgid "review requested"
+msgstr "review gevraagd"
 
 msgid "Review requested"
 msgstr "Review gevraagd"
@@ -18521,8 +18590,16 @@ msgstr "Thread niet gevonden"
 msgid "Three steps · touches packages/ui and apps/desktop"
 msgstr "Drie stappen · raakt packages/ui en apps/desktop"
 
+#. placeholder {0}: name || ticket.url
+msgid "Ticket (closed): {0}"
+msgstr "Ticket (gesloten): {0}"
+
 msgid "Ticket to production under one day, median"
 msgstr "Ticket tot productie onder één dag, mediaan"
+
+#. placeholder {0}: name || ticket.url
+msgid "Ticket: {0}"
+msgstr "Ticket: {0}"
 
 msgid "Tier"
 msgstr "Tier"

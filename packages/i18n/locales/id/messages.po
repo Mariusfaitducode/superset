@@ -525,10 +525,26 @@ msgstr "{0} sesi dihentikan"
 msgid "{0} terminated, {1} remaining"
 msgstr "{0} dihentikan, {1} tersisa"
 
+#. placeholder {0}: project.toFix
+msgid "{0} to fix"
+msgstr "{0} perlu diperbaiki"
+
+#. placeholder {0}: project.toMerge
+msgid "{0} to merge"
+msgstr "{0} siap digabung"
+
 #. placeholder {0}: formatTokens(aboveGap > 0n ? aboveGap : 0n)
 #. placeholder {1}: formatNumber(above.rank)
 msgid "{0} to pass #{1}"
 msgstr "{0} lagi untuk melewati #{1}"
+
+#. placeholder {0}: project.toReview
+msgid "{0} to review"
+msgstr "{0} perlu ditinjau"
+
+#. placeholder {0}: todos.length
+msgid "{0} to-dos:"
+msgstr "{0} tugas:"
 
 #. placeholder {0}: formatTokens(tokens)
 msgid "{0} tokens in the last 30 days. Publishing as <0>{handle}</0>."
@@ -556,6 +572,10 @@ msgstr "{0} diperbarui"
 #. placeholder {1}: right.name
 msgid "{0} vs {1}"
 msgstr "{0} melawan {1}"
+
+#. placeholder {0}: project.onViewer
+msgid "{0} waiting on you"
+msgstr "{0} menunggu Anda"
 
 #. placeholder {0}: file.path
 msgid "{0} was deleted in this change."
@@ -741,6 +761,9 @@ msgstr "{closedCount} tertutup"
 
 msgid "{commitCount, plural, one {# commit} other {# commits}}"
 msgstr "{commitCount, plural, one {# commit} other {# commit}}"
+
+msgid "{commitCount} commits"
+msgstr "{commitCount} commit"
 
 #. placeholder {0}: relevant.length
 msgid "{completed} of {0} checks complete"
@@ -1395,11 +1418,17 @@ msgstr "$0"
 msgid "1"
 msgstr "1"
 
+msgid "1 commit"
+msgstr "1 commit"
+
 msgid "1 cookie — forget this site"
 msgstr "1 cookie — lupakan situs ini"
 
 msgid "1 hr"
 msgstr "1 jam"
+
+msgid "1 to-do:"
+msgstr "1 tugas:"
 
 msgid "1 user"
 msgstr "1 pengguna"
@@ -2017,8 +2046,17 @@ msgstr "Percakapan agen"
 msgid "Agent credentials changed"
 msgstr "Kredensial agen berubah"
 
+msgid "Agent done, not read"
+msgstr "Agen selesai, belum dibaca"
+
+msgid "Agent failed"
+msgstr "Agen gagal"
+
 msgid "Agent finished"
 msgstr "Agen selesai"
+
+msgid "Agent idle"
+msgstr "Agen diam"
 
 msgid "Agent Independence"
 msgstr "Independensi Agen"
@@ -2028,6 +2066,9 @@ msgstr "Agen sedang bekerja"
 
 msgid "Agent launch configuration"
 msgstr "Konfigurasi peluncuran agen"
+
+msgid "Agent needs permission"
+msgstr "Agen butuh izin"
 
 msgid "Agent picker (Claude, Codex, Cursor…) used by every session-creation flow"
 msgstr "Pemilih agen (Claude, Codex, Cursor…) yang dipakai tiap alur pembuatan sesi"
@@ -2067,6 +2108,12 @@ msgstr "pengaturan agen"
 
 msgid "Agent usage rankings"
 msgstr "Peringkat penggunaan agen"
+
+msgid "Agent waiting on you"
+msgstr "Agen menunggu Anda"
+
+msgid "Agent working"
+msgstr "Agen bekerja"
 
 msgid "Agent-driven previews"
 msgstr "Pratinjau yang digerakkan agen"
@@ -4420,6 +4467,9 @@ msgstr "Komentari halaman ini"
 
 msgid "Comment."
 msgstr "Komentari."
+
+msgid "commented"
+msgstr "berkomentar"
 
 msgid "Commented"
 msgstr "Dikomentari"
@@ -8493,6 +8543,10 @@ msgstr "Aksi grup"
 msgid "Group by"
 msgstr "Kelompokkan menurut"
 
+#. placeholder {0}: grouping.label
+msgid "Group by {0}"
+msgstr "Kelompokkan menurut {0}"
+
 msgid "Group new branches under a folder."
 msgstr "Kelompokkan branch baru di bawah satu folder."
 
@@ -9694,6 +9748,9 @@ msgstr "Aktivitas agen terakhir {0}"
 
 msgid "Last attached"
 msgstr "Terakhir terhubung"
+
+msgid "Last commit {lastCommitAgo} ago"
+msgstr "Commit terakhir {lastCommitAgo} lalu"
 
 msgid "Last day of each month"
 msgstr "Hari terakhir tiap bulan"
@@ -11098,6 +11155,9 @@ msgstr "Berikutnya"
 msgid "Next (Enter)"
 msgstr "Berikutnya (Enter)"
 
+msgid "Next action"
+msgstr "Tindakan berikutnya"
+
 msgid "Next branch"
 msgstr "Branch berikutnya"
 
@@ -11741,6 +11801,9 @@ msgstr "Tidak ada tema ditemukan."
 msgid "No themes were imported"
 msgstr "Tidak ada tema yang diimpor"
 
+msgid "No ticket"
+msgstr "Tanpa tiket"
+
 msgid "No triggers"
 msgstr "Tanpa pemicu"
 
@@ -11966,6 +12029,9 @@ msgstr "Notifikasi"
 
 msgid "Notion is not configured for this environment."
 msgstr "Notion belum dikonfigurasi untuk environment ini."
+
+msgid "Notion page"
+msgstr "Halaman Notion"
 
 msgid "now"
 msgstr "sekarang"
@@ -14928,6 +14994,9 @@ msgstr "Review perubahan yang tertunda."
 
 msgid "Review pull requests inside Superset: diff pane, agent-assisted review, act on comments directly."
 msgstr "Review pull request di dalam Superset: panel diff, review dibantu agen, tindak lanjuti komentar langsung."
+
+msgid "review requested"
+msgstr "review diminta"
 
 msgid "Review requested"
 msgstr "Review diminta"
@@ -18521,8 +18590,16 @@ msgstr "Thread tidak ditemukan"
 msgid "Three steps · touches packages/ui and apps/desktop"
 msgstr "Tiga langkah · menyentuh packages/ui dan apps/desktop"
 
+#. placeholder {0}: name || ticket.url
+msgid "Ticket (closed): {0}"
+msgstr "Tiket (ditutup): {0}"
+
 msgid "Ticket to production under one day, median"
 msgstr "Tiket ke produksi di bawah satu hari, median"
+
+#. placeholder {0}: name || ticket.url
+msgid "Ticket: {0}"
+msgstr "Tiket: {0}"
 
 msgid "Tier"
 msgstr "Tingkat"

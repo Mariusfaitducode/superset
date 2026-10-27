@@ -525,10 +525,26 @@ msgstr "Завершено сессий: {0}"
 msgid "{0} terminated, {1} remaining"
 msgstr "Завершено: {0}, осталось: {1}"
 
+#. placeholder {0}: project.toFix
+msgid "{0} to fix"
+msgstr "{0} исправить"
+
+#. placeholder {0}: project.toMerge
+msgid "{0} to merge"
+msgstr "{0} влить"
+
 #. placeholder {0}: formatTokens(aboveGap > 0n ? aboveGap : 0n)
 #. placeholder {1}: formatNumber(above.rank)
 msgid "{0} to pass #{1}"
 msgstr "{0} чтобы обогнать #{1}"
+
+#. placeholder {0}: project.toReview
+msgid "{0} to review"
+msgstr "{0} на ревью"
+
+#. placeholder {0}: todos.length
+msgid "{0} to-dos:"
+msgstr "Задач: {0}:"
 
 #. placeholder {0}: formatTokens(tokens)
 msgid "{0} tokens in the last 30 days. Publishing as <0>{handle}</0>."
@@ -556,6 +572,10 @@ msgstr "{0} обновлён"
 #. placeholder {1}: right.name
 msgid "{0} vs {1}"
 msgstr "{0} против {1}"
+
+#. placeholder {0}: project.onViewer
+msgid "{0} waiting on you"
+msgstr "{0} ждут вас"
 
 #. placeholder {0}: file.path
 msgid "{0} was deleted in this change."
@@ -741,6 +761,9 @@ msgstr "{closedCount} закрыто"
 
 msgid "{commitCount, plural, one {# commit} other {# commits}}"
 msgstr "{commitCount, plural, one {# коммит} few {# коммита} many {# коммитов} other {# коммита}}"
+
+msgid "{commitCount} commits"
+msgstr "Коммитов: {commitCount}"
 
 #. placeholder {0}: relevant.length
 msgid "{completed} of {0} checks complete"
@@ -1395,11 +1418,17 @@ msgstr "$0"
 msgid "1"
 msgstr "1"
 
+msgid "1 commit"
+msgstr "1 коммит"
+
 msgid "1 cookie — forget this site"
 msgstr "1 cookie — забыть этот сайт"
 
 msgid "1 hr"
 msgstr "1 ч"
+
+msgid "1 to-do:"
+msgstr "1 задача:"
 
 msgid "1 user"
 msgstr "1 пользователь"
@@ -2017,8 +2046,17 @@ msgstr "Разговоры агентов"
 msgid "Agent credentials changed"
 msgstr "Учётные данные агента изменились"
 
+msgid "Agent done, not read"
+msgstr "Агент закончил, не прочитано"
+
+msgid "Agent failed"
+msgstr "Агент упал"
+
 msgid "Agent finished"
 msgstr "Агент завершил"
+
+msgid "Agent idle"
+msgstr "Агент простаивает"
 
 msgid "Agent Independence"
 msgstr "Независимость от агента"
@@ -2028,6 +2066,9 @@ msgstr "Агент работает"
 
 msgid "Agent launch configuration"
 msgstr "Конфигурация запуска агента"
+
+msgid "Agent needs permission"
+msgstr "Агенту нужно разрешение"
 
 msgid "Agent picker (Claude, Codex, Cursor…) used by every session-creation flow"
 msgstr "Выбор агента (Claude, Codex, Cursor…), используемый во всех сценариях создания сессий"
@@ -2067,6 +2108,12 @@ msgstr "настройки агента"
 
 msgid "Agent usage rankings"
 msgstr "Рейтинги использования агентов"
+
+msgid "Agent waiting on you"
+msgstr "Агент ждёт вас"
+
+msgid "Agent working"
+msgstr "Агент работает"
 
 msgid "Agent-driven previews"
 msgstr "Превью под управлением агента"
@@ -4420,6 +4467,9 @@ msgstr "Комментировать эту страницу"
 
 msgid "Comment."
 msgstr "Комментируйте."
+
+msgid "commented"
+msgstr "прокомментировал"
 
 msgid "Commented"
 msgstr "Прокомментировано"
@@ -8493,6 +8543,10 @@ msgstr "Действия с группой"
 msgid "Group by"
 msgstr "Группировать по"
 
+#. placeholder {0}: grouping.label
+msgid "Group by {0}"
+msgstr "Группировать: {0}"
+
 msgid "Group new branches under a folder."
 msgstr "Группировать новые ветки в папке."
 
@@ -9694,6 +9748,9 @@ msgstr "Последняя активность агента {0}"
 
 msgid "Last attached"
 msgstr "Последнее подключение"
+
+msgid "Last commit {lastCommitAgo} ago"
+msgstr "Последний коммит {lastCommitAgo} назад"
 
 msgid "Last day of each month"
 msgstr "В последний день каждого месяца"
@@ -11098,6 +11155,9 @@ msgstr "Далее"
 msgid "Next (Enter)"
 msgstr "Далее (Enter)"
 
+msgid "Next action"
+msgstr "Следующее действие"
+
 msgid "Next branch"
 msgstr "Следующая ветка"
 
@@ -11741,6 +11801,9 @@ msgstr "Темы не найдены."
 msgid "No themes were imported"
 msgstr "Ни одна тема не импортирована"
 
+msgid "No ticket"
+msgstr "Нет тикета"
+
 msgid "No triggers"
 msgstr "Нет триггеров"
 
@@ -11966,6 +12029,9 @@ msgstr "Уведомления"
 
 msgid "Notion is not configured for this environment."
 msgstr "Notion не настроен для этого окружения."
+
+msgid "Notion page"
+msgstr "Страница Notion"
 
 msgid "now"
 msgstr "сейчас"
@@ -14928,6 +14994,9 @@ msgstr "Проверьте ожидающие изменения."
 
 msgid "Review pull requests inside Superset: diff pane, agent-assisted review, act on comments directly."
 msgstr "Проверяйте пул-реквесты внутри Superset: панель diff, ревью с помощью агента, действия по комментариям прямо на месте."
+
+msgid "review requested"
+msgstr "запрошено ревью"
 
 msgid "Review requested"
 msgstr "Запрошено ревью"
@@ -18521,8 +18590,16 @@ msgstr "Ветка обсуждения не найдена"
 msgid "Three steps · touches packages/ui and apps/desktop"
 msgstr "Три шага · затрагивает packages/ui и apps/desktop"
 
+#. placeholder {0}: name || ticket.url
+msgid "Ticket (closed): {0}"
+msgstr "Тикет (закрыт): {0}"
+
 msgid "Ticket to production under one day, median"
 msgstr "От тикета до продакшена меньше суток, медиана"
+
+#. placeholder {0}: name || ticket.url
+msgid "Ticket: {0}"
+msgstr "Тикет: {0}"
 
 msgid "Tier"
 msgstr "Уровень"
