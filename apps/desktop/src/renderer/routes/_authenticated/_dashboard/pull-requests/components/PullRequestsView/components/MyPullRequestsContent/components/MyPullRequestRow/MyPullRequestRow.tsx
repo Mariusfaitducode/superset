@@ -4,6 +4,12 @@ import {
 	DropdownMenu,
 	DropdownMenuContent,
 	DropdownMenuItem,
+	DropdownMenuRadioGroup,
+	DropdownMenuRadioItem,
+	DropdownMenuSeparator,
+	DropdownMenuSub,
+	DropdownMenuSubContent,
+	DropdownMenuSubTrigger,
 	DropdownMenuTrigger,
 } from "@superset/ui/dropdown-menu";
 import { cn } from "@superset/ui/utils";
@@ -19,6 +25,7 @@ import {
 	LuEllipsis,
 	LuExternalLink,
 	LuEye,
+	LuFolderInput,
 	LuGitBranch,
 	LuGitMerge,
 	LuMessageSquareWarning,
@@ -36,6 +43,10 @@ import type {
 	MyPullRequestWhy,
 	PrioritizedPullRequest,
 } from "renderer/routes/_authenticated/_dashboard/pull-requests/utils/prioritizeMyPullRequests";
+import {
+	OTHER_PROJECT_ID,
+	type PullRequestProject,
+} from "renderer/routes/_authenticated/_dashboard/pull-requests/utils/pullRequestProjects";
 import type { HostWorkspaceItem } from "renderer/routes/_authenticated/providers/HostWorkspacesProvider";
 import {
 	normalizePRState,
@@ -115,6 +126,12 @@ interface MyPullRequestRowProps {
 	onOpenConversation: (conversation: AgentConversation) => void;
 	/** A second line under the row, shown when grouped by project. */
 	statusLine?: ReactNode;
+	projects: Pick<PullRequestProject, "id" | "name">[];
+	/** Where the PR is now: a project id or OTHER_PROJECT_ID. */
+	projectId: string;
+	isMovedByHand: boolean;
+	/** null hands the PR back to the rules. */
+	onMoveToProject: (projectId: string | null) => void;
 }
 
 /** One dense line (two with `statusLine`): the reason it is here, then CI, review, conflicts, size, age, activity and who. */
@@ -132,6 +149,10 @@ export function MyPullRequestRow({
 	onOpenWorkspace,
 	onOpenConversation,
 	statusLine,
+	projects,
+	projectId,
+	isMovedByHand,
+	onMoveToProject,
 }: MyPullRequestRowProps) {
 	const { t } = useLingui();
 	const { pr, why } = row;
@@ -400,6 +421,38 @@ export function MyPullRequestRow({
 								)}
 								{isLater ? t`Back to its place` : t`Move to later`}
 							</DropdownMenuItem>
+							<DropdownMenuSub>
+								<DropdownMenuSubTrigger className="gap-2">
+									<LuFolderInput className="size-3.5" />
+									{t`Move to project…`}
+								</DropdownMenuSubTrigger>
+								<DropdownMenuSubContent className="min-w-44">
+									<DropdownMenuRadioGroup
+										value={projectId}
+										onValueChange={onMoveToProject}
+									>
+										{projects.map((project) => (
+											<DropdownMenuRadioItem
+												key={project.id}
+												value={project.id}
+											>
+												{project.name}
+											</DropdownMenuRadioItem>
+										))}
+										<DropdownMenuRadioItem value={OTHER_PROJECT_ID}>
+											{t`Other`}
+										</DropdownMenuRadioItem>
+									</DropdownMenuRadioGroup>
+									{isMovedByHand && (
+										<>
+											<DropdownMenuSeparator />
+											<DropdownMenuItem onSelect={() => onMoveToProject(null)}>
+												{t`Back to the project its rules pick`}
+											</DropdownMenuItem>
+										</>
+									)}
+								</DropdownMenuSubContent>
+							</DropdownMenuSub>
 							<DropdownMenuItem onSelect={onOpenOnGitHub}>
 								<LuExternalLink className="size-3.5" />
 								{t`Open on GitHub`}

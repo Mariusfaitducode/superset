@@ -10,7 +10,12 @@ import {
 } from "@superset/ui/dropdown-menu";
 import { cn } from "@superset/ui/utils";
 import type { ReactNode } from "react";
-import { LuChevronDown, LuFolderGit2, LuListOrdered } from "react-icons/lu";
+import {
+	LuChevronDown,
+	LuFolderCog,
+	LuFolderGit2,
+	LuListOrdered,
+} from "react-icons/lu";
 import {
 	type MyPullRequestGrouping,
 	useMyPullRequestsStore,
@@ -71,8 +76,10 @@ function FacetMenu({
 /** Repo, role, state and age filters; each option shows how many PRs it keeps. */
 export function MyPullRequestsFilterBar({
 	counts,
+	onEditProjects,
 }: {
 	counts: MyPullRequestFacetCounts;
+	onEditProjects: () => void;
 }) {
 	const { t } = useLingui();
 	const {
@@ -199,7 +206,23 @@ export function MyPullRequestsFilterBar({
 					<Trans>Clear</Trans>
 				</Button>
 			)}
-			<fieldset className="ml-auto flex items-center gap-0.5 rounded-md border p-0.5">
+			{groupBy === "project" && (
+				<Button
+					variant="ghost"
+					size="xs"
+					className="ml-auto h-6 gap-1 px-2 text-xs font-normal text-muted-foreground"
+					onClick={onEditProjects}
+				>
+					<LuFolderCog className="size-3" />
+					<Trans>Edit projects</Trans>
+				</Button>
+			)}
+			<fieldset
+				className={cn(
+					"flex items-center gap-0.5 rounded-md border p-0.5",
+					groupBy !== "project" && "ml-auto",
+				)}
+			>
 				<legend className="sr-only">{t`Group by`}</legend>
 				{groupings.map((grouping) => (
 					<Button

@@ -1654,6 +1654,9 @@ msgstr "Masih ada proses yang berjalan di terminal ini"
 msgid "A pull request always gets its own worktree"
 msgstr "Pull request selalu mendapat worktree sendiri"
 
+msgid "A pull request goes to the project you moved it to, else to the first project whose rules match: a PR number first, then a label, then a keyword. The rest goes to Other. Separate values with commas."
+msgstr "Pull request masuk ke proyek tempat Anda memindahkannya, jika tidak ke proyek pertama yang aturannya cocok: nomor PR dulu, lalu label, lalu kata kunci. Sisanya masuk ke Lainnya. Pisahkan nilai dengan koma."
+
 msgid "A rebuilt chat surface for driving agents: richer tool output, smoother steering, faster everything."
 msgstr "Permukaan chat yang dibangun ulang untuk mengendalikan agen: output alat lebih kaya, pengarahan lebih halus, semuanya lebih cepat."
 
@@ -3171,6 +3174,9 @@ msgstr "Kembali ke halaman"
 
 msgid "Back to the leaderboard"
 msgstr "Kembali ke papan peringkat"
+
+msgid "Back to the project its rules pick"
+msgstr "Kembali ke proyek pilihan aturan"
 
 msgid "Backed by"
 msgstr "Didukung oleh"
@@ -6243,6 +6249,10 @@ msgstr "Hapus \"{projectName}\"?"
 msgid "Delete “{title}”?"
 msgstr "Hapus “{title}”?"
 
+#. placeholder {0}: project.name
+msgid "Delete {0}"
+msgstr "Hapus {0}"
+
 #. placeholder {0}: organization.name
 #. placeholder {0}: secret.key
 msgid "Delete {0}?"
@@ -6961,6 +6971,9 @@ msgstr "Tenggat"
 msgid "Duration"
 msgstr "Durasi"
 
+msgid "e.g. #2701, spore-bio/hub#3025"
+msgstr "mis. #2701, spore-bio/hub#3025"
+
 msgid "e.g. Add dark mode, Fix checkout bug"
 msgstr "mis. Tambah mode gelap, Perbaiki bug checkout"
 
@@ -7052,6 +7065,9 @@ msgstr "Edit di GitHub"
 
 msgid "Edit prefix"
 msgstr "Edit prefix"
+
+msgid "Edit projects"
+msgstr "Edit proyek"
 
 msgid "Edit Run Script"
 msgstr "Edit Skrip Run"
@@ -8587,6 +8603,9 @@ msgstr "Integrasi GitHub"
 msgid "GitHub issues"
 msgstr "Issue GitHub"
 
+msgid "GitHub labels, e.g. spore-app-redesign"
+msgstr "Label GitHub, mis. spore-app-redesign"
+
 msgid "GitHub rate limit reached"
 msgstr "Batas laju GitHub tercapai"
 
@@ -9313,6 +9332,9 @@ msgstr "Di aplikasi desktop Superset, buka <0>Pengaturan → Tampilan → Tema</
 msgid "In the Superset desktop app, open Settings → Remote Access and turn on “Allow remote access to this device via relay”."
 msgstr "Di aplikasi desktop Superset, buka Pengaturan → Akses Jarak Jauh dan aktifkan “Izinkan akses jarak jauh ke perangkat ini melalui relay”."
 
+msgid "In the title or branch, e.g. audit trail, e-signature"
+msgstr "Di judul atau branch, mis. audit trail, e-signature"
+
 msgid "In under a year, more than 145,000 developers across 180 countries have run Superset and created over 1.85 million agent workspaces."
 msgstr "Dalam waktu kurang dari setahun, lebih dari 145.000 developer di 180 negara telah menjalankan Superset dan membuat lebih dari 1,85 juta workspace agen."
 
@@ -9825,6 +9847,9 @@ msgstr "Pintasan keyboard"
 
 msgid "Keyboard Shortcuts"
 msgstr "Pintasan Keyboard"
+
+msgid "Keywords"
+msgstr "Kata kunci"
 
 msgid "Kill"
 msgstr "Matikan"
@@ -11053,6 +11078,10 @@ msgstr "pindah"
 msgid "Move"
 msgstr "Pindah"
 
+#. placeholder {0}: project.name
+msgid "Move {0} up"
+msgstr "Naikkan {0}"
+
 msgid "Move {count} to Group"
 msgstr "Pindahkan {count} ke Grup"
 
@@ -11065,11 +11094,17 @@ msgstr "Pindahkan ke grup"
 msgid "Move to later"
 msgstr "Pindahkan ke nanti"
 
+msgid "Move to project…"
+msgstr "Pindahkan ke proyek…"
+
 msgid "Move to Right Side"
 msgstr "Pindahkan ke kanan"
 
 msgid "Move to Tab"
 msgstr "Pindahkan ke Tab"
+
+msgid "Move up"
+msgstr "Naikkan"
 
 msgid "Moved down by you"
 msgstr "Dipindahkan ke bawah oleh Anda"
@@ -11293,6 +11328,9 @@ msgstr "Orang baru akan menerima undangan email untuk bergabung ke {organization
 
 msgid "New project"
 msgstr "Proyek baru"
+
+msgid "New project name"
+msgstr "Nama proyek baru"
 
 msgid "New push to branch"
 msgstr "Push baru ke branch"
@@ -11872,6 +11910,9 @@ msgstr "Tidak ada proyek tersedia"
 
 msgid "No project selected"
 msgstr "Tidak ada proyek yang dipilih"
+
+msgid "No project yet: every pull request is in Other."
+msgstr "Belum ada proyek: semua pull request ada di Lainnya."
 
 msgid "No project<0>session</0>"
 msgstr "Tanpa proyek<0>sesi</0>"
@@ -14164,6 +14205,9 @@ msgstr "Pull request"
 
 msgid "Pull Requests"
 msgstr "Pull Request"
+
+msgid "Pull requests in this project now"
+msgstr "Pull request di proyek ini sekarang"
 
 msgid "Purple"
 msgstr "Ungu"

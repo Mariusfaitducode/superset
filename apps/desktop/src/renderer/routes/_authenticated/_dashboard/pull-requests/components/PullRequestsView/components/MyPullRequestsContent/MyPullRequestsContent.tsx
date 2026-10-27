@@ -3,7 +3,7 @@ import { Button } from "@superset/ui/button";
 import { cn } from "@superset/ui/utils";
 import { useQueries } from "@tanstack/react-query";
 import { useNavigate } from "@tanstack/react-router";
-import { useEffect, useMemo, useRef } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { GoGitPullRequest } from "react-icons/go";
 import { LuRefreshCw } from "react-icons/lu";
 import {
@@ -43,8 +43,10 @@ import {
 	type PrioritizedPullRequest,
 	prioritizeMyPullRequests,
 } from "renderer/routes/_authenticated/_dashboard/pull-requests/utils/prioritizeMyPullRequests";
+import { assignPullRequestProject } from "renderer/routes/_authenticated/_dashboard/pull-requests/utils/pullRequestProjects";
 import { navigateToV2Workspace } from "renderer/routes/_authenticated/_dashboard/utils/workspace-navigation";
 import { useHostWorkspaces } from "renderer/routes/_authenticated/providers/HostWorkspacesProvider";
+import { MyPullRequestProjectsDialog } from "./components/MyPullRequestProjectsDialog";
 import {
 	MY_PULL_REQUEST_COLUMNS,
 	MyPullRequestRow,
@@ -75,13 +77,14 @@ const SUMMARY_STATES: MyPullRequestStateFilter[] = [
 	"ready-to-merge",
 ];
 
-function listMine(target: HostQueryTarget, cachedOnly: boolean) {
+function listMine(target: HostQueryTarget, mode: "cached" | "quick" | "full") {
 	if (!target.hostUrl) return Promise.resolve(null);
 	return getHostServiceClientByUrl(
 		target.hostUrl,
 	).workspaceCreation.listMyPullRequests.query({
 		projectIds: target.projects.map((project) => project.projectId),
-		cachedOnly,
+		cachedOnly: mode === "cached",
+		withoutDetails: mode === "quick",
 	});
 }
 
@@ -107,12 +110,12 @@ export function MyPullRequestsContent({
 	);
 	const openUrl = electronTrpc.external.openUrl.useMutation();
 
-	// The host keeps its last answer in memory: show it at once, then let the
-	// GitHub round trip (several seconds) replace it.
+	// The host keeps its last answer, on disk too: show it at once, then let
+	// the GitHub round trip (4-6 s for ~50 PRs) replace it.
 	const cachedResults = useQueries({
 		queries: hostTargets.map((target) => ({
 			queryKey: ["pullRequests", "mine", "cached", target.key, target.hostUrl],
-			queryFn: () => listMine(target, true),
+			queryFn: () => listMine(target, "cached"),
 			enabled: !!target.hostUrl,
 			staleTime: Number.POSITIVE_INFINITY,
 			gcTime: 10 * 60_000,
@@ -121,15 +124,34 @@ export function MyPullRequestsContent({
 	const results = useQueries({
 		queries: hostTargets.map((target) => ({
 			queryKey: ["pullRequests", "mine", target.key, target.hostUrl],
-			queryFn: () => listMine(target, false),
+			queryFn: () => listMine(target, "full"),
 			enabled: !!target.hostUrl,
 			staleTime: 60_000,
 			gcTime: 10 * 60_000,
 			refetchInterval: REFRESH_INTERVAL_MS,
 		})),
 	});
+	// Nothing cached yet (first use, new project set): the search alone takes
+	// about a second, so list the PRs while their details load.
+	const quickResults = useQueries({
+		queries: hostTargets.map((target, index) => ({
+			queryKey: ["pullRequests", "mine", "quick", target.key, target.hostUrl],
+			queryFn: () => listMine(target, "quick"),
+			enabled:
+				!!target.hostUrl &&
+				cachedResults[index]?.isSuccess === true &&
+				cachedResults[index]?.data === null &&
+				!results[index]?.data,
+			staleTime: Number.POSITIVE_INFINITY,
+			gcTime: 60_000,
+		})),
+	});
 	const shown = hostTargets.map(
-		(_, index) => results[index]?.data ?? cachedResults[index]?.data ?? null,
+		(_, index) =>
+			results[index]?.data ??
+			cachedResults[index]?.data ??
+			quickResults[index]?.data ??
+			null,
 	);
 
 	const isFetching = results.some((result) => result.isFetching);
@@ -155,11 +177,16 @@ export function MyPullRequestsContent({
 	const mountedAt = useRef(performance.now());
 	const logged = useRef({ first: false, fresh: false });
 	const hasFresh = results.some((result) => result.data);
+	const firstSource = hasFresh
+		? "GitHub"
+		: cachedResults.some((result) => result.data)
+			? "host cache"
+			: "search only";
 	useEffect(() => {
 		if (!logged.current.first && hasData) {
 			logged.current.first = true;
 			console.info(
-				`[pull-requests:mine] first list after ${Math.round(performance.now() - mountedAt.current)} ms (${hasFresh ? "GitHub" : "host cache"})`,
+				`[pull-requests:mine] first list after ${Math.round(performance.now() - mountedAt.current)} ms (${firstSource})`,
 			);
 		}
 		if (!logged.current.fresh && hasFresh) {
@@ -169,12 +196,22 @@ export function MyPullRequestsContent({
 				timings,
 			);
 		}
-	}, [hasData, hasFresh, timings]);
+	}, [hasData, hasFresh, timings, firstSource]);
 
 	const filters = useMyPullRequestsStore();
-	const { pinned, later, togglePinned, toggleLater, toggleState, groupBy } =
-		filters;
+	const {
+		pinned,
+		later,
+		togglePinned,
+		toggleLater,
+		toggleState,
+		groupBy,
+		projects,
+		projectMoves,
+		movePullRequestToProject,
+	} = filters;
 	const byProject = groupBy === "project";
+	const [isEditingProjects, setIsEditingProjects] = useState(false);
 
 	const dataVersion = shown.map((result) => result?.fetchedAt).join(",");
 	// biome-ignore lint/correctness/useExhaustiveDependencies: pullRequests is rebuilt every render; dataVersion tracks when it really changes
@@ -217,18 +254,15 @@ export function MyPullRequestsContent({
 		[visible, pinned, later],
 	);
 	const projectGroups = useMemo(
-		() => (byProject ? groupMyPullRequestsByProject(groups) : []),
-		[byProject, groups],
-	);
-	const projectNames = useMemo(
 		() =>
-			new Map(
-				projectTargets.map((project) => [
-					project.projectId,
-					project.projectName,
-				]),
-			),
-		[projectTargets],
+			byProject || isEditingProjects
+				? groupMyPullRequestsByProject(groups, projects, projectMoves)
+				: [],
+		[byProject, isEditingProjects, groups, projects, projectMoves],
+	);
+	const projectCounts = useMemo(
+		() => new Map(projectGroups.map((group) => [group.key, group.rows.length])),
+		[projectGroups],
 	);
 	const onViewerCount = groups
 		.filter((group) => group.action !== "later")
@@ -317,6 +351,12 @@ export function MyPullRequestsContent({
 					void navigateToV2Workspace(workspaceId, navigate)
 				}
 				onOpenConversation={openConversation}
+				projects={projects}
+				projectId={assignPullRequestProject(pr, projects, projectMoves)}
+				isMovedByHand={row.key in projectMoves}
+				onMoveToProject={(projectId) =>
+					movePullRequestToProject(row.key, projectId)
+				}
 				statusLine={
 					byProject ? (
 						<MyPullRequestStatusLine
@@ -431,7 +471,16 @@ export function MyPullRequestsContent({
 					/>
 				</Button>
 			</div>
-			<MyPullRequestsFilterBar counts={counts} />
+			<MyPullRequestsFilterBar
+				counts={counts}
+				onEditProjects={() => setIsEditingProjects(true)}
+			/>
+			{isEditingProjects && (
+				<MyPullRequestProjectsDialog
+					counts={projectCounts}
+					onClose={() => setIsEditingProjects(false)}
+				/>
+			)}
 
 			<div className="min-h-0 flex-1 overflow-y-auto">
 				{error && !hasData ? (
@@ -539,15 +588,13 @@ export function MyPullRequestsContent({
 									<section key={project.key} className="flex flex-col px-2">
 										<h3 className="flex items-baseline gap-2 px-2 pt-3 pb-1 text-[11px]">
 											<span className="font-medium text-foreground">
-												{projectNames.get(project.projectId) ??
-													project.repoFullName}
+												{project.name ?? t`Other`}
 											</span>
 											<span className="text-muted-foreground tabular-nums">
 												{project.rows.length}
 											</span>
 											<span className="truncate text-muted-foreground/70">
 												{[
-													project.repoFullName,
 													project.onViewer > 0 &&
 														t`${project.onViewer} waiting on you`,
 													project.toReview > 0 &&

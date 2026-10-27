@@ -1654,6 +1654,9 @@ msgstr "Vẫn còn một tiến trình đang chạy trong terminal này"
 msgid "A pull request always gets its own worktree"
 msgstr "Pull request luôn có worktree riêng"
 
+msgid "A pull request goes to the project you moved it to, else to the first project whose rules match: a PR number first, then a label, then a keyword. The rest goes to Other. Separate values with commas."
+msgstr "Pull request vào dự án bạn đã chuyển nó tới, nếu không thì vào dự án đầu tiên có quy tắc khớp: trước hết là số PR, rồi nhãn, rồi từ khóa. Phần còn lại vào Khác. Phân tách các giá trị bằng dấu phẩy."
+
 msgid "A rebuilt chat surface for driving agents: richer tool output, smoother steering, faster everything."
 msgstr "Giao diện chat được dựng lại để điều khiển agent: output tool phong phú hơn, lái mượt hơn, mọi thứ nhanh hơn."
 
@@ -3171,6 +3174,9 @@ msgstr "Quay lại danh sách trang"
 
 msgid "Back to the leaderboard"
 msgstr "Quay lại bảng xếp hạng"
+
+msgid "Back to the project its rules pick"
+msgstr "Trở về dự án theo quy tắc"
 
 msgid "Backed by"
 msgstr "Được hậu thuẫn bởi"
@@ -6243,6 +6249,10 @@ msgstr "Xóa \"{projectName}\"?"
 msgid "Delete “{title}”?"
 msgstr "Xóa “{title}”?"
 
+#. placeholder {0}: project.name
+msgid "Delete {0}"
+msgstr "Xóa {0}"
+
 #. placeholder {0}: organization.name
 #. placeholder {0}: secret.key
 msgid "Delete {0}?"
@@ -6961,6 +6971,9 @@ msgstr "Hạn"
 msgid "Duration"
 msgstr "Thời lượng"
 
+msgid "e.g. #2701, spore-bio/hub#3025"
+msgstr "vd. #2701, spore-bio/hub#3025"
+
 msgid "e.g. Add dark mode, Fix checkout bug"
 msgstr "ví dụ: Thêm chế độ tối, Sửa lỗi thanh toán"
 
@@ -7052,6 +7065,9 @@ msgstr "Sửa trên GitHub"
 
 msgid "Edit prefix"
 msgstr "Sửa tiền tố"
+
+msgid "Edit projects"
+msgstr "Sửa dự án"
 
 msgid "Edit Run Script"
 msgstr "Sửa script chạy"
@@ -8587,6 +8603,9 @@ msgstr "Tích hợp GitHub"
 msgid "GitHub issues"
 msgstr "Issue GitHub"
 
+msgid "GitHub labels, e.g. spore-app-redesign"
+msgstr "Nhãn GitHub, vd. spore-app-redesign"
+
 msgid "GitHub rate limit reached"
 msgstr "Đã đạt giới hạn yêu cầu GitHub"
 
@@ -9313,6 +9332,9 @@ msgstr "Trong ứng dụng Superset trên máy tính, mở <0>Cài đặt → Gi
 msgid "In the Superset desktop app, open Settings → Remote Access and turn on “Allow remote access to this device via relay”."
 msgstr "Trong ứng dụng Superset trên máy tính, mở Cài đặt → Truy cập từ xa và bật “Cho phép truy cập từ xa vào thiết bị này qua relay”."
 
+msgid "In the title or branch, e.g. audit trail, e-signature"
+msgstr "Trong tiêu đề hoặc nhánh, vd. audit trail, e-signature"
+
 msgid "In under a year, more than 145,000 developers across 180 countries have run Superset and created over 1.85 million agent workspaces."
 msgstr "Chưa đầy một năm, hơn 145.000 nhà phát triển tại 180 quốc gia đã chạy Superset và tạo hơn 1,85 triệu workspace agent."
 
@@ -9825,6 +9847,9 @@ msgstr "Phím tắt"
 
 msgid "Keyboard Shortcuts"
 msgstr "Phím tắt"
+
+msgid "Keywords"
+msgstr "Từ khóa"
 
 msgid "Kill"
 msgstr "Kết thúc"
@@ -11053,6 +11078,10 @@ msgstr "di chuyển"
 msgid "Move"
 msgstr "Di chuyển"
 
+#. placeholder {0}: project.name
+msgid "Move {0} up"
+msgstr "Đưa {0} lên"
+
 msgid "Move {count} to Group"
 msgstr "Chuyển {count} vào nhóm"
 
@@ -11065,11 +11094,17 @@ msgstr "Chuyển vào nhóm"
 msgid "Move to later"
 msgstr "Để sau"
 
+msgid "Move to project…"
+msgstr "Chuyển sang dự án…"
+
 msgid "Move to Right Side"
 msgstr "Chuyển sang bên phải"
 
 msgid "Move to Tab"
 msgstr "Chuyển sang tab"
+
+msgid "Move up"
+msgstr "Đưa lên"
 
 msgid "Moved down by you"
 msgstr "Bạn đã chuyển xuống"
@@ -11293,6 +11328,9 @@ msgstr "Người mới sẽ nhận email mời tham gia {organizationName}. Họ
 
 msgid "New project"
 msgstr "Dự án mới"
+
+msgid "New project name"
+msgstr "Tên dự án mới"
 
 msgid "New push to branch"
 msgstr "Push mới lên nhánh"
@@ -11872,6 +11910,9 @@ msgstr "Không có dự án nào"
 
 msgid "No project selected"
 msgstr "Chưa chọn dự án"
+
+msgid "No project yet: every pull request is in Other."
+msgstr "Chưa có dự án: mọi pull request đều ở Khác."
 
 msgid "No project<0>session</0>"
 msgstr "Không có dự án<0>phiên</0>"
@@ -14164,6 +14205,9 @@ msgstr "Pull request"
 
 msgid "Pull Requests"
 msgstr "Pull request"
+
+msgid "Pull requests in this project now"
+msgstr "Pull request hiện trong dự án này"
 
 msgid "Purple"
 msgstr "Tím"

@@ -1654,6 +1654,9 @@ msgstr "此终端中仍有进程在运行"
 msgid "A pull request always gets its own worktree"
 msgstr "拉取请求总是使用自己的 worktree"
 
+msgid "A pull request goes to the project you moved it to, else to the first project whose rules match: a PR number first, then a label, then a keyword. The rest goes to Other. Separate values with commas."
+msgstr "拉取请求会进入你移动到的项目，否则进入第一个规则匹配的项目：先看 PR 编号，再看标签，最后看关键词。其余的进入“其他”。多个值用逗号分隔。"
+
 msgid "A rebuilt chat surface for driving agents: richer tool output, smoother steering, faster everything."
 msgstr "重建的智能体驱动聊天界面：更丰富的工具输出、更顺手的引导，一切都更快。"
 
@@ -3171,6 +3174,9 @@ msgstr "返回页面"
 
 msgid "Back to the leaderboard"
 msgstr "返回排行榜"
+
+msgid "Back to the project its rules pick"
+msgstr "回到规则选择的项目"
 
 msgid "Backed by"
 msgstr "投资方"
@@ -6243,6 +6249,10 @@ msgstr "删除“{projectName}”？"
 msgid "Delete “{title}”?"
 msgstr "删除“{title}”？"
 
+#. placeholder {0}: project.name
+msgid "Delete {0}"
+msgstr "删除 {0}"
+
 #. placeholder {0}: organization.name
 #. placeholder {0}: secret.key
 msgid "Delete {0}?"
@@ -6961,6 +6971,9 @@ msgstr "截止"
 msgid "Duration"
 msgstr "耗时"
 
+msgid "e.g. #2701, spore-bio/hub#3025"
+msgstr "例如 #2701, spore-bio/hub#3025"
+
 msgid "e.g. Add dark mode, Fix checkout bug"
 msgstr "例如：添加深色模式、修复结账bug"
 
@@ -7052,6 +7065,9 @@ msgstr "在GitHub上编辑"
 
 msgid "Edit prefix"
 msgstr "编辑前缀"
+
+msgid "Edit projects"
+msgstr "编辑项目"
 
 msgid "Edit Run Script"
 msgstr "编辑运行脚本"
@@ -8587,6 +8603,9 @@ msgstr "GitHub集成"
 msgid "GitHub issues"
 msgstr "GitHub议题"
 
+msgid "GitHub labels, e.g. spore-app-redesign"
+msgstr "GitHub 标签，例如 spore-app-redesign"
+
 msgid "GitHub rate limit reached"
 msgstr "已达到 GitHub 速率限制"
 
@@ -9313,6 +9332,9 @@ msgstr "在Superset桌面应用中打开<0>设置 → 外观 → 主题</0>。"
 msgid "In the Superset desktop app, open Settings → Remote Access and turn on “Allow remote access to this device via relay”."
 msgstr "在Superset桌面应用中打开“设置 → 远程访问”，开启“允许通过中继远程访问本设备”。"
 
+msgid "In the title or branch, e.g. audit trail, e-signature"
+msgstr "在标题或分支中，例如 audit trail, e-signature"
+
 msgid "In under a year, more than 145,000 developers across 180 countries have run Superset and created over 1.85 million agent workspaces."
 msgstr "不到一年时间，来自 180 个国家的超过 145,000 名开发者运行过 Superset，并创建了超过 185 万个智能体工作区。"
 
@@ -9825,6 +9847,9 @@ msgstr "键盘快捷键"
 
 msgid "Keyboard Shortcuts"
 msgstr "键盘快捷键"
+
+msgid "Keywords"
+msgstr "关键词"
 
 msgid "Kill"
 msgstr "终止"
@@ -11053,6 +11078,10 @@ msgstr "移动"
 msgid "Move"
 msgstr "移动"
 
+#. placeholder {0}: project.name
+msgid "Move {0} up"
+msgstr "上移 {0}"
+
 msgid "Move {count} to Group"
 msgstr "将{count}个移动到分组"
 
@@ -11065,11 +11094,17 @@ msgstr "移动到分组"
 msgid "Move to later"
 msgstr "移到稍后"
 
+msgid "Move to project…"
+msgstr "移动到项目…"
+
 msgid "Move to Right Side"
 msgstr "移到右侧"
 
 msgid "Move to Tab"
 msgstr "移动到标签页"
+
+msgid "Move up"
+msgstr "上移"
 
 msgid "Moved down by you"
 msgstr "你移到下方的"
@@ -11293,6 +11328,9 @@ msgstr "新成员会收到加入 {organizationName} 的邮件邀请，加入后�
 
 msgid "New project"
 msgstr "新建项目"
+
+msgid "New project name"
+msgstr "新项目名称"
 
 msgid "New push to branch"
 msgstr "向分支推送了新提交"
@@ -11872,6 +11910,9 @@ msgstr "没有可用的项目"
 
 msgid "No project selected"
 msgstr "未选择项目"
+
+msgid "No project yet: every pull request is in Other."
+msgstr "还没有项目：所有拉取请求都在“其他”中。"
 
 msgid "No project<0>session</0>"
 msgstr "无项目<0>会话</0>"
@@ -14164,6 +14205,9 @@ msgstr "拉取请求"
 
 msgid "Pull Requests"
 msgstr "拉取请求"
+
+msgid "Pull requests in this project now"
+msgstr "当前在此项目中的拉取请求"
 
 msgid "Purple"
 msgstr "紫色"

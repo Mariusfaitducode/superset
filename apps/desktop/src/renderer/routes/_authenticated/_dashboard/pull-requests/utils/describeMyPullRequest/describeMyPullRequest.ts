@@ -77,6 +77,8 @@ export interface MyPullRequestItem {
 	authorLogin: string | null;
 	updatedAt: string | null;
 	ticketLinks?: MyPullRequestTicketLink[];
+	/** Missing from hosts older than the project grouping. */
+	labels?: string[];
 	/** null when GitHub did not return them for this PR. */
 	details: MyPullRequestDetails | null;
 }
