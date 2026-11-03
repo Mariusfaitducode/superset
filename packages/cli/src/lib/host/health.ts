@@ -4,6 +4,11 @@ export type HostHealth = {
 	cloudRegistered?: boolean;
 	registrationError?: string | null;
 	/**
+	 * Whether the host tries to register at all. false = the desktop app
+	 * runs it with remote access off. undefined = host predates the field.
+	 */
+	cloudConnectEnabled?: boolean;
+	/**
 	 * Build serving requests. Equals the desktop app's version when the app
 	 * spawned the service, which is how a standalone CLI learns the app version.
 	 */
@@ -35,6 +40,10 @@ export async function checkHostHealth(
 			registrationError:
 				typeof payload?.registrationError === "string"
 					? payload.registrationError
+					: undefined,
+			cloudConnectEnabled:
+				typeof payload?.cloudConnectEnabled === "boolean"
+					? payload.cloudConnectEnabled
 					: undefined,
 			version:
 				typeof payload?.version === "string" ? payload.version : undefined,

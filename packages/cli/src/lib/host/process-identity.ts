@@ -1,6 +1,9 @@
 import { execFile } from "node:child_process";
 
 const HOST_PROCESS_NAME = "superset-host";
+// The desktop app runs its bundled host-service under its own Electron
+// binary, so its command line names the entry script instead of the wrapper.
+const DESKTOP_HOST_ENTRY = /[\\/]host-service\.js(\s|$)/;
 const PS_TIMEOUT_MS = 2_000;
 
 /**
@@ -23,5 +26,7 @@ export async function inspectProcessCommand(
 }
 
 export function looksLikeHostProcess(command: string): boolean {
-	return command.includes(HOST_PROCESS_NAME);
+	return (
+		command.includes(HOST_PROCESS_NAME) || DESKTOP_HOST_ENTRY.test(command)
+	);
 }

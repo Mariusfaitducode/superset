@@ -36,7 +36,7 @@ export async function resolveAutomationTarget(args: {
 				: `This machine (host ${targetHostId}) isn't registered with the cloud`,
 			args.hostId
 				? "Run: superset hosts list"
-				: "Restart the host service (superset stop && superset start), then check: superset hosts list",
+				: "Run: superset status — it says why (remote access off, or a failed registration) and what to do",
 		);
 	}
 
