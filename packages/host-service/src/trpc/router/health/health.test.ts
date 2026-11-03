@@ -3,7 +3,7 @@ import { mkdtempSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import type { HostServiceContext } from "../../../types";
-import { healthRouter, sandboxBootReport } from "./health";
+import { cloudConnectEnabled, healthRouter, sandboxBootReport } from "./health";
 
 const ENV_KEYS = [
 	"SUPERSET_HOST_RUN_MODE",
@@ -64,5 +64,26 @@ describe("health.check", () => {
 			sandboxBootReport({ SUPERSET_HOST_RUN_MODE: "local" }),
 		).toBeUndefined();
 		expect(sandboxBootReport({})).toBeUndefined();
+	});
+});
+
+describe("cloudConnectEnabled", () => {
+	it("is off without a relay url, which is how the desktop app runs with remote access off", () => {
+		expect(cloudConnectEnabled({})).toBe(false);
+	});
+
+	it("is on with a relay url", () => {
+		expect(cloudConnectEnabled({ RELAY_URL: "https://relay.example" })).toBe(
+			true,
+		);
+	});
+
+	it("is off in a sandbox, which never registers itself", () => {
+		expect(
+			cloudConnectEnabled({
+				RELAY_URL: "https://relay.example",
+				SUPERSET_HOST_RUN_MODE: "sandbox",
+			}),
+		).toBe(false);
 	});
 });

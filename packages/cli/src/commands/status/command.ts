@@ -7,6 +7,7 @@ import { checkHostHealth } from "../../lib/host/health";
 import { isProcessAlive, readManifest } from "../../lib/host/manifest";
 import { verifyManifestOwner } from "../../lib/host/manifest-liveness";
 import { resolveOrganizationFromContext } from "../../lib/resolve-org";
+import { registrationWarning } from "./registration-warning";
 
 async function fetchHostName(
 	api: ApiClient,
@@ -92,12 +93,11 @@ export default command({
 		const cloudRegistered =
 			health.cloudRegistered ??
 			(cloudHost.listed === null ? undefined : cloudHost.listed);
-		const registrationWarning =
-			health.healthy && cloudRegistered === false
-				? `\nWarning: not registered with the cloud for ${organization.name}${
-						health.registrationError ? ` (${health.registrationError})` : ""
-					} — hosts list and automations won't see this machine\nHint: check host-service.log; registration retries automatically, or run: superset stop && superset start`
-				: "";
+		const warning = registrationWarning({
+			health,
+			cloudRegistered,
+			organizationName: organization.name,
+		});
 
 		return {
 			data: {
@@ -111,6 +111,9 @@ export default command({
 				hostName: cloudHost.name,
 				...(health.version ? { hostServiceVersion: health.version } : {}),
 				...(cloudRegistered === undefined ? {} : { cloudRegistered }),
+				...(health.cloudConnectEnabled === undefined
+					? {}
+					: { cloudConnectEnabled: health.cloudConnectEnabled }),
 				...(health.registrationError
 					? { registrationError: health.registrationError }
 					: {}),
@@ -118,7 +121,7 @@ export default command({
 			},
 			message: `${organization.name}: ${cloudHost.name ? `${cloudHost.name} (${localHostId.slice(0, 8)}…)` : `host ${localHostId.slice(0, 8)}…`} running (pid ${manifest.pid}, up ${uptime})${
 				health.healthy ? "" : " — not responding to health check"
-			}${registrationWarning}`,
+			}${warning}`,
 		};
 	},
 });

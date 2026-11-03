@@ -29,6 +29,13 @@ export function sandboxBootReport(
 	};
 }
 
+/** Mirrors the condition under which serve.ts calls connectRelay. */
+export function cloudConnectEnabled(
+	env: NodeJS.ProcessEnv = process.env,
+): boolean {
+	return !!env.RELAY_URL && env.SUPERSET_HOST_RUN_MODE !== "sandbox";
+}
+
 export const healthRouter = router({
 	check: publicProcedure.query(() => {
 		// A locally-healthy host that failed cloud registration is invisible
@@ -44,6 +51,10 @@ export const healthRouter = router({
 			installSource: getHostInstallSource(),
 			cloudRegistered: registration.registered,
 			registrationError: registration.lastError,
+			// Registration only runs when the host has a relay to connect to. The
+			// desktop app strips it while remote access is off, so an unregistered
+			// host with no error never tried, and restarting it changes nothing.
+			cloudConnectEnabled: cloudConnectEnabled(),
 			sandboxBoot: sandboxBootReport(),
 		};
 	}),

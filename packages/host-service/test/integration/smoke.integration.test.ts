@@ -22,6 +22,7 @@ describe("host-service smoke", () => {
 			installSource: expect.stringMatching(/^(cli|desktop|dev|unknown)$/),
 			cloudRegistered: false,
 			registrationError: null,
+			cloudConnectEnabled: false,
 		});
 	});
 
@@ -34,6 +35,7 @@ describe("host-service smoke", () => {
 			installSource: expect.stringMatching(/^(cli|desktop|dev|unknown)$/),
 			cloudRegistered: false,
 			registrationError: null,
+			cloudConnectEnabled: false,
 		});
 	});
 
