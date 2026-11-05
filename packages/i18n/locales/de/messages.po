@@ -107,6 +107,10 @@ msgstr "{0, plural, one {# aktiver Port — Details ausblenden} other {# aktive 
 msgid "{0, plural, one {# active port — show details} other {# active ports — show details}}"
 msgstr "{0, plural, one {# aktiver Port — Details anzeigen} other {# aktive Ports — Details anzeigen}}"
 
+#. placeholder {0}: summary.needsYou
+msgid "{0, plural, one {# agent needs you} other {# agents need you}}"
+msgstr "{0, plural, one {# Agent braucht dich} other {# Agenten brauchen dich}}"
+
 #. placeholder {0}: person.runningAgentCount
 msgid "{0, plural, one {# agent} other {# agents}}"
 msgstr "{0, plural, one {# Agent} other {# Agenten}}"
@@ -167,6 +171,10 @@ msgstr "{0, plural, one {# Datei} other {# Dateien}}"
 #. placeholder {0}: projects.length
 msgid "{0, plural, one {# hidden project} other {# hidden projects}}"
 msgstr "{0, plural, one {# ausgeblendetes Projekt} other {# ausgeblendete Projekte}}"
+
+#. placeholder {0}: todos.highPriority
+msgid "{0, plural, one {# high-priority to-do} other {# high-priority to-dos}}"
+msgstr "{0, plural, one {# To-do mit hoher Priorität} other {# To-dos mit hoher Priorität}}"
 
 #. placeholder {0}: result.imported
 msgid "{0, plural, one {# history item} other {# history items}}"
@@ -416,6 +424,10 @@ msgstr "{0} deaktiviert"
 msgid "{0} Documentation"
 msgstr "Dokumentation zu {0}"
 
+#. placeholder {0}: summary.done
+msgid "{0} done"
+msgstr "{0} hotovo"
+
 #. placeholder {0}: displayName(variables.name)
 #. placeholder {0}: skill.name
 #. placeholder {0}: variables.name
@@ -616,6 +628,10 @@ msgstr "{0} gewinnt in {1} Runden"
 #. placeholder {1}: result.events.length
 msgid "{0} wins on damage after {1} turns"
 msgstr "{0} gewinnt nach {1} Runden über die Schadenswertung"
+
+#. placeholder {0}: summary.working
+msgid "{0} working"
+msgstr "{0} arbeiten"
 
 #. placeholder {0}: check.name
 #. placeholder {1}: took ? `, ${took}` : ""
@@ -11514,6 +11530,9 @@ msgstr "Kein Agent läuft. Starte einen in einem Arbeitsbereich, und er bekommt 
 
 msgid "No agent running"
 msgstr "Kein Agent aktiv"
+
+msgid "No agents"
+msgstr "Keine Agenten"
 
 #. placeholder {0}: host.name
 msgid "No agents configured on {0}"

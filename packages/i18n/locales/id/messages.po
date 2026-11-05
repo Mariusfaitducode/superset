@@ -107,6 +107,10 @@ msgstr "{0, plural, one {# port aktif — sembunyikan detail} other {# port akti
 msgid "{0, plural, one {# active port — show details} other {# active ports — show details}}"
 msgstr "{0, plural, one {# port aktif — tampilkan detail} other {# port aktif — tampilkan detail}}"
 
+#. placeholder {0}: summary.needsYou
+msgid "{0, plural, one {# agent needs you} other {# agents need you}}"
+msgstr "{0, plural, other {# agen membutuhkan Anda}}"
+
 #. placeholder {0}: person.runningAgentCount
 msgid "{0, plural, one {# agent} other {# agents}}"
 msgstr "{0, plural, other {# agen}}"
@@ -167,6 +171,10 @@ msgstr "{0, plural, one {# File} other {# File}}"
 #. placeholder {0}: projects.length
 msgid "{0, plural, one {# hidden project} other {# hidden projects}}"
 msgstr "{0, plural, one {# proyek tersembunyi} other {# proyek tersembunyi}}"
+
+#. placeholder {0}: todos.highPriority
+msgid "{0, plural, one {# high-priority to-do} other {# high-priority to-dos}}"
+msgstr "{0, plural, other {# tugas prioritas tinggi}}"
 
 #. placeholder {0}: result.imported
 msgid "{0, plural, one {# history item} other {# history items}}"
@@ -416,6 +424,10 @@ msgstr "{0} dinonaktifkan"
 msgid "{0} Documentation"
 msgstr "Dokumentasi {0}"
 
+#. placeholder {0}: summary.done
+msgid "{0} done"
+msgstr "{0} selesai"
+
 #. placeholder {0}: displayName(variables.name)
 #. placeholder {0}: skill.name
 #. placeholder {0}: variables.name
@@ -616,6 +628,10 @@ msgstr "{0} menang dalam {1} giliran"
 #. placeholder {1}: result.events.length
 msgid "{0} wins on damage after {1} turns"
 msgstr "{0} menang berdasarkan kerusakan setelah {1} giliran"
+
+#. placeholder {0}: summary.working
+msgid "{0} working"
+msgstr "{0} bekerja"
 
 #. placeholder {0}: check.name
 #. placeholder {1}: took ? `, ${took}` : ""
@@ -11514,6 +11530,9 @@ msgstr "Tidak ada agen yang berjalan. Mulai satu di workspace dan ia akan menemp
 
 msgid "No agent running"
 msgstr "Tidak ada agen yang berjalan"
+
+msgid "No agents"
+msgstr "Tidak ada agen"
 
 #. placeholder {0}: host.name
 msgid "No agents configured on {0}"

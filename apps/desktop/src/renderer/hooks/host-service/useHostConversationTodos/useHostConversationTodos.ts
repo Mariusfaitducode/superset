@@ -1,10 +1,14 @@
-import { useQuery } from "@tanstack/react-query";
+import { useQueries, useQuery, useQueryClient } from "@tanstack/react-query";
+import { useEffect, useMemo } from "react";
 import {
 	getHostServiceClientByUrl,
 	type HostServiceClient,
 } from "renderer/lib/host-service-client";
 import { isMissingProcedureError } from "renderer/lib/isMissingProcedureError";
-import { useHostStoreRefresh } from "../useHostStoreRefresh";
+import {
+	holdHostStoreRefresh,
+	useHostStoreRefresh,
+} from "../useHostStoreRefresh";
 
 export type ConversationTodo = Awaited<
 	ReturnType<HostServiceClient["conversationTodos"]["list"]["query"]>
@@ -72,5 +76,45 @@ export function useHostConversationTodos(
 		...query,
 		enabled: active,
 		placeholderData: (previous) => previous,
+	});
+}
+
+// Module-level so react-query can keep the combined result stable.
+function flattenTodos(
+	results: Array<{ data?: ConversationTodo[] | null }>,
+): ConversationTodo[] {
+	return results.flatMap((result) => result.data ?? []);
+}
+
+/** Every to-do of several hosts, read through the same per-host query. */
+export function useConversationTodosOfHosts(
+	hostUrls: string[],
+): ConversationTodo[] {
+	const queryClient = useQueryClient();
+	const key = [...new Set(hostUrls)].sort().join("\n");
+	const unique = useMemo(() => (key ? key.split("\n") : []), [key]);
+	useEffect(() => {
+		const releases = unique
+			.filter((hostUrl) => hostKeepsTodos(hostUrl))
+			.map((hostUrl) =>
+				holdHostStoreRefresh(
+					hostUrl,
+					"conversation-todos",
+					queryClient,
+					hostConversationTodosQueryKey(hostUrl),
+				),
+			);
+		return () => {
+			for (const release of releases) release();
+		};
+	}, [unique, queryClient]);
+	return useQueries({
+		queries: unique.map((hostUrl) => ({
+			...hostConversationTodosQuery(hostUrl),
+			enabled: hostKeepsTodos(hostUrl),
+			placeholderData: (previous: ConversationTodo[] | null | undefined) =>
+				previous,
+		})),
+		combine: flattenTodos,
 	});
 }

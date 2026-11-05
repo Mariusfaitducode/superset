@@ -72,6 +72,7 @@ export function useAgentConversations(): AgentConversation[] {
 				workspace.id,
 				{
 					name: getV2WorkspaceDisplayName(workspace),
+					hostId: workspace.hostId,
 					projectName:
 						workspace.projectId === null
 							? null

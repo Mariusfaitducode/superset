@@ -4,5 +4,6 @@ export {
 	hostConversationTodosQuery,
 	hostConversationTodosQueryKey,
 	hostKeepsTodos,
+	useConversationTodosOfHosts,
 	useHostConversationTodos,
 } from "./useHostConversationTodos";
