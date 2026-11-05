@@ -13,6 +13,7 @@ function conversation(
 		agentLabel: "Claude",
 		title: terminalId,
 		workspaceName: "workspace",
+		hostId: "host-1",
 		projectName: "project",
 		state: "working",
 		since: 0,

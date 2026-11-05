@@ -107,6 +107,10 @@ msgstr "{0, plural, one {활성 포트 #개 — 세부 정보 숨기기} other {
 msgid "{0, plural, one {# active port — show details} other {# active ports — show details}}"
 msgstr "{0, plural, one {활성 포트 #개 — 세부 정보 표시} other {활성 포트 #개 — 세부 정보 표시}}"
 
+#. placeholder {0}: summary.needsYou
+msgid "{0, plural, one {# agent needs you} other {# agents need you}}"
+msgstr "{0, plural, other {에이전트 #개가 응답을 기다림}}"
+
 #. placeholder {0}: person.runningAgentCount
 msgid "{0, plural, one {# agent} other {# agents}}"
 msgstr "{0, plural, other {에이전트 #개}}"
@@ -167,6 +171,10 @@ msgstr "{0, plural, one {파일 #개} other {파일 #개}}"
 #. placeholder {0}: projects.length
 msgid "{0, plural, one {# hidden project} other {# hidden projects}}"
 msgstr "{0, plural, one {숨긴 프로젝트 #개} other {숨긴 프로젝트 #개}}"
+
+#. placeholder {0}: todos.highPriority
+msgid "{0, plural, one {# high-priority to-do} other {# high-priority to-dos}}"
+msgstr "{0, plural, other {높은 우선순위 할 일 #개}}"
 
 #. placeholder {0}: result.imported
 msgid "{0, plural, one {# history item} other {# history items}}"
@@ -411,6 +419,10 @@ msgstr "{0} 비활성화됨"
 msgid "{0} Documentation"
 msgstr "{0} 문서"
 
+#. placeholder {0}: summary.done
+msgid "{0} done"
+msgstr "{0}개 완료"
+
 #. placeholder {0}: displayName(variables.name)
 #. placeholder {0}: skill.name
 #. placeholder {0}: variables.name
@@ -570,6 +582,10 @@ msgstr "{0} 승리, {1}턴 만에"
 #. placeholder {1}: result.events.length
 msgid "{0} wins on damage after {1} turns"
 msgstr "{1}턴 종료, {0}이(가) 누적 데미지로 승리"
+
+#. placeholder {0}: summary.working
+msgid "{0} working"
+msgstr "{0}개 작업 중"
 
 #. placeholder {0}: check.name
 #. placeholder {1}: took ? `, ${took}` : ""
@@ -11195,6 +11211,9 @@ msgstr "이 호스트에 구성된 에이전트가 없습니다"
 
 msgid "No agent running"
 msgstr "실행 중인 에이전트 없음"
+
+msgid "No agents"
+msgstr "에이전트 없음"
 
 #. placeholder {0}: host.name
 msgid "No agents configured on {0}"

@@ -107,6 +107,10 @@ msgstr "{0, plural, one {#個のアクティブなポート — 詳細を隠す}
 msgid "{0, plural, one {# active port — show details} other {# active ports — show details}}"
 msgstr "{0, plural, one {#個のアクティブなポート — 詳細を表示} other {#個のアクティブなポート — 詳細を表示}}"
 
+#. placeholder {0}: summary.needsYou
+msgid "{0, plural, one {# agent needs you} other {# agents need you}}"
+msgstr "{0, plural, other {# 件のエージェントが対応待ち}}"
+
 #. placeholder {0}: person.runningAgentCount
 msgid "{0, plural, one {# agent} other {# agents}}"
 msgstr "{0, plural, other {エージェント # 件}}"
@@ -167,6 +171,10 @@ msgstr "{0, plural, one {#ファイル} other {#ファイル}}"
 #. placeholder {0}: projects.length
 msgid "{0, plural, one {# hidden project} other {# hidden projects}}"
 msgstr "{0, plural, one {非表示のプロジェクト #件} other {非表示のプロジェクト #件}}"
+
+#. placeholder {0}: todos.highPriority
+msgid "{0, plural, one {# high-priority to-do} other {# high-priority to-dos}}"
+msgstr "{0, plural, other {優先度の高い ToDo # 件}}"
 
 #. placeholder {0}: result.imported
 msgid "{0, plural, one {# history item} other {# history items}}"
@@ -411,6 +419,10 @@ msgstr "{0}を無効にしました"
 msgid "{0} Documentation"
 msgstr "{0}ドキュメント"
 
+#. placeholder {0}: summary.done
+msgid "{0} done"
+msgstr "{0} 件完了"
+
 #. placeholder {0}: displayName(variables.name)
 #. placeholder {0}: skill.name
 #. placeholder {0}: variables.name
@@ -570,6 +582,10 @@ msgstr "{0}が{1}ターンで勝利"
 #. placeholder {1}: result.events.length
 msgid "{0} wins on damage after {1} turns"
 msgstr "{1}ターン終了、{0}がダメージ判定で勝利"
+
+#. placeholder {0}: summary.working
+msgid "{0} working"
+msgstr "{0} 件作業中"
 
 #. placeholder {0}: check.name
 #. placeholder {1}: took ? `, ${took}` : ""
@@ -11195,6 +11211,9 @@ msgstr "このホストにはエージェントが設定されていません"
 
 msgid "No agent running"
 msgstr "実行中のエージェントはありません"
+
+msgid "No agents"
+msgstr "エージェントなし"
 
 #. placeholder {0}: host.name
 msgid "No agents configured on {0}"

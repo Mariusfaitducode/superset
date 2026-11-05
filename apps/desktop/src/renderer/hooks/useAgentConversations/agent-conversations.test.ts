@@ -22,8 +22,11 @@ function binding(
 }
 
 const workspaces = new Map([
-	["ws-1", { name: "sidebar todos", projectName: "superset" }],
-	["ws-2", { name: "ctrl tab", projectName: null }],
+	[
+		"ws-1",
+		{ name: "sidebar todos", hostId: "host-1", projectName: "superset" },
+	],
+	["ws-2", { name: "ctrl tab", hostId: "host-1", projectName: null }],
 ]);
 
 function build(bindings: AgentBinding[], terminalSeenAt = {}) {

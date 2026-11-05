@@ -1,3 +1,4 @@
+import { plural } from "@lingui/core/macro";
 import { useLingui } from "@lingui/react/macro";
 import { formatCompactRelativeTime } from "@superset/i18n/format";
 import { cn } from "@superset/ui/utils";
@@ -12,7 +13,7 @@ import {
 	useState,
 } from "react";
 import { createPortal } from "react-dom";
-import { LuBot } from "react-icons/lu";
+import { LuBot, LuFlag, LuGitBranch, LuListChecks } from "react-icons/lu";
 import { usePresetIcon } from "renderer/assets/app-icons/preset-icons";
 import {
 	type AgentConversation,
@@ -28,9 +29,11 @@ import {
 } from "renderer/stores/workspace-recency";
 import type { ActivePaneStatus } from "shared/tabs-types";
 import { useSidebarWorkspaceStatuses } from "../../providers/DashboardSidebarWorkspaceStatusProvider";
-import type { ActiveWorkspaceSwitcherOption } from "../DashboardSidebarActiveWorkspaceSwitcher";
+import type { ActiveWorkspaceSwitcherOption } from "../../utils/buildWorkspaceSwitcherOptions";
 import { DOT_CLASS } from "../DashboardSidebarWorkspaceItem/components/DashboardSidebarExpandedWorkspaceRow/components/DashboardSidebarConversationList/DashboardSidebarConversationList";
 import { isWaitingOnUser } from "../DashboardSidebarWorkspaceItem/components/DashboardSidebarExpandedWorkspaceRow/components/DashboardSidebarConversationList/utils/conversation-state";
+import { LABEL_PILL_CLASS } from "../WorkspaceLabels/labels";
+import { summarizeAgents } from "./utils/summarizeAgents";
 
 interface DashboardSidebarRecentWorkspaceSwitcherProps {
 	workspaces: ActiveWorkspaceSwitcherOption[];
@@ -239,7 +242,7 @@ export function DashboardSidebarRecentWorkspaceSwitcher({
 				aria-orientation="horizontal"
 				aria-activedescendant={`${optionIdPrefix}-${session.index}`}
 				aria-label={t({ message: "Switch to Recent Workspace" })}
-				className="pointer-events-auto flex max-w-full gap-2 overflow-x-auto rounded-2xl border bg-popover/95 p-2.5 text-popover-foreground shadow-2xl outline-none ring-1 ring-black/20 backdrop-blur [scrollbar-width:none]"
+				className="pointer-events-auto flex max-w-full gap-2.5 overflow-x-auto rounded-2xl border bg-popover/95 p-2.5 text-popover-foreground shadow-2xl outline-none ring-1 ring-black/20 backdrop-blur [scrollbar-width:none]"
 			>
 				{session.items.map((item, index) => (
 					<WorkspaceCard
@@ -259,7 +262,7 @@ export function DashboardSidebarRecentWorkspaceSwitcher({
 				))}
 			</div>
 			{selected && (
-				<div className="pointer-events-auto w-[440px] max-w-full rounded-xl border bg-popover p-1.5 text-popover-foreground shadow-xl">
+				<div className="pointer-events-auto w-[480px] max-w-full rounded-xl border bg-popover p-1.5 text-popover-foreground shadow-xl">
 					{selectedConversations.length === 0 ? (
 						<div className="px-2 py-1 text-xs text-muted-foreground">
 							{t({ message: "No agent conversations" })}
@@ -271,6 +274,9 @@ export function DashboardSidebarRecentWorkspaceSwitcher({
 								<SwitcherConversationRow
 									key={conversation.terminalId}
 									conversation={conversation}
+									openTodos={
+										selected.todos.byTerminal[conversation.terminalId] ?? 0
+									}
 									now={now}
 									isSelected={index === session.conversationIndex}
 									onMouseEnter={() =>
@@ -306,7 +312,18 @@ export function DashboardSidebarRecentWorkspaceSwitcher({
 	);
 }
 
-const MAX_CARD_AGENTS = 5;
+const MAX_CARD_AGENTS = 6;
+
+const PR_STATE_CLASS: Record<
+	NonNullable<ActiveWorkspaceSwitcherOption["pullRequest"]>["state"],
+	string
+> = {
+	open: "bg-emerald-500/15 text-emerald-600 dark:text-emerald-400",
+	draft: "bg-muted text-muted-foreground",
+	merged: "bg-violet-500/15 text-violet-600 dark:text-violet-400",
+	closed: "bg-red-500/15 text-red-600 dark:text-red-400",
+	queued: "bg-amber-500/15 text-amber-600 dark:text-amber-400",
+};
 
 function WorkspaceCard({
 	ref,
@@ -331,6 +348,8 @@ function WorkspaceCard({
 }) {
 	const { t } = useLingui();
 	const extraAgents = conversations.length - MAX_CARD_AGENTS;
+	const groupColor = item.section?.color ?? item.project?.color ?? null;
+	const { pullRequest, todos } = item;
 	return (
 		<div
 			ref={ref}
@@ -339,40 +358,193 @@ function WorkspaceCard({
 			tabIndex={-1}
 			aria-selected={isSelected}
 			className={cn(
-				"flex h-[88px] w-44 shrink-0 cursor-default flex-col gap-1 rounded-xl border border-transparent bg-muted/40 p-2.5 text-left transition-colors",
-				isSelected && "border-ring bg-accent text-accent-foreground shadow-md",
+				"flex min-h-[132px] w-60 shrink-0 cursor-default flex-col gap-1.5 rounded-xl border border-l-4 border-border/60 bg-muted/40 py-2.5 pr-3 pl-2.5 text-left transition-colors",
+				isSelected &&
+					"border-ring bg-accent text-accent-foreground shadow-md ring-1 ring-ring",
 			)}
+			style={groupColor ? { borderLeftColor: groupColor } : undefined}
 			onMouseEnter={onMouseEnter}
 			onMouseDown={(e) => {
 				e.preventDefault();
 				onMouseDown();
 			}}
 		>
-			<div className="flex min-w-0 items-center gap-1.5">
-				{status && <StatusIndicator status={status} />}
-				<span className="truncate font-medium text-[13px]">{item.name}</span>
-			</div>
-			<span className="truncate text-[11px] text-muted-foreground">
-				{isCurrent
-					? item.detail
-						? `${item.detail} · ${t({ message: "Current" })}`
-						: t({ message: "Current" })
-					: (item.detail ?? "")}
-			</span>
-			<div className="mt-auto flex items-center gap-1.5">
-				{conversations.slice(0, MAX_CARD_AGENTS).map((conversation) => (
-					<AgentAvatar
-						key={conversation.terminalId}
-						conversation={conversation}
-					/>
-				))}
-				{extraAgents > 0 && (
-					<span className="text-[10px] text-muted-foreground">
-						+{extraAgents}
+			<div className="flex min-w-0 items-center gap-1.5 text-[11px] text-muted-foreground">
+				{(item.project || item.section) && (
+					<>
+						<span
+							className="size-2 shrink-0 rounded-full bg-muted-foreground/40"
+							style={groupColor ? { backgroundColor: groupColor } : undefined}
+						/>
+						<span className="truncate font-medium">
+							{item.project && item.section
+								? `${item.project.name} › ${item.section.name}`
+								: (item.section ?? item.project)?.name}
+						</span>
+					</>
+				)}
+				{isCurrent && (
+					<span className="ml-auto shrink-0 rounded bg-foreground/10 px-1 text-[10px] text-foreground/80">
+						{t({ message: "Current" })}
 					</span>
 				)}
 			</div>
+			<div className="flex min-w-0 items-start gap-1.5">
+				{status && <StatusIndicator status={status} className="mt-1.5" />}
+				<span className="line-clamp-2 break-words font-semibold text-[15px] leading-snug">
+					{item.name}
+				</span>
+			</div>
+			{(item.branch || pullRequest) && (
+				<div className="flex min-w-0 items-center gap-1.5 text-[11px] text-muted-foreground">
+					{item.branch && (
+						<>
+							<LuGitBranch className="size-3 shrink-0" />
+							<span className="min-w-0 truncate font-mono">{item.branch}</span>
+						</>
+					)}
+					{pullRequest && (
+						<span
+							className={cn(
+								"ml-auto shrink-0 rounded px-1 font-medium text-[10px] leading-4",
+								PR_STATE_CLASS[pullRequest.state],
+							)}
+						>
+							#{pullRequest.number}
+						</span>
+					)}
+				</div>
+			)}
+			{item.labels.length > 0 && (
+				<div className="flex flex-wrap gap-1">
+					{item.labels.map((label) => (
+						<span
+							key={label.id}
+							className={cn(
+								"max-w-full truncate rounded px-1.5 font-medium text-[11px] leading-[18px]",
+								LABEL_PILL_CLASS[label.color],
+							)}
+						>
+							{label.name}
+						</span>
+					))}
+				</div>
+			)}
+			<div className="mt-auto flex min-w-0 items-center gap-2 pt-0.5">
+				<AgentStateLine conversations={conversations} />
+				{todos.open > 0 && (
+					<span
+						className={cn(
+							"ml-auto flex shrink-0 items-center gap-0.5 text-[11px] tabular-nums",
+							todos.highPriority > 0
+								? "font-medium text-red-600 dark:text-red-400"
+								: "text-muted-foreground",
+						)}
+						title={
+							todos.highPriority > 0
+								? t({
+										message: plural(todos.highPriority, {
+											one: "# high-priority to-do",
+											other: "# high-priority to-dos",
+										}),
+									})
+								: undefined
+						}
+					>
+						{todos.highPriority > 0 ? (
+							<LuFlag className="size-3" />
+						) : (
+							<LuListChecks className="size-3" />
+						)}
+						{todos.open}
+					</span>
+				)}
+			</div>
+			{conversations.length > 0 && (
+				<div className="flex items-center gap-1.5">
+					{conversations.slice(0, MAX_CARD_AGENTS).map((conversation) => (
+						<AgentAvatar
+							key={conversation.terminalId}
+							conversation={conversation}
+						/>
+					))}
+					{extraAgents > 0 && (
+						<span className="text-[10px] text-muted-foreground">
+							+{extraAgents}
+						</span>
+					)}
+				</div>
+			)}
 		</div>
+	);
+}
+
+/** "2 agents need you · 1 working": the states that ask something first. */
+function AgentStateLine({
+	conversations,
+}: {
+	conversations: AgentConversation[];
+}) {
+	const { t } = useLingui();
+	const summary = summarizeAgents(conversations);
+	const parts: { key: string; dot: string; text: string; strong: boolean }[] =
+		[];
+	if (summary.needsYou > 0) {
+		parts.push({
+			key: "needsYou",
+			dot: DOT_CLASS.request,
+			text: t({
+				message: plural(summary.needsYou, {
+					one: "# agent needs you",
+					other: "# agents need you",
+				}),
+			}),
+			strong: true,
+		});
+	}
+	if (summary.working > 0) {
+		parts.push({
+			key: "working",
+			dot: DOT_CLASS.working,
+			text: t({ message: `${summary.working} working` }),
+			strong: parts.length === 0,
+		});
+	}
+	if (summary.done > 0) {
+		parts.push({
+			key: "done",
+			dot: summary.unseen > 0 ? DOT_CLASS.unseen : DOT_CLASS.seen,
+			text: t({ message: `${summary.done} done` }),
+			strong: parts.length === 0 && summary.unseen > 0,
+		});
+	}
+	if (parts.length === 0) {
+		return (
+			<span className="flex min-w-0 items-center gap-1.5 text-[12px] text-muted-foreground">
+				<span className={cn("size-2 rounded-full", DOT_CLASS.idle)} />
+				{conversations.length === 0
+					? t({ message: "No agents" })
+					: t({ message: "Idle" })}
+			</span>
+		);
+	}
+	return (
+		<span className="flex min-w-0 flex-wrap items-center gap-x-2 gap-y-0.5 text-[12px]">
+			{parts.map((part) => (
+				<span
+					key={part.key}
+					className={cn(
+						"flex items-center gap-1",
+						part.strong
+							? "font-medium text-foreground"
+							: "text-muted-foreground",
+					)}
+				>
+					<span className={cn("size-2 shrink-0 rounded-full", part.dot)} />
+					{part.text}
+				</span>
+			))}
+		</span>
 	);
 }
 
@@ -397,12 +569,14 @@ function AgentAvatar({ conversation }: { conversation: AgentConversation }) {
 
 function SwitcherConversationRow({
 	conversation,
+	openTodos,
 	now,
 	isSelected,
 	onMouseEnter,
 	onMouseDown,
 }: {
 	conversation: AgentConversation;
+	openTodos: number;
 	now: number;
 	isSelected: boolean;
 	onMouseEnter: () => void;
@@ -423,6 +597,12 @@ function SwitcherConversationRow({
 		>
 			<AgentAvatar conversation={conversation} />
 			<span className="min-w-0 flex-1 truncate">{conversation.title}</span>
+			{openTodos > 0 && (
+				<span className="flex shrink-0 items-center gap-0.5 text-[11px] tabular-nums text-muted-foreground">
+					<LuListChecks className="size-3" />
+					{openTodos}
+				</span>
+			)}
 			{isWaitingOnUser(conversation.state) && (
 				<span className="shrink-0 text-[11px] tabular-nums text-muted-foreground">
 					{formatCompactRelativeTime(Math.min(conversation.since, now), now)}

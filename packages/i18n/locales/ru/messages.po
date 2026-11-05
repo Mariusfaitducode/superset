@@ -107,6 +107,10 @@ msgstr "{0, plural, one {# активный порт — скрыть детал
 msgid "{0, plural, one {# active port — show details} other {# active ports — show details}}"
 msgstr "{0, plural, one {# активный порт — показать детали} few {# активных порта — показать детали} many {# активных портов — показать детали} other {# активных портов — показать детали}}"
 
+#. placeholder {0}: summary.needsYou
+msgid "{0, plural, one {# agent needs you} other {# agents need you}}"
+msgstr "{0, plural, one {# агент ждёт вас} few {# агента ждут вас} many {# агентов ждут вас} other {# агента ждут вас}}"
+
 #. placeholder {0}: person.runningAgentCount
 msgid "{0, plural, one {# agent} other {# agents}}"
 msgstr "{0, plural, one {# агент} few {# агента} many {# агентов} other {# агента}}"
@@ -167,6 +171,10 @@ msgstr "{0, plural, one {# файл} few {# файла} many {# файлов} ot
 #. placeholder {0}: projects.length
 msgid "{0, plural, one {# hidden project} other {# hidden projects}}"
 msgstr "{0, plural, one {# скрытый проект} few {# скрытых проекта} many {# скрытых проектов} other {# скрытого проекта}}"
+
+#. placeholder {0}: todos.highPriority
+msgid "{0, plural, one {# high-priority to-do} other {# high-priority to-dos}}"
+msgstr "{0, plural, one {# задача с высоким приоритетом} few {# задачи с высоким приоритетом} many {# задач с высоким приоритетом} other {# задачи с высоким приоритетом}}"
 
 #. placeholder {0}: result.imported
 msgid "{0, plural, one {# history item} other {# history items}}"
@@ -411,6 +419,10 @@ msgstr "{0} отключён"
 msgid "{0} Documentation"
 msgstr "Документация {0}"
 
+#. placeholder {0}: summary.done
+msgid "{0} done"
+msgstr "{0} готово"
+
 #. placeholder {0}: displayName(variables.name)
 #. placeholder {0}: skill.name
 #. placeholder {0}: variables.name
@@ -570,6 +582,10 @@ msgstr "{0} побеждает за {1} ходов"
 #. placeholder {1}: result.events.length
 msgid "{0} wins on damage after {1} turns"
 msgstr "{0} побеждает по урону после {1} ходов"
+
+#. placeholder {0}: summary.working
+msgid "{0} working"
+msgstr "{0} работают"
 
 #. placeholder {0}: check.name
 #. placeholder {1}: took ? `, ${took}` : ""
@@ -11195,6 +11211,9 @@ msgstr "На этом хосте не настроен ни один агент"
 
 msgid "No agent running"
 msgstr "Нет запущенных агентов"
+
+msgid "No agents"
+msgstr "Нет агентов"
 
 #. placeholder {0}: host.name
 msgid "No agents configured on {0}"

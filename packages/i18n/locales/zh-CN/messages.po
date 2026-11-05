@@ -107,6 +107,10 @@ msgstr "{0, plural, one {#个活动端口 — 隐藏详情} other {#个活动端
 msgid "{0, plural, one {# active port — show details} other {# active ports — show details}}"
 msgstr "{0, plural, one {#个活动端口 — 显示详情} other {#个活动端口 — 显示详情}}"
 
+#. placeholder {0}: summary.needsYou
+msgid "{0, plural, one {# agent needs you} other {# agents need you}}"
+msgstr "{0, plural, other {# 个代理需要你}}"
+
 #. placeholder {0}: person.runningAgentCount
 msgid "{0, plural, one {# agent} other {# agents}}"
 msgstr "{0, plural, other {# 个智能体}}"
@@ -167,6 +171,10 @@ msgstr "{0, plural, one {#个文件} other {#个文件}}"
 #. placeholder {0}: projects.length
 msgid "{0, plural, one {# hidden project} other {# hidden projects}}"
 msgstr "{0, plural, one {# 个已隐藏的项目} other {# 个已隐藏的项目}}"
+
+#. placeholder {0}: todos.highPriority
+msgid "{0, plural, one {# high-priority to-do} other {# high-priority to-dos}}"
+msgstr "{0, plural, other {# 个高优先级待办}}"
 
 #. placeholder {0}: result.imported
 msgid "{0, plural, one {# history item} other {# history items}}"
@@ -411,6 +419,10 @@ msgstr "{0}已停用"
 msgid "{0} Documentation"
 msgstr "{0} 文档"
 
+#. placeholder {0}: summary.done
+msgid "{0} done"
+msgstr "{0} 个已完成"
+
 #. placeholder {0}: displayName(variables.name)
 #. placeholder {0}: skill.name
 #. placeholder {0}: variables.name
@@ -570,6 +582,10 @@ msgstr "{0} 在第 {1} 回合获胜"
 #. placeholder {1}: result.events.length
 msgid "{0} wins on damage after {1} turns"
 msgstr "{1} 回合结束，{0} 以伤害判定获胜"
+
+#. placeholder {0}: summary.working
+msgid "{0} working"
+msgstr "{0} 个运行中"
 
 #. placeholder {0}: check.name
 #. placeholder {1}: took ? `, ${took}` : ""
@@ -11195,6 +11211,9 @@ msgstr "此主机上未配置任何智能体"
 
 msgid "No agent running"
 msgstr "没有正在运行的智能体"
+
+msgid "No agents"
+msgstr "没有代理"
 
 #. placeholder {0}: host.name
 msgid "No agents configured on {0}"
