@@ -496,6 +496,14 @@ msgstr "{1}项检查中有{0}项在运行"
 msgid "{0} of {totalCount}"
 msgstr "{0}/{totalCount}"
 
+#. placeholder {0}: todos.open
+msgid "{0} open to-dos"
+msgstr "{0} 个未完成待办"
+
+#. placeholder {0}: todos.open
+msgid "{0} open to-dos, some high priority"
+msgstr "{0} 个未完成待办，部分为高优先级"
+
 #. placeholder {0}: plugin.interface.displayName
 msgid "{0} options"
 msgstr "{0}选项"
@@ -3834,6 +3842,9 @@ msgstr "检查失败"
 msgid "Checks passed"
 msgstr "检查通过"
 
+msgid "Checks running"
+msgstr "检查运行中"
+
 msgid "Checks Skipped"
 msgstr "检查已跳过"
 
@@ -4494,6 +4505,9 @@ msgstr "紧凑"
 
 msgid "Compact conversations"
 msgstr "紧凑对话"
+
+msgid "Compact rows"
+msgstr "紧凑行"
 
 msgid "Company"
 msgstr "公司"
@@ -12212,6 +12226,9 @@ msgstr "一个人同时最多驱动一个智能体。"
 msgid "One line about how you work"
 msgstr "用一句话介绍你的工作方式"
 
+msgid "One line per workspace, without the details line under its name."
+msgstr "每个工作区一行，名称下不显示详情行。"
+
 msgid "One of the first hundred on the board"
 msgstr "榜单最早的一百人之一"
 
@@ -12826,6 +12843,9 @@ msgstr "在“打开方式”菜单中选定的应用（VS Code、Cursor等）�
 
 msgid "Open this run's workspace"
 msgstr "打开此次运行的工作区"
+
+msgid "Open to-dos"
+msgstr "未完成待办"
 
 msgid "Open Usage"
 msgstr "打开用量"
@@ -13974,6 +13994,9 @@ msgstr "拉取请求#{0}，{1}"
 
 msgid "Pull request actions"
 msgstr "拉取请求操作"
+
+msgid "Pull request and checks"
+msgstr "拉取请求和检查"
 
 msgid "Pull request detail tabs"
 msgstr "拉取请求详情标签页"
@@ -17594,6 +17617,9 @@ msgstr "切换到标签页8"
 msgid "Switch to Tab 9"
 msgstr "切换到标签页9"
 
+msgid "Switch to this workspace"
+msgstr "切换到此工作区"
+
 msgid "Switch to Workspace 1"
 msgstr "切换到工作区1"
 
@@ -18050,6 +18076,9 @@ msgstr "桌面应用目前支持macOS和Linux。留下邮箱，Windows版本一�
 
 msgid "The desktop app runs on macOS, with an experimental Linux AppImage; Windows is not yet available. Beyond the desktop app there's a CLI, a TypeScript SDK, and an MCP server, so you can drive Superset from scripts, terminals, and other agents. An app for iPhone and iPad on the App Store lets you check on agents and review their diffs away from your desk."
 msgstr "桌面应用支持macOS，另有实验性的Linux AppImage；Windows暂未提供。除了桌面应用，还有CLI、TypeScript SDK和MCP服务器，你可以从脚本、终端和其他智能体来驱动Superset。App Store上的iPhone和iPad应用让你离开工位时也能查看智能体并审阅它们的差异。"
+
+msgid "The details line shows:"
+msgstr "详情行显示："
 
 msgid "The device that hosts this project is unavailable."
 msgstr "承载这个项目的设备不可用。"
@@ -18743,6 +18772,9 @@ msgstr "等级"
 
 msgid "Time"
 msgstr "时间"
+
+msgid "Time waited"
+msgstr "等待时间"
 
 msgid "Times use your time zone."
 msgstr "时间按你的时区显示。"
@@ -19812,6 +19844,9 @@ msgstr "等待他人"
 msgid "Waiting on reviewers or CI, longest wait first"
 msgstr "等待审查者或 CI，等待最久的在前"
 
+msgid "Waiting on you"
+msgstr "等你处理"
+
 msgid "Waiting tint"
 msgstr "等待着色"
 
@@ -20278,6 +20313,9 @@ msgstr "工作区已恢复"
 
 msgid "workspace root"
 msgstr "工作区根目录"
+
+msgid "Workspace rows"
+msgstr "工作区行"
 
 msgid "Workspace Run"
 msgstr "工作区运行"

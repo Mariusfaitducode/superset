@@ -496,6 +496,14 @@ msgstr "{0} dari {1} check berjalan"
 msgid "{0} of {totalCount}"
 msgstr "{0} dari {totalCount}"
 
+#. placeholder {0}: todos.open
+msgid "{0} open to-dos"
+msgstr "{0} tugas terbuka"
+
+#. placeholder {0}: todos.open
+msgid "{0} open to-dos, some high priority"
+msgstr "{0} tugas terbuka, beberapa prioritas tinggi"
+
 #. placeholder {0}: plugin.interface.displayName
 msgid "{0} options"
 msgstr "Opsi {0}"
@@ -3834,6 +3842,9 @@ msgstr "Check gagal"
 msgid "Checks passed"
 msgstr "Check lulus"
 
+msgid "Checks running"
+msgstr "Pemeriksaan sedang berjalan"
+
 msgid "Checks Skipped"
 msgstr "Check Dilewati"
 
@@ -4494,6 +4505,9 @@ msgstr "Ringkas"
 
 msgid "Compact conversations"
 msgstr "Percakapan ringkas"
+
+msgid "Compact rows"
+msgstr "Baris ringkas"
 
 msgid "Company"
 msgstr "Perusahaan"
@@ -12212,6 +12226,9 @@ msgstr "Satu manusia mengendalikan paling banyak satu agen sekaligus."
 msgid "One line about how you work"
 msgstr "Satu baris tentang cara Anda bekerja"
 
+msgid "One line per workspace, without the details line under its name."
+msgstr "Satu baris per workspace, tanpa baris detail di bawah namanya."
+
 msgid "One of the first hundred on the board"
 msgstr "Termasuk seratus orang pertama di papan"
 
@@ -12826,6 +12843,9 @@ msgstr "Buka workspace di aplikasi yang dipilih di menu \"Buka di\" (VS Code, Cu
 
 msgid "Open this run's workspace"
 msgstr "Buka workspace run ini"
+
+msgid "Open to-dos"
+msgstr "Tugas terbuka"
 
 msgid "Open Usage"
 msgstr "Buka penggunaan"
@@ -13974,6 +13994,9 @@ msgstr "Pull request #{0}, {1}"
 
 msgid "Pull request actions"
 msgstr "Aksi pull request"
+
+msgid "Pull request and checks"
+msgstr "Pull request dan pemeriksaan"
 
 msgid "Pull request detail tabs"
 msgstr "Tab detail pull request"
@@ -17594,6 +17617,9 @@ msgstr "Beralih ke Tab 8"
 msgid "Switch to Tab 9"
 msgstr "Beralih ke Tab 9"
 
+msgid "Switch to this workspace"
+msgstr "Beralih ke workspace ini"
+
 msgid "Switch to Workspace 1"
 msgstr "Beralih ke Workspace 1"
 
@@ -18050,6 +18076,9 @@ msgstr "Kami sedang membawa Superset ke Windows & Linux. Tinggalkan email Anda d
 
 msgid "The desktop app runs on macOS, with an experimental Linux AppImage; Windows is not yet available. Beyond the desktop app there's a CLI, a TypeScript SDK, and an MCP server, so you can drive Superset from scripts, terminals, and other agents. An app for iPhone and iPad on the App Store lets you check on agents and review their diffs away from your desk."
 msgstr "Aplikasi desktopnya berjalan di macOS, dengan AppImage Linux eksperimental; Windows belum tersedia. Selain aplikasi desktop ada CLI, SDK TypeScript, dan server MCP, jadi Anda bisa mengendalikan Superset dari skrip, terminal, dan agen lain. Aplikasi iPhone dan iPad di App Store memungkinkan Anda memantau agen dan meninjau diff mereka saat jauh dari meja."
+
+msgid "The details line shows:"
+msgstr "Baris detail menampilkan:"
 
 msgid "The device that hosts this project is unavailable."
 msgstr "Perangkat yang menjadi host proyek ini tidak tersedia."
@@ -18743,6 +18772,9 @@ msgstr "Tingkat"
 
 msgid "Time"
 msgstr "Waktu"
+
+msgid "Time waited"
+msgstr "Waktu menunggu"
 
 msgid "Times use your time zone."
 msgstr "Waktu memakai zona waktu Anda."
@@ -19812,6 +19844,9 @@ msgstr "Menunggu orang lain"
 msgid "Waiting on reviewers or CI, longest wait first"
 msgstr "Menunggu reviewer atau CI, tunggu terlama dulu"
 
+msgid "Waiting on you"
+msgstr "Menunggu Anda"
+
 msgid "Waiting tint"
 msgstr "Warna tunggu"
 
@@ -20278,6 +20313,9 @@ msgstr "Workspace dipulihkan"
 
 msgid "workspace root"
 msgstr "root workspace"
+
+msgid "Workspace rows"
+msgstr "Baris workspace"
 
 msgid "Workspace Run"
 msgstr "Run Workspace"

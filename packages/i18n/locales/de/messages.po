@@ -496,6 +496,14 @@ msgstr "{0} von {1} Prüfungen laufen"
 msgid "{0} of {totalCount}"
 msgstr "{0} von {totalCount}"
 
+#. placeholder {0}: todos.open
+msgid "{0} open to-dos"
+msgstr "{0} offene To-dos"
+
+#. placeholder {0}: todos.open
+msgid "{0} open to-dos, some high priority"
+msgstr "{0} offene To-dos, einige mit hoher Priorität"
+
 #. placeholder {0}: plugin.interface.displayName
 msgid "{0} options"
 msgstr "Optionen für {0}"
@@ -3834,6 +3842,9 @@ msgstr "Prüfungen fehlgeschlagen"
 msgid "Checks passed"
 msgstr "Prüfungen bestanden"
 
+msgid "Checks running"
+msgstr "Prüfungen laufen"
+
 msgid "Checks Skipped"
 msgstr "Prüfungen übersprungen"
 
@@ -4494,6 +4505,9 @@ msgstr "Kompakt"
 
 msgid "Compact conversations"
 msgstr "Kompakte Unterhaltungen"
+
+msgid "Compact rows"
+msgstr "Kompakte Zeilen"
 
 msgid "Company"
 msgstr "Unternehmen"
@@ -12212,6 +12226,9 @@ msgstr "Ein Mensch steuert höchstens einen Agenten gleichzeitig."
 msgid "One line about how you work"
 msgstr "Eine Zeile darüber, wie du arbeitest"
 
+msgid "One line per workspace, without the details line under its name."
+msgstr "Eine Zeile pro Workspace, ohne die Detailzeile unter dem Namen."
+
 msgid "One of the first hundred on the board"
 msgstr "Unter den ersten hundert im Ranking"
 
@@ -12826,6 +12843,9 @@ msgstr "Den Arbeitsbereich in der im Menü „Öffnen in“ gewählten App öffn
 
 msgid "Open this run's workspace"
 msgstr "Arbeitsbereich dieser Ausführung öffnen"
+
+msgid "Open to-dos"
+msgstr "Offene To-dos"
 
 msgid "Open Usage"
 msgstr "Nutzung öffnen"
@@ -13974,6 +13994,9 @@ msgstr "Pull Request #{0}, {1}"
 
 msgid "Pull request actions"
 msgstr "Pull-Request-Aktionen"
+
+msgid "Pull request and checks"
+msgstr "Pull Request und Prüfungen"
 
 msgid "Pull request detail tabs"
 msgstr "Tabs der Pull-Request-Details"
@@ -17594,6 +17617,9 @@ msgstr "Zu Tab 8 wechseln"
 msgid "Switch to Tab 9"
 msgstr "Zu Tab 9 wechseln"
 
+msgid "Switch to this workspace"
+msgstr "Zu diesem Workspace wechseln"
+
 msgid "Switch to Workspace 1"
 msgstr "Zu Arbeitsbereich 1 wechseln"
 
@@ -18050,6 +18076,9 @@ msgstr "Wir bringen Superset auf Windows & Linux. Lass uns deine E-Mail-Adresse 
 
 msgid "The desktop app runs on macOS, with an experimental Linux AppImage; Windows is not yet available. Beyond the desktop app there's a CLI, a TypeScript SDK, and an MCP server, so you can drive Superset from scripts, terminals, and other agents. An app for iPhone and iPad on the App Store lets you check on agents and review their diffs away from your desk."
 msgstr "Die Desktop-App läuft auf macOS, dazu ein experimentelles Linux-AppImage; Windows gibt es noch nicht. Neben der Desktop-App gibt es eine CLI, ein TypeScript-SDK und einen MCP-Server, sodass du Superset aus Skripten, Terminals und anderen Agenten heraus steuern kannst. Mit einer App für iPhone und iPad aus dem App Store prüfst du deine Agenten und ihre Diffs, auch wenn du nicht am Schreibtisch bist."
+
+msgid "The details line shows:"
+msgstr "Die Detailzeile zeigt:"
 
 msgid "The device that hosts this project is unavailable."
 msgstr "Das Gerät, das dieses Projekt hostet, ist nicht verfügbar."
@@ -18743,6 +18772,9 @@ msgstr "Stufe"
 
 msgid "Time"
 msgstr "Zeit"
+
+msgid "Time waited"
+msgstr "Wartezeit"
 
 msgid "Times use your time zone."
 msgstr "Die Zeiten richten sich nach deiner Zeitzone."
@@ -19812,6 +19844,9 @@ msgstr "Wartet auf andere"
 msgid "Waiting on reviewers or CI, longest wait first"
 msgstr "Wartet auf Reviewer oder CI, längste Wartezeit zuerst"
 
+msgid "Waiting on you"
+msgstr "Wartet auf dich"
+
 msgid "Waiting tint"
 msgstr "Warte-Färbung"
 
@@ -20278,6 +20313,9 @@ msgstr "Arbeitsbereich wiederhergestellt"
 
 msgid "workspace root"
 msgstr "Wurzel des Arbeitsbereichs"
+
+msgid "Workspace rows"
+msgstr "Workspace-Zeilen"
 
 msgid "Workspace Run"
 msgstr "Arbeitsbereich-Run"

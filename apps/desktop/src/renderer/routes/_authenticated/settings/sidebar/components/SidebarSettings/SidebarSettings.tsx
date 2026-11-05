@@ -1,5 +1,6 @@
 import { Trans, useLingui } from "@lingui/react/macro";
 import { Button } from "@superset/ui/button";
+import { Checkbox } from "@superset/ui/checkbox";
 import {
 	Select,
 	SelectContent,
@@ -106,6 +107,13 @@ export function SidebarSettings({ visibleItems }: SidebarSettingsProps) {
 		},
 	];
 
+	const detailFields: { key: SidebarPreferenceKey; label: string }[] = [
+		{ key: "showRowBranch", label: t`Branch` },
+		{ key: "showRowPullRequest", label: t`Pull request and checks` },
+		{ key: "showRowTodos", label: t`Open to-dos` },
+		{ key: "showRowWaitTime", label: t`Time waited` },
+	];
+
 	return (
 		<div className="p-6 max-w-4xl w-full mx-auto">
 			<div className="mb-8 flex items-start justify-between gap-6">
@@ -130,6 +138,50 @@ export function SidebarSettings({ visibleItems }: SidebarSettingsProps) {
 						<Trans>Menu</Trans>
 					</h3>
 					<SidebarMenuSettings />
+				</section>
+			)}
+			{isItemVisible(SETTING_ITEM_ID.SIDEBAR_ROWS, visibleItems) && (
+				<section className="mb-8">
+					<h3 className="mb-1 text-sm font-semibold">
+						<Trans>Workspace rows</Trans>
+					</h3>
+					<SettingsRow
+						label={t`Compact rows`}
+						hint={t`One line per workspace, without the details line under its name.`}
+						htmlFor="sidebar-singleLineRows"
+					>
+						<Switch
+							id="sidebar-singleLineRows"
+							checked={preferences.singleLineRows}
+							onCheckedChange={(checked) =>
+								preferences.setPreference("singleLineRows", checked)
+							}
+						/>
+					</SettingsRow>
+					<div className="py-2.5">
+						<p className="mb-2 text-xs text-muted-foreground">
+							<Trans>The details line shows:</Trans>
+						</p>
+						<div className="flex flex-wrap gap-x-5 gap-y-2">
+							{detailFields.map((field) => (
+								<label
+									key={field.key}
+									htmlFor={`sidebar-${field.key}`}
+									className="flex items-center gap-2 text-sm"
+								>
+									<Checkbox
+										id={`sidebar-${field.key}`}
+										checked={preferences[field.key]}
+										disabled={preferences.singleLineRows}
+										onCheckedChange={(checked) =>
+											preferences.setPreference(field.key, checked === true)
+										}
+									/>
+									{field.label}
+								</label>
+							))}
+						</div>
+					</div>
 				</section>
 			)}
 			{(showAppearance || showStateColors) && (

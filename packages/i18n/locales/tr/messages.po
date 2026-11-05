@@ -496,6 +496,14 @@ msgstr "{1} kontrolden {0} tanesi çalışıyor"
 msgid "{0} of {totalCount}"
 msgstr "{totalCount} içinden {0}"
 
+#. placeholder {0}: todos.open
+msgid "{0} open to-dos"
+msgstr "{0} açık yapılacak"
+
+#. placeholder {0}: todos.open
+msgid "{0} open to-dos, some high priority"
+msgstr "{0} açık yapılacak, bazıları yüksek öncelikli"
+
 #. placeholder {0}: plugin.interface.displayName
 msgid "{0} options"
 msgstr "{0} seçenekleri"
@@ -3834,6 +3842,9 @@ msgstr "Kontroller başarısız"
 msgid "Checks passed"
 msgstr "Kontroller geçti"
 
+msgid "Checks running"
+msgstr "Kontroller çalışıyor"
+
 msgid "Checks Skipped"
 msgstr "Kontroller atlandı"
 
@@ -4494,6 +4505,9 @@ msgstr "Sıkı"
 
 msgid "Compact conversations"
 msgstr "Sıkı konuşmalar"
+
+msgid "Compact rows"
+msgstr "Kompakt satırlar"
 
 msgid "Company"
 msgstr "Şirket"
@@ -12212,6 +12226,9 @@ msgstr "Bir insan aynı anda en fazla bir ajanı yönetir."
 msgid "One line about how you work"
 msgstr "Nasıl çalıştığını bir satırda anlat"
 
+msgid "One line per workspace, without the details line under its name."
+msgstr "Her çalışma alanı için tek satır, adının altında ayrıntı satırı olmadan."
+
 msgid "One of the first hundred on the board"
 msgstr "Tablodaki ilk yüz kişiden biri"
 
@@ -12826,6 +12843,9 @@ msgstr "Çalışma alanını \"Şununla aç\" menüsünde seçilen uygulamada a�
 
 msgid "Open this run's workspace"
 msgstr "Bu çalıştırmanın çalışma alanını aç"
+
+msgid "Open to-dos"
+msgstr "Açık yapılacaklar"
 
 msgid "Open Usage"
 msgstr "Kullanımı aç"
@@ -13974,6 +13994,9 @@ msgstr "Pull request #{0}, {1}"
 
 msgid "Pull request actions"
 msgstr "Pull request eylemleri"
+
+msgid "Pull request and checks"
+msgstr "Pull request ve kontroller"
 
 msgid "Pull request detail tabs"
 msgstr "Pull request ayrıntı sekmeleri"
@@ -17594,6 +17617,9 @@ msgstr "8. sekmeye geç"
 msgid "Switch to Tab 9"
 msgstr "9. sekmeye geç"
 
+msgid "Switch to this workspace"
+msgstr "Bu çalışma alanına geç"
+
 msgid "Switch to Workspace 1"
 msgstr "1. çalışma alanına geç"
 
@@ -18050,6 +18076,9 @@ msgstr "Superset'i Windows ve Linux'a getiriyoruz. E-postanızı bırakın, haz�
 
 msgid "The desktop app runs on macOS, with an experimental Linux AppImage; Windows is not yet available. Beyond the desktop app there's a CLI, a TypeScript SDK, and an MCP server, so you can drive Superset from scripts, terminals, and other agents. An app for iPhone and iPad on the App Store lets you check on agents and review their diffs away from your desk."
 msgstr "Masaüstü uygulaması macOS'ta çalışır; deneysel bir Linux AppImage vardır, Windows henüz kullanılamıyor. Masaüstü uygulamasının ötesinde bir CLI, bir TypeScript SDK ve bir MCP sunucusu var; böylece Superset'i betiklerden, terminallerden ve diğer ajanlardan yönetebilirsiniz. App Store'daki iPhone ve iPad uygulamasıyla masanızdan uzaktayken de ajanlarınızı takip edebilir ve diff'lerini inceleyebilirsiniz."
+
+msgid "The details line shows:"
+msgstr "Ayrıntı satırı şunları gösterir:"
 
 msgid "The device that hosts this project is unavailable."
 msgstr "Bu projeyi barındıran cihaz kullanılamıyor."
@@ -18743,6 +18772,9 @@ msgstr "Katman"
 
 msgid "Time"
 msgstr "Zaman"
+
+msgid "Time waited"
+msgstr "Bekleme süresi"
 
 msgid "Times use your time zone."
 msgstr "Saatler saat diliminizi kullanır."
@@ -19812,6 +19844,9 @@ msgstr "Başkalarını bekliyor"
 msgid "Waiting on reviewers or CI, longest wait first"
 msgstr "İnceleyici veya CI bekleniyor, en uzun bekleyen önce"
 
+msgid "Waiting on you"
+msgstr "Seni bekliyor"
+
 msgid "Waiting tint"
 msgstr "Bekleme tonu"
 
@@ -20278,6 +20313,9 @@ msgstr "Çalışma alanı geri yüklendi"
 
 msgid "workspace root"
 msgstr "çalışma alanı kökü"
+
+msgid "Workspace rows"
+msgstr "Çalışma alanı satırları"
 
 msgid "Workspace Run"
 msgstr "Çalışma alanı çalıştırması"

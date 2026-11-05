@@ -496,6 +496,14 @@ msgstr "Běží {0} z {1} kontrol"
 msgid "{0} of {totalCount}"
 msgstr "{0} z {totalCount}"
 
+#. placeholder {0}: todos.open
+msgid "{0} open to-dos"
+msgstr "Otevřené úkoly: {0}"
+
+#. placeholder {0}: todos.open
+msgid "{0} open to-dos, some high priority"
+msgstr "Otevřené úkoly: {0}, některé s vysokou prioritou"
+
 #. placeholder {0}: plugin.interface.displayName
 msgid "{0} options"
 msgstr "Možnosti {0}"
@@ -3834,6 +3842,9 @@ msgstr "Kontroly selhaly"
 msgid "Checks passed"
 msgstr "Kontroly prošly"
 
+msgid "Checks running"
+msgstr "Kontroly běží"
+
 msgid "Checks Skipped"
 msgstr "Kontroly přeskočeny"
 
@@ -4494,6 +4505,9 @@ msgstr "Kompaktní"
 
 msgid "Compact conversations"
 msgstr "Kompaktní konverzace"
+
+msgid "Compact rows"
+msgstr "Kompaktní řádky"
 
 msgid "Company"
 msgstr "Firma"
@@ -12212,6 +12226,9 @@ msgstr "Jeden člověk řídí nejvýš jednoho agenta naráz."
 msgid "One line about how you work"
 msgstr "Jedna řádka o tom, jak pracujete"
 
+msgid "One line per workspace, without the details line under its name."
+msgstr "Jeden řádek na pracovní prostor, bez řádku s podrobnostmi pod názvem."
+
 msgid "One of the first hundred on the board"
 msgstr "Mezi první stovkou v žebříčku"
 
@@ -12826,6 +12843,9 @@ msgstr "Otevřít pracovní prostor v aplikaci vybrané v nabídce „Otevřít 
 
 msgid "Open this run's workspace"
 msgstr "Otevřít pracovní prostor tohoto běhu"
+
+msgid "Open to-dos"
+msgstr "Otevřené úkoly"
 
 msgid "Open Usage"
 msgstr "Otevřít využití"
@@ -13974,6 +13994,9 @@ msgstr "Pull request #{0}, {1}"
 
 msgid "Pull request actions"
 msgstr "Akce pull requestu"
+
+msgid "Pull request and checks"
+msgstr "Pull request a kontroly"
 
 msgid "Pull request detail tabs"
 msgstr "Karty detailu pull requestu"
@@ -17594,6 +17617,9 @@ msgstr "Přepnout na kartu 8"
 msgid "Switch to Tab 9"
 msgstr "Přepnout na kartu 9"
 
+msgid "Switch to this workspace"
+msgstr "Přepnout na tento pracovní prostor"
+
 msgid "Switch to Workspace 1"
 msgstr "Přepnout na pracovní prostor 1"
 
@@ -18050,6 +18076,9 @@ msgstr "Superset chystáme i pro Windows a Linux. Nechte nám e-mail a dáme vá
 
 msgid "The desktop app runs on macOS, with an experimental Linux AppImage; Windows is not yet available. Beyond the desktop app there's a CLI, a TypeScript SDK, and an MCP server, so you can drive Superset from scripts, terminals, and other agents. An app for iPhone and iPad on the App Store lets you check on agents and review their diffs away from your desk."
 msgstr "Desktopová aplikace běží na macOS, k tomu je experimentální AppImage pro Linux; Windows zatím nejsou dostupné. Kromě desktopové aplikace je tu CLI, TypeScript SDK a MCP server, takže Superset můžete řídit ze skriptů, terminálů i jiných agentů. Aplikace pro iPhone a iPad z App Storu vám umožní kontrolovat agenty a procházet jejich diffy, i když nejste u stolu."
+
+msgid "The details line shows:"
+msgstr "Řádek s podrobnostmi zobrazuje:"
 
 msgid "The device that hosts this project is unavailable."
 msgstr "Zařízení, které hostuje tento projekt, není dostupné."
@@ -18743,6 +18772,9 @@ msgstr "Tarif"
 
 msgid "Time"
 msgstr "Čas"
+
+msgid "Time waited"
+msgstr "Doba čekání"
 
 msgid "Times use your time zone."
 msgstr "Časy používají vaše časové pásmo."
@@ -19812,6 +19844,9 @@ msgstr "Čeká na ostatní"
 msgid "Waiting on reviewers or CI, longest wait first"
 msgstr "Čeká na recenzenty nebo CI, nejdelší čekání první"
 
+msgid "Waiting on you"
+msgstr "Čeká na vás"
+
 msgid "Waiting tint"
 msgstr "Odstín čekání"
 
@@ -20278,6 +20313,9 @@ msgstr "Pracovní prostor obnoven"
 
 msgid "workspace root"
 msgstr "kořen pracovního prostoru"
+
+msgid "Workspace rows"
+msgstr "Řádky pracovních prostorů"
 
 msgid "Workspace Run"
 msgstr "Spuštění pracovního prostoru"

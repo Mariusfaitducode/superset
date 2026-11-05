@@ -23,6 +23,13 @@ export interface SidebarPreferences extends SidebarAppearance {
 	keepSidebarInSettings: boolean;
 	/** Pages as one wrapped row of icons rather than a row each. */
 	navItemsAsIcons: boolean;
+	/** One line per workspace, as before, instead of a details line under it. */
+	singleLineRows: boolean;
+	/** What the details line under a workspace shows. */
+	showRowBranch: boolean;
+	showRowPullRequest: boolean;
+	showRowTodos: boolean;
+	showRowWaitTime: boolean;
 }
 
 export type SidebarPreferenceKey = {
@@ -52,6 +59,11 @@ export const DEFAULT_SIDEBAR_PREFERENCES: SidebarPreferences = {
 	hiddenNavItems: [],
 	keepSidebarInSettings: true,
 	navItemsAsIcons: true,
+	singleLineRows: false,
+	showRowBranch: true,
+	showRowPullRequest: true,
+	showRowTodos: true,
+	showRowWaitTime: true,
 };
 
 type AppearanceKey = Exclude<keyof SidebarAppearance, "stateColors">;

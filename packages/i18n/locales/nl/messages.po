@@ -496,6 +496,14 @@ msgstr "{0} van {1} checks bezig"
 msgid "{0} of {totalCount}"
 msgstr "{0} van {totalCount}"
 
+#. placeholder {0}: todos.open
+msgid "{0} open to-dos"
+msgstr "{0} open taken"
+
+#. placeholder {0}: todos.open
+msgid "{0} open to-dos, some high priority"
+msgstr "{0} open taken, sommige met hoge prioriteit"
+
 #. placeholder {0}: plugin.interface.displayName
 msgid "{0} options"
 msgstr "Opties voor {0}"
@@ -3834,6 +3842,9 @@ msgstr "Checks mislukt"
 msgid "Checks passed"
 msgstr "Checks geslaagd"
 
+msgid "Checks running"
+msgstr "Controles bezig"
+
 msgid "Checks Skipped"
 msgstr "Checks overgeslagen"
 
@@ -4494,6 +4505,9 @@ msgstr "Compact"
 
 msgid "Compact conversations"
 msgstr "Compacte gesprekken"
+
+msgid "Compact rows"
+msgstr "Compacte rijen"
 
 msgid "Company"
 msgstr "Bedrijf"
@@ -12212,6 +12226,9 @@ msgstr "Eén mens stuurt hoogstens één agent tegelijk aan."
 msgid "One line about how you work"
 msgstr "Eén regel over hoe je werkt"
 
+msgid "One line per workspace, without the details line under its name."
+msgstr "Eén regel per werkruimte, zonder de detailregel onder de naam."
+
 msgid "One of the first hundred on the board"
 msgstr "Bij de eerste honderd op het bord"
 
@@ -12826,6 +12843,9 @@ msgstr "De werkruimte openen in de app die is gekozen in het menu 'Openen in' (V
 
 msgid "Open this run's workspace"
 msgstr "Werkruimte van deze run openen"
+
+msgid "Open to-dos"
+msgstr "Open taken"
 
 msgid "Open Usage"
 msgstr "Gebruik openen"
@@ -13974,6 +13994,9 @@ msgstr "Pull request #{0}, {1}"
 
 msgid "Pull request actions"
 msgstr "Acties voor pull request"
+
+msgid "Pull request and checks"
+msgstr "Pull request en controles"
 
 msgid "Pull request detail tabs"
 msgstr "Tabbladen van pull request-details"
@@ -17594,6 +17617,9 @@ msgstr "Naar tabblad 8"
 msgid "Switch to Tab 9"
 msgstr "Naar tabblad 9"
 
+msgid "Switch to this workspace"
+msgstr "Naar deze werkruimte wisselen"
+
 msgid "Switch to Workspace 1"
 msgstr "Naar werkruimte 1"
 
@@ -18050,6 +18076,9 @@ msgstr "We brengen Superset naar Windows en Linux. Laat je e-mailadres achter, d
 
 msgid "The desktop app runs on macOS, with an experimental Linux AppImage; Windows is not yet available. Beyond the desktop app there's a CLI, a TypeScript SDK, and an MCP server, so you can drive Superset from scripts, terminals, and other agents. An app for iPhone and iPad on the App Store lets you check on agents and review their diffs away from your desk."
 msgstr "De desktop-app draait op macOS, met een experimentele Linux-AppImage; Windows is er nog niet. Naast de desktop-app zijn er een CLI, een TypeScript-SDK en een MCP-server, zodat je Superset kunt aansturen vanuit scripts, terminals en andere agents. Met een app voor iPhone en iPad in de App Store bekijk je je agents en hun diffs, ook als je niet achter je bureau zit."
+
+msgid "The details line shows:"
+msgstr "De detailregel toont:"
 
 msgid "The device that hosts this project is unavailable."
 msgstr "Het apparaat dat dit project host is niet beschikbaar."
@@ -18743,6 +18772,9 @@ msgstr "Tier"
 
 msgid "Time"
 msgstr "Tijd"
+
+msgid "Time waited"
+msgstr "Wachttijd"
 
 msgid "Times use your time zone."
 msgstr "Tijden gebruiken je tijdzone."
@@ -19812,6 +19844,9 @@ msgstr "Wacht op anderen"
 msgid "Waiting on reviewers or CI, longest wait first"
 msgstr "Wacht op reviewers of CI, langste wachttijd eerst"
 
+msgid "Waiting on you"
+msgstr "Wacht op jou"
+
 msgid "Waiting tint"
 msgstr "Wachtkleur"
 
@@ -20278,6 +20313,9 @@ msgstr "Werkruimte hersteld"
 
 msgid "workspace root"
 msgstr "root van de werkruimte"
+
+msgid "Workspace rows"
+msgstr "Werkruimterijen"
 
 msgid "Workspace Run"
 msgstr "Werkruimte-run"

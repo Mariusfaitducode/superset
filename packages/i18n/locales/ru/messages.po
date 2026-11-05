@@ -496,6 +496,14 @@ msgstr "{0} из {1} проверок выполняется"
 msgid "{0} of {totalCount}"
 msgstr "{0} из {totalCount}"
 
+#. placeholder {0}: todos.open
+msgid "{0} open to-dos"
+msgstr "Открытых задач: {0}"
+
+#. placeholder {0}: todos.open
+msgid "{0} open to-dos, some high priority"
+msgstr "Открытых задач: {0}, есть с высоким приоритетом"
+
 #. placeholder {0}: plugin.interface.displayName
 msgid "{0} options"
 msgstr "Параметры {0}"
@@ -3834,6 +3842,9 @@ msgstr "Проверки не пройдены"
 msgid "Checks passed"
 msgstr "Проверки пройдены"
 
+msgid "Checks running"
+msgstr "Проверки выполняются"
+
 msgid "Checks Skipped"
 msgstr "Проверки пропущены"
 
@@ -4494,6 +4505,9 @@ msgstr "Компактно"
 
 msgid "Compact conversations"
 msgstr "Компактные диалоги"
+
+msgid "Compact rows"
+msgstr "Компактные строки"
 
 msgid "Company"
 msgstr "Компания"
@@ -12212,6 +12226,9 @@ msgstr "Один человек ведёт не более одного аген
 msgid "One line about how you work"
 msgstr "Одна строка о том, как вы работаете"
 
+msgid "One line per workspace, without the details line under its name."
+msgstr "Одна строка на рабочее пространство, без строки подробностей под названием."
+
 msgid "One of the first hundred on the board"
 msgstr "В числе первых ста в рейтинге"
 
@@ -12826,6 +12843,9 @@ msgstr "Открыть рабочую область в приложении, в
 
 msgid "Open this run's workspace"
 msgstr "Открыть рабочую область этого запуска"
+
+msgid "Open to-dos"
+msgstr "Открытые задачи"
 
 msgid "Open Usage"
 msgstr "Открыть использование"
@@ -13974,6 +13994,9 @@ msgstr "Пул-реквест #{0}, {1}"
 
 msgid "Pull request actions"
 msgstr "Действия с пул-реквестом"
+
+msgid "Pull request and checks"
+msgstr "Пул-реквест и проверки"
 
 msgid "Pull request detail tabs"
 msgstr "Вкладки пул-реквеста"
@@ -17594,6 +17617,9 @@ msgstr "Перейти на вкладку 8"
 msgid "Switch to Tab 9"
 msgstr "Перейти на вкладку 9"
 
+msgid "Switch to this workspace"
+msgstr "Перейти в это рабочее пространство"
+
 msgid "Switch to Workspace 1"
 msgstr "Перейти в рабочую область 1"
 
@@ -18050,6 +18076,9 @@ msgstr "Мы готовим Superset для Windows и Linux. Оставьте e
 
 msgid "The desktop app runs on macOS, with an experimental Linux AppImage; Windows is not yet available. Beyond the desktop app there's a CLI, a TypeScript SDK, and an MCP server, so you can drive Superset from scripts, terminals, and other agents. An app for iPhone and iPad on the App Store lets you check on agents and review their diffs away from your desk."
 msgstr "Десктопное приложение работает на macOS, есть экспериментальный AppImage для Linux; Windows пока нет. Кроме приложения есть CLI, TypeScript SDK и сервер MCP, так что Superset можно водить из скриптов, терминалов и других агентов. Приложение для iPhone и iPad в App Store позволяет следить за агентами и просматривать их диффы, даже когда вы не за рабочим столом."
+
+msgid "The details line shows:"
+msgstr "Строка подробностей показывает:"
 
 msgid "The device that hosts this project is unavailable."
 msgstr "Устройство, где размещён этот проект, недоступно."
@@ -18743,6 +18772,9 @@ msgstr "Уровень"
 
 msgid "Time"
 msgstr "Время"
+
+msgid "Time waited"
+msgstr "Время ожидания"
 
 msgid "Times use your time zone."
 msgstr "Время указано в вашем часовом поясе."
@@ -19812,6 +19844,9 @@ msgstr "Ждут других"
 msgid "Waiting on reviewers or CI, longest wait first"
 msgstr "Ждут ревьюеров или CI, дольше всех ждущие сверху"
 
+msgid "Waiting on you"
+msgstr "Ждёт вас"
+
 msgid "Waiting tint"
 msgstr "Оттенок ожидания"
 
@@ -20278,6 +20313,9 @@ msgstr "Рабочая область восстановлена"
 
 msgid "workspace root"
 msgstr "корень рабочей области"
+
+msgid "Workspace rows"
+msgstr "Строки рабочих пространств"
 
 msgid "Workspace Run"
 msgstr "Запуск рабочей области"

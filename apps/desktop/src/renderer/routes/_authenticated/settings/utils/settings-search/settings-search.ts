@@ -86,6 +86,7 @@ export const SETTING_ITEM_ID = {
 	SIDEBAR_APPEARANCE: "sidebar-appearance",
 	SIDEBAR_MENU: "sidebar-menu",
 	SIDEBAR_STATE_COLORS: "sidebar-state-colors",
+	SIDEBAR_ROWS: "sidebar-rows",
 
 	EXPERIMENTAL_V1_MIGRATION: "experimental-v1-migration",
 	EXPERIMENTAL_INLINE_WORKSPACE_PORTS: "experimental-inline-workspace-ports",
@@ -257,6 +258,7 @@ export const SETTING_ITEM_VARIANT: Record<SettingItemId, SettingVariant> = {
 	[SETTING_ITEM_ID.SIDEBAR_APPEARANCE]: "v2",
 	[SETTING_ITEM_ID.SIDEBAR_MENU]: "v2",
 	[SETTING_ITEM_ID.SIDEBAR_STATE_COLORS]: "v2",
+	[SETTING_ITEM_ID.SIDEBAR_ROWS]: "v2",
 
 	[SETTING_ITEM_ID.EXPERIMENTAL_V1_MIGRATION]: "v2",
 	[SETTING_ITEM_ID.EXPERIMENTAL_INLINE_WORKSPACE_PORTS]: "v2",
@@ -1576,6 +1578,26 @@ export const SETTINGS_ITEMS: SettingsItem[] = [
 			"colorblind",
 			"monochrome",
 			"neon",
+			"needs you",
+		],
+	},
+	{
+		id: SETTING_ITEM_ID.SIDEBAR_ROWS,
+		section: "sidebar",
+		title: "Workspace rows",
+		description:
+			"One or two lines per workspace, and what the details line shows",
+		keywords: [
+			"sidebar",
+			"rows",
+			"compact",
+			"two lines",
+			"branch",
+			"pull request",
+			"checks",
+			"to-dos",
+			"waiting",
+			"labels",
 		],
 	},
 	{

@@ -496,6 +496,14 @@ msgstr "{0} trong {1} check đang chạy"
 msgid "{0} of {totalCount}"
 msgstr "{0} trong {totalCount}"
 
+#. placeholder {0}: todos.open
+msgid "{0} open to-dos"
+msgstr "{0} việc cần làm đang mở"
+
+#. placeholder {0}: todos.open
+msgid "{0} open to-dos, some high priority"
+msgstr "{0} việc cần làm đang mở, có việc ưu tiên cao"
+
 #. placeholder {0}: plugin.interface.displayName
 msgid "{0} options"
 msgstr "Tùy chọn {0}"
@@ -3834,6 +3842,9 @@ msgstr "Check thất bại"
 msgid "Checks passed"
 msgstr "Check đã qua"
 
+msgid "Checks running"
+msgstr "Đang chạy kiểm tra"
+
 msgid "Checks Skipped"
 msgstr "Check đã bỏ qua"
 
@@ -4494,6 +4505,9 @@ msgstr "Gọn"
 
 msgid "Compact conversations"
 msgstr "Cuộc trò chuyện gọn"
+
+msgid "Compact rows"
+msgstr "Hàng thu gọn"
 
 msgid "Company"
 msgstr "Công ty"
@@ -12212,6 +12226,9 @@ msgstr "Mỗi người điều khiển tối đa một agent tại một thời 
 msgid "One line about how you work"
 msgstr "Một dòng về cách bạn làm việc"
 
+msgid "One line per workspace, without the details line under its name."
+msgstr "Một dòng cho mỗi không gian làm việc, không có dòng chi tiết dưới tên."
+
 msgid "One of the first hundred on the board"
 msgstr "Một trong một trăm người đầu tiên trên bảng"
 
@@ -12826,6 +12843,9 @@ msgstr "Mở workspace trong ứng dụng đã chọn ở menu \"Mở trong\" (V
 
 msgid "Open this run's workspace"
 msgstr "Mở workspace của lần chạy này"
+
+msgid "Open to-dos"
+msgstr "Việc cần làm đang mở"
 
 msgid "Open Usage"
 msgstr "Mở mức sử dụng"
@@ -13974,6 +13994,9 @@ msgstr "Pull request #{0}, {1}"
 
 msgid "Pull request actions"
 msgstr "Hành động pull request"
+
+msgid "Pull request and checks"
+msgstr "Pull request và kiểm tra"
 
 msgid "Pull request detail tabs"
 msgstr "Các tab chi tiết pull request"
@@ -17594,6 +17617,9 @@ msgstr "Chuyển tới tab 8"
 msgid "Switch to Tab 9"
 msgstr "Chuyển tới tab 9"
 
+msgid "Switch to this workspace"
+msgstr "Chuyển sang không gian làm việc này"
+
 msgid "Switch to Workspace 1"
 msgstr "Chuyển tới workspace 1"
 
@@ -18050,6 +18076,9 @@ msgstr "Chúng tôi đang đưa Superset lên Windows & Linux. Để lại email
 
 msgid "The desktop app runs on macOS, with an experimental Linux AppImage; Windows is not yet available. Beyond the desktop app there's a CLI, a TypeScript SDK, and an MCP server, so you can drive Superset from scripts, terminals, and other agents. An app for iPhone and iPad on the App Store lets you check on agents and review their diffs away from your desk."
 msgstr "Ứng dụng máy tính chạy trên macOS, kèm bản AppImage Linux thử nghiệm; Windows chưa có. Ngoài ứng dụng máy tính còn có CLI, SDK TypeScript và server MCP, nên bạn có thể điều khiển Superset từ script, terminal và các agent khác. Ứng dụng cho iPhone và iPad trên App Store cho phép bạn theo dõi các agent và xem lại diff của chúng khi không ngồi tại bàn làm việc."
+
+msgid "The details line shows:"
+msgstr "Dòng chi tiết hiển thị:"
 
 msgid "The device that hosts this project is unavailable."
 msgstr "Thiết bị chứa dự án này không khả dụng."
@@ -18743,6 +18772,9 @@ msgstr "Hạng"
 
 msgid "Time"
 msgstr "Thời gian"
+
+msgid "Time waited"
+msgstr "Thời gian chờ"
 
 msgid "Times use your time zone."
 msgstr "Thời gian dùng múi giờ của bạn."
@@ -19812,6 +19844,9 @@ msgstr "Đang chờ người khác"
 msgid "Waiting on reviewers or CI, longest wait first"
 msgstr "Đang chờ reviewer hoặc CI, chờ lâu nhất trước"
 
+msgid "Waiting on you"
+msgstr "Đang chờ bạn"
+
 msgid "Waiting tint"
 msgstr "Sắc chờ"
 
@@ -20278,6 +20313,9 @@ msgstr "Đã khôi phục workspace"
 
 msgid "workspace root"
 msgstr "thư mục gốc workspace"
+
+msgid "Workspace rows"
+msgstr "Hàng không gian làm việc"
 
 msgid "Workspace Run"
 msgstr "Lệnh chạy của workspace"

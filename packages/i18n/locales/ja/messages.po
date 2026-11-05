@@ -496,6 +496,14 @@ msgstr "{1}件中{0}件のチェックが実行中です"
 msgid "{0} of {totalCount}"
 msgstr "{totalCount}件中{0}件目"
 
+#. placeholder {0}: todos.open
+msgid "{0} open to-dos"
+msgstr "未完了の To-do: {0} 件"
+
+#. placeholder {0}: todos.open
+msgid "{0} open to-dos, some high priority"
+msgstr "未完了の To-do: {0} 件（優先度が高いものを含む）"
+
 #. placeholder {0}: plugin.interface.displayName
 msgid "{0} options"
 msgstr "{0}のオプション"
@@ -3834,6 +3842,9 @@ msgstr "チェックが失敗しました"
 msgid "Checks passed"
 msgstr "チェックが成功しました"
 
+msgid "Checks running"
+msgstr "チェック実行中"
+
 msgid "Checks Skipped"
 msgstr "チェックをスキップ"
 
@@ -4494,6 +4505,9 @@ msgstr "コンパクト"
 
 msgid "Compact conversations"
 msgstr "会話をコンパクトに"
+
+msgid "Compact rows"
+msgstr "コンパクトな行"
 
 msgid "Company"
 msgstr "会社"
@@ -12212,6 +12226,9 @@ msgstr "人間1人が同時に動かすエージェントは最大1体。"
 msgid "One line about how you work"
 msgstr "働き方について一行で"
 
+msgid "One line per workspace, without the details line under its name."
+msgstr "ワークスペースごとに 1 行。名前の下の詳細行は表示しません。"
+
 msgid "One of the first hundred on the board"
 msgstr "ボード最初の100人のひとり"
 
@@ -12826,6 +12843,9 @@ msgstr "「開く」メニューで選んだアプリ (VS Code、Cursorなど) �
 
 msgid "Open this run's workspace"
 msgstr "この実行のワークスペースを開く"
+
+msgid "Open to-dos"
+msgstr "未完了の To-do"
 
 msgid "Open Usage"
 msgstr "使用量を開く"
@@ -13974,6 +13994,9 @@ msgstr "プルリクエスト#{0}、{1}"
 
 msgid "Pull request actions"
 msgstr "プルリクエストの操作"
+
+msgid "Pull request and checks"
+msgstr "プルリクエストとチェック"
 
 msgid "Pull request detail tabs"
 msgstr "プルリクエスト詳細のタブ"
@@ -17594,6 +17617,9 @@ msgstr "タブ8に切り替え"
 msgid "Switch to Tab 9"
 msgstr "タブ9に切り替え"
 
+msgid "Switch to this workspace"
+msgstr "このワークスペースに切り替え"
+
 msgid "Switch to Workspace 1"
 msgstr "ワークスペース1に切り替え"
 
@@ -18050,6 +18076,9 @@ msgstr "デスクトップアプリは現在macOSとLinuxに対応していま�
 
 msgid "The desktop app runs on macOS, with an experimental Linux AppImage; Windows is not yet available. Beyond the desktop app there's a CLI, a TypeScript SDK, and an MCP server, so you can drive Superset from scripts, terminals, and other agents. An app for iPhone and iPad on the App Store lets you check on agents and review their diffs away from your desk."
 msgstr "デスクトップアプリはmacOSで動作し、Linux向けには実験的なAppImageがあります。Windowsはまだ利用できません。デスクトップアプリのほかにCLI、TypeScript SDK、MCPサーバーがあるので、スクリプトやターミナル、他のエージェントからSupersetを操作できます。App StoreのiPhone・iPadアプリを使えば、デスクを離れていてもエージェントの状況を確認し、差分をレビューできます。"
+
+msgid "The details line shows:"
+msgstr "詳細行に表示する項目:"
 
 msgid "The device that hosts this project is unavailable."
 msgstr "このプロジェクトをホストするデバイスが利用できません。"
@@ -18743,6 +18772,9 @@ msgstr "ティア"
 
 msgid "Time"
 msgstr "時間"
+
+msgid "Time waited"
+msgstr "待ち時間"
 
 msgid "Times use your time zone."
 msgstr "時刻はあなたのタイムゾーンで表示されます。"
@@ -19812,6 +19844,9 @@ msgstr "他の人待ち"
 msgid "Waiting on reviewers or CI, longest wait first"
 msgstr "レビュアーまたは CI 待ち、待ち時間の長い順"
 
+msgid "Waiting on you"
+msgstr "あなたを待っています"
+
 msgid "Waiting tint"
 msgstr "待機の色付け"
 
@@ -20278,6 +20313,9 @@ msgstr "ワークスペースを復元しました"
 
 msgid "workspace root"
 msgstr "ワークスペースルート"
+
+msgid "Workspace rows"
+msgstr "ワークスペースの行"
 
 msgid "Workspace Run"
 msgstr "ワークスペース実行"
