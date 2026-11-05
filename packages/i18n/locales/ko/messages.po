@@ -1249,6 +1249,9 @@ msgstr "스타 {starCount}개, 계속 늘어나는 중"
 msgid "{started, plural, one {Started # automation} other {Started # automations}}"
 msgstr "{started, plural, one {자동화 #개를 시작했습니다} other {자동화 #개를 시작했습니다}}"
 
+msgid "{stepCount} steps, in the menu"
+msgstr "{stepCount}개 단계, 메뉴에서 보기"
+
 msgid "{subagentCount, plural, one {# subagent running} other {# subagents running}}"
 msgstr "{subagentCount, plural, other {서브 에이전트 #개 실행 중}}"
 
@@ -1780,6 +1783,9 @@ msgstr "업적"
 msgid "Acme Inc."
 msgstr "Acme Inc."
 
+msgid "act"
+msgstr "실행"
+
 msgid "Act."
 msgstr "활동"
 
@@ -2198,14 +2204,14 @@ msgstr "일정이나 트리거로 실행되는 에이전트"
 msgid "Agents on your phone"
 msgstr "휴대폰에서 쓰는 에이전트"
 
-msgid "Agents put their hand-overs here with superset report: work to review, decisions, drafts to approve, blockers."
-msgstr "에이전트가 superset report로 인계 사항을 여기에 둡니다: 검토할 작업, 결정, 승인할 초안, 차단 요소."
-
 msgid "Agents remember what they learn about your codebase, so every new session starts warm."
 msgstr "에이전트가 코드베이스에 대해 배운 내용을 기억하므로 새 세션이 처음부터 맥락을 갖고 시작합니다."
 
 msgid "Agents running at once"
 msgstr "동시에 실행 중인 에이전트"
+
+msgid "Agents stopped on a question, their hand-overs (superset report), your to-dos and the PRs you were asked to review all land here."
+msgstr "질문에서 멈춘 에이전트, 그들의 인계(superset report), 할 일, 리뷰 요청받은 PR이 모두 여기에 모입니다."
 
 msgid "Agents use this account when they call Linear tools."
 msgstr "에이전트는 Linear 도구를 호출할 때 이 계정을 사용합니다."
@@ -2221,9 +2227,6 @@ msgstr "동시에 작업 중인 에이전트"
 
 msgid "Agents' to-dos"
 msgstr "에이전트의 할 일"
-
-msgid "Agents' to-dos for you"
-msgstr "에이전트가 남긴 할 일"
 
 msgid "Aggregate agent usage across every developer on the Superset leaderboard — tokens, cost, cache behaviour and which models people actually reach for."
 msgstr "Superset 리더보드에 참여한 모든 개발자의 에이전트 사용량 집계 — 토큰, 비용, 캐시 동작, 그리고 실제로 많이 쓰이는 모델입니다."
@@ -2565,6 +2568,9 @@ msgstr "다른 기기"
 msgid "answer"
 msgstr "답변"
 
+msgid "Answer"
+msgstr "답변"
+
 msgid "Answer any questions in the terminal below, such as a password."
 msgstr "아래 터미널에서 비밀번호 등 질문에 답하세요."
 
@@ -2754,9 +2760,6 @@ msgctxt "job application"
 msgid "Apply"
 msgstr "지원"
 
-msgid "approve"
-msgstr "승인"
-
 msgid "Approve"
 msgstr "승인"
 
@@ -2894,6 +2897,9 @@ msgstr "편집과 명령 전에 확인"
 
 msgid "Asks only for risky actions"
 msgstr "위험한 작업만 확인"
+
+msgid "Asks you"
+msgstr "질문 중"
 
 msgid "Aspect Ratio"
 msgstr "종횡비"
@@ -3324,8 +3330,8 @@ msgstr "차단됨"
 msgid "Blocked by Branch Rules"
 msgstr "브랜치 규칙으로 차단됨"
 
-msgid "Blocked, see the Desk"
-msgstr "차단됨, Desk 확인"
+msgid "Blocked, needs you"
+msgstr "차단됨, 도움 필요"
 
 msgid "Blockquote"
 msgstr "인용구"
@@ -5199,6 +5205,9 @@ msgstr "작업 ID 복사"
 msgid "Copy terminal ID"
 msgstr "터미널 ID 복사"
 
+msgid "Copy the draft"
+msgstr "초안 복사"
+
 msgid "Copy the workspace path to the clipboard"
 msgstr "워크스페이스 경로를 클립보드에 복사합니다"
 
@@ -5285,6 +5294,9 @@ msgstr "세션을 닫지 못했습니다"
 
 msgid "Could not connect {plugin}. Try again."
 msgstr "{plugin}을(를) 연결하지 못했습니다. 다시 시도하세요."
+
+msgid "Could not copy the draft"
+msgstr "초안을 복사할 수 없습니다"
 
 msgid "Could not copy the link"
 msgstr "링크를 복사할 수 없습니다"
@@ -6201,11 +6213,11 @@ msgstr "디버그"
 msgid "Debug with production stack traces"
 msgstr "프로덕션 스택 트레이스로 디버깅"
 
-msgid "Decision waiting on the Desk"
-msgstr "Desk에서 결정 대기 중"
-
-msgid "Decisions"
+msgid "Decision"
 msgstr "결정"
+
+msgid "Decision waiting on you"
+msgstr "결정 대기 중"
 
 msgid "default"
 msgstr "기본"
@@ -6530,12 +6542,6 @@ msgstr "디자인 모드 실패"
 
 msgid "Design review"
 msgstr "디자인 리뷰"
-
-msgid "Desk"
-msgstr "Desk"
-
-msgid "Desk, {count} waiting on you"
-msgstr "Desk, {count}개가 대기 중"
 
 msgid "Desktop"
 msgstr "데스크톱"
@@ -6921,20 +6927,20 @@ msgstr "초안 · 파일"
 msgid "Draft · line {0}"
 msgstr "초안 · {0}번 줄"
 
+msgid "Draft copied"
+msgstr "초안 복사됨"
+
 msgid "Draft for {draftTarget}"
 msgstr "{draftTarget}용 초안"
 
 msgid "Draft opened"
 msgstr "초안 열림"
 
-msgid "Draft waiting on the Desk"
-msgstr "Desk에서 초안 대기 중"
+msgid "Draft waiting for your approval"
+msgstr "초안 승인 대기 중"
 
 msgid "drafted 3 support replies"
 msgstr "지원 답변 3건 초안 작성"
-
-msgid "Drafts to approve"
-msgstr "승인할 초안"
 
 msgid "Drag to reorder"
 msgstr "끌어서 순서 변경"
@@ -6983,6 +6989,12 @@ msgstr "제외됨"
 
 msgid "Due"
 msgstr "마감"
+
+msgid "Due {dueDay}"
+msgstr "마감 {dueDay}"
+
+msgid "Due today"
+msgstr "오늘 마감"
 
 msgid "Duration"
 msgstr "소요 시간"
@@ -8800,6 +8812,12 @@ msgstr "강제 다시 로드"
 
 msgid "Hardware Keyboard"
 msgstr "하드웨어 키보드"
+
+msgid "Has a draft"
+msgstr "초안 있음"
+
+msgid "Has a draft, in the menu"
+msgstr "초안 있음, 메뉴에서 보기"
 
 msgid "Has access"
 msgstr "접근 권한 있음"
@@ -10676,6 +10694,9 @@ msgstr "준비됨으로 표시"
 msgid "Mark reviewed"
 msgstr "검토 완료로 표시"
 
+msgid "Mark seen"
+msgstr "확인함으로 표시"
+
 msgid "Markdown"
 msgstr "Markdown"
 
@@ -11257,6 +11278,13 @@ msgctxt "agent status"
 msgid "Needs you"
 msgstr "확인 필요"
 
+msgctxt "desk page"
+msgid "Needs you"
+msgstr "나를 기다림"
+
+msgid "Needs you: {nowCount} now, {count} in all"
+msgstr "나를 기다림: 지금 {nowCount}, 전체 {count}"
+
 msgid "Needs your approval"
 msgstr "승인이 필요합니다"
 
@@ -11421,6 +11449,10 @@ msgstr "뉴스와 심층 분석"
 msgid "News, updates, and insights from the Superset team about parallel coding agents and developer productivity."
 msgstr "병렬 코딩 에이전트와 개발자 생산성에 대한 Superset 팀의 소식, 업데이트, 인사이트입니다."
 
+msgid "Next"
+msgstr "다음"
+
+msgctxt "desk section"
 msgid "Next"
 msgstr "다음"
 
@@ -12342,6 +12374,10 @@ msgstr "방금"
 msgid "Now"
 msgstr "현재"
 
+msgctxt "desk section"
+msgid "Now"
+msgstr "지금"
+
 msgid "Now I open the workspace on my phone, type the one line it's waiting for, and it carries on."
 msgstr "이제 휴대폰에서 워크스페이스를 열고 기다리던 한 줄을 입력하면 작업이 계속됩니다."
 
@@ -12913,6 +12949,9 @@ msgstr "iPhone 및 iPad용 Superset 앱에서 페이지를 열고 댓글에 답�
 
 msgid "Open Plugins in the Superset app and pick one. The install is saved to your account."
 msgstr "Superset 앱에서 플러그인을 열고 하나를 고르세요. 설치 내역은 계정에 저장됩니다."
+
+msgid "Open PR"
+msgstr "PR 열기"
 
 #. placeholder {0}: pr.number
 msgid "Open PR #{0}"
@@ -13815,6 +13854,9 @@ msgstr "PR 머지 후 닫힘"
 msgid "PR ready for review"
 msgstr "PR이 리뷰 준비 완료되었습니다"
 
+msgid "PR review"
+msgstr "PR 리뷰"
+
 msgid "PR review comment"
 msgstr "PR 리뷰 댓글"
 
@@ -14457,8 +14499,8 @@ msgstr "리뷰 준비됨"
 msgid "Ready for review failed: {0}"
 msgstr "리뷰 준비 완료 표시 실패: {0}"
 
-msgid "Ready for review on the Desk"
-msgstr "Desk에서 검토 준비됨"
+msgid "Ready for your review"
+msgstr "리뷰 준비됨"
 
 msgid "Ready in"
 msgstr "준비 완료"
@@ -17382,6 +17424,12 @@ msgstr "방향 전환"
 msgid "Step {0} of 2"
 msgstr "2단계 중 {0}단계"
 
+msgid "Steps"
+msgstr "단계"
+
+msgid "Steps {doneSteps}/{stepCount}"
+msgstr "단계 {doneSteps}/{stepCount}"
+
 msgid "Steps 3 and 4 repeat at every scheduled time."
 msgstr "3단계와 4단계는 예약된 시간마다 반복됩니다."
 
@@ -19049,11 +19097,14 @@ msgstr "에이전트 대화를 재개하려면 해당 폴더에서 다음을 실
 msgid "To resume another agent conversation, run this in its folder:"
 msgstr "다른 에이전트 대화를 재개하려면 해당 폴더에서 다음을 실행하세요:"
 
+msgid "To review"
+msgstr "리뷰 대기"
+
+msgid "To-do"
+msgstr "할 일"
+
 msgid "To-do details"
 msgstr "할 일 세부 정보"
-
-msgid "To-do on the Desk"
-msgstr "Desk에 할 일 있음"
 
 msgid "To-dos"
 msgstr "할 일"
@@ -20105,6 +20156,9 @@ msgstr "다른 사람 대기 중"
 msgid "Waiting on reviewers or CI, longest wait first"
 msgstr "리뷰어 또는 CI 대기, 가장 오래 기다린 순"
 
+msgid "Waiting since {waitingSince}"
+msgstr "{waitingSince}부터 대기 중"
+
 msgid "Waiting tint"
 msgstr "대기 색조"
 
@@ -20985,6 +21039,9 @@ msgstr "티어는 측정된 {0}개 축의 가중 점수라서 강한 축이 약�
 
 msgid "Your tokens"
 msgstr "내 토큰"
+
+msgid "Your turn"
+msgstr "내 차례"
 
 msgid "Your v1 projects and workspaces are moving to the new Superset. They appear in the sidebar as each one is ready."
 msgstr "v1 프로젝트와 워크스페이스를 새 Superset으로 옮기는 중입니다. 각 항목이 준비되는 대로 사이드바에 표시됩니다."

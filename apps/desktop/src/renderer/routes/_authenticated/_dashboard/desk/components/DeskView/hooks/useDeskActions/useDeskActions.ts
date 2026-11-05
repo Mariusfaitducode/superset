@@ -6,15 +6,22 @@ import { useMemo } from "react";
 import { hostAgentReportsQueryKey } from "renderer/hooks/host-service/useHostAgentReports";
 import { hostConversationTodosQueryKey } from "renderer/hooks/host-service/useHostConversationTodos";
 import { getHostServiceClientByUrl } from "renderer/lib/host-service-client";
-import type { DeskItem } from "renderer/routes/_authenticated/_dashboard/hooks/useDeskQueue";
+import type {
+	DeskConversationItem,
+	DeskItem,
+} from "renderer/routes/_authenticated/_dashboard/hooks/useDeskQueue";
 import { navigateToV2Workspace } from "renderer/routes/_authenticated/_dashboard/utils/workspace-navigation";
+import { useV2NotificationStore } from "renderer/stores/v2-notifications";
 import { deskMessage } from "../../utils/deskMessage";
 
 export interface DeskActions {
 	open: (item: DeskItem) => void;
-	answer: (item: DeskItem, text: string) => Promise<boolean>;
-	approveDraft: (item: DeskItem, editedText: string | null) => Promise<boolean>;
-	review: (item: DeskItem, followUp: string) => Promise<boolean>;
+	answer: (item: DeskConversationItem, text: string) => Promise<boolean>;
+	approveDraft: (
+		item: DeskConversationItem,
+		editedText: string | null,
+	) => Promise<boolean>;
+	review: (item: DeskConversationItem, followUp: string) => Promise<boolean>;
 	dismiss: (item: DeskItem) => Promise<boolean>;
 	checkTodo: (item: DeskItem) => Promise<boolean>;
 }
@@ -28,15 +35,20 @@ export function useDeskActions(): DeskActions {
 	const { t } = useLingui();
 	const queryClient = useQueryClient();
 	const navigate = useNavigate();
+	const markTerminalSeen = useV2NotificationStore(
+		(state) => state.markTerminalSeen,
+	);
 
 	return useMemo(() => {
-		const refresh = (item: DeskItem) =>
-			queryClient.invalidateQueries({
+		const refresh = (item: DeskItem) => {
+			if (item.source !== "report" && item.source !== "todo") return;
+			return queryClient.invalidateQueries({
 				queryKey:
 					item.source === "report"
 						? hostAgentReportsQueryKey(item.hostUrl)
 						: hostConversationTodosQueryKey(item.hostUrl),
 			});
+		};
 
 		const attempt = async (
 			item: DeskItem,
@@ -55,14 +67,14 @@ export function useDeskActions(): DeskActions {
 			}
 		};
 
-		const send = (item: DeskItem, text: string) =>
+		const send = (item: DeskConversationItem, text: string) =>
 			getHostServiceClientByUrl(item.hostUrl).terminal.send.mutate({
 				workspaceId: item.workspaceId,
 				terminalId: item.terminalId,
 				text,
 			});
 
-		const close = (item: DeskItem, answer: string) =>
+		const close = (item: DeskConversationItem, answer: string) =>
 			item.source === "report"
 				? getHostServiceClientByUrl(item.hostUrl).agentReports.answer.mutate({
 						id: item.report.id,
@@ -72,6 +84,18 @@ export function useDeskActions(): DeskActions {
 
 		return {
 			open: (item) => {
+				if (item.source === "pr") {
+					navigate({
+						to: "/pull-requests/$prNumber",
+						params: { prNumber: String(item.pr.prNumber) },
+						search: {
+							project: item.pr.projectId,
+							repo: item.pr.repoFullName,
+							state: "mine",
+						},
+					});
+					return;
+				}
 				void navigateToV2Workspace(item.workspaceId, navigate, {
 					search: {
 						terminalId: item.terminalId,
@@ -101,6 +125,11 @@ export function useDeskActions(): DeskActions {
 				}),
 			dismiss: (item) =>
 				attempt(item, async () => {
+					if (item.source === "conversation") {
+						// Same as opening it: the finished turn counts as seen.
+						markTerminalSeen(item.terminalId, item.conversation.since);
+						return;
+					}
 					if (item.source !== "report") return;
 					await getHostServiceClientByUrl(
 						item.hostUrl,
@@ -114,5 +143,5 @@ export function useDeskActions(): DeskActions {
 					).conversationTodos.setDone.mutate({ id: item.todo.id, done: true });
 				}),
 		};
-	}, [navigate, queryClient, t]);
+	}, [markTerminalSeen, navigate, queryClient, t]);
 }

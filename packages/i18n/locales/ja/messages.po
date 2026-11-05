@@ -1249,6 +1249,9 @@ msgstr "スター{starCount}件、まだ増えています"
 msgid "{started, plural, one {Started # automation} other {Started # automations}}"
 msgstr "{started, plural, one {#件のオートメーションを開始しました} other {#件のオートメーションを開始しました}}"
 
+msgid "{stepCount} steps, in the menu"
+msgstr "{stepCount} 個のステップ（メニュー内）"
+
 msgid "{subagentCount, plural, one {# subagent running} other {# subagents running}}"
 msgstr "{subagentCount, plural, other {# 件のサブエージェントが実行中}}"
 
@@ -1780,6 +1783,9 @@ msgstr "実績"
 msgid "Acme Inc."
 msgstr "Acme Inc."
 
+msgid "act"
+msgstr "実行"
+
 msgid "Act."
 msgstr "更新"
 
@@ -2198,14 +2204,14 @@ msgstr "スケジュールやトリガーで動くエージェント"
 msgid "Agents on your phone"
 msgstr "スマホで使うエージェント"
 
-msgid "Agents put their hand-overs here with superset report: work to review, decisions, drafts to approve, blockers."
-msgstr "エージェントは superset report で引き継ぎをここに置きます: レビュー待ちの作業、判断、承認待ちの下書き、ブロッカー。"
-
 msgid "Agents remember what they learn about your codebase, so every new session starts warm."
 msgstr "エージェントがコードベースについて学んだことを記憶するため、新しいセッションは最初から文脈を持って始まります。"
 
 msgid "Agents running at once"
 msgstr "同時に動かしているエージェント数"
+
+msgid "Agents stopped on a question, their hand-overs (superset report), your to-dos and the PRs you were asked to review all land here."
+msgstr "質問で止まっているエージェント、その引き継ぎ（superset report）、あなたのTo-do、レビューを依頼されたPRがここに集まります。"
 
 msgid "Agents use this account when they call Linear tools."
 msgstr "エージェントは、Linearのツールを呼び出すときにこのアカウントを使います。"
@@ -2221,9 +2227,6 @@ msgstr "同時に作業中のエージェント"
 
 msgid "Agents' to-dos"
 msgstr "エージェントのTo-do"
-
-msgid "Agents' to-dos for you"
-msgstr "エージェントからあなたへの To-do"
 
 msgid "Aggregate agent usage across every developer on the Superset leaderboard — tokens, cost, cache behaviour and which models people actually reach for."
 msgstr "Supersetリーダーボード上の全開発者を横断したエージェント利用の集計 — トークン、コスト、キャッシュの挙動、実際に選ばれているモデル。"
@@ -2565,6 +2568,9 @@ msgstr "別のデバイス"
 msgid "answer"
 msgstr "回答"
 
+msgid "Answer"
+msgstr "回答"
+
 msgid "Answer any questions in the terminal below, such as a password."
 msgstr "パスワードなど、下のターミナルでの質問に答えてください。"
 
@@ -2754,9 +2760,6 @@ msgctxt "job application"
 msgid "Apply"
 msgstr "応募"
 
-msgid "approve"
-msgstr "承認"
-
 msgid "Approve"
 msgstr "承認"
 
@@ -2894,6 +2897,9 @@ msgstr "編集とコマンドの前に確認"
 
 msgid "Asks only for risky actions"
 msgstr "リスクのある操作のみ確認"
+
+msgid "Asks you"
+msgstr "質問中"
 
 msgid "Aspect Ratio"
 msgstr "Aspect Ratio"
@@ -3324,8 +3330,8 @@ msgstr "ブロック中"
 msgid "Blocked by Branch Rules"
 msgstr "ブランチルールによりブロック"
 
-msgid "Blocked, see the Desk"
-msgstr "ブロック中、Desk を確認"
+msgid "Blocked, needs you"
+msgstr "ブロック中、あなたが必要"
 
 msgid "Blockquote"
 msgstr "引用"
@@ -5199,6 +5205,9 @@ msgstr "タスク ID をコピー"
 msgid "Copy terminal ID"
 msgstr "ターミナルIDをコピー"
 
+msgid "Copy the draft"
+msgstr "下書きをコピー"
+
 msgid "Copy the workspace path to the clipboard"
 msgstr "ワークスペースのパスをクリップボードにコピーする"
 
@@ -5285,6 +5294,9 @@ msgstr "セッションを閉じられませんでした"
 
 msgid "Could not connect {plugin}. Try again."
 msgstr "{plugin} に接続できませんでした。もう一度お試しください。"
+
+msgid "Could not copy the draft"
+msgstr "下書きをコピーできませんでした"
 
 msgid "Could not copy the link"
 msgstr "リンクをコピーできませんでした"
@@ -6201,11 +6213,11 @@ msgstr "デバッグ"
 msgid "Debug with production stack traces"
 msgstr "本番のスタックトレースでデバッグ"
 
-msgid "Decision waiting on the Desk"
-msgstr "Desk で判断待ち"
-
-msgid "Decisions"
+msgid "Decision"
 msgstr "判断"
+
+msgid "Decision waiting on you"
+msgstr "あなたの判断待ち"
 
 msgid "default"
 msgstr "デフォルト"
@@ -6530,12 +6542,6 @@ msgstr "デザインモードに失敗しました"
 
 msgid "Design review"
 msgstr "デザインレビュー"
-
-msgid "Desk"
-msgstr "Desk"
-
-msgid "Desk, {count} waiting on you"
-msgstr "Desk、{count} 件があなた待ち"
 
 msgid "Desktop"
 msgstr "デスクトップ"
@@ -6921,20 +6927,20 @@ msgstr "下書き · ファイル"
 msgid "Draft · line {0}"
 msgstr "下書き · {0}行目"
 
+msgid "Draft copied"
+msgstr "下書きをコピーしました"
+
 msgid "Draft for {draftTarget}"
 msgstr "{draftTarget} 用の下書き"
 
 msgid "Draft opened"
 msgstr "ドラフト作成"
 
-msgid "Draft waiting on the Desk"
-msgstr "Desk で下書きが承認待ち"
+msgid "Draft waiting for your approval"
+msgstr "下書きが承認待ち"
 
 msgid "drafted 3 support replies"
 msgstr "サポート返信を3件下書き"
-
-msgid "Drafts to approve"
-msgstr "承認待ちの下書き"
 
 msgid "Drag to reorder"
 msgstr "ドラッグして並べ替え"
@@ -6983,6 +6989,12 @@ msgstr "却下"
 
 msgid "Due"
 msgstr "期限"
+
+msgid "Due {dueDay}"
+msgstr "期限 {dueDay}"
+
+msgid "Due today"
+msgstr "今日が期限"
 
 msgid "Duration"
 msgstr "所要時間"
@@ -8800,6 +8812,12 @@ msgstr "ハードリロード"
 
 msgid "Hardware Keyboard"
 msgstr "ハードウェアキーボード"
+
+msgid "Has a draft"
+msgstr "下書きあり"
+
+msgid "Has a draft, in the menu"
+msgstr "下書きあり（メニュー内）"
 
 msgid "Has access"
 msgstr "アクセス権あり"
@@ -10676,6 +10694,9 @@ msgstr "レビュー可能にする"
 msgid "Mark reviewed"
 msgstr "レビュー済みにする"
 
+msgid "Mark seen"
+msgstr "既読にする"
+
 msgid "Markdown"
 msgstr "Markdown"
 
@@ -11257,6 +11278,13 @@ msgctxt "agent status"
 msgid "Needs you"
 msgstr "要対応"
 
+msgctxt "desk page"
+msgid "Needs you"
+msgstr "あなた待ち"
+
+msgid "Needs you: {nowCount} now, {count} in all"
+msgstr "あなた待ち：今 {nowCount} 件、全 {count} 件"
+
 msgid "Needs your approval"
 msgstr "承認が必要です"
 
@@ -11423,6 +11451,10 @@ msgstr "並列コーディングエージェントと開発者の生産性に関
 
 msgid "Next"
 msgstr "次へ"
+
+msgctxt "desk section"
+msgid "Next"
+msgstr "次に"
 
 msgid "Next (Enter)"
 msgstr "次へ (Enter)"
@@ -12342,6 +12374,10 @@ msgstr "今"
 msgid "Now"
 msgstr "現在"
 
+msgctxt "desk section"
+msgid "Now"
+msgstr "今すぐ"
+
 msgid "Now I open the workspace on my phone, type the one line it's waiting for, and it carries on."
 msgstr "今ではスマートフォンでワークスペースを開き、待たれている一行を入力すれば、作業が続きます。"
 
@@ -12913,6 +12949,9 @@ msgstr "Superset の iPhone・iPad アプリからページを開き、コメン
 
 msgid "Open Plugins in the Superset app and pick one. The install is saved to your account."
 msgstr "SupersetアプリでPluginsを開いて、1つ選びます。インストールはアカウントに保存されます。"
+
+msgid "Open PR"
+msgstr "PRを開く"
 
 #. placeholder {0}: pr.number
 msgid "Open PR #{0}"
@@ -13815,6 +13854,9 @@ msgstr "PRはマージされクローズ済み"
 msgid "PR ready for review"
 msgstr "PRがレビュー準備完了になりました"
 
+msgid "PR review"
+msgstr "PRレビュー"
+
 msgid "PR review comment"
 msgstr "PRレビューコメント"
 
@@ -14457,8 +14499,8 @@ msgstr "レビュー待ち"
 msgid "Ready for review failed: {0}"
 msgstr "レビュー準備完了にできませんでした: {0}"
 
-msgid "Ready for review on the Desk"
-msgstr "Desk でレビュー待ち"
+msgid "Ready for your review"
+msgstr "レビュー準備完了"
 
 msgid "Ready in"
 msgstr "対応済み"
@@ -17382,6 +17424,12 @@ msgstr "軌道修正"
 msgid "Step {0} of 2"
 msgstr "ステップ {0} / 2"
 
+msgid "Steps"
+msgstr "ステップ"
+
+msgid "Steps {doneSteps}/{stepCount}"
+msgstr "ステップ {doneSteps}/{stepCount}"
+
 msgid "Steps 3 and 4 repeat at every scheduled time."
 msgstr "手順3と4は、予定の時刻ごとに繰り返されます。"
 
@@ -19049,11 +19097,14 @@ msgstr "エージェントとの会話を再開するには、そのフォルダ
 msgid "To resume another agent conversation, run this in its folder:"
 msgstr "別のエージェントとの会話を再開するには、そのフォルダで次を実行します:"
 
+msgid "To review"
+msgstr "レビュー待ち"
+
+msgid "To-do"
+msgstr "To-do"
+
 msgid "To-do details"
 msgstr "To-doの詳細"
-
-msgid "To-do on the Desk"
-msgstr "Desk に To-do あり"
 
 msgid "To-dos"
 msgstr "To-do"
@@ -20105,6 +20156,9 @@ msgstr "他の人待ち"
 msgid "Waiting on reviewers or CI, longest wait first"
 msgstr "レビュアーまたは CI 待ち、待ち時間の長い順"
 
+msgid "Waiting since {waitingSince}"
+msgstr "{waitingSince} から待機中"
+
 msgid "Waiting tint"
 msgstr "待機の色付け"
 
@@ -20985,6 +21039,9 @@ msgstr "あなたのティアは、計測できた{0}軸の加重スコアです
 
 msgid "Your tokens"
 msgstr "あなたのトークン"
+
+msgid "Your turn"
+msgstr "あなたの番"
 
 msgid "Your v1 projects and workspaces are moving to the new Superset. They appear in the sidebar as each one is ready."
 msgstr "v1 のプロジェクトとワークスペースを新しい Superset に移行しています。準備ができたものから順にサイドバーに表示されます。"

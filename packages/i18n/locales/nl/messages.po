@@ -1249,6 +1249,9 @@ msgstr "{starCount} sterren en het worden er meer"
 msgid "{started, plural, one {Started # automation} other {Started # automations}}"
 msgstr "{started, plural, one {# automatisering gestart} other {# automatiseringen gestart}}"
 
+msgid "{stepCount} steps, in the menu"
+msgstr "{stepCount} stappen, in het menu"
+
 msgid "{subagentCount, plural, one {# subagent running} other {# subagents running}}"
 msgstr "{subagentCount, plural, one {# subagent actief} other {# subagents actief}}"
 
@@ -1780,6 +1783,9 @@ msgstr "Prestaties"
 msgid "Acme Inc."
 msgstr "Acme Inc."
 
+msgid "act"
+msgstr "uitvoeren"
+
 msgid "Act."
 msgstr "Act."
 
@@ -2198,14 +2204,14 @@ msgstr "Agents op een schema of trigger"
 msgid "Agents on your phone"
 msgstr "Agents op je telefoon"
 
-msgid "Agents put their hand-overs here with superset report: work to review, decisions, drafts to approve, blockers."
-msgstr "Agents zetten hun overdrachten hier met superset report: werk om te beoordelen, beslissingen, concepten om goed te keuren, blokkades."
-
 msgid "Agents remember what they learn about your codebase, so every new session starts warm."
 msgstr "Agents onthouden wat ze over je codebase leren, zodat elke nieuwe sessie met context begint."
 
 msgid "Agents running at once"
 msgstr "Agents die tegelijk draaien"
+
+msgid "Agents stopped on a question, their hand-overs (superset report), your to-dos and the PRs you were asked to review all land here."
+msgstr "Hier komen agents die op een vraag wachten, hun overdrachten (superset report), je to-do's en de PR's die je moet reviewen."
 
 msgid "Agents use this account when they call Linear tools."
 msgstr "Agents gebruiken dit account wanneer ze Linear-tools aanroepen."
@@ -2221,9 +2227,6 @@ msgstr "Agents die tegelijk werken"
 
 msgid "Agents' to-dos"
 msgstr "To-do's van agents"
-
-msgid "Agents' to-dos for you"
-msgstr "To-do's van agents voor jou"
 
 msgid "Aggregate agent usage across every developer on the Superset leaderboard — tokens, cost, cache behaviour and which models people actually reach for."
 msgstr "Totaal agentgebruik van alle developers op het Superset-leaderboard — tokens, kosten, cachegedrag en welke modellen mensen echt gebruiken."
@@ -2565,6 +2568,9 @@ msgstr "een ander apparaat"
 msgid "answer"
 msgstr "antwoorden"
 
+msgid "Answer"
+msgstr "Antwoorden"
+
 msgid "Answer any questions in the terminal below, such as a password."
 msgstr "Beantwoord vragen in de terminal hieronder, zoals een wachtwoord."
 
@@ -2754,9 +2760,6 @@ msgctxt "job application"
 msgid "Apply"
 msgstr "Solliciteer"
 
-msgid "approve"
-msgstr "goedkeuren"
-
 msgid "Approve"
 msgstr "Goedkeuren"
 
@@ -2894,6 +2897,9 @@ msgstr "Vraagt voor bewerkingen en opdrachten"
 
 msgid "Asks only for risky actions"
 msgstr "Vraagt alleen bij riskante acties"
+
+msgid "Asks you"
+msgstr "Vraagt je"
 
 msgid "Aspect Ratio"
 msgstr "Aspect Ratio"
@@ -3324,8 +3330,8 @@ msgstr "Geblokkeerd"
 msgid "Blocked by Branch Rules"
 msgstr "Geblokkeerd door branchregels"
 
-msgid "Blocked, see the Desk"
-msgstr "Geblokkeerd, zie de Desk"
+msgid "Blocked, needs you"
+msgstr "Geblokkeerd, heeft je nodig"
 
 msgid "Blockquote"
 msgstr "Citaat"
@@ -5199,6 +5205,9 @@ msgstr "Taak-ID kopiëren"
 msgid "Copy terminal ID"
 msgstr "Terminal-ID kopiëren"
 
+msgid "Copy the draft"
+msgstr "Concept kopiëren"
+
 msgid "Copy the workspace path to the clipboard"
 msgstr "Het pad van de werkruimte naar het klembord kopiëren"
 
@@ -5285,6 +5294,9 @@ msgstr "Kan de sessie niet sluiten"
 
 msgid "Could not connect {plugin}. Try again."
 msgstr "Kan {plugin} niet verbinden. Probeer het opnieuw."
+
+msgid "Could not copy the draft"
+msgstr "Kon het concept niet kopiëren"
 
 msgid "Could not copy the link"
 msgstr "Kan de link niet kopiëren"
@@ -6201,11 +6213,11 @@ msgstr "Debug"
 msgid "Debug with production stack traces"
 msgstr "Debug met stack traces uit productie"
 
-msgid "Decision waiting on the Desk"
-msgstr "Beslissing wacht op de Desk"
+msgid "Decision"
+msgstr "Beslissing"
 
-msgid "Decisions"
-msgstr "Beslissingen"
+msgid "Decision waiting on you"
+msgstr "Beslissing wacht op jou"
 
 msgid "default"
 msgstr "standaard"
@@ -6530,12 +6542,6 @@ msgstr "Designmodus mislukt"
 
 msgid "Design review"
 msgstr "Designreview"
-
-msgid "Desk"
-msgstr "Desk"
-
-msgid "Desk, {count} waiting on you"
-msgstr "Desk, {count} wachten op jou"
 
 msgid "Desktop"
 msgstr "Bureaublad"
@@ -6921,20 +6927,20 @@ msgstr "Concept · bestand"
 msgid "Draft · line {0}"
 msgstr "Concept · regel {0}"
 
+msgid "Draft copied"
+msgstr "Concept gekopieerd"
+
 msgid "Draft for {draftTarget}"
 msgstr "Concept voor {draftTarget}"
 
 msgid "Draft opened"
 msgstr "Draft geopend"
 
-msgid "Draft waiting on the Desk"
-msgstr "Concept wacht op de Desk"
+msgid "Draft waiting for your approval"
+msgstr "Concept wacht op je goedkeuring"
 
 msgid "drafted 3 support replies"
 msgstr "3 supportantwoorden opgesteld"
-
-msgid "Drafts to approve"
-msgstr "Concepten om goed te keuren"
 
 msgid "Drag to reorder"
 msgstr "Sleep om te herordenen"
@@ -6983,6 +6989,12 @@ msgstr "Laten vallen"
 
 msgid "Due"
 msgstr "Deadline"
+
+msgid "Due {dueDay}"
+msgstr "Uiterlijk {dueDay}"
+
+msgid "Due today"
+msgstr "Vandaag"
 
 msgid "Duration"
 msgstr "Duur"
@@ -8800,6 +8812,12 @@ msgstr "Hard herladen"
 
 msgid "Hardware Keyboard"
 msgstr "Hardwaretoetsenbord"
+
+msgid "Has a draft"
+msgstr "Heeft een concept"
+
+msgid "Has a draft, in the menu"
+msgstr "Heeft een concept, in het menu"
 
 msgid "Has access"
 msgstr "Heeft toegang"
@@ -10676,6 +10694,9 @@ msgstr "Markeren als klaar"
 msgid "Mark reviewed"
 msgstr "Markeren als beoordeeld"
 
+msgid "Mark seen"
+msgstr "Markeren als gezien"
+
 msgid "Markdown"
 msgstr "Markdown"
 
@@ -11257,6 +11278,13 @@ msgctxt "agent status"
 msgid "Needs you"
 msgstr "Wacht op jou"
 
+msgctxt "desk page"
+msgid "Needs you"
+msgstr "Wacht op jou"
+
+msgid "Needs you: {nowCount} now, {count} in all"
+msgstr "Wacht op jou: {nowCount} nu, {count} in totaal"
+
 msgid "Needs your approval"
 msgstr "Wacht op je goedkeuring"
 
@@ -11423,6 +11451,10 @@ msgstr "Nieuws, updates en inzichten van het Superset-team over parallelle codin
 
 msgid "Next"
 msgstr "Volgende"
+
+msgctxt "desk section"
+msgid "Next"
+msgstr "Daarna"
 
 msgid "Next (Enter)"
 msgstr "Volgende (Enter)"
@@ -12342,6 +12374,10 @@ msgstr "nu"
 msgid "Now"
 msgstr "Nu"
 
+msgctxt "desk section"
+msgid "Now"
+msgstr "Nu"
+
 msgid "Now I open the workspace on my phone, type the one line it's waiting for, and it carries on."
 msgstr "Nu open ik de werkruimte op mijn telefoon, typ ik die ene regel waarop wordt gewacht en gaat het werk verder."
 
@@ -12913,6 +12949,9 @@ msgstr "Open pages en reageer op opmerkingen in de Superset-app op iPhone en iPa
 
 msgid "Open Plugins in the Superset app and pick one. The install is saved to your account."
 msgstr "Open Plugins in de Superset-app en kies er een. De installatie wordt bij je account opgeslagen."
+
+msgid "Open PR"
+msgstr "PR openen"
 
 #. placeholder {0}: pr.number
 msgid "Open PR #{0}"
@@ -13815,6 +13854,9 @@ msgstr "PR gemerged en gesloten"
 msgid "PR ready for review"
 msgstr "PR is klaar voor review"
 
+msgid "PR review"
+msgstr "PR-review"
+
 msgid "PR review comment"
 msgstr "PR-reviewopmerking"
 
@@ -14457,8 +14499,8 @@ msgstr "Klaar voor review"
 msgid "Ready for review failed: {0}"
 msgstr "Markeren als klaar voor review mislukt: {0}"
 
-msgid "Ready for review on the Desk"
-msgstr "Klaar voor beoordeling op de Desk"
+msgid "Ready for your review"
+msgstr "Klaar voor jouw review"
 
 msgid "Ready in"
 msgstr "Klaar in"
@@ -17382,6 +17424,12 @@ msgstr "Bijsturen"
 msgid "Step {0} of 2"
 msgstr "Stap {0} van 2"
 
+msgid "Steps"
+msgstr "Stappen"
+
+msgid "Steps {doneSteps}/{stepCount}"
+msgstr "Stappen {doneSteps}/{stepCount}"
+
 msgid "Steps 3 and 4 repeat at every scheduled time."
 msgstr "Stap 3 en 4 herhalen zich op elk gepland tijdstip."
 
@@ -19049,11 +19097,14 @@ msgstr "Voer dit uit in de map om een agentgesprek te hervatten:"
 msgid "To resume another agent conversation, run this in its folder:"
 msgstr "Voer dit uit in de map om een ander agentgesprek te hervatten:"
 
+msgid "To review"
+msgstr "Te reviewen"
+
+msgid "To-do"
+msgstr "To-do"
+
 msgid "To-do details"
 msgstr "To-do-details"
-
-msgid "To-do on the Desk"
-msgstr "To-do op de Desk"
 
 msgid "To-dos"
 msgstr "To-do's"
@@ -20105,6 +20156,9 @@ msgstr "Wacht op anderen"
 msgid "Waiting on reviewers or CI, longest wait first"
 msgstr "Wacht op reviewers of CI, langste wachttijd eerst"
 
+msgid "Waiting since {waitingSince}"
+msgstr "Wacht sinds {waitingSince}"
+
 msgid "Waiting tint"
 msgstr "Wachtkleur"
 
@@ -20985,6 +21039,9 @@ msgstr "Je niveau is een gewogen score over de {0} assen die voor jou gemeten zi
 
 msgid "Your tokens"
 msgstr "Je tokens"
+
+msgid "Your turn"
+msgstr "Jouw beurt"
 
 msgid "Your v1 projects and workspaces are moving to the new Superset. They appear in the sidebar as each one is ready."
 msgstr "Je v1-projecten en -workspaces worden overgezet naar het nieuwe Superset. Ze verschijnen in de zijbalk zodra elk ervan klaar is."

@@ -1249,6 +1249,9 @@ msgstr "{starCount} звёзд и продолжаем"
 msgid "{started, plural, one {Started # automation} other {Started # automations}}"
 msgstr "{started, plural, one {Запущена # автоматизация} few {Запущено # автоматизации} many {Запущено # автоматизаций} other {Запущено # автоматизаций}}"
 
+msgid "{stepCount} steps, in the menu"
+msgstr "{stepCount} шагов, в меню"
+
 msgid "{subagentCount, plural, one {# subagent running} other {# subagents running}}"
 msgstr "{subagentCount, plural, one {# субагент выполняется} few {# субагента выполняются} many {# субагентов выполняются} other {# субагента выполняются}}"
 
@@ -1780,6 +1783,9 @@ msgstr "Достижения"
 msgid "Acme Inc."
 msgstr "Acme Inc."
 
+msgid "act"
+msgstr "действие"
+
 msgid "Act."
 msgstr "Акт."
 
@@ -2198,14 +2204,14 @@ msgstr "Агенты по расписанию или триггеру"
 msgid "Agents on your phone"
 msgstr "Агенты на телефоне"
 
-msgid "Agents put their hand-overs here with superset report: work to review, decisions, drafts to approve, blockers."
-msgstr "Агенты оставляют здесь свои передачи через superset report: работу на проверку, решения, черновики на утверждение, блокеры."
-
 msgid "Agents remember what they learn about your codebase, so every new session starts warm."
 msgstr "Агенты запоминают, что узнали о вашей кодовой базе, поэтому каждая новая сессия начинается с контекстом."
 
 msgid "Agents running at once"
 msgstr "Агентов запущено одновременно"
+
+msgid "Agents stopped on a question, their hand-overs (superset report), your to-dos and the PRs you were asked to review all land here."
+msgstr "Сюда попадают агенты, остановившиеся на вопросе, их передачи (superset report), ваши задачи и PR, которые вас попросили проверить."
 
 msgid "Agents use this account when they call Linear tools."
 msgstr "Агенты используют этот аккаунт, когда вызывают инструменты Linear."
@@ -2221,9 +2227,6 @@ msgstr "Агенты, работающие одновременно"
 
 msgid "Agents' to-dos"
 msgstr "Задачи агентов"
-
-msgid "Agents' to-dos for you"
-msgstr "Задачи от агентов для вас"
 
 msgid "Aggregate agent usage across every developer on the Superset leaderboard — tokens, cost, cache behaviour and which models people actually reach for."
 msgstr "Совокупное использование агентов всеми разработчиками в лидерборде Superset — токены, стоимость, поведение кеша и модели, к которым люди действительно обращаются."
@@ -2565,6 +2568,9 @@ msgstr "другое устройство"
 msgid "answer"
 msgstr "ответить"
 
+msgid "Answer"
+msgstr "Ответить"
+
 msgid "Answer any questions in the terminal below, such as a password."
 msgstr "Отвечайте на вопросы в терминале ниже, например введите пароль."
 
@@ -2754,9 +2760,6 @@ msgctxt "job application"
 msgid "Apply"
 msgstr "Откликнуться"
 
-msgid "approve"
-msgstr "утвердить"
-
 msgid "Approve"
 msgstr "Одобрить"
 
@@ -2894,6 +2897,9 @@ msgstr "Спрашивает перед правками и командами"
 
 msgid "Asks only for risky actions"
 msgstr "Спрашивает только при риске"
+
+msgid "Asks you"
+msgstr "Спрашивает вас"
 
 msgid "Aspect Ratio"
 msgstr "Соотношение сторон"
@@ -3324,8 +3330,8 @@ msgstr "Заблокировано"
 msgid "Blocked by Branch Rules"
 msgstr "Заблокирован правилами ветки"
 
-msgid "Blocked, see the Desk"
-msgstr "Заблокировано, см. Desk"
+msgid "Blocked, needs you"
+msgstr "Заблокировано, нужны вы"
 
 msgid "Blockquote"
 msgstr "Цитата"
@@ -5199,6 +5205,9 @@ msgstr "Скопировать ID задачи"
 msgid "Copy terminal ID"
 msgstr "Скопировать ID терминала"
 
+msgid "Copy the draft"
+msgstr "Скопировать черновик"
+
 msgid "Copy the workspace path to the clipboard"
 msgstr "Скопировать путь рабочей области в буфер обмена"
 
@@ -5285,6 +5294,9 @@ msgstr "Не удалось закрыть сессию"
 
 msgid "Could not connect {plugin}. Try again."
 msgstr "Не удалось подключить {plugin}. Попробуйте ещё раз."
+
+msgid "Could not copy the draft"
+msgstr "Не удалось скопировать черновик"
 
 msgid "Could not copy the link"
 msgstr "Не удалось скопировать ссылку"
@@ -6201,11 +6213,11 @@ msgstr "Отладка"
 msgid "Debug with production stack traces"
 msgstr "Отладка по стек-трейсам из продакшена"
 
-msgid "Decision waiting on the Desk"
-msgstr "Решение ждёт в Desk"
+msgid "Decision"
+msgstr "Решение"
 
-msgid "Decisions"
-msgstr "Решения"
+msgid "Decision waiting on you"
+msgstr "Решение ждёт вас"
 
 msgid "default"
 msgstr "по умолчанию"
@@ -6530,12 +6542,6 @@ msgstr "Режим дизайна не сработал"
 
 msgid "Design review"
 msgstr "Дизайн-ревью"
-
-msgid "Desk"
-msgstr "Desk"
-
-msgid "Desk, {count} waiting on you"
-msgstr "Desk, {count} ждут вас"
 
 msgid "Desktop"
 msgstr "Десктоп"
@@ -6921,20 +6927,20 @@ msgstr "Черновик · файл"
 msgid "Draft · line {0}"
 msgstr "Черновик · строка {0}"
 
+msgid "Draft copied"
+msgstr "Черновик скопирован"
+
 msgid "Draft for {draftTarget}"
 msgstr "Черновик для {draftTarget}"
 
 msgid "Draft opened"
 msgstr "Открыт черновик"
 
-msgid "Draft waiting on the Desk"
-msgstr "Черновик ждёт в Desk"
+msgid "Draft waiting for your approval"
+msgstr "Черновик ждёт вашего одобрения"
 
 msgid "drafted 3 support replies"
 msgstr "подготовил 3 ответа поддержки"
-
-msgid "Drafts to approve"
-msgstr "Черновики на утверждение"
 
 msgid "Drag to reorder"
 msgstr "Перетащите, чтобы изменить порядок"
@@ -6983,6 +6989,12 @@ msgstr "Отброшена"
 
 msgid "Due"
 msgstr "Срок"
+
+msgid "Due {dueDay}"
+msgstr "Срок {dueDay}"
+
+msgid "Due today"
+msgstr "Срок сегодня"
 
 msgid "Duration"
 msgstr "Длительность"
@@ -8800,6 +8812,12 @@ msgstr "Жёсткая перезагрузка"
 
 msgid "Hardware Keyboard"
 msgstr "Аппаратная клавиатура"
+
+msgid "Has a draft"
+msgstr "Есть черновик"
+
+msgid "Has a draft, in the menu"
+msgstr "Есть черновик, в меню"
 
 msgid "Has access"
 msgstr "Есть доступ"
@@ -10676,6 +10694,9 @@ msgstr "Отметить готовым"
 msgid "Mark reviewed"
 msgstr "Отметить как проверенное"
 
+msgid "Mark seen"
+msgstr "Отметить просмотренным"
+
 msgid "Markdown"
 msgstr "Markdown"
 
@@ -11257,6 +11278,13 @@ msgctxt "agent status"
 msgid "Needs you"
 msgstr "Ждёт вас"
 
+msgctxt "desk page"
+msgid "Needs you"
+msgstr "Ждёт вас"
+
+msgid "Needs you: {nowCount} now, {count} in all"
+msgstr "Ждёт вас: {nowCount} сейчас, всего {count}"
+
 msgid "Needs your approval"
 msgstr "Нужно ваше одобрение"
 
@@ -11423,6 +11451,10 @@ msgstr "Новости, обновления и заметки команды Su
 
 msgid "Next"
 msgstr "Далее"
+
+msgctxt "desk section"
+msgid "Next"
+msgstr "Затем"
 
 msgid "Next (Enter)"
 msgstr "Далее (Enter)"
@@ -12342,6 +12374,10 @@ msgstr "сейчас"
 msgid "Now"
 msgstr "Сейчас"
 
+msgctxt "desk section"
+msgid "Now"
+msgstr "Сейчас"
+
 msgid "Now I open the workspace on my phone, type the one line it's waiting for, and it carries on."
 msgstr "Теперь я открываю рабочее пространство на телефоне, ввожу ту самую строку, которую он ждёт, и работа продолжается."
 
@@ -12913,6 +12949,9 @@ msgstr "Открывайте страницы и отвечайте на ком�
 
 msgid "Open Plugins in the Superset app and pick one. The install is saved to your account."
 msgstr "Откройте «Плагины» в приложении Superset и выберите один. Установка сохранится в вашем аккаунте."
+
+msgid "Open PR"
+msgstr "Открыть PR"
 
 #. placeholder {0}: pr.number
 msgid "Open PR #{0}"
@@ -13815,6 +13854,9 @@ msgstr "PR объединён и закрыт"
 msgid "PR ready for review"
 msgstr "PR готов к ревью"
 
+msgid "PR review"
+msgstr "Ревью PR"
+
 msgid "PR review comment"
 msgstr "Комментарий в ревью PR"
 
@@ -14457,8 +14499,8 @@ msgstr "Готово к ревью"
 msgid "Ready for review failed: {0}"
 msgstr "Не удалось пометить как готово к ревью: {0}"
 
-msgid "Ready for review on the Desk"
-msgstr "Готово к проверке в Desk"
+msgid "Ready for your review"
+msgstr "Готово к вашей проверке"
 
 msgid "Ready in"
 msgstr "Готово в"
@@ -17382,6 +17424,12 @@ msgstr "Направить"
 msgid "Step {0} of 2"
 msgstr "Шаг {0} из 2"
 
+msgid "Steps"
+msgstr "Шаги"
+
+msgid "Steps {doneSteps}/{stepCount}"
+msgstr "Шаги {doneSteps}/{stepCount}"
+
 msgid "Steps 3 and 4 repeat at every scheduled time."
 msgstr "Шаги 3 и 4 повторяются в каждое запланированное время."
 
@@ -19049,11 +19097,14 @@ msgstr "Чтобы возобновить разговор с агентом, в
 msgid "To resume another agent conversation, run this in its folder:"
 msgstr "Чтобы возобновить другой разговор с агентом, выполните это в его папке:"
 
+msgid "To review"
+msgstr "На проверку"
+
+msgid "To-do"
+msgstr "Задача"
+
 msgid "To-do details"
 msgstr "Подробности задачи"
-
-msgid "To-do on the Desk"
-msgstr "Задача в Desk"
 
 msgid "To-dos"
 msgstr "Задачи"
@@ -20105,6 +20156,9 @@ msgstr "Ждут других"
 msgid "Waiting on reviewers or CI, longest wait first"
 msgstr "Ждут ревьюеров или CI, дольше всех ждущие сверху"
 
+msgid "Waiting since {waitingSince}"
+msgstr "Ждёт с {waitingSince}"
+
 msgid "Waiting tint"
 msgstr "Оттенок ожидания"
 
@@ -20985,6 +21039,9 @@ msgstr "Ваш уровень — взвешенная оценка по ося�
 
 msgid "Your tokens"
 msgstr "Ваши токены"
+
+msgid "Your turn"
+msgstr "Ваш ход"
 
 msgid "Your v1 projects and workspaces are moving to the new Superset. They appear in the sidebar as each one is ready."
 msgstr "Ваши проекты и рабочие пространства из v1 переносятся в новый Superset. Они появляются на боковой панели по мере готовности."

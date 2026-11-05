@@ -7,19 +7,20 @@ import { ToggleGroup, ToggleGroupItem } from "@superset/ui/toggle-group";
 import { cn } from "@superset/ui/utils";
 import { useQuery } from "@tanstack/react-query";
 import { type KeyboardEvent, type ReactNode, useState } from "react";
-import type { IconType } from "react-icons";
 import {
 	LuArchive,
 	LuArchiveRestore,
 	LuBot,
 	LuCheck,
-	LuCode,
 	LuEllipsis,
 	LuExternalLink,
-	LuGitPullRequest,
-	LuMessageSquare,
+	LuFileText,
+	LuListOrdered,
 } from "react-icons/lu";
 import { formatRelativeTime } from "renderer/lib/formatRelativeTime";
+import { TodoExtras } from "renderer/routes/_authenticated/_dashboard/components/TodoExtras";
+import { TodoKindIcon } from "renderer/routes/_authenticated/_dashboard/components/TodoKindIcon";
+import { readRichTodo } from "renderer/routes/_authenticated/_dashboard/hooks/useDeskQueue";
 import type {
 	ConversationTodo,
 	TodoActions,
@@ -30,12 +31,6 @@ import { httpLink } from "./utils/httpLink";
 
 type Priority = ConversationTodo["priority"];
 type Kind = ConversationTodo["kind"];
-
-const KIND_ICON: Partial<Record<Kind, IconType>> = {
-	code: LuCode,
-	message: LuMessageSquare,
-	review: LuGitPullRequest,
-};
 
 const DUE_CLASS = {
 	overdue: "text-red-500",
@@ -99,8 +94,13 @@ function TodoDetails({
 		if (next !== todo.link) onChange({ link: next });
 	};
 
+	const rich = readRichTodo(todo);
+	const hasRich =
+		rich.steps.length > 0 || rich.draft || rich.recipient || rich.channel;
+
 	return (
 		<div className="space-y-3">
+			{hasRich && <TodoExtras fields={rich} />}
 			<Field label={t`Priority`}>
 				<ToggleGroup
 					type="single"
@@ -186,7 +186,8 @@ function TodoItem({
 }) {
 	const { t } = useLingui();
 	const [draft, setDraft] = useState<string | null>(null);
-	const KindIcon = KIND_ICON[todo.kind];
+	const rich = readRichTodo(todo);
+	const stepCount = rich.steps.length;
 	const due = dueState(todo.dueOn, today);
 	const safeLink = httpLink(todo.link);
 	const failed = t`Could not update the to-do`;
@@ -226,9 +227,10 @@ function TodoItem({
 					aria-label={t`Added by the agent`}
 				/>
 			)}
-			{KindIcon && (
-				<KindIcon className="size-3 shrink-0 text-muted-foreground" />
-			)}
+			<TodoKindIcon
+				kind={todo.kind}
+				className="size-3 shrink-0 text-muted-foreground"
+			/>
 			{draft !== null ? (
 				<input
 					// biome-ignore lint/a11y/noAutofocus: the user just asked to edit this item
@@ -256,6 +258,23 @@ function TodoItem({
 				>
 					{todo.text}
 				</button>
+			)}
+			{rich.steps.length > 0 && (
+				<span
+					className="flex shrink-0 items-center gap-0.5 text-[10px] tabular-nums text-muted-foreground"
+					title={t`${stepCount} steps, in the menu`}
+				>
+					<LuListOrdered className="size-3" />
+					{rich.tracksSteps
+						? `${rich.steps.filter((step) => step.done).length}/${rich.steps.length}`
+						: rich.steps.length}
+				</span>
+			)}
+			{rich.draft && (
+				<LuFileText
+					className="size-3 shrink-0 text-muted-foreground"
+					aria-label={t`Has a draft, in the menu`}
+				/>
 			)}
 			{due && !todo.done && (
 				<span

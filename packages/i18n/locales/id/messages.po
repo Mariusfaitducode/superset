@@ -1249,6 +1249,9 @@ msgstr "{starCount} star dan terus bertambah"
 msgid "{started, plural, one {Started # automation} other {Started # automations}}"
 msgstr "{started, plural, one {# otomatisasi dimulai} other {# otomatisasi dimulai}}"
 
+msgid "{stepCount} steps, in the menu"
+msgstr "{stepCount} langkah, di menu"
+
 msgid "{subagentCount, plural, one {# subagent running} other {# subagents running}}"
 msgstr "{subagentCount, plural, other {# subagen berjalan}}"
 
@@ -1780,6 +1783,9 @@ msgstr "Pencapaian"
 msgid "Acme Inc."
 msgstr "Acme Inc."
 
+msgid "act"
+msgstr "bertindak"
+
 msgid "Act."
 msgstr "Akt."
 
@@ -2198,14 +2204,14 @@ msgstr "Agen terjadwal atau dengan pemicu"
 msgid "Agents on your phone"
 msgstr "Agen di ponsel Anda"
 
-msgid "Agents put their hand-overs here with superset report: work to review, decisions, drafts to approve, blockers."
-msgstr "Agen menaruh serah terima mereka di sini dengan superset report: pekerjaan untuk ditinjau, keputusan, draf untuk disetujui, hambatan."
-
 msgid "Agents remember what they learn about your codebase, so every new session starts warm."
 msgstr "Agen mengingat apa yang mereka pelajari tentang codebase Anda, sehingga setiap sesi baru dimulai dengan konteks."
 
 msgid "Agents running at once"
 msgstr "Agen yang berjalan sekaligus"
+
+msgid "Agents stopped on a question, their hand-overs (superset report), your to-dos and the PRs you were asked to review all land here."
+msgstr "Agen yang berhenti pada pertanyaan, serah terima mereka (superset report), to-do Anda, dan PR yang perlu Anda tinjau muncul di sini."
 
 msgid "Agents use this account when they call Linear tools."
 msgstr "Agen memakai akun ini saat memanggil tool Linear."
@@ -2221,9 +2227,6 @@ msgstr "Agen yang bekerja bersamaan"
 
 msgid "Agents' to-dos"
 msgstr "To-do agen"
-
-msgid "Agents' to-dos for you"
-msgstr "To-do dari agen untuk Anda"
 
 msgid "Aggregate agent usage across every developer on the Superset leaderboard — tokens, cost, cache behaviour and which models people actually reach for."
 msgstr "Agregat penggunaan agen dari seluruh developer di papan peringkat Superset — token, biaya, perilaku cache, dan model yang benar-benar dipakai orang."
@@ -2565,6 +2568,9 @@ msgstr "perangkat lain"
 msgid "answer"
 msgstr "jawab"
 
+msgid "Answer"
+msgstr "Jawab"
+
 msgid "Answer any questions in the terminal below, such as a password."
 msgstr "Jawab pertanyaan di terminal di bawah, misalnya kata sandi."
 
@@ -2754,9 +2760,6 @@ msgctxt "job application"
 msgid "Apply"
 msgstr "Lamar"
 
-msgid "approve"
-msgstr "setujui"
-
 msgid "Approve"
 msgstr "Setujui"
 
@@ -2894,6 +2897,9 @@ msgstr "Bertanya sebelum edit dan perintah"
 
 msgid "Asks only for risky actions"
 msgstr "Hanya bertanya untuk tindakan berisiko"
+
+msgid "Asks you"
+msgstr "Bertanya"
 
 msgid "Aspect Ratio"
 msgstr "Aspect Ratio"
@@ -3324,8 +3330,8 @@ msgstr "Terhambat"
 msgid "Blocked by Branch Rules"
 msgstr "Terblokir oleh Aturan Branch"
 
-msgid "Blocked, see the Desk"
-msgstr "Terhambat, lihat Desk"
+msgid "Blocked, needs you"
+msgstr "Terblokir, butuh Anda"
 
 msgid "Blockquote"
 msgstr "Kutipan blok"
@@ -5199,6 +5205,9 @@ msgstr "Salin ID tugas"
 msgid "Copy terminal ID"
 msgstr "Salin ID terminal"
 
+msgid "Copy the draft"
+msgstr "Salin draf"
+
 msgid "Copy the workspace path to the clipboard"
 msgstr "Salin path workspace ke clipboard"
 
@@ -5285,6 +5294,9 @@ msgstr "Tidak dapat menutup sesi"
 
 msgid "Could not connect {plugin}. Try again."
 msgstr "Tidak dapat menghubungkan {plugin}. Coba lagi."
+
+msgid "Could not copy the draft"
+msgstr "Tidak dapat menyalin draf"
 
 msgid "Could not copy the link"
 msgstr "Tidak bisa menyalin tautan"
@@ -6201,11 +6213,11 @@ msgstr "Debug"
 msgid "Debug with production stack traces"
 msgstr "Debug dengan stack trace produksi"
 
-msgid "Decision waiting on the Desk"
-msgstr "Keputusan menunggu di Desk"
-
-msgid "Decisions"
+msgid "Decision"
 msgstr "Keputusan"
+
+msgid "Decision waiting on you"
+msgstr "Keputusan menunggu Anda"
 
 msgid "default"
 msgstr "bawaan"
@@ -6530,12 +6542,6 @@ msgstr "Mode desain gagal"
 
 msgid "Design review"
 msgstr "Tinjauan desain"
-
-msgid "Desk"
-msgstr "Desk"
-
-msgid "Desk, {count} waiting on you"
-msgstr "Desk, {count} menunggu Anda"
 
 msgid "Desktop"
 msgstr "Desktop"
@@ -6921,20 +6927,20 @@ msgstr "Draf · file"
 msgid "Draft · line {0}"
 msgstr "Draf · baris {0}"
 
+msgid "Draft copied"
+msgstr "Draf disalin"
+
 msgid "Draft for {draftTarget}"
 msgstr "Draf untuk {draftTarget}"
 
 msgid "Draft opened"
 msgstr "Draf dibuka"
 
-msgid "Draft waiting on the Desk"
-msgstr "Draf menunggu di Desk"
+msgid "Draft waiting for your approval"
+msgstr "Draf menunggu persetujuan Anda"
 
 msgid "drafted 3 support replies"
 msgstr "menyusun 3 draf balasan dukungan"
-
-msgid "Drafts to approve"
-msgstr "Draf untuk disetujui"
 
 msgid "Drag to reorder"
 msgstr "Seret untuk mengurutkan ulang"
@@ -6983,6 +6989,12 @@ msgstr "Dibatalkan"
 
 msgid "Due"
 msgstr "Tenggat"
+
+msgid "Due {dueDay}"
+msgstr "Jatuh tempo {dueDay}"
+
+msgid "Due today"
+msgstr "Jatuh tempo hari ini"
 
 msgid "Duration"
 msgstr "Durasi"
@@ -8800,6 +8812,12 @@ msgstr "Muat ulang paksa"
 
 msgid "Hardware Keyboard"
 msgstr "Keyboard Fisik"
+
+msgid "Has a draft"
+msgstr "Ada draf"
+
+msgid "Has a draft, in the menu"
+msgstr "Ada draf, di menu"
 
 msgid "Has access"
 msgstr "Punya akses"
@@ -10676,6 +10694,9 @@ msgstr "Tandai Siap"
 msgid "Mark reviewed"
 msgstr "Tandai sudah ditinjau"
 
+msgid "Mark seen"
+msgstr "Tandai dilihat"
+
 msgid "Markdown"
 msgstr "Markdown"
 
@@ -11257,6 +11278,13 @@ msgctxt "agent status"
 msgid "Needs you"
 msgstr "Butuh Anda"
 
+msgctxt "desk page"
+msgid "Needs you"
+msgstr "Butuh Anda"
+
+msgid "Needs you: {nowCount} now, {count} in all"
+msgstr "Butuh Anda: {nowCount} sekarang, {count} total"
+
 msgid "Needs your approval"
 msgstr "Perlu persetujuan Anda"
 
@@ -11421,6 +11449,10 @@ msgstr "Berita dan ulasan mendalam"
 msgid "News, updates, and insights from the Superset team about parallel coding agents and developer productivity."
 msgstr "Berita, pembaruan, dan wawasan dari tim Superset tentang agen coding paralel dan produktivitas developer."
 
+msgid "Next"
+msgstr "Berikutnya"
+
+msgctxt "desk section"
 msgid "Next"
 msgstr "Berikutnya"
 
@@ -12342,6 +12374,10 @@ msgstr "sekarang"
 msgid "Now"
 msgstr "Sekarang"
 
+msgctxt "desk section"
+msgid "Now"
+msgstr "Sekarang"
+
 msgid "Now I open the workspace on my phone, type the one line it's waiting for, and it carries on."
 msgstr "Sekarang saya membuka ruang kerja di ponsel, mengetik satu baris yang ditunggunya, dan pekerjaan pun berlanjut."
 
@@ -12913,6 +12949,9 @@ msgstr "Buka halaman dan balas komentar dari aplikasi Superset di iPhone dan iPa
 
 msgid "Open Plugins in the Superset app and pick one. The install is saved to your account."
 msgstr "Buka Plugin di aplikasi Superset dan pilih salah satu. Instalasi tersimpan di akun Anda."
+
+msgid "Open PR"
+msgstr "Buka PR"
 
 #. placeholder {0}: pr.number
 msgid "Open PR #{0}"
@@ -13815,6 +13854,9 @@ msgstr "PR Di-merge dan Ditutup"
 msgid "PR ready for review"
 msgstr "PR siap ditinjau"
 
+msgid "PR review"
+msgstr "Tinjauan PR"
+
 msgid "PR review comment"
 msgstr "Komentar review PR"
 
@@ -14457,8 +14499,8 @@ msgstr "Siap Direview"
 msgid "Ready for review failed: {0}"
 msgstr "Gagal menandai siap ditinjau: {0}"
 
-msgid "Ready for review on the Desk"
-msgstr "Siap ditinjau di Desk"
+msgid "Ready for your review"
+msgstr "Siap Anda tinjau"
 
 msgid "Ready in"
 msgstr "Siap di"
@@ -17382,6 +17424,12 @@ msgstr "Arahkan"
 msgid "Step {0} of 2"
 msgstr "Langkah {0} dari 2"
 
+msgid "Steps"
+msgstr "Langkah"
+
+msgid "Steps {doneSteps}/{stepCount}"
+msgstr "Langkah {doneSteps}/{stepCount}"
+
 msgid "Steps 3 and 4 repeat at every scheduled time."
 msgstr "Langkah 3 dan 4 berulang pada setiap waktu terjadwal."
 
@@ -19049,11 +19097,14 @@ msgstr "Untuk melanjutkan percakapan agen, jalankan ini di foldernya:"
 msgid "To resume another agent conversation, run this in its folder:"
 msgstr "Untuk melanjutkan percakapan agen lain, jalankan ini di foldernya:"
 
+msgid "To review"
+msgstr "Untuk ditinjau"
+
+msgid "To-do"
+msgstr "To-do"
+
 msgid "To-do details"
 msgstr "Detail to-do"
-
-msgid "To-do on the Desk"
-msgstr "To-do di Desk"
 
 msgid "To-dos"
 msgstr "Tugas"
@@ -20105,6 +20156,9 @@ msgstr "Menunggu orang lain"
 msgid "Waiting on reviewers or CI, longest wait first"
 msgstr "Menunggu reviewer atau CI, tunggu terlama dulu"
 
+msgid "Waiting since {waitingSince}"
+msgstr "Menunggu sejak {waitingSince}"
+
 msgid "Waiting tint"
 msgstr "Warna tunggu"
 
@@ -20985,6 +21039,9 @@ msgstr "Peringkat Anda adalah skor berbobot dari {0} sumbu yang terukur untuk An
 
 msgid "Your tokens"
 msgstr "Token Anda"
+
+msgid "Your turn"
+msgstr "Giliran Anda"
 
 msgid "Your v1 projects and workspaces are moving to the new Superset. They appear in the sidebar as each one is ready."
 msgstr "Proyek dan workspace v1 Anda sedang dipindahkan ke Superset yang baru. Semuanya muncul di sidebar begitu masing-masing siap."

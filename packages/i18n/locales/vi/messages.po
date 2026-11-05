@@ -1249,6 +1249,9 @@ msgstr "{starCount} star và còn tăng"
 msgid "{started, plural, one {Started # automation} other {Started # automations}}"
 msgstr "{started, plural, one {Đã khởi chạy # tự động hóa} other {Đã khởi chạy # tự động hóa}}"
 
+msgid "{stepCount} steps, in the menu"
+msgstr "{stepCount} bước, trong menu"
+
 msgid "{subagentCount, plural, one {# subagent running} other {# subagents running}}"
 msgstr "{subagentCount, plural, other {# agent con đang chạy}}"
 
@@ -1780,6 +1783,9 @@ msgstr "Thành tích"
 msgid "Acme Inc."
 msgstr "Acme Inc."
 
+msgid "act"
+msgstr "thực hiện"
+
 msgid "Act."
 msgstr "HĐ"
 
@@ -2198,14 +2204,14 @@ msgstr "Agent chạy theo lịch hoặc trigger"
 msgid "Agents on your phone"
 msgstr "Agent trên điện thoại của bạn"
 
-msgid "Agents put their hand-overs here with superset report: work to review, decisions, drafts to approve, blockers."
-msgstr "Các agent đặt bàn giao của họ ở đây bằng superset report: công việc cần xem xét, quyết định, bản nháp cần duyệt, vướng mắc."
-
 msgid "Agents remember what they learn about your codebase, so every new session starts warm."
 msgstr "Agent ghi nhớ những gì chúng học được về codebase của bạn, nên mỗi phiên mới đều bắt đầu với sẵn ngữ cảnh."
 
 msgid "Agents running at once"
 msgstr "Số agent chạy cùng lúc"
+
+msgid "Agents stopped on a question, their hand-overs (superset report), your to-dos and the PRs you were asked to review all land here."
+msgstr "Các agent đang dừng ở một câu hỏi, các bàn giao của chúng (superset report), việc cần làm của bạn và các PR bạn được yêu cầu review đều hiện ở đây."
 
 msgid "Agents use this account when they call Linear tools."
 msgstr "Agent dùng tài khoản này khi gọi các công cụ Linear."
@@ -2221,9 +2227,6 @@ msgstr "Tác tử làm việc cùng lúc"
 
 msgid "Agents' to-dos"
 msgstr "Việc cần làm của agent"
-
-msgid "Agents' to-dos for you"
-msgstr "Việc cần làm từ agent cho bạn"
 
 msgid "Aggregate agent usage across every developer on the Superset leaderboard — tokens, cost, cache behaviour and which models people actually reach for."
 msgstr "Tổng hợp mức sử dụng agent của mọi lập trình viên trên bảng xếp hạng Superset — token, chi phí, hành vi cache và những mô hình mọi người thực sự dùng."
@@ -2565,6 +2568,9 @@ msgstr "thiết bị khác"
 msgid "answer"
 msgstr "trả lời"
 
+msgid "Answer"
+msgstr "Trả lời"
+
 msgid "Answer any questions in the terminal below, such as a password."
 msgstr "Trả lời các câu hỏi trong terminal bên dưới, chẳng hạn mật khẩu."
 
@@ -2754,9 +2760,6 @@ msgctxt "job application"
 msgid "Apply"
 msgstr "Ứng tuyển"
 
-msgid "approve"
-msgstr "duyệt"
-
 msgid "Approve"
 msgstr "Duyệt"
 
@@ -2894,6 +2897,9 @@ msgstr "Hỏi trước khi sửa và chạy lệnh"
 
 msgid "Asks only for risky actions"
 msgstr "Chỉ hỏi với thao tác rủi ro"
+
+msgid "Asks you"
+msgstr "Hỏi bạn"
 
 msgid "Aspect Ratio"
 msgstr "Aspect Ratio"
@@ -3324,8 +3330,8 @@ msgstr "Bị chặn"
 msgid "Blocked by Branch Rules"
 msgstr "Bị chặn bởi quy tắc nhánh"
 
-msgid "Blocked, see the Desk"
-msgstr "Bị chặn, xem Desk"
+msgid "Blocked, needs you"
+msgstr "Bị chặn, cần bạn"
 
 msgid "Blockquote"
 msgstr "Trích dẫn"
@@ -5199,6 +5205,9 @@ msgstr "Sao chép ID tác vụ"
 msgid "Copy terminal ID"
 msgstr "Sao chép ID terminal"
 
+msgid "Copy the draft"
+msgstr "Sao chép bản nháp"
+
 msgid "Copy the workspace path to the clipboard"
 msgstr "Sao chép đường dẫn workspace vào clipboard"
 
@@ -5285,6 +5294,9 @@ msgstr "Không thể đóng phiên"
 
 msgid "Could not connect {plugin}. Try again."
 msgstr "Không thể kết nối {plugin}. Vui lòng thử lại."
+
+msgid "Could not copy the draft"
+msgstr "Không thể sao chép bản nháp"
 
 msgid "Could not copy the link"
 msgstr "Không thể sao chép liên kết"
@@ -6201,11 +6213,11 @@ msgstr "Debug"
 msgid "Debug with production stack traces"
 msgstr "Gỡ lỗi bằng stack trace từ production"
 
-msgid "Decision waiting on the Desk"
-msgstr "Quyết định đang chờ trên Desk"
-
-msgid "Decisions"
+msgid "Decision"
 msgstr "Quyết định"
+
+msgid "Decision waiting on you"
+msgstr "Quyết định đang chờ bạn"
 
 msgid "default"
 msgstr "mặc định"
@@ -6530,12 +6542,6 @@ msgstr "Chế độ thiết kế thất bại"
 
 msgid "Design review"
 msgstr "Duyệt thiết kế"
-
-msgid "Desk"
-msgstr "Desk"
-
-msgid "Desk, {count} waiting on you"
-msgstr "Desk, {count} đang chờ bạn"
 
 msgid "Desktop"
 msgstr "Màn hình nền"
@@ -6921,20 +6927,20 @@ msgstr "Nháp · tệp"
 msgid "Draft · line {0}"
 msgstr "Nháp · dòng {0}"
 
+msgid "Draft copied"
+msgstr "Đã sao chép bản nháp"
+
 msgid "Draft for {draftTarget}"
 msgstr "Bản nháp cho {draftTarget}"
 
 msgid "Draft opened"
 msgstr "Mở bản nháp"
 
-msgid "Draft waiting on the Desk"
-msgstr "Bản nháp đang chờ trên Desk"
+msgid "Draft waiting for your approval"
+msgstr "Bản nháp đang chờ bạn duyệt"
 
 msgid "drafted 3 support replies"
 msgstr "đã soạn 3 câu trả lời hỗ trợ"
-
-msgid "Drafts to approve"
-msgstr "Bản nháp cần duyệt"
 
 msgid "Drag to reorder"
 msgstr "Kéo để sắp xếp lại"
@@ -6983,6 +6989,12 @@ msgstr "Đã bỏ"
 
 msgid "Due"
 msgstr "Hạn"
+
+msgid "Due {dueDay}"
+msgstr "Hạn {dueDay}"
+
+msgid "Due today"
+msgstr "Hạn hôm nay"
 
 msgid "Duration"
 msgstr "Thời lượng"
@@ -8800,6 +8812,12 @@ msgstr "Tải lại cứng"
 
 msgid "Hardware Keyboard"
 msgstr "Bàn phím cứng"
+
+msgid "Has a draft"
+msgstr "Có bản nháp"
+
+msgid "Has a draft, in the menu"
+msgstr "Có bản nháp, trong menu"
 
 msgid "Has access"
 msgstr "Có quyền truy cập"
@@ -10676,6 +10694,9 @@ msgstr "Đánh dấu sẵn sàng"
 msgid "Mark reviewed"
 msgstr "Đánh dấu đã xem xét"
 
+msgid "Mark seen"
+msgstr "Đánh dấu đã xem"
+
 msgid "Markdown"
 msgstr "Markdown"
 
@@ -11257,6 +11278,13 @@ msgctxt "agent status"
 msgid "Needs you"
 msgstr "Cần bạn"
 
+msgctxt "desk page"
+msgid "Needs you"
+msgstr "Cần bạn"
+
+msgid "Needs you: {nowCount} now, {count} in all"
+msgstr "Cần bạn: {nowCount} bây giờ, tổng {count}"
+
 msgid "Needs your approval"
 msgstr "Cần bạn phê duyệt"
 
@@ -11423,6 +11451,10 @@ msgstr "Tin tức, cập nhật và góc nhìn từ đội ngũ Superset về c�
 
 msgid "Next"
 msgstr "Tiếp"
+
+msgctxt "desk section"
+msgid "Next"
+msgstr "Tiếp theo"
 
 msgid "Next (Enter)"
 msgstr "Tiếp (Enter)"
@@ -12342,6 +12374,10 @@ msgstr "vừa xong"
 msgid "Now"
 msgstr "Hiện tại"
 
+msgctxt "desk section"
+msgid "Now"
+msgstr "Bây giờ"
+
 msgid "Now I open the workspace on my phone, type the one line it's waiting for, and it carries on."
 msgstr "Giờ tôi mở không gian làm việc trên điện thoại, gõ đúng dòng mà nó đang chờ, rồi nó tiếp tục làm việc."
 
@@ -12913,6 +12949,9 @@ msgstr "Mở trang và trả lời bình luận từ ứng dụng Superset trên
 
 msgid "Open Plugins in the Superset app and pick one. The install is saved to your account."
 msgstr "Mở Plugin trong ứng dụng Superset và chọn một plugin. Bản cài đặt được lưu vào tài khoản của bạn."
+
+msgid "Open PR"
+msgstr "Mở PR"
 
 #. placeholder {0}: pr.number
 msgid "Open PR #{0}"
@@ -13815,6 +13854,9 @@ msgstr "PR đã merge và đóng"
 msgid "PR ready for review"
 msgstr "PR đã sẵn sàng để review"
 
+msgid "PR review"
+msgstr "Review PR"
+
 msgid "PR review comment"
 msgstr "Bình luận review PR"
 
@@ -14457,8 +14499,8 @@ msgstr "Sẵn sàng review"
 msgid "Ready for review failed: {0}"
 msgstr "Đánh dấu sẵn sàng để review thất bại: {0}"
 
-msgid "Ready for review on the Desk"
-msgstr "Sẵn sàng xem xét trên Desk"
+msgid "Ready for your review"
+msgstr "Sẵn sàng để bạn review"
 
 msgid "Ready in"
 msgstr "Sẵn sàng trong"
@@ -17382,6 +17424,12 @@ msgstr "Dừng và gửi"
 msgid "Step {0} of 2"
 msgstr "Bước {0} / 2"
 
+msgid "Steps"
+msgstr "Các bước"
+
+msgid "Steps {doneSteps}/{stepCount}"
+msgstr "Các bước {doneSteps}/{stepCount}"
+
 msgid "Steps 3 and 4 repeat at every scheduled time."
 msgstr "Bước 3 và 4 lặp lại vào mỗi thời điểm đã lên lịch."
 
@@ -19049,11 +19097,14 @@ msgstr "Để tiếp tục một cuộc trò chuyện với agent, hãy chạy l
 msgid "To resume another agent conversation, run this in its folder:"
 msgstr "Để tiếp tục một cuộc trò chuyện khác với agent, hãy chạy lệnh này trong thư mục của nó:"
 
+msgid "To review"
+msgstr "Cần review"
+
+msgid "To-do"
+msgstr "Việc cần làm"
+
 msgid "To-do details"
 msgstr "Chi tiết việc cần làm"
-
-msgid "To-do on the Desk"
-msgstr "Việc cần làm trên Desk"
 
 msgid "To-dos"
 msgstr "Việc cần làm"
@@ -20105,6 +20156,9 @@ msgstr "Đang chờ người khác"
 msgid "Waiting on reviewers or CI, longest wait first"
 msgstr "Đang chờ reviewer hoặc CI, chờ lâu nhất trước"
 
+msgid "Waiting since {waitingSince}"
+msgstr "Đang chờ từ {waitingSince}"
+
 msgid "Waiting tint"
 msgstr "Sắc chờ"
 
@@ -20985,6 +21039,9 @@ msgstr "Hạng của bạn là điểm số có trọng số trên {0} trục đ
 
 msgid "Your tokens"
 msgstr "Token của bạn"
+
+msgid "Your turn"
+msgstr "Đến lượt bạn"
 
 msgid "Your v1 projects and workspaces are moving to the new Superset. They appear in the sidebar as each one is ready."
 msgstr "Các dự án và workspace v1 của bạn đang được chuyển sang Superset mới. Chúng sẽ xuất hiện trong thanh bên khi từng mục sẵn sàng."

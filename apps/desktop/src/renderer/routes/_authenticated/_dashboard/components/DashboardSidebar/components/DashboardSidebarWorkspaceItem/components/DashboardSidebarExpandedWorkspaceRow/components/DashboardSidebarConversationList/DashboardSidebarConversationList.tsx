@@ -10,8 +10,8 @@ import { useHostAgentReports } from "renderer/hooks/host-service/useHostAgentRep
 import { useNow } from "renderer/hooks/useNow";
 import { ReportKindIcon } from "renderer/routes/_authenticated/_dashboard/components/ReportKindIcon";
 import {
-	DESK_GROUPS,
-	type DeskGroup,
+	REPORT_KINDS,
+	type ReportKind,
 } from "renderer/routes/_authenticated/_dashboard/hooks/useDeskQueue";
 import {
 	buildSubagentSearch,
@@ -112,7 +112,7 @@ function ConversationRow({
 	hostId: string;
 	conversation: SidebarConversation;
 	/** The most pressing open report of the conversation, if any. */
-	reportKind: DeskGroup | null;
+	reportKind: ReportKind | null;
 	/** Null when the host is too old to keep to-dos. */
 	todos: ConversationTodo[] | null;
 	todoActions: TodoActions;
@@ -135,12 +135,11 @@ function ConversationRow({
 		(todo) => !todo.done && todo.priority === "high",
 	);
 
-	const reportLabel: Record<DeskGroup, string> = {
-		decision: t`Decision waiting on the Desk`,
-		draft: t`Draft waiting on the Desk`,
-		blocked: t`Blocked, see the Desk`,
-		done: t`Ready for review on the Desk`,
-		todo: t`To-do on the Desk`,
+	const reportLabel: Record<ReportKind, string> = {
+		decision: t`Decision waiting on you`,
+		draft: t`Draft waiting for your approval`,
+		blocked: t`Blocked, needs you`,
+		done: t`Ready for your review`,
 	};
 
 	const stateLabel: Record<ConversationState, string> = {
@@ -376,8 +375,8 @@ export function DashboardSidebarConversationList({
 		cache.isSandboxHost(hostId) ? null : cache.resolveHostUrl(hostId),
 		showConversations && conversations.length > 0,
 	).data;
-	const reportKindFor = (terminalId: string): DeskGroup | null => {
-		let best: DeskGroup | null = null;
+	const reportKindFor = (terminalId: string): ReportKind | null => {
+		let best: ReportKind | null = null;
 		for (const report of reports ?? []) {
 			if (
 				report.terminalId !== terminalId ||
@@ -388,7 +387,7 @@ export function DashboardSidebarConversationList({
 			}
 			if (
 				best === null ||
-				DESK_GROUPS.indexOf(report.kind) < DESK_GROUPS.indexOf(best)
+				REPORT_KINDS.indexOf(report.kind) < REPORT_KINDS.indexOf(best)
 			) {
 				best = report.kind;
 			}

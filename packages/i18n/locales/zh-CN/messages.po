@@ -1249,6 +1249,9 @@ msgstr "{starCount}个星标，还在增长"
 msgid "{started, plural, one {Started # automation} other {Started # automations}}"
 msgstr "{started, plural, one {已启动 # 个自动化} other {已启动 # 个自动化}}"
 
+msgid "{stepCount} steps, in the menu"
+msgstr "{stepCount} 个步骤，见菜单"
+
 msgid "{subagentCount, plural, one {# subagent running} other {# subagents running}}"
 msgstr "{subagentCount, plural, other {# 个子智能体运行中}}"
 
@@ -1780,6 +1783,9 @@ msgstr "成就"
 msgid "Acme Inc."
 msgstr "Acme Inc."
 
+msgid "act"
+msgstr "执行"
+
 msgid "Act."
 msgstr "活动"
 
@@ -2198,14 +2204,14 @@ msgstr "按计划或触发器运行的智能体"
 msgid "Agents on your phone"
 msgstr "手机上的智能体"
 
-msgid "Agents put their hand-overs here with superset report: work to review, decisions, drafts to approve, blockers."
-msgstr "智能体通过 superset report 将交接放在这里：待审阅的工作、决策、待批准的草稿、阻碍。"
-
 msgid "Agents remember what they learn about your codebase, so every new session starts warm."
 msgstr "智能体会记住它们对你代码库的了解，让每个新会话一开始就有上下文。"
 
 msgid "Agents running at once"
 msgstr "同时运行的智能体数"
+
+msgid "Agents stopped on a question, their hand-overs (superset report), your to-dos and the PRs you were asked to review all land here."
+msgstr "停在问题上的代理、它们的交接（superset report）、你的待办和请你审查的 PR 都会出现在这里。"
 
 msgid "Agents use this account when they call Linear tools."
 msgstr "智能体调用 Linear 工具时会使用此账号。"
@@ -2221,9 +2227,6 @@ msgstr "同时工作的智能体"
 
 msgid "Agents' to-dos"
 msgstr "智能体的待办"
-
-msgid "Agents' to-dos for you"
-msgstr "智能体给你的待办"
 
 msgid "Aggregate agent usage across every developer on the Superset leaderboard — tokens, cost, cache behaviour and which models people actually reach for."
 msgstr "Superset 排行榜上所有开发者的智能体使用汇总 —— token、成本、缓存表现，以及大家实际常用的模型。"
@@ -2565,6 +2568,9 @@ msgstr "另一台设备"
 msgid "answer"
 msgstr "回答"
 
+msgid "Answer"
+msgstr "回复"
+
 msgid "Answer any questions in the terminal below, such as a password."
 msgstr "请在下方终端中回答提问，例如输入密码。"
 
@@ -2754,9 +2760,6 @@ msgctxt "job application"
 msgid "Apply"
 msgstr "申请"
 
-msgid "approve"
-msgstr "批准"
-
 msgid "Approve"
 msgstr "批准"
 
@@ -2894,6 +2897,9 @@ msgstr "编辑和运行命令前询问"
 
 msgid "Asks only for risky actions"
 msgstr "仅在有风险时询问"
+
+msgid "Asks you"
+msgstr "在问你"
 
 msgid "Aspect Ratio"
 msgstr "宽高比"
@@ -3324,8 +3330,8 @@ msgstr "受阻"
 msgid "Blocked by Branch Rules"
 msgstr "被分支规则阻止"
 
-msgid "Blocked, see the Desk"
-msgstr "受阻，请查看 Desk"
+msgid "Blocked, needs you"
+msgstr "已阻塞，需要你"
 
 msgid "Blockquote"
 msgstr "引用块"
@@ -5199,6 +5205,9 @@ msgstr "复制任务 ID"
 msgid "Copy terminal ID"
 msgstr "复制终端ID"
 
+msgid "Copy the draft"
+msgstr "复制草稿"
+
 msgid "Copy the workspace path to the clipboard"
 msgstr "将工作区路径复制到剪贴板"
 
@@ -5285,6 +5294,9 @@ msgstr "无法关闭会话"
 
 msgid "Could not connect {plugin}. Try again."
 msgstr "无法连接 {plugin}。请重试。"
+
+msgid "Could not copy the draft"
+msgstr "无法复制草稿"
 
 msgid "Could not copy the link"
 msgstr "无法复制链接"
@@ -6201,11 +6213,11 @@ msgstr "调试"
 msgid "Debug with production stack traces"
 msgstr "用生产环境堆栈跟踪调试"
 
-msgid "Decision waiting on the Desk"
-msgstr "Desk 上有待做的决策"
+msgid "Decision"
+msgstr "决定"
 
-msgid "Decisions"
-msgstr "决策"
+msgid "Decision waiting on you"
+msgstr "决定在等你"
 
 msgid "default"
 msgstr "默认"
@@ -6530,12 +6542,6 @@ msgstr "设计模式失败"
 
 msgid "Design review"
 msgstr "设计评审"
-
-msgid "Desk"
-msgstr "Desk"
-
-msgid "Desk, {count} waiting on you"
-msgstr "Desk，{count} 项等待你处理"
 
 msgid "Desktop"
 msgstr "桌面端"
@@ -6921,20 +6927,20 @@ msgstr "草稿 · 文件"
 msgid "Draft · line {0}"
 msgstr "草稿 · 第{0}行"
 
+msgid "Draft copied"
+msgstr "草稿已复制"
+
 msgid "Draft for {draftTarget}"
 msgstr "用于 {draftTarget} 的草稿"
 
 msgid "Draft opened"
 msgstr "创建了草稿"
 
-msgid "Draft waiting on the Desk"
-msgstr "Desk 上有待批准的草稿"
+msgid "Draft waiting for your approval"
+msgstr "草稿等待你批准"
 
 msgid "drafted 3 support replies"
 msgstr "起草了3条支持回复"
-
-msgid "Drafts to approve"
-msgstr "待批准的草稿"
 
 msgid "Drag to reorder"
 msgstr "拖动以重新排序"
@@ -6983,6 +6989,12 @@ msgstr "已放弃"
 
 msgid "Due"
 msgstr "截止"
+
+msgid "Due {dueDay}"
+msgstr "截止 {dueDay}"
+
+msgid "Due today"
+msgstr "今天截止"
 
 msgid "Duration"
 msgstr "耗时"
@@ -8800,6 +8812,12 @@ msgstr "强制重新加载"
 
 msgid "Hardware Keyboard"
 msgstr "硬件键盘"
+
+msgid "Has a draft"
+msgstr "有草稿"
+
+msgid "Has a draft, in the menu"
+msgstr "有草稿，见菜单"
 
 msgid "Has access"
 msgstr "有访问权限"
@@ -10676,6 +10694,9 @@ msgstr "标记为待审查"
 msgid "Mark reviewed"
 msgstr "标记为已审阅"
 
+msgid "Mark seen"
+msgstr "标记为已看"
+
 msgid "Markdown"
 msgstr "Markdown"
 
@@ -11257,6 +11278,13 @@ msgctxt "agent status"
 msgid "Needs you"
 msgstr "需要你"
 
+msgctxt "desk page"
+msgid "Needs you"
+msgstr "等你处理"
+
+msgid "Needs you: {nowCount} now, {count} in all"
+msgstr "等你处理：现在 {nowCount}，共 {count}"
+
 msgid "Needs your approval"
 msgstr "需要你的批准"
 
@@ -11423,6 +11451,10 @@ msgstr "来自 Superset 团队的新闻、更新与洞察，涵盖并行编码�
 
 msgid "Next"
 msgstr "下一页"
+
+msgctxt "desk section"
+msgid "Next"
+msgstr "稍后"
 
 msgid "Next (Enter)"
 msgstr "下一个匹配项（Enter）"
@@ -12342,6 +12374,10 @@ msgstr "刚刚"
 msgid "Now"
 msgstr "现在"
 
+msgctxt "desk section"
+msgid "Now"
+msgstr "现在"
+
 msgid "Now I open the workspace on my phone, type the one line it's waiting for, and it carries on."
 msgstr "现在，我在手机上打开工作区，输入它正在等待的那一行，它就会继续工作。"
 
@@ -12913,6 +12949,9 @@ msgstr "在 Superset 的 iPhone 和 iPad 应用中打开页面并回复评论。
 
 msgid "Open Plugins in the Superset app and pick one. The install is saved to your account."
 msgstr "在 Superset 应用中打开“插件”并选择一个。安装记录会保存到你的账号。"
+
+msgid "Open PR"
+msgstr "打开 PR"
 
 #. placeholder {0}: pr.number
 msgid "Open PR #{0}"
@@ -13815,6 +13854,9 @@ msgstr "PR已合并并关闭"
 msgid "PR ready for review"
 msgstr "PR已可评审"
 
+msgid "PR review"
+msgstr "PR 审查"
+
 msgid "PR review comment"
 msgstr "PR审查评论"
 
@@ -14457,8 +14499,8 @@ msgstr "待审查"
 msgid "Ready for review failed: {0}"
 msgstr "标记为可评审失败：{0}"
 
-msgid "Ready for review on the Desk"
-msgstr "Desk 上待审阅"
+msgid "Ready for your review"
+msgstr "可供你审查"
 
 msgid "Ready in"
 msgstr "已就绪"
@@ -17382,6 +17424,12 @@ msgstr "引导"
 msgid "Step {0} of 2"
 msgstr "第{0}步，共2步"
 
+msgid "Steps"
+msgstr "步骤"
+
+msgid "Steps {doneSteps}/{stepCount}"
+msgstr "步骤 {doneSteps}/{stepCount}"
+
 msgid "Steps 3 and 4 repeat at every scheduled time."
 msgstr "第 3 步和第 4 步会在每个计划时间重复。"
 
@@ -19049,11 +19097,14 @@ msgstr "要恢复与智能体的对话，请在其文件夹中运行："
 msgid "To resume another agent conversation, run this in its folder:"
 msgstr "要恢复其他与智能体的对话，请在其文件夹中运行："
 
+msgid "To review"
+msgstr "待审查"
+
+msgid "To-do"
+msgstr "待办"
+
 msgid "To-do details"
 msgstr "待办详情"
-
-msgid "To-do on the Desk"
-msgstr "Desk 上有待办"
 
 msgid "To-dos"
 msgstr "待办"
@@ -20105,6 +20156,9 @@ msgstr "等待他人"
 msgid "Waiting on reviewers or CI, longest wait first"
 msgstr "等待审查者或 CI，等待最久的在前"
 
+msgid "Waiting since {waitingSince}"
+msgstr "自 {waitingSince} 起等待"
+
 msgid "Waiting tint"
 msgstr "等待着色"
 
@@ -20985,6 +21039,9 @@ msgstr "你的等级是为你测得的 {0} 个维度的加权得分，强项可�
 
 msgid "Your tokens"
 msgstr "你的token数"
+
+msgid "Your turn"
+msgstr "轮到你"
 
 msgid "Your v1 projects and workspaces are moving to the new Superset. They appear in the sidebar as each one is ready."
 msgstr "你的 v1 项目和工作区正在迁移到新版 Superset。每一项准备好后就会出现在侧边栏中。"

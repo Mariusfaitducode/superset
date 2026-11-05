@@ -3,10 +3,9 @@ import { Kbd } from "@superset/ui/kbd";
 import { useEffect, useRef, useState } from "react";
 import { LuInbox } from "react-icons/lu";
 import { PageHeader } from "renderer/routes/_authenticated/_dashboard/components/PageHeader";
-import { ReportKindIcon } from "renderer/routes/_authenticated/_dashboard/components/ReportKindIcon";
 import {
-	DESK_GROUPS,
-	type DeskGroup,
+	DESK_SECTIONS,
+	type DeskSection,
 	useDeskQueue,
 } from "renderer/routes/_authenticated/_dashboard/hooks/useDeskQueue";
 import { DeskCard, type DeskCardHandle } from "./components/DeskCard";
@@ -22,9 +21,10 @@ function isTyping(target: EventTarget | null): boolean {
 }
 
 /**
- * Everything agents handed over to the user, across workspaces, cleared
- * from the keyboard: j/k to move, 1-9 to pick an option, r to answer, a to
- * approve or mark reviewed, x to dismiss, Enter to open the conversation.
+ * Needs you: everything waiting on the user, in one list sorted by urgency
+ * (agents stopped on them, reports, to-dos, PRs to review), cleared from the
+ * keyboard: j/k to move, 1-9 to pick an option, r to answer, a for the
+ * row's main action, x to dismiss, Enter to open.
  */
 export function DeskView() {
 	const { t } = useLingui();
@@ -34,18 +34,20 @@ export function DeskView() {
 	const [selectedKey, setSelectedKey] = useState<string | null>(null);
 	const cards = useRef(new Map<string, DeskCardHandle>());
 
-	const groupLabel: Record<DeskGroup, string> = {
-		decision: t`Decisions`,
-		draft: t`Drafts to approve`,
-		blocked: t`Blocked`,
-		done: t`Ready for review`,
-		todo: t`Agents' to-dos for you`,
+	const pageTitle = t({ message: "Needs you", context: "desk page" });
+	const sectionLabel: Record<DeskSection, string> = {
+		now: t({ message: "Now", context: "desk section" }),
+		next: t({ message: "Next", context: "desk section" }),
 	};
 
-	const selectedIndex = Math.max(
-		0,
-		items.findIndex((item) => item.key === selectedKey),
-	);
+	// When the selected row leaves the list, select the row now in its place.
+	const lastIndex = useRef(0);
+	const foundIndex = items.findIndex((item) => item.key === selectedKey);
+	const selectedIndex =
+		foundIndex >= 0
+			? foundIndex
+			: Math.min(lastIndex.current, Math.max(0, items.length - 1));
+	lastIndex.current = selectedIndex;
 	const selected = items[selectedIndex];
 
 	useEffect(() => {
@@ -77,7 +79,7 @@ export function DeskView() {
 			<PageHeader
 				start={
 					<h1 className="text-sm font-medium">
-						{t`Desk`}
+						{pageTitle}
 						{items.length > 0 && (
 							<span className="ml-2 text-muted-foreground tabular-nums">
 								{items.length}
@@ -90,14 +92,16 @@ export function DeskView() {
 						<Kbd>J</Kbd>
 						<Kbd>K</Kbd>
 						{t`move`}
-						<Kbd>1-9</Kbd>
-						{t`option`}
+						<Kbd>A</Kbd>
+						{t`act`}
 						<Kbd>R</Kbd>
 						{t`answer`}
-						<Kbd>A</Kbd>
-						{t`approve`}
+						<Kbd>1-9</Kbd>
+						{t`option`}
 						<Kbd>X</Kbd>
 						{t`dismiss`}
+						<Kbd>↵</Kbd>
+						{t`open`}
 					</span>
 				}
 			/>
@@ -107,22 +111,23 @@ export function DeskView() {
 						<LuInbox className="size-8" />
 						<p className="text-sm">{t`Nothing waits on you.`}</p>
 						<p className="max-w-sm text-center text-xs">
-							{t`Agents put their hand-overs here with superset report: work to review, decisions, drafts to approve, blockers.`}
+							{t`Agents stopped on a question, their hand-overs (superset report), your to-dos and the PRs you were asked to review all land here.`}
 						</p>
 					</div>
 				) : (
 					<div className="mx-auto flex max-w-3xl flex-col gap-6 px-4 py-4">
-						{DESK_GROUPS.map((group) => {
-							const groupItems = items.filter((item) => item.group === group);
-							if (groupItems.length === 0) return null;
+						{DESK_SECTIONS.map((section) => {
+							const sectionItems = items.filter(
+								(item) => item.section === section,
+							);
+							if (sectionItems.length === 0) return null;
 							return (
-								<section key={group} className="flex flex-col gap-2">
+								<section key={section} className="flex flex-col gap-1.5">
 									<h2 className="flex items-center gap-1.5 text-xs font-medium text-muted-foreground">
-										<ReportKindIcon kind={group} className="size-3.5" />
-										{groupLabel[group]}
-										<span className="tabular-nums">{groupItems.length}</span>
+										{sectionLabel[section]}
+										<span className="tabular-nums">{sectionItems.length}</span>
 									</h2>
-									{groupItems.map((item) => (
+									{sectionItems.map((item) => (
 										<DeskCard
 											key={item.key}
 											ref={(handle) => {
@@ -130,7 +135,11 @@ export function DeskView() {
 												else cards.current.delete(item.key);
 											}}
 											item={item}
-											conversationTitle={titles.get(item.terminalId) ?? null}
+											conversationTitle={
+												item.source === "pr"
+													? null
+													: (titles.get(item.terminalId) ?? null)
+											}
 											selected={item.key === selected?.key}
 											onSelect={() => setSelectedKey(item.key)}
 											actions={actions}
