@@ -1591,6 +1591,9 @@ msgstr "Er draait nog een proces in deze terminal"
 msgid "A pull request always gets its own worktree"
 msgstr "Een pull request krijgt altijd een eigen worktree"
 
+msgid "A question, a permission or a report waits for you"
+msgstr "Een vraag, toestemming of rapport wacht op je"
+
 msgid "A rebuilt chat surface for driving agents: richer tool output, smoother steering, faster everything."
 msgstr "Een herbouwd chatoppervlak om agents aan te sturen: rijkere tooluitvoer, soepeler bijsturen, alles sneller."
 
@@ -4362,9 +4365,6 @@ msgstr "Kleur voor {0}"
 msgid "Colorblind-safe"
 msgstr "Kleurenblindvriendelijk"
 
-msgid "Colors of the agent state dots, in the sidebar and the switchers."
-msgstr "Kleuren van de statusstippen van agents, in de zijbalk en de wisselaars."
-
 msgid "Columns"
 msgstr "Kolommen"
 
@@ -6667,6 +6667,9 @@ msgstr "Klaar — de omkaderde chipstijl van de presetsbalk is nu de standaard v
 msgid "Done (isShimmering=false)"
 msgstr "Klaar (isShimmering=false)"
 
+msgid "Done, not seen yet"
+msgstr "Klaar, nog niet bekeken"
+
 msgid "Downgrade to Free"
 msgstr "Downgraden naar Free"
 
@@ -7330,6 +7333,9 @@ msgstr "Mislukt"
 msgctxt "agent status"
 msgid "Failed"
 msgstr "Mislukt"
+
+msgid "Failed or blocked"
+msgstr "Mislukt of geblokkeerd"
 
 msgid "Failed runs"
 msgstr "Mislukte runs"
@@ -8034,6 +8040,9 @@ msgstr "klaar · 7s gewerkt"
 
 msgid "First repository by name"
 msgstr "Eerste repository op naam"
+
+msgid "Five states, the same for a workspace, a conversation and the switchers. A workspace shows the most urgent of its conversations."
+msgstr "Vijf statussen, hetzelfde voor een werkruimte, een gesprek en de wisselaars. Een werkruimte toont het dringendste van zijn gesprekken."
 
 msgid "Fix"
 msgstr "Repareren"
@@ -12030,6 +12039,9 @@ msgstr "Er staat niets op {pathname}."
 
 msgid "Nothing needs a retry"
 msgstr "Niets hoeft opnieuw te worden geprobeerd"
+
+msgid "Nothing new, or already seen"
+msgstr "Niets nieuws, of al bekeken"
 
 msgid "Nothing published in the last 30 days yet. Your rank appears once usage from this machine syncs, publishing as <0>{handle}</0>."
 msgstr "Nog niets gepubliceerd in de laatste 30 dagen. Je positie verschijnt zodra het gebruik van deze machine is gesynchroniseerd, gepubliceerd als <0>{handle}</0>."
@@ -17967,6 +17979,9 @@ msgstr "De agent kopieert het gesprek; de aftakking opent hier"
 msgid "The agent follows the plugin's skills and calls its tools. The issue shows up in Linear."
 msgstr "De agent volgt de skills van de plugin en roept de tools aan. Het issue verschijnt in Linear."
 
+msgid "The agent is running a turn"
+msgstr "De agent voert een beurt uit"
+
 msgid "The agent owns a task from ticket to diff. The human reviews the result, not the keystrokes. Attention shifts from writing code to specifying work and judging it. One engineer runs several agents at once in isolated workspaces."
 msgstr "De agent bezit een taak van ticket tot diff. De mens reviewt het resultaat, niet de toetsaanslagen. De aandacht verschuift van code schrijven naar werk specificeren en beoordelen. Eén engineer laat meerdere agents tegelijk draaien in geïsoleerde werkruimtes."
 
@@ -18268,8 +18283,14 @@ msgstr "De teamuitnodiging is verlopen of bestaat niet. Vraag een nieuwe link aa
 msgid "The title shows everywhere this page is listed and in its link preview."
 msgstr "De titel verschijnt overal waar deze pagina wordt vermeld en in het linkvoorbeeld."
 
+msgid "The turn ended and you have not opened it"
+msgstr "De beurt is klaar en je hebt hem nog niet geopend"
+
 msgid "The turn failed"
 msgstr "De beurt is mislukt"
+
+msgid "The turn stopped on an error, or the sandbox is down"
+msgstr "De beurt is gestopt door een fout, of de sandbox ligt eruit"
 
 msgid "The workspace is not ready yet. Try again."
 msgstr "De werkruimte is nog niet klaar. Probeer het opnieuw."

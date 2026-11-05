@@ -1591,6 +1591,9 @@ msgstr "此終端中仍有處理程序在執行"
 msgid "A pull request always gets its own worktree"
 msgstr "拉取請求總是使用自己的 worktree"
 
+msgid "A question, a permission or a report waits for you"
+msgstr "有問題、權限請求或報告在等你"
+
 msgid "A rebuilt chat surface for driving agents: richer tool output, smoother steering, faster everything."
 msgstr "重建的代理程式驅動聊天介面：更豐富的工具輸出、更順手的引導，一切都更快。"
 
@@ -4362,9 +4365,6 @@ msgstr "{0} 的顏色"
 msgid "Colorblind-safe"
 msgstr "色盲友善"
 
-msgid "Colors of the agent state dots, in the sidebar and the switchers."
-msgstr "側邊欄和切換器中代理狀態圓點的顏色。"
-
 msgid "Columns"
 msgstr "欄"
 
@@ -6667,6 +6667,9 @@ msgstr "完成——預設欄使用的帶邊框chip樣式現在是所有tooltip�
 msgid "Done (isShimmering=false)"
 msgstr "完成（isShimmering=false）"
 
+msgid "Done, not seen yet"
+msgstr "已完成，尚未查看"
+
 msgid "Downgrade to Free"
 msgstr "降級為免費版"
 
@@ -7330,6 +7333,9 @@ msgstr "失敗"
 msgctxt "agent status"
 msgid "Failed"
 msgstr "失敗"
+
+msgid "Failed or blocked"
+msgstr "失敗或受阻"
 
 msgid "Failed runs"
 msgstr "失敗的執行"
@@ -8034,6 +8040,9 @@ msgstr "已完成 · 用時7秒"
 
 msgid "First repository by name"
 msgstr "依名稱排序的第一個儲存庫"
+
+msgid "Five states, the same for a workspace, a conversation and the switchers. A workspace shows the most urgent of its conversations."
+msgstr "五種狀態，工作區、對話和切換器通用。工作區顯示其對話中最緊急的狀態。"
 
 msgid "Fix"
 msgstr "修正"
@@ -12030,6 +12039,9 @@ msgstr "{pathname}下沒有任何內容。"
 
 msgid "Nothing needs a retry"
 msgstr "沒有需要重試的執行"
+
+msgid "Nothing new, or already seen"
+msgstr "沒有新內容，或已查看"
 
 msgid "Nothing published in the last 30 days yet. Your rank appears once usage from this machine syncs, publishing as <0>{handle}</0>."
 msgstr "最近 30 天尚未發佈任何資料。這台機器的用量同步後即會顯示你的排名，將以 <0>{handle}</0> 發佈。"
@@ -17967,6 +17979,9 @@ msgstr "代理複製該對話，分支在此開啟"
 msgid "The agent follows the plugin's skills and calls its tools. The issue shows up in Linear."
 msgstr "代理程式遵循外掛的技能並呼叫其工具。issue 就會出現在 Linear 中。"
 
+msgid "The agent is running a turn"
+msgstr "代理正在執行一輪"
+
 msgid "The agent owns a task from ticket to diff. The human reviews the result, not the keystrokes. Attention shifts from writing code to specifying work and judging it. One engineer runs several agents at once in isolated workspaces."
 msgstr "代理程式從工單一路負責到差異。人類審查結果，而不是擊鍵過程。注意力從寫程式碼轉向定義工作和判斷成果。一名工程師在隔離工作區裡同時跑好幾個代理程式。"
 
@@ -18268,8 +18283,14 @@ msgstr "該團隊邀請已過期或不存在。請向團隊擁有者索取新連
 msgid "The title shows everywhere this page is listed and in its link preview."
 msgstr "標題會顯示在此頁面列出的所有位置以及連結預覽中。"
 
+msgid "The turn ended and you have not opened it"
+msgstr "這一輪已結束，你還沒打開"
+
 msgid "The turn failed"
 msgstr "本輪失敗"
+
+msgid "The turn stopped on an error, or the sandbox is down"
+msgstr "這一輪因錯誤停止，或沙盒已停止"
 
 msgid "The workspace is not ready yet. Try again."
 msgstr "工作區尚未就緒。請重試。"

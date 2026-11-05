@@ -1591,6 +1591,9 @@ msgstr "В этом терминале ещё работает процесс"
 msgid "A pull request always gets its own worktree"
 msgstr "У pull request всегда есть собственный worktree"
 
+msgid "A question, a permission or a report waits for you"
+msgstr "Вас ждёт вопрос, разрешение или отчёт"
+
 msgid "A rebuilt chat surface for driving agents: richer tool output, smoother steering, faster everything."
 msgstr "Переделанная поверхность чата для управления агентами: богаче вывод инструментов, плавнее управление, всё быстрее."
 
@@ -4362,9 +4365,6 @@ msgstr "Цвет для {0}"
 msgid "Colorblind-safe"
 msgstr "Для дальтоников"
 
-msgid "Colors of the agent state dots, in the sidebar and the switchers."
-msgstr "Цвета точек состояния агентов в боковой панели и переключателях."
-
 msgid "Columns"
 msgstr "Колонки"
 
@@ -6667,6 +6667,9 @@ msgstr "Готово — стиль чипа с рамкой, который и�
 msgid "Done (isShimmering=false)"
 msgstr "Готово (isShimmering=false)"
 
+msgid "Done, not seen yet"
+msgstr "Готово, ещё не просмотрено"
+
 msgid "Downgrade to Free"
 msgstr "Перейти на бесплатный"
 
@@ -7330,6 +7333,9 @@ msgstr "Ошибка"
 msgctxt "agent status"
 msgid "Failed"
 msgstr "Ошибка"
+
+msgid "Failed or blocked"
+msgstr "Ошибка или блокировка"
 
 msgid "Failed runs"
 msgstr "Неудачные запуски"
@@ -8034,6 +8040,9 @@ msgstr "завершил · работал 7 с"
 
 msgid "First repository by name"
 msgstr "Первый репозиторий по имени"
+
+msgid "Five states, the same for a workspace, a conversation and the switchers. A workspace shows the most urgent of its conversations."
+msgstr "Пять состояний, одинаковых для рабочего пространства, беседы и переключателей. Рабочее пространство показывает самое срочное из своих бесед."
 
 msgid "Fix"
 msgstr "Исправить"
@@ -12030,6 +12039,9 @@ msgstr "По адресу {pathname} ничего нет."
 
 msgid "Nothing needs a retry"
 msgstr "Повторять нечего"
+
+msgid "Nothing new, or already seen"
+msgstr "Ничего нового или уже просмотрено"
 
 msgid "Nothing published in the last 30 days yet. Your rank appears once usage from this machine syncs, publishing as <0>{handle}</0>."
 msgstr "За последние 30 дней ещё ничего не опубликовано. Ваше место появится, как только синхронизируется использование с этой машины; публикация как <0>{handle}</0>."
@@ -17967,6 +17979,9 @@ msgstr "Агент копирует разговор; ветвь откроет�
 msgid "The agent follows the plugin's skills and calls its tools. The issue shows up in Linear."
 msgstr "Агент следует навыкам плагина и вызывает его инструменты. Задача появляется в Linear."
 
+msgid "The agent is running a turn"
+msgstr "Агент выполняет ход"
+
 msgid "The agent owns a task from ticket to diff. The human reviews the result, not the keystrokes. Attention shifts from writing code to specifying work and judging it. One engineer runs several agents at once in isolated workspaces."
 msgstr "Агент ведёт задачу от тикета до diff. Человек проверяет результат, а не нажатия клавиш. Внимание смещается с написания кода на постановку задач и оценку результата. Один инженер ведёт несколько агентов одновременно в изолированных рабочих областях."
 
@@ -18268,8 +18283,14 @@ msgstr "Приглашение в команду истекло или не су
 msgid "The title shows everywhere this page is listed and in its link preview."
 msgstr "Заголовок отображается везде, где указана эта страница, и в превью ссылки."
 
+msgid "The turn ended and you have not opened it"
+msgstr "Ход завершён, но вы его ещё не открыли"
+
 msgid "The turn failed"
 msgstr "Ход завершился ошибкой"
+
+msgid "The turn stopped on an error, or the sandbox is down"
+msgstr "Ход остановился с ошибкой или песочница не работает"
 
 msgid "The workspace is not ready yet. Try again."
 msgstr "Рабочая область ещё не готова. Повторите."

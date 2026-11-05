@@ -1591,6 +1591,9 @@ msgstr "此终端中仍有进程在运行"
 msgid "A pull request always gets its own worktree"
 msgstr "拉取请求总是使用自己的 worktree"
 
+msgid "A question, a permission or a report waits for you"
+msgstr "有问题、权限请求或报告在等你"
+
 msgid "A rebuilt chat surface for driving agents: richer tool output, smoother steering, faster everything."
 msgstr "重建的智能体驱动聊天界面：更丰富的工具输出、更顺手的引导，一切都更快。"
 
@@ -4362,9 +4365,6 @@ msgstr "{0} 的颜色"
 msgid "Colorblind-safe"
 msgstr "色盲友好"
 
-msgid "Colors of the agent state dots, in the sidebar and the switchers."
-msgstr "侧边栏和切换器中代理状态圆点的颜色。"
-
 msgid "Columns"
 msgstr "列"
 
@@ -6667,6 +6667,9 @@ msgstr "完成——预设栏使用的带边框chip样式现在是所有tooltip�
 msgid "Done (isShimmering=false)"
 msgstr "完成（isShimmering=false）"
 
+msgid "Done, not seen yet"
+msgstr "已完成，尚未查看"
+
 msgid "Downgrade to Free"
 msgstr "降级为免费版"
 
@@ -7330,6 +7333,9 @@ msgstr "失败"
 msgctxt "agent status"
 msgid "Failed"
 msgstr "失败"
+
+msgid "Failed or blocked"
+msgstr "失败或受阻"
 
 msgid "Failed runs"
 msgstr "失败的运行"
@@ -8034,6 +8040,9 @@ msgstr "已完成 · 用时7秒"
 
 msgid "First repository by name"
 msgstr "按名称排序的第一个仓库"
+
+msgid "Five states, the same for a workspace, a conversation and the switchers. A workspace shows the most urgent of its conversations."
+msgstr "五种状态，工作区、对话和切换器通用。工作区显示其对话中最紧急的状态。"
 
 msgid "Fix"
 msgstr "修复"
@@ -12030,6 +12039,9 @@ msgstr "{pathname}下没有任何内容。"
 
 msgid "Nothing needs a retry"
 msgstr "没有需要重试的运行"
+
+msgid "Nothing new, or already seen"
+msgstr "没有新内容，或已查看"
 
 msgid "Nothing published in the last 30 days yet. Your rank appears once usage from this machine syncs, publishing as <0>{handle}</0>."
 msgstr "最近30天还没有已公开的数据。待本机用量同步后，你的排名就会显示，将以<0>{handle}</0>身份公开。"
@@ -17967,6 +17979,9 @@ msgstr "智能体复制该对话，分支在此打开"
 msgid "The agent follows the plugin's skills and calls its tools. The issue shows up in Linear."
 msgstr "智能体遵循插件的技能并调用其工具。issue 就会出现在 Linear 中。"
 
+msgid "The agent is running a turn"
+msgstr "代理正在执行一轮"
+
 msgid "The agent owns a task from ticket to diff. The human reviews the result, not the keystrokes. Attention shifts from writing code to specifying work and judging it. One engineer runs several agents at once in isolated workspaces."
 msgstr "智能体从工单一路负责到差异。人类审查结果，而不是击键过程。注意力从写代码转向定义工作和判断成果。一名工程师在隔离工作区里同时跑好几个智能体。"
 
@@ -18268,8 +18283,14 @@ msgstr "该团队邀请已过期或不存在。请向团队所有者索取新链
 msgid "The title shows everywhere this page is listed and in its link preview."
 msgstr "标题会显示在此页面列出的所有位置以及链接预览中。"
 
+msgid "The turn ended and you have not opened it"
+msgstr "这一轮已结束，你还没打开"
+
 msgid "The turn failed"
 msgstr "本轮失败"
+
+msgid "The turn stopped on an error, or the sandbox is down"
+msgstr "这一轮因错误停止，或沙盒已停止"
 
 msgid "The workspace is not ready yet. Try again."
 msgstr "工作区尚未就绪。请重试。"

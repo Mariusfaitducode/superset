@@ -410,10 +410,9 @@ html[data-pointer-passthrough] iframe {
 	--sb-conv-text: 12px;
 	--sb-band: 3px;
 	--sb-marker-fill: 10%;
+	--sb-state-needsYou: #f59e0b;
 	--sb-state-working: #facc15;
-	--sb-state-request: #8b5cf6;
 	--sb-state-unseen: #22c55e;
-	--sb-state-seen: #3b82f6;
 	--sb-state-failed: #ef4444;
 	--sb-state-idle: #71717a;
 }

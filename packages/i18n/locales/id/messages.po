@@ -1591,6 +1591,9 @@ msgstr "Masih ada proses yang berjalan di terminal ini"
 msgid "A pull request always gets its own worktree"
 msgstr "Pull request selalu mendapat worktree sendiri"
 
+msgid "A question, a permission or a report waits for you"
+msgstr "Ada pertanyaan, izin, atau laporan yang menunggu Anda"
+
 msgid "A rebuilt chat surface for driving agents: richer tool output, smoother steering, faster everything."
 msgstr "Permukaan chat yang dibangun ulang untuk mengendalikan agen: output alat lebih kaya, pengarahan lebih halus, semuanya lebih cepat."
 
@@ -4362,9 +4365,6 @@ msgstr "Warna untuk {0}"
 msgid "Colorblind-safe"
 msgstr "Ramah buta warna"
 
-msgid "Colors of the agent state dots, in the sidebar and the switchers."
-msgstr "Warna titik status agen, di bilah samping dan pengalih."
-
 msgid "Columns"
 msgstr "Kolom"
 
@@ -6667,6 +6667,9 @@ msgstr "Selesai — gaya chip bergaris yang dipakai presets bar kini menjadi baw
 msgid "Done (isShimmering=false)"
 msgstr "Selesai (isShimmering=false)"
 
+msgid "Done, not seen yet"
+msgstr "Selesai, belum dilihat"
+
 msgid "Downgrade to Free"
 msgstr "Turunkan ke Gratis"
 
@@ -7330,6 +7333,9 @@ msgstr "Gagal"
 msgctxt "agent status"
 msgid "Failed"
 msgstr "Gagal"
+
+msgid "Failed or blocked"
+msgstr "Gagal atau terblokir"
 
 msgid "Failed runs"
 msgstr "Run yang gagal"
@@ -8034,6 +8040,9 @@ msgstr "selesai · bekerja 7 dtk"
 
 msgid "First repository by name"
 msgstr "Repositori pertama menurut nama"
+
+msgid "Five states, the same for a workspace, a conversation and the switchers. A workspace shows the most urgent of its conversations."
+msgstr "Lima status, sama untuk workspace, percakapan, dan pengalih. Workspace menampilkan percakapan yang paling mendesak."
 
 msgid "Fix"
 msgstr "Perbaiki"
@@ -12030,6 +12039,9 @@ msgstr "Tidak ada apa pun di {pathname}."
 
 msgid "Nothing needs a retry"
 msgstr "Tidak ada yang perlu dicoba ulang"
+
+msgid "Nothing new, or already seen"
+msgstr "Tidak ada yang baru, atau sudah dilihat"
 
 msgid "Nothing published in the last 30 days yet. Your rank appears once usage from this machine syncs, publishing as <0>{handle}</0>."
 msgstr "Belum ada yang dipublikasikan dalam 30 hari terakhir. Peringkat Anda muncul setelah penggunaan dari mesin ini tersinkron, dipublikasikan sebagai <0>{handle}</0>."
@@ -17967,6 +17979,9 @@ msgstr "Agen menyalin percakapan; cabang terbuka di sini"
 msgid "The agent follows the plugin's skills and calls its tools. The issue shows up in Linear."
 msgstr "Agen mengikuti skill plugin dan memanggil tool-nya. Issue muncul di Linear."
 
+msgid "The agent is running a turn"
+msgstr "Agen sedang menjalankan giliran"
+
 msgid "The agent owns a task from ticket to diff. The human reviews the result, not the keystrokes. Attention shifts from writing code to specifying work and judging it. One engineer runs several agents at once in isolated workspaces."
 msgstr "Agen memegang tugas dari tiket sampai diff. Manusia mereview hasilnya, bukan tiap ketukan tombolnya. Perhatian bergeser dari menulis kode ke menentukan pekerjaan dan menilainya. Satu engineer menjalankan beberapa agen sekaligus di workspace terisolasi."
 
@@ -18268,8 +18283,14 @@ msgstr "Undangan tim ini sudah kedaluwarsa atau tidak ada. Minta tautan baru dar
 msgid "The title shows everywhere this page is listed and in its link preview."
 msgstr "Judul muncul di semua tempat halaman ini terdaftar dan di pratinjau tautannya."
 
+msgid "The turn ended and you have not opened it"
+msgstr "Giliran selesai dan Anda belum membukanya"
+
 msgid "The turn failed"
 msgstr "Giliran gagal"
+
+msgid "The turn stopped on an error, or the sandbox is down"
+msgstr "Giliran berhenti karena kesalahan, atau sandbox mati"
 
 msgid "The workspace is not ready yet. Try again."
 msgstr "Workspace belum siap. Coba lagi."

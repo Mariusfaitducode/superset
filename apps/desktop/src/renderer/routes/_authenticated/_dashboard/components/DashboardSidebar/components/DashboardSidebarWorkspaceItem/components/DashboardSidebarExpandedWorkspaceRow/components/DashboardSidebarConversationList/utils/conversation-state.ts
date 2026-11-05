@@ -3,13 +3,15 @@
  * (`deriveTerminalAgentStatus`), a finished turn does not fall back to idle once
  * seen: it becomes `seen` and stays that way until the user starts a new turn.
  */
-export type ConversationState =
-	| "working"
-	| "request"
-	| "failed"
-	| "unseen"
-	| "seen"
-	| "idle";
+export const CONVERSATION_STATES = [
+	"working",
+	"request",
+	"failed",
+	"unseen",
+	"seen",
+	"idle",
+] as const;
+export type ConversationState = (typeof CONVERSATION_STATES)[number];
 
 export function deriveConversationState({
 	lastEventType,

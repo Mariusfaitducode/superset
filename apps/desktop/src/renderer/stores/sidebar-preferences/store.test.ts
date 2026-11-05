@@ -1,6 +1,7 @@
 import { beforeEach, describe, expect, test } from "bun:test";
 import {
 	DEFAULT_SIDEBAR_PREFERENCES,
+	migrateSidebarPreferences,
 	useSidebarPreferencesStore,
 } from "./store";
 
@@ -47,14 +48,27 @@ describe("sidebar preferences", () => {
 	});
 
 	test("turns v1's tint switch into a tint level", async () => {
-		const migrate = useSidebarPreferencesStore.persist.getOptions().migrate;
-		const off = await migrate?.(
-			{ showWaitingTint: false, showTodos: false },
-			1,
-		);
-		const on = await migrate?.({ showWaitingTint: true }, 1);
+		const migrate = migrateSidebarPreferences;
+		const off = await migrate({ showWaitingTint: false, showTodos: false }, 1);
+		const on = await migrate({ showWaitingTint: true }, 1);
 		expect(off).toMatchObject({ waitingTint: "off", showTodos: false });
 		expect(off).not.toHaveProperty("showWaitingTint");
 		expect(on).toMatchObject({ waitingTint: "subtle", showTurnTime: true });
+	});
+
+	test("turns v2's request color into the needs-you color", async () => {
+		const migrate = migrateSidebarPreferences;
+		const migrated = await migrate(
+			{
+				stateColors: { request: "#111111", seen: "#222222", failed: "#333333" },
+			},
+			2,
+		);
+		expect(migrated).toMatchObject({
+			stateColors: { needsYou: "#111111", failed: "#333333" },
+		});
+		expect(
+			(migrated as { stateColors: object }).stateColors,
+		).not.toHaveProperty("seen");
 	});
 });

@@ -15,6 +15,7 @@ import {
 } from "react";
 import { HiCheck, HiMiniXMark } from "react-icons/hi2";
 import { LuArchive } from "react-icons/lu";
+import { AGENT_STATE_LABEL } from "renderer/components/AgentStateDot";
 import { WorkspaceNameMarquee } from "renderer/components/WorkspaceNameMarquee";
 import { useFocusVisible } from "renderer/hooks/useFocusVisible";
 import { HotkeyLabel } from "renderer/hotkeys";
@@ -22,11 +23,10 @@ import { pullRequestRefFromUrl } from "renderer/lib/github/pullRequestRef";
 import { useDashboardSidebarWorkspacePorts } from "renderer/routes/_authenticated/_dashboard/components/DashboardSidebar/providers/DashboardSidebarPortsProvider";
 import { navigateToV2Workspace } from "renderer/routes/_authenticated/_dashboard/utils/workspace-navigation";
 import { ProjectThumbnail } from "renderer/routes/_authenticated/components/ProjectThumbnail";
-import { getStatusTooltip } from "renderer/screens/main/components/StatusIndicator";
 import { RenameInput } from "renderer/screens/main/components/WorkspaceSidebar/RenameInput";
 import { useInlineWorkspacePortsEnabled } from "renderer/stores/inline-workspace-ports";
 import { usePullRequestPaneIntent } from "renderer/stores/pull-request-pane-intent";
-import type { ActivePaneStatus } from "shared/tabs-types";
+import { useWorkspaceAgentState } from "../../../../hooks/useWorkspaceAgentState";
 import type {
 	DashboardSidebarWorkspace,
 	DashboardSidebarWorkspaceIndentation,
@@ -73,7 +73,6 @@ interface DashboardSidebarExpandedWorkspaceRowProps
 	isRenaming: boolean;
 	renameValue: string;
 	shortcutLabel?: string;
-	workspaceStatus?: ActivePaneStatus | null;
 	isInSection?: boolean;
 	indentation?: DashboardSidebarWorkspaceIndentation;
 	isBulkSelectable?: boolean;
@@ -102,7 +101,6 @@ export const DashboardSidebarExpandedWorkspaceRow = forwardRef<
 			isRenaming,
 			renameValue,
 			shortcutLabel,
-			workspaceStatus = null,
 			isInSection = false,
 			indentation,
 			isBulkSelectable = false,
@@ -171,9 +169,12 @@ export const DashboardSidebarExpandedWorkspaceRow = forwardRef<
 				: sandboxStatus === "provisioning"
 					? t({ message: "Creating the sandbox" })
 					: null;
+		const agent = useWorkspaceAgentState(workspace.id, sandboxStatus);
+		const agentStateLabel =
+			agent.state === "idle" ? null : i18n._(AGENT_STATE_LABEL[agent.state]);
 		const leadIndicator = (
 			<DashboardSidebarWorkspaceLeadIndicator
-				workspaceStatus={workspaceStatus}
+				agentState={agent.state}
 				isCreatePending={isPending}
 				sandboxStatus={sandboxStatus}
 				pullRequestState={pullRequest?.state ?? null}
@@ -273,13 +274,9 @@ export const DashboardSidebarExpandedWorkspaceRow = forwardRef<
 										{i18n._(PR_STATE_LABEL[pullRequest.state])}
 									</Trans>
 								</p>
-								{(sandboxLabel ??
-									(workspaceStatus && getStatusTooltip(workspaceStatus))) && (
+								{(sandboxLabel ?? agentStateLabel) && (
 									<p className="text-xs text-muted-foreground">
-										{sandboxLabel ??
-											(workspaceStatus
-												? getStatusTooltip(workspaceStatus)
-												: null)}
+										{sandboxLabel ?? agentStateLabel}
 									</p>
 								)}
 								<p className="text-xs text-muted-foreground">
@@ -287,7 +284,7 @@ export const DashboardSidebarExpandedWorkspaceRow = forwardRef<
 								</p>
 							</TooltipContent>
 						</Tooltip>
-					) : sandboxLabel || (workspaceStatus && !isPending) ? (
+					) : sandboxLabel || (agentStateLabel && !isPending) ? (
 						<Tooltip delayDuration={500}>
 							<TooltipTrigger asChild>
 								<span className="mr-2 flex size-4 shrink-0 items-center justify-center">
@@ -296,10 +293,7 @@ export const DashboardSidebarExpandedWorkspaceRow = forwardRef<
 							</TooltipTrigger>
 							<TooltipContent side="right" sideOffset={8}>
 								<p className="text-xs font-medium">
-									{sandboxLabel ??
-										(workspaceStatus
-											? getStatusTooltip(workspaceStatus)
-											: null)}
+									{sandboxLabel ?? agentStateLabel}
 								</p>
 							</TooltipContent>
 						</Tooltip>

@@ -1591,6 +1591,9 @@ msgstr "Bu terminalde hâlâ bir süreç çalışıyor"
 msgid "A pull request always gets its own worktree"
 msgstr "Bir pull request her zaman kendi worktree'sini alır"
 
+msgid "A question, a permission or a report waits for you"
+msgstr "Bir soru, izin veya rapor seni bekliyor"
+
 msgid "A rebuilt chat surface for driving agents: richer tool output, smoother steering, faster everything."
 msgstr "Ajanları yönetmek için yeniden yapılmış bir sohbet yüzeyi: daha zengin araç çıktısı, daha akıcı yönlendirme, her şey daha hızlı."
 
@@ -4362,9 +4365,6 @@ msgstr "{0} için renk"
 msgid "Colorblind-safe"
 msgstr "Renk körlüğüne uygun"
 
-msgid "Colors of the agent state dots, in the sidebar and the switchers."
-msgstr "Kenar çubuğunda ve geçiş ekranlarında ajan durum noktalarının renkleri."
-
 msgid "Columns"
 msgstr "Sütunlar"
 
@@ -6667,6 +6667,9 @@ msgstr "Tamam — hazır ayarlar çubuğunun kullandığı çerçeveli çip stil
 msgid "Done (isShimmering=false)"
 msgstr "Bitti (isShimmering=false)"
 
+msgid "Done, not seen yet"
+msgstr "Bitti, henüz görülmedi"
+
 msgid "Downgrade to Free"
 msgstr "Ücretsiz plana düş"
 
@@ -7330,6 +7333,9 @@ msgstr "Başarısız"
 msgctxt "agent status"
 msgid "Failed"
 msgstr "Başarısız"
+
+msgid "Failed or blocked"
+msgstr "Başarısız veya engellendi"
 
 msgid "Failed runs"
 msgstr "Başarısız çalıştırmalar"
@@ -8034,6 +8040,9 @@ msgstr "bitti · 7 sn çalıştı"
 
 msgid "First repository by name"
 msgstr "Ada göre ilk depo"
+
+msgid "Five states, the same for a workspace, a conversation and the switchers. A workspace shows the most urgent of its conversations."
+msgstr "Beş durum; çalışma alanı, konuşma ve geçiş araçları için aynı. Bir çalışma alanı konuşmalarının en acil olanını gösterir."
 
 msgid "Fix"
 msgstr "Düzelt"
@@ -12030,6 +12039,9 @@ msgstr "{pathname} yolunda bir şey yok."
 
 msgid "Nothing needs a retry"
 msgstr "Yeniden denenecek bir şey yok"
+
+msgid "Nothing new, or already seen"
+msgstr "Yeni bir şey yok veya zaten görüldü"
 
 msgid "Nothing published in the last 30 days yet. Your rank appears once usage from this machine syncs, publishing as <0>{handle}</0>."
 msgstr "Son 30 günde henüz hiçbir şey yayınlanmadı. Bu makinedeki kullanım eşitlendiğinde sıralamanız görünür; <0>{handle}</0> olarak yayınlanıyor."
@@ -17967,6 +17979,9 @@ msgstr "Aracı konuşmayı kopyalar; çatal burada açılır"
 msgid "The agent follows the plugin's skills and calls its tools. The issue shows up in Linear."
 msgstr "Ajan eklentinin becerilerini izler ve araçlarını çağırır. Issue Linear'da görünür."
 
+msgid "The agent is running a turn"
+msgstr "Ajan bir tur çalıştırıyor"
+
 msgid "The agent owns a task from ticket to diff. The human reviews the result, not the keystrokes. Attention shifts from writing code to specifying work and judging it. One engineer runs several agents at once in isolated workspaces."
 msgstr "Ajan, bir görevi biletten farka kadar sahiplenir. İnsan tuş vuruşlarını değil, sonucu inceler. Dikkat, kod yazmaktan işi tanımlamaya ve değerlendirmeye kayar. Bir mühendis, yalıtılmış çalışma alanlarında aynı anda birkaç ajan çalıştırır."
 
@@ -18268,8 +18283,14 @@ msgstr "Takım daveti ya süresi dolmuş ya da mevcut değil. Takım sahibinden 
 msgid "The title shows everywhere this page is listed and in its link preview."
 msgstr "Başlık, bu sayfanın listelendiği her yerde ve bağlantı önizlemesinde görünür."
 
+msgid "The turn ended and you have not opened it"
+msgstr "Tur bitti ve henüz açmadın"
+
 msgid "The turn failed"
 msgstr "Tur başarısız oldu"
+
+msgid "The turn stopped on an error, or the sandbox is down"
+msgstr "Tur bir hatada durdu veya sandbox çalışmıyor"
 
 msgid "The workspace is not ready yet. Try again."
 msgstr "Çalışma alanı henüz hazır değil. Yeniden deneyin."

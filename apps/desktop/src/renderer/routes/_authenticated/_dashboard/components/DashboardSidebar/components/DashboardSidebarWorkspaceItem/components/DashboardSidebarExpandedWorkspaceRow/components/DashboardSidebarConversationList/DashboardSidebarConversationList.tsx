@@ -13,6 +13,10 @@ import { LuBot, LuListChecks, LuMessageSquarePlus } from "react-icons/lu";
 import { usePresetIcon } from "renderer/assets/app-icons/preset-icons";
 import { useNow } from "renderer/hooks/useNow";
 import {
+	AGENT_STATE_DOT_CLASS,
+	agentStateFromConversation,
+} from "renderer/lib/agent-state";
+import {
 	buildSubagentSearch,
 	navigateToV2Workspace,
 } from "renderer/routes/_authenticated/_dashboard/utils/workspace-navigation";
@@ -44,19 +48,19 @@ import {
 	useWorkspaceTodos,
 } from "./hooks/useWorkspaceTodos";
 import {
+	CONVERSATION_STATES,
 	type ConversationState,
 	isWaitingOnUser,
 	waitingTintLevel,
 } from "./utils/conversation-state";
 
-export const DOT_CLASS: Record<ConversationState, string> = {
-	working: "bg-[var(--sb-state-working)] animate-pulse",
-	request: "bg-[var(--sb-state-request)]",
-	failed: "bg-[var(--sb-state-failed)]",
-	unseen: "bg-[var(--sb-state-unseen)]",
-	seen: "bg-[var(--sb-state-seen)]",
-	idle: "bg-[var(--sb-state-idle)]",
-};
+/** A conversation's dot, in the five-state language of every agent surface. */
+export const DOT_CLASS = Object.fromEntries(
+	CONVERSATION_STATES.map((state) => [
+		state,
+		AGENT_STATE_DOT_CLASS[agentStateFromConversation(state)],
+	]),
+) as Record<ConversationState, string>;
 
 export const ACTIVE_MARKER_CLASS: Record<ActiveMarker, string> = {
 	outline:

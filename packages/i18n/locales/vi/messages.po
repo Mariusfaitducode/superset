@@ -1591,6 +1591,9 @@ msgstr "Vẫn còn một tiến trình đang chạy trong terminal này"
 msgid "A pull request always gets its own worktree"
 msgstr "Pull request luôn có worktree riêng"
 
+msgid "A question, a permission or a report waits for you"
+msgstr "Một câu hỏi, quyền hoặc báo cáo đang chờ bạn"
+
 msgid "A rebuilt chat surface for driving agents: richer tool output, smoother steering, faster everything."
 msgstr "Giao diện chat được dựng lại để điều khiển agent: output tool phong phú hơn, lái mượt hơn, mọi thứ nhanh hơn."
 
@@ -4362,9 +4365,6 @@ msgstr "Màu cho {0}"
 msgid "Colorblind-safe"
 msgstr "Thân thiện với người mù màu"
 
-msgid "Colors of the agent state dots, in the sidebar and the switchers."
-msgstr "Màu các chấm trạng thái của agent, trong thanh bên và bộ chuyển đổi."
-
 msgid "Columns"
 msgstr "Cột"
 
@@ -6667,6 +6667,9 @@ msgstr "Xong — kiểu chip có viền mà thanh preset dùng giờ là mặc �
 msgid "Done (isShimmering=false)"
 msgstr "Xong (isShimmering=false)"
 
+msgid "Done, not seen yet"
+msgstr "Xong, chưa xem"
+
 msgid "Downgrade to Free"
 msgstr "Chuyển xuống Free"
 
@@ -7330,6 +7333,9 @@ msgstr "Thất bại"
 msgctxt "agent status"
 msgid "Failed"
 msgstr "Thất bại"
+
+msgid "Failed or blocked"
+msgstr "Thất bại hoặc bị chặn"
 
 msgid "Failed runs"
 msgstr "Lượt chạy thất bại"
@@ -8034,6 +8040,9 @@ msgstr "đã xong · làm trong 7s"
 
 msgid "First repository by name"
 msgstr "Repository đầu tiên theo tên"
+
+msgid "Five states, the same for a workspace, a conversation and the switchers. A workspace shows the most urgent of its conversations."
+msgstr "Năm trạng thái, giống nhau cho không gian làm việc, cuộc trò chuyện và trình chuyển đổi. Không gian làm việc hiển thị trạng thái khẩn cấp nhất trong các cuộc trò chuyện."
 
 msgid "Fix"
 msgstr "Sửa"
@@ -12030,6 +12039,9 @@ msgstr "Không có gì ở {pathname}."
 
 msgid "Nothing needs a retry"
 msgstr "Không có gì cần chạy lại"
+
+msgid "Nothing new, or already seen"
+msgstr "Không có gì mới, hoặc đã xem"
 
 msgid "Nothing published in the last 30 days yet. Your rank appears once usage from this machine syncs, publishing as <0>{handle}</0>."
 msgstr "Chưa có gì được công khai trong 30 ngày qua. Thứ hạng của bạn sẽ xuất hiện khi dữ liệu sử dụng từ máy này đồng bộ, công khai dưới tên <0>{handle}</0>."
@@ -17967,6 +17979,9 @@ msgstr "Tác nhân sao chép hội thoại; nhánh mở tại đây"
 msgid "The agent follows the plugin's skills and calls its tools. The issue shows up in Linear."
 msgstr "Agent làm theo skill của plugin và gọi các công cụ của nó. Issue xuất hiện trong Linear."
 
+msgid "The agent is running a turn"
+msgstr "Tác tử đang chạy một lượt"
+
 msgid "The agent owns a task from ticket to diff. The human reviews the result, not the keystrokes. Attention shifts from writing code to specifying work and judging it. One engineer runs several agents at once in isolated workspaces."
 msgstr "Agent làm chủ một tác vụ từ ticket đến diff. Con người review kết quả, không phải từng thao tác gõ. Sự chú ý dịch từ viết code sang đặc tả công việc và đánh giá nó. Một kỹ sư chạy nhiều agent cùng lúc trong các workspace tách biệt."
 
@@ -18268,8 +18283,14 @@ msgstr "Lời mời vào nhóm đã hết hạn hoặc không tồn tại. Hãy 
 msgid "The title shows everywhere this page is listed and in its link preview."
 msgstr "Tiêu đề hiển thị ở mọi nơi trang này được liệt kê và trong bản xem trước liên kết."
 
+msgid "The turn ended and you have not opened it"
+msgstr "Lượt đã kết thúc và bạn chưa mở"
+
 msgid "The turn failed"
 msgstr "Lượt thất bại"
+
+msgid "The turn stopped on an error, or the sandbox is down"
+msgstr "Lượt đã dừng do lỗi, hoặc sandbox ngừng hoạt động"
 
 msgid "The workspace is not ready yet. Try again."
 msgstr "Workspace chưa sẵn sàng. Hãy thử lại."

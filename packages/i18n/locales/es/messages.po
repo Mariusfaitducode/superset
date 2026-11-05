@@ -1591,6 +1591,9 @@ msgstr "Todavía hay un proceso en marcha en esta terminal"
 msgid "A pull request always gets its own worktree"
 msgstr "Un pull request siempre tiene su propio worktree"
 
+msgid "A question, a permission or a report waits for you"
+msgstr "Una pregunta, un permiso o un informe te espera"
+
 msgid "A rebuilt chat surface for driving agents: richer tool output, smoother steering, faster everything."
 msgstr "Una superficie de chat rehecha para dirigir agentes: salida de herramientas más rica, mejor control y todo más rápido."
 
@@ -4362,9 +4365,6 @@ msgstr "Color para {0}"
 msgid "Colorblind-safe"
 msgstr "Apto para daltónicos"
 
-msgid "Colors of the agent state dots, in the sidebar and the switchers."
-msgstr "Colores de los puntos de estado de los agentes, en la barra lateral y los selectores."
-
 msgid "Columns"
 msgstr "Columnas"
 
@@ -6667,6 +6667,9 @@ msgstr "Listo: el estilo de chip con borde que usa la barra de presets es ahora 
 msgid "Done (isShimmering=false)"
 msgstr "Listo (isShimmering=false)"
 
+msgid "Done, not seen yet"
+msgstr "Terminado, aún sin ver"
+
 msgid "Downgrade to Free"
 msgstr "Bajar al plan Gratis"
 
@@ -7330,6 +7333,9 @@ msgstr "Fallida"
 msgctxt "agent status"
 msgid "Failed"
 msgstr "Falló"
+
+msgid "Failed or blocked"
+msgstr "Fallido o bloqueado"
 
 msgid "Failed runs"
 msgstr "Ejecuciones fallidas"
@@ -8034,6 +8040,9 @@ msgstr "finalizado · trabajó 7 s"
 
 msgid "First repository by name"
 msgstr "Primer repositorio por nombre"
+
+msgid "Five states, the same for a workspace, a conversation and the switchers. A workspace shows the most urgent of its conversations."
+msgstr "Cinco estados, iguales para un espacio de trabajo, una conversación y los selectores. Un espacio de trabajo muestra la más urgente de sus conversaciones."
 
 msgid "Fix"
 msgstr "Arreglar"
@@ -12030,6 +12039,9 @@ msgstr "No hay nada en {pathname}."
 
 msgid "Nothing needs a retry"
 msgstr "Nada necesita reintento"
+
+msgid "Nothing new, or already seen"
+msgstr "Nada nuevo, o ya visto"
 
 msgid "Nothing published in the last 30 days yet. Your rank appears once usage from this machine syncs, publishing as <0>{handle}</0>."
 msgstr "Aún no has publicado nada en los últimos 30 días. Tu puesto aparecerá cuando se sincronice el uso de esta máquina, publicando como <0>{handle}</0>."
@@ -17967,6 +17979,9 @@ msgstr "El agente copia la conversación; la rama se abre aquí"
 msgid "The agent follows the plugin's skills and calls its tools. The issue shows up in Linear."
 msgstr "El agente sigue las skills del plugin y llama a sus herramientas. La incidencia aparece en Linear."
 
+msgid "The agent is running a turn"
+msgstr "El agente está ejecutando un turno"
+
 msgid "The agent owns a task from ticket to diff. The human reviews the result, not the keystrokes. Attention shifts from writing code to specifying work and judging it. One engineer runs several agents at once in isolated workspaces."
 msgstr "El agente se encarga de una tarea desde el ticket hasta el diff. La persona revisa el resultado, no las pulsaciones. La atención pasa de escribir código a especificar el trabajo y juzgarlo. Un ingeniero ejecuta varios agentes a la vez en espacios de trabajo aislados."
 
@@ -18268,8 +18283,14 @@ msgstr "La invitación al equipo ha caducado o no existe. Pide un enlace nuevo a
 msgid "The title shows everywhere this page is listed and in its link preview."
 msgstr "El título aparece en todos los sitios donde se lista esta página y en la vista previa de su enlace."
 
+msgid "The turn ended and you have not opened it"
+msgstr "El turno terminó y aún no lo has abierto"
+
 msgid "The turn failed"
 msgstr "El turno falló"
+
+msgid "The turn stopped on an error, or the sandbox is down"
+msgstr "El turno se detuvo por un error o el sandbox está caído"
 
 msgid "The workspace is not ready yet. Try again."
 msgstr "El espacio de trabajo aún no está listo. Inténtalo de nuevo."

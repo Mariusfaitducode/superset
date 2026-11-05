@@ -92,21 +92,12 @@ export const useSidebarPreferencesStore = create<SidebarPreferencesState>()(
 			}),
 			{
 				name: "sidebar-preferences-v1",
-				version: 2,
-				// v1 had an on/off `showWaitingTint`.
-				migrate: (persisted, version) => {
-					if (version === 1 && persisted && typeof persisted === "object") {
-						const { showWaitingTint, ...rest } = persisted as {
-							showWaitingTint?: boolean;
-						};
-						return {
-							...DEFAULT_SIDEBAR_PREFERENCES,
-							...rest,
-							waitingTint: showWaitingTint === false ? "off" : "subtle",
-						} as SidebarPreferencesState;
-					}
-					return persisted as SidebarPreferencesState;
-				},
+				version: 3,
+				migrate: (persisted, version) =>
+					migrateSidebarPreferences(
+						persisted,
+						version,
+					) as unknown as SidebarPreferencesState,
 				partialize: ({
 					setPreference: _setPreference,
 					setWaitingTint: _setWaitingTint,
@@ -121,6 +112,36 @@ export const useSidebarPreferencesStore = create<SidebarPreferencesState>()(
 		{ name: "SidebarPreferences" },
 	),
 );
+
+/**
+ * v1 had an on/off `showWaitingTint`. v2 had six state colors; v3 has the
+ * five agent states, so a hand-picked "request" color becomes "needs you".
+ */
+export function migrateSidebarPreferences(
+	persisted: unknown,
+	version: number,
+): SidebarPreferences {
+	if (!persisted || typeof persisted !== "object") {
+		return DEFAULT_SIDEBAR_PREFERENCES;
+	}
+	let state = { ...(persisted as Record<string, unknown>) };
+	if (version < 2) {
+		const { showWaitingTint, ...rest } = state;
+		state = {
+			...rest,
+			waitingTint: showWaitingTint === false ? "off" : "subtle",
+		};
+	}
+	if (version < 3) {
+		const {
+			request,
+			seen: _seen,
+			...colors
+		} = (state.stateColors ?? {}) as Record<string, string>;
+		state.stateColors = request ? { ...colors, needsYou: request } : colors;
+	}
+	return { ...DEFAULT_SIDEBAR_PREFERENCES, ...state } as SidebarPreferences;
+}
 
 export function useSidebarPreference<Key extends keyof SidebarPreferences>(
 	key: Key,

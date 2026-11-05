@@ -1591,6 +1591,9 @@ msgstr "A process is still running in this terminal"
 msgid "A pull request always gets its own worktree"
 msgstr "A pull request always gets its own worktree"
 
+msgid "A question, a permission or a report waits for you"
+msgstr "A question, a permission or a report waits for you"
+
 msgid "A rebuilt chat surface for driving agents: richer tool output, smoother steering, faster everything."
 msgstr "A rebuilt chat surface for driving agents: richer tool output, smoother steering, faster everything."
 
@@ -4362,9 +4365,6 @@ msgstr "Color for {0}"
 msgid "Colorblind-safe"
 msgstr "Colorblind-safe"
 
-msgid "Colors of the agent state dots, in the sidebar and the switchers."
-msgstr "Colors of the agent state dots, in the sidebar and the switchers."
-
 msgid "Columns"
 msgstr "Columns"
 
@@ -6667,6 +6667,9 @@ msgstr "Done — the bordered chip style used by the presets bar is now the defa
 msgid "Done (isShimmering=false)"
 msgstr "Done (isShimmering=false)"
 
+msgid "Done, not seen yet"
+msgstr "Done, not seen yet"
+
 msgid "Downgrade to Free"
 msgstr "Downgrade to Free"
 
@@ -7330,6 +7333,9 @@ msgstr "Failed"
 msgctxt "agent status"
 msgid "Failed"
 msgstr "Failed"
+
+msgid "Failed or blocked"
+msgstr "Failed or blocked"
 
 msgid "Failed runs"
 msgstr "Failed runs"
@@ -8034,6 +8040,9 @@ msgstr "finished · worked for 7s"
 
 msgid "First repository by name"
 msgstr "First repository by name"
+
+msgid "Five states, the same for a workspace, a conversation and the switchers. A workspace shows the most urgent of its conversations."
+msgstr "Five states, the same for a workspace, a conversation and the switchers. A workspace shows the most urgent of its conversations."
 
 msgid "Fix"
 msgstr "Fix"
@@ -12030,6 +12039,9 @@ msgstr "Nothing lives at {pathname}."
 
 msgid "Nothing needs a retry"
 msgstr "Nothing needs a retry"
+
+msgid "Nothing new, or already seen"
+msgstr "Nothing new, or already seen"
 
 msgid "Nothing published in the last 30 days yet. Your rank appears once usage from this machine syncs, publishing as <0>{handle}</0>."
 msgstr "Nothing published in the last 30 days yet. Your rank appears once usage from this machine syncs, publishing as <0>{handle}</0>."
@@ -17967,6 +17979,9 @@ msgstr "The agent copies the conversation; the branch opens here"
 msgid "The agent follows the plugin's skills and calls its tools. The issue shows up in Linear."
 msgstr "The agent follows the plugin's skills and calls its tools. The issue shows up in Linear."
 
+msgid "The agent is running a turn"
+msgstr "The agent is running a turn"
+
 msgid "The agent owns a task from ticket to diff. The human reviews the result, not the keystrokes. Attention shifts from writing code to specifying work and judging it. One engineer runs several agents at once in isolated workspaces."
 msgstr "The agent owns a task from ticket to diff. The human reviews the result, not the keystrokes. Attention shifts from writing code to specifying work and judging it. One engineer runs several agents at once in isolated workspaces."
 
@@ -18268,8 +18283,14 @@ msgstr "The team invitation has either expired or doesn't exist. Request a new l
 msgid "The title shows everywhere this page is listed and in its link preview."
 msgstr "The title shows everywhere this page is listed and in its link preview."
 
+msgid "The turn ended and you have not opened it"
+msgstr "The turn ended and you have not opened it"
+
 msgid "The turn failed"
 msgstr "The turn failed"
+
+msgid "The turn stopped on an error, or the sandbox is down"
+msgstr "The turn stopped on an error, or the sandbox is down"
 
 msgid "The workspace is not ready yet. Try again."
 msgstr "The workspace is not ready yet. Try again."

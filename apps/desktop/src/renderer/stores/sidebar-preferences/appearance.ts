@@ -1,3 +1,5 @@
+import type { AgentState } from "renderer/lib/agent-state";
+
 export type SidebarDensity = "compact" | "normal" | "comfortable";
 export type SidebarContrast = "soft" | "normal" | "strong";
 /** How the conversation open in a pane stands out in the list. */
@@ -6,48 +8,45 @@ export type MarkerIntensity = "subtle" | "normal" | "strong";
 export type BandWidth = 1 | 2 | 3 | 4;
 export type StatePalette = "default" | "monochrome" | "colorblind" | "neon";
 
+/** Legend order: the five agent states of `renderer/lib/agent-state`. */
 export const STATE_COLOR_KEYS = [
+	"needsYou",
 	"working",
-	"request",
 	"unseen",
-	"seen",
 	"failed",
 	"idle",
-] as const;
-export type StateColorKey = (typeof STATE_COLOR_KEYS)[number];
+] as const satisfies readonly AgentState[];
+export type StateColorKey = AgentState;
 export type StateColors = Record<StateColorKey, string>;
 
 export const STATE_PALETTES: Record<StatePalette, StateColors> = {
 	default: {
+		needsYou: "#f59e0b",
 		working: "#facc15",
-		request: "#8b5cf6",
 		unseen: "#22c55e",
-		seen: "#3b82f6",
 		failed: "#ef4444",
 		idle: "#71717a",
 	},
+	// Grey except what asks for the user.
 	monochrome: {
+		needsYou: "#f59e0b",
 		working: "#d4d4d8",
-		request: "#8b5cf6",
 		unseen: "#fafafa",
-		seen: "#a1a1aa",
 		failed: "#ef4444",
 		idle: "#52525b",
 	},
 	// Okabe-Ito: tells the states apart with every common color blindness.
 	colorblind: {
-		working: "#e69f00",
-		request: "#cc79a7",
+		needsYou: "#e69f00",
+		working: "#f0e442",
 		unseen: "#009e73",
-		seen: "#0072b2",
 		failed: "#d55e00",
 		idle: "#71717a",
 	},
 	neon: {
+		needsYou: "#ff9f1c",
 		working: "#ffe600",
-		request: "#b026ff",
 		unseen: "#39ff14",
-		seen: "#00e5ff",
 		failed: "#ff2e63",
 		idle: "#6b7280",
 	},

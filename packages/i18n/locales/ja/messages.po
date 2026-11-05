@@ -1591,6 +1591,9 @@ msgstr "このターミナルではプロセスがまだ実行中です"
 msgid "A pull request always gets its own worktree"
 msgstr "プルリクエストには常に専用のワークツリーが作られます"
 
+msgid "A question, a permission or a report waits for you"
+msgstr "質問、許可、またはレポートがあなたを待っています"
+
 msgid "A rebuilt chat surface for driving agents: richer tool output, smoother steering, faster everything."
 msgstr "エージェントを操作するためのチャット画面を作り直します。ツール出力はより豊かに、誘導はよりスムーズに、すべてが速くなります。"
 
@@ -4362,9 +4365,6 @@ msgstr "{0} の色"
 msgid "Colorblind-safe"
 msgstr "色覚多様性に配慮"
 
-msgid "Colors of the agent state dots, in the sidebar and the switchers."
-msgstr "サイドバーと切り替え画面に表示されるエージェント状態ドットの色。"
-
 msgid "Columns"
 msgstr "列"
 
@@ -6667,6 +6667,9 @@ msgstr "完了 — プリセットバーで使っていた枠線付きチップ�
 msgid "Done (isShimmering=false)"
 msgstr "完了(isShimmering=false)"
 
+msgid "Done, not seen yet"
+msgstr "完了、未確認"
+
 msgid "Downgrade to Free"
 msgstr "Freeにダウングレード"
 
@@ -7330,6 +7333,9 @@ msgstr "失敗"
 msgctxt "agent status"
 msgid "Failed"
 msgstr "失敗"
+
+msgid "Failed or blocked"
+msgstr "失敗またはブロック"
 
 msgid "Failed runs"
 msgstr "失敗した実行"
@@ -8034,6 +8040,9 @@ msgstr "完了 · 7秒稼働"
 
 msgid "First repository by name"
 msgstr "名前順で最初のリポジトリ"
+
+msgid "Five states, the same for a workspace, a conversation and the switchers. A workspace shows the most urgent of its conversations."
+msgstr "5 つの状態は、ワークスペース、会話、スイッチャーで共通です。ワークスペースは会話の中で最も緊急な状態を表示します。"
 
 msgid "Fix"
 msgstr "修正"
@@ -12030,6 +12039,9 @@ msgstr "{pathname}には何もありません。"
 
 msgid "Nothing needs a retry"
 msgstr "再実行が必要なものはありません"
+
+msgid "Nothing new, or already seen"
+msgstr "新しいものなし、または確認済み"
 
 msgid "Nothing published in the last 30 days yet. Your rank appears once usage from this machine syncs, publishing as <0>{handle}</0>."
 msgstr "直近30日に公開された実績はまだありません。このマシンの利用状況が同期されるとランクが表示されます(<0>{handle}</0>として公開)。"
@@ -17967,6 +17979,9 @@ msgstr "エージェントが会話を複製し、分岐はここで開きます
 msgid "The agent follows the plugin's skills and calls its tools. The issue shows up in Linear."
 msgstr "エージェントはプラグインのスキルに従い、そのツールを呼び出します。Issueは Linear に作成されます。"
 
+msgid "The agent is running a turn"
+msgstr "エージェントがターンを実行中です"
+
 msgid "The agent owns a task from ticket to diff. The human reviews the result, not the keystrokes. Attention shifts from writing code to specifying work and judging it. One engineer runs several agents at once in isolated workspaces."
 msgstr "エージェントがチケットから差分までタスクを引き受けます。人間はキー入力ではなく結果をレビューします。関心はコードを書くことから、作業を仕様化し判断することへ移ります。エンジニア1人が独立したワークスペースで複数のエージェントを同時に動かします。"
 
@@ -18268,8 +18283,14 @@ msgstr "チームの招待は期限切れか、存在しません。チームの
 msgid "The title shows everywhere this page is listed and in its link preview."
 msgstr "タイトルはこのページが一覧表示される場所すべてと、リンクのプレビューに表示されます。"
 
+msgid "The turn ended and you have not opened it"
+msgstr "ターンが終了しましたが、まだ開いていません"
+
 msgid "The turn failed"
 msgstr "ターンが失敗しました"
+
+msgid "The turn stopped on an error, or the sandbox is down"
+msgstr "ターンがエラーで停止したか、サンドボックスが停止しています"
 
 msgid "The workspace is not ready yet. Try again."
 msgstr "ワークスペースの準備がまだできていません。もう一度お試しください。"

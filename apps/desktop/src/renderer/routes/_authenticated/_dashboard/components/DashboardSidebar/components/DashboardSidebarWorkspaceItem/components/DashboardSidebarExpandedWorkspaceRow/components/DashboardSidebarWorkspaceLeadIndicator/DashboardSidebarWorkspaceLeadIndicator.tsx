@@ -1,8 +1,8 @@
 import { WaveSpinner } from "@superset/ui/atoms/WaveSpinner";
 import { cn } from "@superset/ui/utils";
 import type { ReactNode } from "react";
-import { StatusIndicator } from "renderer/screens/main/components/StatusIndicator";
-import type { ActivePaneStatus } from "shared/tabs-types";
+import { AgentStateDot } from "renderer/components/AgentStateDot";
+import type { AgentState } from "renderer/lib/agent-state";
 import type {
 	DashboardSidebarWorkspace,
 	DashboardSidebarWorkspacePullRequest,
@@ -13,26 +13,22 @@ import {
 } from "../../../DashboardSidebarWorkspaceIcon";
 
 interface DashboardSidebarWorkspaceLeadIndicatorProps {
-	workspaceStatus: ActivePaneStatus | null;
+	/** The most urgent state of the workspace's conversations. */
+	agentState: AgentState;
 	isCreatePending: boolean;
 	sandboxStatus?: DashboardSidebarWorkspace["sandboxStatus"];
+	/** Drawn when nothing is going on; null when the PR has its own spot. */
 	pullRequestState: DashboardSidebarWorkspacePullRequest["state"] | null;
 }
 
-/**
- * One glyph by precedence: the sandbox's own state (nothing runs in a dead
- * or unborn box), then live agent state, then PR state, then idle.
- */
-type LeadKind =
-	| "failed"
-	| "creating"
-	| "working"
-	| "status"
-	| "pull-request"
-	| "idle";
+type LeadKind = AgentState | "creating" | "pull-request";
 
+/**
+ * One glyph: the sandbox's own state (nothing runs in a dead or unborn box),
+ * then the agent state, then the PR when the row has nowhere else to show it.
+ */
 function pickLead({
-	workspaceStatus,
+	agentState,
 	isCreatePending,
 	sandboxStatus,
 	pullRequestState,
@@ -41,7 +37,7 @@ function pickLead({
 	lead: ReactNode;
 } {
 	if (sandboxStatus === "failed") {
-		return { leadKind: "failed", lead: <StatusIndicator status="failed" /> };
+		return { leadKind: "failed", lead: <AgentStateDot state="failed" /> };
 	}
 	if (isCreatePending || sandboxStatus === "provisioning") {
 		return {
@@ -49,17 +45,14 @@ function pickLead({
 			lead: <WaveSpinner className="text-muted-foreground/60" />,
 		};
 	}
-	if (workspaceStatus === "working") {
+	if (agentState === "working") {
 		return {
 			leadKind: "working",
-			lead: <WaveSpinner className="text-foreground/80" />,
+			lead: <WaveSpinner className="text-[color:var(--sb-state-working)]" />,
 		};
 	}
-	if (workspaceStatus) {
-		return {
-			leadKind: "status",
-			lead: <StatusIndicator status={workspaceStatus} />,
-		};
+	if (agentState !== "idle") {
+		return { leadKind: agentState, lead: <AgentStateDot state={agentState} /> };
 	}
 	if (pullRequestState) {
 		const PrIcon = PR_ICON_BY_STATE[pullRequestState];
@@ -73,20 +66,17 @@ function pickLead({
 			),
 		};
 	}
-	return {
-		leadKind: "idle",
-		lead: <span className="size-1.5 rounded-full bg-muted-foreground/50" />,
-	};
+	return { leadKind: "idle", lead: <AgentStateDot state="idle" /> };
 }
 
 export function DashboardSidebarWorkspaceLeadIndicator({
-	workspaceStatus,
+	agentState,
 	isCreatePending,
 	sandboxStatus = null,
 	pullRequestState,
 }: DashboardSidebarWorkspaceLeadIndicatorProps) {
 	const { leadKind, lead } = pickLead({
-		workspaceStatus,
+		agentState,
 		isCreatePending,
 		sandboxStatus,
 		pullRequestState,

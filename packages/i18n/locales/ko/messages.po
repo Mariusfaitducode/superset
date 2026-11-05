@@ -1591,6 +1591,9 @@ msgstr "이 터미널에서 프로세스가 아직 실행 중입니다"
 msgid "A pull request always gets its own worktree"
 msgstr "풀 리퀘스트는 항상 자체 worktree를 갖습니다"
 
+msgid "A question, a permission or a report waits for you"
+msgstr "질문, 권한 또는 보고서가 기다리고 있습니다"
+
 msgid "A rebuilt chat surface for driving agents: richer tool output, smoother steering, faster everything."
 msgstr "에이전트를 다루기 위해 새로 만든 채팅 화면입니다. 더 풍부한 도구 출력, 더 매끄러운 조종, 전반적으로 더 빠른 속도."
 
@@ -4362,9 +4365,6 @@ msgstr "{0} 색상"
 msgid "Colorblind-safe"
 msgstr "색각 이상 친화"
 
-msgid "Colors of the agent state dots, in the sidebar and the switchers."
-msgstr "사이드바와 전환기에 표시되는 에이전트 상태 점의 색상입니다."
-
 msgid "Columns"
 msgstr "열"
 
@@ -6667,6 +6667,9 @@ msgstr "완료 — 프리셋 바에서 쓰던 테두리 칩 스타일이 이제 
 msgid "Done (isShimmering=false)"
 msgstr "완료 (isShimmering=false)"
 
+msgid "Done, not seen yet"
+msgstr "완료, 아직 확인 안 함"
+
 msgid "Downgrade to Free"
 msgstr "무료로 다운그레이드"
 
@@ -7330,6 +7333,9 @@ msgstr "실패"
 msgctxt "agent status"
 msgid "Failed"
 msgstr "실패"
+
+msgid "Failed or blocked"
+msgstr "실패 또는 차단됨"
 
 msgid "Failed runs"
 msgstr "실패한 실행"
@@ -8034,6 +8040,9 @@ msgstr "완료 · 7초 작업"
 
 msgid "First repository by name"
 msgstr "이름순 첫 번째 저장소"
+
+msgid "Five states, the same for a workspace, a conversation and the switchers. A workspace shows the most urgent of its conversations."
+msgstr "다섯 가지 상태는 워크스페이스, 대화, 전환기에서 동일합니다. 워크스페이스는 대화 중 가장 긴급한 상태를 표시합니다."
 
 msgid "Fix"
 msgstr "수정"
@@ -12030,6 +12039,9 @@ msgstr "{pathname}에는 아무것도 없습니다."
 
 msgid "Nothing needs a retry"
 msgstr "재시도가 필요한 항목이 없습니다"
+
+msgid "Nothing new, or already seen"
+msgstr "새로운 것 없음 또는 이미 확인함"
 
 msgid "Nothing published in the last 30 days yet. Your rank appears once usage from this machine syncs, publishing as <0>{handle}</0>."
 msgstr "최근 30일 동안 게시된 사용량이 아직 없습니다. 이 기기의 사용량이 동기화되면 <0>{handle}</0>(으)로 게시되며 순위가 표시됩니다."
@@ -17967,6 +17979,9 @@ msgstr "에이전트가 대화를 복사하고 분기는 여기서 열립니다"
 msgid "The agent follows the plugin's skills and calls its tools. The issue shows up in Linear."
 msgstr "에이전트는 플러그인의 스킬을 따라 도구를 호출합니다. 이슈가 Linear에 나타납니다."
 
+msgid "The agent is running a turn"
+msgstr "에이전트가 턴을 실행 중입니다"
+
 msgid "The agent owns a task from ticket to diff. The human reviews the result, not the keystrokes. Attention shifts from writing code to specifying work and judging it. One engineer runs several agents at once in isolated workspaces."
 msgstr "에이전트가 티켓부터 차이까지 작업을 맡습니다. 사람은 키 입력이 아니라 결과를 리뷰합니다. 관심은 코드를 쓰는 데서 일을 명세하고 판단하는 데로 옮겨 갑니다. 엔지니어 한 명이 격리된 워크스페이스에서 여러 에이전트를 동시에 돌립니다."
 
@@ -18268,8 +18283,14 @@ msgstr "팀 초대가 만료되었거나 존재하지 않습니다. 팀 소유�
 msgid "The title shows everywhere this page is listed and in its link preview."
 msgstr "제목은 이 페이지가 표시되는 모든 곳과 링크 미리보기에 나타납니다."
 
+msgid "The turn ended and you have not opened it"
+msgstr "턴이 끝났지만 아직 열지 않았습니다"
+
 msgid "The turn failed"
 msgstr "턴이 실패했습니다"
+
+msgid "The turn stopped on an error, or the sandbox is down"
+msgstr "턴이 오류로 중단되었거나 샌드박스가 중단되었습니다"
 
 msgid "The workspace is not ready yet. Try again."
 msgstr "워크스페이스가 아직 준비되지 않았습니다. 다시 시도하세요."

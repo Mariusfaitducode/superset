@@ -41,19 +41,25 @@ export function StateColorsSettings() {
 		neon: t`Neon`,
 	};
 	const stateLabel: Record<StateColorKey, string> = {
+		needsYou: t`Needs you`,
 		working: t`Working`,
-		request: t`Needs your approval`,
-		unseen: t`Finished — not opened yet`,
-		seen: t`Waiting for your reply`,
-		failed: t`Stopped on an error`,
+		unseen: t`Done, not seen yet`,
+		failed: t`Failed or blocked`,
 		idle: t`Idle`,
+	};
+	const stateHint: Record<StateColorKey, string> = {
+		needsYou: t`A question, a permission or a report waits for you`,
+		working: t`The agent is running a turn`,
+		unseen: t`The turn ended and you have not opened it`,
+		failed: t`The turn stopped on an error, or the sandbox is down`,
+		idle: t`Nothing new, or already seen`,
 	};
 
 	return (
 		<>
 			<SettingsRow
 				label={t`State colors`}
-				hint={t`Colors of the agent state dots, in the sidebar and the switchers.`}
+				hint={t`Five states, the same for a workspace, a conversation and the switchers. A workspace shows the most urgent of its conversations.`}
 				htmlFor="sidebar-statePalette"
 			>
 				<Select
@@ -93,7 +99,9 @@ export function StateColorsSettings() {
 								className="absolute inset-0 cursor-pointer opacity-0"
 							/>
 						</label>
-						<span className="min-w-0 flex-1 truncate">{stateLabel[key]}</span>
+						<span className="min-w-0 flex-1 truncate" title={stateHint[key]}>
+							{stateLabel[key]}
+						</span>
 						{stateColors[key] ? (
 							<Button
 								variant="ghost"

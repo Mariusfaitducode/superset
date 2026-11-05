@@ -321,7 +321,6 @@ export function DashboardSidebarWorkspaceItem({
 					renameValue={renameValue}
 					shortcutLabel={shortcutLabel}
 					pinnedContext={pinnedContext}
-					workspaceStatus={workspaceStatus}
 					isInSection={isInSection}
 					indentation={indentation}
 					isBulkSelectable={onSelectionClick != null}
