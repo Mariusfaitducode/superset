@@ -1,12 +1,8 @@
 import type { ConversationState } from "renderer/routes/_authenticated/_dashboard/components/DashboardSidebar/components/DashboardSidebarWorkspaceItem/components/DashboardSidebarExpandedWorkspaceRow/components/DashboardSidebarConversationList/utils/conversation-state";
-import type { LabelColor } from "renderer/routes/_authenticated/_dashboard/components/DashboardSidebar/components/WorkspaceLabels/labels";
-import {
-	type Bubble,
-	type CharacterFrame,
-	characterFrame,
-} from "../characterFrame";
+import { type CharacterFrame, characterFrame } from "../characterFrame";
 import {
 	DEVICES_PER_RACK,
+	HEADER_HEIGHT,
 	type OfficeIsland,
 	type OfficeLayout,
 	type OfficeSeat,
@@ -15,7 +11,6 @@ import {
 	WALL_HEIGHT,
 } from "../officeLayout";
 import {
-	BUBBLE_GLYPHS,
 	CHARACTER_SPRITES,
 	type CharacterSprite,
 	COFFEE_COLORS,
@@ -40,7 +35,8 @@ export interface OfficeSceneAgent {
 
 export interface OfficeScene {
 	layout: OfficeLayout;
-	islands: { island: OfficeIsland; color: LabelColor | null }[];
+	/** `color` is the group's `#rrggbb`, or null for the default rug. */
+	islands: { island: OfficeIsland; color: string | null }[];
 	agents: OfficeSceneAgent[];
 	devices: number;
 }
@@ -48,25 +44,7 @@ export interface OfficeScene {
 const T = TILE_SIZE;
 const OUTLINE = "#1d1a24";
 
-const RUG_COLORS: Record<LabelColor, string> = {
-	gray: "#6b6b78",
-	red: "#9c4a45",
-	orange: "#ad6a38",
-	amber: "#a8873a",
-	green: "#4a8055",
-	teal: "#3a7f7b",
-	blue: "#46629c",
-	violet: "#70549c",
-	pink: "#9c5482",
-};
 const DEFAULT_RUG = "#5d6275";
-
-const BUBBLE_COLORS: Record<Bubble, string> = {
-	approval: "#7c3aed",
-	error: "#dc2626",
-	done: "#16a34a",
-	waiting: "#2563eb",
-};
 
 function paint(
 	ctx: CanvasRenderingContext2D,
@@ -125,7 +103,7 @@ function drawWall(ctx: CanvasRenderingContext2D, layout: OfficeLayout) {
 function drawRug(
 	ctx: CanvasRenderingContext2D,
 	island: OfficeIsland,
-	color: LabelColor | null,
+	color: string | null,
 ) {
 	const x = island.x * T + 2;
 	const y = island.y * T + 2;
@@ -133,8 +111,18 @@ function drawRug(
 	const height = island.height * T - 4;
 	ctx.fillStyle = OUTLINE;
 	ctx.fillRect(x - 1, y - 1, width + 2, height + 2);
-	ctx.fillStyle = color ? RUG_COLORS[color] : DEFAULT_RUG;
+	ctx.fillStyle = DEFAULT_RUG;
 	ctx.fillRect(x, y, width, height);
+	if (color) {
+		// Muted so the floor keeps its pixel-art palette.
+		ctx.globalAlpha = 0.6;
+		ctx.fillStyle = color;
+		ctx.fillRect(x, y, width, height);
+		ctx.globalAlpha = 1;
+	}
+	// The header strip, a shade darker, carries the island's name.
+	ctx.fillStyle = "rgba(0,0,0,0.22)";
+	ctx.fillRect(x, y, width, HEADER_HEIGHT * T - 3);
 	ctx.fillStyle = "rgba(255,255,255,0.12)";
 	ctx.fillRect(x + 3, y + 3, width - 6, 1);
 	ctx.fillRect(x + 3, y + height - 4, width - 6, 1);
@@ -284,24 +272,26 @@ function drawCharacter(
 	);
 }
 
-function drawBubble(ctx: CanvasRenderingContext2D, frame: CharacterFrame) {
-	if (!frame.bubble) return;
-	const x = Math.round(frame.x * T) + 9;
-	const y = Math.round(frame.y * T) - 9;
+/** An agent waiting on your answer raises its hand. */
+function drawRaisedHand(
+	ctx: CanvasRenderingContext2D,
+	frame: CharacterFrame,
+	seed: number,
+	timeMs: number,
+	reducedMotion: boolean,
+) {
+	if (frame.bubble !== "approval") return;
+	const wave = reducedMotion ? 0 : Math.floor(timeMs / 400) % 2;
+	// From the right shoulder up past the head.
+	const x = Math.round(frame.x * T) + 13 + wave;
+	const y = Math.round(frame.y * T) - 4;
+	const palette = characterPalette(seed);
 	ctx.fillStyle = OUTLINE;
-	ctx.fillRect(x, y, 11, 10);
-	ctx.fillRect(x + 2, y + 10, 2, 2);
-	ctx.fillStyle = "#ffffff";
-	ctx.fillRect(x + 1, y + 1, 9, 8);
-	ctx.fillRect(x + 2, y + 9, 1, 1);
-	const color = BUBBLE_COLORS[frame.bubble];
-	paint(
-		ctx,
-		BUBBLE_GLYPHS[frame.bubble],
-		(cell) => (cell === "k" ? color : null),
-		x + 3,
-		y + 2,
-	);
+	ctx.fillRect(x - 1, y - 1, 4, 14);
+	ctx.fillStyle = palette.s;
+	ctx.fillRect(x, y, 2, 3);
+	ctx.fillStyle = palette.c;
+	ctx.fillRect(x, y + 3, 2, 9);
 }
 
 /** Draws the whole office in art pixels; the caller scales the context. */
@@ -366,5 +356,7 @@ export function drawOffice(
 	for (const plant of layout.plants) {
 		paint(ctx, PLANT, (cell) => PLANT_COLORS[cell], plant.x * T, plant.y * T);
 	}
-	for (const { frame } of frames) drawBubble(ctx, frame);
+	for (const { agent, frame } of frames) {
+		drawRaisedHand(ctx, frame, agent.seed, timeMs, reducedMotion);
+	}
 }

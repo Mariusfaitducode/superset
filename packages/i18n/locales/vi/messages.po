@@ -180,6 +180,10 @@ msgstr "{0, plural, other {# nhãn}}"
 msgid "{0, plural, one {# login} other {# logins}}"
 msgstr "{0, plural, one {# đăng nhập} other {# đăng nhập}}"
 
+#. placeholder {0}: counts.needYou
+msgid "{0, plural, one {# needs you} other {# need you}}"
+msgstr "{0, plural, other {# cần bạn}}"
+
 #. placeholder {0}: summary.passed
 msgid "{0, plural, one {# passed} other {# passed}}"
 msgstr "{0, plural, one {# đã qua} other {# đã qua}}"
@@ -557,6 +561,10 @@ msgstr "Đã cập nhật {0}"
 msgid "{0} vs {1}"
 msgstr "{0} đấu {1}"
 
+#. placeholder {0}: totals.needYou
+msgid "{0} waiting on you"
+msgstr "{0} đang chờ bạn"
+
 #. placeholder {0}: file.path
 msgid "{0} was deleted in this change."
 msgstr "{0} đã bị xóa trong thay đổi này."
@@ -570,6 +578,11 @@ msgstr "{0} thắng sau {1} lượt"
 #. placeholder {1}: result.events.length
 msgid "{0} wins on damage after {1} turns"
 msgstr "{0} thắng nhờ sát thương sau {1} lượt"
+
+#. placeholder {0}: counts.working
+#. placeholder {0}: totals.working
+msgid "{0} working"
+msgstr "{0} đang làm"
 
 #. placeholder {0}: check.name
 #. placeholder {1}: took ? `, ${took}` : ""
@@ -4028,6 +4041,9 @@ msgstr "Nhấp <0>Import Theme</0> và chọn tệp vừa tải."
 msgid "Click a terminal script to edit its details."
 msgstr "Nhấp vào một script terminal để sửa chi tiết."
 
+msgid "Click an agent to open its conversation · ⌥-click, right-click or I for details · Tab or arrows to move, Enter to open"
+msgstr "Nhấp vào agent để mở cuộc trò chuyện · ⌥-nhấp, nhấp chuột phải hoặc I để xem chi tiết · Tab hoặc phím mũi tên để di chuyển, Enter để mở"
+
 msgid "Click an element."
 msgstr "Nhấp vào một phần tử."
 
@@ -4048,6 +4064,9 @@ msgstr "Nhấp vào thẻ để mở pull request"
 
 msgid "Click to copy the session ID (resume with `claude --resume <id>`)."
 msgstr "Nhấp để sao chép ID phiên (resume bằng `claude --resume <id>`)."
+
+msgid "Click to open · ⌥-click or I for details"
+msgstr "Nhấp để mở · ⌥-nhấp hoặc I để xem chi tiết"
 
 msgid "Click to open on GitHub"
 msgstr "Nhấp để mở trên GitHub"
@@ -6630,6 +6649,9 @@ msgstr "Xong — kiểu chip có viền mà thanh preset dùng giờ là mặc �
 msgid "Done (isShimmering=false)"
 msgstr "Xong (isShimmering=false)"
 
+msgid "Done, not seen"
+msgstr "Xong, chưa xem"
+
 msgid "Downgrade to Free"
 msgstr "Chuyển xuống Free"
 
@@ -8892,6 +8914,9 @@ msgstr "IDE"
 
 msgid "Identity"
 msgstr "Định danh"
+
+msgid "idle"
+msgstr "rảnh"
 
 msgid "Idle"
 msgstr "Rảnh"
@@ -11816,11 +11841,17 @@ msgstr "Chưa ai tham gia bảng xếp hạng."
 msgid "Nobody here by that name."
 msgstr "Không có ai mang tên đó."
 
+msgid "Nobody needs you right now."
+msgstr "Hiện không ai cần bạn."
+
 msgid "Nobody on your team has shared automations yet."
 msgstr "Chưa ai trong nhóm chia sẻ tự động hóa nào."
 
 msgid "Nobody reviews differently because of it."
 msgstr "Không ai review khác đi vì điều đó."
+
+msgid "Nobody waiting on you"
+msgstr "Không ai đang chờ bạn"
 
 msgid "None"
 msgstr "Không có"
@@ -12229,6 +12260,9 @@ msgstr "Chỉ tác giả của luồng hoặc chủ sở hữu trang mới xóa 
 msgid "Only want it out of your sidebar? Hide it instead. Nobody else is affected."
 msgstr "Chỉ muốn bỏ nó khỏi thanh bên của bạn? Hãy ẩn nó. Không ảnh hưởng đến ai khác."
 
+msgid "Only who needs me"
+msgstr "Chỉ những ai cần tôi"
+
 msgid "Only you"
 msgstr "Chỉ mình bạn"
 
@@ -12254,7 +12288,6 @@ msgid "Open"
 msgstr "Đang mở"
 
 #. placeholder {0}: linkedAgent?.label ?? t({ message: "agent settings", })
-#. placeholder {0}: workspace.name
 msgid "Open {0}"
 msgstr "Mở {0}"
 

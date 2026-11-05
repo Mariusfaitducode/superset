@@ -180,6 +180,10 @@ msgstr "{0, plural, other {# 个标签}}"
 msgid "{0, plural, one {# login} other {# logins}}"
 msgstr "{0, plural, one {#项登录信息} other {#项登录信息}}"
 
+#. placeholder {0}: counts.needYou
+msgid "{0, plural, one {# needs you} other {# need you}}"
+msgstr "{0, plural, other {# 个需要你}}"
+
 #. placeholder {0}: summary.passed
 msgid "{0, plural, one {# passed} other {# passed}}"
 msgstr "{0, plural, one {#项通过} other {#项通过}}"
@@ -557,6 +561,10 @@ msgstr "{0} 已更新"
 msgid "{0} vs {1}"
 msgstr "{0} 对战 {1}"
 
+#. placeholder {0}: totals.needYou
+msgid "{0} waiting on you"
+msgstr "{0} 个在等你"
+
 #. placeholder {0}: file.path
 msgid "{0} was deleted in this change."
 msgstr "{0}已在此更改中被删除。"
@@ -570,6 +578,11 @@ msgstr "{0} 在第 {1} 回合获胜"
 #. placeholder {1}: result.events.length
 msgid "{0} wins on damage after {1} turns"
 msgstr "{1} 回合结束，{0} 以伤害判定获胜"
+
+#. placeholder {0}: counts.working
+#. placeholder {0}: totals.working
+msgid "{0} working"
+msgstr "{0} 个工作中"
 
 #. placeholder {0}: check.name
 #. placeholder {1}: took ? `, ${took}` : ""
@@ -4028,6 +4041,9 @@ msgstr "点击<0>导入主题</0>，选择下载好的文件。"
 msgid "Click a terminal script to edit its details."
 msgstr "点击终端脚本以编辑其详情。"
 
+msgid "Click an agent to open its conversation · ⌥-click, right-click or I for details · Tab or arrows to move, Enter to open"
+msgstr "点击代理打开其对话 · ⌥-点击、右键或 I 查看详情 · Tab 或方向键移动，Enter 打开"
+
 msgid "Click an element."
 msgstr "点击一个元素。"
 
@@ -4048,6 +4064,9 @@ msgstr "点击打开拉取请求"
 
 msgid "Click to copy the session ID (resume with `claude --resume <id>`)."
 msgstr "点击复制会话ID（使用`claude --resume <id>`恢复）。"
+
+msgid "Click to open · ⌥-click or I for details"
+msgstr "点击打开 · ⌥-点击或 I 查看详情"
 
 msgid "Click to open on GitHub"
 msgstr "点击在GitHub上打开"
@@ -6630,6 +6649,9 @@ msgstr "完成——预设栏使用的带边框chip样式现在是所有tooltip�
 msgid "Done (isShimmering=false)"
 msgstr "完成（isShimmering=false）"
 
+msgid "Done, not seen"
+msgstr "已完成，未查看"
+
 msgid "Downgrade to Free"
 msgstr "降级为免费版"
 
@@ -8892,6 +8914,9 @@ msgstr "IDE"
 
 msgid "Identity"
 msgstr "身份"
+
+msgid "idle"
+msgstr "空闲"
 
 msgid "Idle"
 msgstr "空闲"
@@ -11816,11 +11841,17 @@ msgstr "还没有人加入榜单。"
 msgid "Nobody here by that name."
 msgstr "没有找到这个名字的人。"
 
+msgid "Nobody needs you right now."
+msgstr "现在没有人需要你。"
+
 msgid "Nobody on your team has shared automations yet."
 msgstr "团队里还没有人共享自动化。"
 
 msgid "Nobody reviews differently because of it."
 msgstr "没有人因此改变审查方式。"
+
+msgid "Nobody waiting on you"
+msgstr "没有人在等你"
 
 msgid "None"
 msgstr "无"
@@ -12229,6 +12260,9 @@ msgstr "只有讨论串的作者或页面所有者才能删除它"
 msgid "Only want it out of your sidebar? Hide it instead. Nobody else is affected."
 msgstr "只是想把它从侧边栏移走？请改为隐藏。不会影响其他人。"
 
+msgid "Only who needs me"
+msgstr "只看需要我的"
+
 msgid "Only you"
 msgstr "仅你自己"
 
@@ -12254,7 +12288,6 @@ msgid "Open"
 msgstr "开启"
 
 #. placeholder {0}: linkedAgent?.label ?? t({ message: "agent settings", })
-#. placeholder {0}: workspace.name
 msgid "Open {0}"
 msgstr "打开{0}"
 

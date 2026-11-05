@@ -180,6 +180,10 @@ msgstr "{0, plural, one {# libellé} other {# libellés}}"
 msgid "{0, plural, one {# login} other {# logins}}"
 msgstr "{0, plural, one {# identifiant} other {# identifiants}}"
 
+#. placeholder {0}: counts.needYou
+msgid "{0, plural, one {# needs you} other {# need you}}"
+msgstr "{0, plural, one {# a besoin de toi} other {# ont besoin de toi}}"
+
 #. placeholder {0}: summary.passed
 msgid "{0, plural, one {# passed} other {# passed}}"
 msgstr "{0, plural, one {# réussi} other {# réussis}}"
@@ -557,6 +561,10 @@ msgstr "{0} mis à jour"
 msgid "{0} vs {1}"
 msgstr "{0} contre {1}"
 
+#. placeholder {0}: totals.needYou
+msgid "{0} waiting on you"
+msgstr "{0} t'attendent"
+
 #. placeholder {0}: file.path
 msgid "{0} was deleted in this change."
 msgstr "{0} a été supprimé dans cette modification."
@@ -570,6 +578,11 @@ msgstr "{0} l'emporte en {1} tours"
 #. placeholder {1}: result.events.length
 msgid "{0} wins on damage after {1} turns"
 msgstr "{0} l'emporte aux dégâts après {1} tours"
+
+#. placeholder {0}: counts.working
+#. placeholder {0}: totals.working
+msgid "{0} working"
+msgstr "{0} au travail"
 
 #. placeholder {0}: check.name
 #. placeholder {1}: took ? `, ${took}` : ""
@@ -4028,6 +4041,9 @@ msgstr "Cliquez sur <0>Importer un thème</0> et sélectionnez le fichier télé
 msgid "Click a terminal script to edit its details."
 msgstr "Cliquez sur un script de terminal pour modifier ses détails."
 
+msgid "Click an agent to open its conversation · ⌥-click, right-click or I for details · Tab or arrows to move, Enter to open"
+msgstr "Clique sur un agent pour ouvrir sa conversation · ⌥-clic, clic droit ou I pour les détails · Tab ou flèches pour naviguer, Entrée pour ouvrir"
+
 msgid "Click an element."
 msgstr "Cliquez sur un élément."
 
@@ -4048,6 +4064,9 @@ msgstr "Cliquez sur la pastille pour ouvrir la pull request"
 
 msgid "Click to copy the session ID (resume with `claude --resume <id>`)."
 msgstr "Cliquez pour copier l'ID de session (reprenez avec `claude --resume <id>`)."
+
+msgid "Click to open · ⌥-click or I for details"
+msgstr "Clic pour ouvrir · ⌥-clic ou I pour les détails"
 
 msgid "Click to open on GitHub"
 msgstr "Cliquer pour ouvrir sur GitHub"
@@ -6630,6 +6649,9 @@ msgstr "Terminé — le style chip bordé utilisé par la barre de préréglages
 msgid "Done (isShimmering=false)"
 msgstr "Terminé (isShimmering=false)"
 
+msgid "Done, not seen"
+msgstr "Fini, pas vu"
+
 msgid "Downgrade to Free"
 msgstr "Revenir au forfait Free"
 
@@ -8892,6 +8914,9 @@ msgstr "IDE"
 
 msgid "Identity"
 msgstr "Identité"
+
+msgid "idle"
+msgstr "au repos"
 
 msgid "Idle"
 msgstr "Inactif"
@@ -11816,11 +11841,17 @@ msgstr "Personne n'a encore rejoint le classement."
 msgid "Nobody here by that name."
 msgstr "Personne ne porte ce nom ici."
 
+msgid "Nobody needs you right now."
+msgstr "Personne n'a besoin de toi pour l'instant."
+
 msgid "Nobody on your team has shared automations yet."
 msgstr "Personne dans votre équipe n'a encore partagé d'automatisations."
 
 msgid "Nobody reviews differently because of it."
 msgstr "Personne ne relit différemment pour autant."
+
+msgid "Nobody waiting on you"
+msgstr "Personne ne t'attend"
 
 msgid "None"
 msgstr "Aucun"
@@ -12229,6 +12260,9 @@ msgstr "Seul l'auteur du fil ou le propriétaire de la page peut le supprimer"
 msgid "Only want it out of your sidebar? Hide it instead. Nobody else is affected."
 msgstr "Vous voulez seulement le retirer de votre barre latérale ? Masquez-le plutôt. Personne d’autre n’est concerné."
 
+msgid "Only who needs me"
+msgstr "Seulement ceux qui ont besoin de moi"
+
 msgid "Only you"
 msgstr "Vous seul"
 
@@ -12254,7 +12288,6 @@ msgid "Open"
 msgstr "Ouvrir"
 
 #. placeholder {0}: linkedAgent?.label ?? t({ message: "agent settings", })
-#. placeholder {0}: workspace.name
 msgid "Open {0}"
 msgstr "Ouvrir {0}"
 

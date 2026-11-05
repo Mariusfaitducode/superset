@@ -1,8 +1,10 @@
 import { describe, expect, test } from "bun:test";
 import {
 	CORRIDOR_X,
+	HEADER_HEIGHT,
 	layoutOffice,
 	pathToCoffee,
+	ROW_PITCH,
 	SEATS_PER_ROW,
 	WALL_HEIGHT,
 } from "./officeLayout";
@@ -41,7 +43,7 @@ describe("layoutOffice", () => {
 				id: String(index),
 				seats: 4,
 			})),
-			maxWidth: 30,
+			maxWidth: 40,
 			devices: 0,
 		});
 		for (const island of layout.islands) {
@@ -64,8 +66,10 @@ describe("layoutOffice", () => {
 			devices: 0,
 		});
 		const island = layout.islands[0];
-		expect(island?.height).toBe(6);
-		expect(island?.seats[SEATS_PER_ROW]?.y).toBe((island?.y ?? 0) + 3);
+		expect(island?.height).toBe(HEADER_HEIGHT + 2 * ROW_PITCH + 1);
+		expect(island?.seats[SEATS_PER_ROW]?.y).toBe(
+			(island?.seats[0]?.y ?? 0) + ROW_PITCH,
+		);
 	});
 
 	test("widens the room for an island wider than the window", () => {
@@ -78,6 +82,26 @@ describe("layoutOffice", () => {
 		expect(layout.width).toBeGreaterThanOrEqual(
 			(island?.x ?? 0) + (island?.width ?? 0),
 		);
+	});
+
+	test("keeps the header and every bubble tile inside the island", () => {
+		const layout = layoutOffice({
+			islands: [{ id: "a", seats: 6 }],
+			maxWidth: 40,
+			devices: 0,
+		});
+		const island = layout.islands[0];
+		if (!island) throw new Error("no island");
+		expect(island.header).toEqual({
+			x: island.x,
+			y: island.y,
+			width: island.width,
+		});
+		for (const seat of island.seats) {
+			expect(seat.y - 1).toBeGreaterThanOrEqual(island.y + HEADER_HEIGHT);
+			expect(seat.desk.y).toBeLessThan(island.y + island.height);
+			expect(seat.desk.x + 2).toBeLessThanOrEqual(island.x + island.width);
+		}
 	});
 
 	test("adds a rack per four connections", () => {

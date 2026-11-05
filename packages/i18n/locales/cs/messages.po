@@ -180,6 +180,10 @@ msgstr "{0, plural, one {# štítek} few {# štítky} many {# štítku} other {#
 msgid "{0, plural, one {# login} other {# logins}}"
 msgstr "{0, plural, one {# přihlášení} few {# přihlášení} many {# přihlášení} other {# přihlášení}}"
 
+#. placeholder {0}: counts.needYou
+msgid "{0, plural, one {# needs you} other {# need you}}"
+msgstr "{0, plural, one {# tě potřebuje} few {# tě potřebují} many {# tě potřebuje} other {# tě potřebuje}}"
+
 #. placeholder {0}: summary.passed
 msgid "{0, plural, one {# passed} other {# passed}}"
 msgstr "{0, plural, one {# prošlo} few {# prošlo} many {# prošlo} other {# prošlo}}"
@@ -557,6 +561,10 @@ msgstr "{0} aktualizován"
 msgid "{0} vs {1}"
 msgstr "{0} proti {1}"
 
+#. placeholder {0}: totals.needYou
+msgid "{0} waiting on you"
+msgstr "{0} čeká na tebe"
+
 #. placeholder {0}: file.path
 msgid "{0} was deleted in this change."
 msgstr "{0} byl v této změně smazán."
@@ -570,6 +578,11 @@ msgstr "{0} vítězí za {1} kol"
 #. placeholder {1}: result.events.length
 msgid "{0} wins on damage after {1} turns"
 msgstr "{0} vítězí na poškození po {1} kolech"
+
+#. placeholder {0}: counts.working
+#. placeholder {0}: totals.working
+msgid "{0} working"
+msgstr "{0} pracuje"
 
 #. placeholder {0}: check.name
 #. placeholder {1}: took ? `, ${took}` : ""
@@ -4028,6 +4041,9 @@ msgstr "Klikněte na <0>Importovat motiv</0> a vyberte stažený soubor."
 msgid "Click a terminal script to edit its details."
 msgstr "Kliknutím na terminálový skript upravíte jeho podrobnosti."
 
+msgid "Click an agent to open its conversation · ⌥-click, right-click or I for details · Tab or arrows to move, Enter to open"
+msgstr "Klikni na agenta pro otevření konverzace · ⌥-klik, pravý klik nebo I pro detaily · Tab nebo šipky pro pohyb, Enter pro otevření"
+
 msgid "Click an element."
 msgstr "Klikněte na prvek."
 
@@ -4048,6 +4064,9 @@ msgstr "Kliknutím na štítek otevřete pull request"
 
 msgid "Click to copy the session ID (resume with `claude --resume <id>`)."
 msgstr "Kliknutím zkopírujete ID relace (pokračování přes `claude --resume <id>`)."
+
+msgid "Click to open · ⌥-click or I for details"
+msgstr "Kliknutím otevřeš · ⌥-klik nebo I pro detaily"
 
 msgid "Click to open on GitHub"
 msgstr "Kliknutím otevřete na GitHubu"
@@ -6630,6 +6649,9 @@ msgstr "Hotovo — orámovaný styl čipu z lišty přednastavení je teď vých
 msgid "Done (isShimmering=false)"
 msgstr "Hotovo (isShimmering=false)"
 
+msgid "Done, not seen"
+msgstr "Hotovo, neviděno"
+
 msgid "Downgrade to Free"
 msgstr "Přejít na Free"
 
@@ -8892,6 +8914,9 @@ msgstr "IDE"
 
 msgid "Identity"
 msgstr "Identita"
+
+msgid "idle"
+msgstr "nečinný"
 
 msgid "Idle"
 msgstr "Nečinný"
@@ -11816,11 +11841,17 @@ msgstr "Do žebříčku se zatím nikdo nezapojil."
 msgid "Nobody here by that name."
 msgstr "Nikdo takový tu není."
 
+msgid "Nobody needs you right now."
+msgstr "Teď tě nikdo nepotřebuje."
+
 msgid "Nobody on your team has shared automations yet."
 msgstr "Nikdo z vašeho týmu zatím nesdílel automatizace."
 
 msgid "Nobody reviews differently because of it."
 msgstr "Nikdo kvůli tomu nereviduje jinak."
+
+msgid "Nobody waiting on you"
+msgstr "Nikdo na tebe nečeká"
 
 msgid "None"
 msgstr "Žádný"
@@ -12229,6 +12260,9 @@ msgstr "Smazat ho může jen autor vlákna nebo vlastník stránky"
 msgid "Only want it out of your sidebar? Hide it instead. Nobody else is affected."
 msgstr "Chcete ho jen odebrat z postranního panelu? Skryjte ho. Nikoho jiného se to nedotkne."
 
+msgid "Only who needs me"
+msgstr "Jen kdo mě potřebuje"
+
 msgid "Only you"
 msgstr "Jen vy"
 
@@ -12254,7 +12288,6 @@ msgid "Open"
 msgstr "Otevřený"
 
 #. placeholder {0}: linkedAgent?.label ?? t({ message: "agent settings", })
-#. placeholder {0}: workspace.name
 msgid "Open {0}"
 msgstr "Otevřít {0}"
 

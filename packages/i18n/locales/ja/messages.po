@@ -180,6 +180,10 @@ msgstr "{0, plural, other {# 個のラベル}}"
 msgid "{0, plural, one {# login} other {# logins}}"
 msgstr "{0, plural, one {#件のログイン情報} other {#件のログイン情報}}"
 
+#. placeholder {0}: counts.needYou
+msgid "{0, plural, one {# needs you} other {# need you}}"
+msgstr "{0, plural, other {#件 対応待ち}}"
+
 #. placeholder {0}: summary.passed
 msgid "{0, plural, one {# passed} other {# passed}}"
 msgstr "{0, plural, one {#件成功} other {#件成功}}"
@@ -557,6 +561,10 @@ msgstr "{0} を更新しました"
 msgid "{0} vs {1}"
 msgstr "{0} 対 {1}"
 
+#. placeholder {0}: totals.needYou
+msgid "{0} waiting on you"
+msgstr "{0}件があなたを待っています"
+
 #. placeholder {0}: file.path
 msgid "{0} was deleted in this change."
 msgstr "{0}はこの変更で削除されました。"
@@ -570,6 +578,11 @@ msgstr "{0}が{1}ターンで勝利"
 #. placeholder {1}: result.events.length
 msgid "{0} wins on damage after {1} turns"
 msgstr "{1}ターン終了、{0}がダメージ判定で勝利"
+
+#. placeholder {0}: counts.working
+#. placeholder {0}: totals.working
+msgid "{0} working"
+msgstr "{0}件 作業中"
 
 #. placeholder {0}: check.name
 #. placeholder {1}: took ? `, ${took}` : ""
@@ -4028,6 +4041,9 @@ msgstr "<0>テーマをインポート</0>をクリックし、ダウンロー�
 msgid "Click a terminal script to edit its details."
 msgstr "ターミナルスクリプトをクリックして詳細を編集します。"
 
+msgid "Click an agent to open its conversation · ⌥-click, right-click or I for details · Tab or arrows to move, Enter to open"
+msgstr "エージェントをクリックで会話を開く · ⌥-クリック、右クリック、または I で詳細 · Tab または矢印で移動、Enter で開く"
+
 msgid "Click an element."
 msgstr "要素をクリックします。"
 
@@ -4048,6 +4064,9 @@ msgstr "チップをクリックするとプルリクエストを開きます"
 
 msgid "Click to copy the session ID (resume with `claude --resume <id>`)."
 msgstr "クリックでセッションIDをコピーします(`claude --resume <id>`で再開)。"
+
+msgid "Click to open · ⌥-click or I for details"
+msgstr "クリックで開く · ⌥-クリックまたは I で詳細"
 
 msgid "Click to open on GitHub"
 msgstr "クリックしてGitHubで開く"
@@ -6630,6 +6649,9 @@ msgstr "完了 — プリセットバーで使っていた枠線付きチップ�
 msgid "Done (isShimmering=false)"
 msgstr "完了(isShimmering=false)"
 
+msgid "Done, not seen"
+msgstr "完了・未確認"
+
 msgid "Downgrade to Free"
 msgstr "Freeにダウングレード"
 
@@ -8892,6 +8914,9 @@ msgstr "IDE"
 
 msgid "Identity"
 msgstr "識別情報"
+
+msgid "idle"
+msgstr "待機中"
 
 msgid "Idle"
 msgstr "アイドル"
@@ -11816,11 +11841,17 @@ msgstr "まだ誰も参加していません。"
 msgid "Nobody here by that name."
 msgstr "その名前の人は見つかりません。"
 
+msgid "Nobody needs you right now."
+msgstr "今は誰もあなたを待っていません。"
+
 msgid "Nobody on your team has shared automations yet."
 msgstr "チームで共有されたオートメーションはまだありません。"
 
 msgid "Nobody reviews differently because of it."
 msgstr "それによってレビューのやり方が変わることはない。"
+
+msgid "Nobody waiting on you"
+msgstr "待っている人はいません"
 
 msgid "None"
 msgstr "なし"
@@ -12229,6 +12260,9 @@ msgstr "スレッドを削除できるのはスレッドの投稿者かページ
 msgid "Only want it out of your sidebar? Hide it instead. Nobody else is affected."
 msgstr "サイドバーから外したいだけですか？代わりに非表示にしてください。他のユーザーには影響しません。"
 
+msgid "Only who needs me"
+msgstr "自分を待っている人のみ"
+
 msgid "Only you"
 msgstr "自分のみ"
 
@@ -12254,7 +12288,6 @@ msgid "Open"
 msgstr "オープン"
 
 #. placeholder {0}: linkedAgent?.label ?? t({ message: "agent settings", })
-#. placeholder {0}: workspace.name
 msgid "Open {0}"
 msgstr "{0}を開く"
 

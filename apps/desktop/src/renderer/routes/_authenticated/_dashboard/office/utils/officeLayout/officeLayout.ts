@@ -5,6 +5,13 @@ export const CORRIDOR_X = 2;
 export const SEATS_PER_ROW = 4;
 export const DEVICES_PER_RACK = 4;
 
+/** A desk is two tiles wide; one more keeps room for the agent's bubble. */
+export const COLUMN_PITCH = 3;
+/** Bubble, agent, desk. */
+export const ROW_PITCH = 3;
+/** The island's name, labels and counter. */
+export const HEADER_HEIGHT = 1;
+const MIN_ISLAND_WIDTH = 8;
 const FIRST_ISLAND_X = 4;
 const GAP = 2;
 const MIN_WIDTH = 16;
@@ -26,8 +33,8 @@ export interface OfficeIsland {
 	width: number;
 	height: number;
 	seats: OfficeSeat[];
-	/** The name plate, centered under the desks. */
-	plate: Point & { width: number };
+	/** The strip along the top of the island for its name and counters. */
+	header: Point & { width: number };
 }
 
 export interface OfficeLayout {
@@ -46,13 +53,18 @@ export interface OfficeLayout {
 function islandSize(seats: number) {
 	const columns = Math.min(Math.max(seats, 1), SEATS_PER_ROW);
 	const rows = Math.max(1, Math.ceil(seats / SEATS_PER_ROW));
-	return { columns, rows, width: columns * 2 + 2, height: rows * 2 + 2 };
+	return {
+		columns,
+		rows,
+		width: Math.max(columns * COLUMN_PITCH + 1, MIN_ISLAND_WIDTH),
+		height: HEADER_HEIGHT + rows * ROW_PITCH + 1,
+	};
 }
 
 /**
- * Places one desk island per workspace, left to right then in rows, with a
- * corridor above each row and down the left side that idle agents walk to
- * reach the coffee counter.
+ * Places one desk island per group, in the given order, left to right then
+ * in rows, with a corridor above each row and down the left side that idle
+ * agents walk to reach the coffee counter.
  */
 export function layoutOffice({
 	islands,
@@ -90,15 +102,15 @@ export function layoutOffice({
 		for (let index = 0; index < island.seats; index++) {
 			const column = index % size.columns;
 			const row = Math.floor(index / size.columns);
-			const seatX = x + 1 + column * 2 + 0.5;
-			const seatY = y + 1 + row * 2;
+			const seatX = x + 1 + column * COLUMN_PITCH + 0.5;
+			// The tile above the agent holds its bubble.
+			const seatY = y + HEADER_HEIGHT + 1 + row * ROW_PITCH;
 			seats.push({
 				x: seatX,
 				y: seatY,
 				desk: { x: seatX - 0.5, y: seatY + 1 },
 			});
 		}
-		const plateWidth = size.width - 2;
 		placed.push({
 			id: island.id,
 			x,
@@ -106,7 +118,7 @@ export function layoutOffice({
 			width: size.width,
 			height: size.height,
 			seats,
-			plate: { x: x + 1, y: y + size.height - 1, width: plateWidth },
+			header: { x, y, width: size.width },
 		});
 		x += size.width + GAP;
 		rowHeight = Math.max(rowHeight, size.height);

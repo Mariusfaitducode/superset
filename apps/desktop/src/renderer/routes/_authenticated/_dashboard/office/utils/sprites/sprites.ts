@@ -216,14 +216,6 @@ export const COFFEE_COLORS: Record<string, string> = {
 	T: "#946a43",
 };
 
-/** Shows the agent is waiting on the user; drawn above its head. */
-export const BUBBLE_GLYPHS = {
-	approval: ["..k..", "..k..", "..k..", ".....", "..k.."],
-	error: ["k...k", ".k.k.", "..k..", ".k.k.", "k...k"],
-	done: [".....", "....k", "...k.", "k.k..", ".k..."],
-	waiting: [".....", ".....", ".....", "k.k.k", "....."],
-} as const satisfies Record<string, SpriteRows>;
-
 /** Digits for the post-it count, 3×5. */
 export const DIGITS: Record<string, SpriteRows> = {
 	"0": ["kkk", "k.k", "k.k", "k.k", "kkk"],
