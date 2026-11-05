@@ -4706,6 +4706,9 @@ msgstr "このサーバーでは GitHub の接続が設定されていません"
 msgid "Connecting lets your agents read and act in {name} on your behalf. Review what you are granting before you continue."
 msgstr "接続すると、エージェントがあなたに代わって {name} で読み取りと操作を行えるようになります。続行する前に許可する内容を確認してください。"
 
+msgid "Connecting to Relais…"
+msgstr "Relais に接続中…"
+
 msgid "Connecting to the desktop…"
 msgstr "デスクトップに接続しています…"
 
@@ -10157,6 +10160,9 @@ msgstr "読み込み中…"
 msgid "Local"
 msgstr "ローカル"
 
+msgid "Local automations"
+msgstr "ローカル自動化"
+
 msgid "Local Device"
 msgstr "ローカルデバイス"
 
@@ -14209,6 +14215,15 @@ msgstr "リージョン"
 
 msgid "Registers lifecycle hooks in this agent's global config so Superset can show status and send notifications. Turning this off removes Superset's entries everywhere — status and notifications stop for this agent, including inside Superset."
 msgstr "このエージェントのグローバル設定にライフサイクルフックを登録し、Supersetがステータス表示と通知を行えるようにします。オフにするとSupersetのエントリがすべて削除され、Superset内も含めてこのエージェントのステータスと通知が停止します。"
+
+msgid "Relais"
+msgstr "Relais"
+
+msgid "Relais · local automations"
+msgstr "Relais · ローカル自動化"
+
+msgid "Relais is not running on this Mac. Start it once and it comes back at every login:"
+msgstr "この Mac では Relais が動いていません。一度起動すれば、ログインのたびに起動します:"
 
 msgid "Related Posts"
 msgstr "関連記事"

@@ -4706,6 +4706,9 @@ msgstr "Bu sunucuda GitHub bağlantısı yapılandırılmamış"
 msgid "Connecting lets your agents read and act in {name} on your behalf. Review what you are granting before you continue."
 msgstr "Bağlanmak, aracılarınızın {name} içinde sizin adınıza okuma ve işlem yapmasına izin verir. Devam etmeden önce neyi verdiğinizi gözden geçirin."
 
+msgid "Connecting to Relais…"
+msgstr "Relais'e bağlanılıyor…"
+
 msgid "Connecting to the desktop…"
 msgstr "Masaüstüne bağlanılıyor…"
 
@@ -10157,6 +10160,9 @@ msgstr "Yükleniyor…"
 msgid "Local"
 msgstr "Yerel"
 
+msgid "Local automations"
+msgstr "Yerel otomasyonlar"
+
 msgid "Local Device"
 msgstr "Yerel cihaz"
 
@@ -14209,6 +14215,15 @@ msgstr "Bölge"
 
 msgid "Registers lifecycle hooks in this agent's global config so Superset can show status and send notifications. Turning this off removes Superset's entries everywhere — status and notifications stop for this agent, including inside Superset."
 msgstr "Superset'in durum gösterebilmesi ve bildirim gönderebilmesi için bu ajanın genel yapılandırmasına yaşam döngüsü hook'ları kaydeder. Bunu kapatmak Superset'in kayıtlarını her yerden kaldırır — Superset içinde dahil olmak üzere bu ajan için durum ve bildirimler durur."
+
+msgid "Relais"
+msgstr "Relais"
+
+msgid "Relais · local automations"
+msgstr "Relais · yerel otomasyonlar"
+
+msgid "Relais is not running on this Mac. Start it once and it comes back at every login:"
+msgstr "Relais bu Mac'te çalışmıyor. Bir kez başlatın, her oturum açışta geri gelir:"
 
 msgid "Related Posts"
 msgstr "İlgili yazılar"

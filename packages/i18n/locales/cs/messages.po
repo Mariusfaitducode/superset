@@ -4706,6 +4706,9 @@ msgstr "Připojení ke GitHubu není na tomto serveru nastaveno"
 msgid "Connecting lets your agents read and act in {name} on your behalf. Review what you are granting before you continue."
 msgstr "Připojením umožníte svým agentům číst a jednat v {name} vaším jménem. Než budete pokračovat, zkontrolujte, co udělujete."
 
+msgid "Connecting to Relais…"
+msgstr "Připojování k Relais…"
+
 msgid "Connecting to the desktop…"
 msgstr "Připojování k ploše…"
 
@@ -10157,6 +10160,9 @@ msgstr "Načítání…"
 msgid "Local"
 msgstr "Lokální"
 
+msgid "Local automations"
+msgstr "Místní automatizace"
+
 msgid "Local Device"
 msgstr "Lokální zařízení"
 
@@ -14209,6 +14215,15 @@ msgstr "Region"
 
 msgid "Registers lifecycle hooks in this agent's global config so Superset can show status and send notifications. Turning this off removes Superset's entries everywhere — status and notifications stop for this agent, including inside Superset."
 msgstr "Zaregistruje lifecycle hooky do globální konfigurace tohoto agenta, aby Superset mohl zobrazovat stav a posílat oznámení. Vypnutím se záznamy Superset odeberou všude — stav a oznámení pro tohoto agenta přestanou fungovat, i uvnitř Superset."
+
+msgid "Relais"
+msgstr "Relais"
+
+msgid "Relais · local automations"
+msgstr "Relais · místní automatizace"
+
+msgid "Relais is not running on this Mac. Start it once and it comes back at every login:"
+msgstr "Relais na tomto Macu neběží. Spusťte ho jednou a poběží po každém přihlášení:"
 
 msgid "Related Posts"
 msgstr "Související články"

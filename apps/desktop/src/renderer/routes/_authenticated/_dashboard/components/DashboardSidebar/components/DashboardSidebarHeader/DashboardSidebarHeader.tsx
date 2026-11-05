@@ -24,6 +24,7 @@ import {
 	LuPuzzle,
 	LuSearch,
 	LuStickyNote,
+	LuWorkflow,
 } from "react-icons/lu";
 import {
 	VscFolderOpened,
@@ -180,6 +181,7 @@ export function DashboardSidebarHeader({
 		fuzzy: true,
 	});
 	const isAutomationsOpen = !!matchRoute({ to: "/automations", fuzzy: true });
+	const isRelaisOpen = !!matchRoute({ to: "/relais", fuzzy: true });
 	const isPluginsOpen = !!matchRoute({ to: "/plugins", fuzzy: true });
 	const isPagesOpen = !!matchRoute({ to: "/pages", fuzzy: true });
 	const isNotesOpen = !!matchRoute({ to: "/notes", fuzzy: true });
@@ -243,6 +245,10 @@ export function DashboardSidebarHeader({
 		gateFeature(GATED_FEATURES.AUTOMATIONS, () => {
 			navigate({ to: "/automations" });
 		});
+	};
+
+	const handleRelaisClick = () => {
+		navigate({ to: "/relais" });
 	};
 
 	const handleFailedAutomationsClick = () => {
@@ -445,6 +451,30 @@ export function DashboardSidebarHeader({
 							</TooltipContent>
 						</Tooltip>
 					)}
+
+					<Tooltip delayDuration={300}>
+						<TooltipTrigger asChild>
+							<button
+								type="button"
+								onClick={handleRelaisClick}
+								aria-label={t({
+									message: "Relais",
+								})}
+								aria-current={isRelaisOpen ? "page" : undefined}
+								className={cn(
+									"flex size-7 items-center justify-center rounded-md transition-colors",
+									isRelaisOpen
+										? "bg-fill-selected text-muted-foreground"
+										: "text-muted-foreground hover:bg-fill-hover",
+								)}
+							>
+								<LuWorkflow className="size-3.5" strokeWidth={1.5} />
+							</button>
+						</TooltipTrigger>
+						<TooltipContent side="right">
+							<Trans>Relais · local automations</Trans>
+						</TooltipContent>
+					</Tooltip>
 
 					<Tooltip delayDuration={300}>
 						<TooltipTrigger asChild>
@@ -817,6 +847,29 @@ export function DashboardSidebarHeader({
 					</span>
 				</button>
 			)}
+
+			<button
+				type="button"
+				onClick={handleRelaisClick}
+				aria-label={t({
+					message: "Relais",
+				})}
+				aria-current={isRelaisOpen ? "page" : undefined}
+				className={cn(
+					"flex h-7 w-full items-center gap-2 rounded-md px-2 text-[13px] font-medium transition-colors",
+					isRelaisOpen
+						? "bg-fill-selected text-foreground"
+						: "text-muted-foreground hover:bg-fill-hover hover:text-foreground",
+				)}
+			>
+				<LuWorkflow
+					className="size-4 shrink-0 text-muted-foreground"
+					strokeWidth={1.5}
+				/>
+				<span className="flex-1 text-left">
+					<Trans>Relais</Trans>
+				</span>
+			</button>
 
 			<div className="relative">
 				<button
