@@ -522,6 +522,14 @@ msgstr "Běží {0} z {1} kontrol"
 msgid "{0} of {totalCount}"
 msgstr "{0} z {totalCount}"
 
+#. placeholder {0}: todos.open
+msgid "{0} open to-dos"
+msgstr "Otevřené úkoly: {0}"
+
+#. placeholder {0}: todos.open
+msgid "{0} open to-dos, some high priority"
+msgstr "Otevřené úkoly: {0}, některé s vysokou prioritou"
+
 #. placeholder {0}: plugin.interface.displayName
 msgid "{0} options"
 msgstr "Možnosti {0}"
@@ -784,6 +792,9 @@ msgstr "{actor} zrušil(a) propojení pracovního prostoru {workspace}"
 
 msgid "{actual} so far · ~{projected} projected"
 msgstr "zatím {actual} · odhad ~{projected}"
+
+msgid "{agents, plural, one {# agent} other {# agents}}"
+msgstr "{agents, plural, one {# agent} few {# agenti} many {# agenta} other {# agentů}}"
 
 msgid "{agents} sessions resume when you open their workspace."
 msgstr "Relace {agents} se obnoví, když otevřete jejich pracovní prostor."
@@ -1211,6 +1222,9 @@ msgstr "{reason}"
 msgid "{received} of {total}"
 msgstr "{received} z {total}"
 
+msgid "{reports, plural, one {# report} other {# reports}}"
+msgstr "{reports, plural, one {# hlášení} few {# hlášení} many {# hlášení} other {# hlášení}}"
+
 msgid "{repositoryFullName} isn't on {installedAccountLogin}, where this organization's GitHub App is installed."
 msgstr "{repositoryFullName} není v účtu {installedAccountLogin}, kde je nainstalovaná GitHub App této organizace."
 
@@ -1272,6 +1286,9 @@ msgstr "{teardownFailureCount, plural, one {Přesto smazat} few {Přesto smazat 
 
 msgid "{threshold, plural, one {# agent PR merged} other {# agent PRs merged}}"
 msgstr "{threshold, plural, one {sloučen # PR agenta} few {sloučeny # PR agenta} many {sloučeno # PR agenta} other {sloučeno # PR agenta}}"
+
+msgid "{todos, plural, one {# to-do} other {# to-dos}}"
+msgstr "{todos, plural, one {# úkol} few {# úkoly} many {# úkolu} other {# úkolů}}"
 
 msgid "{toolName} interrupted"
 msgstr "{toolName} přerušeno"
@@ -1675,6 +1692,9 @@ msgstr "Pull request má vždy vlastní worktree"
 
 msgid "A pull request goes to the project you moved it to, else to the first project whose rules match: a PR number first, then a label, then a keyword. The rest goes to Other. Separate values with commas."
 msgstr "Pull request patří do projektu, kam jste ji přesunuli, jinak do prvního projektu, jehož pravidla odpovídají: nejdřív číslo PR, pak štítek, pak klíčové slovo. Zbytek patří do Ostatní. Hodnoty oddělujte čárkami."
+
+msgid "A question, a permission or a report waits for you"
+msgstr "Čeká na vás otázka, oprávnění nebo hlášení"
 
 msgid "A rebuilt chat surface for driving agents: richer tool output, smoother steering, faster everything."
 msgstr "Přestavěné chatovací rozhraní pro řízení agentů: bohatší výstup nástrojů, plynulejší usměrňování, všechno rychlejší."
@@ -2245,6 +2265,9 @@ msgstr "AI · Stav"
 
 msgid "AI authentication failed. Please check your AI settings."
 msgstr "Ověření AI selhalo. Zkontrolujte prosím nastavení AI."
+
+msgid "Airy"
+msgstr "Vzdušné"
 
 msgid "Alert"
 msgstr "Upozornění"
@@ -3105,9 +3128,6 @@ msgstr "Název automatizace"
 msgid "Automations"
 msgstr "Automatizace"
 
-msgid "Automations ({myFailedCount} failing)"
-msgstr "Automatizace (neúspěšné: {myFailedCount})"
-
 msgid "Automations & event triggers"
 msgstr "Automatizace a spouštěče událostí"
 
@@ -3116,9 +3136,6 @@ msgstr "Automatizace vyžadují tarif Pro nebo Enterprise. Pokud přejdete na ni
 
 msgid "Automations require the Pro plan."
 msgstr "Automatizace vyžadují tarif Pro."
-
-msgid "Automations, {myFailedCount} failing"
-msgstr "Automatizace, neúspěšné: {myFailedCount}"
 
 msgid "Autonomous"
 msgstr "Autonomní"
@@ -3205,6 +3222,9 @@ msgstr "Podporují nás"
 
 msgid "Background"
 msgstr "Pozadí"
+
+msgid "Background of the open conversation."
+msgstr "Pozadí otevřené konverzace."
 
 msgid "Background processes"
 msgstr "Procesy na pozadí"
@@ -3520,6 +3540,9 @@ msgstr "Vyvíjíme veřejně"
 msgid "Build the future of Superset in the cloud"
 msgstr "Tvořte budoucnost Superset v cloudu"
 
+msgid "Build the settings page"
+msgstr "Vytvořit stránku nastavení"
+
 msgid "Build your own"
 msgstr "Vytvořte vlastní"
 
@@ -3637,6 +3660,9 @@ msgstr "Kalendář"
 
 msgid "Calendar and Gmail triggers in this organization will stop firing until an account is connected again."
 msgstr "Spouštěče Kalendáře a Gmailu v této organizaci se přestanou spouštět, dokud znovu nepřipojíte účet."
+
+msgid "Calendar sync"
+msgstr "Synchronizace kalendáře"
 
 msgid "Camera access is not allowed"
 msgstr "Přístup k fotoaparátu není povolen"
@@ -3812,6 +3838,9 @@ msgstr "Změnit umístění projektu"
 msgid "Change role"
 msgstr "Změnit roli"
 
+msgid "Change shortcuts"
+msgstr "Změnit zkratky"
+
 msgid "Change state"
 msgstr "Změnit stav"
 
@@ -3985,6 +4014,9 @@ msgstr "Kontroly selhaly"
 msgid "Checks passed"
 msgstr "Kontroly prošly"
 
+msgid "Checks running"
+msgstr "Kontroly běží"
+
 msgid "Checks Skipped"
 msgstr "Kontroly přeskočeny"
 
@@ -4027,11 +4059,11 @@ msgstr "Zvolte, jak se soubory otevírají, když není žádný panel náhledu"
 msgid "Choose how the Changes view opens from the top bar"
 msgstr "Zvolte, jak se zobrazení změn otevírá z horní lišty"
 
+msgid "Choose how the sidebar looks and what it shows under each workspace. Right-click a project or a group for its own options."
+msgstr "Vyberte, jak postranní panel vypadá a co ukazuje pod každým pracovním prostorem. Kliknutím pravým tlačítkem na projekt nebo skupinu získáte jejich vlastní možnosti."
+
 msgid "Choose how to open file paths when Cmd+clicking in the terminal"
 msgstr "Zvolte, jak se otevírají cesty k souborům při Cmd+kliknutí v terminálu"
-
-msgid "Choose what the sidebar shows under each workspace."
-msgstr "Vyberte, co postranní panel zobrazuje pod každým pracovním prostorem."
 
 msgid "Choose what to clear from the in-app browser."
 msgstr "Vyberte, co se má z vestavěného prohlížeče vymazat."
@@ -4515,6 +4547,13 @@ msgstr "Barva"
 msgid "Color Filter"
 msgstr "Barevný filtr"
 
+#. placeholder {0}: stateLabel[key]
+msgid "Color for {0}"
+msgstr "Barva pro {0}"
+
+msgid "Colorblind-safe"
+msgstr "Pro barvoslepé"
+
 msgid "Columns"
 msgstr "Sloupce"
 
@@ -4638,6 +4677,15 @@ msgstr "Komunikace"
 
 msgid "Community"
 msgstr "Komunita"
+
+msgid "Compact"
+msgstr "Kompaktní"
+
+msgid "Compact conversations"
+msgstr "Kompaktní konverzace"
+
+msgid "Compact rows"
+msgstr "Kompaktní řádky"
 
 msgid "Company"
 msgstr "Firma"
@@ -4960,6 +5008,9 @@ msgstr "Kontaktujte nás"
 msgid "Contains this text..."
 msgstr "Obsahuje tento text..."
 
+msgid "Content"
+msgstr "Obsah"
+
 msgid "Context"
 msgstr "Kontext"
 
@@ -5015,6 +5066,9 @@ msgstr "Pokračování v relaci agenta vyžaduje připnutý pracovní prostor"
 
 msgid "continuing the last session"
 msgstr "pokračováním v poslední relaci"
+
+msgid "Contrast"
+msgstr "Kontrast"
 
 msgid "Contributions"
 msgstr "Příspěvky"
@@ -6483,6 +6537,9 @@ msgstr "Degradovat sami sebe?"
 msgid "Denied"
 msgstr "Odmítnuto"
 
+msgid "Density"
+msgstr "Hustota"
+
 msgid "Deny"
 msgstr "Odmítnout"
 
@@ -6845,6 +6902,9 @@ msgstr "Hotovo — orámovaný styl čipu z lišty přednastavení je teď vých
 
 msgid "Done (isShimmering=false)"
 msgstr "Hotovo (isShimmering=false)"
+
+msgid "Done, not seen yet"
+msgstr "Hotovo, ještě nezobrazeno"
 
 msgid "Downgrade to Free"
 msgstr "Přejít na Free"
@@ -7469,6 +7529,9 @@ msgstr "Prozkoumat"
 msgid "Explore Pages"
 msgstr "Prozkoumat Stránky"
 
+msgid "Explore the codebase"
+msgstr "Prozkoumat kód"
+
 msgid "Explored"
 msgstr "Prozkoumáno"
 
@@ -7530,6 +7593,9 @@ msgstr "Selhalo"
 msgctxt "agent status"
 msgid "Failed"
 msgstr "Selhalo"
+
+msgid "Failed or blocked"
+msgstr "Selhalo nebo blokováno"
 
 msgid "Failed runs"
 msgstr "Neúspěšné běhy"
@@ -8109,6 +8175,9 @@ msgstr "soubory k vyloučení (glob)"
 msgid "files to include (glob)"
 msgstr "soubory k zahrnutí (glob)"
 
+msgid "Fill"
+msgstr "Výplň"
+
 msgid "Fill out the contact form on this page and our team will reach out to learn about your needs and walk you through next steps."
 msgstr "Vyplňte kontaktní formulář na této stránce a náš tým se vám ozve, aby poznal vaše potřeby a provedl vás dalšími kroky."
 
@@ -8235,6 +8304,9 @@ msgstr "První repozitář podle názvu"
 msgid "First scan of your transcripts, numbers are partial…"
 msgstr "První prohledávání přepisů, čísla jsou neúplná…"
 
+msgid "Five states, the same for a workspace, a conversation and the switchers. A workspace shows the most urgent of its conversations."
+msgstr "Pět stavů, stejných pro pracovní prostor, konverzaci i přepínače. Pracovní prostor ukazuje nejnaléhavější ze svých konverzací."
+
 msgid "Fix"
 msgstr "Opravit"
 
@@ -8252,6 +8324,9 @@ msgstr "Opravovat selhání CI"
 
 msgid "Fix findings"
 msgstr "Opravit nálezy"
+
+msgid "Fix the flaky test"
+msgstr "Opravit nestabilní test"
 
 msgid "fix-auth-redirect"
 msgstr "fix-auth-redirect"
@@ -8309,6 +8384,9 @@ msgstr "Zaměřit vyhledávací pole v zobrazení úkolů"
 
 msgid "Folder"
 msgstr "Složka"
+
+msgid "Folder color on conversations"
+msgstr "Barva složky na konverzacích"
 
 msgid "Folder is missing"
 msgstr "Složka chybí"
@@ -8795,6 +8873,9 @@ msgstr "Polovina sloučených změn je kód agenta bez úprav"
 msgid "Hand the browser to your agent."
 msgstr "Svěřte prohlížeč svému agentovi."
 
+msgid "Hand-picked colors stay when you change the palette."
+msgstr "Ručně vybrané barvy zůstanou i po změně palety."
+
 msgid "Handing to agent…"
 msgstr "Předává se agentovi…"
 
@@ -8852,6 +8933,9 @@ msgstr "Nadpis 3"
 msgid "Heart"
 msgstr "Srdce"
 
+msgid "Height of the rows and size of the conversation titles."
+msgstr "Výška řádků a velikost názvů konverzací."
+
 msgid "Help"
 msgstr "Nápověda"
 
@@ -8880,6 +8964,9 @@ msgstr "Skrýt"
 msgid "Hide checks"
 msgstr "Skrýt kontroly"
 
+msgid "Hide conversations"
+msgstr "Skrýt konverzace"
+
 msgid "Hide details"
 msgstr "Skrýt podrobnosti"
 
@@ -8906,6 +8993,9 @@ msgstr "Skrýt z postranního panelu"
 
 msgid "Hide from Sidebar"
 msgstr "Skrýt z postranního panelu"
+
+msgid "Hide idle conversations"
+msgstr "Skrýt nečinné konverzace"
 
 msgid "Hide log"
 msgstr "Skrýt log"
@@ -8934,8 +9024,14 @@ msgstr "Skrýt komentáře z revize"
 msgid "Hide sessions"
 msgstr "Skrýt relace"
 
+msgid "Hide subagents"
+msgstr "Skrýt podagenty"
+
 msgid "Hide text"
 msgstr "Skrýt text"
+
+msgid "Hide to-dos"
+msgstr "Skrýt úkoly"
 
 msgid "Hide unchanged regions"
 msgstr "Skrýt nezměněné části"
@@ -8948,6 +9044,9 @@ msgstr "Vysoká závažnost"
 
 msgid "High usage"
 msgstr "Vysoké využití"
+
+msgid "Highlight intensity"
+msgstr "Intenzita zvýraznění"
 
 msgid "history"
 msgstr "historie"
@@ -9084,11 +9183,17 @@ msgstr "Kolik skrytých terminálů zůstane plně načtených ({MIN_TERMINAL_PA
 msgid "How much agent work engineers are actually running — tokens, cost, models and sessions, published by people who opted in."
 msgstr "Kolik agentní práce inženýři skutečně spouštějí — tokeny, náklady, modely a sessions, publikováno lidmi, kteří se do toho přihlásili."
 
+msgid "How much secondary text and separators stand out."
+msgstr "Jak moc vynikají vedlejší texty a oddělovače."
+
 msgid "How should the agent's actions be approved?"
 msgstr "Jak schvalovat akce agenta?"
 
 msgid "How the command opens."
 msgstr "Jak se příkaz otevře."
+
+msgid "How the conversation shown in a pane stands out."
+msgstr "Jak vyniká konverzace zobrazená v panelu."
 
 msgid "How the prompt is delivered to the process."
 msgstr "Jak se prompt doručí procesu."
@@ -9851,6 +9956,9 @@ msgstr "Udržovat dokumentaci aktuální"
 
 msgid "Keep editing"
 msgstr "Pokračovat v úpravách"
+
+msgid "Keep the sidebar in Settings"
+msgstr "Ponechat postranní panel v Nastavení"
 
 msgid "Keep typing an email to invite"
 msgstr "Pokračujte v psaní e-mailu pro pozvání"
@@ -10824,6 +10932,9 @@ msgstr "Podíl paměti"
 msgid "Mention."
 msgstr "Zmiňte."
 
+msgid "Menu"
+msgstr "Nabídka"
+
 msgid "Menubar"
 msgstr "Panel nabídek"
 
@@ -11030,6 +11141,9 @@ msgstr "Sledujte, řiďte a odblokujte své agenty z iPhonu nebo iPadu."
 
 msgid "Monitoring"
 msgstr "Monitoring"
+
+msgid "Monochrome"
+msgstr "Monochromatická"
 
 msgid "monorepo"
 msgstr "monorepo"
@@ -11287,6 +11401,9 @@ msgstr "Potřebuje vás: {nowCount} teď, celkem {count}"
 
 msgid "Needs your approval"
 msgstr "Čeká na vaše schválení"
+
+msgid "Neon"
+msgstr "Neon"
 
 msgid "Nerd Fonts"
 msgstr "Nerd Fonts"
@@ -12338,6 +12455,9 @@ msgstr "Na {pathname} nic není."
 msgid "Nothing needs a retry"
 msgstr "Není co opakovat"
 
+msgid "Nothing new, or already seen"
+msgstr "Nic nového, nebo už zobrazeno"
+
 msgid "Nothing published in the last 30 days yet. Your rank appears once usage from this machine syncs, publishing as <0>{handle}</0>."
 msgstr "Za posledních 30 dní zatím nebylo nic publikováno. Vaše pozice se objeví, jakmile se synchronizuje využití z tohoto počítače; publikujete jako <0>{handle}</0>."
 
@@ -12520,6 +12640,9 @@ msgstr "Jeden člověk řídí nejvýš jednoho agenta naráz."
 msgid "One line about how you work"
 msgstr "Jedna řádka o tom, jak pracujete"
 
+msgid "One line per workspace, without the details line under its name."
+msgstr "Jeden řádek na pracovní prostor, bez řádku s podrobnostmi pod názvem."
+
 msgid "One of the first hundred on the board"
 msgstr "Mezi první stovkou v žebříčku"
 
@@ -12679,6 +12802,9 @@ msgstr "Otevřít {parentLabel}"
 msgid "Open {path} in file pane"
 msgstr "Otevřít {path} v panelu souboru"
 
+msgid "Open a conversation's to-dos in the list, under it, rather than in a popover beside it."
+msgstr "Otevírat úkoly konverzace v seznamu pod ní, nikoli ve vyskakovacím okně vedle ní."
+
 msgid "Open a draft PR"
 msgstr "Otevřít koncept PR"
 
@@ -12709,6 +12835,9 @@ msgstr "Otevřít App Store"
 msgid "Open as comment pane"
 msgstr "Otevřít jako panel komentářů"
 
+msgid "Open Automations"
+msgstr "Otevřít automatizace"
+
 msgid "Open billing"
 msgstr "Otevřít fakturaci"
 
@@ -12723,6 +12852,9 @@ msgstr "Otevřít změny"
 
 msgid "Open Changes"
 msgstr "Otevřít změny"
+
+msgid "Open Cloud Workspaces"
+msgstr "Otevřít cloudové pracovní prostory"
 
 msgid "Open Command Palette"
 msgstr "Otevřít paletu příkazů"
@@ -12938,14 +13070,23 @@ msgstr "Otevřít nabídku"
 msgid "Open navigation"
 msgstr "Otevřít navigaci"
 
+msgid "Open Notes"
+msgstr "Otevřít poznámky"
+
 msgid "Open on GitHub"
 msgstr "Otevřít na GitHubu"
 
 msgid "Open Page in Default Browser"
 msgstr "Otevřít stránku ve výchozím prohlížeči"
 
+msgid "Open Pages"
+msgstr "Otevřít stránky"
+
 msgid "Open pages and reply to comments from the Superset app on iPhone and iPad."
 msgstr "Otevírejte stránky a odpovídejte na komentáře v aplikaci Superset na iPhonu a iPadu."
+
+msgid "Open Plugins"
+msgstr "Otevřít pluginy"
 
 msgid "Open Plugins in the Superset app and pick one. The install is saved to your account."
 msgstr "Otevřete Pluginy v aplikaci Superset a vyberte jeden. Instalace se uloží do vašeho účtu."
@@ -12992,6 +13133,9 @@ msgstr "Otevřít možnosti pull requestu"
 msgid "Open pull requests"
 msgstr "Otevřené pull requesty"
 
+msgid "Open Pull Requests"
+msgstr "Otevřít pull requesty"
+
 msgid "Open recent"
 msgstr "Otevřít nedávné"
 
@@ -13027,6 +13171,9 @@ msgstr "Otevřít Nastavení systému"
 
 msgid "Open task {title}"
 msgstr "Otevřít úkol {title}"
+
+msgid "Open Tasks"
+msgstr "Otevřít úkoly"
 
 msgid "Open terminal"
 msgstr "Otevřít terminál"
@@ -13064,8 +13211,14 @@ msgstr "Otevřít terminálový skript 9"
 msgid "Open terminals and prompt agents"
 msgstr "Otevírat terminály a zadávat prompty agentům"
 
+msgid "Open the automations"
+msgstr "Otevře automatizace"
+
 msgid "Open the Changes pane in a new tab, or focus the existing one"
 msgstr "Otevře panel Změny na nové kartě, nebo zaměří existující"
+
+msgid "Open the cloud workspaces"
+msgstr "Otevře cloudové pracovní prostory"
 
 #. placeholder {0}: task.title
 msgid "Open the conversation of {0}"
@@ -13074,8 +13227,29 @@ msgstr "Otevřít konverzaci úlohy {0}"
 msgid "Open the global command palette"
 msgstr "Otevřít globální paletu příkazů"
 
+msgid "Open the list of projects"
+msgstr "Otevře seznam projektů"
+
+msgid "Open the list of workspaces"
+msgstr "Otevře seznam pracovních prostorů"
+
 msgid "Open the new workspace modal"
 msgstr "Otevřít okno nového pracovního prostoru"
+
+msgid "Open the next conversation that needs you"
+msgstr "Otevřít další konverzaci, která vás potřebuje"
+
+msgid "Open the notes"
+msgstr "Otevře poznámky"
+
+msgid "Open the pages"
+msgstr "Otevře stránky"
+
+msgid "Open the plugins"
+msgstr "Otevře pluginy"
+
+msgid "Open the pull requests"
+msgstr "Otevře pull requesty"
 
 msgid "Open the resource usage view in the command palette"
 msgstr "Otevřít v paletě příkazů přehled využití prostředků"
@@ -13089,6 +13263,12 @@ msgstr "Otevřít pracovní prostor běhu"
 msgid "open the task in a workspace"
 msgstr "otevřít úkol v pracovním prostoru"
 
+msgid "Open the tasks"
+msgstr "Otevře úkoly"
+
+msgid "Open the usage page"
+msgstr "Otevře stránku využití"
+
 msgid "Open the workspace"
 msgstr "Otevřít pracovní prostor"
 
@@ -13098,12 +13278,21 @@ msgstr "Otevřít pracovní prostor v aplikaci vybrané v nabídce „Otevřít 
 msgid "Open this run's workspace"
 msgstr "Otevřít pracovní prostor tohoto běhu"
 
+msgid "Open to-dos"
+msgstr "Otevřené úkoly"
+
+msgid "Open Usage"
+msgstr "Otevřít využití"
+
 msgid "Open workspace"
 msgstr "Otevřít pracovní prostor"
 
 #. placeholder {0}: getV2WorkspaceDisplayName(workspace)
 msgid "Open workspace: {0}"
 msgstr "Otevřít pracovní prostor: {0}"
+
+msgid "Open Workspaces"
+msgstr "Otevřít pracovní prostory"
 
 msgid "Open your app."
 msgstr "Otevřete aplikaci."
@@ -13371,6 +13560,9 @@ msgstr "Název stránky"
 msgid "Pages"
 msgstr "Stránky"
 
+msgid "Pages as an icon bar"
+msgstr "Stránky jako lišta ikon"
+
 msgid "Pages could not be loaded"
 msgstr "Stránky se nepodařilo načíst"
 
@@ -13596,6 +13788,9 @@ msgstr "Telefonní číslo"
 msgid "Pick {name} from the theme grid to apply it."
 msgstr "Vyberte {name} z mřížky motivů a použijte ho."
 
+msgid "Pick a color"
+msgstr "Vyberte barvu"
+
 msgid "Pick a different element"
 msgstr "Vybrat jiný prvek"
 
@@ -13646,6 +13841,9 @@ msgstr "Vyberte, jak se {label} přihlašuje uvnitř sandboxu. Přihlašovací �
 
 msgid "Pick the best agent."
 msgstr "Vyberte nejlepšího agenta."
+
+msgid "Pick the entries of the menu at the top of the sidebar. Their shortcuts work even when an entry is hidden."
+msgstr "Vyberte položky nabídky v horní části postranního panelu. Jejich zkratky fungují, i když je položka skrytá."
 
 msgid "Pick the new project folder on {hostName}."
 msgstr "Vyberte novou složku projektu na {hostName}."
@@ -14249,6 +14447,9 @@ msgstr "Pull request #{0}, {1}"
 msgid "Pull request actions"
 msgstr "Akce pull requestu"
 
+msgid "Pull request and checks"
+msgstr "Pull request a kontroly"
+
 msgid "Pull request detail tabs"
 msgstr "Karty detailu pull requestu"
 
@@ -14692,6 +14893,9 @@ msgstr "Verze"
 
 msgid "Release control"
 msgstr "Uvolnit ovládání"
+
+msgid "Release notes"
+msgstr "Poznámky k vydání"
 
 msgid "Release notes draft"
 msgstr "Návrh poznámek k vydání"
@@ -15411,6 +15615,9 @@ msgstr "Vyžadována revize"
 
 msgid "Review syntax-highlighted diffs"
 msgstr "Kontrolujte diffy se zvýrazněním syntaxe"
+
+msgid "Review the pull request"
+msgstr "Zkontrolovat pull request"
 
 msgid "Review the result."
 msgstr "Zrevidujte výsledek."
@@ -16727,11 +16934,17 @@ msgstr "Zobrazit text"
 msgid "Show the messages that wait for the current turn to end."
 msgstr "Zobrazit zprávy, které čekají na konec aktuálního kola."
 
+msgid "Show the pages below Search as one row of icons, with their counts, instead of a row each."
+msgstr "Zobrazit stránky pod Hledáním jako jednu řadu ikon s počty místo samostatného řádku pro každou."
+
 msgid "Show the to-do list of each conversation, shared with its agent."
 msgstr "Zobrazit seznam úkolů každé konverzace, sdílený s jejím agentem."
 
 msgid "Show the triggering payload"
 msgstr "Zobrazit spouštěcí data"
+
+msgid "Show the workspace sidebar on the left while Settings is open."
+msgstr "Při otevřeném Nastavení zobrazovat vlevo postranní panel pracovních prostorů."
 
 msgid "Show translation"
 msgstr "Zobrazit překlad"
@@ -16761,6 +16974,9 @@ msgstr "Zobrazuje se veřejně vedle vašeho jména."
 msgid "Shut down {0}"
 msgstr "Vypnout {0}"
 
+msgid "Side bar"
+msgstr "Boční pruh"
+
 msgid "Side by Side"
 msgstr "Vedle sebe"
 
@@ -16775,6 +16991,9 @@ msgstr "Karta postranního panelu"
 
 msgid "Sidebar file rows"
 msgstr "Řádky souborů v postranním panelu"
+
+msgid "Sidebar options"
+msgstr "Možnosti postranního panelu"
 
 msgid "Sidebar order"
 msgstr "Pořadí v panelu"
@@ -17003,6 +17222,9 @@ msgstr "V souladu se SOC 2 Type II. Vyžádejte si naši zprávu."
 
 msgid "SOC 2 Type II report"
 msgstr "Zpráva SOC 2 Type II"
+
+msgid "Soft"
+msgstr "Jemný"
 
 msgid "Some files are not an accepted type and were not added."
 msgstr "Některé soubory nemají povolený typ a nebyly přidány."
@@ -17395,6 +17617,9 @@ msgstr "Spustí v tomto pracovním prostoru novou relaci"
 msgid "State"
 msgstr "Stav"
 
+msgid "State colors"
+msgstr "Barvy stavů"
+
 msgid "Stats"
 msgstr "Statistiky"
 
@@ -17503,6 +17728,12 @@ msgstr "Přeškrtnuté"
 
 msgid "Strip redundant overrides at call sites"
 msgstr "Odstranit nadbytečné přepisy v místech volání"
+
+msgid "Stripe each conversation with its group's color, or its project's."
+msgstr "Označit každou konverzaci pruhem v barvě její skupiny nebo projektu."
+
+msgid "Stripe width"
+msgstr "Šířka pruhu"
 
 msgid "Strong"
 msgstr "Silné"
@@ -17900,6 +18131,9 @@ msgstr "Přepnout na kartu 8"
 
 msgid "Switch to Tab 9"
 msgstr "Přepnout na kartu 9"
+
+msgid "Switch to this workspace"
+msgstr "Přepnout na tento pracovní prostor"
 
 msgid "Switch to Workspace 1"
 msgstr "Přepnout na pracovní prostor 1"
@@ -18309,6 +18543,9 @@ msgstr "Agent zkopíruje konverzaci; větev se otevře zde"
 msgid "The agent follows the plugin's skills and calls its tools. The issue shows up in Linear."
 msgstr "Agent se řídí skills pluginu a volá jeho nástroje. Issue se objeví v Linear."
 
+msgid "The agent is running a turn"
+msgstr "Agent právě provádí tah"
+
 msgid "The agent owns a task from ticket to diff. The human reviews the result, not the keystrokes. Attention shifts from writing code to specifying work and judging it. One engineer runs several agents at once in isolated workspaces."
 msgstr "Agent vlastní úkol od ticketu po diff. Člověk reviduje výsledek, ne úhozy. Pozornost se přesouvá od psaní kódu k zadávání práce a jejímu posuzování. Jeden inženýr běží několik agentů naráz v izolovaných pracovních prostorech."
 
@@ -18374,6 +18611,9 @@ msgstr "Superset chystáme i pro Windows a Linux. Nechte nám e-mail a dáme vá
 
 msgid "The desktop app runs on macOS, with an experimental Linux AppImage; Windows is not yet available. Beyond the desktop app there's a CLI, a TypeScript SDK, and an MCP server, so you can drive Superset from scripts, terminals, and other agents. An app for iPhone and iPad on the App Store lets you check on agents and review their diffs away from your desk."
 msgstr "Desktopová aplikace běží na macOS, k tomu je experimentální AppImage pro Linux; Windows zatím nejsou dostupné. Kromě desktopové aplikace je tu CLI, TypeScript SDK a MCP server, takže Superset můžete řídit ze skriptů, terminálů i jiných agentů. Aplikace pro iPhone a iPad z App Storu vám umožní kontrolovat agenty a procházet jejich diffy, i když nejste u stolu."
+
+msgid "The details line shows:"
+msgstr "Řádek s podrobnostmi zobrazuje:"
 
 msgid "The device that hosts this project is unavailable."
 msgstr "Zařízení, které hostuje tento projekt, není dostupné."
@@ -18619,8 +18859,14 @@ msgstr "Pozvánka do týmu buď vypršela, nebo neexistuje. Vyžádejte si od vl
 msgid "The title shows everywhere this page is listed and in its link preview."
 msgstr "Název se zobrazuje všude, kde je tato stránka uvedena, a v náhledu odkazu."
 
+msgid "The turn ended and you have not opened it"
+msgstr "Tah skončil a ještě jste ho neotevřeli"
+
 msgid "The turn failed"
 msgstr "Tah selhal"
+
+msgid "The turn stopped on an error, or the sandbox is down"
+msgstr "Tah skončil chybou nebo sandbox neběží"
 
 msgid "The workspace is not ready yet. Try again."
 msgstr "Pracovní prostor ještě není připravený. Zkuste to znovu."
@@ -19076,6 +19322,9 @@ msgstr "Tarif"
 msgid "Time"
 msgstr "Čas"
 
+msgid "Time waited"
+msgstr "Doba čekání"
+
 msgid "Times use your time zone."
 msgstr "Časy používají vaše časové pásmo."
 
@@ -19108,6 +19357,9 @@ msgstr "Podrobnosti úkolu"
 
 msgid "To-dos"
 msgstr "Úkoly"
+
+msgid "To-dos under the conversation"
+msgstr "Úkoly pod konverzací"
 
 msgid "Toast (Sonner)"
 msgstr "Toast (Sonner)"
@@ -19874,6 +20126,9 @@ msgstr "Používejte Superset na telefonu s Pro."
 msgid "Use the desktop app to start running parallel coding agents."
 msgstr "Pro spouštění paralelních kódovacích agentů použijte desktopovou aplikaci."
 
+msgid "Use the palette's color"
+msgstr "Použít barvu palety"
+
 msgid "Use the Superset tray menu > Host Service > Restart, then retry."
 msgstr "Použijte nabídku Superset na liště > Host Service > Restart a zkuste to znovu."
 
@@ -20155,6 +20410,9 @@ msgstr "Čeká na ostatní"
 
 msgid "Waiting on reviewers or CI, longest wait first"
 msgstr "Čeká na recenzenty nebo CI, nejdelší čekání první"
+
+msgid "Waiting on you"
+msgstr "Čeká na vás"
 
 msgid "Waiting since {waitingSince}"
 msgstr "Čeká od {waitingSince}"
@@ -20462,6 +20720,9 @@ msgstr "Šířka"
 msgid "Width · parallel sessions"
 msgstr "Šířka · souběžné relace"
 
+msgid "Width of the colored stripes: groups, side bar and folder colors."
+msgstr "Šířka barevných pruhů: skupiny, boční pruh a barvy složek."
+
 msgid "Window"
 msgstr "Okno"
 
@@ -20625,6 +20886,9 @@ msgstr "Pracovní prostor obnoven"
 
 msgid "workspace root"
 msgstr "kořen pracovního prostoru"
+
+msgid "Workspace rows"
+msgstr "Řádky pracovních prostorů"
 
 msgid "Workspace Run"
 msgstr "Spuštění pracovního prostoru"

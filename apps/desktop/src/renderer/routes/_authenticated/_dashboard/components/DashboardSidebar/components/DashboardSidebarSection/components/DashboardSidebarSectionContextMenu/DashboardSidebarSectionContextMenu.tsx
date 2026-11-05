@@ -13,6 +13,7 @@ interface DashboardSidebarSectionContextMenuProps
 
 export function DashboardSidebarSectionContextMenu({
 	color,
+	groupId,
 	onRename,
 	onSetColor,
 	onDelete,
@@ -29,6 +30,7 @@ export function DashboardSidebarSectionContextMenu({
 			>
 				<SectionActionsMenuItems
 					color={color}
+					groupId={groupId}
 					kind="context"
 					onRename={onRename}
 					onSetColor={onSetColor}

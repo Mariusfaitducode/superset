@@ -50,6 +50,16 @@ export function hostConversationTodosQuery(hostUrl: string | null) {
 	};
 }
 
+/** Shared by every reader of a host's to-dos, so they make one request. */
+export function hostConversationTodosQueryOptions(hostUrl: string | null) {
+	return {
+		...hostConversationTodosQuery(hostUrl),
+		placeholderData: (previous: ConversationTodo[] | null | undefined) =>
+			previous,
+	};
+}
+
+/** False once a host turned out to predate to-dos. */
 export function hostKeepsTodos(hostUrl: string | null): boolean {
 	return hostUrl !== null && !hostsWithoutTodos.has(hostUrl);
 }

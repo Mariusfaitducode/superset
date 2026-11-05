@@ -522,6 +522,14 @@ msgstr "{0} dari {1} check berjalan"
 msgid "{0} of {totalCount}"
 msgstr "{0} dari {totalCount}"
 
+#. placeholder {0}: todos.open
+msgid "{0} open to-dos"
+msgstr "{0} tugas terbuka"
+
+#. placeholder {0}: todos.open
+msgid "{0} open to-dos, some high priority"
+msgstr "{0} tugas terbuka, beberapa prioritas tinggi"
+
 #. placeholder {0}: plugin.interface.displayName
 msgid "{0} options"
 msgstr "Opsi {0}"
@@ -784,6 +792,9 @@ msgstr "{actor} melepas tautan workspace {workspace}"
 
 msgid "{actual} so far · ~{projected} projected"
 msgstr "{actual} sejauh ini · ~{projected} diperkirakan"
+
+msgid "{agents, plural, one {# agent} other {# agents}}"
+msgstr "{agents, plural, other {# agen}}"
 
 msgid "{agents} sessions resume when you open their workspace."
 msgstr "Sesi {agents} dilanjutkan saat Anda membuka workspace-nya."
@@ -1211,6 +1222,9 @@ msgstr "{reason}"
 msgid "{received} of {total}"
 msgstr "{received} dari {total}"
 
+msgid "{reports, plural, one {# report} other {# reports}}"
+msgstr "{reports, plural, other {# laporan}}"
+
 msgid "{repositoryFullName} isn't on {installedAccountLogin}, where this organization's GitHub App is installed."
 msgstr "{repositoryFullName} tidak ada di {installedAccountLogin}, tempat GitHub App organisasi ini dipasang."
 
@@ -1272,6 +1286,9 @@ msgstr "{teardownFailureCount, plural, one {Tetap hapus} other {Tetap hapus #}}"
 
 msgid "{threshold, plural, one {# agent PR merged} other {# agent PRs merged}}"
 msgstr "{threshold, plural, other {# PR agen digabungkan}}"
+
+msgid "{todos, plural, one {# to-do} other {# to-dos}}"
+msgstr "{todos, plural, other {# tugas}}"
 
 msgid "{toolName} interrupted"
 msgstr "{toolName} dihentikan"
@@ -1675,6 +1692,9 @@ msgstr "Pull request selalu mendapat worktree sendiri"
 
 msgid "A pull request goes to the project you moved it to, else to the first project whose rules match: a PR number first, then a label, then a keyword. The rest goes to Other. Separate values with commas."
 msgstr "Pull request masuk ke proyek tempat Anda memindahkannya, jika tidak ke proyek pertama yang aturannya cocok: nomor PR dulu, lalu label, lalu kata kunci. Sisanya masuk ke Lainnya. Pisahkan nilai dengan koma."
+
+msgid "A question, a permission or a report waits for you"
+msgstr "Ada pertanyaan, izin, atau laporan yang menunggu Anda"
 
 msgid "A rebuilt chat surface for driving agents: richer tool output, smoother steering, faster everything."
 msgstr "Permukaan chat yang dibangun ulang untuk mengendalikan agen: output alat lebih kaya, pengarahan lebih halus, semuanya lebih cepat."
@@ -2245,6 +2265,9 @@ msgstr "AI · Status"
 
 msgid "AI authentication failed. Please check your AI settings."
 msgstr "Autentikasi AI gagal. Silakan periksa pengaturan AI Anda."
+
+msgid "Airy"
+msgstr "Lapang"
 
 msgid "Alert"
 msgstr "Alert"
@@ -3105,9 +3128,6 @@ msgstr "Judul otomatisasi"
 msgid "Automations"
 msgstr "Otomatisasi"
 
-msgid "Automations ({myFailedCount} failing)"
-msgstr "Otomatisasi ({myFailedCount} gagal)"
-
 msgid "Automations & event triggers"
 msgstr "Otomatisasi & pemicu event"
 
@@ -3116,9 +3136,6 @@ msgstr "Otomatisasi memerlukan paket Pro atau Enterprise. Jika Anda menurunkan p
 
 msgid "Automations require the Pro plan."
 msgstr "Otomatisasi memerlukan paket Pro."
-
-msgid "Automations, {myFailedCount} failing"
-msgstr "Otomatisasi, {myFailedCount} gagal"
 
 msgid "Autonomous"
 msgstr "Otonom"
@@ -3205,6 +3222,9 @@ msgstr "Didukung oleh"
 
 msgid "Background"
 msgstr "Latar belakang"
+
+msgid "Background of the open conversation."
+msgstr "Latar percakapan yang terbuka."
 
 msgid "Background processes"
 msgstr "Proses latar belakang"
@@ -3520,6 +3540,9 @@ msgstr "Membangun secara terbuka"
 msgid "Build the future of Superset in the cloud"
 msgstr "Bangun masa depan Superset di komputasi awan"
 
+msgid "Build the settings page"
+msgstr "Buat halaman pengaturan"
+
 msgid "Build your own"
 msgstr "Buat milik Anda sendiri"
 
@@ -3637,6 +3660,9 @@ msgstr "Kalender"
 
 msgid "Calendar and Gmail triggers in this organization will stop firing until an account is connected again."
 msgstr "Pemicu Calendar dan Gmail di organisasi ini akan berhenti berjalan sampai ada akun yang terhubung lagi."
+
+msgid "Calendar sync"
+msgstr "Sinkronisasi kalender"
 
 msgid "Camera access is not allowed"
 msgstr "Akses kamera tidak diizinkan"
@@ -3812,6 +3838,9 @@ msgstr "Ubah lokasi proyek"
 msgid "Change role"
 msgstr "Ubah peran"
 
+msgid "Change shortcuts"
+msgstr "Ubah pintasan"
+
 msgid "Change state"
 msgstr "Ubah status"
 
@@ -3985,6 +4014,9 @@ msgstr "Check gagal"
 msgid "Checks passed"
 msgstr "Check lulus"
 
+msgid "Checks running"
+msgstr "Pemeriksaan sedang berjalan"
+
 msgid "Checks Skipped"
 msgstr "Check Dilewati"
 
@@ -4027,11 +4059,11 @@ msgstr "Pilih cara file dibuka saat tidak ada panel pratinjau"
 msgid "Choose how the Changes view opens from the top bar"
 msgstr "Pilih cara membuka tampilan perubahan dari bilah atas"
 
+msgid "Choose how the sidebar looks and what it shows under each workspace. Right-click a project or a group for its own options."
+msgstr "Pilih tampilan bilah samping dan apa yang ditampilkan di bawah setiap workspace. Klik kanan proyek atau grup untuk opsinya sendiri."
+
 msgid "Choose how to open file paths when Cmd+clicking in the terminal"
 msgstr "Pilih cara membuka path file saat Cmd+klik di terminal"
-
-msgid "Choose what the sidebar shows under each workspace."
-msgstr "Pilih apa yang ditampilkan bilah sisi di bawah setiap workspace."
 
 msgid "Choose what to clear from the in-app browser."
 msgstr "Pilih apa yang ingin dibersihkan dari browser dalam aplikasi."
@@ -4515,6 +4547,13 @@ msgstr "Warna"
 msgid "Color Filter"
 msgstr "Filter Warna"
 
+#. placeholder {0}: stateLabel[key]
+msgid "Color for {0}"
+msgstr "Warna untuk {0}"
+
+msgid "Colorblind-safe"
+msgstr "Ramah buta warna"
+
 msgid "Columns"
 msgstr "Kolom"
 
@@ -4638,6 +4677,15 @@ msgstr "Komunikasi"
 
 msgid "Community"
 msgstr "Komunitas"
+
+msgid "Compact"
+msgstr "Ringkas"
+
+msgid "Compact conversations"
+msgstr "Percakapan ringkas"
+
+msgid "Compact rows"
+msgstr "Baris ringkas"
 
 msgid "Company"
 msgstr "Perusahaan"
@@ -4960,6 +5008,9 @@ msgstr "Hubungi Kami"
 msgid "Contains this text..."
 msgstr "Mengandung teks ini..."
 
+msgid "Content"
+msgstr "Konten"
+
 msgid "Context"
 msgstr "Konteks"
 
@@ -5015,6 +5066,9 @@ msgstr "Melanjutkan sesi agen memerlukan ruang kerja yang disematkan"
 
 msgid "continuing the last session"
 msgstr "melanjutkan sesi terakhir"
+
+msgid "Contrast"
+msgstr "Kontras"
 
 msgid "Contributions"
 msgstr "Kontribusi"
@@ -6483,6 +6537,9 @@ msgstr "Turunkan peran sendiri?"
 msgid "Denied"
 msgstr "Ditolak"
 
+msgid "Density"
+msgstr "Kepadatan"
+
 msgid "Deny"
 msgstr "Tolak"
 
@@ -6845,6 +6902,9 @@ msgstr "Selesai — gaya chip bergaris yang dipakai presets bar kini menjadi baw
 
 msgid "Done (isShimmering=false)"
 msgstr "Selesai (isShimmering=false)"
+
+msgid "Done, not seen yet"
+msgstr "Selesai, belum dilihat"
 
 msgid "Downgrade to Free"
 msgstr "Turunkan ke Gratis"
@@ -7469,6 +7529,9 @@ msgstr "Jelajahi"
 msgid "Explore Pages"
 msgstr "Jelajahi Halaman"
 
+msgid "Explore the codebase"
+msgstr "Jelajahi basis kode"
+
 msgid "Explored"
 msgstr "Sudah dijelajahi"
 
@@ -7530,6 +7593,9 @@ msgstr "Gagal"
 msgctxt "agent status"
 msgid "Failed"
 msgstr "Gagal"
+
+msgid "Failed or blocked"
+msgstr "Gagal atau terblokir"
 
 msgid "Failed runs"
 msgstr "Run yang gagal"
@@ -8109,6 +8175,9 @@ msgstr "file yang dikecualikan (glob)"
 msgid "files to include (glob)"
 msgstr "file yang disertakan (glob)"
 
+msgid "Fill"
+msgstr "Isian"
+
 msgid "Fill out the contact form on this page and our team will reach out to learn about your needs and walk you through next steps."
 msgstr "Isi formulir kontak di halaman ini dan tim kami akan menghubungi Anda untuk memahami kebutuhan Anda dan memandu langkah berikutnya."
 
@@ -8235,6 +8304,9 @@ msgstr "Repositori pertama menurut nama"
 msgid "First scan of your transcripts, numbers are partial…"
 msgstr "Pemindaian pertama transkrip Anda, angka masih sebagian…"
 
+msgid "Five states, the same for a workspace, a conversation and the switchers. A workspace shows the most urgent of its conversations."
+msgstr "Lima status, sama untuk workspace, percakapan, dan pengalih. Workspace menampilkan percakapan yang paling mendesak."
+
 msgid "Fix"
 msgstr "Perbaiki"
 
@@ -8252,6 +8324,9 @@ msgstr "Perbaiki kegagalan CI"
 
 msgid "Fix findings"
 msgstr "Perbaiki temuan"
+
+msgid "Fix the flaky test"
+msgstr "Perbaiki tes yang tidak stabil"
 
 msgid "fix-auth-redirect"
 msgstr "fix-auth-redirect"
@@ -8309,6 +8384,9 @@ msgstr "Fokus ke kolom pencarian di tampilan tugas"
 
 msgid "Folder"
 msgstr "Folder"
+
+msgid "Folder color on conversations"
+msgstr "Warna folder pada percakapan"
 
 msgid "Folder is missing"
 msgstr "Folder hilang"
@@ -8795,6 +8873,9 @@ msgstr "Separuh perubahan yang di-merge adalah kode agen tanpa suntingan"
 msgid "Hand the browser to your agent."
 msgstr "Serahkan browser ke agen Anda."
 
+msgid "Hand-picked colors stay when you change the palette."
+msgstr "Warna pilihan sendiri tetap ada saat palet diganti."
+
 msgid "Handing to agent…"
 msgstr "Menyerahkan ke agen…"
 
@@ -8852,6 +8933,9 @@ msgstr "Judul 3"
 msgid "Heart"
 msgstr "Hati"
 
+msgid "Height of the rows and size of the conversation titles."
+msgstr "Tinggi baris dan ukuran judul percakapan."
+
 msgid "Help"
 msgstr "Bantuan"
 
@@ -8880,6 +8964,9 @@ msgstr "Sembunyikan"
 msgid "Hide checks"
 msgstr "Sembunyikan check"
 
+msgid "Hide conversations"
+msgstr "Sembunyikan percakapan"
+
 msgid "Hide details"
 msgstr "Sembunyikan detail"
 
@@ -8906,6 +8993,9 @@ msgstr "Sembunyikan dari sidebar"
 
 msgid "Hide from Sidebar"
 msgstr "Sembunyikan dari Sidebar"
+
+msgid "Hide idle conversations"
+msgstr "Sembunyikan percakapan menganggur"
 
 msgid "Hide log"
 msgstr "Sembunyikan log"
@@ -8934,8 +9024,14 @@ msgstr "Sembunyikan komentar review"
 msgid "Hide sessions"
 msgstr "Sembunyikan sesi"
 
+msgid "Hide subagents"
+msgstr "Sembunyikan subagen"
+
 msgid "Hide text"
 msgstr "Sembunyikan teks"
+
+msgid "Hide to-dos"
+msgstr "Sembunyikan to-do"
 
 msgid "Hide unchanged regions"
 msgstr "Sembunyikan bagian yang tidak berubah"
@@ -8948,6 +9044,9 @@ msgstr "Tingkat keparahan tinggi"
 
 msgid "High usage"
 msgstr "Penggunaan tinggi"
+
+msgid "Highlight intensity"
+msgstr "Intensitas sorotan"
 
 msgid "history"
 msgstr "riwayat"
@@ -9084,11 +9183,17 @@ msgstr "Berapa banyak terminal tersembunyi yang tetap dimuat penuh ({MIN_TERMINA
 msgid "How much agent work engineers are actually running — tokens, cost, models and sessions, published by people who opted in."
 msgstr "Seberapa banyak pekerjaan agen yang benar-benar dijalankan engineer — token, biaya, model, dan sesi, dipublikasikan oleh mereka yang ikut serta."
 
+msgid "How much secondary text and separators stand out."
+msgstr "Seberapa menonjol teks sekunder dan pemisah."
+
 msgid "How should the agent's actions be approved?"
 msgstr "Bagaimana tindakan agen harus disetujui?"
 
 msgid "How the command opens."
 msgstr "Bagaimana perintahnya dibuka."
+
+msgid "How the conversation shown in a pane stands out."
+msgstr "Bagaimana percakapan yang tampil di panel menonjol."
 
 msgid "How the prompt is delivered to the process."
 msgstr "Cara prompt dikirimkan ke prosesnya."
@@ -9851,6 +9956,9 @@ msgstr "Jaga dokumentasi tetap segar"
 
 msgid "Keep editing"
 msgstr "Lanjutkan mengedit"
+
+msgid "Keep the sidebar in Settings"
+msgstr "Pertahankan bilah samping di Pengaturan"
 
 msgid "Keep typing an email to invite"
 msgstr "Terus ketik email untuk mengundang"
@@ -10824,6 +10932,9 @@ msgstr "Porsi memori"
 msgid "Mention."
 msgstr "Sebut."
 
+msgid "Menu"
+msgstr "Menu"
+
 msgid "Menubar"
 msgstr "Menubar"
 
@@ -11030,6 +11141,9 @@ msgstr "Pantau, arahkan, dan bantu agen Anda yang tertahan dari iPhone atau iPad
 
 msgid "Monitoring"
 msgstr "Pemantauan"
+
+msgid "Monochrome"
+msgstr "Monokrom"
 
 msgid "monorepo"
 msgstr "monorepo"
@@ -11287,6 +11401,9 @@ msgstr "Butuh Anda: {nowCount} sekarang, {count} total"
 
 msgid "Needs your approval"
 msgstr "Perlu persetujuan Anda"
+
+msgid "Neon"
+msgstr "Neon"
 
 msgid "Nerd Fonts"
 msgstr "Nerd Fonts"
@@ -12338,6 +12455,9 @@ msgstr "Tidak ada apa pun di {pathname}."
 msgid "Nothing needs a retry"
 msgstr "Tidak ada yang perlu dicoba ulang"
 
+msgid "Nothing new, or already seen"
+msgstr "Tidak ada yang baru, atau sudah dilihat"
+
 msgid "Nothing published in the last 30 days yet. Your rank appears once usage from this machine syncs, publishing as <0>{handle}</0>."
 msgstr "Belum ada yang dipublikasikan dalam 30 hari terakhir. Peringkat Anda muncul setelah penggunaan dari mesin ini tersinkron, dipublikasikan sebagai <0>{handle}</0>."
 
@@ -12520,6 +12640,9 @@ msgstr "Satu manusia mengendalikan paling banyak satu agen sekaligus."
 msgid "One line about how you work"
 msgstr "Satu baris tentang cara Anda bekerja"
 
+msgid "One line per workspace, without the details line under its name."
+msgstr "Satu baris per workspace, tanpa baris detail di bawah namanya."
+
 msgid "One of the first hundred on the board"
 msgstr "Termasuk seratus orang pertama di papan"
 
@@ -12679,6 +12802,9 @@ msgstr "Buka {parentLabel}"
 msgid "Open {path} in file pane"
 msgstr "Buka {path} di panel file"
 
+msgid "Open a conversation's to-dos in the list, under it, rather than in a popover beside it."
+msgstr "Buka tugas percakapan di daftar, di bawahnya, bukan di popover di sampingnya."
+
 msgid "Open a draft PR"
 msgstr "Membuka PR draf"
 
@@ -12709,6 +12835,9 @@ msgstr "Buka App Store"
 msgid "Open as comment pane"
 msgstr "Buka sebagai panel komentar"
 
+msgid "Open Automations"
+msgstr "Buka otomatisasi"
+
 msgid "Open billing"
 msgstr "Buka penagihan"
 
@@ -12723,6 +12852,9 @@ msgstr "Buka perubahan"
 
 msgid "Open Changes"
 msgstr "Buka Perubahan"
+
+msgid "Open Cloud Workspaces"
+msgstr "Buka workspace cloud"
 
 msgid "Open Command Palette"
 msgstr "Buka Command Palette"
@@ -12938,14 +13070,23 @@ msgstr "Buka menu"
 msgid "Open navigation"
 msgstr "Buka navigasi"
 
+msgid "Open Notes"
+msgstr "Buka catatan"
+
 msgid "Open on GitHub"
 msgstr "Buka di GitHub"
 
 msgid "Open Page in Default Browser"
 msgstr "Buka Halaman di Browser Bawaan"
 
+msgid "Open Pages"
+msgstr "Buka halaman"
+
 msgid "Open pages and reply to comments from the Superset app on iPhone and iPad."
 msgstr "Buka halaman dan balas komentar dari aplikasi Superset di iPhone dan iPad."
+
+msgid "Open Plugins"
+msgstr "Buka plugin"
 
 msgid "Open Plugins in the Superset app and pick one. The install is saved to your account."
 msgstr "Buka Plugin di aplikasi Superset dan pilih salah satu. Instalasi tersimpan di akun Anda."
@@ -12992,6 +13133,9 @@ msgstr "Buka opsi pull request"
 msgid "Open pull requests"
 msgstr "Pull request terbuka"
 
+msgid "Open Pull Requests"
+msgstr "Buka pull request"
+
 msgid "Open recent"
 msgstr "Buka yang terbaru"
 
@@ -13027,6 +13171,9 @@ msgstr "Buka System Settings"
 
 msgid "Open task {title}"
 msgstr "Buka tugas {title}"
+
+msgid "Open Tasks"
+msgstr "Buka tugas"
 
 msgid "Open terminal"
 msgstr "Buka terminal"
@@ -13064,8 +13211,14 @@ msgstr "Buka Skrip Terminal 9"
 msgid "Open terminals and prompt agents"
 msgstr "Membuka terminal dan memberi prompt ke agen"
 
+msgid "Open the automations"
+msgstr "Membuka otomatisasi"
+
 msgid "Open the Changes pane in a new tab, or focus the existing one"
 msgstr "Buka panel Perubahan di tab baru, atau fokuskan yang sudah ada"
+
+msgid "Open the cloud workspaces"
+msgstr "Membuka workspace cloud"
 
 #. placeholder {0}: task.title
 msgid "Open the conversation of {0}"
@@ -13074,8 +13227,29 @@ msgstr "Buka percakapan {0}"
 msgid "Open the global command palette"
 msgstr "Buka command palette global"
 
+msgid "Open the list of projects"
+msgstr "Membuka daftar proyek"
+
+msgid "Open the list of workspaces"
+msgstr "Membuka daftar workspace"
+
 msgid "Open the new workspace modal"
 msgstr "Buka modal workspace baru"
+
+msgid "Open the next conversation that needs you"
+msgstr "Buka percakapan berikutnya yang membutuhkan Anda"
+
+msgid "Open the notes"
+msgstr "Membuka catatan"
+
+msgid "Open the pages"
+msgstr "Membuka halaman"
+
+msgid "Open the plugins"
+msgstr "Membuka plugin"
+
+msgid "Open the pull requests"
+msgstr "Membuka pull request"
 
 msgid "Open the resource usage view in the command palette"
 msgstr "Buka tampilan penggunaan sumber daya di command palette"
@@ -13089,6 +13263,12 @@ msgstr "Buka workspace run ini"
 msgid "open the task in a workspace"
 msgstr "membuka tugas di workspace"
 
+msgid "Open the tasks"
+msgstr "Membuka tugas"
+
+msgid "Open the usage page"
+msgstr "Membuka halaman penggunaan"
+
 msgid "Open the workspace"
 msgstr "Buka workspace"
 
@@ -13098,12 +13278,21 @@ msgstr "Buka workspace di aplikasi yang dipilih di menu \"Buka di\" (VS Code, Cu
 msgid "Open this run's workspace"
 msgstr "Buka workspace run ini"
 
+msgid "Open to-dos"
+msgstr "Tugas terbuka"
+
+msgid "Open Usage"
+msgstr "Buka penggunaan"
+
 msgid "Open workspace"
 msgstr "Buka workspace"
 
 #. placeholder {0}: getV2WorkspaceDisplayName(workspace)
 msgid "Open workspace: {0}"
 msgstr "Buka workspace: {0}"
+
+msgid "Open Workspaces"
+msgstr "Buka workspace"
 
 msgid "Open your app."
 msgstr "Buka aplikasi Anda."
@@ -13371,6 +13560,9 @@ msgstr "Judul halaman"
 msgid "Pages"
 msgstr "Halaman"
 
+msgid "Pages as an icon bar"
+msgstr "Halaman sebagai bilah ikon"
+
 msgid "Pages could not be loaded"
 msgstr "Halaman tidak dapat dimuat"
 
@@ -13596,6 +13788,9 @@ msgstr "Nomor telepon"
 msgid "Pick {name} from the theme grid to apply it."
 msgstr "Pilih {name} dari grid tema untuk menerapkannya."
 
+msgid "Pick a color"
+msgstr "Pilih warna"
+
 msgid "Pick a different element"
 msgstr "Pilih elemen lain"
 
@@ -13646,6 +13841,9 @@ msgstr "Pilih cara {label} masuk di dalam sandbox. Kredensial diserahkan ke pros
 
 msgid "Pick the best agent."
 msgstr "Pilih agen terbaik."
+
+msgid "Pick the entries of the menu at the top of the sidebar. Their shortcuts work even when an entry is hidden."
+msgstr "Pilih entri menu di bagian atas bilah samping. Pintasannya tetap berfungsi meski entri disembunyikan."
 
 msgid "Pick the new project folder on {hostName}."
 msgstr "Pilih folder proyek yang baru di {hostName}."
@@ -14249,6 +14447,9 @@ msgstr "Pull request #{0}, {1}"
 msgid "Pull request actions"
 msgstr "Aksi pull request"
 
+msgid "Pull request and checks"
+msgstr "Pull request dan pemeriksaan"
+
 msgid "Pull request detail tabs"
 msgstr "Tab detail pull request"
 
@@ -14692,6 +14893,9 @@ msgstr "Rilis"
 
 msgid "Release control"
 msgstr "Lepaskan kendali"
+
+msgid "Release notes"
+msgstr "Catatan rilis"
 
 msgid "Release notes draft"
 msgstr "Draf catatan rilis"
@@ -15411,6 +15615,9 @@ msgstr "Review diperlukan"
 
 msgid "Review syntax-highlighted diffs"
 msgstr "Tinjau diff dengan penyorotan sintaks"
+
+msgid "Review the pull request"
+msgstr "Tinjau pull request"
 
 msgid "Review the result."
 msgstr "Review hasilnya."
@@ -16727,11 +16934,17 @@ msgstr "Tampilkan teks"
 msgid "Show the messages that wait for the current turn to end."
 msgstr "Tampilkan pesan yang menunggu giliran saat ini selesai."
 
+msgid "Show the pages below Search as one row of icons, with their counts, instead of a row each."
+msgstr "Tampilkan halaman di bawah Pencarian sebagai satu baris ikon, dengan hitungannya, alih-alih satu baris masing-masing."
+
 msgid "Show the to-do list of each conversation, shared with its agent."
 msgstr "Tampilkan daftar to-do setiap percakapan, dibagikan dengan agennya."
 
 msgid "Show the triggering payload"
 msgstr "Tampilkan payload pemicu"
+
+msgid "Show the workspace sidebar on the left while Settings is open."
+msgstr "Tampilkan bilah samping workspace di kiri saat Pengaturan terbuka."
 
 msgid "Show translation"
 msgstr "Tampilkan terjemahan"
@@ -16761,6 +16974,9 @@ msgstr "Ditampilkan secara publik di samping nama Anda."
 msgid "Shut down {0}"
 msgstr "Matikan {0}"
 
+msgid "Side bar"
+msgstr "Garis samping"
+
 msgid "Side by Side"
 msgstr "Berdampingan"
 
@@ -16775,6 +16991,9 @@ msgstr "Sidebar Card"
 
 msgid "Sidebar file rows"
 msgstr "Baris file di sidebar"
+
+msgid "Sidebar options"
+msgstr "Opsi bilah samping"
 
 msgid "Sidebar order"
 msgstr "Urutan sidebar"
@@ -17003,6 +17222,9 @@ msgstr "Patuh SOC 2 Type II. Minta laporan kami."
 
 msgid "SOC 2 Type II report"
 msgstr "Laporan SOC 2 Type II"
+
+msgid "Soft"
+msgstr "Lembut"
 
 msgid "Some files are not an accepted type and were not added."
 msgstr "Sebagian file bukan tipe yang diterima dan tidak ditambahkan."
@@ -17395,6 +17617,9 @@ msgstr "Memulai sesi baru di workspace ini"
 msgid "State"
 msgstr "Status"
 
+msgid "State colors"
+msgstr "Warna status"
+
 msgid "Stats"
 msgstr "Statistik"
 
@@ -17503,6 +17728,12 @@ msgstr "Coret"
 
 msgid "Strip redundant overrides at call sites"
 msgstr "Buang penimpaan berlebih di call site"
+
+msgid "Stripe each conversation with its group's color, or its project's."
+msgstr "Beri garis warna grup atau proyek pada setiap percakapan."
+
+msgid "Stripe width"
+msgstr "Lebar garis"
 
 msgid "Strong"
 msgstr "Kuat"
@@ -17900,6 +18131,9 @@ msgstr "Beralih ke Tab 8"
 
 msgid "Switch to Tab 9"
 msgstr "Beralih ke Tab 9"
+
+msgid "Switch to this workspace"
+msgstr "Beralih ke workspace ini"
 
 msgid "Switch to Workspace 1"
 msgstr "Beralih ke Workspace 1"
@@ -18309,6 +18543,9 @@ msgstr "Agen menyalin percakapan; cabang terbuka di sini"
 msgid "The agent follows the plugin's skills and calls its tools. The issue shows up in Linear."
 msgstr "Agen mengikuti skill plugin dan memanggil tool-nya. Issue muncul di Linear."
 
+msgid "The agent is running a turn"
+msgstr "Agen sedang menjalankan giliran"
+
 msgid "The agent owns a task from ticket to diff. The human reviews the result, not the keystrokes. Attention shifts from writing code to specifying work and judging it. One engineer runs several agents at once in isolated workspaces."
 msgstr "Agen memegang tugas dari tiket sampai diff. Manusia mereview hasilnya, bukan tiap ketukan tombolnya. Perhatian bergeser dari menulis kode ke menentukan pekerjaan dan menilainya. Satu engineer menjalankan beberapa agen sekaligus di workspace terisolasi."
 
@@ -18374,6 +18611,9 @@ msgstr "Kami sedang membawa Superset ke Windows & Linux. Tinggalkan email Anda d
 
 msgid "The desktop app runs on macOS, with an experimental Linux AppImage; Windows is not yet available. Beyond the desktop app there's a CLI, a TypeScript SDK, and an MCP server, so you can drive Superset from scripts, terminals, and other agents. An app for iPhone and iPad on the App Store lets you check on agents and review their diffs away from your desk."
 msgstr "Aplikasi desktopnya berjalan di macOS, dengan AppImage Linux eksperimental; Windows belum tersedia. Selain aplikasi desktop ada CLI, SDK TypeScript, dan server MCP, jadi Anda bisa mengendalikan Superset dari skrip, terminal, dan agen lain. Aplikasi iPhone dan iPad di App Store memungkinkan Anda memantau agen dan meninjau diff mereka saat jauh dari meja."
+
+msgid "The details line shows:"
+msgstr "Baris detail menampilkan:"
 
 msgid "The device that hosts this project is unavailable."
 msgstr "Perangkat yang menjadi host proyek ini tidak tersedia."
@@ -18619,8 +18859,14 @@ msgstr "Undangan tim ini sudah kedaluwarsa atau tidak ada. Minta tautan baru dar
 msgid "The title shows everywhere this page is listed and in its link preview."
 msgstr "Judul muncul di semua tempat halaman ini terdaftar dan di pratinjau tautannya."
 
+msgid "The turn ended and you have not opened it"
+msgstr "Giliran selesai dan Anda belum membukanya"
+
 msgid "The turn failed"
 msgstr "Giliran gagal"
+
+msgid "The turn stopped on an error, or the sandbox is down"
+msgstr "Giliran berhenti karena kesalahan, atau sandbox mati"
 
 msgid "The workspace is not ready yet. Try again."
 msgstr "Workspace belum siap. Coba lagi."
@@ -19076,6 +19322,9 @@ msgstr "Tingkat"
 msgid "Time"
 msgstr "Waktu"
 
+msgid "Time waited"
+msgstr "Waktu menunggu"
+
 msgid "Times use your time zone."
 msgstr "Waktu memakai zona waktu Anda."
 
@@ -19108,6 +19357,9 @@ msgstr "Detail to-do"
 
 msgid "To-dos"
 msgstr "Tugas"
+
+msgid "To-dos under the conversation"
+msgstr "Tugas di bawah percakapan"
 
 msgid "Toast (Sonner)"
 msgstr "Toast (Sonner)"
@@ -19874,6 +20126,9 @@ msgstr "Gunakan Superset di ponsel dengan Pro."
 msgid "Use the desktop app to start running parallel coding agents."
 msgstr "Pakai aplikasi desktop untuk mulai menjalankan agen coding paralel."
 
+msgid "Use the palette's color"
+msgstr "Gunakan warna palet"
+
 msgid "Use the Superset tray menu > Host Service > Restart, then retry."
 msgstr "Pakai menu tray Superset > Host Service > Restart, lalu coba lagi."
 
@@ -20155,6 +20410,9 @@ msgstr "Menunggu orang lain"
 
 msgid "Waiting on reviewers or CI, longest wait first"
 msgstr "Menunggu reviewer atau CI, tunggu terlama dulu"
+
+msgid "Waiting on you"
+msgstr "Menunggu Anda"
 
 msgid "Waiting since {waitingSince}"
 msgstr "Menunggu sejak {waitingSince}"
@@ -20462,6 +20720,9 @@ msgstr "Lebar"
 msgid "Width · parallel sessions"
 msgstr "Lebar · sesi paralel"
 
+msgid "Width of the colored stripes: groups, side bar and folder colors."
+msgstr "Lebar garis berwarna: grup, garis samping, dan warna folder."
+
 msgid "Window"
 msgstr "Jendela"
 
@@ -20625,6 +20886,9 @@ msgstr "Workspace dipulihkan"
 
 msgid "workspace root"
 msgstr "root workspace"
+
+msgid "Workspace rows"
+msgstr "Baris workspace"
 
 msgid "Workspace Run"
 msgstr "Run Workspace"

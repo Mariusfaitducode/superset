@@ -30,6 +30,8 @@ export interface DashboardSidebarHoverPayload {
 	workspace: DashboardSidebarWorkspace;
 	/** Absent when the branch can't be renamed from here (a cloud workspace). */
 	onEditBranchClick?: (branchName: string) => void;
+	/** The workspace's jump shortcut, e.g. ⌘3. */
+	shortcutLabel?: string;
 }
 
 interface HoverState {
@@ -364,7 +366,8 @@ export function DashboardSidebarHoverProvider({
 				if (prev.hoveredId !== id) return prev;
 				if (
 					prev.payload?.workspace === payload.workspace &&
-					prev.payload.onEditBranchClick === payload.onEditBranchClick
+					prev.payload.onEditBranchClick === payload.onEditBranchClick &&
+					prev.payload.shortcutLabel === payload.shortcutLabel
 				) {
 					return prev;
 				}

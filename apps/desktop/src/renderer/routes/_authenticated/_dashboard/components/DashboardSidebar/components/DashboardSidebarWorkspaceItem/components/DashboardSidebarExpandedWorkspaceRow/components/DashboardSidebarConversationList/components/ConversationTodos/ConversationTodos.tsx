@@ -390,11 +390,14 @@ export function ConversationTodos({
 	todos,
 	actions,
 	onClose,
+	inline = true,
 }: {
 	terminalId: string;
 	todos: ConversationTodo[];
 	actions: TodoActions;
 	onClose: () => void;
+	/** Under the conversation, rather than in a popover. */
+	inline?: boolean;
 }) {
 	const { t } = useLingui();
 	const [text, setText] = useState("");
@@ -417,7 +420,9 @@ export function ConversationTodos({
 	};
 
 	return (
-		<div className="ml-[7px] border-l border-border pb-1 pl-2.5">
+		<div
+			className={cn(inline && "ml-[7px] border-l border-border pb-1 pl-2.5")}
+		>
 			{todos.length > 0 && (
 				<ul className="flex flex-col">
 					{todos.map((todo) => (

@@ -3,6 +3,7 @@ export {
 	fetchHostConversationTodos,
 	hostConversationTodosQuery,
 	hostConversationTodosQueryKey,
+	hostConversationTodosQueryOptions,
 	hostKeepsTodos,
 	useConversationTodosOfHosts,
 	useHostConversationTodos,

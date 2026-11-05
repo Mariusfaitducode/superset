@@ -92,20 +92,25 @@ describe("Tasks and pull requests navigation", () => {
 
 	test("renders Tasks and Pull requests as separate left-rail destinations", () => {
 		const sidebarSources = [
+			// v2 splits each page into its entry (route) and its label.
 			readComponent(
-				"../../../components/DashboardSidebar/components/DashboardSidebarHeader/DashboardSidebarHeader.tsx",
-			),
+				"../../../components/DashboardSidebar/components/DashboardSidebarHeader/navEntries.tsx",
+			) +
+				readComponent(
+					"../../../../../../stores/sidebar-preferences/nav-items.ts",
+				),
 			readComponent(
 				"../../../../../../screens/main/components/WorkspaceSidebar/WorkspaceSidebarHeader/WorkspaceSidebarHeader.tsx",
 			),
 		];
 
-		// v2's labels go through Lingui (`message: "Tasks"`); v1 still has the
+		// v2's labels go through Lingui (msg`Tasks`); v1 still has the
 		// literal aria-label. Accept either so this keeps asserting the routes
 		// stay separate rather than how their labels are authored.
 		const labelled = (source: string, label: string) =>
 			source.includes(`aria-label="${label}"`) ||
-			source.includes(`message: "${label}"`);
+			source.includes(`message: "${label}"`) ||
+			source.includes(`msg\`${label}\``);
 
 		for (const source of sidebarSources) {
 			expect(source).toContain('to: "/tasks"');

@@ -9,7 +9,7 @@ function renderLead(
 ) {
 	return render(
 		<DashboardSidebarWorkspaceLeadIndicator
-			workspaceStatus={null}
+			agentState="idle"
 			isCreatePending={false}
 			pullRequestState={null}
 			{...props}
@@ -17,23 +17,25 @@ function renderLead(
 	).container;
 }
 
-test("live agent state outranks the pull request", () => {
+const leadOf = (container: HTMLElement) =>
+	container.querySelector("[data-lead]")?.getAttribute("data-lead");
+
+test("agent state outranks the pull request", () => {
 	const working = renderLead({
-		workspaceStatus: "working",
+		agentState: "working",
 		pullRequestState: "open",
 	});
-	expect(working.querySelector(".text-emerald-500")).toBeNull();
-	expect(working.querySelector("[data-lead]")?.getAttribute("data-lead")).toBe(
-		"working",
-	);
+	expect(leadOf(working)).toBe("working");
 	cleanup();
 
-	const needsInput = renderLead({
-		workspaceStatus: "permission",
+	const needsYou = renderLead({
+		agentState: "needsYou",
 		pullRequestState: "open",
 	});
-	expect(needsInput.querySelector(".bg-yellow-500")).not.toBeNull();
-	expect(needsInput.querySelector(".text-emerald-500")).toBeNull();
+	expect(leadOf(needsYou)).toBe("needsYou");
+	expect(
+		needsYou.querySelector(".bg-\\[var\\(--sb-state-needsYou\\)\\]"),
+	).not.toBeNull();
 });
 
 test("an idle row shows its pull request state, else a quiet dot", () => {
@@ -46,29 +48,21 @@ test("an idle row shows its pull request state, else a quiet dot", () => {
 
 	const idle = renderLead({});
 	expect(idle.querySelector("svg")).toBeNull();
-	expect(idle.querySelector("span.rounded-full")?.className).toContain(
-		"bg-muted-foreground/50",
-	);
+	expect(leadOf(idle)).toBe("idle");
 });
 
 test("a dead or unborn sandbox outranks the agent and the PR", () => {
 	const failed = renderLead({
 		sandboxStatus: "failed",
-		workspaceStatus: "working",
+		agentState: "working",
 		pullRequestState: "open",
 	});
-	expect(failed.querySelector(".bg-red-500")).not.toBeNull();
-	expect(failed.querySelector("[data-lead]")?.getAttribute("data-lead")).toBe(
-		"failed",
-	);
+	expect(leadOf(failed)).toBe("failed");
 	cleanup();
 
 	const provisioning = renderLead({
 		sandboxStatus: "provisioning",
 		pullRequestState: "open",
 	});
-	expect(
-		provisioning.querySelector("[data-lead]")?.getAttribute("data-lead"),
-	).toBe("creating");
-	expect(provisioning.querySelector(".text-emerald-500")).toBeNull();
+	expect(leadOf(provisioning)).toBe("creating");
 });
