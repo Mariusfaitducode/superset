@@ -12384,6 +12384,9 @@ msgstr "Mở {parentLabel}"
 msgid "Open {path} in file pane"
 msgstr "Mở {path} trong khung tệp"
 
+msgid "Open a conversation's to-dos in the list, under it, rather than in a popover beside it."
+msgstr "Mở việc cần làm của cuộc trò chuyện trong danh sách, ngay bên dưới, thay vì trong cửa sổ bật lên bên cạnh."
+
 msgid "Open a multiline prompt composer for the active terminal"
 msgstr "Mở ô soạn prompt nhiều dòng cho terminal đang mở"
 
@@ -18802,6 +18805,9 @@ msgstr "Chi tiết việc cần làm"
 
 msgid "To-dos"
 msgstr "Việc cần làm"
+
+msgid "To-dos under the conversation"
+msgstr "Việc cần làm dưới cuộc trò chuyện"
 
 msgid "Toast (Sonner)"
 msgstr "Toast (Sonner)"

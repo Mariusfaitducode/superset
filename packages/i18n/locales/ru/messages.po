@@ -12384,6 +12384,9 @@ msgstr "Открыть {parentLabel}"
 msgid "Open {path} in file pane"
 msgstr "Открыть {path} в панели файла"
 
+msgid "Open a conversation's to-dos in the list, under it, rather than in a popover beside it."
+msgstr "Открывать задачи беседы в списке под ней, а не во всплывающем окне рядом."
+
 msgid "Open a multiline prompt composer for the active terminal"
 msgstr "Открыть многострочный редактор промпта для активного терминала"
 
@@ -18802,6 +18805,9 @@ msgstr "Подробности задачи"
 
 msgid "To-dos"
 msgstr "Задачи"
+
+msgid "To-dos under the conversation"
+msgstr "Задачи под беседой"
 
 msgid "Toast (Sonner)"
 msgstr "Тост (Sonner)"

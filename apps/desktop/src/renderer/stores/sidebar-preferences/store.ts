@@ -30,6 +30,8 @@ export interface SidebarPreferences extends SidebarAppearance {
 	showRowPullRequest: boolean;
 	showRowTodos: boolean;
 	showRowWaitTime: boolean;
+	/** A conversation's to-dos open under it, rather than in a popover. */
+	todosInline: boolean;
 }
 
 export type SidebarPreferenceKey = {
@@ -64,6 +66,7 @@ export const DEFAULT_SIDEBAR_PREFERENCES: SidebarPreferences = {
 	showRowPullRequest: true,
 	showRowTodos: true,
 	showRowWaitTime: true,
+	todosInline: false,
 };
 
 type AppearanceKey = Exclude<keyof SidebarAppearance, "stateColors">;

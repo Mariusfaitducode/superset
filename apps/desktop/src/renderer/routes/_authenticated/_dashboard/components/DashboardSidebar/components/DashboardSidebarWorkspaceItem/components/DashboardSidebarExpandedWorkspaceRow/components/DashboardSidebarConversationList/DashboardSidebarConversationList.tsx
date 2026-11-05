@@ -1,5 +1,6 @@
 import { useLingui } from "@lingui/react/macro";
 import { formatCompactRelativeTime } from "@superset/i18n/format";
+import { Popover, PopoverContent, PopoverTrigger } from "@superset/ui/popover";
 import { toast } from "@superset/ui/sonner";
 import { cn } from "@superset/ui/utils";
 import { useNavigate } from "@tanstack/react-router";
@@ -166,6 +167,7 @@ function ConversationRow({
 	const showTurnTime = useSidebarPreference("showTurnTime");
 	const showQueuedPrompts = useSidebarPreference("showQueuedPrompts");
 	const waitingTint = useSidebarPreference("waitingTint");
+	const todosInline = useSidebarPreference("todosInline");
 	const openTodos = (todos ?? []).filter((todo) => !todo.done).length;
 	const urgentTodos = (todos ?? []).some(
 		(todo) => !todo.done && todo.priority === "high",
@@ -290,26 +292,67 @@ function ConversationRow({
 					lastEventAt={conversation.since}
 					working={conversation.state === "working"}
 				/>
-				{showTodos && (
-					<button
-						type="button"
-						aria-expanded={todosOpen}
-						aria-label={t`To-dos`}
-						onClick={() => setTodosOpen((value) => !value)}
-						className={cn(
-							"flex shrink-0 items-center gap-0.5 rounded-sm px-1 text-[10px] text-muted-foreground hover:bg-background hover:text-foreground",
-							urgentTodos && "text-red-500",
-							todos?.length === 0 &&
-								!todosOpen &&
-								"opacity-0 focus-visible:opacity-100 group-hover/conversation:opacity-100",
-						)}
-					>
-						<LuListChecks className="size-3" />
-						{(todos?.length ?? 0) > 0 && (
-							<span>{openTodos > 0 ? openTodos : "✓"}</span>
-						)}
-					</button>
-				)}
+				{showTodos &&
+					(todosInline ? (
+						<button
+							type="button"
+							aria-expanded={todosOpen}
+							aria-label={t`To-dos`}
+							onClick={() => setTodosOpen((value) => !value)}
+							className={cn(
+								"flex shrink-0 items-center gap-0.5 rounded-sm px-1 text-[10px] text-muted-foreground hover:bg-background hover:text-foreground",
+								urgentTodos && "text-red-500",
+								todos?.length === 0 &&
+									!todosOpen &&
+									"opacity-0 focus-visible:opacity-100 group-hover/conversation:opacity-100",
+							)}
+						>
+							<LuListChecks className="size-3" />
+							{(todos?.length ?? 0) > 0 && (
+								<span>{openTodos > 0 ? openTodos : "✓"}</span>
+							)}
+						</button>
+					) : (
+						<Popover open={todosOpen} onOpenChange={setTodosOpen}>
+							<PopoverTrigger asChild>
+								<button
+									type="button"
+									aria-expanded={todosOpen}
+									aria-label={t`To-dos`}
+									className={cn(
+										"flex shrink-0 items-center gap-0.5 rounded-sm px-1 text-[10px] text-muted-foreground hover:bg-background hover:text-foreground",
+										urgentTodos && "text-red-500",
+										todos?.length === 0 &&
+											!todosOpen &&
+											"opacity-0 focus-visible:opacity-100 group-hover/conversation:opacity-100",
+									)}
+								>
+									<LuListChecks className="size-3" />
+									{(todos?.length ?? 0) > 0 && (
+										<span>{openTodos > 0 ? openTodos : "✓"}</span>
+									)}
+								</button>
+							</PopoverTrigger>
+							<PopoverContent
+								side="right"
+								align="start"
+								sideOffset={8}
+								className="w-80 p-2"
+								onOpenAutoFocus={(event) => event.preventDefault()}
+							>
+								<p className="mb-1 truncate px-1 text-xs font-medium">
+									{conversation.title}
+								</p>
+								<ConversationTodos
+									terminalId={conversation.terminalId}
+									todos={todos ?? []}
+									actions={todoActions}
+									onClose={() => setTodosOpen(false)}
+									inline={false}
+								/>
+							</PopoverContent>
+						</Popover>
+					))}
 				{waiting ? (
 					<span className="shrink-0 text-[10px] tabular-nums text-muted-foreground">
 						{formatCompactRelativeTime(Math.min(conversation.since, now), now)}
@@ -340,7 +383,7 @@ function ConversationRow({
 					))}
 				</ul>
 			)}
-			{showTodos && todosOpen && (
+			{showTodos && todosInline && todosOpen && (
 				<ConversationTodos
 					terminalId={conversation.terminalId}
 					todos={todos ?? []}

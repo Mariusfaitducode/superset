@@ -12384,6 +12384,9 @@ msgstr "{parentLabel} aç"
 msgid "Open {path} in file pane"
 msgstr "{path} dosyasını dosya bölmesinde aç"
 
+msgid "Open a conversation's to-dos in the list, under it, rather than in a popover beside it."
+msgstr "Bir konuşmanın yapılacaklarını yanında bir açılır pencere yerine listede, altında aç."
+
 msgid "Open a multiline prompt composer for the active terminal"
 msgstr "Etkin terminal için çok satırlı istem düzenleyicisini aç"
 
@@ -18802,6 +18805,9 @@ msgstr "Yapılacak ayrıntıları"
 
 msgid "To-dos"
 msgstr "Yapılacaklar"
+
+msgid "To-dos under the conversation"
+msgstr "Konuşmanın altında yapılacaklar"
 
 msgid "Toast (Sonner)"
 msgstr "Bildirim (Sonner)"

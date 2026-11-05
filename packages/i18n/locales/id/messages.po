@@ -12384,6 +12384,9 @@ msgstr "Buka {parentLabel}"
 msgid "Open {path} in file pane"
 msgstr "Buka {path} di panel file"
 
+msgid "Open a conversation's to-dos in the list, under it, rather than in a popover beside it."
+msgstr "Buka tugas percakapan di daftar, di bawahnya, bukan di popover di sampingnya."
+
 msgid "Open a multiline prompt composer for the active terminal"
 msgstr "Buka komposer prompt multibaris untuk terminal aktif"
 
@@ -18802,6 +18805,9 @@ msgstr "Detail to-do"
 
 msgid "To-dos"
 msgstr "Tugas"
+
+msgid "To-dos under the conversation"
+msgstr "Tugas di bawah percakapan"
 
 msgid "Toast (Sonner)"
 msgstr "Toast (Sonner)"

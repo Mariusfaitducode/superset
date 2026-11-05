@@ -12384,6 +12384,9 @@ msgstr "Otevřít {parentLabel}"
 msgid "Open {path} in file pane"
 msgstr "Otevřít {path} v panelu souboru"
 
+msgid "Open a conversation's to-dos in the list, under it, rather than in a popover beside it."
+msgstr "Otevírat úkoly konverzace v seznamu pod ní, nikoli ve vyskakovacím okně vedle ní."
+
 msgid "Open a multiline prompt composer for the active terminal"
 msgstr "Otevřít víceřádkový editor promptu pro aktivní terminál"
 
@@ -18802,6 +18805,9 @@ msgstr "Podrobnosti úkolu"
 
 msgid "To-dos"
 msgstr "Úkoly"
+
+msgid "To-dos under the conversation"
+msgstr "Úkoly pod konverzací"
 
 msgid "Toast (Sonner)"
 msgstr "Toast (Sonner)"

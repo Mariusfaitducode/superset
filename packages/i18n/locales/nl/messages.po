@@ -12384,6 +12384,9 @@ msgstr "{parentLabel} openen"
 msgid "Open {path} in file pane"
 msgstr "{path} openen in bestandspaneel"
 
+msgid "Open a conversation's to-dos in the list, under it, rather than in a popover beside it."
+msgstr "Open de taken van een gesprek in de lijst, eronder, in plaats van in een popover ernaast."
+
 msgid "Open a multiline prompt composer for the active terminal"
 msgstr "Een prompt-editor met meerdere regels openen voor de actieve terminal"
 
@@ -18802,6 +18805,9 @@ msgstr "To-do-details"
 
 msgid "To-dos"
 msgstr "To-do's"
+
+msgid "To-dos under the conversation"
+msgstr "Taken onder het gesprek"
 
 msgid "Toast (Sonner)"
 msgstr "Toast (Sonner)"

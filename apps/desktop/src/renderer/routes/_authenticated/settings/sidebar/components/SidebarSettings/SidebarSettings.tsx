@@ -92,6 +92,13 @@ export function SidebarSettings({ visibleItems }: SidebarSettingsProps) {
 			needsConversations: true,
 		},
 		{
+			itemId: SETTING_ITEM_ID.SIDEBAR_TODOS,
+			key: "todosInline",
+			label: t`To-dos under the conversation`,
+			hint: t`Open a conversation's to-dos in the list, under it, rather than in a popover beside it.`,
+			needsConversations: true,
+		},
+		{
 			itemId: SETTING_ITEM_ID.SIDEBAR_AGENT_TODOS,
 			key: "showAgentTodos",
 			label: t`Agents' to-dos`,

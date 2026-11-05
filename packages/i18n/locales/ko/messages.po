@@ -12384,6 +12384,9 @@ msgstr "{parentLabel} 열기"
 msgid "Open {path} in file pane"
 msgstr "파일 패널에서 {path} 열기"
 
+msgid "Open a conversation's to-dos in the list, under it, rather than in a popover beside it."
+msgstr "대화의 할 일을 옆의 팝오버 대신 목록에서 대화 아래에 엽니다."
+
 msgid "Open a multiline prompt composer for the active terminal"
 msgstr "활성 터미널의 여러 줄 프롬프트 작성기를 엽니다"
 
@@ -18802,6 +18805,9 @@ msgstr "할 일 세부 정보"
 
 msgid "To-dos"
 msgstr "할 일"
+
+msgid "To-dos under the conversation"
+msgstr "대화 아래에 할 일"
 
 msgid "Toast (Sonner)"
 msgstr "토스트 (Sonner)"

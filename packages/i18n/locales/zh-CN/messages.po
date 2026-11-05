@@ -12384,6 +12384,9 @@ msgstr "打开 {parentLabel}"
 msgid "Open {path} in file pane"
 msgstr "在文件面板中打开{path}"
 
+msgid "Open a conversation's to-dos in the list, under it, rather than in a popover beside it."
+msgstr "在列表中对话下方打开其待办，而不是在旁边的弹出框中。"
+
 msgid "Open a multiline prompt composer for the active terminal"
 msgstr "为当前终端打开多行提示词编辑器"
 
@@ -18802,6 +18805,9 @@ msgstr "待办详情"
 
 msgid "To-dos"
 msgstr "待办"
+
+msgid "To-dos under the conversation"
+msgstr "待办显示在对话下方"
 
 msgid "Toast (Sonner)"
 msgstr "Toast（Sonner）"

@@ -12384,6 +12384,9 @@ msgstr "{parentLabel}を開く"
 msgid "Open {path} in file pane"
 msgstr "{path}をファイルペインで開く"
 
+msgid "Open a conversation's to-dos in the list, under it, rather than in a popover beside it."
+msgstr "会話の To-do を横のポップオーバーではなく、リスト内の会話の下に開きます。"
+
 msgid "Open a multiline prompt composer for the active terminal"
 msgstr "アクティブなターミナル用の複数行プロンプト入力を開く"
 
@@ -18802,6 +18805,9 @@ msgstr "To-doの詳細"
 
 msgid "To-dos"
 msgstr "To-do"
+
+msgid "To-dos under the conversation"
+msgstr "会話の下に To-do"
 
 msgid "Toast (Sonner)"
 msgstr "Toast (Sonner)"
