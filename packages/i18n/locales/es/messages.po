@@ -718,6 +718,9 @@ msgstr "{actor} desvinculó el espacio de trabajo {workspace}"
 msgid "{actual} so far · ~{projected} projected"
 msgstr "{actual} hasta ahora · ~{projected} previstas"
 
+msgid "{agents, plural, one {# agent} other {# agents}}"
+msgstr "{agents, plural, one {# agente} other {# agentes}}"
+
 msgid "{agents} sessions resume when you open their workspace."
 msgstr "Las sesiones de {agents} se reanudan cuando abres su espacio de trabajo."
 
@@ -1196,6 +1199,9 @@ msgstr "{teardownFailureCount, plural, one {Eliminar de todos modos} other {Elim
 
 msgid "{threshold, plural, one {# agent PR merged} other {# agent PRs merged}}"
 msgstr "{threshold, plural, one {# PR de agente fusionada} other {# PR de agente fusionadas}}"
+
+msgid "{todos, plural, one {# to-do} other {# to-dos}}"
+msgstr "{todos, plural, one {# tarea} other {# tareas}}"
 
 msgid "{toolName} interrupted"
 msgstr "{toolName} interrumpido"
@@ -12778,6 +12784,9 @@ msgstr "Abre la lista de espacios de trabajo"
 
 msgid "Open the new workspace modal"
 msgstr "Abrir el modal de nuevo espacio de trabajo"
+
+msgid "Open the next conversation that needs you"
+msgstr "Abrir la siguiente conversación que te necesita"
 
 msgid "Open the notes"
 msgstr "Abre las notas"

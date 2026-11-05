@@ -718,6 +718,9 @@ msgstr "{actor} heeft de koppeling met workspace {workspace} verwijderd"
 msgid "{actual} so far · ~{projected} projected"
 msgstr "{actual} tot nu toe · ~{projected} verwacht"
 
+msgid "{agents, plural, one {# agent} other {# agents}}"
+msgstr "{agents, plural, one {# agent} other {# agents}}"
+
 msgid "{agents} sessions resume when you open their workspace."
 msgstr "{agents}-sessies worden hervat wanneer je hun workspace opent."
 
@@ -1196,6 +1199,9 @@ msgstr "{teardownFailureCount, plural, one {Toch verwijderen} other {Toch # verw
 
 msgid "{threshold, plural, one {# agent PR merged} other {# agent PRs merged}}"
 msgstr "{threshold, plural, one {# agent-PR gemerged} other {# agent-PR's gemerged}}"
+
+msgid "{todos, plural, one {# to-do} other {# to-dos}}"
+msgstr "{todos, plural, one {# taak} other {# taken}}"
 
 msgid "{toolName} interrupted"
 msgstr "{toolName} onderbroken"
@@ -12778,6 +12784,9 @@ msgstr "Opent de lijst met workspaces"
 
 msgid "Open the new workspace modal"
 msgstr "Het venster voor een nieuwe werkruimte openen"
+
+msgid "Open the next conversation that needs you"
+msgstr "Open het volgende gesprek dat je nodig heeft"
 
 msgid "Open the notes"
 msgstr "Opent de notities"

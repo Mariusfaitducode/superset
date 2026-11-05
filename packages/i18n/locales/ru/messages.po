@@ -718,6 +718,9 @@ msgstr "{actor} отвязал(а) рабочее пространство {work
 msgid "{actual} so far · ~{projected} projected"
 msgstr "{actual} на данный момент · прогноз ~{projected}"
 
+msgid "{agents, plural, one {# agent} other {# agents}}"
+msgstr "{agents, plural, one {# агент} few {# агента} many {# агентов} other {# агента}}"
+
 msgid "{agents} sessions resume when you open their workspace."
 msgstr "Сеансы {agents} возобновятся, когда вы откроете их рабочее пространство."
 
@@ -1196,6 +1199,9 @@ msgstr "{teardownFailureCount, plural, one {Всё равно удалить} fe
 
 msgid "{threshold, plural, one {# agent PR merged} other {# agent PRs merged}}"
 msgstr "{threshold, plural, one {влит # PR агента} few {влито # PR агента} many {влито # PR агента} other {влито # PR агента}}"
+
+msgid "{todos, plural, one {# to-do} other {# to-dos}}"
+msgstr "{todos, plural, one {# задача} few {# задачи} many {# задач} other {# задачи}}"
 
 msgid "{toolName} interrupted"
 msgstr "{toolName} прерван"
@@ -12778,6 +12784,9 @@ msgstr "Открывает список рабочих пространств"
 
 msgid "Open the new workspace modal"
 msgstr "Открыть окно создания рабочей области"
+
+msgid "Open the next conversation that needs you"
+msgstr "Открыть следующую беседу, которой нужны вы"
 
 msgid "Open the notes"
 msgstr "Открывает заметки"

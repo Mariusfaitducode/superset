@@ -48,6 +48,7 @@ import { DashboardSidebarGithubNotice } from "./components/DashboardSidebarGithu
 import { DashboardSidebarHeader } from "./components/DashboardSidebarHeader";
 import { DashboardSidebarHiddenProjects } from "./components/DashboardSidebarHiddenProjects";
 import { DashboardSidebarHoverCardOverlay } from "./components/DashboardSidebarHoverCardOverlay";
+import { DashboardSidebarNeedsYouRow } from "./components/DashboardSidebarNeedsYouRow";
 import { DashboardSidebarPinnedSection } from "./components/DashboardSidebarPinnedSection";
 import { DashboardSidebarProjectSection } from "./components/DashboardSidebarProjectSection";
 import { DashboardSidebarRecentWorkspaceSwitcher } from "./components/DashboardSidebarRecentWorkspaceSwitcher";
@@ -593,6 +594,11 @@ export function DashboardSidebar({
 												status={githubStatus}
 												isCollapsed={isCollapsed}
 											/>
+											{!isCollapsed && (
+												<DashboardSidebarNeedsYouRow
+													workspaces={statusWorkspaces}
+												/>
+											)}
 											{(isCollapsed || !workspacesListCollapsed) && (
 												<DashboardSidebarPinnedSection
 													pinnedWorkspaces={displayedPinnedWorkspaces}

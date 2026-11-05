@@ -718,6 +718,9 @@ msgstr "{actor} đã hủy liên kết không gian làm việc {workspace}"
 msgid "{actual} so far · ~{projected} projected"
 msgstr "{actual} đến hiện tại · dự kiến ~{projected}"
 
+msgid "{agents, plural, one {# agent} other {# agents}}"
+msgstr "{agents, plural, other {# agent}}"
+
 msgid "{agents} sessions resume when you open their workspace."
 msgstr "Các phiên {agents} sẽ tiếp tục khi bạn mở workspace của chúng."
 
@@ -1196,6 +1199,9 @@ msgstr "{teardownFailureCount, plural, one {Vẫn xóa} other {Vẫn xóa #}}"
 
 msgid "{threshold, plural, one {# agent PR merged} other {# agent PRs merged}}"
 msgstr "{threshold, plural, other {đã hợp nhất # PR của tác nhân}}"
+
+msgid "{todos, plural, one {# to-do} other {# to-dos}}"
+msgstr "{todos, plural, other {# việc cần làm}}"
 
 msgid "{toolName} interrupted"
 msgstr "{toolName} bị gián đoạn"
@@ -12778,6 +12784,9 @@ msgstr "Mở danh sách workspace"
 
 msgid "Open the new workspace modal"
 msgstr "Mở hộp thoại tạo workspace mới"
+
+msgid "Open the next conversation that needs you"
+msgstr "Mở cuộc trò chuyện tiếp theo cần bạn"
 
 msgid "Open the notes"
 msgstr "Mở ghi chú"

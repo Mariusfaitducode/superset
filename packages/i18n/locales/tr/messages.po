@@ -718,6 +718,9 @@ msgstr "{actor} {workspace} çalışma alanının bağlantısını kaldırdı"
 msgid "{actual} so far · ~{projected} projected"
 msgstr "şu ana kadar {actual} · ~{projected} öngörülüyor"
 
+msgid "{agents, plural, one {# agent} other {# agents}}"
+msgstr "{agents, plural, one {# ajan} other {# ajan}}"
+
 msgid "{agents} sessions resume when you open their workspace."
 msgstr "{agents} oturumları, çalışma alanlarını açtığınızda devam eder."
 
@@ -1196,6 +1199,9 @@ msgstr "{teardownFailureCount, plural, one {Yine de sil} other {Yine de # tanesi
 
 msgid "{threshold, plural, one {# agent PR merged} other {# agent PRs merged}}"
 msgstr "{threshold, plural, one {# ajan PR'ı birleştirildi} other {# ajan PR'ı birleştirildi}}"
+
+msgid "{todos, plural, one {# to-do} other {# to-dos}}"
+msgstr "{todos, plural, one {# yapılacak} other {# yapılacak}}"
 
 msgid "{toolName} interrupted"
 msgstr "{toolName} kesildi"
@@ -12778,6 +12784,9 @@ msgstr "Çalışma alanı listesini açar"
 
 msgid "Open the new workspace modal"
 msgstr "Yeni çalışma alanı penceresini aç"
+
+msgid "Open the next conversation that needs you"
+msgstr "Sana ihtiyaç duyan sonraki konuşmayı aç"
 
 msgid "Open the notes"
 msgstr "Notları açar"

@@ -718,6 +718,9 @@ msgstr "{actor} odłączył(a) obszar roboczy {workspace}"
 msgid "{actual} so far · ~{projected} projected"
 msgstr "{actual} dotąd · ~{projected} prognozowane"
 
+msgid "{agents, plural, one {# agent} other {# agents}}"
+msgstr "{agents, plural, one {# agent} few {# agenci} many {# agentów} other {# agenta}}"
+
 msgid "{agents} sessions resume when you open their workspace."
 msgstr "Sesje {agents} wznowią się po otwarciu ich obszaru roboczego."
 
@@ -1196,6 +1199,9 @@ msgstr "{teardownFailureCount, plural, one {Usuń mimo to} few {Usuń # mimo to}
 
 msgid "{threshold, plural, one {# agent PR merged} other {# agent PRs merged}}"
 msgstr "{threshold, plural, one {scalono # PR agenta} few {scalono # PR agenta} many {scalono # PR agenta} other {scalono # PR agenta}}"
+
+msgid "{todos, plural, one {# to-do} other {# to-dos}}"
+msgstr "{todos, plural, one {# zadanie} few {# zadania} many {# zadań} other {# zadania}}"
 
 msgid "{toolName} interrupted"
 msgstr "{toolName} przerwane"
@@ -12778,6 +12784,9 @@ msgstr "Otwiera listę obszarów roboczych"
 
 msgid "Open the new workspace modal"
 msgstr "Otwórz okno nowego obszaru roboczego"
+
+msgid "Open the next conversation that needs you"
+msgstr "Otwórz następną rozmowę, która cię potrzebuje"
 
 msgid "Open the notes"
 msgstr "Otwiera notatki"
