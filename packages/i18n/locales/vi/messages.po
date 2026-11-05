@@ -2957,9 +2957,6 @@ msgstr "Tiêu đề tự động hóa"
 msgid "Automations"
 msgstr "Tự động hóa"
 
-msgid "Automations ({myFailedCount} failing)"
-msgstr "Tự động hóa ({myFailedCount} đang lỗi)"
-
 msgid "Automations & event triggers"
 msgstr "Tự động hóa & trigger sự kiện"
 
@@ -13097,6 +13094,9 @@ msgstr "Tiêu đề trang"
 msgid "Pages"
 msgstr "Trang"
 
+msgid "Pages as an icon bar"
+msgstr "Trang dưới dạng thanh biểu tượng"
+
 msgid "Pages could not be loaded"
 msgstr "Không thể tải các trang"
 
@@ -16401,6 +16401,9 @@ msgstr "Hiện văn bản"
 
 msgid "Show the messages that wait for the current turn to end."
 msgstr "Hiển thị các tin nhắn đang chờ lượt hiện tại kết thúc."
+
+msgid "Show the pages below Search as one row of icons, with their counts, instead of a row each."
+msgstr "Hiển thị các trang bên dưới Tìm kiếm thành một hàng biểu tượng kèm số đếm, thay vì mỗi trang một dòng."
 
 msgid "Show the to-do list of each conversation, shared with its agent."
 msgstr "Hiển thị danh sách việc cần làm của mỗi cuộc trò chuyện, chia sẻ với agent của nó."

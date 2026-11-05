@@ -2957,9 +2957,6 @@ msgstr "Judul otomatisasi"
 msgid "Automations"
 msgstr "Otomatisasi"
 
-msgid "Automations ({myFailedCount} failing)"
-msgstr "Otomatisasi ({myFailedCount} gagal)"
-
 msgid "Automations & event triggers"
 msgstr "Otomatisasi & pemicu event"
 
@@ -13097,6 +13094,9 @@ msgstr "Judul halaman"
 msgid "Pages"
 msgstr "Halaman"
 
+msgid "Pages as an icon bar"
+msgstr "Halaman sebagai bilah ikon"
+
 msgid "Pages could not be loaded"
 msgstr "Halaman tidak dapat dimuat"
 
@@ -16401,6 +16401,9 @@ msgstr "Tampilkan teks"
 
 msgid "Show the messages that wait for the current turn to end."
 msgstr "Tampilkan pesan yang menunggu giliran saat ini selesai."
+
+msgid "Show the pages below Search as one row of icons, with their counts, instead of a row each."
+msgstr "Tampilkan halaman di bawah Pencarian sebagai satu baris ikon, dengan hitungannya, alih-alih satu baris masing-masing."
 
 msgid "Show the to-do list of each conversation, shared with its agent."
 msgstr "Tampilkan daftar to-do setiap percakapan, dibagikan dengan agennya."

@@ -2957,9 +2957,6 @@ msgstr "Název automatizace"
 msgid "Automations"
 msgstr "Automatizace"
 
-msgid "Automations ({myFailedCount} failing)"
-msgstr "Automatizace (neúspěšné: {myFailedCount})"
-
 msgid "Automations & event triggers"
 msgstr "Automatizace a spouštěče událostí"
 
@@ -13097,6 +13094,9 @@ msgstr "Název stránky"
 msgid "Pages"
 msgstr "Stránky"
 
+msgid "Pages as an icon bar"
+msgstr "Stránky jako lišta ikon"
+
 msgid "Pages could not be loaded"
 msgstr "Stránky se nepodařilo načíst"
 
@@ -16401,6 +16401,9 @@ msgstr "Zobrazit text"
 
 msgid "Show the messages that wait for the current turn to end."
 msgstr "Zobrazit zprávy, které čekají na konec aktuálního kola."
+
+msgid "Show the pages below Search as one row of icons, with their counts, instead of a row each."
+msgstr "Zobrazit stránky pod Hledáním jako jednu řadu ikon s počty místo samostatného řádku pro každou."
 
 msgid "Show the to-do list of each conversation, shared with its agent."
 msgstr "Zobrazit seznam úkolů každé konverzace, sdílený s jejím agentem."

@@ -2957,9 +2957,6 @@ msgstr "Titel van automatisering"
 msgid "Automations"
 msgstr "Automatiseringen"
 
-msgid "Automations ({myFailedCount} failing)"
-msgstr "Automatiseringen ({myFailedCount} mislukt)"
-
 msgid "Automations & event triggers"
 msgstr "Automatiseringen en event-triggers"
 
@@ -13097,6 +13094,9 @@ msgstr "Paginatitel"
 msgid "Pages"
 msgstr "Pagina's"
 
+msgid "Pages as an icon bar"
+msgstr "Pagina's als pictogrammenbalk"
+
 msgid "Pages could not be loaded"
 msgstr "Pagina's konden niet worden geladen"
 
@@ -16401,6 +16401,9 @@ msgstr "Tekst tonen"
 
 msgid "Show the messages that wait for the current turn to end."
 msgstr "Toon de berichten die wachten tot de huidige beurt klaar is."
+
+msgid "Show the pages below Search as one row of icons, with their counts, instead of a row each."
+msgstr "Toon de pagina's onder Zoeken als één rij pictogrammen, met hun aantallen, in plaats van elk een eigen rij."
 
 msgid "Show the to-do list of each conversation, shared with its agent."
 msgstr "Toon de to-dolijst van elk gesprek, gedeeld met de agent."

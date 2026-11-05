@@ -2957,9 +2957,6 @@ msgstr "자동화 제목"
 msgid "Automations"
 msgstr "자동화"
 
-msgid "Automations ({myFailedCount} failing)"
-msgstr "자동화 ({myFailedCount}개 실패)"
-
 msgid "Automations & event triggers"
 msgstr "자동화 및 이벤트 트리거"
 
@@ -13097,6 +13094,9 @@ msgstr "페이지 제목"
 msgid "Pages"
 msgstr "페이지"
 
+msgid "Pages as an icon bar"
+msgstr "페이지를 아이콘 막대로 표시"
+
 msgid "Pages could not be loaded"
 msgstr "페이지를 불러오지 못했습니다"
 
@@ -16401,6 +16401,9 @@ msgstr "텍스트 보기"
 
 msgid "Show the messages that wait for the current turn to end."
 msgstr "현재 턴이 끝나기를 기다리는 메시지를 표시합니다."
+
+msgid "Show the pages below Search as one row of icons, with their counts, instead of a row each."
+msgstr "검색 아래의 페이지를 각각 한 줄 대신 개수가 표시된 아이콘 한 줄로 표시합니다."
 
 msgid "Show the to-do list of each conversation, shared with its agent."
 msgstr "각 대화의 할 일 목록을 에이전트와 공유하여 표시합니다."

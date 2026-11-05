@@ -1,5 +1,4 @@
 import { Trans, useLingui } from "@lingui/react/macro";
-import { FEATURE_FLAGS } from "@superset/shared/constants";
 import {
 	DropdownMenu,
 	DropdownMenuContent,
@@ -10,21 +9,8 @@ import { toast } from "@superset/ui/sonner";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@superset/ui/tooltip";
 import { cn } from "@superset/ui/utils";
 import { useMatchRoute, useNavigate } from "@tanstack/react-router";
-import { useFeatureFlagEnabled } from "posthog-js/react";
-import { type ReactNode, useRef } from "react";
-import { GoGitPullRequest } from "react-icons/go";
-import { HiOutlineClipboardDocumentList } from "react-icons/hi2";
-import {
-	LuClock,
-	LuCloud,
-	LuFileText,
-	LuGauge,
-	LuLayers,
-	LuPlus,
-	LuPuzzle,
-	LuSearch,
-	LuStickyNote,
-} from "react-icons/lu";
+import { useRef } from "react";
+import { LuPlus, LuSearch } from "react-icons/lu";
 import {
 	VscFolderOpened,
 	VscGithubAlt,
@@ -32,17 +18,14 @@ import {
 	VscNewFolder,
 } from "react-icons/vsc";
 import { useFrameStackStore } from "renderer/commandPalette";
-import { GATED_FEATURES, usePaywall } from "renderer/components/Paywall";
 import { SidebarKbdHint } from "renderer/components/SidebarKbdHint";
 import { ZoomStable } from "renderer/components/ZoomStable";
-import { env } from "renderer/env.renderer";
 import {
 	useOpenNewWorkspace,
 	useOpenNewWorkspaceForLocalProject,
 } from "renderer/hooks/useOpenNewWorkspace";
 import { useZoomFactor } from "renderer/hooks/useZoomFactor";
 import { useHotkeyDisplay } from "renderer/hotkeys";
-import { cloudTrpc } from "renderer/lib/cloud-trpc";
 import { electronTrpc } from "renderer/lib/electron-trpc";
 import { useFolderFirstImport } from "renderer/routes/_authenticated/_dashboard/components/AddRepositoryModals/hooks/useFolderFirstImport";
 import { AppMenuButton } from "renderer/routes/_authenticated/_dashboard/components/AppMenuButton";
@@ -50,27 +33,13 @@ import { NavigationControls } from "renderer/routes/_authenticated/_dashboard/co
 import { OfflineBadge } from "renderer/routes/_authenticated/_dashboard/components/OfflineBadge";
 import { PortsDropdown } from "renderer/routes/_authenticated/_dashboard/components/PortsDropdown";
 import { SidebarToggle } from "renderer/routes/_authenticated/_dashboard/components/SidebarToggle";
-import { ProjectGlyph } from "renderer/routes/_authenticated/_dashboard/components/TaskProjectIcon";
 import {
 	WINDOW_CHROME_BAND_CLASS,
 	WINDOW_CONTROLS_ROW_HEIGHT,
 	WINDOW_CONTROLS_ROW_TOP,
 } from "renderer/routes/_authenticated/_dashboard/components/WindowChrome";
-import { useFailedAutomations } from "renderer/routes/_authenticated/_dashboard/hooks/useFailedAutomations";
 import { useShowsAppTopBar } from "renderer/routes/_authenticated/_dashboard/hooks/useShowsAppTopBar";
-import {
-	pullRequestsSearchFromFilters,
-	usePullRequestsFilterStore,
-} from "renderer/routes/_authenticated/_dashboard/pull-requests/stores/pullRequestsFilterStore";
-import {
-	tasksSearchFromFilters,
-	useTasksFilterStore,
-} from "renderer/routes/_authenticated/_dashboard/tasks/stores/tasks-filter-state";
 import { useHostWorkspaces } from "renderer/routes/_authenticated/providers/HostWorkspacesProvider";
-import {
-	getUsageLastSection,
-	usageSectionPath,
-} from "renderer/routes/_authenticated/settings/usage/utils/usageLastSection";
 import { STROKE_WIDTH_THICK } from "renderer/screens/main/components/WorkspaceSidebar/constants";
 import {
 	useOpenEmptyProjectModal,
@@ -78,16 +47,15 @@ import {
 	useOpenTemplateGalleryModal,
 } from "renderer/stores/add-repository-modal";
 import {
-	NAV_ITEM_HOTKEY,
 	type SidebarNavItemId,
 	useSidebarPreference,
 } from "renderer/stores/sidebar-preferences";
 import { COLLAPSED_WORKSPACE_SIDEBAR_WIDTH } from "renderer/stores/workspace-sidebar-state";
-import { SidebarNavButton } from "./components/SidebarNavButton";
-import { SidebarNavHotkey } from "./components/SidebarNavHotkey";
-import { SidebarNavRailButton } from "./components/SidebarNavRailButton";
-
-const NAV_ICON_CLASS = "size-4 shrink-0 text-muted-foreground";
+import {
+	SidebarNavEntry,
+	type SidebarNavVariant,
+} from "./components/SidebarNavEntry";
+import { SIDEBAR_NAV_ENTRIES } from "./navEntries";
 
 interface DashboardSidebarHeaderProps {
 	isCollapsed?: boolean;
@@ -162,15 +130,6 @@ export function DashboardSidebarHeader({
 	const isMac = platform === undefined || platform === "darwin";
 	const zoomFactor = useZoomFactor();
 	const matchRoute = useMatchRoute();
-	const { gateFeature, hasAccess } = usePaywall();
-	const isWorkspacesListOpen = !!matchRoute({ to: "/v2-workspaces" });
-	const isCloudWorkspacesOpen = !!matchRoute({
-		to: "/cloud-workspaces",
-		fuzzy: true,
-	});
-	const isProjectsOpen = !!matchRoute({ to: "/projects", fuzzy: true });
-	const isCloudEnabled =
-		useFeatureFlagEnabled(FEATURE_FLAGS.CLOUD_WORKSPACES) === true;
 	const v2WorkspaceMatch = matchRoute({
 		to: "/v2-workspace/$workspaceId",
 		fuzzy: true,
@@ -184,263 +143,18 @@ export function DashboardSidebarHeader({
 					(workspace) => workspace.id === v2WorkspaceMatch.workspaceId,
 				)?.projectId ?? undefined)
 			: undefined;
-	const isTasksOpen = !!matchRoute({ to: "/tasks", fuzzy: true });
-	const isPullRequestsOpen = !!matchRoute({
-		to: "/pull-requests",
-		fuzzy: true,
-	});
-	const isAutomationsOpen = !!matchRoute({ to: "/automations", fuzzy: true });
-	const isPluginsOpen = !!matchRoute({ to: "/plugins", fuzzy: true });
-	const isPagesOpen = !!matchRoute({ to: "/pages", fuzzy: true });
-	const isNotesOpen = !!matchRoute({ to: "/notes", fuzzy: true });
-	// `?? false`: the hook returns undefined until PostHog flags resolve.
-	// Dev builds bypass the flag — the local dev account isn't in the
-	// @superset.sh release condition.
-	const isPluginsEnabled =
-		(useFeatureFlagEnabled(FEATURE_FLAGS.PLUGINS) ?? false) ||
-		env.NODE_ENV === "development";
-	const cloudUtils = cloudTrpc.useUtils();
-	const { myFailedCount } = useFailedAutomations();
-
-	const {
-		tab: lastTab,
-		assignee: lastAssignee,
-		label: lastLabel,
-		search: lastSearch,
-		typeTab: lastTypeTab,
-		projectFilters: lastProjectFilters,
-		includeClosedIssues: lastIncludeClosedIssues,
-	} = useTasksFilterStore();
-	const {
-		search: lastPullRequestsSearch,
-		projectFilters: lastPullRequestsProjectFilters,
-		authorFilter: lastPullRequestsAuthorFilter,
-		reviewFilter: lastPullRequestsReviewFilter,
-		includeClosed: lastPullRequestsIncludeClosed,
-		mergedOnly: lastPullRequestsMergedOnly,
-	} = usePullRequestsFilterStore();
-
-	const handleWorkspacesClick = () => {
-		navigate({ to: "/v2-workspaces" });
-	};
-
-	const handleCloudWorkspacesClick = () => {
-		navigate({ to: "/cloud-workspaces" });
-	};
-
-	const handleProjectsClick = () => {
-		navigate({ to: "/projects" });
-	};
-
-	// Automations are Pro, but an org that already has some (a downgrade) can
-	// still reach the list to pause, edit, or delete them; the page gates the
-	// actions that need the plan. A Free org with none meets the paywall here.
-	// If the list can't be read the answer is unknown, so let the click
-	// through: an empty list page gates every action itself, and a wrong
-	// paywall on a downgraded org would be the worse mistake.
-	const handleAutomationsClick = async () => {
-		if (hasAccess(GATED_FEATURES.AUTOMATIONS)) {
-			navigate({ to: "/automations" });
-			return;
-		}
-		const automations = await cloudUtils.automation.list
-			.fetch()
-			.catch(() => null);
-		if (automations === null || automations.length > 0) {
-			navigate({ to: "/automations" });
-			return;
-		}
-		gateFeature(GATED_FEATURES.AUTOMATIONS, () => {
-			navigate({ to: "/automations" });
-		});
-	};
-
-	const handleFailedAutomationsClick = () => {
-		navigate({
-			to: "/automations/runs",
-			search: { status: "failed", scope: "mine" },
-		});
-	};
-
-	const handleTasksClick = () => {
-		gateFeature(GATED_FEATURES.TASKS, () => {
-			navigate({
-				to: "/tasks",
-				search: tasksSearchFromFilters({
-					tab: lastTab,
-					assignee: lastAssignee,
-					label: lastLabel,
-					search: lastSearch,
-					typeTab: lastTypeTab,
-					projectFilters: lastProjectFilters,
-					includeClosedIssues: lastIncludeClosedIssues,
-				}),
-			});
-		});
-	};
-
-	const { data: isUsageInSidebarEnabled } =
-		electronTrpc.settings.getShowUsageInSidebar.useQuery();
-
-	const handlePagesClick = () => {
-		navigate({ to: "/pages" });
-	};
-
-	const handleNotesClick = () => {
-		navigate({ to: "/notes" });
-	};
-
-	const handlePluginsClick = () => {
-		navigate({ to: "/plugins" });
-	};
-
-	const handlePullRequestsClick = () => {
-		navigate({
-			to: "/pull-requests",
-			search: pullRequestsSearchFromFilters({
-				search: lastPullRequestsSearch,
-				projectFilters: lastPullRequestsProjectFilters,
-				authorFilter: lastPullRequestsAuthorFilter,
-				reviewFilter: lastPullRequestsReviewFilter,
-				includeClosed: lastPullRequestsIncludeClosed,
-				mergedOnly: lastPullRequestsMergedOnly,
-			}),
-		});
-	};
-
-	const handleUsageClick = () => {
-		// Reopen whichever Usage section (token / machine resources) was
-		// visited last.
-		navigate({ to: usageSectionPath(getUsageLastSection()) });
-	};
-
 	const hiddenNavItems = useSidebarPreference("hiddenNavItems");
+	const navItemsAsIcons = useSidebarPreference("navItemsAsIcons");
 	const isNavItemShown = (id: SidebarNavItemId) => !hiddenNavItems.includes(id);
-	const navItems: {
-		id: Exclude<SidebarNavItemId, "search">;
-		label: string;
-		available: boolean;
-		isActive: boolean;
-		onClick: () => void;
-		icon: ReactNode;
-		railIcon: ReactNode;
-	}[] = [
-		{
-			id: "workspaces",
-			label: t({ message: "Workspaces" }),
-			available: true,
-			isActive: isWorkspacesListOpen,
-			onClick: handleWorkspacesClick,
-			icon: <LuLayers className={NAV_ICON_CLASS} strokeWidth={1.5} />,
-			railIcon: <LuLayers className="size-3.5" strokeWidth={1.5} />,
-		},
-		{
-			id: "cloudWorkspaces",
-			label: t({ message: "Cloud workspaces" }),
-			available: isCloudEnabled,
-			isActive: isCloudWorkspacesOpen,
-			onClick: handleCloudWorkspacesClick,
-			icon: <LuCloud className={NAV_ICON_CLASS} strokeWidth={1.5} />,
-			railIcon: <LuCloud className="size-3.5" strokeWidth={1.5} />,
-		},
-		{
-			id: "projects",
-			label: t({ message: "Projects" }),
-			available: isCloudEnabled,
-			isActive: isProjectsOpen,
-			onClick: handleProjectsClick,
-			icon: <ProjectGlyph className={NAV_ICON_CLASS} />,
-			railIcon: <ProjectGlyph className="size-3.5" />,
-		},
-		{
-			id: "automations",
-			label: t({ message: "Automations" }),
-			available: true,
-			isActive: isAutomationsOpen,
-			onClick: () => void handleAutomationsClick(),
-			icon: <LuClock className={NAV_ICON_CLASS} strokeWidth={1.5} />,
-			railIcon: <LuClock className="size-3.5" strokeWidth={1.5} />,
-		},
-		{
-			id: "tasks",
-			label: t({ message: "Tasks" }),
-			available: true,
-			isActive: isTasksOpen,
-			onClick: handleTasksClick,
-			icon: <HiOutlineClipboardDocumentList className={NAV_ICON_CLASS} />,
-			railIcon: <HiOutlineClipboardDocumentList className="size-3.5" />,
-		},
-		{
-			id: "pullRequests",
-			label: t({ message: "Pull requests" }),
-			available: true,
-			isActive: isPullRequestsOpen,
-			onClick: handlePullRequestsClick,
-			icon: <GoGitPullRequest className={NAV_ICON_CLASS} />,
-			railIcon: <GoGitPullRequest className="size-3.5" />,
-		},
-		{
-			id: "usage",
-			label: t({ message: "Usage" }),
-			available: isUsageInSidebarEnabled === true,
-			isActive: false,
-			onClick: handleUsageClick,
-			icon: <LuGauge className={NAV_ICON_CLASS} strokeWidth={1.5} />,
-			railIcon: <LuGauge className="size-3.5" strokeWidth={1.5} />,
-		},
-		{
-			id: "pages",
-			label: t({ message: "Pages" }),
-			available: true,
-			isActive: isPagesOpen,
-			onClick: handlePagesClick,
-			icon: <LuFileText className={NAV_ICON_CLASS} strokeWidth={1.5} />,
-			railIcon: <LuFileText className="size-3.5" strokeWidth={1.5} />,
-		},
-		{
-			id: "notes",
-			label: t({ message: "Notes" }),
-			available: true,
-			isActive: isNotesOpen,
-			onClick: handleNotesClick,
-			icon: <LuStickyNote className={NAV_ICON_CLASS} strokeWidth={1.5} />,
-			railIcon: <LuStickyNote className="size-3.5" strokeWidth={1.5} />,
-		},
-		{
-			id: "plugins",
-			label: t({ message: "Plugins" }),
-			available: isPluginsEnabled,
-			isActive: isPluginsOpen,
-			onClick: handlePluginsClick,
-			icon: <LuPuzzle className={NAV_ICON_CLASS} strokeWidth={1.5} />,
-			railIcon: <LuPuzzle className="size-3.5" strokeWidth={1.5} />,
-		},
-	];
-	const shownNavItems = navItems.filter(
-		(item) => item.available && isNavItemShown(item.id),
-	);
-	// Shortcuts work for hidden entries too.
-	const navHotkeys = navItems.map((item) => (
-		<SidebarNavHotkey
-			key={item.id}
-			hotkeyId={NAV_ITEM_HOTKEY[item.id]}
-			onTrigger={item.onClick}
-			enabled={item.available}
-		/>
-	));
-	const automationsFailedBadge =
-		myFailedCount > 0 ? (
-			<button
-				type="button"
-				onClick={handleFailedAutomationsClick}
-				title={t({
-					message: `${myFailedCount} of your automations failed their last run`,
-				})}
-				className="absolute right-2 top-1/2 flex h-4 min-w-4 -translate-y-1/2 items-center justify-center rounded-full bg-red-500/15 px-1 text-[10px] font-medium tabular-nums text-red-600 transition-colors hover:bg-red-500/25 dark:text-red-400"
-			>
-				{myFailedCount > 9 ? "9+" : myFailedCount}
-			</button>
-		) : undefined;
+	const navEntries = (variant: SidebarNavVariant) =>
+		SIDEBAR_NAV_ENTRIES.map((entry) => (
+			<SidebarNavEntry
+				key={entry.id}
+				entry={entry}
+				variant={variant}
+				hidden={!isNavItemShown(entry.id)}
+			/>
+		));
 
 	if (isCollapsed) {
 		return (
@@ -514,25 +228,7 @@ export function DashboardSidebarHeader({
 						</Tooltip>
 					)}
 
-					{shownNavItems.map((item) => (
-						<SidebarNavRailButton
-							key={item.id}
-							label={item.label}
-							tooltip={
-								item.id === "automations" && myFailedCount > 0
-									? t({
-											message: `Automations (${myFailedCount} failing)`,
-										})
-									: undefined
-							}
-							icon={item.railIcon}
-							hotkeyId={NAV_ITEM_HOTKEY[item.id]}
-							isActive={item.isActive}
-							onClick={item.onClick}
-							showAlertDot={item.id === "automations" && myFailedCount > 0}
-						/>
-					))}
-					{navHotkeys}
+					{navEntries("rail")}
 
 					<DropdownMenu>
 						<Tooltip delayDuration={700}>
@@ -667,18 +363,11 @@ export function DashboardSidebarHeader({
 				</button>
 			)}
 
-			{shownNavItems.map((item) => (
-				<SidebarNavButton
-					key={item.id}
-					label={item.label}
-					icon={item.icon}
-					hotkeyId={NAV_ITEM_HOTKEY[item.id]}
-					isActive={item.isActive}
-					onClick={item.onClick}
-					badge={item.id === "automations" ? automationsFailedBadge : undefined}
-				/>
-			))}
-			{navHotkeys}
+			{navItemsAsIcons ? (
+				<div className="flex flex-wrap gap-0.5 pt-1">{navEntries("icon")}</div>
+			) : (
+				navEntries("row")
+			)}
 		</div>
 	);
 }

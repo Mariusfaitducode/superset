@@ -2957,9 +2957,6 @@ msgstr "オートメーションのタイトル"
 msgid "Automations"
 msgstr "オートメーション"
 
-msgid "Automations ({myFailedCount} failing)"
-msgstr "オートメーション({myFailedCount}件失敗中)"
-
 msgid "Automations & event triggers"
 msgstr "オートメーションとイベントトリガー"
 
@@ -13097,6 +13094,9 @@ msgstr "ページタイトル"
 msgid "Pages"
 msgstr "ページ"
 
+msgid "Pages as an icon bar"
+msgstr "ページをアイコンバーで表示"
+
 msgid "Pages could not be loaded"
 msgstr "ページを読み込めませんでした"
 
@@ -16401,6 +16401,9 @@ msgstr "テキストを表示"
 
 msgid "Show the messages that wait for the current turn to end."
 msgstr "現在のターンの終了を待っているメッセージを表示します。"
+
+msgid "Show the pages below Search as one row of icons, with their counts, instead of a row each."
+msgstr "検索の下のページを、1 行ずつではなく件数付きのアイコンの列として表示します。"
 
 msgid "Show the to-do list of each conversation, shared with its agent."
 msgstr "各会話のTo-doリストを表示し、そのエージェントと共有します。"

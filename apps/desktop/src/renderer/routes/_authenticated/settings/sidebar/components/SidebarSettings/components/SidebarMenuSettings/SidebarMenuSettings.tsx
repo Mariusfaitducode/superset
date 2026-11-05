@@ -10,13 +10,15 @@ import { electronTrpc } from "renderer/lib/electron-trpc";
 import { SettingsRow } from "renderer/routes/_authenticated/settings/components/SettingsRow";
 import {
 	NAV_ITEM_HOTKEY,
+	NAV_ITEM_LABEL,
+	SIDEBAR_NAV_ITEMS,
 	type SidebarNavItemId,
 	useSidebarPreferencesStore,
 } from "renderer/stores/sidebar-preferences";
 
 /** Which entries the menu at the top of the sidebar lists, and their shortcuts. */
 export function SidebarMenuSettings() {
-	const { t } = useLingui();
+	const { t, i18n } = useLingui();
 	const hiddenNavItems = useSidebarPreferencesStore(
 		(state) => state.hiddenNavItems,
 	);
@@ -25,6 +27,9 @@ export function SidebarMenuSettings() {
 	);
 	const keepSidebarInSettings = useSidebarPreferencesStore(
 		(state) => state.keepSidebarInSettings,
+	);
+	const navItemsAsIcons = useSidebarPreferencesStore(
+		(state) => state.navItemsAsIcons,
 	);
 	const setPreference = useSidebarPreferencesStore(
 		(state) => state.setPreference,
@@ -43,23 +48,17 @@ export function SidebarMenuSettings() {
 			onSettled: () => utils.settings.getShowUsageInSidebar.invalidate(),
 		});
 
-	const items: { id: SidebarNavItemId; label: string; available: boolean }[] = [
-		{ id: "search", label: t`Search`, available: true },
-		{ id: "workspaces", label: t`Workspaces`, available: true },
-		{
-			id: "cloudWorkspaces",
-			label: t`Cloud workspaces`,
-			available: isCloudEnabled,
-		},
-		{ id: "projects", label: t`Projects`, available: isCloudEnabled },
-		{ id: "automations", label: t`Automations`, available: true },
-		{ id: "tasks", label: t`Tasks`, available: true },
-		{ id: "pullRequests", label: t`Pull requests`, available: true },
-		{ id: "usage", label: t`Usage`, available: true },
-		{ id: "pages", label: t`Pages`, available: true },
-		{ id: "notes", label: t`Notes`, available: true },
-		{ id: "plugins", label: t`Plugins`, available: isPluginsEnabled },
-	];
+	// Pages from other features are available unless listed here.
+	const availability: Partial<Record<SidebarNavItemId, boolean>> = {
+		cloudWorkspaces: isCloudEnabled,
+		projects: isCloudEnabled,
+		plugins: isPluginsEnabled,
+	};
+	const items = SIDEBAR_NAV_ITEMS.map((id) => ({
+		id,
+		label: i18n._(NAV_ITEM_LABEL[id]),
+		available: availability[id] ?? true,
+	}));
 
 	const isShown = (id: SidebarNavItemId) =>
 		id === "usage"
@@ -82,6 +81,19 @@ export function SidebarMenuSettings() {
 					checked={keepSidebarInSettings}
 					onCheckedChange={(checked) =>
 						setPreference("keepSidebarInSettings", checked)
+					}
+				/>
+			</SettingsRow>
+			<SettingsRow
+				label={t`Pages as an icon bar`}
+				hint={t`Show the pages below Search as one row of icons, with their counts, instead of a row each.`}
+				htmlFor="sidebar-navItemsAsIcons"
+			>
+				<Switch
+					id="sidebar-navItemsAsIcons"
+					checked={navItemsAsIcons}
+					onCheckedChange={(checked) =>
+						setPreference("navItemsAsIcons", checked)
 					}
 				/>
 			</SettingsRow>

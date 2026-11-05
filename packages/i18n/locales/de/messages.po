@@ -2957,9 +2957,6 @@ msgstr "Titel der Automatisierung"
 msgid "Automations"
 msgstr "Automatisierungen"
 
-msgid "Automations ({myFailedCount} failing)"
-msgstr "Automatisierungen ({myFailedCount} fehlgeschlagen)"
-
 msgid "Automations & event triggers"
 msgstr "Automatisierungen & Ereignis-Trigger"
 
@@ -13097,6 +13094,9 @@ msgstr "Seitentitel"
 msgid "Pages"
 msgstr "Seiten"
 
+msgid "Pages as an icon bar"
+msgstr "Seiten als Symbolleiste"
+
 msgid "Pages could not be loaded"
 msgstr "Seiten konnten nicht geladen werden"
 
@@ -16401,6 +16401,9 @@ msgstr "Text anzeigen"
 
 msgid "Show the messages that wait for the current turn to end."
 msgstr "Nachrichten anzeigen, die auf das Ende des aktuellen Durchlaufs warten."
+
+msgid "Show the pages below Search as one row of icons, with their counts, instead of a row each."
+msgstr "Zeigt die Seiten unter der Suche als eine Reihe von Symbolen mit ihren Zählern statt je einer Zeile."
 
 msgid "Show the to-do list of each conversation, shared with its agent."
 msgstr "Die To-do-Liste jeder Unterhaltung anzeigen, geteilt mit ihrem Agenten."

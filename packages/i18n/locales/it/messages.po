@@ -2957,9 +2957,6 @@ msgstr "Titolo dell'automazione"
 msgid "Automations"
 msgstr "Automazioni"
 
-msgid "Automations ({myFailedCount} failing)"
-msgstr "Automazioni ({myFailedCount} in errore)"
-
 msgid "Automations & event triggers"
 msgstr "Automazioni e trigger da eventi"
 
@@ -13097,6 +13094,9 @@ msgstr "Titolo della pagina"
 msgid "Pages"
 msgstr "Pagine"
 
+msgid "Pages as an icon bar"
+msgstr "Pagine come barra di icone"
+
 msgid "Pages could not be loaded"
 msgstr "Impossibile caricare le pagine"
 
@@ -16401,6 +16401,9 @@ msgstr "Mostra testo"
 
 msgid "Show the messages that wait for the current turn to end."
 msgstr "Mostra i messaggi che aspettano la fine del turno corrente."
+
+msgid "Show the pages below Search as one row of icons, with their counts, instead of a row each."
+msgstr "Mostra le pagine sotto Cerca come una riga di icone, con i loro conteggi, invece di una riga ciascuna."
 
 msgid "Show the to-do list of each conversation, shared with its agent."
 msgstr "Mostra la lista dei to-do di ogni conversazione, condivisa con il suo agente."

@@ -2957,9 +2957,6 @@ msgstr "Otomasyon başlığı"
 msgid "Automations"
 msgstr "Otomasyonlar"
 
-msgid "Automations ({myFailedCount} failing)"
-msgstr "Otomasyonlar ({myFailedCount} başarısız)"
-
 msgid "Automations & event triggers"
 msgstr "Otomasyonlar ve olay tetikleyicileri"
 
@@ -13097,6 +13094,9 @@ msgstr "Sayfa başlığı"
 msgid "Pages"
 msgstr "Sayfalar"
 
+msgid "Pages as an icon bar"
+msgstr "Sayfalar simge çubuğu olarak"
+
 msgid "Pages could not be loaded"
 msgstr "Sayfalar yüklenemedi"
 
@@ -16401,6 +16401,9 @@ msgstr "Metni göster"
 
 msgid "Show the messages that wait for the current turn to end."
 msgstr "Mevcut turun bitmesini bekleyen mesajları göster."
+
+msgid "Show the pages below Search as one row of icons, with their counts, instead of a row each."
+msgstr "Arama'nın altındaki sayfaları her biri için ayrı satır yerine sayılarıyla birlikte tek bir simge satırı olarak göster."
 
 msgid "Show the to-do list of each conversation, shared with its agent."
 msgstr "Her konuşmanın yapılacaklar listesini, ajanıyla paylaşarak göster."

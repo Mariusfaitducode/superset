@@ -8,7 +8,7 @@ interface SidebarNavRailButtonProps {
 	/** Tooltip text when it says more than the label. */
 	tooltip?: string;
 	icon: ReactNode;
-	hotkeyId: HotkeyId;
+	hotkeyId?: HotkeyId;
 	isActive: boolean;
 	onClick: () => void;
 	showAlertDot?: boolean;
@@ -23,7 +23,7 @@ export function SidebarNavRailButton({
 	onClick,
 	showAlertDot = false,
 }: SidebarNavRailButtonProps) {
-	const shortcut = useHotkeyDisplay(hotkeyId).text;
+	const shortcut = useHotkeyDisplay(hotkeyId ?? "").text;
 	return (
 		<Tooltip delayDuration={300}>
 			<TooltipTrigger asChild>

@@ -21,6 +21,8 @@ export interface SidebarPreferences extends SidebarAppearance {
 	hiddenNavItems: SidebarNavItemId[];
 	/** Keep the sidebar on the left of the Settings pages. */
 	keepSidebarInSettings: boolean;
+	/** Pages as one wrapped row of icons rather than a row each. */
+	navItemsAsIcons: boolean;
 }
 
 export type SidebarPreferenceKey = {
@@ -49,6 +51,7 @@ export const DEFAULT_SIDEBAR_PREFERENCES: SidebarPreferences = {
 	folderColorOnConversations: false,
 	hiddenNavItems: [],
 	keepSidebarInSettings: true,
+	navItemsAsIcons: true,
 };
 
 type AppearanceKey = Exclude<keyof SidebarAppearance, "stateColors">;

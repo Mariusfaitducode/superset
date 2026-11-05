@@ -2957,9 +2957,6 @@ msgstr "自动化标题"
 msgid "Automations"
 msgstr "自动化"
 
-msgid "Automations ({myFailedCount} failing)"
-msgstr "自动化（{myFailedCount}个失败）"
-
 msgid "Automations & event triggers"
 msgstr "自动化与事件触发"
 
@@ -13097,6 +13094,9 @@ msgstr "页面标题"
 msgid "Pages"
 msgstr "页面"
 
+msgid "Pages as an icon bar"
+msgstr "页面显示为图标栏"
+
 msgid "Pages could not be loaded"
 msgstr "无法加载页面"
 
@@ -16401,6 +16401,9 @@ msgstr "显示文本"
 
 msgid "Show the messages that wait for the current turn to end."
 msgstr "显示等待当前轮次结束的消息。"
+
+msgid "Show the pages below Search as one row of icons, with their counts, instead of a row each."
+msgstr "将搜索下方的页面显示为一行带计数的图标，而不是每个页面一行。"
 
 msgid "Show the to-do list of each conversation, shared with its agent."
 msgstr "显示每个对话的待办列表，与其智能体共享。"

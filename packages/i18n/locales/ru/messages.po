@@ -2957,9 +2957,6 @@ msgstr "Название автоматизации"
 msgid "Automations"
 msgstr "Автоматизации"
 
-msgid "Automations ({myFailedCount} failing)"
-msgstr "Автоматизации (с ошибкой: {myFailedCount})"
-
 msgid "Automations & event triggers"
 msgstr "Автоматизации и триггеры по событиям"
 
@@ -13097,6 +13094,9 @@ msgstr "Заголовок страницы"
 msgid "Pages"
 msgstr "Страницы"
 
+msgid "Pages as an icon bar"
+msgstr "Страницы в виде панели значков"
+
 msgid "Pages could not be loaded"
 msgstr "Не удалось загрузить страницы"
 
@@ -16401,6 +16401,9 @@ msgstr "Показать текст"
 
 msgid "Show the messages that wait for the current turn to end."
 msgstr "Показывать сообщения, ожидающие окончания текущего хода."
+
+msgid "Show the pages below Search as one row of icons, with their counts, instead of a row each."
+msgstr "Показывать страницы под поиском одной строкой значков со счётчиками вместо отдельной строки для каждой."
 
 msgid "Show the to-do list of each conversation, shared with its agent."
 msgstr "Показывать список задач каждой беседы, общий с её агентом."

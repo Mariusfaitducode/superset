@@ -6,7 +6,7 @@ import { type HotkeyId, useHotkeyDisplay } from "renderer/hotkeys";
 interface SidebarNavButtonProps {
 	label: string;
 	icon: ReactNode;
-	hotkeyId: HotkeyId;
+	hotkeyId?: HotkeyId;
 	isActive: boolean;
 	onClick: () => void;
 	/** Drawn over the row's right end instead of the shortcut, e.g. a count. */
@@ -21,7 +21,7 @@ export function SidebarNavButton({
 	onClick,
 	badge,
 }: SidebarNavButtonProps) {
-	const shortcut = useHotkeyDisplay(hotkeyId).text;
+	const shortcut = useHotkeyDisplay(hotkeyId ?? "").text;
 	return (
 		<div className="relative">
 			<button

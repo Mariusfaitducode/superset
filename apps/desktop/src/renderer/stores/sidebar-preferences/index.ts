@@ -16,11 +16,13 @@ export {
 } from "./appearance";
 export {
 	NAV_ITEM_HOTKEY,
+	NAV_ITEM_LABEL,
 	SIDEBAR_NAV_ITEMS,
 	type SidebarNavItemId,
 } from "./nav-items";
 export {
 	DEFAULT_SIDEBAR_PREFERENCES,
+	migrateSidebarPreferences,
 	type SidebarPreferenceKey,
 	type SidebarPreferences,
 	useSidebarPreference,

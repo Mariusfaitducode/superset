@@ -2957,9 +2957,6 @@ msgstr "自動化標題"
 msgid "Automations"
 msgstr "自動化"
 
-msgid "Automations ({myFailedCount} failing)"
-msgstr "自動化（{myFailedCount}個失敗）"
-
 msgid "Automations & event triggers"
 msgstr "自動化與事件觸發"
 
@@ -13097,6 +13094,9 @@ msgstr "頁面標題"
 msgid "Pages"
 msgstr "頁面"
 
+msgid "Pages as an icon bar"
+msgstr "頁面顯示為圖示列"
+
 msgid "Pages could not be loaded"
 msgstr "無法載入頁面"
 
@@ -16401,6 +16401,9 @@ msgstr "顯示文字"
 
 msgid "Show the messages that wait for the current turn to end."
 msgstr "顯示等待目前回合結束的訊息。"
+
+msgid "Show the pages below Search as one row of icons, with their counts, instead of a row each."
+msgstr "將搜尋下方的頁面顯示為一列帶計數的圖示，而不是每個頁面一列。"
 
 msgid "Show the to-do list of each conversation, shared with its agent."
 msgstr "顯示每個對話的待辦清單，與其代理共用。"

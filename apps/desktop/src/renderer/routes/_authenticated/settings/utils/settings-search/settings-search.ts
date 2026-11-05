@@ -1521,7 +1521,7 @@ export const SETTINGS_ITEMS: SettingsItem[] = [
 		section: "sidebar",
 		title: "Sidebar menu",
 		description:
-			"Pick the menu entries of the sidebar, see their shortcuts, and keep the sidebar in Settings",
+			"Pick the menu entries of the sidebar, show them as an icon bar, see their shortcuts, and keep the sidebar in Settings",
 		keywords: [
 			"sidebar",
 			"menu",
@@ -1537,6 +1537,9 @@ export const SETTINGS_ITEMS: SettingsItem[] = [
 			"plugins",
 			"usage",
 			"settings",
+			"icons",
+			"icon bar",
+			"compact",
 		],
 	},
 	{
