@@ -15,7 +15,11 @@ export function useConversationTitles(
 	items: DeskItem[],
 ): ReadonlyMap<string, string> {
 	const targetsKey = [
-		...new Set(items.map((item) => `${item.hostUrl}\t${item.workspaceId}`)),
+		...new Set(
+			items.flatMap((item) =>
+				item.source === "pr" ? [] : [`${item.hostUrl}\t${item.workspaceId}`],
+			),
+		),
 	]
 		.sort()
 		.join("\n");

@@ -5,14 +5,18 @@ import { useMatchRoute, useNavigate } from "@tanstack/react-router";
 import { LuInbox } from "react-icons/lu";
 import { useDeskQueue } from "renderer/routes/_authenticated/_dashboard/hooks/useDeskQueue";
 
-/** The Desk entry of the sidebar, with the count of what waits on the user. */
+/** The Needs you entry of the sidebar, with the count of what waits on the user. */
 export function DeskNavButton({ isCollapsed }: { isCollapsed: boolean }) {
 	const { t } = useLingui();
 	const navigate = useNavigate();
 	const matchRoute = useMatchRoute();
 	const isOpen = !!matchRoute({ to: "/desk", fuzzy: true });
-	const count = useDeskQueue().length;
-	const label = count > 0 ? t`Desk, ${count} waiting on you` : t`Desk`;
+	const items = useDeskQueue();
+	const count = items.length;
+	const nowCount = items.filter((item) => item.section === "now").length;
+	const title = t({ message: "Needs you", context: "desk page" });
+	const label =
+		count > 0 ? t`Needs you: ${nowCount} now, ${count} in all` : title;
 	const badge = count > 99 ? "99+" : String(count);
 	const open = () => navigate({ to: "/desk" });
 
@@ -63,7 +67,7 @@ export function DeskNavButton({ isCollapsed }: { isCollapsed: boolean }) {
 				className="size-4 shrink-0 text-muted-foreground"
 				strokeWidth={1.5}
 			/>
-			<span className="flex-1 text-left">{t`Desk`}</span>
+			<span className="flex-1 text-left">{title}</span>
 			{count > 0 && (
 				<span className="flex h-4 min-w-4 items-center justify-center rounded-full bg-violet-500/15 px-1 text-[10px] font-medium tabular-nums text-violet-600 dark:text-violet-400">
 					{badge}

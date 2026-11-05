@@ -1176,6 +1176,9 @@ msgstr "{starCount} star e continuano a crescere"
 msgid "{started, plural, one {Started # automation} other {Started # automations}}"
 msgstr "{started, plural, one {# automazione avviata} other {# automazioni avviate}}"
 
+msgid "{stepCount} steps, in the menu"
+msgstr "{stepCount} passaggi, nel menu"
+
 msgid "{subagentCount, plural, one {# subagent running} other {# subagents running}}"
 msgstr "{subagentCount, plural, one {# sottoagente in esecuzione} other {# sottoagenti in esecuzione}}"
 
@@ -1698,6 +1701,9 @@ msgstr "Riconoscimenti"
 msgid "Acme Inc."
 msgstr "Acme Inc."
 
+msgid "act"
+msgstr "agisci"
+
 msgid "Act."
 msgstr "Att."
 
@@ -2086,23 +2092,20 @@ msgstr "Agenti pianificati o con trigger"
 msgid "Agents on your phone"
 msgstr "Agenti sul tuo telefono"
 
-msgid "Agents put their hand-overs here with superset report: work to review, decisions, drafts to approve, blockers."
-msgstr "Gli agenti lasciano qui le loro consegne con superset report: lavoro da rivedere, decisioni, bozze da approvare, blocchi."
-
 msgid "Agents remember what they learn about your codebase, so every new session starts warm."
 msgstr "Gli agenti ricordano ciò che imparano sul tuo codice, così ogni nuova sessione parte già con il contesto."
 
 msgid "Agents running at once"
 msgstr "Agenti in esecuzione in parallelo"
 
+msgid "Agents stopped on a question, their hand-overs (superset report), your to-dos and the PRs you were asked to review all land here."
+msgstr "Qui arrivano gli agenti fermi su una domanda, i loro passaggi di consegne (superset report), i tuoi to-do e le PR di cui ti è stata chiesta la revisione."
+
 msgid "Agents use this account when they call Linear tools."
 msgstr "Gli agenti usano questo account quando chiamano gli strumenti di Linear."
 
 msgid "Agents' to-dos"
 msgstr "To-do degli agenti"
-
-msgid "Agents' to-dos for you"
-msgstr "To-do degli agenti per te"
 
 msgid "Aggregate agent usage across every developer on the Superset leaderboard — tokens, cost, cache behaviour and which models people actually reach for."
 msgstr "Utilizzo aggregato degli agenti di tutti gli sviluppatori nella classifica di Superset — token, costi, comportamento della cache e quali modelli vengono davvero usati."
@@ -2441,6 +2444,9 @@ msgstr "un altro dispositivo"
 msgid "answer"
 msgstr "rispondi"
 
+msgid "Answer"
+msgstr "Rispondi"
+
 msgid "Answer any questions in the terminal below, such as a password."
 msgstr "Rispondi alle domande nel terminale qui sotto, ad esempio una password."
 
@@ -2630,9 +2636,6 @@ msgctxt "job application"
 msgid "Apply"
 msgstr "Candidati"
 
-msgid "approve"
-msgstr "approva"
-
 msgid "Approve"
 msgstr "Approva"
 
@@ -2764,6 +2767,9 @@ msgstr "Chiede prima di modifiche e comandi"
 
 msgid "Asks only for risky actions"
 msgstr "Chiede solo per azioni rischiose"
+
+msgid "Asks you"
+msgstr "Ti chiede"
 
 msgid "Aspect Ratio"
 msgstr "Aspect Ratio"
@@ -3188,8 +3194,8 @@ msgstr "Bloccato"
 msgid "Blocked by Branch Rules"
 msgstr "Bloccata dalle regole del branch"
 
-msgid "Blocked, see the Desk"
-msgstr "Bloccato, vedi il Desk"
+msgid "Blocked, needs you"
+msgstr "Bloccato, serve il tuo aiuto"
 
 msgid "Blockquote"
 msgstr "Citazione"
@@ -5053,6 +5059,9 @@ msgstr "Copia ID del task"
 msgid "Copy terminal ID"
 msgstr "Copia l'ID del terminale"
 
+msgid "Copy the draft"
+msgstr "Copia la bozza"
+
 msgid "Copy the workspace path to the clipboard"
 msgstr "Copia il percorso del workspace negli appunti"
 
@@ -5133,6 +5142,9 @@ msgstr "Impossibile chiudere la sessione"
 
 msgid "Could not connect {plugin}. Try again."
 msgstr "Impossibile connettere {plugin}. Riprova."
+
+msgid "Could not copy the draft"
+msgstr "Impossibile copiare la bozza"
 
 msgid "Could not copy the link"
 msgstr "Impossibile copiare il link"
@@ -6037,11 +6049,11 @@ msgstr "Debug"
 msgid "Debug with production stack traces"
 msgstr "Esegui il debug con gli stack trace di produzione"
 
-msgid "Decision waiting on the Desk"
-msgstr "Decisione in attesa sul Desk"
+msgid "Decision"
+msgstr "Decisione"
 
-msgid "Decisions"
-msgstr "Decisioni"
+msgid "Decision waiting on you"
+msgstr "Decisione in attesa di te"
 
 msgid "default"
 msgstr "predefinito"
@@ -6365,12 +6377,6 @@ msgstr "Modalità design non riuscita"
 
 msgid "Design review"
 msgstr "Revisione del design"
-
-msgid "Desk"
-msgstr "Desk"
-
-msgid "Desk, {count} waiting on you"
-msgstr "Desk, {count} in attesa di te"
 
 msgid "Desktop"
 msgstr "Desktop"
@@ -6756,20 +6762,20 @@ msgstr "Bozza · file"
 msgid "Draft · line {0}"
 msgstr "Bozza · riga {0}"
 
+msgid "Draft copied"
+msgstr "Bozza copiata"
+
 msgid "Draft for {draftTarget}"
 msgstr "Bozza per {draftTarget}"
 
 msgid "Draft opened"
 msgstr "Bozza aperta"
 
-msgid "Draft waiting on the Desk"
-msgstr "Bozza in attesa sul Desk"
+msgid "Draft waiting for your approval"
+msgstr "Bozza in attesa della tua approvazione"
 
 msgid "drafted 3 support replies"
 msgstr "preparate 3 risposte di supporto"
-
-msgid "Drafts to approve"
-msgstr "Bozze da approvare"
 
 msgid "Drag to reorder"
 msgstr "Trascina per riordinare"
@@ -6818,6 +6824,12 @@ msgstr "Scartata"
 
 msgid "Due"
 msgstr "Scadenza"
+
+msgid "Due {dueDay}"
+msgstr "Scade il {dueDay}"
+
+msgid "Due today"
+msgstr "Scade oggi"
 
 msgid "Duration"
 msgstr "Durata"
@@ -8597,6 +8609,12 @@ msgstr "Ricarica forzata"
 
 msgid "Hardware Keyboard"
 msgstr "Tastiera hardware"
+
+msgid "Has a draft"
+msgstr "Ha una bozza"
+
+msgid "Has a draft, in the menu"
+msgstr "Ha una bozza, nel menu"
 
 msgid "Has access"
 msgstr "Ha accesso"
@@ -10438,6 +10456,9 @@ msgstr "Segna come pronta"
 msgid "Mark reviewed"
 msgstr "Segna come rivisto"
 
+msgid "Mark seen"
+msgstr "Segna come visto"
+
 msgid "Markdown"
 msgstr "Markdown"
 
@@ -10994,6 +11015,13 @@ msgctxt "agent status"
 msgid "Needs you"
 msgstr "Ti aspetta"
 
+msgctxt "desk page"
+msgid "Needs you"
+msgstr "Serve a te"
+
+msgid "Needs you: {nowCount} now, {count} in all"
+msgstr "Serve a te: {nowCount} ora, {count} in tutto"
+
 msgid "Needs your approval"
 msgstr "Richiede la tua approvazione"
 
@@ -11157,6 +11185,10 @@ msgstr "Notizie, aggiornamenti e approfondimenti dal team Superset su agenti di 
 
 msgid "Next"
 msgstr "Avanti"
+
+msgctxt "desk section"
+msgid "Next"
+msgstr "Dopo"
 
 msgid "Next (Enter)"
 msgstr "Successivo (Invio)"
@@ -12039,6 +12071,10 @@ msgstr "adesso"
 msgid "Now"
 msgstr "Ora"
 
+msgctxt "desk section"
+msgid "Now"
+msgstr "Ora"
+
 msgid "Now I open the workspace on my phone, type the one line it's waiting for, and it carries on."
 msgstr "Ora apro il workspace sul telefono, scrivo la riga che sta aspettando e il lavoro prosegue."
 
@@ -12597,6 +12633,9 @@ msgstr "Apri le pagine e rispondi ai commenti dall'app Superset su iPhone e iPad
 
 msgid "Open Plugins in the Superset app and pick one. The install is saved to your account."
 msgstr "Apri Plugin nell'app Superset e scegline uno. L'installazione viene salvata nel tuo account."
+
+msgid "Open PR"
+msgstr "Apri PR"
 
 #. placeholder {0}: pr.number
 msgid "Open PR #{0}"
@@ -13480,6 +13519,9 @@ msgstr "PR unita e chiusa"
 msgid "PR ready for review"
 msgstr "La PR è pronta per la revisione"
 
+msgid "PR review"
+msgstr "Revisione PR"
+
 msgid "PR review comment"
 msgstr "Commento di revisione PR"
 
@@ -14113,8 +14155,8 @@ msgstr "Pronto per la revisione"
 msgid "Ready for review failed: {0}"
 msgstr "Contrassegno come pronta per la revisione non riuscito: {0}"
 
-msgid "Ready for review on the Desk"
-msgstr "Pronto da rivedere sul Desk"
+msgid "Ready for your review"
+msgstr "Pronto per la tua revisione"
 
 msgid "Ready in"
 msgstr "Pronto in"
@@ -16996,6 +17038,12 @@ msgstr "Interrompi e invia"
 msgid "Step {0} of 2"
 msgstr "Passaggio {0} di 2"
 
+msgid "Steps"
+msgstr "Passaggi"
+
+msgid "Steps {doneSteps}/{stepCount}"
+msgstr "Passaggi {doneSteps}/{stepCount}"
+
 msgid "Steps 3 and 4 repeat at every scheduled time."
 msgstr "I passaggi 3 e 4 si ripetono a ogni orario pianificato."
 
@@ -18629,11 +18677,14 @@ msgstr "Per riprendere una conversazione con un agente, esegui questo nella sua 
 msgid "To resume another agent conversation, run this in its folder:"
 msgstr "Per riprendere un’altra conversazione con un agente, esegui questo nella sua cartella:"
 
+msgid "To review"
+msgstr "Da rivedere"
+
+msgid "To-do"
+msgstr "To-do"
+
 msgid "To-do details"
 msgstr "Dettagli del to-do"
-
-msgid "To-do on the Desk"
-msgstr "To-do sul Desk"
 
 msgid "To-dos"
 msgstr "Attività"
@@ -19676,6 +19727,9 @@ msgstr "In attesa di altri"
 msgid "Waiting on reviewers or CI, longest wait first"
 msgstr "In attesa di revisori o CI, attesa più lunga prima"
 
+msgid "Waiting since {waitingSince}"
+msgstr "In attesa dal {waitingSince}"
+
 msgid "Waiting tint"
 msgstr "Tinta di attesa"
 
@@ -20544,6 +20598,9 @@ msgstr "Il tuo livello è un punteggio ponderato sugli {0} assi misurati per te,
 
 msgid "Your tokens"
 msgstr "I tuoi token"
+
+msgid "Your turn"
+msgstr "Tocca a te"
 
 msgid "Your v1 projects and workspaces are moving to the new Superset. They appear in the sidebar as each one is ready."
 msgstr "I tuoi progetti e workspace v1 vengono trasferiti nel nuovo Superset. Compaiono nella barra laterale man mano che sono pronti."

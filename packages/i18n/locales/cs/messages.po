@@ -1176,6 +1176,9 @@ msgstr "{starCount} hvězd a přibývá"
 msgid "{started, plural, one {Started # automation} other {Started # automations}}"
 msgstr "{started, plural, one {Spuštěna # automatizace} few {Spuštěny # automatizace} many {Spuštěno # automatizace} other {Spuštěno # automatizací}}"
 
+msgid "{stepCount} steps, in the menu"
+msgstr "{stepCount} kroků, v nabídce"
+
 msgid "{subagentCount, plural, one {# subagent running} other {# subagents running}}"
 msgstr "{subagentCount, plural, one {# subagent běží} few {# subagenti běží} many {# subagenta běží} other {# subagentů běží}}"
 
@@ -1698,6 +1701,9 @@ msgstr "Úspěchy"
 msgid "Acme Inc."
 msgstr "Acme Inc."
 
+msgid "act"
+msgstr "provést"
+
 msgid "Act."
 msgstr "Akt."
 
@@ -2086,23 +2092,20 @@ msgstr "Agenti podle plánu nebo spouštěče"
 msgid "Agents on your phone"
 msgstr "Agenti ve vašem telefonu"
 
-msgid "Agents put their hand-overs here with superset report: work to review, decisions, drafts to approve, blockers."
-msgstr "Agenti sem dávají své předávky pomocí superset report: práci ke kontrole, rozhodnutí, koncepty ke schválení, překážky."
-
 msgid "Agents remember what they learn about your codebase, so every new session starts warm."
 msgstr "Agenti si pamatují, co se naučí o vašem kódu, takže každá nová relace začíná s kontextem."
 
 msgid "Agents running at once"
 msgstr "Agentů běžících najednou"
 
+msgid "Agents stopped on a question, their hand-overs (superset report), your to-dos and the PRs you were asked to review all land here."
+msgstr "Sem přicházejí agenti zastavení na otázce, jejich předávky (superset report), vaše úkoly a PR, o jejichž revizi jste byli požádáni."
+
 msgid "Agents use this account when they call Linear tools."
 msgstr "Agenti používají tento účet, když volají nástroje Linear."
 
 msgid "Agents' to-dos"
 msgstr "Úkoly agentů"
-
-msgid "Agents' to-dos for you"
-msgstr "Úkoly od agentů pro vás"
 
 msgid "Aggregate agent usage across every developer on the Superset leaderboard — tokens, cost, cache behaviour and which models people actually reach for."
 msgstr "Souhrnné využití agentů napříč všemi vývojáři v žebříčku Superset — tokeny, náklady, chování cache a modely, po kterých lidé skutečně sahají."
@@ -2441,6 +2444,9 @@ msgstr "jiné zařízení"
 msgid "answer"
 msgstr "odpovědět"
 
+msgid "Answer"
+msgstr "Odpovědět"
+
 msgid "Answer any questions in the terminal below, such as a password."
 msgstr "Odpovězte na dotazy v terminálu níže, například heslo."
 
@@ -2630,9 +2636,6 @@ msgctxt "job application"
 msgid "Apply"
 msgstr "Přihlásit se"
 
-msgid "approve"
-msgstr "schválit"
-
 msgid "Approve"
 msgstr "Schválit"
 
@@ -2764,6 +2767,9 @@ msgstr "Ptá se před úpravami a příkazy"
 
 msgid "Asks only for risky actions"
 msgstr "Ptá se jen u rizikových akcí"
+
+msgid "Asks you"
+msgstr "Ptá se vás"
 
 msgid "Aspect Ratio"
 msgstr "Poměr stran"
@@ -3188,8 +3194,8 @@ msgstr "Zablokováno"
 msgid "Blocked by Branch Rules"
 msgstr "Zablokováno pravidly větve"
 
-msgid "Blocked, see the Desk"
-msgstr "Zablokováno, viz Desk"
+msgid "Blocked, needs you"
+msgstr "Zablokováno, potřebuje vás"
 
 msgid "Blockquote"
 msgstr "Citace"
@@ -5053,6 +5059,9 @@ msgstr "Kopírovat ID úkolu"
 msgid "Copy terminal ID"
 msgstr "Kopírovat ID terminálu"
 
+msgid "Copy the draft"
+msgstr "Zkopírovat koncept"
+
 msgid "Copy the workspace path to the clipboard"
 msgstr "Zkopírovat cestu k pracovnímu prostoru do schránky"
 
@@ -5133,6 +5142,9 @@ msgstr "Relaci se nepodařilo zavřít"
 
 msgid "Could not connect {plugin}. Try again."
 msgstr "Nepodařilo se připojit {plugin}. Zkuste to znovu."
+
+msgid "Could not copy the draft"
+msgstr "Koncept se nepodařilo zkopírovat"
 
 msgid "Could not copy the link"
 msgstr "Odkaz se nepodařilo zkopírovat"
@@ -6037,11 +6049,11 @@ msgstr "Debug"
 msgid "Debug with production stack traces"
 msgstr "Ladění s produkčními stack trace"
 
-msgid "Decision waiting on the Desk"
-msgstr "Rozhodnutí čeká na Desku"
-
-msgid "Decisions"
+msgid "Decision"
 msgstr "Rozhodnutí"
+
+msgid "Decision waiting on you"
+msgstr "Rozhodnutí čeká na vás"
 
 msgid "default"
 msgstr "výchozí"
@@ -6365,12 +6377,6 @@ msgstr "Režim designu selhal"
 
 msgid "Design review"
 msgstr "Design review"
-
-msgid "Desk"
-msgstr "Desk"
-
-msgid "Desk, {count} waiting on you"
-msgstr "Desk, {count} čeká na vás"
 
 msgid "Desktop"
 msgstr "Plocha"
@@ -6756,20 +6762,20 @@ msgstr "Koncept · soubor"
 msgid "Draft · line {0}"
 msgstr "Koncept · řádek {0}"
 
+msgid "Draft copied"
+msgstr "Koncept zkopírován"
+
 msgid "Draft for {draftTarget}"
 msgstr "Koncept pro {draftTarget}"
 
 msgid "Draft opened"
 msgstr "Otevřen koncept"
 
-msgid "Draft waiting on the Desk"
-msgstr "Koncept čeká na Desku"
+msgid "Draft waiting for your approval"
+msgstr "Koncept čeká na vaše schválení"
 
 msgid "drafted 3 support replies"
 msgstr "připravil 3 odpovědi podpoře"
-
-msgid "Drafts to approve"
-msgstr "Koncepty ke schválení"
 
 msgid "Drag to reorder"
 msgstr "Přetažením změníte pořadí"
@@ -6818,6 +6824,12 @@ msgstr "Zahozený"
 
 msgid "Due"
 msgstr "Termín"
+
+msgid "Due {dueDay}"
+msgstr "Termín {dueDay}"
+
+msgid "Due today"
+msgstr "Termín dnes"
 
 msgid "Duration"
 msgstr "Trvání"
@@ -8597,6 +8609,12 @@ msgstr "Vynucené načtení znovu"
 
 msgid "Hardware Keyboard"
 msgstr "Hardwarová klávesnice"
+
+msgid "Has a draft"
+msgstr "Má koncept"
+
+msgid "Has a draft, in the menu"
+msgstr "Má koncept, v nabídce"
 
 msgid "Has access"
 msgstr "Má přístup"
@@ -10438,6 +10456,9 @@ msgstr "Označit jako připravené"
 msgid "Mark reviewed"
 msgstr "Označit jako zkontrolované"
 
+msgid "Mark seen"
+msgstr "Označit jako viděné"
+
 msgid "Markdown"
 msgstr "Markdown"
 
@@ -10994,6 +11015,13 @@ msgctxt "agent status"
 msgid "Needs you"
 msgstr "Čeká na tebe"
 
+msgctxt "desk page"
+msgid "Needs you"
+msgstr "Potřebuje vás"
+
+msgid "Needs you: {nowCount} now, {count} in all"
+msgstr "Potřebuje vás: {nowCount} teď, celkem {count}"
+
 msgid "Needs your approval"
 msgstr "Čeká na vaše schválení"
 
@@ -11157,6 +11185,10 @@ msgstr "Novinky, aktualizace a postřehy od týmu Superset o paralelních kódov
 
 msgid "Next"
 msgstr "Další"
+
+msgctxt "desk section"
+msgid "Next"
+msgstr "Potom"
 
 msgid "Next (Enter)"
 msgstr "Další (Enter)"
@@ -12039,6 +12071,10 @@ msgstr "teď"
 msgid "Now"
 msgstr "Teď"
 
+msgctxt "desk section"
+msgid "Now"
+msgstr "Teď"
+
 msgid "Now I open the workspace on my phone, type the one line it's waiting for, and it carries on."
 msgstr "Teď otevřu pracovní prostor na telefonu, napíšu ten jeden řádek, na který čeká, a práce pokračuje."
 
@@ -12597,6 +12633,9 @@ msgstr "Otevírejte stránky a odpovídejte na komentáře v aplikaci Superset n
 
 msgid "Open Plugins in the Superset app and pick one. The install is saved to your account."
 msgstr "Otevřete Pluginy v aplikaci Superset a vyberte jeden. Instalace se uloží do vašeho účtu."
+
+msgid "Open PR"
+msgstr "Otevřít PR"
 
 #. placeholder {0}: pr.number
 msgid "Open PR #{0}"
@@ -13480,6 +13519,9 @@ msgstr "PR sloučen a uzavřen"
 msgid "PR ready for review"
 msgstr "PR je připraven k revizi"
 
+msgid "PR review"
+msgstr "Revize PR"
+
 msgid "PR review comment"
 msgstr "Komentář v revizi PR"
 
@@ -14113,8 +14155,8 @@ msgstr "Připraveno k revizi"
 msgid "Ready for review failed: {0}"
 msgstr "Označení jako připravené k revizi se nezdařilo: {0}"
 
-msgid "Ready for review on the Desk"
-msgstr "Připraveno ke kontrole na Desku"
+msgid "Ready for your review"
+msgstr "Připraveno k vaší revizi"
 
 msgid "Ready in"
 msgstr "Připraveno v"
@@ -16996,6 +17038,12 @@ msgstr "Usměrnit"
 msgid "Step {0} of 2"
 msgstr "Krok {0} ze 2"
 
+msgid "Steps"
+msgstr "Kroky"
+
+msgid "Steps {doneSteps}/{stepCount}"
+msgstr "Kroky {doneSteps}/{stepCount}"
+
 msgid "Steps 3 and 4 repeat at every scheduled time."
 msgstr "Kroky 3 a 4 se opakují v každý naplánovaný čas."
 
@@ -18629,11 +18677,14 @@ msgstr "Chcete-li obnovit konverzaci s agentem, spusťte toto v její složce:"
 msgid "To resume another agent conversation, run this in its folder:"
 msgstr "Chcete-li obnovit jinou konverzaci s agentem, spusťte toto v její složce:"
 
+msgid "To review"
+msgstr "K revizi"
+
+msgid "To-do"
+msgstr "Úkol"
+
 msgid "To-do details"
 msgstr "Podrobnosti úkolu"
-
-msgid "To-do on the Desk"
-msgstr "Úkol na Desku"
 
 msgid "To-dos"
 msgstr "Úkoly"
@@ -19676,6 +19727,9 @@ msgstr "Čeká na ostatní"
 msgid "Waiting on reviewers or CI, longest wait first"
 msgstr "Čeká na recenzenty nebo CI, nejdelší čekání první"
 
+msgid "Waiting since {waitingSince}"
+msgstr "Čeká od {waitingSince}"
+
 msgid "Waiting tint"
 msgstr "Odstín čekání"
 
@@ -20544,6 +20598,9 @@ msgstr "Tvoje úroveň je vážené skóre z os, kterých bylo změřeno {0}, ta
 
 msgid "Your tokens"
 msgstr "Vaše tokeny"
+
+msgid "Your turn"
+msgstr "Jste na řadě"
 
 msgid "Your v1 projects and workspaces are moving to the new Superset. They appear in the sidebar as each one is ready."
 msgstr "Vaše projekty a pracovní prostory z v1 se přenášejí do nového Supersetu. V postranním panelu se zobrazí, jakmile bude každá položka připravena."
