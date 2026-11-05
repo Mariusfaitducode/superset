@@ -244,7 +244,12 @@ export function DeskCard({
 			<div className="flex min-w-0 items-center gap-2">
 				<ReportKindIcon kind={item.kind} className="size-4" />
 				<div className="flex min-w-0 flex-1 flex-col">
-					<p className={cn("truncate font-medium", selected && "whitespace-normal")}>
+					<p
+						className={cn(
+							"truncate font-medium",
+							selected && "whitespace-normal",
+						)}
+					>
 						{title}
 					</p>
 					<div className="flex min-w-0 items-center gap-1.5 text-xs text-muted-foreground">
@@ -268,9 +273,7 @@ export function DeskCard({
 											: undefined,
 								)}
 							>
-								{due === "today"
-									? t`Due today`
-									: t`Due ${dueDay}`}
+								{due === "today" ? t`Due today` : t`Due ${dueDay}`}
 							</span>
 						)}
 						{rich && rich.steps.length > 0 && (

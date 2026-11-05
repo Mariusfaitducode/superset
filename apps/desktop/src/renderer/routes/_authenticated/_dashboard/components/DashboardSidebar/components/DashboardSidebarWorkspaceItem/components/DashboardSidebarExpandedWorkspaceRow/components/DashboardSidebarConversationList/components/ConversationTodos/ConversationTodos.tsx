@@ -14,8 +14,8 @@ import {
 	LuFileText,
 	LuListOrdered,
 } from "react-icons/lu";
-import { TodoKindIcon } from "renderer/routes/_authenticated/_dashboard/components/TodoKindIcon";
 import { TodoExtras } from "renderer/routes/_authenticated/_dashboard/components/TodoExtras";
+import { TodoKindIcon } from "renderer/routes/_authenticated/_dashboard/components/TodoKindIcon";
 import { readRichTodo } from "renderer/routes/_authenticated/_dashboard/hooks/useDeskQueue";
 import type {
 	ConversationTodo,

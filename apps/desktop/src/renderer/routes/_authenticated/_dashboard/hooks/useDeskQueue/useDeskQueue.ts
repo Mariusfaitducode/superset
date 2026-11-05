@@ -55,7 +55,8 @@ export function useDeskQueue(): DeskItem[] {
 	const today = localDay(useNow(60_000));
 
 	const projectNames = useMemo(
-		() => new Map(projects.map((project) => [project.projectKey, project.name])),
+		() =>
+			new Map(projects.map((project) => [project.projectKey, project.name])),
 		[projects],
 	);
 	const deskWorkspaces = useMemo(

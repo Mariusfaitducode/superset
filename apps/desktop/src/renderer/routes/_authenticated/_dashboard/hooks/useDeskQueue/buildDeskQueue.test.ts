@@ -212,7 +212,9 @@ describe("buildDeskQueue", () => {
 	test("says where each item comes from", () => {
 		const [todoItem, prItem] = buildDeskQueue(
 			sources({
-				hosts: [host({ todos: [todo({ priority: "high" })], pullRequests: [pr({})] })],
+				hosts: [
+					host({ todos: [todo({ priority: "high" })], pullRequests: [pr({})] }),
+				],
 			}),
 		);
 		expect(todoItem).toMatchObject({

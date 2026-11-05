@@ -51,9 +51,7 @@ export function TodoExtras({
 			{steps.length > 0 && (
 				<div className="flex flex-col gap-1">
 					<p className="text-[11px] text-muted-foreground">
-						{tracksSteps
-							? t`Steps ${doneSteps}/${stepCount}`
-							: t`Steps`}
+						{tracksSteps ? t`Steps ${doneSteps}/${stepCount}` : t`Steps`}
 					</p>
 					<ol className="flex flex-col gap-0.5">
 						{steps.map((step, index) => (

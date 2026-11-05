@@ -24,7 +24,10 @@ describe("deskMessage", () => {
 	});
 
 	test("answers a to-do by its text", () => {
-		const todo = { source: "todo", todo: { text: "Check the PR" } } as DeskConversationItem;
+		const todo = {
+			source: "todo",
+			todo: { text: "Check the PR" },
+		} as DeskConversationItem;
 		expect(deskMessage(todo, { type: "answer", text: "ok" })).toBe(
 			'From the Desk, about the to-do "Check the PR": ok',
 		);
