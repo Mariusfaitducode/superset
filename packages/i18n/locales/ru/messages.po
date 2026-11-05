@@ -188,6 +188,10 @@ msgstr "{0, plural, one {# метка} few {# метки} many {# меток} ot
 msgid "{0, plural, one {# login} other {# logins}}"
 msgstr "{0, plural, one {# логин} few {# логина} many {# логинов} other {# логина}}"
 
+#. placeholder {0}: counts.needYou
+msgid "{0, plural, one {# needs you} other {# need you}}"
+msgstr "{0, plural, one {# ждёт тебя} few {# ждут тебя} many {# ждут тебя} other {# ждут тебя}}"
+
 #. placeholder {0}: summary.passed
 msgid "{0, plural, one {# passed} other {# passed}}"
 msgstr "{0, plural, one {# пройдено} few {# пройдено} many {# пройдено} other {# пройдено}}"
@@ -616,6 +620,7 @@ msgid "{0} vs {1}"
 msgstr "{0} против {1}"
 
 #. placeholder {0}: project.onViewer
+#. placeholder {0}: totals.needYou
 msgid "{0} waiting on you"
 msgstr "{0} ждут вас"
 
@@ -637,7 +642,9 @@ msgstr "{0} побеждает за {1} ходов"
 msgid "{0} wins on damage after {1} turns"
 msgstr "{0} побеждает по урону после {1} ходов"
 
+#. placeholder {0}: counts.working
 #. placeholder {0}: summary.working
+#. placeholder {0}: totals.working
 msgid "{0} working"
 msgstr "{0} работают"
 
@@ -4229,6 +4236,9 @@ msgstr "Нажмите <0>Импорт темы</0> и выберите скач
 msgid "Click a terminal script to edit its details."
 msgstr "Нажмите на скрипт терминала, чтобы изменить его."
 
+msgid "Click an agent to open its conversation · ⌥-click, right-click or I for details · Tab or arrows to move, Enter to open"
+msgstr "Нажми на агента, чтобы открыть разговор · ⌥-клик, правый клик или I для деталей · Tab или стрелки для перехода, Enter чтобы открыть"
+
 msgid "Click an element."
 msgstr "Нажмите на элемент."
 
@@ -4249,6 +4259,9 @@ msgstr "Нажмите на чип, чтобы открыть пул-рекве�
 
 msgid "Click to copy the session ID (resume with `claude --resume <id>`)."
 msgstr "Нажмите, чтобы скопировать ID сессии (возобновление: `claude --resume <id>`)."
+
+msgid "Click to open · ⌥-click or I for details"
+msgstr "Нажми, чтобы открыть · ⌥-клик или I для деталей"
 
 msgid "Click to open on GitHub"
 msgstr "Нажмите, чтобы открыть на GitHub"
@@ -6903,6 +6916,9 @@ msgstr "Готово — стиль чипа с рамкой, который и�
 msgid "Done (isShimmering=false)"
 msgstr "Готово (isShimmering=false)"
 
+msgid "Done, not seen"
+msgstr "Готово, не просмотрено"
+
 msgid "Done, not seen yet"
 msgstr "Готово, ещё не просмотрено"
 
@@ -9275,6 +9291,9 @@ msgstr "IDE"
 
 msgid "Identity"
 msgstr "Идентификация"
+
+msgid "idle"
+msgstr "простаивает"
 
 msgid "Idle"
 msgstr "Простаивает"
@@ -12319,11 +12338,17 @@ msgstr "В рейтинг пока никто не вступил."
 msgid "Nobody here by that name."
 msgstr "Никого с таким именем здесь нет."
 
+msgid "Nobody needs you right now."
+msgstr "Сейчас никто тебя не ждёт."
+
 msgid "Nobody on your team has shared automations yet."
 msgstr "Никто в команде пока не поделился автоматизациями."
 
 msgid "Nobody reviews differently because of it."
 msgstr "Из-за этого никто не проверяет код иначе."
+
+msgid "Nobody waiting on you"
+msgstr "Никто тебя не ждёт"
 
 msgid "None"
 msgstr "Нет"
@@ -12757,6 +12782,9 @@ msgstr "Удалить может только автор ветки или вл
 msgid "Only want it out of your sidebar? Hide it instead. Nobody else is affected."
 msgstr "Хотите просто убрать его из боковой панели? Скройте его. Это никого больше не затронет."
 
+msgid "Only who needs me"
+msgstr "Только кто ждёт меня"
+
 msgid "Only you"
 msgstr "Только вы"
 
@@ -12782,7 +12810,6 @@ msgid "Open"
 msgstr "Открыт"
 
 #. placeholder {0}: linkedAgent?.label ?? t({ message: "agent settings", })
-#. placeholder {0}: workspace.name
 msgid "Open {0}"
 msgstr "Открыть {0}"
 

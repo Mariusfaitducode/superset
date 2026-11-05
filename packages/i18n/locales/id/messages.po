@@ -188,6 +188,10 @@ msgstr "{0, plural, other {# label}}"
 msgid "{0, plural, one {# login} other {# logins}}"
 msgstr "{0, plural, one {# login} other {# login}}"
 
+#. placeholder {0}: counts.needYou
+msgid "{0, plural, one {# needs you} other {# need you}}"
+msgstr "{0, plural, other {# membutuhkanmu}}"
+
 #. placeholder {0}: summary.passed
 msgid "{0, plural, one {# passed} other {# passed}}"
 msgstr "{0, plural, one {# lulus} other {# lulus}}"
@@ -616,6 +620,7 @@ msgid "{0} vs {1}"
 msgstr "{0} melawan {1}"
 
 #. placeholder {0}: project.onViewer
+#. placeholder {0}: totals.needYou
 msgid "{0} waiting on you"
 msgstr "{0} menunggu Anda"
 
@@ -637,7 +642,9 @@ msgstr "{0} menang dalam {1} giliran"
 msgid "{0} wins on damage after {1} turns"
 msgstr "{0} menang berdasarkan kerusakan setelah {1} giliran"
 
+#. placeholder {0}: counts.working
 #. placeholder {0}: summary.working
+#. placeholder {0}: totals.working
 msgid "{0} working"
 msgstr "{0} bekerja"
 
@@ -4229,6 +4236,9 @@ msgstr "Klik <0>Import Theme</0> dan pilih file yang sudah diunduh."
 msgid "Click a terminal script to edit its details."
 msgstr "Klik sebuah skrip terminal untuk mengedit detailnya."
 
+msgid "Click an agent to open its conversation · ⌥-click, right-click or I for details · Tab or arrows to move, Enter to open"
+msgstr "Klik agen untuk membuka percakapannya · ⌥-klik, klik kanan atau I untuk detail · Tab atau panah untuk berpindah, Enter untuk membuka"
+
 msgid "Click an element."
 msgstr "Klik sebuah elemen."
 
@@ -4249,6 +4259,9 @@ msgstr "Klik chip untuk membuka pull request"
 
 msgid "Click to copy the session ID (resume with `claude --resume <id>`)."
 msgstr "Klik untuk menyalin ID sesi (lanjutkan dengan `claude --resume <id>`)."
+
+msgid "Click to open · ⌥-click or I for details"
+msgstr "Klik untuk membuka · ⌥-klik atau I untuk detail"
 
 msgid "Click to open on GitHub"
 msgstr "Klik untuk membuka di GitHub"
@@ -6903,6 +6916,9 @@ msgstr "Selesai — gaya chip bergaris yang dipakai presets bar kini menjadi baw
 msgid "Done (isShimmering=false)"
 msgstr "Selesai (isShimmering=false)"
 
+msgid "Done, not seen"
+msgstr "Selesai, belum dilihat"
+
 msgid "Done, not seen yet"
 msgstr "Selesai, belum dilihat"
 
@@ -9275,6 +9291,9 @@ msgstr "IDE"
 
 msgid "Identity"
 msgstr "Identitas"
+
+msgid "idle"
+msgstr "menganggur"
 
 msgid "Idle"
 msgstr "Idle"
@@ -12319,11 +12338,17 @@ msgstr "Belum ada yang bergabung ke papan ini."
 msgid "Nobody here by that name."
 msgstr "Tidak ada orang dengan nama itu."
 
+msgid "Nobody needs you right now."
+msgstr "Tidak ada yang membutuhkanmu saat ini."
+
 msgid "Nobody on your team has shared automations yet."
 msgstr "Belum ada anggota tim Anda yang membagikan otomatisasi."
 
 msgid "Nobody reviews differently because of it."
 msgstr "Tidak ada yang mereview secara berbeda karenanya."
+
+msgid "Nobody waiting on you"
+msgstr "Tidak ada yang menunggumu"
 
 msgid "None"
 msgstr "Tidak ada"
@@ -12757,6 +12782,9 @@ msgstr "Hanya penulis thread atau pemilik halaman yang bisa menghapusnya"
 msgid "Only want it out of your sidebar? Hide it instead. Nobody else is affected."
 msgstr "Hanya ingin menghapusnya dari sidebar Anda? Sembunyikan saja. Tidak ada orang lain yang terpengaruh."
 
+msgid "Only who needs me"
+msgstr "Hanya yang membutuhkanku"
+
 msgid "Only you"
 msgstr "Hanya Anda"
 
@@ -12782,7 +12810,6 @@ msgid "Open"
 msgstr "Buka"
 
 #. placeholder {0}: linkedAgent?.label ?? t({ message: "agent settings", })
-#. placeholder {0}: workspace.name
 msgid "Open {0}"
 msgstr "Buka {0}"
 

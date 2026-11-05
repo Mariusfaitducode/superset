@@ -1,6 +1,5 @@
 import { describe, expect, test } from "bun:test";
 import {
-	BUBBLE_GLYPHS,
 	CHARACTER_SPRITES,
 	COFFEE_COLORS,
 	COFFEE_COUNTER,
@@ -37,7 +36,6 @@ describe("sprites", () => {
 		for (const cell of COFFEE_COUNTER.join("").replaceAll(".", "")) {
 			expect(COFFEE_COLORS[cell]).toBeDefined();
 		}
-		for (const glyph of Object.values(BUBBLE_GLYPHS)) expectGrid(glyph, 5, 5);
 		for (const digit of Object.values(DIGITS)) expectGrid(digit, 3, 5);
 	});
 });

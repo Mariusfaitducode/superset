@@ -188,6 +188,10 @@ msgstr "{0, plural, one {# etiket} other {# etiket}}"
 msgid "{0, plural, one {# login} other {# logins}}"
 msgstr "{0, plural, one {# oturum bilgisi} other {# oturum bilgisi}}"
 
+#. placeholder {0}: counts.needYou
+msgid "{0, plural, one {# needs you} other {# need you}}"
+msgstr "{0, plural, other {# seni bekliyor}}"
+
 #. placeholder {0}: summary.passed
 msgid "{0, plural, one {# passed} other {# passed}}"
 msgstr "{0, plural, one {# geçti} other {# geçti}}"
@@ -616,6 +620,7 @@ msgid "{0} vs {1}"
 msgstr "{0} - {1}"
 
 #. placeholder {0}: project.onViewer
+#. placeholder {0}: totals.needYou
 msgid "{0} waiting on you"
 msgstr "{0} sizi bekliyor"
 
@@ -637,7 +642,9 @@ msgstr "{0}, {1} turda kazanıyor"
 msgid "{0} wins on damage after {1} turns"
 msgstr "{1} turun ardından {0} hasar üstünlüğüyle kazanıyor"
 
+#. placeholder {0}: counts.working
 #. placeholder {0}: summary.working
+#. placeholder {0}: totals.working
 msgid "{0} working"
 msgstr "{0} çalışıyor"
 
@@ -4229,6 +4236,9 @@ msgstr "<0>Temayı İçe Aktar</0> seçeneğine tıklayın ve indirdiğiniz dosy
 msgid "Click a terminal script to edit its details."
 msgstr "Ayrıntılarını düzenlemek için bir terminal betiğine tıklayın."
 
+msgid "Click an agent to open its conversation · ⌥-click, right-click or I for details · Tab or arrows to move, Enter to open"
+msgstr "Konuşmasını açmak için bir ajana tıkla · Ayrıntılar için ⌥-tık, sağ tık veya I · Gezinmek için Tab veya oklar, açmak için Enter"
+
 msgid "Click an element."
 msgstr "Bir öğeye tıklayın."
 
@@ -4249,6 +4259,9 @@ msgstr "Pull request'i açmak için etikete tıklayın"
 
 msgid "Click to copy the session ID (resume with `claude --resume <id>`)."
 msgstr "Oturum kimliğini kopyalamak için tıklayın (`claude --resume <id>` ile sürdürün)."
+
+msgid "Click to open · ⌥-click or I for details"
+msgstr "Açmak için tıkla · Ayrıntılar için ⌥-tık veya I"
 
 msgid "Click to open on GitHub"
 msgstr "GitHub'da açmak için tıklayın"
@@ -6903,6 +6916,9 @@ msgstr "Tamam — hazır ayarlar çubuğunun kullandığı çerçeveli çip stil
 msgid "Done (isShimmering=false)"
 msgstr "Bitti (isShimmering=false)"
 
+msgid "Done, not seen"
+msgstr "Bitti, görülmedi"
+
 msgid "Done, not seen yet"
 msgstr "Bitti, henüz görülmedi"
 
@@ -9275,6 +9291,9 @@ msgstr "IDE"
 
 msgid "Identity"
 msgstr "Kimlik"
+
+msgid "idle"
+msgstr "boşta"
 
 msgid "Idle"
 msgstr "Boşta"
@@ -12319,11 +12338,17 @@ msgstr "Tabloya henüz kimse katılmadı."
 msgid "Nobody here by that name."
 msgstr "Bu isimde kimse yok."
 
+msgid "Nobody needs you right now."
+msgstr "Şu an kimsenin sana ihtiyacı yok."
+
 msgid "Nobody on your team has shared automations yet."
 msgstr "Takımınızdan henüz kimse otomasyon paylaşmadı."
 
 msgid "Nobody reviews differently because of it."
 msgstr "Kimse bu yüzden farklı inceleme yapmaz."
+
+msgid "Nobody waiting on you"
+msgstr "Seni bekleyen yok"
 
 msgid "None"
 msgstr "Yok"
@@ -12757,6 +12782,9 @@ msgstr "Konuyu yalnızca yazarı veya sayfanın sahibi silebilir"
 msgid "Only want it out of your sidebar? Hide it instead. Nobody else is affected."
 msgstr "Sadece kenar çubuğundan mı kaldırmak istiyorsun? Bunun yerine gizle. Başka kimse etkilenmez."
 
+msgid "Only who needs me"
+msgstr "Yalnızca bana ihtiyacı olanlar"
+
 msgid "Only you"
 msgstr "Yalnızca siz"
 
@@ -12782,7 +12810,6 @@ msgid "Open"
 msgstr "Açık"
 
 #. placeholder {0}: linkedAgent?.label ?? t({ message: "agent settings", })
-#. placeholder {0}: workspace.name
 msgid "Open {0}"
 msgstr "Aç: {0}"
 

@@ -188,6 +188,10 @@ msgstr "{0, plural, one {# etiqueta} other {# etiquetas}}"
 msgid "{0, plural, one {# login} other {# logins}}"
 msgstr "{0, plural, one {# inicio de sesión} other {# inicios de sesión}}"
 
+#. placeholder {0}: counts.needYou
+msgid "{0, plural, one {# needs you} other {# need you}}"
+msgstr "{0, plural, one {# te necesita} other {# te necesitan}}"
+
 #. placeholder {0}: summary.passed
 msgid "{0, plural, one {# passed} other {# passed}}"
 msgstr "{0, plural, one {# superada} other {# superadas}}"
@@ -616,6 +620,7 @@ msgid "{0} vs {1}"
 msgstr "{0} contra {1}"
 
 #. placeholder {0}: project.onViewer
+#. placeholder {0}: totals.needYou
 msgid "{0} waiting on you"
 msgstr "{0} te esperan"
 
@@ -637,7 +642,9 @@ msgstr "{0} gana en {1} turnos"
 msgid "{0} wins on damage after {1} turns"
 msgstr "{0} gana por daño tras {1} turnos"
 
+#. placeholder {0}: counts.working
 #. placeholder {0}: summary.working
+#. placeholder {0}: totals.working
 msgid "{0} working"
 msgstr "{0} trabajando"
 
@@ -4229,6 +4236,9 @@ msgstr "Haz clic en <0>Importar tema</0> y selecciona el archivo descargado."
 msgid "Click a terminal script to edit its details."
 msgstr "Haz clic en un script de terminal para editar sus detalles."
 
+msgid "Click an agent to open its conversation · ⌥-click, right-click or I for details · Tab or arrows to move, Enter to open"
+msgstr "Haz clic en un agente para abrir su conversación · ⌥-clic, clic derecho o I para detalles · Tab o flechas para moverte, Enter para abrir"
+
 msgid "Click an element."
 msgstr "Haz clic en un elemento."
 
@@ -4249,6 +4259,9 @@ msgstr "Haz clic en el chip para abrir la pull request"
 
 msgid "Click to copy the session ID (resume with `claude --resume <id>`)."
 msgstr "Haz clic para copiar el ID de la sesión (retómala con `claude --resume <id>`)."
+
+msgid "Click to open · ⌥-click or I for details"
+msgstr "Clic para abrir · ⌥-clic o I para detalles"
 
 msgid "Click to open on GitHub"
 msgstr "Haz clic para abrir en GitHub"
@@ -6903,6 +6916,9 @@ msgstr "Listo: el estilo de chip con borde que usa la barra de presets es ahora 
 msgid "Done (isShimmering=false)"
 msgstr "Listo (isShimmering=false)"
 
+msgid "Done, not seen"
+msgstr "Terminado, sin ver"
+
 msgid "Done, not seen yet"
 msgstr "Terminado, aún sin ver"
 
@@ -9275,6 +9291,9 @@ msgstr "IDE"
 
 msgid "Identity"
 msgstr "Identidad"
+
+msgid "idle"
+msgstr "inactivo"
 
 msgid "Idle"
 msgstr "Inactivo"
@@ -12319,11 +12338,17 @@ msgstr "Todavía nadie se ha unido a la clasificación."
 msgid "Nobody here by that name."
 msgstr "Aquí no hay nadie con ese nombre."
 
+msgid "Nobody needs you right now."
+msgstr "Nadie te necesita ahora mismo."
+
 msgid "Nobody on your team has shared automations yet."
 msgstr "Nadie de tu equipo ha compartido automatizaciones todavía."
 
 msgid "Nobody reviews differently because of it."
 msgstr "Nadie revisa de forma distinta por ello."
+
+msgid "Nobody waiting on you"
+msgstr "Nadie te espera"
 
 msgid "None"
 msgstr "Ninguno"
@@ -12757,6 +12782,9 @@ msgstr "Solo el autor del hilo o el propietario de la página pueden eliminarlo"
 msgid "Only want it out of your sidebar? Hide it instead. Nobody else is affected."
 msgstr "¿Solo quieres quitarlo de tu barra lateral? Ocúltalo. No afecta a nadie más."
 
+msgid "Only who needs me"
+msgstr "Solo quien me necesita"
+
 msgid "Only you"
 msgstr "Solo tú"
 
@@ -12782,7 +12810,6 @@ msgid "Open"
 msgstr "Abierta"
 
 #. placeholder {0}: linkedAgent?.label ?? t({ message: "agent settings", })
-#. placeholder {0}: workspace.name
 msgid "Open {0}"
 msgstr "Abrir {0}"
 

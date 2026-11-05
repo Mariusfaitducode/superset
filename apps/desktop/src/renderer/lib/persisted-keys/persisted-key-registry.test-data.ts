@@ -89,6 +89,10 @@ export const PERSISTED_KEY_REGISTRY: ReadonlyArray<
 	["src/renderer/stores/sidebar-state.ts", ["sidebar-store"]],
 	["src/renderer/stores/new-workspace-width.ts", ["new-workspace-width"]],
 	[
+		"src/renderer/routes/_authenticated/_dashboard/office/stores/office-filter.ts",
+		["office-filter"],
+	],
+	[
 		"src/renderer/stores/workspace-sidebar-state.ts",
 		["workspace-sidebar-store"],
 	],

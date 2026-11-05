@@ -1,5 +1,4 @@
 export {
-	BUBBLE_GLYPHS,
 	CHARACTER_SPRITES,
 	type CharacterPalette,
 	type CharacterSprite,

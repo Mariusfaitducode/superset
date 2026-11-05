@@ -188,6 +188,10 @@ msgstr "{0, plural, one {# etichetta} other {# etichette}}"
 msgid "{0, plural, one {# login} other {# logins}}"
 msgstr "{0, plural, one {# accesso} other {# accessi}}"
 
+#. placeholder {0}: counts.needYou
+msgid "{0, plural, one {# needs you} other {# need you}}"
+msgstr "{0, plural, one {# ha bisogno di te} other {# hanno bisogno di te}}"
+
 #. placeholder {0}: summary.passed
 msgid "{0, plural, one {# passed} other {# passed}}"
 msgstr "{0, plural, one {# superato} other {# superati}}"
@@ -616,6 +620,7 @@ msgid "{0} vs {1}"
 msgstr "{0} contro {1}"
 
 #. placeholder {0}: project.onViewer
+#. placeholder {0}: totals.needYou
 msgid "{0} waiting on you"
 msgstr "{0} ti aspettano"
 
@@ -637,7 +642,9 @@ msgstr "{0} vince in {1} turni"
 msgid "{0} wins on damage after {1} turns"
 msgstr "{0} vince ai danni dopo {1} turni"
 
+#. placeholder {0}: counts.working
 #. placeholder {0}: summary.working
+#. placeholder {0}: totals.working
 msgid "{0} working"
 msgstr "{0} al lavoro"
 
@@ -4229,6 +4236,9 @@ msgstr "Clicca su <0>Importa tema</0> e seleziona il file scaricato."
 msgid "Click a terminal script to edit its details."
 msgstr "Clicca su uno script del terminale per modificarne i dettagli."
 
+msgid "Click an agent to open its conversation · ⌥-click, right-click or I for details · Tab or arrows to move, Enter to open"
+msgstr "Fai clic su un agente per aprire la sua conversazione · ⌥-clic, clic destro o I per i dettagli · Tab o frecce per spostarti, Invio per aprire"
+
 msgid "Click an element."
 msgstr "Clicca su un elemento."
 
@@ -4249,6 +4259,9 @@ msgstr "Fai clic sul chip per aprire la pull request"
 
 msgid "Click to copy the session ID (resume with `claude --resume <id>`)."
 msgstr "Clicca per copiare l'ID della sessione (riprendi con `claude --resume <id>`)."
+
+msgid "Click to open · ⌥-click or I for details"
+msgstr "Clic per aprire · ⌥-clic o I per i dettagli"
 
 msgid "Click to open on GitHub"
 msgstr "Clicca per aprire su GitHub"
@@ -6903,6 +6916,9 @@ msgstr "Fatto — lo stile chip con bordo usato dalla barra dei preset è ora il
 msgid "Done (isShimmering=false)"
 msgstr "Fatto (isShimmering=false)"
 
+msgid "Done, not seen"
+msgstr "Finito, non visto"
+
 msgid "Done, not seen yet"
 msgstr "Finito, non ancora visto"
 
@@ -9275,6 +9291,9 @@ msgstr "IDE"
 
 msgid "Identity"
 msgstr "Identità"
+
+msgid "idle"
+msgstr "inattivo"
 
 msgid "Idle"
 msgstr "Inattivo"
@@ -12319,11 +12338,17 @@ msgstr "Nessuno si è ancora unito alla classifica."
 msgid "Nobody here by that name."
 msgstr "Nessuno con questo nome."
 
+msgid "Nobody needs you right now."
+msgstr "Nessuno ha bisogno di te in questo momento."
+
 msgid "Nobody on your team has shared automations yet."
 msgstr "Nessuno nel tuo team ha ancora condiviso automazioni."
 
 msgid "Nobody reviews differently because of it."
 msgstr "Nessuno rivede in modo diverso per questo."
+
+msgid "Nobody waiting on you"
+msgstr "Nessuno ti aspetta"
 
 msgid "None"
 msgstr "Nessuno"
@@ -12757,6 +12782,9 @@ msgstr "Solo l'autore del thread o il proprietario della pagina può eliminarlo"
 msgid "Only want it out of your sidebar? Hide it instead. Nobody else is affected."
 msgstr "Vuoi solo toglierlo dalla barra laterale? Nascondilo. Nessun altro ne è interessato."
 
+msgid "Only who needs me"
+msgstr "Solo chi ha bisogno di me"
+
 msgid "Only you"
 msgstr "Solo tu"
 
@@ -12782,7 +12810,6 @@ msgid "Open"
 msgstr "Aperta"
 
 #. placeholder {0}: linkedAgent?.label ?? t({ message: "agent settings", })
-#. placeholder {0}: workspace.name
 msgid "Open {0}"
 msgstr "Apri {0}"
 
