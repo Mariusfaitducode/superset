@@ -458,7 +458,7 @@ export function DashboardSidebarHeader({
 								type="button"
 								onClick={handleRelaisClick}
 								aria-label={t({
-									message: "Relais",
+									message: "My automations",
 								})}
 								aria-current={isRelaisOpen ? "page" : undefined}
 								className={cn(
@@ -472,7 +472,7 @@ export function DashboardSidebarHeader({
 							</button>
 						</TooltipTrigger>
 						<TooltipContent side="right">
-							<Trans>Relais · local automations</Trans>
+							<Trans>My automations</Trans>
 						</TooltipContent>
 					</Tooltip>
 
@@ -852,7 +852,7 @@ export function DashboardSidebarHeader({
 				type="button"
 				onClick={handleRelaisClick}
 				aria-label={t({
-					message: "Relais",
+					message: "My automations",
 				})}
 				aria-current={isRelaisOpen ? "page" : undefined}
 				className={cn(
@@ -867,7 +867,7 @@ export function DashboardSidebarHeader({
 					strokeWidth={1.5}
 				/>
 				<span className="flex-1 text-left">
-					<Trans>Relais</Trans>
+					<Trans>My automations</Trans>
 				</span>
 			</button>
 

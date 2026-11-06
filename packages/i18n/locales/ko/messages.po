@@ -10834,6 +10834,9 @@ msgstr "음소거됨"
 msgid "My Agent"
 msgstr "내 에이전트"
 
+msgid "My automations"
+msgstr "내 자동화"
+
 msgid "My last message"
 msgstr "내 마지막 메시지"
 
@@ -14215,12 +14218,6 @@ msgstr "리전"
 
 msgid "Registers lifecycle hooks in this agent's global config so Superset can show status and send notifications. Turning this off removes Superset's entries everywhere — status and notifications stop for this agent, including inside Superset."
 msgstr "이 에이전트의 전역 구성에 라이프사이클 훅을 등록해 Superset이 상태를 표시하고 알림을 보낼 수 있게 합니다. 이 기능을 끄면 모든 곳에서 Superset의 항목이 제거되며, Superset 안에서도 이 에이전트의 상태와 알림이 중단됩니다."
-
-msgid "Relais"
-msgstr "Relais"
-
-msgid "Relais · local automations"
-msgstr "Relais · 로컬 자동화"
 
 msgid "Relais is not running on this Mac. Start it once and it comes back at every login:"
 msgstr "이 Mac에서 Relais가 실행되고 있지 않습니다. 한 번 시작하면 로그인할 때마다 실행됩니다:"

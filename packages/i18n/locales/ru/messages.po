@@ -10834,6 +10834,9 @@ msgstr "Микрофон выключен"
 msgid "My Agent"
 msgstr "Мой агент"
 
+msgid "My automations"
+msgstr "Мои автоматизации"
+
 msgid "My last message"
 msgstr "Моё последнее сообщение"
 
@@ -14215,12 +14218,6 @@ msgstr "Регион"
 
 msgid "Registers lifecycle hooks in this agent's global config so Superset can show status and send notifications. Turning this off removes Superset's entries everywhere — status and notifications stop for this agent, including inside Superset."
 msgstr "Регистрирует хуки жизненного цикла в глобальной конфигурации этого агента, чтобы Superset мог показывать статус и отправлять уведомления. Отключение убирает записи Superset везде — статус и уведомления для этого агента перестанут работать, в том числе внутри Superset."
-
-msgid "Relais"
-msgstr "Relais"
-
-msgid "Relais · local automations"
-msgstr "Relais · локальные автоматизации"
 
 msgid "Relais is not running on this Mac. Start it once and it comes back at every login:"
 msgstr "Relais не запущен на этом Mac. Запустите его один раз, и он будет стартовать при каждом входе:"

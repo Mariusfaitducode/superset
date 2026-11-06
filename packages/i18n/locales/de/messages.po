@@ -10834,6 +10834,9 @@ msgstr "Stummgeschaltet"
 msgid "My Agent"
 msgstr "Mein Agent"
 
+msgid "My automations"
+msgstr "Meine Automatisierungen"
+
 msgid "My last message"
 msgstr "Meine letzte Nachricht"
 
@@ -14215,12 +14218,6 @@ msgstr "Region"
 
 msgid "Registers lifecycle hooks in this agent's global config so Superset can show status and send notifications. Turning this off removes Superset's entries everywhere — status and notifications stop for this agent, including inside Superset."
 msgstr "Registriert Lifecycle-Hooks in der globalen Konfiguration dieses Agenten, damit Superset Status anzeigen und Benachrichtigungen senden kann. Wird das ausgeschaltet, werden Supersets Einträge überall entfernt — Status und Benachrichtigungen für diesen Agenten enden, auch innerhalb von Superset."
-
-msgid "Relais"
-msgstr "Relais"
-
-msgid "Relais · local automations"
-msgstr "Relais · lokale Automatisierungen"
 
 msgid "Relais is not running on this Mac. Start it once and it comes back at every login:"
 msgstr "Relais läuft auf diesem Mac nicht. Einmal starten, dann startet es bei jeder Anmeldung:"

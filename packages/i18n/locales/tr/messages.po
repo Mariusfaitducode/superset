@@ -10834,6 +10834,9 @@ msgstr "Sessizde"
 msgid "My Agent"
 msgstr "Ajanım"
 
+msgid "My automations"
+msgstr "Otomasyonlarım"
+
 msgid "My last message"
 msgstr "Son mesajım"
 
@@ -14215,12 +14218,6 @@ msgstr "Bölge"
 
 msgid "Registers lifecycle hooks in this agent's global config so Superset can show status and send notifications. Turning this off removes Superset's entries everywhere — status and notifications stop for this agent, including inside Superset."
 msgstr "Superset'in durum gösterebilmesi ve bildirim gönderebilmesi için bu ajanın genel yapılandırmasına yaşam döngüsü hook'ları kaydeder. Bunu kapatmak Superset'in kayıtlarını her yerden kaldırır — Superset içinde dahil olmak üzere bu ajan için durum ve bildirimler durur."
-
-msgid "Relais"
-msgstr "Relais"
-
-msgid "Relais · local automations"
-msgstr "Relais · yerel otomasyonlar"
 
 msgid "Relais is not running on this Mac. Start it once and it comes back at every login:"
 msgstr "Relais bu Mac'te çalışmıyor. Bir kez başlatın, her oturum açışta geri gelir:"

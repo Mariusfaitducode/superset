@@ -10834,6 +10834,9 @@ msgstr "Ztlumeno"
 msgid "My Agent"
 msgstr "Můj agent"
 
+msgid "My automations"
+msgstr "Moje automatizace"
+
 msgid "My last message"
 msgstr "Moje poslední zpráva"
 
@@ -14215,12 +14218,6 @@ msgstr "Region"
 
 msgid "Registers lifecycle hooks in this agent's global config so Superset can show status and send notifications. Turning this off removes Superset's entries everywhere — status and notifications stop for this agent, including inside Superset."
 msgstr "Zaregistruje lifecycle hooky do globální konfigurace tohoto agenta, aby Superset mohl zobrazovat stav a posílat oznámení. Vypnutím se záznamy Superset odeberou všude — stav a oznámení pro tohoto agenta přestanou fungovat, i uvnitř Superset."
-
-msgid "Relais"
-msgstr "Relais"
-
-msgid "Relais · local automations"
-msgstr "Relais · místní automatizace"
 
 msgid "Relais is not running on this Mac. Start it once and it comes back at every login:"
 msgstr "Relais na tomto Macu neběží. Spusťte ho jednou a poběží po každém přihlášení:"
