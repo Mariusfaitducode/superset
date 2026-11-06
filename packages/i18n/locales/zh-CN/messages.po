@@ -4233,8 +4233,8 @@ msgstr "点击<0>导入主题</0>，选择下载好的文件。"
 msgid "Click a terminal script to edit its details."
 msgstr "点击终端脚本以编辑其详情。"
 
-msgid "Click an agent to open its conversation · ⌥-click, right-click or I for details · Tab or arrows to move, Enter to open"
-msgstr "点击代理打开其对话 · ⌥-点击、右键或 I 查看详情 · Tab 或方向键移动，Enter 打开"
+msgid "Click an agent to open its conversation, a name plate to open its workspace · ⌥-click, right-click or I for details · Tab or arrows to move, Enter to open"
+msgstr "点击代理打开其对话，点击名牌打开其工作区 · ⌥-点击、右键或 I 查看详情 · Tab 或方向键移动，Enter 打开"
 
 msgid "Click an element."
 msgstr "点击一个元素。"
@@ -11696,9 +11696,6 @@ msgstr "还没有智能体对话。"
 msgid "No agent is configured on this host"
 msgstr "此主机上未配置任何智能体"
 
-msgid "No agent is running. Start one in a workspace and it takes a desk here."
-msgstr "没有正在运行的智能体。在工作区中启动一个，它就会在这里占一张桌子。"
-
 msgid "No agent running"
 msgstr "没有正在运行的智能体"
 
@@ -11759,6 +11756,9 @@ msgstr "此分支上还没有改动。"
 
 msgid "No changes to display."
 msgstr "没有可显示的改动。"
+
+msgid "No chat running"
+msgstr "没有运行中的对话"
 
 msgid "No checks"
 msgstr "无检查"
@@ -12307,6 +12307,9 @@ msgstr "没有工作区带有这些标签"
 
 msgid "No workspace run command configured"
 msgstr "未配置工作区运行命令"
+
+msgid "No workspace yet. Create one and it gets a desk here."
+msgstr "还没有工作区。创建一个，它就会在这里有张桌子。"
 
 msgid "No workspaces found."
 msgstr "未找到工作区。"
@@ -13320,6 +13323,9 @@ msgstr "打开工作区"
 #. placeholder {0}: getV2WorkspaceDisplayName(workspace)
 msgid "Open workspace: {0}"
 msgstr "打开工作区：{0}"
+
+msgid "Open workspace: {details}"
+msgstr "打开工作区：{details}"
 
 msgid "Open Workspaces"
 msgstr "打开工作区"

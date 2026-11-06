@@ -4233,8 +4233,8 @@ msgstr "Nhấp <0>Import Theme</0> và chọn tệp vừa tải."
 msgid "Click a terminal script to edit its details."
 msgstr "Nhấp vào một script terminal để sửa chi tiết."
 
-msgid "Click an agent to open its conversation · ⌥-click, right-click or I for details · Tab or arrows to move, Enter to open"
-msgstr "Nhấp vào agent để mở cuộc trò chuyện · ⌥-nhấp, nhấp chuột phải hoặc I để xem chi tiết · Tab hoặc phím mũi tên để di chuyển, Enter để mở"
+msgid "Click an agent to open its conversation, a name plate to open its workspace · ⌥-click, right-click or I for details · Tab or arrows to move, Enter to open"
+msgstr "Nhấp vào agent để mở cuộc trò chuyện, vào bảng tên để mở workspace · ⌥-nhấp, nhấp chuột phải hoặc I để xem chi tiết · Tab hoặc phím mũi tên để di chuyển, Enter để mở"
 
 msgid "Click an element."
 msgstr "Nhấp vào một phần tử."
@@ -11696,9 +11696,6 @@ msgstr "Chưa có cuộc trò chuyện nào của agent."
 msgid "No agent is configured on this host"
 msgstr "Không có tác nhân nào được cấu hình trên máy chủ này"
 
-msgid "No agent is running. Start one in a workspace and it takes a desk here."
-msgstr "Không có agent nào đang chạy. Hãy khởi động một agent trong workspace và nó sẽ ngồi vào bàn ở đây."
-
 msgid "No agent running"
 msgstr "Không có agent nào đang chạy"
 
@@ -11759,6 +11756,9 @@ msgstr "Chưa có thay đổi nào trên nhánh này."
 
 msgid "No changes to display."
 msgstr "Không có thay đổi nào để hiển thị."
+
+msgid "No chat running"
+msgstr "Không có chat nào đang chạy"
 
 msgid "No checks"
 msgstr "Không có check"
@@ -12307,6 +12307,9 @@ msgstr "Không có workspace nào có các nhãn này"
 
 msgid "No workspace run command configured"
 msgstr "Chưa cấu hình lệnh chạy cho workspace"
+
+msgid "No workspace yet. Create one and it gets a desk here."
+msgstr "Chưa có workspace. Tạo một cái và nó sẽ có bàn ở đây."
 
 msgid "No workspaces found."
 msgstr "Không tìm thấy workspace nào."
@@ -13320,6 +13323,9 @@ msgstr "Mở workspace"
 #. placeholder {0}: getV2WorkspaceDisplayName(workspace)
 msgid "Open workspace: {0}"
 msgstr "Mở workspace: {0}"
+
+msgid "Open workspace: {details}"
+msgstr "Mở workspace: {details}"
 
 msgid "Open Workspaces"
 msgstr "Mở workspace"

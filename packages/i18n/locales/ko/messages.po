@@ -4233,8 +4233,8 @@ msgstr "<0>테마 가져오기</0>를 클릭하고 다운로드한 파일을 선
 msgid "Click a terminal script to edit its details."
 msgstr "터미널 스크립트를 클릭하면 세부 정보를 편집합니다."
 
-msgid "Click an agent to open its conversation · ⌥-click, right-click or I for details · Tab or arrows to move, Enter to open"
-msgstr "에이전트를 클릭하면 대화가 열립니다 · ⌥-클릭, 우클릭 또는 I로 세부 정보 · Tab 또는 화살표로 이동, Enter로 열기"
+msgid "Click an agent to open its conversation, a name plate to open its workspace · ⌥-click, right-click or I for details · Tab or arrows to move, Enter to open"
+msgstr "에이전트를 클릭하면 대화가, 명패를 클릭하면 워크스페이스가 열립니다 · ⌥-클릭, 우클릭 또는 I로 세부 정보 · Tab 또는 화살표로 이동, Enter로 열기"
 
 msgid "Click an element."
 msgstr "요소를 클릭하세요."
@@ -11696,9 +11696,6 @@ msgstr "아직 에이전트 대화가 없습니다."
 msgid "No agent is configured on this host"
 msgstr "이 호스트에 구성된 에이전트가 없습니다"
 
-msgid "No agent is running. Start one in a workspace and it takes a desk here."
-msgstr "실행 중인 에이전트가 없습니다. 워크스페이스에서 시작하면 여기 책상에 앉습니다."
-
 msgid "No agent running"
 msgstr "실행 중인 에이전트 없음"
 
@@ -11759,6 +11756,9 @@ msgstr "아직 이 브랜치에 변경 사항이 없습니다."
 
 msgid "No changes to display."
 msgstr "표시할 변경 사항이 없습니다."
+
+msgid "No chat running"
+msgstr "실행 중인 채팅 없음"
 
 msgid "No checks"
 msgstr "검사 없음"
@@ -12307,6 +12307,9 @@ msgstr "이 라벨이 있는 워크스페이스가 없습니다"
 
 msgid "No workspace run command configured"
 msgstr "설정된 워크스페이스 실행 명령이 없습니다"
+
+msgid "No workspace yet. Create one and it gets a desk here."
+msgstr "아직 워크스페이스가 없습니다. 만들면 여기에 책상이 생깁니다."
 
 msgid "No workspaces found."
 msgstr "워크스페이스를 찾을 수 없습니다."
@@ -13320,6 +13323,9 @@ msgstr "워크스페이스 열기"
 #. placeholder {0}: getV2WorkspaceDisplayName(workspace)
 msgid "Open workspace: {0}"
 msgstr "워크스페이스 열기: {0}"
+
+msgid "Open workspace: {details}"
+msgstr "워크스페이스 열기: {details}"
 
 msgid "Open Workspaces"
 msgstr "워크스페이스 열기"
