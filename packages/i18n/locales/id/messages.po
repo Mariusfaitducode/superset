@@ -4942,6 +4942,9 @@ msgstr "Koneksi GitHub belum dikonfigurasi di server ini"
 msgid "Connecting lets your agents read and act in {name} on your behalf. Review what you are granting before you continue."
 msgstr "Menghubungkan memungkinkan agen Anda membaca dan bertindak di {name} atas nama Anda. Tinjau apa yang Anda berikan sebelum melanjutkan."
 
+msgid "Connecting to Relais…"
+msgstr "Menghubungkan ke Relais…"
+
 msgid "Connecting to the desktop…"
 msgstr "Menghubungkan ke desktop…"
 
@@ -10591,6 +10594,9 @@ msgstr "Memuat…"
 msgid "Local"
 msgstr "Lokal"
 
+msgid "Local automations"
+msgstr "Otomatisasi lokal"
+
 msgid "Local branches"
 msgstr "Branch lokal"
 
@@ -11304,6 +11310,9 @@ msgstr "Dibisukan"
 
 msgid "My Agent"
 msgstr "Agen Saya"
+
+msgid "My automations"
+msgstr "Otomatisasi saya"
 
 msgid "My last message"
 msgstr "Pesan terakhir saya"
@@ -14902,6 +14911,9 @@ msgstr "Region"
 
 msgid "Registers lifecycle hooks in this agent's global config so Superset can show status and send notifications. Turning this off removes Superset's entries everywhere — status and notifications stop for this agent, including inside Superset."
 msgstr "Mendaftarkan hook lifecycle di konfigurasi global agen ini agar Superset bisa menampilkan status dan mengirim notifikasi. Mematikannya menghapus entri Superset di mana-mana — status dan notifikasi berhenti untuk agen ini, termasuk di dalam Superset."
+
+msgid "Relais is not running on this Mac. Start it once and it comes back at every login:"
+msgstr "Relais tidak berjalan di Mac ini. Jalankan sekali dan akan aktif setiap kali masuk:"
 
 msgid "Related Posts"
 msgstr "Tulisan Terkait"

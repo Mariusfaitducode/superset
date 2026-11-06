@@ -17,6 +17,7 @@ import {
 	LuLayers,
 	LuPuzzle,
 	LuStickyNote,
+	LuWorkflow,
 } from "react-icons/lu";
 import { GATED_FEATURES, usePaywall } from "renderer/components/Paywall";
 import { env } from "renderer/env.renderer";
@@ -73,7 +74,8 @@ type SimplePageRoute =
 	| "/plugins"
 	| "/git-graph"
 	| "/insights"
-	| "/office";
+	| "/office"
+	| "/relais";
 
 function useRoutePage(
 	to: SimplePageRoute,
@@ -266,6 +268,11 @@ function useInsightsTarget(): SidebarNavTarget {
 	return { ...useRoutePage("/insights"), available: true };
 }
 
+/** Local automations run by Relais, beside the Pro ones. */
+function useMyAutomationsTarget(): SidebarNavTarget {
+	return { ...useRoutePage("/relais"), available: true };
+}
+
 function useOfficeTarget(): SidebarNavTarget {
 	return { ...useRoutePage("/office"), available: true };
 }
@@ -308,6 +315,12 @@ export const SIDEBAR_NAV_ENTRIES: SidebarNavEntry[] = [
 		icon: LuClock,
 		thinStroke: true,
 		useTarget: useAutomationsTarget,
+	},
+	{
+		id: "myAutomations",
+		icon: LuWorkflow,
+		thinStroke: true,
+		useTarget: useMyAutomationsTarget,
 	},
 	{
 		id: "tasks",

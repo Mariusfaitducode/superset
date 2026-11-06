@@ -4942,6 +4942,9 @@ msgstr "Máy chủ này chưa cấu hình kết nối GitHub"
 msgid "Connecting lets your agents read and act in {name} on your behalf. Review what you are granting before you continue."
 msgstr "Kết nối cho phép các tác nhân của bạn đọc và thao tác trong {name} thay mặt bạn. Hãy xem lại những gì bạn đang cấp trước khi tiếp tục."
 
+msgid "Connecting to Relais…"
+msgstr "Đang kết nối tới Relais…"
+
 msgid "Connecting to the desktop…"
 msgstr "Đang kết nối tới màn hình nền…"
 
@@ -10591,6 +10594,9 @@ msgstr "Đang tải…"
 msgid "Local"
 msgstr "Cục bộ"
 
+msgid "Local automations"
+msgstr "Tự động hóa cục bộ"
+
 msgid "Local branches"
 msgstr "Nhánh cục bộ"
 
@@ -11304,6 +11310,9 @@ msgstr "Đã tắt tiếng"
 
 msgid "My Agent"
 msgstr "Agent của tôi"
+
+msgid "My automations"
+msgstr "Tự động hóa của tôi"
 
 msgid "My last message"
 msgstr "Tin nhắn cuối của tôi"
@@ -14902,6 +14911,9 @@ msgstr "Region"
 
 msgid "Registers lifecycle hooks in this agent's global config so Superset can show status and send notifications. Turning this off removes Superset's entries everywhere — status and notifications stop for this agent, including inside Superset."
 msgstr "Đăng ký các hook vòng đời vào cấu hình toàn cục của agent này để Superset hiển thị trạng thái và gửi thông báo. Tắt tùy chọn này sẽ gỡ các mục của Superset ở mọi nơi — trạng thái và thông báo cho agent này sẽ dừng, kể cả bên trong Superset."
+
+msgid "Relais is not running on this Mac. Start it once and it comes back at every login:"
+msgstr "Relais không chạy trên máy Mac này. Khởi động một lần và nó sẽ chạy lại mỗi lần đăng nhập:"
 
 msgid "Related Posts"
 msgstr "Bài viết liên quan"

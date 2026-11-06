@@ -4942,6 +4942,9 @@ msgstr "此服务器未配置 GitHub 连接"
 msgid "Connecting lets your agents read and act in {name} on your behalf. Review what you are granting before you continue."
 msgstr "连接后，你的智能体可代表你在 {name} 中读取和操作。继续前请检查你授予的权限。"
 
+msgid "Connecting to Relais…"
+msgstr "正在连接 Relais…"
+
 msgid "Connecting to the desktop…"
 msgstr "正在连接桌面…"
 
@@ -10591,6 +10594,9 @@ msgstr "正在加载…"
 msgid "Local"
 msgstr "本地"
 
+msgid "Local automations"
+msgstr "本地自动化"
+
 msgid "Local branches"
 msgstr "本地分支"
 
@@ -11304,6 +11310,9 @@ msgstr "已静音"
 
 msgid "My Agent"
 msgstr "我的智能体"
+
+msgid "My automations"
+msgstr "我的自动化"
 
 msgid "My last message"
 msgstr "我的最后一条消息"
@@ -14902,6 +14911,9 @@ msgstr "区域"
 
 msgid "Registers lifecycle hooks in this agent's global config so Superset can show status and send notifications. Turning this off removes Superset's entries everywhere — status and notifications stop for this agent, including inside Superset."
 msgstr "在该智能体的全局配置中注册生命周期钩子，以便Superset显示状态并发送通知。关闭后会在所有位置移除Superset的条目，该智能体的状态和通知都会停止，包括在Superset内部。"
+
+msgid "Relais is not running on this Mac. Start it once and it comes back at every login:"
+msgstr "Relais 未在此 Mac 上运行。启动一次后，每次登录都会自动运行："
 
 msgid "Related Posts"
 msgstr "相关文章"

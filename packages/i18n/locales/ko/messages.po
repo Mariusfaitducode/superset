@@ -4942,6 +4942,9 @@ msgstr "이 서버에는 GitHub 연결이 구성되어 있지 않습니다"
 msgid "Connecting lets your agents read and act in {name} on your behalf. Review what you are granting before you continue."
 msgstr "연결하면 에이전트가 사용자를 대신해 {name}에서 읽고 작업할 수 있습니다. 계속하기 전에 부여하는 권한을 확인하세요."
 
+msgid "Connecting to Relais…"
+msgstr "Relais에 연결 중…"
+
 msgid "Connecting to the desktop…"
 msgstr "데스크톱에 연결하는 중…"
 
@@ -10591,6 +10594,9 @@ msgstr "불러오는 중…"
 msgid "Local"
 msgstr "로컬"
 
+msgid "Local automations"
+msgstr "로컬 자동화"
+
 msgid "Local branches"
 msgstr "로컬 브랜치"
 
@@ -11304,6 +11310,9 @@ msgstr "음소거됨"
 
 msgid "My Agent"
 msgstr "내 에이전트"
+
+msgid "My automations"
+msgstr "내 자동화"
 
 msgid "My last message"
 msgstr "내 마지막 메시지"
@@ -14902,6 +14911,9 @@ msgstr "리전"
 
 msgid "Registers lifecycle hooks in this agent's global config so Superset can show status and send notifications. Turning this off removes Superset's entries everywhere — status and notifications stop for this agent, including inside Superset."
 msgstr "이 에이전트의 전역 구성에 라이프사이클 훅을 등록해 Superset이 상태를 표시하고 알림을 보낼 수 있게 합니다. 이 기능을 끄면 모든 곳에서 Superset의 항목이 제거되며, Superset 안에서도 이 에이전트의 상태와 알림이 중단됩니다."
+
+msgid "Relais is not running on this Mac. Start it once and it comes back at every login:"
+msgstr "이 Mac에서 Relais가 실행되고 있지 않습니다. 한 번 시작하면 로그인할 때마다 실행됩니다:"
 
 msgid "Related Posts"
 msgstr "관련 게시물"
