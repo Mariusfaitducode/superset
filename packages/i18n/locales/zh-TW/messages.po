@@ -1413,9 +1413,6 @@ msgstr "還有 {hidden} 個"
 msgid "+{hiddenCount} earlier"
 msgstr "更早的+{hiddenCount}條"
 
-msgid "+{hiddenCount} more"
-msgstr "+{hiddenCount} 個"
-
 msgid "+{remainingCount} more"
 msgstr "+{remainingCount}個"
 
@@ -11693,9 +11690,6 @@ msgstr "沒有作用中的工作區"
 msgid "No agent"
 msgstr "無代理程式"
 
-msgid "No agent conversations"
-msgstr "沒有代理對話"
-
 msgid "No agent conversations yet."
 msgstr "尚無代理對話。"
 
@@ -18248,9 +18242,6 @@ msgstr "每條命令一個分頁"
 
 msgid "Tab to fill"
 msgstr "按 Tab 填入"
-
-msgid "Tab: next workspace · ↑↓: pick a conversation · release Ctrl to open"
-msgstr "Tab：下一個工作區 · ↑↓：選擇對話 · 放開 Ctrl 開啟"
 
 msgid "Table"
 msgstr "表格"

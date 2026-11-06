@@ -1413,9 +1413,6 @@ msgstr "+{hidden}개 더"
 msgid "+{hiddenCount} earlier"
 msgstr "이전 +{hiddenCount}개"
 
-msgid "+{hiddenCount} more"
-msgstr "+{hiddenCount}개 더"
-
 msgid "+{remainingCount} more"
 msgstr "+{remainingCount}개 더"
 
@@ -11693,9 +11690,6 @@ msgstr "활성 워크스페이스 없음"
 msgid "No agent"
 msgstr "에이전트 없음"
 
-msgid "No agent conversations"
-msgstr "에이전트 대화 없음"
-
 msgid "No agent conversations yet."
 msgstr "아직 에이전트 대화가 없습니다."
 
@@ -18248,9 +18242,6 @@ msgstr "명령마다 탭"
 
 msgid "Tab to fill"
 msgstr "Tab으로 채우기"
-
-msgid "Tab: next workspace · ↑↓: pick a conversation · release Ctrl to open"
-msgstr "Tab: 다음 워크스페이스 · ↑↓: 대화 선택 · Ctrl을 놓으면 열림"
 
 msgid "Table"
 msgstr "테이블"

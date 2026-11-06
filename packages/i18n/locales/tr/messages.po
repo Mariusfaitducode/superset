@@ -1413,9 +1413,6 @@ msgstr "+{hidden} daha"
 msgid "+{hiddenCount} earlier"
 msgstr "+{hiddenCount} daha önce"
 
-msgid "+{hiddenCount} more"
-msgstr "+{hiddenCount} daha"
-
 msgid "+{remainingCount} more"
 msgstr "+{remainingCount} daha"
 
@@ -11693,9 +11690,6 @@ msgstr "Etkin çalışma alanı yok"
 msgid "No agent"
 msgstr "Ajan yok"
 
-msgid "No agent conversations"
-msgstr "Ajan konuşması yok"
-
 msgid "No agent conversations yet."
 msgstr "Henüz ajan konuşması yok."
 
@@ -18248,9 +18242,6 @@ msgstr "Komut başına sekme"
 
 msgid "Tab to fill"
 msgstr "Doldurmak için Tab"
-
-msgid "Tab: next workspace · ↑↓: pick a conversation · release Ctrl to open"
-msgstr "Tab: sonraki çalışma alanı · ↑↓: konuşma seç · açmak için Ctrl'yi bırakın"
 
 msgid "Table"
 msgstr "Tablo"

@@ -1413,9 +1413,6 @@ msgstr "+{hidden} dalších"
 msgid "+{hiddenCount} earlier"
 msgstr "+{hiddenCount} dřívějších"
 
-msgid "+{hiddenCount} more"
-msgstr "+{hiddenCount} další"
-
 msgid "+{remainingCount} more"
 msgstr "+{remainingCount} další"
 
@@ -11693,9 +11690,6 @@ msgstr "Žádné aktivní pracovní prostory"
 msgid "No agent"
 msgstr "Žádný agent"
 
-msgid "No agent conversations"
-msgstr "Žádné konverzace agentů"
-
 msgid "No agent conversations yet."
 msgstr "Zatím žádné konverzace agentů."
 
@@ -18248,9 +18242,6 @@ msgstr "Karta na příkaz"
 
 msgid "Tab to fill"
 msgstr "Tab pro doplnění"
-
-msgid "Tab: next workspace · ↑↓: pick a conversation · release Ctrl to open"
-msgstr "Tab: další pracovní prostor · ↑↓: vybrat konverzaci · uvolněním Ctrl otevřete"
 
 msgid "Table"
 msgstr "Tabulka"

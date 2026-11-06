@@ -1413,9 +1413,6 @@ msgstr "+{hidden} lagi"
 msgid "+{hiddenCount} earlier"
 msgstr "+{hiddenCount} sebelumnya"
 
-msgid "+{hiddenCount} more"
-msgstr "+{hiddenCount} lainnya"
-
 msgid "+{remainingCount} more"
 msgstr "+{remainingCount} lagi"
 
@@ -11693,9 +11690,6 @@ msgstr "Tidak ada workspace aktif"
 msgid "No agent"
 msgstr "Tanpa agen"
 
-msgid "No agent conversations"
-msgstr "Tidak ada percakapan agen"
-
 msgid "No agent conversations yet."
 msgstr "Belum ada percakapan agen."
 
@@ -18248,9 +18242,6 @@ msgstr "Satu tab per perintah"
 
 msgid "Tab to fill"
 msgstr "Tab untuk mengisi"
-
-msgid "Tab: next workspace · ↑↓: pick a conversation · release Ctrl to open"
-msgstr "Tab: workspace berikutnya · ↑↓: pilih percakapan · lepas Ctrl untuk membuka"
 
 msgid "Table"
 msgstr "Tabel"
