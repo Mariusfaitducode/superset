@@ -23,8 +23,6 @@ export interface WorkspaceSwitcherGroup {
 export interface WorkspaceSwitcherTodos {
 	open: number;
 	highPriority: number;
-	/** Open to-dos per conversation (terminal id). */
-	byTerminal: Readonly<Record<string, number>>;
 }
 
 export interface ActiveWorkspaceSwitcherOption {
@@ -47,7 +45,6 @@ export interface ActiveWorkspaceSwitcherOption {
 /** The fields of a host to-do the switcher counts. */
 export interface SwitcherTodo {
 	workspaceId: string;
-	terminalId: string;
 	done: boolean;
 	priority: string;
 }
@@ -55,7 +52,6 @@ export interface SwitcherTodo {
 const NO_TODOS: WorkspaceSwitcherTodos = {
 	open: 0,
 	highPriority: 0,
-	byTerminal: {},
 };
 
 function groupColor(color: string | null): string | null {
@@ -72,21 +68,16 @@ function toGroup(source: {
 function countTodos(
 	todos: Iterable<SwitcherTodo>,
 ): Map<string, WorkspaceSwitcherTodos> {
-	const byWorkspace = new Map<
-		string,
-		{ open: number; highPriority: number; byTerminal: Record<string, number> }
-	>();
+	const byWorkspace = new Map<string, WorkspaceSwitcherTodos>();
 	for (const todo of todos) {
 		if (todo.done) continue;
 		let entry = byWorkspace.get(todo.workspaceId);
 		if (!entry) {
-			entry = { open: 0, highPriority: 0, byTerminal: {} };
+			entry = { open: 0, highPriority: 0 };
 			byWorkspace.set(todo.workspaceId, entry);
 		}
 		entry.open += 1;
 		if (todo.priority === "high") entry.highPriority += 1;
-		entry.byTerminal[todo.terminalId] =
-			(entry.byTerminal[todo.terminalId] ?? 0) + 1;
 	}
 	return byWorkspace;
 }

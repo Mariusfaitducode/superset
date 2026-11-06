@@ -1329,9 +1329,6 @@ msgstr "还有 {hidden} 个"
 msgid "+{hiddenCount} earlier"
 msgstr "更早的+{hiddenCount}条"
 
-msgid "+{hiddenCount} more"
-msgstr "+{hiddenCount} 个"
-
 msgid "+{remainingCount} more"
 msgstr "+{remainingCount}个"
 
@@ -11200,9 +11197,6 @@ msgstr "没有活动的工作区"
 msgid "No agent"
 msgstr "无智能体"
 
-msgid "No agent conversations"
-msgstr "没有智能体对话"
-
 msgid "No agent conversations yet."
 msgstr "还没有智能体对话。"
 
@@ -17482,9 +17476,6 @@ msgstr "每条命令一个标签页"
 
 msgid "Tab to fill"
 msgstr "按 Tab 填充"
-
-msgid "Tab: next workspace · ↑↓: pick a conversation · release Ctrl to open"
-msgstr "Tab：下一个工作区 · ↑↓：选择对话 · 松开 Ctrl 打开"
 
 msgid "Table"
 msgstr "表格"

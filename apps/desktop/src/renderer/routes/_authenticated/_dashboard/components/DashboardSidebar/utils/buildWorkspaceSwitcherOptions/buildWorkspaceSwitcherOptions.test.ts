@@ -115,13 +115,13 @@ describe("buildWorkspaceSwitcherOptions", () => {
 		expect(option?.project).toEqual({ name: "superset", color: null });
 	});
 
-	test("counts open to-dos per workspace and conversation, flagging high priority", () => {
+	test("counts open to-dos per workspace, flagging high priority", () => {
 		const todos: SwitcherTodo[] = [
-			{ workspaceId: "a", terminalId: "t1", done: false, priority: "high" },
-			{ workspaceId: "a", terminalId: "t1", done: false, priority: "normal" },
-			{ workspaceId: "a", terminalId: "t2", done: false, priority: "low" },
-			{ workspaceId: "a", terminalId: "t2", done: true, priority: "high" },
-			{ workspaceId: "other", terminalId: "t9", done: false, priority: "high" },
+			{ workspaceId: "a", done: false, priority: "high" },
+			{ workspaceId: "a", done: false, priority: "normal" },
+			{ workspaceId: "a", done: false, priority: "low" },
+			{ workspaceId: "a", done: true, priority: "high" },
+			{ workspaceId: "other", done: false, priority: "high" },
 		];
 		const [option] = build({
 			projects: [
@@ -141,7 +141,6 @@ describe("buildWorkspaceSwitcherOptions", () => {
 		expect(option?.todos).toEqual({
 			open: 3,
 			highPriority: 1,
-			byTerminal: { t1: 2, t2: 1 },
 		});
 	});
 

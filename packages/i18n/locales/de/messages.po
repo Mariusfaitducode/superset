@@ -1329,9 +1329,6 @@ msgstr "+{hidden} weitere"
 msgid "+{hiddenCount} earlier"
 msgstr "+{hiddenCount} früher"
 
-msgid "+{hiddenCount} more"
-msgstr "+{hiddenCount} weitere"
-
 msgid "+{remainingCount} more"
 msgstr "+{remainingCount} weitere"
 
@@ -11200,9 +11197,6 @@ msgstr "Keine aktiven Arbeitsbereiche"
 msgid "No agent"
 msgstr "Kein Agent"
 
-msgid "No agent conversations"
-msgstr "Keine Agent-Unterhaltungen"
-
 msgid "No agent conversations yet."
 msgstr "Noch keine Agent-Unterhaltungen."
 
@@ -17482,9 +17476,6 @@ msgstr "Ein Tab pro Befehl"
 
 msgid "Tab to fill"
 msgstr "Tab zum Ausfüllen"
-
-msgid "Tab: next workspace · ↑↓: pick a conversation · release Ctrl to open"
-msgstr "Tab: nächster Workspace · ↑↓: Unterhaltung wählen · Strg loslassen zum Öffnen"
 
 msgid "Table"
 msgstr "Tabelle"

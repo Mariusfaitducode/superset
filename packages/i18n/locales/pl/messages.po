@@ -1329,9 +1329,6 @@ msgstr "+{hidden} więcej"
 msgid "+{hiddenCount} earlier"
 msgstr "+{hiddenCount} wcześniej"
 
-msgid "+{hiddenCount} more"
-msgstr "+{hiddenCount} więcej"
-
 msgid "+{remainingCount} more"
 msgstr "+{remainingCount} więcej"
 
@@ -11200,9 +11197,6 @@ msgstr "Brak aktywnych obszarów roboczych"
 msgid "No agent"
 msgstr "Brak agenta"
 
-msgid "No agent conversations"
-msgstr "Brak rozmów agentów"
-
 msgid "No agent conversations yet."
 msgstr "Brak rozmów agentów."
 
@@ -17482,9 +17476,6 @@ msgstr "Karta na polecenie"
 
 msgid "Tab to fill"
 msgstr "Tab, aby uzupełnić"
-
-msgid "Tab: next workspace · ↑↓: pick a conversation · release Ctrl to open"
-msgstr "Tab: następny obszar roboczy · ↑↓: wybierz rozmowę · puść Ctrl, aby otworzyć"
 
 msgid "Table"
 msgstr "Tabela"
