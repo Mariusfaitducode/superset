@@ -4041,8 +4041,8 @@ msgstr "Klik <0>Import Theme</0> dan pilih file yang sudah diunduh."
 msgid "Click a terminal script to edit its details."
 msgstr "Klik sebuah skrip terminal untuk mengedit detailnya."
 
-msgid "Click an agent to open its conversation · ⌥-click, right-click or I for details · Tab or arrows to move, Enter to open"
-msgstr "Klik agen untuk membuka percakapannya · ⌥-klik, klik kanan atau I untuk detail · Tab atau panah untuk berpindah, Enter untuk membuka"
+msgid "Click an agent to open its conversation, a name plate to open its workspace · ⌥-click, right-click or I for details · Tab or arrows to move, Enter to open"
+msgstr "Klik agen untuk membuka percakapannya, papan nama untuk membuka workspace-nya · ⌥-klik, klik kanan atau I untuk detail · Tab atau panah untuk berpindah, Enter untuk membuka"
 
 msgid "Click an element."
 msgstr "Klik sebuah elemen."
@@ -11218,9 +11218,6 @@ msgstr "Belum ada percakapan agen."
 msgid "No agent is configured on this host"
 msgstr "Tidak ada agen yang dikonfigurasi di host ini"
 
-msgid "No agent is running. Start one in a workspace and it takes a desk here."
-msgstr "Tidak ada agen yang berjalan. Mulai satu di workspace dan ia akan menempati meja di sini."
-
 msgid "No agent running"
 msgstr "Tidak ada agen yang berjalan"
 
@@ -11272,6 +11269,9 @@ msgstr "Belum ada perubahan di branch ini."
 
 msgid "No changes to display."
 msgstr "Tidak ada perubahan untuk ditampilkan."
+
+msgid "No chat running"
+msgstr "Tidak ada chat berjalan"
 
 msgid "No checks"
 msgstr "Tidak ada check"
@@ -11807,6 +11807,9 @@ msgstr "Tidak ada workspace dengan label ini"
 
 msgid "No workspace run command configured"
 msgstr "Tidak ada perintah run workspace yang dikonfigurasi"
+
+msgid "No workspace yet. Create one and it gets a desk here."
+msgstr "Belum ada workspace. Buat satu dan ia akan mendapat meja di sini."
 
 msgid "No workspaces found."
 msgstr "Tidak ada workspace ditemukan."
@@ -12719,6 +12722,9 @@ msgstr "Buka workspace"
 #. placeholder {0}: getV2WorkspaceDisplayName(workspace)
 msgid "Open workspace: {0}"
 msgstr "Buka workspace: {0}"
+
+msgid "Open workspace: {details}"
+msgstr "Buka workspace: {details}"
 
 msgid "Open your app."
 msgstr "Buka aplikasi Anda."

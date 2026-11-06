@@ -4041,8 +4041,8 @@ msgstr "Klik op <0>Thema importeren</0> en kies het gedownloade bestand."
 msgid "Click a terminal script to edit its details."
 msgstr "Klik op een terminalscript om de details te bewerken."
 
-msgid "Click an agent to open its conversation · ⌥-click, right-click or I for details · Tab or arrows to move, Enter to open"
-msgstr "Klik op een agent om zijn gesprek te openen · ⌥-klik, rechtsklik of I voor details · Tab of pijlen om te bewegen, Enter om te openen"
+msgid "Click an agent to open its conversation, a name plate to open its workspace · ⌥-click, right-click or I for details · Tab or arrows to move, Enter to open"
+msgstr "Klik op een agent om zijn gesprek te openen, op een naambordje om zijn workspace te openen · ⌥-klik, rechtsklik of I voor details · Tab of pijlen om te bewegen, Enter om te openen"
 
 msgid "Click an element."
 msgstr "Klik op een element."
@@ -11218,9 +11218,6 @@ msgstr "Nog geen agentgesprekken."
 msgid "No agent is configured on this host"
 msgstr "Er is geen agent geconfigureerd op deze host"
 
-msgid "No agent is running. Start one in a workspace and it takes a desk here."
-msgstr "Er draait geen agent. Start er een in een werkruimte en hij krijgt hier een bureau."
-
 msgid "No agent running"
 msgstr "Geen agent actief"
 
@@ -11272,6 +11269,9 @@ msgstr "Nog geen wijzigingen op deze branch."
 
 msgid "No changes to display."
 msgstr "Geen wijzigingen om te tonen."
+
+msgid "No chat running"
+msgstr "Geen chat actief"
 
 msgid "No checks"
 msgstr "Geen checks"
@@ -11807,6 +11807,9 @@ msgstr "Geen workspace heeft deze labels"
 
 msgid "No workspace run command configured"
 msgstr "Geen run-commando voor de werkruimte geconfigureerd"
+
+msgid "No workspace yet. Create one and it gets a desk here."
+msgstr "Nog geen workspace. Maak er een en hij krijgt hier een bureau."
 
 msgid "No workspaces found."
 msgstr "Geen werkruimtes gevonden."
@@ -12719,6 +12722,9 @@ msgstr "Werkruimte openen"
 #. placeholder {0}: getV2WorkspaceDisplayName(workspace)
 msgid "Open workspace: {0}"
 msgstr "Workspace openen: {0}"
+
+msgid "Open workspace: {details}"
+msgstr "Workspace openen: {details}"
 
 msgid "Open your app."
 msgstr "Open je app."

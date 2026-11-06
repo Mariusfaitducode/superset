@@ -68,9 +68,19 @@ function urgency(tones: readonly OfficeTone[]): number[] {
 	return counts;
 }
 
+/** The most urgent tone among a workspace's chats; null with no chat. */
+export function deskTone(tones: readonly OfficeTone[]): OfficeTone | null {
+	let best: OfficeTone | null = null;
+	for (const tone of tones) {
+		if (best === null || TONE_RANK[tone] < TONE_RANK[best]) best = tone;
+	}
+	return best;
+}
+
 /**
- * Islands with someone waiting on you first (a question beats an error
- * beats an unseen result), then the busiest, then by name.
+ * Rooms or desks with someone waiting on you first (a question beats an
+ * error beats an unseen result), then the busiest, then by name; empty
+ * ones last.
  */
 export function orderIslands<T extends RankableIsland>(islands: readonly T[]) {
 	const keyed = islands.map((island) => ({
@@ -82,12 +92,15 @@ export function orderIslands<T extends RankableIsland>(islands: readonly T[]) {
 			const diff = (a.key[index] ?? 0) - (b.key[index] ?? 0);
 			if (diff !== 0) return diff;
 		}
+		const empty =
+			Number(a.island.tones.length === 0) - Number(b.island.tones.length === 0);
+		if (empty !== 0) return empty;
 		return a.island.name.localeCompare(b.island.name);
 	});
 	return keyed.map(({ island }) => island);
 }
 
-/** With `onlyNeedsMe`, keeps the islands where someone needs you. */
+/** With `onlyNeedsMe`, keeps the ones where someone needs you. */
 export function visibleIslands<T extends RankableIsland>(
 	islands: readonly T[],
 	onlyNeedsMe: boolean,

@@ -3,6 +3,7 @@ import { Tooltip, TooltipContent, TooltipTrigger } from "@superset/ui/tooltip";
 import { cn } from "@superset/ui/utils";
 import type { CSSProperties, KeyboardEvent, MouseEvent, Ref } from "react";
 import type { OfficeTone } from "renderer/routes/_authenticated/_dashboard/office/utils/officeStatus";
+import { TONE_GLYPH, TONE_GLYPH_CLASS } from "../../toneStyles";
 
 /** Filled bubbles are the ones asking for you. */
 const BUBBLE_CLASS: Record<OfficeTone, string> = {
@@ -11,22 +12,6 @@ const BUBBLE_CLASS: Record<OfficeTone, string> = {
 	done: "bg-green-500 text-[#1d1a24]",
 	working: "bg-[#f4f1ea] text-[#1d1a24]",
 	idle: "bg-[#f4f1ea]/75 text-[#1d1a24]/70",
-};
-
-const GLYPH_CLASS: Record<OfficeTone, string> = {
-	need: "bg-[#1d1a24] text-amber-300",
-	failed: "bg-[#1d1a24] text-red-300",
-	done: "bg-[#1d1a24] text-green-300",
-	working: "bg-yellow-400 text-[#1d1a24]",
-	idle: "bg-zinc-400 text-[#1d1a24]",
-};
-
-const GLYPH: Record<OfficeTone, string> = {
-	need: "!",
-	failed: "×",
-	done: "✓",
-	working: "…",
-	idle: "z",
 };
 
 /**
@@ -100,11 +85,11 @@ export function OfficeSeatButton({
 							aria-hidden
 							className={cn(
 								"flex size-3 shrink-0 items-center justify-center font-bold",
-								GLYPH_CLASS[tone],
+								TONE_GLYPH_CLASS[tone],
 								tone === "need" && "motion-safe:animate-pulse",
 							)}
 						>
-							{GLYPH[tone]}
+							{TONE_GLYPH[tone]}
 						</span>
 						<span className="min-w-0 flex-1 truncate">{title}</span>
 					</span>

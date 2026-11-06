@@ -35,12 +35,17 @@ import type {
 import {
 	HEADER_HEIGHT,
 	layoutOffice,
+	type OfficeDesk,
+	type OfficeRoom,
+	PLATE_HEIGHT,
 	pathToCoffee,
 	TILE_SIZE,
 } from "renderer/routes/_authenticated/_dashboard/office/utils/officeLayout";
 import {
 	type ArrowKey,
 	countTones,
+	deskTone,
+	type IslandCounts,
 	moveFocus,
 	type OfficeTone,
 	orderIslands,
@@ -49,9 +54,11 @@ import {
 } from "renderer/routes/_authenticated/_dashboard/office/utils/officeStatus";
 import { navigateToV2Workspace } from "renderer/routes/_authenticated/_dashboard/utils/workspace-navigation";
 import { useSidebarPreference } from "renderer/stores/sidebar-preferences";
+import { getV2WorkspaceDisplayName } from "renderer/utils/getV2WorkspaceDisplayName";
 import { OfficeAgentPanel } from "./components/OfficeAgentPanel";
 import { OfficeCanvas } from "./components/OfficeCanvas";
-import { OfficeIslandHeader } from "./components/OfficeIslandHeader";
+import { OfficeDeskPlate } from "./components/OfficeDeskPlate";
+import { OfficeRoomHeader } from "./components/OfficeRoomHeader";
 import { OfficeSeatButton } from "./components/OfficeSeatButton";
 import {
 	type OfficeWorkspaceReport,
@@ -78,6 +85,7 @@ interface Selection {
 	terminalId: string;
 }
 
+/** One chat: an employee at its workspace's desk. */
 interface Member {
 	workspace: HostWorkspaceItem;
 	conversation: SidebarConversation;
@@ -86,14 +94,23 @@ interface Member {
 	openTodos: number;
 }
 
-interface GroupIsland {
+/** One workspace: a cubicle in its group's room. */
+interface DeskUnit {
 	key: string;
 	name: string;
-	color: string | null;
+	workspace: HostWorkspaceItem;
 	members: Member[];
 	tones: OfficeTone[];
 	labels: WorkspaceLabel[];
-	workspaceNames: string[];
+}
+
+/** One group (sidebar folder or project): a room. */
+interface RoomUnit {
+	key: string;
+	name: string;
+	color: string | null;
+	desks: DeskUnit[];
+	tones: OfficeTone[];
 }
 
 export function OfficeFloor({
@@ -111,16 +128,15 @@ export function OfficeFloor({
 	const onlyNeedsMe = useOfficeFilterStore((state) => state.onlyNeedsMe);
 	const setOnlyNeedsMe = useOfficeFilterStore((state) => state.setOnlyNeedsMe);
 
+	// Every workspace gets a desk; only the ones with agents are read.
 	const staffed = useMemo(
 		() =>
-			workspaces
-				.filter(
-					(workspace) => (statuses.get(workspace.id)?.bindings.size ?? 0) > 0,
-				)
-				.sort((a, b) => a.name.localeCompare(b.name)),
+			workspaces.filter(
+				(workspace) => (statuses.get(workspace.id)?.bindings.size ?? 0) > 0,
+			),
 		[workspaces, statuses],
 	);
-	const groups = useOfficeGroups(staffed);
+	const groups = useOfficeGroups(workspaces);
 
 	const [reports, setReports] = useState<
 		ReadonlyMap<string, OfficeWorkspaceReport>
@@ -139,8 +155,8 @@ export function OfficeFloor({
 	);
 
 	const hostIds = useMemo(
-		() => staffed.map((workspace) => workspace.hostId),
-		[staffed],
+		() => workspaces.map((workspace) => workspace.hostId),
+		[workspaces],
 	);
 	const labelsByHost = useLabelsByHost(hostIds, true);
 
@@ -169,34 +185,30 @@ export function OfficeFloor({
 
 	const [selection, setSelection] = useState<Selection | null>(null);
 
-	const { allIslands, shownIslands } = useMemo(() => {
-		const byKey = new Map<string, GroupIsland>();
-		for (const workspace of staffed) {
+	const { allRooms, shownRooms } = useMemo(() => {
+		const byKey = new Map<string, RoomUnit>();
+		for (const workspace of workspaces) {
 			const group = groups.get(workspace.id) ?? {
 				key: `workspace:${workspace.id}`,
 				name: workspace.name,
 				color: null,
 			};
-			let island = byKey.get(group.key);
-			if (!island) {
-				island = {
-					...group,
-					members: [],
-					tones: [],
-					labels: [],
-					workspaceNames: [],
-				};
-				byKey.set(group.key, island);
+			let room = byKey.get(group.key);
+			if (!room) {
+				room = { ...group, desks: [], tones: [] };
+				byKey.set(group.key, room);
 			}
-			island.workspaceNames.push(workspace.name);
-			for (const label of workspaceLabels(
-				labelsByHost.get(workspace.hostId),
-				workspace.id,
-			)) {
-				if (!island.labels.some((known) => known.name === label.name)) {
-					island.labels.push(label);
-				}
-			}
+			const desk: DeskUnit = {
+				key: workspace.id,
+				name: getV2WorkspaceDisplayName(workspace),
+				workspace,
+				members: [],
+				tones: [],
+				labels: workspaceLabels(
+					labelsByHost.get(workspace.hostId),
+					workspace.id,
+				),
+			};
 			const report = reports.get(workspace.id);
 			for (const conversation of report?.conversations ?? []) {
 				const open = (
@@ -205,67 +217,88 @@ export function OfficeFloor({
 					.filter((todo) => showAgentTodos || todo.author !== "agent")
 					.filter((todo) => !todo.done);
 				const tone = toneFor(conversation.state);
-				island.members.push({
+				desk.members.push({
 					workspace,
 					conversation,
 					tone,
 					topTodo: open[0]?.text ?? null,
 					openTodos: open.length,
 				});
-				island.tones.push(tone);
+				desk.tones.push(tone);
+				room.tones.push(tone);
 			}
+			room.desks.push(desk);
 		}
-		const allIslands = orderIslands([...byKey.values()]);
-		return {
-			allIslands,
-			shownIslands: visibleIslands(allIslands, onlyNeedsMe),
-		};
-	}, [staffed, groups, labelsByHost, reports, showAgentTodos, onlyNeedsMe]);
+		const allRooms = orderIslands([...byKey.values()]).map((room) => ({
+			...room,
+			desks: orderIslands(room.desks),
+		}));
+		const shownRooms = allRooms
+			.map((room) => ({
+				...room,
+				desks: visibleIslands(room.desks, onlyNeedsMe),
+			}))
+			.filter((room) => room.desks.length > 0);
+		return { allRooms, shownRooms };
+	}, [workspaces, groups, labelsByHost, reports, showAgentTodos, onlyNeedsMe]);
 
-	const { scene, seats, headers } = useMemo(() => {
+	const { scene, seats, rooms, plates } = useMemo(() => {
 		const layout = layoutOffice({
-			islands: shownIslands.map((island) => ({
-				id: island.key,
-				seats: Math.max(island.members.length, 1),
+			rooms: shownRooms.map((room) => ({
+				id: room.key,
+				desks: room.desks.map((desk) => ({
+					id: desk.key,
+					seats: desk.members.length,
+				})),
 			})),
 			maxWidth: containerWidth / (TILE_SIZE * scale),
 			devices: providers.length,
 		});
 		const agents: OfficeSceneAgent[] = [];
 		const seats: (Member & { deskX: number; seatY: number })[] = [];
-		const headers = shownIslands.map((group, index) => {
-			const island = layout.islands[index];
-			if (!island) throw new Error("layoutOffice dropped an island");
-			group.members.forEach((member, seatIndex) => {
-				const seat = island.seats[seatIndex];
-				if (!seat) return;
-				agents.push({
-					terminalId: member.conversation.terminalId,
-					state: member.conversation.state,
-					openTodos: member.openTodos,
-					seed: seedFor(member.conversation.terminalId),
-					seat,
-					path: pathToCoffee(island, seat, layout),
+		const plates: { desk: OfficeDesk; unit: DeskUnit }[] = [];
+		const emptyDesks = new Set<string>();
+		const rooms: {
+			room: OfficeRoom;
+			unit: RoomUnit;
+			counts: IslandCounts;
+		}[] = shownRooms.map((unit, roomIndex) => {
+			const room = layout.rooms[roomIndex];
+			if (!room) throw new Error("layoutOffice dropped a room");
+			unit.desks.forEach((deskUnit, deskIndex) => {
+				const desk = room.desks[deskIndex];
+				if (!desk) throw new Error("layoutOffice dropped a desk");
+				plates.push({ desk, unit: deskUnit });
+				if (deskUnit.members.length === 0) emptyDesks.add(desk.id);
+				deskUnit.members.forEach((member, seatIndex) => {
+					const seat = desk.seats[seatIndex];
+					if (!seat) return;
+					agents.push({
+						terminalId: member.conversation.terminalId,
+						state: member.conversation.state,
+						openTodos: member.openTodos,
+						seed: seedFor(member.conversation.terminalId),
+						seat,
+						path: pathToCoffee(room, seat, layout),
+					});
+					seats.push({ ...member, deskX: seat.desk.x, seatY: seat.y });
 				});
-				seats.push({ ...member, deskX: seat.desk.x, seatY: seat.y });
 			});
-			return { island, group, counts: countTones(group.tones) };
+			return { room, unit, counts: countTones(unit.tones) };
 		});
 		const scene: OfficeScene = {
 			layout,
-			islands: headers.map(({ island, group }) => ({
-				island,
-				color: group.color,
-			})),
+			rooms: rooms.map(({ room, unit }) => ({ room, color: unit.color })),
+			emptyDesks,
 			agents,
 			devices: providers.length,
 		};
-		return { scene, seats, headers };
-	}, [shownIslands, containerWidth, scale, providers.length]);
+		return { scene, seats, rooms, plates };
+	}, [shownRooms, containerWidth, scale, providers.length]);
 
 	const totals = useMemo(
-		() => countTones(allIslands.flatMap((island) => island.tones)),
-		[allIslands],
+		() => countTones(allRooms.flatMap((room) => room.tones)),
+		[allRooms],
 	);
 
 	const openConversation = useCallback(
@@ -313,7 +346,7 @@ export function OfficeFloor({
 					(conversation) => conversation.terminalId === selection.terminalId,
 				)
 		: undefined;
-	const selectedWorkspace = staffed.find(
+	const selectedWorkspace = workspaces.find(
 		(workspace) => workspace.id === selection?.workspaceId,
 	);
 	const rackLeft = Math.min(...scene.layout.racks.map((rack) => rack.x));
@@ -382,22 +415,44 @@ export function OfficeFloor({
 								scale={scale}
 								reducedMotion={reducedMotion}
 							/>
-							{headers.map(({ island, group, counts }) => (
-								<OfficeIslandHeader
-									key={island.id}
-									name={group.name}
-									color={group.color}
-									labels={group.labels}
-									workspaceNames={group.workspaceNames}
+							{rooms.map(({ room, unit, counts }) => (
+								<OfficeRoomHeader
+									key={room.id}
+									name={unit.name}
+									color={unit.color}
 									counts={counts}
 									style={{
-										left: island.header.x * px,
-										top: island.header.y * px,
-										width: island.header.width * px,
+										left: room.header.x * px,
+										top: room.header.y * px,
+										width: room.header.width * px,
 										height: HEADER_HEIGHT * px,
 									}}
 								/>
 							))}
+							{plates.map(({ desk, unit }) => {
+								const tone = deskTone(unit.tones);
+								const branch = unit.workspace.branch;
+								return (
+									<OfficeDeskPlate
+										key={desk.id}
+										name={unit.name}
+										branch={branch && branch !== unit.name ? branch : null}
+										labels={unit.labels}
+										tone={tone}
+										toneLabel={tone ? toneLabels[tone] : t`No chat running`}
+										chats={unit.members.length}
+										onOpen={() =>
+											void navigateToV2Workspace(unit.workspace.id, navigate)
+										}
+										style={{
+											left: desk.plate.x * px + 2,
+											top: desk.plate.y * px + 3,
+											width: desk.plate.width * px - 4,
+											height: PLATE_HEIGHT * px - 3,
+										}}
+									/>
+								);
+							})}
 							{seats.map((seat, index) => (
 								<OfficeSeatButton
 									key={seat.conversation.terminalId}
@@ -463,15 +518,14 @@ export function OfficeFloor({
 									)}
 								</TooltipContent>
 							</Tooltip>
-							{shownIslands.length === 0 && (
+							{shownRooms.length === 0 && (
 								<p
 									className="absolute right-0 left-0 mx-auto max-w-sm rounded-md border-2 border-[#1d1a24] bg-[#f4f1ea] p-3 text-center text-xs text-[#1d1a24]"
 									style={{ top: 5 * px }}
 								>
-									{staffed.length === 0 ? (
+									{workspaces.length === 0 ? (
 										<Trans>
-											No agent is running. Start one in a workspace and it takes
-											a desk here.
+											No workspace yet. Create one and it gets a desk here.
 										</Trans>
 									) : (
 										<Trans>Nobody needs you right now.</Trans>
@@ -483,8 +537,9 @@ export function OfficeFloor({
 				</div>
 				<footer className="flex h-7 shrink-0 items-center gap-2 border-t border-border px-4 text-[11px] text-muted-foreground">
 					<Trans>
-						Click an agent to open its conversation · ⌥-click, right-click or I
-						for details · Tab or arrows to move, Enter to open
+						Click an agent to open its conversation, a name plate to open its
+						workspace · ⌥-click, right-click or I for details · Tab or arrows to
+						move, Enter to open
 					</Trans>
 				</footer>
 			</div>

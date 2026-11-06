@@ -3,8 +3,9 @@ import { type CharacterFrame, characterFrame } from "../characterFrame";
 import {
 	DEVICES_PER_RACK,
 	HEADER_HEIGHT,
-	type OfficeIsland,
+	type OfficeDesk,
 	type OfficeLayout,
+	type OfficeRoom,
 	type OfficeSeat,
 	type Point,
 	TILE_SIZE,
@@ -36,7 +37,9 @@ export interface OfficeSceneAgent {
 export interface OfficeScene {
 	layout: OfficeLayout;
 	/** `color` is the group's `#rrggbb`, or null for the default rug. */
-	islands: { island: OfficeIsland; color: string | null }[];
+	rooms: { room: OfficeRoom; color: string | null }[];
+	/** Workspaces without a live chat, drawn dimmed. */
+	emptyDesks: ReadonlySet<string>;
 	agents: OfficeSceneAgent[];
 	devices: number;
 }
@@ -100,15 +103,15 @@ function drawWall(ctx: CanvasRenderingContext2D, layout: OfficeLayout) {
 	}
 }
 
-function drawRug(
+function drawRoom(
 	ctx: CanvasRenderingContext2D,
-	island: OfficeIsland,
+	room: OfficeRoom,
 	color: string | null,
 ) {
-	const x = island.x * T + 2;
-	const y = island.y * T + 2;
-	const width = island.width * T - 4;
-	const height = island.height * T - 4;
+	const x = room.x * T + 2;
+	const y = room.y * T + 2;
+	const width = room.width * T - 4;
+	const height = room.height * T - 4;
 	ctx.fillStyle = OUTLINE;
 	ctx.fillRect(x - 1, y - 1, width + 2, height + 2);
 	ctx.fillStyle = DEFAULT_RUG;
@@ -120,12 +123,79 @@ function drawRug(
 		ctx.fillRect(x, y, width, height);
 		ctx.globalAlpha = 1;
 	}
-	// The header strip, a shade darker, carries the island's name.
+	// The header strip, a shade darker, carries the room's name.
 	ctx.fillStyle = "rgba(0,0,0,0.22)";
 	ctx.fillRect(x, y, width, HEADER_HEIGHT * T - 3);
 	ctx.fillStyle = "rgba(255,255,255,0.12)";
 	ctx.fillRect(x + 3, y + 3, width - 6, 1);
 	ctx.fillRect(x + 3, y + height - 4, width - 6, 1);
+}
+
+const CARPET = "#d8ccb4";
+const CARPET_SHADE = "#cbbfa6";
+const PARTITION = "#8d879c";
+const PARTITION_TOP = "#b3adc0";
+
+/** A workspace's cubicle: light carpet inside low partition walls. */
+function drawCubicle(ctx: CanvasRenderingContext2D, desk: OfficeDesk) {
+	const x = desk.x * T;
+	const y = desk.y * T + 2;
+	const width = desk.width * T;
+	const height = desk.height * T - 4;
+	ctx.fillStyle = OUTLINE;
+	ctx.fillRect(x, y, width, height);
+	ctx.fillStyle = CARPET;
+	ctx.fillRect(x + 1, y + 1, width - 2, height - 2);
+	ctx.fillStyle = CARPET_SHADE;
+	for (let row = y + 4; row < y + height - 2; row += 4) {
+		ctx.fillRect(x + 1, row, width - 2, 1);
+	}
+	// Partitions on the sides and along the front.
+	ctx.fillStyle = PARTITION;
+	ctx.fillRect(x + 1, y + 1, 3, height - 2);
+	ctx.fillRect(x + width - 4, y + 1, 3, height - 2);
+	ctx.fillRect(x + 1, y + height - 5, width - 2, 4);
+	ctx.fillStyle = PARTITION_TOP;
+	ctx.fillRect(x + 1, y + 1, 1, height - 2);
+	ctx.fillRect(x + width - 4, y + 1, 1, height - 2);
+	ctx.fillRect(x + 1, y + height - 5, width - 2, 1);
+}
+
+/** One shared tabletop under each row of seats, sized to the chats. */
+function drawTables(ctx: CanvasRenderingContext2D, desk: OfficeDesk) {
+	const rows = new Map<number, { min: number; max: number }>();
+	for (const seat of desk.seats) {
+		const row = rows.get(seat.desk.y);
+		if (row) {
+			row.min = Math.min(row.min, seat.desk.x);
+			row.max = Math.max(row.max, seat.desk.x);
+		} else {
+			rows.set(seat.desk.y, { min: seat.desk.x, max: seat.desk.x });
+		}
+	}
+	for (const [deskY, { min, max }] of rows) {
+		const x = min * T;
+		const y = deskY * T;
+		const width = (max - min + 2) * T;
+		ctx.fillStyle = OUTLINE;
+		ctx.fillRect(x, y, width, T - 1);
+		ctx.fillStyle = "#d9a46c";
+		ctx.fillRect(x + 1, y + 1, width - 2, 1);
+		ctx.fillStyle = "#c08a55";
+		ctx.fillRect(x + 1, y + 2, width - 2, 7);
+		ctx.fillStyle = "#8a5a33";
+		ctx.fillRect(x + 1, y + 9, width - 2, 5);
+	}
+}
+
+function dimDesk(ctx: CanvasRenderingContext2D, desk: OfficeDesk) {
+	ctx.fillStyle = "rgba(29,26,36,0.35)";
+	ctx.fillRect(
+		desk.x * T + 1,
+		desk.y * T + 3,
+		desk.width * T - 2,
+		desk.height * T - 6,
+	);
 }
 
 function drawNumber(
@@ -148,7 +218,8 @@ function drawNumber(
 	});
 }
 
-function drawDesk(
+/** One seat's keyboard, monitor and to-do post-it, on the shared table. */
+function drawWorkstation(
 	ctx: CanvasRenderingContext2D,
 	seat: OfficeSeat,
 	agent: OfficeSceneAgent | undefined,
@@ -157,14 +228,6 @@ function drawDesk(
 ) {
 	const x = seat.desk.x * T;
 	const y = seat.desk.y * T;
-	ctx.fillStyle = OUTLINE;
-	ctx.fillRect(x, y, 2 * T, T - 1);
-	ctx.fillStyle = "#d9a46c";
-	ctx.fillRect(x + 1, y + 1, 2 * T - 2, 1);
-	ctx.fillStyle = "#c08a55";
-	ctx.fillRect(x + 1, y + 2, 2 * T - 2, 7);
-	ctx.fillStyle = "#8a5a33";
-	ctx.fillRect(x + 1, y + 9, 2 * T - 2, 5);
 
 	// Keyboard, in front of the agent's hands.
 	ctx.fillStyle = "#e4e4ea";
@@ -305,7 +368,10 @@ export function drawOffice(
 	ctx.clearRect(0, 0, layout.width * T, layout.height * T);
 	drawFloor(ctx, layout);
 	drawWall(ctx, layout);
-	for (const { island, color } of scene.islands) drawRug(ctx, island, color);
+	for (const { room, color } of scene.rooms) {
+		drawRoom(ctx, room, color);
+		for (const desk of room.desks) drawCubicle(ctx, desk);
+	}
 
 	paint(
 		ctx,
@@ -342,9 +408,19 @@ export function drawOffice(
 		if (atDesk(frame)) drawCharacter(ctx, frame, agent.seed);
 	}
 	const agentBySeat = new Map(scene.agents.map((agent) => [agent.seat, agent]));
-	for (const { island } of scene.islands) {
-		for (const seat of island.seats) {
-			drawDesk(ctx, seat, agentBySeat.get(seat), timeMs, reducedMotion);
+	for (const { room } of scene.rooms) {
+		for (const desk of room.desks) {
+			drawTables(ctx, desk);
+			for (const seat of desk.seats) {
+				drawWorkstation(
+					ctx,
+					seat,
+					agentBySeat.get(seat),
+					timeMs,
+					reducedMotion,
+				);
+			}
+			if (scene.emptyDesks.has(desk.id)) dimDesk(ctx, desk);
 		}
 	}
 	const walking = frames

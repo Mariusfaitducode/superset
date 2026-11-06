@@ -1,6 +1,7 @@
 export {
 	type ArrowKey,
 	countTones,
+	deskTone,
 	type IslandCounts,
 	moveFocus,
 	needsYou,

@@ -4041,8 +4041,8 @@ msgstr "<0>テーマをインポート</0>をクリックし、ダウンロー�
 msgid "Click a terminal script to edit its details."
 msgstr "ターミナルスクリプトをクリックして詳細を編集します。"
 
-msgid "Click an agent to open its conversation · ⌥-click, right-click or I for details · Tab or arrows to move, Enter to open"
-msgstr "エージェントをクリックで会話を開く · ⌥-クリック、右クリック、または I で詳細 · Tab または矢印で移動、Enter で開く"
+msgid "Click an agent to open its conversation, a name plate to open its workspace · ⌥-click, right-click or I for details · Tab or arrows to move, Enter to open"
+msgstr "エージェントをクリックで会話を開く、名札をクリックでワークスペースを開く · ⌥-クリック、右クリック、または I で詳細 · Tab または矢印で移動、Enter で開く"
 
 msgid "Click an element."
 msgstr "要素をクリックします。"
@@ -11218,9 +11218,6 @@ msgstr "エージェントの会話はまだありません。"
 msgid "No agent is configured on this host"
 msgstr "このホストにはエージェントが設定されていません"
 
-msgid "No agent is running. Start one in a workspace and it takes a desk here."
-msgstr "実行中のエージェントはありません。ワークスペースで起動すると、ここにデスクが用意されます。"
-
 msgid "No agent running"
 msgstr "実行中のエージェントはありません"
 
@@ -11272,6 +11269,9 @@ msgstr "このブランチにはまだ変更がありません。"
 
 msgid "No changes to display."
 msgstr "表示する変更がありません。"
+
+msgid "No chat running"
+msgstr "実行中のチャットなし"
 
 msgid "No checks"
 msgstr "チェックなし"
@@ -11807,6 +11807,9 @@ msgstr "これらのラベルを持つワークスペースはありません"
 
 msgid "No workspace run command configured"
 msgstr "ワークスペース実行コマンドが設定されていません"
+
+msgid "No workspace yet. Create one and it gets a desk here."
+msgstr "まだワークスペースがありません。作成するとここにデスクができます。"
 
 msgid "No workspaces found."
 msgstr "ワークスペースが見つかりません。"
@@ -12719,6 +12722,9 @@ msgstr "ワークスペースを開く"
 #. placeholder {0}: getV2WorkspaceDisplayName(workspace)
 msgid "Open workspace: {0}"
 msgstr "ワークスペースを開く: {0}"
+
+msgid "Open workspace: {details}"
+msgstr "ワークスペースを開く: {details}"
 
 msgid "Open your app."
 msgstr "アプリを開きます。"

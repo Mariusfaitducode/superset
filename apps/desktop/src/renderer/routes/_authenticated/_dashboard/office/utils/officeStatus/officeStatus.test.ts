@@ -1,6 +1,7 @@
 import { describe, expect, test } from "bun:test";
 import {
 	countTones,
+	deskTone,
 	moveFocus,
 	type OfficeTone,
 	orderIslands,
@@ -50,6 +51,14 @@ describe("orderIslands", () => {
 		]);
 	});
 
+	test("a workspace without chats goes after idle ones", () => {
+		const ordered = orderIslands([
+			island("Alpha", []),
+			island("Bravo", ["idle"]),
+		]);
+		expect(ordered.map((entry) => entry.name)).toEqual(["Bravo", "Alpha"]);
+	});
+
 	test("more agents waiting ranks higher; ties fall back to the name", () => {
 		const ordered = orderIslands([
 			island("Zulu", ["need"]),
@@ -63,6 +72,18 @@ describe("orderIslands", () => {
 			"Alpha",
 			"Bravo",
 		]);
+	});
+});
+
+describe("deskTone", () => {
+	test("is the most urgent tone among a workspace's chats", () => {
+		expect(deskTone(["idle", "working", "done"])).toBe("done");
+		expect(deskTone(["working", "need", "failed"])).toBe("need");
+		expect(deskTone(["idle"])).toBe("idle");
+	});
+
+	test("is null for a workspace without chats", () => {
+		expect(deskTone([])).toBeNull();
 	});
 });
 
