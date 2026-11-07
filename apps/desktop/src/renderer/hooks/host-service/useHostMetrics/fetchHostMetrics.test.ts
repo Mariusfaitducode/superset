@@ -22,7 +22,7 @@ test("other failures still reject so the query can retry", async () => {
 });
 
 test("a current host returns its metrics", async () => {
-	const metrics = { hostname: "tower" } as HostMetrics;
+	const metrics = { agents: 3 } as HostMetrics;
 	const client = clientWith(async () => metrics);
 	expect(await fetchHostMetrics(client)).toEqual({ status: "ok", metrics });
 });
