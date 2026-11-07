@@ -1027,6 +1027,9 @@ msgstr "{hidden, plural, other {他 # 件の返信を表示}}"
 msgid "{hiddenCount, plural, one {Show # more frame} other {Show # more frames}}"
 msgstr "{hiddenCount, plural, one {さらに#件のフレームを表示} other {さらに#件のフレームを表示}}"
 
+msgid "{hostName} (this device)"
+msgstr "{hostName}（このデバイス）"
+
 msgid "{hostName} is offline"
 msgstr "{hostName}はオフラインです"
 
@@ -1341,6 +1344,9 @@ msgstr "{used} 使用済み"
 
 msgid "{waiting} Waiting"
 msgstr "{waiting}件待機中"
+
+msgid "{working} working · {needsYou} waiting for you · {idle} idle"
+msgstr "作業中 {working} · 応答待ち {needsYou} · 待機中 {idle}"
 
 msgid "{workspaceName}: host is unavailable"
 msgstr "{workspaceName}: ホストが利用できません"
@@ -7408,6 +7414,9 @@ msgstr "毎週金曜午後4時に、今週マージされたPRからリリース
 msgid "Every Friday at 5:00 PM"
 msgstr "毎週金曜 午後5:00"
 
+msgid "Every host"
+msgstr "すべてのホスト"
+
 msgid "Every minute"
 msgstr "毎分"
 
@@ -12325,6 +12334,9 @@ msgstr "検索に一致するワークスペースはありません"
 
 msgid "No workspaces match."
 msgstr "一致するワークスペースがありません。"
+
+msgid "No workspaces on {selectedHostName}"
+msgstr "{selectedHostName} にワークスペースはありません"
 
 msgid "No workspaces on this host yet"
 msgstr "このホストにはまだワークスペースがありません"
