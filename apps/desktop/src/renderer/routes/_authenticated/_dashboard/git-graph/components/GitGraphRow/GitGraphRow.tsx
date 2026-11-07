@@ -12,6 +12,7 @@ import {
 	GitGraphCell,
 	GRAPH_LANE_WIDTH,
 	GRAPH_ROW_HEIGHT,
+	type GraphNodeKind,
 	laneColor,
 } from "../GitGraphCell";
 
@@ -36,6 +37,7 @@ export const GIT_GRAPH_COLUMNS = {
 interface GitGraphRowProps {
 	commit: GitGraphRowCommit;
 	layout: GraphRowLayout;
+	node: GraphNodeKind;
 	graphWidth: number;
 	badges: GitGraphBadge[];
 	isDimmed: boolean;
@@ -49,6 +51,7 @@ interface GitGraphRowProps {
 export const GitGraphRow = memo(function GitGraphRow({
 	commit,
 	layout,
+	node,
 	graphWidth,
 	badges,
 	isDimmed,
@@ -64,8 +67,8 @@ export const GitGraphRow = memo(function GitGraphRow({
 		// biome-ignore lint/a11y/useSemanticElements: row is a composite list item, not a native control
 		<div
 			className={cn(
-				"flex items-center gap-2 pr-3 text-xs hover:bg-accent/50",
-				isSelected && "bg-accent",
+				"flex cursor-default items-center gap-2 pr-3 text-xs outline-none hover:bg-accent/50 focus-visible:bg-accent/50",
+				isSelected && "bg-accent hover:bg-accent",
 			)}
 			style={{ height: GRAPH_ROW_HEIGHT }}
 			onClick={onSelect}
@@ -87,7 +90,7 @@ export const GitGraphRow = memo(function GitGraphRow({
 				<GitGraphCell
 					row={layout}
 					width={(layout.width + 1) * GRAPH_LANE_WIDTH}
-					isMerge={commit.parents.length > 1}
+					node={node}
 					isDimmed={isDimmed}
 				/>
 			</div>

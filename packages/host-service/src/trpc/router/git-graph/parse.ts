@@ -1,3 +1,5 @@
+import type { ChangedFile } from "../git/types";
+
 export interface GraphCommit {
 	hash: string;
 	parents: string[];
@@ -170,4 +172,61 @@ export function parseWorktrees(output: string): GraphWorktree[] {
 
 export function countStatusLines(output: string): number {
 	return output.split("\n").filter((line) => line.trim().length > 0).length;
+}
+
+export interface GraphCommitDetails {
+	hash: string;
+	parents: string[];
+	authorName: string;
+	authorEmail: string;
+	/** Unix seconds. */
+	authoredAt: number;
+	committerName: string;
+	committerEmail: string;
+	/** Unix seconds. */
+	committedAt: number;
+	/** Full message, subject and body. */
+	message: string;
+	/** Changes against the first parent; against nothing for a root commit. */
+	files: ChangedFile[];
+}
+
+export const COMMIT_DETAILS_FORMAT = [
+	"%H",
+	"%P",
+	"%an",
+	"%ae",
+	"%at",
+	"%cn",
+	"%ce",
+	"%ct",
+	"%B",
+].join("%x1f");
+
+export function parseCommitDetails(
+	output: string,
+): Omit<GraphCommitDetails, "files"> {
+	const [
+		hash = "",
+		parents = "",
+		authorName = "",
+		authorEmail = "",
+		authoredAt = "0",
+		committerName = "",
+		committerEmail = "",
+		committedAt = "0",
+		...message
+	] = output.split(FIELD_SEPARATOR);
+	return {
+		hash: hash.trim(),
+		parents: parents.split(" ").filter(Boolean),
+		authorName,
+		authorEmail,
+		authoredAt: Number.parseInt(authoredAt, 10) || 0,
+		committerName,
+		committerEmail,
+		committedAt: Number.parseInt(committedAt, 10) || 0,
+		// A message may itself contain the separator.
+		message: message.join(FIELD_SEPARATOR).trimEnd(),
+	};
 }

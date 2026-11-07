@@ -79,3 +79,23 @@ describe("layoutGitGraph", () => {
 		expect(Math.max(...rows.map((row) => row.width))).toBe(2);
 	});
 });
+
+describe("layoutGitGraph with uncommitted changes", () => {
+	it("draws a dashed line from the changes down to HEAD only", () => {
+		// HEAD is b, below a newer commit x on another branch.
+		const rows = layoutGitGraph([
+			{ hash: "*", parents: ["b"], dashed: true },
+			c("x", "a"),
+			c("b", "a"),
+			c("a"),
+		]);
+		expect(rows[0]?.outgoing).toEqual([{ to: 0, color: 0, dashed: true }]);
+		expect(rows[1]?.passing).toEqual([{ lane: 0, color: 0, dashed: true }]);
+		expect(rows[2]).toMatchObject({
+			lane: 0,
+			incoming: [{ from: 0, color: 0, dashed: true }],
+			outgoing: [{ to: 0, color: 0 }],
+		});
+		expect(rows[2]?.outgoing[0]?.dashed).toBeUndefined();
+	});
+});

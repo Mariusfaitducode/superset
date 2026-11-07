@@ -1,5 +1,5 @@
 import { describe, expect, it } from "bun:test";
-import { migrateGitGraphState } from "./gitGraphStore";
+import { migrateGitGraphState, useGitGraphStore } from "./gitGraphStore";
 
 describe("migrateGitGraphState", () => {
 	it("keeps valid refs and defaults the rest", () => {
@@ -14,10 +14,24 @@ describe("migrateGitGraphState", () => {
 			}),
 		).toEqual({
 			projectId: "p1",
+			recentProjectIds: [],
 			refsByProject: { p1: ["refs/heads/main", "refs/tags/v1"] },
 			showRemotes: true,
 			showTags: true,
 			worktreesOnly: false,
+		});
+	});
+});
+
+describe("setProjectId", () => {
+	it("keeps the opened repositories most recent first, without repeats", () => {
+		const { setProjectId } = useGitGraphStore.getState();
+		setProjectId("a");
+		setProjectId("b");
+		setProjectId("a");
+		expect(useGitGraphStore.getState()).toMatchObject({
+			projectId: "a",
+			recentProjectIds: ["a", "b"],
 		});
 	});
 });

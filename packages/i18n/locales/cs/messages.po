@@ -379,6 +379,10 @@ msgstr "{0} · zastaralý"
 msgid "{0} · peak {1}"
 msgstr "{0} · špička {1}"
 
+#. placeholder {0}: file.path
+msgid "{0} (click to copy)"
+msgstr "{0} (kliknutím zkopírujete)"
+
 #. placeholder {0}: creator.name
 #. placeholder {0}: option.name
 msgid "{0} (you)"
@@ -387,6 +391,11 @@ msgstr "{0} (vy)"
 #. placeholder {0}: actor.login
 msgid "{0} {actorVerb}"
 msgstr "{0} {actorVerb}"
+
+#. placeholder {0}: file.oldPath
+#. placeholder {1}: file.path
+msgid "{0} → {1} (click to copy)"
+msgstr "{0} → {1} (kliknutím zkopírujete)"
 
 #. placeholder {0}: versions.running
 #. placeholder {1}: versions.expected
@@ -453,6 +462,10 @@ msgstr "{0} selhalo, {1} běží"
 #. placeholder {0}: collisions.length
 msgid "{0} files already exist in {where}. Do you want to replace them?"
 msgstr "V {where} už existuje {0} souborů. Chcete je nahradit?"
+
+#. placeholder {0}: data.files.length
+msgid "{0} files changed"
+msgstr "Změněné soubory: {0}"
 
 #. placeholder {0}: displayName(variables.name)
 msgid "{0} installed"
@@ -3338,6 +3351,9 @@ msgstr "Fakturační údaje"
 msgid "Billing refused to start a cloud workspace: the organization needs a paid plan, or it reached its cloud usage limit. Upgrade or raise the limit in Settings > Billing, or run the automation on a device."
 msgstr "Fakturace zabránila spuštění cloudového pracovního prostoru: organizace potřebuje placený tarif, nebo dosáhla limitu využití cloudu. Přejděte na vyšší tarif nebo zvyšte limit v Nastavení > Fakturace, případně spusťte automatizaci na zařízení."
 
+msgid "binary"
+msgstr "binární"
+
 msgid "Binary"
 msgstr "Binární"
 
@@ -3467,6 +3483,9 @@ msgstr "Větve"
 
 msgid "Branches & naming"
 msgstr "Větve a pojmenování"
+
+msgid "Branches:"
+msgstr "Větve:"
 
 msgid "Branches..."
 msgstr "Větve..."
@@ -4056,6 +4075,9 @@ msgstr "Vyberte předvolbu, například Pracovní dny, nebo napište vlastní RR
 msgid "Choose a project from GitHub issues before opening an issue."
 msgstr "Než otevřete issue, vyberte projekt v sekci GitHub issues."
 
+msgid "Choose a repository"
+msgstr "Vyberte repozitář"
+
 msgid "Choose a section."
 msgstr "Vyberte sekci."
 
@@ -4355,6 +4377,12 @@ msgstr "Zavřít komentář"
 
 msgid "Close comments"
 msgstr "Zavřít komentáře"
+
+msgid "Close details"
+msgstr "Zavřít podrobnosti"
+
+msgid "Close details (Esc)"
+msgstr "Zavřít podrobnosti (Esc)"
 
 msgid "Close Diff"
 msgstr "Zavřít diff"
@@ -4689,6 +4717,9 @@ msgstr "Commitnuté"
 
 msgid "Committed, starting soon."
 msgstr "Potvrzeno, brzy začínáme."
+
+msgid "Committer"
+msgstr "Commitující"
 
 msgid "Common questions"
 msgstr "Časté dotazy"
@@ -5203,6 +5234,9 @@ msgstr "zkopírovat odkaz na souboj"
 
 msgid "Copy file name"
 msgstr "Kopírovat název souboru"
+
+msgid "Copy hash"
+msgstr "Kopírovat hash"
 
 msgid "Copy ID"
 msgstr "Kopírovat ID"
@@ -8298,6 +8332,9 @@ msgstr "Filtry, aktivních: {activeFilterCount}"
 msgid "Find"
 msgstr "Najít"
 
+msgid "Find (⌘F)"
+msgstr "Hledat (⌘F)"
+
 msgid "Find a person…"
 msgstr "Najít osobu…"
 
@@ -8330,6 +8367,9 @@ msgstr "Najde nedávno změněný kód se slabým pokrytím a pořádně ho otes
 
 msgid "Find stale TODO/FIXME comments and resolve the quick ones."
 msgstr "Najde zastaralé komentáře TODO/FIXME a ty rychlé vyřeší."
+
+msgid "Find: message, author, hash, branch"
+msgstr "Hledat: zpráva, autor, hash, větev"
 
 msgid "Finder"
 msgstr "Finder"
@@ -8828,6 +8868,9 @@ msgstr "Přejít vpřed na další stránku v historii"
 
 msgid "Go home"
 msgstr "Přejít domů"
+
+msgid "Go to {parent}"
+msgstr "Přejít na {parent}"
 
 msgid "Go to Conversation"
 msgstr "Přejít na konverzaci"
@@ -10551,6 +10594,9 @@ msgstr "Načítám změny..."
 msgid "Loading comments…"
 msgstr "Načítání komentářů…"
 
+msgid "Loading commit…"
+msgstr "Načítání commitu…"
+
 msgid "Loading contributors…"
 msgstr "Načítám přispěvatele…"
 
@@ -11079,9 +11125,6 @@ msgstr "Zpráva"
 
 msgid "Message in channel"
 msgstr "Zpráva v kanálu"
-
-msgid "Message, author, hash, branch"
-msgstr "Zpráva, autor, hash, větev"
 
 msgid "Message..."
 msgstr "Zpráva..."
@@ -12223,6 +12266,9 @@ msgstr "Nenalezeny žádné repozitáře. Ověřte, že vaše GitHub App má k r
 msgid "No repositories. Connect GitHub in Integrations, then refresh."
 msgstr "Žádné repozitáře. Připojte GitHub v Integracích a poté obnovte."
 
+msgid "No repository matches."
+msgstr "Žádný repozitář neodpovídá."
+
 msgid "No results"
 msgstr "Žádné výsledky"
 
@@ -12444,6 +12490,9 @@ msgstr "Nejste přihlášeni. Přihlaste se prosím."
 
 msgid "Not authenticated. Provide a bearer JWT, x-api-key, or session."
 msgstr "Nejste přihlášeni. Zadejte bearer JWT, x-api-key nebo relaci."
+
+msgid "Not available on a connected host"
+msgstr "Není dostupné na připojeném hostiteli"
 
 msgid "Not available on this server"
 msgstr "Na tomto serveru není k dispozici"
@@ -13736,6 +13785,9 @@ msgstr "Nadřazený adresář"
 
 msgid "Parent directory on {hostName}"
 msgstr "Nadřazený adresář na {hostName}"
+
+msgid "Parents"
+msgstr "Rodiče"
 
 msgid "Part of Superset Pro"
 msgstr "Součást Superset Pro"
@@ -15308,6 +15360,9 @@ msgstr "repo"
 msgid "Repo"
 msgstr "Repo"
 
+msgid "Repo:"
+msgstr "Repozitář:"
+
 msgid "Report"
 msgstr "Nahlásit"
 
@@ -16305,6 +16360,9 @@ msgstr "Hledat pull requesty..."
 msgid "Search pull requests…"
 msgstr "Hledat pull requesty…"
 
+msgid "Search repositories"
+msgstr "Hledat repozitáře"
+
 msgid "Search repositories..."
 msgstr "Hledat repozitáře..."
 
@@ -17035,6 +17093,9 @@ msgstr "Zobrazit seznam pull requestů"
 
 msgid "Show pull request preview"
 msgstr "Zobrazit náhled pull requestu"
+
+msgid "Show Remote Branches"
+msgstr "Zobrazit vzdálené větve"
 
 msgid "Show resolved ({resolvedCount})"
 msgstr "Zobrazit vyřešené ({resolvedCount})"
@@ -19322,6 +19383,9 @@ msgstr "Nahradí to jeho popisek, příkaz, argumenty, nastavení promptu a pokr
 msgid "This repository does not allow merging from here."
 msgstr "Tento repozitář neumožňuje slučovat odsud."
 
+msgid "This repository is not on a connected host. Pick another one."
+msgstr "Tento repozitář není na připojeném hostiteli. Vyberte jiný."
+
 msgid "This screen doesn't exist"
 msgstr "Tato obrazovka neexistuje"
 
@@ -19910,7 +19974,7 @@ msgstr "Necommitnuto · Neodesláno"
 msgid "Uncommitted changes"
 msgstr "Necommitnuté změny"
 
-msgid "Uncommitted changes ({uncommitted})"
+msgid "Uncommitted Changes ({uncommitted})"
 msgstr "Necommitnuté změny ({uncommitted})"
 
 msgid "Uncommitted changes, on top of {base}"

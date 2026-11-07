@@ -379,6 +379,10 @@ msgstr "{0} · cũ"
 msgid "{0} · peak {1}"
 msgstr "{0} · đỉnh {1}"
 
+#. placeholder {0}: file.path
+msgid "{0} (click to copy)"
+msgstr "{0} (nhấp để sao chép)"
+
 #. placeholder {0}: creator.name
 #. placeholder {0}: option.name
 msgid "{0} (you)"
@@ -387,6 +391,11 @@ msgstr "{0} (bạn)"
 #. placeholder {0}: actor.login
 msgid "{0} {actorVerb}"
 msgstr "{0} {actorVerb}"
+
+#. placeholder {0}: file.oldPath
+#. placeholder {1}: file.path
+msgid "{0} → {1} (click to copy)"
+msgstr "{0} → {1} (nhấp để sao chép)"
 
 #. placeholder {0}: versions.running
 #. placeholder {1}: versions.expected
@@ -453,6 +462,10 @@ msgstr "{0} thất bại, {1} đang chạy"
 #. placeholder {0}: collisions.length
 msgid "{0} files already exist in {where}. Do you want to replace them?"
 msgstr "{0} tệp đã tồn tại trong {where}. Bạn có muốn thay thế chúng không?"
+
+#. placeholder {0}: data.files.length
+msgid "{0} files changed"
+msgstr "{0} tệp đã thay đổi"
 
 #. placeholder {0}: displayName(variables.name)
 msgid "{0} installed"
@@ -3338,6 +3351,9 @@ msgstr "Thông tin thanh toán"
 msgid "Billing refused to start a cloud workspace: the organization needs a paid plan, or it reached its cloud usage limit. Upgrade or raise the limit in Settings > Billing, or run the automation on a device."
 msgstr "Thanh toán đã từ chối khởi động workspace cloud: tổ chức cần gói trả phí hoặc đã đạt giới hạn sử dụng cloud. Hãy nâng cấp hoặc tăng giới hạn trong Cài đặt > Thanh toán, hoặc chạy tự động hóa trên một thiết bị."
 
+msgid "binary"
+msgstr "nhị phân"
+
 msgid "Binary"
 msgstr "Nhị phân"
 
@@ -3467,6 +3483,9 @@ msgstr "Nhánh"
 
 msgid "Branches & naming"
 msgstr "Nhánh & đặt tên"
+
+msgid "Branches:"
+msgstr "Nhánh:"
 
 msgid "Branches..."
 msgstr "Nhánh..."
@@ -4056,6 +4075,9 @@ msgstr "Chọn một preset như Các ngày trong tuần hoặc tự viết RRul
 msgid "Choose a project from GitHub issues before opening an issue."
 msgstr "Chọn một dự án trong mục Issue GitHub trước khi mở một issue."
 
+msgid "Choose a repository"
+msgstr "Chọn kho mã"
+
 msgid "Choose a section."
 msgstr "Chọn một mục."
 
@@ -4355,6 +4377,12 @@ msgstr "Đóng bình luận"
 
 msgid "Close comments"
 msgstr "Đóng bình luận"
+
+msgid "Close details"
+msgstr "Đóng chi tiết"
+
+msgid "Close details (Esc)"
+msgstr "Đóng chi tiết (Esc)"
 
 msgid "Close Diff"
 msgstr "Đóng diff"
@@ -4689,6 +4717,9 @@ msgstr "Đã commit"
 
 msgid "Committed, starting soon."
 msgstr "Đã cam kết, sắp bắt đầu."
+
+msgid "Committer"
+msgstr "Người commit"
 
 msgid "Common questions"
 msgstr "Câu hỏi thường gặp"
@@ -5203,6 +5234,9 @@ msgstr "sao chép liên kết trận đấu"
 
 msgid "Copy file name"
 msgstr "Sao chép tên tệp"
+
+msgid "Copy hash"
+msgstr "Sao chép hash"
 
 msgid "Copy ID"
 msgstr "Sao chép ID"
@@ -8298,6 +8332,9 @@ msgstr "Bộ lọc, {activeFilterCount} đang bật"
 msgid "Find"
 msgstr "Tìm"
 
+msgid "Find (⌘F)"
+msgstr "Tìm (⌘F)"
+
 msgid "Find a person…"
 msgstr "Tìm người…"
 
@@ -8330,6 +8367,9 @@ msgstr "Tìm code vừa thay đổi có coverage yếu và viết test đàng ho
 
 msgid "Find stale TODO/FIXME comments and resolve the quick ones."
 msgstr "Tìm các comment TODO/FIXME cũ và xử lý những cái nhanh gọn."
+
+msgid "Find: message, author, hash, branch"
+msgstr "Tìm: thông điệp, tác giả, hash, nhánh"
 
 msgid "Finder"
 msgstr "Finder"
@@ -8828,6 +8868,9 @@ msgstr "Đi tới trang kế tiếp trong lịch sử"
 
 msgid "Go home"
 msgstr "Về trang chủ"
+
+msgid "Go to {parent}"
+msgstr "Đi tới {parent}"
 
 msgid "Go to Conversation"
 msgstr "Đi tới cuộc trò chuyện"
@@ -10551,6 +10594,9 @@ msgstr "Đang tải thay đổi..."
 msgid "Loading comments…"
 msgstr "Đang tải bình luận…"
 
+msgid "Loading commit…"
+msgstr "Đang tải commit…"
+
 msgid "Loading contributors…"
 msgstr "Đang tải người đóng góp…"
 
@@ -11079,9 +11125,6 @@ msgstr "Tin nhắn"
 
 msgid "Message in channel"
 msgstr "Tin nhắn trong kênh"
-
-msgid "Message, author, hash, branch"
-msgstr "Thông điệp, tác giả, hash, nhánh"
 
 msgid "Message..."
 msgstr "Tin nhắn..."
@@ -12223,6 +12266,9 @@ msgstr "Không tìm thấy repository nào. Hãy đảm bảo GitHub App của b
 msgid "No repositories. Connect GitHub in Integrations, then refresh."
 msgstr "Không có repository. Hãy kết nối GitHub trong Tích hợp rồi làm mới."
 
+msgid "No repository matches."
+msgstr "Không có kho mã phù hợp."
+
 msgid "No results"
 msgstr "Không có kết quả"
 
@@ -12444,6 +12490,9 @@ msgstr "Chưa xác thực. Vui lòng đăng nhập."
 
 msgid "Not authenticated. Provide a bearer JWT, x-api-key, or session."
 msgstr "Chưa xác thực. Hãy cung cấp bearer JWT, x-api-key hoặc session."
+
+msgid "Not available on a connected host"
+msgstr "Không có trên máy chủ đã kết nối"
 
 msgid "Not available on this server"
 msgstr "Không khả dụng trên máy chủ này"
@@ -13736,6 +13785,9 @@ msgstr "Thư mục cha"
 
 msgid "Parent directory on {hostName}"
 msgstr "Thư mục cha trên {hostName}"
+
+msgid "Parents"
+msgstr "Commit cha"
 
 msgid "Part of Superset Pro"
 msgstr "Thuộc Superset Pro"
@@ -15308,6 +15360,9 @@ msgstr "repo"
 msgid "Repo"
 msgstr "Repo"
 
+msgid "Repo:"
+msgstr "Kho mã:"
+
 msgid "Report"
 msgstr "Báo cáo"
 
@@ -16305,6 +16360,9 @@ msgstr "Tìm pull request..."
 msgid "Search pull requests…"
 msgstr "Tìm pull request…"
 
+msgid "Search repositories"
+msgstr "Tìm kho mã"
+
 msgid "Search repositories..."
 msgstr "Tìm repository..."
 
@@ -17035,6 +17093,9 @@ msgstr "Hiện danh sách pull request"
 
 msgid "Show pull request preview"
 msgstr "Hiện xem trước pull request"
+
+msgid "Show Remote Branches"
+msgstr "Hiện nhánh từ xa"
 
 msgid "Show resolved ({resolvedCount})"
 msgstr "Hiện các mục đã xử lý ({resolvedCount})"
@@ -19322,6 +19383,9 @@ msgstr "Thao tác này thay nhãn, lệnh, tham số, cài đặt prompt và res
 msgid "This repository does not allow merging from here."
 msgstr "Repository này không cho phép merge từ đây."
 
+msgid "This repository is not on a connected host. Pick another one."
+msgstr "Kho mã này không có trên máy chủ đã kết nối. Hãy chọn kho khác."
+
 msgid "This screen doesn't exist"
 msgstr "Màn hình này không tồn tại"
 
@@ -19910,7 +19974,7 @@ msgstr "Chưa commit · Chưa push"
 msgid "Uncommitted changes"
 msgstr "Thay đổi chưa commit"
 
-msgid "Uncommitted changes ({uncommitted})"
+msgid "Uncommitted Changes ({uncommitted})"
 msgstr "Thay đổi chưa commit ({uncommitted})"
 
 msgid "Uncommitted changes, on top of {base}"

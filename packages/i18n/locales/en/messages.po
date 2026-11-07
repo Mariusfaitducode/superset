@@ -379,6 +379,10 @@ msgstr "{0} · behind"
 msgid "{0} · peak {1}"
 msgstr "{0} · peak {1}"
 
+#. placeholder {0}: file.path
+msgid "{0} (click to copy)"
+msgstr "{0} (click to copy)"
+
 #. placeholder {0}: creator.name
 #. placeholder {0}: option.name
 msgid "{0} (you)"
@@ -387,6 +391,11 @@ msgstr "{0} (you)"
 #. placeholder {0}: actor.login
 msgid "{0} {actorVerb}"
 msgstr "{0} {actorVerb}"
+
+#. placeholder {0}: file.oldPath
+#. placeholder {1}: file.path
+msgid "{0} → {1} (click to copy)"
+msgstr "{0} → {1} (click to copy)"
 
 #. placeholder {0}: versions.running
 #. placeholder {1}: versions.expected
@@ -453,6 +462,10 @@ msgstr "{0} failed, {1} running"
 #. placeholder {0}: collisions.length
 msgid "{0} files already exist in {where}. Do you want to replace them?"
 msgstr "{0} files already exist in {where}. Do you want to replace them?"
+
+#. placeholder {0}: data.files.length
+msgid "{0} files changed"
+msgstr "{0} files changed"
 
 #. placeholder {0}: displayName(variables.name)
 msgid "{0} installed"
@@ -3338,6 +3351,9 @@ msgstr "Billing details"
 msgid "Billing refused to start a cloud workspace: the organization needs a paid plan, or it reached its cloud usage limit. Upgrade or raise the limit in Settings > Billing, or run the automation on a device."
 msgstr "Billing refused to start a cloud workspace: the organization needs a paid plan, or it reached its cloud usage limit. Upgrade or raise the limit in Settings > Billing, or run the automation on a device."
 
+msgid "binary"
+msgstr "binary"
+
 msgid "Binary"
 msgstr "Binary"
 
@@ -3467,6 +3483,9 @@ msgstr "Branches"
 
 msgid "Branches & naming"
 msgstr "Branches & naming"
+
+msgid "Branches:"
+msgstr "Branches:"
 
 msgid "Branches..."
 msgstr "Branches..."
@@ -4056,6 +4075,9 @@ msgstr "Choose a preset such as Weekdays or write a custom RRule. One automation
 msgid "Choose a project from GitHub issues before opening an issue."
 msgstr "Choose a project from GitHub issues before opening an issue."
 
+msgid "Choose a repository"
+msgstr "Choose a repository"
+
 msgid "Choose a section."
 msgstr "Choose a section."
 
@@ -4355,6 +4377,12 @@ msgstr "Close Comment"
 
 msgid "Close comments"
 msgstr "Close comments"
+
+msgid "Close details"
+msgstr "Close details"
+
+msgid "Close details (Esc)"
+msgstr "Close details (Esc)"
 
 msgid "Close Diff"
 msgstr "Close Diff"
@@ -4689,6 +4717,9 @@ msgstr "Committed"
 
 msgid "Committed, starting soon."
 msgstr "Committed, starting soon."
+
+msgid "Committer"
+msgstr "Committer"
 
 msgid "Common questions"
 msgstr "Common questions"
@@ -5203,6 +5234,9 @@ msgstr "copy fight link"
 
 msgid "Copy file name"
 msgstr "Copy file name"
+
+msgid "Copy hash"
+msgstr "Copy hash"
 
 msgid "Copy ID"
 msgstr "Copy ID"
@@ -8298,6 +8332,9 @@ msgstr "Filters, {activeFilterCount} active"
 msgid "Find"
 msgstr "Find"
 
+msgid "Find (⌘F)"
+msgstr "Find (⌘F)"
+
 msgid "Find a person…"
 msgstr "Find a person…"
 
@@ -8330,6 +8367,9 @@ msgstr "Find recently changed code with weak coverage and test it properly."
 
 msgid "Find stale TODO/FIXME comments and resolve the quick ones."
 msgstr "Find stale TODO/FIXME comments and resolve the quick ones."
+
+msgid "Find: message, author, hash, branch"
+msgstr "Find: message, author, hash, branch"
 
 msgid "Finder"
 msgstr "Finder"
@@ -8828,6 +8868,9 @@ msgstr "Go forward to the next page in history"
 
 msgid "Go home"
 msgstr "Go home"
+
+msgid "Go to {parent}"
+msgstr "Go to {parent}"
 
 msgid "Go to Conversation"
 msgstr "Go to Conversation"
@@ -10551,6 +10594,9 @@ msgstr "Loading changes..."
 msgid "Loading comments…"
 msgstr "Loading comments…"
 
+msgid "Loading commit…"
+msgstr "Loading commit…"
+
 msgid "Loading contributors…"
 msgstr "Loading contributors…"
 
@@ -11079,9 +11125,6 @@ msgstr "Message"
 
 msgid "Message in channel"
 msgstr "Message in channel"
-
-msgid "Message, author, hash, branch"
-msgstr "Message, author, hash, branch"
 
 msgid "Message..."
 msgstr "Message..."
@@ -12223,6 +12266,9 @@ msgstr "No repositories found. Make sure your GitHub App has access to repositor
 msgid "No repositories. Connect GitHub in Integrations, then refresh."
 msgstr "No repositories. Connect GitHub in Integrations, then refresh."
 
+msgid "No repository matches."
+msgstr "No repository matches."
+
 msgid "No results"
 msgstr "No results"
 
@@ -12444,6 +12490,9 @@ msgstr "Not authenticated. Please sign in."
 
 msgid "Not authenticated. Provide a bearer JWT, x-api-key, or session."
 msgstr "Not authenticated. Provide a bearer JWT, x-api-key, or session."
+
+msgid "Not available on a connected host"
+msgstr "Not available on a connected host"
 
 msgid "Not available on this server"
 msgstr "Not available on this server"
@@ -13736,6 +13785,9 @@ msgstr "Parent directory"
 
 msgid "Parent directory on {hostName}"
 msgstr "Parent directory on {hostName}"
+
+msgid "Parents"
+msgstr "Parents"
 
 msgid "Part of Superset Pro"
 msgstr "Part of Superset Pro"
@@ -15308,6 +15360,9 @@ msgstr "repo"
 msgid "Repo"
 msgstr "Repo"
 
+msgid "Repo:"
+msgstr "Repo:"
+
 msgid "Report"
 msgstr "Report"
 
@@ -16305,6 +16360,9 @@ msgstr "Search pull requests..."
 msgid "Search pull requests…"
 msgstr "Search pull requests…"
 
+msgid "Search repositories"
+msgstr "Search repositories"
+
 msgid "Search repositories..."
 msgstr "Search repositories..."
 
@@ -17035,6 +17093,9 @@ msgstr "Show pull request list"
 
 msgid "Show pull request preview"
 msgstr "Show pull request preview"
+
+msgid "Show Remote Branches"
+msgstr "Show Remote Branches"
 
 msgid "Show resolved ({resolvedCount})"
 msgstr "Show resolved ({resolvedCount})"
@@ -19322,6 +19383,9 @@ msgstr "This replaces its label, command, arguments, prompt and resume settings,
 msgid "This repository does not allow merging from here."
 msgstr "This repository does not allow merging from here."
 
+msgid "This repository is not on a connected host. Pick another one."
+msgstr "This repository is not on a connected host. Pick another one."
+
 msgid "This screen doesn't exist"
 msgstr "This screen doesn't exist"
 
@@ -19910,8 +19974,8 @@ msgstr "Uncommitted · Unpushed"
 msgid "Uncommitted changes"
 msgstr "Uncommitted changes"
 
-msgid "Uncommitted changes ({uncommitted})"
-msgstr "Uncommitted changes ({uncommitted})"
+msgid "Uncommitted Changes ({uncommitted})"
+msgstr "Uncommitted Changes ({uncommitted})"
 
 msgid "Uncommitted changes, on top of {base}"
 msgstr "Uncommitted changes, on top of {base}"

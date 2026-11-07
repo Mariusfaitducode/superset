@@ -379,6 +379,10 @@ msgstr "{0} · veraltet"
 msgid "{0} · peak {1}"
 msgstr "{0} · Spitze {1}"
 
+#. placeholder {0}: file.path
+msgid "{0} (click to copy)"
+msgstr "{0} (zum Kopieren klicken)"
+
 #. placeholder {0}: creator.name
 #. placeholder {0}: option.name
 msgid "{0} (you)"
@@ -387,6 +391,11 @@ msgstr "{0} (du)"
 #. placeholder {0}: actor.login
 msgid "{0} {actorVerb}"
 msgstr "{0} {actorVerb}"
+
+#. placeholder {0}: file.oldPath
+#. placeholder {1}: file.path
+msgid "{0} → {1} (click to copy)"
+msgstr "{0} → {1} (zum Kopieren klicken)"
 
 #. placeholder {0}: versions.running
 #. placeholder {1}: versions.expected
@@ -453,6 +462,10 @@ msgstr "{0} fehlgeschlagen, {1} laufen"
 #. placeholder {0}: collisions.length
 msgid "{0} files already exist in {where}. Do you want to replace them?"
 msgstr "{0} Dateien existieren bereits in {where}. Willst du sie ersetzen?"
+
+#. placeholder {0}: data.files.length
+msgid "{0} files changed"
+msgstr "{0} Dateien geändert"
 
 #. placeholder {0}: displayName(variables.name)
 msgid "{0} installed"
@@ -3338,6 +3351,9 @@ msgstr "Rechnungsdaten"
 msgid "Billing refused to start a cloud workspace: the organization needs a paid plan, or it reached its cloud usage limit. Upgrade or raise the limit in Settings > Billing, or run the automation on a device."
 msgstr "Die Abrechnung hat den Start eines Cloud-Arbeitsbereichs verhindert: Die Organisation braucht einen kostenpflichtigen Plan oder hat ihr Cloud-Nutzungslimit erreicht. Führe in Einstellungen > Abrechnung ein Upgrade durch oder erhöhe das Limit, oder führe die Automatisierung auf einem Gerät aus."
 
+msgid "binary"
+msgstr "binär"
+
 msgid "Binary"
 msgstr "Binär"
 
@@ -3467,6 +3483,9 @@ msgstr "Branches"
 
 msgid "Branches & naming"
 msgstr "Branches & Benennung"
+
+msgid "Branches:"
+msgstr "Branches:"
 
 msgid "Branches..."
 msgstr "Branches..."
@@ -4056,6 +4075,9 @@ msgstr "Wähle eine Vorlage wie Werktage oder schreibe eine eigene RRule. Eine A
 msgid "Choose a project from GitHub issues before opening an issue."
 msgstr "Wähle unter GitHub-Issues ein Projekt, bevor du ein Issue öffnest."
 
+msgid "Choose a repository"
+msgstr "Repository auswählen"
+
 msgid "Choose a section."
 msgstr "Wähle einen Bereich."
 
@@ -4355,6 +4377,12 @@ msgstr "Kommentar schließen"
 
 msgid "Close comments"
 msgstr "Kommentare schließen"
+
+msgid "Close details"
+msgstr "Details schließen"
+
+msgid "Close details (Esc)"
+msgstr "Details schließen (Esc)"
 
 msgid "Close Diff"
 msgstr "Diff schließen"
@@ -4689,6 +4717,9 @@ msgstr "Committet"
 
 msgid "Committed, starting soon."
 msgstr "Zugesagt, startet bald."
+
+msgid "Committer"
+msgstr "Committer"
 
 msgid "Common questions"
 msgstr "Häufige Fragen"
@@ -5203,6 +5234,9 @@ msgstr "Kampflink kopieren"
 
 msgid "Copy file name"
 msgstr "Dateinamen kopieren"
+
+msgid "Copy hash"
+msgstr "Hash kopieren"
 
 msgid "Copy ID"
 msgstr "ID kopieren"
@@ -8298,6 +8332,9 @@ msgstr "Filter, {activeFilterCount} aktiv"
 msgid "Find"
 msgstr "Suchen"
 
+msgid "Find (⌘F)"
+msgstr "Suchen (⌘F)"
+
 msgid "Find a person…"
 msgstr "Person suchen…"
 
@@ -8330,6 +8367,9 @@ msgstr "Kürzlich geänderten Code mit schwacher Abdeckung finden und ordentlich
 
 msgid "Find stale TODO/FIXME comments and resolve the quick ones."
 msgstr "Veraltete TODO-/FIXME-Kommentare finden und die schnellen davon erledigen."
+
+msgid "Find: message, author, hash, branch"
+msgstr "Suchen: Nachricht, Autor, Hash, Branch"
 
 msgid "Finder"
 msgstr "Finder"
@@ -8828,6 +8868,9 @@ msgstr "Zur nächsten Seite im Verlauf vorgehen"
 
 msgid "Go home"
 msgstr "Zur Startseite"
+
+msgid "Go to {parent}"
+msgstr "Zu {parent} springen"
 
 msgid "Go to Conversation"
 msgstr "Zur Unterhaltung wechseln"
@@ -10551,6 +10594,9 @@ msgstr "Änderungen werden geladen..."
 msgid "Loading comments…"
 msgstr "Kommentare werden geladen…"
 
+msgid "Loading commit…"
+msgstr "Commit wird geladen…"
+
 msgid "Loading contributors…"
 msgstr "Mitwirkende werden geladen…"
 
@@ -11079,9 +11125,6 @@ msgstr "Nachricht"
 
 msgid "Message in channel"
 msgstr "Nachricht im Channel"
-
-msgid "Message, author, hash, branch"
-msgstr "Nachricht, Autor, Hash, Branch"
 
 msgid "Message..."
 msgstr "Nachricht..."
@@ -12223,6 +12266,9 @@ msgstr "Keine Repositories gefunden. Stelle sicher, dass deine GitHub-App Zugrif
 msgid "No repositories. Connect GitHub in Integrations, then refresh."
 msgstr "Keine Repositories. Verbinde GitHub unter Integrationen und aktualisiere dann."
 
+msgid "No repository matches."
+msgstr "Kein Repository passt."
+
 msgid "No results"
 msgstr "Keine Ergebnisse"
 
@@ -12444,6 +12490,9 @@ msgstr "Nicht authentifiziert. Bitte melde dich an."
 
 msgid "Not authenticated. Provide a bearer JWT, x-api-key, or session."
 msgstr "Nicht authentifiziert. Gib ein Bearer-JWT, x-api-key oder eine Sitzung an."
+
+msgid "Not available on a connected host"
+msgstr "Auf keinem verbundenen Host verfügbar"
 
 msgid "Not available on this server"
 msgstr "Auf diesem Server nicht verfügbar"
@@ -13736,6 +13785,9 @@ msgstr "Übergeordnetes Verzeichnis"
 
 msgid "Parent directory on {hostName}"
 msgstr "Übergeordnetes Verzeichnis auf {hostName}"
+
+msgid "Parents"
+msgstr "Eltern"
 
 msgid "Part of Superset Pro"
 msgstr "Teil von Superset Pro"
@@ -15308,6 +15360,9 @@ msgstr "Repo"
 msgid "Repo"
 msgstr "Repo"
 
+msgid "Repo:"
+msgstr "Repo:"
+
 msgid "Report"
 msgstr "Melden"
 
@@ -16305,6 +16360,9 @@ msgstr "Pull Requests suchen..."
 msgid "Search pull requests…"
 msgstr "Pull Requests durchsuchen…"
 
+msgid "Search repositories"
+msgstr "Repositories suchen"
+
 msgid "Search repositories..."
 msgstr "Repositories suchen..."
 
@@ -17035,6 +17093,9 @@ msgstr "Pull-Request-Liste anzeigen"
 
 msgid "Show pull request preview"
 msgstr "Pull-Request-Vorschau anzeigen"
+
+msgid "Show Remote Branches"
+msgstr "Remote-Branches anzeigen"
 
 msgid "Show resolved ({resolvedCount})"
 msgstr "Aufgelöste anzeigen ({resolvedCount})"
@@ -19322,6 +19383,9 @@ msgstr "Damit werden Bezeichnung, Befehl, Argumente, Prompt- und Resume-Einstell
 msgid "This repository does not allow merging from here."
 msgstr "Dieses Repository erlaubt kein Zusammenführen von hier aus."
 
+msgid "This repository is not on a connected host. Pick another one."
+msgstr "Dieses Repository liegt auf keinem verbundenen Host. Wähle ein anderes."
+
 msgid "This screen doesn't exist"
 msgstr "Diesen Bildschirm gibt es nicht"
 
@@ -19910,7 +19974,7 @@ msgstr "Nicht committet · Nicht gepusht"
 msgid "Uncommitted changes"
 msgstr "Nicht committete Änderungen"
 
-msgid "Uncommitted changes ({uncommitted})"
+msgid "Uncommitted Changes ({uncommitted})"
 msgstr "Nicht committete Änderungen ({uncommitted})"
 
 msgid "Uncommitted changes, on top of {base}"

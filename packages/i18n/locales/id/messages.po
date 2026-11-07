@@ -379,6 +379,10 @@ msgstr "{0} · tertinggal"
 msgid "{0} · peak {1}"
 msgstr "{0} · puncak {1}"
 
+#. placeholder {0}: file.path
+msgid "{0} (click to copy)"
+msgstr "{0} (klik untuk menyalin)"
+
 #. placeholder {0}: creator.name
 #. placeholder {0}: option.name
 msgid "{0} (you)"
@@ -387,6 +391,11 @@ msgstr "{0} (Anda)"
 #. placeholder {0}: actor.login
 msgid "{0} {actorVerb}"
 msgstr "{0} {actorVerb}"
+
+#. placeholder {0}: file.oldPath
+#. placeholder {1}: file.path
+msgid "{0} → {1} (click to copy)"
+msgstr "{0} → {1} (klik untuk menyalin)"
 
 #. placeholder {0}: versions.running
 #. placeholder {1}: versions.expected
@@ -453,6 +462,10 @@ msgstr "{0} gagal, {1} berjalan"
 #. placeholder {0}: collisions.length
 msgid "{0} files already exist in {where}. Do you want to replace them?"
 msgstr "{0} file sudah ada di {where}. Ingin menggantinya?"
+
+#. placeholder {0}: data.files.length
+msgid "{0} files changed"
+msgstr "{0} file diubah"
 
 #. placeholder {0}: displayName(variables.name)
 msgid "{0} installed"
@@ -3338,6 +3351,9 @@ msgstr "Detail penagihan"
 msgid "Billing refused to start a cloud workspace: the organization needs a paid plan, or it reached its cloud usage limit. Upgrade or raise the limit in Settings > Billing, or run the automation on a device."
 msgstr "Penagihan menolak memulai workspace cloud: organisasi memerlukan paket berbayar, atau telah mencapai batas penggunaan cloud. Upgrade atau naikkan batas di Pengaturan > Penagihan, atau jalankan otomasi di perangkat."
 
+msgid "binary"
+msgstr "biner"
+
 msgid "Binary"
 msgstr "Biner"
 
@@ -3467,6 +3483,9 @@ msgstr "Branch"
 
 msgid "Branches & naming"
 msgstr "Branch & penamaan"
+
+msgid "Branches:"
+msgstr "Branch:"
 
 msgid "Branches..."
 msgstr "Branch..."
@@ -4056,6 +4075,9 @@ msgstr "Pilih preset seperti Hari kerja atau tulis RRule kustom. Satu otomatisas
 msgid "Choose a project from GitHub issues before opening an issue."
 msgstr "Pilih proyek dari issue GitHub sebelum membuka sebuah issue."
 
+msgid "Choose a repository"
+msgstr "Pilih repositori"
+
 msgid "Choose a section."
 msgstr "Pilih sebuah bagian."
 
@@ -4355,6 +4377,12 @@ msgstr "Tutup Komentar"
 
 msgid "Close comments"
 msgstr "Tutup komentar"
+
+msgid "Close details"
+msgstr "Tutup detail"
+
+msgid "Close details (Esc)"
+msgstr "Tutup detail (Esc)"
 
 msgid "Close Diff"
 msgstr "Tutup Diff"
@@ -4689,6 +4717,9 @@ msgstr "Sudah di-commit"
 
 msgid "Committed, starting soon."
 msgstr "Sudah pasti, segera dimulai."
+
+msgid "Committer"
+msgstr "Committer"
 
 msgid "Common questions"
 msgstr "Pertanyaan umum"
@@ -5203,6 +5234,9 @@ msgstr "salin tautan pertarungan"
 
 msgid "Copy file name"
 msgstr "Salin nama file"
+
+msgid "Copy hash"
+msgstr "Salin hash"
 
 msgid "Copy ID"
 msgstr "Salin ID"
@@ -8298,6 +8332,9 @@ msgstr "Filter, {activeFilterCount} aktif"
 msgid "Find"
 msgstr "Cari"
 
+msgid "Find (⌘F)"
+msgstr "Cari (⌘F)"
+
 msgid "Find a person…"
 msgstr "Cari orang…"
 
@@ -8330,6 +8367,9 @@ msgstr "Cari kode yang baru berubah dengan cakupan tes lemah dan uji dengan bena
 
 msgid "Find stale TODO/FIXME comments and resolve the quick ones."
 msgstr "Cari komentar TODO/FIXME yang basi dan selesaikan yang mudah."
+
+msgid "Find: message, author, hash, branch"
+msgstr "Cari: pesan, penulis, hash, branch"
 
 msgid "Finder"
 msgstr "Finder"
@@ -8828,6 +8868,9 @@ msgstr "Maju ke halaman berikutnya di riwayat"
 
 msgid "Go home"
 msgstr "Ke beranda"
+
+msgid "Go to {parent}"
+msgstr "Buka {parent}"
 
 msgid "Go to Conversation"
 msgstr "Buka percakapan"
@@ -10551,6 +10594,9 @@ msgstr "Memuat perubahan..."
 msgid "Loading comments…"
 msgstr "Memuat komentar…"
 
+msgid "Loading commit…"
+msgstr "Memuat commit…"
+
 msgid "Loading contributors…"
 msgstr "Memuat kontributor…"
 
@@ -11079,9 +11125,6 @@ msgstr "Pesan"
 
 msgid "Message in channel"
 msgstr "Pesan di channel"
-
-msgid "Message, author, hash, branch"
-msgstr "Pesan, penulis, hash, branch"
 
 msgid "Message..."
 msgstr "Pesan..."
@@ -12223,6 +12266,9 @@ msgstr "Tidak ada repositori ditemukan. Pastikan GitHub App Anda punya akses ke 
 msgid "No repositories. Connect GitHub in Integrations, then refresh."
 msgstr "Tidak ada repositori. Hubungkan GitHub di Integrasi, lalu segarkan."
 
+msgid "No repository matches."
+msgstr "Tidak ada repositori yang cocok."
+
 msgid "No results"
 msgstr "Tidak ada hasil"
 
@@ -12444,6 +12490,9 @@ msgstr "Belum terautentikasi. Silakan masuk."
 
 msgid "Not authenticated. Provide a bearer JWT, x-api-key, or session."
 msgstr "Belum terautentikasi. Berikan bearer JWT, x-api-key, atau session."
+
+msgid "Not available on a connected host"
+msgstr "Tidak tersedia di host yang terhubung"
 
 msgid "Not available on this server"
 msgstr "Tidak tersedia di server ini"
@@ -13736,6 +13785,9 @@ msgstr "Direktori induk"
 
 msgid "Parent directory on {hostName}"
 msgstr "Direktori induk di {hostName}"
+
+msgid "Parents"
+msgstr "Induk"
 
 msgid "Part of Superset Pro"
 msgstr "Bagian dari Superset Pro"
@@ -15308,6 +15360,9 @@ msgstr "repo"
 msgid "Repo"
 msgstr "Repo"
 
+msgid "Repo:"
+msgstr "Repo:"
+
 msgid "Report"
 msgstr "Laporkan"
 
@@ -16305,6 +16360,9 @@ msgstr "Cari pull request..."
 msgid "Search pull requests…"
 msgstr "Cari pull request…"
 
+msgid "Search repositories"
+msgstr "Cari repositori"
+
 msgid "Search repositories..."
 msgstr "Cari repositori..."
 
@@ -17035,6 +17093,9 @@ msgstr "Tampilkan daftar pull request"
 
 msgid "Show pull request preview"
 msgstr "Tampilkan pratinjau pull request"
+
+msgid "Show Remote Branches"
+msgstr "Tampilkan branch remote"
 
 msgid "Show resolved ({resolvedCount})"
 msgstr "Tampilkan yang terselesaikan ({resolvedCount})"
@@ -19322,6 +19383,9 @@ msgstr "Ini mengganti label, perintah, argumen, pengaturan prompt dan resume, va
 msgid "This repository does not allow merging from here."
 msgstr "Repositori ini tidak mengizinkan merge dari sini."
 
+msgid "This repository is not on a connected host. Pick another one."
+msgstr "Repositori ini tidak ada di host yang terhubung. Pilih yang lain."
+
 msgid "This screen doesn't exist"
 msgstr "Layar ini tidak ada"
 
@@ -19910,7 +19974,7 @@ msgstr "Belum di-commit · Belum di-push"
 msgid "Uncommitted changes"
 msgstr "Perubahan yang belum di-commit"
 
-msgid "Uncommitted changes ({uncommitted})"
+msgid "Uncommitted Changes ({uncommitted})"
 msgstr "Perubahan belum di-commit ({uncommitted})"
 
 msgid "Uncommitted changes, on top of {base}"

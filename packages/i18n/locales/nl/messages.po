@@ -379,6 +379,10 @@ msgstr "{0} · verouderd"
 msgid "{0} · peak {1}"
 msgstr "{0} · piek {1}"
 
+#. placeholder {0}: file.path
+msgid "{0} (click to copy)"
+msgstr "{0} (klik om te kopiëren)"
+
 #. placeholder {0}: creator.name
 #. placeholder {0}: option.name
 msgid "{0} (you)"
@@ -387,6 +391,11 @@ msgstr "{0} (jij)"
 #. placeholder {0}: actor.login
 msgid "{0} {actorVerb}"
 msgstr "{0} {actorVerb}"
+
+#. placeholder {0}: file.oldPath
+#. placeholder {1}: file.path
+msgid "{0} → {1} (click to copy)"
+msgstr "{0} → {1} (klik om te kopiëren)"
 
 #. placeholder {0}: versions.running
 #. placeholder {1}: versions.expected
@@ -453,6 +462,10 @@ msgstr "{0} mislukt, {1} bezig"
 #. placeholder {0}: collisions.length
 msgid "{0} files already exist in {where}. Do you want to replace them?"
 msgstr "{0} bestanden bestaan al in {where}. Wil je ze vervangen?"
+
+#. placeholder {0}: data.files.length
+msgid "{0} files changed"
+msgstr "{0} bestanden gewijzigd"
 
 #. placeholder {0}: displayName(variables.name)
 msgid "{0} installed"
@@ -3338,6 +3351,9 @@ msgstr "Factuurgegevens"
 msgid "Billing refused to start a cloud workspace: the organization needs a paid plan, or it reached its cloud usage limit. Upgrade or raise the limit in Settings > Billing, or run the automation on a device."
 msgstr "Facturering heeft het starten van een cloudwerkruimte geweigerd: de organisatie heeft een betaald abonnement nodig of heeft haar limiet voor cloudgebruik bereikt. Upgrade of verhoog de limiet in Instellingen > Facturering, of voer de automatisering uit op een apparaat."
 
+msgid "binary"
+msgstr "binair"
+
 msgid "Binary"
 msgstr "Binair"
 
@@ -3467,6 +3483,9 @@ msgstr "Branches"
 
 msgid "Branches & naming"
 msgstr "Branches en naamgeving"
+
+msgid "Branches:"
+msgstr "Branches:"
 
 msgid "Branches..."
 msgstr "Branches..."
@@ -4056,6 +4075,9 @@ msgstr "Kies een preset zoals Werkdagen of schrijf een eigen RRule. Een automati
 msgid "Choose a project from GitHub issues before opening an issue."
 msgstr "Kies een project bij GitHub-issues voordat je een issue opent."
 
+msgid "Choose a repository"
+msgstr "Kies een repository"
+
 msgid "Choose a section."
 msgstr "Kies een onderdeel."
 
@@ -4355,6 +4377,12 @@ msgstr "Opmerking sluiten"
 
 msgid "Close comments"
 msgstr "Opmerkingen sluiten"
+
+msgid "Close details"
+msgstr "Details sluiten"
+
+msgid "Close details (Esc)"
+msgstr "Details sluiten (Esc)"
 
 msgid "Close Diff"
 msgstr "Diff sluiten"
@@ -4689,6 +4717,9 @@ msgstr "Gecommit"
 
 msgid "Committed, starting soon."
 msgstr "Toegezegd, start binnenkort."
+
+msgid "Committer"
+msgstr "Committer"
 
 msgid "Common questions"
 msgstr "Veelgestelde vragen"
@@ -5203,6 +5234,9 @@ msgstr "gevechtslink kopiëren"
 
 msgid "Copy file name"
 msgstr "Bestandsnaam kopiëren"
+
+msgid "Copy hash"
+msgstr "Hash kopiëren"
 
 msgid "Copy ID"
 msgstr "ID kopiëren"
@@ -8298,6 +8332,9 @@ msgstr "Filters, {activeFilterCount} actief"
 msgid "Find"
 msgstr "Zoeken"
 
+msgid "Find (⌘F)"
+msgstr "Zoeken (⌘F)"
+
 msgid "Find a person…"
 msgstr "Persoon zoeken…"
 
@@ -8330,6 +8367,9 @@ msgstr "Zoek recent gewijzigde code met zwakke dekking en test die goed."
 
 msgid "Find stale TODO/FIXME comments and resolve the quick ones."
 msgstr "Zoek verouderde TODO/FIXME-opmerkingen en los de snelle op."
+
+msgid "Find: message, author, hash, branch"
+msgstr "Zoeken: bericht, auteur, hash, branch"
 
 msgid "Finder"
 msgstr "Finder"
@@ -8828,6 +8868,9 @@ msgstr "Vooruit naar de volgende pagina in de geschiedenis"
 
 msgid "Go home"
 msgstr "Naar home"
+
+msgid "Go to {parent}"
+msgstr "Ga naar {parent}"
 
 msgid "Go to Conversation"
 msgstr "Ga naar gesprek"
@@ -10551,6 +10594,9 @@ msgstr "Wijzigingen laden..."
 msgid "Loading comments…"
 msgstr "Opmerkingen laden…"
 
+msgid "Loading commit…"
+msgstr "Commit laden…"
+
 msgid "Loading contributors…"
 msgstr "Contributors laden…"
 
@@ -11079,9 +11125,6 @@ msgstr "Bericht"
 
 msgid "Message in channel"
 msgstr "Bericht in kanaal"
-
-msgid "Message, author, hash, branch"
-msgstr "Bericht, auteur, hash, branch"
 
 msgid "Message..."
 msgstr "Bericht..."
@@ -12223,6 +12266,9 @@ msgstr "Geen repository's gevonden. Controleer of je GitHub App toegang heeft to
 msgid "No repositories. Connect GitHub in Integrations, then refresh."
 msgstr "Geen repositories. Koppel GitHub bij Integraties en vernieuw daarna."
 
+msgid "No repository matches."
+msgstr "Geen repository komt overeen."
+
 msgid "No results"
 msgstr "Geen resultaten"
 
@@ -12444,6 +12490,9 @@ msgstr "Niet geauthenticeerd. Log in."
 
 msgid "Not authenticated. Provide a bearer JWT, x-api-key, or session."
 msgstr "Niet geauthenticeerd. Geef een bearer-JWT, x-api-key of sessie mee."
+
+msgid "Not available on a connected host"
+msgstr "Niet beschikbaar op een verbonden host"
 
 msgid "Not available on this server"
 msgstr "Niet beschikbaar op deze server"
@@ -13736,6 +13785,9 @@ msgstr "Bovenliggende map"
 
 msgid "Parent directory on {hostName}"
 msgstr "Bovenliggende map op {hostName}"
+
+msgid "Parents"
+msgstr "Ouders"
 
 msgid "Part of Superset Pro"
 msgstr "Onderdeel van Superset Pro"
@@ -15308,6 +15360,9 @@ msgstr "repo"
 msgid "Repo"
 msgstr "Repo"
 
+msgid "Repo:"
+msgstr "Repo:"
+
 msgid "Report"
 msgstr "Melden"
 
@@ -16305,6 +16360,9 @@ msgstr "Pull requests zoeken..."
 msgid "Search pull requests…"
 msgstr "Pull requests zoeken…"
 
+msgid "Search repositories"
+msgstr "Repositories zoeken"
+
 msgid "Search repositories..."
 msgstr "Repositories zoeken..."
 
@@ -17035,6 +17093,9 @@ msgstr "Lijst met pull requests tonen"
 
 msgid "Show pull request preview"
 msgstr "Voorbeeld van pull request tonen"
+
+msgid "Show Remote Branches"
+msgstr "Remote branches tonen"
 
 msgid "Show resolved ({resolvedCount})"
 msgstr "Opgeloste tonen ({resolvedCount})"
@@ -19322,6 +19383,9 @@ msgstr "Dit vervangt het label, het commando, de argumenten, de prompt- en resum
 msgid "This repository does not allow merging from here."
 msgstr "Deze repository staat mergen vanaf hier niet toe."
 
+msgid "This repository is not on a connected host. Pick another one."
+msgstr "Deze repository staat niet op een verbonden host. Kies een andere."
+
 msgid "This screen doesn't exist"
 msgstr "Dit scherm bestaat niet"
 
@@ -19910,7 +19974,7 @@ msgstr "Niet gecommit · Niet gepusht"
 msgid "Uncommitted changes"
 msgstr "Niet-gecommitte wijzigingen"
 
-msgid "Uncommitted changes ({uncommitted})"
+msgid "Uncommitted Changes ({uncommitted})"
 msgstr "Niet-gecommitte wijzigingen ({uncommitted})"
 
 msgid "Uncommitted changes, on top of {base}"
