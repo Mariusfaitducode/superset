@@ -4,6 +4,7 @@ import { z } from "zod";
 import { projects } from "../../../db/schema";
 import type { HostServiceContext } from "../../../types";
 import {
+	gitGraphCommitTask,
 	gitGraphLogTask,
 	gitGraphOverviewTask,
 } from "../../../workers/tasks/git";
@@ -58,6 +59,23 @@ export const gitGraphRouter = router({
 					includeRemotes: input.includeRemotes,
 					includeTags: input.includeTags,
 					limit: input.limit,
+				}),
+			}),
+		),
+
+	commit: protectedProcedure
+		.input(
+			z.object({
+				projectId: z.string(),
+				hash: z.string().regex(/^[0-9a-f]{7,64}$/),
+			}),
+		)
+		.query(
+			offLoop({
+				task: gitGraphCommitTask,
+				prepare: ({ ctx, input }) => ({
+					repoPath: projectRepoPath(ctx, input.projectId),
+					hash: input.hash,
 				}),
 			}),
 		),

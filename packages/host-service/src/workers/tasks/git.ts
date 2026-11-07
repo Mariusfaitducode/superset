@@ -30,7 +30,10 @@ import {
 	getChangedFilesForDiff,
 	getDefaultBranchName,
 	loadFileDiffContent,
+	mapGitStatus,
 	mapWithConcurrency,
+	parseNameStatus,
+	parseNumstat,
 	resolveDiffCategoryRefs,
 } from "../../trpc/router/git/utils/git-helpers.ts";
 import type { GitStatusSnapshotComputation } from "../../trpc/router/git/utils/git-status.ts";
@@ -38,10 +41,13 @@ import { getGitStatusSnapshot } from "../../trpc/router/git/utils/git-status.ts"
 import type { GitStatusPartial } from "../../trpc/router/git/utils/git-status-partial/index.ts";
 import { getGitStatusPartial } from "../../trpc/router/git/utils/git-status-partial/index.ts";
 import {
+	COMMIT_DETAILS_FORMAT,
 	countStatusLines,
 	type GitGraphLog,
 	type GitGraphOverview,
+	type GraphCommitDetails,
 	LOG_FORMAT,
+	parseCommitDetails,
 	parseLog,
 	parseRefs,
 	parseWorktrees,
@@ -824,9 +830,64 @@ export const gitGraphLogTask = defineWorkerTask<
 	},
 });
 
+// The empty tree, to diff a root commit against.
+const EMPTY_TREE = {
+	sha1: "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+	sha256: "6ef19b41225c5369f1c104d45d8d85efa9b057b53b14b4b9b939dd74decc5321",
+};
+
+// One commit's full message and changed files, for the git graph details.
+export const gitGraphCommitTask = defineWorkerTask<
+	{ repoPath: string; hash: string },
+	GraphCommitDetails
+>({
+	type: "git/readGraphCommit",
+	handler: async ({ repoPath, hash }) => {
+		const git = createUserSimpleGit(await gitGraphRoot(repoPath), {
+			timeout: { block: GIT_GRAPH_TIMEOUT_MS },
+		});
+		const details = parseCommitDetails(
+			await git.raw([
+				"show",
+				"--no-patch",
+				`--format=${COMMIT_DETAILS_FORMAT}`,
+				hash,
+				"--",
+			]),
+		);
+		let base = details.parents[0];
+		if (!base) {
+			const format = (
+				await git.raw(["rev-parse", "--show-object-format"])
+			).trim();
+			base = format === "sha256" ? EMPTY_TREE.sha256 : EMPTY_TREE.sha1;
+		}
+		const range = [base, details.hash, "--"];
+		const [nameStatusRaw, numstatRaw] = await Promise.all([
+			git.raw(["diff", "--name-status", "-M", "-z", ...range]),
+			git.raw(["diff", "--numstat", "-M", "-z", ...range]),
+		]);
+		const numstat = parseNumstat(numstatRaw);
+		return {
+			...details,
+			files: parseNameStatus(nameStatusRaw)
+				.filter((file) => file.path)
+				.map((file) => ({
+					path: file.path,
+					oldPath: file.oldPath,
+					status: mapGitStatus(file.status),
+					additions: numstat.get(file.path)?.additions ?? null,
+					deletions: numstat.get(file.path)?.deletions ?? null,
+					isBinary: numstat.get(file.path)?.isBinary ?? false,
+				})),
+		};
+	},
+});
+
 export const gitTasks = [
 	gitGraphOverviewTask,
 	gitGraphLogTask,
+	gitGraphCommitTask,
 	gitStatusSnapshotTask,
 	gitStatusPartialTask,
 	gitFetchBaseRefTask,
