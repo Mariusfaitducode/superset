@@ -1424,6 +1424,9 @@ msgstr "更早的+{hiddenCount}条"
 msgid "+{remainingCount} more"
 msgstr "+{remainingCount}个"
 
+msgid "+{subagentCount} subagents"
+msgstr "+{subagentCount} 个子代理"
+
 #. placeholder {0}: paths[0]?.split("/").pop()
 msgid "<0>{0}</0> is not a git repository. Would you like to initialize one?"
 msgstr "<0>{0}</0>不是git仓库。要初始化一个吗？"
@@ -4784,6 +4787,9 @@ msgstr "配置工作区运行命令"
 msgid "Confirm before quitting"
 msgstr "退出前确认"
 
+msgid "Confirm stop"
+msgstr "确认停止"
+
 msgid "Conflicts"
 msgstr "冲突"
 
@@ -5722,6 +5728,9 @@ msgstr "无法合并拉取请求"
 msgid "Couldn't name \"{name}\" automatically"
 msgstr "无法自动命名“{name}”"
 
+msgid "Couldn't open a terminal"
+msgstr "无法打开终端"
+
 msgid "Couldn't parse this diff: {patchParseError}"
 msgstr "无法解析这个差异：{patchParseError}"
 
@@ -5824,11 +5833,17 @@ msgstr "无法启动云端工作区"
 msgid "Couldn't start design mode on this page"
 msgstr "无法在此页面启动设计模式"
 
+msgid "Couldn't start the agent"
+msgstr "无法启动代理"
+
 msgid "Couldn't start voice mode"
 msgstr "无法启动语音模式"
 
 msgid "Couldn't start workspace"
 msgstr "无法启动工作区"
+
+msgid "Couldn't stop the agent"
+msgstr "无法停止代理"
 
 msgid "Couldn't stop the agent's terminal"
 msgstr "无法停止该智能体的终端"
@@ -7424,6 +7439,9 @@ msgstr "每周五下午 5:00"
 
 msgid "Every host"
 msgstr "所有主机"
+
+msgid "Every machine you reach, with the agents running on it."
+msgstr "你能访问的每台机器，以及其上运行的代理。"
 
 msgid "Every minute"
 msgstr "每分钟"
@@ -11493,6 +11511,9 @@ msgstr "新建智能体"
 msgid "New agent launches use this account. Relaunch a running agent to switch it."
 msgstr "新启动的智能体使用此账户。重新启动运行中的智能体才能切换。"
 
+msgid "New agent or terminal"
+msgstr "新建代理或终端"
+
 msgid "New agent session"
 msgstr "新建智能体会话"
 
@@ -11727,6 +11748,9 @@ msgstr "还没有智能体对话。"
 
 msgid "No agent is configured on this host"
 msgstr "此主机上未配置任何智能体"
+
+msgid "No agent is running on this host."
+msgstr "此主机上没有正在运行的代理。"
 
 msgid "No agent running"
 msgstr "没有正在运行的智能体"
@@ -12336,6 +12360,12 @@ msgstr "还没有任何版本。"
 
 msgid "No workspace has these labels"
 msgstr "没有工作区带有这些标签"
+
+msgid "No workspace on this host yet."
+msgstr "此主机上还没有工作区。"
+
+msgid "No workspace on this host yet. Start a session to run an agent here, or a workspace on one of its projects."
+msgstr "此主机上还没有工作区。开始一个会话即可在这里运行代理，或在其某个项目上创建工作区。"
 
 msgid "No workspace run command configured"
 msgstr "未配置工作区运行命令"
@@ -13288,12 +13318,18 @@ msgstr "在新标签页中打开更改面板，或聚焦现有面板"
 msgid "Open the cloud workspaces"
 msgstr "打开云工作区"
 
+msgid "Open the conversation"
+msgstr "打开对话"
+
 #. placeholder {0}: task.title
 msgid "Open the conversation of {0}"
 msgstr "打开 {0} 的对话"
 
 msgid "Open the global command palette"
 msgstr "打开全局命令面板"
+
+msgid "Open the hosts page"
+msgstr "打开主机页面"
 
 msgid "Open the list of projects"
 msgstr "打开项目列表"
@@ -15962,6 +15998,9 @@ msgstr "在你选择的设备上运行"
 
 msgid "Runs that started their workspace in the last 7 days"
 msgstr "过去 7 天内启动了工作区的运行"
+
+msgid "Runs the host's wake command on this machine. The host shows as online once it is back."
+msgstr "在本机运行该主机的唤醒命令。主机恢复后会显示为在线。"
 
 msgid "Runs when a new workspace is created."
 msgstr "创建新工作区时运行。"
@@ -18763,6 +18802,9 @@ msgstr "未来用于存放可复用的 Superset 智能体配置、提示词与�
 msgid "The host came back on {0}, not {targetVersion}."
 msgstr "主机以 {0} 而非 {targetVersion} 恢复。"
 
+msgid "The host could not be woken. The reason is in the output below."
+msgstr "无法唤醒主机。原因见下方输出。"
+
 msgid "The host did not come back within fifteen minutes."
 msgstr "主机未在十五分钟内恢复。"
 
@@ -18955,6 +18997,9 @@ msgstr "本轮失败"
 msgid "The turn stopped on an error, or the sandbox is down"
 msgstr "这一轮因错误停止，或沙盒已停止"
 
+msgid "The wake command ran. The host may take a minute to come online."
+msgstr "唤醒命令已运行。主机可能需要一分钟才能上线。"
+
 msgid "The workspace is not ready yet. Try again."
 msgstr "工作区尚未就绪。请重试。"
 
@@ -19129,6 +19174,9 @@ msgstr "此主机尚未报告版本。"
 
 msgid "This host is behind the app you are using. Workspaces still open, but newer features may fail on it."
 msgstr "此主机落后于你正在使用的应用。工作区仍可打开，但较新的功能可能无法使用。"
+
+msgid "This host is offline, so its agents can't be read or started. The workspaces below are the last ones it reported."
+msgstr "此主机离线，无法读取或启动其代理。下方工作区是它最后上报的。"
 
 msgid "This host is too old to keep to-dos."
 msgstr "此主机版本过旧，无法保存待办事项。"
@@ -20516,6 +20564,12 @@ msgstr "自 {waitingSince} 起等待"
 msgid "Waiting tint"
 msgstr "等待着色"
 
+msgid "Wake"
+msgstr "唤醒"
+
+msgid "Wake {hostName}"
+msgstr "唤醒 {hostName}"
+
 msgid "Waking up workspace"
 msgstr "正在唤醒工作区"
 
@@ -21012,6 +21066,9 @@ msgstr "此设备上的工作区会显示在这里。"
 
 msgid "Workspaces started from this environment will stop receiving it."
 msgstr "从此环境启动的工作区将不再收到它。"
+
+msgid "Workspaces without agents ({quietCount})"
+msgstr "没有代理的工作区（{quietCount}）"
 
 msgid "worktree"
 msgstr "worktree"

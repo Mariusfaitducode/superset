@@ -1,5 +1,6 @@
 export {
 	useOpenNewSession,
+	useOpenNewSessionForHost,
 	useOpenNewWorkspace,
 	useOpenNewWorkspaceForHost,
 	useOpenNewWorkspaceForLocalProject,
