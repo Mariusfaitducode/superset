@@ -111,7 +111,8 @@ msgstr "{0, plural, one {# port aktif — tampilkan detail} other {# port aktif 
 msgid "{0, plural, one {# agent needs you} other {# agents need you}}"
 msgstr "{0, plural, other {# agen membutuhkan Anda}}"
 
-#. placeholder {0}: metrics.agents.active
+#. placeholder {0}: data.metrics.agents
+#. placeholder {0}: metrics.agents
 #. placeholder {0}: person.runningAgentCount
 msgid "{0, plural, one {# agent} other {# agents}}"
 msgstr "{0, plural, other {# agen}}"
@@ -5300,9 +5301,6 @@ msgstr "Salin kunci Anda sekarang — Anda tidak akan bisa melihatnya lagi."
 msgid "Copyright or trademark"
 msgstr "Hak cipta atau merek dagang"
 
-msgid "Cores"
-msgstr "Inti"
-
 msgid "Corrections"
 msgstr "Koreksi"
 
@@ -5480,6 +5478,9 @@ msgstr "Tidak dapat menjangkau server."
 
 msgid "Could not reach the workspace host"
 msgstr "Tidak dapat menjangkau host workspace"
+
+msgid "Could not reach this host."
+msgstr "Tidak dapat menjangkau host ini."
 
 msgid "Could not reach this workspace's machine"
 msgstr "Tidak bisa menjangkau mesin workspace ini"
@@ -8609,6 +8610,9 @@ msgstr "Full self-driving"
 msgid "Full source available on GitHub under Elastic License 2.0 (ELv2). Inspect, audit, and contribute to the code. No black boxes, no hidden functionality."
 msgstr "Sumber lengkap tersedia di GitHub dengan Elastic License 2.0 (ELv2). Periksa, audit, dan berkontribusi ke kodenya. Tanpa kotak hitam, tanpa fungsi tersembunyi."
 
+msgid "Full: close agents before starting another"
+msgstr "Penuh: tutup agen sebelum memulai yang lain"
+
 msgid "Future home for reusable agent configs."
 msgstr "Rumah masa depan untuk konfigurasi agen yang bisa dipakai ulang."
 
@@ -10489,9 +10493,6 @@ msgstr "Muat {PAGE_SIZE} commit lagi"
 
 msgid "load agent settings"
 msgstr "memuat pengaturan agen"
-
-msgid "Load average"
-msgstr "Rata-rata beban"
 
 msgid "Load diff"
 msgstr "Muat diff"
@@ -19389,6 +19390,9 @@ msgstr "Tiket: {0}"
 
 msgid "Tier"
 msgstr "Tingkat"
+
+msgid "Tight: close idle agents before starting another"
+msgstr "Hampir penuh: tutup agen yang menganggur sebelum memulai yang lain"
 
 msgid "Time"
 msgstr "Waktu"

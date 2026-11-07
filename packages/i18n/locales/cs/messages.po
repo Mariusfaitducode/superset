@@ -111,7 +111,8 @@ msgstr "{0, plural, one {# aktivní port — zobrazit podrobnosti} few {# aktivn
 msgid "{0, plural, one {# agent needs you} other {# agents need you}}"
 msgstr "{0, plural, one {# agent vás potřebuje} few {# agenti vás potřebují} many {# agenta vás potřebuje} other {# agentů vás potřebuje}}"
 
-#. placeholder {0}: metrics.agents.active
+#. placeholder {0}: data.metrics.agents
+#. placeholder {0}: metrics.agents
 #. placeholder {0}: person.runningAgentCount
 msgid "{0, plural, one {# agent} other {# agents}}"
 msgstr "{0, plural, one {# agent} few {# agenti} many {# agenta} other {# agentů}}"
@@ -5300,9 +5301,6 @@ msgstr "Zkopírujte si klíč teď — už ho znovu neuvidíte."
 msgid "Copyright or trademark"
 msgstr "Autorská práva nebo ochranná známka"
 
-msgid "Cores"
-msgstr "Jádra"
-
 msgid "Corrections"
 msgstr "Opravy"
 
@@ -5480,6 +5478,9 @@ msgstr "Nepodařilo se spojit se serverem."
 
 msgid "Could not reach the workspace host"
 msgstr "Nelze se spojit s hostitelem pracovního prostoru"
+
+msgid "Could not reach this host."
+msgstr "Tohoto hostitele se nepodařilo zastihnout."
 
 msgid "Could not reach this workspace's machine"
 msgstr "Nepodařilo se spojit s počítačem tohoto pracovního prostoru"
@@ -8609,6 +8610,9 @@ msgstr "Plná autonomie"
 msgid "Full source available on GitHub under Elastic License 2.0 (ELv2). Inspect, audit, and contribute to the code. No black boxes, no hidden functionality."
 msgstr "Kompletní zdrojový kód je na GitHubu pod licencí Elastic License 2.0 (ELv2). Prohlédněte si ho, zauditujte ho a přispějte. Žádné černé skříňky, žádné skryté funkce."
 
+msgid "Full: close agents before starting another"
+msgstr "Plno: před spuštěním dalšího zavřete agenty"
+
 msgid "Future home for reusable agent configs."
 msgstr "Budoucí domov pro znovupoužitelné konfigurace agentů."
 
@@ -10489,9 +10493,6 @@ msgstr "Načíst dalších {PAGE_SIZE} commitů"
 
 msgid "load agent settings"
 msgstr "načíst nastavení agenta"
-
-msgid "Load average"
-msgstr "Průměrné zatížení"
 
 msgid "Load diff"
 msgstr "Načíst diff"
@@ -19389,6 +19390,9 @@ msgstr "Tiket: {0}"
 
 msgid "Tier"
 msgstr "Tarif"
+
+msgid "Tight: close idle agents before starting another"
+msgstr "Těsno: před spuštěním dalšího zavřete nečinné agenty"
 
 msgid "Time"
 msgstr "Čas"

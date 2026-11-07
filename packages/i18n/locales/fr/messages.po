@@ -111,7 +111,8 @@ msgstr "{0, plural, one {# port actif — afficher les détails} other {# ports 
 msgid "{0, plural, one {# agent needs you} other {# agents need you}}"
 msgstr "{0, plural, one {# agent a besoin de vous} other {# agents ont besoin de vous}}"
 
-#. placeholder {0}: metrics.agents.active
+#. placeholder {0}: data.metrics.agents
+#. placeholder {0}: metrics.agents
 #. placeholder {0}: person.runningAgentCount
 msgid "{0, plural, one {# agent} other {# agents}}"
 msgstr "{0, plural, one {# agent} other {# agents}}"
@@ -5300,9 +5301,6 @@ msgstr "Copiez votre clé maintenant — vous ne pourrez plus la voir ensuite."
 msgid "Copyright or trademark"
 msgstr "Droit d'auteur ou marque"
 
-msgid "Cores"
-msgstr "Cœurs"
-
 msgid "Corrections"
 msgstr "Corrections"
 
@@ -5480,6 +5478,9 @@ msgstr "Impossible de joindre le serveur."
 
 msgid "Could not reach the workspace host"
 msgstr "Impossible de joindre l'hôte de l'espace de travail"
+
+msgid "Could not reach this host."
+msgstr "Impossible de joindre cet hôte."
 
 msgid "Could not reach this workspace's machine"
 msgstr "Impossible de joindre la machine de cet espace de travail"
@@ -8609,6 +8610,9 @@ msgstr "Autonomie complète"
 msgid "Full source available on GitHub under Elastic License 2.0 (ELv2). Inspect, audit, and contribute to the code. No black boxes, no hidden functionality."
 msgstr "Code source complet disponible sur GitHub sous Elastic License 2.0 (ELv2). Inspectez, auditez et contribuez au code. Aucune boîte noire, aucune fonctionnalité cachée."
 
+msgid "Full: close agents before starting another"
+msgstr "Plein : fermez des agents avant d’en lancer un autre"
+
 msgid "Future home for reusable agent configs."
 msgstr "Futur foyer des configurations d'agents réutilisables."
 
@@ -10489,9 +10493,6 @@ msgstr "Charger {PAGE_SIZE} commits de plus"
 
 msgid "load agent settings"
 msgstr "charger les paramètres de l'agent"
-
-msgid "Load average"
-msgstr "Charge moyenne"
 
 msgid "Load diff"
 msgstr "Charger le diff"
@@ -19389,6 +19390,9 @@ msgstr "Ticket : {0}"
 
 msgid "Tier"
 msgstr "Offre"
+
+msgid "Tight: close idle agents before starting another"
+msgstr "Juste : fermez les agents inactifs avant d’en lancer un autre"
 
 msgid "Time"
 msgstr "Date"

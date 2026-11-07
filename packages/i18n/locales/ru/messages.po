@@ -111,7 +111,8 @@ msgstr "{0, plural, one {# активный порт — показать дет
 msgid "{0, plural, one {# agent needs you} other {# agents need you}}"
 msgstr "{0, plural, one {# агент ждёт вас} few {# агента ждут вас} many {# агентов ждут вас} other {# агента ждут вас}}"
 
-#. placeholder {0}: metrics.agents.active
+#. placeholder {0}: data.metrics.agents
+#. placeholder {0}: metrics.agents
 #. placeholder {0}: person.runningAgentCount
 msgid "{0, plural, one {# agent} other {# agents}}"
 msgstr "{0, plural, one {# агент} few {# агента} many {# агентов} other {# агента}}"
@@ -5300,9 +5301,6 @@ msgstr "Скопируйте ключ сейчас — увидеть его с�
 msgid "Copyright or trademark"
 msgstr "Авторские права или товарный знак"
 
-msgid "Cores"
-msgstr "Ядра"
-
 msgid "Corrections"
 msgstr "Исправления"
 
@@ -5480,6 +5478,9 @@ msgstr "Не удалось подключиться к серверу."
 
 msgid "Could not reach the workspace host"
 msgstr "Не удалось связаться с хостом рабочего пространства"
+
+msgid "Could not reach this host."
+msgstr "Не удалось связаться с этим хостом."
 
 msgid "Could not reach this workspace's machine"
 msgstr "Не удалось связаться с машиной этой рабочей области"
@@ -8609,6 +8610,9 @@ msgstr "Полная автономность"
 msgid "Full source available on GitHub under Elastic License 2.0 (ELv2). Inspect, audit, and contribute to the code. No black boxes, no hidden functionality."
 msgstr "Полный исходный код доступен на GitHub под Elastic License 2.0 (ELv2). Изучайте, проверяйте и вносите вклад. Никаких чёрных ящиков и скрытой функциональности."
 
+msgid "Full: close agents before starting another"
+msgstr "Заполнено: закройте агентов, прежде чем запускать нового"
+
 msgid "Future home for reusable agent configs."
 msgstr "Будущее место для переиспользуемых конфигураций агентов."
 
@@ -10489,9 +10493,6 @@ msgstr "Загрузить ещё {PAGE_SIZE} коммитов"
 
 msgid "load agent settings"
 msgstr "загрузить настройки агента"
-
-msgid "Load average"
-msgstr "Средняя нагрузка"
 
 msgid "Load diff"
 msgstr "Загрузить diff"
@@ -19389,6 +19390,9 @@ msgstr "Тикет: {0}"
 
 msgid "Tier"
 msgstr "Уровень"
+
+msgid "Tight: close idle agents before starting another"
+msgstr "Тесно: закройте простаивающих агентов, прежде чем запускать нового"
 
 msgid "Time"
 msgstr "Время"

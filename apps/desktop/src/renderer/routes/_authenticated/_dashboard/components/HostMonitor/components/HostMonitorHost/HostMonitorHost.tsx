@@ -6,7 +6,7 @@ import type { RemoteHostMetrics } from "../../hooks/useRemoteHostsMetrics";
 
 interface HostMonitorHostProps {
 	host: RemoteHostMetrics;
-	onNavigate: () => void;
+	onNavigate?: () => void;
 }
 
 export function HostMonitorHost({ host, onNavigate }: HostMonitorHostProps) {
@@ -30,16 +30,18 @@ export function HostMonitorHost({ host, onNavigate }: HostMonitorHostProps) {
 				</Link>
 			</div>
 			{result?.status === "ok" ? (
-				<HostMetricsDetails metrics={result.metrics} />
-			) : result?.status === "unsupported" ? (
-				<p className="text-xs text-muted-foreground">
-					<Trans>
-						This host runs an older host service. Update it to see its load.
-					</Trans>
-				</p>
+				<HostMetricsDetails metrics={result.metrics} onNavigate={onNavigate} />
 			) : (
 				<p className="text-xs text-muted-foreground">
-					<Trans>Loading…</Trans>
+					{result?.status === "unsupported" ? (
+						<Trans>
+							This host runs an older host service. Update it to see its load.
+						</Trans>
+					) : host.isUnreachable ? (
+						<Trans>Could not reach this host.</Trans>
+					) : (
+						<Trans>Loading…</Trans>
+					)}
 				</p>
 			)}
 		</section>

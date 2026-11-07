@@ -42,15 +42,15 @@ function sources(overrides: Partial<HostMetricsSources> = {}) {
 		}),
 		readProcessTable: async () =>
 			parseProcessTable(
-				["10 1 1048576", "11 10 1048576", "20 1 524288"].join("\n"),
+				["10 1 1048576", "11 10 1048576", "20 1 524288", "30 1 524288"].join(
+					"\n",
+				),
 			),
-		listSessions: async () => ({
-			live: 3,
-			sessions: [
-				{ terminalId: "a", workspaceId: "small", pid: 20, title: null },
-				{ terminalId: "b", workspaceId: "big", pid: 10, title: null },
-			],
-		}),
+		listSessions: async () => [
+			{ terminalId: "a", workspaceId: "small", pid: 20, title: null },
+			{ terminalId: "b", workspaceId: "big", pid: 10, title: null },
+			{ terminalId: "c", workspaceId: "small", pid: 30, title: null },
+		],
 		workspaceLabels: (ids) => new Map(ids.map((id) => [id, `label-${id}`])),
 		listAgents: () => [agent("a"), agent("b"), agent("c", true)],
 		...overrides,
@@ -74,21 +74,10 @@ test("one sample: memory used from available, live agents, workspaces by memory"
 		availableBytes: 9 * GIB,
 		usedBytes: 11 * GIB,
 	});
-	expect(metrics.agents).toEqual({ active: 2, subagents: 0 });
-	expect(metrics.terminals).toEqual({ live: 3 });
+	expect(metrics.agents).toBe(2);
 	expect(metrics.topWorkspaces).toEqual([
-		{
-			workspaceId: "big",
-			label: "label-big",
-			memoryBytes: 2 * GIB,
-			terminals: 1,
-		},
-		{
-			workspaceId: "small",
-			label: "label-small",
-			memoryBytes: 0.5 * GIB,
-			terminals: 1,
-		},
+		{ workspaceId: "big", label: "label-big", memoryBytes: 2 * GIB },
+		{ workspaceId: "small", label: "label-small", memoryBytes: 1 * GIB },
 	]);
 });
 
@@ -115,7 +104,6 @@ test("a dead terminal daemon still gives machine numbers", async () => {
 	const metrics = await createHostMetricsCollector(value, {
 		firstSampleDelayMs: 0,
 	}).read();
-	expect(metrics.terminals).toBeNull();
 	expect(metrics.topWorkspaces).toEqual([]);
 	expect(metrics.memory.usedBytes).toBe(11 * GIB);
 });

@@ -111,7 +111,8 @@ msgstr "{0, plural, one {# porta attiva — mostra i dettagli} other {# porte at
 msgid "{0, plural, one {# agent needs you} other {# agents need you}}"
 msgstr "{0, plural, one {# agente ha bisogno di te} other {# agenti hanno bisogno di te}}"
 
-#. placeholder {0}: metrics.agents.active
+#. placeholder {0}: data.metrics.agents
+#. placeholder {0}: metrics.agents
 #. placeholder {0}: person.runningAgentCount
 msgid "{0, plural, one {# agent} other {# agents}}"
 msgstr "{0, plural, one {# agente} other {# agenti}}"
@@ -5300,9 +5301,6 @@ msgstr "Copia la chiave adesso — non potrai più vederla."
 msgid "Copyright or trademark"
 msgstr "Copyright o marchio"
 
-msgid "Cores"
-msgstr "Core"
-
 msgid "Corrections"
 msgstr "Correzioni"
 
@@ -5480,6 +5478,9 @@ msgstr "Impossibile raggiungere il server."
 
 msgid "Could not reach the workspace host"
 msgstr "Impossibile raggiungere l'host del workspace"
+
+msgid "Could not reach this host."
+msgstr "Impossibile raggiungere questo host."
 
 msgid "Could not reach this workspace's machine"
 msgstr "Impossibile raggiungere la macchina di questo workspace"
@@ -8609,6 +8610,9 @@ msgstr "Guida completamente autonoma"
 msgid "Full source available on GitHub under Elastic License 2.0 (ELv2). Inspect, audit, and contribute to the code. No black boxes, no hidden functionality."
 msgstr "Codice sorgente completo su GitHub con licenza Elastic License 2.0 (ELv2). Ispeziona, verifica e contribuisci al codice. Nessuna scatola nera, nessuna funzionalità nascosta."
 
+msgid "Full: close agents before starting another"
+msgstr "Pieno: chiudi degli agenti prima di avviarne un altro"
+
 msgid "Future home for reusable agent configs."
 msgstr "Futura casa per configurazioni di agenti riutilizzabili."
 
@@ -10489,9 +10493,6 @@ msgstr "Carica altri {PAGE_SIZE} commit"
 
 msgid "load agent settings"
 msgstr "caricare le impostazioni degli agenti"
-
-msgid "Load average"
-msgstr "Carico medio"
 
 msgid "Load diff"
 msgstr "Carica il diff"
@@ -19389,6 +19390,9 @@ msgstr "Ticket: {0}"
 
 msgid "Tier"
 msgstr "Livello"
+
+msgid "Tight: close idle agents before starting another"
+msgstr "Al limite: chiudi gli agenti inattivi prima di avviarne un altro"
 
 msgid "Time"
 msgstr "Tempo"

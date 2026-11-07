@@ -1,15 +1,10 @@
 export type { HostMetrics, HostMetricsResult } from "./fetchHostMetrics";
 export {
 	getHostLoad,
-	HOST_LOAD_HOT_SHARE,
+	getHostVerdict,
 	type HostLoad,
-	isHostHot,
-	isHotShare,
+	type HostVerdict,
 	toGigabytes,
+	worstVerdict,
 } from "./hostLoad";
-export {
-	HOST_METRICS_POLL_MS,
-	hostMetricsQueryKey,
-	useHostMetrics,
-	useHostsMetrics,
-} from "./useHostMetrics";
+export { useHostMetrics, useHostsMetrics } from "./useHostMetrics";

@@ -1,14 +1,12 @@
 import { cn } from "@superset/ui/lib/utils";
-import {
-	type HostLoad,
-	isHotShare,
-} from "renderer/hooks/host-service/useHostMetrics";
+import { shareBarClass } from "renderer/components/HostMetricsDetails/verdictTone";
+import type { HostLoad } from "renderer/hooks/host-service/useHostMetrics";
 
-/** Two thin vertical gauges, CPU then memory, for a narrow trigger. */
+/** Two thin vertical gauges, memory then CPU, for a narrow trigger. */
 export function HostLoadBars({ load }: { load: HostLoad | null }) {
 	return (
 		<span className="flex h-3.5 items-end gap-[2px]" aria-hidden>
-			{[load?.cpu ?? null, load?.memory ?? null].map((share, index) => (
+			{[load?.memory ?? null, load?.cpu ?? null].map((share, index) => (
 				<span
 					// biome-ignore lint/suspicious/noArrayIndexKey: fixed two-item list
 					key={index}
@@ -17,7 +15,9 @@ export function HostLoadBars({ load }: { load: HostLoad | null }) {
 					<span
 						className={cn(
 							"absolute inset-x-0 bottom-0 rounded-full transition-[height] duration-500",
-							isHotShare(share) ? "bg-red-500/90" : "bg-current",
+							share !== null && share >= 0.75
+								? shareBarClass(share)
+								: "bg-current",
 						)}
 						style={{ height: `${Math.round((share ?? 0) * 100)}%` }}
 					/>

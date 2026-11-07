@@ -111,7 +111,8 @@ msgstr "{0, plural, one {#個活動埠 — 顯示詳情} other {#個活動埠 �
 msgid "{0, plural, one {# agent needs you} other {# agents need you}}"
 msgstr "{0, plural, other {# 個代理需要你}}"
 
-#. placeholder {0}: metrics.agents.active
+#. placeholder {0}: data.metrics.agents
+#. placeholder {0}: metrics.agents
 #. placeholder {0}: person.runningAgentCount
 msgid "{0, plural, one {# agent} other {# agents}}"
 msgstr "{0, plural, other {# 個代理}}"
@@ -5300,9 +5301,6 @@ msgstr "請立即複製你的金鑰，之後將無法再次檢視。"
 msgid "Copyright or trademark"
 msgstr "著作權或商標"
 
-msgid "Cores"
-msgstr "核心"
-
 msgid "Corrections"
 msgstr "糾正"
 
@@ -5480,6 +5478,9 @@ msgstr "無法連線到伺服器。"
 
 msgid "Could not reach the workspace host"
 msgstr "無法連線到工作區主機"
+
+msgid "Could not reach this host."
+msgstr "無法連線到此主機。"
 
 msgid "Could not reach this workspace's machine"
 msgstr "無法連線到這個工作區所在的機器"
@@ -8609,6 +8610,9 @@ msgstr "完全自動駕駛"
 msgid "Full source available on GitHub under Elastic License 2.0 (ELv2). Inspect, audit, and contribute to the code. No black boxes, no hidden functionality."
 msgstr "完整原始碼在GitHub上以Elastic License 2.0（ELv2）提供。可查閱、審計並參與貢獻。沒有黑箱，沒有隱藏功能。"
 
+msgid "Full: close agents before starting another"
+msgstr "已滿：啟動新代理前請先關閉一些代理"
+
 msgid "Future home for reusable agent configs."
 msgstr "可複用代理程式配置的未來歸處。"
 
@@ -10489,9 +10493,6 @@ msgstr "再載入 {PAGE_SIZE} 個提交"
 
 msgid "load agent settings"
 msgstr "載入代理程式設定"
-
-msgid "Load average"
-msgstr "平均負載"
 
 msgid "Load diff"
 msgstr "載入差異"
@@ -19389,6 +19390,9 @@ msgstr "工單：{0}"
 
 msgid "Tier"
 msgstr "等級"
+
+msgid "Tight: close idle agents before starting another"
+msgstr "吃緊：啟動新代理前請先關閉閒置代理"
 
 msgid "Time"
 msgstr "時間"

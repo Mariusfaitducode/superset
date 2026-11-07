@@ -12,6 +12,8 @@ export interface RemoteHostMetrics {
 	name: string;
 	/** Undefined while the first answer is pending or the host failed. */
 	result: HostMetricsResult | undefined;
+	/** The host is listed online but its service did not answer. */
+	isUnreachable: boolean;
 }
 
 /** Load of every online host other than this machine, polled every 5 s. */
@@ -32,5 +34,6 @@ export function useRemoteHostsMetrics(): RemoteHostMetrics[] {
 		hostId: host.machineId,
 		name: host.name,
 		result: queries[index]?.data,
+		isUnreachable: !queries[index]?.data && !!queries[index]?.isError,
 	}));
 }

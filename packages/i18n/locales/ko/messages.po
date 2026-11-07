@@ -111,7 +111,8 @@ msgstr "{0, plural, one {활성 포트 #개 — 세부 정보 표시} other {활
 msgid "{0, plural, one {# agent needs you} other {# agents need you}}"
 msgstr "{0, plural, other {에이전트 #개가 응답을 기다림}}"
 
-#. placeholder {0}: metrics.agents.active
+#. placeholder {0}: data.metrics.agents
+#. placeholder {0}: metrics.agents
 #. placeholder {0}: person.runningAgentCount
 msgid "{0, plural, one {# agent} other {# agents}}"
 msgstr "{0, plural, other {에이전트 #개}}"
@@ -5300,9 +5301,6 @@ msgstr "지금 키를 복사하세요 — 다시 볼 수 없습니다."
 msgid "Copyright or trademark"
 msgstr "저작권 또는 상표"
 
-msgid "Cores"
-msgstr "코어"
-
 msgid "Corrections"
 msgstr "수정"
 
@@ -5480,6 +5478,9 @@ msgstr "서버에 연결할 수 없습니다."
 
 msgid "Could not reach the workspace host"
 msgstr "워크스페이스 호스트에 연결할 수 없습니다"
+
+msgid "Could not reach this host."
+msgstr "이 호스트에 연결할 수 없습니다."
 
 msgid "Could not reach this workspace's machine"
 msgstr "이 워크스페이스의 컴퓨터에 연결할 수 없습니다"
@@ -8609,6 +8610,9 @@ msgstr "완전 자율 주행"
 msgid "Full source available on GitHub under Elastic License 2.0 (ELv2). Inspect, audit, and contribute to the code. No black boxes, no hidden functionality."
 msgstr "전체 소스가 Elastic License 2.0(ELv2)으로 GitHub에 공개되어 있습니다. 코드를 확인하고, 감사하고, 기여하세요. 블랙박스도, 숨겨진 기능도 없습니다."
 
+msgid "Full: close agents before starting another"
+msgstr "가득 참: 다른 에이전트를 시작하기 전에 에이전트를 닫으세요"
+
 msgid "Future home for reusable agent configs."
 msgstr "재사용 가능한 에이전트 설정이 앞으로 들어올 자리입니다."
 
@@ -10489,9 +10493,6 @@ msgstr "커밋 {PAGE_SIZE}개 더 불러오기"
 
 msgid "load agent settings"
 msgstr "에이전트 설정을 불러올"
-
-msgid "Load average"
-msgstr "평균 부하"
 
 msgid "Load diff"
 msgstr "차이 불러오기"
@@ -19389,6 +19390,9 @@ msgstr "티켓: {0}"
 
 msgid "Tier"
 msgstr "등급"
+
+msgid "Tight: close idle agents before starting another"
+msgstr "빠듯함: 다른 에이전트를 시작하기 전에 유휴 에이전트를 닫으세요"
 
 msgid "Time"
 msgstr "시간"

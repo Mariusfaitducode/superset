@@ -6,9 +6,11 @@ import {
 } from "renderer/lib/host-service-client";
 import { fetchHostMetrics, type HostMetricsResult } from "./fetchHostMetrics";
 
-export const HOST_METRICS_POLL_MS = 5_000;
+const POLL_MS = 5_000;
+// An older host service gains the procedure only when the host updates.
+const UNSUPPORTED_POLL_MS = 60_000;
 
-export function hostMetricsQueryKey(hostUrl: string | null) {
+function hostMetricsQueryKey(hostUrl: string | null) {
 	return ["host-metrics", hostUrl] as const;
 }
 
@@ -21,7 +23,9 @@ function hostMetricsQueryOptions(hostUrl: string | null, enabled: boolean) {
 		},
 		enabled: enabled && hostUrl !== null,
 		refetchInterval: (query: { state: { data?: HostMetricsResult } }) =>
-			query.state.data?.status === "unsupported" ? false : HOST_METRICS_POLL_MS,
+			query.state.data?.status === "unsupported"
+				? UNSUPPORTED_POLL_MS
+				: POLL_MS,
 		retry: hostServiceQueryRetry,
 		retryDelay: hostServiceQueryRetryDelay,
 	};

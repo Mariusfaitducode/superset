@@ -42,6 +42,7 @@ import {
 } from "renderer/routes/_authenticated/_dashboard/components/TopBar/components/ResourceConsumption/utils/workspaceGrouping";
 import { ResourceSparkline } from "renderer/routes/_authenticated/components/ResourceSparkline";
 import { AgentResourcesSection } from "./components/AgentResourcesSection";
+import { RemoteHostsSection } from "./components/RemoteHostsSection";
 import { useResourceSampleBuffer } from "./hooks/useResourceSampleBuffer";
 
 const SORT_LABELS: Record<SortOption, MessageDescriptor> = {
@@ -296,6 +297,8 @@ export function UsageResourcesPage() {
 				resources={snapshot}
 				onOpenTerminal={navigateToPane}
 			/>
+
+			<RemoteHostsSection />
 
 			<div className="mt-3 flex items-center gap-2">
 				<h3 className="text-[13px] font-medium">

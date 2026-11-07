@@ -111,7 +111,8 @@ msgstr "{0, plural, one {#個のアクティブなポート — 詳細を表示}
 msgid "{0, plural, one {# agent needs you} other {# agents need you}}"
 msgstr "{0, plural, other {# 件のエージェントが対応待ち}}"
 
-#. placeholder {0}: metrics.agents.active
+#. placeholder {0}: data.metrics.agents
+#. placeholder {0}: metrics.agents
 #. placeholder {0}: person.runningAgentCount
 msgid "{0, plural, one {# agent} other {# agents}}"
 msgstr "{0, plural, other {エージェント # 件}}"
@@ -5300,9 +5301,6 @@ msgstr "キーを今すぐコピーしてください — 後で再表示する�
 msgid "Copyright or trademark"
 msgstr "著作権または商標"
 
-msgid "Cores"
-msgstr "コア"
-
 msgid "Corrections"
 msgstr "修正"
 
@@ -5480,6 +5478,9 @@ msgstr "サーバーに接続できませんでした。"
 
 msgid "Could not reach the workspace host"
 msgstr "ワークスペースのホストに接続できません"
+
+msgid "Could not reach this host."
+msgstr "このホストに接続できませんでした。"
 
 msgid "Could not reach this workspace's machine"
 msgstr "このワークスペースのマシンに接続できませんでした"
@@ -8609,6 +8610,9 @@ msgstr "完全自動運転"
 msgid "Full source available on GitHub under Elastic License 2.0 (ELv2). Inspect, audit, and contribute to the code. No black boxes, no hidden functionality."
 msgstr "全ソースがElastic License 2.0(ELv2)のもとGitHubで公開されています。コードを確認し、監査し、貢献できます。ブラックボックスも隠し機能もありません。"
 
+msgid "Full: close agents before starting another"
+msgstr "満杯: 次を起動する前にエージェントを閉じてください"
+
 msgid "Future home for reusable agent configs."
 msgstr "再利用可能なエージェント設定を、いずれここに置きます。"
 
@@ -10489,9 +10493,6 @@ msgstr "さらに {PAGE_SIZE} 件のコミットを読み込む"
 
 msgid "load agent settings"
 msgstr "エージェント設定を読み込む"
-
-msgid "Load average"
-msgstr "ロードアベレージ"
 
 msgid "Load diff"
 msgstr "差分を読み込む"
@@ -19389,6 +19390,9 @@ msgstr "チケット: {0}"
 
 msgid "Tier"
 msgstr "ティア"
+
+msgid "Tight: close idle agents before starting another"
+msgstr "余裕なし: 次を起動する前にアイドル中のエージェントを閉じてください"
 
 msgid "Time"
 msgstr "時間"

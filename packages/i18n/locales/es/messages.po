@@ -111,7 +111,8 @@ msgstr "{0, plural, one {# puerto activo: mostrar detalles} other {# puertos act
 msgid "{0, plural, one {# agent needs you} other {# agents need you}}"
 msgstr "{0, plural, one {# agente te necesita} other {# agentes te necesitan}}"
 
-#. placeholder {0}: metrics.agents.active
+#. placeholder {0}: data.metrics.agents
+#. placeholder {0}: metrics.agents
 #. placeholder {0}: person.runningAgentCount
 msgid "{0, plural, one {# agent} other {# agents}}"
 msgstr "{0, plural, one {# agente} other {# agentes}}"
@@ -5300,9 +5301,6 @@ msgstr "Copia tu clave ahora: no podrás volver a verla."
 msgid "Copyright or trademark"
 msgstr "Derechos de autor o marca registrada"
 
-msgid "Cores"
-msgstr "Núcleos"
-
 msgid "Corrections"
 msgstr "Correcciones"
 
@@ -5480,6 +5478,9 @@ msgstr "No se pudo conectar con el servidor."
 
 msgid "Could not reach the workspace host"
 msgstr "No se pudo conectar con el host del espacio de trabajo"
+
+msgid "Could not reach this host."
+msgstr "No se pudo conectar con este host."
 
 msgid "Could not reach this workspace's machine"
 msgstr "No se pudo contactar con la máquina de este espacio de trabajo"
@@ -8609,6 +8610,9 @@ msgstr "Autonomía total"
 msgid "Full source available on GitHub under Elastic License 2.0 (ELv2). Inspect, audit, and contribute to the code. No black boxes, no hidden functionality."
 msgstr "Código fuente completo disponible en GitHub bajo la Elastic License 2.0 (ELv2). Inspecciónalo, audítalo y contribuye. Sin cajas negras ni funciones ocultas."
 
+msgid "Full: close agents before starting another"
+msgstr "Lleno: cierra agentes antes de iniciar otro"
+
 msgid "Future home for reusable agent configs."
 msgstr "Futuro hogar de configuraciones de agente reutilizables."
 
@@ -10489,9 +10493,6 @@ msgstr "Cargar {PAGE_SIZE} commits más"
 
 msgid "load agent settings"
 msgstr "cargar la configuración del agente"
-
-msgid "Load average"
-msgstr "Carga media"
 
 msgid "Load diff"
 msgstr "Cargar el diff"
@@ -19389,6 +19390,9 @@ msgstr "Ticket: {0}"
 
 msgid "Tier"
 msgstr "Nivel"
+
+msgid "Tight: close idle agents before starting another"
+msgstr "Justo: cierra los agentes inactivos antes de iniciar otro"
 
 msgid "Time"
 msgstr "Tiempo"

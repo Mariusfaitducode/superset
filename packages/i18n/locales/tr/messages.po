@@ -111,7 +111,8 @@ msgstr "{0, plural, one {# etkin port — ayrıntıları göster} other {# etkin
 msgid "{0, plural, one {# agent needs you} other {# agents need you}}"
 msgstr "{0, plural, one {# ajan sizi bekliyor} other {# ajan sizi bekliyor}}"
 
-#. placeholder {0}: metrics.agents.active
+#. placeholder {0}: data.metrics.agents
+#. placeholder {0}: metrics.agents
 #. placeholder {0}: person.runningAgentCount
 msgid "{0, plural, one {# agent} other {# agents}}"
 msgstr "{0, plural, one {# ajan} other {# ajan}}"
@@ -5300,9 +5301,6 @@ msgstr "Anahtarınızı şimdi kopyalayın — bir daha göremezsiniz."
 msgid "Copyright or trademark"
 msgstr "Telif hakkı veya ticari marka"
 
-msgid "Cores"
-msgstr "Çekirdekler"
-
 msgid "Corrections"
 msgstr "Düzeltmeler"
 
@@ -5480,6 +5478,9 @@ msgstr "Sunucuya ulaşılamadı."
 
 msgid "Could not reach the workspace host"
 msgstr "Çalışma alanı sunucusuna ulaşılamadı"
+
+msgid "Could not reach this host."
+msgstr "Bu ana bilgisayara ulaşılamadı."
 
 msgid "Could not reach this workspace's machine"
 msgstr "Bu çalışma alanının makinesine erişilemedi"
@@ -8609,6 +8610,9 @@ msgstr "Tam otonomi"
 msgid "Full source available on GitHub under Elastic License 2.0 (ELv2). Inspect, audit, and contribute to the code. No black boxes, no hidden functionality."
 msgstr "Tüm kaynak kodu GitHub'da Elastic License 2.0 (ELv2) altında mevcuttur. Kodu inceleyin, denetleyin ve katkıda bulunun. Kara kutu yok, gizli işlev yok."
 
+msgid "Full: close agents before starting another"
+msgstr "Dolu: başka bir ajan başlatmadan önce ajanları kapatın"
+
 msgid "Future home for reusable agent configs."
 msgstr "Yeniden kullanılabilir ajan yapılandırmalarının gelecekteki evi."
 
@@ -10489,9 +10493,6 @@ msgstr "{PAGE_SIZE} commit daha yükle"
 
 msgid "load agent settings"
 msgstr "ajan ayarlarını yükleme"
-
-msgid "Load average"
-msgstr "Ortalama yük"
 
 msgid "Load diff"
 msgstr "Farkı yükle"
@@ -19389,6 +19390,9 @@ msgstr "Bilet: {0}"
 
 msgid "Tier"
 msgstr "Katman"
+
+msgid "Tight: close idle agents before starting another"
+msgstr "Sıkışık: başka bir ajan başlatmadan önce boştaki ajanları kapatın"
 
 msgid "Time"
 msgstr "Zaman"

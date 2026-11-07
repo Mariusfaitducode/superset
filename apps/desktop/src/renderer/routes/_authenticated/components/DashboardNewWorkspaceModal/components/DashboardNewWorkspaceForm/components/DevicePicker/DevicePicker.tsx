@@ -26,6 +26,7 @@ import {
 	FORM_PICKER_MENU_CLASS,
 	FormPickerTrigger,
 } from "../../PromptGroup/components/FormPickerTrigger";
+import { HostLoadHint } from "./components/HostLoadHint";
 import { useWorkspaceHostOptions } from "./hooks/useWorkspaceHostOptions";
 
 function OnlineDot({ online }: { online: boolean }) {
@@ -181,6 +182,7 @@ export function DevicePicker({
 										>
 											<HiOutlineServer className="size-4" />
 											<span className="min-w-0 truncate">{host.name}</span>
+											{host.isOnline && <HostLoadHint hostId={host.id} />}
 											{host.isOnline && host.version && (
 												<span
 													className={cn(

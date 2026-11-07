@@ -1,7 +1,14 @@
 import type { HostMetrics } from "./fetchHostMetrics";
 
-/** Shares at or above this read as a machine under pressure. */
-export const HOST_LOAD_HOT_SHARE = 0.85;
+/** Same scale as the local machine's verdict in Settings › Resources. */
+export type HostVerdict = "room" | "tight" | "critical";
+
+// Memory decides: agents are memory-bound, and a 5 s CPU spike from a build
+// says little about room for one more.
+const MEMORY_TIGHT_SHARE = 0.75;
+const MEMORY_CRITICAL_SHARE = 0.9;
+const SWAP_TIGHT_SHARE = 0.75;
+const CPU_TIGHT_SHARE = 0.9;
 
 const GIB = 1024 ** 3;
 
@@ -28,12 +35,33 @@ export function getHostLoad(metrics: HostMetrics): HostLoad {
 	};
 }
 
-export function isHotShare(value: number | null): boolean {
-	return value !== null && value >= HOST_LOAD_HOT_SHARE;
+/** Can the host take another agent right now? */
+export function getHostVerdict(load: HostLoad): HostVerdict {
+	if (load.memory >= MEMORY_CRITICAL_SHARE) return "critical";
+	if (
+		load.memory >= MEMORY_TIGHT_SHARE ||
+		(load.swap ?? 0) >= SWAP_TIGHT_SHARE ||
+		(load.cpu ?? 0) >= CPU_TIGHT_SHARE
+	) {
+		return "tight";
+	}
+	return "room";
 }
 
-export function isHostHot(load: HostLoad): boolean {
-	return isHotShare(load.cpu) || isHotShare(load.memory);
+const VERDICT_RANK: Record<HostVerdict, number> = {
+	room: 0,
+	tight: 1,
+	critical: 2,
+};
+
+export function worstVerdict(verdicts: HostVerdict[]): HostVerdict | null {
+	return verdicts.reduce<HostVerdict | null>(
+		(worst, verdict) =>
+			worst === null || VERDICT_RANK[verdict] > VERDICT_RANK[worst]
+				? verdict
+				: worst,
+		null,
+	);
 }
 
 export function toGigabytes(bytes: number): number {

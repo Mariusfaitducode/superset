@@ -57,3 +57,22 @@ export function parseVmStatAvailableBytes(text: string): number | null {
 	}
 	return found ? pages * Number(pageSize) : null;
 }
+
+const SWAP_UNIT_BYTES: Record<string, number> = {
+	K: KIB,
+	M: KIB ** 2,
+	G: KIB ** 3,
+};
+
+/** Reads macOS `sysctl vm.swapusage`: "total = 19456.00M  used = 17865.88M …". */
+export function parseSwapUsage(text: string): MemoryReading["swap"] {
+	const read = (key: string) => {
+		const match = new RegExp(`${key} = ([\\d.]+)([KMG])`).exec(text);
+		const unit = match?.[2] ? SWAP_UNIT_BYTES[match[2]] : undefined;
+		return match?.[1] && unit ? Number(match[1]) * unit : null;
+	};
+	const totalBytes = read("total");
+	const usedBytes = read("used");
+	if (!totalBytes || usedBytes === null) return null;
+	return { totalBytes, usedBytes: Math.min(usedBytes, totalBytes) };
+}

@@ -111,7 +111,8 @@ msgstr "{0, plural, one {# actieve poort — details tonen} other {# actieve poo
 msgid "{0, plural, one {# agent needs you} other {# agents need you}}"
 msgstr "{0, plural, one {# agent heeft je nodig} other {# agents hebben je nodig}}"
 
-#. placeholder {0}: metrics.agents.active
+#. placeholder {0}: data.metrics.agents
+#. placeholder {0}: metrics.agents
 #. placeholder {0}: person.runningAgentCount
 msgid "{0, plural, one {# agent} other {# agents}}"
 msgstr "{0, plural, one {# agent} other {# agents}}"
@@ -5300,9 +5301,6 @@ msgstr "Kopieer je sleutel nu — je kunt hem later niet meer zien."
 msgid "Copyright or trademark"
 msgstr "Auteursrecht of handelsmerk"
 
-msgid "Cores"
-msgstr "Kernen"
-
 msgid "Corrections"
 msgstr "Correcties"
 
@@ -5480,6 +5478,9 @@ msgstr "Kan de server niet bereiken."
 
 msgid "Could not reach the workspace host"
 msgstr "Kan de werkruimte-host niet bereiken"
+
+msgid "Could not reach this host."
+msgstr "Kan deze host niet bereiken."
 
 msgid "Could not reach this workspace's machine"
 msgstr "Kan de machine van deze werkruimte niet bereiken"
@@ -8609,6 +8610,9 @@ msgstr "Volledig zelfrijdend"
 msgid "Full source available on GitHub under Elastic License 2.0 (ELv2). Inspect, audit, and contribute to the code. No black boxes, no hidden functionality."
 msgstr "Volledige broncode beschikbaar op GitHub onder Elastic License 2.0 (ELv2). Bekijk, audit en draag bij aan de code. Geen black boxes, geen verborgen functionaliteit."
 
+msgid "Full: close agents before starting another"
+msgstr "Vol: sluit agents voordat je een nieuwe start"
+
 msgid "Future home for reusable agent configs."
 msgstr "Toekomstige plek voor herbruikbare agentconfiguraties."
 
@@ -10489,9 +10493,6 @@ msgstr "Nog {PAGE_SIZE} commits laden"
 
 msgid "load agent settings"
 msgstr "agentinstellingen laden"
-
-msgid "Load average"
-msgstr "Gemiddelde belasting"
 
 msgid "Load diff"
 msgstr "Diff laden"
@@ -19389,6 +19390,9 @@ msgstr "Ticket: {0}"
 
 msgid "Tier"
 msgstr "Tier"
+
+msgid "Tight: close idle agents before starting another"
+msgstr "Krap: sluit inactieve agents voordat je een nieuwe start"
 
 msgid "Time"
 msgstr "Tijd"

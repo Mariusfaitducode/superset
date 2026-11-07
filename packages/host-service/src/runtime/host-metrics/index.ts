@@ -5,5 +5,9 @@ export {
 	type HostMetricsWorkspace,
 	readHostMetrics,
 } from "./host-metrics.ts";
-export { parseMeminfo, parseVmStatAvailableBytes } from "./memory.ts";
+export {
+	parseMeminfo,
+	parseSwapUsage,
+	parseVmStatAvailableBytes,
+} from "./memory.ts";
 export { parseProcessTable, subtreeRssBytes } from "./process-table.ts";

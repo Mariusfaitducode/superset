@@ -4,9 +4,11 @@ import { Popover, PopoverContent, PopoverTrigger } from "@superset/ui/popover";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@superset/ui/tooltip";
 import { useState } from "react";
 import { LuServer } from "react-icons/lu";
+import { VERDICT_TONE } from "renderer/components/HostMetricsDetails";
 import {
 	getHostLoad,
-	isHostHot,
+	getHostVerdict,
+	worstVerdict,
 } from "renderer/hooks/host-service/useHostMetrics";
 import { HostLoadBars } from "./components/HostLoadBars";
 import { HostMonitorHost } from "./components/HostMonitorHost";
@@ -21,7 +23,7 @@ interface HostMonitorProps {
 
 /**
  * Live load of the remote hosts this window can reach. Renders nothing when
- * no remote host is online; this machine has its own resource monitor.
+ * no remote host is online; this machine has Settings › Resources.
  */
 export function HostMonitor({
 	variant = "compact",
@@ -37,7 +39,9 @@ export function HostMonitor({
 		const metrics = host.result?.status === "ok" ? host.result.metrics : null;
 		return { host, metrics, load: metrics ? getHostLoad(metrics) : null };
 	});
-	const anyHot = entries.some((entry) => entry.load && isHostHot(entry.load));
+	const worst = worstVerdict(
+		entries.flatMap(({ load }) => (load ? [getHostVerdict(load)] : [])),
+	);
 
 	return (
 		<Popover open={open} onOpenChange={setOpen}>
@@ -49,7 +53,7 @@ export function HostMonitor({
 							aria-label={t({ message: "Remote host load" })}
 							className={cn(
 								"no-drag flex h-7 items-center gap-1.5 rounded-md px-1.5 text-[11px] text-muted-foreground transition-colors hover:bg-fill-hover hover:text-foreground data-[state=open]:bg-fill-hover data-[state=open]:text-foreground",
-								anyHot && "text-red-500",
+								worst && worst !== "room" && VERDICT_TONE[worst].text,
 							)}
 						>
 							<LuServer className="size-3.5 shrink-0" />

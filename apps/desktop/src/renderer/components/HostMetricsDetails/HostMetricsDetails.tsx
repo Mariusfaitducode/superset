@@ -1,60 +1,57 @@
-import { useLingui } from "@lingui/react/macro";
+import { Plural, useLingui } from "@lingui/react/macro";
 import { useFormat } from "@superset/i18n/react";
+import { cn } from "@superset/ui/lib/utils";
 import {
 	getHostLoad,
+	getHostVerdict,
 	type HostMetrics,
+	type HostVerdict,
 	toGigabytes,
 } from "renderer/hooks/host-service/useHostMetrics";
 import { MetricMeter } from "./components/MetricMeter";
 import { TopWorkspacesList } from "./components/TopWorkspacesList";
+import { VERDICT_TONE } from "./verdictTone";
 
 interface HostMetricsDetailsProps {
 	metrics: HostMetrics;
+	/** Called before opening one of the listed workspaces. */
+	onNavigate?: () => void;
 }
 
-const SECONDS_PER_HOUR = 3600;
-const SECONDS_PER_DAY = 86_400;
-
-export function HostMetricsDetails({ metrics }: HostMetricsDetailsProps) {
+/** "Can this host take another agent?", then what backs the answer. */
+export function HostMetricsDetails({
+	metrics,
+	onNavigate,
+}: HostMetricsDetailsProps) {
 	const { t } = useLingui();
 	const { formatNumber, formatPercent } = useFormat();
 	const load = getHostLoad(metrics);
+	const verdict = getHostVerdict(load);
+	const tone = VERDICT_TONE[verdict];
 
-	const gigabytes = (bytes: number) =>
-		formatNumber(toGigabytes(bytes), { maximumFractionDigits: 1 });
+	const headline: Record<HostVerdict, string> = {
+		room: t({ message: "Room for another agent" }),
+		tight: t({ message: "Tight: close idle agents before starting another" }),
+		critical: t({ message: "Full: close agents before starting another" }),
+	};
 	const usedOfTotal = (used: number, total: number) =>
-		`${gigabytes(used)} / ${formatNumber(toGigabytes(total), {
-			style: "unit",
-			unit: "gigabyte",
-			maximumFractionDigits: 0,
-		})}`;
-	const uptime =
-		metrics.uptimeSeconds >= SECONDS_PER_DAY
-			? formatNumber(Math.floor(metrics.uptimeSeconds / SECONDS_PER_DAY), {
-					style: "unit",
-					unit: "day",
-					unitDisplay: "long",
-				})
-			: formatNumber(Math.floor(metrics.uptimeSeconds / SECONDS_PER_HOUR), {
-					style: "unit",
-					unit: "hour",
-					unitDisplay: "long",
-				});
-	const loadAverage = metrics.cpu.loadAverage
-		.map((value) => formatNumber(value, { maximumFractionDigits: 1 }))
-		.join(" · ");
-	const cores = metrics.cpu.cores;
-	const agents = metrics.agents.active;
-	const terminals = metrics.terminals?.live ?? null;
+		`${formatNumber(toGigabytes(used), { maximumFractionDigits: 1 })} / ${formatNumber(
+			toGigabytes(total),
+			{ style: "unit", unit: "gigabyte", maximumFractionDigits: 0 },
+		)}`;
 
 	return (
 		<div className="space-y-3">
+			<div className="flex items-center gap-2 text-xs">
+				<span className={cn("size-2 shrink-0 rounded-full", tone.dot)} />
+				<span className={cn("min-w-0 flex-1 font-medium", tone.text)}>
+					{headline[verdict]}
+				</span>
+				<span className="shrink-0 tabular-nums text-muted-foreground">
+					<Plural value={metrics.agents} one="# agent" other="# agents" />
+				</span>
+			</div>
 			<div className="space-y-2.5">
-				<MetricMeter
-					label={t({ message: "CPU" })}
-					value={load.cpu === null ? "—" : formatPercent(load.cpu)}
-					share={load.cpu}
-				/>
 				<MetricMeter
 					label={t({ message: "Memory" })}
 					value={usedOfTotal(
@@ -70,32 +67,16 @@ export function HostMetricsDetails({ metrics }: HostMetricsDetailsProps) {
 						share={load.swap}
 					/>
 				)}
+				<MetricMeter
+					label={t({ message: "CPU" })}
+					value={load.cpu === null ? "—" : formatPercent(load.cpu)}
+					share={load.cpu}
+				/>
 			</div>
-
-			<dl className="grid grid-cols-2 gap-x-4 gap-y-1 text-xs">
-				<dt className="text-muted-foreground">{t({ message: "Agents" })}</dt>
-				<dd className="text-right tabular-nums">{formatNumber(agents)}</dd>
-				{terminals !== null && (
-					<>
-						<dt className="text-muted-foreground">
-							{t({ message: "Terminals" })}
-						</dt>
-						<dd className="text-right tabular-nums">
-							{formatNumber(terminals)}
-						</dd>
-					</>
-				)}
-				<dt className="text-muted-foreground">
-					{t({ message: "Load average" })}
-				</dt>
-				<dd className="text-right tabular-nums">{loadAverage}</dd>
-				<dt className="text-muted-foreground">{t({ message: "Cores" })}</dt>
-				<dd className="text-right tabular-nums">{formatNumber(cores)}</dd>
-				<dt className="text-muted-foreground">{t({ message: "Uptime" })}</dt>
-				<dd className="text-right tabular-nums">{uptime}</dd>
-			</dl>
-
-			<TopWorkspacesList workspaces={metrics.topWorkspaces} />
+			<TopWorkspacesList
+				workspaces={metrics.topWorkspaces}
+				onNavigate={onNavigate}
+			/>
 		</div>
 	);
 }

@@ -15,6 +15,7 @@ import { type CpuTimesSample, cpuBusyPercent, sumCpuTimes } from "./cpu.ts";
 import {
 	type MemoryReading,
 	parseMeminfo,
+	parseSwapUsage,
 	parseVmStatAvailableBytes,
 } from "./memory.ts";
 import {
@@ -33,28 +34,18 @@ export interface HostMetricsWorkspace {
 	workspaceId: string;
 	label: string | null;
 	memoryBytes: number;
-	terminals: number;
 }
 
 export interface HostMetrics {
 	sampledAt: number;
-	hostname: string;
-	platform: NodeJS.Platform;
-	arch: string;
-	release: string;
-	uptimeSeconds: number;
 	cpu: {
-		cores: number;
-		model: string | null;
 		/** Busy share of all cores since the previous sample, 0–100. */
 		usagePercent: number | null;
-		loadAverage: [number, number, number];
 	};
 	memory: { totalBytes: number; usedBytes: number; availableBytes: number };
 	swap: { totalBytes: number; usedBytes: number } | null;
-	agents: { active: number; subagents: number };
-	/** Null when the terminal daemon did not answer. */
-	terminals: { live: number } | null;
+	/** Agents whose session has not ended. */
+	agents: number;
 	/** Workspaces by terminal memory (process subtree RSS), largest first. */
 	topWorkspaces: HostMetricsWorkspace[];
 }
@@ -64,10 +55,7 @@ export interface HostMetricsSources {
 	cpuTimes(): CpuTimesSample;
 	readMemory(): Promise<MemoryReading>;
 	readProcessTable(): Promise<ProcessTable | null>;
-	listSessions(): Promise<{
-		live: number;
-		sessions: TerminalResourceSession[];
-	} | null>;
+	listSessions(): Promise<TerminalResourceSession[]>;
 	workspaceLabels(ids: string[]): Map<string, string>;
 	listAgents(): TerminalAgentBinding[];
 }
@@ -107,38 +95,18 @@ export function createHostMetricsCollector(
 			sources.readProcessTable().catch(() => null),
 			sources.listSessions().catch(() => null),
 		]);
-		const agents = sources.listAgents().filter((agent) => !agent.endedAt);
-		const cpus = os.cpus();
-		const [load1 = 0, load5 = 0, load15 = 0] = os.loadavg();
 		return {
 			sampledAt: sources.now(),
-			hostname: os.hostname(),
-			platform: os.platform(),
-			arch: os.arch(),
-			release: os.release(),
-			uptimeSeconds: Math.round(os.uptime()),
-			cpu: {
-				cores: cpus.length,
-				model: cpus[0]?.model.trim() || null,
-				usagePercent,
-				loadAverage: [load1, load5, load15],
-			},
+			cpu: { usagePercent },
 			memory: {
 				totalBytes: memory.totalBytes,
 				availableBytes: memory.availableBytes,
 				usedBytes: Math.max(0, memory.totalBytes - memory.availableBytes),
 			},
 			swap: memory.swap,
-			agents: {
-				active: agents.length,
-				subagents: agents.reduce(
-					(count, agent) => count + (agent.subagents?.length ?? 0),
-					0,
-				),
-			},
-			terminals: sessions ? { live: sessions.live } : null,
+			agents: sources.listAgents().filter((agent) => !agent.endedAt).length,
 			topWorkspaces: sessions
-				? rankWorkspaces(sessions.sessions, processTable, sources)
+				? rankWorkspaces(sessions, processTable, sources)
 				: [],
 		};
 	}
@@ -162,31 +130,24 @@ function rankWorkspaces(
 	processTable: ProcessTable | null,
 	sources: Pick<HostMetricsSources, "workspaceLabels">,
 ): HostMetricsWorkspace[] {
-	const byWorkspace = new Map<
-		string,
-		{ memoryBytes: number; terminals: number }
-	>();
+	const byWorkspace = new Map<string, number>();
 	for (const session of sessions) {
-		const entry = byWorkspace.get(session.workspaceId) ?? {
-			memoryBytes: 0,
-			terminals: 0,
-		};
-		entry.terminals += 1;
-		if (processTable)
-			entry.memoryBytes += subtreeRssBytes(processTable, session.pid);
-		byWorkspace.set(session.workspaceId, entry);
+		const memoryBytes = processTable
+			? subtreeRssBytes(processTable, session.pid)
+			: 0;
+		byWorkspace.set(
+			session.workspaceId,
+			(byWorkspace.get(session.workspaceId) ?? 0) + memoryBytes,
+		);
 	}
 	const ranked = [...byWorkspace.entries()]
-		.sort(
-			([, a], [, b]) =>
-				b.memoryBytes - a.memoryBytes || b.terminals - a.terminals,
-		)
+		.sort(([, a], [, b]) => b - a)
 		.slice(0, TOP_WORKSPACE_COUNT);
 	const labels = sources.workspaceLabels(ranked.map(([id]) => id));
-	return ranked.map(([workspaceId, entry]) => ({
+	return ranked.map(([workspaceId, memoryBytes]) => ({
 		workspaceId,
 		label: labels.get(workspaceId) ?? null,
-		...entry,
+		memoryBytes,
 	}));
 }
 
@@ -199,16 +160,21 @@ async function readSystemMemory(): Promise<MemoryReading> {
 		if (parsed) return parsed;
 	}
 	if (os.platform() === "darwin") {
-		const available = await execFileAsync("vm_stat", [], {
-			timeout: EXEC_TIMEOUT_MS,
-		})
-			.then(({ stdout }) => parseVmStatAvailableBytes(stdout))
-			.catch(() => null);
+		const [available, swap] = await Promise.all([
+			execFileAsync("vm_stat", [], { timeout: EXEC_TIMEOUT_MS })
+				.then(({ stdout }) => parseVmStatAvailableBytes(stdout))
+				.catch(() => null),
+			execFileAsync("sysctl", ["-n", "vm.swapusage"], {
+				timeout: EXEC_TIMEOUT_MS,
+			})
+				.then(({ stdout }) => parseSwapUsage(stdout))
+				.catch(() => null),
+		]);
 		if (available !== null) {
 			return {
 				totalBytes,
 				availableBytes: Math.min(available, totalBytes),
-				swap: null,
+				swap,
 			};
 		}
 	}
@@ -245,13 +211,11 @@ export function readHostMetrics(args: {
 			cpuTimes: () => sumCpuTimes(os.cpus()),
 			readMemory: readSystemMemory,
 			readProcessTable: readSystemProcessTable,
-			listSessions: async () => {
-				const daemonSessions = await (await getDaemonClient()).list();
-				return {
-					live: daemonSessions.filter((session) => session.alive).length,
-					sessions: listTerminalResourceSessions(db, daemonSessions),
-				};
-			},
+			listSessions: async () =>
+				listTerminalResourceSessions(
+					db,
+					await (await getDaemonClient()).list(),
+				),
 			workspaceLabels: (ids) => {
 				if (ids.length === 0) return new Map();
 				const rows = db

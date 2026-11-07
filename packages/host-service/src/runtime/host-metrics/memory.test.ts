@@ -1,5 +1,9 @@
 import { describe, expect, test } from "bun:test";
-import { parseMeminfo, parseVmStatAvailableBytes } from "./memory";
+import {
+	parseMeminfo,
+	parseSwapUsage,
+	parseVmStatAvailableBytes,
+} from "./memory";
 
 const KIB = 1024;
 
@@ -61,5 +65,25 @@ describe("parseVmStatAvailableBytes", () => {
 
 	test("output without a page size is not a reading", () => {
 		expect(parseVmStatAvailableBytes("Pages free: 10.")).toBeNull();
+	});
+});
+
+describe("parseSwapUsage", () => {
+	test("reads total and used from sysctl vm.swapusage", () => {
+		expect(
+			parseSwapUsage(
+				"total = 19456.00M  used = 17865.88M  free = 1590.12M  (encrypted)",
+			),
+		).toEqual({
+			totalBytes: 19456 * 1024 ** 2,
+			usedBytes: 17865.88 * 1024 ** 2,
+		});
+	});
+
+	test("no swap file is no swap", () => {
+		expect(
+			parseSwapUsage("total = 0.00M  used = 0.00M  free = 0.00M"),
+		).toBeNull();
+		expect(parseSwapUsage("")).toBeNull();
 	});
 });
