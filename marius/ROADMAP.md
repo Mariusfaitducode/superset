@@ -15,6 +15,7 @@ Kept by the agents working on this fork and read on every Mac. Updated at each s
 
 ## Backlog
 
+- **Hosts tab** (`feature/hosts-tab`, 2026-11-07): every SSH host in one place, like `herdr --remote` but all hosts at once. Step 1 (this PR): a host switcher at the top of the sidebar (All, this device, then each host with online dot and agents working / waiting for you / idle), the choice filters projects and sessions and is persisted, "+" opens the existing "Set up a host over SSH" dialog. Step 2 (#38, `feature/hosts-page`, stacked on #37): a Hosts page with every agent of a host grouped by workspace (open, stop, new agent or terminal, Wake when offline). Test build: `./marius/install-from-ci.sh build/hosts-tab`. Next: the load from #28 `host.metrics` in the host header once merged.
 - **Background task card**: a card on the conversation that says what the agent is doing and how far it is, with a progress bar. The agent updates it, the same way as to-dos. First use: following a prototype's disk cleanup instead of polling Grafana by hand. A metric curve can come later.
 - **Test build `build/next` (2026-10-22)**: `marius/main` + #9, #10, #11, #12, #13, #14, #15, #16, #17. Fork CI and Fork build green on 176b4f7c15. Waiting for Marius's test; nothing merged.
 - **PR view** (#14, `feature/pr-view`): "Mine" tab on the Pull Requests page, waiting on me / on others, CI, reviews, conflicts, link to the PR's conversation or workspace. Fixes "no GitHub remote" when the remote URL holds a token. In build/next, to test.

@@ -17,15 +17,13 @@ export function matchesHostFilter(
 
 function filterChildren(
 	children: DashboardSidebarProjectChild[],
-	filter: Exclude<SidebarProjectHostFilter, "all">,
+	keep: (workspace: DashboardSidebarWorkspace) => boolean,
 ): DashboardSidebarProjectChild[] {
 	return children.flatMap((child): DashboardSidebarProjectChild[] => {
 		if (child.type === "workspace") {
-			return matchesHostFilter(child.workspace, filter) ? [child] : [];
+			return keep(child.workspace) ? [child] : [];
 		}
-		const workspaces = child.section.workspaces.filter((workspace) =>
-			matchesHostFilter(workspace, filter),
-		);
+		const workspaces = child.section.workspaces.filter(keep);
 		if (workspaces.length === 0) return [];
 		if (sameItems(workspaces, child.section.workspaces)) return [child];
 		return [{ type: "section", section: { ...child.section, workspaces } }];
@@ -49,7 +47,34 @@ export function filterDashboardSidebarProjectsByHost(
 	return projects.flatMap((project): DashboardSidebarProject[] => {
 		if (project.children.length === 0)
 			return filter === "local" ? [project] : [];
-		const children = filterChildren(project.children, filter);
+		const children = filterChildren(project.children, (workspace) =>
+			matchesHostFilter(workspace, filter),
+		);
+		if (children.length === 0) return [];
+		if (sameItems(children, project.children)) return [project];
+		return [{ ...project, children }];
+	});
+}
+
+/**
+ * Keeps only the rows on the host `machineId`, with the same identity and
+ * collapse rules as `filterDashboardSidebarProjectsByHost`. A project with no
+ * rows at all stays only under this device, where its "+" creates rows.
+ */
+export function filterDashboardSidebarProjectsByMachine(
+	projects: DashboardSidebarProject[],
+	machineId: string | null,
+	localMachineId: string | null,
+): DashboardSidebarProject[] {
+	if (machineId === null) return projects;
+
+	return projects.flatMap((project): DashboardSidebarProject[] => {
+		if (project.children.length === 0)
+			return machineId === localMachineId ? [project] : [];
+		const children = filterChildren(
+			project.children,
+			(workspace) => workspace.hostId === machineId,
+		);
 		if (children.length === 0) return [];
 		if (sameItems(children, project.children)) return [project];
 		return [{ ...project, children }];

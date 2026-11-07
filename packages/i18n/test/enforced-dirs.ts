@@ -10,6 +10,7 @@ export const ENFORCED_DIRS: readonly string[] = [
 	// rewrote most of its copy, and converting the new strings is deferred to
 	// a dedicated i18n pass. Re-add once that lands.
 	"apps/desktop/src/renderer/routes/_authenticated/_dashboard/components",
+	"apps/desktop/src/renderer/routes/_authenticated/_dashboard/hosts",
 	"apps/desktop/src/renderer/routes/_authenticated/_dashboard/new-workspace",
 	"apps/desktop/src/renderer/routes/_authenticated/_dashboard/pages",
 	"apps/desktop/src/renderer/routes/_authenticated/_dashboard/plugins",
@@ -18,6 +19,7 @@ export const ENFORCED_DIRS: readonly string[] = [
 	"apps/desktop/src/renderer/routes/_authenticated/_dashboard/tasks",
 	"apps/desktop/src/renderer/routes/_authenticated/_dashboard/v2-workspaces",
 	"apps/desktop/src/renderer/routes/_authenticated/components/DashboardNewWorkspaceModal",
+	"apps/desktop/src/renderer/routes/_authenticated/components/SetUpOverSshDialog",
 	// settings — everything except `project/` ($projectId), the v1 counterpart
 	// of v2-project that dies with the v1 sunset.
 	"apps/desktop/src/renderer/routes/_authenticated/settings/account",

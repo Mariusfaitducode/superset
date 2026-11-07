@@ -1029,6 +1029,9 @@ msgstr "{hidden, plural, one {View # more reply} other {View # more replies}}"
 msgid "{hiddenCount, plural, one {Show # more frame} other {Show # more frames}}"
 msgstr "{hiddenCount, plural, one {Show # more frame} other {Show # more frames}}"
 
+msgid "{hostName} (this device)"
+msgstr "{hostName} (this device)"
+
 msgid "{hostName} is offline"
 msgstr "{hostName} is offline"
 
@@ -1344,6 +1347,9 @@ msgstr "{used} used"
 msgid "{waiting} Waiting"
 msgstr "{waiting} Waiting"
 
+msgid "{working} working · {needsYou} waiting for you · {idle} idle"
+msgstr "{working} working · {needsYou} waiting for you · {idle} idle"
+
 msgid "{workspaceName}: host is unavailable"
 msgstr "{workspaceName}: host is unavailable"
 
@@ -1417,6 +1423,9 @@ msgstr "+{hiddenCount} earlier"
 
 msgid "+{remainingCount} more"
 msgstr "+{remainingCount} more"
+
+msgid "+{subagentCount} subagents"
+msgstr "+{subagentCount} subagents"
 
 #. placeholder {0}: paths[0]?.split("/").pop()
 msgid "<0>{0}</0> is not a git repository. Would you like to initialize one?"
@@ -4778,6 +4787,9 @@ msgstr "Configure workspace run command"
 msgid "Confirm before quitting"
 msgstr "Confirm before quitting"
 
+msgid "Confirm stop"
+msgstr "Confirm stop"
+
 msgid "Conflicts"
 msgstr "Conflicts"
 
@@ -5716,6 +5728,9 @@ msgstr "Couldn't merge pull request"
 msgid "Couldn't name \"{name}\" automatically"
 msgstr "Couldn't name \"{name}\" automatically"
 
+msgid "Couldn't open a terminal"
+msgstr "Couldn't open a terminal"
+
 msgid "Couldn't parse this diff: {patchParseError}"
 msgstr "Couldn't parse this diff: {patchParseError}"
 
@@ -5818,11 +5833,17 @@ msgstr "Couldn't start cloud workspace"
 msgid "Couldn't start design mode on this page"
 msgstr "Couldn't start design mode on this page"
 
+msgid "Couldn't start the agent"
+msgstr "Couldn't start the agent"
+
 msgid "Couldn't start voice mode"
 msgstr "Couldn't start voice mode"
 
 msgid "Couldn't start workspace"
 msgstr "Couldn't start workspace"
+
+msgid "Couldn't stop the agent"
+msgstr "Couldn't stop the agent"
 
 msgid "Couldn't stop the agent's terminal"
 msgstr "Couldn't stop the agent's terminal"
@@ -7415,6 +7436,12 @@ msgstr "Every Friday at 4pm, draft release notes from this week's merged PRs."
 
 msgid "Every Friday at 5:00 PM"
 msgstr "Every Friday at 5:00 PM"
+
+msgid "Every host"
+msgstr "Every host"
+
+msgid "Every machine you reach, with the agents running on it."
+msgstr "Every machine you reach, with the agents running on it."
 
 msgid "Every minute"
 msgstr "Every minute"
@@ -11484,6 +11511,9 @@ msgstr "New agent"
 msgid "New agent launches use this account. Relaunch a running agent to switch it."
 msgstr "New agent launches use this account. Relaunch a running agent to switch it."
 
+msgid "New agent or terminal"
+msgstr "New agent or terminal"
+
 msgid "New agent session"
 msgstr "New agent session"
 
@@ -11718,6 +11748,9 @@ msgstr "No agent conversations yet."
 
 msgid "No agent is configured on this host"
 msgstr "No agent is configured on this host"
+
+msgid "No agent is running on this host."
+msgstr "No agent is running on this host."
 
 msgid "No agent running"
 msgstr "No agent running"
@@ -12328,6 +12361,9 @@ msgstr "No versions yet."
 msgid "No workspace has these labels"
 msgstr "No workspace has these labels"
 
+msgid "No workspace on this host yet."
+msgstr "No workspace on this host yet."
+
 msgid "No workspace run command configured"
 msgstr "No workspace run command configured"
 
@@ -12348,6 +12384,9 @@ msgstr "No workspaces match your search"
 
 msgid "No workspaces match."
 msgstr "No workspaces match."
+
+msgid "No workspaces on {selectedHostName}"
+msgstr "No workspaces on {selectedHostName}"
 
 msgid "No workspaces on this host yet"
 msgstr "No workspaces on this host yet"
@@ -13276,12 +13315,18 @@ msgstr "Open the Changes pane in a new tab, or focus the existing one"
 msgid "Open the cloud workspaces"
 msgstr "Open the cloud workspaces"
 
+msgid "Open the conversation"
+msgstr "Open the conversation"
+
 #. placeholder {0}: task.title
 msgid "Open the conversation of {0}"
 msgstr "Open the conversation of {0}"
 
 msgid "Open the global command palette"
 msgstr "Open the global command palette"
+
+msgid "Open the hosts page"
+msgstr "Open the hosts page"
 
 msgid "Open the list of projects"
 msgstr "Open the list of projects"
@@ -15950,6 +15995,9 @@ msgstr "Runs on a device you choose"
 
 msgid "Runs that started their workspace in the last 7 days"
 msgstr "Runs that started their workspace in the last 7 days"
+
+msgid "Runs the host's wake command on this machine. The host shows as online once it is back."
+msgstr "Runs the host's wake command on this machine. The host shows as online once it is back."
 
 msgid "Runs when a new workspace is created."
 msgstr "Runs when a new workspace is created."
@@ -18751,6 +18799,9 @@ msgstr "The future home for reusable Superset agent configs, prompts, and setup 
 msgid "The host came back on {0}, not {targetVersion}."
 msgstr "The host came back on {0}, not {targetVersion}."
 
+msgid "The host could not be woken. The reason is in the output below."
+msgstr "The host could not be woken. The reason is in the output below."
+
 msgid "The host did not come back within fifteen minutes."
 msgstr "The host did not come back within fifteen minutes."
 
@@ -18943,6 +18994,9 @@ msgstr "The turn failed"
 msgid "The turn stopped on an error, or the sandbox is down"
 msgstr "The turn stopped on an error, or the sandbox is down"
 
+msgid "The wake command ran. The host may take a minute to come online."
+msgstr "The wake command ran. The host may take a minute to come online."
+
 msgid "The workspace is not ready yet. Try again."
 msgstr "The workspace is not ready yet. Try again."
 
@@ -19117,6 +19171,9 @@ msgstr "This host has not reported a version yet."
 
 msgid "This host is behind the app you are using. Workspaces still open, but newer features may fail on it."
 msgstr "This host is behind the app you are using. Workspaces still open, but newer features may fail on it."
+
+msgid "This host is offline, so its agents can't be read or started. The workspaces below are the last ones it reported."
+msgstr "This host is offline, so its agents can't be read or started. The workspaces below are the last ones it reported."
 
 msgid "This host is too old to keep to-dos."
 msgstr "This host is too old to keep to-dos."
@@ -20504,6 +20561,12 @@ msgstr "Waiting since {waitingSince}"
 msgid "Waiting tint"
 msgstr "Waiting tint"
 
+msgid "Wake"
+msgstr "Wake"
+
+msgid "Wake {hostName}"
+msgstr "Wake {hostName}"
+
 msgid "Waking up workspace"
 msgstr "Waking up workspace"
 
@@ -21000,6 +21063,9 @@ msgstr "Workspaces on this device will show up here."
 
 msgid "Workspaces started from this environment will stop receiving it."
 msgstr "Workspaces started from this environment will stop receiving it."
+
+msgid "Workspaces without agents ({quietCount})"
+msgstr "Workspaces without agents ({quietCount})"
 
 msgid "worktree"
 msgstr "worktree"

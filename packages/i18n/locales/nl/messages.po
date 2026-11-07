@@ -1029,6 +1029,9 @@ msgstr "{hidden, plural, one {# reactie meer weergeven} other {# reacties meer w
 msgid "{hiddenCount, plural, one {Show # more frame} other {Show # more frames}}"
 msgstr "{hiddenCount, plural, one {# frame meer tonen} other {# frames meer tonen}}"
 
+msgid "{hostName} (this device)"
+msgstr "{hostName} (dit apparaat)"
+
 msgid "{hostName} is offline"
 msgstr "{hostName} is offline"
 
@@ -1344,6 +1347,9 @@ msgstr "{used} gebruikt"
 msgid "{waiting} Waiting"
 msgstr "{waiting} wachten"
 
+msgid "{working} working · {needsYou} waiting for you · {idle} idle"
+msgstr "{working} aan het werk · {needsYou} wachten op jou · {idle} inactief"
+
 msgid "{workspaceName}: host is unavailable"
 msgstr "{workspaceName}: host is niet beschikbaar"
 
@@ -1417,6 +1423,9 @@ msgstr "+{hiddenCount} eerder"
 
 msgid "+{remainingCount} more"
 msgstr "+{remainingCount} meer"
+
+msgid "+{subagentCount} subagents"
+msgstr "+{subagentCount} subagents"
 
 #. placeholder {0}: paths[0]?.split("/").pop()
 msgid "<0>{0}</0> is not a git repository. Would you like to initialize one?"
@@ -4778,6 +4787,9 @@ msgstr "Run-commando van werkruimte configureren"
 msgid "Confirm before quitting"
 msgstr "Bevestigen voor afsluiten"
 
+msgid "Confirm stop"
+msgstr "Stoppen bevestigen"
+
 msgid "Conflicts"
 msgstr "Conflicten"
 
@@ -5716,6 +5728,9 @@ msgstr "Kan pull request niet mergen"
 msgid "Couldn't name \"{name}\" automatically"
 msgstr "Kon \"{name}\" niet automatisch een naam geven"
 
+msgid "Couldn't open a terminal"
+msgstr "Kon geen terminal openen"
+
 msgid "Couldn't parse this diff: {patchParseError}"
 msgstr "Kan deze diff niet parsen: {patchParseError}"
 
@@ -5818,11 +5833,17 @@ msgstr "Kan cloudwerkruimte niet starten"
 msgid "Couldn't start design mode on this page"
 msgstr "Kan de designmodus niet starten op deze pagina"
 
+msgid "Couldn't start the agent"
+msgstr "Kon de agent niet starten"
+
 msgid "Couldn't start voice mode"
 msgstr "Spraakmodus kon niet worden gestart"
 
 msgid "Couldn't start workspace"
 msgstr "Kan werkruimte niet starten"
+
+msgid "Couldn't stop the agent"
+msgstr "Kon de agent niet stoppen"
 
 msgid "Couldn't stop the agent's terminal"
 msgstr "Kon de terminal van de agent niet stoppen"
@@ -7415,6 +7436,12 @@ msgstr "Elke vrijdag om 16.00 uur: stel release notes op uit de gemergede PR's v
 
 msgid "Every Friday at 5:00 PM"
 msgstr "Elke vrijdag om 17:00"
+
+msgid "Every host"
+msgstr "Alle hosts"
+
+msgid "Every machine you reach, with the agents running on it."
+msgstr "Elke machine die je bereikt, met de agents die erop draaien."
 
 msgid "Every minute"
 msgstr "Elke minuut"
@@ -11484,6 +11511,9 @@ msgstr "Nieuwe agent"
 msgid "New agent launches use this account. Relaunch a running agent to switch it."
 msgstr "Nieuwe agentstarts gebruiken dit account. Herstart een draaiende agent om te wisselen."
 
+msgid "New agent or terminal"
+msgstr "Nieuwe agent of terminal"
+
 msgid "New agent session"
 msgstr "Nieuwe agentsessie"
 
@@ -11718,6 +11748,9 @@ msgstr "Nog geen agentgesprekken."
 
 msgid "No agent is configured on this host"
 msgstr "Er is geen agent geconfigureerd op deze host"
+
+msgid "No agent is running on this host."
+msgstr "Er draait geen agent op deze host."
 
 msgid "No agent running"
 msgstr "Geen agent actief"
@@ -12328,6 +12361,9 @@ msgstr "Nog geen versies."
 msgid "No workspace has these labels"
 msgstr "Geen workspace heeft deze labels"
 
+msgid "No workspace on this host yet."
+msgstr "Nog geen workspace op deze host."
+
 msgid "No workspace run command configured"
 msgstr "Geen run-commando voor de werkruimte geconfigureerd"
 
@@ -12348,6 +12384,9 @@ msgstr "Geen werkruimtes komen overeen met je zoekopdracht"
 
 msgid "No workspaces match."
 msgstr "Geen overeenkomende werkruimtes."
+
+msgid "No workspaces on {selectedHostName}"
+msgstr "Geen workspaces op {selectedHostName}"
 
 msgid "No workspaces on this host yet"
 msgstr "Nog geen werkruimtes op deze host"
@@ -13276,12 +13315,18 @@ msgstr "Opent het wijzigingenpaneel in een nieuw tabblad, of focust het bestaand
 msgid "Open the cloud workspaces"
 msgstr "Opent de cloudworkspaces"
 
+msgid "Open the conversation"
+msgstr "Gesprek openen"
+
 #. placeholder {0}: task.title
 msgid "Open the conversation of {0}"
 msgstr "Gesprek van {0} openen"
 
 msgid "Open the global command palette"
 msgstr "Het globale opdrachtenpalet openen"
+
+msgid "Open the hosts page"
+msgstr "Hostspagina openen"
 
 msgid "Open the list of projects"
 msgstr "Opent de lijst met projecten"
@@ -15950,6 +15995,9 @@ msgstr "Draait op een apparaat naar keuze"
 
 msgid "Runs that started their workspace in the last 7 days"
 msgstr "Uitvoeringen die hun workspace in de afgelopen 7 dagen hebben gestart"
+
+msgid "Runs the host's wake command on this machine. The host shows as online once it is back."
+msgstr "Voert het wekcommando van de host uit op deze machine. De host verschijnt online zodra hij terug is."
 
 msgid "Runs when a new workspace is created."
 msgstr "Wordt uitgevoerd bij het aanmaken van een werkruimte."
@@ -18751,6 +18799,9 @@ msgstr "De toekomstige plek voor herbruikbare Superset-agentconfigs, prompts en 
 msgid "The host came back on {0}, not {targetVersion}."
 msgstr "De host kwam terug op {0}, niet op {targetVersion}."
 
+msgid "The host could not be woken. The reason is in the output below."
+msgstr "De host kon niet worden gewekt. De reden staat in de uitvoer hieronder."
+
 msgid "The host did not come back within fifteen minutes."
 msgstr "De host was na vijftien minuten nog niet terug."
 
@@ -18943,6 +18994,9 @@ msgstr "De beurt is mislukt"
 msgid "The turn stopped on an error, or the sandbox is down"
 msgstr "De beurt is gestopt door een fout, of de sandbox ligt eruit"
 
+msgid "The wake command ran. The host may take a minute to come online."
+msgstr "Het wekcommando is uitgevoerd. Het kan een minuut duren voor de host online is."
+
 msgid "The workspace is not ready yet. Try again."
 msgstr "De werkruimte is nog niet klaar. Probeer het opnieuw."
 
@@ -19117,6 +19171,9 @@ msgstr "Deze host heeft nog geen versie gemeld."
 
 msgid "This host is behind the app you are using. Workspaces still open, but newer features may fail on it."
 msgstr "Deze host loopt achter op de app die je gebruikt. Werkruimtes openen nog, maar nieuwere functies kunnen erop mislukken."
+
+msgid "This host is offline, so its agents can't be read or started. The workspaces below are the last ones it reported."
+msgstr "Deze host is offline, dus de agents kunnen niet worden gelezen of gestart. De workspaces hieronder zijn de laatst gemelde."
 
 msgid "This host is too old to keep to-dos."
 msgstr "Deze host is te oud om to-do's te bewaren."
@@ -20504,6 +20561,12 @@ msgstr "Wacht sinds {waitingSince}"
 msgid "Waiting tint"
 msgstr "Wachtkleur"
 
+msgid "Wake"
+msgstr "Wekken"
+
+msgid "Wake {hostName}"
+msgstr "{hostName} wekken"
+
 msgid "Waking up workspace"
 msgstr "Werkruimte wordt gewekt"
 
@@ -21000,6 +21063,9 @@ msgstr "Werkruimtes op dit apparaat verschijnen hier."
 
 msgid "Workspaces started from this environment will stop receiving it."
 msgstr "Workspaces die vanuit deze omgeving starten, ontvangen deze niet meer."
+
+msgid "Workspaces without agents ({quietCount})"
+msgstr "Workspaces zonder agents ({quietCount})"
 
 msgid "worktree"
 msgstr "worktree"

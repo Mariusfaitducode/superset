@@ -10,12 +10,12 @@ import { useMemo, useState } from "react";
 import { useAppVersion } from "renderer/hooks/host-version/useHostVersionState";
 import { useKnownHosts } from "renderer/hooks/known-hosts/useKnownHosts";
 import { hostVersionDotClass } from "renderer/routes/_authenticated/components/HostVersionBadge";
+import { SetUpOverSshDialog } from "renderer/routes/_authenticated/components/SetUpOverSshDialog";
 import {
 	type SettingsListGroup,
 	SettingsListSidebar,
 	settingsListItemClass,
 } from "../../../components/SettingsListSidebar";
-import { SetUpOverSshDialog } from "../SetUpOverSshDialog";
 
 interface HostRow {
 	id: string;

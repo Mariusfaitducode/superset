@@ -1029,6 +1029,9 @@ msgstr "{hidden, plural, one {Ver # respuesta más} other {Ver # respuestas más
 msgid "{hiddenCount, plural, one {Show # more frame} other {Show # more frames}}"
 msgstr "{hiddenCount, plural, one {Mostrar # marco más} other {Mostrar # marcos más}}"
 
+msgid "{hostName} (this device)"
+msgstr "{hostName} (este dispositivo)"
+
 msgid "{hostName} is offline"
 msgstr "{hostName} está sin conexión"
 
@@ -1344,6 +1347,9 @@ msgstr "{used} usado"
 msgid "{waiting} Waiting"
 msgstr "{waiting} en espera"
 
+msgid "{working} working · {needsYou} waiting for you · {idle} idle"
+msgstr "{working} trabajando · {needsYou} esperándote · {idle} inactivos"
+
 msgid "{workspaceName}: host is unavailable"
 msgstr "{workspaceName}: el host no está disponible"
 
@@ -1417,6 +1423,9 @@ msgstr "+{hiddenCount} anteriores"
 
 msgid "+{remainingCount} more"
 msgstr "+{remainingCount} más"
+
+msgid "+{subagentCount} subagents"
+msgstr "+{subagentCount} subagentes"
 
 #. placeholder {0}: paths[0]?.split("/").pop()
 msgid "<0>{0}</0> is not a git repository. Would you like to initialize one?"
@@ -4778,6 +4787,9 @@ msgstr "Configurar el comando de ejecución del espacio de trabajo"
 msgid "Confirm before quitting"
 msgstr "Confirmar antes de salir"
 
+msgid "Confirm stop"
+msgstr "Confirmar detención"
+
 msgid "Conflicts"
 msgstr "Conflictos"
 
@@ -5716,6 +5728,9 @@ msgstr "No se pudo fusionar la pull request"
 msgid "Couldn't name \"{name}\" automatically"
 msgstr "No se pudo nombrar «{name}» automáticamente"
 
+msgid "Couldn't open a terminal"
+msgstr "No se pudo abrir una terminal"
+
 msgid "Couldn't parse this diff: {patchParseError}"
 msgstr "No se pudo analizar este diff: {patchParseError}"
 
@@ -5818,11 +5833,17 @@ msgstr "No se pudo iniciar el espacio de trabajo en la nube"
 msgid "Couldn't start design mode on this page"
 msgstr "No se pudo iniciar el modo diseño en esta página"
 
+msgid "Couldn't start the agent"
+msgstr "No se pudo iniciar el agente"
+
 msgid "Couldn't start voice mode"
 msgstr "No se pudo iniciar el modo de voz"
 
 msgid "Couldn't start workspace"
 msgstr "No se pudo iniciar el espacio de trabajo"
+
+msgid "Couldn't stop the agent"
+msgstr "No se pudo detener el agente"
 
 msgid "Couldn't stop the agent's terminal"
 msgstr "No se pudo detener la terminal del agente"
@@ -7415,6 +7436,12 @@ msgstr "Cada viernes a las 16:00, redacta las notas de la versión a partir de l
 
 msgid "Every Friday at 5:00 PM"
 msgstr "Todos los viernes a las 17:00"
+
+msgid "Every host"
+msgstr "Todos los hosts"
+
+msgid "Every machine you reach, with the agents running on it."
+msgstr "Cada máquina a la que llegas, con los agentes que se ejecutan en ella."
 
 msgid "Every minute"
 msgstr "Cada minuto"
@@ -11484,6 +11511,9 @@ msgstr "Nuevo agente"
 msgid "New agent launches use this account. Relaunch a running agent to switch it."
 msgstr "Los agentes nuevos se lanzan con esta cuenta. Vuelve a lanzar un agente en marcha para cambiarla."
 
+msgid "New agent or terminal"
+msgstr "Nuevo agente o terminal"
+
 msgid "New agent session"
 msgstr "Nueva sesión de agente"
 
@@ -11718,6 +11748,9 @@ msgstr "Aún no hay conversaciones de agentes."
 
 msgid "No agent is configured on this host"
 msgstr "No hay ningún agente configurado en este host"
+
+msgid "No agent is running on this host."
+msgstr "No hay ningún agente ejecutándose en este host."
 
 msgid "No agent running"
 msgstr "Ningún agente en ejecución"
@@ -12328,6 +12361,9 @@ msgstr "Aún no hay versiones."
 msgid "No workspace has these labels"
 msgstr "Ningún espacio de trabajo tiene estas etiquetas"
 
+msgid "No workspace on this host yet."
+msgstr "Todavía no hay espacios de trabajo en este host."
+
 msgid "No workspace run command configured"
 msgstr "No hay ningún comando de ejecución configurado para el espacio de trabajo"
 
@@ -12348,6 +12384,9 @@ msgstr "Ningún espacio de trabajo coincide con la búsqueda"
 
 msgid "No workspaces match."
 msgstr "Ningún espacio de trabajo coincide."
+
+msgid "No workspaces on {selectedHostName}"
+msgstr "No hay espacios de trabajo en {selectedHostName}"
 
 msgid "No workspaces on this host yet"
 msgstr "Aún no hay espacios de trabajo en este host"
@@ -13276,12 +13315,18 @@ msgstr "Abre el panel de cambios en una pestaña nueva o enfoca el existente"
 msgid "Open the cloud workspaces"
 msgstr "Abre los espacios de trabajo en la nube"
 
+msgid "Open the conversation"
+msgstr "Abrir la conversación"
+
 #. placeholder {0}: task.title
 msgid "Open the conversation of {0}"
 msgstr "Abrir la conversación de {0}"
 
 msgid "Open the global command palette"
 msgstr "Abrir la paleta de comandos global"
+
+msgid "Open the hosts page"
+msgstr "Abrir la página de hosts"
 
 msgid "Open the list of projects"
 msgstr "Abre la lista de proyectos"
@@ -15950,6 +15995,9 @@ msgstr "Se ejecuta en el dispositivo que elijas"
 
 msgid "Runs that started their workspace in the last 7 days"
 msgstr "Ejecuciones que iniciaron su espacio de trabajo en los últimos 7 días"
+
+msgid "Runs the host's wake command on this machine. The host shows as online once it is back."
+msgstr "Ejecuta el comando de activación del host en esta máquina. El host aparece en línea cuando vuelve."
 
 msgid "Runs when a new workspace is created."
 msgstr "Se ejecuta al crear un espacio de trabajo."
@@ -18751,6 +18799,9 @@ msgstr "El futuro hogar de configuraciones de agentes, prompts y guías de insta
 msgid "The host came back on {0}, not {targetVersion}."
 msgstr "El host volvió con {0}, no con {targetVersion}."
 
+msgid "The host could not be woken. The reason is in the output below."
+msgstr "No se pudo activar el host. El motivo está en la salida de abajo."
+
 msgid "The host did not come back within fifteen minutes."
 msgstr "El host no volvió a estar disponible en quince minutos."
 
@@ -18943,6 +18994,9 @@ msgstr "El turno falló"
 msgid "The turn stopped on an error, or the sandbox is down"
 msgstr "El turno se detuvo por un error o el sandbox está caído"
 
+msgid "The wake command ran. The host may take a minute to come online."
+msgstr "El comando de activación se ejecutó. El host puede tardar un minuto en estar en línea."
+
 msgid "The workspace is not ready yet. Try again."
 msgstr "El espacio de trabajo aún no está listo. Inténtalo de nuevo."
 
@@ -19117,6 +19171,9 @@ msgstr "Este host aún no ha informado de una versión."
 
 msgid "This host is behind the app you are using. Workspaces still open, but newer features may fail on it."
 msgstr "Este host está por detrás de la app que usas. Los espacios de trabajo siguen abriéndose, pero las funciones nuevas pueden fallar."
+
+msgid "This host is offline, so its agents can't be read or started. The workspaces below are the last ones it reported."
+msgstr "Este host está desconectado, así que sus agentes no se pueden leer ni iniciar. Los espacios de trabajo de abajo son los últimos que informó."
 
 msgid "This host is too old to keep to-dos."
 msgstr "Este host es demasiado antiguo para guardar tareas pendientes."
@@ -20504,6 +20561,12 @@ msgstr "Esperando desde {waitingSince}"
 msgid "Waiting tint"
 msgstr "Tono de espera"
 
+msgid "Wake"
+msgstr "Activar"
+
+msgid "Wake {hostName}"
+msgstr "Activar {hostName}"
+
 msgid "Waking up workspace"
 msgstr "Activando el espacio de trabajo"
 
@@ -21000,6 +21063,9 @@ msgstr "Los espacios de trabajo de este dispositivo aparecerán aquí."
 
 msgid "Workspaces started from this environment will stop receiving it."
 msgstr "Los espacios de trabajo iniciados desde este entorno dejarán de recibirla."
+
+msgid "Workspaces without agents ({quietCount})"
+msgstr "Espacios de trabajo sin agentes ({quietCount})"
 
 msgid "worktree"
 msgstr "worktree"
