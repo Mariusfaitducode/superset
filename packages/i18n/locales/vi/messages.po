@@ -1422,6 +1422,9 @@ msgstr "+{hiddenCount} trước đó"
 msgid "+{remainingCount} more"
 msgstr "+{remainingCount} nữa"
 
+msgid "+{subagentCount} subagents"
+msgstr "+{subagentCount} tác tử con"
+
 #. placeholder {0}: paths[0]?.split("/").pop()
 msgid "<0>{0}</0> is not a git repository. Would you like to initialize one?"
 msgstr "<0>{0}</0> không phải là repository git. Bạn có muốn khởi tạo một repository không?"
@@ -4782,6 +4785,9 @@ msgstr "Cấu hình lệnh chạy của workspace"
 msgid "Confirm before quitting"
 msgstr "Xác nhận trước khi thoát"
 
+msgid "Confirm stop"
+msgstr "Xác nhận dừng"
+
 msgid "Conflicts"
 msgstr "Xung đột"
 
@@ -5714,6 +5720,9 @@ msgstr "Không thể merge pull request"
 msgid "Couldn't name \"{name}\" automatically"
 msgstr "Không thể tự động đặt tên cho \"{name}\""
 
+msgid "Couldn't open a terminal"
+msgstr "Không thể mở terminal"
+
 msgid "Couldn't parse this diff: {patchParseError}"
 msgstr "Không thể phân tích diff này: {patchParseError}"
 
@@ -5816,11 +5825,17 @@ msgstr "Không thể khởi động workspace trên cloud"
 msgid "Couldn't start design mode on this page"
 msgstr "Không thể bật chế độ thiết kế trên trang này"
 
+msgid "Couldn't start the agent"
+msgstr "Không thể khởi động tác tử"
+
 msgid "Couldn't start voice mode"
 msgstr "Không thể bắt đầu chế độ giọng nói"
 
 msgid "Couldn't start workspace"
 msgstr "Không khởi động được workspace"
+
+msgid "Couldn't stop the agent"
+msgstr "Không thể dừng tác tử"
 
 msgid "Couldn't stop the agent's terminal"
 msgstr "Không thể dừng terminal của tác nhân"
@@ -7416,6 +7431,9 @@ msgstr "Mỗi thứ Sáu lúc 5:00 chiều"
 
 msgid "Every host"
 msgstr "Tất cả máy chủ"
+
+msgid "Every machine you reach, with the agents running on it."
+msgstr "Mọi máy bạn kết nối được, cùng các tác tử đang chạy trên đó."
 
 msgid "Every minute"
 msgstr "Mỗi phút"
@@ -11470,6 +11488,9 @@ msgstr "Agent mới"
 msgid "New agent launches use this account. Relaunch a running agent to switch it."
 msgstr "Các agent khởi chạy mới sẽ dùng tài khoản này. Khởi chạy lại agent đang chạy để đổi sang tài khoản này."
 
+msgid "New agent or terminal"
+msgstr "Tác tử hoặc terminal mới"
+
 msgid "New agent session"
 msgstr "Phiên agent mới"
 
@@ -11704,6 +11725,9 @@ msgstr "Chưa có cuộc trò chuyện nào của agent."
 
 msgid "No agent is configured on this host"
 msgstr "Không có tác nhân nào được cấu hình trên máy chủ này"
+
+msgid "No agent is running on this host."
+msgstr "Không có tác tử nào đang chạy trên máy chủ này."
 
 msgid "No agent running"
 msgstr "Không có agent nào đang chạy"
@@ -12313,6 +12337,9 @@ msgstr "Chưa có phiên bản nào."
 
 msgid "No workspace has these labels"
 msgstr "Không có workspace nào có các nhãn này"
+
+msgid "No workspace on this host yet."
+msgstr "Chưa có workspace nào trên máy chủ này."
 
 msgid "No workspace run command configured"
 msgstr "Chưa cấu hình lệnh chạy cho workspace"
@@ -13265,12 +13292,18 @@ msgstr "Mở bảng thay đổi trong tab mới, hoặc chuyển tiêu điểm �
 msgid "Open the cloud workspaces"
 msgstr "Mở các workspace đám mây"
 
+msgid "Open the conversation"
+msgstr "Mở cuộc trò chuyện"
+
 #. placeholder {0}: task.title
 msgid "Open the conversation of {0}"
 msgstr "Mở cuộc trò chuyện của {0}"
 
 msgid "Open the global command palette"
 msgstr "Mở bảng lệnh toàn cục"
+
+msgid "Open the hosts page"
+msgstr "Mở trang máy chủ"
 
 msgid "Open the list of projects"
 msgstr "Mở danh sách dự án"
@@ -15930,6 +15963,9 @@ msgstr "Chạy trên thiết bị bạn chọn"
 
 msgid "Runs that started their workspace in the last 7 days"
 msgstr "Các lần chạy đã khởi động workspace của chúng trong 7 ngày qua"
+
+msgid "Runs the host's wake command on this machine. The host shows as online once it is back."
+msgstr "Chạy lệnh đánh thức máy chủ trên máy này. Máy chủ hiện trực tuyến khi đã hoạt động lại."
 
 msgid "Runs when a new workspace is created."
 msgstr "Chạy khi tạo không gian làm việc mới."
@@ -18727,6 +18763,9 @@ msgstr "Nơi sẽ chứa các cấu hình agent, prompt và hướng dẫn thi�
 msgid "The host came back on {0}, not {targetVersion}."
 msgstr "Máy chủ đã trở lại với {0}, không phải {targetVersion}."
 
+msgid "The host could not be woken. The reason is in the output below."
+msgstr "Không thể đánh thức máy chủ. Lý do nằm trong kết quả bên dưới."
+
 msgid "The host did not come back within fifteen minutes."
 msgstr "Máy chủ không hoạt động trở lại trong vòng mười lăm phút."
 
@@ -18916,6 +18955,9 @@ msgstr "Lượt thất bại"
 msgid "The turn stopped on an error, or the sandbox is down"
 msgstr "Lượt đã dừng do lỗi, hoặc sandbox ngừng hoạt động"
 
+msgid "The wake command ran. The host may take a minute to come online."
+msgstr "Lệnh đánh thức đã chạy. Máy chủ có thể mất một phút để trực tuyến."
+
 msgid "The workspace is not ready yet. Try again."
 msgstr "Workspace chưa sẵn sàng. Hãy thử lại."
 
@@ -19090,6 +19132,9 @@ msgstr "Máy chủ này chưa báo cáo phiên bản."
 
 msgid "This host is behind the app you are using. Workspaces still open, but newer features may fail on it."
 msgstr "Máy chủ này cũ hơn ứng dụng bạn đang dùng. Workspace vẫn mở được nhưng các tính năng mới có thể lỗi."
+
+msgid "This host is offline, so its agents can't be read or started. The workspaces below are the last ones it reported."
+msgstr "Máy chủ này đang ngoại tuyến nên không thể đọc hay khởi động tác tử. Các workspace bên dưới là những cái nó báo cáo gần nhất."
 
 msgid "This host is too old to keep to-dos."
 msgstr "Máy chủ này quá cũ để lưu việc cần làm."
@@ -20468,6 +20513,12 @@ msgstr "Đang chờ từ {waitingSince}"
 msgid "Waiting tint"
 msgstr "Sắc chờ"
 
+msgid "Wake"
+msgstr "Đánh thức"
+
+msgid "Wake {hostName}"
+msgstr "Đánh thức {hostName}"
+
 msgid "Waking up workspace"
 msgstr "Đang đánh thức workspace"
 
@@ -20964,6 +21015,9 @@ msgstr "Workspace trên thiết bị này sẽ xuất hiện ở đây."
 
 msgid "Workspaces started from this environment will stop receiving it."
 msgstr "Các workspace khởi động từ môi trường này sẽ không còn nhận được nó."
+
+msgid "Workspaces without agents ({quietCount})"
+msgstr "Workspace không có tác tử ({quietCount})"
 
 msgid "worktree"
 msgstr "worktree"

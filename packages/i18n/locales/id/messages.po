@@ -1422,6 +1422,9 @@ msgstr "+{hiddenCount} sebelumnya"
 msgid "+{remainingCount} more"
 msgstr "+{remainingCount} lagi"
 
+msgid "+{subagentCount} subagents"
+msgstr "+{subagentCount} subagen"
+
 #. placeholder {0}: paths[0]?.split("/").pop()
 msgid "<0>{0}</0> is not a git repository. Would you like to initialize one?"
 msgstr "<0>{0}</0> bukan repositori git. Ingin menginisialisasi satu?"
@@ -4782,6 +4785,9 @@ msgstr "Atur perintah run workspace"
 msgid "Confirm before quitting"
 msgstr "Konfirmasi sebelum keluar"
 
+msgid "Confirm stop"
+msgstr "Konfirmasi hentikan"
+
 msgid "Conflicts"
 msgstr "Konflik"
 
@@ -5714,6 +5720,9 @@ msgstr "Tidak bisa merge pull request"
 msgid "Couldn't name \"{name}\" automatically"
 msgstr "Tidak dapat menamai \"{name}\" secara otomatis"
 
+msgid "Couldn't open a terminal"
+msgstr "Tidak dapat membuka terminal"
+
 msgid "Couldn't parse this diff: {patchParseError}"
 msgstr "Tidak bisa mengurai diff ini: {patchParseError}"
 
@@ -5816,11 +5825,17 @@ msgstr "Tidak bisa memulai workspace cloud"
 msgid "Couldn't start design mode on this page"
 msgstr "Tidak bisa memulai mode desain di halaman ini"
 
+msgid "Couldn't start the agent"
+msgstr "Tidak dapat memulai agen"
+
 msgid "Couldn't start voice mode"
 msgstr "Tidak dapat memulai mode suara"
 
 msgid "Couldn't start workspace"
 msgstr "Tidak bisa memulai workspace"
+
+msgid "Couldn't stop the agent"
+msgstr "Tidak dapat menghentikan agen"
 
 msgid "Couldn't stop the agent's terminal"
 msgstr "Tidak dapat menghentikan terminal agen"
@@ -7416,6 +7431,9 @@ msgstr "Setiap Jumat pukul 17.00"
 
 msgid "Every host"
 msgstr "Semua host"
+
+msgid "Every machine you reach, with the agents running on it."
+msgstr "Setiap mesin yang Anda jangkau, beserta agen yang berjalan di dalamnya."
 
 msgid "Every minute"
 msgstr "Tiap menit"
@@ -11470,6 +11488,9 @@ msgstr "Agen baru"
 msgid "New agent launches use this account. Relaunch a running agent to switch it."
 msgstr "Peluncuran agen baru memakai akun ini. Jalankan ulang agen yang sedang berjalan untuk menggantinya."
 
+msgid "New agent or terminal"
+msgstr "Agen atau terminal baru"
+
 msgid "New agent session"
 msgstr "Sesi agen baru"
 
@@ -11704,6 +11725,9 @@ msgstr "Belum ada percakapan agen."
 
 msgid "No agent is configured on this host"
 msgstr "Tidak ada agen yang dikonfigurasi di host ini"
+
+msgid "No agent is running on this host."
+msgstr "Tidak ada agen yang berjalan di host ini."
 
 msgid "No agent running"
 msgstr "Tidak ada agen yang berjalan"
@@ -12313,6 +12337,9 @@ msgstr "Belum ada versi."
 
 msgid "No workspace has these labels"
 msgstr "Tidak ada workspace dengan label ini"
+
+msgid "No workspace on this host yet."
+msgstr "Belum ada workspace di host ini."
 
 msgid "No workspace run command configured"
 msgstr "Tidak ada perintah run workspace yang dikonfigurasi"
@@ -13265,12 +13292,18 @@ msgstr "Buka panel Perubahan di tab baru, atau fokuskan yang sudah ada"
 msgid "Open the cloud workspaces"
 msgstr "Membuka workspace cloud"
 
+msgid "Open the conversation"
+msgstr "Buka percakapan"
+
 #. placeholder {0}: task.title
 msgid "Open the conversation of {0}"
 msgstr "Buka percakapan {0}"
 
 msgid "Open the global command palette"
 msgstr "Buka command palette global"
+
+msgid "Open the hosts page"
+msgstr "Buka halaman host"
 
 msgid "Open the list of projects"
 msgstr "Membuka daftar proyek"
@@ -15930,6 +15963,9 @@ msgstr "Berjalan di perangkat pilihan Anda"
 
 msgid "Runs that started their workspace in the last 7 days"
 msgstr "Eksekusi yang memulai workspace-nya dalam 7 hari terakhir"
+
+msgid "Runs the host's wake command on this machine. The host shows as online once it is back."
+msgstr "Menjalankan perintah bangun host di mesin ini. Host tampil online setelah kembali."
 
 msgid "Runs when a new workspace is created."
 msgstr "Dijalankan saat ruang kerja baru dibuat."
@@ -18727,6 +18763,9 @@ msgstr "Rumah masa depan untuk konfigurasi agen Superset, prompt, dan panduan pe
 msgid "The host came back on {0}, not {targetVersion}."
 msgstr "Host kembali dengan {0}, bukan {targetVersion}."
 
+msgid "The host could not be woken. The reason is in the output below."
+msgstr "Host tidak dapat dibangunkan. Alasannya ada di output di bawah."
+
 msgid "The host did not come back within fifteen minutes."
 msgstr "Host tidak kembali dalam lima belas menit."
 
@@ -18916,6 +18955,9 @@ msgstr "Giliran gagal"
 msgid "The turn stopped on an error, or the sandbox is down"
 msgstr "Giliran berhenti karena kesalahan, atau sandbox mati"
 
+msgid "The wake command ran. The host may take a minute to come online."
+msgstr "Perintah bangun sudah dijalankan. Host mungkin butuh satu menit untuk online."
+
 msgid "The workspace is not ready yet. Try again."
 msgstr "Workspace belum siap. Coba lagi."
 
@@ -19090,6 +19132,9 @@ msgstr "Host ini belum melaporkan versi."
 
 msgid "This host is behind the app you are using. Workspaces still open, but newer features may fail on it."
 msgstr "Host ini tertinggal dari aplikasi yang Anda gunakan. Workspace masih terbuka, tetapi fitur baru mungkin gagal di sana."
+
+msgid "This host is offline, so its agents can't be read or started. The workspaces below are the last ones it reported."
+msgstr "Host ini offline, jadi agennya tidak dapat dibaca atau dimulai. Workspace di bawah adalah yang terakhir dilaporkannya."
 
 msgid "This host is too old to keep to-dos."
 msgstr "Host ini terlalu lama untuk menyimpan daftar tugas."
@@ -20468,6 +20513,12 @@ msgstr "Menunggu sejak {waitingSince}"
 msgid "Waiting tint"
 msgstr "Warna tunggu"
 
+msgid "Wake"
+msgstr "Bangunkan"
+
+msgid "Wake {hostName}"
+msgstr "Bangunkan {hostName}"
+
 msgid "Waking up workspace"
 msgstr "Membangunkan workspace"
 
@@ -20964,6 +21015,9 @@ msgstr "Workspace di perangkat ini akan muncul di sini."
 
 msgid "Workspaces started from this environment will stop receiving it."
 msgstr "Workspace yang dimulai dari environment ini tidak akan menerimanya lagi."
+
+msgid "Workspaces without agents ({quietCount})"
+msgstr "Workspace tanpa agen ({quietCount})"
 
 msgid "worktree"
 msgstr "worktree"

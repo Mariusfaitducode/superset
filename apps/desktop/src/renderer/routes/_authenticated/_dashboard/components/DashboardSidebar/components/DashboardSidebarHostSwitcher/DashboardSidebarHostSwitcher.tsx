@@ -1,16 +1,23 @@
 import { useLingui } from "@lingui/react/macro";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@superset/ui/tooltip";
+import { useNavigate } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
-import { LuLayers, LuMonitor, LuPlus, LuServer } from "react-icons/lu";
+import {
+	LuArrowUpRight,
+	LuLayers,
+	LuMonitor,
+	LuPlus,
+	LuServer,
+} from "react-icons/lu";
 import { useKnownHosts } from "renderer/hooks/known-hosts/useKnownHosts";
+import { HostChip } from "renderer/routes/_authenticated/_dashboard/components/HostChip";
+import { summarizeHosts } from "renderer/routes/_authenticated/_dashboard/utils/summarizeHosts";
 import { SetUpOverSshDialog } from "renderer/routes/_authenticated/components/SetUpOverSshDialog";
 import { useLocalHostService } from "renderer/routes/_authenticated/providers/LocalHostServiceProvider";
 import {
 	type SidebarStatusWorkspaceRef,
 	useSidebarWorkspaceStatuses,
 } from "../../providers/DashboardSidebarWorkspaceStatusProvider";
-import { HostChip } from "./components/HostChip";
-import { type HostAgentCounts, summarizeHosts } from "./utils/summarizeHosts";
 
 interface DashboardSidebarHostSwitcherProps {
 	/** Every workspace the sidebar can show, so the counts ignore its filters. */
@@ -29,6 +36,7 @@ export function DashboardSidebarHostSwitcher({
 	onSelect,
 }: DashboardSidebarHostSwitcherProps) {
 	const { t } = useLingui();
+	const navigate = useNavigate();
 	const [sshDialogOpen, setSshDialogOpen] = useState(false);
 	const { hosts: knownHosts } = useKnownHosts();
 	const { machineId: localMachineId } = useLocalHostService();
@@ -46,10 +54,6 @@ export function DashboardSidebarHostSwitcher({
 	);
 	if (hosts.length < 2) return null;
 
-	const countsLine = ({ working, needsYou, idle }: HostAgentCounts) =>
-		t({
-			message: `${working} working · ${needsYou} waiting for you · ${idle} idle`,
-		});
 	const thisDeviceLabel = (hostName: string) =>
 		t({ message: `${hostName} (this device)` });
 
@@ -65,12 +69,7 @@ export function DashboardSidebarHostSwitcher({
 					icon={<LuLayers className="size-3" />}
 					label={t({ message: "All" })}
 					counts={total}
-					tooltip={
-						<>
-							<div>{t({ message: "Every host" })}</div>
-							<div className="text-muted-foreground">{countsLine(total)}</div>
-						</>
-					}
+					tooltip={t({ message: "Every host" })}
 				/>
 				{hosts.map((host) => (
 					<HostChip
@@ -89,20 +88,35 @@ export function DashboardSidebarHostSwitcher({
 						counts={host.counts}
 						tooltip={
 							<>
-								<div>
-									{host.isLocal ? thisDeviceLabel(host.name) : host.name}
-									{" · "}
-									{host.isOnline
-										? t({ message: "Online" })
-										: t({ message: "Offline" })}
-								</div>
-								<div className="text-muted-foreground">
-									{countsLine(host.counts)}
-								</div>
+								{host.isLocal ? thisDeviceLabel(host.name) : host.name}
+								{" · "}
+								{host.isOnline
+									? t({ message: "Online" })
+									: t({ message: "Offline" })}
 							</>
 						}
 					/>
 				))}
+				<Tooltip delayDuration={300}>
+					<TooltipTrigger asChild>
+						<button
+							type="button"
+							onClick={() =>
+								navigate({
+									to: "/hosts",
+									search: selectedMachineId ? { host: selectedMachineId } : {},
+								})
+							}
+							aria-label={t({ message: "Open the hosts page" })}
+							className="flex size-5 items-center justify-center rounded-full text-muted-foreground hover:bg-accent hover:text-foreground"
+						>
+							<LuArrowUpRight className="size-3" />
+						</button>
+					</TooltipTrigger>
+					<TooltipContent side="bottom">
+						{t({ message: "Open the hosts page" })}
+					</TooltipContent>
+				</Tooltip>
 				<Tooltip delayDuration={300}>
 					<TooltipTrigger asChild>
 						<button

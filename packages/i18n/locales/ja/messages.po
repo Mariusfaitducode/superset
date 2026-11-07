@@ -1422,6 +1422,9 @@ msgstr "以前の{hiddenCount}件"
 msgid "+{remainingCount} more"
 msgstr "+{remainingCount}件"
 
+msgid "+{subagentCount} subagents"
+msgstr "+{subagentCount} サブエージェント"
+
 #. placeholder {0}: paths[0]?.split("/").pop()
 msgid "<0>{0}</0> is not a git repository. Would you like to initialize one?"
 msgstr "<0>{0}</0>はgitリポジトリではありません。初期化しますか?"
@@ -4782,6 +4785,9 @@ msgstr "ワークスペースの実行コマンドを設定"
 msgid "Confirm before quitting"
 msgstr "終了前に確認"
 
+msgid "Confirm stop"
+msgstr "停止を確認"
+
 msgid "Conflicts"
 msgstr "コンフリクト"
 
@@ -5714,6 +5720,9 @@ msgstr "プルリクエストをマージできませんでした"
 msgid "Couldn't name \"{name}\" automatically"
 msgstr "「{name}」に自動で名前を付けられませんでした"
 
+msgid "Couldn't open a terminal"
+msgstr "ターミナルを開けませんでした"
+
 msgid "Couldn't parse this diff: {patchParseError}"
 msgstr "この差分を解析できませんでした: {patchParseError}"
 
@@ -5816,11 +5825,17 @@ msgstr "クラウドワークスペースを開始できませんでした"
 msgid "Couldn't start design mode on this page"
 msgstr "このページでデザインモードを開始できませんでした"
 
+msgid "Couldn't start the agent"
+msgstr "エージェントを起動できませんでした"
+
 msgid "Couldn't start voice mode"
 msgstr "音声モードを開始できませんでした"
 
 msgid "Couldn't start workspace"
 msgstr "ワークスペースを開始できませんでした"
+
+msgid "Couldn't stop the agent"
+msgstr "エージェントを停止できませんでした"
 
 msgid "Couldn't stop the agent's terminal"
 msgstr "エージェントのターミナルを停止できませんでした"
@@ -7416,6 +7431,9 @@ msgstr "毎週金曜 午後5:00"
 
 msgid "Every host"
 msgstr "すべてのホスト"
+
+msgid "Every machine you reach, with the agents running on it."
+msgstr "接続できるすべてのマシンと、そこで動いているエージェント。"
 
 msgid "Every minute"
 msgstr "毎分"
@@ -11470,6 +11488,9 @@ msgstr "新しいエージェント"
 msgid "New agent launches use this account. Relaunch a running agent to switch it."
 msgstr "新規エージェントの起動でこのアカウントを使用します。実行中のエージェントを切り替えるには再起動してください。"
 
+msgid "New agent or terminal"
+msgstr "新しいエージェントまたはターミナル"
+
 msgid "New agent session"
 msgstr "新規エージェントセッション"
 
@@ -11704,6 +11725,9 @@ msgstr "エージェントの会話はまだありません。"
 
 msgid "No agent is configured on this host"
 msgstr "このホストにはエージェントが設定されていません"
+
+msgid "No agent is running on this host."
+msgstr "このホストで動いているエージェントはありません。"
 
 msgid "No agent running"
 msgstr "実行中のエージェントはありません"
@@ -12313,6 +12337,9 @@ msgstr "バージョンはまだありません。"
 
 msgid "No workspace has these labels"
 msgstr "これらのラベルを持つワークスペースはありません"
+
+msgid "No workspace on this host yet."
+msgstr "このホストにはまだワークスペースがありません。"
 
 msgid "No workspace run command configured"
 msgstr "ワークスペース実行コマンドが設定されていません"
@@ -13265,12 +13292,18 @@ msgstr "変更ペインを新しいタブで開くか、既存のペインにフ
 msgid "Open the cloud workspaces"
 msgstr "クラウドワークスペースを開きます"
 
+msgid "Open the conversation"
+msgstr "会話を開く"
+
 #. placeholder {0}: task.title
 msgid "Open the conversation of {0}"
 msgstr "{0} の会話を開く"
 
 msgid "Open the global command palette"
 msgstr "グローバルコマンドパレットを開く"
+
+msgid "Open the hosts page"
+msgstr "ホストのページを開く"
 
 msgid "Open the list of projects"
 msgstr "プロジェクトの一覧を開きます"
@@ -15930,6 +15963,9 @@ msgstr "選んだデバイスで実行"
 
 msgid "Runs that started their workspace in the last 7 days"
 msgstr "過去 7 日間にワークスペースを開始した実行"
+
+msgid "Runs the host's wake command on this machine. The host shows as online once it is back."
+msgstr "このマシンでホストの起動コマンドを実行します。ホストが戻るとオンラインと表示されます。"
 
 msgid "Runs when a new workspace is created."
 msgstr "新しいワークスペースの作成時に実行します。"
@@ -18727,6 +18763,9 @@ msgstr "再利用可能なSupersetエージェント設定、プロンプト、�
 msgid "The host came back on {0}, not {targetVersion}."
 msgstr "ホストは{targetVersion}ではなく{0}で復帰しました。"
 
+msgid "The host could not be woken. The reason is in the output below."
+msgstr "ホストを起動できませんでした。理由は下の出力にあります。"
+
 msgid "The host did not come back within fifteen minutes."
 msgstr "ホストが15分以内に復帰しませんでした。"
 
@@ -18916,6 +18955,9 @@ msgstr "ターンが失敗しました"
 msgid "The turn stopped on an error, or the sandbox is down"
 msgstr "ターンがエラーで停止したか、サンドボックスが停止しています"
 
+msgid "The wake command ran. The host may take a minute to come online."
+msgstr "起動コマンドを実行しました。ホストがオンラインになるまで1分ほどかかることがあります。"
+
 msgid "The workspace is not ready yet. Try again."
 msgstr "ワークスペースの準備がまだできていません。もう一度お試しください。"
 
@@ -19090,6 +19132,9 @@ msgstr "このホストはまだバージョンを報告していません。"
 
 msgid "This host is behind the app you are using. Workspaces still open, but newer features may fail on it."
 msgstr "このホストは使用中のアプリより古いバージョンです。ワークスペースは開けますが、新しい機能は動作しない可能性があります。"
+
+msgid "This host is offline, so its agents can't be read or started. The workspaces below are the last ones it reported."
+msgstr "このホストはオフラインのため、エージェントを読み取ることも起動することもできません。下のワークスペースは最後に報告されたものです。"
 
 msgid "This host is too old to keep to-dos."
 msgstr "このホストは古すぎて ToDo を保存できません。"
@@ -20468,6 +20513,12 @@ msgstr "{waitingSince} から待機中"
 msgid "Waiting tint"
 msgstr "待機の色付け"
 
+msgid "Wake"
+msgstr "起動"
+
+msgid "Wake {hostName}"
+msgstr "{hostName} を起動"
+
 msgid "Waking up workspace"
 msgstr "ワークスペースを起動中"
 
@@ -20964,6 +21015,9 @@ msgstr "このデバイスのワークスペースがここに表示されます
 
 msgid "Workspaces started from this environment will stop receiving it."
 msgstr "この環境から起動したワークスペースはこれを受け取らなくなります。"
+
+msgid "Workspaces without agents ({quietCount})"
+msgstr "エージェントのないワークスペース ({quietCount})"
 
 msgid "worktree"
 msgstr "ワークツリー"

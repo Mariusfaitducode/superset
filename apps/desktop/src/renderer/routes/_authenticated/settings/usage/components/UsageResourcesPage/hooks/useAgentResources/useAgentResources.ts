@@ -1,10 +1,10 @@
 import { useMutation } from "@tanstack/react-query";
 import { useActiveOrganizationId } from "renderer/hooks/useActiveOrganizationId";
+import { closeTerminal } from "renderer/lib/closeTerminal";
 import { electronTrpc } from "renderer/lib/electron-trpc";
 import { getHostServiceClientByUrl } from "renderer/lib/host-service-client";
 import { getResourceMonitorRefetchInterval } from "renderer/routes/_authenticated/_dashboard/components/TopBar/components/ResourceConsumption/resourceConsumptionPolicy";
 import type { AgentSessionView } from "../../types";
-import { closeTerminal } from "../../utils/closeTerminal";
 
 const SESSION_ID_PATTERN = /^[0-9a-f-]{8,64}$/i;
 
