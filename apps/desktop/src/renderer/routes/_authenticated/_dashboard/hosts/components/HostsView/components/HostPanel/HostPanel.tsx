@@ -5,13 +5,13 @@ import { Link } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { LuChevronRight, LuMoon, LuPower, LuSettings2 } from "react-icons/lu";
 import { useV2AgentConfigs } from "renderer/hooks/useV2AgentConfigs";
-import type { HostSummary } from "renderer/routes/_authenticated/_dashboard/utils/summarizeHosts";
-import { useHostAgentActions } from "../../../../hooks/useHostAgentActions";
+import { useHostAgentActions } from "renderer/routes/_authenticated/_dashboard/hosts/hooks/useHostAgentActions";
 import {
 	type HostsAgents,
 	useHostTerminalTitles,
-} from "../../../../hooks/useHostsAgents";
-import { groupHostAgents } from "../../../../utils/groupHostAgents";
+} from "renderer/routes/_authenticated/_dashboard/hosts/hooks/useHostsAgents";
+import { groupHostAgents } from "renderer/routes/_authenticated/_dashboard/hosts/utils/groupHostAgents";
+import type { HostSummary } from "renderer/routes/_authenticated/_dashboard/utils/summarizeHosts";
 import { WakeHostDialog } from "./components/WakeHostDialog";
 import { WorkspaceAgents } from "./components/WorkspaceAgents";
 

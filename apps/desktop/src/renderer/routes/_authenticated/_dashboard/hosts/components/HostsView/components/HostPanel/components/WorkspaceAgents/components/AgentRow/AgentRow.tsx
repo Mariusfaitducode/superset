@@ -8,7 +8,7 @@ import {
 	AGENT_STATE_LABEL,
 	AgentStateDot,
 } from "renderer/components/AgentStateDot";
-import type { HostAgentView } from "../../../../../../../utils/groupHostAgents";
+import type { HostAgentView } from "renderer/routes/_authenticated/_dashboard/hosts/utils/groupHostAgents";
 
 const CONFIRM_STOP_MS = 3_000;
 

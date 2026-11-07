@@ -1,12 +1,12 @@
 import { useLingui } from "@lingui/react/macro";
 import { useNavigate } from "@tanstack/react-router";
 import { LuGitBranch } from "react-icons/lu";
-import { navigateToV2Workspace } from "renderer/routes/_authenticated/_dashboard/utils/workspace-navigation";
-import type { HostAgentActions } from "../../../../../../hooks/useHostAgentActions";
+import type { HostAgentActions } from "renderer/routes/_authenticated/_dashboard/hosts/hooks/useHostAgentActions";
 import type {
 	HostAgentView,
 	HostWorkspaceRef,
-} from "../../../../../../utils/groupHostAgents";
+} from "renderer/routes/_authenticated/_dashboard/hosts/utils/groupHostAgents";
+import { navigateToV2Workspace } from "renderer/routes/_authenticated/_dashboard/utils/workspace-navigation";
 import { AgentRow } from "./components/AgentRow";
 import { NewAgentMenu } from "./components/NewAgentMenu";
 
