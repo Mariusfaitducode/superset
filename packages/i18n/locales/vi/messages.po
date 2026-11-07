@@ -1027,6 +1027,9 @@ msgstr "{hidden, plural, other {Xem thêm # phản hồi}}"
 msgid "{hiddenCount, plural, one {Show # more frame} other {Show # more frames}}"
 msgstr "{hiddenCount, plural, one {Hiện thêm # frame} other {Hiện thêm # frame}}"
 
+msgid "{hostName} (this device)"
+msgstr "{hostName} (thiết bị này)"
+
 msgid "{hostName} is offline"
 msgstr "{hostName} đang ngoại tuyến"
 
@@ -1341,6 +1344,9 @@ msgstr "Đã dùng {used}"
 
 msgid "{waiting} Waiting"
 msgstr "{waiting} đang chờ"
+
+msgid "{working} working · {needsYou} waiting for you · {idle} idle"
+msgstr "{working} đang làm việc · {needsYou} đang chờ bạn · {idle} rảnh"
 
 msgid "{workspaceName}: host is unavailable"
 msgstr "{workspaceName}: host không khả dụng"
@@ -7408,6 +7414,9 @@ msgstr "Mỗi thứ Sáu lúc 4h chiều, soạn ghi chú phát hành từ các 
 msgid "Every Friday at 5:00 PM"
 msgstr "Mỗi thứ Sáu lúc 5:00 chiều"
 
+msgid "Every host"
+msgstr "Tất cả máy chủ"
+
 msgid "Every minute"
 msgstr "Mỗi phút"
 
@@ -12325,6 +12334,9 @@ msgstr "Không có workspace nào khớp tìm kiếm"
 
 msgid "No workspaces match."
 msgstr "Không có workspace nào khớp."
+
+msgid "No workspaces on {selectedHostName}"
+msgstr "Không có workspace nào trên {selectedHostName}"
 
 msgid "No workspaces on this host yet"
 msgstr "Chưa có workspace nào trên host này"

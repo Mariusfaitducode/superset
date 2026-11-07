@@ -1027,6 +1027,9 @@ msgstr "{hidden, plural, one {Pokaż # kolejną odpowiedź} few {Pokaż # kolejn
 msgid "{hiddenCount, plural, one {Show # more frame} other {Show # more frames}}"
 msgstr "{hiddenCount, plural, one {Pokaż # kolejną ramkę} few {Pokaż # kolejne ramki} many {Pokaż # kolejnych ramek} other {Pokaż # kolejnej ramki}}"
 
+msgid "{hostName} (this device)"
+msgstr "{hostName} (to urządzenie)"
+
 msgid "{hostName} is offline"
 msgstr "{hostName} jest offline"
 
@@ -1341,6 +1344,9 @@ msgstr "Wykorzystano {used}"
 
 msgid "{waiting} Waiting"
 msgstr "{waiting} oczekuje"
+
+msgid "{working} working · {needsYou} waiting for you · {idle} idle"
+msgstr "Pracuje: {working} · czeka na Ciebie: {needsYou} · bezczynne: {idle}"
 
 msgid "{workspaceName}: host is unavailable"
 msgstr "{workspaceName}: host jest niedostępny"
@@ -7408,6 +7414,9 @@ msgstr "W każdy piątek o 16:00 przygotuj notatki wydania z PR-ów scalonych w 
 msgid "Every Friday at 5:00 PM"
 msgstr "W każdy piątek o 17:00"
 
+msgid "Every host"
+msgstr "Wszystkie hosty"
+
 msgid "Every minute"
 msgstr "Co minutę"
 
@@ -12325,6 +12334,9 @@ msgstr "Żaden obszar roboczy nie pasuje do wyszukiwania"
 
 msgid "No workspaces match."
 msgstr "Brak pasujących obszarów roboczych."
+
+msgid "No workspaces on {selectedHostName}"
+msgstr "Brak przestrzeni roboczych na {selectedHostName}"
 
 msgid "No workspaces on this host yet"
 msgstr "Brak obszarów roboczych na tym hoście"

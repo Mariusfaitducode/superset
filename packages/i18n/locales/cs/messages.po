@@ -1027,6 +1027,9 @@ msgstr "{hidden, plural, one {Zobrazit # další odpověď} few {Zobrazit # dal�
 msgid "{hiddenCount, plural, one {Show # more frame} other {Show # more frames}}"
 msgstr "{hiddenCount, plural, one {Zobrazit ještě # rámec} few {Zobrazit ještě # rámce} many {Zobrazit ještě # rámce} other {Zobrazit ještě # rámců}}"
 
+msgid "{hostName} (this device)"
+msgstr "{hostName} (toto zařízení)"
+
 msgid "{hostName} is offline"
 msgstr "{hostName} je offline"
 
@@ -1341,6 +1344,9 @@ msgstr "Využito {used}"
 
 msgid "{waiting} Waiting"
 msgstr "Čeká: {waiting}"
+
+msgid "{working} working · {needsYou} waiting for you · {idle} idle"
+msgstr "Pracuje: {working} · čeká na vás: {needsYou} · nečinných: {idle}"
 
 msgid "{workspaceName}: host is unavailable"
 msgstr "{workspaceName}: host není dostupný"
@@ -7408,6 +7414,9 @@ msgstr "Každý pátek v 16:00 sepiš poznámky k vydání ze sloučených PR za
 msgid "Every Friday at 5:00 PM"
 msgstr "Každý pátek v 17:00"
 
+msgid "Every host"
+msgstr "Všichni hostitelé"
+
 msgid "Every minute"
 msgstr "Každou minutu"
 
@@ -12325,6 +12334,9 @@ msgstr "Vašemu hledání neodpovídá žádný pracovní prostor"
 
 msgid "No workspaces match."
 msgstr "Žádný pracovní prostor neodpovídá."
+
+msgid "No workspaces on {selectedHostName}"
+msgstr "Na {selectedHostName} nejsou žádné pracovní prostory"
 
 msgid "No workspaces on this host yet"
 msgstr "Na tomto hostu zatím nejsou žádné pracovní prostory"

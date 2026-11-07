@@ -4,7 +4,10 @@ import {
 	makeSection,
 	makeWorkspace,
 } from "../testProjectFixtures";
-import { filterDashboardSidebarProjectsByHost } from "./filterDashboardSidebarProjectsByHost";
+import {
+	filterDashboardSidebarProjectsByHost,
+	filterDashboardSidebarProjectsByMachine,
+} from "./filterDashboardSidebarProjectsByHost";
 
 const local = makeWorkspace({ id: "w-local", name: "fix-login" });
 const remote = makeWorkspace({
@@ -63,5 +66,62 @@ describe("filterDashboardSidebarProjectsByHost", () => {
 		expect(result[0]?.children).toEqual([
 			{ type: "section", section: { ...section, workspaces: [cloud] } },
 		]);
+	});
+});
+
+describe("filterDashboardSidebarProjectsByMachine", () => {
+	const onTower = makeWorkspace({
+		id: "w-tower",
+		name: "gpu",
+		hostId: "tower",
+	});
+	const machineProjects = [
+		makeProject({
+			id: "p-both",
+			name: "Both",
+			children: [
+				{ type: "workspace", workspace: local },
+				{ type: "workspace", workspace: onTower },
+			],
+		}),
+		makeProject({
+			id: "p-here",
+			name: "Here",
+			children: [{ type: "workspace", workspace: local }],
+		}),
+		makeProject({ id: "p-empty", name: "Empty", children: [] }),
+	];
+
+	it("returns the same array with no host selected", () => {
+		expect(
+			filterDashboardSidebarProjectsByMachine(machineProjects, null, "host-1"),
+		).toBe(machineProjects);
+	});
+
+	it("keeps only the selected host's rows and drops projects left empty", () => {
+		const result = filterDashboardSidebarProjectsByMachine(
+			machineProjects,
+			"tower",
+			"host-1",
+		);
+		expect(result.map((project) => project.id)).toEqual(["p-both"]);
+		expect(result[0]?.children).toEqual([
+			{ type: "workspace", workspace: onTower },
+		]);
+	});
+
+	it("keeps empty projects and untouched projects by reference on this device", () => {
+		const result = filterDashboardSidebarProjectsByMachine(
+			machineProjects,
+			"host-1",
+			"host-1",
+		);
+		expect(result.map((project) => project.id)).toEqual([
+			"p-both",
+			"p-here",
+			"p-empty",
+		]);
+		expect(result[1]).toBe(machineProjects[1]);
+		expect(result[2]).toBe(machineProjects[2]);
 	});
 });

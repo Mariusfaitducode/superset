@@ -20,6 +20,7 @@ import {
 } from "renderer/components/SidebarCardSlot";
 import { UpdatesPill } from "renderer/components/UpdatesPill";
 import { useConversationTodosOfHosts } from "renderer/hooks/host-service/useHostConversationTodos";
+import { useKnownHosts } from "renderer/hooks/known-hosts/useKnownHosts";
 import { useActiveOrganizationId } from "renderer/hooks/useActiveOrganizationId";
 import { useCloudWorkspaces } from "renderer/hooks/useCloudWorkspaces";
 import { useV2UserPreferences } from "renderer/hooks/useV2UserPreferences";
@@ -35,6 +36,7 @@ import { useDashboardSidebarState } from "renderer/routes/_authenticated/hooks/u
 import { useHostWorkspaces } from "renderer/routes/_authenticated/providers/HostWorkspacesProvider";
 import { useLocalHostService } from "renderer/routes/_authenticated/providers/LocalHostServiceProvider";
 import { useReleaseNotesCardStore } from "renderer/stores/release-notes-card";
+import { useSidebarHostSelectionStore } from "renderer/stores/sidebar-host-selection";
 import { useSidebarPreference } from "renderer/stores/sidebar-preferences";
 import { useSidebarSectionsCollapseStore } from "renderer/stores/sidebar-sections-collapse";
 import { useV2NotificationStore } from "renderer/stores/v2-notifications";
@@ -46,6 +48,7 @@ import { DashboardSidebarCloudSection } from "./components/DashboardSidebarCloud
 import { DashboardSidebarGithubNotice } from "./components/DashboardSidebarGithubNotice";
 import { DashboardSidebarHeader } from "./components/DashboardSidebarHeader";
 import { DashboardSidebarHiddenProjects } from "./components/DashboardSidebarHiddenProjects";
+import { DashboardSidebarHostSwitcher } from "./components/DashboardSidebarHostSwitcher";
 import { DashboardSidebarHoverCardOverlay } from "./components/DashboardSidebarHoverCardOverlay";
 import { DashboardSidebarNeedsYouRow } from "./components/DashboardSidebarNeedsYouRow";
 import { DashboardSidebarPinnedSection } from "./components/DashboardSidebarPinnedSection";
@@ -90,6 +93,7 @@ import { buildWorkspaceSwitcherOptions } from "./utils/buildWorkspaceSwitcherOpt
 import { filterDashboardSidebarProjects } from "./utils/filterDashboardSidebarProjects";
 import {
 	filterDashboardSidebarProjectsByHost,
+	filterDashboardSidebarProjectsByMachine,
 	matchesHostFilter,
 } from "./utils/filterDashboardSidebarProjectsByHost";
 import { filterDashboardSidebarProjectsByWorkspace } from "./utils/filterDashboardSidebarProjectsByWorkspace";
@@ -205,7 +209,7 @@ export function DashboardSidebar({
 	const matchRoute = useMatchRoute();
 	const settingsHotkey = useHotkeyDisplay("OPEN_SETTINGS").text;
 	const isSettingsOpen = !!matchRoute({ to: "/settings", fuzzy: true });
-	const { activeHostUrl } = useLocalHostService();
+	const { activeHostUrl, machineId: localMachineId } = useLocalHostService();
 	const v2RouteMatch = matchRoute({ to: "/v2-workspace/$workspaceId" });
 	const activeV2WorkspaceId = v2RouteMatch ? v2RouteMatch.workspaceId : null;
 	const workspacesListCollapsed = useSidebarSectionsCollapseStore(
@@ -224,6 +228,24 @@ export function DashboardSidebar({
 		inlineCloudWorkspaces && !isCollapsed
 			? preferences.sidebarProjectHostFilter
 			: "all";
+	const storedMachineId = useSidebarHostSelectionStore(
+		(state) => state.machineId,
+	);
+	const selectHost = useSidebarHostSelectionStore((state) => state.select);
+	const { hosts: knownHosts } = useKnownHosts();
+	// The switcher shows only with two hosts or more and not in the icon rail;
+	// a host it can't show, or one gone from the roster, must not hide rows.
+	const selectedHost =
+		!isCollapsed && knownHosts.length > 1
+			? (knownHosts.find((host) => host.machineId === storedMachineId) ?? null)
+			: null;
+	const selectedMachineId = selectedHost?.machineId ?? null;
+	const selectedHostName = selectedHost?.name ?? "";
+	const matchesSelectedHost = useCallback(
+		(workspace: Pick<DashboardSidebarWorkspace, "hostId">) =>
+			selectedMachineId === null || workspace.hostId === selectedMachineId,
+		[selectedMachineId],
+	);
 	const [projectFilterQuery, setProjectFilterQuery] = useState("");
 	// The icon rail hides the Projects header (and its filter input); a
 	// filter left active there would invisibly hide projects.
@@ -256,8 +278,13 @@ export function DashboardSidebar({
 		[sortMode, orderedGroups],
 	);
 	const hostFilteredGroups = useMemo(
-		() => filterDashboardSidebarProjectsByHost(sortedGroups, hostFilter),
-		[sortedGroups, hostFilter],
+		() =>
+			filterDashboardSidebarProjectsByMachine(
+				filterDashboardSidebarProjectsByHost(sortedGroups, hostFilter),
+				selectedMachineId,
+				localMachineId,
+			),
+		[sortedGroups, hostFilter, selectedMachineId, localMachineId],
 	);
 	const selectedLabels = useWorkspaceLabelFilterStore(
 		(state) => state.selected,
@@ -313,18 +340,32 @@ export function DashboardSidebar({
 			pinnedWorkspaces.filter(
 				(workspace) =>
 					(hostFilter === "all" || matchesHostFilter(workspace, hostFilter)) &&
+					matchesSelectedHost(workspace) &&
 					(activeLabels.length === 0 || keepLabeled(workspace)),
 			),
-		[pinnedWorkspaces, hostFilter, activeLabels, keepLabeled],
+		[
+			pinnedWorkspaces,
+			hostFilter,
+			matchesSelectedHost,
+			activeLabels,
+			keepLabeled,
+		],
 	);
 	const displayedSessionWorkspaces = useMemo(
 		() =>
 			sessionWorkspaces.filter(
 				(workspace) =>
 					(hostFilter === "all" || matchesHostFilter(workspace, hostFilter)) &&
+					matchesSelectedHost(workspace) &&
 					(activeLabels.length === 0 || keepLabeled(workspace)),
 			),
-		[sessionWorkspaces, hostFilter, activeLabels, keepLabeled],
+		[
+			sessionWorkspaces,
+			hostFilter,
+			matchesSelectedHost,
+			activeLabels,
+			keepLabeled,
+		],
 	);
 	const displayedGroups = useMemo(() => {
 		const labelFiltered =
@@ -349,6 +390,7 @@ export function DashboardSidebar({
 	const isFilterActive =
 		trimmedFilterQuery !== "" ||
 		hostFilter !== "all" ||
+		selectedMachineId !== null ||
 		activeLabels.length > 0;
 	// The sort modes only reorder rows inside a project, so the project list
 	// is still the manual order and stays draggable; only a filter, which
@@ -361,6 +403,7 @@ export function DashboardSidebar({
 		onClearFilter: () => {
 			setProjectFilterQuery("");
 			setSidebarProjectHostFilter("all");
+			selectHost(null);
 			clearLabelFilter();
 		},
 	});
@@ -586,6 +629,13 @@ export function DashboardSidebar({
 											fadeEdges={["top", "bottom"]}
 											className="flex-1 overflow-y-auto hide-scrollbar"
 										>
+											{!isCollapsed && (
+												<DashboardSidebarHostSwitcher
+													workspaces={statusWorkspaces}
+													selectedMachineId={selectedMachineId}
+													onSelect={selectHost}
+												/>
+											)}
 											<DashboardSidebarGithubNotice
 												status={githubStatus}
 												isCollapsed={isCollapsed}
@@ -671,9 +721,13 @@ export function DashboardSidebar({
 																? t({
 																		message: "No workspace has these labels",
 																	})
-																: hostFilter === "cloud"
-																	? t({ message: "No cloud workspaces" })
-																	: t({ message: "No local workspaces" })}
+																: selectedHost
+																	? t({
+																			message: `No workspaces on ${selectedHostName}`,
+																		})
+																	: hostFilter === "cloud"
+																		? t({ message: "No cloud workspaces" })
+																		: t({ message: "No local workspaces" })}
 													</div>
 												)}
 										</OverflowFadeContainer>

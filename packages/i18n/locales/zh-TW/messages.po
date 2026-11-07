@@ -1027,6 +1027,9 @@ msgstr "{hidden, plural, other {查看另外 # 則回覆}}"
 msgid "{hiddenCount, plural, one {Show # more frame} other {Show # more frames}}"
 msgstr "{hiddenCount, plural, one {再顯示#個堆疊框架} other {再顯示#個堆疊框架}}"
 
+msgid "{hostName} (this device)"
+msgstr "{hostName}（此裝置）"
+
 msgid "{hostName} is offline"
 msgstr "{hostName}已離線"
 
@@ -1341,6 +1344,9 @@ msgstr "已使用 {used}"
 
 msgid "{waiting} Waiting"
 msgstr "{waiting}人等待"
+
+msgid "{working} working · {needsYou} waiting for you · {idle} idle"
+msgstr "{working} 個工作中 · {needsYou} 個等待你 · {idle} 個閒置"
 
 msgid "{workspaceName}: host is unavailable"
 msgstr "{workspaceName}：主機不可用"
@@ -7408,6 +7414,9 @@ msgstr "每週五下午4點，根據本週合併的PR起草釋出說明。"
 msgid "Every Friday at 5:00 PM"
 msgstr "每週五下午 5:00"
 
+msgid "Every host"
+msgstr "所有主機"
+
 msgid "Every minute"
 msgstr "每分鐘"
 
@@ -12325,6 +12334,9 @@ msgstr "沒有匹配搜尋的工作區"
 
 msgid "No workspaces match."
 msgstr "沒有匹配的工作區。"
+
+msgid "No workspaces on {selectedHostName}"
+msgstr "{selectedHostName} 上沒有工作區"
 
 msgid "No workspaces on this host yet"
 msgstr "此主機上還沒有工作區"
