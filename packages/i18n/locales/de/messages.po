@@ -12341,6 +12341,9 @@ msgstr "Kein Workspace hat diese Labels"
 msgid "No workspace on this host yet."
 msgstr "Noch kein Arbeitsbereich auf diesem Host."
 
+msgid "No workspace on this host yet. Start a session to run an agent here, or a workspace on one of its projects."
+msgstr "Noch kein Arbeitsbereich auf diesem Host. Starte eine Sitzung, um hier einen Agenten laufen zu lassen, oder einen Arbeitsbereich in einem seiner Projekte."
+
 msgid "No workspace run command configured"
 msgstr "Kein Run-Befehl für den Arbeitsbereich konfiguriert"
 

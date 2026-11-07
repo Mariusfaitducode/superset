@@ -12341,6 +12341,9 @@ msgstr "Tidak ada workspace dengan label ini"
 msgid "No workspace on this host yet."
 msgstr "Belum ada workspace di host ini."
 
+msgid "No workspace on this host yet. Start a session to run an agent here, or a workspace on one of its projects."
+msgstr "Belum ada workspace di host ini. Mulai sesi untuk menjalankan agen di sini, atau workspace di salah satu proyeknya."
+
 msgid "No workspace run command configured"
 msgstr "Tidak ada perintah run workspace yang dikonfigurasi"
 

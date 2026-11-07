@@ -12341,6 +12341,9 @@ msgstr "Нет рабочих пространств с этими меткам�
 msgid "No workspace on this host yet."
 msgstr "На этом хосте пока нет рабочих пространств."
 
+msgid "No workspace on this host yet. Start a session to run an agent here, or a workspace on one of its projects."
+msgstr "На этом хосте пока нет рабочих пространств. Начните сессию, чтобы запустить здесь агента, или рабочее пространство в одном из его проектов."
+
 msgid "No workspace run command configured"
 msgstr "Команда запуска рабочей области не настроена"
 

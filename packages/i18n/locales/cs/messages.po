@@ -12341,6 +12341,9 @@ msgstr "Žádný pracovní prostor nemá tyto štítky"
 msgid "No workspace on this host yet."
 msgstr "Na tomto hostiteli zatím není žádný pracovní prostor."
 
+msgid "No workspace on this host yet. Start a session to run an agent here, or a workspace on one of its projects."
+msgstr "Na tomto hostiteli zatím není žádný pracovní prostor. Spusťte relaci a pusťte zde agenta, nebo pracovní prostor v jednom z jeho projektů."
+
 msgid "No workspace run command configured"
 msgstr "Není nastavený žádný spouštěcí příkaz pracovního prostoru"
 

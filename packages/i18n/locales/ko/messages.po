@@ -12341,6 +12341,9 @@ msgstr "이 라벨이 있는 워크스페이스가 없습니다"
 msgid "No workspace on this host yet."
 msgstr "이 호스트에 아직 워크스페이스가 없습니다."
 
+msgid "No workspace on this host yet. Start a session to run an agent here, or a workspace on one of its projects."
+msgstr "이 호스트에 아직 워크스페이스가 없습니다. 세션을 시작해 여기서 에이전트를 실행하거나, 프로젝트 중 하나에 워크스페이스를 만드세요."
+
 msgid "No workspace run command configured"
 msgstr "설정된 워크스페이스 실행 명령이 없습니다"
 

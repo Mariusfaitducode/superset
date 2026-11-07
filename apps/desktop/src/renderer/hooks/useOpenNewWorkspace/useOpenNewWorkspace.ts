@@ -40,16 +40,15 @@ export function openNewWorkspace(
 	});
 }
 
-export function openNewSession({
-	isV2CloudEnabled,
-	machineId,
-	navigate,
-}: NewWorkspaceHandoff) {
+export function openNewSession(
+	{ isV2CloudEnabled, machineId, navigate }: NewWorkspaceHandoff,
+	requestedHostId?: string,
+) {
 	if (!isV2CloudEnabled) {
 		useNewWorkspaceModalStore.getState().openSessionModal();
 		return;
 	}
-	const hostId = resolveHandoffHostId(machineId);
+	const hostId = requestedHostId ?? resolveHandoffHostId(machineId);
 	const draftStore = useNewWorkspaceDraftStore.getState();
 	if (hostId) draftStore.updateDraft({ hostId });
 	draftStore.selectSession();
@@ -119,6 +118,19 @@ export function useOpenNewSession() {
 
 	return useCallback(
 		() => openNewSession({ isV2CloudEnabled, machineId, navigate }),
+		[isV2CloudEnabled, machineId, navigate],
+	);
+}
+
+/** A session (no project) on one host rather than the remembered one. */
+export function useOpenNewSessionForHost() {
+	const navigate = useNavigate();
+	const isV2CloudEnabled = useIsV2CloudEnabled();
+	const { machineId } = useLocalHostService();
+
+	return useCallback(
+		(hostId: string) =>
+			openNewSession({ isV2CloudEnabled, machineId, navigate }, hostId),
 		[isV2CloudEnabled, machineId, navigate],
 	);
 }
