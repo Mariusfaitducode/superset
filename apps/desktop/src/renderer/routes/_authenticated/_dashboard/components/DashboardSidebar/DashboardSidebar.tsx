@@ -19,6 +19,7 @@ import {
 	useStarNagCard,
 } from "renderer/components/SidebarCardSlot";
 import { UpdatesPill } from "renderer/components/UpdatesPill";
+import { useConversationTodosOfHosts } from "renderer/hooks/host-service/useHostConversationTodos";
 import { useActiveOrganizationId } from "renderer/hooks/useActiveOrganizationId";
 import { useCloudWorkspaces } from "renderer/hooks/useCloudWorkspaces";
 import { useV2UserPreferences } from "renderer/hooks/useV2UserPreferences";
@@ -31,15 +32,14 @@ import {
 } from "renderer/routes/_authenticated/_dashboard/stores/cloudSidebarStore";
 import { isInCloudSidebar } from "renderer/routes/_authenticated/_dashboard/utils/buildCloudSidebar";
 import { useDashboardSidebarState } from "renderer/routes/_authenticated/hooks/useDashboardSidebarState";
+import { useHostWorkspaces } from "renderer/routes/_authenticated/providers/HostWorkspacesProvider";
 import { useLocalHostService } from "renderer/routes/_authenticated/providers/LocalHostServiceProvider";
 import { useReleaseNotesCardStore } from "renderer/stores/release-notes-card";
+import { useSidebarPreference } from "renderer/stores/sidebar-preferences";
 import { useSidebarSectionsCollapseStore } from "renderer/stores/sidebar-sections-collapse";
 import { useV2NotificationStore } from "renderer/stores/v2-notifications";
 import { useWorkspaceLabelFilterStore } from "renderer/stores/workspace-label-filter";
-import {
-	type ActiveWorkspaceSwitcherOption,
-	DashboardSidebarActiveWorkspaceSwitcher,
-} from "./components/DashboardSidebarActiveWorkspaceSwitcher";
+import { DashboardSidebarActiveWorkspaceSwitcher } from "./components/DashboardSidebarActiveWorkspaceSwitcher";
 import { DashboardSidebarBulkActions } from "./components/DashboardSidebarBulkActions";
 import { DashboardSidebarBulkDeleteMount } from "./components/DashboardSidebarBulkDeleteMount";
 import { DashboardSidebarCloudSection } from "./components/DashboardSidebarCloudSection";
@@ -47,6 +47,7 @@ import { DashboardSidebarGithubNotice } from "./components/DashboardSidebarGithu
 import { DashboardSidebarHeader } from "./components/DashboardSidebarHeader";
 import { DashboardSidebarHiddenProjects } from "./components/DashboardSidebarHiddenProjects";
 import { DashboardSidebarHoverCardOverlay } from "./components/DashboardSidebarHoverCardOverlay";
+import { DashboardSidebarNeedsYouRow } from "./components/DashboardSidebarNeedsYouRow";
 import { DashboardSidebarPinnedSection } from "./components/DashboardSidebarPinnedSection";
 import { DashboardSidebarProjectSection } from "./components/DashboardSidebarProjectSection";
 import { DashboardSidebarRecentWorkspaceSwitcher } from "./components/DashboardSidebarRecentWorkspaceSwitcher";
@@ -85,6 +86,7 @@ import type {
 	DashboardSidebarProject,
 	DashboardSidebarWorkspace,
 } from "./types";
+import { buildWorkspaceSwitcherOptions } from "./utils/buildWorkspaceSwitcherOptions";
 import { filterDashboardSidebarProjects } from "./utils/filterDashboardSidebarProjects";
 import {
 	filterDashboardSidebarProjectsByHost,
@@ -173,6 +175,7 @@ export function DashboardSidebar({
 	isCollapsed = false,
 }: DashboardSidebarProps) {
 	const { t } = useLingui();
+	const sidebarContrast = useSidebarPreference("contrast");
 	const inlineCloudWorkspaces = useNewDashboardSidebarEnabled();
 	const {
 		groups,
@@ -272,7 +275,8 @@ export function DashboardSidebar({
 				].map((workspace) => workspace.hostId),
 			[groups, pinnedWorkspaces, sessionWorkspaces],
 		),
-		!isCollapsed,
+		// The workspace switchers show labels in the icon rail too.
+		true,
 	);
 	const filterLabels = useMemo(() => {
 		const byName = new Map<string, WorkspaceLabel>();
@@ -451,45 +455,40 @@ export function DashboardSidebar({
 			? (state.byOrganization[organizationId] ?? EMPTY_CLOUD_SIDEBAR).entries
 			: EMPTY_CLOUD_SIDEBAR.entries,
 	);
-	const switcherWorkspaces = useMemo<ActiveWorkspaceSwitcherOption[]>(() => {
-		const byId = new Map<string, ActiveWorkspaceSwitcherOption>();
-		for (const workspace of pinnedWorkspaces) {
-			byId.set(workspace.id, {
-				id: workspace.id,
-				name: workspace.name,
-				detail: workspace.projectName,
-			});
+	const { cache: hostCache } = useHostWorkspaces();
+	const todoHostUrls = useMemo(() => {
+		const urls: string[] = [];
+		for (const { hostId } of statusWorkspaces) {
+			if (hostCache.isSandboxHost(hostId)) continue;
+			const url = hostCache.resolveHostUrl(hostId);
+			if (url) urls.push(url);
 		}
-		for (const workspace of sessionWorkspaces) {
-			byId.set(workspace.id, {
-				id: workspace.id,
-				name: workspace.name,
-				detail: null,
-			});
-		}
-		for (const project of sortedGroups) {
-			for (const workspace of getProjectChildrenWorkspaces(project.children)) {
-				byId.set(workspace.id, {
-					id: workspace.id,
-					name: workspace.name,
-					detail: project.name,
-				});
-			}
-		}
-		for (const cloud of cloudWorkspaces ?? []) {
-			if (!isInCloudSidebar(cloud, cloudSidebarEntries[cloud.id], userId))
-				continue;
-			byId.set(cloud.id, { id: cloud.id, name: cloud.name, detail: null });
-		}
-		return [...byId.values()];
-	}, [
-		pinnedWorkspaces,
-		sessionWorkspaces,
-		sortedGroups,
-		cloudWorkspaces,
-		userId,
-		cloudSidebarEntries,
-	]);
+		return urls;
+	}, [statusWorkspaces, hostCache]);
+	const switcherTodos = useConversationTodosOfHosts(todoHostUrls);
+	const switcherWorkspaces = useMemo(
+		() =>
+			buildWorkspaceSwitcherOptions({
+				pinnedWorkspaces,
+				sessionChildren,
+				projects: sortedGroups,
+				cloudWorkspaces: (cloudWorkspaces ?? []).filter((cloud) =>
+					isInCloudSidebar(cloud, cloudSidebarEntries[cloud.id], userId),
+				),
+				labelsByHost,
+				todos: switcherTodos,
+			}),
+		[
+			pinnedWorkspaces,
+			sessionChildren,
+			sortedGroups,
+			cloudWorkspaces,
+			userId,
+			cloudSidebarEntries,
+			labelsByHost,
+			switcherTodos,
+		],
+	);
 
 	const activeV2Project = useMemo(() => {
 		if (!activeV2WorkspaceId) return null;
@@ -577,7 +576,10 @@ export function DashboardSidebar({
 									isProjectDragDisabled={isProjectDragDisabled}
 									isChildDragDisabled={isChildDragDisabled}
 								>
-									<div className="flex h-full flex-col border-r border-border bg-sidebar dark:bg-muted/35">
+									<div
+										data-sb-contrast={sidebarContrast}
+										className="flex h-full flex-col border-r border-border bg-sidebar dark:bg-muted/35"
+									>
 										<DashboardSidebarHeader isCollapsed={isCollapsed} />
 
 										<OverflowFadeContainer
@@ -588,6 +590,11 @@ export function DashboardSidebar({
 												status={githubStatus}
 												isCollapsed={isCollapsed}
 											/>
+											{!isCollapsed && (
+												<DashboardSidebarNeedsYouRow
+													workspaces={statusWorkspaces}
+												/>
+											)}
 											{(isCollapsed || !workspacesListCollapsed) && (
 												<DashboardSidebarPinnedSection
 													pinnedWorkspaces={displayedPinnedWorkspaces}

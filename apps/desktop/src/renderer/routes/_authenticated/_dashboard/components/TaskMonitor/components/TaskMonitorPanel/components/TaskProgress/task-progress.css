@@ -1,0 +1,47 @@
+/* A task that measures nothing still moves: a short bar sweeps the track,
+ * so "running, no idea how far" reads differently from "stuck at 0%". */
+.task-progress-sweep {
+	position: absolute;
+	inset-block: 0;
+	width: 30%;
+	border-radius: inherit;
+	background: currentColor;
+	animation: task-progress-sweep 1.8s ease-in-out infinite;
+}
+
+@keyframes task-progress-sweep {
+	from {
+		left: -30%;
+	}
+	to {
+		left: 100%;
+	}
+}
+
+/* The step being worked on breathes; the done ones are solid. */
+.task-progress-current {
+	animation: task-progress-current 1.6s ease-in-out infinite alternate;
+}
+
+@keyframes task-progress-current {
+	from {
+		opacity: 0.35;
+	}
+	to {
+		opacity: 0.8;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.task-progress-sweep {
+		left: 0;
+		width: 100%;
+		opacity: 0.35;
+		animation: none;
+	}
+
+	.task-progress-current {
+		opacity: 0.6;
+		animation: none;
+	}
+}

@@ -1,4 +1,5 @@
 import { router } from "../index";
+import { agentReportsRouter } from "./agent-reports";
 import { agentToolingRouter } from "./agent-tooling";
 import { agentsRouter } from "./agents";
 import { attachmentsRouter } from "./attachments";
@@ -7,9 +8,11 @@ import { configRouter } from "./config";
 import { conversationTodosRouter } from "./conversation-todos";
 import { filesystemRouter } from "./filesystem";
 import { gitRouter } from "./git";
+import { gitGraphRouter } from "./git-graph";
 import { githubRouter } from "./github";
 import { healthRouter } from "./health";
 import { hostRouter } from "./host";
+import { insightsRouter } from "./insights";
 import { issuesRouter } from "./issues";
 import { linkPreviewRouter } from "./link-preview";
 import { mobileRouter } from "./mobile";
@@ -25,25 +28,30 @@ import { systemRouter } from "./system";
 import { tagFoldersRouter } from "./tag-folders";
 import { terminalRouter } from "./terminal";
 import { terminalAgentsRouter } from "./terminal-agents";
+import { trackedTasksRouter } from "./tracked-tasks";
 import { usageRouter } from "./usage";
 import { workspaceRouter } from "./workspace";
 import { workspaceCleanupRouter } from "./workspace-cleanup";
 import { workspaceCreationRouter } from "./workspace-creation";
+import { workspaceGrantsRouter } from "./workspace-grants";
 import { workspaceLabelsRouter } from "./workspace-labels";
 import { workspaceNotesRouter } from "./workspace-notes";
 import { workspacesRouter } from "./workspaces";
 
 export const appRouter = router({
+	agentReports: agentReportsRouter,
 	agents: agentsRouter,
 	agentTooling: agentToolingRouter,
 	attachments: attachmentsRouter,
 	browser: browserRouter,
 	health: healthRouter,
 	host: hostRouter,
+	insights: insightsRouter,
 	config: configRouter,
 	conversationTodos: conversationTodosRouter,
 	filesystem: filesystemRouter,
 	git: gitRouter,
+	gitGraph: gitGraphRouter,
 	github: githubRouter,
 	issues: issuesRouter,
 	linkPreview: linkPreviewRouter,
@@ -66,7 +74,9 @@ export const appRouter = router({
 	workspaceCleanup: workspaceCleanupRouter,
 	workspaceCreation: workspaceCreationRouter,
 	workspaceNotes: workspaceNotesRouter,
+	trackedTasks: trackedTasksRouter,
 	workspaceLabels: workspaceLabelsRouter,
+	workspaceGrants: workspaceGrantsRouter,
 });
 
 export type AppRouter = typeof appRouter;

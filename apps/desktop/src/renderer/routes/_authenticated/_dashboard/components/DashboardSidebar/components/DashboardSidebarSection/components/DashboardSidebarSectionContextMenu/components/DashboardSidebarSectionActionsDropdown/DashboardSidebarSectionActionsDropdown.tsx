@@ -10,6 +10,7 @@ import { SectionActionsMenuItems } from "../SectionActionsMenuItems";
 
 export function DashboardSidebarSectionActionsDropdown({
 	color,
+	groupId,
 	onRename,
 	onSetColor,
 	onDelete,
@@ -41,6 +42,7 @@ export function DashboardSidebarSectionActionsDropdown({
 			>
 				<SectionActionsMenuItems
 					color={color}
+					groupId={groupId}
 					kind="dropdown"
 					onRename={onRename}
 					onSetColor={onSetColor}

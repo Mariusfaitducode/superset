@@ -24,11 +24,17 @@ export function isActiveNote(note: WorkspaceNote): boolean {
 	return note.status === "open" || note.status === "kept";
 }
 
-/** Active notes first, then the closed ones; oldest first within each. */
+/**
+ * Active notes first, pinned context leading them, then the closed ones;
+ * oldest first within each.
+ */
 export function sortNotes(notes: WorkspaceNote[]): WorkspaceNote[] {
+	const isPinned = (note: WorkspaceNote) =>
+		isActiveNote(note) && note.kind === "context";
 	return [...notes].sort(
 		(a, b) =>
 			Number(isActiveNote(b)) - Number(isActiveNote(a)) ||
+			Number(isPinned(b)) - Number(isPinned(a)) ||
 			a.createdAt - b.createdAt,
 	);
 }

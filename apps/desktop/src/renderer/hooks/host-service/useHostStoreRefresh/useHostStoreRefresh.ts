@@ -6,7 +6,11 @@ import {
 import { useEffect } from "react";
 import { getHostEventBus } from "renderer/lib/host-event-bus";
 
-export type HostStore = "conversation-todos" | "workspace-labels";
+export type HostStore =
+	| "conversation-todos"
+	| "workspace-labels"
+	| "agent-reports"
+	| "tracked-tasks";
 
 const holds = new Map<string, { count: number; release: () => void }>();
 

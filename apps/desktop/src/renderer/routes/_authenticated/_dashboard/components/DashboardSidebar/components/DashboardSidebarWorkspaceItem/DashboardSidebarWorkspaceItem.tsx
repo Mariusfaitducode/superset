@@ -141,8 +141,9 @@ export function DashboardSidebarWorkspaceItem({
 		() => ({
 			workspace,
 			onEditBranchClick: isCloudWorkspace ? undefined : setRenameBranchTarget,
+			shortcutLabel,
 		}),
-		[workspace, isCloudWorkspace],
+		[workspace, isCloudWorkspace, shortcutLabel],
 	);
 
 	const handleMouseEnter = useCallback(
@@ -319,9 +320,7 @@ export function DashboardSidebarWorkspaceItem({
 					isActive={isActive}
 					isRenaming={isRenaming}
 					renameValue={renameValue}
-					shortcutLabel={shortcutLabel}
 					pinnedContext={pinnedContext}
-					workspaceStatus={workspaceStatus}
 					isInSection={isInSection}
 					indentation={indentation}
 					isBulkSelectable={onSelectionClick != null}

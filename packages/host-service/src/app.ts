@@ -59,6 +59,7 @@ import {
 	TerminalAgentStore,
 } from "./terminal-agents";
 import { matchesAgentBinding } from "./terminal-agents/matches-agent-binding";
+import { startTrackedTaskCiWatcher } from "./tracked-tasks";
 import { appRouter } from "./trpc/router";
 import { gitStatusStore } from "./trpc/router/git/utils/git-status-store";
 import { stopLocalMobileServer } from "./trpc/router/mobile";
@@ -246,6 +247,9 @@ export function createApp(options: CreateAppOptions): CreateAppResult {
 		todoStore: getConversationTodoStore(),
 		onMoved: () => eventBus.broadcastHostStoreChanged("conversation-todos"),
 	});
+	startTrackedTaskCiWatcher(() =>
+		eventBus.broadcastHostStoreChanged("tracked-tasks"),
+	);
 
 	const pageWatch = new PageWatchManager({
 		api: {

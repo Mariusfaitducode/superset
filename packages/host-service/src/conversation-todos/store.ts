@@ -40,6 +40,12 @@ export interface ConversationTodo {
 	link: string | null;
 	createdAt: number;
 	updatedAt: number;
+	/**
+	 * Set when the to-do is closed: it is kept, out of the list, so there is
+	 * a trace of it. Absent on to-dos written before archiving existed.
+	 */
+	archivedAt?: number | null;
+	archivedBy?: TodoActor | null;
 }
 
 export interface TodoFields {
@@ -55,6 +61,7 @@ export class TodoNotFoundError extends Error {}
 
 export const MAX_CONVERSATIONS = 200;
 export const MAX_TODOS_PER_CONVERSATION = 100;
+export const MAX_ARCHIVED_PER_CONVERSATION = 200;
 
 interface TodoFile {
 	version: 1;
@@ -70,8 +77,9 @@ export function defaultTodosPath(): string {
 /**
  * The to-dos of every agent conversation on this host, in one JSON file the
  * app and the agents' CLI both go through. Agents may check any to-do but
- * only change or delete their own: the user's to-dos say what the user
+ * only change or archive their own: the user's to-dos say what the user
  * wants, and an agent rewriting them would make the list untrustworthy.
+ * Nothing is deleted: closing a to-do archives it.
  */
 export class ConversationTodoStore {
 	private todos: ConversationTodo[] | null = null;
@@ -81,9 +89,18 @@ export class ConversationTodoStore {
 		private readonly now: () => number = Date.now,
 	) {}
 
-	list(filter: { workspaceId?: string; terminalId?: string } = {}) {
+	/** The open list by default; `archived` gives the archived ones instead. */
+	list(
+		filter: {
+			workspaceId?: string;
+			terminalId?: string;
+			archived?: boolean;
+		} = {},
+	) {
+		const archived = filter.archived ?? false;
 		return this.load().filter(
 			(todo) =>
+				isArchived(todo) === archived &&
 				(!filter.workspaceId || todo.workspaceId === filter.workspaceId) &&
 				(!filter.terminalId || todo.terminalId === filter.terminalId),
 		);
@@ -118,6 +135,8 @@ export class ConversationTodoStore {
 			link: input.link ?? null,
 			createdAt: at,
 			updatedAt: at,
+			archivedAt: null,
+			archivedBy: null,
 		};
 		this.save([...this.load(), todo]);
 		return todo;
@@ -145,10 +164,22 @@ export class ConversationTodoStore {
 		return this.replace({ ...todo, done, doneBy: done ? actor : null });
 	}
 
-	remove(actor: TodoActor, id: string): void {
+	archive(actor: TodoActor, id: string): ConversationTodo {
 		const todo = this.get(id);
-		this.assertOwns(actor, todo, "delete");
-		this.save(this.load().filter((item) => item.id !== id));
+		this.assertOwns(actor, todo, "archive");
+		if (isArchived(todo)) return todo;
+		return this.replace({
+			...todo,
+			archivedAt: this.now(),
+			archivedBy: actor,
+		});
+	}
+
+	restore(actor: TodoActor, id: string): ConversationTodo {
+		const todo = this.get(id);
+		this.assertOwns(actor, todo, "restore");
+		if (!isArchived(todo)) return todo;
+		return this.replace({ ...todo, archivedAt: null, archivedBy: null });
 	}
 
 	/**
@@ -190,15 +221,24 @@ export class ConversationTodoStore {
 		return moved;
 	}
 
-	/** Removes the checked to-dos of a conversation that the actor may delete. */
+	/** Archives the checked to-dos of a conversation that the actor may archive. */
 	clearDone(actor: TodoActor, terminalId: string): number {
-		const todos = this.load();
-		const kept = todos.filter(
-			(todo) =>
-				todo.terminalId !== terminalId || !todo.done || !this.owns(actor, todo),
-		);
-		this.save(kept);
-		return todos.length - kept.length;
+		const at = this.now();
+		let cleared = 0;
+		const todos = this.load().map((todo) => {
+			if (
+				todo.terminalId !== terminalId ||
+				!todo.done ||
+				isArchived(todo) ||
+				!this.owns(actor, todo)
+			) {
+				return todo;
+			}
+			cleared++;
+			return { ...todo, archivedAt: at, archivedBy: actor, updatedAt: at };
+		});
+		if (cleared > 0) this.save(todos);
+		return cleared;
 	}
 
 	private owns(actor: TodoActor, todo: ConversationTodo): boolean {
@@ -260,6 +300,24 @@ export class ConversationTodoStore {
 	}
 }
 
+function isArchived(todo: ConversationTodo): boolean {
+	return todo.archivedAt != null;
+}
+
+// Archived to-dos get their own cap so a long history never pushes open
+// to-dos out; past it the oldest archived go first.
+function boundConversation(list: ConversationTodo[]): ConversationTodo[] {
+	const open = list.filter((todo) => !isArchived(todo));
+	const keptArchived = new Set(
+		list
+			.filter(isArchived)
+			.sort((a, b) => (a.archivedAt ?? 0) - (b.archivedAt ?? 0))
+			.slice(-MAX_ARCHIVED_PER_CONVERSATION),
+	);
+	const keptOpen = new Set(open.slice(-MAX_TODOS_PER_CONVERSATION));
+	return list.filter((todo) => keptOpen.has(todo) || keptArchived.has(todo));
+}
+
 // A conversation's to-dos follow it to its latest terminal, so old terminal
 // ids never come back: once the cap is reached the conversation touched
 // longest ago goes first.
@@ -275,5 +333,5 @@ function bound(todos: ConversationTodo[]): ConversationTodo[] {
 	return [...byTerminal.values()]
 		.sort((a, b) => lastTouched(b) - lastTouched(a))
 		.slice(0, MAX_CONVERSATIONS)
-		.flatMap((list) => list.slice(-MAX_TODOS_PER_CONVERSATION));
+		.flatMap(boundConversation);
 }

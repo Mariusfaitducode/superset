@@ -19,6 +19,7 @@ describe("buildDetailsQuery", () => {
 		expect(query).toContain("pr34: pullRequest(number: 34)");
 		expect(query).toContain("contexts(first: 0)");
 		expect(query).not.toContain("detailsUrl");
+		expect(query).toContain("closingIssuesReferences(first: 5)");
 	});
 });
 
@@ -58,6 +59,21 @@ describe("parseDetailsResponse", () => {
 				},
 			],
 		},
+		lastCommit: {
+			totalCount: 4,
+			nodes: [{ commit: { committedDate: "2026-10-21T08:00:00Z" } }],
+		},
+		closingIssuesReferences: {
+			nodes: [
+				{
+					number: 2944,
+					title: "Group trends by local day",
+					url: "https://github.com/acme/web/issues/2944",
+					state: "OPEN",
+				},
+				null,
+			],
+		},
 		statusCheckRollup: {
 			state: "FAILURE",
 			contexts: {
@@ -89,6 +105,16 @@ describe("parseDetailsResponse", () => {
 			pendingReviewers: ["Me-User", "core"],
 			reviews: [{ login: "bob", state: "CHANGES_REQUESTED" }],
 			viewerReview: null,
+			commitCount: 4,
+			lastCommitAt: "2026-10-21T08:00:00Z",
+			closingIssues: [
+				{
+					number: 2944,
+					title: "Group trends by local day",
+					url: "https://github.com/acme/web/issues/2944",
+					state: "OPEN",
+				},
+			],
 		});
 	});
 
@@ -96,7 +122,13 @@ describe("parseDetailsResponse", () => {
 		const details = parseDetailsResponse({
 			viewer: { login: "alice" },
 			repository: {
-				pr7: { ...node, statusCheckRollup: null, timelineItems: null },
+				pr7: {
+					...node,
+					statusCheckRollup: null,
+					timelineItems: null,
+					lastCommit: null,
+					closingIssuesReferences: null,
+				},
 				pr8: null,
 			},
 		});
@@ -107,6 +139,9 @@ describe("parseDetailsResponse", () => {
 			reviewRequestedAt: null,
 			viewerReview: null,
 			checks: { status: "none", failed: 0, pending: 0, total: 0 },
+			commitCount: null,
+			lastCommitAt: null,
+			closingIssues: [],
 		});
 	});
 });

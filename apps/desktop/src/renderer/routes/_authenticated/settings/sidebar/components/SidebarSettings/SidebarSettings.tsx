@@ -1,5 +1,6 @@
 import { Trans, useLingui } from "@lingui/react/macro";
 import { Button } from "@superset/ui/button";
+import { Checkbox } from "@superset/ui/checkbox";
 import {
 	Select,
 	SelectContent,
@@ -8,7 +9,6 @@ import {
 	SelectValue,
 } from "@superset/ui/select";
 import { Switch } from "@superset/ui/switch";
-import { cn } from "@superset/ui/utils";
 import {
 	type SidebarPreferenceKey,
 	useSidebarPreferencesStore,
@@ -20,29 +20,9 @@ import {
 	SETTING_ITEM_ID,
 	type SettingItemId,
 } from "../../../utils/settings-search";
+import { SidebarAppearanceSettings } from "./components/SidebarAppearanceSettings";
+import { SidebarMenuSettings } from "./components/SidebarMenuSettings";
 import { WorkspaceLabelsSettings } from "./components/WorkspaceLabelsSettings";
-
-function StateLegend() {
-	const { t } = useLingui();
-	const states = [
-		{ dot: "bg-yellow-400", label: t`Working` },
-		{ dot: "bg-violet-500", label: t`Needs your approval` },
-		{ dot: "bg-green-500", label: t`Finished — not opened yet` },
-		{ dot: "bg-blue-500", label: t`Waiting for your reply` },
-		{ dot: "bg-red-500", label: t`Stopped on an error` },
-		{ dot: "bg-muted-foreground/40", label: t`Idle` },
-	];
-	return (
-		<ul className="my-2.5 grid grid-cols-2 gap-x-6 gap-y-2 rounded-md border border-border p-3">
-			{states.map((state) => (
-				<li key={state.label} className="flex items-center gap-2 text-xs">
-					<span className={cn("size-2 shrink-0 rounded-full", state.dot)} />
-					{state.label}
-				</li>
-			))}
-		</ul>
-	);
-}
 
 interface SidebarSettingsProps {
 	visibleItems: SettingItemId[];
@@ -51,6 +31,15 @@ interface SidebarSettingsProps {
 export function SidebarSettings({ visibleItems }: SidebarSettingsProps) {
 	const { t } = useLingui();
 	const preferences = useSidebarPreferencesStore();
+	const showAppearance = isItemVisible(
+		SETTING_ITEM_ID.SIDEBAR_APPEARANCE,
+		visibleItems,
+	);
+	const showMenu = isItemVisible(SETTING_ITEM_ID.SIDEBAR_MENU, visibleItems);
+	const showStateColors = isItemVisible(
+		SETTING_ITEM_ID.SIDEBAR_STATE_COLORS,
+		visibleItems,
+	);
 
 	const rows: {
 		itemId: SettingItemId;
@@ -103,6 +92,13 @@ export function SidebarSettings({ visibleItems }: SidebarSettingsProps) {
 			needsConversations: true,
 		},
 		{
+			itemId: SETTING_ITEM_ID.SIDEBAR_TODOS,
+			key: "todosInline",
+			label: t`To-dos under the conversation`,
+			hint: t`Open a conversation's to-dos in the list, under it, rather than in a popover beside it.`,
+			needsConversations: true,
+		},
+		{
 			itemId: SETTING_ITEM_ID.SIDEBAR_AGENT_TODOS,
 			key: "showAgentTodos",
 			label: t`Agents' to-dos`,
@@ -118,6 +114,13 @@ export function SidebarSettings({ visibleItems }: SidebarSettingsProps) {
 		},
 	];
 
+	const detailFields: { key: SidebarPreferenceKey; label: string }[] = [
+		{ key: "showRowBranch", label: t`Branch` },
+		{ key: "showRowPullRequest", label: t`Pull request and checks` },
+		{ key: "showRowTodos", label: t`Open to-dos` },
+		{ key: "showRowWaitTime", label: t`Time waited` },
+	];
+
 	return (
 		<div className="p-6 max-w-4xl w-full mx-auto">
 			<div className="mb-8 flex items-start justify-between gap-6">
@@ -126,13 +129,82 @@ export function SidebarSettings({ visibleItems }: SidebarSettingsProps) {
 						<Trans>Sidebar</Trans>
 					</h2>
 					<p className="text-sm text-muted-foreground mt-1">
-						<Trans>Choose what the sidebar shows under each workspace.</Trans>
+						<Trans>
+							Choose how the sidebar looks and what it shows under each
+							workspace. Right-click a project or a group for its own options.
+						</Trans>
 					</p>
 				</div>
 				<Button variant="outline" size="sm" onClick={preferences.reset}>
 					<Trans>Reset to defaults</Trans>
 				</Button>
 			</div>
+			{showMenu && (
+				<section className="mb-8">
+					<h3 className="mb-1 text-sm font-semibold">
+						<Trans>Menu</Trans>
+					</h3>
+					<SidebarMenuSettings />
+				</section>
+			)}
+			{isItemVisible(SETTING_ITEM_ID.SIDEBAR_ROWS, visibleItems) && (
+				<section className="mb-8">
+					<h3 className="mb-1 text-sm font-semibold">
+						<Trans>Workspace rows</Trans>
+					</h3>
+					<SettingsRow
+						label={t`Compact rows`}
+						hint={t`One line per workspace, without the details line under its name.`}
+						htmlFor="sidebar-singleLineRows"
+					>
+						<Switch
+							id="sidebar-singleLineRows"
+							checked={preferences.singleLineRows}
+							onCheckedChange={(checked) =>
+								preferences.setPreference("singleLineRows", checked)
+							}
+						/>
+					</SettingsRow>
+					<div className="py-2.5">
+						<p className="mb-2 text-xs text-muted-foreground">
+							<Trans>The details line shows:</Trans>
+						</p>
+						<div className="flex flex-wrap gap-x-5 gap-y-2">
+							{detailFields.map((field) => (
+								<label
+									key={field.key}
+									htmlFor={`sidebar-${field.key}`}
+									className="flex items-center gap-2 text-sm"
+								>
+									<Checkbox
+										id={`sidebar-${field.key}`}
+										checked={preferences[field.key]}
+										disabled={preferences.singleLineRows}
+										onCheckedChange={(checked) =>
+											preferences.setPreference(field.key, checked === true)
+										}
+									/>
+									{field.label}
+								</label>
+							))}
+						</div>
+					</div>
+				</section>
+			)}
+			{(showAppearance || showStateColors) && (
+				<section className="mb-8">
+					<h3 className="mb-1 text-sm font-semibold">
+						<Trans>Appearance</Trans>
+					</h3>
+					<SidebarAppearanceSettings
+						showLayout={showAppearance}
+						showColors={showStateColors}
+					/>
+				</section>
+			)}
+			<h3 className="mb-1 text-sm font-semibold">
+				<Trans>Content</Trans>
+			</h3>
 			<div className="divide-y divide-border">
 				{rows
 					.filter((row) => isItemVisible(row.itemId, visibleItems))
@@ -184,9 +256,6 @@ export function SidebarSettings({ visibleItems }: SidebarSettingsProps) {
 							</SelectContent>
 						</Select>
 					</SettingsRow>
-				)}
-				{isItemVisible(SETTING_ITEM_ID.SIDEBAR_CONVERSATIONS, visibleItems) && (
-					<StateLegend />
 				)}
 			</div>
 			{isItemVisible(

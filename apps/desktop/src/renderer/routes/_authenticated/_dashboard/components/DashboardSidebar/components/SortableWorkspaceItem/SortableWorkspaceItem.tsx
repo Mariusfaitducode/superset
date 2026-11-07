@@ -4,6 +4,7 @@ import { cn } from "@superset/ui/utils";
 import { useMemo } from "react";
 import { getBlockedDragProps } from "../../hooks/useBlockedDragNotice";
 import { useDashboardSidebarDnd } from "../../hooks/useSidebarDnd";
+import { DashboardSidebarFolderProvider } from "../../providers/DashboardSidebarFolderProvider";
 import type { WorkspaceSelectionEvent } from "../../providers/DashboardSidebarSelectionProvider";
 import type {
 	DashboardSidebarWorkspace,
@@ -15,6 +16,10 @@ interface SortableWorkspaceItemProps {
 	sortableId: string;
 	workspace: DashboardSidebarWorkspace;
 	accentColor?: string | null;
+	/** The group the row is filed under, if any. */
+	groupId?: string | null;
+	/** Fallback for the conversation stripe when the row has no group color. */
+	projectColor?: string | null;
 	isInSection?: boolean;
 	indentation?: DashboardSidebarWorkspaceIndentation;
 	onHoverCardOpen?: (workspaceId: string) => void | Promise<void>;
@@ -42,6 +47,8 @@ export function SortableWorkspaceItem({
 	sortableId,
 	workspace,
 	accentColor,
+	groupId = null,
+	projectColor = null,
 	isInSection,
 	indentation,
 	onHoverCardOpen,
@@ -71,18 +78,27 @@ export function SortableWorkspaceItem({
 	// so keep it referentially stable while only the wrapper transform changes.
 	const row = useMemo(
 		() => (
-			<DashboardSidebarWorkspaceItem
-				workspace={workspace}
-				onHoverCardOpen={onHoverCardOpen}
-				shortcutLabel={shortcutLabel}
-				isInSection={isInSection}
-				indentation={indentation}
-				isSelected={isSelected}
-				onSelectionClick={onSelectionClick}
-				pinnedContext={pinnedContext}
-			/>
+			<DashboardSidebarFolderProvider
+				projectId={workspace.projectId}
+				groupId={groupId}
+				color={accentColor ?? projectColor}
+			>
+				<DashboardSidebarWorkspaceItem
+					workspace={workspace}
+					onHoverCardOpen={onHoverCardOpen}
+					shortcutLabel={shortcutLabel}
+					isInSection={isInSection}
+					indentation={indentation}
+					isSelected={isSelected}
+					onSelectionClick={onSelectionClick}
+					pinnedContext={pinnedContext}
+				/>
+			</DashboardSidebarFolderProvider>
 		),
 		[
+			groupId,
+			accentColor,
+			projectColor,
 			workspace,
 			onHoverCardOpen,
 			shortcutLabel,
@@ -101,7 +117,9 @@ export function SortableWorkspaceItem({
 				transform: CSS.Translate.toString(transform),
 				transition,
 				opacity: isDragging || isDragPlaceholder ? 0.5 : undefined,
-				boxShadow: accentColor ? `inset 3px 0 ${accentColor}` : undefined,
+				boxShadow: accentColor
+					? `inset var(--sb-band) 0 ${accentColor}`
+					: undefined,
 			}}
 			{...getBlockedDragProps(isChildDragDisabled)}
 			{...attributes}

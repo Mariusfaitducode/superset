@@ -8,12 +8,9 @@ import { navigateToV2Workspace } from "renderer/routes/_authenticated/_dashboard
 import { StatusIndicator } from "renderer/screens/main/components/StatusIndicator";
 import type { ActivePaneStatus } from "shared/tabs-types";
 import { useSidebarWorkspaceStatuses } from "../../providers/DashboardSidebarWorkspaceStatusProvider";
+import type { ActiveWorkspaceSwitcherOption } from "../../utils/buildWorkspaceSwitcherOptions";
 
-export interface ActiveWorkspaceSwitcherOption {
-	id: string;
-	name: string;
-	detail: string | null;
-}
+export type { ActiveWorkspaceSwitcherOption };
 
 interface DashboardSidebarActiveWorkspaceSwitcherProps {
 	workspaces: ActiveWorkspaceSwitcherOption[];

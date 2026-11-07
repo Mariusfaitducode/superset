@@ -1,20 +1,24 @@
 import { useLingui } from "@lingui/react/macro";
 import { Button } from "@superset/ui/button";
+import { Switch } from "@superset/ui/switch";
 import { Textarea } from "@superset/ui/textarea";
-import { useState } from "react";
+import { useId, useState } from "react";
 import type { WorkspaceNote } from "./notes";
 
-/** A note's details and its delete button, in the note's menu. */
+/** A note's details, its pin and its delete button, in the note's menu. */
 export function NoteDetails({
 	note,
 	onDetailsChange,
+	onKindChange,
 	onDelete,
 }: {
 	note: WorkspaceNote;
 	onDetailsChange: (details: string | null) => void;
+	onKindChange: (kind: WorkspaceNote["kind"]) => void;
 	onDelete: () => void;
 }) {
 	const { t } = useLingui();
+	const pinId = useId();
 	const [details, setDetails] = useState(note.details ?? "");
 	const commitDetails = () => {
 		const next = details.trim() || null;
@@ -32,6 +36,21 @@ export function NoteDetails({
 					onBlur={commitDetails}
 					className="max-h-48 min-h-16 text-xs"
 				/>
+			</div>
+			<div className="flex items-start gap-2">
+				<Switch
+					id={pinId}
+					checked={note.kind === "context"}
+					onCheckedChange={(checked) =>
+						onKindChange(checked ? "context" : "note")
+					}
+				/>
+				<label htmlFor={pinId} className="space-y-0.5 text-xs">
+					<span className="block">{t`Pinned context`}</span>
+					<span className="block text-[11px] text-muted-foreground">
+						{t`Every agent started in this workspace gets it.`}
+					</span>
+				</label>
 			</div>
 			<Button
 				variant="ghost"

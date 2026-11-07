@@ -2,8 +2,8 @@ import { useLingui } from "@lingui/react/macro";
 import { cn } from "@superset/ui/utils";
 import { useMemo } from "react";
 import { LuListChecks } from "react-icons/lu";
+import { DOT_CLASS } from "renderer/routes/_authenticated/_dashboard/components/DashboardSidebar/components/DashboardSidebarWorkspaceItem/components/DashboardSidebarExpandedWorkspaceRow/components/DashboardSidebarConversationList/DashboardSidebarConversationList";
 import {
-	type ConversationState,
 	deriveConversationState,
 	isWaitingOnUser,
 } from "renderer/routes/_authenticated/_dashboard/components/DashboardSidebar/components/DashboardSidebarWorkspaceItem/components/DashboardSidebarExpandedWorkspaceRow/components/DashboardSidebarConversationList/utils/conversation-state";
@@ -11,15 +11,6 @@ import { compareTodos } from "renderer/routes/_authenticated/_dashboard/componen
 import { WorkspaceLabelPills } from "renderer/routes/_authenticated/_dashboard/components/DashboardSidebar/components/WorkspaceLabels";
 import { useV2NotificationStore } from "renderer/stores/v2-notifications";
 import { useHostAgentBindings, useHostTodos } from "./useHostInsights";
-
-const DOT_CLASS: Record<ConversationState, string> = {
-	working: "bg-yellow-400 animate-pulse",
-	request: "bg-violet-500",
-	failed: "bg-red-500",
-	unseen: "bg-green-500",
-	seen: "bg-blue-500",
-	idle: "bg-muted-foreground/40",
-};
 
 /**
  * What the sidebar shows about a workspace, on its board card or list row:
