@@ -1029,6 +1029,9 @@ msgstr "{hidden, plural, one {# reactie meer weergeven} other {# reacties meer w
 msgid "{hiddenCount, plural, one {Show # more frame} other {Show # more frames}}"
 msgstr "{hiddenCount, plural, one {# frame meer tonen} other {# frames meer tonen}}"
 
+msgid "{hostName} (this device)"
+msgstr "{hostName} (dit apparaat)"
+
 msgid "{hostName} is offline"
 msgstr "{hostName} is offline"
 
@@ -1343,6 +1346,9 @@ msgstr "{used} gebruikt"
 
 msgid "{waiting} Waiting"
 msgstr "{waiting} wachten"
+
+msgid "{working} working · {needsYou} waiting for you · {idle} idle"
+msgstr "{working} aan het werk · {needsYou} wachten op jou · {idle} inactief"
 
 msgid "{workspaceName}: host is unavailable"
 msgstr "{workspaceName}: host is niet beschikbaar"
@@ -7416,6 +7422,9 @@ msgstr "Elke vrijdag om 16.00 uur: stel release notes op uit de gemergede PR's v
 msgid "Every Friday at 5:00 PM"
 msgstr "Elke vrijdag om 17:00"
 
+msgid "Every host"
+msgstr "Alle hosts"
+
 msgid "Every minute"
 msgstr "Elke minuut"
 
@@ -12348,6 +12357,9 @@ msgstr "Geen werkruimtes komen overeen met je zoekopdracht"
 
 msgid "No workspaces match."
 msgstr "Geen overeenkomende werkruimtes."
+
+msgid "No workspaces on {selectedHostName}"
+msgstr "Geen workspaces op {selectedHostName}"
 
 msgid "No workspaces on this host yet"
 msgstr "Nog geen werkruimtes op deze host"

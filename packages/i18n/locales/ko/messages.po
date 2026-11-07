@@ -1029,6 +1029,9 @@ msgstr "{hidden, plural, other {답글 #개 더 보기}}"
 msgid "{hiddenCount, plural, one {Show # more frame} other {Show # more frames}}"
 msgstr "{hiddenCount, plural, one {프레임 #개 더 보기} other {프레임 #개 더 보기}}"
 
+msgid "{hostName} (this device)"
+msgstr "{hostName} (이 기기)"
+
 msgid "{hostName} is offline"
 msgstr "{hostName}이(가) 오프라인입니다"
 
@@ -1343,6 +1346,9 @@ msgstr "{used} 사용됨"
 
 msgid "{waiting} Waiting"
 msgstr "{waiting}명 대기 중"
+
+msgid "{working} working · {needsYou} waiting for you · {idle} idle"
+msgstr "작업 중 {working} · 응답 대기 {needsYou} · 유휴 {idle}"
 
 msgid "{workspaceName}: host is unavailable"
 msgstr "{workspaceName}: 호스트를 사용할 수 없습니다"
@@ -7416,6 +7422,9 @@ msgstr "매주 금요일 오후 4시에 이번 주 머지된 PR로 릴리스 노
 msgid "Every Friday at 5:00 PM"
 msgstr "매주 금요일 오후 5:00"
 
+msgid "Every host"
+msgstr "모든 호스트"
+
 msgid "Every minute"
 msgstr "1분마다"
 
@@ -12348,6 +12357,9 @@ msgstr "검색과 일치하는 워크스페이스가 없습니다"
 
 msgid "No workspaces match."
 msgstr "일치하는 워크스페이스가 없습니다."
+
+msgid "No workspaces on {selectedHostName}"
+msgstr "{selectedHostName}에 워크스페이스가 없습니다"
 
 msgid "No workspaces on this host yet"
 msgstr "아직 이 호스트에 워크스페이스가 없습니다"

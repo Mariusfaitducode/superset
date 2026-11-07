@@ -1029,6 +1029,9 @@ msgstr "{hidden, plural, other {Lihat # balasan lagi}}"
 msgid "{hiddenCount, plural, one {Show # more frame} other {Show # more frames}}"
 msgstr "{hiddenCount, plural, one {Tampilkan # frame lagi} other {Tampilkan # frame lagi}}"
 
+msgid "{hostName} (this device)"
+msgstr "{hostName} (perangkat ini)"
+
 msgid "{hostName} is offline"
 msgstr "{hostName} sedang offline"
 
@@ -1343,6 +1346,9 @@ msgstr "{used} terpakai"
 
 msgid "{waiting} Waiting"
 msgstr "{waiting} Menunggu"
+
+msgid "{working} working · {needsYou} waiting for you · {idle} idle"
+msgstr "{working} bekerja · {needsYou} menunggu Anda · {idle} diam"
 
 msgid "{workspaceName}: host is unavailable"
 msgstr "{workspaceName}: host tidak tersedia"
@@ -7416,6 +7422,9 @@ msgstr "Tiap Jumat jam 4 sore, susun draf catatan rilis dari PR yang di-merge mi
 msgid "Every Friday at 5:00 PM"
 msgstr "Setiap Jumat pukul 17.00"
 
+msgid "Every host"
+msgstr "Semua host"
+
 msgid "Every minute"
 msgstr "Tiap menit"
 
@@ -12348,6 +12357,9 @@ msgstr "Tidak ada workspace yang cocok dengan pencarian Anda"
 
 msgid "No workspaces match."
 msgstr "Tidak ada workspace yang cocok."
+
+msgid "No workspaces on {selectedHostName}"
+msgstr "Tidak ada workspace di {selectedHostName}"
 
 msgid "No workspaces on this host yet"
 msgstr "Belum ada workspace di host ini"

@@ -1029,6 +1029,9 @@ msgstr "{hidden, plural, one {# yanıt daha göster} other {# yanıt daha göste
 msgid "{hiddenCount, plural, one {Show # more frame} other {Show # more frames}}"
 msgstr "{hiddenCount, plural, one {# çerçeve daha göster} other {# çerçeve daha göster}}"
 
+msgid "{hostName} (this device)"
+msgstr "{hostName} (bu cihaz)"
+
 msgid "{hostName} is offline"
 msgstr "{hostName} çevrimdışı"
 
@@ -1343,6 +1346,9 @@ msgstr "{used} kullanıldı"
 
 msgid "{waiting} Waiting"
 msgstr "{waiting} bekliyor"
+
+msgid "{working} working · {needsYou} waiting for you · {idle} idle"
+msgstr "{working} çalışıyor · {needsYou} sizi bekliyor · {idle} boşta"
 
 msgid "{workspaceName}: host is unavailable"
 msgstr "{workspaceName}: host kullanılamıyor"
@@ -7416,6 +7422,9 @@ msgstr "Her cuma 16.00'da bu haftanın birleştirilen PR'larından sürüm notla
 msgid "Every Friday at 5:00 PM"
 msgstr "Her cuma 17:00'de"
 
+msgid "Every host"
+msgstr "Tüm ana bilgisayarlar"
+
 msgid "Every minute"
 msgstr "Her dakika"
 
@@ -12348,6 +12357,9 @@ msgstr "Aramanızla eşleşen çalışma alanı yok"
 
 msgid "No workspaces match."
 msgstr "Eşleşen çalışma alanı yok."
+
+msgid "No workspaces on {selectedHostName}"
+msgstr "{selectedHostName} üzerinde çalışma alanı yok"
 
 msgid "No workspaces on this host yet"
 msgstr "Bu host'ta henüz çalışma alanı yok"

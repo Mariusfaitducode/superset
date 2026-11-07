@@ -1029,6 +1029,9 @@ msgstr "{hidden, plural, one {Ver # respuesta más} other {Ver # respuestas más
 msgid "{hiddenCount, plural, one {Show # more frame} other {Show # more frames}}"
 msgstr "{hiddenCount, plural, one {Mostrar # marco más} other {Mostrar # marcos más}}"
 
+msgid "{hostName} (this device)"
+msgstr "{hostName} (este dispositivo)"
+
 msgid "{hostName} is offline"
 msgstr "{hostName} está sin conexión"
 
@@ -1343,6 +1346,9 @@ msgstr "{used} usado"
 
 msgid "{waiting} Waiting"
 msgstr "{waiting} en espera"
+
+msgid "{working} working · {needsYou} waiting for you · {idle} idle"
+msgstr "{working} trabajando · {needsYou} esperándote · {idle} inactivos"
 
 msgid "{workspaceName}: host is unavailable"
 msgstr "{workspaceName}: el host no está disponible"
@@ -7416,6 +7422,9 @@ msgstr "Cada viernes a las 16:00, redacta las notas de la versión a partir de l
 msgid "Every Friday at 5:00 PM"
 msgstr "Todos los viernes a las 17:00"
 
+msgid "Every host"
+msgstr "Todos los hosts"
+
 msgid "Every minute"
 msgstr "Cada minuto"
 
@@ -12348,6 +12357,9 @@ msgstr "Ningún espacio de trabajo coincide con la búsqueda"
 
 msgid "No workspaces match."
 msgstr "Ningún espacio de trabajo coincide."
+
+msgid "No workspaces on {selectedHostName}"
+msgstr "No hay espacios de trabajo en {selectedHostName}"
 
 msgid "No workspaces on this host yet"
 msgstr "Aún no hay espacios de trabajo en este host"

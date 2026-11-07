@@ -1029,6 +1029,9 @@ msgstr "{hidden, plural, one {Показать ещё # ответ} few {Пок�
 msgid "{hiddenCount, plural, one {Show # more frame} other {Show # more frames}}"
 msgstr "{hiddenCount, plural, one {Показать ещё # кадр} few {Показать ещё # кадра} many {Показать ещё # кадров} other {Показать ещё # кадра}}"
 
+msgid "{hostName} (this device)"
+msgstr "{hostName} (это устройство)"
+
 msgid "{hostName} is offline"
 msgstr "{hostName} офлайн"
 
@@ -1343,6 +1346,9 @@ msgstr "Использовано {used}"
 
 msgid "{waiting} Waiting"
 msgstr "Ожидают: {waiting}"
+
+msgid "{working} working · {needsYou} waiting for you · {idle} idle"
+msgstr "Работают: {working} · ждут вас: {needsYou} · простаивают: {idle}"
 
 msgid "{workspaceName}: host is unavailable"
 msgstr "{workspaceName}: хост недоступен"
@@ -7416,6 +7422,9 @@ msgstr "Каждую пятницу в 16:00 готовь черновик relea
 msgid "Every Friday at 5:00 PM"
 msgstr "Каждую пятницу в 17:00"
 
+msgid "Every host"
+msgstr "Все хосты"
+
 msgid "Every minute"
 msgstr "Каждую минуту"
 
@@ -12348,6 +12357,9 @@ msgstr "Нет рабочих областей по вашему запросу"
 
 msgid "No workspaces match."
 msgstr "Нет подходящих рабочих областей."
+
+msgid "No workspaces on {selectedHostName}"
+msgstr "На {selectedHostName} нет рабочих пространств"
 
 msgid "No workspaces on this host yet"
 msgstr "На этом хосте пока нет рабочих областей"

@@ -1029,6 +1029,9 @@ msgstr "{hidden, plural, one {View # more reply} other {View # more replies}}"
 msgid "{hiddenCount, plural, one {Show # more frame} other {Show # more frames}}"
 msgstr "{hiddenCount, plural, one {Show # more frame} other {Show # more frames}}"
 
+msgid "{hostName} (this device)"
+msgstr "{hostName} (this device)"
+
 msgid "{hostName} is offline"
 msgstr "{hostName} is offline"
 
@@ -1343,6 +1346,9 @@ msgstr "{used} used"
 
 msgid "{waiting} Waiting"
 msgstr "{waiting} Waiting"
+
+msgid "{working} working · {needsYou} waiting for you · {idle} idle"
+msgstr "{working} working · {needsYou} waiting for you · {idle} idle"
 
 msgid "{workspaceName}: host is unavailable"
 msgstr "{workspaceName}: host is unavailable"
@@ -7416,6 +7422,9 @@ msgstr "Every Friday at 4pm, draft release notes from this week's merged PRs."
 msgid "Every Friday at 5:00 PM"
 msgstr "Every Friday at 5:00 PM"
 
+msgid "Every host"
+msgstr "Every host"
+
 msgid "Every minute"
 msgstr "Every minute"
 
@@ -12348,6 +12357,9 @@ msgstr "No workspaces match your search"
 
 msgid "No workspaces match."
 msgstr "No workspaces match."
+
+msgid "No workspaces on {selectedHostName}"
+msgstr "No workspaces on {selectedHostName}"
 
 msgid "No workspaces on this host yet"
 msgstr "No workspaces on this host yet"
