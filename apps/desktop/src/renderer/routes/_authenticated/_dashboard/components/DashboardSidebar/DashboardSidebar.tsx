@@ -377,10 +377,10 @@ export function DashboardSidebar({
 					);
 		return filterDashboardSidebarProjects(labelFiltered, projectFilterQuery);
 	}, [hostFilteredGroups, projectFilterQuery, activeLabels, keepLabeled]);
-	// Pinned and session rows sit above the projects; when the label filter
-	// keeps some of them, an empty-state line below would contradict them.
-	const labelMatchesShownAbove =
-		activeLabels.length > 0 &&
+	// Pinned and session rows sit above the projects; when the label or host
+	// filter keeps some of them, an empty-state line below would contradict them.
+	const filterMatchesShownAbove =
+		(activeLabels.length > 0 || selectedMachineId !== null) &&
 		displayedPinnedWorkspaces.length + displayedSessionWorkspaces.length > 0;
 	const displayedProjectIds = useMemo(
 		() => displayedGroups.map((project) => project.id),
@@ -711,7 +711,7 @@ export function DashboardSidebar({
 											{!isCollapsed &&
 												isFilterActive &&
 												displayedGroups.length === 0 &&
-												!labelMatchesShownAbove && (
+												!filterMatchesShownAbove && (
 													<div className="select-text cursor-text px-4 py-2 text-xs text-muted-foreground">
 														{trimmedFilterQuery !== ""
 															? t({
