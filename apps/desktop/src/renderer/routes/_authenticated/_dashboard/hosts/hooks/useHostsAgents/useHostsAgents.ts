@@ -20,8 +20,6 @@ import { useV2NotificationStore } from "renderer/stores/v2-notifications";
 import { bindingPaneStatus } from "../../utils/groupHostAgents";
 
 const NO_BINDINGS: TerminalAgentBinding[] = [];
-/** Lifecycle events invalidate these keys while the sidebar shows the workspace; this catches the rest. */
-const BINDINGS_REFETCH_MS = 15_000;
 const TITLES_REFETCH_MS = 10_000;
 
 export interface HostsAgents {
@@ -36,7 +34,8 @@ export interface HostsAgents {
 
 /**
  * Every host of the roster with its workspaces and their live agents. The
- * bindings ride the sidebar's query keys, so both read one cache.
+ * bindings ride the sidebar's query keys: its status provider invalidates
+ * them on agent lifecycle events, so this page polls nothing for them.
  */
 export function useHostsAgents(): HostsAgents {
 	const { hosts, settled } = useKnownHosts();
@@ -86,7 +85,6 @@ export function useHostsAgents(): HostsAgents {
 						).terminalAgents.listByWorkspace.query({ workspaceId }, { signal })
 					: NO_BINDINGS,
 			staleTime: 30_000,
-			refetchInterval: BINDINGS_REFETCH_MS,
 		})),
 		combine: (results) => results.map((result) => result.data ?? NO_BINDINGS),
 	});
