@@ -45,7 +45,7 @@ const commitQuery = mock(async ({ hash }: { hash: string }) => ({
 	],
 }));
 
-const realClient = await import("renderer/lib/host-service-client");
+const realClient = { ...(await import("renderer/lib/host-service-client")) };
 mock.module("renderer/lib/host-service-client", () => ({
 	...realClient,
 	getHostServiceClientByUrl: () => ({
@@ -66,9 +66,11 @@ mock.module("renderer/lib/host-service-client", () => ({
 		},
 	}),
 }));
-const realTargets = await import(
-	"renderer/routes/_authenticated/_dashboard/hooks/useProjectQueryTargets"
-);
+const realTargets = {
+	...(await import(
+		"renderer/routes/_authenticated/_dashboard/hooks/useProjectQueryTargets"
+	)),
+};
 mock.module(
 	"renderer/routes/_authenticated/_dashboard/hooks/useProjectQueryTargets",
 	() => ({
@@ -87,31 +89,28 @@ mock.module(
 		}),
 	}),
 );
-const realWorkspaces = await import(
-	"renderer/routes/_authenticated/providers/HostWorkspacesProvider"
-);
+const realWorkspaces = {
+	...(await import(
+		"renderer/routes/_authenticated/providers/HostWorkspacesProvider"
+	)),
+};
 const workspaces: never[] = [];
 mock.module(
 	"renderer/routes/_authenticated/providers/HostWorkspacesProvider",
 	() => ({ ...realWorkspaces, useHostWorkspaces: () => ({ workspaces }) }),
 );
-const realConversations = await import("renderer/hooks/useAgentConversations");
+const realConversations = {
+	...(await import("renderer/hooks/useAgentConversations")),
+};
 const conversations: never[] = [];
 mock.module("renderer/hooks/useAgentConversations", () => ({
 	...realConversations,
 	useAgentConversations: () => conversations,
 }));
-const realRouter = await import("@tanstack/react-router");
+const realRouter = { ...(await import("@tanstack/react-router")) };
 mock.module("@tanstack/react-router", () => ({
 	...realRouter,
 	useNavigate: () => () => {},
-}));
-const realTrpc = await import("renderer/lib/electron-trpc");
-mock.module("renderer/lib/electron-trpc", () => ({
-	...realTrpc,
-	electronTrpc: {
-		external: { openUrl: { useMutation: () => ({ mutate: () => {} }) } },
-	},
 }));
 
 // happy-dom has no layout; give the scroll area a size so rows render.
@@ -132,10 +131,24 @@ const { render, cleanup, fireEvent, waitFor } = await import(
 const { QueryClient, QueryClientProvider } = await import(
 	"@tanstack/react-query"
 );
+const { electronTrpc } = await import("renderer/lib/electron-trpc");
 const { GitGraphView } = await import("./GitGraphView");
 
 afterEach(cleanup);
 afterAll(() => {
+	// mock.module outlives this file in bun's single process: put the real
+	// exports back so later test files don't render against these stubs.
+	mock.module("renderer/lib/host-service-client", () => realClient);
+	mock.module(
+		"renderer/routes/_authenticated/_dashboard/hooks/useProjectQueryTargets",
+		() => realTargets,
+	);
+	mock.module(
+		"renderer/routes/_authenticated/providers/HostWorkspacesProvider",
+		() => realWorkspaces,
+	);
+	mock.module("renderer/hooks/useAgentConversations", () => realConversations);
+	mock.module("@tanstack/react-router", () => realRouter);
 	sizes.forEach((key, index) => {
 		const descriptor = original[index];
 		if (descriptor)
@@ -144,10 +157,16 @@ afterAll(() => {
 });
 
 function renderView() {
+	const queryClient = new QueryClient();
 	return render(
-		<QueryClientProvider client={new QueryClient()}>
-			<GitGraphView />
-		</QueryClientProvider>,
+		<electronTrpc.Provider
+			client={electronTrpc.createClient({ links: [] })}
+			queryClient={queryClient}
+		>
+			<QueryClientProvider client={queryClient}>
+				<GitGraphView />
+			</QueryClientProvider>
+		</electronTrpc.Provider>,
 	);
 }
 
