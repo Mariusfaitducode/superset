@@ -8,7 +8,16 @@ export type Todo = Awaited<
 >[number];
 
 export const TODO_PRIORITIES = ["high", "normal", "low"] as const;
-export const TODO_KINDS = ["code", "message", "review", "other"] as const;
+export const TODO_KINDS = [
+	"code",
+	"message",
+	"review",
+	"other",
+	"mail",
+	"contact",
+	"post",
+	"meeting",
+] as const;
 
 export const todoFieldOptions = {
 	priority: string()
@@ -16,12 +25,55 @@ export const todoFieldOptions = {
 		.desc("high, normal or low"),
 	kind: string()
 		.enum(...TODO_KINDS)
-		.desc("code, message, review or other"),
+		.desc("code, message, review, mail, contact, post, meeting or other"),
 	due: string().desc("Due day, YYYY-MM-DD (empty to clear)"),
 	link: string().desc(
 		"A URL the to-do is about: PR, Slack thread… (empty to clear)",
 	),
+	step: string()
+		.variadic()
+		.desc(
+			"A step for the user, in order; repeat for each (edit replaces them all, empty clears)",
+		),
+	draft: string().desc(
+		"Ready-to-send text: the mail, message or post (empty to clear)",
+	),
+	recipient: string().desc("Who it goes to (empty to clear)"),
+	channel: string().desc("Where it goes: email, LinkedIn… (empty to clear)"),
 };
+
+/**
+ * The rich fields the flags set. A field left out stays as it is; `--step`
+ * replaces every step.
+ */
+export function richFields(options: {
+	step?: string[];
+	draft?: string;
+	recipient?: string;
+	channel?: string;
+}) {
+	const steps = options.step?.map((step) => step.trim()).filter(Boolean);
+	return {
+		...(options.step?.length ? { steps } : {}),
+		...(options.draft !== undefined ? { draft: draftText(options.draft) } : {}),
+		...(options.recipient !== undefined
+			? { recipient: clearable(options.recipient) }
+			: {}),
+		...(options.channel !== undefined
+			? { channel: clearable(options.channel) }
+			: {}),
+	};
+}
+
+// Agents often write `"Hi\n\nThanks"`, which the shell passes as a literal
+// backslash-n rather than a line break.
+export function draftText(value: string): string | null {
+	const text =
+		value.includes("\\n") && !value.includes("\n")
+			? value.replaceAll("\\n", "\n")
+			: value;
+	return text.trim() === "" ? null : text.trim();
+}
 
 /**
  * Agents run with `SUPERSET_AGENT_ID` set; their to-dos are marked as theirs

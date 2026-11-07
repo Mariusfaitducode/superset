@@ -4,6 +4,7 @@ import {
 	clearable,
 	localTodosClient,
 	resolveTodoId,
+	richFields,
 	todoActor,
 	todoFieldOptions,
 } from "../../../lib/todos";
@@ -24,11 +25,12 @@ export default command({
 			...(options.kind ? { kind: options.kind } : {}),
 			...(options.due !== undefined ? { dueOn: clearable(options.due) } : {}),
 			...(options.link !== undefined ? { link: clearable(options.link) } : {}),
+			...richFields(options),
 		};
 		if (Object.keys(fields).length === 0) {
 			throw new CLIError(
 				"Nothing to change",
-				"Pass --text, --priority, --kind, --due or --link.",
+				"Pass --text, --priority, --kind, --due, --link, --step, --draft, --recipient or --channel.",
 			);
 		}
 		const client = await localTodosClient(ctx);

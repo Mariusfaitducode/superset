@@ -10700,6 +10700,9 @@ msgstr "マシンに縛られないクラウドワークスペース。数秒で
 msgid "Magenta"
 msgstr "マゼンタ"
 
+msgid "Mail"
+msgstr "メール"
+
 msgid "Main"
 msgstr "メイン"
 
@@ -10917,6 +10920,9 @@ msgstr "チームを紹介"
 
 msgid "Meet the team behind Superset, building parallel coding agents for developers."
 msgstr "開発者向けの並列コーディングエージェントを作る、Supersetのチームを紹介します。"
+
+msgid "Meeting"
+msgstr "会議"
 
 msgid "Member"
 msgstr "メンバー"

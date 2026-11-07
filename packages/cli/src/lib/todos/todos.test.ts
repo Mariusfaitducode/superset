@@ -1,7 +1,9 @@
 import { describe, expect, test } from "bun:test";
 import {
 	clearable,
+	draftText,
 	resolveTodoId,
+	richFields,
 	type Todo,
 	todoActor,
 	todoConversation,
@@ -38,5 +40,27 @@ describe("todos CLI helpers", () => {
 		expect(clearable(undefined)).toBeUndefined();
 		expect(clearable(" ")).toBeNull();
 		expect(clearable(" 2026-10-30 ")).toBe("2026-10-30");
+	});
+
+	test("sets only the rich fields passed, an empty one clears", () => {
+		expect(richFields({})).toEqual({});
+		expect(
+			richFields({
+				step: [" Check the address ", "Send it"],
+				recipient: "",
+				channel: " email ",
+			}),
+		).toEqual({
+			steps: ["Check the address", "Send it"],
+			recipient: null,
+			channel: "email",
+		});
+		expect(richFields({ step: [""] })).toEqual({ steps: [] });
+	});
+
+	test("turns a literal \\n in a draft into a line break", () => {
+		expect(draftText("Hi Paul,\\n\\nThanks")).toBe("Hi Paul,\n\nThanks");
+		expect(draftText("a\nb \\n c")).toBe("a\nb \\n c");
+		expect(draftText("  ")).toBeNull();
 	});
 });

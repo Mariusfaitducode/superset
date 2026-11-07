@@ -3,6 +3,7 @@ import { command } from "../../../lib/command";
 import {
 	clearable,
 	localTodosClient,
+	richFields,
 	todoActor,
 	todoConversation,
 	todoFieldOptions,
@@ -30,6 +31,7 @@ export default command({
 			...(options.kind ? { kind: options.kind } : {}),
 			...(due ? { dueOn: due } : {}),
 			...(link ? { link } : {}),
+			...richFields(options),
 		});
 		return {
 			data: todo,

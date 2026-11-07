@@ -10700,6 +10700,9 @@ msgstr "Облачные рабочие области, не привязанн�
 msgid "Magenta"
 msgstr "Пурпурный"
 
+msgid "Mail"
+msgstr "Письмо"
+
 msgid "Main"
 msgstr "Основной"
 
@@ -10917,6 +10920,9 @@ msgstr "Познакомьтесь с командой"
 
 msgid "Meet the team behind Superset, building parallel coding agents for developers."
 msgstr "Познакомьтесь с командой Superset, которая создаёт параллельных кодинг-агентов для разработчиков."
+
+msgid "Meeting"
+msgstr "Встреча"
 
 msgid "Member"
 msgstr "Участник"

@@ -10700,6 +10700,9 @@ msgstr "Workspace cloud slegati dalla macchina, pronti in pochi secondi e condiv
 msgid "Magenta"
 msgstr "Magenta"
 
+msgid "Mail"
+msgstr "Mail"
+
 msgid "Main"
 msgstr "Principale"
 
@@ -10917,6 +10920,9 @@ msgstr "Conosci il team"
 
 msgid "Meet the team behind Superset, building parallel coding agents for developers."
 msgstr "Scopri il team dietro Superset, che costruisce agenti di coding paralleli per sviluppatori."
+
+msgid "Meeting"
+msgstr "Riunione"
 
 msgid "Member"
 msgstr "Membro"
