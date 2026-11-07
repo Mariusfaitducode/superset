@@ -377,6 +377,10 @@ msgstr "{0} · 古い"
 msgid "{0} · peak {1}"
 msgstr "{0} · ピーク {1}"
 
+#. placeholder {0}: file.path
+msgid "{0} (click to copy)"
+msgstr "{0}（クリックでコピー）"
+
 #. placeholder {0}: creator.name
 #. placeholder {0}: option.name
 msgid "{0} (you)"
@@ -385,6 +389,11 @@ msgstr "{0}（自分）"
 #. placeholder {0}: actor.login
 msgid "{0} {actorVerb}"
 msgstr "{0}が{actorVerb}"
+
+#. placeholder {0}: file.oldPath
+#. placeholder {1}: file.path
+msgid "{0} → {1} (click to copy)"
+msgstr "{0} → {1}（クリックでコピー）"
 
 #. placeholder {0}: versions.running
 #. placeholder {1}: versions.expected
@@ -451,6 +460,10 @@ msgstr "{0} 件失敗、{1} 件実行中"
 #. placeholder {0}: collisions.length
 msgid "{0} files already exist in {where}. Do you want to replace them?"
 msgstr "{where}には{0}件のファイルがすでに存在します。置き換えますか?"
+
+#. placeholder {0}: data.files.length
+msgid "{0} files changed"
+msgstr "{0} 個のファイルを変更"
 
 #. placeholder {0}: displayName(variables.name)
 msgid "{0} installed"
@@ -3327,6 +3340,9 @@ msgstr "請求先情報"
 msgid "Billing refused to start a cloud workspace: the organization needs a paid plan, or it reached its cloud usage limit. Upgrade or raise the limit in Settings > Billing, or run the automation on a device."
 msgstr "請求の都合でクラウドワークスペースを起動できませんでした。組織に有料プランが必要か、クラウドの利用上限に達しています。「設定 > 請求」でアップグレードするか上限を引き上げるか、オートメーションをデバイスで実行してください。"
 
+msgid "binary"
+msgstr "バイナリ"
+
 msgid "Binary"
 msgstr "バイナリ"
 
@@ -3456,6 +3472,9 @@ msgstr "ブランチ"
 
 msgid "Branches & naming"
 msgstr "ブランチと命名"
+
+msgid "Branches:"
+msgstr "ブランチ:"
 
 msgid "Branches..."
 msgstr "ブランチ..."
@@ -4045,6 +4064,9 @@ msgstr "「平日」などのプリセットを選ぶか、カスタムのRRule�
 msgid "Choose a project from GitHub issues before opening an issue."
 msgstr "issueを開く前に、GitHub issueでプロジェクトを選択してください。"
 
+msgid "Choose a repository"
+msgstr "リポジトリを選択"
+
 msgid "Choose a section."
 msgstr "セクションを選んでください。"
 
@@ -4344,6 +4366,12 @@ msgstr "コメントを閉じる"
 
 msgid "Close comments"
 msgstr "コメントを閉じる"
+
+msgid "Close details"
+msgstr "詳細を閉じる"
+
+msgid "Close details (Esc)"
+msgstr "詳細を閉じる (Esc)"
 
 msgid "Close Diff"
 msgstr "差分を閉じる"
@@ -4678,6 +4706,9 @@ msgstr "コミット済み"
 
 msgid "Committed, starting soon."
 msgstr "着手が決まっており、まもなく開始します。"
+
+msgid "Committer"
+msgstr "コミッター"
 
 msgid "Common questions"
 msgstr "よくある質問"
@@ -5189,6 +5220,9 @@ msgstr "対戦リンクをコピー"
 
 msgid "Copy file name"
 msgstr "ファイル名をコピー"
+
+msgid "Copy hash"
+msgstr "ハッシュをコピー"
 
 msgid "Copy ID"
 msgstr "IDをコピー"
@@ -8263,6 +8297,9 @@ msgstr "フィルター、{activeFilterCount}件適用中"
 msgid "Find"
 msgstr "検索"
 
+msgid "Find (⌘F)"
+msgstr "検索 (⌘F)"
+
 msgid "Find a person…"
 msgstr "メンバーを検索…"
 
@@ -8295,6 +8332,9 @@ msgstr "最近変更されたカバレッジの薄いコードを見つけて、
 
 msgid "Find stale TODO/FIXME comments and resolve the quick ones."
 msgstr "古いTODO/FIXMEコメントを見つけて、すぐ直せるものを解消します。"
+
+msgid "Find: message, author, hash, branch"
+msgstr "検索: メッセージ、作成者、ハッシュ、ブランチ"
 
 msgid "Finder"
 msgstr "Finder"
@@ -8790,6 +8830,9 @@ msgstr "履歴の次のページに進む"
 
 msgid "Go home"
 msgstr "ホームへ"
+
+msgid "Go to {parent}"
+msgstr "{parent} へ移動"
 
 msgid "Go to Conversation"
 msgstr "会話に移動"
@@ -10507,6 +10550,9 @@ msgstr "変更を読み込み中..."
 msgid "Loading comments…"
 msgstr "コメントを読み込み中…"
 
+msgid "Loading commit…"
+msgstr "コミットを読み込み中…"
+
 msgid "Loading contributors…"
 msgstr "コントリビューターを読み込み中…"
 
@@ -11029,9 +11075,6 @@ msgstr "メッセージ"
 
 msgid "Message in channel"
 msgstr "チャンネルのメッセージ"
-
-msgid "Message, author, hash, branch"
-msgstr "メッセージ、作成者、ハッシュ、ブランチ"
 
 msgid "Message..."
 msgstr "メッセージ..."
@@ -12167,6 +12210,9 @@ msgstr "リポジトリが見つかりません。GitHub Appにリポジトリ�
 msgid "No repositories. Connect GitHub in Integrations, then refresh."
 msgstr "リポジトリがありません。「連携」で GitHub を接続してから更新してください。"
 
+msgid "No repository matches."
+msgstr "一致するリポジトリはありません。"
+
 msgid "No results"
 msgstr "結果がありません"
 
@@ -12379,6 +12425,9 @@ msgstr "認証されていません。サインインしてください。"
 
 msgid "Not authenticated. Provide a bearer JWT, x-api-key, or session."
 msgstr "認証されていません。ベアラーJWT、x-api-key、またはセッションを指定してください。"
+
+msgid "Not available on a connected host"
+msgstr "接続中のホストにありません"
 
 msgid "Not available on this server"
 msgstr "このサーバーでは利用できません"
@@ -13665,6 +13714,9 @@ msgstr "親ディレクトリ"
 
 msgid "Parent directory on {hostName}"
 msgstr "{hostName}上の親ディレクトリ"
+
+msgid "Parents"
+msgstr "親"
 
 msgid "Part of Superset Pro"
 msgstr "Superset Proに含まれます"
@@ -15228,6 +15280,9 @@ msgstr "リポジトリ"
 msgid "Repo"
 msgstr "リポジトリ"
 
+msgid "Repo:"
+msgstr "リポジトリ:"
+
 msgid "Report"
 msgstr "報告"
 
@@ -16222,6 +16277,9 @@ msgstr "プルリクエストを検索..."
 msgid "Search pull requests…"
 msgstr "プルリクエストを検索…"
 
+msgid "Search repositories"
+msgstr "リポジトリを検索"
+
 msgid "Search repositories..."
 msgstr "リポジトリを検索..."
 
@@ -16948,6 +17006,9 @@ msgstr "プルリクエスト一覧を表示"
 
 msgid "Show pull request preview"
 msgstr "プルリクエストのプレビューを表示"
+
+msgid "Show Remote Branches"
+msgstr "リモートブランチを表示"
 
 msgid "Show resolved ({resolvedCount})"
 msgstr "解決済みを表示 ({resolvedCount})"
@@ -19220,6 +19281,9 @@ msgstr "ラベル、コマンド、引数、プロンプトと再開設定、環
 msgid "This repository does not allow merging from here."
 msgstr "このリポジトリはここからのマージを許可していません。"
 
+msgid "This repository is not on a connected host. Pick another one."
+msgstr "このリポジトリは接続中のホストにありません。別のリポジトリを選んでください。"
+
 msgid "This screen doesn't exist"
 msgstr "この画面は存在しません"
 
@@ -19805,7 +19869,7 @@ msgstr "未コミット · 未プッシュ"
 msgid "Uncommitted changes"
 msgstr "未コミットの変更"
 
-msgid "Uncommitted changes ({uncommitted})"
+msgid "Uncommitted Changes ({uncommitted})"
 msgstr "未コミットの変更 ({uncommitted})"
 
 msgid "Uncommitted changes, on top of {base}"

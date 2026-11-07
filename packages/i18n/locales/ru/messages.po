@@ -377,6 +377,10 @@ msgstr "{0} · устарел"
 msgid "{0} · peak {1}"
 msgstr "{0} · пик {1}"
 
+#. placeholder {0}: file.path
+msgid "{0} (click to copy)"
+msgstr "{0} (нажмите, чтобы скопировать)"
+
 #. placeholder {0}: creator.name
 #. placeholder {0}: option.name
 msgid "{0} (you)"
@@ -385,6 +389,11 @@ msgstr "{0} (вы)"
 #. placeholder {0}: actor.login
 msgid "{0} {actorVerb}"
 msgstr "{0} {actorVerb}"
+
+#. placeholder {0}: file.oldPath
+#. placeholder {1}: file.path
+msgid "{0} → {1} (click to copy)"
+msgstr "{0} → {1} (нажмите, чтобы скопировать)"
 
 #. placeholder {0}: versions.running
 #. placeholder {1}: versions.expected
@@ -451,6 +460,10 @@ msgstr "{0} с ошибкой, {1} выполняется"
 #. placeholder {0}: collisions.length
 msgid "{0} files already exist in {where}. Do you want to replace them?"
 msgstr "В {where} уже есть {0} таких файлов. Заменить их?"
+
+#. placeholder {0}: data.files.length
+msgid "{0} files changed"
+msgstr "Изменено файлов: {0}"
 
 #. placeholder {0}: displayName(variables.name)
 msgid "{0} installed"
@@ -3327,6 +3340,9 @@ msgstr "Платёжные данные"
 msgid "Billing refused to start a cloud workspace: the organization needs a paid plan, or it reached its cloud usage limit. Upgrade or raise the limit in Settings > Billing, or run the automation on a device."
 msgstr "Оплата не позволила запустить облачную рабочую область: организации нужен платный тариф или достигнут лимит использования облака. Перейдите на другой тариф или увеличьте лимит в разделе «Настройки > Оплата» либо запустите автоматизацию на устройстве."
 
+msgid "binary"
+msgstr "двоичный"
+
 msgid "Binary"
 msgstr "Бинарный"
 
@@ -3456,6 +3472,9 @@ msgstr "Ветки"
 
 msgid "Branches & naming"
 msgstr "Ветки и именование"
+
+msgid "Branches:"
+msgstr "Ветки:"
 
 msgid "Branches..."
 msgstr "Ветки..."
@@ -4045,6 +4064,9 @@ msgstr "Выберите готовый вариант, например «По 
 msgid "Choose a project from GitHub issues before opening an issue."
 msgstr "Выберите проект в разделе задач GitHub, прежде чем открывать задачу."
 
+msgid "Choose a repository"
+msgstr "Выберите репозиторий"
+
 msgid "Choose a section."
 msgstr "Выберите раздел."
 
@@ -4344,6 +4366,12 @@ msgstr "Закрыть комментарий"
 
 msgid "Close comments"
 msgstr "Закрыть комментарии"
+
+msgid "Close details"
+msgstr "Закрыть подробности"
+
+msgid "Close details (Esc)"
+msgstr "Закрыть подробности (Esc)"
 
 msgid "Close Diff"
 msgstr "Закрыть diff"
@@ -4678,6 +4706,9 @@ msgstr "Закоммичено"
 
 msgid "Committed, starting soon."
 msgstr "Взяли в работу, скоро начнём."
+
+msgid "Committer"
+msgstr "Коммиттер"
 
 msgid "Common questions"
 msgstr "Частые вопросы"
@@ -5189,6 +5220,9 @@ msgstr "скопировать ссылку на бой"
 
 msgid "Copy file name"
 msgstr "Скопировать имя файла"
+
+msgid "Copy hash"
+msgstr "Скопировать хеш"
 
 msgid "Copy ID"
 msgstr "Скопировать ID"
@@ -8263,6 +8297,9 @@ msgstr "Фильтры, активных: {activeFilterCount}"
 msgid "Find"
 msgstr "Найти"
 
+msgid "Find (⌘F)"
+msgstr "Найти (⌘F)"
+
 msgid "Find a person…"
 msgstr "Найти человека…"
 
@@ -8295,6 +8332,9 @@ msgstr "Найти недавно изменённый код со слабым 
 
 msgid "Find stale TODO/FIXME comments and resolve the quick ones."
 msgstr "Найти старые комментарии TODO/FIXME и закрыть быстрые."
+
+msgid "Find: message, author, hash, branch"
+msgstr "Найти: сообщение, автор, хеш, ветка"
 
 msgid "Finder"
 msgstr "Finder"
@@ -8790,6 +8830,9 @@ msgstr "Перейти на следующую страницу в истори�
 
 msgid "Go home"
 msgstr "На главную"
+
+msgid "Go to {parent}"
+msgstr "Перейти к {parent}"
 
 msgid "Go to Conversation"
 msgstr "Перейти к разговору"
@@ -10507,6 +10550,9 @@ msgstr "Загрузка изменений..."
 msgid "Loading comments…"
 msgstr "Загрузка комментариев…"
 
+msgid "Loading commit…"
+msgstr "Загрузка коммита…"
+
 msgid "Loading contributors…"
 msgstr "Загрузка контрибьюторов…"
 
@@ -11029,9 +11075,6 @@ msgstr "Сообщение"
 
 msgid "Message in channel"
 msgstr "Сообщение в канале"
-
-msgid "Message, author, hash, branch"
-msgstr "Сообщение, автор, хеш, ветка"
 
 msgid "Message..."
 msgstr "Сообщение..."
@@ -12167,6 +12210,9 @@ msgstr "Репозитории не найдены. Убедитесь, что �
 msgid "No repositories. Connect GitHub in Integrations, then refresh."
 msgstr "Нет репозиториев. Подключите GitHub в разделе «Интеграции», затем обновите."
 
+msgid "No repository matches."
+msgstr "Нет подходящих репозиториев."
+
 msgid "No results"
 msgstr "Ничего не найдено"
 
@@ -12379,6 +12425,9 @@ msgstr "Не выполнен вход. Войдите в аккаунт."
 
 msgid "Not authenticated. Provide a bearer JWT, x-api-key, or session."
 msgstr "Не выполнен вход. Передайте bearer JWT, x-api-key или сессию."
+
+msgid "Not available on a connected host"
+msgstr "Недоступно на подключённом хосте"
 
 msgid "Not available on this server"
 msgstr "Недоступно на этом сервере"
@@ -13665,6 +13714,9 @@ msgstr "Родительская папка"
 
 msgid "Parent directory on {hostName}"
 msgstr "Родительская папка на {hostName}"
+
+msgid "Parents"
+msgstr "Родители"
 
 msgid "Part of Superset Pro"
 msgstr "Входит в Superset Pro"
@@ -15228,6 +15280,9 @@ msgstr "репозиторий"
 msgid "Repo"
 msgstr "Репо"
 
+msgid "Repo:"
+msgstr "Репозиторий:"
+
 msgid "Report"
 msgstr "Пожаловаться"
 
@@ -16222,6 +16277,9 @@ msgstr "Поиск пул-реквестов..."
 msgid "Search pull requests…"
 msgstr "Поиск пул-реквестов…"
 
+msgid "Search repositories"
+msgstr "Поиск репозиториев"
+
 msgid "Search repositories..."
 msgstr "Поиск репозиториев..."
 
@@ -16948,6 +17006,9 @@ msgstr "Показать список пул-реквестов"
 
 msgid "Show pull request preview"
 msgstr "Показать предпросмотр пул-реквеста"
+
+msgid "Show Remote Branches"
+msgstr "Показать удалённые ветки"
 
 msgid "Show resolved ({resolvedCount})"
 msgstr "Показать закрытые ({resolvedCount})"
@@ -19220,6 +19281,9 @@ msgstr "Это заменит его название, команду, аргу�
 msgid "This repository does not allow merging from here."
 msgstr "Этот репозиторий не разрешает слияние отсюда."
 
+msgid "This repository is not on a connected host. Pick another one."
+msgstr "Этот репозиторий не находится на подключённом хосте. Выберите другой."
+
 msgid "This screen doesn't exist"
 msgstr "Такого экрана нет"
 
@@ -19805,8 +19869,8 @@ msgstr "Незакоммиченное · Неотправленное"
 msgid "Uncommitted changes"
 msgstr "Незакоммиченные изменения"
 
-msgid "Uncommitted changes ({uncommitted})"
-msgstr "Незакоммиченные изменения ({uncommitted})"
+msgid "Uncommitted Changes ({uncommitted})"
+msgstr "Незафиксированные изменения ({uncommitted})"
 
 msgid "Uncommitted changes, on top of {base}"
 msgstr "Незакоммиченные изменения, поверх {base}"

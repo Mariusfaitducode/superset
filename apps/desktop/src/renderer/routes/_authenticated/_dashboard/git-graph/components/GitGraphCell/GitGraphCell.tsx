@@ -1,22 +1,26 @@
 import { memo } from "react";
 import type { GraphRowLayout } from "../../utils/layoutGitGraph";
 
-export const GRAPH_ROW_HEIGHT = 26;
-export const GRAPH_LANE_WIDTH = 12;
-const NODE_RADIUS = 3.5;
+export const GRAPH_ROW_HEIGHT = 24;
+export const GRAPH_LANE_WIDTH = 16;
+const NODE_RADIUS = 4;
+const STROKE_WIDTH = 2;
+const DASHED_COLOR = "var(--muted-foreground)";
 
-// Readable on light and dark backgrounds; a lane keeps its color down the graph.
+// The Git Graph extension's default palette; a lane keeps its color down the graph.
 const LANE_COLORS = [
-	"#e5489c",
-	"#2bb24c",
-	"#9b51e0",
-	"#e8890c",
-	"#13b5c8",
-	"#e5534b",
-	"#3b82f6",
-	"#84cc16",
-	"#d946ef",
-	"#f59e0b",
+	"#0085d9",
+	"#d9008f",
+	"#00d90a",
+	"#d98500",
+	"#a300d9",
+	"#ff0000",
+	"#00d9cc",
+	"#e138e8",
+	"#85d900",
+	"#dc5b23",
+	"#6f24d6",
+	"#ffcc00",
 ];
 
 export function laneColor(color: number): string {
@@ -27,21 +31,32 @@ function x(lane: number): number {
 	return lane * GRAPH_LANE_WIDTH + GRAPH_LANE_WIDTH / 2;
 }
 
+function strokeOf(line: { color: number; dashed?: boolean }) {
+	return line.dashed
+		? { stroke: DASHED_COLOR, strokeDasharray: "3 3" }
+		: { stroke: laneColor(line.color) };
+}
+
+/** The HEAD commit and the uncommitted changes are hollow, as in Git Graph. */
+export type GraphNodeKind = "commit" | "head" | "uncommitted";
+
 /** One row of the graph: lines crossing it, into its node, and out to the parents. */
 export const GitGraphCell = memo(function GitGraphCell({
 	row,
 	width,
-	isMerge,
+	node,
 	isDimmed,
 }: {
 	row: GraphRowLayout;
 	width: number;
-	isMerge: boolean;
+	node: GraphNodeKind;
 	isDimmed: boolean;
 }) {
 	const height = GRAPH_ROW_HEIGHT;
 	const mid = height / 2;
 	const nodeX = x(row.lane);
+	const nodeColor =
+		node === "uncommitted" ? DASHED_COLOR : laneColor(row.color);
 	return (
 		<svg
 			width={width}
@@ -57,8 +72,8 @@ export const GitGraphCell = memo(function GitGraphCell({
 					y1={0}
 					x2={x(line.lane)}
 					y2={height}
-					stroke={laneColor(line.color)}
-					strokeWidth={2}
+					strokeWidth={STROKE_WIDTH}
+					{...strokeOf(line)}
 				/>
 			))}
 			{row.incoming.map((line) => (
@@ -70,8 +85,8 @@ export const GitGraphCell = memo(function GitGraphCell({
 							: `M ${x(line.from)} 0 C ${x(line.from)} ${mid * 0.8}, ${nodeX} ${mid * 0.2}, ${nodeX} ${mid}`
 					}
 					fill="none"
-					stroke={laneColor(line.color)}
-					strokeWidth={2}
+					strokeWidth={STROKE_WIDTH}
+					{...strokeOf(line)}
 				/>
 			))}
 			{row.outgoing.map((line) => (
@@ -83,18 +98,50 @@ export const GitGraphCell = memo(function GitGraphCell({
 							: `M ${nodeX} ${mid} C ${nodeX} ${mid + mid * 0.8}, ${x(line.to)} ${mid + mid * 0.2}, ${x(line.to)} ${height}`
 					}
 					fill="none"
-					stroke={laneColor(line.color)}
-					strokeWidth={2}
+					strokeWidth={STROKE_WIDTH}
+					{...strokeOf(line)}
 				/>
 			))}
 			<circle
 				cx={nodeX}
 				cy={mid}
 				r={NODE_RADIUS}
-				fill={isMerge ? "var(--background)" : laneColor(row.color)}
-				stroke={laneColor(row.color)}
-				strokeWidth={2}
+				fill={node === "commit" ? nodeColor : "var(--background)"}
+				stroke={nodeColor}
+				strokeWidth={STROKE_WIDTH}
 			/>
 		</svg>
 	);
 });
+
+/** The lanes that continue past a row, drawn beside its open details. */
+export function GitGraphContinuation({
+	row,
+	width,
+	height,
+}: {
+	row: GraphRowLayout;
+	width: number;
+	height: number;
+}) {
+	const lines = [
+		...row.passing,
+		...row.outgoing.map((line) => ({ ...line, lane: line.to })),
+	];
+	return (
+		<svg width={width} height={height} className="shrink-0" aria-hidden="true">
+			{lines.map((line, index) => (
+				<line
+					// A merge's line can end in a lane another line already uses.
+					key={`${line.lane}-${index}`}
+					x1={x(line.lane)}
+					y1={0}
+					x2={x(line.lane)}
+					y2={height}
+					strokeWidth={STROKE_WIDTH}
+					{...strokeOf(line)}
+				/>
+			))}
+		</svg>
+	);
+}

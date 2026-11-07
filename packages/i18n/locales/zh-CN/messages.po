@@ -377,6 +377,10 @@ msgstr "{0} · 落后"
 msgid "{0} · peak {1}"
 msgstr "{0} · 峰值 {1}"
 
+#. placeholder {0}: file.path
+msgid "{0} (click to copy)"
+msgstr "{0}（点击复制）"
+
 #. placeholder {0}: creator.name
 #. placeholder {0}: option.name
 msgid "{0} (you)"
@@ -385,6 +389,11 @@ msgstr "{0}（你）"
 #. placeholder {0}: actor.login
 msgid "{0} {actorVerb}"
 msgstr "{0}{actorVerb}"
+
+#. placeholder {0}: file.oldPath
+#. placeholder {1}: file.path
+msgid "{0} → {1} (click to copy)"
+msgstr "{0} → {1}（点击复制）"
 
 #. placeholder {0}: versions.running
 #. placeholder {1}: versions.expected
@@ -451,6 +460,10 @@ msgstr "{0} 个失败，{1} 个运行中"
 #. placeholder {0}: collisions.length
 msgid "{0} files already exist in {where}. Do you want to replace them?"
 msgstr "{where}中已存在{0}个文件。是否要替换它们？"
+
+#. placeholder {0}: data.files.length
+msgid "{0} files changed"
+msgstr "{0} 个文件已更改"
 
 #. placeholder {0}: displayName(variables.name)
 msgid "{0} installed"
@@ -3327,6 +3340,9 @@ msgstr "账单信息"
 msgid "Billing refused to start a cloud workspace: the organization needs a paid plan, or it reached its cloud usage limit. Upgrade or raise the limit in Settings > Billing, or run the automation on a device."
 msgstr "账单原因导致无法启动云端工作区：组织需要付费方案，或已达到云端用量上限。请在“设置 > 账单”中升级或提高上限，或在设备上运行该自动化。"
 
+msgid "binary"
+msgstr "二进制"
+
 msgid "Binary"
 msgstr "二进制"
 
@@ -3456,6 +3472,9 @@ msgstr "分支"
 
 msgid "Branches & naming"
 msgstr "分支与命名"
+
+msgid "Branches:"
+msgstr "分支："
 
 msgid "Branches..."
 msgstr "分支..."
@@ -4045,6 +4064,9 @@ msgstr "选择“工作日”等预设，或自行编写 RRule。一个自动化
 msgid "Choose a project from GitHub issues before opening an issue."
 msgstr "打开议题前，请先在GitHub议题中选择一个项目。"
 
+msgid "Choose a repository"
+msgstr "选择仓库"
+
 msgid "Choose a section."
 msgstr "选择一个分区。"
 
@@ -4344,6 +4366,12 @@ msgstr "关闭评论"
 
 msgid "Close comments"
 msgstr "关闭评论"
+
+msgid "Close details"
+msgstr "关闭详情"
+
+msgid "Close details (Esc)"
+msgstr "关闭详情 (Esc)"
 
 msgid "Close Diff"
 msgstr "关闭差异"
@@ -4678,6 +4706,9 @@ msgstr "已提交"
 
 msgid "Committed, starting soon."
 msgstr "已确定，很快开始。"
+
+msgid "Committer"
+msgstr "提交者"
 
 msgid "Common questions"
 msgstr "常见问题"
@@ -5189,6 +5220,9 @@ msgstr "复制对战链接"
 
 msgid "Copy file name"
 msgstr "复制文件名"
+
+msgid "Copy hash"
+msgstr "复制哈希"
 
 msgid "Copy ID"
 msgstr "复制ID"
@@ -8263,6 +8297,9 @@ msgstr "筛选，{activeFilterCount}项生效"
 msgid "Find"
 msgstr "查找"
 
+msgid "Find (⌘F)"
+msgstr "查找 (⌘F)"
+
 msgid "Find a person…"
 msgstr "查找成员…"
 
@@ -8295,6 +8332,9 @@ msgstr "找出最近改动过、覆盖率薄弱的代码，好好补上测试。
 
 msgid "Find stale TODO/FIXME comments and resolve the quick ones."
 msgstr "找出过期的TODO/FIXME注释，把好处理的解决掉。"
+
+msgid "Find: message, author, hash, branch"
+msgstr "查找：消息、作者、哈希、分支"
 
 msgid "Finder"
 msgstr "Finder"
@@ -8790,6 +8830,9 @@ msgstr "前进到历史记录中的下一页"
 
 msgid "Go home"
 msgstr "回到首页"
+
+msgid "Go to {parent}"
+msgstr "跳转到 {parent}"
 
 msgid "Go to Conversation"
 msgstr "转到对话"
@@ -10507,6 +10550,9 @@ msgstr "正在加载更改..."
 msgid "Loading comments…"
 msgstr "正在加载评论…"
 
+msgid "Loading commit…"
+msgstr "正在加载提交…"
+
 msgid "Loading contributors…"
 msgstr "正在加载贡献者…"
 
@@ -11029,9 +11075,6 @@ msgstr "消息"
 
 msgid "Message in channel"
 msgstr "频道中的消息"
-
-msgid "Message, author, hash, branch"
-msgstr "消息、作者、哈希、分支"
 
 msgid "Message..."
 msgstr "消息..."
@@ -12167,6 +12210,9 @@ msgstr "未找到仓库。请确认你的GitHub App有权访问仓库。"
 msgid "No repositories. Connect GitHub in Integrations, then refresh."
 msgstr "没有仓库。请在“集成”中连接 GitHub，然后刷新。"
 
+msgid "No repository matches."
+msgstr "没有匹配的仓库。"
+
 msgid "No results"
 msgstr "无结果"
 
@@ -12379,6 +12425,9 @@ msgstr "未通过身份验证。请登录。"
 
 msgid "Not authenticated. Provide a bearer JWT, x-api-key, or session."
 msgstr "未通过身份验证。请提供bearer JWT、x-api-key或session。"
+
+msgid "Not available on a connected host"
+msgstr "不在已连接的主机上"
 
 msgid "Not available on this server"
 msgstr "此服务器不可用"
@@ -13665,6 +13714,9 @@ msgstr "父目录"
 
 msgid "Parent directory on {hostName}"
 msgstr "{hostName}上的父目录"
+
+msgid "Parents"
+msgstr "父提交"
 
 msgid "Part of Superset Pro"
 msgstr "包含在 Superset 专业版中"
@@ -15228,6 +15280,9 @@ msgstr "仓库"
 msgid "Repo"
 msgstr "仓库"
 
+msgid "Repo:"
+msgstr "仓库："
+
 msgid "Report"
 msgstr "举报"
 
@@ -16222,6 +16277,9 @@ msgstr "搜索拉取请求..."
 msgid "Search pull requests…"
 msgstr "搜索拉取请求…"
 
+msgid "Search repositories"
+msgstr "搜索仓库"
+
 msgid "Search repositories..."
 msgstr "搜索仓库..."
 
@@ -16948,6 +17006,9 @@ msgstr "显示拉取请求列表"
 
 msgid "Show pull request preview"
 msgstr "显示拉取请求预览"
+
+msgid "Show Remote Branches"
+msgstr "显示远程分支"
 
 msgid "Show resolved ({resolvedCount})"
 msgstr "显示已解决 ({resolvedCount})"
@@ -19220,6 +19281,9 @@ msgstr "这会用当前内置配置替换它的名称、命令、参数、提示
 msgid "This repository does not allow merging from here."
 msgstr "此仓库不允许从这里合并。"
 
+msgid "This repository is not on a connected host. Pick another one."
+msgstr "此仓库不在已连接的主机上。请选择其他仓库。"
+
 msgid "This screen doesn't exist"
 msgstr "此页面不存在"
 
@@ -19805,8 +19869,8 @@ msgstr "未提交 · 未推送"
 msgid "Uncommitted changes"
 msgstr "未提交的更改"
 
-msgid "Uncommitted changes ({uncommitted})"
-msgstr "未提交的更改（{uncommitted}）"
+msgid "Uncommitted Changes ({uncommitted})"
+msgstr "未提交的更改 ({uncommitted})"
 
 msgid "Uncommitted changes, on top of {base}"
 msgstr "未提交的更改，基于 {base}"

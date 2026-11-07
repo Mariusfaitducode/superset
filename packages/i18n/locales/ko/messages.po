@@ -377,6 +377,10 @@ msgstr "{0} · 구버전"
 msgid "{0} · peak {1}"
 msgstr "{0} · 최대 {1}"
 
+#. placeholder {0}: file.path
+msgid "{0} (click to copy)"
+msgstr "{0} (클릭하여 복사)"
+
 #. placeholder {0}: creator.name
 #. placeholder {0}: option.name
 msgid "{0} (you)"
@@ -385,6 +389,11 @@ msgstr "{0} (나)"
 #. placeholder {0}: actor.login
 msgid "{0} {actorVerb}"
 msgstr "{0} {actorVerb}"
+
+#. placeholder {0}: file.oldPath
+#. placeholder {1}: file.path
+msgid "{0} → {1} (click to copy)"
+msgstr "{0} → {1} (클릭하여 복사)"
 
 #. placeholder {0}: versions.running
 #. placeholder {1}: versions.expected
@@ -451,6 +460,10 @@ msgstr "{0}개 실패, {1}개 실행 중"
 #. placeholder {0}: collisions.length
 msgid "{0} files already exist in {where}. Do you want to replace them?"
 msgstr "{where}에 파일 {0}개가 이미 있습니다. 바꿀까요?"
+
+#. placeholder {0}: data.files.length
+msgid "{0} files changed"
+msgstr "{0}개 파일 변경됨"
 
 #. placeholder {0}: displayName(variables.name)
 msgid "{0} installed"
@@ -3327,6 +3340,9 @@ msgstr "결제 정보"
 msgid "Billing refused to start a cloud workspace: the organization needs a paid plan, or it reached its cloud usage limit. Upgrade or raise the limit in Settings > Billing, or run the automation on a device."
 msgstr "결제 문제로 클라우드 워크스페이스를 시작할 수 없습니다. 조직에 유료 플랜이 필요하거나 클라우드 사용 한도에 도달했습니다. 설정 > 결제에서 업그레이드하거나 한도를 올리거나, 자동화를 기기에서 실행하세요."
 
+msgid "binary"
+msgstr "바이너리"
+
 msgid "Binary"
 msgstr "바이너리"
 
@@ -3456,6 +3472,9 @@ msgstr "브랜치"
 
 msgid "Branches & naming"
 msgstr "브랜치 및 이름 지정"
+
+msgid "Branches:"
+msgstr "브랜치:"
 
 msgid "Branches..."
 msgstr "브랜치..."
@@ -4045,6 +4064,9 @@ msgstr "'평일' 같은 프리셋을 고르거나 직접 RRule을 작성하세�
 msgid "Choose a project from GitHub issues before opening an issue."
 msgstr "이슈를 열기 전에 GitHub 이슈 화면에서 프로젝트를 선택하세요."
 
+msgid "Choose a repository"
+msgstr "저장소 선택"
+
 msgid "Choose a section."
 msgstr "섹션을 선택하세요."
 
@@ -4344,6 +4366,12 @@ msgstr "코멘트 닫기"
 
 msgid "Close comments"
 msgstr "댓글 닫기"
+
+msgid "Close details"
+msgstr "세부 정보 닫기"
+
+msgid "Close details (Esc)"
+msgstr "세부 정보 닫기 (Esc)"
 
 msgid "Close Diff"
 msgstr "차이 닫기"
@@ -4678,6 +4706,9 @@ msgstr "커밋됨"
 
 msgid "Committed, starting soon."
 msgstr "확정되었고 곧 시작합니다."
+
+msgid "Committer"
+msgstr "커미터"
 
 msgid "Common questions"
 msgstr "자주 묻는 질문"
@@ -5189,6 +5220,9 @@ msgstr "대전 링크 복사"
 
 msgid "Copy file name"
 msgstr "파일 이름 복사"
+
+msgid "Copy hash"
+msgstr "해시 복사"
 
 msgid "Copy ID"
 msgstr "ID 복사"
@@ -8263,6 +8297,9 @@ msgstr "필터, {activeFilterCount}개 적용됨"
 msgid "Find"
 msgstr "찾기"
 
+msgid "Find (⌘F)"
+msgstr "찾기 (⌘F)"
+
 msgid "Find a person…"
 msgstr "사람 찾기…"
 
@@ -8295,6 +8332,9 @@ msgstr "최근 변경되었지만 커버리지가 낮은 코드를 찾아 제대
 
 msgid "Find stale TODO/FIXME comments and resolve the quick ones."
 msgstr "오래된 TODO/FIXME 주석을 찾아 간단한 것부터 해결합니다."
+
+msgid "Find: message, author, hash, branch"
+msgstr "찾기: 메시지, 작성자, 해시, 브랜치"
 
 msgid "Finder"
 msgstr "Finder"
@@ -8790,6 +8830,9 @@ msgstr "기록에서 다음 페이지로 이동합니다"
 
 msgid "Go home"
 msgstr "홈으로"
+
+msgid "Go to {parent}"
+msgstr "{parent}(으)로 이동"
 
 msgid "Go to Conversation"
 msgstr "대화로 이동"
@@ -10507,6 +10550,9 @@ msgstr "변경 사항을 불러오는 중..."
 msgid "Loading comments…"
 msgstr "댓글 불러오는 중…"
 
+msgid "Loading commit…"
+msgstr "커밋 불러오는 중…"
+
 msgid "Loading contributors…"
 msgstr "기여자 불러오는 중…"
 
@@ -11029,9 +11075,6 @@ msgstr "메시지"
 
 msgid "Message in channel"
 msgstr "채널 내 메시지"
-
-msgid "Message, author, hash, branch"
-msgstr "메시지, 작성자, 해시, 브랜치"
 
 msgid "Message..."
 msgstr "메시지..."
@@ -12167,6 +12210,9 @@ msgstr "리포지토리를 찾을 수 없습니다. GitHub App이 리포지토�
 msgid "No repositories. Connect GitHub in Integrations, then refresh."
 msgstr "리포지토리가 없습니다. 통합에서 GitHub를 연결한 후 새로 고침하세요."
 
+msgid "No repository matches."
+msgstr "일치하는 저장소가 없습니다."
+
 msgid "No results"
 msgstr "결과 없음"
 
@@ -12379,6 +12425,9 @@ msgstr "인증되지 않았습니다. 로그인해 주세요."
 
 msgid "Not authenticated. Provide a bearer JWT, x-api-key, or session."
 msgstr "인증되지 않았습니다. bearer JWT, x-api-key 또는 세션을 제공하세요."
+
+msgid "Not available on a connected host"
+msgstr "연결된 호스트에서 사용할 수 없음"
 
 msgid "Not available on this server"
 msgstr "이 서버에서는 사용할 수 없습니다"
@@ -13665,6 +13714,9 @@ msgstr "상위 디렉터리"
 
 msgid "Parent directory on {hostName}"
 msgstr "{hostName}의 상위 디렉터리"
+
+msgid "Parents"
+msgstr "부모"
 
 msgid "Part of Superset Pro"
 msgstr "Superset Pro에 포함"
@@ -15228,6 +15280,9 @@ msgstr "리포"
 msgid "Repo"
 msgstr "저장소"
 
+msgid "Repo:"
+msgstr "저장소:"
+
 msgid "Report"
 msgstr "신고"
 
@@ -16222,6 +16277,9 @@ msgstr "풀 리퀘스트 검색..."
 msgid "Search pull requests…"
 msgstr "풀 리퀘스트 검색…"
 
+msgid "Search repositories"
+msgstr "저장소 검색"
+
 msgid "Search repositories..."
 msgstr "리포지토리 검색..."
 
@@ -16948,6 +17006,9 @@ msgstr "풀 리퀘스트 목록 표시"
 
 msgid "Show pull request preview"
 msgstr "풀 리퀘스트 미리보기 표시"
+
+msgid "Show Remote Branches"
+msgstr "원격 브랜치 표시"
 
 msgid "Show resolved ({resolvedCount})"
 msgstr "해결된 항목 표시 ({resolvedCount})"
@@ -19220,6 +19281,9 @@ msgstr "레이블, 명령, 인수, 프롬프트 및 재개 설정, 환경 변수
 msgid "This repository does not allow merging from here."
 msgstr "이 리포지토리는 여기에서 머지하는 것을 허용하지 않습니다."
 
+msgid "This repository is not on a connected host. Pick another one."
+msgstr "이 저장소는 연결된 호스트에 없습니다. 다른 저장소를 선택하세요."
+
 msgid "This screen doesn't exist"
 msgstr "이 화면은 존재하지 않습니다"
 
@@ -19805,8 +19869,8 @@ msgstr "커밋 안 됨 · 푸시 안 됨"
 msgid "Uncommitted changes"
 msgstr "커밋되지 않은 변경 사항"
 
-msgid "Uncommitted changes ({uncommitted})"
-msgstr "커밋되지 않은 변경 ({uncommitted})"
+msgid "Uncommitted Changes ({uncommitted})"
+msgstr "커밋되지 않은 변경 사항 ({uncommitted})"
 
 msgid "Uncommitted changes, on top of {base}"
 msgstr "커밋되지 않은 변경, {base} 위"

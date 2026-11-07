@@ -377,6 +377,10 @@ msgstr "{0} · eski"
 msgid "{0} · peak {1}"
 msgstr "{0} · zirve {1}"
 
+#. placeholder {0}: file.path
+msgid "{0} (click to copy)"
+msgstr "{0} (kopyalamak için tıklayın)"
+
 #. placeholder {0}: creator.name
 #. placeholder {0}: option.name
 msgid "{0} (you)"
@@ -385,6 +389,11 @@ msgstr "{0} (siz)"
 #. placeholder {0}: actor.login
 msgid "{0} {actorVerb}"
 msgstr "{0} {actorVerb}"
+
+#. placeholder {0}: file.oldPath
+#. placeholder {1}: file.path
+msgid "{0} → {1} (click to copy)"
+msgstr "{0} → {1} (kopyalamak için tıklayın)"
 
 #. placeholder {0}: versions.running
 #. placeholder {1}: versions.expected
@@ -451,6 +460,10 @@ msgstr "{0} başarısız, {1} çalışıyor"
 #. placeholder {0}: collisions.length
 msgid "{0} files already exist in {where}. Do you want to replace them?"
 msgstr "{where} konumunda {0} dosya zaten var. Bunları değiştirmek istiyor musunuz?"
+
+#. placeholder {0}: data.files.length
+msgid "{0} files changed"
+msgstr "{0} dosya değişti"
 
 #. placeholder {0}: displayName(variables.name)
 msgid "{0} installed"
@@ -3327,6 +3340,9 @@ msgstr "Faturalandırma bilgileri"
 msgid "Billing refused to start a cloud workspace: the organization needs a paid plan, or it reached its cloud usage limit. Upgrade or raise the limit in Settings > Billing, or run the automation on a device."
 msgstr "Faturalandırma bir bulut çalışma alanının başlatılmasını engelledi: kuruluşun ücretli bir plana ihtiyacı var ya da bulut kullanım sınırına ulaştı. Ayarlar > Faturalandırma bölümünden planı yükseltin veya sınırı artırın ya da otomasyonu bir cihazda çalıştırın."
 
+msgid "binary"
+msgstr "ikili"
+
 msgid "Binary"
 msgstr "İkili"
 
@@ -3456,6 +3472,9 @@ msgstr "Dallar"
 
 msgid "Branches & naming"
 msgstr "Dallar ve adlandırma"
+
+msgid "Branches:"
+msgstr "Dallar:"
 
 msgid "Branches..."
 msgstr "Dallar..."
@@ -4045,6 +4064,9 @@ msgstr "Hafta içi gibi hazır bir ayar seçin veya özel bir RRule yazın. Bir 
 msgid "Choose a project from GitHub issues before opening an issue."
 msgstr "Bir issue açmadan önce GitHub issue'ları bölümünden bir proje seçin."
 
+msgid "Choose a repository"
+msgstr "Bir depo seçin"
+
 msgid "Choose a section."
 msgstr "Bir bölüm seçin."
 
@@ -4344,6 +4366,12 @@ msgstr "Yorumu kapat"
 
 msgid "Close comments"
 msgstr "Yorumları kapat"
+
+msgid "Close details"
+msgstr "Ayrıntıları kapat"
+
+msgid "Close details (Esc)"
+msgstr "Ayrıntıları kapat (Esc)"
 
 msgid "Close Diff"
 msgstr "Farkı kapat"
@@ -4678,6 +4706,9 @@ msgstr "Commit'lenmiş"
 
 msgid "Committed, starting soon."
 msgstr "Kararlaştırıldı, yakında başlıyor."
+
+msgid "Committer"
+msgstr "Commit eden"
 
 msgid "Common questions"
 msgstr "Sık sorulan sorular"
@@ -5189,6 +5220,9 @@ msgstr "dövüş bağlantısını kopyala"
 
 msgid "Copy file name"
 msgstr "Dosya adını kopyala"
+
+msgid "Copy hash"
+msgstr "Hash'i kopyala"
 
 msgid "Copy ID"
 msgstr "Kimliği kopyala"
@@ -8263,6 +8297,9 @@ msgstr "Filtreler, {activeFilterCount} etkin"
 msgid "Find"
 msgstr "Bul"
 
+msgid "Find (⌘F)"
+msgstr "Bul (⌘F)"
+
 msgid "Find a person…"
 msgstr "Kişi bul…"
 
@@ -8295,6 +8332,9 @@ msgstr "Kapsamı zayıf olan, yakın zamanda değişmiş kodu bul ve düzgün te
 
 msgid "Find stale TODO/FIXME comments and resolve the quick ones."
 msgstr "Eskimiş TODO/FIXME yorumlarını bul ve kolay olanları çöz."
+
+msgid "Find: message, author, hash, branch"
+msgstr "Bul: mesaj, yazar, hash, dal"
 
 msgid "Finder"
 msgstr "Finder"
@@ -8790,6 +8830,9 @@ msgstr "Geçmişte sonraki sayfaya git"
 
 msgid "Go home"
 msgstr "Ana sayfaya git"
+
+msgid "Go to {parent}"
+msgstr "{parent} öğesine git"
 
 msgid "Go to Conversation"
 msgstr "Konuşmaya git"
@@ -10507,6 +10550,9 @@ msgstr "Değişiklikler yükleniyor..."
 msgid "Loading comments…"
 msgstr "Yorumlar yükleniyor…"
 
+msgid "Loading commit…"
+msgstr "Commit yükleniyor…"
+
 msgid "Loading contributors…"
 msgstr "Katkıda bulunanlar yükleniyor…"
 
@@ -11029,9 +11075,6 @@ msgstr "Mesaj"
 
 msgid "Message in channel"
 msgstr "Kanalda mesaj"
-
-msgid "Message, author, hash, branch"
-msgstr "Mesaj, yazar, hash, dal"
 
 msgid "Message..."
 msgstr "Mesaj..."
@@ -12167,6 +12210,9 @@ msgstr "Depo bulunamadı. GitHub App'inizin depolara erişimi olduğundan emin o
 msgid "No repositories. Connect GitHub in Integrations, then refresh."
 msgstr "Depo yok. Entegrasyonlar'dan GitHub'ı bağlayın, sonra yenileyin."
 
+msgid "No repository matches."
+msgstr "Eşleşen depo yok."
+
 msgid "No results"
 msgstr "Sonuç yok"
 
@@ -12379,6 +12425,9 @@ msgstr "Kimlik doğrulanmadı. Lütfen oturum açın."
 
 msgid "Not authenticated. Provide a bearer JWT, x-api-key, or session."
 msgstr "Kimlik doğrulanmadı. Bir bearer JWT, x-api-key veya oturum sağlayın."
+
+msgid "Not available on a connected host"
+msgstr "Bağlı bir ana bilgisayarda yok"
 
 msgid "Not available on this server"
 msgstr "Bu sunucuda kullanılamıyor"
@@ -13665,6 +13714,9 @@ msgstr "Üst dizin"
 
 msgid "Parent directory on {hostName}"
 msgstr "{hostName} üzerindeki üst dizin"
+
+msgid "Parents"
+msgstr "Üst commitler"
 
 msgid "Part of Superset Pro"
 msgstr "Superset Pro'nun parçası"
@@ -15228,6 +15280,9 @@ msgstr "depo"
 msgid "Repo"
 msgstr "Depo"
 
+msgid "Repo:"
+msgstr "Depo:"
+
 msgid "Report"
 msgstr "Bildir"
 
@@ -16222,6 +16277,9 @@ msgstr "Pull request ara..."
 msgid "Search pull requests…"
 msgstr "Pull request ara…"
 
+msgid "Search repositories"
+msgstr "Depolarda ara"
+
 msgid "Search repositories..."
 msgstr "Depolarda ara..."
 
@@ -16948,6 +17006,9 @@ msgstr "Pull request listesini göster"
 
 msgid "Show pull request preview"
 msgstr "Pull request önizlemesini göster"
+
+msgid "Show Remote Branches"
+msgstr "Uzak dalları göster"
 
 msgid "Show resolved ({resolvedCount})"
 msgstr "Çözülenleri göster ({resolvedCount})"
@@ -19220,6 +19281,9 @@ msgstr "Bu işlem; etiketini, komutunu, argümanlarını, istem ve sürdürme ay
 msgid "This repository does not allow merging from here."
 msgstr "Bu depo buradan birleştirmeye izin vermiyor."
 
+msgid "This repository is not on a connected host. Pick another one."
+msgstr "Bu depo bağlı bir ana bilgisayarda değil. Başka birini seçin."
+
 msgid "This screen doesn't exist"
 msgstr "Bu ekran mevcut değil"
 
@@ -19805,7 +19869,7 @@ msgstr "Commit'lenmemiş · Push edilmemiş"
 msgid "Uncommitted changes"
 msgstr "Commit'lenmemiş değişiklikler"
 
-msgid "Uncommitted changes ({uncommitted})"
+msgid "Uncommitted Changes ({uncommitted})"
 msgstr "Commit edilmemiş değişiklikler ({uncommitted})"
 
 msgid "Uncommitted changes, on top of {base}"

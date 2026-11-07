@@ -4,9 +4,12 @@ import { persist } from "zustand/middleware";
 // Bounds the persisted filters: a few repos, a few dozen refs each.
 const MAX_PROJECTS = 20;
 const MAX_REFS_PER_PROJECT = 50;
+const MAX_RECENT_PROJECTS = 8;
 
 interface GitGraphState {
 	projectId: string | null;
+	/** Repositories opened here, most recent first. */
+	recentProjectIds: string[];
 	/** Full ref names to show per project; empty shows every branch. */
 	refsByProject: Record<string, string[]>;
 	showRemotes: boolean;
@@ -21,7 +24,12 @@ interface GitGraphState {
 
 type PersistedGitGraphState = Pick<
 	GitGraphState,
-	"projectId" | "refsByProject" | "showRemotes" | "showTags" | "worktreesOnly"
+	| "projectId"
+	| "recentProjectIds"
+	| "refsByProject"
+	| "showRemotes"
+	| "showTags"
+	| "worktreesOnly"
 >;
 
 export function migrateGitGraphState(
@@ -48,6 +56,11 @@ export function migrateGitGraphState(
 	}
 	return {
 		projectId: typeof state.projectId === "string" ? state.projectId : null,
+		recentProjectIds: Array.isArray(state.recentProjectIds)
+			? state.recentProjectIds
+					.filter((id): id is string => typeof id === "string")
+					.slice(0, MAX_RECENT_PROJECTS)
+			: [],
 		refsByProject,
 		showRemotes: state.showRemotes === true,
 		showTags: state.showTags !== false,
@@ -59,11 +72,19 @@ export const useGitGraphStore = create<GitGraphState>()(
 	persist(
 		(set) => ({
 			projectId: null,
+			recentProjectIds: [],
 			refsByProject: {},
 			showRemotes: false,
 			showTags: true,
 			worktreesOnly: false,
-			setProjectId: (projectId) => set({ projectId }),
+			setProjectId: (projectId) =>
+				set((state) => ({
+					projectId,
+					recentProjectIds: [
+						projectId,
+						...state.recentProjectIds.filter((id) => id !== projectId),
+					].slice(0, MAX_RECENT_PROJECTS),
+				})),
 			setRefs: (projectId, refs) =>
 				set((state) => {
 					const others = Object.entries(state.refsByProject)
@@ -88,6 +109,7 @@ export const useGitGraphStore = create<GitGraphState>()(
 			migrate: migrateGitGraphState,
 			partialize: (state) => ({
 				projectId: state.projectId,
+				recentProjectIds: state.recentProjectIds,
 				refsByProject: state.refsByProject,
 				showRemotes: state.showRemotes,
 				showTags: state.showTags,

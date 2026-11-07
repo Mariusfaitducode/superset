@@ -377,6 +377,10 @@ msgstr "{0} · 落後"
 msgid "{0} · peak {1}"
 msgstr "{0} · 峰值 {1}"
 
+#. placeholder {0}: file.path
+msgid "{0} (click to copy)"
+msgstr "{0}（點擊複製）"
+
 #. placeholder {0}: creator.name
 #. placeholder {0}: option.name
 msgid "{0} (you)"
@@ -385,6 +389,11 @@ msgstr "{0}（你）"
 #. placeholder {0}: actor.login
 msgid "{0} {actorVerb}"
 msgstr "{0}{actorVerb}"
+
+#. placeholder {0}: file.oldPath
+#. placeholder {1}: file.path
+msgid "{0} → {1} (click to copy)"
+msgstr "{0} → {1}（點擊複製）"
 
 #. placeholder {0}: versions.running
 #. placeholder {1}: versions.expected
@@ -451,6 +460,10 @@ msgstr "{0} 個失敗，{1} 個執行中"
 #. placeholder {0}: collisions.length
 msgid "{0} files already exist in {where}. Do you want to replace them?"
 msgstr "{where}中已存在{0}個檔案。是否要替換它們？"
+
+#. placeholder {0}: data.files.length
+msgid "{0} files changed"
+msgstr "{0} 個檔案已變更"
 
 #. placeholder {0}: displayName(variables.name)
 msgid "{0} installed"
@@ -3327,6 +3340,9 @@ msgstr "帳單資訊"
 msgid "Billing refused to start a cloud workspace: the organization needs a paid plan, or it reached its cloud usage limit. Upgrade or raise the limit in Settings > Billing, or run the automation on a device."
 msgstr "帳單原因導致無法啟動雲端工作區：組織需要付費方案，或已達到雲端用量上限。請在「設定 > 帳單」中升級或提高上限，或在裝置上執行該自動化。"
 
+msgid "binary"
+msgstr "二進位"
+
 msgid "Binary"
 msgstr "二進位"
 
@@ -3456,6 +3472,9 @@ msgstr "分支"
 
 msgid "Branches & naming"
 msgstr "分支與命名"
+
+msgid "Branches:"
+msgstr "分支："
 
 msgid "Branches..."
 msgstr "分支..."
@@ -4045,6 +4064,9 @@ msgstr "選擇「平日」等預設，或自行撰寫 RRule。一個自動化可
 msgid "Choose a project from GitHub issues before opening an issue."
 msgstr "開啟議題前，請先在GitHub議題中選擇一個專案。"
 
+msgid "Choose a repository"
+msgstr "選擇存放庫"
+
 msgid "Choose a section."
 msgstr "選擇一個分區。"
 
@@ -4344,6 +4366,12 @@ msgstr "關閉評論"
 
 msgid "Close comments"
 msgstr "關閉評論"
+
+msgid "Close details"
+msgstr "關閉詳細資料"
+
+msgid "Close details (Esc)"
+msgstr "關閉詳細資料 (Esc)"
 
 msgid "Close Diff"
 msgstr "關閉差異"
@@ -4678,6 +4706,9 @@ msgstr "已提交"
 
 msgid "Committed, starting soon."
 msgstr "已確定，很快開始。"
+
+msgid "Committer"
+msgstr "提交者"
 
 msgid "Common questions"
 msgstr "常見問題"
@@ -5189,6 +5220,9 @@ msgstr "複製對戰連結"
 
 msgid "Copy file name"
 msgstr "複製檔名"
+
+msgid "Copy hash"
+msgstr "複製雜湊"
 
 msgid "Copy ID"
 msgstr "複製ID"
@@ -8263,6 +8297,9 @@ msgstr "篩選，{activeFilterCount}項生效"
 msgid "Find"
 msgstr "尋找"
 
+msgid "Find (⌘F)"
+msgstr "尋找 (⌘F)"
+
 msgid "Find a person…"
 msgstr "尋找成員…"
 
@@ -8295,6 +8332,9 @@ msgstr "找出最近改動過、覆蓋率薄弱的程式碼，好好補上測試
 
 msgid "Find stale TODO/FIXME comments and resolve the quick ones."
 msgstr "找出過期的TODO/FIXME註釋，把好處理的解決掉。"
+
+msgid "Find: message, author, hash, branch"
+msgstr "尋找：訊息、作者、雜湊、分支"
 
 msgid "Finder"
 msgstr "Finder"
@@ -8790,6 +8830,9 @@ msgstr "前進到歷史記錄中的下一頁"
 
 msgid "Go home"
 msgstr "回到首頁"
+
+msgid "Go to {parent}"
+msgstr "前往 {parent}"
 
 msgid "Go to Conversation"
 msgstr "前往對話"
@@ -10507,6 +10550,9 @@ msgstr "正在載入更改..."
 msgid "Loading comments…"
 msgstr "正在載入評論…"
 
+msgid "Loading commit…"
+msgstr "正在載入提交…"
+
 msgid "Loading contributors…"
 msgstr "正在載入貢獻者…"
 
@@ -11029,9 +11075,6 @@ msgstr "訊息"
 
 msgid "Message in channel"
 msgstr "頻道中的訊息"
-
-msgid "Message, author, hash, branch"
-msgstr "訊息、作者、雜湊、分支"
 
 msgid "Message..."
 msgstr "訊息..."
@@ -12167,6 +12210,9 @@ msgstr "未找到儲存庫。請確認你的GitHub App有權存取儲存庫。"
 msgid "No repositories. Connect GitHub in Integrations, then refresh."
 msgstr "沒有儲存庫。請在「整合」中連結 GitHub，然後重新整理。"
 
+msgid "No repository matches."
+msgstr "沒有相符的存放庫。"
+
 msgid "No results"
 msgstr "無結果"
 
@@ -12379,6 +12425,9 @@ msgstr "未通過身份驗證。請登入。"
 
 msgid "Not authenticated. Provide a bearer JWT, x-api-key, or session."
 msgstr "未通過身份驗證。請提供bearer JWT、x-api-key或session。"
+
+msgid "Not available on a connected host"
+msgstr "不在已連線的主機上"
 
 msgid "Not available on this server"
 msgstr "此伺服器無法使用"
@@ -13665,6 +13714,9 @@ msgstr "父目錄"
 
 msgid "Parent directory on {hostName}"
 msgstr "{hostName}上的父目錄"
+
+msgid "Parents"
+msgstr "父提交"
 
 msgid "Part of Superset Pro"
 msgstr "包含於 Superset 專業版中"
@@ -15228,6 +15280,9 @@ msgstr "儲存庫"
 msgid "Repo"
 msgstr "儲存庫"
 
+msgid "Repo:"
+msgstr "存放庫："
+
 msgid "Report"
 msgstr "檢舉"
 
@@ -16222,6 +16277,9 @@ msgstr "搜尋拉取請求..."
 msgid "Search pull requests…"
 msgstr "搜尋拉取請求…"
 
+msgid "Search repositories"
+msgstr "搜尋存放庫"
+
 msgid "Search repositories..."
 msgstr "搜尋儲存庫..."
 
@@ -16948,6 +17006,9 @@ msgstr "顯示拉取請求列表"
 
 msgid "Show pull request preview"
 msgstr "顯示拉取請求預覽"
+
+msgid "Show Remote Branches"
+msgstr "顯示遠端分支"
 
 msgid "Show resolved ({resolvedCount})"
 msgstr "顯示已解決 ({resolvedCount})"
@@ -19220,6 +19281,9 @@ msgstr "這會用目前內建配置替換它的名稱、命令、引數、提示
 msgid "This repository does not allow merging from here."
 msgstr "此儲存庫不允許從這裡合併。"
 
+msgid "This repository is not on a connected host. Pick another one."
+msgstr "此存放庫不在已連線的主機上。請選擇其他存放庫。"
+
 msgid "This screen doesn't exist"
 msgstr "此頁面不存在"
 
@@ -19805,8 +19869,8 @@ msgstr "未提交 · 未推送"
 msgid "Uncommitted changes"
 msgstr "未提交的更改"
 
-msgid "Uncommitted changes ({uncommitted})"
-msgstr "未提交的變更（{uncommitted}）"
+msgid "Uncommitted Changes ({uncommitted})"
+msgstr "未提交的變更 ({uncommitted})"
 
 msgid "Uncommitted changes, on top of {base}"
 msgstr "未提交的變更，基於 {base}"

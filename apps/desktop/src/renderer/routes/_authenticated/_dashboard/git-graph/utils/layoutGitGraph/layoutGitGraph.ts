@@ -1,6 +1,8 @@
 export interface GraphLine {
 	lane: number;
 	color: number;
+	/** Drawn dashed: the link from uncommitted changes to HEAD. */
+	dashed?: boolean;
 }
 
 export interface GraphRowLayout {
@@ -10,9 +12,9 @@ export interface GraphRowLayout {
 	/** Lines crossing the whole row untouched. */
 	passing: GraphLine[];
 	/** Lines from the top of the row into the node (the commit's children). */
-	incoming: { from: number; color: number }[];
+	incoming: { from: number; color: number; dashed?: boolean }[];
 	/** Lines from the node to the bottom of the row (towards its parents). */
-	outgoing: { to: number; color: number }[];
+	outgoing: { to: number; color: number; dashed?: boolean }[];
 	/** Lanes the row needs, to size the graph column. */
 	width: number;
 }
@@ -20,9 +22,13 @@ export interface GraphRowLayout {
 interface LayoutCommit {
 	hash: string;
 	parents: string[];
+	/** Its lines to its parents are dashed (the uncommitted changes row). */
+	dashed?: boolean;
 }
 
-type Lane = { hash: string; color: number } | null;
+type Lane = { hash: string; color: number; dashed: boolean } | null;
+
+const dashedFlag = (dashed: boolean) => (dashed ? { dashed: true } : {});
 
 /**
  * Assign each commit (in topological order, newest first) a lane, and the
@@ -52,13 +58,17 @@ export function layoutGitGraph(commits: LayoutCommit[]): GraphRowLayout[] {
 		const incoming: GraphRowLayout["incoming"] = [];
 		before.forEach((entry, index) => {
 			if (entry?.hash === commit.hash) {
-				incoming.push({ from: index, color: entry.color });
+				incoming.push({
+					from: index,
+					color: entry.color,
+					...dashedFlag(entry.dashed),
+				});
 				lanes[index] = null;
 			}
 		});
 		const passing = before.flatMap((entry, index) =>
 			entry && entry.hash !== commit.hash
-				? [{ lane: index, color: entry.color }]
+				? [{ lane: index, color: entry.color, ...dashedFlag(entry.dashed) }]
 				: [],
 		);
 
@@ -73,13 +83,15 @@ export function layoutGitGraph(commits: LayoutCommit[]): GraphRowLayout[] {
 				outgoing.push({
 					to: existing,
 					color: (lanes[existing] as { color: number }).color,
+					...dashedFlag(!!commit.dashed),
 				});
 				return;
 			}
 			const target = index === 0 ? lane : freeSlot();
 			const parentColor = index === 0 ? color : nextColor++;
-			lanes[target] = { hash: parent, color: parentColor };
-			outgoing.push({ to: target, color: parentColor });
+			const dashed = !!commit.dashed;
+			lanes[target] = { hash: parent, color: parentColor, dashed };
+			outgoing.push({ to: target, color: parentColor, ...dashedFlag(dashed) });
 		});
 
 		while (lanes.length > 0 && lanes[lanes.length - 1] === null) lanes.pop();
