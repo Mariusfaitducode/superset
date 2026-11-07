@@ -1422,6 +1422,9 @@ msgstr "+{hiddenCount} daha önce"
 msgid "+{remainingCount} more"
 msgstr "+{remainingCount} daha"
 
+msgid "+{subagentCount} subagents"
+msgstr "+{subagentCount} alt ajan"
+
 #. placeholder {0}: paths[0]?.split("/").pop()
 msgid "<0>{0}</0> is not a git repository. Would you like to initialize one?"
 msgstr "<0>{0}</0> bir git deposu değil. Bir tane başlatmak ister misiniz?"
@@ -4782,6 +4785,9 @@ msgstr "Çalışma alanı çalıştırma komutunu yapılandır"
 msgid "Confirm before quitting"
 msgstr "Çıkmadan önce onay iste"
 
+msgid "Confirm stop"
+msgstr "Durdurmayı onayla"
+
 msgid "Conflicts"
 msgstr "Çakışmalar"
 
@@ -5714,6 +5720,9 @@ msgstr "Pull request birleştirilemedi"
 msgid "Couldn't name \"{name}\" automatically"
 msgstr "\"{name}\" otomatik olarak adlandırılamadı"
 
+msgid "Couldn't open a terminal"
+msgstr "Terminal açılamadı"
+
 msgid "Couldn't parse this diff: {patchParseError}"
 msgstr "Bu fark ayrıştırılamadı: {patchParseError}"
 
@@ -5816,11 +5825,17 @@ msgstr "Bulut çalışma alanı başlatılamadı"
 msgid "Couldn't start design mode on this page"
 msgstr "Bu sayfada tasarım modu başlatılamadı"
 
+msgid "Couldn't start the agent"
+msgstr "Ajan başlatılamadı"
+
 msgid "Couldn't start voice mode"
 msgstr "Sesli mod başlatılamadı"
 
 msgid "Couldn't start workspace"
 msgstr "Çalışma alanı başlatılamadı"
+
+msgid "Couldn't stop the agent"
+msgstr "Ajan durdurulamadı"
 
 msgid "Couldn't stop the agent's terminal"
 msgstr "Aracının terminali durdurulamadı"
@@ -7416,6 +7431,9 @@ msgstr "Her cuma 17:00'de"
 
 msgid "Every host"
 msgstr "Tüm ana bilgisayarlar"
+
+msgid "Every machine you reach, with the agents running on it."
+msgstr "Eriştiğiniz her makine ve üzerinde çalışan ajanlar."
 
 msgid "Every minute"
 msgstr "Her dakika"
@@ -11470,6 +11488,9 @@ msgstr "Yeni ajan"
 msgid "New agent launches use this account. Relaunch a running agent to switch it."
 msgstr "Yeni ajan başlatmaları bu hesabı kullanır. Değiştirmek için çalışan bir ajanı yeniden başlatın."
 
+msgid "New agent or terminal"
+msgstr "Yeni ajan veya terminal"
+
 msgid "New agent session"
 msgstr "Yeni ajan oturumu"
 
@@ -11704,6 +11725,9 @@ msgstr "Henüz ajan konuşması yok."
 
 msgid "No agent is configured on this host"
 msgstr "Bu ana makinede yapılandırılmış bir ajan yok"
+
+msgid "No agent is running on this host."
+msgstr "Bu ana bilgisayarda çalışan ajan yok."
 
 msgid "No agent running"
 msgstr "Çalışan ajan yok"
@@ -12313,6 +12337,12 @@ msgstr "Henüz sürüm yok."
 
 msgid "No workspace has these labels"
 msgstr "Bu etiketlere sahip çalışma alanı yok"
+
+msgid "No workspace on this host yet."
+msgstr "Bu ana bilgisayarda henüz çalışma alanı yok."
+
+msgid "No workspace on this host yet. Start a session to run an agent here, or a workspace on one of its projects."
+msgstr "Bu ana bilgisayarda henüz çalışma alanı yok. Burada bir ajan çalıştırmak için bir oturum başlatın veya projelerinden birinde bir çalışma alanı açın."
 
 msgid "No workspace run command configured"
 msgstr "Yapılandırılmış çalışma alanı çalıştırma komutu yok"
@@ -13265,12 +13295,18 @@ msgstr "Değişiklikler panelini yeni sekmede açar veya mevcut olana odaklanır
 msgid "Open the cloud workspaces"
 msgstr "Bulut çalışma alanlarını açar"
 
+msgid "Open the conversation"
+msgstr "Konuşmayı aç"
+
 #. placeholder {0}: task.title
 msgid "Open the conversation of {0}"
 msgstr "{0} konuşmasını aç"
 
 msgid "Open the global command palette"
 msgstr "Genel komut paletini aç"
+
+msgid "Open the hosts page"
+msgstr "Ana bilgisayarlar sayfasını aç"
 
 msgid "Open the list of projects"
 msgstr "Proje listesini açar"
@@ -15930,6 +15966,9 @@ msgstr "Seçtiğiniz bir cihazda çalışır"
 
 msgid "Runs that started their workspace in the last 7 days"
 msgstr "Son 7 günde workspace'ini başlatan çalıştırmalar"
+
+msgid "Runs the host's wake command on this machine. The host shows as online once it is back."
+msgstr "Ana bilgisayarın uyandırma komutunu bu makinede çalıştırır. Geri döndüğünde çevrimiçi görünür."
 
 msgid "Runs when a new workspace is created."
 msgstr "Yeni bir çalışma alanı oluşturulduğunda çalışır."
@@ -18727,6 +18766,9 @@ msgstr "Yeniden kullanılabilir Superset ajan yapılandırmaları, istemleri ve 
 msgid "The host came back on {0}, not {targetVersion}."
 msgstr "Ana makine {targetVersion} yerine {0} ile geri döndü."
 
+msgid "The host could not be woken. The reason is in the output below."
+msgstr "Ana bilgisayar uyandırılamadı. Nedeni aşağıdaki çıktıda."
+
 msgid "The host did not come back within fifteen minutes."
 msgstr "Ana makine on beş dakika içinde geri gelmedi."
 
@@ -18916,6 +18958,9 @@ msgstr "Tur başarısız oldu"
 msgid "The turn stopped on an error, or the sandbox is down"
 msgstr "Tur bir hatada durdu veya sandbox çalışmıyor"
 
+msgid "The wake command ran. The host may take a minute to come online."
+msgstr "Uyandırma komutu çalıştı. Ana bilgisayarın çevrimiçi olması bir dakika sürebilir."
+
 msgid "The workspace is not ready yet. Try again."
 msgstr "Çalışma alanı henüz hazır değil. Yeniden deneyin."
 
@@ -19090,6 +19135,9 @@ msgstr "Bu ana makine henüz bir sürüm bildirmedi."
 
 msgid "This host is behind the app you are using. Workspaces still open, but newer features may fail on it."
 msgstr "Bu ana makine kullandığınız uygulamanın gerisinde. Çalışma alanları hâlâ açılıyor ama yeni özellikler üzerinde çalışmayabilir."
+
+msgid "This host is offline, so its agents can't be read or started. The workspaces below are the last ones it reported."
+msgstr "Bu ana bilgisayar çevrimdışı, bu yüzden ajanları okunamaz veya başlatılamaz. Aşağıdaki çalışma alanları son bildirdikleridir."
 
 msgid "This host is too old to keep to-dos."
 msgstr "Bu ana bilgisayar yapılacakları saklamak için çok eski."
@@ -20468,6 +20516,12 @@ msgstr "{waitingSince} tarihinden beri bekliyor"
 msgid "Waiting tint"
 msgstr "Bekleme tonu"
 
+msgid "Wake"
+msgstr "Uyandır"
+
+msgid "Wake {hostName}"
+msgstr "{hostName} uyandır"
+
 msgid "Waking up workspace"
 msgstr "Çalışma alanı uyandırılıyor"
 
@@ -20964,6 +21018,9 @@ msgstr "Bu cihazdaki çalışma alanları burada görünecek."
 
 msgid "Workspaces started from this environment will stop receiving it."
 msgstr "Bu ortamdan başlatılan çalışma alanları artık bunu almayacak."
+
+msgid "Workspaces without agents ({quietCount})"
+msgstr "Ajansız çalışma alanları ({quietCount})"
 
 msgid "worktree"
 msgstr "worktree"

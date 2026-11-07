@@ -1422,6 +1422,9 @@ msgstr "이전 +{hiddenCount}개"
 msgid "+{remainingCount} more"
 msgstr "+{remainingCount}개 더"
 
+msgid "+{subagentCount} subagents"
+msgstr "+{subagentCount}개 하위 에이전트"
+
 #. placeholder {0}: paths[0]?.split("/").pop()
 msgid "<0>{0}</0> is not a git repository. Would you like to initialize one?"
 msgstr "<0>{0}</0>은(는) git 저장소가 아닙니다. 저장소를 초기화할까요?"
@@ -4782,6 +4785,9 @@ msgstr "워크스페이스 실행 명령 구성"
 msgid "Confirm before quitting"
 msgstr "종료 전 확인"
 
+msgid "Confirm stop"
+msgstr "중지 확인"
+
 msgid "Conflicts"
 msgstr "충돌"
 
@@ -5714,6 +5720,9 @@ msgstr "풀 리퀘스트를 머지하지 못했습니다"
 msgid "Couldn't name \"{name}\" automatically"
 msgstr "\"{name}\"의 이름을 자동으로 지정하지 못했습니다"
 
+msgid "Couldn't open a terminal"
+msgstr "터미널을 열 수 없습니다"
+
 msgid "Couldn't parse this diff: {patchParseError}"
 msgstr "이 차이를 해석하지 못했습니다: {patchParseError}"
 
@@ -5816,11 +5825,17 @@ msgstr "클라우드 워크스페이스를 시작하지 못했습니다"
 msgid "Couldn't start design mode on this page"
 msgstr "이 페이지에서 디자인 모드를 시작할 수 없습니다"
 
+msgid "Couldn't start the agent"
+msgstr "에이전트를 시작할 수 없습니다"
+
 msgid "Couldn't start voice mode"
 msgstr "음성 모드를 시작할 수 없습니다"
 
 msgid "Couldn't start workspace"
 msgstr "워크스페이스를 시작하지 못했습니다"
+
+msgid "Couldn't stop the agent"
+msgstr "에이전트를 중지할 수 없습니다"
 
 msgid "Couldn't stop the agent's terminal"
 msgstr "에이전트의 터미널을 중지할 수 없습니다"
@@ -7416,6 +7431,9 @@ msgstr "매주 금요일 오후 5:00"
 
 msgid "Every host"
 msgstr "모든 호스트"
+
+msgid "Every machine you reach, with the agents running on it."
+msgstr "접속할 수 있는 모든 머신과 그 위에서 실행 중인 에이전트."
 
 msgid "Every minute"
 msgstr "1분마다"
@@ -11470,6 +11488,9 @@ msgstr "새 에이전트"
 msgid "New agent launches use this account. Relaunch a running agent to switch it."
 msgstr "새 에이전트는 이 계정으로 실행됩니다. 실행 중인 에이전트는 다시 실행해야 바뀝니다."
 
+msgid "New agent or terminal"
+msgstr "새 에이전트 또는 터미널"
+
 msgid "New agent session"
 msgstr "새 에이전트 세션"
 
@@ -11704,6 +11725,9 @@ msgstr "아직 에이전트 대화가 없습니다."
 
 msgid "No agent is configured on this host"
 msgstr "이 호스트에 구성된 에이전트가 없습니다"
+
+msgid "No agent is running on this host."
+msgstr "이 호스트에서 실행 중인 에이전트가 없습니다."
 
 msgid "No agent running"
 msgstr "실행 중인 에이전트 없음"
@@ -12313,6 +12337,12 @@ msgstr "아직 버전이 없습니다."
 
 msgid "No workspace has these labels"
 msgstr "이 라벨이 있는 워크스페이스가 없습니다"
+
+msgid "No workspace on this host yet."
+msgstr "이 호스트에 아직 워크스페이스가 없습니다."
+
+msgid "No workspace on this host yet. Start a session to run an agent here, or a workspace on one of its projects."
+msgstr "이 호스트에 아직 워크스페이스가 없습니다. 세션을 시작해 여기서 에이전트를 실행하거나, 프로젝트 중 하나에 워크스페이스를 만드세요."
 
 msgid "No workspace run command configured"
 msgstr "설정된 워크스페이스 실행 명령이 없습니다"
@@ -13265,12 +13295,18 @@ msgstr "변경 패널을 새 탭에서 열거나 기존 패널에 포커스합�
 msgid "Open the cloud workspaces"
 msgstr "클라우드 워크스페이스를 엽니다"
 
+msgid "Open the conversation"
+msgstr "대화 열기"
+
 #. placeholder {0}: task.title
 msgid "Open the conversation of {0}"
 msgstr "{0}의 대화 열기"
 
 msgid "Open the global command palette"
 msgstr "전역 명령 팔레트를 엽니다"
+
+msgid "Open the hosts page"
+msgstr "호스트 페이지 열기"
 
 msgid "Open the list of projects"
 msgstr "프로젝트 목록을 엽니다"
@@ -15930,6 +15966,9 @@ msgstr "선택한 기기에서 실행"
 
 msgid "Runs that started their workspace in the last 7 days"
 msgstr "지난 7일 동안 워크스페이스를 시작한 실행"
+
+msgid "Runs the host's wake command on this machine. The host shows as online once it is back."
+msgstr "이 머신에서 호스트의 깨우기 명령을 실행합니다. 호스트가 돌아오면 온라인으로 표시됩니다."
 
 msgid "Runs when a new workspace is created."
 msgstr "새 작업 공간을 만들 때 실행됩니다."
@@ -18727,6 +18766,9 @@ msgstr "재사용 가능한 Superset 에이전트 설정, 프롬프트, 셋업 �
 msgid "The host came back on {0}, not {targetVersion}."
 msgstr "호스트가 {targetVersion}이(가) 아닌 {0}(으)로 돌아왔습니다."
 
+msgid "The host could not be woken. The reason is in the output below."
+msgstr "호스트를 깨울 수 없습니다. 이유는 아래 출력에 있습니다."
+
 msgid "The host did not come back within fifteen minutes."
 msgstr "호스트가 15분 이내에 다시 연결되지 않았습니다."
 
@@ -18916,6 +18958,9 @@ msgstr "턴이 실패했습니다"
 msgid "The turn stopped on an error, or the sandbox is down"
 msgstr "턴이 오류로 중단되었거나 샌드박스가 중단되었습니다"
 
+msgid "The wake command ran. The host may take a minute to come online."
+msgstr "깨우기 명령을 실행했습니다. 호스트가 온라인이 되기까지 1분 정도 걸릴 수 있습니다."
+
 msgid "The workspace is not ready yet. Try again."
 msgstr "워크스페이스가 아직 준비되지 않았습니다. 다시 시도하세요."
 
@@ -19090,6 +19135,9 @@ msgstr "이 호스트는 아직 버전을 보고하지 않았습니다."
 
 msgid "This host is behind the app you are using. Workspaces still open, but newer features may fail on it."
 msgstr "이 호스트는 사용 중인 앱보다 뒤처져 있습니다. 워크스페이스는 여전히 열리지만 최신 기능은 실패할 수 있습니다."
+
+msgid "This host is offline, so its agents can't be read or started. The workspaces below are the last ones it reported."
+msgstr "이 호스트는 오프라인이라 에이전트를 읽거나 시작할 수 없습니다. 아래 워크스페이스는 마지막으로 보고된 것입니다."
 
 msgid "This host is too old to keep to-dos."
 msgstr "이 호스트는 너무 오래되어 할 일을 저장할 수 없습니다."
@@ -20468,6 +20516,12 @@ msgstr "{waitingSince}부터 대기 중"
 msgid "Waiting tint"
 msgstr "대기 색조"
 
+msgid "Wake"
+msgstr "깨우기"
+
+msgid "Wake {hostName}"
+msgstr "{hostName} 깨우기"
+
 msgid "Waking up workspace"
 msgstr "워크스페이스 깨우는 중"
 
@@ -20964,6 +21018,9 @@ msgstr "이 기기의 워크스페이스가 여기에 표시됩니다."
 
 msgid "Workspaces started from this environment will stop receiving it."
 msgstr "이 환경에서 시작한 워크스페이스는 더 이상 이 값을 받지 않습니다."
+
+msgid "Workspaces without agents ({quietCount})"
+msgstr "에이전트가 없는 워크스페이스 ({quietCount})"
 
 msgid "worktree"
 msgstr "worktree"

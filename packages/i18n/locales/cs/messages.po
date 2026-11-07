@@ -1422,6 +1422,9 @@ msgstr "+{hiddenCount} dřívějších"
 msgid "+{remainingCount} more"
 msgstr "+{remainingCount} další"
 
+msgid "+{subagentCount} subagents"
+msgstr "+{subagentCount} subagentů"
+
 #. placeholder {0}: paths[0]?.split("/").pop()
 msgid "<0>{0}</0> is not a git repository. Would you like to initialize one?"
 msgstr "<0>{0}</0> není git repozitář. Chcete ho inicializovat?"
@@ -4782,6 +4785,9 @@ msgstr "Nastavit spouštěcí příkaz pracovního prostoru"
 msgid "Confirm before quitting"
 msgstr "Potvrdit před ukončením"
 
+msgid "Confirm stop"
+msgstr "Potvrdit zastavení"
+
 msgid "Conflicts"
 msgstr "Konflikty"
 
@@ -5714,6 +5720,9 @@ msgstr "Pull request se nepodařilo sloučit"
 msgid "Couldn't name \"{name}\" automatically"
 msgstr "Nepodařilo se automaticky pojmenovat „{name}“"
 
+msgid "Couldn't open a terminal"
+msgstr "Terminál se nepodařilo otevřít"
+
 msgid "Couldn't parse this diff: {patchParseError}"
 msgstr "Tento diff se nepodařilo zpracovat: {patchParseError}"
 
@@ -5816,11 +5825,17 @@ msgstr "Nepodařilo se spustit cloudový pracovní prostor"
 msgid "Couldn't start design mode on this page"
 msgstr "Na této stránce se nepodařilo spustit režim designu"
 
+msgid "Couldn't start the agent"
+msgstr "Agenta se nepodařilo spustit"
+
 msgid "Couldn't start voice mode"
 msgstr "Hlasový režim se nepodařilo spustit"
 
 msgid "Couldn't start workspace"
 msgstr "Pracovní prostor se nepodařilo spustit"
+
+msgid "Couldn't stop the agent"
+msgstr "Agenta se nepodařilo zastavit"
 
 msgid "Couldn't stop the agent's terminal"
 msgstr "Terminál agenta se nepodařilo zastavit"
@@ -7416,6 +7431,9 @@ msgstr "Každý pátek v 17:00"
 
 msgid "Every host"
 msgstr "Všichni hostitelé"
+
+msgid "Every machine you reach, with the agents running on it."
+msgstr "Všechny stroje, ke kterým se dostanete, a agenti, kteří na nich běží."
 
 msgid "Every minute"
 msgstr "Každou minutu"
@@ -11470,6 +11488,9 @@ msgstr "Nový agent"
 msgid "New agent launches use this account. Relaunch a running agent to switch it."
 msgstr "Nová spuštění agentů použijí tento účet. Běžícího agenta přepnete jeho novým spuštěním."
 
+msgid "New agent or terminal"
+msgstr "Nový agent nebo terminál"
+
 msgid "New agent session"
 msgstr "Nová relace agenta"
 
@@ -11704,6 +11725,9 @@ msgstr "Zatím žádné konverzace agentů."
 
 msgid "No agent is configured on this host"
 msgstr "Na tomto hostiteli není nakonfigurován žádný agent"
+
+msgid "No agent is running on this host."
+msgstr "Na tomto hostiteli neběží žádný agent."
 
 msgid "No agent running"
 msgstr "Neběží žádný agent"
@@ -12313,6 +12337,12 @@ msgstr "Zatím žádné verze."
 
 msgid "No workspace has these labels"
 msgstr "Žádný pracovní prostor nemá tyto štítky"
+
+msgid "No workspace on this host yet."
+msgstr "Na tomto hostiteli zatím není žádný pracovní prostor."
+
+msgid "No workspace on this host yet. Start a session to run an agent here, or a workspace on one of its projects."
+msgstr "Na tomto hostiteli zatím není žádný pracovní prostor. Spusťte relaci a pusťte zde agenta, nebo pracovní prostor v jednom z jeho projektů."
 
 msgid "No workspace run command configured"
 msgstr "Není nastavený žádný spouštěcí příkaz pracovního prostoru"
@@ -13265,12 +13295,18 @@ msgstr "Otevře panel Změny na nové kartě, nebo zaměří existující"
 msgid "Open the cloud workspaces"
 msgstr "Otevře cloudové pracovní prostory"
 
+msgid "Open the conversation"
+msgstr "Otevřít konverzaci"
+
 #. placeholder {0}: task.title
 msgid "Open the conversation of {0}"
 msgstr "Otevřít konverzaci úlohy {0}"
 
 msgid "Open the global command palette"
 msgstr "Otevřít globální paletu příkazů"
+
+msgid "Open the hosts page"
+msgstr "Otevřít stránku hostitelů"
 
 msgid "Open the list of projects"
 msgstr "Otevře seznam projektů"
@@ -15930,6 +15966,9 @@ msgstr "Běží na zařízení, které si vyberete"
 
 msgid "Runs that started their workspace in the last 7 days"
 msgstr "Spuštění, která v posledních 7 dnech spustila svůj workspace"
+
+msgid "Runs the host's wake command on this machine. The host shows as online once it is back."
+msgstr "Spustí na tomto stroji příkaz pro probuzení hostitele. Hostitel se zobrazí jako online, jakmile se vrátí."
 
 msgid "Runs when a new workspace is created."
 msgstr "Spouští se při vytvoření pracovního prostoru."
@@ -18727,6 +18766,9 @@ msgstr "Budoucí domov pro znovupoužitelné konfigurace agentů, prompty a prů
 msgid "The host came back on {0}, not {targetVersion}."
 msgstr "Hostitel se vrátil s verzí {0}, ne {targetVersion}."
 
+msgid "The host could not be woken. The reason is in the output below."
+msgstr "Hostitele se nepodařilo probudit. Důvod je ve výstupu níže."
+
 msgid "The host did not come back within fifteen minutes."
 msgstr "Hostitel se neobnovil do patnácti minut."
 
@@ -18916,6 +18958,9 @@ msgstr "Tah selhal"
 msgid "The turn stopped on an error, or the sandbox is down"
 msgstr "Tah skončil chybou nebo sandbox neběží"
 
+msgid "The wake command ran. The host may take a minute to come online."
+msgstr "Příkaz pro probuzení proběhl. Hostitel může být online až za minutu."
+
 msgid "The workspace is not ready yet. Try again."
 msgstr "Pracovní prostor ještě není připravený. Zkuste to znovu."
 
@@ -19090,6 +19135,9 @@ msgstr "Tento hostitel zatím nenahlásil verzi."
 
 msgid "This host is behind the app you are using. Workspaces still open, but newer features may fail on it."
 msgstr "Tento hostitel zaostává za aplikací, kterou používáte. Pracovní prostory se stále otevřou, ale novější funkce na něm mohou selhat."
+
+msgid "This host is offline, so its agents can't be read or started. The workspaces below are the last ones it reported."
+msgstr "Tento hostitel je offline, takže jeho agenty nelze číst ani spouštět. Pracovní prostory níže jsou ty, které naposledy nahlásil."
 
 msgid "This host is too old to keep to-dos."
 msgstr "Tento hostitel je příliš starý na ukládání úkolů."
@@ -20468,6 +20516,12 @@ msgstr "Čeká od {waitingSince}"
 msgid "Waiting tint"
 msgstr "Odstín čekání"
 
+msgid "Wake"
+msgstr "Probudit"
+
+msgid "Wake {hostName}"
+msgstr "Probudit {hostName}"
+
 msgid "Waking up workspace"
 msgstr "Probouzení pracovního prostoru"
 
@@ -20964,6 +21018,9 @@ msgstr "Pracovní prostory na tomto zařízení se objeví tady."
 
 msgid "Workspaces started from this environment will stop receiving it."
 msgstr "Workspacy spuštěné z tohoto prostředí ji přestanou dostávat."
+
+msgid "Workspaces without agents ({quietCount})"
+msgstr "Pracovní prostory bez agentů ({quietCount})"
 
 msgid "worktree"
 msgstr "worktree"

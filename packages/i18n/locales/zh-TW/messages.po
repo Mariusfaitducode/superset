@@ -1422,6 +1422,9 @@ msgstr "更早的+{hiddenCount}條"
 msgid "+{remainingCount} more"
 msgstr "+{remainingCount}個"
 
+msgid "+{subagentCount} subagents"
+msgstr "+{subagentCount} 個子代理"
+
 #. placeholder {0}: paths[0]?.split("/").pop()
 msgid "<0>{0}</0> is not a git repository. Would you like to initialize one?"
 msgstr "<0>{0}</0>不是git儲存庫。要初始化一個嗎？"
@@ -4782,6 +4785,9 @@ msgstr "配置工作區執行命令"
 msgid "Confirm before quitting"
 msgstr "退出前確認"
 
+msgid "Confirm stop"
+msgstr "確認停止"
+
 msgid "Conflicts"
 msgstr "衝突"
 
@@ -5714,6 +5720,9 @@ msgstr "無法合併拉取請求"
 msgid "Couldn't name \"{name}\" automatically"
 msgstr "無法自動命名「{name}」"
 
+msgid "Couldn't open a terminal"
+msgstr "無法開啟終端機"
+
 msgid "Couldn't parse this diff: {patchParseError}"
 msgstr "無法解析這個差異：{patchParseError}"
 
@@ -5816,11 +5825,17 @@ msgstr "無法啟動雲端工作區"
 msgid "Couldn't start design mode on this page"
 msgstr "無法在此頁面啟動設計模式"
 
+msgid "Couldn't start the agent"
+msgstr "無法啟動代理"
+
 msgid "Couldn't start voice mode"
 msgstr "無法啟動語音模式"
 
 msgid "Couldn't start workspace"
 msgstr "無法啟動工作區"
+
+msgid "Couldn't stop the agent"
+msgstr "無法停止代理"
 
 msgid "Couldn't stop the agent's terminal"
 msgstr "無法停止該代理的終端機"
@@ -7416,6 +7431,9 @@ msgstr "每週五下午 5:00"
 
 msgid "Every host"
 msgstr "所有主機"
+
+msgid "Every machine you reach, with the agents running on it."
+msgstr "你能存取的每台機器，以及其上執行的代理。"
 
 msgid "Every minute"
 msgstr "每分鐘"
@@ -11470,6 +11488,9 @@ msgstr "新建代理程式"
 msgid "New agent launches use this account. Relaunch a running agent to switch it."
 msgstr "新啟動的代理程式使用此帳戶。重新啟動執行中的代理程式才能切換。"
 
+msgid "New agent or terminal"
+msgstr "新增代理或終端機"
+
 msgid "New agent session"
 msgstr "新建代理程式會話"
 
@@ -11704,6 +11725,9 @@ msgstr "尚無代理對話。"
 
 msgid "No agent is configured on this host"
 msgstr "此主機上未設定任何代理程式"
+
+msgid "No agent is running on this host."
+msgstr "此主機上沒有正在執行的代理。"
 
 msgid "No agent running"
 msgstr "沒有正在執行的代理程式"
@@ -12313,6 +12337,12 @@ msgstr "還沒有任何版本。"
 
 msgid "No workspace has these labels"
 msgstr "沒有工作區帶有這些標籤"
+
+msgid "No workspace on this host yet."
+msgstr "此主機上還沒有工作區。"
+
+msgid "No workspace on this host yet. Start a session to run an agent here, or a workspace on one of its projects."
+msgstr "此主機上還沒有工作區。開始一個工作階段即可在這裡執行代理，或在其某個專案上建立工作區。"
 
 msgid "No workspace run command configured"
 msgstr "未配置工作區執行命令"
@@ -13265,12 +13295,18 @@ msgstr "在新分頁中開啟更改面板，或聚焦現有面板"
 msgid "Open the cloud workspaces"
 msgstr "開啟雲端工作區"
 
+msgid "Open the conversation"
+msgstr "開啟對話"
+
 #. placeholder {0}: task.title
 msgid "Open the conversation of {0}"
 msgstr "開啟 {0} 的對話"
 
 msgid "Open the global command palette"
 msgstr "開啟全域性命令面板"
+
+msgid "Open the hosts page"
+msgstr "開啟主機頁面"
 
 msgid "Open the list of projects"
 msgstr "開啟專案清單"
@@ -15930,6 +15966,9 @@ msgstr "在你選擇的裝置上執行"
 
 msgid "Runs that started their workspace in the last 7 days"
 msgstr "過去 7 天內啟動了工作區的執行"
+
+msgid "Runs the host's wake command on this machine. The host shows as online once it is back."
+msgstr "在本機執行該主機的喚醒命令。主機恢復後會顯示為上線。"
 
 msgid "Runs when a new workspace is created."
 msgstr "建立新工作區時執行。"
@@ -18727,6 +18766,9 @@ msgstr "未來可重複使用的 Superset 代理設定、提示詞與設定指�
 msgid "The host came back on {0}, not {targetVersion}."
 msgstr "主機以 {0} 而非 {targetVersion} 恢復。"
 
+msgid "The host could not be woken. The reason is in the output below."
+msgstr "無法喚醒主機。原因見下方輸出。"
+
 msgid "The host did not come back within fifteen minutes."
 msgstr "主機未在十五分鐘內恢復。"
 
@@ -18916,6 +18958,9 @@ msgstr "本輪失敗"
 msgid "The turn stopped on an error, or the sandbox is down"
 msgstr "這一輪因錯誤停止，或沙盒已停止"
 
+msgid "The wake command ran. The host may take a minute to come online."
+msgstr "喚醒命令已執行。主機可能需要一分鐘才能上線。"
+
 msgid "The workspace is not ready yet. Try again."
 msgstr "工作區尚未就緒。請重試。"
 
@@ -19090,6 +19135,9 @@ msgstr "此主機尚未回報版本。"
 
 msgid "This host is behind the app you are using. Workspaces still open, but newer features may fail on it."
 msgstr "此主機落後於你正在使用的應用程式。工作區仍可開啟，但較新的功能可能無法使用。"
+
+msgid "This host is offline, so its agents can't be read or started. The workspaces below are the last ones it reported."
+msgstr "此主機離線，無法讀取或啟動其代理。下方工作區是它最後回報的。"
 
 msgid "This host is too old to keep to-dos."
 msgstr "此主機版本過舊，無法儲存待辦事項。"
@@ -20468,6 +20516,12 @@ msgstr "自 {waitingSince} 起等待"
 msgid "Waiting tint"
 msgstr "等待著色"
 
+msgid "Wake"
+msgstr "喚醒"
+
+msgid "Wake {hostName}"
+msgstr "喚醒 {hostName}"
+
 msgid "Waking up workspace"
 msgstr "正在喚醒工作區"
 
@@ -20964,6 +21018,9 @@ msgstr "此裝置上的工作區會顯示在這裡。"
 
 msgid "Workspaces started from this environment will stop receiving it."
 msgstr "從此環境啟動的工作區將不再收到它。"
+
+msgid "Workspaces without agents ({quietCount})"
+msgstr "沒有代理的工作區（{quietCount}）"
 
 msgid "worktree"
 msgstr "worktree"

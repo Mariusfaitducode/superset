@@ -16,6 +16,7 @@ import {
 	LuInbox,
 	LuLayers,
 	LuPuzzle,
+	LuServer,
 	LuStickyNote,
 	LuWorkflow,
 } from "react-icons/lu";
@@ -75,7 +76,8 @@ type SimplePageRoute =
 	| "/git-graph"
 	| "/insights"
 	| "/office"
-	| "/relais";
+	| "/relais"
+	| "/hosts";
 
 function useRoutePage(
 	to: SimplePageRoute,
@@ -273,6 +275,10 @@ function useMyAutomationsTarget(): SidebarNavTarget {
 	return { ...useRoutePage("/relais"), available: true };
 }
 
+function useHostsTarget(): SidebarNavTarget {
+	return { ...useRoutePage("/hosts"), available: true };
+}
+
 function useOfficeTarget(): SidebarNavTarget {
 	return { ...useRoutePage("/office"), available: true };
 }
@@ -298,6 +304,12 @@ export const SIDEBAR_NAV_ENTRIES: SidebarNavEntry[] = [
 		icon: LuInbox,
 		thinStroke: true,
 		useTarget: useDeskTarget,
+	},
+	{
+		id: "hosts",
+		icon: LuServer,
+		thinStroke: true,
+		useTarget: useHostsTarget,
 	},
 	{
 		id: "cloudWorkspaces",
