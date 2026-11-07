@@ -35,6 +35,17 @@ export interface MyPullRequestDetails {
 	pendingReviewers: string[];
 	reviews: MyPullRequestReview[];
 	viewerReview: MyPullRequestReview["state"] | null;
+	commitCount: number | null;
+	lastCommitAt: string | null;
+	/** Issues the PR closes when merged ("Closes #12"), the usual ticket on GitHub. */
+	closingIssues: MyPullRequestIssue[];
+}
+
+export interface MyPullRequestIssue {
+	number: number;
+	title: string;
+	url: string;
+	state: "OPEN" | "CLOSED";
 }
 
 // One query per repo costs ~6.5 s for 40 PRs and gets close to the gh
@@ -66,6 +77,13 @@ const PULL_REQUEST_SELECTION = `
 	}
 	timelineItems(last: 10, itemTypes: [REVIEW_REQUESTED_EVENT]) {
 		nodes { ... on ReviewRequestedEvent { createdAt requestedReviewer { ... on User { login } } } }
+	}
+	lastCommit: commits(last: 1) {
+		totalCount
+		nodes { commit { committedDate } }
+	}
+	closingIssuesReferences(first: 5) {
+		nodes { number title url state }
 	}
 	statusCheckRollup {
 		state
@@ -142,6 +160,37 @@ const detailsNodeSchema = z.object({
 							.object({ login: z.string().optional() })
 							.nullable()
 							.optional(),
+					})
+					.nullable(),
+			),
+		})
+		.nullable()
+		.optional(),
+	lastCommit: z
+		.object({
+			totalCount: z.number(),
+			nodes: z
+				.array(
+					z
+						.object({
+							commit: z.object({ committedDate: z.string().nullable() }),
+						})
+						.nullable(),
+				)
+				.nullable()
+				.optional(),
+		})
+		.nullable()
+		.optional(),
+	closingIssuesReferences: z
+		.object({
+			nodes: z.array(
+				z
+					.object({
+						number: z.number(),
+						title: z.string(),
+						url: z.string(),
+						state: z.string(),
 					})
 					.nullable(),
 			),
@@ -292,6 +341,22 @@ export function parseDetailsResponse(
 			viewerReview:
 				reviews.find((review) => review.login.toLowerCase() === viewerLogin)
 					?.state ?? null,
+			commitCount: node.lastCommit?.totalCount ?? null,
+			lastCommitAt:
+				node.lastCommit?.nodes?.at(-1)?.commit.committedDate ?? null,
+			closingIssues: (node.closingIssuesReferences?.nodes ?? []).flatMap(
+				(issue) =>
+					issue
+						? [
+								{
+									number: issue.number,
+									title: issue.title,
+									url: issue.url,
+									state: issue.state === "CLOSED" ? "CLOSED" : "OPEN",
+								} as const,
+							]
+						: [],
+			),
 		});
 	}
 	return details;

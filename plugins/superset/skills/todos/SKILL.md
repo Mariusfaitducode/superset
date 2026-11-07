@@ -15,11 +15,13 @@ conversation (`$SUPERSET_TERMINAL_ID`).
 ## Rules
 
 - **The user's to-dos are theirs.** You may check them off when done
-  (`superset todos done <id>`), never reword or delete them: the host refuses
+  (`superset todos done <id>`), never reword or archive them: the host refuses
   it. If one looks wrong, outdated or duplicated, add your own to-do saying so.
 - **Your own to-dos** are for what the user should see and act on: a
   follow-up, a decision waiting on them, a message to send. You may change and
-  delete them.
+  archive them.
+- **Nothing is deleted.** `rm` archives: the to-do leaves the list but stays
+  findable with `list --archived` and comes back with `restore`.
 - Check a to-do only when it is really done, not when you start it.
 
 ## Commands
@@ -32,7 +34,9 @@ superset todos add "Answer Paul about the release" --kind message --priority hig
 superset todos done <id>            # the short id from `list` works
 superset todos undone <id>
 superset todos edit <id> --priority low --link https://github.com/org/repo/pull/12
-superset todos rm <id>              # your own only
+superset todos rm <id>              # archive it, your own only
+superset todos list --archived      # the archived ones
+superset todos restore <id>         # back to the list, your own only
 ```
 
 Fields: `--priority high|normal|low` (default normal), `--kind

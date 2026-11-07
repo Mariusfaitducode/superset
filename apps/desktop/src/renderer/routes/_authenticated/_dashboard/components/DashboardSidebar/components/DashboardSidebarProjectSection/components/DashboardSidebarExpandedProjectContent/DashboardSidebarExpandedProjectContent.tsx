@@ -28,6 +28,7 @@ interface DashboardSidebarExpandedProjectContentProps {
 	containerId: string;
 	/** Lane the rows are filed under: the project id, or null for sessions. */
 	projectId: string | null;
+	projectColor?: string | null;
 	isCollapsed: boolean;
 	/**
 	 * Row indentation overrides; the Sessions lane sits flush with its header.
@@ -58,6 +59,7 @@ interface DashboardSidebarExpandedProjectContentProps {
 export function DashboardSidebarExpandedProjectContent({
 	containerId,
 	projectId,
+	projectColor = null,
 	isCollapsed,
 	topLevelIndentation,
 	groupedIndentation,
@@ -169,6 +171,8 @@ export function DashboardSidebarExpandedProjectContent({
 											sortableId={String(id)}
 											workspace={workspace}
 											accentColor={group?.color}
+											groupId={group?.sectionId}
+											projectColor={projectColor}
 											isInSection={isInSection}
 											indentation={
 												isInSection ? groupedIndentation : topLevelIndentation

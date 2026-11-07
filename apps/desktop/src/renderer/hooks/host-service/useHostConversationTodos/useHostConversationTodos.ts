@@ -1,10 +1,14 @@
-import { useQuery } from "@tanstack/react-query";
+import { useQueries, useQuery, useQueryClient } from "@tanstack/react-query";
+import { useEffect, useMemo } from "react";
 import {
 	getHostServiceClientByUrl,
 	type HostServiceClient,
 } from "renderer/lib/host-service-client";
 import { isMissingProcedureError } from "renderer/lib/isMissingProcedureError";
-import { useHostStoreRefresh } from "../useHostStoreRefresh";
+import {
+	holdHostStoreRefresh,
+	useHostStoreRefresh,
+} from "../useHostStoreRefresh";
 
 export type ConversationTodo = Awaited<
 	ReturnType<HostServiceClient["conversationTodos"]["list"]["query"]>
@@ -14,6 +18,50 @@ const hostsWithoutTodos = new Set<string>();
 
 export function hostConversationTodosQueryKey(hostUrl: string | null) {
 	return ["host-conversation-todos", hostUrl] as const;
+}
+
+/** Null on hosts too old to keep to-dos; they are not asked again. */
+export async function fetchHostConversationTodos(
+	hostUrl: string,
+): Promise<ConversationTodo[] | null> {
+	if (hostsWithoutTodos.has(hostUrl)) return null;
+	try {
+		return await getHostServiceClientByUrl(
+			hostUrl,
+		).conversationTodos.list.query({});
+	} catch (error) {
+		if (!isMissingProcedureError(error)) throw error;
+		hostsWithoutTodos.add(hostUrl);
+		return null;
+	}
+}
+
+/**
+ * The query for every to-do of a host, for callers that read several hosts
+ * at once. Null data on hosts too old to keep to-dos.
+ */
+export function hostConversationTodosQuery(hostUrl: string | null) {
+	return {
+		queryKey: hostConversationTodosQueryKey(hostUrl),
+		queryFn: (): Promise<ConversationTodo[] | null> =>
+			hostUrl ? fetchHostConversationTodos(hostUrl) : Promise.resolve(null),
+		refetchInterval: 60_000,
+		staleTime: 5_000,
+	};
+}
+
+/** Shared by every reader of a host's to-dos, so they make one request. */
+export function hostConversationTodosQueryOptions(hostUrl: string | null) {
+	return {
+		...hostConversationTodosQuery(hostUrl),
+		placeholderData: (previous: ConversationTodo[] | null | undefined) =>
+			previous,
+	};
+}
+
+/** False once a host turned out to predate to-dos. */
+export function hostKeepsTodos(hostUrl: string | null): boolean {
+	return hostUrl !== null && !hostsWithoutTodos.has(hostUrl);
 }
 
 /**
@@ -26,31 +74,57 @@ export function useHostConversationTodos(
 	hostUrl: string | null,
 	enabled: boolean,
 ) {
-	const queryKey = hostConversationTodosQueryKey(hostUrl);
-	const active = enabled && hostUrl !== null && !hostsWithoutTodos.has(hostUrl);
+	const query = hostConversationTodosQuery(hostUrl);
+	const active = enabled && hostKeepsTodos(hostUrl);
 	useHostStoreRefresh({
 		hostUrl,
 		store: "conversation-todos",
-		queryKey,
+		queryKey: query.queryKey,
 		enabled: active,
 	});
 	return useQuery({
-		queryKey,
+		...query,
 		enabled: active,
-		queryFn: async (): Promise<ConversationTodo[] | null> => {
-			if (!hostUrl) return null;
-			try {
-				return await getHostServiceClientByUrl(
-					hostUrl,
-				).conversationTodos.list.query({});
-			} catch (error) {
-				if (!isMissingProcedureError(error)) throw error;
-				hostsWithoutTodos.add(hostUrl);
-				return null;
-			}
-		},
-		refetchInterval: 60_000,
-		staleTime: 5_000,
 		placeholderData: (previous) => previous,
+	});
+}
+
+// Module-level so react-query can keep the combined result stable.
+function flattenTodos(
+	results: Array<{ data?: ConversationTodo[] | null }>,
+): ConversationTodo[] {
+	return results.flatMap((result) => result.data ?? []);
+}
+
+/** Every to-do of several hosts, read through the same per-host query. */
+export function useConversationTodosOfHosts(
+	hostUrls: string[],
+): ConversationTodo[] {
+	const queryClient = useQueryClient();
+	const key = [...new Set(hostUrls)].sort().join("\n");
+	const unique = useMemo(() => (key ? key.split("\n") : []), [key]);
+	useEffect(() => {
+		const releases = unique
+			.filter((hostUrl) => hostKeepsTodos(hostUrl))
+			.map((hostUrl) =>
+				holdHostStoreRefresh(
+					hostUrl,
+					"conversation-todos",
+					queryClient,
+					hostConversationTodosQueryKey(hostUrl),
+				),
+			);
+		return () => {
+			for (const release of releases) release();
+		};
+	}, [unique, queryClient]);
+	return useQueries({
+		queries: unique.map((hostUrl) => ({
+			...hostConversationTodosQuery(hostUrl),
+			enabled: hostKeepsTodos(hostUrl),
+			placeholderData: (previous: ConversationTodo[] | null | undefined) =>
+				previous,
+		})),
+		combine: flattenTodos,
 	});
 }

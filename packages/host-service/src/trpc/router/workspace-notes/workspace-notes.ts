@@ -3,6 +3,7 @@ import { z } from "zod";
 import type { HostServiceContext } from "../../../types";
 import {
 	NOTE_ACTORS,
+	NOTE_KINDS,
 	NOTE_STATUSES,
 	NoteNotFoundError,
 	NotePermissionError,
@@ -50,6 +51,7 @@ function run<T extends WorkspaceNote | WorkspaceNote[]>(
 const actor = z.enum(NOTE_ACTORS).default("user");
 const text = z.string().trim().min(1).max(1_000);
 const details = z.string().max(10_000).nullable();
+const kind = z.enum(NOTE_KINDS);
 
 /**
  * Notes pinned to a workspace, shared by the user and the agents of this
@@ -67,7 +69,13 @@ export const workspaceNotesRouter = router({
 				actor,
 				workspaceId: z.string().min(1),
 				items: z
-					.array(z.object({ text, details: details.optional() }))
+					.array(
+						z.object({
+							text,
+							details: details.optional(),
+							kind: kind.optional(),
+						}),
+					)
 					.min(1)
 					.max(200),
 			}),
@@ -81,6 +89,7 @@ export const workspaceNotesRouter = router({
 				id: z.string(),
 				text: text.optional(),
 				details: details.optional(),
+				kind: kind.optional(),
 			}),
 		)
 		.mutation(({ ctx, input: { actor, id, ...fields } }) =>

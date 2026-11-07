@@ -127,7 +127,7 @@ function entryTokens(entry: UsageLogEntry): number {
  * host's own workspace worktrees and project repos) win via longest-prefix
  * match; unknown paths fall back to the worktree-name segment or basename.
  */
-function attributeCwd(
+export function attributeCwd(
 	cwd: string,
 	labelsByLength: CwdLabel[],
 ): {

@@ -92,6 +92,7 @@ export function DashboardSidebarHoverCardOverlay({
 						workspace={payload.workspace}
 						diffStats={diffStats}
 						onEditBranchClick={payload.onEditBranchClick}
+						shortcutLabel={payload.shortcutLabel}
 					/>
 				</PopoverContent>
 			)}

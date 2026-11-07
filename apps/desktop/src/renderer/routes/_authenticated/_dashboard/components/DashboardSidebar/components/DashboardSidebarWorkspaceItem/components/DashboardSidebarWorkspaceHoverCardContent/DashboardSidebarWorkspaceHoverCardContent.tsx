@@ -22,12 +22,14 @@ interface DashboardSidebarWorkspaceHoverCardContentProps {
 	workspace: DashboardSidebarWorkspace;
 	diffStats: DiffStats | null;
 	onEditBranchClick?: (branchName: string) => void;
+	shortcutLabel?: string;
 }
 
 export function DashboardSidebarWorkspaceHoverCardContent({
 	workspace,
 	diffStats,
 	onEditBranchClick,
+	shortcutLabel,
 }: DashboardSidebarWorkspaceHoverCardContentProps) {
 	const { t } = useLingui();
 	const {
@@ -64,6 +66,14 @@ export function DashboardSidebarWorkspaceHoverCardContent({
 
 	return (
 		<div className="space-y-3">
+			{shortcutLabel && (
+				<div className="flex items-center justify-between text-[11px] text-muted-foreground">
+					<Trans>Switch to this workspace</Trans>
+					<kbd className="rounded border border-foreground/10 bg-fill-selected px-1 font-sans text-[10px] tabular-nums">
+						{shortcutLabel}
+					</kbd>
+				</div>
+			)}
 			<div className="space-y-1.5">
 				{hasCustomAlias && (
 					<div

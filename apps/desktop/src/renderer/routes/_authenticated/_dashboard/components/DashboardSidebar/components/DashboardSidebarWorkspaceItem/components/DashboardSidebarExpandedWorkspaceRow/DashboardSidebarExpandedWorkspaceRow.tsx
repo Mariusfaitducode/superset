@@ -15,6 +15,7 @@ import {
 } from "react";
 import { HiCheck, HiMiniXMark } from "react-icons/hi2";
 import { LuArchive } from "react-icons/lu";
+import { AGENT_STATE_LABEL } from "renderer/components/AgentStateDot";
 import { WorkspaceNameMarquee } from "renderer/components/WorkspaceNameMarquee";
 import { useFocusVisible } from "renderer/hooks/useFocusVisible";
 import { HotkeyLabel } from "renderer/hotkeys";
@@ -22,11 +23,12 @@ import { pullRequestRefFromUrl } from "renderer/lib/github/pullRequestRef";
 import { useDashboardSidebarWorkspacePorts } from "renderer/routes/_authenticated/_dashboard/components/DashboardSidebar/providers/DashboardSidebarPortsProvider";
 import { navigateToV2Workspace } from "renderer/routes/_authenticated/_dashboard/utils/workspace-navigation";
 import { ProjectThumbnail } from "renderer/routes/_authenticated/components/ProjectThumbnail";
-import { getStatusTooltip } from "renderer/screens/main/components/StatusIndicator";
 import { RenameInput } from "renderer/screens/main/components/WorkspaceSidebar/RenameInput";
 import { useInlineWorkspacePortsEnabled } from "renderer/stores/inline-workspace-ports";
 import { usePullRequestPaneIntent } from "renderer/stores/pull-request-pane-intent";
-import type { ActivePaneStatus } from "shared/tabs-types";
+import { useSidebarPreference } from "renderer/stores/sidebar-preferences";
+import { useWorkspaceAgentState } from "../../../../hooks/useWorkspaceAgentState";
+import { useWorkspaceOpenTodos } from "../../../../hooks/useWorkspaceOpenTodos";
 import type {
 	DashboardSidebarWorkspace,
 	DashboardSidebarWorkspaceIndentation,
@@ -41,6 +43,7 @@ import { DashboardSidebarWorkspaceQueuedBadge } from "../DashboardSidebarWorkspa
 import { DashboardSidebarConversationList } from "./components/DashboardSidebarConversationList";
 import { DashboardSidebarPortsChip } from "./components/DashboardSidebarPortsChip";
 import { DashboardSidebarRowEventBoundary } from "./components/DashboardSidebarRowEventBoundary";
+import { DashboardSidebarWorkspaceDetails } from "./components/DashboardSidebarWorkspaceDetails";
 import { DashboardSidebarWorkspaceHostGlyph } from "./components/DashboardSidebarWorkspaceHostGlyph";
 import { DashboardSidebarWorkspaceLeadIndicator } from "./components/DashboardSidebarWorkspaceLeadIndicator";
 
@@ -72,8 +75,6 @@ interface DashboardSidebarExpandedWorkspaceRowProps
 	isActive: boolean;
 	isRenaming: boolean;
 	renameValue: string;
-	shortcutLabel?: string;
-	workspaceStatus?: ActivePaneStatus | null;
 	isInSection?: boolean;
 	indentation?: DashboardSidebarWorkspaceIndentation;
 	isBulkSelectable?: boolean;
@@ -101,8 +102,6 @@ export const DashboardSidebarExpandedWorkspaceRow = forwardRef<
 			isActive,
 			isRenaming,
 			renameValue,
-			shortcutLabel,
-			workspaceStatus = null,
 			isInSection = false,
 			indentation,
 			isBulkSelectable = false,
@@ -157,9 +156,37 @@ export const DashboardSidebarExpandedWorkspaceRow = forwardRef<
 		const closeLabel = isCloudWorkspace
 			? t({ message: "Archive workspace" })
 			: t({ message: "Delete workspace" });
-		// The slot stays the PR's button whatever glyph precedence puts in it,
-		// so a working row's PR is one click away, as before.
-		const showsPullRequest = !isPending && pullRequest !== null;
+		const singleLineRows = useSidebarPreference("singleLineRows");
+		const showRowBranch = useSidebarPreference("showRowBranch");
+		const showRowPullRequest = useSidebarPreference("showRowPullRequest");
+		const showRowTodos = useSidebarPreference("showRowTodos");
+		const showRowWaitTime = useSidebarPreference("showRowWaitTime");
+		const twoLine = !singleLineRows && !isPending;
+		const pullRequestOnDetails = twoLine && showRowPullRequest;
+		// Else the lead slot stays the PR's button whatever glyph precedence
+		// puts in it, so a working row's PR is one click away.
+		const showsPullRequest =
+			!isPending && pullRequest !== null && !pullRequestOnDetails;
+		const openTodos = useWorkspaceOpenTodos({
+			workspaceId: workspace.id,
+			hostId: workspace.hostId,
+			enabled: twoLine && showRowTodos,
+		});
+		const openPullRequest = () => {
+			if (!pullRequest) return;
+			// Lands in the workspace with its PR pane open, rather than on
+			// GitHub; the pane keeps the GitHub link.
+			const ref = pullRequestRefFromUrl(pullRequest.url);
+			if (!ref) {
+				window.open(pullRequest.url, "_blank");
+				return;
+			}
+			usePullRequestPaneIntent.getState().request({
+				workspaceId: workspace.id,
+				...ref,
+			});
+			void navigateToV2Workspace(workspace.id, navigate);
+		};
 		const inlinePortsEnabled = useInlineWorkspacePortsEnabled();
 		const portGroup = useDashboardSidebarWorkspacePorts(workspace.id);
 		const ports =
@@ -171,14 +198,39 @@ export const DashboardSidebarExpandedWorkspaceRow = forwardRef<
 				: sandboxStatus === "provisioning"
 					? t({ message: "Creating the sandbox" })
 					: null;
+		const agent = useWorkspaceAgentState(workspace.id, sandboxStatus);
+		const agentStateLabel =
+			agent.state === "idle" ? null : i18n._(AGENT_STATE_LABEL[agent.state]);
 		const leadIndicator = (
 			<DashboardSidebarWorkspaceLeadIndicator
-				workspaceStatus={workspaceStatus}
+				agentState={agent.state}
 				isCreatePending={isPending}
 				sandboxStatus={sandboxStatus}
-				pullRequestState={pullRequest?.state ?? null}
+				pullRequestState={
+					pullRequestOnDetails ? null : (pullRequest?.state ?? null)
+				}
 			/>
 		);
+		const hostGlyph = (
+			<DashboardSidebarWorkspaceHostGlyph
+				hostType={hostType}
+				hostIsOnline={hostIsOnline}
+			/>
+		);
+		const details = {
+			hostGlyph: twoLine && hostType !== "local-device" ? hostGlyph : null,
+			branch:
+				twoLine && showRowBranch && name && name !== branch ? branch : null,
+			pullRequest: pullRequestOnDetails ? pullRequest : null,
+			todos: twoLine && showRowTodos ? openTodos : null,
+			waitingSince: twoLine && showRowWaitTime ? agent.waitingSince : null,
+		};
+		const hasDetails =
+			details.hostGlyph !== null ||
+			details.branch !== null ||
+			details.pullRequest !== null ||
+			(details.todos?.open ?? 0) > 0 ||
+			details.waitingSince !== null;
 
 		return (
 			<div
@@ -220,7 +272,8 @@ export const DashboardSidebarExpandedWorkspaceRow = forwardRef<
 					onFocus={handleRowFocus}
 					onBlur={handleRowBlur}
 					className={cn(
-						"group relative flex h-7 w-full items-center pr-2",
+						"group relative flex w-full flex-col justify-center pr-2",
+						hasDetails ? "gap-0.5 py-1" : "h-[var(--sb-row-h)]",
 						resolvedIndentation === "top-level"
 							? "pl-2"
 							: resolvedIndentation === "grouped"
@@ -229,191 +282,167 @@ export const DashboardSidebarExpandedWorkspaceRow = forwardRef<
 						onClick && "cursor-pointer",
 					)}
 				>
-					{isSelected ? (
-						<span className="mr-2 flex size-4 shrink-0 items-center justify-center text-foreground">
-							<HiCheck className="size-3.5" />
-						</span>
-					) : showsPullRequest && pullRequest ? (
-						<Tooltip delayDuration={500}>
-							<TooltipTrigger asChild>
-								<button
-									type="button"
-									onClick={(event) => {
-										event.stopPropagation();
-										// Lands in the workspace with its PR pane open, rather
-										// than on GitHub; the pane keeps the GitHub link.
-										const ref = pullRequestRefFromUrl(pullRequest.url);
-										if (!ref) {
-											window.open(pullRequest.url, "_blank");
-											return;
-										}
-										usePullRequestPaneIntent.getState().request({
-											workspaceId: workspace.id,
-											...ref,
-										});
-										void navigateToV2Workspace(workspace.id, navigate);
-									}}
-									onKeyDown={(event) => {
-										if (event.key === "Enter" || event.key === " ") {
+					<div
+						className={cn(
+							"flex w-full items-center",
+							hasDetails ? "min-h-5" : "h-full",
+						)}
+					>
+						{isSelected ? (
+							<span className="mr-2 flex size-4 shrink-0 items-center justify-center text-foreground">
+								<HiCheck className="size-3.5" />
+							</span>
+						) : showsPullRequest && pullRequest ? (
+							<Tooltip delayDuration={500}>
+								<TooltipTrigger asChild>
+									<button
+										type="button"
+										onClick={(event) => {
 											event.stopPropagation();
-										}
-									}}
-									aria-label={t({
-										message: `Open pull request #${pullRequest.number}`,
-									})}
-									className="mr-2 flex size-4 shrink-0 cursor-pointer items-center justify-center rounded hover:bg-foreground/10"
-								>
-									{leadIndicator}
-								</button>
-							</TooltipTrigger>
-							<TooltipContent side="right" sideOffset={8}>
-								<p className="text-xs font-medium">
-									<Trans>
-										PR #{pullRequest.number} —{" "}
-										{i18n._(PR_STATE_LABEL[pullRequest.state])}
-									</Trans>
-								</p>
-								{(sandboxLabel ??
-									(workspaceStatus && getStatusTooltip(workspaceStatus))) && (
-									<p className="text-xs text-muted-foreground">
-										{sandboxLabel ??
-											(workspaceStatus
-												? getStatusTooltip(workspaceStatus)
-												: null)}
+											openPullRequest();
+										}}
+										onKeyDown={(event) => {
+											if (event.key === "Enter" || event.key === " ") {
+												event.stopPropagation();
+											}
+										}}
+										aria-label={t({
+											message: `Open pull request #${pullRequest.number}`,
+										})}
+										className="mr-2 flex size-4 shrink-0 cursor-pointer items-center justify-center rounded hover:bg-foreground/10"
+									>
+										{leadIndicator}
+									</button>
+								</TooltipTrigger>
+								<TooltipContent side="right" sideOffset={8}>
+									<p className="text-xs font-medium">
+										<Trans>
+											PR #{pullRequest.number} —{" "}
+											{i18n._(PR_STATE_LABEL[pullRequest.state])}
+										</Trans>
 									</p>
-								)}
-								<p className="text-xs text-muted-foreground">
-									<Trans>Click to open the pull request</Trans>
-								</p>
-							</TooltipContent>
-						</Tooltip>
-					) : sandboxLabel || (workspaceStatus && !isPending) ? (
-						<Tooltip delayDuration={500}>
-							<TooltipTrigger asChild>
-								<span className="mr-2 flex size-4 shrink-0 items-center justify-center">
-									{leadIndicator}
-								</span>
-							</TooltipTrigger>
-							<TooltipContent side="right" sideOffset={8}>
-								<p className="text-xs font-medium">
-									{sandboxLabel ??
-										(workspaceStatus
-											? getStatusTooltip(workspaceStatus)
-											: null)}
-								</p>
-							</TooltipContent>
-						</Tooltip>
-					) : (
-						<span className="mr-2 flex size-4 shrink-0 items-center justify-center">
-							{leadIndicator}
-						</span>
-					)}
-
-					{pinnedContext && (
-						<Tooltip delayDuration={500}>
-							<TooltipTrigger asChild>
-								<div className="mr-1.5 flex shrink-0 items-center">
-									<ProjectThumbnail
-										projectName={
-											pinnedContext.projectName ??
-											t({
-												message: "Session",
-											})
-										}
-										iconUrl={pinnedContext.projectIconUrl}
-										className="size-3.5 text-[8px]"
-									/>
-								</div>
-							</TooltipTrigger>
-							<TooltipContent side="right" sideOffset={8}>
-								{pinnedContext.projectName ??
-									t({
-										message: "Session",
-									})}
-							</TooltipContent>
-						</Tooltip>
-					)}
-
-					<div className="grid min-w-0 flex-1 grid-cols-[minmax(0,1fr)_auto] items-center gap-x-1.5">
-						{isRenaming ? (
-							<RenameInput
-								value={renameValue}
-								onChange={onRenameValueChange}
-								onSubmit={onSubmitRename}
-								onCancel={onCancelRename}
-								className={cn(
-									"h-5 w-full -ml-1 border-none bg-transparent px-1 py-0 text-[13px] leading-tight outline-none",
-								)}
-							/>
-						) : (
-							<>
-								<WorkspaceNameMarquee
-									name={name || branch}
-									prefix={
-										pinnedContext
-											? (pinnedContext.projectName ??
-												t({
-													message: "Session",
-												}))
-											: undefined
-									}
-									forceActive={isFocused}
-									className={cn(
-										"text-[13px] leading-tight transition-colors",
-										isActive || isSelected
-											? "text-foreground"
-											: "text-foreground/80",
+									{(sandboxLabel ?? agentStateLabel) && (
+										<p className="text-xs text-muted-foreground">
+											{sandboxLabel ?? agentStateLabel}
+										</p>
 									)}
-								/>
-								{isSelected && (
-									<span className="sr-only">
-										<Trans>, selected</Trans>
+									<p className="text-xs text-muted-foreground">
+										<Trans>Click to open the pull request</Trans>
+									</p>
+								</TooltipContent>
+							</Tooltip>
+						) : sandboxLabel || (agentStateLabel && !isPending) ? (
+							<Tooltip delayDuration={500}>
+								<TooltipTrigger asChild>
+									<span className="mr-2 flex size-4 shrink-0 items-center justify-center">
+										{leadIndicator}
 									</span>
-								)}
-							</>
+								</TooltipTrigger>
+								<TooltipContent side="right" sideOffset={8}>
+									<p className="text-xs font-medium">
+										{sandboxLabel ?? agentStateLabel}
+									</p>
+								</TooltipContent>
+							</Tooltip>
+						) : (
+							<span className="mr-2 flex size-4 shrink-0 items-center justify-center">
+								{leadIndicator}
+							</span>
 						)}
 
-						<div className="col-start-2 row-start-1 flex h-5 shrink-0 items-center gap-2">
-							{creationStatusText ? (
-								<span className="text-[11px] text-muted-foreground">
-									{creationStatusText}
-								</span>
+						{pinnedContext && (
+							<Tooltip delayDuration={500}>
+								<TooltipTrigger asChild>
+									<div className="mr-1.5 flex shrink-0 items-center">
+										<ProjectThumbnail
+											projectName={
+												pinnedContext.projectName ??
+												t({
+													message: "Session",
+												})
+											}
+											iconUrl={pinnedContext.projectIconUrl}
+											className="size-3.5 text-[8px]"
+										/>
+									</div>
+								</TooltipTrigger>
+								<TooltipContent side="right" sideOffset={8}>
+									{pinnedContext.projectName ??
+										t({
+											message: "Session",
+										})}
+								</TooltipContent>
+							</Tooltip>
+						)}
+
+						<div className="grid min-w-0 flex-1 grid-cols-[minmax(0,1fr)_auto] items-center gap-x-1.5">
+							{isRenaming ? (
+								<RenameInput
+									value={renameValue}
+									onChange={onRenameValueChange}
+									onSubmit={onSubmitRename}
+									onCancel={onCancelRename}
+									className={cn(
+										"h-5 w-full -ml-1 border-none bg-transparent px-1 py-0 text-[13px] leading-tight outline-none",
+									)}
+								/>
 							) : (
 								<>
-									<WorkspaceLabelPills
-										workspaceId={workspace.id}
-										hostId={workspace.hostId}
+									<WorkspaceNameMarquee
+										name={name || branch}
+										prefix={
+											pinnedContext
+												? (pinnedContext.projectName ??
+													t({
+														message: "Session",
+													}))
+												: undefined
+										}
+										forceActive={isFocused}
+										className={cn(
+											"text-[13px] leading-tight transition-colors",
+											isActive || isSelected
+												? "text-foreground"
+												: "text-foreground/80",
+										)}
 									/>
-									<DashboardSidebarWorkspaceQueuedBadge
-										workspaceId={workspace.id}
-									/>
-									<WorkspaceNotesBadge
-										workspaceId={workspace.id}
-										hostId={workspace.hostId}
-									/>
+									{isSelected && (
+										<span className="sr-only">
+											<Trans>, selected</Trans>
+										</span>
+									)}
 								</>
 							)}
-							<div className="grid items-center justify-items-end [&>*]:col-start-1 [&>*]:row-start-1">
-								<span
-									className={cn(
-										"flex",
-										!isPending &&
-											!isSelected &&
-											"group-hover:invisible group-focus-within:invisible",
-									)}
-								>
-									<DashboardSidebarWorkspaceHostGlyph
-										hostType={hostType}
-										hostIsOnline={hostIsOnline}
-									/>
-								</span>
+
+							<div
+								className={cn(
+									"col-start-2 row-start-1 flex min-h-5 shrink-0 items-center gap-2",
+									twoLine && "max-w-44",
+								)}
+							>
+								{creationStatusText ? (
+									<span className="text-[11px] text-muted-foreground">
+										{creationStatusText}
+									</span>
+								) : (
+									<>
+										<WorkspaceLabelPills
+											workspaceId={workspace.id}
+											hostId={workspace.hostId}
+											all={twoLine}
+										/>
+										<DashboardSidebarWorkspaceQueuedBadge
+											workspaceId={workspace.id}
+										/>
+										<WorkspaceNotesBadge
+											workspaceId={workspace.id}
+											hostId={workspace.hostId}
+										/>
+									</>
+								)}
+								{!twoLine && hostGlyph}
 								{!isPending && !isSelected && (
-									<div className="hidden items-center justify-end gap-1.5 group-hover:flex group-focus-within:flex">
-										{shortcutLabel && (
-											<span className="shrink-0 font-mono text-[10px] tabular-nums text-muted-foreground">
-												{shortcutLabel}
-											</span>
-										)}
+									<div className="hidden items-center justify-end group-hover:flex group-focus-within:flex">
 										<Tooltip delayDuration={300}>
 											<TooltipTrigger asChild>
 												<button
@@ -450,14 +479,22 @@ export const DashboardSidebarExpandedWorkspaceRow = forwardRef<
 										</Tooltip>
 									</div>
 								)}
+								{ports.length > 0 && (
+									<DashboardSidebarRowEventBoundary>
+										<DashboardSidebarPortsChip ports={ports} />
+									</DashboardSidebarRowEventBoundary>
+								)}
 							</div>
-							{ports.length > 0 && (
-								<DashboardSidebarRowEventBoundary>
-									<DashboardSidebarPortsChip ports={ports} />
-								</DashboardSidebarRowEventBoundary>
-							)}
 						</div>
 					</div>
+					{hasDetails && (
+						<div className="pl-6">
+							<DashboardSidebarWorkspaceDetails
+								{...details}
+								onPullRequestClick={openPullRequest}
+							/>
+						</div>
+					)}
 				</div>
 				{!isPending && (
 					<WorkspaceNotesPanel

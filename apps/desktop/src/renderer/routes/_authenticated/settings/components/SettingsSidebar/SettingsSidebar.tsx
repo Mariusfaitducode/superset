@@ -29,7 +29,16 @@ import { getVisibleMatchCountBySection } from "../../utils/settings-search";
 import { ForkBuildInfo } from "./components/ForkBuildInfo";
 import { GeneralSettings } from "./GeneralSettings";
 
-export function SettingsSidebar() {
+interface SettingsSidebarProps {
+	/** The workspace sidebar is on its left and owns the window controls. */
+	besideAppSidebar?: boolean;
+}
+
+const WIDTH_BESIDE_APP_SIDEBAR = 220;
+
+export function SettingsSidebar({
+	besideAppSidebar = false,
+}: SettingsSidebarProps) {
 	const { t } = useLingui();
 	const searchQuery = useSettingsSearchQuery();
 	// Same width as the workspace sidebar, so opening Settings does not jump.
@@ -58,10 +67,12 @@ export function SettingsSidebar() {
 	return (
 		<div
 			className="flex shrink-0 flex-col pb-3 overflow-hidden border-r border-border bg-sidebar dark:bg-muted/35"
-			style={{ width: sidebarWidth }}
+			style={{
+				width: besideAppSidebar ? WIDTH_BESIDE_APP_SIDEBAR : sidebarWidth,
+			}}
 		>
 			<div className="mb-1 flex h-12 shrink-0 items-center">
-				{isMac ? (
+				{besideAppSidebar ? null : isMac ? (
 					<div className="drag h-full shrink-0" style={{ width: 96 }} />
 				) : (
 					<div
@@ -75,15 +86,17 @@ export function SettingsSidebar() {
 						<AppMenuButton />
 					</div>
 				)}
-				<div
-					className="flex shrink-0 items-center self-start"
-					style={{
-						marginTop: WINDOW_CONTROLS_ROW_TOP,
-						height: WINDOW_CONTROLS_ROW_HEIGHT,
-					}}
-				>
-					<NavigationControls />
-				</div>
+				{!besideAppSidebar && (
+					<div
+						className="flex shrink-0 items-center self-start"
+						style={{
+							marginTop: WINDOW_CONTROLS_ROW_TOP,
+							height: WINDOW_CONTROLS_ROW_HEIGHT,
+						}}
+					>
+						<NavigationControls />
+					</div>
+				)}
 				<div className="drag h-full min-w-0 flex-1" />
 			</div>
 			{/* Back button */}

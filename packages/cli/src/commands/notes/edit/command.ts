@@ -3,13 +3,14 @@ import { command } from "../../../lib/command";
 import {
 	clearable,
 	localNotesClient,
+	NOTE_KINDS,
 	noteActor,
 	resolveNoteId,
 } from "../../../lib/notes";
 
 export default command({
 	description:
-		"Change a note's text or details. Agents can only change their own",
+		"Change a note's text, details or kind. Agents can only change their own",
 	args: [
 		positional("id")
 			.required()
@@ -18,6 +19,9 @@ export default command({
 	options: {
 		text: string().desc("New text"),
 		details: string().desc("New details (empty to clear)"),
+		kind: string()
+			.enum(...NOTE_KINDS)
+			.desc("context pins it for every agent here, note unpins it"),
 	},
 	run: async ({ ctx, args, options }) => {
 		const fields = {
@@ -25,9 +29,15 @@ export default command({
 			...(options.details !== undefined
 				? { details: clearable(options.details) }
 				: {}),
+			...(options.kind
+				? { kind: options.kind as (typeof NOTE_KINDS)[number] }
+				: {}),
 		};
 		if (Object.keys(fields).length === 0) {
-			throw new CLIError("Nothing to change", "Pass --text or --details.");
+			throw new CLIError(
+				"Nothing to change",
+				"Pass --text, --details or --kind.",
+			);
 		}
 		const client = await localNotesClient(ctx);
 		const id = resolveNoteId(args.id as string, await client.list.query({}));

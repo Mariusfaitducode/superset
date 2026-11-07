@@ -1,0 +1,1 @@
+export { OfficeDeskPlate } from "./OfficeDeskPlate";

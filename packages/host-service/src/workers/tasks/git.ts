@@ -37,6 +37,16 @@ import type { GitStatusSnapshotComputation } from "../../trpc/router/git/utils/g
 import { getGitStatusSnapshot } from "../../trpc/router/git/utils/git-status.ts";
 import type { GitStatusPartial } from "../../trpc/router/git/utils/git-status-partial/index.ts";
 import { getGitStatusPartial } from "../../trpc/router/git/utils/git-status-partial/index.ts";
+import {
+	countStatusLines,
+	type GitGraphLog,
+	type GitGraphOverview,
+	LOG_FORMAT,
+	parseLog,
+	parseRefs,
+	parseWorktrees,
+	REF_FORMAT,
+} from "../../trpc/router/git-graph/parse.ts";
 import { addBranchWorktree } from "../../trpc/router/workspace-creation/shared/add-branch-worktree.ts";
 import { listWorktreeBranches } from "../../trpc/router/workspace-creation/shared/branch-search.ts";
 import { enablePushAutoSetupRemote } from "../../trpc/router/workspace-creation/shared/git-config.ts";
@@ -724,7 +734,99 @@ export const gitRestoreWorktreeTask = defineWorkerTask<
 	},
 });
 
+const GIT_GRAPH_TIMEOUT_MS = 20_000;
+
+async function gitGraphRoot(repoPath: string): Promise<string> {
+	return (
+		await createUserSimpleGit(repoPath).revparse(["--show-toplevel"])
+	).trim();
+}
+
+// Refs, worktrees, head and dirty count for the git graph page.
+export const gitGraphOverviewTask = defineWorkerTask<
+	{ repoPath: string },
+	GitGraphOverview
+>({
+	type: "git/readGraphOverview",
+	handler: async ({ repoPath }) => {
+		const root = await gitGraphRoot(repoPath);
+		const git = createUserSimpleGit(root, {
+			timeout: { block: GIT_GRAPH_TIMEOUT_MS },
+		});
+		const [refs, worktrees, head, status] = await Promise.all([
+			git.raw([
+				"for-each-ref",
+				`--format=${REF_FORMAT}`,
+				"refs/heads",
+				"refs/remotes",
+				"refs/tags",
+			]),
+			git.raw(["worktree", "list", "--porcelain"]),
+			git.raw(["symbolic-ref", "--quiet", "--short", "HEAD"]).catch(() => ""),
+			git
+				.raw(["status", "--porcelain", "--untracked-files=normal"])
+				.catch(() => ""),
+		]);
+		return {
+			repoPath: root,
+			headBranch: head.trim() || null,
+			refs: parseRefs(refs),
+			worktrees: parseWorktrees(worktrees),
+			uncommittedCount: countStatusLines(status),
+		};
+	},
+});
+
+// Commits for the git graph page, newest first in topological order.
+export const gitGraphLogTask = defineWorkerTask<
+	{
+		repoPath: string;
+		/** Full ref names; empty walks every branch. */
+		refs: string[];
+		includeRemotes: boolean;
+		includeTags: boolean;
+		limit: number;
+	},
+	GitGraphLog
+>({
+	type: "git/readGraphLog",
+	handler: async ({ repoPath, refs, includeRemotes, includeTags, limit }) => {
+		const startedAt = performance.now();
+		const git = createUserSimpleGit(await gitGraphRoot(repoPath), {
+			timeout: { block: GIT_GRAPH_TIMEOUT_MS },
+		});
+		const starts =
+			refs.length > 0
+				? refs
+				: [
+						"--branches",
+						...(includeRemotes ? ["--remotes"] : []),
+						...(includeTags ? ["--tags"] : []),
+						"HEAD",
+					];
+		// One extra commit tells whether there is more to load.
+		const commits = parseLog(
+			await git.raw([
+				"log",
+				"--topo-order",
+				"--decorate=full",
+				`--format=${LOG_FORMAT}`,
+				`--max-count=${limit + 1}`,
+				...starts,
+				"--",
+			]),
+		);
+		return {
+			commits: commits.slice(0, limit),
+			hasMore: commits.length > limit,
+			durationMs: Math.round(performance.now() - startedAt),
+		};
+	},
+});
+
 export const gitTasks = [
+	gitGraphOverviewTask,
+	gitGraphLogTask,
 	gitStatusSnapshotTask,
 	gitStatusPartialTask,
 	gitFetchBaseRefTask,

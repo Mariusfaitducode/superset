@@ -26,6 +26,10 @@ decided yet), `kept` (worth doing), `dropped`, `done`.
   may change, triage and delete them.
 - A note is not a to-do. What the user must do or decide now goes in
   `superset todos`.
+- **Pinned context** (kind `context`, a pin in the app) is a brief, a decision
+  or a message the user wants every agent here to read at start. Read it
+  first; `superset context` prints it in full. Pin a note yourself
+  (`--context`) only when the user asks.
 
 ## Commands
 
@@ -36,10 +40,13 @@ superset notes list --all            # every workspace on this machine
 superset notes add "Cache the PR list" --details "The page refetches it on every focus"
 superset notes status <id> done      # the short id from `list` works
 superset notes edit <id> --details ""   # your own only; an empty value clears them
+superset notes add "Brief: …" --details "…" --context   # pinned for every agent here
+superset notes edit <id> --kind note   # unpin (your own only)
 superset notes rm <id>               # your own only
 ```
 
-Output is JSON under agents; each note has `createdBy` (`user` or `agent`).
+Output is JSON under agents; each note has `createdBy` (`user` or
+`agent`) and `kind` (`note` or `context`).
 
 If `superset notes` is missing, the desktop app is older than the fork build
 that added it: tell the user rather than working around it.
