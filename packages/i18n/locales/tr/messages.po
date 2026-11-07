@@ -12364,6 +12364,9 @@ msgstr "Bu etiketlere sahip çalışma alanı yok"
 msgid "No workspace on this host yet."
 msgstr "Bu ana bilgisayarda henüz çalışma alanı yok."
 
+msgid "No workspace on this host yet. Start a session to run an agent here, or a workspace on one of its projects."
+msgstr "Bu ana bilgisayarda henüz çalışma alanı yok. Burada bir ajan çalıştırmak için bir oturum başlatın veya projelerinden birinde bir çalışma alanı açın."
+
 msgid "No workspace run command configured"
 msgstr "Yapılandırılmış çalışma alanı çalıştırma komutu yok"
 

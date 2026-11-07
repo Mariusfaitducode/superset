@@ -12364,6 +12364,9 @@ msgstr "Không có workspace nào có các nhãn này"
 msgid "No workspace on this host yet."
 msgstr "Chưa có workspace nào trên máy chủ này."
 
+msgid "No workspace on this host yet. Start a session to run an agent here, or a workspace on one of its projects."
+msgstr "Chưa có workspace nào trên máy chủ này. Hãy bắt đầu một phiên để chạy tác tử ở đây, hoặc tạo workspace trên một dự án của nó."
+
 msgid "No workspace run command configured"
 msgstr "Chưa cấu hình lệnh chạy cho workspace"
 

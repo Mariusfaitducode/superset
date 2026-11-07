@@ -12364,6 +12364,9 @@ msgstr "Aucun espace de travail n'a ces labels"
 msgid "No workspace on this host yet."
 msgstr "Aucun espace de travail sur cet hôte pour l'instant."
 
+msgid "No workspace on this host yet. Start a session to run an agent here, or a workspace on one of its projects."
+msgstr "Aucun espace de travail sur cet hôte pour l'instant. Lance une session pour y faire tourner un agent, ou un espace de travail sur un de ses projets."
+
 msgid "No workspace run command configured"
 msgstr "Aucune commande d'exécution configurée pour l'espace de travail"
 

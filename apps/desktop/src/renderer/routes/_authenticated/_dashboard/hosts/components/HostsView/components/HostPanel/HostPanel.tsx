@@ -3,7 +3,18 @@ import { Button } from "@superset/ui/button";
 import { cn } from "@superset/ui/utils";
 import { Link } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
-import { LuChevronRight, LuMoon, LuPower, LuSettings2 } from "react-icons/lu";
+import {
+	LuChevronRight,
+	LuFolderPlus,
+	LuMessageSquarePlus,
+	LuMoon,
+	LuPower,
+	LuSettings2,
+} from "react-icons/lu";
+import {
+	useOpenNewSessionForHost,
+	useOpenNewWorkspaceForHost,
+} from "renderer/hooks/useOpenNewWorkspace";
 import { useV2AgentConfigs } from "renderer/hooks/useV2AgentConfigs";
 import { useHostAgentActions } from "renderer/routes/_authenticated/_dashboard/hosts/hooks/useHostAgentActions";
 import {
@@ -28,6 +39,30 @@ export function HostPanel({ host, data }: HostPanelProps) {
 	const hostUrl = host.isOnline ? data.hostUrlOf(host.machineId) : null;
 	const canAct = hostUrl !== null;
 	const actions = useHostAgentActions(hostUrl);
+	const openNewSession = useOpenNewSessionForHost();
+	const openNewWorkspace = useOpenNewWorkspaceForHost();
+	const newButtons = canAct && (
+		<>
+			<Button
+				size="sm"
+				variant="outline"
+				className="h-7 gap-1.5 text-xs"
+				onClick={() => openNewSession(host.machineId)}
+			>
+				<LuMessageSquarePlus className="size-3.5" />
+				<Trans>New session</Trans>
+			</Button>
+			<Button
+				size="sm"
+				variant="outline"
+				className="h-7 gap-1.5 text-xs"
+				onClick={() => openNewWorkspace(host.machineId)}
+			>
+				<LuFolderPlus className="size-3.5" />
+				<Trans>New workspace</Trans>
+			</Button>
+		</>
+	);
 	const { data: agentConfigs = [] } = useV2AgentConfigs(hostUrl);
 	const titles = useHostTerminalTitles(hostUrl);
 	const workspaces = data.workspacesOf(host.machineId);
@@ -62,11 +97,12 @@ export function HostPanel({ host, data }: HostPanelProps) {
 					{host.isLocal && " · "}
 					{host.isOnline ? t({ message: "Online" }) : t({ message: "Offline" })}
 				</span>
+				<div className="ml-auto flex items-center gap-1.5">{newButtons}</div>
 				<Button
 					asChild
 					size="sm"
 					variant="ghost"
-					className="ml-auto h-7 gap-1.5 text-xs"
+					className="h-7 gap-1.5 text-xs"
 				>
 					<Link
 						to="/settings/hosts/$hostId"
@@ -100,9 +136,21 @@ export function HostPanel({ host, data }: HostPanelProps) {
 			)}
 
 			{workspaces.length === 0 ? (
-				<p className="py-6 text-center text-muted-foreground text-sm">
-					<Trans>No workspace on this host yet.</Trans>
-				</p>
+				<div className="flex flex-col items-center gap-3 py-8 text-center">
+					<p className="text-muted-foreground text-sm">
+						{canAct ? (
+							<Trans>
+								No workspace on this host yet. Start a session to run an agent
+								here, or a workspace on one of its projects.
+							</Trans>
+						) : (
+							<Trans>No workspace on this host yet.</Trans>
+						)}
+					</p>
+					{canAct && (
+						<div className="flex items-center gap-1.5">{newButtons}</div>
+					)}
+				</div>
 			) : (
 				<div className="flex flex-col gap-3">
 					{withAgents.length === 0 && host.isOnline && (

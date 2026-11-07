@@ -142,6 +142,18 @@ test("session handoff re-selects the session when the URL already asks for it", 
 	});
 });
 
+test("session handoff aimed at a host keeps that host over the draft one", () => {
+	useNewWorkspaceDraftStore.getState().updateDraft({ hostId: "other-machine" });
+	openNewSession(v2, "tower");
+	expect(navigate).toHaveBeenCalledWith(
+		expect.objectContaining({ search: { session: true, host: "tower" } }),
+	);
+	expect(useNewWorkspaceDraftStore.getState()).toMatchObject({
+		hostId: "tower",
+		isSession: true,
+	});
+});
+
 test("v1 local project handoff still opens the project modal", () => {
 	openNewWorkspaceForLocalProject(
 		{ ...v2, isV2CloudEnabled: false },
