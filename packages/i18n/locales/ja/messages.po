@@ -111,6 +111,8 @@ msgstr "{0, plural, one {#個のアクティブなポート — 詳細を表示}
 msgid "{0, plural, one {# agent needs you} other {# agents need you}}"
 msgstr "{0, plural, other {# 件のエージェントが対応待ち}}"
 
+#. placeholder {0}: data.metrics.agents
+#. placeholder {0}: metrics.agents
 #. placeholder {0}: person.runningAgentCount
 msgid "{0, plural, one {# agent} other {# agents}}"
 msgstr "{0, plural, other {エージェント # 件}}"
@@ -5477,6 +5479,9 @@ msgstr "サーバーに接続できませんでした。"
 msgid "Could not reach the workspace host"
 msgstr "ワークスペースのホストに接続できません"
 
+msgid "Could not reach this host."
+msgstr "このホストに接続できませんでした。"
+
 msgid "Could not reach this workspace's machine"
 msgstr "このワークスペースのマシンに接続できませんでした"
 
@@ -5491,6 +5496,9 @@ msgstr "ドロップされたファイルを読み取れませんでした"
 
 msgid "Could not read the Google account. Please try again."
 msgstr "Googleアカウントを読み取れませんでした。もう一度お試しください。"
+
+msgid "Could not read the host's load."
+msgstr "ホストの負荷を読み取れませんでした。"
 
 msgid "Could not record cloud workspace"
 msgstr "クラウドワークスペースを記録できませんでした"
@@ -8602,6 +8610,9 @@ msgstr "完全自動運転"
 msgid "Full source available on GitHub under Elastic License 2.0 (ELv2). Inspect, audit, and contribute to the code. No black boxes, no hidden functionality."
 msgstr "全ソースがElastic License 2.0(ELv2)のもとGitHubで公開されています。コードを確認し、監査し、貢献できます。ブラックボックスも隠し機能もありません。"
 
+msgid "Full: close agents before starting another"
+msgstr "満杯: 次を起動する前にエージェントを閉じてください"
+
 msgid "Future home for reusable agent configs."
 msgstr "再利用可能なエージェント設定を、いずれここに置きます。"
 
@@ -8948,6 +8959,9 @@ msgstr "見出し3"
 
 msgid "Heart"
 msgstr "ハート"
+
+msgid "Heaviest workspaces"
+msgstr "負荷の大きいワークスペース"
 
 msgid "Height of the rows and size of the conversation titles."
 msgstr "行の高さと会話タイトルのサイズ。"
@@ -10467,6 +10481,9 @@ msgstr "1日あたりのアクティブなセッション"
 
 msgid "llms.txt (index for AI agents)"
 msgstr "llms.txt(AIエージェント向けの索引)"
+
+msgid "Load"
+msgstr "負荷"
 
 msgid "Load (1 min)"
 msgstr "負荷 (1 分)"
@@ -14627,6 +14644,9 @@ msgstr "Radixはtooltipの矢印ラッパーを辺ごとに回転させるため
 msgid "Radix Tooltip docs"
 msgstr "Radix Tooltipのドキュメント"
 
+msgid "RAM"
+msgstr "RAM"
+
 msgid "RAM in use"
 msgstr "使用中の RAM"
 
@@ -14995,6 +15015,12 @@ msgstr "リモートアクセスがオフかもしれません"
 
 msgid "Remote branches"
 msgstr "リモートブランチ"
+
+msgid "Remote host load"
+msgstr "リモートホストの負荷"
+
+msgid "Remote hosts"
+msgstr "リモートホスト"
 
 msgid "Remote MCP server — connects over HTTP"
 msgstr "リモートMCPサーバー — HTTP経由で接続"
@@ -16713,6 +16739,10 @@ msgstr "設定 → リモートアクセス →「リレー経由でこのデバ
 
 msgid "Settings are not available for this device"
 msgstr "このデバイスでは設定を利用できません"
+
+#. placeholder {0}: host.name
+msgid "Settings for {0}"
+msgstr "{0} の設定"
 
 msgid "Settings..."
 msgstr "設定..."
@@ -18727,6 +18757,9 @@ msgstr "ホストが15分以内に復帰しませんでした。"
 msgid "The host hasn't answered."
 msgstr "ホストからの応答がありません。"
 
+msgid "The host is offline."
+msgstr "ホストはオフラインです。"
+
 msgid "The host is online. Pick it when you create a workspace."
 msgstr "ホストはオンラインです。ワークスペースを作成するときに選択してください。"
 
@@ -19091,6 +19124,9 @@ msgstr "このホストは古すぎて ToDo を保存できません。"
 msgid "This host needs an update"
 msgstr "このホストは更新が必要です"
 
+msgid "This host runs an older host service. Update it to see its load."
+msgstr "このホストは古い host service を実行しています。負荷を表示するには更新してください。"
+
 msgid "This host runs an older Superset. Update the app to see insights."
 msgstr "このホストは古い Superset を実行しています。インサイトを見るにはアプリを更新してください。"
 
@@ -19360,6 +19396,9 @@ msgstr "チケット: {0}"
 
 msgid "Tier"
 msgstr "ティア"
+
+msgid "Tight: close idle agents before starting another"
+msgstr "余裕なし: 次を起動する前にアイドル中のエージェントを閉じてください"
 
 msgid "Time"
 msgstr "時間"
@@ -19923,6 +19962,9 @@ msgstr "通知のミュートを解除"
 
 msgid "Unnamed key"
 msgstr "名称未設定のキー"
+
+msgid "Unnamed workspace"
+msgstr "名前のないワークスペース"
 
 msgid "Unpaid"
 msgstr "未払い"

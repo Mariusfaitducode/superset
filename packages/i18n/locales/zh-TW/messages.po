@@ -111,6 +111,8 @@ msgstr "{0, plural, one {#個活動埠 — 顯示詳情} other {#個活動埠 �
 msgid "{0, plural, one {# agent needs you} other {# agents need you}}"
 msgstr "{0, plural, other {# 個代理需要你}}"
 
+#. placeholder {0}: data.metrics.agents
+#. placeholder {0}: metrics.agents
 #. placeholder {0}: person.runningAgentCount
 msgid "{0, plural, one {# agent} other {# agents}}"
 msgstr "{0, plural, other {# 個代理}}"
@@ -5477,6 +5479,9 @@ msgstr "無法連線到伺服器。"
 msgid "Could not reach the workspace host"
 msgstr "無法連線到工作區主機"
 
+msgid "Could not reach this host."
+msgstr "無法連線到此主機。"
+
 msgid "Could not reach this workspace's machine"
 msgstr "無法連線到這個工作區所在的機器"
 
@@ -5491,6 +5496,9 @@ msgstr "無法讀取拖入的檔案"
 
 msgid "Could not read the Google account. Please try again."
 msgstr "無法讀取該Google帳戶。請重試。"
+
+msgid "Could not read the host's load."
+msgstr "無法讀取主機負載。"
 
 msgid "Could not record cloud workspace"
 msgstr "無法記錄雲端工作區"
@@ -8602,6 +8610,9 @@ msgstr "完全自動駕駛"
 msgid "Full source available on GitHub under Elastic License 2.0 (ELv2). Inspect, audit, and contribute to the code. No black boxes, no hidden functionality."
 msgstr "完整原始碼在GitHub上以Elastic License 2.0（ELv2）提供。可查閱、審計並參與貢獻。沒有黑箱，沒有隱藏功能。"
 
+msgid "Full: close agents before starting another"
+msgstr "已滿：啟動新代理前請先關閉一些代理"
+
 msgid "Future home for reusable agent configs."
 msgstr "可複用代理程式配置的未來歸處。"
 
@@ -8948,6 +8959,9 @@ msgstr "標題3"
 
 msgid "Heart"
 msgstr "心形"
+
+msgid "Heaviest workspaces"
+msgstr "佔用最多的工作區"
 
 msgid "Height of the rows and size of the conversation titles."
 msgstr "列高和對話標題大小。"
@@ -10467,6 +10481,9 @@ msgstr "每天活躍工作階段"
 
 msgid "llms.txt (index for AI agents)"
 msgstr "llms.txt（面向AI代理程式的索引）"
+
+msgid "Load"
+msgstr "負載"
 
 msgid "Load (1 min)"
 msgstr "負載（1 分鐘）"
@@ -14627,6 +14644,9 @@ msgstr "Radix會按不同方向旋轉tooltip的箭頭容器，"
 msgid "Radix Tooltip docs"
 msgstr "Radix Tooltip文件"
 
+msgid "RAM"
+msgstr "記憶體"
+
 msgid "RAM in use"
 msgstr "已用 RAM"
 
@@ -14995,6 +15015,12 @@ msgstr "遠端存取可能已關閉"
 
 msgid "Remote branches"
 msgstr "遠端分支"
+
+msgid "Remote host load"
+msgstr "遠端主機負載"
+
+msgid "Remote hosts"
+msgstr "遠端主機"
 
 msgid "Remote MCP server — connects over HTTP"
 msgstr "遠端MCP伺服器，通過HTTP連線"
@@ -16713,6 +16739,10 @@ msgstr "設定 → 遠端存取 → 「允許遠端工作區通過中繼存取�
 
 msgid "Settings are not available for this device"
 msgstr "此裝置無法使用設定"
+
+#. placeholder {0}: host.name
+msgid "Settings for {0}"
+msgstr "{0} 的設定"
 
 msgid "Settings..."
 msgstr "設定..."
@@ -18727,6 +18757,9 @@ msgstr "主機未在十五分鐘內恢復。"
 msgid "The host hasn't answered."
 msgstr "主機未回應。"
 
+msgid "The host is offline."
+msgstr "主機處於離線狀態。"
+
 msgid "The host is online. Pick it when you create a workspace."
 msgstr "主機已上線。建立工作區時選擇它。"
 
@@ -19091,6 +19124,9 @@ msgstr "此主機版本過舊，無法儲存待辦事項。"
 msgid "This host needs an update"
 msgstr "此主機需要更新"
 
+msgid "This host runs an older host service. Update it to see its load."
+msgstr "此主機執行的是舊版 host service。請更新以查看其負載。"
+
 msgid "This host runs an older Superset. Update the app to see insights."
 msgstr "此主機執行的是舊版 Superset。請更新應用程式以查看洞察。"
 
@@ -19360,6 +19396,9 @@ msgstr "工單：{0}"
 
 msgid "Tier"
 msgstr "等級"
+
+msgid "Tight: close idle agents before starting another"
+msgstr "吃緊：啟動新代理前請先關閉閒置代理"
 
 msgid "Time"
 msgstr "時間"
@@ -19923,6 +19962,9 @@ msgstr "取消靜音通知"
 
 msgid "Unnamed key"
 msgstr "未命名金鑰"
+
+msgid "Unnamed workspace"
+msgstr "未命名工作區"
 
 msgid "Unpaid"
 msgstr "未支付"

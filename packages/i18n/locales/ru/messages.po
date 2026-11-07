@@ -111,6 +111,8 @@ msgstr "{0, plural, one {# активный порт — показать дет
 msgid "{0, plural, one {# agent needs you} other {# agents need you}}"
 msgstr "{0, plural, one {# агент ждёт вас} few {# агента ждут вас} many {# агентов ждут вас} other {# агента ждут вас}}"
 
+#. placeholder {0}: data.metrics.agents
+#. placeholder {0}: metrics.agents
 #. placeholder {0}: person.runningAgentCount
 msgid "{0, plural, one {# agent} other {# agents}}"
 msgstr "{0, plural, one {# агент} few {# агента} many {# агентов} other {# агента}}"
@@ -5477,6 +5479,9 @@ msgstr "Не удалось подключиться к серверу."
 msgid "Could not reach the workspace host"
 msgstr "Не удалось связаться с хостом рабочего пространства"
 
+msgid "Could not reach this host."
+msgstr "Не удалось связаться с этим хостом."
+
 msgid "Could not reach this workspace's machine"
 msgstr "Не удалось связаться с машиной этой рабочей области"
 
@@ -5491,6 +5496,9 @@ msgstr "Не удалось прочитать перетащенные файл
 
 msgid "Could not read the Google account. Please try again."
 msgstr "Не удалось прочитать аккаунт Google. Попробуйте ещё раз."
+
+msgid "Could not read the host's load."
+msgstr "Не удалось получить нагрузку хоста."
 
 msgid "Could not record cloud workspace"
 msgstr "Не удалось записать облачную рабочую область"
@@ -8602,6 +8610,9 @@ msgstr "Полная автономность"
 msgid "Full source available on GitHub under Elastic License 2.0 (ELv2). Inspect, audit, and contribute to the code. No black boxes, no hidden functionality."
 msgstr "Полный исходный код доступен на GitHub под Elastic License 2.0 (ELv2). Изучайте, проверяйте и вносите вклад. Никаких чёрных ящиков и скрытой функциональности."
 
+msgid "Full: close agents before starting another"
+msgstr "Заполнено: закройте агентов, прежде чем запускать нового"
+
 msgid "Future home for reusable agent configs."
 msgstr "Будущее место для переиспользуемых конфигураций агентов."
 
@@ -8948,6 +8959,9 @@ msgstr "Заголовок 3"
 
 msgid "Heart"
 msgstr "Сердце"
+
+msgid "Heaviest workspaces"
+msgstr "Самые тяжёлые рабочие пространства"
 
 msgid "Height of the rows and size of the conversation titles."
 msgstr "Высота строк и размер заголовков диалогов."
@@ -10467,6 +10481,9 @@ msgstr "Активных сессий в день"
 
 msgid "llms.txt (index for AI agents)"
 msgstr "llms.txt (индекс для AI-агентов)"
+
+msgid "Load"
+msgstr "Нагрузка"
 
 msgid "Load (1 min)"
 msgstr "Нагрузка (1 мин)"
@@ -14627,6 +14644,9 @@ msgstr "Radix поворачивает обёртку стрелки подск�
 msgid "Radix Tooltip docs"
 msgstr "Документация Radix Tooltip"
 
+msgid "RAM"
+msgstr "ОЗУ"
+
 msgid "RAM in use"
 msgstr "Используемая RAM"
 
@@ -14995,6 +15015,12 @@ msgstr "Возможно, удалённый доступ выключен"
 
 msgid "Remote branches"
 msgstr "Удалённые ветки"
+
+msgid "Remote host load"
+msgstr "Нагрузка удалённых хостов"
+
+msgid "Remote hosts"
+msgstr "Удалённые хосты"
 
 msgid "Remote MCP server — connects over HTTP"
 msgstr "Удалённый сервер MCP — подключается по HTTP"
@@ -16713,6 +16739,10 @@ msgstr "Настройки → Удалённый доступ → «Разре�
 
 msgid "Settings are not available for this device"
 msgstr "Настройки недоступны для этого устройства"
+
+#. placeholder {0}: host.name
+msgid "Settings for {0}"
+msgstr "Настройки {0}"
 
 msgid "Settings..."
 msgstr "Настройки..."
@@ -18727,6 +18757,9 @@ msgstr "Хост не восстановил работу в течение пя
 msgid "The host hasn't answered."
 msgstr "Хост не ответил."
 
+msgid "The host is offline."
+msgstr "Хост не в сети."
+
 msgid "The host is online. Pick it when you create a workspace."
 msgstr "Хост в сети. Выберите его при создании рабочей области."
 
@@ -19091,6 +19124,9 @@ msgstr "Этот хост слишком старый, чтобы хранить
 msgid "This host needs an update"
 msgstr "Этому хосту нужно обновление"
 
+msgid "This host runs an older host service. Update it to see its load."
+msgstr "На этом хосте старая версия host service. Обновите её, чтобы видеть нагрузку."
+
 msgid "This host runs an older Superset. Update the app to see insights."
 msgstr "На этом хосте старая версия Superset. Обновите приложение, чтобы увидеть аналитику."
 
@@ -19360,6 +19396,9 @@ msgstr "Тикет: {0}"
 
 msgid "Tier"
 msgstr "Уровень"
+
+msgid "Tight: close idle agents before starting another"
+msgstr "Тесно: закройте простаивающих агентов, прежде чем запускать нового"
 
 msgid "Time"
 msgstr "Время"
@@ -19923,6 +19962,9 @@ msgstr "Включить уведомления"
 
 msgid "Unnamed key"
 msgstr "Ключ без названия"
+
+msgid "Unnamed workspace"
+msgstr "Рабочее пространство без названия"
 
 msgid "Unpaid"
 msgstr "Не оплачен"

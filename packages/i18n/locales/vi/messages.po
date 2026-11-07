@@ -111,6 +111,8 @@ msgstr "{0, plural, one {# cổng đang hoạt động — hiện chi tiết} ot
 msgid "{0, plural, one {# agent needs you} other {# agents need you}}"
 msgstr "{0, plural, other {# tác tử cần bạn}}"
 
+#. placeholder {0}: data.metrics.agents
+#. placeholder {0}: metrics.agents
 #. placeholder {0}: person.runningAgentCount
 msgid "{0, plural, one {# agent} other {# agents}}"
 msgstr "{0, plural, other {# agent}}"
@@ -5477,6 +5479,9 @@ msgstr "Không thể kết nối tới máy chủ."
 msgid "Could not reach the workspace host"
 msgstr "Không thể kết nối tới máy chủ workspace"
 
+msgid "Could not reach this host."
+msgstr "Không thể kết nối tới máy chủ này."
+
 msgid "Could not reach this workspace's machine"
 msgstr "Không kết nối được tới máy của workspace này"
 
@@ -5491,6 +5496,9 @@ msgstr "Không thể đọc các tệp đã thả"
 
 msgid "Could not read the Google account. Please try again."
 msgstr "Không đọc được tài khoản Google. Vui lòng thử lại."
+
+msgid "Could not read the host's load."
+msgstr "Không thể đọc tải của máy chủ."
 
 msgid "Could not record cloud workspace"
 msgstr "Không thể ghi nhận workspace trên cloud"
@@ -8602,6 +8610,9 @@ msgstr "Tự vận hành hoàn toàn"
 msgid "Full source available on GitHub under Elastic License 2.0 (ELv2). Inspect, audit, and contribute to the code. No black boxes, no hidden functionality."
 msgstr "Toàn bộ mã nguồn có trên GitHub theo Elastic License 2.0 (ELv2). Xem, kiểm tra và đóng góp cho mã nguồn. Không hộp đen, không chức năng ẩn."
 
+msgid "Full: close agents before starting another"
+msgstr "Đầy: đóng bớt agent trước khi khởi động agent khác"
+
 msgid "Future home for reusable agent configs."
 msgstr "Nơi sẽ chứa các cấu hình agent dùng lại được."
 
@@ -8948,6 +8959,9 @@ msgstr "Tiêu đề 3"
 
 msgid "Heart"
 msgstr "Trái tim"
+
+msgid "Heaviest workspaces"
+msgstr "Workspace nặng nhất"
 
 msgid "Height of the rows and size of the conversation titles."
 msgstr "Chiều cao hàng và cỡ tiêu đề cuộc trò chuyện."
@@ -10467,6 +10481,9 @@ msgstr "Phiên hoạt động mỗi ngày"
 
 msgid "llms.txt (index for AI agents)"
 msgstr "llms.txt (chỉ mục cho agent AI)"
+
+msgid "Load"
+msgstr "Tải"
 
 msgid "Load (1 min)"
 msgstr "Tải (1 phút)"
@@ -14627,6 +14644,9 @@ msgstr "Radix xoay lớp bọc mũi tên tooltip theo từng phía,"
 msgid "Radix Tooltip docs"
 msgstr "Tài liệu Radix Tooltip"
 
+msgid "RAM"
+msgstr "RAM"
+
 msgid "RAM in use"
 msgstr "RAM đang dùng"
 
@@ -14995,6 +15015,12 @@ msgstr "Truy cập từ xa có thể đang tắt"
 
 msgid "Remote branches"
 msgstr "Nhánh từ xa"
+
+msgid "Remote host load"
+msgstr "Tải máy chủ từ xa"
+
+msgid "Remote hosts"
+msgstr "Máy chủ từ xa"
 
 msgid "Remote MCP server — connects over HTTP"
 msgstr "Server MCP từ xa — kết nối qua HTTP"
@@ -16713,6 +16739,10 @@ msgstr "Cài đặt → Truy cập từ xa → “Cho phép truy cập từ xa v
 
 msgid "Settings are not available for this device"
 msgstr "Không có cài đặt cho thiết bị này"
+
+#. placeholder {0}: host.name
+msgid "Settings for {0}"
+msgstr "Cài đặt cho {0}"
 
 msgid "Settings..."
 msgstr "Cài đặt..."
@@ -18727,6 +18757,9 @@ msgstr "Máy chủ không hoạt động trở lại trong vòng mười lăm ph
 msgid "The host hasn't answered."
 msgstr "Host không phản hồi."
 
+msgid "The host is offline."
+msgstr "Máy chủ đang ngoại tuyến."
+
 msgid "The host is online. Pick it when you create a workspace."
 msgstr "Host đã trực tuyến. Hãy chọn nó khi tạo workspace."
 
@@ -19091,6 +19124,9 @@ msgstr "Máy chủ này quá cũ để lưu việc cần làm."
 msgid "This host needs an update"
 msgstr "Host này cần được cập nhật"
 
+msgid "This host runs an older host service. Update it to see its load."
+msgstr "Máy chủ này chạy host service cũ. Hãy cập nhật để xem tải."
+
 msgid "This host runs an older Superset. Update the app to see insights."
 msgstr "Máy chủ này chạy Superset cũ. Hãy cập nhật ứng dụng để xem thông tin chi tiết."
 
@@ -19360,6 +19396,9 @@ msgstr "Ticket: {0}"
 
 msgid "Tier"
 msgstr "Hạng"
+
+msgid "Tight: close idle agents before starting another"
+msgstr "Gần đầy: đóng các agent đang rảnh trước khi khởi động agent khác"
 
 msgid "Time"
 msgstr "Thời gian"
@@ -19923,6 +19962,9 @@ msgstr "Bật lại thông báo"
 
 msgid "Unnamed key"
 msgstr "Khóa chưa đặt tên"
+
+msgid "Unnamed workspace"
+msgstr "Workspace chưa đặt tên"
 
 msgid "Unpaid"
 msgstr "Chưa thanh toán"

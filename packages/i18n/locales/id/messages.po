@@ -111,6 +111,8 @@ msgstr "{0, plural, one {# port aktif — tampilkan detail} other {# port aktif 
 msgid "{0, plural, one {# agent needs you} other {# agents need you}}"
 msgstr "{0, plural, other {# agen membutuhkan Anda}}"
 
+#. placeholder {0}: data.metrics.agents
+#. placeholder {0}: metrics.agents
 #. placeholder {0}: person.runningAgentCount
 msgid "{0, plural, one {# agent} other {# agents}}"
 msgstr "{0, plural, other {# agen}}"
@@ -5477,6 +5479,9 @@ msgstr "Tidak dapat menjangkau server."
 msgid "Could not reach the workspace host"
 msgstr "Tidak dapat menjangkau host workspace"
 
+msgid "Could not reach this host."
+msgstr "Tidak dapat menjangkau host ini."
+
 msgid "Could not reach this workspace's machine"
 msgstr "Tidak bisa menjangkau mesin workspace ini"
 
@@ -5491,6 +5496,9 @@ msgstr "Tidak bisa membaca file yang dilepas"
 
 msgid "Could not read the Google account. Please try again."
 msgstr "Tidak bisa membaca akun Google. Silakan coba lagi."
+
+msgid "Could not read the host's load."
+msgstr "Tidak dapat membaca beban host."
 
 msgid "Could not record cloud workspace"
 msgstr "Tidak bisa mencatat workspace cloud"
@@ -8602,6 +8610,9 @@ msgstr "Full self-driving"
 msgid "Full source available on GitHub under Elastic License 2.0 (ELv2). Inspect, audit, and contribute to the code. No black boxes, no hidden functionality."
 msgstr "Sumber lengkap tersedia di GitHub dengan Elastic License 2.0 (ELv2). Periksa, audit, dan berkontribusi ke kodenya. Tanpa kotak hitam, tanpa fungsi tersembunyi."
 
+msgid "Full: close agents before starting another"
+msgstr "Penuh: tutup agen sebelum memulai yang lain"
+
 msgid "Future home for reusable agent configs."
 msgstr "Rumah masa depan untuk konfigurasi agen yang bisa dipakai ulang."
 
@@ -8948,6 +8959,9 @@ msgstr "Judul 3"
 
 msgid "Heart"
 msgstr "Hati"
+
+msgid "Heaviest workspaces"
+msgstr "Workspace terberat"
 
 msgid "Height of the rows and size of the conversation titles."
 msgstr "Tinggi baris dan ukuran judul percakapan."
@@ -10467,6 +10481,9 @@ msgstr "Sesi aktif per hari"
 
 msgid "llms.txt (index for AI agents)"
 msgstr "llms.txt (indeks untuk agen AI)"
+
+msgid "Load"
+msgstr "Beban"
 
 msgid "Load (1 min)"
 msgstr "Beban (1 mnt)"
@@ -14627,6 +14644,9 @@ msgstr "Radix memutar pembungkus panah tooltip per sisi,"
 msgid "Radix Tooltip docs"
 msgstr "Dokumentasi Radix Tooltip"
 
+msgid "RAM"
+msgstr "RAM"
+
 msgid "RAM in use"
 msgstr "RAM terpakai"
 
@@ -14995,6 +15015,12 @@ msgstr "Akses Jarak Jauh mungkin nonaktif"
 
 msgid "Remote branches"
 msgstr "Branch remote"
+
+msgid "Remote host load"
+msgstr "Beban host jarak jauh"
+
+msgid "Remote hosts"
+msgstr "Host jarak jauh"
 
 msgid "Remote MCP server — connects over HTTP"
 msgstr "Server MCP remote — terhubung lewat HTTP"
@@ -16713,6 +16739,10 @@ msgstr "Pengaturan → Akses Jarak Jauh → “Izinkan akses jarak jauh ke peran
 
 msgid "Settings are not available for this device"
 msgstr "Pengaturan tidak tersedia untuk perangkat ini"
+
+#. placeholder {0}: host.name
+msgid "Settings for {0}"
+msgstr "Pengaturan untuk {0}"
 
 msgid "Settings..."
 msgstr "Pengaturan..."
@@ -18727,6 +18757,9 @@ msgstr "Host tidak kembali dalam lima belas menit."
 msgid "The host hasn't answered."
 msgstr "Host tidak merespons."
 
+msgid "The host is offline."
+msgstr "Host sedang offline."
+
 msgid "The host is online. Pick it when you create a workspace."
 msgstr "Host sudah online. Pilih host ini saat membuat workspace."
 
@@ -19091,6 +19124,9 @@ msgstr "Host ini terlalu lama untuk menyimpan daftar tugas."
 msgid "This host needs an update"
 msgstr "Host ini perlu diperbarui"
 
+msgid "This host runs an older host service. Update it to see its load."
+msgstr "Host ini menjalankan host service versi lama. Perbarui untuk melihat bebannya."
+
 msgid "This host runs an older Superset. Update the app to see insights."
 msgstr "Host ini menjalankan Superset versi lama. Perbarui aplikasi untuk melihat wawasan."
 
@@ -19360,6 +19396,9 @@ msgstr "Tiket: {0}"
 
 msgid "Tier"
 msgstr "Tingkat"
+
+msgid "Tight: close idle agents before starting another"
+msgstr "Hampir penuh: tutup agen yang menganggur sebelum memulai yang lain"
 
 msgid "Time"
 msgstr "Waktu"
@@ -19923,6 +19962,9 @@ msgstr "Nyalakan notifikasi"
 
 msgid "Unnamed key"
 msgstr "Kunci tanpa nama"
+
+msgid "Unnamed workspace"
+msgstr "Workspace tanpa nama"
 
 msgid "Unpaid"
 msgstr "Belum dibayar"

@@ -111,6 +111,8 @@ msgstr "{0, plural, one {# aktivní port — zobrazit podrobnosti} few {# aktivn
 msgid "{0, plural, one {# agent needs you} other {# agents need you}}"
 msgstr "{0, plural, one {# agent vás potřebuje} few {# agenti vás potřebují} many {# agenta vás potřebuje} other {# agentů vás potřebuje}}"
 
+#. placeholder {0}: data.metrics.agents
+#. placeholder {0}: metrics.agents
 #. placeholder {0}: person.runningAgentCount
 msgid "{0, plural, one {# agent} other {# agents}}"
 msgstr "{0, plural, one {# agent} few {# agenti} many {# agenta} other {# agentů}}"
@@ -5477,6 +5479,9 @@ msgstr "Nepodařilo se spojit se serverem."
 msgid "Could not reach the workspace host"
 msgstr "Nelze se spojit s hostitelem pracovního prostoru"
 
+msgid "Could not reach this host."
+msgstr "Tohoto hostitele se nepodařilo zastihnout."
+
 msgid "Could not reach this workspace's machine"
 msgstr "Nepodařilo se spojit s počítačem tohoto pracovního prostoru"
 
@@ -5491,6 +5496,9 @@ msgstr "Přetažené soubory se nepodařilo přečíst"
 
 msgid "Could not read the Google account. Please try again."
 msgstr "Nepodařilo se přečíst účet Google. Zkuste to prosím znovu."
+
+msgid "Could not read the host's load."
+msgstr "Zatížení hostitele se nepodařilo načíst."
 
 msgid "Could not record cloud workspace"
 msgstr "Nepodařilo se zaznamenat cloudový pracovní prostor"
@@ -8602,6 +8610,9 @@ msgstr "Plná autonomie"
 msgid "Full source available on GitHub under Elastic License 2.0 (ELv2). Inspect, audit, and contribute to the code. No black boxes, no hidden functionality."
 msgstr "Kompletní zdrojový kód je na GitHubu pod licencí Elastic License 2.0 (ELv2). Prohlédněte si ho, zauditujte ho a přispějte. Žádné černé skříňky, žádné skryté funkce."
 
+msgid "Full: close agents before starting another"
+msgstr "Plno: před spuštěním dalšího zavřete agenty"
+
 msgid "Future home for reusable agent configs."
 msgstr "Budoucí domov pro znovupoužitelné konfigurace agentů."
 
@@ -8948,6 +8959,9 @@ msgstr "Nadpis 3"
 
 msgid "Heart"
 msgstr "Srdce"
+
+msgid "Heaviest workspaces"
+msgstr "Nejnáročnější pracovní prostory"
 
 msgid "Height of the rows and size of the conversation titles."
 msgstr "Výška řádků a velikost názvů konverzací."
@@ -10467,6 +10481,9 @@ msgstr "Aktivní relace za den"
 
 msgid "llms.txt (index for AI agents)"
 msgstr "llms.txt (index pro AI agenty)"
+
+msgid "Load"
+msgstr "Zatížení"
 
 msgid "Load (1 min)"
 msgstr "Zátěž (1 min)"
@@ -14627,6 +14644,9 @@ msgstr "Radix otáčí obal šipky tooltipu podle strany,"
 msgid "Radix Tooltip docs"
 msgstr "Dokumentace Radix Tooltip"
 
+msgid "RAM"
+msgstr "RAM"
+
 msgid "RAM in use"
 msgstr "Využitá RAM"
 
@@ -14995,6 +15015,12 @@ msgstr "Vzdálený přístup může být vypnutý"
 
 msgid "Remote branches"
 msgstr "Vzdálené větve"
+
+msgid "Remote host load"
+msgstr "Zatížení vzdálených hostitelů"
+
+msgid "Remote hosts"
+msgstr "Vzdálení hostitelé"
 
 msgid "Remote MCP server — connects over HTTP"
 msgstr "Vzdálený MCP server — připojuje se přes HTTP"
@@ -16713,6 +16739,10 @@ msgstr "Nastavení → Vzdálený přístup → „Povolit vzdálený přístup 
 
 msgid "Settings are not available for this device"
 msgstr "Nastavení nejsou pro toto zařízení dostupná"
+
+#. placeholder {0}: host.name
+msgid "Settings for {0}"
+msgstr "Nastavení pro {0}"
 
 msgid "Settings..."
 msgstr "Nastavení..."
@@ -18727,6 +18757,9 @@ msgstr "Hostitel se neobnovil do patnácti minut."
 msgid "The host hasn't answered."
 msgstr "Host neodpověděl."
 
+msgid "The host is offline."
+msgstr "Hostitel je offline."
+
 msgid "The host is online. Pick it when you create a workspace."
 msgstr "Host je online. Vyberte ho při vytváření pracovního prostoru."
 
@@ -19091,6 +19124,9 @@ msgstr "Tento hostitel je příliš starý na ukládání úkolů."
 msgid "This host needs an update"
 msgstr "Tento host potřebuje aktualizaci"
 
+msgid "This host runs an older host service. Update it to see its load."
+msgstr "Tento hostitel používá starší host service. Aktualizujte ji, abyste viděli jeho zatížení."
+
 msgid "This host runs an older Superset. Update the app to see insights."
 msgstr "Tento hostitel používá starší Superset. Aktualizujte aplikaci, abyste viděli přehledy."
 
@@ -19360,6 +19396,9 @@ msgstr "Tiket: {0}"
 
 msgid "Tier"
 msgstr "Tarif"
+
+msgid "Tight: close idle agents before starting another"
+msgstr "Těsno: před spuštěním dalšího zavřete nečinné agenty"
 
 msgid "Time"
 msgstr "Čas"
@@ -19923,6 +19962,9 @@ msgstr "Zrušit ztlumení oznámení"
 
 msgid "Unnamed key"
 msgstr "Nepojmenovaný klíč"
+
+msgid "Unnamed workspace"
+msgstr "Nepojmenovaný pracovní prostor"
 
 msgid "Unpaid"
 msgstr "Nezaplacená"

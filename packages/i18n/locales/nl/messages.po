@@ -111,6 +111,8 @@ msgstr "{0, plural, one {# actieve poort — details tonen} other {# actieve poo
 msgid "{0, plural, one {# agent needs you} other {# agents need you}}"
 msgstr "{0, plural, one {# agent heeft je nodig} other {# agents hebben je nodig}}"
 
+#. placeholder {0}: data.metrics.agents
+#. placeholder {0}: metrics.agents
 #. placeholder {0}: person.runningAgentCount
 msgid "{0, plural, one {# agent} other {# agents}}"
 msgstr "{0, plural, one {# agent} other {# agents}}"
@@ -5477,6 +5479,9 @@ msgstr "Kan de server niet bereiken."
 msgid "Could not reach the workspace host"
 msgstr "Kan de werkruimte-host niet bereiken"
 
+msgid "Could not reach this host."
+msgstr "Kan deze host niet bereiken."
+
 msgid "Could not reach this workspace's machine"
 msgstr "Kan de machine van deze werkruimte niet bereiken"
 
@@ -5491,6 +5496,9 @@ msgstr "Kan de neergezette bestanden niet lezen"
 
 msgid "Could not read the Google account. Please try again."
 msgstr "Kan het Google-account niet uitlezen. Probeer het opnieuw."
+
+msgid "Could not read the host's load."
+msgstr "Kan de belasting van de host niet lezen."
 
 msgid "Could not record cloud workspace"
 msgstr "Kan cloudwerkruimte niet vastleggen"
@@ -8602,6 +8610,9 @@ msgstr "Volledig zelfrijdend"
 msgid "Full source available on GitHub under Elastic License 2.0 (ELv2). Inspect, audit, and contribute to the code. No black boxes, no hidden functionality."
 msgstr "Volledige broncode beschikbaar op GitHub onder Elastic License 2.0 (ELv2). Bekijk, audit en draag bij aan de code. Geen black boxes, geen verborgen functionaliteit."
 
+msgid "Full: close agents before starting another"
+msgstr "Vol: sluit agents voordat je een nieuwe start"
+
 msgid "Future home for reusable agent configs."
 msgstr "Toekomstige plek voor herbruikbare agentconfiguraties."
 
@@ -8948,6 +8959,9 @@ msgstr "Kop 3"
 
 msgid "Heart"
 msgstr "Hart"
+
+msgid "Heaviest workspaces"
+msgstr "Zwaarste workspaces"
 
 msgid "Height of the rows and size of the conversation titles."
 msgstr "Hoogte van de rijen en grootte van de gesprekstitels."
@@ -10467,6 +10481,9 @@ msgstr "Actieve sessies per dag"
 
 msgid "llms.txt (index for AI agents)"
 msgstr "llms.txt (index voor AI-agents)"
+
+msgid "Load"
+msgstr "Belasting"
 
 msgid "Load (1 min)"
 msgstr "Belasting (1 min)"
@@ -14627,6 +14644,9 @@ msgstr "Radix roteert de wrapper van de tooltip-pijl per zijde,"
 msgid "Radix Tooltip docs"
 msgstr "Radix Tooltip-docs"
 
+msgid "RAM"
+msgstr "RAM"
+
 msgid "RAM in use"
 msgstr "RAM in gebruik"
 
@@ -14995,6 +15015,12 @@ msgstr "Externe toegang staat mogelijk uit"
 
 msgid "Remote branches"
 msgstr "Remote branches"
+
+msgid "Remote host load"
+msgstr "Belasting van externe hosts"
+
+msgid "Remote hosts"
+msgstr "Externe hosts"
 
 msgid "Remote MCP server — connects over HTTP"
 msgstr "Externe MCP-server — verbindt via HTTP"
@@ -16713,6 +16739,10 @@ msgstr "Instellingen → Externe toegang → “Externe toegang tot dit apparaat
 
 msgid "Settings are not available for this device"
 msgstr "Instellingen zijn niet beschikbaar voor dit apparaat"
+
+#. placeholder {0}: host.name
+msgid "Settings for {0}"
+msgstr "Instellingen voor {0}"
 
 msgid "Settings..."
 msgstr "Instellingen..."
@@ -18727,6 +18757,9 @@ msgstr "De host was na vijftien minuten nog niet terug."
 msgid "The host hasn't answered."
 msgstr "De host heeft niet geantwoord."
 
+msgid "The host is offline."
+msgstr "De host is offline."
+
 msgid "The host is online. Pick it when you create a workspace."
 msgstr "De host is online. Kies hem wanneer je een werkruimte aanmaakt."
 
@@ -19091,6 +19124,9 @@ msgstr "Deze host is te oud om to-do's te bewaren."
 msgid "This host needs an update"
 msgstr "Deze host heeft een update nodig"
 
+msgid "This host runs an older host service. Update it to see its load."
+msgstr "Deze host draait een oudere host service. Werk deze bij om de belasting te zien."
+
 msgid "This host runs an older Superset. Update the app to see insights."
 msgstr "Deze host draait een oudere Superset. Werk de app bij om inzichten te zien."
 
@@ -19360,6 +19396,9 @@ msgstr "Ticket: {0}"
 
 msgid "Tier"
 msgstr "Tier"
+
+msgid "Tight: close idle agents before starting another"
+msgstr "Krap: sluit inactieve agents voordat je een nieuwe start"
 
 msgid "Time"
 msgstr "Tijd"
@@ -19923,6 +19962,9 @@ msgstr "Dempen van meldingen opheffen"
 
 msgid "Unnamed key"
 msgstr "Naamloze sleutel"
+
+msgid "Unnamed workspace"
+msgstr "Naamloze workspace"
 
 msgid "Unpaid"
 msgstr "Onbetaald"

@@ -111,6 +111,8 @@ msgstr "{0, plural, one {# etkin port — ayrıntıları göster} other {# etkin
 msgid "{0, plural, one {# agent needs you} other {# agents need you}}"
 msgstr "{0, plural, one {# ajan sizi bekliyor} other {# ajan sizi bekliyor}}"
 
+#. placeholder {0}: data.metrics.agents
+#. placeholder {0}: metrics.agents
 #. placeholder {0}: person.runningAgentCount
 msgid "{0, plural, one {# agent} other {# agents}}"
 msgstr "{0, plural, one {# ajan} other {# ajan}}"
@@ -5477,6 +5479,9 @@ msgstr "Sunucuya ulaşılamadı."
 msgid "Could not reach the workspace host"
 msgstr "Çalışma alanı sunucusuna ulaşılamadı"
 
+msgid "Could not reach this host."
+msgstr "Bu ana bilgisayara ulaşılamadı."
+
 msgid "Could not reach this workspace's machine"
 msgstr "Bu çalışma alanının makinesine erişilemedi"
 
@@ -5491,6 +5496,9 @@ msgstr "Bırakılan dosyalar okunamadı"
 
 msgid "Could not read the Google account. Please try again."
 msgstr "Google hesabı okunamadı. Lütfen yeniden deneyin."
+
+msgid "Could not read the host's load."
+msgstr "Ana makine yükü okunamadı."
 
 msgid "Could not record cloud workspace"
 msgstr "Bulut çalışma alanı kaydedilemedi"
@@ -8602,6 +8610,9 @@ msgstr "Tam otonomi"
 msgid "Full source available on GitHub under Elastic License 2.0 (ELv2). Inspect, audit, and contribute to the code. No black boxes, no hidden functionality."
 msgstr "Tüm kaynak kodu GitHub'da Elastic License 2.0 (ELv2) altında mevcuttur. Kodu inceleyin, denetleyin ve katkıda bulunun. Kara kutu yok, gizli işlev yok."
 
+msgid "Full: close agents before starting another"
+msgstr "Dolu: başka bir ajan başlatmadan önce ajanları kapatın"
+
 msgid "Future home for reusable agent configs."
 msgstr "Yeniden kullanılabilir ajan yapılandırmalarının gelecekteki evi."
 
@@ -8948,6 +8959,9 @@ msgstr "Başlık 3"
 
 msgid "Heart"
 msgstr "Kalp"
+
+msgid "Heaviest workspaces"
+msgstr "En ağır çalışma alanları"
 
 msgid "Height of the rows and size of the conversation titles."
 msgstr "Satır yüksekliği ve konuşma başlıklarının boyutu."
@@ -10467,6 +10481,9 @@ msgstr "Günlük etkin oturum"
 
 msgid "llms.txt (index for AI agents)"
 msgstr "llms.txt (AI ajanları için dizin)"
+
+msgid "Load"
+msgstr "Yük"
 
 msgid "Load (1 min)"
 msgstr "Yük (1 dk)"
@@ -14627,6 +14644,9 @@ msgstr "Radix, tooltip ok sarmalayıcısını her yön için döndürür,"
 msgid "Radix Tooltip docs"
 msgstr "Radix Tooltip belgeleri"
 
+msgid "RAM"
+msgstr "RAM"
+
 msgid "RAM in use"
 msgstr "Kullanımdaki RAM"
 
@@ -14995,6 +15015,12 @@ msgstr "Uzaktan erişim kapalı olabilir"
 
 msgid "Remote branches"
 msgstr "Uzak dallar"
+
+msgid "Remote host load"
+msgstr "Uzak ana makine yükü"
+
+msgid "Remote hosts"
+msgstr "Uzak ana makineler"
 
 msgid "Remote MCP server — connects over HTTP"
 msgstr "Uzak MCP sunucusu — HTTP üzerinden bağlanır"
@@ -16713,6 +16739,10 @@ msgstr "Ayarlar → Uzaktan erişim → “Bu cihaza röle üzerinden uzaktan er
 
 msgid "Settings are not available for this device"
 msgstr "Bu cihaz için ayarlar kullanılamıyor"
+
+#. placeholder {0}: host.name
+msgid "Settings for {0}"
+msgstr "{0} ayarları"
 
 msgid "Settings..."
 msgstr "Ayarlar..."
@@ -18727,6 +18757,9 @@ msgstr "Ana makine on beş dakika içinde geri gelmedi."
 msgid "The host hasn't answered."
 msgstr "Host yanıt vermedi."
 
+msgid "The host is offline."
+msgstr "Ana makine çevrimdışı."
+
 msgid "The host is online. Pick it when you create a workspace."
 msgstr "Host çevrimiçi. Bir çalışma alanı oluştururken onu seç."
 
@@ -19091,6 +19124,9 @@ msgstr "Bu ana bilgisayar yapılacakları saklamak için çok eski."
 msgid "This host needs an update"
 msgstr "Bu host'un güncellenmesi gerekiyor"
 
+msgid "This host runs an older host service. Update it to see its load."
+msgstr "Bu ana makine eski bir host service çalıştırıyor. Yükünü görmek için güncelleyin."
+
 msgid "This host runs an older Superset. Update the app to see insights."
 msgstr "Bu ana bilgisayarda eski bir Superset çalışıyor. İçgörüleri görmek için uygulamayı güncelleyin."
 
@@ -19360,6 +19396,9 @@ msgstr "Bilet: {0}"
 
 msgid "Tier"
 msgstr "Katman"
+
+msgid "Tight: close idle agents before starting another"
+msgstr "Sıkışık: başka bir ajan başlatmadan önce boştaki ajanları kapatın"
 
 msgid "Time"
 msgstr "Zaman"
@@ -19923,6 +19962,9 @@ msgstr "Bildirimlerin sesini aç"
 
 msgid "Unnamed key"
 msgstr "Adsız anahtar"
+
+msgid "Unnamed workspace"
+msgstr "Adsız çalışma alanı"
 
 msgid "Unpaid"
 msgstr "Ödenmemiş"

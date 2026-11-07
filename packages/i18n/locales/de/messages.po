@@ -111,6 +111,8 @@ msgstr "{0, plural, one {# aktiver Port — Details anzeigen} other {# aktive Po
 msgid "{0, plural, one {# agent needs you} other {# agents need you}}"
 msgstr "{0, plural, one {# Agent braucht dich} other {# Agenten brauchen dich}}"
 
+#. placeholder {0}: data.metrics.agents
+#. placeholder {0}: metrics.agents
 #. placeholder {0}: person.runningAgentCount
 msgid "{0, plural, one {# agent} other {# agents}}"
 msgstr "{0, plural, one {# Agent} other {# Agenten}}"
@@ -5477,6 +5479,9 @@ msgstr "Server nicht erreichbar."
 msgid "Could not reach the workspace host"
 msgstr "Arbeitsbereich-Host nicht erreichbar"
 
+msgid "Could not reach this host."
+msgstr "Dieser Host ist nicht erreichbar."
+
 msgid "Could not reach this workspace's machine"
 msgstr "Der Rechner dieses Arbeitsbereichs war nicht erreichbar"
 
@@ -5491,6 +5496,9 @@ msgstr "Die abgelegten Dateien konnten nicht gelesen werden"
 
 msgid "Could not read the Google account. Please try again."
 msgstr "Das Google-Konto konnte nicht gelesen werden. Bitte versuche es erneut."
+
+msgid "Could not read the host's load."
+msgstr "Die Auslastung des Hosts konnte nicht gelesen werden."
 
 msgid "Could not record cloud workspace"
 msgstr "Cloud-Arbeitsbereich konnte nicht erfasst werden"
@@ -8602,6 +8610,9 @@ msgstr "Vollständig autonom"
 msgid "Full source available on GitHub under Elastic License 2.0 (ELv2). Inspect, audit, and contribute to the code. No black boxes, no hidden functionality."
 msgstr "Vollständiger Quellcode auf GitHub unter der Elastic License 2.0 (ELv2). Sieh ihn dir an, prüfe ihn, trag etwas bei. Keine Blackbox, keine versteckten Funktionen."
 
+msgid "Full: close agents before starting another"
+msgstr "Voll: Schließe Agenten, bevor du einen weiteren startest"
+
 msgid "Future home for reusable agent configs."
 msgstr "Künftiger Ort für wiederverwendbare Agenten-Konfigurationen."
 
@@ -8948,6 +8959,9 @@ msgstr "Überschrift 3"
 
 msgid "Heart"
 msgstr "Herz"
+
+msgid "Heaviest workspaces"
+msgstr "Speicherintensivste Workspaces"
 
 msgid "Height of the rows and size of the conversation titles."
 msgstr "Höhe der Zeilen und Größe der Unterhaltungstitel."
@@ -10467,6 +10481,9 @@ msgstr "Aktive Sitzungen pro Tag"
 
 msgid "llms.txt (index for AI agents)"
 msgstr "llms.txt (Index für KI-Agenten)"
+
+msgid "Load"
+msgstr "Auslastung"
 
 msgid "Load (1 min)"
 msgstr "Last (1 min)"
@@ -14627,6 +14644,9 @@ msgstr "Radix dreht den Wrapper des Tooltip-Pfeils je nach Seite,"
 msgid "Radix Tooltip docs"
 msgstr "Radix-Tooltip-Doku"
 
+msgid "RAM"
+msgstr "RAM"
+
 msgid "RAM in use"
 msgstr "Belegter RAM"
 
@@ -14995,6 +15015,12 @@ msgstr "Der Fernzugriff ist möglicherweise aus"
 
 msgid "Remote branches"
 msgstr "Remote-Branches"
+
+msgid "Remote host load"
+msgstr "Auslastung entfernter Hosts"
+
+msgid "Remote hosts"
+msgstr "Entfernte Hosts"
 
 msgid "Remote MCP server — connects over HTTP"
 msgstr "Remote-MCP-Server — verbindet über HTTP"
@@ -16713,6 +16739,10 @@ msgstr "Einstellungen → Fernzugriff → „Fernzugriff auf dieses Gerät über
 
 msgid "Settings are not available for this device"
 msgstr "Für dieses Gerät sind keine Einstellungen verfügbar"
+
+#. placeholder {0}: host.name
+msgid "Settings for {0}"
+msgstr "Einstellungen für {0}"
 
 msgid "Settings..."
 msgstr "Einstellungen..."
@@ -18727,6 +18757,9 @@ msgstr "Der Host war nach fünfzehn Minuten noch nicht wieder erreichbar."
 msgid "The host hasn't answered."
 msgstr "Der Host hat nicht geantwortet."
 
+msgid "The host is offline."
+msgstr "Der Host ist offline."
+
 msgid "The host is online. Pick it when you create a workspace."
 msgstr "Der Host ist online. Wähle ihn beim Erstellen eines Arbeitsbereichs aus."
 
@@ -19091,6 +19124,9 @@ msgstr "Dieser Host ist zu alt, um To-dos zu speichern."
 msgid "This host needs an update"
 msgstr "Dieser Host braucht ein Update"
 
+msgid "This host runs an older host service. Update it to see its load."
+msgstr "Dieser Host verwendet einen älteren Host-Service. Aktualisiere ihn, um seine Auslastung zu sehen."
+
 msgid "This host runs an older Superset. Update the app to see insights."
 msgstr "Auf diesem Host läuft ein älteres Superset. Aktualisiere die App, um die Einblicke zu sehen."
 
@@ -19360,6 +19396,9 @@ msgstr "Ticket: {0}"
 
 msgid "Tier"
 msgstr "Stufe"
+
+msgid "Tight: close idle agents before starting another"
+msgstr "Knapp: Schließe inaktive Agenten, bevor du einen weiteren startest"
 
 msgid "Time"
 msgstr "Zeit"
@@ -19923,6 +19962,9 @@ msgstr "Stummschaltung aufheben"
 
 msgid "Unnamed key"
 msgstr "Unbenannter Schlüssel"
+
+msgid "Unnamed workspace"
+msgstr "Unbenannter Workspace"
 
 msgid "Unpaid"
 msgstr "Unbezahlt"

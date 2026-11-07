@@ -111,6 +111,8 @@ msgstr "{0, plural, one {# active port — show details} other {# active ports �
 msgid "{0, plural, one {# agent needs you} other {# agents need you}}"
 msgstr "{0, plural, one {# agent needs you} other {# agents need you}}"
 
+#. placeholder {0}: data.metrics.agents
+#. placeholder {0}: metrics.agents
 #. placeholder {0}: person.runningAgentCount
 msgid "{0, plural, one {# agent} other {# agents}}"
 msgstr "{0, plural, one {# agent} other {# agents}}"
@@ -5477,6 +5479,9 @@ msgstr "Could not reach the server."
 msgid "Could not reach the workspace host"
 msgstr "Could not reach the workspace host"
 
+msgid "Could not reach this host."
+msgstr "Could not reach this host."
+
 msgid "Could not reach this workspace's machine"
 msgstr "Could not reach this workspace's machine"
 
@@ -5491,6 +5496,9 @@ msgstr "Could not read the dropped files"
 
 msgid "Could not read the Google account. Please try again."
 msgstr "Could not read the Google account. Please try again."
+
+msgid "Could not read the host's load."
+msgstr "Could not read the host's load."
 
 msgid "Could not record cloud workspace"
 msgstr "Could not record cloud workspace"
@@ -8602,6 +8610,9 @@ msgstr "Full self-driving"
 msgid "Full source available on GitHub under Elastic License 2.0 (ELv2). Inspect, audit, and contribute to the code. No black boxes, no hidden functionality."
 msgstr "Full source available on GitHub under Elastic License 2.0 (ELv2). Inspect, audit, and contribute to the code. No black boxes, no hidden functionality."
 
+msgid "Full: close agents before starting another"
+msgstr "Full: close agents before starting another"
+
 msgid "Future home for reusable agent configs."
 msgstr "Future home for reusable agent configs."
 
@@ -8948,6 +8959,9 @@ msgstr "Heading 3"
 
 msgid "Heart"
 msgstr "Heart"
+
+msgid "Heaviest workspaces"
+msgstr "Heaviest workspaces"
 
 msgid "Height of the rows and size of the conversation titles."
 msgstr "Height of the rows and size of the conversation titles."
@@ -10467,6 +10481,9 @@ msgstr "Live sessions per day"
 
 msgid "llms.txt (index for AI agents)"
 msgstr "llms.txt (index for AI agents)"
+
+msgid "Load"
+msgstr "Load"
 
 msgid "Load (1 min)"
 msgstr "Load (1 min)"
@@ -14627,6 +14644,9 @@ msgstr "Radix rotates the tooltip arrow wrapper per side,"
 msgid "Radix Tooltip docs"
 msgstr "Radix Tooltip docs"
 
+msgid "RAM"
+msgstr "RAM"
+
 msgid "RAM in use"
 msgstr "RAM in use"
 
@@ -14995,6 +15015,12 @@ msgstr "Remote Access may be off"
 
 msgid "Remote branches"
 msgstr "Remote branches"
+
+msgid "Remote host load"
+msgstr "Remote host load"
+
+msgid "Remote hosts"
+msgstr "Remote hosts"
 
 msgid "Remote MCP server — connects over HTTP"
 msgstr "Remote MCP server — connects over HTTP"
@@ -16713,6 +16739,10 @@ msgstr "Settings → Remote Access → “Allow remote access to this device via
 
 msgid "Settings are not available for this device"
 msgstr "Settings are not available for this device"
+
+#. placeholder {0}: host.name
+msgid "Settings for {0}"
+msgstr "Settings for {0}"
 
 msgid "Settings..."
 msgstr "Settings..."
@@ -18727,6 +18757,9 @@ msgstr "The host did not come back within fifteen minutes."
 msgid "The host hasn't answered."
 msgstr "The host hasn't answered."
 
+msgid "The host is offline."
+msgstr "The host is offline."
+
 msgid "The host is online. Pick it when you create a workspace."
 msgstr "The host is online. Pick it when you create a workspace."
 
@@ -19091,6 +19124,9 @@ msgstr "This host is too old to keep to-dos."
 msgid "This host needs an update"
 msgstr "This host needs an update"
 
+msgid "This host runs an older host service. Update it to see its load."
+msgstr "This host runs an older host service. Update it to see its load."
+
 msgid "This host runs an older Superset. Update the app to see insights."
 msgstr "This host runs an older Superset. Update the app to see insights."
 
@@ -19360,6 +19396,9 @@ msgstr "Ticket: {0}"
 
 msgid "Tier"
 msgstr "Tier"
+
+msgid "Tight: close idle agents before starting another"
+msgstr "Tight: close idle agents before starting another"
 
 msgid "Time"
 msgstr "Time"
@@ -19923,6 +19962,9 @@ msgstr "Unmute notifications"
 
 msgid "Unnamed key"
 msgstr "Unnamed key"
+
+msgid "Unnamed workspace"
+msgstr "Unnamed workspace"
 
 msgid "Unpaid"
 msgstr "Unpaid"
