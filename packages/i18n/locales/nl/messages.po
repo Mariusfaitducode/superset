@@ -10700,6 +10700,9 @@ msgstr "Machine-onafhankelijke cloudwerkruimtes die in seconden opstarten en met
 msgid "Magenta"
 msgstr "Magenta"
 
+msgid "Mail"
+msgstr "Mail"
+
 msgid "Main"
 msgstr "Main"
 
@@ -10917,6 +10920,9 @@ msgstr "Maak kennis met het team"
 
 msgid "Meet the team behind Superset, building parallel coding agents for developers."
 msgstr "Maak kennis met het team achter Superset, dat parallelle coding agents voor developers bouwt."
+
+msgid "Meeting"
+msgstr "Vergadering"
 
 msgid "Member"
 msgstr "Lid"

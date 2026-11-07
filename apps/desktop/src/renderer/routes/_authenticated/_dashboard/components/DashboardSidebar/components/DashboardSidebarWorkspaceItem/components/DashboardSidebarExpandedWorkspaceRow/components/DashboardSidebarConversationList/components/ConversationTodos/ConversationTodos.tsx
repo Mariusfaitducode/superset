@@ -82,6 +82,10 @@ function TodoDetails({
 		{ value: "code", label: t`Code` },
 		{ value: "message", label: t`Message` },
 		{ value: "review", label: t`Review` },
+		{ value: "mail", label: t`Mail` },
+		{ value: "contact", label: t`Contact` },
+		{ value: "post", label: t`Post` },
+		{ value: "meeting", label: t`Meeting` },
 		{ value: "other", label: t`Other` },
 	];
 	const commitLink = () => {
@@ -127,6 +131,8 @@ function TodoDetails({
 					type="single"
 					size="sm"
 					variant="outline"
+					spacing={1}
+					className="flex-wrap"
 					value={todo.kind}
 					onValueChange={(value) => value && onChange({ kind: value as Kind })}
 				>

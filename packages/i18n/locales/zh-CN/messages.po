@@ -10700,6 +10700,9 @@ msgstr "不绑定机器的云端工作区，几秒即可启动，还能分享给
 msgid "Magenta"
 msgstr "品红"
 
+msgid "Mail"
+msgstr "邮件"
+
 msgid "Main"
 msgstr "主进程"
 
@@ -10917,6 +10920,9 @@ msgstr "认识团队"
 
 msgid "Meet the team behind Superset, building parallel coding agents for developers."
 msgstr "认识 Superset 背后的团队，我们为开发者打造并行编码智能体。"
+
+msgid "Meeting"
+msgstr "会议"
 
 msgid "Member"
 msgstr "成员"

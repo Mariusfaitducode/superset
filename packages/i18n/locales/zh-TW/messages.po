@@ -10700,6 +10700,9 @@ msgstr "不繫結機器的雲端工作區，幾秒即可啟動，還能分享給
 msgid "Magenta"
 msgstr "品紅"
 
+msgid "Mail"
+msgstr "郵件"
+
 msgid "Main"
 msgstr "主處理程序"
 
@@ -10917,6 +10920,9 @@ msgstr "認識團隊"
 
 msgid "Meet the team behind Superset, building parallel coding agents for developers."
 msgstr "認識 Superset 背後的團隊，為開發者打造平行編碼代理。"
+
+msgid "Meeting"
+msgstr "會議"
 
 msgid "Member"
 msgstr "成員"

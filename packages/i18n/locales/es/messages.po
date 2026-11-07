@@ -10700,6 +10700,9 @@ msgstr "Espacios de trabajo en la nube, sin atarse a una máquina, que arrancan 
 msgid "Magenta"
 msgstr "Magenta"
 
+msgid "Mail"
+msgstr "Correo"
+
 msgid "Main"
 msgstr "Principal"
 
@@ -10917,6 +10920,9 @@ msgstr "Conoce al equipo"
 
 msgid "Meet the team behind Superset, building parallel coding agents for developers."
 msgstr "Conoce al equipo detrás de Superset, que crea agentes de codificación en paralelo para desarrolladores."
+
+msgid "Meeting"
+msgstr "Reunión"
 
 msgid "Member"
 msgstr "Miembro"

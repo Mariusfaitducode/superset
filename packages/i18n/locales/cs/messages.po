@@ -10700,6 +10700,9 @@ msgstr "Cloudové pracovní prostory nevázané na počítač, které naběhnou 
 msgid "Magenta"
 msgstr "Purpurová"
 
+msgid "Mail"
+msgstr "E-mail"
+
 msgid "Main"
 msgstr "Hlavní"
 
@@ -10917,6 +10920,9 @@ msgstr "Poznejte tým"
 
 msgid "Meet the team behind Superset, building parallel coding agents for developers."
 msgstr "Poznejte tým za Supersetem, který staví paralelní kódovací agenty pro vývojáře."
+
+msgid "Meeting"
+msgstr "Schůzka"
 
 msgid "Member"
 msgstr "Člen"

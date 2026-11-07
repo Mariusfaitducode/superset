@@ -10700,6 +10700,9 @@ msgstr "Workspace cloud yang tidak terikat mesin, siap dalam hitungan detik dan 
 msgid "Magenta"
 msgstr "Magenta"
 
+msgid "Mail"
+msgstr "Email"
+
 msgid "Main"
 msgstr "Main"
 
@@ -10917,6 +10920,9 @@ msgstr "Kenali tim"
 
 msgid "Meet the team behind Superset, building parallel coding agents for developers."
 msgstr "Kenali tim di balik Superset, yang membangun agen coding paralel untuk developer."
+
+msgid "Meeting"
+msgstr "Rapat"
 
 msgid "Member"
 msgstr "Anggota"

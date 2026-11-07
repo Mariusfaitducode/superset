@@ -10700,6 +10700,9 @@ msgstr "Saniyeler içinde açılan ve takım arkadaşlarınızla paylaşılabile
 msgid "Magenta"
 msgstr "Macenta"
 
+msgid "Mail"
+msgstr "E-posta"
+
 msgid "Main"
 msgstr "Ana"
 
@@ -10917,6 +10920,9 @@ msgstr "Ekiple tanışın"
 
 msgid "Meet the team behind Superset, building parallel coding agents for developers."
 msgstr "Geliştiriciler için paralel kodlama ajanları geliştiren Superset ekibiyle tanışın."
+
+msgid "Meeting"
+msgstr "Toplantı"
 
 msgid "Member"
 msgstr "Üye"

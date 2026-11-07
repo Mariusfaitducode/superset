@@ -10700,6 +10700,9 @@ msgstr "Workspace trên cloud không phụ thuộc máy, dựng trong vài giây
 msgid "Magenta"
 msgstr "Đỏ tía"
 
+msgid "Mail"
+msgstr "Thư"
+
 msgid "Main"
 msgstr "Main"
 
@@ -10917,6 +10920,9 @@ msgstr "Gặp gỡ đội ngũ"
 
 msgid "Meet the team behind Superset, building parallel coding agents for developers."
 msgstr "Gặp gỡ đội ngũ đứng sau Superset, xây dựng các agent lập trình song song cho lập trình viên."
+
+msgid "Meeting"
+msgstr "Cuộc họp"
 
 msgid "Member"
 msgstr "Thành viên"
