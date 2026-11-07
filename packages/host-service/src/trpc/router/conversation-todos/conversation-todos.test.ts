@@ -79,6 +79,23 @@ describe("conversationTodosRouter", () => {
 		expect(changed).toEqual(["conversation-todos", "conversation-todos"]);
 	});
 
+	test("archives instead of deleting, and restores", async () => {
+		const todo = await caller.add({
+			workspaceId: "ws-archive",
+			terminalId: "term",
+			text: "Keep a trace",
+		});
+		await caller.archive({ id: todo.id });
+		expect(await caller.list({ workspaceId: "ws-archive" })).toEqual([]);
+		expect(
+			await caller.list({ workspaceId: "ws-archive", archived: true }),
+		).toMatchObject([{ id: todo.id, archivedBy: "user" }]);
+		await caller.restore({ id: todo.id });
+		expect(await caller.list({ workspaceId: "ws-archive" })).toMatchObject([
+			{ id: todo.id, archivedAt: null },
+		]);
+	});
+
 	test("answers NOT_FOUND for an unknown id", async () => {
 		await expect(
 			caller.setDone({ id: "missing", done: true }),

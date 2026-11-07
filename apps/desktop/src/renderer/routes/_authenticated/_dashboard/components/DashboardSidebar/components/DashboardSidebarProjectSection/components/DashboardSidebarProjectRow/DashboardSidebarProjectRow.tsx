@@ -66,7 +66,7 @@ export const DashboardSidebarProjectRow = forwardRef<
 							}
 				}
 				className={cn(
-					"group mx-2 flex h-7 items-center rounded-md pl-2 pr-1 text-[13px] font-medium",
+					"group mx-2 flex h-[var(--sb-row-h)] items-center rounded-md pl-2 pr-1 text-[13px] font-medium",
 					"hover:bg-fill-hover transition-colors",
 					className,
 				)}

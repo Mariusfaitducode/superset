@@ -32,6 +32,12 @@ import {
 	type ConversationState,
 	isWaitingOnUser,
 } from "renderer/routes/_authenticated/_dashboard/components/DashboardSidebar/components/DashboardSidebarWorkspaceItem/components/DashboardSidebarExpandedWorkspaceRow/components/DashboardSidebarConversationList/utils/conversation-state";
+import {
+	useLabelsByHost,
+	type WorkspaceLabel,
+	workspaceLabels,
+} from "renderer/routes/_authenticated/_dashboard/components/DashboardSidebar/components/WorkspaceLabels";
+import { LABEL_PILL_CLASS } from "renderer/routes/_authenticated/_dashboard/components/DashboardSidebar/components/WorkspaceLabels/labels";
 import { navigateToV2Workspace } from "renderer/routes/_authenticated/_dashboard/utils/workspace-navigation";
 import { useConversationRecencyStore } from "renderer/stores/conversation-recency";
 import { useVisibleTerminalsStore } from "renderer/stores/visible-terminals";
@@ -102,6 +108,13 @@ function SwitcherContent({
 	// Minutes are the finest unit shown.
 	const now = useNow(30_000).getTime();
 	const [query, setQuery] = useState("");
+	const labelsByHost = useLabelsByHost(
+		useMemo(
+			() => conversations.map((conversation) => conversation.hostId),
+			[conversations],
+		),
+		true,
+	);
 	const sections = useMemo(
 		() =>
 			arrangeConversations({
@@ -178,6 +191,10 @@ function SwitcherContent({
 							<ConversationRow
 								key={conversation.terminalId}
 								conversation={conversation}
+								labels={workspaceLabels(
+									labelsByHost.get(conversation.hostId),
+									conversation.workspaceId,
+								)}
 								stateLabel={stateLabel[conversation.state]}
 								now={now}
 								isCurrent={conversation.terminalId === currentTerminalId}
@@ -213,14 +230,18 @@ function Kbd({ children }: { children: string }) {
 	);
 }
 
+const MAX_ROW_LABELS = 3;
+
 function ConversationRow({
 	conversation,
+	labels,
 	stateLabel,
 	now,
 	isCurrent,
 	onSelect,
 }: {
 	conversation: AgentConversation;
+	labels: WorkspaceLabel[];
 	stateLabel: string;
 	now: number;
 	isCurrent: boolean;
@@ -256,8 +277,33 @@ function ConversationRow({
 				<span className="truncate text-[13px] text-foreground">
 					{conversation.title}
 				</span>
-				<span className="truncate text-[11px] text-muted-foreground">
-					{isCurrent ? `${place} · ${t`On screen`}` : place}
+				<span className="flex min-w-0 items-center gap-1.5 text-[11px] text-muted-foreground">
+					<span className="min-w-0 truncate">
+						{isCurrent ? `${place} · ${t`On screen`}` : place}
+					</span>
+					{labels.length > 0 && (
+						<span
+							className="flex shrink-0 items-center gap-0.5"
+							title={labels.map((label) => label.name).join(", ")}
+						>
+							{labels.slice(0, MAX_ROW_LABELS).map((label) => (
+								<span
+									key={label.id}
+									className={cn(
+										"max-w-24 truncate rounded px-1 text-[10px] leading-4",
+										LABEL_PILL_CLASS[label.color],
+									)}
+								>
+									{label.name}
+								</span>
+							))}
+							{labels.length > MAX_ROW_LABELS && (
+								<span className="text-[10px]">
+									+{labels.length - MAX_ROW_LABELS}
+								</span>
+							)}
+						</span>
+					)}
 				</span>
 			</span>
 			<span className="flex shrink-0 flex-col items-end text-[11px] text-muted-foreground">

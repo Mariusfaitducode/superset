@@ -1,5 +1,11 @@
 import { afterEach, beforeEach, describe, expect, test } from "bun:test";
-import { mkdtempSync, readFileSync, rmSync } from "node:fs";
+import {
+	mkdirSync,
+	mkdtempSync,
+	readFileSync,
+	rmSync,
+	writeFileSync,
+} from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import {
@@ -103,6 +109,39 @@ describe("WorkspaceNoteStore", () => {
 		const list = store.list({ workspaceId });
 		expect(list).toHaveLength(MAX_NOTES_PER_WORKSPACE);
 		expect(list[0]?.text).toBe("i1");
+	});
+
+	test("pins a note as context, and only its author agent can unpin it", () => {
+		const [pinned] = store.add({
+			actor: "agent",
+			workspaceId,
+			items: [{ text: "Brief", kind: "context" }],
+		});
+		if (!pinned) throw new Error("not added");
+		expect(pinned.kind).toBe("context");
+		expect(store.update("agent", pinned.id, { kind: "note" }).kind).toBe(
+			"note",
+		);
+		const user = addOne("user", "Decision");
+		expect(user.kind).toBe("note");
+		expect(() => store.update("agent", user.id, { kind: "context" })).toThrow(
+			NotePermissionError,
+		);
+		expect(store.update("user", user.id, { kind: "context" }).kind).toBe(
+			"context",
+		);
+	});
+
+	test("reads notes saved before kinds existed as plain notes", () => {
+		mkdirSync(join(dir, "state"), { recursive: true });
+		writeFileSync(
+			filePath,
+			JSON.stringify({
+				version: 1,
+				notes: [{ id: "old", workspaceId, text: "Old", status: "open" }],
+			}),
+		);
+		expect(new WorkspaceNoteStore(filePath).list()[0]?.kind).toBe("note");
 	});
 
 	test("starts empty on a missing file", () => {

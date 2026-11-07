@@ -28,7 +28,11 @@ export interface NoteActions {
 	add: (texts: string[]) => Promise<void>;
 	update: (
 		id: string,
-		fields: { text?: string; details?: string | null },
+		fields: {
+			text?: string;
+			details?: string | null;
+			kind?: WorkspaceNote["kind"];
+		},
 	) => Promise<void>;
 	setStatus: (id: string, status: NoteStatus) => Promise<void>;
 	remove: (id: string) => Promise<void>;

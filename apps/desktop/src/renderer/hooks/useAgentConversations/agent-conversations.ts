@@ -19,6 +19,7 @@ export interface AgentBinding {
 
 export interface ConversationWorkspace {
 	name: string;
+	hostId: string;
 	projectName: string | null;
 }
 
@@ -34,6 +35,8 @@ export interface AgentConversation {
 	agentLabel: string;
 	title: string;
 	workspaceName: string;
+	/** The host keeping the workspace, for its labels. */
+	hostId: string;
 	projectName: string | null;
 	state: ConversationState;
 	/** Host clock, ms: when the conversation entered its current state. */
@@ -78,6 +81,7 @@ export function buildAgentConversations({
 				agentLabel,
 			}),
 			workspaceName: workspace.name,
+			hostId: workspace.hostId,
 			projectName: workspace.projectName,
 			state: deriveConversationState({
 				lastEventType: binding.lastEventType,

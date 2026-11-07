@@ -1,24 +1,23 @@
+import { plural } from "@lingui/core/macro";
 import { useLingui } from "@lingui/react/macro";
-import { formatCompactRelativeTime } from "@superset/i18n/format";
 import { cn } from "@superset/ui/utils";
 import { useNavigate } from "@tanstack/react-router";
 import {
-	type Ref,
 	useCallback,
 	useEffect,
 	useId,
+	useLayoutEffect,
 	useMemo,
 	useRef,
 	useState,
 } from "react";
 import { createPortal } from "react-dom";
-import { LuBot } from "react-icons/lu";
+import { LuBot, LuFlag, LuGitBranch, LuListChecks } from "react-icons/lu";
 import { usePresetIcon } from "renderer/assets/app-icons/preset-icons";
 import {
 	type AgentConversation,
 	useAgentConversations,
 } from "renderer/hooks/useAgentConversations";
-import { useNow } from "renderer/hooks/useNow";
 import { useHotkey } from "renderer/hotkeys";
 import { navigateToV2Workspace } from "renderer/routes/_authenticated/_dashboard/utils/workspace-navigation";
 import { StatusIndicator } from "renderer/screens/main/components/StatusIndicator";
@@ -28,9 +27,12 @@ import {
 } from "renderer/stores/workspace-recency";
 import type { ActivePaneStatus } from "shared/tabs-types";
 import { useSidebarWorkspaceStatuses } from "../../providers/DashboardSidebarWorkspaceStatusProvider";
-import type { ActiveWorkspaceSwitcherOption } from "../DashboardSidebarActiveWorkspaceSwitcher";
+import type { ActiveWorkspaceSwitcherOption } from "../../utils/buildWorkspaceSwitcherOptions";
 import { DOT_CLASS } from "../DashboardSidebarWorkspaceItem/components/DashboardSidebarExpandedWorkspaceRow/components/DashboardSidebarConversationList/DashboardSidebarConversationList";
-import { isWaitingOnUser } from "../DashboardSidebarWorkspaceItem/components/DashboardSidebarExpandedWorkspaceRow/components/DashboardSidebarConversationList/utils/conversation-state";
+import type { WorkspaceLabel } from "../WorkspaceLabels";
+import { LABEL_PILL_CLASS } from "../WorkspaceLabels/labels";
+import { slideCardWindow } from "./utils/cardWindow";
+import { summarizeAgents } from "./utils/summarizeAgents";
 
 interface DashboardSidebarRecentWorkspaceSwitcherProps {
 	workspaces: ActiveWorkspaceSwitcherOption[];
@@ -40,25 +42,35 @@ interface DashboardSidebarRecentWorkspaceSwitcherProps {
 interface SwitcherSession {
 	items: ActiveWorkspaceSwitcherOption[];
 	index: number;
-	/** A conversation of the selected workspace picked with ↓, if any. */
-	conversationIndex: number | null;
+	/** First card shown when they don't all fit the window. */
+	windowStart: number;
 	/** False when rebound to a chord without a modifier: Enter commits. */
 	holdsModifier: boolean;
 	returnFocusTo: HTMLElement | null;
 }
 
-const MAX_CONVERSATIONS = 6;
-
 function holdsAnyModifier(e: KeyboardEvent): boolean {
 	return e.metaKey || e.ctrlKey || e.altKey;
+}
+
+function useViewportWidth(enabled: boolean): number {
+	const [width, setWidth] = useState(() => window.innerWidth);
+	useEffect(() => {
+		if (!enabled) return;
+		const update = () => setWidth(window.innerWidth);
+		update();
+		window.addEventListener("resize", update);
+		return () => window.removeEventListener("resize", update);
+	}, [enabled]);
+	return width;
 }
 
 /**
  * Ctrl+Tab like a browser's tab switcher: holding Ctrl shows one card per
  * workspace, most recently used first, each Tab steps one card, and releasing
  * Ctrl opens the selected workspace as it was left, so a quick Ctrl+Tab flips
- * back to the previous one. The selected workspace's conversations show
- * below the cards; ↓ picks one to open instead.
+ * back to the previous one. When the cards don't fit the window, a window of
+ * them follows the selection, with "+N" at the ends.
  */
 export function DashboardSidebarRecentWorkspaceSwitcher({
 	workspaces,
@@ -70,12 +82,11 @@ export function DashboardSidebarRecentWorkspaceSwitcher({
 	const recent = useWorkspaceRecencyStore((state) => state.recent);
 	const touch = useWorkspaceRecencyStore((state) => state.touch);
 	const conversations = useAgentConversations();
-	// Minutes are the finest unit shown.
-	const now = useNow(30_000).getTime();
 	const [session, setSession] = useState<SwitcherSession | null>(null);
 	const sessionRef = useRef<SwitcherSession | null>(null);
-	const conversationsRef = useRef<AgentConversation[]>([]);
-	conversationsRef.current = conversations;
+	const viewportWidth = useViewportWidth(session !== null);
+	const viewportWidthRef = useRef(viewportWidth);
+	viewportWidthRef.current = viewportWidth;
 	const conversationsByWorkspace = useMemo(() => {
 		const byWorkspace = new Map<string, AgentConversation[]>();
 		for (const conversation of conversations) {
@@ -95,6 +106,23 @@ export function DashboardSidebarRecentWorkspaceSwitcher({
 		setSession(next);
 	}, []);
 
+	/** Selects `index`, sliding the shown cards only if it left them. */
+	const select = useCallback(
+		(current: SwitcherSession, index: number) => {
+			updateSession({
+				...current,
+				index,
+				windowStart: slideCardWindow({
+					previousStart: current.windowStart,
+					index,
+					count: current.items.length,
+					viewportWidth: viewportWidthRef.current,
+				}).start,
+			});
+		},
+		[updateSession],
+	);
+
 	const open = (e: KeyboardEvent, backwards: boolean) => {
 		if (sessionRef.current) return;
 		const items = orderByRecency(workspaces, [
@@ -102,16 +130,19 @@ export function DashboardSidebarRecentWorkspaceSwitcher({
 			...recent,
 		]);
 		if (items.length === 0) return;
-		updateSession({
-			items,
-			index: backwards ? items.length - 1 : Math.min(1, items.length - 1),
-			conversationIndex: null,
-			holdsModifier: holdsAnyModifier(e),
-			returnFocusTo:
-				document.activeElement instanceof HTMLElement
-					? document.activeElement
-					: null,
-		});
+		select(
+			{
+				items,
+				index: 0,
+				windowStart: 0,
+				holdsModifier: holdsAnyModifier(e),
+				returnFocusTo:
+					document.activeElement instanceof HTMLElement
+						? document.activeElement
+						: null,
+			},
+			backwards ? items.length - 1 : Math.min(1, items.length - 1),
+		);
 	};
 	const hotkeyOptions = {
 		ignoreEventWhen: (e: KeyboardEvent) => e.defaultPrevented,
@@ -120,11 +151,6 @@ export function DashboardSidebarRecentWorkspaceSwitcher({
 	useHotkey("PREV_RECENT_WORKSPACE", (e) => open(e, true), hotkeyOptions);
 
 	useEffect(() => {
-		const conversationsOf = (workspaceId: string | undefined) =>
-			conversationsRef.current
-				.filter((conversation) => conversation.workspaceId === workspaceId)
-				.slice(0, MAX_CONVERSATIONS);
-
 		const close = () => {
 			const returnFocusTo = sessionRef.current?.returnFocusTo;
 			updateSession(null);
@@ -133,20 +159,8 @@ export function DashboardSidebarRecentWorkspaceSwitcher({
 		const commit = () => {
 			const current = sessionRef.current;
 			const workspace = current?.items[current.index];
-			const conversation =
-				current?.conversationIndex != null
-					? conversationsOf(workspace?.id)[current.conversationIndex]
-					: undefined;
 			close();
-			if (!workspace) return;
-			if (conversation) {
-				void navigateToV2Workspace(workspace.id, navigate, {
-					search: {
-						terminalId: conversation.terminalId,
-						focusRequestId: crypto.randomUUID(),
-					},
-				});
-			} else if (workspace.id !== activeWorkspaceId) {
+			if (workspace && workspace.id !== activeWorkspaceId) {
 				void navigateToV2Workspace(workspace.id, navigate);
 			}
 		};
@@ -154,22 +168,7 @@ export function DashboardSidebarRecentWorkspaceSwitcher({
 			const current = sessionRef.current;
 			if (!current) return;
 			const count = current.items.length;
-			updateSession({
-				...current,
-				index: (current.index + delta + count) % count,
-				conversationIndex: null,
-			});
-		};
-		const stepConversation = (delta: number) => {
-			const current = sessionRef.current;
-			if (!current) return;
-			const count = conversationsOf(current.items[current.index]?.id).length;
-			if (count === 0) return;
-			const next = (current.conversationIndex ?? -1) + delta;
-			updateSession({
-				...current,
-				conversationIndex: next < 0 ? null : Math.min(next, count - 1),
-			});
+			select(current, (current.index + delta + count) % count);
 		};
 
 		const onKeyDown = (e: KeyboardEvent) => {
@@ -179,8 +178,6 @@ export function DashboardSidebarRecentWorkspaceSwitcher({
 			if (e.key === "Tab") stepWorkspace(e.shiftKey ? -1 : 1);
 			else if (e.key === "ArrowRight") stepWorkspace(1);
 			else if (e.key === "ArrowLeft") stepWorkspace(-1);
-			else if (e.key === "ArrowDown") stepConversation(1);
-			else if (e.key === "ArrowUp") stepConversation(-1);
 			else if (e.key === "Enter") commit();
 			else if (e.key === "Escape") close();
 		};
@@ -198,30 +195,27 @@ export function DashboardSidebarRecentWorkspaceSwitcher({
 			window.removeEventListener("keyup", onKeyUp, true);
 			window.removeEventListener("blur", close);
 		};
-	}, [activeWorkspaceId, navigate, updateSession]);
+	}, [activeWorkspaceId, navigate, updateSession, select]);
 
 	const optionIdPrefix = useId();
 	const listboxRef = useRef<HTMLDivElement>(null);
-	const selectedChipRef = useRef<HTMLDivElement>(null);
 	const isOpen = session !== null;
-	const selectedIndex = session?.index;
 	useEffect(() => {
 		if (isOpen) listboxRef.current?.focus();
 	}, [isOpen]);
-	useEffect(() => {
-		if (selectedIndex === undefined) return;
-		selectedChipRef.current?.scrollIntoView({
-			block: "nearest",
-			inline: "nearest",
-		});
-	}, [selectedIndex]);
 
 	if (!session) return null;
 
-	const selected = session.items[session.index];
-	const selectedConversations =
-		conversationsByWorkspace.get(selected?.id ?? "") ?? [];
-	const hiddenCount = selectedConversations.length - MAX_CONVERSATIONS;
+	// Re-derived on each render so a resized window re-fits the strip.
+	const shown = slideCardWindow({
+		previousStart: session.windowStart,
+		index: session.index,
+		count: session.items.length,
+		viewportWidth,
+	});
+	const hiddenBefore = shown.start;
+	const hiddenAfter = session.items.length - shown.start - shown.size;
+	const isWindowed = shown.size < session.items.length;
 
 	const openWorkspace = (item: ActiveWorkspaceSwitcherOption) => {
 		updateSession(null);
@@ -231,7 +225,7 @@ export function DashboardSidebarRecentWorkspaceSwitcher({
 	};
 
 	return createPortal(
-		<div className="pointer-events-none fixed inset-0 z-50 flex flex-col items-center justify-center gap-2 px-4">
+		<div className="pointer-events-none fixed inset-0 z-50 flex items-center justify-center px-4">
 			<div
 				ref={listboxRef}
 				role="listbox"
@@ -239,77 +233,57 @@ export function DashboardSidebarRecentWorkspaceSwitcher({
 				aria-orientation="horizontal"
 				aria-activedescendant={`${optionIdPrefix}-${session.index}`}
 				aria-label={t({ message: "Switch to Recent Workspace" })}
-				className="pointer-events-auto flex max-w-full gap-2 overflow-x-auto rounded-2xl border bg-popover/95 p-2.5 text-popover-foreground shadow-2xl outline-none ring-1 ring-black/20 backdrop-blur [scrollbar-width:none]"
+				className="pointer-events-auto flex max-w-full items-stretch gap-2.5 rounded-2xl border bg-popover/95 p-2.5 text-popover-foreground shadow-2xl outline-none ring-1 ring-black/20 backdrop-blur"
 			>
-				{session.items.map((item, index) => (
-					<WorkspaceCard
-						key={item.id}
-						ref={index === session.index ? selectedChipRef : undefined}
-						id={`${optionIdPrefix}-${index}`}
-						item={item}
-						status={statuses.get(item.id)?.status ?? null}
-						conversations={conversationsByWorkspace.get(item.id) ?? []}
-						isSelected={index === session.index}
-						isCurrent={item.id === activeWorkspaceId}
-						onMouseEnter={() =>
-							updateSession({ ...session, index, conversationIndex: null })
-						}
-						onMouseDown={() => openWorkspace(item)}
-					/>
-				))}
+				{isWindowed && <MoreHint count={hiddenBefore} />}
+				{session.items
+					.slice(shown.start, shown.start + shown.size)
+					.map((item, offset) => {
+						const index = shown.start + offset;
+						return (
+							<WorkspaceCard
+								key={item.id}
+								id={`${optionIdPrefix}-${index}`}
+								item={item}
+								status={statuses.get(item.id)?.status ?? null}
+								conversations={conversationsByWorkspace.get(item.id) ?? []}
+								isSelected={index === session.index}
+								isCurrent={item.id === activeWorkspaceId}
+								onMouseEnter={() => select(session, index)}
+								onMouseDown={() => openWorkspace(item)}
+							/>
+						);
+					})}
+				{isWindowed && <MoreHint count={hiddenAfter} />}
 			</div>
-			{selected && (
-				<div className="pointer-events-auto w-[440px] max-w-full rounded-xl border bg-popover p-1.5 text-popover-foreground shadow-xl">
-					{selectedConversations.length === 0 ? (
-						<div className="px-2 py-1 text-xs text-muted-foreground">
-							{t({ message: "No agent conversations" })}
-						</div>
-					) : (
-						selectedConversations
-							.slice(0, MAX_CONVERSATIONS)
-							.map((conversation, index) => (
-								<SwitcherConversationRow
-									key={conversation.terminalId}
-									conversation={conversation}
-									now={now}
-									isSelected={index === session.conversationIndex}
-									onMouseEnter={() =>
-										updateSession({ ...session, conversationIndex: index })
-									}
-									onMouseDown={() => {
-										updateSession(null);
-										void navigateToV2Workspace(selected.id, navigate, {
-											search: {
-												terminalId: conversation.terminalId,
-												focusRequestId: crypto.randomUUID(),
-											},
-										});
-									}}
-								/>
-							))
-					)}
-					{hiddenCount > 0 && (
-						<div className="px-2 pt-0.5 text-[11px] text-muted-foreground">
-							{t({ message: `+${hiddenCount} more` })}
-						</div>
-					)}
-					<div className="mt-1 border-t px-2 pt-1.5 pb-0.5 text-[11px] text-muted-foreground">
-						{t({
-							message:
-								"Tab: next workspace · ↑↓: pick a conversation · release Ctrl to open",
-						})}
-					</div>
-				</div>
-			)}
 		</div>,
 		document.body,
 	);
 }
 
-const MAX_CARD_AGENTS = 5;
+/** A fixed-width end of a windowed strip; empty when nothing is hidden there. */
+function MoreHint({ count }: { count: number }) {
+	return (
+		<div className="flex w-8 shrink-0 items-center justify-center text-[12px] tabular-nums text-muted-foreground">
+			{count > 0 ? `+${count}` : null}
+		</div>
+	);
+}
+
+const MAX_CARD_AGENTS = 6;
+
+const PR_STATE_CLASS: Record<
+	NonNullable<ActiveWorkspaceSwitcherOption["pullRequest"]>["state"],
+	string
+> = {
+	open: "bg-emerald-500/15 text-emerald-600 dark:text-emerald-400",
+	draft: "bg-muted text-muted-foreground",
+	merged: "bg-violet-500/15 text-violet-600 dark:text-violet-400",
+	closed: "bg-red-500/15 text-red-600 dark:text-red-400",
+	queued: "bg-amber-500/15 text-amber-600 dark:text-amber-400",
+};
 
 function WorkspaceCard({
-	ref,
 	id,
 	item,
 	status,
@@ -319,7 +293,6 @@ function WorkspaceCard({
 	onMouseEnter,
 	onMouseDown,
 }: {
-	ref?: Ref<HTMLDivElement>;
 	id: string;
 	item: ActiveWorkspaceSwitcherOption;
 	status: ActivePaneStatus | null;
@@ -331,16 +304,18 @@ function WorkspaceCard({
 }) {
 	const { t } = useLingui();
 	const extraAgents = conversations.length - MAX_CARD_AGENTS;
+	const groupColor = item.section?.color ?? item.project?.color ?? null;
+	const { pullRequest, todos } = item;
 	return (
 		<div
-			ref={ref}
 			id={id}
 			role="option"
 			tabIndex={-1}
 			aria-selected={isSelected}
 			className={cn(
-				"flex h-[88px] w-44 shrink-0 cursor-default flex-col gap-1 rounded-xl border border-transparent bg-muted/40 p-2.5 text-left transition-colors",
-				isSelected && "border-ring bg-accent text-accent-foreground shadow-md",
+				"flex h-[176px] w-60 min-w-44 shrink cursor-default flex-col gap-1.5 overflow-hidden rounded-xl border border-border/60 bg-muted/40 px-3 py-2.5 text-left transition-colors",
+				isSelected &&
+					"border-ring bg-accent text-accent-foreground shadow-md ring-1 ring-ring",
 			)}
 			onMouseEnter={onMouseEnter}
 			onMouseDown={(e) => {
@@ -348,18 +323,82 @@ function WorkspaceCard({
 				onMouseDown();
 			}}
 		>
-			<div className="flex min-w-0 items-center gap-1.5">
-				{status && <StatusIndicator status={status} />}
-				<span className="truncate font-medium text-[13px]">{item.name}</span>
+			<div className="flex h-4 min-w-0 shrink-0 items-center gap-1.5 text-[11px] text-muted-foreground">
+				{(item.project || item.section) && (
+					<>
+						<span
+							className="size-2 shrink-0 rounded-[3px] bg-muted-foreground/40"
+							style={groupColor ? { backgroundColor: groupColor } : undefined}
+						/>
+						<span className="truncate font-medium">
+							{item.project && item.section
+								? `${item.project.name} › ${item.section.name}`
+								: (item.section ?? item.project)?.name}
+						</span>
+					</>
+				)}
+				{isCurrent && (
+					<span className="ml-auto shrink-0 rounded bg-foreground/10 px-1 text-[10px] text-foreground/80">
+						{t({ message: "Current" })}
+					</span>
+				)}
 			</div>
-			<span className="truncate text-[11px] text-muted-foreground">
-				{isCurrent
-					? item.detail
-						? `${item.detail} · ${t({ message: "Current" })}`
-						: t({ message: "Current" })
-					: (item.detail ?? "")}
-			</span>
-			<div className="mt-auto flex items-center gap-1.5">
+			<div className="flex h-[42px] min-w-0 shrink-0 items-start gap-1.5">
+				{status && <StatusIndicator status={status} className="mt-2" />}
+				<span className="line-clamp-2 break-words font-semibold text-[15px] leading-[21px]">
+					{item.name}
+				</span>
+			</div>
+			<div className="flex h-4 min-w-0 shrink-0 items-center gap-1.5 text-[11px] text-muted-foreground">
+				{item.branch && (
+					<>
+						<LuGitBranch className="size-3 shrink-0" />
+						<span className="min-w-0 truncate font-mono">{item.branch}</span>
+					</>
+				)}
+				{pullRequest && (
+					<span
+						className={cn(
+							"ml-auto shrink-0 rounded px-1 font-medium text-[10px] leading-4",
+							PR_STATE_CLASS[pullRequest.state],
+						)}
+					>
+						#{pullRequest.number}
+					</span>
+				)}
+			</div>
+			<LabelRow labels={item.labels} />
+			<div className="mt-auto flex h-4 min-w-0 shrink-0 items-center gap-2">
+				<AgentStateLine conversations={conversations} />
+				{todos.open > 0 && (
+					<span
+						className={cn(
+							"ml-auto flex shrink-0 items-center gap-0.5 text-[11px] tabular-nums",
+							todos.highPriority > 0
+								? "font-medium text-red-600 dark:text-red-400"
+								: "text-muted-foreground",
+						)}
+						title={
+							todos.highPriority > 0
+								? t({
+										message: plural(todos.highPriority, {
+											one: "# high-priority to-do",
+											other: "# high-priority to-dos",
+										}),
+									})
+								: undefined
+						}
+					>
+						{todos.highPriority > 0 ? (
+							<LuFlag className="size-3" />
+						) : (
+							<LuListChecks className="size-3" />
+						)}
+						{todos.open}
+					</span>
+				)}
+			</div>
+			<div className="flex h-4 shrink-0 items-center gap-1.5">
 				{conversations.slice(0, MAX_CARD_AGENTS).map((conversation) => (
 					<AgentAvatar
 						key={conversation.terminalId}
@@ -373,6 +412,143 @@ function WorkspaceCard({
 				)}
 			</div>
 		</div>
+	);
+}
+
+/** Room kept for the "+N" after the labels that fit. */
+const MORE_LABELS_WIDTH = 28;
+
+/**
+ * The labels on one line: those that fit, then "+N". Every pill stays laid
+ * out (the clipped ones invisible) so their widths can be measured.
+ */
+function LabelRow({ labels }: { labels: WorkspaceLabel[] }) {
+	const rowRef = useRef<HTMLDivElement>(null);
+	const pillsRef = useRef<HTMLDivElement>(null);
+	const [fitting, setFitting] = useState(labels.length);
+
+	// biome-ignore lint/correctness/useExhaustiveDependencies: new labels need a new measure
+	useLayoutEffect(() => {
+		const row = rowRef.current;
+		const pills = pillsRef.current;
+		if (!row || !pills) return;
+		const measure = () => {
+			const rights = [...pills.children].map(
+				(pill) =>
+					(pill as HTMLElement).offsetLeft + (pill as HTMLElement).offsetWidth,
+			);
+			const width = row.clientWidth;
+			const all = rights.length === 0 || (rights.at(-1) ?? 0) <= width;
+			const fit = all
+				? rights.length
+				: rights.filter((right) => right <= width - MORE_LABELS_WIDTH).length;
+			setFitting(Math.max(1, fit));
+		};
+		measure();
+		const observer = new ResizeObserver(measure);
+		observer.observe(row);
+		return () => observer.disconnect();
+	}, [labels]);
+
+	const hidden = labels.length - Math.min(fitting, labels.length);
+	return (
+		<div
+			ref={rowRef}
+			className="flex h-[18px] min-w-0 shrink-0 items-center gap-1"
+			title={labels.map((label) => label.name).join(", ")}
+		>
+			<div
+				ref={pillsRef}
+				className="relative flex min-w-0 flex-1 gap-1 overflow-hidden"
+			>
+				{labels.map((label, index) => (
+					<span
+						key={label.id}
+						className={cn(
+							"max-w-32 shrink-0 truncate rounded px-1.5 font-medium text-[11px] leading-[18px]",
+							LABEL_PILL_CLASS[label.color],
+							index >= fitting && "invisible",
+						)}
+					>
+						{label.name}
+					</span>
+				))}
+			</div>
+			{hidden > 0 && (
+				<span className="shrink-0 text-[11px] tabular-nums text-muted-foreground">
+					+{hidden}
+				</span>
+			)}
+		</div>
+	);
+}
+
+/** "2 agents need you · 1 working": the states that ask something first. */
+function AgentStateLine({
+	conversations,
+}: {
+	conversations: AgentConversation[];
+}) {
+	const { t } = useLingui();
+	const summary = summarizeAgents(conversations);
+	const parts: { key: string; dot: string; text: string; strong: boolean }[] =
+		[];
+	if (summary.needsYou > 0) {
+		parts.push({
+			key: "needsYou",
+			dot: DOT_CLASS.request,
+			text: t({
+				message: plural(summary.needsYou, {
+					one: "# agent needs you",
+					other: "# agents need you",
+				}),
+			}),
+			strong: true,
+		});
+	}
+	if (summary.working > 0) {
+		parts.push({
+			key: "working",
+			dot: DOT_CLASS.working,
+			text: t({ message: `${summary.working} working` }),
+			strong: parts.length === 0,
+		});
+	}
+	if (summary.done > 0) {
+		parts.push({
+			key: "done",
+			dot: summary.unseen > 0 ? DOT_CLASS.unseen : DOT_CLASS.seen,
+			text: t({ message: `${summary.done} done` }),
+			strong: parts.length === 0 && summary.unseen > 0,
+		});
+	}
+	if (parts.length === 0) {
+		return (
+			<span className="flex min-w-0 items-center gap-1.5 text-[12px] text-muted-foreground">
+				<span className={cn("size-2 rounded-full", DOT_CLASS.idle)} />
+				{conversations.length === 0
+					? t({ message: "No agents" })
+					: t({ message: "Idle" })}
+			</span>
+		);
+	}
+	return (
+		<span className="flex min-w-0 items-center gap-2 overflow-hidden whitespace-nowrap text-[12px]">
+			{parts.map((part) => (
+				<span
+					key={part.key}
+					className={cn(
+						"flex items-center gap-1",
+						part.strong
+							? "font-medium text-foreground"
+							: "text-muted-foreground",
+					)}
+				>
+					<span className={cn("size-2 shrink-0 rounded-full", part.dot)} />
+					{part.text}
+				</span>
+			))}
+		</span>
 	);
 }
 
@@ -392,42 +568,5 @@ function AgentAvatar({ conversation }: { conversation: AgentConversation }) {
 				)}
 			/>
 		</span>
-	);
-}
-
-function SwitcherConversationRow({
-	conversation,
-	now,
-	isSelected,
-	onMouseEnter,
-	onMouseDown,
-}: {
-	conversation: AgentConversation;
-	now: number;
-	isSelected: boolean;
-	onMouseEnter: () => void;
-	onMouseDown: () => void;
-}) {
-	return (
-		// biome-ignore lint/a11y/noStaticElementInteractions: keyboard goes through the switcher's window listener
-		<div
-			className={cn(
-				"flex h-8 cursor-default items-center gap-2.5 rounded-md px-2 text-[13px]",
-				isSelected && "bg-accent text-accent-foreground",
-			)}
-			onMouseEnter={onMouseEnter}
-			onMouseDown={(e) => {
-				e.preventDefault();
-				onMouseDown();
-			}}
-		>
-			<AgentAvatar conversation={conversation} />
-			<span className="min-w-0 flex-1 truncate">{conversation.title}</span>
-			{isWaitingOnUser(conversation.state) && (
-				<span className="shrink-0 text-[11px] tabular-nums text-muted-foreground">
-					{formatCompactRelativeTime(Math.min(conversation.since, now), now)}
-				</span>
-			)}
-		</div>
 	);
 }

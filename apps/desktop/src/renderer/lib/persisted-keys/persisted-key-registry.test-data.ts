@@ -89,6 +89,10 @@ export const PERSISTED_KEY_REGISTRY: ReadonlyArray<
 	["src/renderer/stores/sidebar-state.ts", ["sidebar-store"]],
 	["src/renderer/stores/new-workspace-width.ts", ["new-workspace-width"]],
 	[
+		"src/renderer/routes/_authenticated/_dashboard/office/stores/office-filter.ts",
+		["office-filter"],
+	],
+	[
 		"src/renderer/stores/workspace-sidebar-state.ts",
 		["workspace-sidebar-store"],
 	],
@@ -121,6 +125,10 @@ export const PERSISTED_KEY_REGISTRY: ReadonlyArray<
 	[
 		"src/renderer/stores/sidebar-preferences/store.ts",
 		["sidebar-preferences-v1"],
+	],
+	[
+		"src/renderer/stores/sidebar-folder-options/store.ts",
+		["sidebar-folder-options-v1"],
 	],
 	[
 		"src/renderer/stores/workspace-label-filter/store.ts",
@@ -196,6 +204,10 @@ export const PERSISTED_KEY_REGISTRY: ReadonlyArray<
 	[
 		"src/renderer/routes/_authenticated/_dashboard/pull-requests/stores/myPullRequestsStore/myPullRequestsStore.ts",
 		["my-pull-requests-state"],
+	],
+	[
+		"src/renderer/routes/_authenticated/_dashboard/git-graph/stores/gitGraphStore/gitGraphStore.ts",
+		["git-graph-state"],
 	],
 	[
 		"src/renderer/routes/_authenticated/_dashboard/pull-requests/stores/pullRequestsSplitViewStore/pullRequestsSplitViewStore.ts",

@@ -1,0 +1,1 @@
+export { InsightsWeekTable } from "./InsightsWeekTable";

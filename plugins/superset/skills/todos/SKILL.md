@@ -15,11 +15,13 @@ conversation (`$SUPERSET_TERMINAL_ID`).
 ## Rules
 
 - **The user's to-dos are theirs.** You may check them off when done
-  (`superset todos done <id>`), never reword or delete them: the host refuses
+  (`superset todos done <id>`), never reword or archive them: the host refuses
   it. If one looks wrong, outdated or duplicated, add your own to-do saying so.
 - **Your own to-dos** are for what the user should see and act on: a
   follow-up, a decision waiting on them, a message to send. You may change and
-  delete them.
+  archive them.
+- **Nothing is deleted.** `rm` archives: the to-do leaves the list but stays
+  findable with `list --archived` and comes back with `restore`.
 - Check a to-do only when it is really done, not when you start it.
 - **What the user must do goes on the list, not only in the chat.** When you
   propose a plan with actions only the user can take (send a mail, contact
@@ -30,6 +32,12 @@ conversation (`$SUPERSET_TERMINAL_ID`).
   and a `--draft` the user can send as is: the full mail, message or post in
   the user's language and voice, not a summary of it. Then tell the user the
   to-dos are on their list.
+- **A to-do draft or a `draft` report?** Use `superset report draft` (see the
+  `report` skill) when you stop and will send the text yourself once the user
+  approves it. Use a to-do with `--draft` when the user sends it themselves
+  (their own mail box, LinkedIn, a call, a channel you can't reach) or when
+  you have several texts queued: a report keeps only one open draft per
+  conversation, to-dos keep each one with its recipient and channel.
 - **Keep every list true, not only yours.** When the user says something is
   done ("I opened the Apple Developer account", "I sent the mail"), run
   `superset todos list --all` and check off every open to-do, in any
@@ -46,8 +54,9 @@ superset todos add "Answer Paul about the release" --kind message --priority hig
 superset todos done <id>            # the short id from `list` works
 superset todos undone <id>
 superset todos edit <id> --priority low --link https://github.com/org/repo/pull/12
-superset todos rm <id>              # your own only
-superset todos report               # Markdown brief of every open to-do, with steps and drafts
+superset todos rm <id>              # archive it, your own only
+superset todos list --archived      # the archived ones
+superset todos restore <id>         # back to the list, your own only
 ```
 
 A to-do for the user to carry out, with everything they need:

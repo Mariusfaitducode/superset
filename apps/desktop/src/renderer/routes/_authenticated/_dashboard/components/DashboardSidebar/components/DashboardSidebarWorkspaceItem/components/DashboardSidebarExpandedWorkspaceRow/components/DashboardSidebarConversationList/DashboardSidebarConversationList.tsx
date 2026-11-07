@@ -1,22 +1,46 @@
 import { useLingui } from "@lingui/react/macro";
 import { formatCompactRelativeTime } from "@superset/i18n/format";
+import { Popover, PopoverContent, PopoverTrigger } from "@superset/ui/popover";
 import { toast } from "@superset/ui/sonner";
 import { cn } from "@superset/ui/utils";
 import { useNavigate } from "@tanstack/react-router";
-import { type SyntheticEvent, useState } from "react";
+import {
+	type CSSProperties,
+	type SyntheticEvent,
+	useMemo,
+	useState,
+} from "react";
 import { LuBot, LuListChecks, LuMessageSquarePlus } from "react-icons/lu";
 import { usePresetIcon } from "renderer/assets/app-icons/preset-icons";
+import { useHostAgentReports } from "renderer/hooks/host-service/useHostAgentReports";
 import { useNow } from "renderer/hooks/useNow";
+import {
+	AGENT_STATE_DOT_CLASS,
+	agentStateFromConversation,
+} from "renderer/lib/agent-state";
+import { ReportKindIcon } from "renderer/routes/_authenticated/_dashboard/components/ReportKindIcon";
+import {
+	REPORT_KINDS,
+	type ReportKind,
+} from "renderer/routes/_authenticated/_dashboard/hooks/useDeskQueue";
 import {
 	buildSubagentSearch,
 	navigateToV2Workspace,
 } from "renderer/routes/_authenticated/_dashboard/utils/workspace-navigation";
+import { useHostWorkspaces } from "renderer/routes/_authenticated/providers/HostWorkspacesProvider";
 import { RenameInput } from "renderer/screens/main/components/WorkspaceSidebar/RenameInput";
 import {
+	resolveFolderOptions,
+	useSidebarFolderOptionsStore,
+} from "renderer/stores/sidebar-folder-options";
+import {
+	type ActiveMarker,
+	COMPACT_ROW_VARS,
 	useSidebarPreference,
 	type WaitingTint,
 } from "renderer/stores/sidebar-preferences";
 import { useIsTerminalVisible } from "renderer/stores/visible-terminals";
+import { useDashboardSidebarFolder } from "../../../../../../providers/DashboardSidebarFolderProvider";
 import type { DashboardSidebarWorkspaceIndentation } from "../../../../../../types";
 import { ConversationStats } from "./components/ConversationStats";
 import { ConversationTodos } from "./components/ConversationTodos";
@@ -32,19 +56,44 @@ import {
 	useWorkspaceTodos,
 } from "./hooks/useWorkspaceTodos";
 import {
+	CONVERSATION_STATES,
 	type ConversationState,
 	isWaitingOnUser,
 	waitingTintLevel,
 } from "./utils/conversation-state";
 
-export const DOT_CLASS: Record<ConversationState, string> = {
-	working: "bg-yellow-400 animate-pulse",
-	request: "bg-violet-500",
-	failed: "bg-red-500",
-	unseen: "bg-green-500",
-	seen: "bg-blue-500",
-	idle: "bg-muted-foreground/40",
+/** A conversation's dot, in the five-state language of every agent surface. */
+export const DOT_CLASS = Object.fromEntries(
+	CONVERSATION_STATES.map((state) => [
+		state,
+		AGENT_STATE_DOT_CLASS[agentStateFromConversation(state)],
+	]),
+) as Record<ConversationState, string>;
+
+export const ACTIVE_MARKER_CLASS: Record<ActiveMarker, string> = {
+	outline:
+		"border-primary bg-[color-mix(in_oklab,var(--primary)_var(--sb-marker-fill),transparent)]",
+	bar: "bg-[color-mix(in_oklab,var(--primary)_var(--sb-marker-fill),transparent)]",
+	fill: "bg-[color-mix(in_oklab,var(--primary)_calc(var(--sb-marker-fill)*1.8),transparent)]",
 };
+
+export function conversationRowStyle({
+	isActive,
+	activeMarker,
+	folderColor,
+}: {
+	isActive: boolean;
+	activeMarker: ActiveMarker;
+	folderColor: string | null;
+}): CSSProperties | undefined {
+	if (isActive && activeMarker === "bar") {
+		return { boxShadow: "inset var(--sb-band) 0 var(--primary)" };
+	}
+	if (folderColor) {
+		return { boxShadow: `inset var(--sb-band) 0 ${folderColor}` };
+	}
+	return undefined;
+}
 
 // Warms up the longer a conversation has waited on the user.
 const TINT_CLASS: Record<Exclude<WaitingTint, "off">, string[]> = {
@@ -99,13 +148,21 @@ function ConversationRow({
 	conversation,
 	todos,
 	todoActions,
+	reportKind,
+	showSubagents,
+	folderColor,
 }: {
 	workspaceId: string;
 	hostId: string;
 	conversation: SidebarConversation;
-	/** Null when the host is too old to keep to-dos. */
+	/** The most pressing open report of the conversation, if any. */
+	reportKind: ReportKind | null;
+	/** Null when the host is too old to keep to-dos, or hidden for this folder. */
 	todos: ConversationTodo[] | null;
 	todoActions: TodoActions;
+	showSubagents: boolean;
+	/** Null when the conversation is not striped with its folder's color. */
+	folderColor: string | null;
 }) {
 	const { t } = useLingui();
 	// Minutes are the finest unit shown.
@@ -115,15 +172,23 @@ function ConversationRow({
 	const [renameValue, setRenameValue] = useState<string | null>(null);
 	const renameConversation = useRenameConversation({ workspaceId, hostId });
 	const isVisible = useIsTerminalVisible(conversation.terminalId);
-	const showTodos = useSidebarPreference("showTodos") && todos !== null;
-	const showSubagents = useSidebarPreference("showSubagents");
+	const showTodos = todos !== null;
+	const activeMarker = useSidebarPreference("activeMarker");
 	const showTurnTime = useSidebarPreference("showTurnTime");
 	const showQueuedPrompts = useSidebarPreference("showQueuedPrompts");
 	const waitingTint = useSidebarPreference("waitingTint");
+	const todosInline = useSidebarPreference("todosInline");
 	const openTodos = (todos ?? []).filter((todo) => !todo.done).length;
 	const urgentTodos = (todos ?? []).some(
 		(todo) => !todo.done && todo.priority === "high",
 	);
+
+	const reportLabel: Record<ReportKind, string> = {
+		decision: t`Decision waiting on you`,
+		draft: t`Draft waiting for your approval`,
+		blocked: t`Blocked, needs you`,
+		done: t`Ready for your review`,
+	};
 
 	const stateLabel: Record<ConversationState, string> = {
 		working: t`Working`,
@@ -178,10 +243,16 @@ function ConversationRow({
 		<li>
 			<div
 				className={cn(
-					"group/conversation flex h-6 items-center gap-2 rounded-sm border border-transparent pr-1 pl-1 hover:bg-muted",
+					"group/conversation flex h-[var(--sb-conv-h)] items-center gap-2 rounded-sm border border-transparent pr-1 pl-1 hover:bg-muted",
+					folderColor && "pl-[calc(var(--sb-band)+4px)]",
 					tint,
-					isVisible && "border-primary bg-primary/10",
+					isVisible && ACTIVE_MARKER_CLASS[activeMarker],
 				)}
+				style={conversationRowStyle({
+					isActive: isVisible,
+					activeMarker,
+					folderColor,
+				})}
 			>
 				{renameValue !== null ? (
 					<div className="flex min-w-0 flex-1 items-center gap-2">
@@ -194,7 +265,7 @@ function ConversationRow({
 							onChange={setRenameValue}
 							onSubmit={submitRename}
 							onCancel={() => setRenameValue(null)}
-							className="h-5 min-w-0 flex-1 -ml-1 border-none bg-transparent px-1 py-0 text-xs outline-none"
+							className="h-5 min-w-0 flex-1 -ml-1 border-none bg-transparent px-1 py-0 text-[length:var(--sb-conv-text)] outline-none"
 						/>
 					</div>
 				) : (
@@ -212,7 +283,7 @@ function ConversationRow({
 						/>
 						<span
 							className={cn(
-								"min-w-0 flex-1 truncate text-xs",
+								"min-w-0 flex-1 truncate text-[length:var(--sb-conv-text)]",
 								waiting || conversation.state === "working"
 									? "text-foreground"
 									: "text-muted-foreground",
@@ -221,6 +292,15 @@ function ConversationRow({
 							{conversation.title}
 						</span>
 					</button>
+				)}
+				{reportKind && (
+					<span
+						role="img"
+						aria-label={reportLabel[reportKind]}
+						title={reportLabel[reportKind]}
+					>
+						<ReportKindIcon kind={reportKind} className="size-3" />
+					</span>
 				)}
 				{showQueuedPrompts && conversation.queuedPrompts > 0 && (
 					<span
@@ -238,33 +318,74 @@ function ConversationRow({
 					lastEventAt={conversation.since}
 					working={conversation.state === "working"}
 				/>
-				{showTodos && (
-					<button
-						type="button"
-						aria-expanded={todosOpen}
-						aria-label={t`To-dos`}
-						onClick={() => setTodosOpen((value) => !value)}
-						className={cn(
-							"flex shrink-0 items-center gap-0.5 rounded-sm px-1 text-[10px] text-muted-foreground hover:bg-background hover:text-foreground",
-							urgentTodos && "text-red-500",
-							todos?.length === 0 &&
-								!todosOpen &&
-								"opacity-0 focus-visible:opacity-100 group-hover/conversation:opacity-100",
-						)}
-					>
-						<LuListChecks className="size-3" />
-						{(todos?.length ?? 0) > 0 && (
-							<span>{openTodos > 0 ? openTodos : "✓"}</span>
-						)}
-					</button>
-				)}
+				{showTodos &&
+					(todosInline ? (
+						<button
+							type="button"
+							aria-expanded={todosOpen}
+							aria-label={t`To-dos`}
+							onClick={() => setTodosOpen((value) => !value)}
+							className={cn(
+								"flex shrink-0 items-center gap-0.5 rounded-sm px-1 text-[10px] text-muted-foreground hover:bg-background hover:text-foreground",
+								urgentTodos && "text-red-500",
+								todos?.length === 0 &&
+									!todosOpen &&
+									"opacity-0 focus-visible:opacity-100 group-hover/conversation:opacity-100",
+							)}
+						>
+							<LuListChecks className="size-3" />
+							{(todos?.length ?? 0) > 0 && (
+								<span>{openTodos > 0 ? openTodos : "✓"}</span>
+							)}
+						</button>
+					) : (
+						<Popover open={todosOpen} onOpenChange={setTodosOpen}>
+							<PopoverTrigger asChild>
+								<button
+									type="button"
+									aria-expanded={todosOpen}
+									aria-label={t`To-dos`}
+									className={cn(
+										"flex shrink-0 items-center gap-0.5 rounded-sm px-1 text-[10px] text-muted-foreground hover:bg-background hover:text-foreground",
+										urgentTodos && "text-red-500",
+										todos?.length === 0 &&
+											!todosOpen &&
+											"opacity-0 focus-visible:opacity-100 group-hover/conversation:opacity-100",
+									)}
+								>
+									<LuListChecks className="size-3" />
+									{(todos?.length ?? 0) > 0 && (
+										<span>{openTodos > 0 ? openTodos : "✓"}</span>
+									)}
+								</button>
+							</PopoverTrigger>
+							<PopoverContent
+								side="right"
+								align="start"
+								sideOffset={8}
+								className="w-80 p-2"
+								onOpenAutoFocus={(event) => event.preventDefault()}
+							>
+								<p className="mb-1 truncate px-1 text-xs font-medium">
+									{conversation.title}
+								</p>
+								<ConversationTodos
+									terminalId={conversation.terminalId}
+									todos={todos ?? []}
+									actions={todoActions}
+									onClose={() => setTodosOpen(false)}
+									inline={false}
+								/>
+							</PopoverContent>
+						</Popover>
+					))}
 				{waiting ? (
 					<span className="shrink-0 text-[10px] tabular-nums text-muted-foreground">
 						{formatCompactRelativeTime(Math.min(conversation.since, now), now)}
 					</span>
 				) : turnStartedAt !== null ? (
 					<span
-						className="shrink-0 text-[10px] tabular-nums text-yellow-500"
+						className="shrink-0 text-[10px] tabular-nums text-[color:var(--sb-state-working)]"
 						title={t`Current turn running`}
 					>
 						{formatCompactRelativeTime(Math.min(turnStartedAt, now), now)}
@@ -288,7 +409,7 @@ function ConversationRow({
 					))}
 				</ul>
 			)}
-			{showTodos && todosOpen && (
+			{showTodos && todosInline && todosOpen && (
 				<ConversationTodos
 					terminalId={conversation.terminalId}
 					todos={todos ?? []}
@@ -316,8 +437,24 @@ export function DashboardSidebarConversationList({
 	isInSection?: boolean;
 	indentation?: DashboardSidebarWorkspaceIndentation;
 }) {
-	const showConversations = useSidebarPreference("showConversations");
-	const showIdleConversations = useSidebarPreference("showIdleConversations");
+	const folder = useDashboardSidebarFolder();
+	const byFolder = useSidebarFolderOptionsStore((state) => state.byFolder);
+	const folderOptions = useMemo(
+		() => resolveFolderOptions(byFolder, folder.projectId, folder.groupId),
+		[byFolder, folder.projectId, folder.groupId],
+	);
+	const showConversations =
+		useSidebarPreference("showConversations") &&
+		!folderOptions.hideConversations;
+	const showIdleConversations =
+		useSidebarPreference("showIdleConversations") &&
+		!folderOptions.hideIdleConversations;
+	const showSubagents =
+		useSidebarPreference("showSubagents") && !folderOptions.hideSubagents;
+	const folderColorOnConversations = useSidebarPreference(
+		"folderColorOnConversations",
+	);
+	const folderColor = folderColorOnConversations ? folder.color : null;
 	const allConversations = useWorkspaceConversations({
 		workspaceId,
 		hostId,
@@ -326,7 +463,8 @@ export function DashboardSidebarConversationList({
 	const conversations = showIdleConversations
 		? allConversations
 		: allConversations.filter((conversation) => conversation.state !== "idle");
-	const showTodos = useSidebarPreference("showTodos");
+	const showTodos =
+		useSidebarPreference("showTodos") && !folderOptions.hideTodos;
 	const showAgentTodos = useSidebarPreference("showAgentTodos");
 	const todos = useWorkspaceTodos({
 		workspaceId,
@@ -337,11 +475,36 @@ export function DashboardSidebarConversationList({
 		enabled: showConversations && showTodos,
 	});
 	const todosFor = (terminalId: string): ConversationTodo[] | null => {
-		if (!todos.available) return null;
+		if (!todos.available || !showTodos) return null;
 		const list = todos.byTerminal.get(terminalId) ?? [];
 		return showAgentTodos
 			? list
 			: list.filter((todo) => todo.author !== "agent");
+	};
+
+	const { cache } = useHostWorkspaces();
+	const reports = useHostAgentReports(
+		cache.isSandboxHost(hostId) ? null : cache.resolveHostUrl(hostId),
+		showConversations && conversations.length > 0,
+	).data;
+	const reportKindFor = (terminalId: string): ReportKind | null => {
+		let best: ReportKind | null = null;
+		for (const report of reports ?? []) {
+			if (
+				report.terminalId !== terminalId ||
+				report.status !== "open" ||
+				report.kind === "progress"
+			) {
+				continue;
+			}
+			if (
+				best === null ||
+				REPORT_KINDS.indexOf(report.kind) < REPORT_KINDS.indexOf(best)
+			) {
+				best = report.kind;
+			}
+		}
+		return best;
 	};
 
 	if (!showConversations || conversations.length === 0) return null;
@@ -362,6 +525,11 @@ export function DashboardSidebarConversationList({
 			onClick={stopRowEvent}
 			onDoubleClick={stopRowEvent}
 			onKeyDown={stopRowEvent}
+			style={
+				folderOptions.compactRows
+					? (COMPACT_ROW_VARS as CSSProperties)
+					: undefined
+			}
 		>
 			<ul className="flex flex-col">
 				{conversations.map((conversation) => (
@@ -372,6 +540,9 @@ export function DashboardSidebarConversationList({
 						conversation={conversation}
 						todos={todosFor(conversation.terminalId)}
 						todoActions={todos.actions}
+						reportKind={reportKindFor(conversation.terminalId)}
+						showSubagents={showSubagents}
+						folderColor={folderColor}
 					/>
 				))}
 			</ul>

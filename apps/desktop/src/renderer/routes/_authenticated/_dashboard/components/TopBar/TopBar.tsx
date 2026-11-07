@@ -11,6 +11,7 @@ import { AppMenuButton } from "../AppMenuButton";
 import { NavigationControls } from "../NavigationControls";
 import { PortsDropdown } from "../PortsDropdown";
 import { SidebarToggle } from "../SidebarToggle";
+import { TaskMonitorButton } from "../TaskMonitor";
 import { WindowControlsInset } from "../WindowControlsInset";
 import { OpenInMenuButton } from "./components/OpenInMenuButton";
 import { OrganizationDropdown } from "./components/OrganizationDropdown";
@@ -79,6 +80,7 @@ export function TopBar() {
 						</span>
 					</div>
 				)}
+				<TaskMonitorButton />
 				{workspace?.worktreePath ? (
 					<OpenInMenuButton
 						worktreePath={workspace.worktreePath}

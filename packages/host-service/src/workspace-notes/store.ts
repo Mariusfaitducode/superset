@@ -11,16 +11,20 @@ import { dirname, join } from "node:path";
 
 export const NOTE_STATUSES = ["open", "kept", "dropped", "done"] as const;
 export const NOTE_ACTORS = ["user", "agent"] as const;
+/** A `context` note is pinned: every agent of the workspace gets it at start. */
+export const NOTE_KINDS = ["note", "context"] as const;
 
 export type NoteStatus = (typeof NOTE_STATUSES)[number];
 /** Who acts on a note: the user in the app, or an agent through the CLI. */
 export type NoteActor = (typeof NOTE_ACTORS)[number];
+export type NoteKind = (typeof NOTE_KINDS)[number];
 
 export interface WorkspaceNote {
 	id: string;
 	workspaceId: string;
 	text: string;
 	details: string | null;
+	kind: NoteKind;
 	status: NoteStatus;
 	createdBy: NoteActor;
 	createdAt: number;
@@ -30,6 +34,7 @@ export interface WorkspaceNote {
 export interface NoteFields {
 	text?: string;
 	details?: string | null;
+	kind?: NoteKind;
 }
 
 export class NotePermissionError extends Error {}
@@ -72,12 +77,13 @@ export class WorkspaceNoteStore {
 	add(input: {
 		actor: NoteActor;
 		workspaceId: string;
-		items: Array<{ text: string; details?: string | null }>;
+		items: Array<{ text: string; details?: string | null; kind?: NoteKind }>;
 	}): WorkspaceNote[] {
 		const items = input.items
 			.map((item) => ({
 				text: item.text.trim(),
 				details: cleanDetails(item.details),
+				kind: item.kind ?? "note",
 			}))
 			.filter((item) => item.text);
 		if (items.length === 0) throw new Error("A note needs some text");
@@ -88,6 +94,7 @@ export class WorkspaceNoteStore {
 				workspaceId: input.workspaceId,
 				text: item.text,
 				details: item.details,
+				kind: item.kind,
 				status: "open",
 				createdBy: input.actor,
 				createdAt: at,
@@ -111,6 +118,7 @@ export class WorkspaceNoteStore {
 			...(fields.details !== undefined
 				? { details: cleanDetails(fields.details) }
 				: {}),
+			...(fields.kind ? { kind: fields.kind } : {}),
 		});
 	}
 
@@ -156,7 +164,10 @@ export class WorkspaceNoteStore {
 		if (this.notes) return this.notes;
 		try {
 			const file = JSON.parse(readFileSync(this.filePath, "utf8")) as NoteFile;
-			this.notes = Array.isArray(file.notes) ? file.notes : [];
+			// Notes saved before kinds existed are plain notes.
+			this.notes = Array.isArray(file.notes)
+				? file.notes.map((note) => ({ ...note, kind: note.kind ?? "note" }))
+				: [];
 		} catch {
 			this.notes = [];
 		}
