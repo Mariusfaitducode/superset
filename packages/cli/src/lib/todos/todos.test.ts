@@ -1,5 +1,6 @@
 import { describe, expect, test } from "bun:test";
 import {
+	assertUserMayAdd,
 	clearable,
 	draftText,
 	resolveTodoId,
@@ -15,6 +16,13 @@ describe("todos CLI helpers", () => {
 	test("acts as the agent inside an agent's terminal", () => {
 		expect(todoActor({ SUPERSET_AGENT_ID: "claude" })).toBe("agent");
 		expect(todoActor({})).toBe("user");
+	});
+
+	test("only the user adds to-dos", () => {
+		expect(() => assertUserMayAdd({ SUPERSET_AGENT_ID: "claude" })).toThrow(
+			"Agents can't add to-dos",
+		);
+		expect(() => assertUserMayAdd({})).not.toThrow();
 	});
 
 	test("defaults to the terminal it runs in, flags win", () => {

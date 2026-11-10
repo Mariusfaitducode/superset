@@ -53,7 +53,7 @@ export function formatContext(input: ContextInput): string {
 	} else {
 		const open = input.todos.filter((todo) => !todo.done);
 		lines.push(
-			`- Open to-dos of this conversation: ${open.length}${open.length ? "" : " (add yours with `superset todos add`)"}`,
+			`- The user's open to-dos for this conversation (their project status, read only): ${open.length}`,
 			...open
 				.slice(0, LISTED)
 				.map((todo) => `  - [${todo.author}] ${todo.text}`),

@@ -36,7 +36,7 @@ describe("formatContext", () => {
 		expect(text).toBe(
 			[
 				"Superset context for this workspace.",
-				"- Open to-dos of this conversation: 1",
+				"- The user's open to-dos for this conversation (their project status, read only): 1",
 				"  - [user] Review it",
 				'- Workspace labels on: Today (set `In progress` while working: `superset labels add "In progress"`)',
 				"- Grants: the user lets you do this without asking:",
@@ -74,6 +74,6 @@ describe("formatContext", () => {
 			notes: [],
 		});
 		expect(text).toContain("- Grants: none.");
-		expect(text).toContain("add yours with `superset todos add`");
+		expect(text).not.toContain("superset todos add");
 	});
 });

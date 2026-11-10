@@ -83,6 +83,19 @@ export function todoActor(env: NodeJS.ProcessEnv = process.env) {
 	return env.SUPERSET_AGENT_ID ? ("agent" as const) : ("user" as const);
 }
 
+/**
+ * The to-do list is the user's own view of where each project stands, so only
+ * the user writes to it. Agents hand work over with `superset report`.
+ */
+export function assertUserMayAdd(env: NodeJS.ProcessEnv = process.env) {
+	if (todoActor(env) === "agent") {
+		throw new CLIError(
+			"Agents can't add to-dos: the list is the user's own",
+			"Hand it over with `superset report` (done, decision, draft, blocked) or pin it with `superset notes add`.",
+		);
+	}
+}
+
 /** The conversation the command runs in, unless flags name another. */
 export function todoConversation(
 	flags: { workspace?: string; terminal?: string },

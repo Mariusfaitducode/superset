@@ -1,6 +1,6 @@
 ---
 name: notes
-description: Read and add to the notes pinned to your Superset workspace (ideas, findings, things to do later), which the user sees under the workspace in the app's sidebar and in the Notes view. Use at the start of a task to see what the user has in mind for this workspace, when you think of something worth doing later that is out of scope now, when you finish something the user noted, or when asked "what notes do we have", "note this idea", "add it to the notes". Not for work to do now (that is a to-do: `superset todos`).
+description: Read and add to the notes pinned to your Superset workspace (ideas, findings, things to do later), which the user sees under the workspace in the app's sidebar and in the Notes view. Use at the start of a task to see what the user has in mind for this workspace, when you think of something worth doing later that is out of scope now, when you finish something the user noted, or when asked "what notes do we have", "note this idea", "add it to the notes". Not for handing work to the user (that is `superset report`).
 argument-hint: what to read, add, or mark done
 allowed-tools: Bash(superset:*)
 ---
@@ -24,8 +24,8 @@ decided yet), `kept` (worth doing), `dropped`, `done`.
 - **Your own notes** are for what is worth doing later and out of scope now.
   Keep them short, one note per line, and put the why in `--details`. You
   may change, triage and delete them.
-- A note is not a to-do. What the user must do or decide now goes in
-  `superset todos`.
+- A note is not a hand-over. What the user must do or decide now goes in
+  `superset report`. Never add to-dos: that list is the user's own.
 - **Pinned context** (kind `context`, a pin in the app) is a brief, a decision
   or a message the user wants every agent here to read at start. Read it
   first; `superset context` prints it in full. Pin a note yourself
