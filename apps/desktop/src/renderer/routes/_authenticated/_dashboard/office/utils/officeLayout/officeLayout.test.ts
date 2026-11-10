@@ -271,12 +271,8 @@ describe("layoutOffice", () => {
 	});
 
 	test("adds a rack per four connections", () => {
-		expect(
-			layoutOffice({ rooms: [], maxWidth: 30, devices: 0 }).racks,
-		).toHaveLength(1);
-		expect(
-			layoutOffice({ rooms: [], maxWidth: 30, devices: 5 }).racks,
-		).toHaveLength(2);
+		expect(layoutOffice({ rooms: [], devices: 0 }).racks).toHaveLength(1);
+		expect(layoutOffice({ rooms: [], devices: 5 }).racks).toHaveLength(2);
 	});
 });
 

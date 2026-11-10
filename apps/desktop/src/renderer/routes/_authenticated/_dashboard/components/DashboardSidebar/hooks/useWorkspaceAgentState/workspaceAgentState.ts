@@ -24,6 +24,9 @@ export interface WorkspaceAgentBinding {
 	terminalId: string;
 	lastEventType: string;
 	lastEventAt: number;
+	/** Live children keep a finished parent at work (`countLiveChildren`). */
+	subagents?: readonly unknown[];
+	backgroundTasks?: readonly { kind: string }[];
 }
 
 /** A workspace takes the most urgent state of its conversations. */

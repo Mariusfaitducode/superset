@@ -16,6 +16,9 @@ export interface AgentBinding {
 	agentId: AgentIdentityId;
 	lastEventType: string;
 	lastEventAt: number;
+	/** Live children keep a finished parent at work (`countLiveChildren`). */
+	subagents?: readonly unknown[];
+	backgroundTasks?: readonly { kind: string }[];
 }
 
 export interface ConversationWorkspace {
