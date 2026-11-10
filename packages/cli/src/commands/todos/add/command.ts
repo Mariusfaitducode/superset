@@ -1,6 +1,7 @@
 import { positional, string } from "@superset/cli-framework";
 import { command } from "../../../lib/command";
 import {
+	assertUserMayAdd,
 	clearable,
 	localTodosClient,
 	richFields,
@@ -18,6 +19,7 @@ export default command({
 		terminal: string().desc("Terminal ID (default: this terminal)"),
 	},
 	run: async ({ ctx, args, options }) => {
+		assertUserMayAdd();
 		const due = clearable(options.due);
 		const link = clearable(options.link);
 		const todo = await (await localTodosClient(ctx)).add.mutate({

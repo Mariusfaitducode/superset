@@ -1,48 +1,32 @@
 ---
 name: todos
-description: Read and update the to-do list of your Superset conversation, which the user sees in the app's sidebar, and see the other conversations' to-dos on this machine. Use at the start of a task to check what the user listed for you, when you finish something the user listed, to record follow-ups the user should see, when your plan includes actions only the user can take (a mail, a call, a post), or when asked "what's on my list", "add a to-do", "check that off", "what are the other agents doing". Not for your own step-by-step plan inside a turn (keep using your built-in task list for that).
-argument-hint: what to read, add, or check off
+description: Read the to-do list of your Superset conversation, which is the user's own tracker of where each project stands, and see the other conversations' to-dos on this machine. Use at the start of a task to see the state the user recorded, or when the user asks you to check off, change or read a to-do ("what's on my list", "check that off"). Agents never add to-dos: hand work to the user with `superset report`. Not for your own step-by-step plan inside a turn (keep using your built-in task list for that).
+argument-hint: what to read, or what the user asked to check off
 allowed-tools: Bash(superset:*)
 ---
 
 # Conversation to-dos
 
 Each agent conversation in Superset has a to-do list, shown under it in the
-sidebar. The user writes to-dos for you there; you read and update them with
+sidebar. The user writes them there to track each project; you read them with
 `superset todos`. From your terminal, every command acts on your own
 conversation (`$SUPERSET_TERMINAL_ID`).
 
 ## Rules
 
-- **The user's to-dos are theirs.** You may check them off when done
-  (`superset todos done <id>`), never reword or archive them: the host refuses
-  it. If one looks wrong, outdated or duplicated, add your own to-do saying so.
-- **Your own to-dos** are for what the user should see and act on: a
-  follow-up, a decision waiting on them, a message to send. You may change and
-  archive them.
+- **The list is the user's, not yours.** The user keeps it to track where
+  each project stands, and only the user writes it. Read it to know that
+  state; don't add, reword, check or archive anything unless the user asks
+  you to in this conversation. `superset todos add` refuses to run from an
+  agent's terminal.
+- **Hand work over with `superset report`**, not a to-do: work ready for
+  review (`done`), a choice (`decision`), a text to send (`draft`), something
+  only the user can do (`blocked`). See the `report` skill.
+- **Something worth doing later** that is out of scope now goes in
+  `superset notes add`.
+- When the user asks you to check one off, do it only if it is really done.
 - **Nothing is deleted.** `rm` archives: the to-do leaves the list but stays
   findable with `list --archived` and comes back with `restore`.
-- Check a to-do only when it is really done, not when you start it.
-- **What the user must do goes on the list, not only in the chat.** When you
-  propose a plan with actions only the user can take (send a mail, contact
-  someone, publish a post, book a meeting, any marketing step), record each
-  one as its own to-do, as well as saying it in your reply. Give it the right
-  `--kind` (`mail`, `contact`, `post`, `meeting`, `message`), a `--due` day,
-  a `--priority`, the `--recipient` and `--channel`, the ordered `--step`s,
-  and a `--draft` the user can send as is: the full mail, message or post in
-  the user's language and voice, not a summary of it. Then tell the user the
-  to-dos are on their list.
-- **A to-do draft or a `draft` report?** Use `superset report draft` (see the
-  `report` skill) when you stop and will send the text yourself once the user
-  approves it. Use a to-do with `--draft` when the user sends it themselves
-  (their own mail box, LinkedIn, a call, a channel you can't reach) or when
-  you have several texts queued: a report keeps only one open draft per
-  conversation, to-dos keep each one with its recipient and channel.
-- **Keep every list true, not only yours.** When the user says something is
-  done ("I opened the Apple Developer account", "I sent the mail"), run
-  `superset todos list --all` and check off every open to-do, in any
-  conversation, that this completes. If what they said unblocks another
-  conversation's to-dos, say which ones in your reply.
 
 ## Commands
 
@@ -50,7 +34,7 @@ conversation (`$SUPERSET_TERMINAL_ID`).
 superset todos list                 # this conversation's to-dos
 superset todos list --open          # without the checked ones
 superset todos list --all           # every conversation on this machine
-superset todos add "Answer Paul about the release" --kind message --priority high --due 2026-10-24
+superset todos add "Answer Paul about the release" --kind message --priority high --due 2026-10-24   # user only
 superset todos done <id>            # the short id from `list` works
 superset todos undone <id>
 superset todos edit <id> --priority low --link https://github.com/org/repo/pull/12
@@ -59,25 +43,7 @@ superset todos list --archived      # the archived ones
 superset todos restore <id>         # back to the list, your own only
 ```
 
-A to-do for the user to carry out, with everything they need:
-
-```bash
-superset todos add "Invite Paul to the beta" --kind mail --priority high --due 2026-10-28 \
-  --recipient "Paul Martin <paul@example.com>" --channel email \
-  --step "Check Paul's address in the CRM" --step "Send the mail" --step "Add him to the beta list" \
-  --draft "$(cat <<'EOF'
-Subject: Your invite to the beta
-
-Hi Paul,
-
-The beta opens on Monday and I would love you to try it first.
-Here is your access link: https://example.com/beta
-
-Thanks,
-Marius
-EOF
-)"
-```
+The user adds and edits to-dos in the app or with:
 
 Fields: `--priority high|normal|low` (default normal), `--kind
 code|message|review|mail|contact|post|meeting|other` (default other), `--due

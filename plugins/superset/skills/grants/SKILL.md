@@ -23,8 +23,8 @@ superset context                  # the start-of-session block: to-dos, labels, 
   for it does. Say in your report that you did it.
 - **Not granted and it leaves the machine** (push, PR, comment, message): don't
   ask in the chat. Prepare it (branch ready, text drafted) and hand it to the
-  user as a draft or a decision, with `superset report` when this build has it,
-  otherwise a `superset todos add` for the user.
+  user as a draft or a decision with `superset report`. Never add a to-do:
+  the to-do list is the user's own.
 - Local commits are always fine. Never push to a branch that is not this
   workspace's own, never force-push, never merge, whatever is granted.
 - Grants are advisory for now: nothing stops you, so following them is on you.

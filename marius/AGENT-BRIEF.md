@@ -4,7 +4,7 @@ Read this, then `marius/README.md` and `marius/ROADMAP.md` ("How we work"). You 
 
 ## Your loop
 
-1. **Decide and build.** Marius is the reviewer, not the gatekeeper: his request plus the context you can find (code, git history, memory, open PRs, `marius/ROADMAP.md`) is enough to start. Pick the approach you recommend and build it. Ask him only what none of that can answer and a wrong guess would waste most of the work; a question that doesn't block you goes into a `superset todos add` for him. Never use the brainstorming skill.
+1. **Decide and build.** Marius is the reviewer, not the gatekeeper: his request plus the context you can find (code, git history, memory, open PRs, `marius/ROADMAP.md`) is enough to start. Pick the approach you recommend and build it. Ask him only what none of that can answer and a wrong guess would waste most of the work; a question that doesn't block you goes into your final `superset report` (or a note), never into a to-do. Never use the brainstorming skill.
 2. **Build** in your worktree only. Match the surrounding code: rare comments that say why, `react-icons/lu`, Lingui `t` for every visible string, both sidebar row variants (`DashboardSidebarExpandedWorkspaceRow` and `DashboardSidebarLegacyExpandedWorkspaceRow`) when you touch a row.
 3. **Check locally, light only:** `bun test <the folders you touched>`, `bunx biome check <your files>` (CI fails on any warning), `bun run check:i18n`. Fill translations with `python3 marius/i18n/fill.py <file.json>` (`{"msgid": [cs, de, es, fr, id, it, ja, ko, nl, pl, pt-BR, ru, tr, vi, zh-CN, zh-TW]}`). A new localStorage store must be added to `apps/desktop/src/renderer/lib/persisted-keys/persisted-key-registry.test-data.ts`.
 4. **Push and open the PR to `marius/main`.** Fork CI (lint + i18n, typecheck, tests) runs on GitHub: that is your typecheck. Loop until it is green. Merge `origin/marius/main` into your branch when it moves; never rebase a pushed branch, never force-push.
@@ -17,7 +17,7 @@ Read this, then `marius/README.md` and `marius/ROADMAP.md` ("How we work"). You 
 - **English** in code, comments, commits, PR titles and descriptions. French with Marius.
 - **Texts in Marius's name** (PR description, comments): load the `my-voice` skill, show him the exact text, wait for his OK.
 - **Be honest:** say what you verified and what you did not. Marius validates the UI himself.
-- **Use the fork's tools:** start with `superset todos list --open`; keep your own to-dos and Marius's action items with `superset todos add`; set your workspace label with `superset labels` (`In progress` while working, `Waiting` when you need Marius, off when done). Anything in Superset that slows you down or a feature you wish it had: log it without stopping (`superset notes add "Superset idea: …"`, or a dated line in `~/.claude/superset-ideas.md` when notes aren't available).
+- **Use the fork's tools:** the to-do list is Marius's own project tracker: read it (`superset todos list --open`) for where things stand, never add, edit or check one unless he asks; hand work over with `superset report`; set your workspace label with `superset labels` (`In progress` while working, `Waiting` when you need Marius, off when done). Anything in Superset that slows you down or a feature you wish it had: log it without stopping (`superset notes add "Superset idea: …"`, or a dated line in `~/.claude/superset-ideas.md` when notes aren't available).
 
 ## Envelope
 
