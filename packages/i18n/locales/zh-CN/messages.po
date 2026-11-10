@@ -1294,6 +1294,9 @@ msgstr "{stepCount} 个步骤，见菜单"
 msgid "{subagentCount, plural, one {# subagent running} other {# subagents running}}"
 msgstr "{subagentCount, plural, other {# 个子智能体运行中}}"
 
+msgid "{subagentCount} subagents"
+msgstr "{subagentCount} 个子代理"
+
 msgid "{successCount, plural, one {Created # workspace, {failCount} failed} other {Created # workspaces, {failCount} failed}}"
 msgstr "{successCount, plural, one {已创建#个工作区，{failCount}个失败} other {已创建#个工作区，{failCount}个失败}}"
 
@@ -4266,9 +4269,6 @@ msgstr "点击<0>导入主题</0>，选择下载好的文件。"
 msgid "Click a terminal script to edit its details."
 msgstr "点击终端脚本以编辑其详情。"
 
-msgid "Click an agent to open its conversation, a name plate to open its workspace · ⌥-click, right-click or I for details · Tab or arrows to move, Enter to open"
-msgstr "点击代理打开其对话，点击名牌打开其工作区 · ⌥-点击、右键或 I 查看详情 · Tab 或方向键移动，Enter 打开"
-
 msgid "Click an element."
 msgstr "点击一个元素。"
 
@@ -4292,6 +4292,9 @@ msgstr "点击复制会话ID（使用`claude --resume <id>`恢复）。"
 
 msgid "Click to open · ⌥-click or I for details"
 msgstr "点击打开 · ⌥-点击或 I 查看详情"
+
+msgid "Click to open its transcript"
+msgstr "点击打开其记录"
 
 msgid "Click to open on GitHub"
 msgstr "点击在GitHub上打开"
@@ -7080,6 +7083,9 @@ msgstr "草稿等待你批准"
 
 msgid "drafted 3 support replies"
 msgstr "起草了3条支持回复"
+
+msgid "Drag or scroll to move, pinch or ⌘-scroll to zoom, click a room's name to zoom on it · Click an agent to open its conversation, a small one for its subagent · ⌥-click or I for details"
+msgstr "拖动或滚动来移动，捏合或 ⌘+滚动来缩放，点击房间名称放大该房间 · 点击代理打开其对话，点击小代理打开其子代理 · ⌥-点击或按 I 查看详情"
 
 msgid "Drag to reorder"
 msgstr "拖动以重新排序"
@@ -16483,6 +16489,9 @@ msgstr "想修改主题或做一个自己的，请查看<0>自定义主题指南
 msgid "See the open roles, or try Superset first."
 msgstr "查看空缺职位，或先试用 Superset。"
 
+msgid "See the whole building (0)"
+msgstr "查看整栋楼 (0)"
+
 msgid "See this gate on the scorecard"
 msgstr "在评分表中查看这道关卡"
 
@@ -20990,6 +20999,12 @@ msgstr "用时 {0} 分 {1} 秒"
 msgid "Worked for {seconds}s"
 msgstr "用时 {seconds} 秒"
 
+msgid "Workflow"
+msgstr "工作流"
+
+msgid "Workflow agent"
+msgstr "工作流代理"
+
 msgid "Workflow run completed…"
 msgstr "工作流运行完成…"
 
@@ -21007,6 +21022,9 @@ msgstr "运行中"
 #. placeholder {1}: seconds % 60
 msgid "Working for {0}m {1}s"
 msgstr "已运行 {0} 分 {1} 秒"
+
+msgid "Working for {parentTitle}"
+msgstr "正在为 {parentTitle} 工作"
 
 msgid "Working for {seconds}s"
 msgstr "已运行 {seconds} 秒"
@@ -21545,11 +21563,20 @@ msgstr "放大"
 msgid "Zoom In"
 msgstr "放大"
 
+msgid "Zoom in (+)"
+msgstr "放大 (+)"
+
+msgid "Zoom on {name}"
+msgstr "放大 {name}"
+
 msgid "Zoom out"
 msgstr "缩小"
 
 msgid "Zoom Out"
 msgstr "缩小"
+
+msgid "Zoom out (−)"
+msgstr "缩小 (−)"
 
 msgid "zsh"
 msgstr "zsh"

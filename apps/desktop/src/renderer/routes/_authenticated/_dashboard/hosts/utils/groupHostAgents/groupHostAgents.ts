@@ -3,6 +3,7 @@ import {
 	AGENT_STATES,
 	type AgentState,
 	agentStateFromPaneStatus,
+	countLiveChildren,
 	mostUrgentAgentState,
 } from "renderer/lib/agent-state";
 import type { PaneStatus } from "shared/tabs-types";
@@ -48,6 +49,7 @@ export function bindingPaneStatus(
 		lastEventType: binding.lastEventType,
 		lastEventAt: binding.lastEventAt,
 		lastSeenAt: terminalSeenAt[binding.terminalId],
+		liveChildren: countLiveChildren(binding),
 	});
 }
 

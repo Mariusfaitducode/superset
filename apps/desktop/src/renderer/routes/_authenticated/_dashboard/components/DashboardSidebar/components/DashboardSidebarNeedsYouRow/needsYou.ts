@@ -1,5 +1,6 @@
 import {
 	agentStateFromConversation,
+	countLiveChildren,
 	isBlockedOnUser,
 } from "renderer/lib/agent-state";
 import { deriveConversationState } from "../DashboardSidebarWorkspaceItem/components/DashboardSidebarExpandedWorkspaceRow/components/DashboardSidebarConversationList/utils/conversation-state";
@@ -72,6 +73,7 @@ export function summarizeNeedsYou({
 					lastEventType: binding.lastEventType,
 					lastEventAt: binding.lastEventAt,
 					lastSeenAt: terminalSeenAt[binding.terminalId],
+					liveChildren: countLiveChildren(binding),
 				}),
 			);
 			if (isBlockedOnUser(state)) {

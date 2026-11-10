@@ -2,6 +2,7 @@ import {
 	AGENT_IDENTITY_LABELS,
 	type AgentIdentityId,
 } from "@superset/shared/agent-catalog";
+import { countLiveChildren } from "renderer/lib/agent-state";
 import {
 	type ConversationState,
 	deriveConversationState,
@@ -87,6 +88,7 @@ export function buildAgentConversations({
 				lastEventType: binding.lastEventType,
 				lastEventAt: binding.lastEventAt,
 				lastSeenAt: terminalSeenAt[binding.terminalId],
+				liveChildren: countLiveChildren(binding),
 			}),
 			since: binding.lastEventAt,
 		});

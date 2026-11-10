@@ -3,17 +3,19 @@ import { Trans, useLingui } from "@lingui/react/macro";
 import type { CSSProperties } from "react";
 import type { IslandCounts } from "renderer/routes/_authenticated/_dashboard/office/utils/officeStatus";
 
-/** A room's group name in its color, and who in it needs you. */
+/** A room's group name in its color, and who in it needs you. Click zooms on the room. */
 export function OfficeRoomHeader({
 	name,
 	color,
 	counts,
 	style,
+	onFocusRoom,
 }: {
 	name: string;
 	color: string | null;
 	counts: IslandCounts;
 	style: CSSProperties;
+	onFocusRoom: () => void;
 }) {
 	const { t } = useLingui();
 	const needYou = t({
@@ -25,8 +27,11 @@ export function OfficeRoomHeader({
 	const working = t`${counts.working} working`;
 
 	return (
-		<div
-			className="pointer-events-none absolute flex flex-col justify-center overflow-hidden px-2 font-mono leading-none text-[#f4f1ea]"
+		<button
+			type="button"
+			onClick={onFocusRoom}
+			aria-label={t`Zoom on ${name}`}
+			className="absolute flex flex-col justify-center overflow-hidden px-2 text-left font-mono leading-none text-[#f4f1ea] outline-none hover:bg-white/10 focus-visible:ring-2 focus-visible:ring-ring"
 			style={style}
 		>
 			<div className="flex min-w-0 items-center gap-1.5">
@@ -54,6 +59,6 @@ export function OfficeRoomHeader({
 					)}
 				</span>
 			</div>
-		</div>
+		</button>
 	);
 }

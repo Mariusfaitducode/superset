@@ -1294,6 +1294,9 @@ msgstr "{stepCount} bước, trong menu"
 msgid "{subagentCount, plural, one {# subagent running} other {# subagents running}}"
 msgstr "{subagentCount, plural, other {# agent con đang chạy}}"
 
+msgid "{subagentCount} subagents"
+msgstr "{subagentCount} agent con"
+
 msgid "{successCount, plural, one {Created # workspace, {failCount} failed} other {Created # workspaces, {failCount} failed}}"
 msgstr "{successCount, plural, one {Đã tạo # workspace, {failCount} thất bại} other {Đã tạo # workspace, {failCount} thất bại}}"
 
@@ -4266,9 +4269,6 @@ msgstr "Nhấp <0>Import Theme</0> và chọn tệp vừa tải."
 msgid "Click a terminal script to edit its details."
 msgstr "Nhấp vào một script terminal để sửa chi tiết."
 
-msgid "Click an agent to open its conversation, a name plate to open its workspace · ⌥-click, right-click or I for details · Tab or arrows to move, Enter to open"
-msgstr "Nhấp vào agent để mở cuộc trò chuyện, vào bảng tên để mở workspace · ⌥-nhấp, nhấp chuột phải hoặc I để xem chi tiết · Tab hoặc phím mũi tên để di chuyển, Enter để mở"
-
 msgid "Click an element."
 msgstr "Nhấp vào một phần tử."
 
@@ -4292,6 +4292,9 @@ msgstr "Nhấp để sao chép ID phiên (resume bằng `claude --resume <id>`).
 
 msgid "Click to open · ⌥-click or I for details"
 msgstr "Nhấp để mở · ⌥-nhấp hoặc I để xem chi tiết"
+
+msgid "Click to open its transcript"
+msgstr "Nhấp để mở bản ghi"
 
 msgid "Click to open on GitHub"
 msgstr "Nhấp để mở trên GitHub"
@@ -7080,6 +7083,9 @@ msgstr "Bản nháp đang chờ bạn duyệt"
 
 msgid "drafted 3 support replies"
 msgstr "đã soạn 3 câu trả lời hỗ trợ"
+
+msgid "Drag or scroll to move, pinch or ⌘-scroll to zoom, click a room's name to zoom on it · Click an agent to open its conversation, a small one for its subagent · ⌥-click or I for details"
+msgstr "Kéo hoặc cuộn để di chuyển, chụm hoặc ⌘ + cuộn để thu phóng, nhấp tên phòng để phóng to phòng đó · Nhấp một agent để mở cuộc trò chuyện, agent nhỏ để mở agent con · ⌥-nhấp hoặc I để xem chi tiết"
 
 msgid "Drag to reorder"
 msgstr "Kéo để sắp xếp lại"
@@ -16483,6 +16489,9 @@ msgstr "Xem <0>hướng dẫn chủ đề tùy chỉnh</0> để sửa một ch�
 msgid "See the open roles, or try Superset first."
 msgstr "Xem các vị trí đang tuyển, hoặc dùng thử Superset trước."
 
+msgid "See the whole building (0)"
+msgstr "Xem toàn bộ tòa nhà (0)"
+
 msgid "See this gate on the scorecard"
 msgstr "Xem cổng này trên bảng điểm"
 
@@ -20990,6 +20999,12 @@ msgstr "Đã chạy {0} phút {1} giây"
 msgid "Worked for {seconds}s"
 msgstr "Đã chạy {seconds} giây"
 
+msgid "Workflow"
+msgstr "Quy trình"
+
+msgid "Workflow agent"
+msgstr "Agent quy trình"
+
 msgid "Workflow run completed…"
 msgstr "Workflow chạy xong…"
 
@@ -21007,6 +21022,9 @@ msgstr "Đang chạy"
 #. placeholder {1}: seconds % 60
 msgid "Working for {0}m {1}s"
 msgstr "Đang chạy {0} phút {1} giây"
+
+msgid "Working for {parentTitle}"
+msgstr "Đang làm cho {parentTitle}"
 
 msgid "Working for {seconds}s"
 msgstr "Đang chạy {seconds} giây"
@@ -21545,11 +21563,20 @@ msgstr "Phóng to"
 msgid "Zoom In"
 msgstr "Phóng to"
 
+msgid "Zoom in (+)"
+msgstr "Phóng to (+)"
+
+msgid "Zoom on {name}"
+msgstr "Phóng to {name}"
+
 msgid "Zoom out"
 msgstr "Thu nhỏ"
 
 msgid "Zoom Out"
 msgstr "Thu nhỏ"
+
+msgid "Zoom out (−)"
+msgstr "Thu nhỏ (−)"
 
 msgid "zsh"
 msgstr "zsh"

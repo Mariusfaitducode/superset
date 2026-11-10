@@ -347,10 +347,22 @@ export class TerminalAgentStore extends EventEmitter {
 
 		const nextType = agentType ?? existing?.agentType;
 		const nextPath = transcriptPath ?? existing?.transcriptPath;
+		// The sidecar files can land after the first event: read until found.
+		const details =
+			nextPath &&
+			(nextPath !== existing?.transcriptPath ||
+				!existing?.description ||
+				(existing.workflow && !existing.workflow.name))
+				? harness.readDetails(nextPath)
+				: {};
+		const description = details.description ?? existing?.description;
+		const workflow = details.workflow ?? existing?.workflow;
 		const next: TerminalSubagent = {
 			id: subagentId,
 			...(nextType ? { agentType: nextType } : {}),
 			...(nextPath ? { transcriptPath: nextPath } : {}),
+			...(description ? { description } : {}),
+			...(workflow ? { workflow } : {}),
 			// A stopped child that speaks again (Codex send_input) is live again.
 			startedAt:
 				existing && existing.endedAt === undefined

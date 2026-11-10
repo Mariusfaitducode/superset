@@ -1294,6 +1294,9 @@ msgstr "{stepCount} langkah, di menu"
 msgid "{subagentCount, plural, one {# subagent running} other {# subagents running}}"
 msgstr "{subagentCount, plural, other {# subagen berjalan}}"
 
+msgid "{subagentCount} subagents"
+msgstr "{subagentCount} subagen"
+
 msgid "{successCount, plural, one {Created # workspace, {failCount} failed} other {Created # workspaces, {failCount} failed}}"
 msgstr "{successCount, plural, one {Membuat # workspace, {failCount} gagal} other {Membuat # workspace, {failCount} gagal}}"
 
@@ -4266,9 +4269,6 @@ msgstr "Klik <0>Import Theme</0> dan pilih file yang sudah diunduh."
 msgid "Click a terminal script to edit its details."
 msgstr "Klik sebuah skrip terminal untuk mengedit detailnya."
 
-msgid "Click an agent to open its conversation, a name plate to open its workspace · ⌥-click, right-click or I for details · Tab or arrows to move, Enter to open"
-msgstr "Klik agen untuk membuka percakapannya, papan nama untuk membuka workspace-nya · ⌥-klik, klik kanan atau I untuk detail · Tab atau panah untuk berpindah, Enter untuk membuka"
-
 msgid "Click an element."
 msgstr "Klik sebuah elemen."
 
@@ -4292,6 +4292,9 @@ msgstr "Klik untuk menyalin ID sesi (lanjutkan dengan `claude --resume <id>`)."
 
 msgid "Click to open · ⌥-click or I for details"
 msgstr "Klik untuk membuka · ⌥-klik atau I untuk detail"
+
+msgid "Click to open its transcript"
+msgstr "Klik untuk membuka transkripnya"
 
 msgid "Click to open on GitHub"
 msgstr "Klik untuk membuka di GitHub"
@@ -7080,6 +7083,9 @@ msgstr "Draf menunggu persetujuan Anda"
 
 msgid "drafted 3 support replies"
 msgstr "menyusun 3 draf balasan dukungan"
+
+msgid "Drag or scroll to move, pinch or ⌘-scroll to zoom, click a room's name to zoom on it · Click an agent to open its conversation, a small one for its subagent · ⌥-click or I for details"
+msgstr "Seret atau gulir untuk bergerak, cubit atau ⌘ + gulir untuk zoom, klik nama ruangan untuk memperbesarnya · Klik agen untuk membuka percakapannya, yang kecil untuk subagennya · ⌥-klik atau I untuk detail"
 
 msgid "Drag to reorder"
 msgstr "Seret untuk mengurutkan ulang"
@@ -16483,6 +16489,9 @@ msgstr "Lihat <0>panduan tema kustom</0> untuk mengedit tema atau membuat tema A
 msgid "See the open roles, or try Superset first."
 msgstr "Lihat lowongan yang ada, atau coba Superset dulu."
 
+msgid "See the whole building (0)"
+msgstr "Lihat seluruh gedung (0)"
+
 msgid "See this gate on the scorecard"
 msgstr "Lihat gerbang ini di kartu skor"
 
@@ -20990,6 +20999,12 @@ msgstr "Bekerja {0} mnt {1} dtk"
 msgid "Worked for {seconds}s"
 msgstr "Bekerja {seconds} dtk"
 
+msgid "Workflow"
+msgstr "Alur kerja"
+
+msgid "Workflow agent"
+msgstr "Agen alur kerja"
+
 msgid "Workflow run completed…"
 msgstr "Run workflow selesai…"
 
@@ -21007,6 +21022,9 @@ msgstr "Bekerja"
 #. placeholder {1}: seconds % 60
 msgid "Working for {0}m {1}s"
 msgstr "Bekerja selama {0} mnt {1} dtk"
+
+msgid "Working for {parentTitle}"
+msgstr "Bekerja untuk {parentTitle}"
 
 msgid "Working for {seconds}s"
 msgstr "Bekerja selama {seconds} dtk"
@@ -21545,11 +21563,20 @@ msgstr "Perbesar"
 msgid "Zoom In"
 msgstr "Perbesar"
 
+msgid "Zoom in (+)"
+msgstr "Perbesar (+)"
+
+msgid "Zoom on {name}"
+msgstr "Perbesar {name}"
+
 msgid "Zoom out"
 msgstr "Perkecil"
 
 msgid "Zoom Out"
 msgstr "Perkecil"
+
+msgid "Zoom out (−)"
+msgstr "Perkecil (−)"
 
 msgid "zsh"
 msgstr "zsh"

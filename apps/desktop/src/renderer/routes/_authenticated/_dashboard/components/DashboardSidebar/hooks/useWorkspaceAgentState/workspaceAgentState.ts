@@ -2,6 +2,7 @@ import {
 	type AgentState,
 	agentStateFromConversation,
 	agentStateFromPaneStatus,
+	countLiveChildren,
 	isBlockedOnUser,
 	mostUrgentAgentState,
 } from "renderer/lib/agent-state";
@@ -46,6 +47,7 @@ export function deriveWorkspaceAgentState({
 			lastEventType: binding.lastEventType,
 			lastEventAt: binding.lastEventAt,
 			lastSeenAt: terminalSeenAt[binding.terminalId],
+			liveChildren: countLiveChildren(binding),
 		});
 		const state = agentStateFromConversation(conversationState);
 		states.push(state);

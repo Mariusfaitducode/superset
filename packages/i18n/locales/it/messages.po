@@ -1294,6 +1294,9 @@ msgstr "{stepCount} passaggi, nel menu"
 msgid "{subagentCount, plural, one {# subagent running} other {# subagents running}}"
 msgstr "{subagentCount, plural, one {# sottoagente in esecuzione} other {# sottoagenti in esecuzione}}"
 
+msgid "{subagentCount} subagents"
+msgstr "{subagentCount} subagenti"
+
 msgid "{successCount, plural, one {Created # workspace, {failCount} failed} other {Created # workspaces, {failCount} failed}}"
 msgstr "{successCount, plural, one {Creato # workspace, {failCount} non riusciti} other {Creati # workspace, {failCount} non riusciti}}"
 
@@ -4266,9 +4269,6 @@ msgstr "Clicca su <0>Importa tema</0> e seleziona il file scaricato."
 msgid "Click a terminal script to edit its details."
 msgstr "Clicca su uno script del terminale per modificarne i dettagli."
 
-msgid "Click an agent to open its conversation, a name plate to open its workspace · ⌥-click, right-click or I for details · Tab or arrows to move, Enter to open"
-msgstr "Fai clic su un agente per aprire la sua conversazione, su una targhetta per aprire il suo workspace · ⌥-clic, clic destro o I per i dettagli · Tab o frecce per spostarti, Invio per aprire"
-
 msgid "Click an element."
 msgstr "Clicca su un elemento."
 
@@ -4292,6 +4292,9 @@ msgstr "Clicca per copiare l'ID della sessione (riprendi con `claude --resume <i
 
 msgid "Click to open · ⌥-click or I for details"
 msgstr "Clic per aprire · ⌥-clic o I per i dettagli"
+
+msgid "Click to open its transcript"
+msgstr "Fai clic per aprire la sua trascrizione"
 
 msgid "Click to open on GitHub"
 msgstr "Clicca per aprire su GitHub"
@@ -7080,6 +7083,9 @@ msgstr "Bozza in attesa della tua approvazione"
 
 msgid "drafted 3 support replies"
 msgstr "preparate 3 risposte di supporto"
+
+msgid "Drag or scroll to move, pinch or ⌘-scroll to zoom, click a room's name to zoom on it · Click an agent to open its conversation, a small one for its subagent · ⌥-click or I for details"
+msgstr "Trascina o scorri per muoverti, pizzica o ⌘ + scorrimento per lo zoom, fai clic sul nome di una stanza per ingrandirla · Fai clic su un agente per aprirne la conversazione, su uno piccolo per il suo subagente · ⌥-clic o I per i dettagli"
 
 msgid "Drag to reorder"
 msgstr "Trascina per riordinare"
@@ -16483,6 +16489,9 @@ msgstr "Consulta la <0>guida ai temi personalizzati</0> per modificare un tema o
 msgid "See the open roles, or try Superset first."
 msgstr "Guarda le posizioni aperte, oppure prova prima Superset."
 
+msgid "See the whole building (0)"
+msgstr "Vedi tutto l'edificio (0)"
+
 msgid "See this gate on the scorecard"
 msgstr "Vedi questo gate nella scheda di valutazione"
 
@@ -20990,6 +20999,12 @@ msgstr "Ha lavorato {0} min {1} s"
 msgid "Worked for {seconds}s"
 msgstr "Ha lavorato {seconds} s"
 
+msgid "Workflow"
+msgstr "Workflow"
+
+msgid "Workflow agent"
+msgstr "Agente del workflow"
+
 msgid "Workflow run completed…"
 msgstr "Esecuzione del workflow completata…"
 
@@ -21007,6 +21022,9 @@ msgstr "In corso"
 #. placeholder {1}: seconds % 60
 msgid "Working for {0}m {1}s"
 msgstr "Al lavoro da {0} min {1} s"
+
+msgid "Working for {parentTitle}"
+msgstr "Lavora per {parentTitle}"
 
 msgid "Working for {seconds}s"
 msgstr "Al lavoro da {seconds} s"
@@ -21545,11 +21563,20 @@ msgstr "Zoom avanti"
 msgid "Zoom In"
 msgstr "Zoom avanti"
 
+msgid "Zoom in (+)"
+msgstr "Ingrandisci (+)"
+
+msgid "Zoom on {name}"
+msgstr "Ingrandisci {name}"
+
 msgid "Zoom out"
 msgstr "Zoom indietro"
 
 msgid "Zoom Out"
 msgstr "Zoom indietro"
+
+msgid "Zoom out (−)"
+msgstr "Riduci (−)"
 
 msgid "zsh"
 msgstr "zsh"

@@ -1294,6 +1294,9 @@ msgstr "{stepCount} 個のステップ（メニュー内）"
 msgid "{subagentCount, plural, one {# subagent running} other {# subagents running}}"
 msgstr "{subagentCount, plural, other {# 件のサブエージェントが実行中}}"
 
+msgid "{subagentCount} subagents"
+msgstr "サブエージェント {subagentCount} 件"
+
 msgid "{successCount, plural, one {Created # workspace, {failCount} failed} other {Created # workspaces, {failCount} failed}}"
 msgstr "{successCount, plural, one {#件のワークスペースを作成、{failCount}件失敗} other {#件のワークスペースを作成、{failCount}件失敗}}"
 
@@ -4266,9 +4269,6 @@ msgstr "<0>テーマをインポート</0>をクリックし、ダウンロー�
 msgid "Click a terminal script to edit its details."
 msgstr "ターミナルスクリプトをクリックして詳細を編集します。"
 
-msgid "Click an agent to open its conversation, a name plate to open its workspace · ⌥-click, right-click or I for details · Tab or arrows to move, Enter to open"
-msgstr "エージェントをクリックで会話を開く、名札をクリックでワークスペースを開く · ⌥-クリック、右クリック、または I で詳細 · Tab または矢印で移動、Enter で開く"
-
 msgid "Click an element."
 msgstr "要素をクリックします。"
 
@@ -4292,6 +4292,9 @@ msgstr "クリックでセッションIDをコピーします(`claude --resume <
 
 msgid "Click to open · ⌥-click or I for details"
 msgstr "クリックで開く · ⌥-クリックまたは I で詳細"
+
+msgid "Click to open its transcript"
+msgstr "クリックでトランスクリプトを開く"
 
 msgid "Click to open on GitHub"
 msgstr "クリックしてGitHubで開く"
@@ -7080,6 +7083,9 @@ msgstr "下書きが承認待ち"
 
 msgid "drafted 3 support replies"
 msgstr "サポート返信を3件下書き"
+
+msgid "Drag or scroll to move, pinch or ⌘-scroll to zoom, click a room's name to zoom on it · Click an agent to open its conversation, a small one for its subagent · ⌥-click or I for details"
+msgstr "ドラッグまたはスクロールで移動、ピンチまたは ⌘+スクロールでズーム、部屋の名前をクリックでその部屋に寄る · エージェントをクリックで会話を開き、小さいものはサブエージェントを開く · ⌥-クリックまたは I で詳細"
 
 msgid "Drag to reorder"
 msgstr "ドラッグして並べ替え"
@@ -16483,6 +16489,9 @@ msgstr "テーマを編集したり自作したりするには<0>カスタムテ
 msgid "See the open roles, or try Superset first."
 msgstr "募集中のポジションを見るか、まずはSupersetを試してみてください。"
 
+msgid "See the whole building (0)"
+msgstr "建物全体を表示 (0)"
+
 msgid "See this gate on the scorecard"
 msgstr "このゲートをスコアカードで見る"
 
@@ -20990,6 +20999,12 @@ msgstr "作業時間 {0}分{1}秒"
 msgid "Worked for {seconds}s"
 msgstr "作業時間 {seconds}秒"
 
+msgid "Workflow"
+msgstr "ワークフロー"
+
+msgid "Workflow agent"
+msgstr "ワークフローのエージェント"
+
 msgid "Workflow run completed…"
 msgstr "ワークフロー実行完了…"
 
@@ -21007,6 +21022,9 @@ msgstr "実行中"
 #. placeholder {1}: seconds % 60
 msgid "Working for {0}m {1}s"
 msgstr "作業時間 {0}分{1}秒"
+
+msgid "Working for {parentTitle}"
+msgstr "{parentTitle} のために作業中"
 
 msgid "Working for {seconds}s"
 msgstr "作業時間 {seconds}秒"
@@ -21545,11 +21563,20 @@ msgstr "拡大"
 msgid "Zoom In"
 msgstr "拡大"
 
+msgid "Zoom in (+)"
+msgstr "拡大 (+)"
+
+msgid "Zoom on {name}"
+msgstr "{name} を拡大"
+
 msgid "Zoom out"
 msgstr "縮小"
 
 msgid "Zoom Out"
 msgstr "縮小"
+
+msgid "Zoom out (−)"
+msgstr "縮小 (−)"
 
 msgid "zsh"
 msgstr "zsh"

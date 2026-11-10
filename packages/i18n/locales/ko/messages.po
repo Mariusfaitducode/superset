@@ -1294,6 +1294,9 @@ msgstr "{stepCount}개 단계, 메뉴에서 보기"
 msgid "{subagentCount, plural, one {# subagent running} other {# subagents running}}"
 msgstr "{subagentCount, plural, other {서브 에이전트 #개 실행 중}}"
 
+msgid "{subagentCount} subagents"
+msgstr "하위 에이전트 {subagentCount}개"
+
 msgid "{successCount, plural, one {Created # workspace, {failCount} failed} other {Created # workspaces, {failCount} failed}}"
 msgstr "{successCount, plural, one {워크스페이스 #개를 만들었고 {failCount}개는 실패했습니다} other {워크스페이스 #개를 만들었고 {failCount}개는 실패했습니다}}"
 
@@ -4266,9 +4269,6 @@ msgstr "<0>테마 가져오기</0>를 클릭하고 다운로드한 파일을 선
 msgid "Click a terminal script to edit its details."
 msgstr "터미널 스크립트를 클릭하면 세부 정보를 편집합니다."
 
-msgid "Click an agent to open its conversation, a name plate to open its workspace · ⌥-click, right-click or I for details · Tab or arrows to move, Enter to open"
-msgstr "에이전트를 클릭하면 대화가, 명패를 클릭하면 워크스페이스가 열립니다 · ⌥-클릭, 우클릭 또는 I로 세부 정보 · Tab 또는 화살표로 이동, Enter로 열기"
-
 msgid "Click an element."
 msgstr "요소를 클릭하세요."
 
@@ -4292,6 +4292,9 @@ msgstr "클릭하면 세션 ID를 복사합니다(`claude --resume <id>`로 이�
 
 msgid "Click to open · ⌥-click or I for details"
 msgstr "클릭하여 열기 · ⌥-클릭 또는 I로 세부 정보"
+
+msgid "Click to open its transcript"
+msgstr "클릭하면 기록을 엽니다"
 
 msgid "Click to open on GitHub"
 msgstr "클릭하여 GitHub에서 열기"
@@ -7080,6 +7083,9 @@ msgstr "초안 승인 대기 중"
 
 msgid "drafted 3 support replies"
 msgstr "지원 답변 3건 초안 작성"
+
+msgid "Drag or scroll to move, pinch or ⌘-scroll to zoom, click a room's name to zoom on it · Click an agent to open its conversation, a small one for its subagent · ⌥-click or I for details"
+msgstr "드래그하거나 스크롤해 이동, 핀치 또는 ⌘+스크롤로 확대·축소, 방 이름을 클릭하면 그 방으로 확대 · 에이전트를 클릭하면 대화를, 작은 에이전트는 하위 에이전트를 엽니다 · ⌥-클릭 또는 I로 세부 정보"
 
 msgid "Drag to reorder"
 msgstr "끌어서 순서 변경"
@@ -16483,6 +16489,9 @@ msgstr "테마를 수정하거나 직접 만들려면 <0>커스텀 테마 가이
 msgid "See the open roles, or try Superset first."
 msgstr "채용 공고를 확인하거나 먼저 Superset을 사용해 보세요."
 
+msgid "See the whole building (0)"
+msgstr "건물 전체 보기 (0)"
+
 msgid "See this gate on the scorecard"
 msgstr "성적표에서 이 관문 보기"
 
@@ -20990,6 +20999,12 @@ msgstr "{0}분 {1}초 동안 작업함"
 msgid "Worked for {seconds}s"
 msgstr "{seconds}초 동안 작업함"
 
+msgid "Workflow"
+msgstr "워크플로"
+
+msgid "Workflow agent"
+msgstr "워크플로 에이전트"
+
 msgid "Workflow run completed…"
 msgstr "워크플로 실행 완료…"
 
@@ -21007,6 +21022,9 @@ msgstr "작업 중"
 #. placeholder {1}: seconds % 60
 msgid "Working for {0}m {1}s"
 msgstr "{0}분 {1}초 동안 작업 중"
+
+msgid "Working for {parentTitle}"
+msgstr "{parentTitle}을(를) 위해 작업 중"
 
 msgid "Working for {seconds}s"
 msgstr "{seconds}초 동안 작업 중"
@@ -21545,11 +21563,20 @@ msgstr "확대"
 msgid "Zoom In"
 msgstr "확대"
 
+msgid "Zoom in (+)"
+msgstr "확대 (+)"
+
+msgid "Zoom on {name}"
+msgstr "{name} 확대"
+
 msgid "Zoom out"
 msgstr "축소"
 
 msgid "Zoom Out"
 msgstr "축소"
+
+msgid "Zoom out (−)"
+msgstr "축소 (−)"
 
 msgid "zsh"
 msgstr "zsh"

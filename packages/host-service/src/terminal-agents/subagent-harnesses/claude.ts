@@ -7,7 +7,65 @@ import {
 	type SubagentTranscriptEntry,
 	summarizeToolInput,
 } from "../subagent-transcript";
-import { defineSubagentHarness } from "./types";
+import { defineSubagentHarness, type SubagentDetails } from "./types";
+
+const WORKFLOW_TRANSCRIPT =
+	/^(.*)\/subagents\/workflows\/(wf_[^/]+)\/agent-[^/]+\.jsonl$/;
+const META_NAME = /\bname\s*:\s*['"`]([^'"`\n]{1,120})['"`]/;
+const MAX_CACHED_RUN_NAMES = 64;
+const runNames = new Map<string, string>();
+
+function readMeta(transcriptPath: string): Record<string, unknown> | undefined {
+	try {
+		const meta = JSON.parse(
+			fs.readFileSync(transcriptPath.replace(/\.jsonl$/, ".meta.json"), "utf8"),
+		);
+		return isRecord(meta) ? meta : undefined;
+	} catch {
+		return undefined;
+	}
+}
+
+/** The run's `meta.name`, from `<session>/workflows/<runId>.json`; cached once found. */
+function readRunName(sessionDir: string, runId: string): string | undefined {
+	const file = path.join(sessionDir, "workflows", `${runId}.json`);
+	const cached = runNames.get(file);
+	if (cached) return cached;
+	try {
+		const run = JSON.parse(fs.readFileSync(file, "utf8"));
+		const script =
+			isRecord(run) && typeof run.script === "string" ? run.script : "";
+		const name = META_NAME.exec(script)?.[1];
+		if (!name) return undefined;
+		if (runNames.size >= MAX_CACHED_RUN_NAMES) {
+			const oldest = runNames.keys().next().value;
+			if (oldest !== undefined) runNames.delete(oldest);
+		}
+		runNames.set(file, name);
+		return name;
+	} catch {
+		return undefined;
+	}
+}
+
+/** A workflow's children write under `subagents/workflows/<runId>/`, not `subagents/`. */
+function findWorkflowTranscript(
+	subagentsDir: string,
+	subagentId: string,
+): string | undefined {
+	const workflowsDir = path.join(subagentsDir, "workflows");
+	let runs: string[];
+	try {
+		runs = fs.readdirSync(workflowsDir);
+	} catch {
+		return undefined;
+	}
+	for (const run of runs) {
+		const candidate = path.join(workflowsDir, run, `agent-${subagentId}.jsonl`);
+		if (fs.existsSync(candidate)) return candidate;
+	}
+	return undefined;
+}
 
 /** Text of a Claude / Anthropic content block list. */
 function blocksText(content: unknown): string {
@@ -121,25 +179,39 @@ export const claudeSubagentHarness = defineSubagentHarness({
 		const { transcriptPath, sessionId, subagentId } = hint;
 		if (!transcriptPath) return undefined;
 		if (sessionId && path.basename(transcriptPath) === `${sessionId}.jsonl`) {
-			return path.join(
+			const subagentsDir = path.join(
 				path.dirname(transcriptPath),
 				sessionId,
 				"subagents",
-				`agent-${subagentId}.jsonl`,
 			);
+			const direct = path.join(subagentsDir, `agent-${subagentId}.jsonl`);
+			if (fs.existsSync(direct)) return direct;
+			return findWorkflowTranscript(subagentsDir, subagentId) ?? direct;
 		}
 		return transcriptPath;
 	},
 	parseTranscript: (text) => ({ entries: parseClaudeSubagentTranscript(text) }),
 	readDescription(transcriptPath) {
-		const metaPath = transcriptPath.replace(/\.jsonl$/, ".meta.json");
-		try {
-			const meta = JSON.parse(fs.readFileSync(metaPath, "utf8"));
-			return isRecord(meta) && typeof meta.description === "string"
-				? meta.description
-				: undefined;
-		} catch {
-			return undefined;
+		const meta = readMeta(transcriptPath);
+		return typeof meta?.description === "string" ? meta.description : undefined;
+	},
+	readDetails(transcriptPath): SubagentDetails {
+		const meta = readMeta(transcriptPath);
+		const details: SubagentDetails = {};
+		if (typeof meta?.description === "string") {
+			details.description = clip(meta.description);
 		}
+		const match = WORKFLOW_TRANSCRIPT.exec(transcriptPath);
+		if (match?.[1] && match[2]) {
+			const name = readRunName(match[1], match[2]);
+			details.workflow = {
+				runId: match[2],
+				...(name ? { name } : {}),
+				...(typeof meta?.workflowPhase === "string"
+					? { phase: clip(meta.workflowPhase) }
+					: {}),
+			};
+		}
+		return details;
 	},
 });

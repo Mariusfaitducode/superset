@@ -1294,6 +1294,9 @@ msgstr "{stepCount} kroků, v nabídce"
 msgid "{subagentCount, plural, one {# subagent running} other {# subagents running}}"
 msgstr "{subagentCount, plural, one {# subagent běží} few {# subagenti běží} many {# subagenta běží} other {# subagentů běží}}"
 
+msgid "{subagentCount} subagents"
+msgstr "{subagentCount} podagentů"
+
 msgid "{successCount, plural, one {Created # workspace, {failCount} failed} other {Created # workspaces, {failCount} failed}}"
 msgstr "{successCount, plural, one {Vytvořen # pracovní prostor, {failCount} selhalo} few {Vytvořeny # pracovní prostory, {failCount} selhalo} many {Vytvořeno # pracovního prostoru, {failCount} selhalo} other {Vytvořeno # pracovních prostorů, {failCount} selhalo}}"
 
@@ -4266,9 +4269,6 @@ msgstr "Klikněte na <0>Importovat motiv</0> a vyberte stažený soubor."
 msgid "Click a terminal script to edit its details."
 msgstr "Kliknutím na terminálový skript upravíte jeho podrobnosti."
 
-msgid "Click an agent to open its conversation, a name plate to open its workspace · ⌥-click, right-click or I for details · Tab or arrows to move, Enter to open"
-msgstr "Klikni na agenta pro otevření konverzace, na jmenovku pro otevření workspace · ⌥-klik, pravý klik nebo I pro detaily · Tab nebo šipky pro pohyb, Enter pro otevření"
-
 msgid "Click an element."
 msgstr "Klikněte na prvek."
 
@@ -4292,6 +4292,9 @@ msgstr "Kliknutím zkopírujete ID relace (pokračování přes `claude --resume
 
 msgid "Click to open · ⌥-click or I for details"
 msgstr "Kliknutím otevřeš · ⌥-klik nebo I pro detaily"
+
+msgid "Click to open its transcript"
+msgstr "Kliknutím otevřete jeho přepis"
 
 msgid "Click to open on GitHub"
 msgstr "Kliknutím otevřete na GitHubu"
@@ -7080,6 +7083,9 @@ msgstr "Koncept čeká na vaše schválení"
 
 msgid "drafted 3 support replies"
 msgstr "připravil 3 odpovědi podpoře"
+
+msgid "Drag or scroll to move, pinch or ⌘-scroll to zoom, click a room's name to zoom on it · Click an agent to open its conversation, a small one for its subagent · ⌥-click or I for details"
+msgstr "Pohyb tažením nebo posouváním, přiblížení sevřením nebo ⌘ a posouváním, kliknutím na název místnosti ji přiblížíte · Kliknutím na agenta otevřete jeho konverzaci, na malého jeho podagenta · ⌥-klik nebo I pro podrobnosti"
 
 msgid "Drag to reorder"
 msgstr "Přetažením změníte pořadí"
@@ -16483,6 +16489,9 @@ msgstr "Podívejte se na <0>průvodce vlastními motivy</0>, jak motiv upravit n
 msgid "See the open roles, or try Superset first."
 msgstr "Podívejte se na otevřené pozice, nebo si nejdřív vyzkoušejte Superset."
 
+msgid "See the whole building (0)"
+msgstr "Zobrazit celou budovu (0)"
+
 msgid "See this gate on the scorecard"
 msgstr "Zobrazit tuto bránu v hodnoticí tabulce"
 
@@ -20990,6 +20999,12 @@ msgstr "Pracoval {0} m {1} s"
 msgid "Worked for {seconds}s"
 msgstr "Pracoval {seconds} s"
 
+msgid "Workflow"
+msgstr "Workflow"
+
+msgid "Workflow agent"
+msgstr "Agent workflow"
+
 msgid "Workflow run completed…"
 msgstr "Dokončen běh workflow…"
 
@@ -21007,6 +21022,9 @@ msgstr "Pracuje"
 #. placeholder {1}: seconds % 60
 msgid "Working for {0}m {1}s"
 msgstr "Pracuje se {0} m {1} s"
+
+msgid "Working for {parentTitle}"
+msgstr "Pracuje pro {parentTitle}"
 
 msgid "Working for {seconds}s"
 msgstr "Pracuje se {seconds} s"
@@ -21545,11 +21563,20 @@ msgstr "Přiblížit"
 msgid "Zoom In"
 msgstr "Přiblížit"
 
+msgid "Zoom in (+)"
+msgstr "Přiblížit (+)"
+
+msgid "Zoom on {name}"
+msgstr "Přiblížit {name}"
+
 msgid "Zoom out"
 msgstr "Oddálit"
 
 msgid "Zoom Out"
 msgstr "Oddálit"
+
+msgid "Zoom out (−)"
+msgstr "Oddálit (−)"
 
 msgid "zsh"
 msgstr "zsh"

@@ -46,6 +46,17 @@ export interface TerminalSubagent {
 	transcriptPath?: string;
 	/** Set once the child reported its stop; such entries leave `subagents`. */
 	endedAt?: number;
+	/** What the parent asked it to do, read beside its transcript. */
+	description?: string;
+	/** Set when a workflow run spawned the child rather than the agent itself. */
+	workflow?: TerminalSubagentWorkflow;
+}
+
+export interface TerminalSubagentWorkflow {
+	runId: string;
+	/** The script's `meta.name`, once the run file is on disk. */
+	name?: string;
+	phase?: string;
 }
 
 export interface TerminalAgentBinding {

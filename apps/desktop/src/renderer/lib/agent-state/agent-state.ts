@@ -64,6 +64,21 @@ export function mostUrgentAgentState(
 	return AGENT_STATES[best];
 }
 
+/**
+ * Subagents and workflow agents still running under an agent. A parent that
+ * handed its turn back while they run is still at work.
+ */
+export function countLiveChildren(binding: {
+	subagents?: readonly unknown[];
+	backgroundTasks?: readonly { kind: string }[];
+}): number {
+	return (
+		(binding.subagents?.length ?? 0) +
+		(binding.backgroundTasks?.filter((task) => task.kind === "subagent")
+			.length ?? 0)
+	);
+}
+
 /** Counted in "Needs you": the agent cannot go on without the user. */
 export function isBlockedOnUser(state: AgentState): boolean {
 	return state === "needsYou" || state === "failed";

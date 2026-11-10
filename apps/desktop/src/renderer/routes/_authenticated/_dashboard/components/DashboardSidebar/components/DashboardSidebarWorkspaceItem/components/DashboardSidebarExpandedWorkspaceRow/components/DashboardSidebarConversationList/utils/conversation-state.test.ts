@@ -102,3 +102,29 @@ describe("waitingTintLevel", () => {
 		expect(waitingTintLevel(-MIN)).toBe(0);
 	});
 });
+
+describe("deriveConversationState with live children", () => {
+	test("a parent that stopped while its subagents run is still working", () => {
+		expect(
+			deriveConversationState({
+				lastEventType: "Stop",
+				lastEventAt: 2,
+				lastSeenAt: 1,
+				liveChildren: 3,
+			}),
+		).toBe("working");
+	});
+
+	test("a question or an error still wins over running children", () => {
+		for (const lastEventType of ["PermissionRequest", "Failed"]) {
+			expect(
+				deriveConversationState({
+					lastEventType,
+					lastEventAt: 2,
+					lastSeenAt: 1,
+					liveChildren: 1,
+				}),
+			).not.toBe("working");
+		}
+	});
+});

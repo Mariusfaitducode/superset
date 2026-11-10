@@ -1,4 +1,11 @@
 import type { SubagentTranscriptEntry } from "../subagent-transcript";
+import type { TerminalSubagentWorkflow } from "../types";
+
+/** What a harness keeps about a child beside its transcript. */
+export interface SubagentDetails {
+	description?: string;
+	workflow?: TerminalSubagentWorkflow;
+}
 
 /**
  * What a hook event inside a subagent tells us about where its transcript
@@ -45,6 +52,8 @@ export interface SubagentHarness {
 	parseTranscript(text: string): ParsedSubagentTranscript;
 	/** A title kept beside the transcript rather than inside it, if any. */
 	readDescription(transcriptPath: string): string | undefined;
+	/** The description and workflow run kept beside the transcript. */
+	readDetails(transcriptPath: string): SubagentDetails;
 }
 
 /** Hook event names that end a child's turn in the Claude schema and its forks. */
@@ -56,6 +65,7 @@ const defaults: Omit<SubagentHarness, "parseTranscript"> = {
 	resolveTranscriptPath: (hint) =>
 		hint.agentTranscriptPath || hint.transcriptPath || undefined,
 	readDescription: () => undefined,
+	readDetails: () => ({}),
 };
 
 /**

@@ -5,6 +5,7 @@ export {
 	agentStateColorVar,
 	agentStateFromConversation,
 	agentStateFromPaneStatus,
+	countLiveChildren,
 	isBlockedOnUser,
 	mostUrgentAgentState,
 } from "./agent-state";

@@ -1294,6 +1294,9 @@ msgstr "{stepCount} шагов, в меню"
 msgid "{subagentCount, plural, one {# subagent running} other {# subagents running}}"
 msgstr "{subagentCount, plural, one {# субагент выполняется} few {# субагента выполняются} many {# субагентов выполняются} other {# субагента выполняются}}"
 
+msgid "{subagentCount} subagents"
+msgstr "Субагентов: {subagentCount}"
+
 msgid "{successCount, plural, one {Created # workspace, {failCount} failed} other {Created # workspaces, {failCount} failed}}"
 msgstr "{successCount, plural, one {Создана # рабочая область, {failCount} с ошибкой} few {Создано # рабочие области, {failCount} с ошибкой} many {Создано # рабочих областей, {failCount} с ошибкой} other {Создано # рабочей области, {failCount} с ошибкой}}"
 
@@ -4266,9 +4269,6 @@ msgstr "Нажмите <0>Импорт темы</0> и выберите скач
 msgid "Click a terminal script to edit its details."
 msgstr "Нажмите на скрипт терминала, чтобы изменить его."
 
-msgid "Click an agent to open its conversation, a name plate to open its workspace · ⌥-click, right-click or I for details · Tab or arrows to move, Enter to open"
-msgstr "Нажми на агента, чтобы открыть разговор, на табличку — чтобы открыть workspace · ⌥-клик, правый клик или I для деталей · Tab или стрелки для перехода, Enter чтобы открыть"
-
 msgid "Click an element."
 msgstr "Нажмите на элемент."
 
@@ -4292,6 +4292,9 @@ msgstr "Нажмите, чтобы скопировать ID сессии (во�
 
 msgid "Click to open · ⌥-click or I for details"
 msgstr "Нажми, чтобы открыть · ⌥-клик или I для деталей"
+
+msgid "Click to open its transcript"
+msgstr "Нажмите, чтобы открыть его журнал"
 
 msgid "Click to open on GitHub"
 msgstr "Нажмите, чтобы открыть на GitHub"
@@ -7080,6 +7083,9 @@ msgstr "Черновик ждёт вашего одобрения"
 
 msgid "drafted 3 support replies"
 msgstr "подготовил 3 ответа поддержки"
+
+msgid "Drag or scroll to move, pinch or ⌘-scroll to zoom, click a room's name to zoom on it · Click an agent to open its conversation, a small one for its subagent · ⌥-click or I for details"
+msgstr "Перетаскивайте или прокручивайте, чтобы перемещаться, щипок или ⌘ + прокрутка — масштаб, щелчок по названию комнаты приближает её · Щелчок по агенту открывает его диалог, по маленькому — его субагента · ⌥-щелчок или I — подробности"
 
 msgid "Drag to reorder"
 msgstr "Перетащите, чтобы изменить порядок"
@@ -16483,6 +16489,9 @@ msgstr "Смотрите <0>руководство по пользователь
 msgid "See the open roles, or try Superset first."
 msgstr "Посмотрите вакансии или сначала попробуйте Superset."
 
+msgid "See the whole building (0)"
+msgstr "Показать всё здание (0)"
+
 msgid "See this gate on the scorecard"
 msgstr "Посмотреть этот шлюз в таблице"
 
@@ -20990,6 +20999,12 @@ msgstr "Работал {0} мин {1} с"
 msgid "Worked for {seconds}s"
 msgstr "Работал {seconds} с"
 
+msgid "Workflow"
+msgstr "Рабочий процесс"
+
+msgid "Workflow agent"
+msgstr "Агент рабочего процесса"
+
 msgid "Workflow run completed…"
 msgstr "Запуск workflow завершён…"
 
@@ -21007,6 +21022,9 @@ msgstr "Работает"
 #. placeholder {1}: seconds % 60
 msgid "Working for {0}m {1}s"
 msgstr "В работе {0} мин {1} с"
+
+msgid "Working for {parentTitle}"
+msgstr "Работает для {parentTitle}"
 
 msgid "Working for {seconds}s"
 msgstr "В работе {seconds} с"
@@ -21545,11 +21563,20 @@ msgstr "Приблизить"
 msgid "Zoom In"
 msgstr "Приблизить"
 
+msgid "Zoom in (+)"
+msgstr "Приблизить (+)"
+
+msgid "Zoom on {name}"
+msgstr "Приблизить {name}"
+
 msgid "Zoom out"
 msgstr "Отдалить"
 
 msgid "Zoom Out"
 msgstr "Отдалить"
+
+msgid "Zoom out (−)"
+msgstr "Отдалить (−)"
 
 msgid "zsh"
 msgstr "zsh"

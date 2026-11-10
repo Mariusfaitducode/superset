@@ -10,12 +10,18 @@ export function deriveTerminalAgentStatus({
 	lastEventType,
 	lastEventAt,
 	lastSeenAt,
+	liveChildren = 0,
 }: {
 	lastEventType: string;
 	lastEventAt: number;
 	lastSeenAt: number | undefined;
+	/** Subagents and workflow agents still running (`countLiveChildren`). */
+	liveChildren?: number;
 }): PaneStatus {
 	const status = agentStatusFromEvent(lastEventType);
+	if (liveChildren > 0 && (status === "review" || !status)) {
+		return "working";
+	}
 	if (status === "review") {
 		return lastEventAt > (lastSeenAt ?? 0) ? "review" : "idle";
 	}

@@ -33,6 +33,7 @@ export function OfficeSeatButton({
 	onOpen,
 	onDetails,
 	onKeyDown,
+	onFocus,
 }: {
 	buttonRef?: Ref<HTMLButtonElement>;
 	tone: OfficeTone;
@@ -48,6 +49,8 @@ export function OfficeSeatButton({
 	onOpen: () => void;
 	onDetails: () => void;
 	onKeyDown: (event: KeyboardEvent<HTMLButtonElement>) => void;
+	/** Lets the office pan to a seat reached with the keyboard. */
+	onFocus?: () => void;
 }) {
 	const handleClick = (event: MouseEvent<HTMLButtonElement>) => {
 		if (event.altKey) onDetails();
@@ -67,6 +70,7 @@ export function OfficeSeatButton({
 					onClick={handleClick}
 					onContextMenu={handleContextMenu}
 					onKeyDown={onKeyDown}
+					onFocus={onFocus}
 					aria-label={`${title} · ${toneLabel} · ${workspaceName}`}
 					style={style}
 					className={cn(

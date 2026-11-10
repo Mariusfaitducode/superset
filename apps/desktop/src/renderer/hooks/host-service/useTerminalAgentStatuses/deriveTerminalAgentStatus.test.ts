@@ -1,4 +1,4 @@
-import { describe, expect, it } from "bun:test";
+import { describe, expect, it, test } from "bun:test";
 import { deriveTerminalAgentStatus } from "./deriveTerminalAgentStatus";
 
 describe("deriveTerminalAgentStatus", () => {
@@ -80,5 +80,18 @@ describe("deriveTerminalAgentStatus", () => {
 				lastSeenAt: undefined,
 			}),
 		).toBe("idle");
+	});
+});
+
+describe("deriveTerminalAgentStatus with live children", () => {
+	test("a finished turn with subagents still running reads as working", () => {
+		expect(
+			deriveTerminalAgentStatus({
+				lastEventType: "Stop",
+				lastEventAt: 2,
+				lastSeenAt: 3,
+				liveChildren: 2,
+			}),
+		).toBe("working");
 	});
 });

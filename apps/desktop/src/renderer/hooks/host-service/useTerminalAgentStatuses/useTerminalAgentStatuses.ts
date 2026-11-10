@@ -1,4 +1,5 @@
 import { useMemo } from "react";
+import { countLiveChildren } from "renderer/lib/agent-state";
 import { useV2NotificationStore } from "renderer/stores/v2-notifications";
 import type { PaneStatus } from "shared/tabs-types";
 import { useTerminalAgentBindings } from "../useTerminalAgentBindings";
@@ -28,6 +29,7 @@ export function useTerminalAgentStatuses(
 					lastEventType: binding.lastEventType,
 					lastEventAt: binding.lastEventAt,
 					lastSeenAt: terminalSeenAt[binding.terminalId],
+					liveChildren: countLiveChildren(binding),
 				}),
 			);
 		}

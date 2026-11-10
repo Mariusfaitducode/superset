@@ -1,5 +1,6 @@
 import { useQueryClient } from "@tanstack/react-query";
 import { useEffect, useMemo, useState } from "react";
+import { countLiveChildren } from "renderer/lib/agent-state";
 import {
 	getV2NotificationSourceKey,
 	getV2NotificationSourcesForPane,
@@ -99,6 +100,7 @@ export function useV2AttentionWorkspaceCount(): number {
 					lastEventType: binding.lastEventType,
 					lastEventAt: binding.lastEventAt,
 					lastSeenAt: terminalSeenAt[binding.terminalId],
+					liveChildren: countLiveChildren(binding),
 				});
 				if (
 					status === "permission" ||
