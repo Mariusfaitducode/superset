@@ -397,6 +397,7 @@ export function ConversationTodos({
 	actions,
 	onClose,
 	inline = true,
+	autoFocus = true,
 }: {
 	terminalId: string;
 	todos: ConversationTodo[];
@@ -404,6 +405,8 @@ export function ConversationTodos({
 	onClose: () => void;
 	/** Under the conversation, rather than in a popover. */
 	inline?: boolean;
+	/** Put the cursor in the add field on open. */
+	autoFocus?: boolean;
 }) {
 	const { t } = useLingui();
 	const [text, setText] = useState("");
@@ -444,7 +447,7 @@ export function ConversationTodos({
 			<div className="flex h-6 items-center gap-1.5">
 				<input
 					// biome-ignore lint/a11y/noAutofocus: the user just opened the to-dos to add one
-					autoFocus
+					autoFocus={autoFocus}
 					value={text}
 					onChange={(event) => setText(event.target.value)}
 					onKeyDown={onKeyDown}

@@ -10,6 +10,7 @@ import {
 	LuFileText,
 	LuFolderTree,
 	LuGitPullRequestArrow,
+	LuListChecks,
 } from "react-icons/lu";
 import { TbWorld } from "react-icons/tb";
 import type { RightPaneKind } from "../../types";
@@ -53,6 +54,12 @@ export function RightPaneAddMenu({
 				<LuFileText className="size-4" />
 				<span>
 					<Trans>Pages</Trans>
+				</span>
+			</DropdownMenuItem>
+			<DropdownMenuItem className="gap-2" onClick={() => onAdd("todos")}>
+				<LuListChecks className="size-4" />
+				<span>
+					<Trans>To-dos</Trans>
 				</span>
 			</DropdownMenuItem>
 			<DropdownMenuSeparator />

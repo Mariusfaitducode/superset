@@ -4,5 +4,6 @@ export type RightPaneKind =
 	| "diff"
 	| "review"
 	| "pages-list"
+	| "todos"
 	| "browser"
 	| "terminal";

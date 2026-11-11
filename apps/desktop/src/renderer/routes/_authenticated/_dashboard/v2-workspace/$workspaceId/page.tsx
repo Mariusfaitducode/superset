@@ -21,6 +21,7 @@ import {
 	parseSubagentSearch,
 	readSubagentSearch,
 } from "renderer/routes/_authenticated/_dashboard/utils/workspace-navigation";
+import { useCollections } from "renderer/routes/_authenticated/providers/CollectionsProvider";
 import { CommandPalette } from "renderer/screens/main/components/CommandPalette";
 import { ResizablePanel } from "renderer/screens/main/components/ResizablePanel";
 import { getV2NotificationSourcesForTab } from "renderer/stores/v2-notifications";
@@ -62,6 +63,7 @@ import { useRunWorkspaceCreationPresets } from "./hooks/useRunWorkspaceCreationP
 import { useShellInteractionPassthrough } from "./hooks/useShellInteractionPassthrough";
 import { useSlotElement } from "./hooks/useSlotElement";
 import { useTabCloseGuard } from "./hooks/useTabCloseGuard";
+import { useTodosPanelOpener } from "./hooks/useTodosPanelOpener";
 import { useV2PresetExecution } from "./hooks/useV2PresetExecution";
 import { useV2TerminalLauncher } from "./hooks/useV2TerminalLauncher";
 import { useV2WorkspacePaneLayout } from "./hooks/useV2WorkspacePaneLayout";
@@ -74,13 +76,15 @@ import { useWorkspaceRightSidebarOpen } from "./hooks/useWorkspaceRightSidebarOp
 import { RightPaneLinkTargetProvider } from "./providers/RightPaneLinkTargetProvider";
 import { WorkspaceGitStatusProvider } from "./providers/WorkspaceGitStatusProvider";
 import { FileDocumentStoreProvider } from "./state/fileDocumentStore";
-import type { ConsumeSearch, PaneViewerData } from "./types";
+import type { ConsumeSearch, PaneViewerData, TodosPaneData } from "./types";
+import { focusOrOpenPane } from "./utils/focusOrOpenPane";
 import {
 	closeVisibleChangesPane,
 	findVisibleChangesPane,
 	openChangesPaneInStore,
 } from "./utils/openChangesPaneInStore";
 import type { V2WorkspaceUrlOpenTarget } from "./utils/openUrlInV2Workspace";
+import { setWorkspaceSidebarTab } from "./utils/setWorkspaceSidebarTab";
 
 interface WorkspaceSearch {
 	terminalId?: string;
@@ -462,6 +466,17 @@ function V2WorkspaceContent() {
 				case "pages-list":
 					rightStore.getState().addTab({ panes: [{ kind, data: { kind } }] });
 					return;
+				case "todos":
+					// One to-dos view per workspace: it already lists every
+					// conversation, so a second would only repeat it.
+					focusOrOpenPane<TodosPaneData>(
+						rightStore,
+						kind,
+						() => true,
+						{ kind },
+						"tab",
+					);
+					return;
 				case "diff":
 					openChangesPaneInStore(rightStore, "tab");
 					return;
@@ -479,6 +494,26 @@ function V2WorkspaceContent() {
 		() => setRightSidebarOpen(true),
 		[setRightSidebarOpen],
 	);
+	const collections = useCollections();
+	const openTodosPanel = useCallback(() => {
+		setRightSidebarOpen(true);
+		if (isRightPaneAreaEnabled) {
+			addRightPane("todos");
+			return;
+		}
+		setWorkspaceSidebarTab(collections, workspaceId, "todos");
+	}, [
+		setRightSidebarOpen,
+		isRightPaneAreaEnabled,
+		addRightPane,
+		collections,
+		workspaceId,
+	]);
+	useTodosPanelOpener({
+		workspaceId,
+		isLayoutReady: isLayoutReady && isRightLayoutReady,
+		openTodos: openTodosPanel,
+	});
 	const rightPaneLinkTarget = useMemo(
 		() =>
 			isRightPaneAreaEnabled

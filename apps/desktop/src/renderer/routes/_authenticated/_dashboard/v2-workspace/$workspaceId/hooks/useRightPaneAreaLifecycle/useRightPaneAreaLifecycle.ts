@@ -10,6 +10,7 @@ const SIDEBAR_PANE_KINDS = new Set([
 	"diff",
 	"review",
 	"pages-list",
+	"todos",
 ]);
 
 export function useRightPaneAreaLifecycle({

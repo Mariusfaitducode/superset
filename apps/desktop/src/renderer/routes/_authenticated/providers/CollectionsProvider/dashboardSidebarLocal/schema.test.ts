@@ -233,6 +233,19 @@ describe("healWorkspaceLocalState", () => {
 		expect(healed.viewedFiles).toEqual(["a.ts"]);
 	});
 
+	it("keeps the to-dos tab, and heals an unknown tab to changes", () => {
+		const onTodos = healWorkspaceLocalState({
+			...baseStored,
+			sidebarState: { ...baseStored.sidebarState, activeTab: "todos" },
+		});
+		expect(onTodos.sidebarState.activeTab).toBe("todos");
+		const onRetired = healWorkspaceLocalState({
+			...baseStored,
+			sidebarState: { ...baseStored.sidebarState, activeTab: "pages" },
+		});
+		expect(onRetired.sidebarState.activeTab).toBe("changes");
+	});
+
 	it("fills missing top-level optional fields", () => {
 		const stored = {
 			...baseStored,
