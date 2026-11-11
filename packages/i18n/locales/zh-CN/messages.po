@@ -10060,9 +10060,6 @@ msgstr "让文档保持最新"
 msgid "Keep editing"
 msgstr "继续编辑"
 
-msgid "Keep the sidebar in Settings"
-msgstr "在设置中保留侧边栏"
-
 msgid "Keep typing an email to invite"
 msgstr "继续输入邮箱以邀请"
 
@@ -17141,9 +17138,6 @@ msgstr "显示每个对话的待办列表，与其智能体共享。"
 
 msgid "Show the triggering payload"
 msgstr "显示触发负载"
-
-msgid "Show the workspace sidebar on the left while Settings is open."
-msgstr "打开设置时在左侧显示工作区侧边栏。"
 
 msgid "Show translation"
 msgstr "显示译文"

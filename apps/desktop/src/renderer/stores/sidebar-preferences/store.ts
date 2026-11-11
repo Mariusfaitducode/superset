@@ -28,8 +28,6 @@ export interface SidebarPreferences extends SidebarAppearance {
 	waitingTint: WaitingTint;
 	/** Menu entries at the top of the sidebar that the user took out. */
 	hiddenNavItems: SidebarNavItemId[];
-	/** Keep the sidebar on the left of the Settings pages. */
-	keepSidebarInSettings: boolean;
 	/** Pages as one wrapped row of icons rather than a row each. */
 	navItemsAsIcons: boolean;
 	/** One line per workspace, as before, instead of a details line under it. */
@@ -68,7 +66,6 @@ export const DEFAULT_SIDEBAR_PREFERENCES: SidebarPreferences = {
 	stateColors: {},
 	folderColorOnConversations: false,
 	hiddenNavItems: [],
-	keepSidebarInSettings: true,
 	navItemsAsIcons: true,
 	singleLineRows: false,
 	showRowBranch: true,
@@ -147,7 +144,8 @@ export const useSidebarPreferencesStore = create<SidebarPreferencesState>()(
  * v1 had an on/off `showWaitingTint`. v2 had six state colors; v3 has the
  * five agent states, so a hand-picked "request" color becomes "needs you".
  * v3 had an on/off `todosInline`; v4 has a placement, and everyone starts
- * on the right panel, which replaced both earlier displays as the default.
+ * on the right panel. v4 also drops `keepSidebarInSettings`: Settings now
+ * always opens inside the app sidebar.
  */
 export function migrateSidebarPreferences(
 	persisted: unknown,
@@ -173,7 +171,11 @@ export function migrateSidebarPreferences(
 		state.stateColors = request ? { ...colors, needsYou: request } : colors;
 	}
 	if (version < 4) {
-		const { todosInline: _todosInline, ...rest } = state;
+		const {
+			todosInline: _todosInline,
+			keepSidebarInSettings: _keepSidebarInSettings,
+			...rest
+		} = state;
 		state = { ...rest, todosPlacement: "right-panel" };
 	}
 	return { ...DEFAULT_SIDEBAR_PREFERENCES, ...state } as SidebarPreferences;

@@ -101,4 +101,13 @@ describe("sidebar preferences", () => {
 			"popover",
 		);
 	});
+
+	test("drops v3's keep-sidebar-in-settings switch", async () => {
+		const migrated = await migrateSidebarPreferences(
+			{ keepSidebarInSettings: false, showTodos: false },
+			3,
+		);
+		expect(migrated).toMatchObject({ showTodos: false });
+		expect(migrated).not.toHaveProperty("keepSidebarInSettings");
+	});
 });

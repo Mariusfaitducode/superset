@@ -38,7 +38,7 @@ import {
 import {
 	getUsageLastSection,
 	usageSectionPath,
-} from "renderer/routes/_authenticated/settings/usage/utils/usageLastSection";
+} from "renderer/routes/_authenticated/_dashboard/usage/utils/usageLastSection";
 import type { SidebarNavItemId } from "renderer/stores/sidebar-preferences";
 
 export interface SidebarNavBadge {
@@ -200,12 +200,13 @@ function usePullRequestsTarget(): SidebarNavTarget {
 }
 
 function useUsageTarget(): SidebarNavTarget {
+	const matchRoute = useMatchRoute();
 	const navigate = useNavigate();
 	const { data: usageInSidebar } =
 		electronTrpc.settings.getShowUsageInSidebar.useQuery();
 	return {
 		available: usageInSidebar === true,
-		isActive: false,
+		isActive: !!matchRoute({ to: "/usage", fuzzy: true }),
 		// Reopen whichever Usage section was visited last.
 		onClick: () => navigate({ to: usageSectionPath(getUsageLastSection()) }),
 	};

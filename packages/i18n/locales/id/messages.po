@@ -10060,9 +10060,6 @@ msgstr "Jaga dokumentasi tetap segar"
 msgid "Keep editing"
 msgstr "Lanjutkan mengedit"
 
-msgid "Keep the sidebar in Settings"
-msgstr "Pertahankan bilah samping di Pengaturan"
-
 msgid "Keep typing an email to invite"
 msgstr "Terus ketik email untuk mengundang"
 
@@ -17141,9 +17138,6 @@ msgstr "Tampilkan daftar to-do setiap percakapan, dibagikan dengan agennya."
 
 msgid "Show the triggering payload"
 msgstr "Tampilkan payload pemicu"
-
-msgid "Show the workspace sidebar on the left while Settings is open."
-msgstr "Tampilkan bilah samping workspace di kiri saat Pengaturan terbuka."
 
 msgid "Show translation"
 msgstr "Tampilkan terjemahan"

@@ -10060,9 +10060,6 @@ msgstr "문서 최신 상태 유지"
 msgid "Keep editing"
 msgstr "계속 편집"
 
-msgid "Keep the sidebar in Settings"
-msgstr "설정에서도 사이드바 유지"
-
 msgid "Keep typing an email to invite"
 msgstr "초대하려면 이메일을 계속 입력하세요"
 
@@ -17141,9 +17138,6 @@ msgstr "각 대화의 할 일 목록을 에이전트와 공유하여 표시합�
 
 msgid "Show the triggering payload"
 msgstr "트리거 페이로드 표시"
-
-msgid "Show the workspace sidebar on the left while Settings is open."
-msgstr "설정이 열려 있는 동안 왼쪽에 워크스페이스 사이드바를 표시합니다."
 
 msgid "Show translation"
 msgstr "번역 보기"

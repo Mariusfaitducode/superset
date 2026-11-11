@@ -10060,9 +10060,6 @@ msgstr "ドキュメントを最新に保つ"
 msgid "Keep editing"
 msgstr "編集を続ける"
 
-msgid "Keep the sidebar in Settings"
-msgstr "設定でもサイドバーを表示"
-
 msgid "Keep typing an email to invite"
 msgstr "招待するにはメールアドレスを入力し続けてください"
 
@@ -17141,9 +17138,6 @@ msgstr "各会話のTo-doリストを表示し、そのエージェントと共�
 
 msgid "Show the triggering payload"
 msgstr "トリガーのペイロードを表示"
-
-msgid "Show the workspace sidebar on the left while Settings is open."
-msgstr "設定を開いている間も、左にワークスペースのサイドバーを表示します。"
 
 msgid "Show translation"
 msgstr "翻訳を表示"

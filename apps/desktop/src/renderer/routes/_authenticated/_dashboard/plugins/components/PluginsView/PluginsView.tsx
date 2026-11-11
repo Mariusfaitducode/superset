@@ -3,6 +3,7 @@ import { PLUGIN_CATEGORIES } from "@superset/shared/plugins";
 import { Input } from "@superset/ui/input";
 import { Skeleton } from "@superset/ui/skeleton";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@superset/ui/tabs";
+import { cn } from "@superset/ui/utils";
 import { useNavigate } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { LuSearch } from "react-icons/lu";
@@ -10,6 +11,7 @@ import {
 	type CatalogPlugin,
 	usePluginCatalog,
 } from "renderer/hooks/usePluginCatalog";
+import { PAGE_WIDTH } from "renderer/routes/_authenticated/_dashboard/components/PageBody";
 import { usePluginMutations } from "renderer/routes/_authenticated/_dashboard/hooks/usePluginMutations";
 import { PluginCard } from "./components/PluginCard";
 import { SkillsList } from "./components/SkillsList";
@@ -99,7 +101,7 @@ export function PluginsView() {
 	);
 
 	return (
-		<div className="mx-auto w-full max-w-3xl px-6 pt-4 pb-16">
+		<div className={cn("mx-auto w-full px-8 pt-4 pb-12", PAGE_WIDTH.reading)}>
 			<Tabs defaultValue="plugins">
 				<TabsList className="mb-6">
 					<TabsTrigger value="plugins">

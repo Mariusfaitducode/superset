@@ -10060,9 +10060,6 @@ msgstr "Keep docs fresh"
 msgid "Keep editing"
 msgstr "Keep editing"
 
-msgid "Keep the sidebar in Settings"
-msgstr "Keep the sidebar in Settings"
-
 msgid "Keep typing an email to invite"
 msgstr "Keep typing an email to invite"
 
@@ -17141,9 +17138,6 @@ msgstr "Show the to-do list of each conversation, shared with its agent."
 
 msgid "Show the triggering payload"
 msgstr "Show the triggering payload"
-
-msgid "Show the workspace sidebar on the left while Settings is open."
-msgstr "Show the workspace sidebar on the left while Settings is open."
 
 msgid "Show translation"
 msgstr "Show translation"

@@ -10060,9 +10060,6 @@ msgstr "Держать документацию актуальной"
 msgid "Keep editing"
 msgstr "Продолжить редактирование"
 
-msgid "Keep the sidebar in Settings"
-msgstr "Оставлять боковую панель в настройках"
-
 msgid "Keep typing an email to invite"
 msgstr "Продолжайте вводить email, чтобы пригласить"
 
@@ -17141,9 +17138,6 @@ msgstr "Показывать список задач каждой беседы, 
 
 msgid "Show the triggering payload"
 msgstr "Показать полезную нагрузку триггера"
-
-msgid "Show the workspace sidebar on the left while Settings is open."
-msgstr "Показывать боковую панель рабочих пространств слева, пока открыты настройки."
 
 msgid "Show translation"
 msgstr "Показать перевод"

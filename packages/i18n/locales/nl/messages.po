@@ -10060,9 +10060,6 @@ msgstr "Docs actueel houden"
 msgid "Keep editing"
 msgstr "Verder bewerken"
 
-msgid "Keep the sidebar in Settings"
-msgstr "Zijbalk behouden in Instellingen"
-
 msgid "Keep typing an email to invite"
 msgstr "Typ verder een e-mailadres om uit te nodigen"
 
@@ -17141,9 +17138,6 @@ msgstr "Toon de to-dolijst van elk gesprek, gedeeld met de agent."
 
 msgid "Show the triggering payload"
 msgstr "Activerende payload tonen"
-
-msgid "Show the workspace sidebar on the left while Settings is open."
-msgstr "Toon de workspace-zijbalk links zolang Instellingen open is."
 
 msgid "Show translation"
 msgstr "Vertaling tonen"

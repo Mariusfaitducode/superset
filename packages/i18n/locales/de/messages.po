@@ -10060,9 +10060,6 @@ msgstr "Doku aktuell halten"
 msgid "Keep editing"
 msgstr "Weiter bearbeiten"
 
-msgid "Keep the sidebar in Settings"
-msgstr "Seitenleiste in den Einstellungen behalten"
-
 msgid "Keep typing an email to invite"
 msgstr "Gib weiter eine E-Mail-Adresse ein, um einzuladen"
 
@@ -17141,9 +17138,6 @@ msgstr "Die To-do-Liste jeder Unterhaltung anzeigen, geteilt mit ihrem Agenten."
 
 msgid "Show the triggering payload"
 msgstr "Auslösende Nutzlast anzeigen"
-
-msgid "Show the workspace sidebar on the left while Settings is open."
-msgstr "Die Workspace-Seitenleiste links anzeigen, während die Einstellungen offen sind."
 
 msgid "Show translation"
 msgstr "Übersetzung anzeigen"

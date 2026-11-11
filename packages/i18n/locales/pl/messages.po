@@ -10060,9 +10060,6 @@ msgstr "Utrzymuj dokumentację aktualną"
 msgid "Keep editing"
 msgstr "Kontynuuj edycję"
 
-msgid "Keep the sidebar in Settings"
-msgstr "Zachowaj pasek boczny w Ustawieniach"
-
 msgid "Keep typing an email to invite"
 msgstr "Wpisuj dalej adres e-mail, aby zaprosić"
 
@@ -17141,9 +17138,6 @@ msgstr "Pokazuj listę zadań każdej rozmowy, współdzieloną z jej agentem."
 
 msgid "Show the triggering payload"
 msgstr "Pokaż ładunek wyzwalający"
-
-msgid "Show the workspace sidebar on the left while Settings is open."
-msgstr "Pokazuj pasek boczny obszarów roboczych po lewej, gdy Ustawienia są otwarte."
 
 msgid "Show translation"
 msgstr "Pokaż tłumaczenie"

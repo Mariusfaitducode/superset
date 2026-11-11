@@ -60,10 +60,13 @@ import { SIDEBAR_NAV_ENTRIES } from "./navEntries";
 
 interface DashboardSidebarHeaderProps {
 	isCollapsed?: boolean;
+	/** Only the window-controls row, for Settings, which brings its own navigation. */
+	chromeOnly?: boolean;
 }
 
 export function DashboardSidebarHeader({
 	isCollapsed = false,
+	chromeOnly = false,
 }: DashboardSidebarHeaderProps) {
 	const { t } = useLingui();
 	const openNewWorkspace = useOpenNewWorkspace();
@@ -331,44 +334,50 @@ export function DashboardSidebarHeader({
 				<div className="drag h-full min-w-0 flex-1" />
 			</div>
 
-			<button
-				type="button"
-				onClick={() => openNewWorkspace(activeProjectId)}
-				className="group flex h-7 w-full items-center gap-2 rounded-md bg-fill-hover/60 [.light_&]:bg-fill-hover px-1.5 text-[13px] font-medium text-muted-foreground transition-colors hover:bg-fill-selected [.light_&]:hover:bg-fill-selected hover:text-foreground"
-			>
-				<div className="flex size-5 shrink-0 items-center justify-center rounded bg-fill-selected">
-					<LuPlus className="size-3" strokeWidth={STROKE_WIDTH_THICK} />
-				</div>
-				<span className="flex-1 truncate text-left whitespace-nowrap">
-					<Trans>New Workspace</Trans>
-				</span>
-				<SidebarKbdHint label={shortcutText} />
-			</button>
+			{!chromeOnly && (
+				<>
+					<button
+						type="button"
+						onClick={() => openNewWorkspace(activeProjectId)}
+						className="group flex h-7 w-full items-center gap-2 rounded-md bg-fill-hover/60 [.light_&]:bg-fill-hover px-1.5 text-[13px] font-medium text-muted-foreground transition-colors hover:bg-fill-selected [.light_&]:hover:bg-fill-selected hover:text-foreground"
+					>
+						<div className="flex size-5 shrink-0 items-center justify-center rounded bg-fill-selected">
+							<LuPlus className="size-3" strokeWidth={STROKE_WIDTH_THICK} />
+						</div>
+						<span className="flex-1 truncate text-left whitespace-nowrap">
+							<Trans>New Workspace</Trans>
+						</span>
+						<SidebarKbdHint label={shortcutText} />
+					</button>
 
-			{isNavItemShown("search") && (
-				<button
-					type="button"
-					onPointerDown={handleSearchPointerDown}
-					onClick={handleSearchClick}
-					className="group flex h-[var(--sb-row-h)] w-full items-center gap-2 rounded-md px-2 text-[13px] font-medium text-muted-foreground transition-colors hover:bg-fill-hover hover:text-foreground"
-				>
-					<LuSearch
-						className="size-4 shrink-0 text-muted-foreground"
-						strokeWidth={1.5}
-					/>
-					<span className="flex-1 text-left">
-						<Trans>Search</Trans>
-					</span>
-					{searchShortcutText !== "Unassigned" && (
-						<SidebarKbdHint label={searchShortcutText} />
+					{isNavItemShown("search") && (
+						<button
+							type="button"
+							onPointerDown={handleSearchPointerDown}
+							onClick={handleSearchClick}
+							className="group flex h-[var(--sb-row-h)] w-full items-center gap-2 rounded-md px-2 text-[13px] font-medium text-muted-foreground transition-colors hover:bg-fill-hover hover:text-foreground"
+						>
+							<LuSearch
+								className="size-4 shrink-0 text-muted-foreground"
+								strokeWidth={1.5}
+							/>
+							<span className="flex-1 text-left">
+								<Trans>Search</Trans>
+							</span>
+							{searchShortcutText !== "Unassigned" && (
+								<SidebarKbdHint label={searchShortcutText} />
+							)}
+						</button>
 					)}
-				</button>
-			)}
 
-			{navItemsAsIcons ? (
-				<div className="flex flex-wrap gap-0.5 pt-1">{navEntries("icon")}</div>
-			) : (
-				navEntries("row")
+					{navItemsAsIcons ? (
+						<div className="flex flex-wrap gap-0.5 pt-1">
+							{navEntries("icon")}
+						</div>
+					) : (
+						navEntries("row")
+					)}
+				</>
 			)}
 		</div>
 	);

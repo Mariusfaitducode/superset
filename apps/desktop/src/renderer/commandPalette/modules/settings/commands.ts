@@ -162,7 +162,7 @@ const TABS: SettingsTab[] = [
 	{
 		id: "usage",
 		title: msg({ message: "Usage" }),
-		path: "/settings/usage",
+		path: "/usage",
 		icon: ChartBarIcon,
 		keywords: ["tokens", "cost", "quota", "cpu", "memory", "resources"],
 	},

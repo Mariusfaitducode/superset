@@ -17,7 +17,7 @@ import {
 	type AgentTarget,
 	useAgentSessionTarget,
 } from "renderer/routes/_authenticated/_dashboard/components/AgentSessionPicker";
-import { AgentIcon } from "renderer/routes/_authenticated/settings/agents/components/V2AgentsSettings/components/AgentIcon";
+import { AgentIcon } from "renderer/routes/_authenticated/_dashboard/settings/agents/components/V2AgentsSettings/components/AgentIcon";
 import type { CreateNewAgentSession } from "../../../../../../../useAgentSessionLauncher";
 import { waitForPageAgent } from "../../utils/waitForPageAgent";
 

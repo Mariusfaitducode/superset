@@ -107,6 +107,15 @@ mock.module("renderer/hooks/useAgentConversations", () => ({
 	...realConversations,
 	useAgentConversations: () => conversations,
 }));
+const realPageHeader = {
+	...(await import(
+		"renderer/routes/_authenticated/_dashboard/components/PageHeader"
+	)),
+};
+mock.module(
+	"renderer/routes/_authenticated/_dashboard/components/PageHeader",
+	() => ({ PageHeader: () => null }),
+);
 const realRouter = { ...(await import("@tanstack/react-router")) };
 mock.module("@tanstack/react-router", () => ({
 	...realRouter,
@@ -149,6 +158,10 @@ afterAll(() => {
 	);
 	mock.module("renderer/hooks/useAgentConversations", () => realConversations);
 	mock.module("@tanstack/react-router", () => realRouter);
+	mock.module(
+		"renderer/routes/_authenticated/_dashboard/components/PageHeader",
+		() => realPageHeader,
+	);
 	sizes.forEach((key, index) => {
 		const descriptor = original[index];
 		if (descriptor)
