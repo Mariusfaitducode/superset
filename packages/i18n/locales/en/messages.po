@@ -11786,6 +11786,9 @@ msgstr "No active workspaces"
 msgid "No agent"
 msgstr "No agent"
 
+msgid "No agent conversation in this workspace."
+msgstr "No agent conversation in this workspace."
+
 msgid "No agent conversations yet."
 msgstr "No agent conversations yet."
 
@@ -12374,6 +12377,9 @@ msgstr "No themes were imported"
 msgid "No ticket"
 msgstr "No ticket"
 
+msgid "No to-dos yet. Use a conversation's to-do button to add one."
+msgstr "No to-dos yet. Use a conversation's to-do button to add one."
+
 msgid "No triggers"
 msgstr "No triggers"
 
@@ -12949,8 +12955,8 @@ msgstr "Open {parentLabel}"
 msgid "Open {path} in file pane"
 msgstr "Open {path} in file pane"
 
-msgid "Open a conversation's to-dos in the list, under it, rather than in a popover beside it."
-msgstr "Open a conversation's to-dos in the list, under it, rather than in a popover beside it."
+msgid "Open a conversation's to-dos in"
+msgstr "Open a conversation's to-dos in"
 
 msgid "Open a draft PR"
 msgstr "Open a draft PR"
@@ -13418,6 +13424,9 @@ msgstr "open the task in a workspace"
 
 msgid "Open the tasks"
 msgstr "Open the tasks"
+
+msgid "Open the to-dos in the right panel"
+msgstr "Open the to-dos in the right panel"
 
 msgid "Open the usage page"
 msgstr "Open the usage page"
@@ -15843,6 +15852,9 @@ msgstr "Rich input ({hotkeyText})"
 
 msgid "right pane"
 msgstr "right pane"
+
+msgid "Right panel"
+msgstr "Right panel"
 
 msgid "Right-click here"
 msgstr "Right-click here"
@@ -19563,8 +19575,8 @@ msgstr "To-do details"
 msgid "To-dos"
 msgstr "To-dos"
 
-msgid "To-dos under the conversation"
-msgstr "To-dos under the conversation"
+msgid "To-dos are turned off in Settings, Sidebar."
+msgstr "To-dos are turned off in Settings, Sidebar."
 
 msgid "Toast (Sonner)"
 msgstr "Toast (Sonner)"
@@ -19979,6 +19991,9 @@ msgstr "Uncommitted Changes ({uncommitted})"
 
 msgid "Uncommitted changes, on top of {base}"
 msgstr "Uncommitted changes, on top of {base}"
+
+msgid "Under the conversation"
+msgstr "Under the conversation"
 
 msgid "Underline"
 msgstr "Underline"
@@ -20897,6 +20912,9 @@ msgstr "Where the industry is, honestly"
 
 msgid "Where the repository and new worktrees live on this host."
 msgstr "Where the repository and new worktrees live on this host."
+
+msgid "Where the to-do button of a conversation shows its list."
+msgstr "Where the to-do button of a conversation shows its list."
 
 msgid "Where this terminal script is available."
 msgstr "Where this terminal script is available."

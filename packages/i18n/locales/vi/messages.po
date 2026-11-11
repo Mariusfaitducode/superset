@@ -11786,6 +11786,9 @@ msgstr "Không có workspace đang hoạt động"
 msgid "No agent"
 msgstr "Không có agent"
 
+msgid "No agent conversation in this workspace."
+msgstr "Không có cuộc trò chuyện của tác tử nào trong không gian làm việc này."
+
 msgid "No agent conversations yet."
 msgstr "Chưa có cuộc trò chuyện nào của agent."
 
@@ -12374,6 +12377,9 @@ msgstr "Không có theme nào được nhập"
 msgid "No ticket"
 msgstr "Không có ticket"
 
+msgid "No to-dos yet. Use a conversation's to-do button to add one."
+msgstr "Chưa có việc cần làm. Dùng nút việc cần làm của một cuộc trò chuyện để thêm."
+
 msgid "No triggers"
 msgstr "Không có trigger"
 
@@ -12949,8 +12955,8 @@ msgstr "Mở {parentLabel}"
 msgid "Open {path} in file pane"
 msgstr "Mở {path} trong khung tệp"
 
-msgid "Open a conversation's to-dos in the list, under it, rather than in a popover beside it."
-msgstr "Mở việc cần làm của cuộc trò chuyện trong danh sách, ngay bên dưới, thay vì trong cửa sổ bật lên bên cạnh."
+msgid "Open a conversation's to-dos in"
+msgstr "Mở việc cần làm của cuộc trò chuyện trong"
 
 msgid "Open a draft PR"
 msgstr "Mở PR nháp"
@@ -13418,6 +13424,9 @@ msgstr "mở tác vụ trong một workspace"
 
 msgid "Open the tasks"
 msgstr "Mở tác vụ"
+
+msgid "Open the to-dos in the right panel"
+msgstr "Mở việc cần làm trong bảng bên phải"
 
 msgid "Open the usage page"
 msgstr "Mở trang mức sử dụng"
@@ -15843,6 +15852,9 @@ msgstr "Nhập nâng cao ({hotkeyText})"
 
 msgid "right pane"
 msgstr "ngăn bên phải"
+
+msgid "Right panel"
+msgstr "Bảng bên phải"
 
 msgid "Right-click here"
 msgstr "Nhấp chuột phải ở đây"
@@ -19563,8 +19575,8 @@ msgstr "Chi tiết việc cần làm"
 msgid "To-dos"
 msgstr "Việc cần làm"
 
-msgid "To-dos under the conversation"
-msgstr "Việc cần làm dưới cuộc trò chuyện"
+msgid "To-dos are turned off in Settings, Sidebar."
+msgstr "Việc cần làm đang tắt trong Cài đặt, Thanh bên."
 
 msgid "Toast (Sonner)"
 msgstr "Toast (Sonner)"
@@ -19979,6 +19991,9 @@ msgstr "Thay đổi chưa commit ({uncommitted})"
 
 msgid "Uncommitted changes, on top of {base}"
 msgstr "Thay đổi chưa commit, dựa trên {base}"
+
+msgid "Under the conversation"
+msgstr "Bên dưới cuộc trò chuyện"
 
 msgid "Underline"
 msgstr "Gạch chân"
@@ -20897,6 +20912,9 @@ msgstr "Ngành đang ở đâu, nói thật"
 
 msgid "Where the repository and new worktrees live on this host."
 msgstr "Nơi repository và các worktree mới nằm trên host này."
+
+msgid "Where the to-do button of a conversation shows its list."
+msgstr "Nơi nút việc cần làm của cuộc trò chuyện hiển thị danh sách."
 
 msgid "Where this terminal script is available."
 msgstr "Nơi script terminal này khả dụng."

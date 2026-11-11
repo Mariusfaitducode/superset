@@ -1484,8 +1484,21 @@ export const SETTINGS_ITEMS: SettingsItem[] = [
 		id: SETTING_ITEM_ID.SIDEBAR_TODOS,
 		section: "sidebar",
 		title: "Conversation to-dos",
-		description: "Show the to-do button and list on each conversation",
-		keywords: ["sidebar", "todo", "todos", "to-do", "checklist", "tasks"],
+		description:
+			"Show the to-do button on each conversation, and where it opens the list: the right panel, a popover or under the conversation",
+		keywords: [
+			"sidebar",
+			"todo",
+			"todos",
+			"to-do",
+			"checklist",
+			"tasks",
+			"right panel",
+			"panel",
+			"placement",
+			"popover",
+			"inline",
+		],
 	},
 	{
 		id: SETTING_ITEM_ID.SIDEBAR_AGENT_TODOS,

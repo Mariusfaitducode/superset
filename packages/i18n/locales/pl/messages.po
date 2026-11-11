@@ -11786,6 +11786,9 @@ msgstr "Brak aktywnych obszarów roboczych"
 msgid "No agent"
 msgstr "Brak agenta"
 
+msgid "No agent conversation in this workspace."
+msgstr "Brak rozmów agentów w tym obszarze roboczym."
+
 msgid "No agent conversations yet."
 msgstr "Brak rozmów agentów."
 
@@ -12374,6 +12377,9 @@ msgstr "Nie zaimportowano żadnych motywów"
 msgid "No ticket"
 msgstr "Brak zgłoszenia"
 
+msgid "No to-dos yet. Use a conversation's to-do button to add one."
+msgstr "Brak zadań. Dodaj zadanie przyciskiem zadań przy rozmowie."
+
 msgid "No triggers"
 msgstr "Brak wyzwalaczy"
 
@@ -12949,8 +12955,8 @@ msgstr "Otwórz {parentLabel}"
 msgid "Open {path} in file pane"
 msgstr "Otwórz {path} w panelu plików"
 
-msgid "Open a conversation's to-dos in the list, under it, rather than in a popover beside it."
-msgstr "Otwieraj zadania rozmowy na liście pod nią zamiast w okienku obok."
+msgid "Open a conversation's to-dos in"
+msgstr "Otwieraj zadania rozmowy w"
 
 msgid "Open a draft PR"
 msgstr "Otworzyć szkic PR"
@@ -13418,6 +13424,9 @@ msgstr "otworzyć zadania w obszarze roboczym"
 
 msgid "Open the tasks"
 msgstr "Otwiera zadania"
+
+msgid "Open the to-dos in the right panel"
+msgstr "Otwórz zadania w prawym panelu"
 
 msgid "Open the usage page"
 msgstr "Otwiera stronę użycia"
@@ -15843,6 +15852,9 @@ msgstr "Rozbudowane pole tekstowe ({hotkeyText})"
 
 msgid "right pane"
 msgstr "prawy panel"
+
+msgid "Right panel"
+msgstr "Prawy panel"
 
 msgid "Right-click here"
 msgstr "Kliknij tutaj prawym przyciskiem"
@@ -19563,8 +19575,8 @@ msgstr "Szczegóły zadania"
 msgid "To-dos"
 msgstr "Zadania"
 
-msgid "To-dos under the conversation"
-msgstr "Zadania pod rozmową"
+msgid "To-dos are turned off in Settings, Sidebar."
+msgstr "Zadania są wyłączone w Ustawienia, Pasek boczny."
 
 msgid "Toast (Sonner)"
 msgstr "Toast (Sonner)"
@@ -19979,6 +19991,9 @@ msgstr "Niezatwierdzone zmiany ({uncommitted})"
 
 msgid "Uncommitted changes, on top of {base}"
 msgstr "Niezatwierdzone zmiany, na bazie {base}"
+
+msgid "Under the conversation"
+msgstr "Pod rozmową"
 
 msgid "Underline"
 msgstr "Podkreślenie"
@@ -20897,6 +20912,9 @@ msgstr "Gdzie naprawdę jest branża"
 
 msgid "Where the repository and new worktrees live on this host."
 msgstr "Gdzie na tym hoście znajduje się repozytorium i nowe worktree."
+
+msgid "Where the to-do button of a conversation shows its list."
+msgstr "Gdzie przycisk zadań rozmowy pokazuje ich listę."
 
 msgid "Where this terminal script is available."
 msgstr "Gdzie ten skrypt terminala jest dostępny."

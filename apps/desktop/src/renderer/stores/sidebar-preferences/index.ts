@@ -25,6 +25,8 @@ export {
 	migrateSidebarPreferences,
 	type SidebarPreferenceKey,
 	type SidebarPreferences,
+	TODOS_PLACEMENTS,
+	type TodosPlacement,
 	useSidebarPreference,
 	useSidebarPreferencesStore,
 	type WaitingTint,

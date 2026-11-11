@@ -11786,6 +11786,9 @@ msgstr "Aucun espace de travail actif"
 msgid "No agent"
 msgstr "Aucun agent"
 
+msgid "No agent conversation in this workspace."
+msgstr "Aucune conversation d'agent dans cet espace de travail."
+
 msgid "No agent conversations yet."
 msgstr "Aucune conversation d'agent pour l'instant."
 
@@ -12374,6 +12377,9 @@ msgstr "Aucun thème n'a été importé"
 msgid "No ticket"
 msgstr "Pas de ticket"
 
+msgid "No to-dos yet. Use a conversation's to-do button to add one."
+msgstr "Aucune tâche pour l'instant. Utilise le bouton des tâches d'une conversation pour en ajouter une."
+
 msgid "No triggers"
 msgstr "Aucun déclencheur"
 
@@ -12949,8 +12955,8 @@ msgstr "Ouvrir {parentLabel}"
 msgid "Open {path} in file pane"
 msgstr "Ouvrir {path} dans le volet Fichier"
 
-msgid "Open a conversation's to-dos in the list, under it, rather than in a popover beside it."
-msgstr "Ouvrir les to-dos d'une conversation dans la liste, sous elle, plutôt que dans une bulle à côté."
+msgid "Open a conversation's to-dos in"
+msgstr "Ouvrir les tâches d'une conversation dans"
 
 msgid "Open a draft PR"
 msgstr "Ouvrir une PR en brouillon"
@@ -13418,6 +13424,9 @@ msgstr "ouvrir la tâche dans un espace de travail"
 
 msgid "Open the tasks"
 msgstr "Ouvre les tâches"
+
+msgid "Open the to-dos in the right panel"
+msgstr "Ouvrir les tâches dans le panneau de droite"
 
 msgid "Open the usage page"
 msgstr "Ouvre la page d'utilisation"
@@ -15843,6 +15852,9 @@ msgstr "Saisie enrichie ({hotkeyText})"
 
 msgid "right pane"
 msgstr "panneau de droite"
+
+msgid "Right panel"
+msgstr "Panneau de droite"
 
 msgid "Right-click here"
 msgstr "Clic droit ici"
@@ -19563,8 +19575,8 @@ msgstr "Détails de la to-do"
 msgid "To-dos"
 msgstr "Tâches"
 
-msgid "To-dos under the conversation"
-msgstr "To-dos sous la conversation"
+msgid "To-dos are turned off in Settings, Sidebar."
+msgstr "Les tâches sont désactivées dans Réglages, Barre latérale."
 
 msgid "Toast (Sonner)"
 msgstr "Toast (Sonner)"
@@ -19979,6 +19991,9 @@ msgstr "Modifications non commitées ({uncommitted})"
 
 msgid "Uncommitted changes, on top of {base}"
 msgstr "Changements non commités, par-dessus {base}"
+
+msgid "Under the conversation"
+msgstr "Sous la conversation"
 
 msgid "Underline"
 msgstr "Souligné"
@@ -20897,6 +20912,9 @@ msgstr "Où en est le secteur, honnêtement"
 
 msgid "Where the repository and new worktrees live on this host."
 msgstr "Où se trouvent le dépôt et les nouveaux worktrees sur cet hôte."
+
+msgid "Where the to-do button of a conversation shows its list."
+msgstr "Où le bouton des tâches d'une conversation affiche sa liste."
 
 msgid "Where this terminal script is available."
 msgstr "Où ce script de terminal est disponible."

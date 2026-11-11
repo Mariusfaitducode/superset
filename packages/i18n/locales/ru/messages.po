@@ -11786,6 +11786,9 @@ msgstr "Нет активных рабочих областей"
 msgid "No agent"
 msgstr "Без агента"
 
+msgid "No agent conversation in this workspace."
+msgstr "В этом рабочем пространстве нет разговоров агентов."
+
 msgid "No agent conversations yet."
 msgstr "Разговоров агентов пока нет."
 
@@ -12374,6 +12377,9 @@ msgstr "Ни одна тема не импортирована"
 msgid "No ticket"
 msgstr "Нет тикета"
 
+msgid "No to-dos yet. Use a conversation's to-do button to add one."
+msgstr "Задач пока нет. Добавьте задачу кнопкой задач у разговора."
+
 msgid "No triggers"
 msgstr "Нет триггеров"
 
@@ -12949,8 +12955,8 @@ msgstr "Открыть {parentLabel}"
 msgid "Open {path} in file pane"
 msgstr "Открыть {path} в панели файла"
 
-msgid "Open a conversation's to-dos in the list, under it, rather than in a popover beside it."
-msgstr "Открывать задачи беседы в списке под ней, а не во всплывающем окне рядом."
+msgid "Open a conversation's to-dos in"
+msgstr "Открывать задачи разговора в"
 
 msgid "Open a draft PR"
 msgstr "Открыть черновой PR"
@@ -13418,6 +13424,9 @@ msgstr "открыть задачу в рабочей области"
 
 msgid "Open the tasks"
 msgstr "Открывает задачи"
+
+msgid "Open the to-dos in the right panel"
+msgstr "Открыть задачи в правой панели"
 
 msgid "Open the usage page"
 msgstr "Открывает страницу использования"
@@ -15843,6 +15852,9 @@ msgstr "Расширенный ввод ({hotkeyText})"
 
 msgid "right pane"
 msgstr "правая панель"
+
+msgid "Right panel"
+msgstr "Правая панель"
 
 msgid "Right-click here"
 msgstr "Кликните здесь правой кнопкой"
@@ -19563,8 +19575,8 @@ msgstr "Подробности задачи"
 msgid "To-dos"
 msgstr "Задачи"
 
-msgid "To-dos under the conversation"
-msgstr "Задачи под беседой"
+msgid "To-dos are turned off in Settings, Sidebar."
+msgstr "Задачи отключены в Настройки, Боковая панель."
 
 msgid "Toast (Sonner)"
 msgstr "Тост (Sonner)"
@@ -19979,6 +19991,9 @@ msgstr "Незафиксированные изменения ({uncommitted})"
 
 msgid "Uncommitted changes, on top of {base}"
 msgstr "Незакоммиченные изменения, поверх {base}"
+
+msgid "Under the conversation"
+msgstr "Под разговором"
 
 msgid "Underline"
 msgstr "Подчёркнутый"
@@ -20897,6 +20912,9 @@ msgstr "Где отрасль на самом деле"
 
 msgid "Where the repository and new worktrees live on this host."
 msgstr "Где на этом хосте находятся репозиторий и новые worktree."
+
+msgid "Where the to-do button of a conversation shows its list."
+msgstr "Где кнопка задач разговора показывает их список."
 
 msgid "Where this terminal script is available."
 msgstr "Где доступен этот скрипт терминала."

@@ -11786,6 +11786,9 @@ msgstr "Keine aktiven Arbeitsbereiche"
 msgid "No agent"
 msgstr "Kein Agent"
 
+msgid "No agent conversation in this workspace."
+msgstr "Keine Agenten-Unterhaltung in diesem Arbeitsbereich."
+
 msgid "No agent conversations yet."
 msgstr "Noch keine Agent-Unterhaltungen."
 
@@ -12374,6 +12377,9 @@ msgstr "Es wurden keine Themes importiert"
 msgid "No ticket"
 msgstr "Kein Ticket"
 
+msgid "No to-dos yet. Use a conversation's to-do button to add one."
+msgstr "Noch keine To-dos. Füge eines über den To-do-Button einer Unterhaltung hinzu."
+
 msgid "No triggers"
 msgstr "Keine Trigger"
 
@@ -12949,8 +12955,8 @@ msgstr "{parentLabel} öffnen"
 msgid "Open {path} in file pane"
 msgstr "{path} im Dateibereich öffnen"
 
-msgid "Open a conversation's to-dos in the list, under it, rather than in a popover beside it."
-msgstr "Die To-dos einer Unterhaltung in der Liste darunter öffnen statt in einem Popover daneben."
+msgid "Open a conversation's to-dos in"
+msgstr "To-dos einer Unterhaltung öffnen in"
 
 msgid "Open a draft PR"
 msgstr "Einen Entwurfs-PR öffnen"
@@ -13418,6 +13424,9 @@ msgstr "die Aufgabe in einem Arbeitsbereich öffnen"
 
 msgid "Open the tasks"
 msgstr "Öffnet die Aufgaben"
+
+msgid "Open the to-dos in the right panel"
+msgstr "To-dos im rechten Bereich öffnen"
 
 msgid "Open the usage page"
 msgstr "Öffnet die Nutzungsseite"
@@ -15843,6 +15852,9 @@ msgstr "Rich-Eingabe ({hotkeyText})"
 
 msgid "right pane"
 msgstr "rechter Bereich"
+
+msgid "Right panel"
+msgstr "Rechter Bereich"
 
 msgid "Right-click here"
 msgstr "Hier rechtsklicken"
@@ -19563,8 +19575,8 @@ msgstr "To-do-Details"
 msgid "To-dos"
 msgstr "To-dos"
 
-msgid "To-dos under the conversation"
-msgstr "To-dos unter der Unterhaltung"
+msgid "To-dos are turned off in Settings, Sidebar."
+msgstr "To-dos sind unter Einstellungen, Seitenleiste ausgeschaltet."
 
 msgid "Toast (Sonner)"
 msgstr "Toast (Sonner)"
@@ -19979,6 +19991,9 @@ msgstr "Nicht committete Änderungen ({uncommitted})"
 
 msgid "Uncommitted changes, on top of {base}"
 msgstr "Nicht committete Änderungen, auf {base}"
+
+msgid "Under the conversation"
+msgstr "Unter der Unterhaltung"
 
 msgid "Underline"
 msgstr "Unterstrichen"
@@ -20897,6 +20912,9 @@ msgstr "Wo die Branche wirklich steht"
 
 msgid "Where the repository and new worktrees live on this host."
 msgstr "Wo das Repository und neue Worktrees auf diesem Host liegen."
+
+msgid "Where the to-do button of a conversation shows its list."
+msgstr "Wo der To-do-Button einer Unterhaltung seine Liste zeigt."
 
 msgid "Where this terminal script is available."
 msgstr "Wo dieses Terminal-Skript verfügbar ist."

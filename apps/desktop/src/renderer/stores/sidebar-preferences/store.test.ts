@@ -71,4 +71,34 @@ describe("sidebar preferences", () => {
 			(migrated as { stateColors: object }).stateColors,
 		).not.toHaveProperty("seen");
 	});
+
+	test("moves every v3 to-do display to the right panel", async () => {
+		const migrate = migrateSidebarPreferences;
+		const inline = await migrate({ todosInline: true, showTodos: false }, 3);
+		const popover = await migrate({ todosInline: false }, 3);
+		expect(inline).toMatchObject({
+			todosPlacement: "right-panel",
+			showTodos: false,
+		});
+		expect(inline).not.toHaveProperty("todosInline");
+		expect(popover).toMatchObject({ todosPlacement: "right-panel" });
+		expect(await migrate({ showTodos: true }, 1)).toMatchObject({
+			todosPlacement: "right-panel",
+		});
+	});
+
+	test("keeps a v4 placement", async () => {
+		const migrated = await migrateSidebarPreferences(
+			{ todosPlacement: "inline" },
+			4,
+		);
+		expect(migrated).toMatchObject({ todosPlacement: "inline" });
+	});
+
+	test("sets the to-dos placement", () => {
+		useSidebarPreferencesStore.getState().setTodosPlacement("popover");
+		expect(useSidebarPreferencesStore.getState().todosPlacement).toBe(
+			"popover",
+		);
+	});
 });

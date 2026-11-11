@@ -11786,6 +11786,9 @@ msgstr "활성 워크스페이스 없음"
 msgid "No agent"
 msgstr "에이전트 없음"
 
+msgid "No agent conversation in this workspace."
+msgstr "이 워크스페이스에 에이전트 대화가 없습니다."
+
 msgid "No agent conversations yet."
 msgstr "아직 에이전트 대화가 없습니다."
 
@@ -12374,6 +12377,9 @@ msgstr "가져온 테마가 없습니다"
 msgid "No ticket"
 msgstr "티켓 없음"
 
+msgid "No to-dos yet. Use a conversation's to-do button to add one."
+msgstr "아직 할 일이 없습니다. 대화의 할 일 버튼으로 추가하세요."
+
 msgid "No triggers"
 msgstr "트리거 없음"
 
@@ -12949,8 +12955,8 @@ msgstr "{parentLabel} 열기"
 msgid "Open {path} in file pane"
 msgstr "파일 패널에서 {path} 열기"
 
-msgid "Open a conversation's to-dos in the list, under it, rather than in a popover beside it."
-msgstr "대화의 할 일을 옆의 팝오버 대신 목록에서 대화 아래에 엽니다."
+msgid "Open a conversation's to-dos in"
+msgstr "대화의 할 일 열기 위치"
 
 msgid "Open a draft PR"
 msgstr "초안 PR 열기"
@@ -13418,6 +13424,9 @@ msgstr "워크스페이스에서 작업을 열"
 
 msgid "Open the tasks"
 msgstr "작업을 엽니다"
+
+msgid "Open the to-dos in the right panel"
+msgstr "오른쪽 패널에서 할 일 열기"
 
 msgid "Open the usage page"
 msgstr "사용량 페이지를 엽니다"
@@ -15842,6 +15851,9 @@ msgid "Rich input ({hotkeyText})"
 msgstr "리치 입력 ({hotkeyText})"
 
 msgid "right pane"
+msgstr "오른쪽 패널"
+
+msgid "Right panel"
 msgstr "오른쪽 패널"
 
 msgid "Right-click here"
@@ -19563,8 +19575,8 @@ msgstr "할 일 세부 정보"
 msgid "To-dos"
 msgstr "할 일"
 
-msgid "To-dos under the conversation"
-msgstr "대화 아래에 할 일"
+msgid "To-dos are turned off in Settings, Sidebar."
+msgstr "할 일이 설정의 사이드바에서 꺼져 있습니다."
 
 msgid "Toast (Sonner)"
 msgstr "토스트 (Sonner)"
@@ -19979,6 +19991,9 @@ msgstr "커밋되지 않은 변경 사항 ({uncommitted})"
 
 msgid "Uncommitted changes, on top of {base}"
 msgstr "커밋되지 않은 변경, {base} 위"
+
+msgid "Under the conversation"
+msgstr "대화 아래"
 
 msgid "Underline"
 msgstr "밑줄"
@@ -20897,6 +20912,9 @@ msgstr "업계의 현재 위치, 솔직하게"
 
 msgid "Where the repository and new worktrees live on this host."
 msgstr "이 호스트에서 리포지토리와 새 worktree가 자리 잡는 위치입니다."
+
+msgid "Where the to-do button of a conversation shows its list."
+msgstr "대화의 할 일 버튼이 목록을 보여 주는 위치입니다."
 
 msgid "Where this terminal script is available."
 msgstr "이 터미널 스크립트를 사용할 수 있는 범위입니다."

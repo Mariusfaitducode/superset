@@ -11786,6 +11786,9 @@ msgstr "没有活动的工作区"
 msgid "No agent"
 msgstr "无智能体"
 
+msgid "No agent conversation in this workspace."
+msgstr "此工作区没有智能体对话。"
+
 msgid "No agent conversations yet."
 msgstr "还没有智能体对话。"
 
@@ -12374,6 +12377,9 @@ msgstr "没有导入任何主题"
 msgid "No ticket"
 msgstr "无工单"
 
+msgid "No to-dos yet. Use a conversation's to-do button to add one."
+msgstr "还没有待办。使用对话的待办按钮来添加。"
+
 msgid "No triggers"
 msgstr "没有触发器"
 
@@ -12949,8 +12955,8 @@ msgstr "打开 {parentLabel}"
 msgid "Open {path} in file pane"
 msgstr "在文件面板中打开{path}"
 
-msgid "Open a conversation's to-dos in the list, under it, rather than in a popover beside it."
-msgstr "在列表中对话下方打开其待办，而不是在旁边的弹出框中。"
+msgid "Open a conversation's to-dos in"
+msgstr "对话的待办打开位置"
 
 msgid "Open a draft PR"
 msgstr "创建草稿 PR"
@@ -13418,6 +13424,9 @@ msgstr "在工作区中打开任务"
 
 msgid "Open the tasks"
 msgstr "打开任务"
+
+msgid "Open the to-dos in the right panel"
+msgstr "在右侧面板中打开待办"
 
 msgid "Open the usage page"
 msgstr "打开用量页面"
@@ -15842,6 +15851,9 @@ msgid "Rich input ({hotkeyText})"
 msgstr "富输入（{hotkeyText}）"
 
 msgid "right pane"
+msgstr "右侧面板"
+
+msgid "Right panel"
 msgstr "右侧面板"
 
 msgid "Right-click here"
@@ -19563,8 +19575,8 @@ msgstr "待办详情"
 msgid "To-dos"
 msgstr "待办"
 
-msgid "To-dos under the conversation"
-msgstr "待办显示在对话下方"
+msgid "To-dos are turned off in Settings, Sidebar."
+msgstr "待办已在“设置 > 侧边栏”中关闭。"
 
 msgid "Toast (Sonner)"
 msgstr "Toast（Sonner）"
@@ -19979,6 +19991,9 @@ msgstr "未提交的更改 ({uncommitted})"
 
 msgid "Uncommitted changes, on top of {base}"
 msgstr "未提交的更改，基于 {base}"
+
+msgid "Under the conversation"
+msgstr "对话下方"
 
 msgid "Underline"
 msgstr "下划线"
@@ -20897,6 +20912,9 @@ msgstr "行业实际走到了哪里"
 
 msgid "Where the repository and new worktrees live on this host."
 msgstr "仓库和新建worktree在此主机上的位置。"
+
+msgid "Where the to-do button of a conversation shows its list."
+msgstr "对话的待办按钮在何处显示其列表。"
 
 msgid "Where this terminal script is available."
 msgstr "此终端脚本在哪些地方可用。"

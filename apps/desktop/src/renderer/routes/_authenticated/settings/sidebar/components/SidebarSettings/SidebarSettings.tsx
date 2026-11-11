@@ -9,8 +9,10 @@ import {
 	SelectValue,
 } from "@superset/ui/select";
 import { Switch } from "@superset/ui/switch";
+import { Fragment } from "react";
 import {
 	type SidebarPreferenceKey,
+	type TodosPlacement,
 	useSidebarPreferencesStore,
 	type WaitingTint,
 } from "renderer/stores/sidebar-preferences";
@@ -89,13 +91,6 @@ export function SidebarSettings({ visibleItems }: SidebarSettingsProps) {
 			key: "showTodos",
 			label: t`Conversation to-dos`,
 			hint: t`Show the to-do list of each conversation, shared with its agent.`,
-			needsConversations: true,
-		},
-		{
-			itemId: SETTING_ITEM_ID.SIDEBAR_TODOS,
-			key: "todosInline",
-			label: t`To-dos under the conversation`,
-			hint: t`Open a conversation's to-dos in the list, under it, rather than in a popover beside it.`,
 			needsConversations: true,
 		},
 		{
@@ -209,23 +204,59 @@ export function SidebarSettings({ visibleItems }: SidebarSettingsProps) {
 				{rows
 					.filter((row) => isItemVisible(row.itemId, visibleItems))
 					.map((row) => (
-						<SettingsRow
-							key={row.key}
-							label={row.label}
-							hint={row.hint}
-							htmlFor={`sidebar-${row.key}`}
-						>
-							<Switch
-								id={`sidebar-${row.key}`}
-								checked={preferences[row.key]}
-								disabled={
-									row.needsConversations && !preferences.showConversations
-								}
-								onCheckedChange={(checked) =>
-									preferences.setPreference(row.key, checked)
-								}
-							/>
-						</SettingsRow>
+						<Fragment key={row.key}>
+							<SettingsRow
+								label={row.label}
+								hint={row.hint}
+								htmlFor={`sidebar-${row.key}`}
+							>
+								<Switch
+									id={`sidebar-${row.key}`}
+									checked={preferences[row.key]}
+									disabled={
+										row.needsConversations && !preferences.showConversations
+									}
+									onCheckedChange={(checked) =>
+										preferences.setPreference(row.key, checked)
+									}
+								/>
+							</SettingsRow>
+							{row.key === "showTodos" && (
+								<SettingsRow
+									label={t`Open a conversation's to-dos in`}
+									hint={t`Where the to-do button of a conversation shows its list.`}
+									htmlFor="sidebar-todosPlacement"
+								>
+									<Select
+										value={preferences.todosPlacement}
+										disabled={
+											!preferences.showConversations || !preferences.showTodos
+										}
+										onValueChange={(value) =>
+											preferences.setTodosPlacement(value as TodosPlacement)
+										}
+									>
+										<SelectTrigger
+											id="sidebar-todosPlacement"
+											className="w-[200px]"
+										>
+											<SelectValue />
+										</SelectTrigger>
+										<SelectContent>
+											<SelectItem value="right-panel">
+												<Trans>Right panel</Trans>
+											</SelectItem>
+											<SelectItem value="popover">
+												<Trans>Popover</Trans>
+											</SelectItem>
+											<SelectItem value="inline">
+												<Trans>Under the conversation</Trans>
+											</SelectItem>
+										</SelectContent>
+									</Select>
+								</SettingsRow>
+							)}
+						</Fragment>
 					))}
 				{isItemVisible(SETTING_ITEM_ID.SIDEBAR_WAITING_TINT, visibleItems) && (
 					<SettingsRow
