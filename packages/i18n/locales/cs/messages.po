@@ -10060,9 +10060,6 @@ msgstr "Udržovat dokumentaci aktuální"
 msgid "Keep editing"
 msgstr "Pokračovat v úpravách"
 
-msgid "Keep the sidebar in Settings"
-msgstr "Ponechat postranní panel v Nastavení"
-
 msgid "Keep typing an email to invite"
 msgstr "Pokračujte v psaní e-mailu pro pozvání"
 
@@ -17129,9 +17126,6 @@ msgstr "Zobrazit seznam úkolů každé konverzace, sdílený s jejím agentem."
 
 msgid "Show the triggering payload"
 msgstr "Zobrazit spouštěcí data"
-
-msgid "Show the workspace sidebar on the left while Settings is open."
-msgstr "Při otevřeném Nastavení zobrazovat vlevo postranní panel pracovních prostorů."
 
 msgid "Show translation"
 msgstr "Zobrazit překlad"

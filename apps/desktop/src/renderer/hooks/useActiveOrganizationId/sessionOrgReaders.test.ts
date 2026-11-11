@@ -49,7 +49,7 @@ const ACCOUNT_WIDE_READERS: Record<string, string> = {
 
 	// Reads the session's organization for membership and role, which is
 	// account-level data rather than a scoping decision.
-	"routes/_authenticated/settings/organization/components/OrganizationSettings/OrganizationSettings.tsx":
+	"routes/_authenticated/_dashboard/settings/organization/components/OrganizationSettings/OrganizationSettings.tsx":
 		"reads account membership, not a window scope",
 	"routes/_authenticated/providers/LocalHostServiceProvider/LocalHostServiceProvider.tsx":
 		"session still owns membership and the auth token; the active org here is per-window",

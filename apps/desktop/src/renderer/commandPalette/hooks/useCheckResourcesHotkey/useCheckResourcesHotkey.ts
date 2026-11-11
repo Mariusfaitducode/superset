@@ -14,7 +14,7 @@ export function useCheckResourcesHotkey(onBeforeNavigate?: () => void) {
 
 	const openResources = () => {
 		onBeforeNavigate?.();
-		void navigate({ to: "/settings/usage/resources" });
+		void navigate({ to: "/usage/resources" });
 	};
 
 	useHotkey("CHECK_RESOURCES", openResources);

@@ -17,6 +17,8 @@ import { DashboardSidebar } from "renderer/routes/_authenticated/_dashboard/comp
 import { DashboardSidebarPortsProvider } from "renderer/routes/_authenticated/_dashboard/components/DashboardSidebar/providers/DashboardSidebarPortsProvider";
 import { PortForwardsProvider } from "renderer/routes/_authenticated/_dashboard/components/DashboardSidebar/providers/PortForwardsProvider";
 import { useHistoryNavigationShortcuts } from "renderer/routes/_authenticated/_dashboard/hooks/useHistoryNavigationShortcuts";
+import { useIsSettingsOpen } from "renderer/routes/_authenticated/_dashboard/hooks/useIsSettingsOpen";
+import { useIsSidebarRail } from "renderer/routes/_authenticated/_dashboard/hooks/useIsSidebarRail";
 import { useCloudSidebarStore } from "renderer/routes/_authenticated/_dashboard/stores/cloudSidebarStore";
 import { useDevSeedV2Sidebar } from "renderer/routes/_authenticated/hooks/useDevSeedV2Sidebar";
 import { useHostWorkspaces } from "renderer/routes/_authenticated/providers/HostWorkspacesProvider";
@@ -109,6 +111,10 @@ function DashboardLayout() {
 	const onV2WorkspaceRoute = v2WorkspaceMatch !== false;
 	useHistoryNavigationShortcuts();
 	const showsAppTopBar = useShowsAppTopBar();
+	const isSettingsOpen = useIsSettingsOpen();
+	const isSidebarRail = useIsSidebarRail();
+	// v1 Settings draws its own navigation column in place of the app sidebar.
+	const showsAppSidebar = isV2CloudEnabled || !isSettingsOpen;
 	const versionMismatch =
 		(isV2CloudEnabled && onV1WorkspaceRoute) ||
 		(!isV2CloudEnabled && onV2WorkspaceRoute);
@@ -145,7 +151,7 @@ function DashboardLayout() {
 		setWidth: setWorkspaceSidebarWidth,
 		isResizing: isWorkspaceSidebarResizing,
 		setIsResizing: setWorkspaceSidebarIsResizing,
-		isCollapsed: isWorkspaceSidebarCollapsed,
+		lastExpandedWidth: lastExpandedWorkspaceSidebarWidth,
 	} = useWorkspaceSidebarStore();
 
 	// Global hotkeys for dashboard
@@ -196,12 +202,15 @@ function DashboardLayout() {
 	// The collapsed rail's top strip continues the page's header row, so the
 	// panel must not draw its own full-height border: the sidebar's inner
 	// border, which stops below the strip, is the only divider.
-	const railContinuesHeaderRow =
-		!showsAppTopBar && isWorkspaceSidebarCollapsed();
+	const railContinuesHeaderRow = !showsAppTopBar && isSidebarRail;
 
 	const sidebarPanel = (
 		<ResizablePanel
-			width={workspaceSidebarWidth}
+			width={
+				isSettingsOpen && !isSidebarRail
+					? Math.max(workspaceSidebarWidth, lastExpandedWorkspaceSidebarWidth)
+					: workspaceSidebarWidth
+			}
 			onWidthChange={setWorkspaceSidebarWidth}
 			isResizing={isWorkspaceSidebarResizing}
 			onResizingChange={setWorkspaceSidebarIsResizing}
@@ -215,10 +224,10 @@ function DashboardLayout() {
 			}
 		>
 			{isV2CloudEnabled ? (
-				<DashboardSidebar isCollapsed={isWorkspaceSidebarCollapsed()} />
+				<DashboardSidebar isCollapsed={isSidebarRail} />
 			) : (
 				<WorkspaceSidebar
-					isCollapsed={isWorkspaceSidebarCollapsed()}
+					isCollapsed={isSidebarRail}
 					activeProjectId={currentWorkspace?.projectId ?? null}
 					activeProjectName={currentWorkspace?.project?.name ?? null}
 				/>
@@ -229,7 +238,7 @@ function DashboardLayout() {
 	// v2 screens draw their own headers, so the sidebar always runs full
 	// height beside them; only v1 screens keep the TopBar above both.
 	const sidebarOutsideColumn =
-		!showsAppTopBar || (isV2CloudEnabled && !isWorkspaceSidebarCollapsed());
+		!showsAppTopBar || (isV2CloudEnabled && !isSidebarRail);
 
 	return (
 		// The single ports-data provider for both layout modes. It lives up here
@@ -243,7 +252,7 @@ function DashboardLayout() {
 			enabled={
 				isV2CloudEnabled &&
 				(portsDisplayMode === "topbar" ||
-					!isWorkspaceSidebarCollapsed() ||
+					!isSidebarRail ||
 					// Port forwarding follows the selected remote workspace and
 					// needs its port list even when no ports UI is on screen.
 					selectedWorkspaceIsRemote)
@@ -255,11 +264,11 @@ function DashboardLayout() {
 					<CommandPaletteHost />
 					<ConversationSwitcher />
 					<TaskMonitor />
-					{sidebarOutsideColumn && sidebarPanel}
+					{showsAppSidebar && sidebarOutsideColumn && sidebarPanel}
 					<div className="flex flex-1 flex-col min-w-0 min-h-0">
 						{showsAppTopBar && <TopBar />}
 						<div className="flex flex-1 min-h-0 min-w-0 overflow-hidden">
-							{!sidebarOutsideColumn && sidebarPanel}
+							{showsAppSidebar && !sidebarOutsideColumn && sidebarPanel}
 							<div className="relative flex flex-1 min-h-0 min-w-0">
 								{versionMismatch ? (
 									// A v2 user on a stale v1 workspace route has nothing to go

@@ -10060,9 +10060,6 @@ msgstr "讓文件保持最新"
 msgid "Keep editing"
 msgstr "繼續編輯"
 
-msgid "Keep the sidebar in Settings"
-msgstr "在設定中保留側邊欄"
-
 msgid "Keep typing an email to invite"
 msgstr "繼續輸入電子郵件以邀請"
 
@@ -17129,9 +17126,6 @@ msgstr "顯示每個對話的待辦清單，與其代理共用。"
 
 msgid "Show the triggering payload"
 msgstr "顯示觸發酬載"
-
-msgid "Show the workspace sidebar on the left while Settings is open."
-msgstr "開啟設定時在左側顯示工作區側邊欄。"
 
 msgid "Show translation"
 msgstr "顯示譯文"

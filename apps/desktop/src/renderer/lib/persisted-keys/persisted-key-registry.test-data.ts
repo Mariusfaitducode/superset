@@ -147,7 +147,7 @@ export const PERSISTED_KEY_REGISTRY: ReadonlyArray<
 		["conversation-recency-v1"],
 	],
 	[
-		"src/renderer/routes/_authenticated/settings/usage/components/UsageResourcesPage/stores/agentCleanup/store.ts",
+		"src/renderer/routes/_authenticated/_dashboard/usage/components/UsageResourcesPage/stores/agentCleanup/store.ts",
 		["agent-cleanup-v1"],
 	],
 	["src/renderer/stores/workspace-recency/store.ts", ["workspace-recency-v1"]],
@@ -184,11 +184,11 @@ export const PERSISTED_KEY_REGISTRY: ReadonlyArray<
 	["src/renderer/stores/workspace-agents-row.ts", ["workspace-agents-row"]],
 	["src/renderer/stores/new-dashboard-sidebar.ts", ["new-dashboard-sidebar"]],
 	[
-		"src/renderer/routes/_authenticated/settings/usage/utils/usageLastSection/usageLastSection.ts",
+		"src/renderer/routes/_authenticated/_dashboard/usage/utils/usageLastSection/usageLastSection.ts",
 		["usage-last-section-v1"],
 	],
 	[
-		"src/renderer/routes/_authenticated/settings/usage/components/LeaderboardCard/utils/leaderboardCardCollapsed/leaderboardCardCollapsed.ts",
+		"src/renderer/routes/_authenticated/_dashboard/usage/components/LeaderboardCard/utils/leaderboardCardCollapsed/leaderboardCardCollapsed.ts",
 		["leaderboard-card-collapsed-v1"],
 	],
 	["src/renderer/stores/inline-workspace-ports.ts", ["inline-workspace-ports"]],

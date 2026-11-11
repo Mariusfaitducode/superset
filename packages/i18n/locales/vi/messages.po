@@ -10060,9 +10060,6 @@ msgstr "Giữ tài liệu luôn mới"
 msgid "Keep editing"
 msgstr "Tiếp tục chỉnh sửa"
 
-msgid "Keep the sidebar in Settings"
-msgstr "Giữ thanh bên trong Cài đặt"
-
 msgid "Keep typing an email to invite"
 msgstr "Tiếp tục nhập email để mời"
 
@@ -17129,9 +17126,6 @@ msgstr "Hiển thị danh sách việc cần làm của mỗi cuộc trò chuy�
 
 msgid "Show the triggering payload"
 msgstr "Hiển thị payload kích hoạt"
-
-msgid "Show the workspace sidebar on the left while Settings is open."
-msgstr "Hiển thị thanh bên workspace ở bên trái khi Cài đặt đang mở."
 
 msgid "Show translation"
 msgstr "Xem bản dịch"

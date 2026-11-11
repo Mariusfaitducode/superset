@@ -3,7 +3,7 @@ import { HiOutlineChartBar, HiOutlineCpuChip } from "react-icons/hi2";
 import {
 	getUsageLastSection,
 	usageSectionPath,
-} from "renderer/routes/_authenticated/settings/usage/utils/usageLastSection";
+} from "renderer/routes/_authenticated/_dashboard/usage/utils/usageLastSection";
 import type { Command } from "../../core/types";
 
 /**
@@ -59,5 +59,5 @@ export const checkResourcesCommand: Command = {
 		"activity",
 		"processes",
 	],
-	run: (context) => context.navigate("/settings/usage/resources"),
+	run: (context) => context.navigate("/usage/resources"),
 };

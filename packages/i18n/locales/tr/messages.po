@@ -10060,9 +10060,6 @@ msgstr "Belgeleri güncel tut"
 msgid "Keep editing"
 msgstr "Düzenlemeye devam et"
 
-msgid "Keep the sidebar in Settings"
-msgstr "Ayarlar'da kenar çubuğunu koru"
-
 msgid "Keep typing an email to invite"
 msgstr "Davet etmek için e-postayı yazmaya devam edin"
 
@@ -17129,9 +17126,6 @@ msgstr "Her konuşmanın yapılacaklar listesini, ajanıyla paylaşarak göster.
 
 msgid "Show the triggering payload"
 msgstr "Tetikleyen yükü göster"
-
-msgid "Show the workspace sidebar on the left while Settings is open."
-msgstr "Ayarlar açıkken çalışma alanı kenar çubuğunu solda göster."
 
 msgid "Show translation"
 msgstr "Çeviriyi göster"

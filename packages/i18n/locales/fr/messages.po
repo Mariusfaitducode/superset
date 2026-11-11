@@ -10060,9 +10060,6 @@ msgstr "Garder la documentation à jour"
 msgid "Keep editing"
 msgstr "Continuer à modifier"
 
-msgid "Keep the sidebar in Settings"
-msgstr "Garder la barre latérale dans les Réglages"
-
 msgid "Keep typing an email to invite"
 msgstr "Continuez à saisir un e-mail pour inviter"
 
@@ -17129,9 +17126,6 @@ msgstr "Afficher la liste de to-do de chaque conversation, partagée avec son ag
 
 msgid "Show the triggering payload"
 msgstr "Afficher la charge utile déclenchante"
-
-msgid "Show the workspace sidebar on the left while Settings is open."
-msgstr "Afficher la barre latérale des espaces de travail à gauche quand les Réglages sont ouverts."
 
 msgid "Show translation"
 msgstr "Afficher la traduction"

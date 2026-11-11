@@ -19,8 +19,6 @@ export interface SidebarPreferences extends SidebarAppearance {
 	waitingTint: WaitingTint;
 	/** Menu entries at the top of the sidebar that the user took out. */
 	hiddenNavItems: SidebarNavItemId[];
-	/** Keep the sidebar on the left of the Settings pages. */
-	keepSidebarInSettings: boolean;
 	/** Pages as one wrapped row of icons rather than a row each. */
 	navItemsAsIcons: boolean;
 	/** One line per workspace, as before, instead of a details line under it. */
@@ -59,7 +57,6 @@ export const DEFAULT_SIDEBAR_PREFERENCES: SidebarPreferences = {
 	stateColors: {},
 	folderColorOnConversations: false,
 	hiddenNavItems: [],
-	keepSidebarInSettings: true,
 	navItemsAsIcons: true,
 	singleLineRows: false,
 	showRowBranch: true,
@@ -110,7 +107,7 @@ export const useSidebarPreferencesStore = create<SidebarPreferencesState>()(
 			}),
 			{
 				name: "sidebar-preferences-v1",
-				version: 3,
+				version: 4,
 				migrate: (persisted, version) =>
 					migrateSidebarPreferences(
 						persisted,
@@ -134,6 +131,8 @@ export const useSidebarPreferencesStore = create<SidebarPreferencesState>()(
 /**
  * v1 had an on/off `showWaitingTint`. v2 had six state colors; v3 has the
  * five agent states, so a hand-picked "request" color becomes "needs you".
+ * v4 drops `keepSidebarInSettings`: Settings now always opens inside the
+ * app sidebar.
  */
 export function migrateSidebarPreferences(
 	persisted: unknown,
@@ -157,6 +156,10 @@ export function migrateSidebarPreferences(
 			...colors
 		} = (state.stateColors ?? {}) as Record<string, string>;
 		state.stateColors = request ? { ...colors, needsYou: request } : colors;
+	}
+	if (version < 4) {
+		const { keepSidebarInSettings: _keepSidebarInSettings, ...rest } = state;
+		state = rest;
 	}
 	return { ...DEFAULT_SIDEBAR_PREFERENCES, ...state } as SidebarPreferences;
 }

@@ -9,7 +9,6 @@ export type SettingsSection =
 	| "appearance"
 	| "sidebar"
 	| "ringtones"
-	| "usage"
 	| "keyboard"
 	| "behavior"
 	| "browser"

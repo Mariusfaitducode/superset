@@ -194,15 +194,15 @@ test("every production failure boundary is included in the renderer audit", asyn
 			"routes/_authenticated/components/ContentBoundary/ContentBoundary.tsx: errorComponent",
 			"routes/_authenticated/_dashboard/project/$projectId/page.tsx: notFoundComponent",
 			"routes/_authenticated/_dashboard/workspace/$workspaceId/page.tsx: notFoundComponent",
-			"routes/_authenticated/settings/hosts/$hostId/page.tsx: notFoundComponent",
-			"routes/_authenticated/settings/projects/$projectId/page.tsx: notFoundComponent",
+			"routes/_authenticated/_dashboard/settings/hosts/$hostId/page.tsx: notFoundComponent",
+			"routes/_authenticated/_dashboard/settings/projects/$projectId/page.tsx: notFoundComponent",
 		].sort(),
 	);
 });
 
 test("settings and dashboard outlets retain their surrounding layout on render errors", () => {
 	for (const relative of [
-		"routes/_authenticated/settings/layout.tsx",
+		"routes/_authenticated/_dashboard/settings/layout.tsx",
 		"routes/_authenticated/_dashboard/layout.tsx",
 	]) {
 		const source = parse(resolve(renderer, relative));

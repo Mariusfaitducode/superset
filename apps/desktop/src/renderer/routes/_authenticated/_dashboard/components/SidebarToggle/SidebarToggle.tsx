@@ -1,11 +1,12 @@
 import { Tooltip, TooltipContent, TooltipTrigger } from "@superset/ui/tooltip";
 import { LuPanelLeft, LuPanelLeftClose, LuPanelLeftOpen } from "react-icons/lu";
 import { HotkeyLabel } from "renderer/hotkeys";
+import { useIsSidebarRail } from "renderer/routes/_authenticated/_dashboard/hooks/useIsSidebarRail";
 import { useWorkspaceSidebarStore } from "renderer/stores";
 
 export function SidebarToggle() {
-	const { isCollapsed, toggleCollapsed } = useWorkspaceSidebarStore();
-	const collapsed = isCollapsed();
+	const toggleCollapsed = useWorkspaceSidebarStore((s) => s.toggleCollapsed);
+	const collapsed = useIsSidebarRail();
 
 	const getToggleIcon = (isHovering: boolean) => {
 		if (collapsed) {

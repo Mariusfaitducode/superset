@@ -197,7 +197,7 @@ export function AccountUsage({ workspaceId, terminalId }: AccountUsageProps) {
 							})()}
 					</span>
 					<Link
-						to="/settings/usage"
+						to="/usage"
 						search={{
 							workspaceId,
 							accountKey: account?.accountKey,
