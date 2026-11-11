@@ -7510,6 +7510,9 @@ msgstr "每週三上午9點，回顧本週合併的PR，更新被它們改過時
 msgid "Every weekday at 9am, read new GitHub issues, apply labels, and draft a first reply for my review."
 msgstr "每個工作日上午9點，閱讀新的GitHub議題，打上標籤，並起草初步回覆供我審閱。"
 
+msgid "Everyone"
+msgstr "所有人"
+
 msgid "Everyone argues about whether this generalizes. That argument is the sign the level was reached."
 msgstr "所有人都在爭論這能否推廣。這場爭論本身就說明這一級別已經達到了。"
 
@@ -11494,6 +11497,9 @@ msgstr "需要處理"
 msgid "Needs input"
 msgstr "需要輸入"
 
+msgid "Needs me"
+msgstr "需要我"
+
 msgid "Needs permission"
 msgstr "需要授權"
 
@@ -11800,6 +11806,9 @@ msgstr "此主機上未設定任何代理程式"
 
 msgid "No agent is running on this host."
 msgstr "此主機上沒有正在執行的代理。"
+
+msgid "No agent is working right now."
+msgstr "目前沒有代理在工作。"
 
 msgid "No agent running"
 msgstr "沒有正在執行的代理程式"
@@ -12907,9 +12916,6 @@ msgstr "只有討論串的作者或頁面擁有者才能刪除它"
 
 msgid "Only want it out of your sidebar? Hide it instead. Nobody else is affected."
 msgstr "只是想把它從側邊欄移除？請改為隱藏。不會影響其他人。"
-
-msgid "Only who needs me"
-msgstr "只看需要我的"
 
 msgid "Only you"
 msgstr "僅你自己"
@@ -20924,6 +20930,9 @@ msgstr "誰"
 
 msgid "Who can open it"
 msgstr "誰可以開啟"
+
+msgid "Who to show"
+msgstr "顯示誰"
 
 msgid "Who waits on you, or whom you wait on"
 msgstr "誰在等你，或你在等誰"

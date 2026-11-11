@@ -7510,6 +7510,9 @@ msgstr "Каждую среду в 9:00 просматривай объедин�
 msgid "Every weekday at 9am, read new GitHub issues, apply labels, and draft a first reply for my review."
 msgstr "Каждый будний день в 9:00 читай новые задачи GitHub, расставляй метки и готовь первый черновик ответа мне на проверку."
 
+msgid "Everyone"
+msgstr "Все"
+
 msgid "Everyone argues about whether this generalizes. That argument is the sign the level was reached."
 msgstr "Все спорят, обобщается ли это. Сам спор — признак того, что уровень достигнут."
 
@@ -11494,6 +11497,9 @@ msgstr "Требует внимания"
 msgid "Needs input"
 msgstr "Нужен ввод"
 
+msgid "Needs me"
+msgstr "Ждут меня"
+
 msgid "Needs permission"
 msgstr "Нужно разрешение"
 
@@ -11800,6 +11806,9 @@ msgstr "На этом хосте не настроен ни один агент"
 
 msgid "No agent is running on this host."
 msgstr "На этом хосте не запущено ни одного агента."
+
+msgid "No agent is working right now."
+msgstr "Сейчас ни один агент не работает."
 
 msgid "No agent running"
 msgstr "Нет запущенных агентов"
@@ -12907,9 +12916,6 @@ msgstr "Удалить может только автор ветки или вл
 
 msgid "Only want it out of your sidebar? Hide it instead. Nobody else is affected."
 msgstr "Хотите просто убрать его из боковой панели? Скройте его. Это никого больше не затронет."
-
-msgid "Only who needs me"
-msgstr "Только кто ждёт меня"
 
 msgid "Only you"
 msgstr "Только вы"
@@ -20924,6 +20930,9 @@ msgstr "Кто"
 
 msgid "Who can open it"
 msgstr "Кто может открыть"
+
+msgid "Who to show"
+msgstr "Кого показывать"
 
 msgid "Who waits on you, or whom you wait on"
 msgstr "Кто ждёт вас или кого ждёте вы"

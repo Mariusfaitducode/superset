@@ -7510,6 +7510,9 @@ msgstr "Her çarşamba 09.00'da bu haftanın birleştirilen PR'larını incele v
 msgid "Every weekday at 9am, read new GitHub issues, apply labels, and draft a first reply for my review."
 msgstr "Her hafta içi 09.00'da yeni GitHub issue'larını oku, etiket uygula ve incelemem için ilk yanıt taslağını hazırla."
 
+msgid "Everyone"
+msgstr "Herkes"
+
 msgid "Everyone argues about whether this generalizes. That argument is the sign the level was reached."
 msgstr "Herkes bunun genellenebilir olup olmadığını tartışır. Bu tartışma, düzeye ulaşıldığının işaretidir."
 
@@ -11494,6 +11497,9 @@ msgstr "İlgi bekliyor"
 msgid "Needs input"
 msgstr "Giriş gerekiyor"
 
+msgid "Needs me"
+msgstr "Bana ihtiyaç var"
+
 msgid "Needs permission"
 msgstr "İzin gerekiyor"
 
@@ -11800,6 +11806,9 @@ msgstr "Bu ana makinede yapılandırılmış bir ajan yok"
 
 msgid "No agent is running on this host."
 msgstr "Bu ana bilgisayarda çalışan ajan yok."
+
+msgid "No agent is working right now."
+msgstr "Şu anda çalışan ajan yok."
 
 msgid "No agent running"
 msgstr "Çalışan ajan yok"
@@ -12907,9 +12916,6 @@ msgstr "Konuyu yalnızca yazarı veya sayfanın sahibi silebilir"
 
 msgid "Only want it out of your sidebar? Hide it instead. Nobody else is affected."
 msgstr "Sadece kenar çubuğundan mı kaldırmak istiyorsun? Bunun yerine gizle. Başka kimse etkilenmez."
-
-msgid "Only who needs me"
-msgstr "Yalnızca bana ihtiyacı olanlar"
 
 msgid "Only you"
 msgstr "Yalnızca siz"
@@ -20924,6 +20930,9 @@ msgstr "Kim"
 
 msgid "Who can open it"
 msgstr "Kimler açabilir"
+
+msgid "Who to show"
+msgstr "Kimler gösterilsin"
 
 msgid "Who waits on you, or whom you wait on"
 msgstr "Sizi bekleyen ya da beklediğiniz kişi"

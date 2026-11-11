@@ -7510,6 +7510,9 @@ msgstr "Každou středu v 9:00 projdi sloučené PR za tento týden a aktualizuj
 msgid "Every weekday at 9am, read new GitHub issues, apply labels, and draft a first reply for my review."
 msgstr "Každý všední den v 9:00 přečti nové GitHub issues, přiřaď štítky a připrav první odpověď ke kontrole."
 
+msgid "Everyone"
+msgstr "Všichni"
+
 msgid "Everyone argues about whether this generalizes. That argument is the sign the level was reached."
 msgstr "Všichni se dohadují, jestli se to dá zobecnit. Právě ten spor je známkou toho, že úroveň byla dosažena."
 
@@ -11494,6 +11497,9 @@ msgstr "Vyžaduje pozornost"
 msgid "Needs input"
 msgstr "Čeká na vstup"
 
+msgid "Needs me"
+msgstr "Potřebují mě"
+
 msgid "Needs permission"
 msgstr "Vyžaduje oprávnění"
 
@@ -11800,6 +11806,9 @@ msgstr "Na tomto hostiteli není nakonfigurován žádný agent"
 
 msgid "No agent is running on this host."
 msgstr "Na tomto hostiteli neběží žádný agent."
+
+msgid "No agent is working right now."
+msgstr "Právě teď nepracuje žádný agent."
 
 msgid "No agent running"
 msgstr "Neběží žádný agent"
@@ -12907,9 +12916,6 @@ msgstr "Smazat ho může jen autor vlákna nebo vlastník stránky"
 
 msgid "Only want it out of your sidebar? Hide it instead. Nobody else is affected."
 msgstr "Chcete ho jen odebrat z postranního panelu? Skryjte ho. Nikoho jiného se to nedotkne."
-
-msgid "Only who needs me"
-msgstr "Jen kdo mě potřebuje"
 
 msgid "Only you"
 msgstr "Jen vy"
@@ -20924,6 +20930,9 @@ msgstr "Kdo"
 
 msgid "Who can open it"
 msgstr "Kdo to může otevřít"
+
+msgid "Who to show"
+msgstr "Koho zobrazit"
 
 msgid "Who waits on you, or whom you wait on"
 msgstr "Kdo čeká na vás, nebo na koho čekáte vy"

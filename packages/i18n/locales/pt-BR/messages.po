@@ -7510,6 +7510,9 @@ msgstr "Toda quarta às 9h, revise os PRs mesclados da semana e atualize a docum
 msgid "Every weekday at 9am, read new GitHub issues, apply labels, and draft a first reply for my review."
 msgstr "Todo dia útil às 9h, leia as novas issues do GitHub, aplique labels e escreva uma primeira resposta para eu revisar."
 
+msgid "Everyone"
+msgstr "Todos"
+
 msgid "Everyone argues about whether this generalizes. That argument is the sign the level was reached."
 msgstr "Todo mundo discute se isso generaliza. Essa discussão é o sinal de que o nível foi alcançado."
 
@@ -11494,6 +11497,9 @@ msgstr "Precisam de atenção"
 msgid "Needs input"
 msgstr "Precisa de resposta"
 
+msgid "Needs me"
+msgstr "Precisam de mim"
+
 msgid "Needs permission"
 msgstr "Precisa de permissão"
 
@@ -11800,6 +11806,9 @@ msgstr "Nenhum agente está configurado neste host"
 
 msgid "No agent is running on this host."
 msgstr "Nenhum agente está rodando neste host."
+
+msgid "No agent is working right now."
+msgstr "Nenhum agente está trabalhando agora."
 
 msgid "No agent running"
 msgstr "Nenhum agente em execução"
@@ -12907,9 +12916,6 @@ msgstr "Só quem criou a thread ou quem é dono da página pode excluí-la"
 
 msgid "Only want it out of your sidebar? Hide it instead. Nobody else is affected."
 msgstr "Só quer tirar da sua barra lateral? Oculte. Ninguém mais é afetado."
-
-msgid "Only who needs me"
-msgstr "Só quem precisa de mim"
 
 msgid "Only you"
 msgstr "Só você"
@@ -20924,6 +20930,9 @@ msgstr "Quem"
 
 msgid "Who can open it"
 msgstr "Quem pode abrir"
+
+msgid "Who to show"
+msgstr "Quem mostrar"
 
 msgid "Who waits on you, or whom you wait on"
 msgstr "Quem aguarda você, ou quem você aguarda"

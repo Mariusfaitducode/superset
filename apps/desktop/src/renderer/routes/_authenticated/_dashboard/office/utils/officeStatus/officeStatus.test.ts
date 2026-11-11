@@ -92,17 +92,24 @@ describe("visibleIslands", () => {
 		island("quiet", ["idle", "working"]),
 		island("asks", ["idle", "need"]),
 		island("done", ["done"]),
+		island("resting", ["idle"]),
+		island("empty", []),
 	];
 
 	test("keeps every island by default", () => {
-		expect(visibleIslands(islands, false)).toHaveLength(3);
+		expect(visibleIslands(islands, "all")).toHaveLength(5);
+	});
+
+	test("keeps only islands where an agent is not resting", () => {
+		expect(
+			visibleIslands(islands, "active").map((entry) => entry.name),
+		).toEqual(["quiet", "asks", "done"]);
 	});
 
 	test("keeps only islands where someone needs you", () => {
-		expect(visibleIslands(islands, true).map((entry) => entry.name)).toEqual([
-			"asks",
-			"done",
-		]);
+		expect(
+			visibleIslands(islands, "needsMe").map((entry) => entry.name),
+		).toEqual(["asks", "done"]);
 	});
 });
 

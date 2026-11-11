@@ -17,7 +17,7 @@ export interface AgentBinding {
 	lastEventType: string;
 	lastEventAt: number;
 	/** Live children keep a finished parent at work (`countLiveChildren`). */
-	subagents?: readonly unknown[];
+	subagents?: readonly { lastEventAt?: number }[];
 	backgroundTasks?: readonly { kind: string }[];
 }
 

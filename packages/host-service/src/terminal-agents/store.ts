@@ -481,6 +481,8 @@ export class TerminalAgentStore extends EventEmitter {
 			if (binding.workspaceId !== workspaceId) continue;
 			if (onlyTerminalId !== undefined && terminalId !== onlyTerminalId)
 				continue;
+			// An interrupt stops the children too, and they never report it.
+			if (this.endLiveSubagents(terminalId)) changed = true;
 			if (binding.lastEventType === "Stop") continue;
 			const next: TerminalAgentBinding = { ...binding, lastEventType: "Stop" };
 			this.byTerminal.set(terminalId, next);
@@ -503,6 +505,19 @@ export class TerminalAgentStore extends EventEmitter {
 			changed = true;
 		}
 		if (changed) this.emit("change", workspaceId);
+	}
+
+	private endLiveSubagents(terminalId: string): boolean {
+		const roster = this.subagentsByTerminal.get(terminalId);
+		if (!roster) return false;
+		const now = Date.now();
+		let ended = false;
+		for (const [id, subagent] of roster) {
+			if (subagent.endedAt !== undefined) continue;
+			roster.set(id, { ...subagent, endedAt: now });
+			ended = true;
+		}
+		return ended;
 	}
 
 	get(terminalId: string): TerminalAgentBinding | undefined {

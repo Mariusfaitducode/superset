@@ -7510,6 +7510,9 @@ msgstr "Tiap Rabu jam 9 pagi, tinjau PR yang di-merge minggu ini dan perbarui do
 msgid "Every weekday at 9am, read new GitHub issues, apply labels, and draft a first reply for my review."
 msgstr "Tiap hari kerja jam 9 pagi, baca issue GitHub baru, terapkan label, dan susun draf balasan pertama untuk saya review."
 
+msgid "Everyone"
+msgstr "Semua"
+
 msgid "Everyone argues about whether this generalizes. That argument is the sign the level was reached."
 msgstr "Semua orang berdebat apakah ini bisa digeneralisasi. Perdebatan itu justru tanda bahwa levelnya sudah tercapai."
 
@@ -11494,6 +11497,9 @@ msgstr "Perlu perhatian"
 msgid "Needs input"
 msgstr "Perlu input"
 
+msgid "Needs me"
+msgstr "Butuh saya"
+
 msgid "Needs permission"
 msgstr "Perlu izin"
 
@@ -11800,6 +11806,9 @@ msgstr "Tidak ada agen yang dikonfigurasi di host ini"
 
 msgid "No agent is running on this host."
 msgstr "Tidak ada agen yang berjalan di host ini."
+
+msgid "No agent is working right now."
+msgstr "Tidak ada agen yang bekerja saat ini."
 
 msgid "No agent running"
 msgstr "Tidak ada agen yang berjalan"
@@ -12907,9 +12916,6 @@ msgstr "Hanya penulis thread atau pemilik halaman yang bisa menghapusnya"
 
 msgid "Only want it out of your sidebar? Hide it instead. Nobody else is affected."
 msgstr "Hanya ingin menghapusnya dari sidebar Anda? Sembunyikan saja. Tidak ada orang lain yang terpengaruh."
-
-msgid "Only who needs me"
-msgstr "Hanya yang membutuhkanku"
 
 msgid "Only you"
 msgstr "Hanya Anda"
@@ -20924,6 +20930,9 @@ msgstr "Siapa"
 
 msgid "Who can open it"
 msgstr "Siapa yang bisa membuka"
+
+msgid "Who to show"
+msgstr "Siapa yang ditampilkan"
 
 msgid "Who waits on you, or whom you wait on"
 msgstr "Siapa yang menunggu Anda, atau yang Anda tunggu"

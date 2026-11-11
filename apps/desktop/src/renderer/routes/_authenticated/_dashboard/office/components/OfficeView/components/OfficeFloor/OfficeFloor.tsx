@@ -1,5 +1,5 @@
 import { Trans, useLingui } from "@lingui/react/macro";
-import { Switch } from "@superset/ui/switch";
+import { ToggleGroup, ToggleGroupItem } from "@superset/ui/toggle-group";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@superset/ui/tooltip";
 import { cn } from "@superset/ui/utils";
 import { useNavigate } from "@tanstack/react-router";
@@ -57,6 +57,7 @@ import {
 	deskTone,
 	type IslandCounts,
 	moveFocus,
+	type OfficeShow,
 	type OfficeTone,
 	orderIslands,
 	toneFor,
@@ -91,6 +92,8 @@ const LEGEND: { tone: OfficeTone; dot: string }[] = [
 	{ tone: "failed", dot: "bg-red-500" },
 	{ tone: "idle", dot: "bg-zinc-400" },
 ];
+
+const SHOW_OPTIONS: OfficeShow[] = ["all", "active", "needsMe"];
 
 const ARROW_KEYS = new Set<string>([
 	"ArrowLeft",
@@ -154,10 +157,15 @@ export function OfficeFloor({
 	const reducedMotion = usePrefersReducedMotion();
 	const stateLabels = useConversationStateLabels();
 	const toneLabels = useOfficeToneLabels();
+	const showLabels: Record<OfficeShow, string> = {
+		all: t`Everyone`,
+		active: t`Active`,
+		needsMe: t`Needs me`,
+	};
 	const showAgentTodos = useSidebarPreference("showAgentTodos");
 	const statuses = useSidebarWorkspaceStatuses();
-	const onlyNeedsMe = useOfficeFilterStore((state) => state.onlyNeedsMe);
-	const setOnlyNeedsMe = useOfficeFilterStore((state) => state.setOnlyNeedsMe);
+	const show = useOfficeFilterStore((state) => state.show);
+	const setShow = useOfficeFilterStore((state) => state.setShow);
 
 	// Every workspace gets a desk; only the ones with agents are read.
 	const staffed = useMemo(
@@ -276,11 +284,11 @@ export function OfficeFloor({
 		const shownRooms = allRooms
 			.map((room) => ({
 				...room,
-				desks: visibleIslands(room.desks, onlyNeedsMe),
+				desks: visibleIslands(room.desks, show),
 			}))
 			.filter((room) => room.desks.length > 0);
 		return { allRooms, shownRooms };
-	}, [workspaces, groups, labelsByHost, reports, showAgentTodos, onlyNeedsMe]);
+	}, [workspaces, groups, labelsByHost, reports, showAgentTodos, show]);
 
 	const [worldSize, setWorldSize] = useState({ width: 0, height: 0 });
 	const camera = useOfficeCamera(worldSize);
@@ -544,17 +552,26 @@ export function OfficeFloor({
 							</>
 						)}
 					</span>
-					<label
-						htmlFor="office-only-needs-me"
-						className="ml-auto flex cursor-pointer items-center gap-2 text-xs"
+					<ToggleGroup
+						type="single"
+						size="sm"
+						value={show}
+						onValueChange={(value) => {
+							if (value) setShow(value as OfficeShow);
+						}}
+						aria-label={t`Who to show`}
+						className="ml-auto rounded-md bg-muted/50 p-0.5"
 					>
-						<Switch
-							id="office-only-needs-me"
-							checked={onlyNeedsMe}
-							onCheckedChange={setOnlyNeedsMe}
-						/>
-						<Trans>Only who needs me</Trans>
-					</label>
+						{SHOW_OPTIONS.map((option) => (
+							<ToggleGroupItem
+								key={option}
+								value={option}
+								className="h-6 px-2.5 text-xs text-muted-foreground data-[state=on]:bg-background data-[state=on]:text-foreground data-[state=on]:shadow-sm"
+							>
+								{showLabels[option]}
+							</ToggleGroupItem>
+						))}
+					</ToggleGroup>
 					<ul className="flex flex-wrap items-center gap-3 text-xs text-muted-foreground">
 						{LEGEND.map(({ tone, dot }) => (
 							<li key={tone} className="flex items-center gap-1.5">
@@ -747,6 +764,8 @@ export function OfficeFloor({
 										<Trans>
 											No workspace yet. Create one and it gets a desk here.
 										</Trans>
+									) : show === "active" ? (
+										<Trans>No agent is working right now.</Trans>
 									) : (
 										<Trans>Nobody needs you right now.</Trans>
 									)}

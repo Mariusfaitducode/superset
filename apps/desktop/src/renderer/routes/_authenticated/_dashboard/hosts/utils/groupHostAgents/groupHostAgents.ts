@@ -15,7 +15,7 @@ export interface HostAgentBinding {
 	lastEventType: string;
 	lastEventAt: number;
 	endedAt?: number;
-	subagents?: unknown[];
+	subagents?: { lastEventAt?: number }[];
 }
 
 export interface HostWorkspaceRef {

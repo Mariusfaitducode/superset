@@ -7510,6 +7510,9 @@ msgstr "Mỗi thứ Tư lúc 9h sáng, xem lại các PR đã merge trong tuần
 msgid "Every weekday at 9am, read new GitHub issues, apply labels, and draft a first reply for my review."
 msgstr "Mỗi ngày trong tuần lúc 9h sáng, đọc issue GitHub mới, gán nhãn và soạn câu trả lời đầu tiên để tôi xem lại."
 
+msgid "Everyone"
+msgstr "Mọi người"
+
 msgid "Everyone argues about whether this generalizes. That argument is the sign the level was reached."
 msgstr "Ai cũng tranh cãi liệu điều này có khái quát được không. Chính cuộc tranh cãi đó là dấu hiệu mức này đã đạt được."
 
@@ -11494,6 +11497,9 @@ msgstr "Cần chú ý"
 msgid "Needs input"
 msgstr "Cần nhập thêm"
 
+msgid "Needs me"
+msgstr "Cần tôi"
+
 msgid "Needs permission"
 msgstr "Cần cấp quyền"
 
@@ -11800,6 +11806,9 @@ msgstr "Không có tác nhân nào được cấu hình trên máy chủ này"
 
 msgid "No agent is running on this host."
 msgstr "Không có tác tử nào đang chạy trên máy chủ này."
+
+msgid "No agent is working right now."
+msgstr "Hiện không có agent nào đang làm việc."
 
 msgid "No agent running"
 msgstr "Không có agent nào đang chạy"
@@ -12907,9 +12916,6 @@ msgstr "Chỉ tác giả của luồng hoặc chủ sở hữu trang mới xóa 
 
 msgid "Only want it out of your sidebar? Hide it instead. Nobody else is affected."
 msgstr "Chỉ muốn bỏ nó khỏi thanh bên của bạn? Hãy ẩn nó. Không ảnh hưởng đến ai khác."
-
-msgid "Only who needs me"
-msgstr "Chỉ những ai cần tôi"
 
 msgid "Only you"
 msgstr "Chỉ mình bạn"
@@ -20924,6 +20930,9 @@ msgstr "Ai"
 
 msgid "Who can open it"
 msgstr "Ai có thể mở"
+
+msgid "Who to show"
+msgstr "Hiển thị ai"
 
 msgid "Who waits on you, or whom you wait on"
 msgstr "Ai đang chờ bạn, hoặc bạn đang chờ ai"

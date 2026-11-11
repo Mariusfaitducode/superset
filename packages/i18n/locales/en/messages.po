@@ -7510,6 +7510,9 @@ msgstr "Every Wednesday at 9am, review this week's merged PRs and update any doc
 msgid "Every weekday at 9am, read new GitHub issues, apply labels, and draft a first reply for my review."
 msgstr "Every weekday at 9am, read new GitHub issues, apply labels, and draft a first reply for my review."
 
+msgid "Everyone"
+msgstr "Everyone"
+
 msgid "Everyone argues about whether this generalizes. That argument is the sign the level was reached."
 msgstr "Everyone argues about whether this generalizes. That argument is the sign the level was reached."
 
@@ -11494,6 +11497,9 @@ msgstr "Needs attention"
 msgid "Needs input"
 msgstr "Needs input"
 
+msgid "Needs me"
+msgstr "Needs me"
+
 msgid "Needs permission"
 msgstr "Needs permission"
 
@@ -11800,6 +11806,9 @@ msgstr "No agent is configured on this host"
 
 msgid "No agent is running on this host."
 msgstr "No agent is running on this host."
+
+msgid "No agent is working right now."
+msgstr "No agent is working right now."
 
 msgid "No agent running"
 msgstr "No agent running"
@@ -12907,9 +12916,6 @@ msgstr "Only the thread's author or the page's owner can delete it"
 
 msgid "Only want it out of your sidebar? Hide it instead. Nobody else is affected."
 msgstr "Only want it out of your sidebar? Hide it instead. Nobody else is affected."
-
-msgid "Only who needs me"
-msgstr "Only who needs me"
 
 msgid "Only you"
 msgstr "Only you"
@@ -20924,6 +20930,9 @@ msgstr "Who"
 
 msgid "Who can open it"
 msgstr "Who can open it"
+
+msgid "Who to show"
+msgstr "Who to show"
 
 msgid "Who waits on you, or whom you wait on"
 msgstr "Who waits on you, or whom you wait on"
