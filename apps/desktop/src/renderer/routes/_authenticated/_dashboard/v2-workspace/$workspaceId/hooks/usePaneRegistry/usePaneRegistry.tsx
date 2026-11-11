@@ -49,6 +49,7 @@ import { terminalRuntimeRegistry } from "renderer/lib/terminal/terminal-runtime-
 import type { OpenFile } from "renderer/routes/_authenticated/_dashboard/v2-workspace/$workspaceId/types";
 import { useWorkspace } from "renderer/routes/_authenticated/_dashboard/v2-workspace/providers/WorkspaceProvider";
 import { useCollections } from "renderer/routes/_authenticated/providers/CollectionsProvider";
+import { useSidebarPreferencesStore } from "renderer/stores/sidebar-preferences";
 import { getV2NotificationSourcesForPane } from "renderer/stores/v2-notifications";
 import type { StoreApi } from "zustand/vanilla";
 import { TodosPanel } from "../../components/TodosPanel";
@@ -406,6 +407,8 @@ export function usePaneRegistry({
 								?.trim() || undefined,
 					};
 				},
+				liveTitleWins: () =>
+					useSidebarPreferencesStore.getState().syncConversationNames,
 				onBeforeClose: (pane) => {
 					const { terminalId } = pane.data as TerminalPaneData;
 					return confirmCloseTerminals(

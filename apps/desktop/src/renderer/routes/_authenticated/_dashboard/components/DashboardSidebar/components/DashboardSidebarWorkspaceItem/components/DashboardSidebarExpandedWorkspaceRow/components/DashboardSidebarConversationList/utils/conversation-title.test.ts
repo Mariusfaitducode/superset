@@ -45,4 +45,16 @@ describe("pickConversationTitle", () => {
 			"Claude",
 		);
 	});
+
+	test("puts the agent's title before the tab's name when names are synced", () => {
+		expect(
+			pickConversationTitle({
+				customTitle: null,
+				tabName: "old tab name",
+				runtimeTitle: "Fix invoices",
+				agentLabel: "Claude",
+				syncNames: true,
+			}),
+		).toBe("Fix invoices");
+	});
 });

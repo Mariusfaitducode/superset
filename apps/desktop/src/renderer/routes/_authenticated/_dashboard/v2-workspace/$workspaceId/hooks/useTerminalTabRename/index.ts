@@ -1,0 +1,1 @@
+export { useTerminalTabRename } from "./useTerminalTabRename";

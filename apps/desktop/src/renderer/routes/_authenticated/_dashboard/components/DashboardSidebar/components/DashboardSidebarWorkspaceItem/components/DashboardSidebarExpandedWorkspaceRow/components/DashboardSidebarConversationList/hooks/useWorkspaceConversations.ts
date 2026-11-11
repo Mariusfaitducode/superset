@@ -10,6 +10,7 @@ import { countLiveChildren } from "renderer/lib/agent-state";
 import { useSidebarWorkspaceStatus } from "renderer/routes/_authenticated/_dashboard/components/DashboardSidebar/providers/DashboardSidebarWorkspaceStatusProvider";
 import { useCollections } from "renderer/routes/_authenticated/providers/CollectionsProvider";
 import { useHostWorkspaces } from "renderer/routes/_authenticated/providers/HostWorkspacesProvider";
+import { useSidebarPreference } from "renderer/stores/sidebar-preferences";
 import { useV2NotificationStore } from "renderer/stores/v2-notifications";
 import {
 	type ConversationState,
@@ -100,6 +101,7 @@ export function useWorkspaceConversations({
 	);
 	const paneLayout = localRows[0]?.paneLayout;
 	const tabNames = useMemo(() => terminalTabNames(paneLayout), [paneLayout]);
+	const syncNames = useSidebarPreference("syncConversationNames");
 
 	const { cache } = useHostWorkspaces();
 	const hostUrl = cache.isSandboxHost(hostId)
@@ -145,6 +147,7 @@ export function useWorkspaceConversations({
 					tabName: tabNames.get(binding.terminalId) ?? null,
 					runtimeTitle: titles?.get(binding.terminalId)?.runtimeTitle ?? null,
 					agentLabel: AGENT_IDENTITY_LABELS[binding.agentId] ?? binding.agentId,
+					syncNames,
 				}),
 				subagents: (binding.subagents ?? []).map((subagent) => ({
 					id: subagent.id,
@@ -168,5 +171,5 @@ export function useWorkspaceConversations({
 		}
 		conversations.sort((a, b) => a.startedAt - b.startedAt);
 		return conversations;
-	}, [bindings, terminalSeenAt, tabNames, titles]);
+	}, [bindings, terminalSeenAt, tabNames, titles, syncNames]);
 }

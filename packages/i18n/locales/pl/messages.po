@@ -15298,6 +15298,9 @@ msgstr "Zmień nazwę obszaru roboczego"
 msgid "Rename..."
 msgstr "Zmień nazwę..."
 
+msgid "Renaming a conversation in the sidebar or on its terminal tab renames it in both places."
+msgstr "Zmiana nazwy rozmowy na pasku bocznym lub na jej karcie terminala zmienia ją w obu miejscach."
+
 msgid "Renaming branch to {newName}..."
 msgstr "Zmiana nazwy gałęzi na {newName}..."
 
@@ -16083,6 +16086,9 @@ msgstr "Uruchamia się przy tworzeniu obszaru roboczego."
 
 msgid "Runs when a workspace is deleted."
 msgstr "Uruchamia się przy usuwaniu obszaru roboczego."
+
+msgid "Same name in sidebar and tabs"
+msgstr "Ta sama nazwa na pasku bocznym i w kartach"
 
 msgid "Same version as this app."
 msgstr "Ta sama wersja co ta aplikacja."

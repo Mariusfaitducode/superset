@@ -34,6 +34,7 @@ function useReactivePaneTitle<TData>(
 /**
  * Reactive tab title. Precedence:
  *
+ *   pane.titleSource (live)      (when the pane's definition says it wins)
  *   tab.titleOverride
  *   pane.titleOverride           (only/active pane)
  *   pane.titleSource (live)      (only/active pane)
@@ -48,6 +49,13 @@ export function useTabTitle<TData>(
 	const titlePane = pickTabTitlePane(tab);
 	const reactiveTitle = useReactivePaneTitle(titlePane, registry)?.trim();
 
+	if (
+		reactiveTitle &&
+		titlePane &&
+		registry[titlePane.kind]?.liveTitleWins?.(titlePane)
+	) {
+		return reactiveTitle;
+	}
 	if (tab.titleOverride) return tab.titleOverride;
 	if (titlePane?.titleOverride) return titlePane.titleOverride;
 	if (reactiveTitle) return reactiveTitle;

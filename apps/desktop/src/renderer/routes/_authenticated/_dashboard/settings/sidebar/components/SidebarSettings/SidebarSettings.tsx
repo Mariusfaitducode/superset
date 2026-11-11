@@ -59,6 +59,13 @@ export function SidebarSettings({ visibleItems }: SidebarSettingsProps) {
 			needsConversations: false,
 		},
 		{
+			itemId: SETTING_ITEM_ID.SIDEBAR_SYNC_CONVERSATION_NAMES,
+			key: "syncConversationNames",
+			label: t`Same name in sidebar and tabs`,
+			hint: t`Renaming a conversation in the sidebar or on its terminal tab renames it in both places.`,
+			needsConversations: false,
+		},
+		{
 			itemId: SETTING_ITEM_ID.SIDEBAR_IDLE_CONVERSATIONS,
 			key: "showIdleConversations",
 			label: t`Idle conversations`,

@@ -15298,6 +15298,9 @@ msgstr "Arbeitsbereich umbenennen"
 msgid "Rename..."
 msgstr "Umbenennen..."
 
+msgid "Renaming a conversation in the sidebar or on its terminal tab renames it in both places."
+msgstr "Wenn du eine Unterhaltung in der Seitenleiste oder auf ihrem Terminal-Tab umbenennst, wird sie an beiden Stellen umbenannt."
+
 msgid "Renaming branch to {newName}..."
 msgstr "Branch wird in {newName} umbenannt..."
 
@@ -16083,6 +16086,9 @@ msgstr "Wird beim Erstellen eines Arbeitsbereichs ausgeführt."
 
 msgid "Runs when a workspace is deleted."
 msgstr "Wird beim Löschen eines Arbeitsbereichs ausgeführt."
+
+msgid "Same name in sidebar and tabs"
+msgstr "Gleicher Name in Seitenleiste und Tabs"
 
 msgid "Same version as this app."
 msgstr "Gleiche Version wie diese App."

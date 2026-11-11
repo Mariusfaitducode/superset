@@ -15298,6 +15298,9 @@ msgstr "Cambiar el nombre del espacio de trabajo"
 msgid "Rename..."
 msgstr "Cambiar el nombre..."
 
+msgid "Renaming a conversation in the sidebar or on its terminal tab renames it in both places."
+msgstr "Al cambiar el nombre de una conversación en la barra lateral o en su pestaña de terminal, se cambia en ambos lugares."
+
 msgid "Renaming branch to {newName}..."
 msgstr "Cambiando el nombre de la rama a {newName}..."
 
@@ -16083,6 +16086,9 @@ msgstr "Se ejecuta al crear un espacio de trabajo."
 
 msgid "Runs when a workspace is deleted."
 msgstr "Se ejecuta al eliminar un espacio de trabajo."
+
+msgid "Same name in sidebar and tabs"
+msgstr "Mismo nombre en la barra lateral y las pestañas"
 
 msgid "Same version as this app."
 msgstr "Misma versión que esta app."

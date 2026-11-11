@@ -1,4 +1,5 @@
 export {
+	pickTabTitlePane,
 	resolveTabTitle,
 	useTabTitle,
 	Workspace,
