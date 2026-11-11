@@ -347,10 +347,22 @@ export class TerminalAgentStore extends EventEmitter {
 
 		const nextType = agentType ?? existing?.agentType;
 		const nextPath = transcriptPath ?? existing?.transcriptPath;
+		// The sidecar files can land after the first event: read until found.
+		const details =
+			nextPath &&
+			(nextPath !== existing?.transcriptPath ||
+				!existing?.description ||
+				(existing.workflow && !existing.workflow.name))
+				? harness.readDetails(nextPath)
+				: {};
+		const description = details.description ?? existing?.description;
+		const workflow = details.workflow ?? existing?.workflow;
 		const next: TerminalSubagent = {
 			id: subagentId,
 			...(nextType ? { agentType: nextType } : {}),
 			...(nextPath ? { transcriptPath: nextPath } : {}),
+			...(description ? { description } : {}),
+			...(workflow ? { workflow } : {}),
 			// A stopped child that speaks again (Codex send_input) is live again.
 			startedAt:
 				existing && existing.endedAt === undefined
@@ -469,6 +481,8 @@ export class TerminalAgentStore extends EventEmitter {
 			if (binding.workspaceId !== workspaceId) continue;
 			if (onlyTerminalId !== undefined && terminalId !== onlyTerminalId)
 				continue;
+			// An interrupt stops the children too, and they never report it.
+			if (this.endLiveSubagents(terminalId)) changed = true;
 			if (binding.lastEventType === "Stop") continue;
 			const next: TerminalAgentBinding = { ...binding, lastEventType: "Stop" };
 			this.byTerminal.set(terminalId, next);
@@ -491,6 +505,19 @@ export class TerminalAgentStore extends EventEmitter {
 			changed = true;
 		}
 		if (changed) this.emit("change", workspaceId);
+	}
+
+	private endLiveSubagents(terminalId: string): boolean {
+		const roster = this.subagentsByTerminal.get(terminalId);
+		if (!roster) return false;
+		const now = Date.now();
+		let ended = false;
+		for (const [id, subagent] of roster) {
+			if (subagent.endedAt !== undefined) continue;
+			roster.set(id, { ...subagent, endedAt: now });
+			ended = true;
+		}
+		return ended;
 	}
 
 	get(terminalId: string): TerminalAgentBinding | undefined {

@@ -6,6 +6,7 @@ import { eq } from "@tanstack/db";
 import { useLiveQuery } from "@tanstack/react-db";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { useEffect, useMemo } from "react";
+import { countLiveChildren } from "renderer/lib/agent-state";
 import { useSidebarWorkspaceStatus } from "renderer/routes/_authenticated/_dashboard/components/DashboardSidebar/providers/DashboardSidebarWorkspaceStatusProvider";
 import { useCollections } from "renderer/routes/_authenticated/providers/CollectionsProvider";
 import { useHostWorkspaces } from "renderer/routes/_authenticated/providers/HostWorkspacesProvider";
@@ -26,6 +27,10 @@ export { cleanTitle } from "./hostTerminalTitles";
 export interface SidebarSubagent {
 	id: string;
 	agentType?: string;
+	description?: string;
+	/** Set when a workflow run spawned it. */
+	workflow?: { runId: string; name?: string; phase?: string };
+	startedAt?: number;
 }
 
 export interface SidebarConversation {
@@ -130,6 +135,7 @@ export function useWorkspaceConversations({
 				lastEventType: binding.lastEventType,
 				lastEventAt: binding.lastEventAt,
 				lastSeenAt: terminalSeenAt[binding.terminalId],
+				liveChildren: countLiveChildren(binding),
 			});
 			conversations.push({
 				terminalId: binding.terminalId,
@@ -143,6 +149,11 @@ export function useWorkspaceConversations({
 				subagents: (binding.subagents ?? []).map((subagent) => ({
 					id: subagent.id,
 					...(subagent.agentType ? { agentType: subagent.agentType } : {}),
+					...(subagent.description
+						? { description: subagent.description }
+						: {}),
+					...(subagent.workflow ? { workflow: subagent.workflow } : {}),
+					startedAt: subagent.startedAt,
 				})),
 				state,
 				since: binding.lastEventAt,

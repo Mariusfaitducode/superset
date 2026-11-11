@@ -179,3 +179,57 @@ describe("defineSubagentHarness defaults", () => {
 		expect(harness.readDescription("/x.jsonl")).toBeUndefined();
 	});
 });
+
+describe("Claude workflow subagents", () => {
+	function workflowSession() {
+		const dir = mkdtempSync(path.join(tmpdir(), "wf-"));
+		const runDir = path.join(dir, "s1", "subagents", "workflows", "wf_run-1");
+		mkdirSync(runDir, { recursive: true });
+		mkdirSync(path.join(dir, "s1", "workflows"), { recursive: true });
+		const transcript = path.join(runDir, "agent-a1.jsonl");
+		writeFileSync(transcript, "");
+		writeFileSync(
+			path.join(runDir, "agent-a1.meta.json"),
+			JSON.stringify({
+				agentType: "workflow-subagent",
+				description: "review the diff",
+				workflowPhase: "Review",
+			}),
+		);
+		writeFileSync(
+			path.join(dir, "s1", "workflows", "wf_run-1.json"),
+			JSON.stringify({
+				runId: "wf_run-1",
+				script: "export const meta = {\n  name: 'review-changes',\n}",
+			}),
+		);
+		return { dir, transcript };
+	}
+
+	it("finds a workflow child's transcript under its run", () => {
+		const { dir, transcript } = workflowSession();
+		expect(
+			resolveSubagentTranscriptPath("claude", {
+				subagentId: "a1",
+				sessionId: "s1",
+				transcriptPath: path.join(dir, "s1.jsonl"),
+			}),
+		).toBe(transcript);
+	});
+
+	it("reads its description, run name and phase", () => {
+		const { transcript } = workflowSession();
+		expect(getSubagentHarness("claude").readDetails(transcript)).toEqual({
+			description: "review the diff",
+			workflow: { runId: "wf_run-1", name: "review-changes", phase: "Review" },
+		});
+	});
+
+	it("a plain subagent has no workflow", () => {
+		const dir = mkdtempSync(path.join(tmpdir(), "sub-"));
+		const transcript = path.join(dir, "s1", "subagents", "agent-a2.jsonl");
+		mkdirSync(path.dirname(transcript), { recursive: true });
+		writeFileSync(transcript, "");
+		expect(getSubagentHarness("claude").readDetails(transcript)).toEqual({});
+	});
+});

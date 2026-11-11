@@ -17,12 +17,31 @@ export function deriveConversationState({
 	lastEventType,
 	lastEventAt,
 	lastSeenAt,
+	liveChildren = 0,
 }: {
 	lastEventType: string;
 	lastEventAt: number;
 	/** Host-clock mark from the notification store, like `lastEventAt`. */
 	lastSeenAt: number | undefined;
+	/** Subagents and workflow agents still running (`countLiveChildren`). */
+	liveChildren?: number;
 }): ConversationState {
+	const state = parentState(lastEventType, lastEventAt, lastSeenAt);
+	// A finished or quiet parent whose children still run is not done yet.
+	if (
+		liveChildren > 0 &&
+		(state === "unseen" || state === "seen" || state === "idle")
+	) {
+		return "working";
+	}
+	return state;
+}
+
+function parentState(
+	lastEventType: string,
+	lastEventAt: number,
+	lastSeenAt: number | undefined,
+): ConversationState {
 	switch (lastEventType) {
 		case "Start":
 			return "working";

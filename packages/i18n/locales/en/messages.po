@@ -1294,6 +1294,9 @@ msgstr "{stepCount} steps, in the menu"
 msgid "{subagentCount, plural, one {# subagent running} other {# subagents running}}"
 msgstr "{subagentCount, plural, one {# subagent running} other {# subagents running}}"
 
+msgid "{subagentCount} subagents"
+msgstr "{subagentCount} subagents"
+
 msgid "{successCount, plural, one {Created # workspace, {failCount} failed} other {Created # workspaces, {failCount} failed}}"
 msgstr "{successCount, plural, one {Created # workspace, {failCount} failed} other {Created # workspaces, {failCount} failed}}"
 
@@ -4266,9 +4269,6 @@ msgstr "Click <0>Import Theme</0> and select the downloaded file."
 msgid "Click a terminal script to edit its details."
 msgstr "Click a terminal script to edit its details."
 
-msgid "Click an agent to open its conversation, a name plate to open its workspace · ⌥-click, right-click or I for details · Tab or arrows to move, Enter to open"
-msgstr "Click an agent to open its conversation, a name plate to open its workspace · ⌥-click, right-click or I for details · Tab or arrows to move, Enter to open"
-
 msgid "Click an element."
 msgstr "Click an element."
 
@@ -4292,6 +4292,9 @@ msgstr "Click to copy the session ID (resume with `claude --resume <id>`)."
 
 msgid "Click to open · ⌥-click or I for details"
 msgstr "Click to open · ⌥-click or I for details"
+
+msgid "Click to open its transcript"
+msgstr "Click to open its transcript"
 
 msgid "Click to open on GitHub"
 msgstr "Click to open on GitHub"
@@ -7081,6 +7084,9 @@ msgstr "Draft waiting for your approval"
 msgid "drafted 3 support replies"
 msgstr "drafted 3 support replies"
 
+msgid "Drag or scroll to move, pinch or ⌘-scroll to zoom, click a room's name to zoom on it · Click an agent to open its conversation, a small one for its subagent · ⌥-click or I for details"
+msgstr "Drag or scroll to move, pinch or ⌘-scroll to zoom, click a room's name to zoom on it · Click an agent to open its conversation, a small one for its subagent · ⌥-click or I for details"
+
 msgid "Drag to reorder"
 msgstr "Drag to reorder"
 
@@ -7503,6 +7509,9 @@ msgstr "Every Wednesday at 9am, review this week's merged PRs and update any doc
 
 msgid "Every weekday at 9am, read new GitHub issues, apply labels, and draft a first reply for my review."
 msgstr "Every weekday at 9am, read new GitHub issues, apply labels, and draft a first reply for my review."
+
+msgid "Everyone"
+msgstr "Everyone"
 
 msgid "Everyone argues about whether this generalizes. That argument is the sign the level was reached."
 msgstr "Everyone argues about whether this generalizes. That argument is the sign the level was reached."
@@ -11485,6 +11494,9 @@ msgstr "Needs attention"
 msgid "Needs input"
 msgstr "Needs input"
 
+msgid "Needs me"
+msgstr "Needs me"
+
 msgid "Needs permission"
 msgstr "Needs permission"
 
@@ -11794,6 +11806,9 @@ msgstr "No agent is configured on this host"
 
 msgid "No agent is running on this host."
 msgstr "No agent is running on this host."
+
+msgid "No agent is working right now."
+msgstr "No agent is working right now."
 
 msgid "No agent running"
 msgstr "No agent running"
@@ -12904,9 +12919,6 @@ msgstr "Only the thread's author or the page's owner can delete it"
 
 msgid "Only want it out of your sidebar? Hide it instead. Nobody else is affected."
 msgstr "Only want it out of your sidebar? Hide it instead. Nobody else is affected."
-
-msgid "Only who needs me"
-msgstr "Only who needs me"
 
 msgid "Only you"
 msgstr "Only you"
@@ -16491,6 +16503,9 @@ msgstr "See the <0>custom themes guide</0> to edit a theme or build your own."
 
 msgid "See the open roles, or try Superset first."
 msgstr "See the open roles, or try Superset first."
+
+msgid "See the whole building (0)"
+msgstr "See the whole building (0)"
 
 msgid "See this gate on the scorecard"
 msgstr "See this gate on the scorecard"
@@ -20928,6 +20943,9 @@ msgstr "Who"
 msgid "Who can open it"
 msgstr "Who can open it"
 
+msgid "Who to show"
+msgstr "Who to show"
+
 msgid "Who waits on you, or whom you wait on"
 msgstr "Who waits on you, or whom you wait on"
 
@@ -21002,6 +21020,12 @@ msgstr "Worked for {0}m {1}s"
 msgid "Worked for {seconds}s"
 msgstr "Worked for {seconds}s"
 
+msgid "Workflow"
+msgstr "Workflow"
+
+msgid "Workflow agent"
+msgstr "Workflow agent"
+
 msgid "Workflow run completed…"
 msgstr "Workflow run completed…"
 
@@ -21019,6 +21043,9 @@ msgstr "Working"
 #. placeholder {1}: seconds % 60
 msgid "Working for {0}m {1}s"
 msgstr "Working for {0}m {1}s"
+
+msgid "Working for {parentTitle}"
+msgstr "Working for {parentTitle}"
 
 msgid "Working for {seconds}s"
 msgstr "Working for {seconds}s"
@@ -21557,11 +21584,20 @@ msgstr "Zoom in"
 msgid "Zoom In"
 msgstr "Zoom In"
 
+msgid "Zoom in (+)"
+msgstr "Zoom in (+)"
+
+msgid "Zoom on {name}"
+msgstr "Zoom on {name}"
+
 msgid "Zoom out"
 msgstr "Zoom out"
 
 msgid "Zoom Out"
 msgstr "Zoom Out"
+
+msgid "Zoom out (−)"
+msgstr "Zoom out (−)"
 
 msgid "zsh"
 msgstr "zsh"

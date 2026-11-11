@@ -1294,6 +1294,9 @@ msgstr "{stepCount} adım, menüde"
 msgid "{subagentCount, plural, one {# subagent running} other {# subagents running}}"
 msgstr "{subagentCount, plural, one {# alt ajan çalışıyor} other {# alt ajan çalışıyor}}"
 
+msgid "{subagentCount} subagents"
+msgstr "{subagentCount} alt ajan"
+
 msgid "{successCount, plural, one {Created # workspace, {failCount} failed} other {Created # workspaces, {failCount} failed}}"
 msgstr "{successCount, plural, one {# çalışma alanı oluşturuldu, {failCount} başarısız} other {# çalışma alanı oluşturuldu, {failCount} başarısız}}"
 
@@ -4266,9 +4269,6 @@ msgstr "<0>Temayı İçe Aktar</0> seçeneğine tıklayın ve indirdiğiniz dosy
 msgid "Click a terminal script to edit its details."
 msgstr "Ayrıntılarını düzenlemek için bir terminal betiğine tıklayın."
 
-msgid "Click an agent to open its conversation, a name plate to open its workspace · ⌥-click, right-click or I for details · Tab or arrows to move, Enter to open"
-msgstr "Konuşmasını açmak için bir ajana, workspace'i açmak için isim levhasına tıkla · Ayrıntılar için ⌥-tık, sağ tık veya I · Gezinmek için Tab veya oklar, açmak için Enter"
-
 msgid "Click an element."
 msgstr "Bir öğeye tıklayın."
 
@@ -4292,6 +4292,9 @@ msgstr "Oturum kimliğini kopyalamak için tıklayın (`claude --resume <id>` il
 
 msgid "Click to open · ⌥-click or I for details"
 msgstr "Açmak için tıkla · Ayrıntılar için ⌥-tık veya I"
+
+msgid "Click to open its transcript"
+msgstr "Dökümünü açmak için tıklayın"
 
 msgid "Click to open on GitHub"
 msgstr "GitHub'da açmak için tıklayın"
@@ -7081,6 +7084,9 @@ msgstr "Taslak onayını bekliyor"
 msgid "drafted 3 support replies"
 msgstr "3 destek yanıtı taslağı hazırladı"
 
+msgid "Drag or scroll to move, pinch or ⌘-scroll to zoom, click a room's name to zoom on it · Click an agent to open its conversation, a small one for its subagent · ⌥-click or I for details"
+msgstr "Hareket için sürükleyin veya kaydırın, yakınlaştırmak için sıkıştırın veya ⌘ ile kaydırın, bir odanın adına tıklayarak ona yakınlaşın · Bir ajana tıklayınca konuşması, küçük birine tıklayınca alt ajanı açılır · Ayrıntılar için ⌥-tık veya I"
+
 msgid "Drag to reorder"
 msgstr "Sıralamak için sürükleyin"
 
@@ -7503,6 +7509,9 @@ msgstr "Her çarşamba 09.00'da bu haftanın birleştirilen PR'larını incele v
 
 msgid "Every weekday at 9am, read new GitHub issues, apply labels, and draft a first reply for my review."
 msgstr "Her hafta içi 09.00'da yeni GitHub issue'larını oku, etiket uygula ve incelemem için ilk yanıt taslağını hazırla."
+
+msgid "Everyone"
+msgstr "Herkes"
 
 msgid "Everyone argues about whether this generalizes. That argument is the sign the level was reached."
 msgstr "Herkes bunun genellenebilir olup olmadığını tartışır. Bu tartışma, düzeye ulaşıldığının işaretidir."
@@ -11485,6 +11494,9 @@ msgstr "İlgi bekliyor"
 msgid "Needs input"
 msgstr "Giriş gerekiyor"
 
+msgid "Needs me"
+msgstr "Bana ihtiyaç var"
+
 msgid "Needs permission"
 msgstr "İzin gerekiyor"
 
@@ -11794,6 +11806,9 @@ msgstr "Bu ana makinede yapılandırılmış bir ajan yok"
 
 msgid "No agent is running on this host."
 msgstr "Bu ana bilgisayarda çalışan ajan yok."
+
+msgid "No agent is working right now."
+msgstr "Şu anda çalışan ajan yok."
 
 msgid "No agent running"
 msgstr "Çalışan ajan yok"
@@ -12904,9 +12919,6 @@ msgstr "Konuyu yalnızca yazarı veya sayfanın sahibi silebilir"
 
 msgid "Only want it out of your sidebar? Hide it instead. Nobody else is affected."
 msgstr "Sadece kenar çubuğundan mı kaldırmak istiyorsun? Bunun yerine gizle. Başka kimse etkilenmez."
-
-msgid "Only who needs me"
-msgstr "Yalnızca bana ihtiyacı olanlar"
 
 msgid "Only you"
 msgstr "Yalnızca siz"
@@ -16491,6 +16503,9 @@ msgstr "Bir temayı düzenlemek veya kendinizinkini oluşturmak için <0>özel t
 
 msgid "See the open roles, or try Superset first."
 msgstr "Açık pozisyonlara bakın ya da önce Superset'i deneyin."
+
+msgid "See the whole building (0)"
+msgstr "Tüm binayı gör (0)"
 
 msgid "See this gate on the scorecard"
 msgstr "Bu eşiği puan tablosunda gör"
@@ -20928,6 +20943,9 @@ msgstr "Kim"
 msgid "Who can open it"
 msgstr "Kimler açabilir"
 
+msgid "Who to show"
+msgstr "Kimler gösterilsin"
+
 msgid "Who waits on you, or whom you wait on"
 msgstr "Sizi bekleyen ya da beklediğiniz kişi"
 
@@ -21002,6 +21020,12 @@ msgstr "{0} dk {1} sn çalıştı"
 msgid "Worked for {seconds}s"
 msgstr "{seconds} sn çalıştı"
 
+msgid "Workflow"
+msgstr "İş akışı"
+
+msgid "Workflow agent"
+msgstr "İş akışı ajanı"
+
 msgid "Workflow run completed…"
 msgstr "Workflow çalıştırması tamamlandı…"
 
@@ -21019,6 +21043,9 @@ msgstr "Çalışıyor"
 #. placeholder {1}: seconds % 60
 msgid "Working for {0}m {1}s"
 msgstr "{0} dk {1} sn'dir çalışıyor"
+
+msgid "Working for {parentTitle}"
+msgstr "{parentTitle} için çalışıyor"
 
 msgid "Working for {seconds}s"
 msgstr "{seconds} sn'dir çalışıyor"
@@ -21557,11 +21584,20 @@ msgstr "Yakınlaştır"
 msgid "Zoom In"
 msgstr "Yakınlaştır"
 
+msgid "Zoom in (+)"
+msgstr "Yakınlaştır (+)"
+
+msgid "Zoom on {name}"
+msgstr "{name} odasına yakınlaş"
+
 msgid "Zoom out"
 msgstr "Uzaklaştır"
 
 msgid "Zoom Out"
 msgstr "Uzaklaştır"
+
+msgid "Zoom out (−)"
+msgstr "Uzaklaştır (−)"
 
 msgid "zsh"
 msgstr "zsh"

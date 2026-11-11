@@ -2,6 +2,7 @@ import { describe, expect, test } from "bun:test";
 import {
 	agentStateFromConversation,
 	agentStateFromPaneStatus,
+	countLiveChildren,
 	isBlockedOnUser,
 	mostUrgentAgentState,
 } from "./agent-state";
@@ -52,4 +53,33 @@ test("isBlockedOnUser", () => {
 	expect(isBlockedOnUser("unseen")).toBe(false);
 	expect(isBlockedOnUser("working")).toBe(false);
 	expect(isBlockedOnUser("idle")).toBe(false);
+});
+
+describe("countLiveChildren", () => {
+	test("counts children heard from since the parent's last event", () => {
+		expect(
+			countLiveChildren({
+				lastEventAt: 100_000,
+				subagents: [{ lastEventAt: 101_000 }, { lastEventAt: 98_000 }],
+			}),
+		).toBe(2);
+	});
+
+	test("ignores a child left silent by an interrupt", () => {
+		expect(
+			countLiveChildren({
+				lastEventAt: 100_000,
+				subagents: [{ lastEventAt: 10_000 }],
+			}),
+		).toBe(0);
+	});
+
+	test("counts a chat's background subagents, not its processes", () => {
+		expect(
+			countLiveChildren({
+				lastEventAt: 0,
+				backgroundTasks: [{ kind: "subagent" }, { kind: "process" }],
+			}),
+		).toBe(1);
+	});
 });

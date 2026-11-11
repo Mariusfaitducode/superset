@@ -1294,6 +1294,9 @@ msgstr "{stepCount} pasos, en el menú"
 msgid "{subagentCount, plural, one {# subagent running} other {# subagents running}}"
 msgstr "{subagentCount, plural, one {# subagente en ejecución} other {# subagentes en ejecución}}"
 
+msgid "{subagentCount} subagents"
+msgstr "{subagentCount} subagentes"
+
 msgid "{successCount, plural, one {Created # workspace, {failCount} failed} other {Created # workspaces, {failCount} failed}}"
 msgstr "{successCount, plural, one {# espacio de trabajo creado, {failCount} con error} other {# espacios de trabajo creados, {failCount} con error}}"
 
@@ -4266,9 +4269,6 @@ msgstr "Haz clic en <0>Importar tema</0> y selecciona el archivo descargado."
 msgid "Click a terminal script to edit its details."
 msgstr "Haz clic en un script de terminal para editar sus detalles."
 
-msgid "Click an agent to open its conversation, a name plate to open its workspace · ⌥-click, right-click or I for details · Tab or arrows to move, Enter to open"
-msgstr "Haz clic en un agente para abrir su conversación, en una placa para abrir su workspace · ⌥-clic, clic derecho o I para detalles · Tab o flechas para moverte, Enter para abrir"
-
 msgid "Click an element."
 msgstr "Haz clic en un elemento."
 
@@ -4292,6 +4292,9 @@ msgstr "Haz clic para copiar el ID de la sesión (retómala con `claude --resume
 
 msgid "Click to open · ⌥-click or I for details"
 msgstr "Clic para abrir · ⌥-clic o I para detalles"
+
+msgid "Click to open its transcript"
+msgstr "Haz clic para abrir su transcripción"
 
 msgid "Click to open on GitHub"
 msgstr "Haz clic para abrir en GitHub"
@@ -7081,6 +7084,9 @@ msgstr "Borrador pendiente de tu aprobación"
 msgid "drafted 3 support replies"
 msgstr "redactó 3 respuestas de soporte"
 
+msgid "Drag or scroll to move, pinch or ⌘-scroll to zoom, click a room's name to zoom on it · Click an agent to open its conversation, a small one for its subagent · ⌥-click or I for details"
+msgstr "Arrastra o desplázate para moverte, pellizca o ⌘ + desplazamiento para hacer zoom, haz clic en el nombre de una sala para acercarte · Haz clic en un agente para abrir su conversación, en uno pequeño para su subagente · ⌥-clic o I para detalles"
+
 msgid "Drag to reorder"
 msgstr "Arrastra para reordenar"
 
@@ -7503,6 +7509,9 @@ msgstr "Cada miércoles a las 9:00, revisa los PR fusionados esta semana y actua
 
 msgid "Every weekday at 9am, read new GitHub issues, apply labels, and draft a first reply for my review."
 msgstr "Cada día laborable a las 9:00, lee los issues nuevos de GitHub, aplica etiquetas y redacta una primera respuesta para que la revise."
+
+msgid "Everyone"
+msgstr "Todos"
 
 msgid "Everyone argues about whether this generalizes. That argument is the sign the level was reached."
 msgstr "Todo el mundo discute si esto se generaliza. Esa discusión es la señal de que se alcanzó el nivel."
@@ -11485,6 +11494,9 @@ msgstr "Necesita atención"
 msgid "Needs input"
 msgstr "Necesita entrada"
 
+msgid "Needs me"
+msgstr "Me necesitan"
+
 msgid "Needs permission"
 msgstr "Necesita permiso"
 
@@ -11794,6 +11806,9 @@ msgstr "No hay ningún agente configurado en este host"
 
 msgid "No agent is running on this host."
 msgstr "No hay ningún agente ejecutándose en este host."
+
+msgid "No agent is working right now."
+msgstr "Ningún agente está trabajando ahora."
 
 msgid "No agent running"
 msgstr "Ningún agente en ejecución"
@@ -12904,9 +12919,6 @@ msgstr "Solo el autor del hilo o el propietario de la página pueden eliminarlo"
 
 msgid "Only want it out of your sidebar? Hide it instead. Nobody else is affected."
 msgstr "¿Solo quieres quitarlo de tu barra lateral? Ocúltalo. No afecta a nadie más."
-
-msgid "Only who needs me"
-msgstr "Solo quien me necesita"
 
 msgid "Only you"
 msgstr "Solo tú"
@@ -16491,6 +16503,9 @@ msgstr "Consulta la <0>guía de temas personalizados</0> para editar un tema o c
 
 msgid "See the open roles, or try Superset first."
 msgstr "Mira las vacantes o prueba Superset primero."
+
+msgid "See the whole building (0)"
+msgstr "Ver todo el edificio (0)"
 
 msgid "See this gate on the scorecard"
 msgstr "Ver esta meta en el cuadro de resultados"
@@ -20928,6 +20943,9 @@ msgstr "Quién"
 msgid "Who can open it"
 msgstr "Quién puede acceder"
 
+msgid "Who to show"
+msgstr "A quién mostrar"
+
 msgid "Who waits on you, or whom you wait on"
 msgstr "Quién te espera, o a quién esperas"
 
@@ -21002,6 +21020,12 @@ msgstr "Trabajó {0} min {1} s"
 msgid "Worked for {seconds}s"
 msgstr "Trabajó {seconds} s"
 
+msgid "Workflow"
+msgstr "Flujo de trabajo"
+
+msgid "Workflow agent"
+msgstr "Agente de flujo de trabajo"
+
 msgid "Workflow run completed…"
 msgstr "Ejecución de workflow completada…"
 
@@ -21019,6 +21043,9 @@ msgstr "Trabajando"
 #. placeholder {1}: seconds % 60
 msgid "Working for {0}m {1}s"
 msgstr "Trabajando desde hace {0} min {1} s"
+
+msgid "Working for {parentTitle}"
+msgstr "Trabaja para {parentTitle}"
 
 msgid "Working for {seconds}s"
 msgstr "Trabajando desde hace {seconds} s"
@@ -21557,11 +21584,20 @@ msgstr "Acercar"
 msgid "Zoom In"
 msgstr "Acercar"
 
+msgid "Zoom in (+)"
+msgstr "Acercar (+)"
+
+msgid "Zoom on {name}"
+msgstr "Acercar a {name}"
+
 msgid "Zoom out"
 msgstr "Alejar"
 
 msgid "Zoom Out"
 msgstr "Alejar"
+
+msgid "Zoom out (−)"
+msgstr "Alejar (−)"
 
 msgid "zsh"
 msgstr "zsh"

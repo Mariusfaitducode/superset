@@ -21,6 +21,7 @@ import {
 	type TerminalAgentBinding,
 } from "renderer/hooks/host-service/useTerminalAgentBindings";
 import { deriveTerminalAgentStatus } from "renderer/hooks/host-service/useTerminalAgentStatuses";
+import { countLiveChildren } from "renderer/lib/agent-state";
 import { getHostEventBus } from "renderer/lib/host-event-bus";
 import { getHostServiceClientByUrl } from "renderer/lib/host-service-client";
 import { useHostWorkspaces } from "renderer/routes/_authenticated/providers/HostWorkspacesProvider";
@@ -357,6 +358,7 @@ export function DashboardSidebarWorkspaceStatusProvider({
 						lastEventType: binding.lastEventType,
 						lastEventAt: binding.lastEventAt,
 						lastSeenAt: terminalSeenAt[binding.terminalId],
+						liveChildren: countLiveChildren(binding),
 					}),
 				);
 			}

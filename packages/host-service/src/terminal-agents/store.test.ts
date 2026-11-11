@@ -505,6 +505,30 @@ describe("TerminalAgentStore", () => {
 		expect(events).toEqual([WORKSPACE]);
 	});
 
+	it("clearWorkspaceStatuses ends the children of an interrupted agent", () => {
+		const now = Date.now();
+		store.recordEvent({
+			terminalId: "t1",
+			workspaceId: WORKSPACE,
+			eventType: "Start",
+			agentId: "claude",
+			occurredAt: now,
+		});
+		store.recordSubagentEvent({
+			terminalId: "t1",
+			workspaceId: WORKSPACE,
+			eventType: "SubagentStart",
+			subagentId: "a1",
+			occurredAt: now + 1,
+		});
+		expect(store.get("t1")?.subagents).toHaveLength(1);
+
+		store.clearWorkspaceStatuses(WORKSPACE, "t1");
+
+		expect(store.get("t1")?.lastEventType).toBe("Stop");
+		expect(store.get("t1")?.subagents).toBeUndefined();
+	});
+
 	it("clearWorkspaceStatuses scoped to a terminalId leaves siblings alone", () => {
 		for (const terminalId of ["t1", "t2"]) {
 			store.recordEvent({

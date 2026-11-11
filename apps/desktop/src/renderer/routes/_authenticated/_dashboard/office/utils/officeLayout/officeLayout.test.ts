@@ -4,14 +4,20 @@ import {
 	DESK_GAP,
 	deskSize,
 	HEADER_HEIGHT,
+	HELPER_ROW,
+	HELPERS_PER_SEAT,
 	layoutOffice,
 	type OfficeDesk,
 	type OfficeRoom,
+	type OfficeSeat,
+	type OfficeWorkflow,
 	PLATE_HEIGHT,
 	pathToCoffee,
 	ROW_PITCH,
 	SEATS_PER_ROW,
 	WALL_HEIGHT,
+	WORKFLOW_HEIGHT,
+	WORKFLOW_MAX_AGENTS,
 } from "./officeLayout";
 
 function overlaps(
@@ -74,7 +80,6 @@ describe("layoutOffice", () => {
 	test("gives every chat its own seat on its workspace's desk", () => {
 		const layout = layoutOffice({
 			rooms: [room("a", [1, 3]), room("b", [2])],
-			maxWidth: 60,
 			devices: 0,
 		});
 		expect(
@@ -90,7 +95,6 @@ describe("layoutOffice", () => {
 	test("an empty workspace still has a desk with one empty seat", () => {
 		const layout = layoutOffice({
 			rooms: [room("a", [0])],
-			maxWidth: 40,
 			devices: 0,
 		});
 		expect(onlyRoom(layout.rooms).desks[0]?.seats).toHaveLength(1);
@@ -99,7 +103,6 @@ describe("layoutOffice", () => {
 	test("keeps desks inside their room, side by side, without overlap", () => {
 		const layout = layoutOffice({
 			rooms: [room("a", [1, 4, 2, 6, 1])],
-			maxWidth: 40,
 			devices: 0,
 		});
 		const only = onlyRoom(layout.rooms);
@@ -110,29 +113,30 @@ describe("layoutOffice", () => {
 				expect(overlaps(desk, other)).toBe(false);
 			}
 		});
-		// Five desks do not fit one row of a 40-tile office.
+		// Five desks wrap into a squarish room rather than one long row.
 		expect(new Set(only.desks.map((desk) => desk.y)).size).toBeGreaterThan(1);
 		expect(only.x + only.width).toBeLessThanOrEqual(layout.width);
 	});
 
 	test("leaves a gap between neighbouring desks", () => {
 		const layout = layoutOffice({
-			rooms: [room("a", [1, 1])],
-			maxWidth: 60,
+			rooms: [room("a", [1, 1, 1, 1])],
 			devices: 0,
 		});
-		const [first, second] = onlyRoom(layout.rooms).desks as [
-			OfficeDesk,
-			OfficeDesk,
-		];
-		expect(second.x - (first.x + first.width)).toBe(DESK_GAP);
-		expect(second.y).toBe(first.y);
+		const desks = onlyRoom(layout.rooms).desks;
+		let neighbours = 0;
+		desks.slice(1).forEach((desk, index) => {
+			const left = desks[index] as OfficeDesk;
+			if (desk.y !== left.y) return;
+			neighbours += 1;
+			expect(desk.x - (left.x + left.width)).toBe(DESK_GAP);
+		});
+		expect(neighbours).toBeGreaterThan(0);
 	});
 
 	test("keeps the plate, bubbles and desks inside each cubicle", () => {
 		const layout = layoutOffice({
 			rooms: [room("a", [SEATS_PER_ROW + 2, 1])],
-			maxWidth: 60,
 			devices: 0,
 		});
 		for (const desk of onlyRoom(layout.rooms).desks) {
@@ -149,7 +153,6 @@ describe("layoutOffice", () => {
 	test("stacks more chats than a row holds into extra seat rows", () => {
 		const layout = layoutOffice({
 			rooms: [room("a", [SEATS_PER_ROW + 1])],
-			maxWidth: 40,
 			devices: 0,
 		});
 		const desk = onlyRoom(layout.rooms).desks[0];
@@ -159,12 +162,11 @@ describe("layoutOffice", () => {
 		);
 	});
 
-	test("wraps rooms into rows that fit the width, without overlap", () => {
+	test("builds floors of rooms wall against wall, the same length", () => {
 		const layout = layoutOffice({
 			rooms: Array.from({ length: 6 }, (_, index) =>
 				room(String(index), [2, 2]),
 			),
-			maxWidth: 45,
 			devices: 0,
 		});
 		for (const entry of layout.rooms) {
@@ -177,13 +179,91 @@ describe("layoutOffice", () => {
 				expect(overlaps(entry, other)).toBe(false);
 			}
 		});
-		expect(new Set(layout.rooms.map((entry) => entry.y)).size).toBe(3);
+		const floors = new Map<number, OfficeRoom[]>();
+		for (const entry of layout.rooms) {
+			floors.set(entry.y, [...(floors.get(entry.y) ?? []), entry]);
+		}
+		expect(floors.size).toBeGreaterThan(1);
+		const ends = new Set<number>();
+		for (const floor of floors.values()) {
+			floor.slice(1).forEach((entry, index) => {
+				const left = floor[index] as OfficeRoom;
+				expect(entry.x).toBe(left.x + left.width);
+				expect(entry.height).toBe(left.height);
+			});
+			const last = floor.at(-1) as OfficeRoom;
+			ends.add(last.x + last.width);
+		}
+		expect(ends.size).toBe(1);
 	});
 
-	test("widens the office for a desk wider than the window", () => {
+	test("a wider window gives longer floors", () => {
+		const rooms = Array.from({ length: 8 }, (_, index) =>
+			room(String(index), [2, 1]),
+		);
+		const wide = layoutOffice({ rooms, devices: 0, aspect: 3 });
+		const tall = layoutOffice({ rooms, devices: 0, aspect: 0.6 });
+		expect(wide.width).toBeGreaterThan(tall.width);
+		expect(wide.height).toBeLessThan(tall.height);
+	});
+
+	test("puts subagents in a strip under their parent's desk", () => {
+		const layout = layoutOffice({
+			rooms: [
+				{
+					id: "a",
+					desks: [{ id: "d", seats: 2, helpers: [HELPERS_PER_SEAT + 2, 0] }],
+				},
+			],
+			devices: 0,
+		});
+		const desk = onlyRoom(layout.rooms).desks[0] as OfficeDesk;
+		const [parent, other] = desk.seats as [OfficeSeat, OfficeSeat];
+		expect(parent.helpers).toHaveLength(HELPERS_PER_SEAT);
+		expect(parent.extraHelpers).toBe(2);
+		expect(other.helpers).toHaveLength(0);
+		for (const helper of parent.helpers) {
+			expect(helper.y).toBeGreaterThan(parent.desk.y);
+			expect(helper.y).toBeLessThan(desk.y + desk.height);
+		}
+		expect(desk.height).toBe(PLATE_HEIGHT + ROW_PITCH + HELPER_ROW + 1);
+	});
+
+	test("gives each workflow run a table below the seats", () => {
+		const layout = layoutOffice({
+			rooms: [
+				{
+					id: "a",
+					desks: [
+						{
+							id: "d",
+							seats: 1,
+							workflows: [
+								{ id: "wf_1", agents: 3 },
+								{ id: "wf_2", agents: WORKFLOW_MAX_AGENTS + 1 },
+							],
+						},
+					],
+				},
+			],
+			devices: 0,
+		});
+		const desk = onlyRoom(layout.rooms).desks[0] as OfficeDesk;
+		const [first, second] = desk.workflows as [OfficeWorkflow, OfficeWorkflow];
+		expect(first.agents).toHaveLength(3);
+		expect(second.agents).toHaveLength(WORKFLOW_MAX_AGENTS);
+		expect(second.extraAgents).toBe(1);
+		expect(first.y).toBeGreaterThan(desk.seats[0]?.desk.y ?? 0);
+		expect(second.y).toBe(first.y + WORKFLOW_HEIGHT);
+		expect(second.x + second.width).toBeLessThanOrEqual(desk.x + desk.width);
+		expect(second.y + WORKFLOW_HEIGHT).toBeLessThanOrEqual(
+			desk.y + desk.height,
+		);
+	});
+
+	test("widens the office for its widest room", () => {
 		const layout = layoutOffice({
 			rooms: [room("a", [4])],
-			maxWidth: 4,
 			devices: 0,
 		});
 		const only = onlyRoom(layout.rooms);
@@ -191,20 +271,15 @@ describe("layoutOffice", () => {
 	});
 
 	test("adds a rack per four connections", () => {
-		expect(
-			layoutOffice({ rooms: [], maxWidth: 30, devices: 0 }).racks,
-		).toHaveLength(1);
-		expect(
-			layoutOffice({ rooms: [], maxWidth: 30, devices: 5 }).racks,
-		).toHaveLength(2);
+		expect(layoutOffice({ rooms: [], devices: 0 }).racks).toHaveLength(1);
+		expect(layoutOffice({ rooms: [], devices: 5 }).racks).toHaveLength(2);
 	});
 });
 
 describe("pathToCoffee", () => {
-	test("leaves the room by its left edge and ends at the counter", () => {
+	test("leaves the room by its left wall and ends at the counter", () => {
 		const layout = layoutOffice({
 			rooms: [room("a", [2]), room("b", [2, 2])],
-			maxWidth: 60,
 			devices: 0,
 		});
 		const target = layout.rooms[1];

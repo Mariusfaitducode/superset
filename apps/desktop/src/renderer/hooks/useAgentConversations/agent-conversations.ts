@@ -2,6 +2,7 @@ import {
 	AGENT_IDENTITY_LABELS,
 	type AgentIdentityId,
 } from "@superset/shared/agent-catalog";
+import { countLiveChildren } from "renderer/lib/agent-state";
 import {
 	type ConversationState,
 	deriveConversationState,
@@ -15,6 +16,9 @@ export interface AgentBinding {
 	agentId: AgentIdentityId;
 	lastEventType: string;
 	lastEventAt: number;
+	/** Live children keep a finished parent at work (`countLiveChildren`). */
+	subagents?: readonly { lastEventAt?: number }[];
+	backgroundTasks?: readonly { kind: string }[];
 }
 
 export interface ConversationWorkspace {
@@ -87,6 +91,7 @@ export function buildAgentConversations({
 				lastEventType: binding.lastEventType,
 				lastEventAt: binding.lastEventAt,
 				lastSeenAt: terminalSeenAt[binding.terminalId],
+				liveChildren: countLiveChildren(binding),
 			}),
 			since: binding.lastEventAt,
 		});

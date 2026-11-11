@@ -2,6 +2,7 @@ import {
 	type AgentState,
 	agentStateFromConversation,
 	agentStateFromPaneStatus,
+	countLiveChildren,
 	isBlockedOnUser,
 	mostUrgentAgentState,
 } from "renderer/lib/agent-state";
@@ -23,6 +24,9 @@ export interface WorkspaceAgentBinding {
 	terminalId: string;
 	lastEventType: string;
 	lastEventAt: number;
+	/** Live children keep a finished parent at work (`countLiveChildren`). */
+	subagents?: readonly { lastEventAt?: number }[];
+	backgroundTasks?: readonly { kind: string }[];
 }
 
 /** A workspace takes the most urgent state of its conversations. */
@@ -46,6 +50,7 @@ export function deriveWorkspaceAgentState({
 			lastEventType: binding.lastEventType,
 			lastEventAt: binding.lastEventAt,
 			lastSeenAt: terminalSeenAt[binding.terminalId],
+			liveChildren: countLiveChildren(binding),
 		});
 		const state = agentStateFromConversation(conversationState);
 		states.push(state);

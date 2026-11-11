@@ -1,5 +1,5 @@
 import { Trans, useLingui } from "@lingui/react/macro";
-import { Switch } from "@superset/ui/switch";
+import { ToggleGroup, ToggleGroupItem } from "@superset/ui/toggle-group";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@superset/ui/tooltip";
 import { cn } from "@superset/ui/utils";
 import { useNavigate } from "@tanstack/react-router";
@@ -15,7 +15,10 @@ import { LuBuilding2 } from "react-icons/lu";
 import type { HostWorkspaceItem } from "renderer/hooks/host-workspaces/useHostWorkspaces";
 import { useActiveOrganizationId } from "renderer/hooks/useActiveOrganizationId";
 import { cloudTrpc } from "renderer/lib/cloud-trpc";
-import type { SidebarConversation } from "renderer/routes/_authenticated/_dashboard/components/DashboardSidebar/components/DashboardSidebarWorkspaceItem/components/DashboardSidebarExpandedWorkspaceRow/components/DashboardSidebarConversationList/hooks/useWorkspaceConversations";
+import type {
+	SidebarConversation,
+	SidebarSubagent,
+} from "renderer/routes/_authenticated/_dashboard/components/DashboardSidebar/components/DashboardSidebarWorkspaceItem/components/DashboardSidebarExpandedWorkspaceRow/components/DashboardSidebarConversationList/hooks/useWorkspaceConversations";
 import {
 	useLabelsByHost,
 	type WorkspaceLabel,
@@ -24,6 +27,7 @@ import {
 import { useSidebarWorkspaceStatuses } from "renderer/routes/_authenticated/_dashboard/components/DashboardSidebar/providers/DashboardSidebarWorkspaceStatusProvider";
 import { PageHeader } from "renderer/routes/_authenticated/_dashboard/components/PageHeader";
 import { useConversationStateLabels } from "renderer/routes/_authenticated/_dashboard/office/hooks/useConversationStateLabels";
+import { useOfficeCamera } from "renderer/routes/_authenticated/_dashboard/office/hooks/useOfficeCamera";
 import { useOfficeGroups } from "renderer/routes/_authenticated/_dashboard/office/hooks/useOfficeGroups";
 import { useOfficeToneLabels } from "renderer/routes/_authenticated/_dashboard/office/hooks/useOfficeToneLabels";
 import { usePrefersReducedMotion } from "renderer/routes/_authenticated/_dashboard/office/hooks/usePrefersReducedMotion";
@@ -32,15 +36,21 @@ import { seedFor } from "renderer/routes/_authenticated/_dashboard/office/utils/
 import type {
 	OfficeScene,
 	OfficeSceneAgent,
+	OfficeSceneHelper,
+	OfficeSceneWorkflow,
 } from "renderer/routes/_authenticated/_dashboard/office/utils/drawOffice";
 import {
 	HEADER_HEIGHT,
+	HELPER_SCALE,
 	layoutOffice,
 	type OfficeDesk,
 	type OfficeRoom,
+	type OfficeWorkflow,
 	PLATE_HEIGHT,
+	type Point,
 	pathToCoffee,
 	TILE_SIZE,
+	WORKFLOW_SCALE,
 } from "renderer/routes/_authenticated/_dashboard/office/utils/officeLayout";
 import {
 	type ArrowKey,
@@ -48,23 +58,33 @@ import {
 	deskTone,
 	type IslandCounts,
 	moveFocus,
+	type OfficeShow,
 	type OfficeTone,
 	orderIslands,
 	toneFor,
 	visibleIslands,
 } from "renderer/routes/_authenticated/_dashboard/office/utils/officeStatus";
-import { navigateToV2Workspace } from "renderer/routes/_authenticated/_dashboard/utils/workspace-navigation";
+import {
+	buildSubagentSearch,
+	navigateToV2Workspace,
+} from "renderer/routes/_authenticated/_dashboard/utils/workspace-navigation";
 import { useSidebarPreference } from "renderer/stores/sidebar-preferences";
 import { getV2WorkspaceDisplayName } from "renderer/utils/getV2WorkspaceDisplayName";
 import { OfficeAgentPanel } from "./components/OfficeAgentPanel";
+import { OfficeCameraControls } from "./components/OfficeCameraControls";
 import { OfficeCanvas } from "./components/OfficeCanvas";
 import { OfficeDeskPlate } from "./components/OfficeDeskPlate";
+import { OfficeHelperButton } from "./components/OfficeHelperButton";
 import { OfficeRoomHeader } from "./components/OfficeRoomHeader";
 import { OfficeSeatButton } from "./components/OfficeSeatButton";
+import { OfficeWorkflowLabel } from "./components/OfficeWorkflowLabel";
 import {
 	type OfficeWorkspaceReport,
 	OfficeWorkspaceSource,
 } from "./components/OfficeWorkspaceSource";
+
+/** CSS pixels per art pixel at 100% zoom. */
+const BASE_SCALE = 2;
 
 const LEGEND: { tone: OfficeTone; dot: string }[] = [
 	{ tone: "need", dot: "bg-amber-400" },
@@ -73,6 +93,8 @@ const LEGEND: { tone: OfficeTone; dot: string }[] = [
 	{ tone: "failed", dot: "bg-red-500" },
 	{ tone: "idle", dot: "bg-zinc-400" },
 ];
+
+const SHOW_OPTIONS: OfficeShow[] = ["all", "active", "needsMe"];
 
 const ARROW_KEYS = new Set<string>([
 	"ArrowLeft",
@@ -93,6 +115,17 @@ interface Member {
 	tone: OfficeTone;
 	topTodo: string | null;
 	openTodos: number;
+	/** Its own subagents; workflow agents sit at their run's table. */
+	helpers: SidebarSubagent[];
+}
+
+/** One workflow run in a workspace, and the conversation that started it. */
+interface WorkflowUnit {
+	runId: string;
+	name: string | null;
+	phase: string | null;
+	parent: Member;
+	agents: SidebarSubagent[];
 }
 
 /** One workspace: a cubicle in its group's room. */
@@ -101,6 +134,7 @@ interface DeskUnit {
 	name: string;
 	workspace: HostWorkspaceItem;
 	members: Member[];
+	workflows: WorkflowUnit[];
 	tones: OfficeTone[];
 	labels: WorkspaceLabel[];
 }
@@ -124,10 +158,15 @@ export function OfficeFloor({
 	const reducedMotion = usePrefersReducedMotion();
 	const stateLabels = useConversationStateLabels();
 	const toneLabels = useOfficeToneLabels();
+	const showLabels: Record<OfficeShow, string> = {
+		all: t`Everyone`,
+		active: t`Active`,
+		needsMe: t`Needs me`,
+	};
 	const showAgentTodos = useSidebarPreference("showAgentTodos");
 	const statuses = useSidebarWorkspaceStatuses();
-	const onlyNeedsMe = useOfficeFilterStore((state) => state.onlyNeedsMe);
-	const setOnlyNeedsMe = useOfficeFilterStore((state) => state.setOnlyNeedsMe);
+	const show = useOfficeFilterStore((state) => state.show);
+	const setShow = useOfficeFilterStore((state) => state.setShow);
 
 	// Every workspace gets a desk; only the ones with agents are read.
 	const staffed = useMemo(
@@ -171,19 +210,6 @@ export function OfficeFloor({
 		[integrations],
 	);
 
-	const containerRef = useRef<HTMLDivElement>(null);
-	const [containerWidth, setContainerWidth] = useState(0);
-	useEffect(() => {
-		const container = containerRef.current;
-		if (!container) return;
-		const observer = new ResizeObserver(([entry]) => {
-			if (entry) setContainerWidth(entry.contentRect.width);
-		});
-		observer.observe(container);
-		return () => observer.disconnect();
-	}, []);
-	const scale = containerWidth >= 1400 ? 3 : 2;
-
 	const [selection, setSelection] = useState<Selection | null>(null);
 
 	const { allRooms, shownRooms } = useMemo(() => {
@@ -204,6 +230,7 @@ export function OfficeFloor({
 				name: getV2WorkspaceDisplayName(workspace),
 				workspace,
 				members: [],
+				workflows: [],
 				tones: [],
 				labels: workspaceLabels(
 					labelsByHost.get(workspace.hostId),
@@ -218,13 +245,34 @@ export function OfficeFloor({
 					.filter((todo) => showAgentTodos || todo.author !== "agent")
 					.filter((todo) => !todo.done);
 				const tone = toneFor(conversation.state);
-				desk.members.push({
+				const member: Member = {
 					workspace,
 					conversation,
 					tone,
 					topTodo: open[0]?.text ?? null,
 					openTodos: open.length,
-				});
+					helpers: conversation.subagents.filter(
+						(subagent) => !subagent.workflow,
+					),
+				};
+				desk.members.push(member);
+				for (const subagent of conversation.subagents) {
+					const run = subagent.workflow;
+					if (!run) continue;
+					let unit = desk.workflows.find((entry) => entry.runId === run.runId);
+					if (!unit) {
+						unit = {
+							runId: run.runId,
+							name: run.name ?? null,
+							phase: run.phase ?? null,
+							parent: member,
+							agents: [],
+						};
+						desk.workflows.push(unit);
+					}
+					unit.agents.push(subagent);
+					if (run.phase) unit.phase = run.phase;
+				}
 				desk.tones.push(tone);
 				room.tones.push(tone);
 			}
@@ -237,66 +285,187 @@ export function OfficeFloor({
 		const shownRooms = allRooms
 			.map((room) => ({
 				...room,
-				desks: visibleIslands(room.desks, onlyNeedsMe),
+				desks: visibleIslands(room.desks, show),
 			}))
 			.filter((room) => room.desks.length > 0);
 		return { allRooms, shownRooms };
-	}, [workspaces, groups, labelsByHost, reports, showAgentTodos, onlyNeedsMe]);
+	}, [workspaces, groups, labelsByHost, reports, showAgentTodos, show]);
 
-	const { scene, seats, rooms, plates } = useMemo(() => {
-		const layout = layoutOffice({
-			rooms: shownRooms.map((room) => ({
-				id: room.key,
-				desks: room.desks.map((desk) => ({
-					id: desk.key,
-					seats: desk.members.length,
+	const [worldSize, setWorldSize] = useState({ width: 0, height: 0 });
+	const camera = useOfficeCamera(worldSize);
+	const aspect =
+		camera.viewport.height > 0
+			? camera.viewport.width / camera.viewport.height
+			: undefined;
+
+	const { scene, seats, rooms, plates, helperSpots, workflowSpots } =
+		useMemo(() => {
+			const layout = layoutOffice({
+				rooms: shownRooms.map((room) => ({
+					id: room.key,
+					desks: room.desks.map((desk) => ({
+						id: desk.key,
+						seats: desk.members.length,
+						helpers: desk.members.map((member) => member.helpers.length),
+						workflows: desk.workflows.map((workflow) => ({
+							id: workflow.runId,
+							agents: workflow.agents.length,
+						})),
+					})),
 				})),
-			})),
-			maxWidth: containerWidth / (TILE_SIZE * scale),
-			devices: providers.length,
-		});
-		const agents: OfficeSceneAgent[] = [];
-		const seats: (Member & { deskX: number; seatY: number })[] = [];
-		const plates: { desk: OfficeDesk; unit: DeskUnit }[] = [];
-		const emptyDesks = new Set<string>();
-		const rooms: {
-			room: OfficeRoom;
-			unit: RoomUnit;
-			counts: IslandCounts;
-		}[] = shownRooms.map((unit, roomIndex) => {
-			const room = layout.rooms[roomIndex];
-			if (!room) throw new Error("layoutOffice dropped a room");
-			unit.desks.forEach((deskUnit, deskIndex) => {
-				const desk = room.desks[deskIndex];
-				if (!desk) throw new Error("layoutOffice dropped a desk");
-				plates.push({ desk, unit: deskUnit });
-				if (deskUnit.members.length === 0) emptyDesks.add(desk.id);
-				deskUnit.members.forEach((member, seatIndex) => {
-					const seat = desk.seats[seatIndex];
-					if (!seat) return;
-					agents.push({
-						terminalId: member.conversation.terminalId,
-						state: member.conversation.state,
-						openTodos: member.openTodos,
-						seed: seedFor(member.conversation.terminalId),
-						seat,
-						path: pathToCoffee(room, seat, layout),
-					});
-					seats.push({ ...member, deskX: seat.desk.x, seatY: seat.y });
-				});
+				devices: providers.length,
+				...(aspect ? { aspect } : {}),
 			});
-			return { room, unit, counts: countTones(unit.tones) };
-		});
-		const scene: OfficeScene = {
-			layout,
-			rooms: rooms.map(({ room, unit }) => ({ room, color: unit.color })),
-			emptyDesks,
-			agents,
-			devices: providers.length,
-		};
-		return { scene, seats, rooms, plates };
-	}, [shownRooms, containerWidth, scale, providers.length]);
+			const agents: OfficeSceneAgent[] = [];
+			const helpers: OfficeSceneHelper[] = [];
+			const extraHelpers: OfficeScene["extraHelpers"] = [];
+			const workflows: OfficeSceneWorkflow[] = [];
+			const seats: (Member & { deskX: number; seatY: number })[] = [];
+			const plates: { desk: OfficeDesk; unit: DeskUnit }[] = [];
+			const helperSpots: {
+				subagent: SidebarSubagent;
+				parent: Member;
+				at: Point;
+				scale: number;
+			}[] = [];
+			const workflowSpots: { workflow: OfficeWorkflow; unit: WorkflowUnit }[] =
+				[];
+			const emptyDesks = new Set<string>();
+			const rooms: {
+				room: OfficeRoom;
+				unit: RoomUnit;
+				counts: IslandCounts;
+			}[] = shownRooms.map((unit, roomIndex) => {
+				const room = layout.rooms[roomIndex];
+				if (!room) throw new Error("layoutOffice dropped a room");
+				unit.desks.forEach((deskUnit, deskIndex) => {
+					const desk = room.desks[deskIndex];
+					if (!desk) throw new Error("layoutOffice dropped a desk");
+					plates.push({ desk, unit: deskUnit });
+					if (deskUnit.members.length === 0) emptyDesks.add(desk.id);
+					deskUnit.members.forEach((member, seatIndex) => {
+						const seat = desk.seats[seatIndex];
+						if (!seat) return;
+						agents.push({
+							terminalId: member.conversation.terminalId,
+							state: member.conversation.state,
+							openTodos: member.openTodos,
+							seed: seedFor(member.conversation.terminalId),
+							seat,
+							path: pathToCoffee(room, seat, layout),
+						});
+						seats.push({ ...member, deskX: seat.desk.x, seatY: seat.y });
+						seat.helpers.forEach((at, helperIndex) => {
+							const subagent = member.helpers[helperIndex];
+							if (!subagent) return;
+							helpers.push({
+								id: subagent.id,
+								seed: seedFor(subagent.id),
+								at,
+								parentDesk: seat.desk,
+							});
+							helperSpots.push({
+								subagent,
+								parent: member,
+								at,
+								scale: HELPER_SCALE,
+							});
+						});
+						const lastHelper = seat.helpers.at(-1);
+						if (seat.extraHelpers > 0 && lastHelper) {
+							extraHelpers.push({
+								at: { x: lastHelper.x + 0.9, y: lastHelper.y },
+								count: seat.extraHelpers,
+							});
+						}
+					});
+					deskUnit.workflows.forEach((workflowUnit, workflowIndex) => {
+						const workflow = desk.workflows[workflowIndex];
+						if (!workflow) return;
+						workflows.push({
+							workflow,
+							seeds: workflowUnit.agents.map((agent) => seedFor(agent.id)),
+						});
+						workflowSpots.push({ workflow, unit: workflowUnit });
+						workflow.agents.forEach((at, agentIndex) => {
+							const subagent = workflowUnit.agents[agentIndex];
+							if (!subagent) return;
+							helperSpots.push({
+								subagent,
+								parent: workflowUnit.parent,
+								at,
+								scale: WORKFLOW_SCALE,
+							});
+						});
+					});
+				});
+				return { room, unit, counts: countTones(unit.tones) };
+			});
+			const scene: OfficeScene = {
+				layout,
+				rooms: rooms.map(({ room, unit }) => ({ room, color: unit.color })),
+				emptyDesks,
+				agents,
+				helpers,
+				extraHelpers,
+				workflows,
+				devices: providers.length,
+			};
+			return { scene, seats, rooms, plates, helperSpots, workflowSpots };
+		}, [shownRooms, providers.length, aspect]);
 
+	const px = TILE_SIZE * BASE_SCALE;
+	const worldWidth = scene.layout.width * px;
+	const worldHeight = scene.layout.height * px;
+	useEffect(() => {
+		setWorldSize((current) =>
+			current.width === worldWidth && current.height === worldHeight
+				? current
+				: { width: worldWidth, height: worldHeight },
+		);
+	}, [worldWidth, worldHeight]);
+
+	const { fit, zoomBy, focusRect, reveal } = camera;
+	useEffect(() => {
+		const onKeyDown = (event: globalThis.KeyboardEvent) => {
+			const target = event.target as HTMLElement | null;
+			if (target?.closest("input, textarea, [contenteditable=true]")) return;
+			if (event.metaKey || event.ctrlKey || event.altKey) return;
+			if (event.key === "+" || event.key === "=") zoomBy(1.25);
+			else if (event.key === "-") zoomBy(0.8);
+			else if (event.key === "0") fit();
+			else return;
+			event.preventDefault();
+		};
+		window.addEventListener("keydown", onKeyDown);
+		return () => window.removeEventListener("keydown", onKeyDown);
+	}, [fit, zoomBy]);
+
+	const openSubagent = useCallback(
+		(parent: Member, subagent: SidebarSubagent) => {
+			void navigateToV2Workspace(parent.workspace.id, navigate, {
+				search: {
+					...buildSubagentSearch({
+						terminalId: parent.conversation.terminalId,
+						subagentId: subagent.id,
+						agentId: parent.conversation.agentId,
+						...(subagent.agentType ? { agentType: subagent.agentType } : {}),
+					}),
+					focusRequestId: crypto.randomUUID(),
+				},
+			});
+		},
+		[navigate],
+	);
+
+	const subagentCount = useMemo(
+		() =>
+			allRooms
+				.flatMap((room) => room.desks)
+				.flatMap((desk) => desk.members)
+				.reduce((sum, member) => sum + member.conversation.subagents.length, 0),
+		[allRooms],
+	);
 	const totals = useMemo(
 		() => countTones(allRooms.flatMap((room) => room.tones)),
 		[allRooms],
@@ -339,7 +508,6 @@ export function OfficeFloor({
 		}
 	};
 
-	const px = TILE_SIZE * scale;
 	const selected = selection
 		? reports
 				.get(selection.workspaceId)
@@ -382,22 +550,37 @@ export function OfficeFloor({
 								)}
 								{" · "}
 								<Trans>{totals.working} working</Trans>
+								{subagentCount > 0 && (
+									<>
+										{" · "}
+										<Trans>{subagentCount} subagents</Trans>
+									</>
+								)}
 							</span>
 						</>
 					}
 					end={
 						<>
-							<label
-								htmlFor="office-only-needs-me"
-								className="flex cursor-pointer items-center gap-2 text-xs"
+							<ToggleGroup
+								type="single"
+								size="sm"
+								value={show}
+								onValueChange={(value) => {
+									if (value) setShow(value as OfficeShow);
+								}}
+								aria-label={t`Who to show`}
+								className="rounded-md bg-muted/50 p-0.5"
 							>
-								<Switch
-									id="office-only-needs-me"
-									checked={onlyNeedsMe}
-									onCheckedChange={setOnlyNeedsMe}
-								/>
-								<Trans>Only who needs me</Trans>
-							</label>
+								{SHOW_OPTIONS.map((option) => (
+									<ToggleGroupItem
+										key={option}
+										value={option}
+										className="h-6 px-2.5 text-xs text-muted-foreground data-[state=on]:bg-background data-[state=on]:text-foreground data-[state=on]:shadow-sm"
+									>
+										{showLabels[option]}
+									</ToggleGroupItem>
+								))}
+							</ToggleGroup>
 							<ul className="flex flex-wrap items-center gap-3 text-xs text-muted-foreground">
 								{LEGEND.map(({ tone, dot }) => (
 									<li key={tone} className="flex items-center gap-1.5">
@@ -410,20 +593,22 @@ export function OfficeFloor({
 					}
 				/>
 				<div
-					ref={containerRef}
-					className="relative min-h-0 flex-1 overflow-auto"
+					ref={camera.viewportRef}
+					{...camera.panHandlers}
+					className="relative min-h-0 flex-1 cursor-grab touch-none overflow-hidden bg-[#2d2a3a] active:cursor-grabbing"
 				>
-					{containerWidth > 0 && (
+					{camera.viewport.width > 0 && (
 						<div
-							className="relative"
+							className="absolute top-0 left-0 origin-top-left"
 							style={{
-								width: scene.layout.width * px,
-								height: scene.layout.height * px,
+								width: worldWidth,
+								height: worldHeight,
+								transform: `translate(${camera.camera.x}px, ${camera.camera.y}px) scale(${camera.camera.zoom})`,
 							}}
 						>
 							<OfficeCanvas
 								scene={scene}
-								scale={scale}
+								scale={BASE_SCALE}
 								reducedMotion={reducedMotion}
 							/>
 							{rooms.map(({ room, unit, counts }) => (
@@ -432,11 +617,54 @@ export function OfficeFloor({
 									name={unit.name}
 									color={unit.color}
 									counts={counts}
+									onFocusRoom={() =>
+										focusRect({
+											x: room.x * px,
+											y: room.y * px,
+											width: room.width * px,
+											height: room.height * px,
+										})
+									}
 									style={{
 										left: room.header.x * px,
 										top: room.header.y * px,
 										width: room.header.width * px,
 										height: HEADER_HEIGHT * px,
+									}}
+								/>
+							))}
+							{workflowSpots.map(({ workflow, unit }) => (
+								<OfficeWorkflowLabel
+									key={`${unit.parent.conversation.terminalId}:${workflow.id}`}
+									name={unit.name}
+									phase={unit.phase}
+									agents={unit.agents.length}
+									style={{
+										left: workflow.label.x * px,
+										top: workflow.label.y * px + 4,
+										width: workflow.label.width * px,
+										height: px - 4,
+									}}
+								/>
+							))}
+							{helperSpots.map(({ subagent, parent, at, scale }) => (
+								<OfficeHelperButton
+									key={`${parent.conversation.terminalId}:${subagent.id}`}
+									label={
+										subagent.workflow
+											? (subagent.description ?? t`Workflow agent`)
+											: (subagent.agentType ?? t`Subagent`)
+									}
+									description={
+										subagent.workflow ? null : (subagent.description ?? null)
+									}
+									parentTitle={parent.conversation.title}
+									onOpen={() => openSubagent(parent, subagent)}
+									style={{
+										left: at.x * px,
+										top: at.y * px,
+										width: TILE_SIZE * scale * BASE_SCALE,
+										height: TILE_SIZE * scale * BASE_SCALE,
 									}}
 								/>
 							))}
@@ -493,6 +721,14 @@ export function OfficeFloor({
 										})
 									}
 									onKeyDown={(event) => onSeatKeyDown(index, event)}
+									onFocus={() =>
+										reveal({
+											x: (seat.deskX - 0.4) * px,
+											y: (seat.seatY - 1) * px,
+											width: 2.8 * px,
+											height: 3 * px,
+										})
+									}
 									style={{
 										left: (seat.deskX - 0.4) * px,
 										top: (seat.seatY - 1) * px + 2,
@@ -510,9 +746,10 @@ export function OfficeFloor({
 										className="absolute rounded-sm outline-none hover:bg-white/10 focus-visible:ring-2 focus-visible:ring-ring"
 										style={{
 											left: rackLeft * px,
-											top: (scene.layout.racks[0]?.y ?? 0) * px - 6 * scale,
+											top:
+												(scene.layout.racks[0]?.y ?? 0) * px - 6 * BASE_SCALE,
 											width: scene.layout.racks.length * 3 * px - px,
-											height: 2 * px + 4 * scale,
+											height: 2 * px + 4 * BASE_SCALE,
 										}}
 									/>
 								</TooltipTrigger>
@@ -538,6 +775,8 @@ export function OfficeFloor({
 										<Trans>
 											No workspace yet. Create one and it gets a desk here.
 										</Trans>
+									) : show === "active" ? (
+										<Trans>No agent is working right now.</Trans>
 									) : (
 										<Trans>Nobody needs you right now.</Trans>
 									)}
@@ -545,12 +784,18 @@ export function OfficeFloor({
 							)}
 						</div>
 					)}
+					<OfficeCameraControls
+						zoom={camera.camera.zoom}
+						onZoomIn={() => zoomBy(1.25)}
+						onZoomOut={() => zoomBy(0.8)}
+						onFit={fit}
+					/>
 				</div>
 				<footer className="flex h-7 shrink-0 items-center gap-2 border-t border-border px-4 text-[11px] text-muted-foreground">
 					<Trans>
-						Click an agent to open its conversation, a name plate to open its
-						workspace · ⌥-click, right-click or I for details · Tab or arrows to
-						move, Enter to open
+						Drag or scroll to move, pinch or ⌘-scroll to zoom, click a room's
+						name to zoom on it · Click an agent to open its conversation, a
+						small one for its subagent · ⌥-click or I for details
 					</Trans>
 				</footer>
 			</div>

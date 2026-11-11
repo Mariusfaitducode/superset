@@ -100,13 +100,22 @@ export function orderIslands<T extends RankableIsland>(islands: readonly T[]) {
 	return keyed.map(({ island }) => island);
 }
 
-/** With `onlyNeedsMe`, keeps the ones where someone needs you. */
+/** Everyone, the islands where an agent is not resting, or where one needs you. */
+export type OfficeShow = "all" | "active" | "needsMe";
+
 export function visibleIslands<T extends RankableIsland>(
 	islands: readonly T[],
-	onlyNeedsMe: boolean,
+	show: OfficeShow,
 ): T[] {
-	if (!onlyNeedsMe) return [...islands];
-	return islands.filter((island) => island.tones.some(needsYou));
+	if (show === "active") {
+		return islands.filter((island) =>
+			island.tones.some((tone) => tone !== "idle"),
+		);
+	}
+	if (show === "needsMe") {
+		return islands.filter((island) => island.tones.some(needsYou));
+	}
+	return [...islands];
 }
 
 export type ArrowKey = "ArrowLeft" | "ArrowRight" | "ArrowUp" | "ArrowDown";

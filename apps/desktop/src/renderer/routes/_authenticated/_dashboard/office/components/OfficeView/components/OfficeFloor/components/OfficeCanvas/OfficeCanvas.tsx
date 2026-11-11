@@ -6,6 +6,7 @@ import {
 import { TILE_SIZE } from "renderer/routes/_authenticated/_dashboard/office/utils/officeLayout";
 
 const FRAME_MS = 125;
+const MAX_CANVAS_PIXELS = 16_000_000;
 
 /**
  * Pixel art drawn at a whole-number scale with smoothing off, redrawn at a
@@ -28,9 +29,13 @@ export function OfficeCanvas({
 		const canvas = canvasRef.current;
 		const ctx = canvas?.getContext("2d");
 		if (!canvas || !ctx) return;
+		// A big building on a dense screen would outgrow the canvas size limit.
 		const pixelRatio = Math.max(
 			1,
-			Math.round(scale * (window.devicePixelRatio || 1)),
+			Math.min(
+				Math.round(scale * (window.devicePixelRatio || 1)),
+				Math.floor(Math.sqrt(MAX_CANVAS_PIXELS / (width * height))),
+			),
 		);
 		canvas.width = width * pixelRatio;
 		canvas.height = height * pixelRatio;

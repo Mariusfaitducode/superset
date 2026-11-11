@@ -1,5 +1,6 @@
 import {
 	agentStateFromConversation,
+	countLiveChildren,
 	isBlockedOnUser,
 } from "renderer/lib/agent-state";
 import { deriveConversationState } from "../DashboardSidebarWorkspaceItem/components/DashboardSidebarExpandedWorkspaceRow/components/DashboardSidebarConversationList/utils/conversation-state";
@@ -8,6 +9,9 @@ export interface NeedsYouBinding {
 	terminalId: string;
 	lastEventType: string;
 	lastEventAt: number;
+	/** Live children keep a finished parent at work (`countLiveChildren`). */
+	subagents?: readonly { lastEventAt?: number }[];
+	backgroundTasks?: readonly { kind: string }[];
 }
 
 export interface NeedsYouTodo {
@@ -72,6 +76,7 @@ export function summarizeNeedsYou({
 					lastEventType: binding.lastEventType,
 					lastEventAt: binding.lastEventAt,
 					lastSeenAt: terminalSeenAt[binding.terminalId],
+					liveChildren: countLiveChildren(binding),
 				}),
 			);
 			if (isBlockedOnUser(state)) {

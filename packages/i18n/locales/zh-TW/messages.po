@@ -1294,6 +1294,9 @@ msgstr "{stepCount} 個步驟，見選單"
 msgid "{subagentCount, plural, one {# subagent running} other {# subagents running}}"
 msgstr "{subagentCount, plural, other {# 個子代理程式執行中}}"
 
+msgid "{subagentCount} subagents"
+msgstr "{subagentCount} 個子代理"
+
 msgid "{successCount, plural, one {Created # workspace, {failCount} failed} other {Created # workspaces, {failCount} failed}}"
 msgstr "{successCount, plural, one {已建立#個工作區，{failCount}個失敗} other {已建立#個工作區，{failCount}個失敗}}"
 
@@ -4266,9 +4269,6 @@ msgstr "點選<0>匯入主題</0>，選擇下載好的檔案。"
 msgid "Click a terminal script to edit its details."
 msgstr "點選終端指令碼以編輯其詳情。"
 
-msgid "Click an agent to open its conversation, a name plate to open its workspace · ⌥-click, right-click or I for details · Tab or arrows to move, Enter to open"
-msgstr "點擊代理開啟其對話，點擊名牌開啟其工作區 · ⌥-點擊、右鍵或 I 查看詳情 · Tab 或方向鍵移動，Enter 開啟"
-
 msgid "Click an element."
 msgstr "點擊一個元素。"
 
@@ -4292,6 +4292,9 @@ msgstr "點選複製會話ID（使用`claude --resume <id>`恢復）。"
 
 msgid "Click to open · ⌥-click or I for details"
 msgstr "點擊開啟 · ⌥-點擊或 I 查看詳情"
+
+msgid "Click to open its transcript"
+msgstr "點擊開啟其記錄"
 
 msgid "Click to open on GitHub"
 msgstr "點選在GitHub上開啟"
@@ -7081,6 +7084,9 @@ msgstr "草稿等待你核准"
 msgid "drafted 3 support replies"
 msgstr "起草了3條支援回覆"
 
+msgid "Drag or scroll to move, pinch or ⌘-scroll to zoom, click a room's name to zoom on it · Click an agent to open its conversation, a small one for its subagent · ⌥-click or I for details"
+msgstr "拖曳或捲動來移動，捏合或 ⌘+捲動來縮放，點擊房間名稱放大該房間 · 點擊代理開啟其對話，點擊小代理開啟其子代理 · ⌥-點擊或按 I 查看詳情"
+
 msgid "Drag to reorder"
 msgstr "拖曳以重新排序"
 
@@ -7503,6 +7509,9 @@ msgstr "每週三上午9點，回顧本週合併的PR，更新被它們改過時
 
 msgid "Every weekday at 9am, read new GitHub issues, apply labels, and draft a first reply for my review."
 msgstr "每個工作日上午9點，閱讀新的GitHub議題，打上標籤，並起草初步回覆供我審閱。"
+
+msgid "Everyone"
+msgstr "所有人"
 
 msgid "Everyone argues about whether this generalizes. That argument is the sign the level was reached."
 msgstr "所有人都在爭論這能否推廣。這場爭論本身就說明這一級別已經達到了。"
@@ -11485,6 +11494,9 @@ msgstr "需要處理"
 msgid "Needs input"
 msgstr "需要輸入"
 
+msgid "Needs me"
+msgstr "需要我"
+
 msgid "Needs permission"
 msgstr "需要授權"
 
@@ -11794,6 +11806,9 @@ msgstr "此主機上未設定任何代理程式"
 
 msgid "No agent is running on this host."
 msgstr "此主機上沒有正在執行的代理。"
+
+msgid "No agent is working right now."
+msgstr "目前沒有代理在工作。"
 
 msgid "No agent running"
 msgstr "沒有正在執行的代理程式"
@@ -12904,9 +12919,6 @@ msgstr "只有討論串的作者或頁面擁有者才能刪除它"
 
 msgid "Only want it out of your sidebar? Hide it instead. Nobody else is affected."
 msgstr "只是想把它從側邊欄移除？請改為隱藏。不會影響其他人。"
-
-msgid "Only who needs me"
-msgstr "只看需要我的"
 
 msgid "Only you"
 msgstr "僅你自己"
@@ -16491,6 +16503,9 @@ msgstr "想修改主題或做一個自己的，請檢視<0>自訂主題指南</0
 
 msgid "See the open roles, or try Superset first."
 msgstr "查看空缺職位，或先試用 Superset。"
+
+msgid "See the whole building (0)"
+msgstr "查看整棟樓 (0)"
 
 msgid "See this gate on the scorecard"
 msgstr "在評分表中檢視這道關卡"
@@ -20928,6 +20943,9 @@ msgstr "誰"
 msgid "Who can open it"
 msgstr "誰可以開啟"
 
+msgid "Who to show"
+msgstr "顯示誰"
+
 msgid "Who waits on you, or whom you wait on"
 msgstr "誰在等你，或你在等誰"
 
@@ -21002,6 +21020,12 @@ msgstr "用時 {0} 分 {1} 秒"
 msgid "Worked for {seconds}s"
 msgstr "用時 {seconds} 秒"
 
+msgid "Workflow"
+msgstr "工作流程"
+
+msgid "Workflow agent"
+msgstr "工作流程代理"
+
 msgid "Workflow run completed…"
 msgstr "工作流執行完成…"
 
@@ -21019,6 +21043,9 @@ msgstr "執行中"
 #. placeholder {1}: seconds % 60
 msgid "Working for {0}m {1}s"
 msgstr "已執行 {0} 分 {1} 秒"
+
+msgid "Working for {parentTitle}"
+msgstr "正在為 {parentTitle} 工作"
 
 msgid "Working for {seconds}s"
 msgstr "已執行 {seconds} 秒"
@@ -21557,11 +21584,20 @@ msgstr "放大"
 msgid "Zoom In"
 msgstr "放大"
 
+msgid "Zoom in (+)"
+msgstr "放大 (+)"
+
+msgid "Zoom on {name}"
+msgstr "放大 {name}"
+
 msgid "Zoom out"
 msgstr "縮小"
 
 msgid "Zoom Out"
 msgstr "縮小"
+
+msgid "Zoom out (−)"
+msgstr "縮小 (−)"
 
 msgid "zsh"
 msgstr "zsh"
