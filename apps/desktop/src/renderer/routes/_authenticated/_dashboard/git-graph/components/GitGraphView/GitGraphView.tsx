@@ -27,6 +27,7 @@ import {
 	useAgentConversations,
 } from "renderer/hooks/useAgentConversations";
 import { getHostServiceClientByUrl } from "renderer/lib/host-service-client";
+import { PageHeader } from "renderer/routes/_authenticated/_dashboard/components/PageHeader";
 import { useProjectQueryTargets } from "renderer/routes/_authenticated/_dashboard/hooks/useProjectQueryTargets";
 import { navigateToV2Workspace } from "renderer/routes/_authenticated/_dashboard/utils/workspace-navigation";
 import { useHostWorkspaces } from "renderer/routes/_authenticated/providers/HostWorkspacesProvider";
@@ -388,8 +389,11 @@ export function GitGraphView() {
 
 	if (isReady && targets.length === 0) {
 		return (
-			<div className="flex h-full w-full flex-1 items-center justify-center p-8 text-sm text-muted-foreground">
-				<Trans>Add a project to see its git graph.</Trans>
+			<div className="flex h-full w-full flex-1 flex-col overflow-hidden">
+				<PageHeader />
+				<div className="flex flex-1 items-center justify-center p-8 text-sm text-muted-foreground">
+					<Trans>Add a project to see its git graph.</Trans>
+				</div>
 			</div>
 		);
 	}
@@ -405,6 +409,7 @@ export function GitGraphView() {
 			className="@container flex h-full w-full min-w-0 flex-1 flex-col overflow-hidden"
 			onKeyDown={onKeyDown}
 		>
+			<PageHeader />
 			<div className="flex shrink-0 flex-wrap items-center gap-x-3 gap-y-1.5 border-b px-3 py-2 text-xs">
 				<div className="flex items-center gap-1.5">
 					<span className="text-muted-foreground">

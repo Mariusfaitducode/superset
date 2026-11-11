@@ -3,11 +3,13 @@ import { COMPANY } from "@superset/shared/constants";
 import { Input } from "@superset/ui/input";
 import { toast } from "@superset/ui/sonner";
 import { Tabs, TabsList, TabsTrigger } from "@superset/ui/tabs";
+import { cn } from "@superset/ui/utils";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { LuSearch } from "react-icons/lu";
 import { cloudTrpc } from "renderer/lib/cloud-trpc";
 import { FeatureHeader } from "renderer/routes/_authenticated/_dashboard/components/FeatureHeader";
 import { LoadMoreSentinel } from "renderer/routes/_authenticated/_dashboard/components/LoadMoreSentinel";
+import { PAGE_WIDTH } from "renderer/routes/_authenticated/_dashboard/components/PageBody";
 import { useDebouncedSearchNavigation } from "renderer/routes/_authenticated/_dashboard/hooks/useDebouncedSearchNavigation";
 import { usePagesList } from "renderer/routes/_authenticated/_dashboard/hooks/usePagesList";
 import { pagesListInput } from "renderer/routes/_authenticated/_dashboard/utils/pagesListInput";
@@ -214,7 +216,12 @@ export function PagesList({
 
 	return (
 		<div ref={scrollRef} className="min-h-0 flex-1 overflow-y-auto">
-			<div className="mx-auto flex min-h-full w-full max-w-5xl flex-col px-8 pt-4 pb-12">
+			<div
+				className={cn(
+					"mx-auto flex min-h-full w-full flex-col px-8 pt-4 pb-12",
+					PAGE_WIDTH.wide,
+				)}
+			>
 				<FeatureHeader
 					title={<Trans>Pages</Trans>}
 					docsUrl={`${COMPANY.DOCS_URL}/pages`}

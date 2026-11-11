@@ -2,9 +2,11 @@ import { Trans, useLingui } from "@lingui/react/macro";
 import { useFormat } from "@superset/i18n/react";
 import { Skeleton } from "@superset/ui/skeleton";
 import { Tabs, TabsList, TabsTrigger } from "@superset/ui/tabs";
+import { cn } from "@superset/ui/utils";
 import { useState } from "react";
 import { LuRefreshCw } from "react-icons/lu";
 import { isMissingProcedureError } from "renderer/lib/isMissingProcedureError";
+import { PAGE_WIDTH } from "renderer/routes/_authenticated/_dashboard/components/PageBody";
 import { PageHeader } from "renderer/routes/_authenticated/_dashboard/components/PageHeader";
 import { useLocalHostService } from "renderer/routes/_authenticated/providers/LocalHostServiceProvider/LocalHostServiceProvider";
 import { InsightsDailyChart } from "./components/InsightsDailyChart";
@@ -28,7 +30,12 @@ export function InsightsView() {
 		<div className="flex h-full w-full flex-1 flex-col overflow-hidden">
 			<PageHeader />
 			<div className="min-h-0 flex-1 overflow-y-auto">
-				<div className="mx-auto flex w-full max-w-5xl flex-col gap-6 px-8 pt-4 pb-12">
+				<div
+					className={cn(
+						"mx-auto flex w-full flex-col gap-6 px-8 pt-4 pb-12",
+						PAGE_WIDTH.wide,
+					)}
+				>
 					<div className="flex flex-wrap items-center gap-x-3 gap-y-1">
 						<h1 className="text-lg font-semibold">
 							<Trans>Insights</Trans>

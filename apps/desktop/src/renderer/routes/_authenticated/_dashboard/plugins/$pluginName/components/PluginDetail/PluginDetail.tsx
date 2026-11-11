@@ -6,6 +6,7 @@ import {
 	DropdownMenuItem,
 	DropdownMenuTrigger,
 } from "@superset/ui/dropdown-menu";
+import { cn } from "@superset/ui/utils";
 import { useNavigate } from "@tanstack/react-router";
 import { useCallback, useEffect, useRef, useState } from "react";
 import {
@@ -26,6 +27,7 @@ import { PluginIcon } from "renderer/components/PluginIcon";
 import { pluginMentionText } from "renderer/components/PluginMention";
 import { useOpenNewWorkspace } from "renderer/hooks/useOpenNewWorkspace";
 import type { CatalogPlugin } from "renderer/hooks/usePluginCatalog";
+import { PAGE_WIDTH } from "renderer/routes/_authenticated/_dashboard/components/PageBody";
 import { usePluginMutations } from "renderer/routes/_authenticated/_dashboard/hooks/usePluginMutations";
 import { SkillIcon } from "renderer/routes/_authenticated/_dashboard/plugins/components/SkillIcon";
 import { useNewWorkspaceDraftStore } from "renderer/stores/new-workspace-draft";
@@ -66,7 +68,7 @@ export function PluginDetail({ plugin }: { plugin: CatalogPlugin }) {
 	const skills = plugin.pluginSkills ?? [];
 
 	return (
-		<div className="mx-auto w-full max-w-3xl px-6 pt-4 pb-16">
+		<div className={cn("mx-auto w-full px-8 pt-4 pb-12", PAGE_WIDTH.reading)}>
 			<Button
 				variant="ghost"
 				size="sm"

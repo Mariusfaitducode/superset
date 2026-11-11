@@ -3,6 +3,8 @@ import { Button } from "@superset/ui/button";
 import { useState } from "react";
 import { LuMonitor, LuPlus, LuServer } from "react-icons/lu";
 import { HostChip } from "renderer/routes/_authenticated/_dashboard/components/HostChip";
+import { PageBody } from "renderer/routes/_authenticated/_dashboard/components/PageBody";
+import { PageHeader } from "renderer/routes/_authenticated/_dashboard/components/PageHeader";
 import { SetUpOverSshDialog } from "renderer/routes/_authenticated/components/SetUpOverSshDialog";
 import { useHostsAgents } from "../../hooks/useHostsAgents";
 import { HostPanel } from "./components/HostPanel";
@@ -29,8 +31,9 @@ export function HostsView({ selectedMachineId, onSelect }: HostsViewProps) {
 
 	return (
 		<div className="flex h-full w-full flex-1 flex-col overflow-hidden">
+			<PageHeader />
 			<div className="min-h-0 flex-1 overflow-y-auto">
-				<div className="mx-auto flex w-full max-w-3xl flex-col px-8 pt-4 pb-12">
+				<PageBody>
 					<div className="flex items-center justify-between gap-2">
 						<h1 className="font-semibold text-xl tracking-tight">
 							<Trans>Hosts</Trans>
@@ -88,7 +91,7 @@ export function HostsView({ selectedMachineId, onSelect }: HostsViewProps) {
 							)
 						)}
 					</div>
-				</div>
+				</PageBody>
 			</div>
 			<SetUpOverSshDialog
 				open={sshDialogOpen}

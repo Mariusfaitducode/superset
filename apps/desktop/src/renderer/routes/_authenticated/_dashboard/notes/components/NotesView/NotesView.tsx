@@ -1,10 +1,12 @@
 import { Trans, useLingui } from "@lingui/react/macro";
 import { Input } from "@superset/ui/input";
 import { Tabs, TabsList, TabsTrigger } from "@superset/ui/tabs";
+import { cn } from "@superset/ui/utils";
 import { useQueryClient } from "@tanstack/react-query";
 import { useNavigate } from "@tanstack/react-router";
 import { useMemo } from "react";
 import { LuArrowRight, LuSearch } from "react-icons/lu";
+import { PAGE_WIDTH } from "renderer/routes/_authenticated/_dashboard/components/PageBody";
 import { PageHeader } from "renderer/routes/_authenticated/_dashboard/components/PageHeader";
 import { navigateToV2Workspace } from "renderer/routes/_authenticated/_dashboard/utils/workspace-navigation";
 import { useHostWorkspaces } from "renderer/routes/_authenticated/providers/HostWorkspacesProvider";
@@ -89,7 +91,12 @@ export function NotesView({
 		<div className="flex h-full w-full flex-1 flex-col overflow-hidden">
 			<PageHeader />
 			<div className="min-h-0 flex-1 overflow-y-auto">
-				<div className="mx-auto flex w-full max-w-3xl flex-col px-8 pt-4 pb-12">
+				<div
+					className={cn(
+						"mx-auto flex w-full flex-col px-8 pt-4 pb-12",
+						PAGE_WIDTH.reading,
+					)}
+				>
 					<h1 className="font-semibold text-xl tracking-tight">
 						<Trans>Notes</Trans>
 					</h1>

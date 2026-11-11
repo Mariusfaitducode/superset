@@ -22,6 +22,7 @@ import {
 	workspaceLabels,
 } from "renderer/routes/_authenticated/_dashboard/components/DashboardSidebar/components/WorkspaceLabels";
 import { useSidebarWorkspaceStatuses } from "renderer/routes/_authenticated/_dashboard/components/DashboardSidebar/providers/DashboardSidebarWorkspaceStatusProvider";
+import { PageHeader } from "renderer/routes/_authenticated/_dashboard/components/PageHeader";
 import { useConversationStateLabels } from "renderer/routes/_authenticated/_dashboard/office/hooks/useConversationStateLabels";
 import { useOfficeGroups } from "renderer/routes/_authenticated/_dashboard/office/hooks/useOfficeGroups";
 import { useOfficeToneLabels } from "renderer/routes/_authenticated/_dashboard/office/hooks/useOfficeToneLabels";
@@ -362,42 +363,52 @@ export function OfficeFloor({
 				/>
 			))}
 			<div className="flex min-w-0 flex-1 flex-col">
-				<header className="flex h-12 shrink-0 items-center gap-3 border-b border-border px-4">
-					<LuBuilding2 className="size-4 text-muted-foreground" />
-					<h1 className="text-sm font-medium">
-						<Trans>Office</Trans>
-					</h1>
-					<span className="text-xs text-muted-foreground">
-						{totals.needYou > 0 ? (
-							<span className="font-medium text-amber-500">
-								<Trans>{totals.needYou} waiting on you</Trans>
+				<PageHeader
+					className="border-b border-border"
+					contentClassName="gap-3"
+					start={
+						<>
+							<LuBuilding2 className="size-4 text-muted-foreground" />
+							<h1 className="text-sm font-medium">
+								<Trans>Office</Trans>
+							</h1>
+							<span className="text-xs text-muted-foreground">
+								{totals.needYou > 0 ? (
+									<span className="font-medium text-amber-500">
+										<Trans>{totals.needYou} waiting on you</Trans>
+									</span>
+								) : (
+									<Trans>Nobody waiting on you</Trans>
+								)}
+								{" · "}
+								<Trans>{totals.working} working</Trans>
 							</span>
-						) : (
-							<Trans>Nobody waiting on you</Trans>
-						)}
-						{" · "}
-						<Trans>{totals.working} working</Trans>
-					</span>
-					<label
-						htmlFor="office-only-needs-me"
-						className="ml-auto flex cursor-pointer items-center gap-2 text-xs"
-					>
-						<Switch
-							id="office-only-needs-me"
-							checked={onlyNeedsMe}
-							onCheckedChange={setOnlyNeedsMe}
-						/>
-						<Trans>Only who needs me</Trans>
-					</label>
-					<ul className="flex flex-wrap items-center gap-3 text-xs text-muted-foreground">
-						{LEGEND.map(({ tone, dot }) => (
-							<li key={tone} className="flex items-center gap-1.5">
-								<span className={cn("size-2 rounded-full", dot)} />
-								{toneLabels[tone]}
-							</li>
-						))}
-					</ul>
-				</header>
+						</>
+					}
+					end={
+						<>
+							<label
+								htmlFor="office-only-needs-me"
+								className="flex cursor-pointer items-center gap-2 text-xs"
+							>
+								<Switch
+									id="office-only-needs-me"
+									checked={onlyNeedsMe}
+									onCheckedChange={setOnlyNeedsMe}
+								/>
+								<Trans>Only who needs me</Trans>
+							</label>
+							<ul className="flex flex-wrap items-center gap-3 text-xs text-muted-foreground">
+								{LEGEND.map(({ tone, dot }) => (
+									<li key={tone} className="flex items-center gap-1.5">
+										<span className={cn("size-2 rounded-full", dot)} />
+										{toneLabels[tone]}
+									</li>
+								))}
+							</ul>
+						</>
+					}
+				/>
 				<div
 					ref={containerRef}
 					className="relative min-h-0 flex-1 overflow-auto"

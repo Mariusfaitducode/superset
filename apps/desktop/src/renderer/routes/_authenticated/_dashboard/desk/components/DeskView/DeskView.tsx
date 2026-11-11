@@ -1,7 +1,9 @@
 import { useLingui } from "@lingui/react/macro";
 import { Kbd } from "@superset/ui/kbd";
+import { cn } from "@superset/ui/utils";
 import { useEffect, useRef, useState } from "react";
 import { LuInbox } from "react-icons/lu";
+import { PAGE_WIDTH } from "renderer/routes/_authenticated/_dashboard/components/PageBody";
 import { PageHeader } from "renderer/routes/_authenticated/_dashboard/components/PageHeader";
 import {
 	DESK_SECTIONS,
@@ -115,7 +117,12 @@ export function DeskView() {
 						</p>
 					</div>
 				) : (
-					<div className="mx-auto flex max-w-3xl flex-col gap-6 px-4 py-4">
+					<div
+						className={cn(
+							"mx-auto flex w-full flex-col gap-6 px-8 pt-4 pb-12",
+							PAGE_WIDTH.reading,
+						)}
+					>
 						{DESK_SECTIONS.map((section) => {
 							const sectionItems = items.filter(
 								(item) => item.section === section,

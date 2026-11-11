@@ -37,6 +37,7 @@ import { GATED_FEATURES, usePaywall } from "renderer/components/Paywall";
 import { apiTrpcClient } from "renderer/lib/api-trpc-client";
 import { cloudTrpc } from "renderer/lib/cloud-trpc";
 import { DATA_TABLE_HEAD_CELL } from "renderer/routes/_authenticated/_dashboard/components/DataTableHeader";
+import { PAGE_WIDTH } from "renderer/routes/_authenticated/_dashboard/components/PageBody";
 import { useFailedAutomations } from "renderer/routes/_authenticated/_dashboard/hooks/useFailedAutomations";
 import { HostOfflineRunDialog } from "../components/HostOfflineRunDialog";
 import { dispatchErrorCode, runErrorHelp } from "../utils/runErrorHelp";
@@ -218,7 +219,12 @@ function AutomationRunsPage() {
 			<div className="drag h-10 shrink-0" />
 
 			<div className="min-h-0 flex-1 overflow-y-auto">
-				<div className="mx-auto flex min-h-full w-full max-w-5xl flex-col px-8 pb-12">
+				<div
+					className={cn(
+						"mx-auto flex min-h-full w-full flex-col px-8 pb-12",
+						PAGE_WIDTH.wide,
+					)}
+				>
 					<div className="flex flex-wrap items-center justify-between gap-3">
 						<div className="flex items-center gap-1.5">
 							<Button

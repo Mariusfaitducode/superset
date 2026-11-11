@@ -57,6 +57,7 @@ import { authClient } from "renderer/lib/auth-client";
 import { cloudTrpc } from "renderer/lib/cloud-trpc";
 import { DATA_TABLE_HEAD_CELL } from "renderer/routes/_authenticated/_dashboard/components/DataTableHeader";
 import { FeatureHeader } from "renderer/routes/_authenticated/_dashboard/components/FeatureHeader";
+import { PAGE_WIDTH } from "renderer/routes/_authenticated/_dashboard/components/PageBody";
 import { PageHeader } from "renderer/routes/_authenticated/_dashboard/components/PageHeader";
 import {
 	SortableHeader,
@@ -472,7 +473,12 @@ function AutomationsPage() {
 			<PageHeader />
 
 			<div className="min-h-0 flex-1 overflow-y-auto">
-				<div className="mx-auto flex min-h-full w-full max-w-5xl flex-col px-8 pt-4 pb-12">
+				<div
+					className={cn(
+						"mx-auto flex min-h-full w-full flex-col px-8 pt-4 pb-12",
+						PAGE_WIDTH.wide,
+					)}
+				>
 					<FeatureHeader
 						title={<Trans>Automations</Trans>}
 						docsUrl={`${COMPANY.DOCS_URL}/automations`}
