@@ -11786,6 +11786,9 @@ msgstr "Žádné aktivní pracovní prostory"
 msgid "No agent"
 msgstr "Žádný agent"
 
+msgid "No agent conversation in this workspace."
+msgstr "V tomto pracovním prostoru není žádná konverzace agenta."
+
 msgid "No agent conversations yet."
 msgstr "Zatím žádné konverzace agentů."
 
@@ -12374,6 +12377,9 @@ msgstr "Nebyly importovány žádné motivy"
 msgid "No ticket"
 msgstr "Bez tiketu"
 
+msgid "No to-dos yet. Use a conversation's to-do button to add one."
+msgstr "Zatím žádné úkoly. Přidejte úkol tlačítkem úkolů u konverzace."
+
 msgid "No triggers"
 msgstr "Žádné spouštěče"
 
@@ -12949,8 +12955,8 @@ msgstr "Otevřít {parentLabel}"
 msgid "Open {path} in file pane"
 msgstr "Otevřít {path} v panelu souboru"
 
-msgid "Open a conversation's to-dos in the list, under it, rather than in a popover beside it."
-msgstr "Otevírat úkoly konverzace v seznamu pod ní, nikoli ve vyskakovacím okně vedle ní."
+msgid "Open a conversation's to-dos in"
+msgstr "Otevírat úkoly konverzace v"
 
 msgid "Open a draft PR"
 msgstr "Otevřít koncept PR"
@@ -13418,6 +13424,9 @@ msgstr "otevřít úkol v pracovním prostoru"
 
 msgid "Open the tasks"
 msgstr "Otevře úkoly"
+
+msgid "Open the to-dos in the right panel"
+msgstr "Otevřít úkoly v pravém panelu"
 
 msgid "Open the usage page"
 msgstr "Otevře stránku využití"
@@ -15843,6 +15852,9 @@ msgstr "Rozšířený vstup ({hotkeyText})"
 
 msgid "right pane"
 msgstr "pravý panel"
+
+msgid "Right panel"
+msgstr "Pravý panel"
 
 msgid "Right-click here"
 msgstr "Klikněte sem pravým tlačítkem"
@@ -19563,8 +19575,8 @@ msgstr "Podrobnosti úkolu"
 msgid "To-dos"
 msgstr "Úkoly"
 
-msgid "To-dos under the conversation"
-msgstr "Úkoly pod konverzací"
+msgid "To-dos are turned off in Settings, Sidebar."
+msgstr "Úkoly jsou vypnuté v Nastavení, Postranní panel."
 
 msgid "Toast (Sonner)"
 msgstr "Toast (Sonner)"
@@ -19979,6 +19991,9 @@ msgstr "Necommitnuté změny ({uncommitted})"
 
 msgid "Uncommitted changes, on top of {base}"
 msgstr "Necommitnuté změny, nad {base}"
+
+msgid "Under the conversation"
+msgstr "Pod konverzací"
 
 msgid "Underline"
 msgstr "Podtržené"
@@ -20897,6 +20912,9 @@ msgstr "Kde obor upřímně je"
 
 msgid "Where the repository and new worktrees live on this host."
 msgstr "Kde na tomto hostu leží repozitář a nové worktree."
+
+msgid "Where the to-do button of a conversation shows its list."
+msgstr "Kde tlačítko úkolů u konverzace zobrazí jejich seznam."
 
 msgid "Where this terminal script is available."
 msgstr "Kde je tento terminálový skript dostupný."

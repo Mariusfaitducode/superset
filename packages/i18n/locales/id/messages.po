@@ -11786,6 +11786,9 @@ msgstr "Tidak ada workspace aktif"
 msgid "No agent"
 msgstr "Tanpa agen"
 
+msgid "No agent conversation in this workspace."
+msgstr "Tidak ada percakapan agen di ruang kerja ini."
+
 msgid "No agent conversations yet."
 msgstr "Belum ada percakapan agen."
 
@@ -12374,6 +12377,9 @@ msgstr "Tidak ada tema yang diimpor"
 msgid "No ticket"
 msgstr "Tanpa tiket"
 
+msgid "No to-dos yet. Use a conversation's to-do button to add one."
+msgstr "Belum ada tugas. Gunakan tombol tugas pada percakapan untuk menambahkannya."
+
 msgid "No triggers"
 msgstr "Tanpa pemicu"
 
@@ -12949,8 +12955,8 @@ msgstr "Buka {parentLabel}"
 msgid "Open {path} in file pane"
 msgstr "Buka {path} di panel file"
 
-msgid "Open a conversation's to-dos in the list, under it, rather than in a popover beside it."
-msgstr "Buka tugas percakapan di daftar, di bawahnya, bukan di popover di sampingnya."
+msgid "Open a conversation's to-dos in"
+msgstr "Buka tugas percakapan di"
 
 msgid "Open a draft PR"
 msgstr "Membuka PR draf"
@@ -13418,6 +13424,9 @@ msgstr "membuka tugas di workspace"
 
 msgid "Open the tasks"
 msgstr "Membuka tugas"
+
+msgid "Open the to-dos in the right panel"
+msgstr "Buka tugas di panel kanan"
 
 msgid "Open the usage page"
 msgstr "Membuka halaman penggunaan"
@@ -15843,6 +15852,9 @@ msgstr "Input kaya ({hotkeyText})"
 
 msgid "right pane"
 msgstr "panel kanan"
+
+msgid "Right panel"
+msgstr "Panel kanan"
 
 msgid "Right-click here"
 msgstr "Klik kanan di sini"
@@ -19563,8 +19575,8 @@ msgstr "Detail to-do"
 msgid "To-dos"
 msgstr "Tugas"
 
-msgid "To-dos under the conversation"
-msgstr "Tugas di bawah percakapan"
+msgid "To-dos are turned off in Settings, Sidebar."
+msgstr "Tugas dinonaktifkan di Pengaturan, Bilah sisi."
 
 msgid "Toast (Sonner)"
 msgstr "Toast (Sonner)"
@@ -19979,6 +19991,9 @@ msgstr "Perubahan belum di-commit ({uncommitted})"
 
 msgid "Uncommitted changes, on top of {base}"
 msgstr "Perubahan belum di-commit, di atas {base}"
+
+msgid "Under the conversation"
+msgstr "Di bawah percakapan"
 
 msgid "Underline"
 msgstr "Garis bawah"
@@ -20897,6 +20912,9 @@ msgstr "Posisi industri, sejujurnya"
 
 msgid "Where the repository and new worktrees live on this host."
 msgstr "Di mana repositori dan worktree baru berada di host ini."
+
+msgid "Where the to-do button of a conversation shows its list."
+msgstr "Tempat tombol tugas percakapan menampilkan daftarnya."
 
 msgid "Where this terminal script is available."
 msgstr "Di mana skrip terminal ini tersedia."

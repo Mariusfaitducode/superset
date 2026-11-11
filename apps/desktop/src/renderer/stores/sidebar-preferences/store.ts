@@ -5,6 +5,15 @@ import type { SidebarNavItemId } from "./nav-items";
 
 export type WaitingTint = "off" | "subtle" | "strong";
 
+/** Where a conversation's to-do button opens its list. */
+export type TodosPlacement = "right-panel" | "popover" | "inline";
+
+export const TODOS_PLACEMENTS: readonly TodosPlacement[] = [
+	"right-panel",
+	"popover",
+	"inline",
+];
+
 export interface SidebarPreferences extends SidebarAppearance {
 	showConversations: boolean;
 	/** Conversations whose agent has not started a turn yet. */
@@ -30,8 +39,8 @@ export interface SidebarPreferences extends SidebarAppearance {
 	showRowPullRequest: boolean;
 	showRowTodos: boolean;
 	showRowWaitTime: boolean;
-	/** A conversation's to-dos open under it, rather than in a popover. */
-	todosInline: boolean;
+	/** Where a conversation's to-do button opens its list. */
+	todosPlacement: TodosPlacement;
 }
 
 export type SidebarPreferenceKey = {
@@ -66,7 +75,7 @@ export const DEFAULT_SIDEBAR_PREFERENCES: SidebarPreferences = {
 	showRowPullRequest: true,
 	showRowTodos: true,
 	showRowWaitTime: true,
-	todosInline: false,
+	todosPlacement: "right-panel",
 };
 
 type AppearanceKey = Exclude<keyof SidebarAppearance, "stateColors">;
@@ -74,6 +83,7 @@ type AppearanceKey = Exclude<keyof SidebarAppearance, "stateColors">;
 interface SidebarPreferencesState extends SidebarPreferences {
 	setPreference: (key: SidebarPreferenceKey, value: boolean) => void;
 	setWaitingTint: (waitingTint: WaitingTint) => void;
+	setTodosPlacement: (todosPlacement: TodosPlacement) => void;
 	setAppearance: <Key extends AppearanceKey>(
 		key: Key,
 		value: SidebarAppearance[Key],
@@ -92,6 +102,7 @@ export const useSidebarPreferencesStore = create<SidebarPreferencesState>()(
 				...DEFAULT_SIDEBAR_PREFERENCES,
 				setPreference: (key, value) => set({ [key]: value }),
 				setWaitingTint: (waitingTint) => set({ waitingTint }),
+				setTodosPlacement: (todosPlacement) => set({ todosPlacement }),
 				setAppearance: (key, value) => set({ [key]: value }),
 				setNavItemVisible: (item, visible) =>
 					set((state) => ({
@@ -110,7 +121,7 @@ export const useSidebarPreferencesStore = create<SidebarPreferencesState>()(
 			}),
 			{
 				name: "sidebar-preferences-v1",
-				version: 3,
+				version: 4,
 				migrate: (persisted, version) =>
 					migrateSidebarPreferences(
 						persisted,
@@ -119,6 +130,7 @@ export const useSidebarPreferencesStore = create<SidebarPreferencesState>()(
 				partialize: ({
 					setPreference: _setPreference,
 					setWaitingTint: _setWaitingTint,
+					setTodosPlacement: _setTodosPlacement,
 					setAppearance: _setAppearance,
 					setStateColor: _setStateColor,
 					setNavItemVisible: _setNavItemVisible,
@@ -134,6 +146,8 @@ export const useSidebarPreferencesStore = create<SidebarPreferencesState>()(
 /**
  * v1 had an on/off `showWaitingTint`. v2 had six state colors; v3 has the
  * five agent states, so a hand-picked "request" color becomes "needs you".
+ * v3 had an on/off `todosInline`; v4 has a placement, and everyone starts
+ * on the right panel, which replaced both earlier displays as the default.
  */
 export function migrateSidebarPreferences(
 	persisted: unknown,
@@ -157,6 +171,10 @@ export function migrateSidebarPreferences(
 			...colors
 		} = (state.stateColors ?? {}) as Record<string, string>;
 		state.stateColors = request ? { ...colors, needsYou: request } : colors;
+	}
+	if (version < 4) {
+		const { todosInline: _todosInline, ...rest } = state;
+		state = { ...rest, todosPlacement: "right-panel" };
 	}
 	return { ...DEFAULT_SIDEBAR_PREFERENCES, ...state } as SidebarPreferences;
 }

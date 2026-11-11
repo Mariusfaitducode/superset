@@ -11786,6 +11786,9 @@ msgstr "アクティブなワークスペースはありません"
 msgid "No agent"
 msgstr "エージェントなし"
 
+msgid "No agent conversation in this workspace."
+msgstr "このワークスペースにはエージェントの会話がありません。"
+
 msgid "No agent conversations yet."
 msgstr "エージェントの会話はまだありません。"
 
@@ -12374,6 +12377,9 @@ msgstr "インポートされたテーマはありません"
 msgid "No ticket"
 msgstr "チケットなし"
 
+msgid "No to-dos yet. Use a conversation's to-do button to add one."
+msgstr "To-doはまだありません。会話のTo-doボタンから追加できます。"
+
 msgid "No triggers"
 msgstr "トリガーなし"
 
@@ -12949,8 +12955,8 @@ msgstr "{parentLabel}を開く"
 msgid "Open {path} in file pane"
 msgstr "{path}をファイルペインで開く"
 
-msgid "Open a conversation's to-dos in the list, under it, rather than in a popover beside it."
-msgstr "会話の To-do を横のポップオーバーではなく、リスト内の会話の下に開きます。"
+msgid "Open a conversation's to-dos in"
+msgstr "会話のTo-doを開く場所"
 
 msgid "Open a draft PR"
 msgstr "ドラフト PR を作成する"
@@ -13418,6 +13424,9 @@ msgstr "タスクをワークスペースで開く"
 
 msgid "Open the tasks"
 msgstr "タスクを開きます"
+
+msgid "Open the to-dos in the right panel"
+msgstr "To-doを右パネルで開く"
 
 msgid "Open the usage page"
 msgstr "使用量ページを開きます"
@@ -15843,6 +15852,9 @@ msgstr "リッチ入力 ({hotkeyText})"
 
 msgid "right pane"
 msgstr "右ペイン"
+
+msgid "Right panel"
+msgstr "右パネル"
 
 msgid "Right-click here"
 msgstr "ここを右クリック"
@@ -19563,8 +19575,8 @@ msgstr "To-doの詳細"
 msgid "To-dos"
 msgstr "To-do"
 
-msgid "To-dos under the conversation"
-msgstr "会話の下に To-do"
+msgid "To-dos are turned off in Settings, Sidebar."
+msgstr "To-doは設定のサイドバーでオフになっています。"
 
 msgid "Toast (Sonner)"
 msgstr "Toast (Sonner)"
@@ -19979,6 +19991,9 @@ msgstr "未コミットの変更 ({uncommitted})"
 
 msgid "Uncommitted changes, on top of {base}"
 msgstr "未コミットの変更、{base} の上"
+
+msgid "Under the conversation"
+msgstr "会話の下"
 
 msgid "Underline"
 msgstr "下線"
@@ -20897,6 +20912,9 @@ msgstr "業界の現在地、正直なところ"
 
 msgid "Where the repository and new worktrees live on this host."
 msgstr "このホスト上でリポジトリと新規ワークツリーを置く場所。"
+
+msgid "Where the to-do button of a conversation shows its list."
+msgstr "会話のTo-doボタンがリストを表示する場所。"
 
 msgid "Where this terminal script is available."
 msgstr "このターミナルスクリプトを利用できる範囲。"

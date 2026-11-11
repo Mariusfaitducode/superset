@@ -2,14 +2,16 @@ import { useLingui } from "@lingui/react/macro";
 import { eq } from "@tanstack/db";
 import { useLiveQuery } from "@tanstack/react-db";
 import { type ReactNode, useEffect, useRef, useState } from "react";
-import { LuFile } from "react-icons/lu";
+import { LuFile, LuListChecks } from "react-icons/lu";
 import type { PullRequestRef } from "renderer/lib/github/pullRequestRef";
 import { useWorkspaceGitStatus } from "renderer/routes/_authenticated/_dashboard/v2-workspace/$workspaceId/providers/WorkspaceGitStatusProvider";
+import { useWorkspace } from "renderer/routes/_authenticated/_dashboard/v2-workspace/providers/WorkspaceProvider";
 import { useCollections } from "renderer/routes/_authenticated/providers/CollectionsProvider";
 import {
 	WORKSPACE_SIDEBAR_TABS,
 	type WorkspaceSidebarTab,
 } from "renderer/routes/_authenticated/providers/CollectionsProvider/dashboardSidebarLocal/schema";
+import { useSidebarPreference } from "renderer/stores/sidebar-preferences";
 import { useReviewCommentNavigation } from "../../hooks/useReviewCommentNavigation";
 import { useRowlessSidebarTabStore } from "../../state/rowlessSidebarTabStore";
 import type { CommentPaneData, DiffFocusSide } from "../../types";
@@ -17,6 +19,7 @@ import {
 	DEFAULT_WORKSPACE_SIDEBAR_TAB,
 	setWorkspaceSidebarTab,
 } from "../../utils/setWorkspaceSidebarTab";
+import { TodosPanel, useWorkspaceOpenTodoCount } from "../TodosPanel";
 import { FilesTab } from "./components/FilesTab";
 import { PRActionHeader } from "./components/PRActionHeader";
 import { SidebarHeader } from "./components/SidebarHeader";
@@ -74,6 +77,10 @@ export function WorkspaceSidebar({
 }: WorkspaceSidebarProps) {
 	const { t } = useLingui();
 	const gitStatus = useWorkspaceGitStatus();
+	const { workspace } = useWorkspace();
+	const hostId = workspace.hostId;
+	const showTodos = useSidebarPreference("showTodos");
+	const openTodoCount = useWorkspaceOpenTodoCount({ workspaceId, hostId });
 	const collections = useCollections();
 	const { data: [localState] = [] } = useLiveQuery(
 		(query) =>
@@ -149,7 +156,17 @@ export function WorkspaceSidebar({
 		),
 	};
 
-	const tabs: SidebarTabDefinition[] = [filesTab, changesTab, reviewTab];
+	const todosTab: SidebarTabDefinition = {
+		id: "todos",
+		label: t({ message: "To-dos" }),
+		icon: LuListChecks,
+		badge: openTodoCount > 0 ? openTodoCount : undefined,
+		content: <TodosPanel workspaceId={workspaceId} hostId={hostId} />,
+	};
+
+	const tabs: SidebarTabDefinition[] = showTodos
+		? [filesTab, changesTab, reviewTab, todosTab]
+		: [filesTab, changesTab, reviewTab];
 	const activeTabDef = tabs.find((t) => t.id === activeTab) ?? tabs[0];
 
 	const tabCount = tabs.length;

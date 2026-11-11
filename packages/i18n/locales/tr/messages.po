@@ -11786,6 +11786,9 @@ msgstr "Etkin çalışma alanı yok"
 msgid "No agent"
 msgstr "Ajan yok"
 
+msgid "No agent conversation in this workspace."
+msgstr "Bu çalışma alanında ajan konuşması yok."
+
 msgid "No agent conversations yet."
 msgstr "Henüz ajan konuşması yok."
 
@@ -12374,6 +12377,9 @@ msgstr "Hiçbir tema içe aktarılmadı"
 msgid "No ticket"
 msgstr "Bilet yok"
 
+msgid "No to-dos yet. Use a conversation's to-do button to add one."
+msgstr "Henüz yapılacak yok. Eklemek için bir konuşmanın yapılacaklar düğmesini kullanın."
+
 msgid "No triggers"
 msgstr "Tetikleyici yok"
 
@@ -12949,8 +12955,8 @@ msgstr "{parentLabel} aç"
 msgid "Open {path} in file pane"
 msgstr "{path} dosyasını dosya bölmesinde aç"
 
-msgid "Open a conversation's to-dos in the list, under it, rather than in a popover beside it."
-msgstr "Bir konuşmanın yapılacaklarını yanında bir açılır pencere yerine listede, altında aç."
+msgid "Open a conversation's to-dos in"
+msgstr "Bir konuşmanın yapılacaklarını şurada aç"
 
 msgid "Open a draft PR"
 msgstr "Taslak PR açmak"
@@ -13418,6 +13424,9 @@ msgstr "görevi çalışma alanında açma"
 
 msgid "Open the tasks"
 msgstr "Görevleri açar"
+
+msgid "Open the to-dos in the right panel"
+msgstr "Yapılacakları sağ panelde aç"
 
 msgid "Open the usage page"
 msgstr "Kullanım sayfasını açar"
@@ -15843,6 +15852,9 @@ msgstr "Zengin giriş ({hotkeyText})"
 
 msgid "right pane"
 msgstr "sağ panel"
+
+msgid "Right panel"
+msgstr "Sağ panel"
 
 msgid "Right-click here"
 msgstr "Buraya sağ tıklayın"
@@ -19563,8 +19575,8 @@ msgstr "Yapılacak ayrıntıları"
 msgid "To-dos"
 msgstr "Yapılacaklar"
 
-msgid "To-dos under the conversation"
-msgstr "Konuşmanın altında yapılacaklar"
+msgid "To-dos are turned off in Settings, Sidebar."
+msgstr "Yapılacaklar Ayarlar, Kenar çubuğu bölümünde kapalı."
 
 msgid "Toast (Sonner)"
 msgstr "Bildirim (Sonner)"
@@ -19979,6 +19991,9 @@ msgstr "Commit edilmemiş değişiklikler ({uncommitted})"
 
 msgid "Uncommitted changes, on top of {base}"
 msgstr "Commit edilmemiş değişiklikler, {base} üzerinde"
+
+msgid "Under the conversation"
+msgstr "Konuşmanın altında"
 
 msgid "Underline"
 msgstr "Altı çizili"
@@ -20897,6 +20912,9 @@ msgstr "Sektör dürüstçe nerede"
 
 msgid "Where the repository and new worktrees live on this host."
 msgstr "Deponun ve yeni worktree'lerin bu host'ta nerede bulunacağı."
+
+msgid "Where the to-do button of a conversation shows its list."
+msgstr "Bir konuşmanın yapılacaklar düğmesinin listesini gösterdiği yer."
 
 msgid "Where this terminal script is available."
 msgstr "Bu terminal betiğinin nerede kullanılabilir olduğu."

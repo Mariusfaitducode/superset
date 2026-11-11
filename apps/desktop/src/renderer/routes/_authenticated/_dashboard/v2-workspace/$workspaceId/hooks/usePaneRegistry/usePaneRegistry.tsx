@@ -19,6 +19,7 @@ import {
 	GitPullRequest,
 	GitPullRequestArrow,
 	Globe,
+	ListChecks,
 	MessageSquare,
 	Monitor,
 	Smartphone,
@@ -50,6 +51,7 @@ import { useWorkspace } from "renderer/routes/_authenticated/_dashboard/v2-works
 import { useCollections } from "renderer/routes/_authenticated/providers/CollectionsProvider";
 import { getV2NotificationSourcesForPane } from "renderer/stores/v2-notifications";
 import type { StoreApi } from "zustand/vanilla";
+import { TodosPanel } from "../../components/TodosPanel";
 import { V2NotificationStatusIndicator } from "../../components/V2NotificationStatusIndicator";
 import {
 	getDocument,
@@ -178,6 +180,7 @@ export function usePaneRegistry({
 	const { t } = useLingui();
 	const { workspace } = useWorkspace();
 	const workspaceId = workspace.id;
+	const hostId = workspace.hostId;
 	const agentSurface = useAgentSurfaceSwitch(workspaceId);
 	const closeChatWithUndo = useUndoableChatClose({
 		workspaceId,
@@ -779,6 +782,13 @@ export function usePaneRegistry({
 					/>
 				),
 			},
+			todos: {
+				getIcon: () => <ListChecks className="size-3.5" />,
+				getTitle: () => t({ message: "To-dos" }),
+				renderPane: () => (
+					<TodosPanel workspaceId={workspaceId} hostId={hostId} />
+				),
+			},
 			mobile: {
 				getIcon: () => <Smartphone className="size-3.5" />,
 				getTitle: () =>
@@ -1000,6 +1010,7 @@ export function usePaneRegistry({
 			store,
 			linkedStores,
 			workspaceId,
+			hostId,
 			agentSurface,
 			closeChatWithUndo,
 			clearWorkspaceRunTerminal,

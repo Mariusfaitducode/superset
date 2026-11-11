@@ -11786,6 +11786,9 @@ msgstr "Geen actieve werkruimtes"
 msgid "No agent"
 msgstr "Geen agent"
 
+msgid "No agent conversation in this workspace."
+msgstr "Geen agentgesprek in deze werkruimte."
+
 msgid "No agent conversations yet."
 msgstr "Nog geen agentgesprekken."
 
@@ -12374,6 +12377,9 @@ msgstr "Er zijn geen thema's geïmporteerd"
 msgid "No ticket"
 msgstr "Geen ticket"
 
+msgid "No to-dos yet. Use a conversation's to-do button to add one."
+msgstr "Nog geen to-do's. Gebruik de to-doknop van een gesprek om er een toe te voegen."
+
 msgid "No triggers"
 msgstr "Geen triggers"
 
@@ -12949,8 +12955,8 @@ msgstr "{parentLabel} openen"
 msgid "Open {path} in file pane"
 msgstr "{path} openen in bestandspaneel"
 
-msgid "Open a conversation's to-dos in the list, under it, rather than in a popover beside it."
-msgstr "Open de taken van een gesprek in de lijst, eronder, in plaats van in een popover ernaast."
+msgid "Open a conversation's to-dos in"
+msgstr "To-do's van een gesprek openen in"
 
 msgid "Open a draft PR"
 msgstr "Een concept-PR openen"
@@ -13418,6 +13424,9 @@ msgstr "de taak in een werkruimte openen"
 
 msgid "Open the tasks"
 msgstr "Opent de taken"
+
+msgid "Open the to-dos in the right panel"
+msgstr "To-do's openen in het rechterpaneel"
 
 msgid "Open the usage page"
 msgstr "Opent de gebruikspagina"
@@ -15843,6 +15852,9 @@ msgstr "Uitgebreide invoer ({hotkeyText})"
 
 msgid "right pane"
 msgstr "rechterpaneel"
+
+msgid "Right panel"
+msgstr "Rechterpaneel"
 
 msgid "Right-click here"
 msgstr "Klik hier met rechts"
@@ -19563,8 +19575,8 @@ msgstr "To-do-details"
 msgid "To-dos"
 msgstr "To-do's"
 
-msgid "To-dos under the conversation"
-msgstr "Taken onder het gesprek"
+msgid "To-dos are turned off in Settings, Sidebar."
+msgstr "To-do's staan uit in Instellingen, Zijbalk."
 
 msgid "Toast (Sonner)"
 msgstr "Toast (Sonner)"
@@ -19979,6 +19991,9 @@ msgstr "Niet-gecommitte wijzigingen ({uncommitted})"
 
 msgid "Uncommitted changes, on top of {base}"
 msgstr "Niet-gecommitte wijzigingen, bovenop {base}"
+
+msgid "Under the conversation"
+msgstr "Onder het gesprek"
 
 msgid "Underline"
 msgstr "Onderstrepen"
@@ -20897,6 +20912,9 @@ msgstr "Waar de sector staat, eerlijk gezegd"
 
 msgid "Where the repository and new worktrees live on this host."
 msgstr "Waar de repository en nieuwe worktrees op deze host staan."
+
+msgid "Where the to-do button of a conversation shows its list."
+msgstr "Waar de to-doknop van een gesprek zijn lijst toont."
 
 msgid "Where this terminal script is available."
 msgstr "Waar dit terminalscript beschikbaar is."

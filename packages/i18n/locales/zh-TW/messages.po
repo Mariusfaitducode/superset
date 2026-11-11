@@ -11786,6 +11786,9 @@ msgstr "沒有作用中的工作區"
 msgid "No agent"
 msgstr "無代理程式"
 
+msgid "No agent conversation in this workspace."
+msgstr "此工作區沒有代理對話。"
+
 msgid "No agent conversations yet."
 msgstr "尚無代理對話。"
 
@@ -12374,6 +12377,9 @@ msgstr "沒有匯入任何主題"
 msgid "No ticket"
 msgstr "無工單"
 
+msgid "No to-dos yet. Use a conversation's to-do button to add one."
+msgstr "還沒有待辦。使用對話的待辦按鈕來新增。"
+
 msgid "No triggers"
 msgstr "沒有觸發器"
 
@@ -12949,8 +12955,8 @@ msgstr "開啟 {parentLabel}"
 msgid "Open {path} in file pane"
 msgstr "在檔案面板中開啟{path}"
 
-msgid "Open a conversation's to-dos in the list, under it, rather than in a popover beside it."
-msgstr "在清單中對話下方開啟其待辦，而不是在旁邊的彈出框中。"
+msgid "Open a conversation's to-dos in"
+msgstr "對話的待辦開啟位置"
 
 msgid "Open a draft PR"
 msgstr "建立草稿 PR"
@@ -13418,6 +13424,9 @@ msgstr "在工作區中開啟任務"
 
 msgid "Open the tasks"
 msgstr "開啟任務"
+
+msgid "Open the to-dos in the right panel"
+msgstr "在右側面板中開啟待辦"
 
 msgid "Open the usage page"
 msgstr "開啟用量頁面"
@@ -15842,6 +15851,9 @@ msgid "Rich input ({hotkeyText})"
 msgstr "富輸入（{hotkeyText}）"
 
 msgid "right pane"
+msgstr "右側面板"
+
+msgid "Right panel"
 msgstr "右側面板"
 
 msgid "Right-click here"
@@ -19563,8 +19575,8 @@ msgstr "待辦詳細資料"
 msgid "To-dos"
 msgstr "待辦"
 
-msgid "To-dos under the conversation"
-msgstr "待辦顯示在對話下方"
+msgid "To-dos are turned off in Settings, Sidebar."
+msgstr "待辦已在「設定 > 側邊欄」中關閉。"
 
 msgid "Toast (Sonner)"
 msgstr "Toast（Sonner）"
@@ -19979,6 +19991,9 @@ msgstr "未提交的變更 ({uncommitted})"
 
 msgid "Uncommitted changes, on top of {base}"
 msgstr "未提交的變更，基於 {base}"
+
+msgid "Under the conversation"
+msgstr "對話下方"
 
 msgid "Underline"
 msgstr "底線"
@@ -20897,6 +20912,9 @@ msgstr "行業實際走到了哪裡"
 
 msgid "Where the repository and new worktrees live on this host."
 msgstr "儲存庫和新建worktree在此主機上的位置。"
+
+msgid "Where the to-do button of a conversation shows its list."
+msgstr "對話的待辦按鈕在何處顯示其清單。"
 
 msgid "Where this terminal script is available."
 msgstr "此終端指令碼在哪些地方可用。"

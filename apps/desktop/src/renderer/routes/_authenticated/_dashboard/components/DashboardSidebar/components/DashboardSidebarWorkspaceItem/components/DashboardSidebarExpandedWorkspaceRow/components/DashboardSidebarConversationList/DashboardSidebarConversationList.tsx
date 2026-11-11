@@ -39,6 +39,7 @@ import {
 	useSidebarPreference,
 	type WaitingTint,
 } from "renderer/stores/sidebar-preferences";
+import { useTodosPanelStore } from "renderer/stores/todos-panel";
 import { useIsTerminalVisible } from "renderer/stores/visible-terminals";
 import { useDashboardSidebarFolder } from "../../../../../../providers/DashboardSidebarFolderProvider";
 import type { DashboardSidebarWorkspaceIndentation } from "../../../../../../types";
@@ -177,7 +178,7 @@ function ConversationRow({
 	const showTurnTime = useSidebarPreference("showTurnTime");
 	const showQueuedPrompts = useSidebarPreference("showQueuedPrompts");
 	const waitingTint = useSidebarPreference("waitingTint");
-	const todosInline = useSidebarPreference("todosInline");
+	const todosPlacement = useSidebarPreference("todosPlacement");
 	const openTodos = (todos ?? []).filter((todo) => !todo.done).length;
 	const urgentTodos = (todos ?? []).some(
 		(todo) => !todo.done && todo.priority === "high",
@@ -224,6 +225,27 @@ function ConversationRow({
 			},
 		});
 	};
+
+	const openTodosInRightPanel = () => {
+		useTodosPanelStore.getState().open(workspaceId, conversation.terminalId);
+		open();
+	};
+
+	const todoButtonClass = cn(
+		"flex shrink-0 items-center gap-0.5 rounded-sm px-1 text-[10px] text-muted-foreground hover:bg-background hover:text-foreground",
+		urgentTodos && "text-red-500",
+		todos?.length === 0 &&
+			!todosOpen &&
+			"opacity-0 focus-visible:opacity-100 group-hover/conversation:opacity-100",
+	);
+	const todoButtonContent = (
+		<>
+			<LuListChecks className="size-3" />
+			{(todos?.length ?? 0) > 0 && (
+				<span>{openTodos > 0 ? openTodos : "✓"}</span>
+			)}
+		</>
+	);
 
 	const openSubagent = (subagent: SidebarSubagent) => {
 		void navigateToV2Workspace(workspaceId, navigate, {
@@ -319,24 +341,25 @@ function ConversationRow({
 					working={conversation.state === "working"}
 				/>
 				{showTodos &&
-					(todosInline ? (
+					(todosPlacement === "right-panel" ? (
+						<button
+							type="button"
+							aria-label={t`To-dos`}
+							title={t`Open the to-dos in the right panel`}
+							onClick={openTodosInRightPanel}
+							className={todoButtonClass}
+						>
+							{todoButtonContent}
+						</button>
+					) : todosPlacement === "inline" ? (
 						<button
 							type="button"
 							aria-expanded={todosOpen}
 							aria-label={t`To-dos`}
 							onClick={() => setTodosOpen((value) => !value)}
-							className={cn(
-								"flex shrink-0 items-center gap-0.5 rounded-sm px-1 text-[10px] text-muted-foreground hover:bg-background hover:text-foreground",
-								urgentTodos && "text-red-500",
-								todos?.length === 0 &&
-									!todosOpen &&
-									"opacity-0 focus-visible:opacity-100 group-hover/conversation:opacity-100",
-							)}
+							className={todoButtonClass}
 						>
-							<LuListChecks className="size-3" />
-							{(todos?.length ?? 0) > 0 && (
-								<span>{openTodos > 0 ? openTodos : "✓"}</span>
-							)}
+							{todoButtonContent}
 						</button>
 					) : (
 						<Popover open={todosOpen} onOpenChange={setTodosOpen}>
@@ -345,18 +368,9 @@ function ConversationRow({
 									type="button"
 									aria-expanded={todosOpen}
 									aria-label={t`To-dos`}
-									className={cn(
-										"flex shrink-0 items-center gap-0.5 rounded-sm px-1 text-[10px] text-muted-foreground hover:bg-background hover:text-foreground",
-										urgentTodos && "text-red-500",
-										todos?.length === 0 &&
-											!todosOpen &&
-											"opacity-0 focus-visible:opacity-100 group-hover/conversation:opacity-100",
-									)}
+									className={todoButtonClass}
 								>
-									<LuListChecks className="size-3" />
-									{(todos?.length ?? 0) > 0 && (
-										<span>{openTodos > 0 ? openTodos : "✓"}</span>
-									)}
+									{todoButtonContent}
 								</button>
 							</PopoverTrigger>
 							<PopoverContent
@@ -409,7 +423,7 @@ function ConversationRow({
 					))}
 				</ul>
 			)}
-			{showTodos && todosInline && todosOpen && (
+			{showTodos && todosPlacement === "inline" && todosOpen && (
 				<ConversationTodos
 					terminalId={conversation.terminalId}
 					todos={todos ?? []}
