@@ -216,6 +216,7 @@ export function createCommands(options: CommandsOptions): ChatCommands {
 					sessionId,
 					scopeId: parsed.scopeId,
 					harness: parsed.harness,
+					title: parsed.title,
 				});
 				try {
 					options.live.create({

@@ -566,7 +566,7 @@ interface TerminalSession {
 	exitCode: number;
 	exitSignal: number;
 	listed: boolean;
-	/** Last title the shell reported over OSC. Lives and dies with the process. */
+	/** Last title the shell reported over OSC, seeded from `last_title`. */
 	title: string | null;
 	/**
 	 * The name the user gave this session, mirrored from `custom_title`. It
@@ -986,6 +986,7 @@ export async function listLiveTerminalSessions(
 			status: terminalSessions.status,
 			createdAt: terminalSessions.createdAt,
 			customTitle: terminalSessions.customTitle,
+			lastTitle: terminalSessions.lastTitle,
 			disposeRequestedAt: terminalSessions.disposeRequestedAt,
 		})
 		.from(terminalSessions)
@@ -1008,9 +1009,7 @@ export async function listLiveTerminalSessions(
 			exited: false,
 			exitCode: 0,
 			attached: false,
-			// No OSC title to fall back on — this process has never watched
-			// this session's output — but the name it was given is durable.
-			title: row.customTitle,
+			title: row.customTitle ?? row.lastTitle,
 			customTitle: row.customTitle,
 		});
 	}
@@ -1495,10 +1494,89 @@ function broadcastDisplayTitle(
 	broadcastMessage(session, { type: "title", title: after });
 }
 
+// Agents animate a spinner in their title, so writes are throttled.
+const TITLE_PERSIST_INTERVAL_MS = 3_000;
+const titlePersistTimers = new Map<string, ReturnType<typeof setTimeout>>();
+
+function persistSessionTitle(session: TerminalSession) {
+	if (session.title === null || titlePersistTimers.has(session.terminalId)) {
+		return;
+	}
+	const timer = setTimeout(() => {
+		titlePersistTimers.delete(session.terminalId);
+		if (session.title === null) return;
+		try {
+			session.db
+				.update(terminalSessions)
+				.set({ lastTitle: session.title })
+				.where(eq(terminalSessions.id, session.terminalId))
+				.run();
+		} catch (error) {
+			console.warn("[terminal] failed to persist session title", {
+				terminalId: session.terminalId,
+				error,
+			});
+		}
+	}, TITLE_PERSIST_INTERVAL_MS);
+	timer.unref?.();
+	titlePersistTimers.set(session.terminalId, timer);
+}
+
 function setSessionTitle(session: TerminalSession, title: string | null) {
 	if (session.title === title) return;
 	const before = sessionDisplayTitle(session);
 	session.title = title;
+	broadcastDisplayTitle(session, before);
+	persistSessionTitle(session);
+}
+
+/**
+ * Carry a session's names to the terminal it was resumed into, so the
+ * conversation keeps its name across a quit or a host restart.
+ */
+export function inheritTerminalSessionTitles({
+	db,
+	fromTerminalId,
+	toTerminalId,
+}: {
+	db: HostDb;
+	fromTerminalId: string;
+	toTerminalId: string;
+}): void {
+	const source = db
+		.select({
+			customTitle: terminalSessions.customTitle,
+			lastTitle: terminalSessions.lastTitle,
+		})
+		.from(terminalSessions)
+		.where(eq(terminalSessions.id, fromTerminalId))
+		.get();
+	const lastTitle = sessions.get(fromTerminalId)?.title ?? source?.lastTitle;
+	const customTitle = source?.customTitle ?? null;
+	if (!customTitle && !lastTitle) return;
+
+	const target = db
+		.select({
+			customTitle: terminalSessions.customTitle,
+			lastTitle: terminalSessions.lastTitle,
+		})
+		.from(terminalSessions)
+		.where(eq(terminalSessions.id, toTerminalId))
+		.get();
+	if (!target) return;
+	db.update(terminalSessions)
+		.set({
+			customTitle: target.customTitle ?? customTitle,
+			lastTitle: target.lastTitle ?? lastTitle ?? null,
+		})
+		.where(eq(terminalSessions.id, toTerminalId))
+		.run();
+
+	const session = sessions.get(toTerminalId);
+	if (!session) return;
+	const before = sessionDisplayTitle(session);
+	session.customTitle ??= customTitle;
+	session.title ??= lastTitle ?? null;
 	broadcastDisplayTitle(session, before);
 }
 
@@ -3246,12 +3324,15 @@ async function createTerminalSessionUnlocked({
 	// Read back rather than default to null: relaunching into the same
 	// terminal id (adoption, an agent resume) must keep the name it was given,
 	// and the conflict update above deliberately leaves the column alone.
-	const customTitle =
-		db
-			.select({ customTitle: terminalSessions.customTitle })
-			.from(terminalSessions)
-			.where(eq(terminalSessions.id, terminalId))
-			.get()?.customTitle ?? null;
+	const savedTitles = db
+		.select({
+			customTitle: terminalSessions.customTitle,
+			lastTitle: terminalSessions.lastTitle,
+		})
+		.from(terminalSessions)
+		.where(eq(terminalSessions.id, terminalId))
+		.get();
+	const customTitle = savedTitles?.customTitle ?? null;
 
 	// Determine shell readiness support. Adopted sessions are already past
 	// shell startup, so treat them as immediately ready — the OSC 133;A
@@ -3305,7 +3386,7 @@ async function createTerminalSessionUnlocked({
 		exitCode: 0,
 		exitSignal: 0,
 		listed,
-		title: null,
+		title: savedTitles?.lastTitle ?? null,
 		customTitle,
 		titleScanState: createTerminalTitleScanState(),
 		eventBus,

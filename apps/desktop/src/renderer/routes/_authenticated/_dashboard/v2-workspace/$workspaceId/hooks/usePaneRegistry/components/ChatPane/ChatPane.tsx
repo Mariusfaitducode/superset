@@ -78,12 +78,14 @@ export function ChatPane({
 				modelId={data.chatModelId}
 				modelLabel={data.chatModelLabel}
 				modeId={data.chatModeId}
+				title={data.chatTitle}
 				onSessionInfo={({ harnessSessionId, title }) => {
-					const rebound = harnessSessionId !== undefined && data.agent;
-					const retitled = title !== undefined && title !== data.chatTitle;
+					const current = latest.current;
+					const rebound = harnessSessionId !== undefined && current.agent;
+					const retitled = title !== undefined && title !== current.chatTitle;
 					if (!rebound && !retitled) return;
 					ctx.actions.updateData({
-						...data,
+						...current,
 						...(rebound
 							? { agent: { ...rebound, sessionId: harnessSessionId } }
 							: {}),

@@ -11,6 +11,7 @@ import { reconcileMissingTerminalSessions } from "../../../terminal/reaper/reape
 import {
 	createTerminalSessionInternal,
 	disposeSessionAndWait,
+	inheritTerminalSessionTitles,
 } from "../../../terminal/terminal";
 import type {
 	TerminalAgentBinding,
@@ -166,6 +167,18 @@ export async function resumeTerminalAgentSession(
 		}
 
 		markResumeCandidateResumedInto(deps.db, terminalId, result.sessionId);
+		try {
+			inheritTerminalSessionTitles({
+				db: deps.db,
+				fromTerminalId: terminalId,
+				toTerminalId: result.sessionId,
+			});
+		} catch (error) {
+			console.warn("[terminal-agents] failed to carry session titles", {
+				terminalId,
+				error,
+			});
+		}
 
 		// The replaced terminal is dead (or a respawned empty shell nobody
 		// asked for) — drop it now that the session lives elsewhere.

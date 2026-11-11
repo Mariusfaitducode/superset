@@ -1,6 +1,7 @@
 import { Database } from "bun:sqlite";
 import { describe, expect, it } from "bun:test";
 import { resolve } from "node:path";
+import { eq } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/bun-sqlite";
 import { migrate } from "drizzle-orm/bun-sqlite/migrator";
 import type { HostDb } from "../../../db";
@@ -178,6 +179,39 @@ describe("resumeTerminalAgentSession", () => {
 				occurredAt: expect.any(Number),
 			},
 		]);
+	});
+
+	it("carries the session's names to the terminal it resumed into", async () => {
+		const db = createTestDb();
+		seedResumableBinding(db);
+		db.update(terminalSessions)
+			.set({ customTitle: "Billing fix", lastTitle: "✳ Fix invoices" })
+			.where(eq(terminalSessions.id, "t1"))
+			.run();
+		const { deps } = createDeps(db, {
+			runAgent: async () => {
+				db.insert(terminalSessions)
+					.values({ id: "t-new", originWorkspaceId: "ws-1", createdAt: 5 })
+					.run();
+				return { kind: "terminal", sessionId: "t-new", label: "Claude" };
+			},
+		});
+
+		await resumeTerminalAgentSession(deps, {
+			workspaceId: "ws-1",
+			terminalId: "t1",
+		});
+
+		expect(
+			db
+				.select({
+					customTitle: terminalSessions.customTitle,
+					lastTitle: terminalSessions.lastTitle,
+				})
+				.from(terminalSessions)
+				.where(eq(terminalSessions.id, "t-new"))
+				.get(),
+		).toEqual({ customTitle: "Billing fix", lastTitle: "✳ Fix invoices" });
 	});
 
 	it("launches a never-prompted session fresh instead of resuming into nothing", async () => {

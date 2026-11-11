@@ -96,11 +96,13 @@ export function TerminalAgentAutoResume({
 				paneId: ctx.pane.id,
 				data: { terminalId: resumedTerminalId } satisfies TerminalPaneData,
 			});
-			state.setPaneTitleOverride({
-				tabId: ctx.tab.id,
-				paneId: ctx.pane.id,
-				titleOverride: label,
-			});
+			if (!ctx.pane.titleOverride) {
+				state.setPaneTitleOverride({
+					tabId: ctx.tab.id,
+					paneId: ctx.pane.id,
+					titleOverride: label,
+				});
+			}
 			if (existing && existing.paneId !== ctx.pane.id) {
 				state.closePane(existing);
 			}

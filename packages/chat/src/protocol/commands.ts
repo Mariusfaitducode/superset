@@ -18,6 +18,8 @@ export const createSessionInputSchema = z.object({
 	modelId: z.string().optional(),
 	resume: z.object({ harnessSessionId: z.string().min(1) }).optional(),
 	terminalId: z.string().min(1).optional(),
+	/** Name a resumed conversation already had, until its agent renames it. */
+	title: z.string().min(1).max(500).optional(),
 });
 export type CreateSessionInput = z.infer<typeof createSessionInputSchema>;
 

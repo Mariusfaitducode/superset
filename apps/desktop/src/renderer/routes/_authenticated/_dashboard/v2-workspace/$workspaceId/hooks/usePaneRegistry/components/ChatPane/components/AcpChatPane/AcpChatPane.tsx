@@ -68,6 +68,7 @@ export function AcpChatPane({
 	modelId,
 	modelLabel,
 	modeId,
+	title,
 }: {
 	workspaceId: string;
 	terminalId: string;
@@ -89,6 +90,8 @@ export function AcpChatPane({
 	modelId?: string;
 	modelLabel?: string;
 	modeId?: string;
+	/** The pane's saved conversation name, handed to a resumed session. */
+	title?: string;
 }) {
 	const { t } = useLingui();
 	const { client, wiring } = useSessionClient(sessionId);
@@ -164,6 +167,7 @@ export function AcpChatPane({
 										...(modelId ? { modelId } : {}),
 										...(startModeId ? { modeId: startModeId } : {}),
 										...(resume ? { resume: { harnessSessionId: resume } } : {}),
+										...(resume && title ? { title } : {}),
 									})
 									.then((created) => created.sessionId),
 							isReachableFailure: (error) =>
@@ -194,6 +198,7 @@ export function AcpChatPane({
 			modelId,
 			modeId,
 			agent,
+			title,
 		],
 	);
 
