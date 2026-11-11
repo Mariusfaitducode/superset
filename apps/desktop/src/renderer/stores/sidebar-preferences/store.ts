@@ -7,6 +7,8 @@ export type WaitingTint = "off" | "subtle" | "strong";
 
 export interface SidebarPreferences extends SidebarAppearance {
 	showConversations: boolean;
+	/** A conversation has one name, shared by the sidebar and the terminal tabs. */
+	syncConversationNames: boolean;
 	/** Conversations whose agent has not started a turn yet. */
 	showIdleConversations: boolean;
 	showConversationStats: boolean;
@@ -42,6 +44,7 @@ export type SidebarPreferenceKey = {
 
 export const DEFAULT_SIDEBAR_PREFERENCES: SidebarPreferences = {
 	showConversations: true,
+	syncConversationNames: true,
 	showIdleConversations: true,
 	showConversationStats: true,
 	showTurnTime: true,

@@ -15280,6 +15280,9 @@ msgstr "Đổi tên workspace"
 msgid "Rename..."
 msgstr "Đổi tên..."
 
+msgid "Renaming a conversation in the sidebar or on its terminal tab renames it in both places."
+msgstr "Đổi tên cuộc trò chuyện ở thanh bên hoặc trên tab terminal sẽ đổi tên ở cả hai nơi."
+
 msgid "Renaming branch to {newName}..."
 msgstr "Đang đổi tên nhánh thành {newName}..."
 
@@ -16062,6 +16065,9 @@ msgstr "Chạy khi tạo không gian làm việc mới."
 
 msgid "Runs when a workspace is deleted."
 msgstr "Chạy khi xóa không gian làm việc."
+
+msgid "Same name in sidebar and tabs"
+msgstr "Cùng tên ở thanh bên và các tab"
 
 msgid "Same version as this app."
 msgstr "Cùng phiên bản với ứng dụng này."

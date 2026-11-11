@@ -1,0 +1,1 @@
+export { clearTerminalNames } from "./clearTerminalNames";

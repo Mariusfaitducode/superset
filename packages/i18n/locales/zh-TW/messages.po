@@ -15280,6 +15280,9 @@ msgstr "重新命名工作區"
 msgid "Rename..."
 msgstr "重新命名..."
 
+msgid "Renaming a conversation in the sidebar or on its terminal tab renames it in both places."
+msgstr "在側邊欄或其終端機分頁中重新命名對話，會同時更改兩處的名稱。"
+
 msgid "Renaming branch to {newName}..."
 msgstr "正在將分支重新命名為{newName}..."
 
@@ -16062,6 +16065,9 @@ msgstr "建立新工作區時執行。"
 
 msgid "Runs when a workspace is deleted."
 msgstr "刪除工作區時執行。"
+
+msgid "Same name in sidebar and tabs"
+msgstr "側邊欄與分頁使用相同名稱"
 
 msgid "Same version as this app."
 msgstr "與此應用程式版本相同。"

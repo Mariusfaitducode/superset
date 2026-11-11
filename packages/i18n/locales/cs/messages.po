@@ -15280,6 +15280,9 @@ msgstr "Přejmenovat pracovní prostor"
 msgid "Rename..."
 msgstr "Přejmenovat..."
 
+msgid "Renaming a conversation in the sidebar or on its terminal tab renames it in both places."
+msgstr "Přejmenování konverzace v postranním panelu nebo na její kartě terminálu ji přejmenuje na obou místech."
+
 msgid "Renaming branch to {newName}..."
 msgstr "Přejmenovávám větev na {newName}..."
 
@@ -16062,6 +16065,9 @@ msgstr "Spouští se při vytvoření pracovního prostoru."
 
 msgid "Runs when a workspace is deleted."
 msgstr "Spouští se při smazání pracovního prostoru."
+
+msgid "Same name in sidebar and tabs"
+msgstr "Stejný název v postranním panelu a na kartách"
 
 msgid "Same version as this app."
 msgstr "Stejná verze jako tato aplikace."

@@ -62,6 +62,7 @@ import { useRunWorkspaceCreationPresets } from "./hooks/useRunWorkspaceCreationP
 import { useShellInteractionPassthrough } from "./hooks/useShellInteractionPassthrough";
 import { useSlotElement } from "./hooks/useSlotElement";
 import { useTabCloseGuard } from "./hooks/useTabCloseGuard";
+import { useTerminalTabRename } from "./hooks/useTerminalTabRename";
 import { useV2PresetExecution } from "./hooks/useV2PresetExecution";
 import { useV2TerminalLauncher } from "./hooks/useV2TerminalLauncher";
 import { useV2WorkspacePaneLayout } from "./hooks/useV2WorkspacePaneLayout";
@@ -192,6 +193,7 @@ function V2WorkspaceContent() {
 		[setRightSidebarOpen],
 	);
 	const { store, isLayoutReady, hasRow } = useV2WorkspacePaneLayout();
+	const renameTerminalTab = useTerminalTabRename({ workspaceId, store });
 	useClearActivePaneAttention({ store });
 	useReportVisibleTerminal({ store, slot: "center" });
 	const rightPaneAreaFlag = useFeatureFlagEnabled(
@@ -669,6 +671,7 @@ function V2WorkspaceContent() {
 									paneActions={defaultPaneActions}
 									contextMenuActions={centerContextMenuActions}
 									onPaneError={reportRendererError}
+									onRenameTab={renameTerminalTab}
 									renderTabIcon={renderBrowserTabIcon}
 									renderTabAccessory={(tab) => (
 										<V2NotificationStatusIndicator

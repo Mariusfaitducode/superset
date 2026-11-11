@@ -1,7 +1,11 @@
+import type { WorkspaceState } from "@superset/panes";
 import { useQueryClient } from "@tanstack/react-query";
 import { useCallback } from "react";
+import { clearTerminalNames } from "renderer/lib/clearTerminalNames";
 import { getHostServiceClientByUrl } from "renderer/lib/host-service-client";
+import { useCollections } from "renderer/routes/_authenticated/providers/CollectionsProvider";
 import { useHostWorkspaces } from "renderer/routes/_authenticated/providers/HostWorkspacesProvider";
+import { useSidebarPreference } from "renderer/stores/sidebar-preferences";
 import { hostTerminalTitlesQueryKey } from "./hostTerminalTitles";
 
 /**
@@ -17,6 +21,8 @@ export function useRenameConversation({
 	hostId: string;
 }) {
 	const queryClient = useQueryClient();
+	const collections = useCollections();
+	const syncNames = useSidebarPreference("syncConversationNames");
 	const { cache } = useHostWorkspaces();
 	const hostUrl = cache.isSandboxHost(hostId)
 		? null
@@ -30,10 +36,20 @@ export function useRenameConversation({
 				terminalId,
 				title,
 			});
+			const row = collections.v2WorkspaceLocalState.get(workspaceId);
+			const layout = row?.paneLayout as WorkspaceState<unknown> | undefined;
+			if (syncNames && layout) {
+				const cleared = clearTerminalNames(layout, terminalId);
+				if (cleared !== layout) {
+					collections.v2WorkspaceLocalState.update(workspaceId, (draft) => {
+						draft.paneLayout = cleared as typeof draft.paneLayout;
+					});
+				}
+			}
 			await queryClient.invalidateQueries({
 				queryKey: hostTerminalTitlesQueryKey(hostUrl),
 			});
 		},
-		[hostUrl, queryClient, workspaceId],
+		[hostUrl, queryClient, workspaceId, collections, syncNames],
 	);
 }

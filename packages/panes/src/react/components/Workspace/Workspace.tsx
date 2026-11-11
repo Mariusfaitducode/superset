@@ -24,6 +24,7 @@ export function Workspace<TData>({
 	renderBelowTabBar,
 	onBeforeCloseTab,
 	onAfterCloseTab,
+	onRenameTab,
 	onInteractionStateChange,
 	paneActions,
 	contextMenuActions,
@@ -123,9 +124,11 @@ export function Workspace<TData>({
 						await closeTab(tab.id);
 					}
 				}}
-				onRenameTab={(tabId, title) =>
-					store.getState().setTabTitleOverride({ tabId, titleOverride: title })
-				}
+				onRenameTab={(tabId, title) => {
+					const tab = tabs.find((candidate) => candidate.id === tabId);
+					if (tab && onRenameTab?.(tab, title)) return;
+					store.getState().setTabTitleOverride({ tabId, titleOverride: title });
+				}}
 				onReorderTab={(tabId, toIndex) =>
 					store.getState().reorderTab({ tabId, toIndex })
 				}

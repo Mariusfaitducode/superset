@@ -74,6 +74,8 @@ export interface PaneDefinition<TData> {
 	 * changes — without mirroring runtime state into the pane store.
 	 */
 	titleSource?(pane: Pane<TData>): PaneTitleSource | undefined;
+	/** The live title, when there is one, wins over the pane's and tab's names. */
+	liveTitleWins?(pane: Pane<TData>): boolean;
 	getIcon?(context: RendererContext<TData>): ReactNode;
 	renderTitle?(context: RendererContext<TData>): ReactNode;
 	renderHeaderExtras?(context: RendererContext<TData>): ReactNode;
@@ -130,6 +132,8 @@ export interface WorkspaceProps<TData> {
 	) => boolean | Promise<boolean>;
 	onBeforeCloseTab?: (tab: Tab<TData>) => boolean | Promise<boolean>;
 	onAfterCloseTab?: (tab: Tab<TData>) => void;
+	/** Return true when the rename was handled; the tab's name is then left as is. */
+	onRenameTab?: (tab: Tab<TData>, title: string | undefined) => boolean;
 	onInteractionStateChange?: (state: WorkspaceInteractionState) => void;
 	paneActions?:
 		| PaneActionConfig<TData>[]

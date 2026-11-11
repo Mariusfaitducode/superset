@@ -15280,6 +15280,9 @@ msgstr "Rinomina il workspace"
 msgid "Rename..."
 msgstr "Rinomina..."
 
+msgid "Renaming a conversation in the sidebar or on its terminal tab renames it in both places."
+msgstr "Rinominare una conversazione nella barra laterale o nella sua scheda del terminale la rinomina in entrambi i punti."
+
 msgid "Renaming branch to {newName}..."
 msgstr "Rinomina del branch in {newName}..."
 
@@ -16062,6 +16065,9 @@ msgstr "Eseguito quando viene creato uno spazio di lavoro."
 
 msgid "Runs when a workspace is deleted."
 msgstr "Eseguito quando viene eliminato uno spazio di lavoro."
+
+msgid "Same name in sidebar and tabs"
+msgstr "Stesso nome nella barra laterale e nelle schede"
 
 msgid "Same version as this app."
 msgstr "Stessa versione di questa app."

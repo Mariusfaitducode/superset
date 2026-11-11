@@ -15280,6 +15280,9 @@ msgstr "Werkruimte hernoemen"
 msgid "Rename..."
 msgstr "Naam wijzigen..."
 
+msgid "Renaming a conversation in the sidebar or on its terminal tab renames it in both places."
+msgstr "Als je een gesprek in de zijbalk of op het terminaltabblad hernoemt, wordt het op beide plekken hernoemd."
+
 msgid "Renaming branch to {newName}..."
 msgstr "Branch hernoemen naar {newName}..."
 
@@ -16062,6 +16065,9 @@ msgstr "Wordt uitgevoerd bij het aanmaken van een werkruimte."
 
 msgid "Runs when a workspace is deleted."
 msgstr "Wordt uitgevoerd bij het verwijderen van een werkruimte."
+
+msgid "Same name in sidebar and tabs"
+msgstr "Zelfde naam in zijbalk en tabbladen"
 
 msgid "Same version as this app."
 msgstr "Dezelfde versie als deze app."

@@ -16,6 +16,7 @@ import { eq } from "@tanstack/db";
 import { useLiveQuery } from "@tanstack/react-db";
 import { Check, LoaderCircle, Pencil, Plus, Trash2 } from "lucide-react";
 import { useCallback, useMemo, useState, useSyncExternalStore } from "react";
+import { clearTerminalNames } from "renderer/lib/clearTerminalNames";
 import { useRenderStressInstrumentation } from "renderer/lib/performance/stress-instrumentation";
 import { markTerminalForBackground } from "renderer/lib/terminal/terminal-background-intents";
 import { terminalRuntimeRegistry } from "renderer/lib/terminal/terminal-runtime-registry";
@@ -26,6 +27,7 @@ import type {
 } from "renderer/routes/_authenticated/_dashboard/v2-workspace/$workspaceId/types";
 import { useCollections } from "renderer/routes/_authenticated/providers/CollectionsProvider";
 import { getRelativeTime } from "renderer/screens/main/components/WorkspacesListView/utils";
+import { useSidebarPreference } from "renderer/stores/sidebar-preferences";
 import { TerminalPaneIcon } from "../TerminalPaneIcon";
 import { RenameSessionDialog } from "./components/RenameSessionDialog";
 import {
@@ -114,6 +116,7 @@ export function TerminalSessionDropdown({
 	const utils = workspaceTrpc.useUtils();
 	const killTerminalSession = workspaceTrpc.terminal.killSession.useMutation();
 	const renameTerminalSession = workspaceTrpc.terminal.rename.useMutation();
+	const syncNames = useSidebarPreference("syncConversationNames");
 	const [renameTarget, setRenameTarget] = useState<RenameTarget | null>(null);
 	const sessionsInput = useMemo(() => ({ workspaceId }), [workspaceId]);
 	const sessionsQuery = workspaceTrpc.terminal.list.useQuery(sessionsInput, {
@@ -280,7 +283,13 @@ export function TerminalSessionDropdown({
 		});
 		// A pane label from a preset or a launch would sit on top of the name
 		// the user just chose, so the name they chose retires it.
-		if (name.trim()) {
+		if (name.trim() && syncNames) {
+			context.store
+				.getState()
+				.replaceState((layout) =>
+					clearTerminalNames(layout, target.terminalId),
+				);
+		} else if (name.trim()) {
 			const state = context.store.getState();
 			const clearLabel = (location: { tabId: string; paneId: string }) =>
 				state.setPaneTitleOverride({ ...location, titleOverride: undefined });

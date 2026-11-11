@@ -74,6 +74,7 @@ export const SETTING_ITEM_ID = {
 	LINKS_PAGE: "links-page",
 
 	SIDEBAR_CONVERSATIONS: "sidebar-conversations",
+	SIDEBAR_SYNC_CONVERSATION_NAMES: "sidebar-sync-conversation-names",
 	SIDEBAR_IDLE_CONVERSATIONS: "sidebar-idle-conversations",
 	SIDEBAR_CONVERSATION_STATS: "sidebar-conversation-stats",
 	SIDEBAR_TURN_TIME: "sidebar-turn-time",
@@ -246,6 +247,7 @@ export const SETTING_ITEM_VARIANT: Record<SettingItemId, SettingVariant> = {
 	[SETTING_ITEM_ID.LINKS_PAGE]: "v2",
 
 	[SETTING_ITEM_ID.SIDEBAR_CONVERSATIONS]: "v2",
+	[SETTING_ITEM_ID.SIDEBAR_SYNC_CONVERSATION_NAMES]: "v2",
 	[SETTING_ITEM_ID.SIDEBAR_IDLE_CONVERSATIONS]: "v2",
 	[SETTING_ITEM_ID.SIDEBAR_CONVERSATION_STATS]: "v2",
 	[SETTING_ITEM_ID.SIDEBAR_TURN_TIME]: "v2",
@@ -1425,6 +1427,23 @@ export const SETTINGS_ITEMS: SettingsItem[] = [
 			"terminal",
 			"chat",
 			"behavior",
+		],
+	},
+	{
+		id: SETTING_ITEM_ID.SIDEBAR_SYNC_CONVERSATION_NAMES,
+		section: "sidebar",
+		title: "Same name in sidebar and tabs",
+		description:
+			"Renaming a conversation in the sidebar or on its terminal tab renames it in both places",
+		keywords: [
+			"sidebar",
+			"tabs",
+			"terminal",
+			"rename",
+			"name",
+			"title",
+			"sync",
+			"conversation",
 		],
 	},
 	{
