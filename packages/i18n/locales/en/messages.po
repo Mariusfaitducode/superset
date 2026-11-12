@@ -37,6 +37,9 @@ msgstr ".sh"
 msgid "· none right now"
 msgstr "· none right now"
 
+msgid "· The target on a name plate puts it in focus"
+msgstr "· The target on a name plate puts it in focus"
+
 msgid "· updated {updatedAgo}"
 msgstr "· updated {updatedAgo}"
 
@@ -1039,6 +1042,9 @@ msgstr "{hidden, plural, one {Show # reply} other {Show # replies}}"
 msgid "{hidden, plural, one {View # more reply} other {View # more replies}}"
 msgstr "{hidden, plural, one {View # more reply} other {View # more replies}}"
 
+msgid "{hiddenByFocus} more outside your focus. Turn off Focus to see them."
+msgstr "{hiddenByFocus} more outside your focus. Turn off Focus to see them."
+
 msgid "{hiddenCount, plural, one {Show # more frame} other {Show # more frames}}"
 msgstr "{hiddenCount, plural, one {Show # more frame} other {Show # more frames}}"
 
@@ -1896,6 +1902,9 @@ msgstr "Add {0} account"
 msgid "Add {0} to workspace"
 msgstr "Add {0} to workspace"
 
+msgid "Add {count} to focus"
+msgstr "Add {count} to focus"
+
 msgid "Add a comment…"
 msgstr "Add a comment…"
 
@@ -2053,6 +2062,9 @@ msgstr "Add tests for the riskiest untested code…"
 msgid "Add tests where they're missing"
 msgstr "Add tests where they're missing"
 
+msgid "Add the current workspace to the ones you are working on, or take it out"
+msgstr "Add the current workspace to the ones you are working on, or take it out"
+
 msgid "Add this label"
 msgstr "Add this label"
 
@@ -2061,6 +2073,12 @@ msgstr "Add to Dictionary"
 
 msgid "Add to favorites"
 msgstr "Add to favorites"
+
+msgid "Add to focus"
+msgstr "Add to focus"
+
+msgid "Add to focus or remove from it"
+msgstr "Add to focus or remove from it"
 
 msgid "Add to project"
 msgstr "Add to project"
@@ -7663,6 +7681,9 @@ msgstr "Extra high"
 msgid "Extra small"
 msgstr "Extra small"
 
+msgid "F adds or removes the selected workspace from focus"
+msgstr "F adds or removes the selected workspace from focus"
+
 msgid "F4 gate · {F4_GATE_SHARE}%"
 msgstr "F4 gate · {F4_GATE_SHARE}%"
 
@@ -8443,8 +8464,15 @@ msgstr "Flame"
 msgid "Fleets of agents plan, implement, review, and test each other's work. Humans set direction, arbitrate exceptions, and own taste. The unit of human attention is no longer the pull request. It is the decision."
 msgstr "Fleets of agents plan, implement, review, and test each other's work. Humans set direction, arbitrate exceptions, and own taste. The unit of human attention is no longer the pull request. It is the decision."
 
+msgctxt "workspace focus filter"
+msgid "Focus"
+msgstr "Focus"
+
 msgid "Focus Chat Input"
 msgstr "Focus Chat Input"
+
+msgid "Focus only · F adds or removes the selected workspace"
+msgstr "Focus only · F adds or removes the selected workspace"
 
 msgid "Focus Pane Down"
 msgstr "Focus Pane Down"
@@ -9556,6 +9584,9 @@ msgstr "in a terminal on this host."
 
 msgid "In all projects"
 msgstr "In all projects"
+
+msgid "In focus"
+msgstr "In focus"
 
 msgid "In just a few months, <0>tens of thousands of engineers</0> run Superset as their primary IDE, at companies like Wix, DoorDash, and Netflix."
 msgstr "In just a few months, <0>tens of thousands of engineers</0> run Superset as their primary IDE, at companies like Wix, DoorDash, and Netflix."
@@ -12425,6 +12456,18 @@ msgstr "No versions yet."
 msgid "No workspace has these labels"
 msgstr "No workspace has these labels"
 
+msgid "No workspace in focus here"
+msgstr "No workspace in focus here"
+
+msgid "No workspace in focus here."
+msgstr "No workspace in focus here."
+
+msgid "No workspace in focus on this host."
+msgstr "No workspace in focus on this host."
+
+msgid "No workspace in focus yet: click the target on a workspace to add it"
+msgstr "No workspace in focus yet: click the target on a workspace to add it"
+
 msgid "No workspace on this host yet."
 msgstr "No workspace on this host yet."
 
@@ -12605,6 +12648,9 @@ msgstr "Nothing here yet."
 
 msgid "Nothing here."
 msgstr "Nothing here."
+
+msgid "Nothing in focus waits on you."
+msgstr "Nothing in focus waits on you."
 
 msgid "Nothing is being tracked"
 msgstr "Nothing is being tracked"
@@ -15156,6 +15202,9 @@ msgstr "Remove"
 msgid "Remove {0}"
 msgstr "Remove {0}"
 
+msgid "Remove {count} from focus"
+msgstr "Remove {count} from focus"
+
 msgid "Remove {label}"
 msgstr "Remove {label}"
 
@@ -15170,6 +15219,9 @@ msgstr "Remove attachment"
 
 msgid "Remove from favorites"
 msgstr "Remove from favorites"
+
+msgid "Remove from focus"
+msgstr "Remove from focus"
 
 msgid "Remove from Queue"
 msgstr "Remove from Queue"
@@ -17106,6 +17158,12 @@ msgstr "Show on Sidebar"
 msgid "Show only {0}"
 msgstr "Show only {0}"
 
+msgid "Show only the workspaces in focus"
+msgstr "Show only the workspaces in focus"
+
+msgid "Show only workspaces in focus (toggle)"
+msgstr "Show only workspaces in focus (toggle)"
+
 msgid "Show open items"
 msgstr "Show open items"
 
@@ -17168,6 +17226,9 @@ msgstr "Show usage tab on sidebar"
 
 msgid "showArrow opt-in"
 msgstr "showArrow opt-in"
+
+msgid "Showing only the workspaces in focus. Click to show all."
+msgstr "Showing only the workspaces in focus. Click to show all."
 
 msgid "Showing the latest {MAX_COMMITS} commits. Filter by branch to go further back."
 msgstr "Showing the latest {MAX_COMMITS} commits. Filter by branch to go further back."
@@ -19652,6 +19713,9 @@ msgstr "Toggle theme"
 
 msgid "Toggle value visibility"
 msgstr "Toggle value visibility"
+
+msgid "Toggle Workspace Focus"
+msgstr "Toggle Workspace Focus"
 
 msgid "Toggle Workspaces Sidebar"
 msgstr "Toggle Workspaces Sidebar"

@@ -37,6 +37,9 @@ msgstr ".sh"
 msgid "· none right now"
 msgstr "· сейчас нет"
 
+msgid "· The target on a name plate puts it in focus"
+msgstr "· Мишень на табличке добавляет его в фокус"
+
 msgid "· updated {updatedAgo}"
 msgstr "· обновлено {updatedAgo}"
 
@@ -1039,6 +1042,9 @@ msgstr "{hidden, plural, one {Показать # ответ} few {Показат
 msgid "{hidden, plural, one {View # more reply} other {View # more replies}}"
 msgstr "{hidden, plural, one {Показать ещё # ответ} few {Показать ещё # ответа} many {Показать ещё # ответов} other {Показать ещё # ответа}}"
 
+msgid "{hiddenByFocus} more outside your focus. Turn off Focus to see them."
+msgstr "Ещё {hiddenByFocus} вне фокуса. Отключите Фокус, чтобы их увидеть."
+
 msgid "{hiddenCount, plural, one {Show # more frame} other {Show # more frames}}"
 msgstr "{hiddenCount, plural, one {Показать ещё # кадр} few {Показать ещё # кадра} many {Показать ещё # кадров} other {Показать ещё # кадра}}"
 
@@ -1896,6 +1902,9 @@ msgstr "Добавить аккаунт {0}"
 msgid "Add {0} to workspace"
 msgstr "Добавить {0} в рабочую область"
 
+msgid "Add {count} to focus"
+msgstr "Добавить {count} в фокус"
+
 msgid "Add a comment…"
 msgstr "Добавьте комментарий…"
 
@@ -2053,6 +2062,9 @@ msgstr "Добавь тесты для самого рискованного н�
 msgid "Add tests where they're missing"
 msgstr "Добавить тесты там, где их нет"
 
+msgid "Add the current workspace to the ones you are working on, or take it out"
+msgstr "Добавляет текущее рабочее пространство к тем, над которыми вы работаете, или убирает его"
+
 msgid "Add this label"
 msgstr "Добавить эту метку"
 
@@ -2061,6 +2073,12 @@ msgstr "Добавить в словарь"
 
 msgid "Add to favorites"
 msgstr "Добавить в избранное"
+
+msgid "Add to focus"
+msgstr "Добавить в фокус"
+
+msgid "Add to focus or remove from it"
+msgstr "Добавить в фокус или убрать"
 
 msgid "Add to project"
 msgstr "Добавить в проект"
@@ -7663,6 +7681,9 @@ msgstr "Очень высокий"
 msgid "Extra small"
 msgstr "Очень маленький"
 
+msgid "F adds or removes the selected workspace from focus"
+msgstr "F добавляет или убирает выбранное пространство из фокуса"
+
 msgid "F4 gate · {F4_GATE_SHARE}%"
 msgstr "Шлюз F4 · {F4_GATE_SHARE}%"
 
@@ -8443,8 +8464,15 @@ msgstr "Пламя"
 msgid "Fleets of agents plan, implement, review, and test each other's work. Humans set direction, arbitrate exceptions, and own taste. The unit of human attention is no longer the pull request. It is the decision."
 msgstr "Флоты агентов планируют, реализуют, проверяют и тестируют работу друг друга. Люди задают направление, разбирают исключения и отвечают за вкус. Единица человеческого внимания — уже не пул-реквест, а решение."
 
+msgctxt "workspace focus filter"
+msgid "Focus"
+msgstr "Фокус"
+
 msgid "Focus Chat Input"
 msgstr "Фокус на поле чата"
+
+msgid "Focus only · F adds or removes the selected workspace"
+msgstr "Только фокус · F добавляет или убирает выбранное"
 
 msgid "Focus Pane Down"
 msgstr "Фокус на панель снизу"
@@ -9556,6 +9584,9 @@ msgstr "в терминале на этом хосте."
 
 msgid "In all projects"
 msgstr "Во всех проектах"
+
+msgid "In focus"
+msgstr "В фокусе"
 
 msgid "In just a few months, <0>tens of thousands of engineers</0> run Superset as their primary IDE, at companies like Wix, DoorDash, and Netflix."
 msgstr "Всего за несколько месяцев <0>десятки тысяч инженеров</0> используют Superset как основную IDE — в таких компаниях, как Wix, DoorDash и Netflix."
@@ -12425,6 +12456,18 @@ msgstr "Версий пока нет."
 msgid "No workspace has these labels"
 msgstr "Нет рабочих пространств с этими метками"
 
+msgid "No workspace in focus here"
+msgstr "Здесь нет пространств в фокусе"
+
+msgid "No workspace in focus here."
+msgstr "Здесь нет пространств в фокусе."
+
+msgid "No workspace in focus on this host."
+msgstr "На этом хосте нет пространств в фокусе."
+
+msgid "No workspace in focus yet: click the target on a workspace to add it"
+msgstr "Пока нет пространств в фокусе: нажмите на мишень у пространства"
+
 msgid "No workspace on this host yet."
 msgstr "На этом хосте пока нет рабочих пространств."
 
@@ -12605,6 +12648,9 @@ msgstr "Здесь пока пусто."
 
 msgid "Nothing here."
 msgstr "Здесь пусто."
+
+msgid "Nothing in focus waits on you."
+msgstr "В фокусе ничего вас не ждёт."
 
 msgid "Nothing is being tracked"
 msgstr "Ничего не отслеживается"
@@ -15156,6 +15202,9 @@ msgstr "Удалить"
 msgid "Remove {0}"
 msgstr "Удалить {0}"
 
+msgid "Remove {count} from focus"
+msgstr "Убрать {count} из фокуса"
+
 msgid "Remove {label}"
 msgstr "Удалить {label}"
 
@@ -15170,6 +15219,9 @@ msgstr "Удалить вложение"
 
 msgid "Remove from favorites"
 msgstr "Удалить из избранного"
+
+msgid "Remove from focus"
+msgstr "Убрать из фокуса"
 
 msgid "Remove from Queue"
 msgstr "Убрать из очереди"
@@ -17106,6 +17158,12 @@ msgstr "Показать на боковой панели"
 msgid "Show only {0}"
 msgstr "Показать только {0}"
 
+msgid "Show only the workspaces in focus"
+msgstr "Показывать только пространства в фокусе"
+
+msgid "Show only workspaces in focus (toggle)"
+msgstr "Показывать только пространства в фокусе (переключить)"
+
 msgid "Show open items"
 msgstr "Показывать только открытые"
 
@@ -17168,6 +17226,9 @@ msgstr "Показывать вкладку использования на бо
 
 msgid "showArrow opt-in"
 msgstr "showArrow по желанию"
+
+msgid "Showing only the workspaces in focus. Click to show all."
+msgstr "Показаны только пространства в фокусе. Нажмите, чтобы показать все."
 
 msgid "Showing the latest {MAX_COMMITS} commits. Filter by branch to go further back."
 msgstr "Последние {MAX_COMMITS} коммитов. Отфильтруйте по ветке, чтобы уйти глубже."
@@ -19652,6 +19713,9 @@ msgstr "Переключить тему"
 
 msgid "Toggle value visibility"
 msgstr "Показать или скрыть значение"
+
+msgid "Toggle Workspace Focus"
+msgstr "Переключить фокус пространства"
 
 msgid "Toggle Workspaces Sidebar"
 msgstr "Переключить боковую панель рабочих областей"

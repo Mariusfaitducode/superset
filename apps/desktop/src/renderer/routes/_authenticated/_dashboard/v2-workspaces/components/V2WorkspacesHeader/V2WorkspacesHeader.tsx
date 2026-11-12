@@ -36,6 +36,7 @@ import {
 	LuTerminal,
 	LuUsers,
 } from "react-icons/lu";
+import { WorkspaceFocusFilterChip } from "renderer/components/WorkspaceFocus";
 import { useOpenNewWorkspace } from "renderer/hooks/useOpenNewWorkspace";
 import { PageHeader } from "renderer/routes/_authenticated/_dashboard/components/PageHeader";
 import { SubmenuValue } from "renderer/routes/_authenticated/_dashboard/components/SubmenuValue";
@@ -392,6 +393,7 @@ export function V2WorkspacesHeader({
 				/>
 
 				<div className="flex min-w-0 items-center gap-2 overflow-x-auto hide-scrollbar">
+					<WorkspaceFocusFilterChip size="md" className="h-8" />
 					<DropdownMenu modal={false}>
 						<DropdownMenuTrigger asChild>
 							<ToolbarMenuButton isActive={projectFilters.length > 0}>

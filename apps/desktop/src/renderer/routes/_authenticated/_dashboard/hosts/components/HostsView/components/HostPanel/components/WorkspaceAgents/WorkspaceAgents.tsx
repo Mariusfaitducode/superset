@@ -1,6 +1,7 @@
 import { useLingui } from "@lingui/react/macro";
 import { useNavigate } from "@tanstack/react-router";
 import { LuGitBranch } from "react-icons/lu";
+import { WorkspaceFocusToggle } from "renderer/components/WorkspaceFocus";
 import type { HostAgentActions } from "renderer/routes/_authenticated/_dashboard/hosts/hooks/useHostAgentActions";
 import type {
 	HostAgentView,
@@ -32,6 +33,7 @@ export function WorkspaceAgents({
 	return (
 		<section className="flex flex-col">
 			<div className="flex h-8 items-center gap-2 px-1.5">
+				<WorkspaceFocusToggle workspaceId={workspace.id} />
 				<button
 					type="button"
 					onClick={() => void navigateToV2Workspace(workspace.id, navigate)}

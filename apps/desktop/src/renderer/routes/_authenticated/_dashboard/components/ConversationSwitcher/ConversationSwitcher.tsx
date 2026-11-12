@@ -21,6 +21,10 @@ import { useEffect, useMemo, useState } from "react";
 import { LuBot } from "react-icons/lu";
 import { usePresetIcon } from "renderer/assets/app-icons/preset-icons";
 import {
+	WorkspaceFocusFilterChip,
+	WorkspaceFocusMark,
+} from "renderer/components/WorkspaceFocus";
+import {
 	type AgentConversation,
 	useAgentConversations,
 } from "renderer/hooks/useAgentConversations";
@@ -41,6 +45,7 @@ import { LABEL_PILL_CLASS } from "renderer/routes/_authenticated/_dashboard/comp
 import { navigateToV2Workspace } from "renderer/routes/_authenticated/_dashboard/utils/workspace-navigation";
 import { useConversationRecencyStore } from "renderer/stores/conversation-recency";
 import { useVisibleTerminalsStore } from "renderer/stores/visible-terminals";
+import { useWorkspaceFocus } from "renderer/stores/workspace-focus";
 import {
 	arrangeConversations,
 	type SwitcherSectionId,
@@ -108,6 +113,7 @@ function SwitcherContent({
 	// Minutes are the finest unit shown.
 	const now = useNow(30_000).getTime();
 	const [query, setQuery] = useState("");
+	const { focused, filterOn: focusFilterOn } = useWorkspaceFocus();
 	const labelsByHost = useLabelsByHost(
 		useMemo(
 			() => conversations.map((conversation) => conversation.hostId),
@@ -122,8 +128,9 @@ function SwitcherContent({
 				recent,
 				currentTerminalId,
 				query,
+				focusedWorkspaces: focusFilterOn ? focused : null,
 			}),
-		[conversations, recent, currentTerminalId, query],
+		[conversations, recent, currentTerminalId, query, focusFilterOn, focused],
 	);
 
 	// cmdk keeps its highlight on a row that moved; restart from the top
@@ -217,6 +224,7 @@ function SwitcherContent({
 				<span className="ml-auto">
 					<Trans>⌘K ↵ goes back to the previous conversation</Trans>
 				</span>
+				<WorkspaceFocusFilterChip />
 			</div>
 		</Command>
 	);
@@ -278,6 +286,7 @@ function ConversationRow({
 					{conversation.title}
 				</span>
 				<span className="flex min-w-0 items-center gap-1.5 text-[11px] text-muted-foreground">
+					<WorkspaceFocusMark workspaceId={conversation.workspaceId} />
 					<span className="min-w-0 truncate">
 						{isCurrent ? `${place} · ${t`On screen`}` : place}
 					</span>

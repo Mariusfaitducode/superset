@@ -138,6 +138,7 @@ export const PERSISTED_KEY_REGISTRY: ReadonlyArray<
 		"src/renderer/stores/sidebar-host-selection/store.ts",
 		["sidebar-host-selection-v1"],
 	],
+	["src/renderer/stores/workspace-focus/store.ts", ["workspace-focus-v1"]],
 	[
 		"src/renderer/stores/workspace-notes-panel/store.ts",
 		["workspace-notes-panel-v1"],

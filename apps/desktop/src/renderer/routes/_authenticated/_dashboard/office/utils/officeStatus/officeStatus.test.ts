@@ -102,7 +102,7 @@ describe("visibleIslands", () => {
 
 	test("keeps only islands where an agent is not resting", () => {
 		expect(
-			visibleIslands(islands, "active").map((entry) => entry.name),
+			visibleIslands(islands, "working").map((entry) => entry.name),
 		).toEqual(["quiet", "asks", "done"]);
 	});
 

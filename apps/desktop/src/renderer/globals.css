@@ -415,6 +415,7 @@ html[data-pointer-passthrough] iframe {
 	--sb-state-unseen: #22c55e;
 	--sb-state-failed: #ef4444;
 	--sb-state-idle: #71717a;
+	--focus-mark: #6366f1;
 }
 
 [data-sb-contrast="soft"] {

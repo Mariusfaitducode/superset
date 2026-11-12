@@ -12,6 +12,7 @@ import {
 	useState,
 } from "react";
 import { LuBuilding2 } from "react-icons/lu";
+import { WorkspaceFocusFilterChip } from "renderer/components/WorkspaceFocus";
 import type { HostWorkspaceItem } from "renderer/hooks/host-workspaces/useHostWorkspaces";
 import { useActiveOrganizationId } from "renderer/hooks/useActiveOrganizationId";
 import { cloudTrpc } from "renderer/lib/cloud-trpc";
@@ -69,6 +70,7 @@ import {
 	navigateToV2Workspace,
 } from "renderer/routes/_authenticated/_dashboard/utils/workspace-navigation";
 import { useSidebarPreference } from "renderer/stores/sidebar-preferences";
+import { useWorkspaceFocus } from "renderer/stores/workspace-focus";
 import { getV2WorkspaceDisplayName } from "renderer/utils/getV2WorkspaceDisplayName";
 import { OfficeAgentPanel } from "./components/OfficeAgentPanel";
 import { OfficeCameraControls } from "./components/OfficeCameraControls";
@@ -94,7 +96,7 @@ const LEGEND: { tone: OfficeTone; dot: string }[] = [
 	{ tone: "idle", dot: "bg-zinc-400" },
 ];
 
-const SHOW_OPTIONS: OfficeShow[] = ["all", "active", "needsMe"];
+const SHOW_OPTIONS: OfficeShow[] = ["all", "working", "needsMe"];
 
 const ARROW_KEYS = new Set<string>([
 	"ArrowLeft",
@@ -160,13 +162,14 @@ export function OfficeFloor({
 	const toneLabels = useOfficeToneLabels();
 	const showLabels: Record<OfficeShow, string> = {
 		all: t`Everyone`,
-		active: t`Active`,
+		working: t`Working`,
 		needsMe: t`Needs me`,
 	};
 	const showAgentTodos = useSidebarPreference("showAgentTodos");
 	const statuses = useSidebarWorkspaceStatuses();
 	const show = useOfficeFilterStore((state) => state.show);
 	const setShow = useOfficeFilterStore((state) => state.setShow);
+	const { focused, filterOn: focusFilterOn } = useWorkspaceFocus();
 
 	// Every workspace gets a desk; only the ones with agents are read.
 	const staffed = useMemo(
@@ -285,11 +288,22 @@ export function OfficeFloor({
 		const shownRooms = allRooms
 			.map((room) => ({
 				...room,
-				desks: visibleIslands(room.desks, show),
+				desks: visibleIslands(room.desks, show).filter(
+					(desk) => !focusFilterOn || focused.has(desk.key),
+				),
 			}))
 			.filter((room) => room.desks.length > 0);
 		return { allRooms, shownRooms };
-	}, [workspaces, groups, labelsByHost, reports, showAgentTodos, show]);
+	}, [
+		workspaces,
+		groups,
+		labelsByHost,
+		reports,
+		showAgentTodos,
+		show,
+		focusFilterOn,
+		focused,
+	]);
 
 	const [worldSize, setWorldSize] = useState({ width: 0, height: 0 });
 	const camera = useOfficeCamera(worldSize);
@@ -561,6 +575,7 @@ export function OfficeFloor({
 					}
 					end={
 						<>
+							<WorkspaceFocusFilterChip size="md" />
 							<ToggleGroup
 								type="single"
 								size="sm"
@@ -674,6 +689,7 @@ export function OfficeFloor({
 								return (
 									<OfficeDeskPlate
 										key={desk.id}
+										workspaceId={unit.workspace.id}
 										name={unit.name}
 										branch={branch && branch !== unit.name ? branch : null}
 										labels={unit.labels}
@@ -775,7 +791,9 @@ export function OfficeFloor({
 										<Trans>
 											No workspace yet. Create one and it gets a desk here.
 										</Trans>
-									) : show === "active" ? (
+									) : focusFilterOn && show === "all" ? (
+										<Trans>No workspace in focus here.</Trans>
+									) : show === "working" ? (
 										<Trans>No agent is working right now.</Trans>
 									) : (
 										<Trans>Nobody needs you right now.</Trans>
@@ -797,6 +815,9 @@ export function OfficeFloor({
 						name to zoom on it · Click an agent to open its conversation, a
 						small one for its subagent · ⌥-click or I for details
 					</Trans>
+					<span>
+						<Trans>· The target on a name plate puts it in focus</Trans>
+					</span>
 				</footer>
 			</div>
 			{selected && selectedWorkspace && (

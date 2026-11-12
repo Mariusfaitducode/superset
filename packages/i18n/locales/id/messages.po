@@ -37,6 +37,9 @@ msgstr ".sh"
 msgid "· none right now"
 msgstr "· tidak ada saat ini"
 
+msgid "· The target on a name plate puts it in focus"
+msgstr "· Target di papan nama menaruhnya di fokus"
+
 msgid "· updated {updatedAgo}"
 msgstr "· diperbarui {updatedAgo}"
 
@@ -1039,6 +1042,9 @@ msgstr "{hidden, plural, one {Tampilkan # balasan} other {Tampilkan # balasan}}"
 msgid "{hidden, plural, one {View # more reply} other {View # more replies}}"
 msgstr "{hidden, plural, other {Lihat # balasan lagi}}"
 
+msgid "{hiddenByFocus} more outside your focus. Turn off Focus to see them."
+msgstr "{hiddenByFocus} lainnya di luar fokus Anda. Matikan Fokus untuk melihatnya."
+
 msgid "{hiddenCount, plural, one {Show # more frame} other {Show # more frames}}"
 msgstr "{hiddenCount, plural, one {Tampilkan # frame lagi} other {Tampilkan # frame lagi}}"
 
@@ -1896,6 +1902,9 @@ msgstr "Tambah akun {0}"
 msgid "Add {0} to workspace"
 msgstr "Tambahkan {0} ke workspace"
 
+msgid "Add {count} to focus"
+msgstr "Tambahkan {count} ke fokus"
+
 msgid "Add a comment…"
 msgstr "Tambahkan komentar…"
 
@@ -2053,6 +2062,9 @@ msgstr "Tambahkan tes untuk kode paling berisiko yang belum diuji…"
 msgid "Add tests where they're missing"
 msgstr "Tambahkan tes yang belum ada"
 
+msgid "Add the current workspace to the ones you are working on, or take it out"
+msgstr "Tambahkan workspace saat ini ke yang sedang Anda kerjakan, atau keluarkan"
+
 msgid "Add this label"
 msgstr "Tambahkan label ini"
 
@@ -2061,6 +2073,12 @@ msgstr "Tambahkan ke Kamus"
 
 msgid "Add to favorites"
 msgstr "Tambahkan ke favorit"
+
+msgid "Add to focus"
+msgstr "Tambahkan ke fokus"
+
+msgid "Add to focus or remove from it"
+msgstr "Tambahkan ke fokus atau keluarkan"
 
 msgid "Add to project"
 msgstr "Tambahkan ke proyek"
@@ -7663,6 +7681,9 @@ msgstr "Sangat tinggi"
 msgid "Extra small"
 msgstr "Ekstra kecil"
 
+msgid "F adds or removes the selected workspace from focus"
+msgstr "F menambah atau mengeluarkan workspace terpilih dari fokus"
+
 msgid "F4 gate · {F4_GATE_SHARE}%"
 msgstr "Gerbang F4 · {F4_GATE_SHARE}%"
 
@@ -8443,8 +8464,15 @@ msgstr "Api"
 msgid "Fleets of agents plan, implement, review, and test each other's work. Humans set direction, arbitrate exceptions, and own taste. The unit of human attention is no longer the pull request. It is the decision."
 msgstr "Armada agen merencanakan, mengimplementasi, mereview, dan menguji pekerjaan satu sama lain. Manusia menetapkan arah, menengahi pengecualian, dan memegang selera. Satuan perhatian manusia bukan lagi pull request, melainkan keputusan."
 
+msgctxt "workspace focus filter"
+msgid "Focus"
+msgstr "Fokus"
+
 msgid "Focus Chat Input"
 msgstr "Fokus ke Input Chat"
+
+msgid "Focus only · F adds or removes the selected workspace"
+msgstr "Hanya fokus · F menambah atau mengeluarkan workspace terpilih"
 
 msgid "Focus Pane Down"
 msgstr "Fokus Panel Bawah"
@@ -9556,6 +9584,9 @@ msgstr "di terminal pada host ini."
 
 msgid "In all projects"
 msgstr "Di semua proyek"
+
+msgid "In focus"
+msgstr "Dalam fokus"
 
 msgid "In just a few months, <0>tens of thousands of engineers</0> run Superset as their primary IDE, at companies like Wix, DoorDash, and Netflix."
 msgstr "Hanya dalam beberapa bulan, <0>puluhan ribu engineer</0> memakai Superset sebagai IDE utama mereka, di perusahaan seperti Wix, DoorDash, dan Netflix."
@@ -12425,6 +12456,18 @@ msgstr "Belum ada versi."
 msgid "No workspace has these labels"
 msgstr "Tidak ada workspace dengan label ini"
 
+msgid "No workspace in focus here"
+msgstr "Tidak ada workspace dalam fokus di sini"
+
+msgid "No workspace in focus here."
+msgstr "Tidak ada workspace dalam fokus di sini."
+
+msgid "No workspace in focus on this host."
+msgstr "Tidak ada workspace dalam fokus di host ini."
+
+msgid "No workspace in focus yet: click the target on a workspace to add it"
+msgstr "Belum ada workspace dalam fokus: klik target pada workspace untuk menambahkannya"
+
 msgid "No workspace on this host yet."
 msgstr "Belum ada workspace di host ini."
 
@@ -12605,6 +12648,9 @@ msgstr "Belum ada apa-apa di sini."
 
 msgid "Nothing here."
 msgstr "Tidak ada apa-apa di sini."
+
+msgid "Nothing in focus waits on you."
+msgstr "Tidak ada dalam fokus yang menunggu Anda."
 
 msgid "Nothing is being tracked"
 msgstr "Tidak ada yang dilacak"
@@ -15156,6 +15202,9 @@ msgstr "Hapus"
 msgid "Remove {0}"
 msgstr "Hapus {0}"
 
+msgid "Remove {count} from focus"
+msgstr "Keluarkan {count} dari fokus"
+
 msgid "Remove {label}"
 msgstr "Hapus {label}"
 
@@ -15170,6 +15219,9 @@ msgstr "Hapus lampiran"
 
 msgid "Remove from favorites"
 msgstr "Hapus dari favorit"
+
+msgid "Remove from focus"
+msgstr "Keluarkan dari fokus"
 
 msgid "Remove from Queue"
 msgstr "Keluarkan dari Antrean"
@@ -17106,6 +17158,12 @@ msgstr "Tampilkan di Sidebar"
 msgid "Show only {0}"
 msgstr "Tampilkan hanya {0}"
 
+msgid "Show only the workspaces in focus"
+msgstr "Tampilkan hanya workspace dalam fokus"
+
+msgid "Show only workspaces in focus (toggle)"
+msgstr "Tampilkan hanya workspace dalam fokus (alihkan)"
+
 msgid "Show open items"
 msgstr "Tampilkan item yang terbuka"
 
@@ -17168,6 +17226,9 @@ msgstr "Tampilkan tab penggunaan di bilah samping"
 
 msgid "showArrow opt-in"
 msgstr "showArrow opsional"
+
+msgid "Showing only the workspaces in focus. Click to show all."
+msgstr "Hanya workspace dalam fokus yang ditampilkan. Klik untuk menampilkan semua."
 
 msgid "Showing the latest {MAX_COMMITS} commits. Filter by branch to go further back."
 msgstr "Menampilkan {MAX_COMMITS} commit terbaru. Filter per branch untuk melihat lebih lama."
@@ -19652,6 +19713,9 @@ msgstr "Alihkan tema"
 
 msgid "Toggle value visibility"
 msgstr "Alihkan visibilitas nilai"
+
+msgid "Toggle Workspace Focus"
+msgstr "Alihkan fokus workspace"
 
 msgid "Toggle Workspaces Sidebar"
 msgstr "Alihkan Sidebar Workspace"

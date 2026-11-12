@@ -16,6 +16,7 @@ import {
 import { HiCheck, HiMiniXMark } from "react-icons/hi2";
 import { LuArchive } from "react-icons/lu";
 import { AGENT_STATE_LABEL } from "renderer/components/AgentStateDot";
+import { WorkspaceFocusToggle } from "renderer/components/WorkspaceFocus";
 import { WorkspaceNameMarquee } from "renderer/components/WorkspaceNameMarquee";
 import { useFocusVisible } from "renderer/hooks/useFocusVisible";
 import { HotkeyLabel } from "renderer/hotkeys";
@@ -27,6 +28,7 @@ import { RenameInput } from "renderer/screens/main/components/WorkspaceSidebar/R
 import { useInlineWorkspacePortsEnabled } from "renderer/stores/inline-workspace-ports";
 import { usePullRequestPaneIntent } from "renderer/stores/pull-request-pane-intent";
 import { useSidebarPreference } from "renderer/stores/sidebar-preferences";
+import { useIsWorkspaceFocused } from "renderer/stores/workspace-focus";
 import { useWorkspaceAgentState } from "../../../../hooks/useWorkspaceAgentState";
 import { useWorkspaceOpenTodos } from "../../../../hooks/useWorkspaceOpenTodos";
 import type {
@@ -141,6 +143,7 @@ export const DashboardSidebarExpandedWorkspaceRow = forwardRef<
 			onFocus: handleRowFocus,
 			onBlur: handleRowBlur,
 		} = useFocusVisible();
+		const isInFocus = useIsWorkspaceFocused(workspace.id);
 
 		useEffect(() => {
 			if (isActive) {
@@ -404,6 +407,7 @@ export const DashboardSidebarExpandedWorkspaceRow = forwardRef<
 											isActive || isSelected
 												? "text-foreground"
 												: "text-foreground/80",
+											isInFocus && "font-semibold text-foreground",
 										)}
 									/>
 									{isSelected && (
@@ -426,6 +430,15 @@ export const DashboardSidebarExpandedWorkspaceRow = forwardRef<
 									</span>
 								) : (
 									<>
+										<WorkspaceFocusToggle
+											workspaceId={workspace.id}
+											showHotkey={isActive}
+											idleClassName={
+												isSelected
+													? "hidden"
+													: "hidden group-hover:flex group-focus-within:flex"
+											}
+										/>
 										<WorkspaceLabelPills
 											workspaceId={workspace.id}
 											hostId={workspace.hostId}

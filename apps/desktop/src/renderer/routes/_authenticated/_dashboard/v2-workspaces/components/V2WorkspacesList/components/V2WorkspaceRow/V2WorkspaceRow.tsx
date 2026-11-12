@@ -7,6 +7,7 @@ import { useNavigate } from "@tanstack/react-router";
 import { memo } from "react";
 import { CgLaptop } from "react-icons/cg";
 import { LuLaptop, LuMonitor } from "react-icons/lu";
+import { WorkspaceFocusToggle } from "renderer/components/WorkspaceFocus";
 import { WorkspaceNameMarquee } from "renderer/components/WorkspaceNameMarquee";
 import { useFocusVisible } from "renderer/hooks/useFocusVisible";
 import { pullRequestRefFromUrl } from "renderer/lib/github/pullRequestRef";
@@ -135,7 +136,7 @@ export const V2WorkspaceRow = memo(function V2WorkspaceRow({
 					onBlur={handleRowBlur}
 					title={rowTitle}
 					className={cn(
-						"flex cursor-pointer items-center gap-3 border-b border-border/40 px-6 py-3 text-sm outline-none transition-colors",
+						"group flex cursor-pointer items-center gap-3 border-b border-border/40 px-6 py-3 text-sm outline-none transition-colors",
 						"focus-visible:ring-2 focus-visible:ring-ring/40 focus-visible:ring-inset",
 						isCurrentRoute
 							? "bg-muted hover:bg-muted focus-visible:bg-muted"
@@ -143,6 +144,14 @@ export const V2WorkspaceRow = memo(function V2WorkspaceRow({
 					)}
 				>
 					<WorkspaceStateGlyph workspace={workspace} />
+					{workspace.archivedAt == null && (
+						<WorkspaceFocusToggle
+							workspaceId={workspace.id}
+							showHotkey={isCurrentRoute}
+							className="-mx-1.5"
+							idleClassName="invisible group-hover:visible group-focus-within:visible"
+						/>
+					)}
 
 					{isLocalWorkspace ? (
 						<Tooltip delayDuration={300}>

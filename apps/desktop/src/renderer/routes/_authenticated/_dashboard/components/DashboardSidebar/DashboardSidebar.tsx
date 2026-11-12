@@ -41,6 +41,10 @@ import { useSidebarHostSelectionStore } from "renderer/stores/sidebar-host-selec
 import { useSidebarPreference } from "renderer/stores/sidebar-preferences";
 import { useSidebarSectionsCollapseStore } from "renderer/stores/sidebar-sections-collapse";
 import { useV2NotificationStore } from "renderer/stores/v2-notifications";
+import {
+	useWorkspaceFocus,
+	useWorkspaceFocusStore,
+} from "renderer/stores/workspace-focus";
 import { useWorkspaceLabelFilterStore } from "renderer/stores/workspace-label-filter";
 import { DashboardSidebarActiveWorkspaceSwitcher } from "./components/DashboardSidebarActiveWorkspaceSwitcher";
 import { DashboardSidebarBulkActions } from "./components/DashboardSidebarBulkActions";
@@ -328,29 +332,31 @@ export function DashboardSidebar({
 					),
 		[isCollapsed, selectedLabels, filterLabels],
 	);
-	const keepLabeled = useCallback(
+	const { focused: focusedIds, filterOn: focusFilterSetting } =
+		useWorkspaceFocus();
+	const setFocusOnly = useWorkspaceFocusStore((state) => state.setFocusOnly);
+	// Same rule as the labels: the icon rail has no control to undo it.
+	const focusFilterOn = focusFilterSetting && !isCollapsed;
+	const keepFiltered = useCallback(
 		(workspace: DashboardSidebarWorkspace) =>
-			hasAllLabels(
-				workspaceLabels(labelsByHost.get(workspace.hostId), workspace.id),
-				activeLabels,
-			),
-		[labelsByHost, activeLabels],
+			(activeLabels.length === 0 ||
+				hasAllLabels(
+					workspaceLabels(labelsByHost.get(workspace.hostId), workspace.id),
+					activeLabels,
+				)) &&
+			(!focusFilterOn || focusedIds.has(workspace.id)),
+		[labelsByHost, activeLabels, focusFilterOn, focusedIds],
 	);
+	const labelOrFocusFilterOn = activeLabels.length > 0 || focusFilterOn;
 	const displayedPinnedWorkspaces = useMemo(
 		() =>
 			pinnedWorkspaces.filter(
 				(workspace) =>
 					(hostFilter === "all" || matchesHostFilter(workspace, hostFilter)) &&
 					matchesSelectedHost(workspace) &&
-					(activeLabels.length === 0 || keepLabeled(workspace)),
+					keepFiltered(workspace),
 			),
-		[
-			pinnedWorkspaces,
-			hostFilter,
-			matchesSelectedHost,
-			activeLabels,
-			keepLabeled,
-		],
+		[pinnedWorkspaces, hostFilter, matchesSelectedHost, keepFiltered],
 	);
 	const displayedSessionWorkspaces = useMemo(
 		() =>
@@ -358,30 +364,28 @@ export function DashboardSidebar({
 				(workspace) =>
 					(hostFilter === "all" || matchesHostFilter(workspace, hostFilter)) &&
 					matchesSelectedHost(workspace) &&
-					(activeLabels.length === 0 || keepLabeled(workspace)),
+					keepFiltered(workspace),
 			),
-		[
-			sessionWorkspaces,
-			hostFilter,
-			matchesSelectedHost,
-			activeLabels,
-			keepLabeled,
-		],
+		[sessionWorkspaces, hostFilter, matchesSelectedHost, keepFiltered],
 	);
 	const displayedGroups = useMemo(() => {
-		const labelFiltered =
-			activeLabels.length === 0
-				? hostFilteredGroups
-				: filterDashboardSidebarProjectsByWorkspace(
-						hostFilteredGroups,
-						keepLabeled,
-					);
+		const labelFiltered = !labelOrFocusFilterOn
+			? hostFilteredGroups
+			: filterDashboardSidebarProjectsByWorkspace(
+					hostFilteredGroups,
+					keepFiltered,
+				);
 		return filterDashboardSidebarProjects(labelFiltered, projectFilterQuery);
-	}, [hostFilteredGroups, projectFilterQuery, activeLabels, keepLabeled]);
+	}, [
+		hostFilteredGroups,
+		projectFilterQuery,
+		labelOrFocusFilterOn,
+		keepFiltered,
+	]);
 	// Pinned and session rows sit above the projects; when the label or host
 	// filter keeps some of them, an empty-state line below would contradict them.
 	const filterMatchesShownAbove =
-		(activeLabels.length > 0 || selectedMachineId !== null) &&
+		(labelOrFocusFilterOn || selectedMachineId !== null) &&
 		displayedPinnedWorkspaces.length + displayedSessionWorkspaces.length > 0;
 	const displayedProjectIds = useMemo(
 		() => displayedGroups.map((project) => project.id),
@@ -392,7 +396,7 @@ export function DashboardSidebar({
 		trimmedFilterQuery !== "" ||
 		hostFilter !== "all" ||
 		selectedMachineId !== null ||
-		activeLabels.length > 0;
+		labelOrFocusFilterOn;
 	// The sort modes only reorder rows inside a project, so the project list
 	// is still the manual order and stays draggable; only a filter, which
 	// hides projects outright, makes a project drop unsafe to commit.
@@ -406,6 +410,7 @@ export function DashboardSidebar({
 			setSidebarProjectHostFilter("all");
 			selectHost(null);
 			clearLabelFilter();
+			setFocusOnly(false);
 		},
 	});
 
@@ -732,13 +737,17 @@ export function DashboardSidebar({
 																	? t({
 																			message: "No workspace has these labels",
 																		})
-																	: selectedHost
+																	: focusFilterOn
 																		? t({
-																				message: `No workspaces on ${selectedHostName}`,
+																				message: "No workspace in focus here",
 																			})
-																		: hostFilter === "cloud"
-																			? t({ message: "No cloud workspaces" })
-																			: t({ message: "No local workspaces" })}
+																		: selectedHost
+																			? t({
+																					message: `No workspaces on ${selectedHostName}`,
+																				})
+																			: hostFilter === "cloud"
+																				? t({ message: "No cloud workspaces" })
+																				: t({ message: "No local workspaces" })}
 														</div>
 													)}
 											</OverflowFadeContainer>

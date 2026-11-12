@@ -37,6 +37,9 @@ msgstr ".sh"
 msgid "· none right now"
 msgstr "· obecnie brak"
 
+msgid "· The target on a name plate puts it in focus"
+msgstr "· Tarcza na tabliczce dodaje go do fokusu"
+
 msgid "· updated {updatedAgo}"
 msgstr "· zaktualizowano {updatedAgo}"
 
@@ -1039,6 +1042,9 @@ msgstr "{hidden, plural, one {Pokaż # odpowiedź} few {Pokaż # odpowiedzi} man
 msgid "{hidden, plural, one {View # more reply} other {View # more replies}}"
 msgstr "{hidden, plural, one {Pokaż # kolejną odpowiedź} few {Pokaż # kolejne odpowiedzi} many {Pokaż # kolejnych odpowiedzi} other {Pokaż # kolejnej odpowiedzi}}"
 
+msgid "{hiddenByFocus} more outside your focus. Turn off Focus to see them."
+msgstr "Jeszcze {hiddenByFocus} poza fokusem. Wyłącz Fokus, aby je zobaczyć."
+
 msgid "{hiddenCount, plural, one {Show # more frame} other {Show # more frames}}"
 msgstr "{hiddenCount, plural, one {Pokaż # kolejną ramkę} few {Pokaż # kolejne ramki} many {Pokaż # kolejnych ramek} other {Pokaż # kolejnej ramki}}"
 
@@ -1896,6 +1902,9 @@ msgstr "Dodaj konto {0}"
 msgid "Add {0} to workspace"
 msgstr "Dodaj {0} do obszaru roboczego"
 
+msgid "Add {count} to focus"
+msgstr "Dodaj {count} do fokusu"
+
 msgid "Add a comment…"
 msgstr "Dodaj komentarz…"
 
@@ -2053,6 +2062,9 @@ msgstr "Dodaj testy do najbardziej ryzykownego nieprzetestowanego kodu…"
 msgid "Add tests where they're missing"
 msgstr "Dodaj testy tam, gdzie ich brakuje"
 
+msgid "Add the current workspace to the ones you are working on, or take it out"
+msgstr "Dodaje bieżący obszar roboczy do tych, nad którymi pracujesz, lub go usuwa"
+
 msgid "Add this label"
 msgstr "Dodaj tę etykietę"
 
@@ -2061,6 +2073,12 @@ msgstr "Dodaj do słownika"
 
 msgid "Add to favorites"
 msgstr "Dodaj do ulubionych"
+
+msgid "Add to focus"
+msgstr "Dodaj do fokusu"
+
+msgid "Add to focus or remove from it"
+msgstr "Dodaj do fokusu lub usuń"
 
 msgid "Add to project"
 msgstr "Dodaj do projektu"
@@ -7663,6 +7681,9 @@ msgstr "Bardzo wysoki"
 msgid "Extra small"
 msgstr "Bardzo mały"
 
+msgid "F adds or removes the selected workspace from focus"
+msgstr "F dodaje lub usuwa wybrany obszar z fokusu"
+
 msgid "F4 gate · {F4_GATE_SHARE}%"
 msgstr "Bramka F4 · {F4_GATE_SHARE}%"
 
@@ -8443,8 +8464,15 @@ msgstr "Płomień"
 msgid "Fleets of agents plan, implement, review, and test each other's work. Humans set direction, arbitrate exceptions, and own taste. The unit of human attention is no longer the pull request. It is the decision."
 msgstr "Floty agentów planują, wdrażają, przeglądają i testują nawzajem swoją pracę. Ludzie wyznaczają kierunek, rozstrzygają wyjątki i odpowiadają za gust. Jednostką ludzkiej uwagi nie jest już pull request. Jest nią decyzja."
 
+msgctxt "workspace focus filter"
+msgid "Focus"
+msgstr "Fokus"
+
 msgid "Focus Chat Input"
 msgstr "Aktywuj pole czatu"
+
+msgid "Focus only · F adds or removes the selected workspace"
+msgstr "Tylko fokus · F dodaje lub usuwa wybrany obszar"
 
 msgid "Focus Pane Down"
 msgstr "Aktywuj panel poniżej"
@@ -9556,6 +9584,9 @@ msgstr "w terminalu na tym hoście."
 
 msgid "In all projects"
 msgstr "We wszystkich projektach"
+
+msgid "In focus"
+msgstr "W fokusie"
 
 msgid "In just a few months, <0>tens of thousands of engineers</0> run Superset as their primary IDE, at companies like Wix, DoorDash, and Netflix."
 msgstr "W zaledwie kilka miesięcy <0>dziesiątki tysięcy inżynierów</0> zaczęło używać Superset jako głównego IDE, w firmach takich jak Wix, DoorDash czy Netflix."
@@ -12425,6 +12456,18 @@ msgstr "Brak wersji."
 msgid "No workspace has these labels"
 msgstr "Żaden obszar roboczy nie ma tych etykiet"
 
+msgid "No workspace in focus here"
+msgstr "Brak obszarów w fokusie tutaj"
+
+msgid "No workspace in focus here."
+msgstr "Brak obszarów w fokusie tutaj."
+
+msgid "No workspace in focus on this host."
+msgstr "Brak obszarów w fokusie na tym hoście."
+
+msgid "No workspace in focus yet: click the target on a workspace to add it"
+msgstr "Brak obszarów w fokusie: kliknij tarczę przy obszarze, aby go dodać"
+
 msgid "No workspace on this host yet."
 msgstr "Brak przestrzeni roboczych na tym hoście."
 
@@ -12605,6 +12648,9 @@ msgstr "Jeszcze nic tu nie ma."
 
 msgid "Nothing here."
 msgstr "Nic tu nie ma."
+
+msgid "Nothing in focus waits on you."
+msgstr "Nic w fokusie na ciebie nie czeka."
 
 msgid "Nothing is being tracked"
 msgstr "Nic nie jest śledzone"
@@ -15156,6 +15202,9 @@ msgstr "Usuń"
 msgid "Remove {0}"
 msgstr "Usuń {0}"
 
+msgid "Remove {count} from focus"
+msgstr "Usuń {count} z fokusu"
+
 msgid "Remove {label}"
 msgstr "Usuń {label}"
 
@@ -15170,6 +15219,9 @@ msgstr "Usuń załącznik"
 
 msgid "Remove from favorites"
 msgstr "Usuń z ulubionych"
+
+msgid "Remove from focus"
+msgstr "Usuń z fokusu"
 
 msgid "Remove from Queue"
 msgstr "Usuń z kolejki"
@@ -17106,6 +17158,12 @@ msgstr "Pokaż na pasku bocznym"
 msgid "Show only {0}"
 msgstr "Pokaż tylko {0}"
 
+msgid "Show only the workspaces in focus"
+msgstr "Pokaż tylko obszary w fokusie"
+
+msgid "Show only workspaces in focus (toggle)"
+msgstr "Pokaż tylko obszary w fokusie (przełącz)"
+
 msgid "Show open items"
 msgstr "Pokaż otwarte elementy"
 
@@ -17168,6 +17226,9 @@ msgstr "Pokaż kartę użycia na pasku bocznym"
 
 msgid "showArrow opt-in"
 msgstr "showArrow włączone"
+
+msgid "Showing only the workspaces in focus. Click to show all."
+msgstr "Pokazywane są tylko obszary w fokusie. Kliknij, aby pokazać wszystkie."
 
 msgid "Showing the latest {MAX_COMMITS} commits. Filter by branch to go further back."
 msgstr "Ostatnie {MAX_COMMITS} commitów. Filtruj po gałęzi, aby cofnąć się dalej."
@@ -19652,6 +19713,9 @@ msgstr "Przełącz motyw"
 
 msgid "Toggle value visibility"
 msgstr "Przełącz widoczność wartości"
+
+msgid "Toggle Workspace Focus"
+msgstr "Przełącz fokus obszaru"
 
 msgid "Toggle Workspaces Sidebar"
 msgstr "Przełącz pasek obszarów roboczych"

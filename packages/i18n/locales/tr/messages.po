@@ -37,6 +37,9 @@ msgstr ".sh"
 msgid "· none right now"
 msgstr "· şu anda yok"
 
+msgid "· The target on a name plate puts it in focus"
+msgstr "· İsim levhasındaki hedef onu odağa alır"
+
 msgid "· updated {updatedAgo}"
 msgstr "· güncelleme {updatedAgo}"
 
@@ -1039,6 +1042,9 @@ msgstr "{hidden, plural, one {# yanıtı göster} other {# yanıtı göster}}"
 msgid "{hidden, plural, one {View # more reply} other {View # more replies}}"
 msgstr "{hidden, plural, one {# yanıt daha göster} other {# yanıt daha göster}}"
 
+msgid "{hiddenByFocus} more outside your focus. Turn off Focus to see them."
+msgstr "Odağınızın dışında {hiddenByFocus} öğe daha var. Görmek için Odak'ı kapatın."
+
 msgid "{hiddenCount, plural, one {Show # more frame} other {Show # more frames}}"
 msgstr "{hiddenCount, plural, one {# çerçeve daha göster} other {# çerçeve daha göster}}"
 
@@ -1896,6 +1902,9 @@ msgstr "{0} hesabı ekle"
 msgid "Add {0} to workspace"
 msgstr "{0} öğesini çalışma alanına ekle"
 
+msgid "Add {count} to focus"
+msgstr "{count} öğeyi odağa ekle"
+
 msgid "Add a comment…"
 msgstr "Yorum ekle…"
 
@@ -2053,6 +2062,9 @@ msgstr "Test edilmemiş en riskli kod için test ekle…"
 msgid "Add tests where they're missing"
 msgstr "Eksik olan yerlere test ekle"
 
+msgid "Add the current workspace to the ones you are working on, or take it out"
+msgstr "Geçerli çalışma alanını üzerinde çalıştıklarınıza ekler veya çıkarır"
+
 msgid "Add this label"
 msgstr "Bu etiketi ekle"
 
@@ -2061,6 +2073,12 @@ msgstr "Sözlüğe ekle"
 
 msgid "Add to favorites"
 msgstr "Favorilere ekle"
+
+msgid "Add to focus"
+msgstr "Odağa ekle"
+
+msgid "Add to focus or remove from it"
+msgstr "Odağa ekle veya çıkar"
 
 msgid "Add to project"
 msgstr "Projeye ekle"
@@ -7663,6 +7681,9 @@ msgstr "Çok yüksek"
 msgid "Extra small"
 msgstr "Çok küçük"
 
+msgid "F adds or removes the selected workspace from focus"
+msgstr "F seçili çalışma alanını odağa ekler veya çıkarır"
+
 msgid "F4 gate · {F4_GATE_SHARE}%"
 msgstr "F4 eşiği · %{F4_GATE_SHARE}"
 
@@ -8443,8 +8464,15 @@ msgstr "Alev"
 msgid "Fleets of agents plan, implement, review, and test each other's work. Humans set direction, arbitrate exceptions, and own taste. The unit of human attention is no longer the pull request. It is the decision."
 msgstr "Ajan filoları planlar, uygular, birbirinin işini inceler ve test eder. İnsanlar yönü belirler, istisnalara hakemlik eder ve zevkin sahibi olur. İnsan dikkatinin birimi artık pull request değildir. Karardır."
 
+msgctxt "workspace focus filter"
+msgid "Focus"
+msgstr "Odak"
+
 msgid "Focus Chat Input"
 msgstr "Sohbet girişine odaklan"
+
+msgid "Focus only · F adds or removes the selected workspace"
+msgstr "Yalnızca odak · F seçileni ekler veya çıkarır"
 
 msgid "Focus Pane Down"
 msgstr "Alttaki bölmeye odaklan"
@@ -9556,6 +9584,9 @@ msgstr "komutunu çalıştırın."
 
 msgid "In all projects"
 msgstr "Tüm projelerde"
+
+msgid "In focus"
+msgstr "Odakta"
 
 msgid "In just a few months, <0>tens of thousands of engineers</0> run Superset as their primary IDE, at companies like Wix, DoorDash, and Netflix."
 msgstr "Yalnızca birkaç ayda <0>on binlerce mühendis</0> Superset'i birincil IDE'si olarak kullanmaya başladı; Wix, DoorDash ve Netflix gibi şirketlerde."
@@ -12425,6 +12456,18 @@ msgstr "Henüz sürüm yok."
 msgid "No workspace has these labels"
 msgstr "Bu etiketlere sahip çalışma alanı yok"
 
+msgid "No workspace in focus here"
+msgstr "Burada odakta çalışma alanı yok"
+
+msgid "No workspace in focus here."
+msgstr "Burada odakta çalışma alanı yok."
+
+msgid "No workspace in focus on this host."
+msgstr "Bu sunucuda odakta çalışma alanı yok."
+
+msgid "No workspace in focus yet: click the target on a workspace to add it"
+msgstr "Henüz odakta çalışma alanı yok: eklemek için bir alandaki hedefe tıklayın"
+
 msgid "No workspace on this host yet."
 msgstr "Bu ana bilgisayarda henüz çalışma alanı yok."
 
@@ -12605,6 +12648,9 @@ msgstr "Burada henüz bir şey yok."
 
 msgid "Nothing here."
 msgstr "Burada bir şey yok."
+
+msgid "Nothing in focus waits on you."
+msgstr "Odakta sizi bekleyen bir şey yok."
 
 msgid "Nothing is being tracked"
 msgstr "Takip edilen bir şey yok"
@@ -15156,6 +15202,9 @@ msgstr "Kaldır"
 msgid "Remove {0}"
 msgstr "{0} kişisini kaldır"
 
+msgid "Remove {count} from focus"
+msgstr "{count} öğeyi odaktan çıkar"
+
 msgid "Remove {label}"
 msgstr "{label} kaldır"
 
@@ -15170,6 +15219,9 @@ msgstr "Eki kaldır"
 
 msgid "Remove from favorites"
 msgstr "Favorilerden kaldır"
+
+msgid "Remove from focus"
+msgstr "Odaktan çıkar"
 
 msgid "Remove from Queue"
 msgstr "Kuyruktan çıkar"
@@ -17106,6 +17158,12 @@ msgstr "Kenar çubuğunda göster"
 msgid "Show only {0}"
 msgstr "Yalnızca {0} göster"
 
+msgid "Show only the workspaces in focus"
+msgstr "Yalnızca odaktaki çalışma alanlarını göster"
+
+msgid "Show only workspaces in focus (toggle)"
+msgstr "Yalnızca odaktaki çalışma alanlarını göster (aç/kapat)"
+
 msgid "Show open items"
 msgstr "Açık öğeleri göster"
 
@@ -17168,6 +17226,9 @@ msgstr "Kenar çubuğunda kullanım sekmesini göster"
 
 msgid "showArrow opt-in"
 msgstr "showArrow açık"
+
+msgid "Showing only the workspaces in focus. Click to show all."
+msgstr "Yalnızca odaktaki çalışma alanları gösteriliyor. Tümünü görmek için tıklayın."
 
 msgid "Showing the latest {MAX_COMMITS} commits. Filter by branch to go further back."
 msgstr "Son {MAX_COMMITS} commit gösteriliyor. Daha eskisi için dala göre filtreleyin."
@@ -19652,6 +19713,9 @@ msgstr "Temayı değiştir"
 
 msgid "Toggle value visibility"
 msgstr "Değer görünürlüğünü aç/kapat"
+
+msgid "Toggle Workspace Focus"
+msgstr "Çalışma alanı odağını aç/kapat"
 
 msgid "Toggle Workspaces Sidebar"
 msgstr "Çalışma alanları kenar çubuğunu aç/kapat"

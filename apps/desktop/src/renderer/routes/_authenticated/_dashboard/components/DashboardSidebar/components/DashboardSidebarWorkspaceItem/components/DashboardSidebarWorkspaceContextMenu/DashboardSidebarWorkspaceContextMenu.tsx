@@ -31,6 +31,7 @@ import {
 	LuUnlink,
 	LuX,
 } from "react-icons/lu";
+import { WorkspaceFocusContextMenuItem } from "renderer/components/WorkspaceFocus";
 import { useHotkeyDisplay } from "renderer/hotkeys";
 import { parseSidebarFolderKey } from "renderer/routes/_authenticated/utils/workspaceTagFolders";
 import { useDashboardSidebarPortKill } from "../../../../hooks/useDashboardSidebarPortKill";
@@ -135,6 +136,10 @@ export function DashboardSidebarWorkspaceContextMenu({
 		<ContextMenu onOpenChange={setContextMenuOpen}>
 			<ContextMenuTrigger asChild>{children}</ContextMenuTrigger>
 			<ContextMenuContent onCloseAutoFocus={onCloseAutoFocus}>
+				<WorkspaceFocusContextMenuItem
+					workspaceId={workspaceId}
+					showHotkey={showDeleteHotkey}
+				/>
 				<ContextMenuItem onSelect={onTogglePin}>
 					{isPinned ? (
 						<>

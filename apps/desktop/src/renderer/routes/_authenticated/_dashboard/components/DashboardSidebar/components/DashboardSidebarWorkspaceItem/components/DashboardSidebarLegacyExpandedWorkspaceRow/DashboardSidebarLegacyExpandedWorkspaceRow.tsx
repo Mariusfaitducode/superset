@@ -14,6 +14,7 @@ import {
 	useRef,
 } from "react";
 import { HiCheck, HiMiniXMark } from "react-icons/hi2";
+import { WorkspaceFocusToggle } from "renderer/components/WorkspaceFocus";
 import { WorkspaceNameMarquee } from "renderer/components/WorkspaceNameMarquee";
 import type { DiffStats } from "renderer/hooks/host-service/useDiffStats";
 import { useFocusVisible } from "renderer/hooks/useFocusVisible";
@@ -25,6 +26,7 @@ import { ProjectThumbnail } from "renderer/routes/_authenticated/components/Proj
 import { RenameInput } from "renderer/screens/main/components/WorkspaceSidebar/RenameInput";
 import { useInlineWorkspacePortsEnabled } from "renderer/stores/inline-workspace-ports";
 import { usePullRequestPaneIntent } from "renderer/stores/pull-request-pane-intent";
+import { useIsWorkspaceFocused } from "renderer/stores/workspace-focus";
 import type { ActivePaneStatus } from "shared/tabs-types";
 import type {
 	DashboardSidebarWorkspace,
@@ -144,6 +146,7 @@ export const DashboardSidebarLegacyExpandedWorkspaceRow = forwardRef<
 			onFocus: handleRowFocus,
 			onBlur: handleRowBlur,
 		} = useFocusVisible();
+		const isInFocus = useIsWorkspaceFocused(workspace.id);
 
 		useEffect(() => {
 			if (isActive) {
@@ -382,6 +385,7 @@ export const DashboardSidebarLegacyExpandedWorkspaceRow = forwardRef<
 										isActive || isSelected
 											? "text-foreground"
 											: "text-foreground/80",
+										isInFocus && "font-semibold text-foreground",
 									)}
 								/>
 								{isSelected && (
@@ -399,6 +403,15 @@ export const DashboardSidebarLegacyExpandedWorkspaceRow = forwardRef<
 								</span>
 							) : (
 								<>
+									<WorkspaceFocusToggle
+										workspaceId={workspace.id}
+										showHotkey={isActive}
+										idleClassName={
+											isSelected
+												? "hidden"
+												: "hidden group-hover:flex group-focus-within:flex"
+										}
+									/>
 									<WorkspaceLabelPills
 										workspaceId={workspace.id}
 										hostId={workspace.hostId}

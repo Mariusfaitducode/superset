@@ -37,6 +37,9 @@ msgstr ".sh"
 msgid "· none right now"
 msgstr "· 目前没有"
 
+msgid "· The target on a name plate puts it in focus"
+msgstr "· 点击名牌上的靶心将其加入专注"
+
 msgid "· updated {updatedAgo}"
 msgstr "· 更新于{updatedAgo}"
 
@@ -1039,6 +1042,9 @@ msgstr "{hidden, plural, one {显示 # 条回复} other {显示 # 条回复}}"
 msgid "{hidden, plural, one {View # more reply} other {View # more replies}}"
 msgstr "{hidden, plural, other {查看另外 # 条回复}}"
 
+msgid "{hiddenByFocus} more outside your focus. Turn off Focus to see them."
+msgstr "专注之外还有 {hiddenByFocus} 项。关闭专注即可查看。"
+
 msgid "{hiddenCount, plural, one {Show # more frame} other {Show # more frames}}"
 msgstr "{hiddenCount, plural, one {再显示#个栈帧} other {再显示#个栈帧}}"
 
@@ -1896,6 +1902,9 @@ msgstr "添加{0}账户"
 msgid "Add {0} to workspace"
 msgstr "将{0}添加到工作区"
 
+msgid "Add {count} to focus"
+msgstr "将 {count} 个加入专注"
+
 msgid "Add a comment…"
 msgstr "添加评论…"
 
@@ -2053,6 +2062,9 @@ msgstr "给风险最高又没测试的代码补上测试…"
 msgid "Add tests where they're missing"
 msgstr "给缺测试的地方补测试"
 
+msgid "Add the current workspace to the ones you are working on, or take it out"
+msgstr "将当前工作区加入正在处理的工作区，或将其移出"
+
 msgid "Add this label"
 msgstr "添加此标签"
 
@@ -2061,6 +2073,12 @@ msgstr "添加到词典"
 
 msgid "Add to favorites"
 msgstr "添加到收藏"
+
+msgid "Add to focus"
+msgstr "加入专注"
+
+msgid "Add to focus or remove from it"
+msgstr "加入或移出专注"
 
 msgid "Add to project"
 msgstr "添加到项目"
@@ -7663,6 +7681,9 @@ msgstr "极高"
 msgid "Extra small"
 msgstr "超小"
 
+msgid "F adds or removes the selected workspace from focus"
+msgstr "按 F 将所选工作区加入或移出专注"
+
 msgid "F4 gate · {F4_GATE_SHARE}%"
 msgstr "F4关卡 · {F4_GATE_SHARE}%"
 
@@ -8443,8 +8464,15 @@ msgstr "火焰"
 msgid "Fleets of agents plan, implement, review, and test each other's work. Humans set direction, arbitrate exceptions, and own taste. The unit of human attention is no longer the pull request. It is the decision."
 msgstr "成群的智能体规划、实现、审查并测试彼此的工作。人类定方向、裁决例外、把握品味。人类注意力的单位不再是拉取请求，而是决策。"
 
+msgctxt "workspace focus filter"
+msgid "Focus"
+msgstr "专注"
+
 msgid "Focus Chat Input"
 msgstr "聚焦聊天输入框"
+
+msgid "Focus only · F adds or removes the selected workspace"
+msgstr "仅专注 · 按 F 加入或移出所选工作区"
 
 msgid "Focus Pane Down"
 msgstr "聚焦下方窗格"
@@ -9556,6 +9584,9 @@ msgstr "（在此主机的终端中）。"
 
 msgid "In all projects"
 msgstr "全部项目"
+
+msgid "In focus"
+msgstr "专注中"
 
 msgid "In just a few months, <0>tens of thousands of engineers</0> run Superset as their primary IDE, at companies like Wix, DoorDash, and Netflix."
 msgstr "短短几个月，<0>数万名工程师</0>把Superset当作主力IDE，他们来自Wix、DoorDash、Netflix这样的公司。"
@@ -12425,6 +12456,18 @@ msgstr "还没有任何版本。"
 msgid "No workspace has these labels"
 msgstr "没有工作区带有这些标签"
 
+msgid "No workspace in focus here"
+msgstr "此处没有专注中的工作区"
+
+msgid "No workspace in focus here."
+msgstr "此处没有专注中的工作区。"
+
+msgid "No workspace in focus on this host."
+msgstr "此主机上没有专注中的工作区。"
+
+msgid "No workspace in focus yet: click the target on a workspace to add it"
+msgstr "还没有专注中的工作区：点击工作区上的靶心即可加入"
+
 msgid "No workspace on this host yet."
 msgstr "此主机上还没有工作区。"
 
@@ -12605,6 +12648,9 @@ msgstr "这里还没有内容。"
 
 msgid "Nothing here."
 msgstr "这里没有内容。"
+
+msgid "Nothing in focus waits on you."
+msgstr "专注中没有等你处理的事项。"
 
 msgid "Nothing is being tracked"
 msgstr "没有正在跟踪的任务"
@@ -15156,6 +15202,9 @@ msgstr "移除"
 msgid "Remove {0}"
 msgstr "移除{0}"
 
+msgid "Remove {count} from focus"
+msgstr "将 {count} 个移出专注"
+
 msgid "Remove {label}"
 msgstr "移除 {label}"
 
@@ -15170,6 +15219,9 @@ msgstr "移除附件"
 
 msgid "Remove from favorites"
 msgstr "从收藏中移除"
+
+msgid "Remove from focus"
+msgstr "移出专注"
 
 msgid "Remove from Queue"
 msgstr "移出队列"
@@ -17106,6 +17158,12 @@ msgstr "在侧边栏中显示"
 msgid "Show only {0}"
 msgstr "仅显示 {0}"
 
+msgid "Show only the workspaces in focus"
+msgstr "仅显示专注中的工作区"
+
+msgid "Show only workspaces in focus (toggle)"
+msgstr "仅显示专注中的工作区（切换）"
+
 msgid "Show open items"
 msgstr "只显示打开的条目"
 
@@ -17168,6 +17226,9 @@ msgstr "在侧边栏显示用量选项卡"
 
 msgid "showArrow opt-in"
 msgstr "showArrow按需开启"
+
+msgid "Showing only the workspaces in focus. Click to show all."
+msgstr "仅显示专注中的工作区。点击显示全部。"
 
 msgid "Showing the latest {MAX_COMMITS} commits. Filter by branch to go further back."
 msgstr "显示最近 {MAX_COMMITS} 个提交。按分支筛选可查看更早的。"
@@ -19652,6 +19713,9 @@ msgstr "切换主题"
 
 msgid "Toggle value visibility"
 msgstr "切换值的可见性"
+
+msgid "Toggle Workspace Focus"
+msgstr "切换工作区专注"
 
 msgid "Toggle Workspaces Sidebar"
 msgstr "切换工作区侧边栏"

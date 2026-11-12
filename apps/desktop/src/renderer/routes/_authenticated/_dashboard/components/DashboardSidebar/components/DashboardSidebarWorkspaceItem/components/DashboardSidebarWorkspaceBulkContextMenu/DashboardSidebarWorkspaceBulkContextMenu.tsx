@@ -14,9 +14,11 @@ import {
 	LuArrowRightLeft,
 	LuArrowUp,
 	LuFolderPlus,
+	LuTarget,
 	LuTrash2,
 	LuX,
 } from "react-icons/lu";
+import { useWorkspaceFocusStore } from "renderer/stores/workspace-focus";
 import { useBulkWorkspaceMoveActions } from "../../../../hooks/useBulkWorkspaceMoveActions";
 import { useDashboardSidebarHoverActions } from "../../../../providers/DashboardSidebarHoverProvider";
 import { useDashboardSidebarSelection } from "../../../../providers/DashboardSidebarSelectionProvider";
@@ -46,17 +48,30 @@ export function DashboardSidebarWorkspaceBulkContextMenu({
 		workspacesById: scope?.workspacesById ?? new Map(),
 		sectionIdByWorkspaceId: scope?.sectionIdByWorkspaceId ?? new Map(),
 	});
+	const focusedIds = useWorkspaceFocusStore((state) => state.ids);
+	const setFocused = useWorkspaceFocusStore((state) => state.setFocused);
 	const openDeleteDialog = () =>
 		useBulkDeleteWorkspacesIntent.getState().request(selectedWorkspaces);
 
 	if (!scope) return children;
 
 	const count = selectedWorkspaces.length;
+	const selectedIds = selectedWorkspaces.map((workspace) => workspace.id);
+	const allFocused = selectedIds.every((id) => focusedIds.includes(id));
 
 	return (
 		<ContextMenu onOpenChange={setContextMenuOpen}>
 			<ContextMenuTrigger asChild>{children}</ContextMenuTrigger>
 			<ContextMenuContent onCloseAutoFocus={(event) => event.preventDefault()}>
+				<ContextMenuItem onSelect={() => setFocused(selectedIds, !allFocused)}>
+					<LuTarget className="size-4 mr-2" />
+					{allFocused ? (
+						<Trans>Remove {count} from focus</Trans>
+					) : (
+						<Trans>Add {count} to focus</Trans>
+					)}
+				</ContextMenuItem>
+				<ContextMenuSeparator />
 				<ContextMenuSub>
 					<ContextMenuSubTrigger>
 						<LuArrowRightLeft className="size-4 mr-2" />

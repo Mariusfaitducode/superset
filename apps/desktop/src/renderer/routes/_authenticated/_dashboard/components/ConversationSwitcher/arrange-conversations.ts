@@ -17,13 +17,16 @@ const RECENT_LIMIT = 4;
 /**
  * Without a query: the conversations last on screen first, so ⌘K ↵ flips
  * back to the previous one, then those waiting on the user, then the rest.
- * The conversation on screen is left out. With a query: one ranked list.
+ * The conversation on screen is left out. `focusedWorkspaces`, when given,
+ * narrows those two lists to the workspaces in focus; recent ones and search
+ * results still span every workspace. With a query: one ranked list.
  */
 export function arrangeConversations({
 	conversations,
 	recent,
 	currentTerminalId,
 	query,
+	focusedWorkspaces = null,
 }: {
 	/** Waiting on the user first, most recent state change first. */
 	conversations: AgentConversation[];
@@ -31,6 +34,7 @@ export function arrangeConversations({
 	recent: readonly string[];
 	currentTerminalId: string | null;
 	query: string;
+	focusedWorkspaces?: ReadonlySet<string> | null;
 }): SwitcherSection[] {
 	const recencyRank = new Map(recent.map((id, index) => [id, index]));
 	const trimmed = query.trim();
@@ -62,7 +66,10 @@ export function arrangeConversations({
 		...recentConversations.map((conversation) => conversation.terminalId),
 	]);
 	const rest = conversations.filter(
-		(conversation) => !shown.has(conversation.terminalId),
+		(conversation) =>
+			!shown.has(conversation.terminalId) &&
+			(focusedWorkspaces === null ||
+				focusedWorkspaces.has(conversation.workspaceId)),
 	);
 	const sections: SwitcherSection[] = [
 		{ id: "recent", conversations: recentConversations },
