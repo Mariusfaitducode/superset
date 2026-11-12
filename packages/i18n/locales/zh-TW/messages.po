@@ -80,6 +80,9 @@ msgstr "「{title}」已完成任務"
 msgid "\"{title}\" is waiting for your reply"
 msgstr "「{title}」正在等待你的回覆"
 
+msgid "\"{title}\" will be squashed and merged on GitHub. This can't be undone from here."
+msgstr "「{title}」將在 GitHub 上壓縮合併。此操作無法在這裡復原。"
+
 msgid "({aliveCount} running)"
 msgstr "（{aliveCount}個執行中）"
 
@@ -820,6 +823,12 @@ msgstr "{agents, plural, other {# 個代理}}"
 
 msgid "{agents} sessions resume when you open their workspace."
 msgstr "開啟對應工作區時，{agents} 工作階段會恢復。"
+
+msgid "{author} answered since your review"
+msgstr "{author} 在你審查後回覆了"
+
+msgid "{author} pushed since your review"
+msgstr "{author} 在你審查後推送了提交"
 
 msgid "{author} waits for your review"
 msgstr "{author} 正在等你審查"
@@ -2835,6 +2844,12 @@ msgstr "已批准"
 msgid "Approved and green"
 msgstr "已核准且通過"
 
+msgid "Approved and green, behind {base}"
+msgstr "已核准且全部通過，落後於 {base}"
+
+msgid "Approved and green, behind its base"
+msgstr "已核准且全部通過，落後於基礎分支"
+
 msgid "Approved and green, oldest first"
 msgstr "已核准且通過，最早的在前"
 
@@ -2918,6 +2933,9 @@ msgstr "請代理程式寫一份設計文件或報告。它會建立頁面並發
 
 msgid "Ask an agent to publish one from the desktop app."
 msgstr "請代理程式從桌面應用程式發佈一個頁面。"
+
+msgid "Ask for a review"
+msgstr "請求審查"
 
 msgid "Ask for approval"
 msgstr "要求批准"
@@ -4141,6 +4159,9 @@ msgstr "CI 執行中"
 #. placeholder {1}: checks.total
 msgid "CI running: {0} of {1} checks"
 msgstr "CI 執行中：{1} 項中 {0} 項"
+
+msgid "CI runs again on the new commit."
+msgstr "CI 會在新提交上重新執行。"
 
 msgid "Clarify this"
 msgstr "闡明這裡"
@@ -5899,6 +5920,9 @@ msgstr "無法取消暫存檔案"
 
 msgid "Couldn't update pull request"
 msgstr "無法更新拉取請求"
+
+msgid "Couldn't update the branch"
+msgstr "無法更新分支"
 
 msgid "Couldn't update the queue"
 msgstr "無法更新佇列"
@@ -8427,6 +8451,9 @@ msgstr "修正審查問題"
 
 msgid "Fix the flaky test"
 msgstr "修正不穩定的測試"
+
+msgid "Fix with agent"
+msgstr "交給代理修復"
 
 msgid "fix-auth-redirect"
 msgstr "fix-auth-redirect"
@@ -11097,12 +11124,18 @@ msgstr "合併狀態"
 msgid "Merge status unknown"
 msgstr "合併狀態不明"
 
+msgid "Merge, then reviews, then your blocked PRs"
+msgstr "先合併，再審查，然後處理你被阻擋的 PR"
+
 msgid "Merged"
 msgstr "已合併"
 
 msgctxt "pull request state"
 msgid "Merged"
 msgstr "已合併"
+
+msgid "Merged #{prNumber}"
+msgstr "已合併 #{prNumber}"
 
 msgid "Merged after {base}, not released yet"
 msgstr "在 {base} 之後合併，尚未發行"
@@ -12583,6 +12616,9 @@ msgstr "尚未在此主機上配置"
 
 msgid "not sorted"
 msgstr "未排序"
+
+msgid "Not today: move it to Later"
+msgstr "今天不做：移到稍後"
 
 msgctxt "agent status"
 msgid "Not updating"
@@ -14789,6 +14825,9 @@ msgstr "超出速率限制。"
 msgid "Rate Superset"
 msgstr "為Superset評分"
 
+msgid "Re-review"
+msgstr "重新審查"
+
 msgid "Reach this Mac from anywhere via the Superset relay, or spin up cloud workspaces. Connect from any client."
 msgstr "通過Superset中繼從任何地方連上這臺Mac，或啟動雲端工作區。可從任意客戶端連線。"
 
@@ -15434,6 +15473,9 @@ msgstr "申請試用"
 
 msgid "Request Body"
 msgstr "請求體"
+
+msgid "Request reviewers on GitHub"
+msgstr "在 GitHub 上請求審查者"
 
 msgid "requested changes"
 msgstr "要求變更"
@@ -17637,6 +17679,9 @@ msgstr "壓縮併合併"
 msgid "Squash and merge"
 msgstr "壓縮併合併"
 
+msgid "Squash and merge #{prNumber}?"
+msgstr "壓縮合併 #{prNumber}？"
+
 msgid "SS"
 msgstr "SS"
 
@@ -17654,6 +17699,9 @@ msgstr "穩定性改進"
 
 msgid "Stacked"
 msgstr "堆疊"
+
+msgid "stacked on #{stackedOn}"
+msgstr "堆疊在 #{stackedOn} 上"
 
 msgid "Staff Software Engineer, Vori"
 msgstr "Staff 軟體工程師，Vori"
@@ -20189,6 +20237,9 @@ msgstr "更新"
 msgid "Update available"
 msgstr "有可用更新"
 
+msgid "Update branch"
+msgstr "更新分支"
+
 msgid "Update Branch"
 msgstr "更新分支"
 
@@ -20257,6 +20308,9 @@ msgstr "剛剛從 {0} 更新。"
 
 msgid "Updates"
 msgstr "更新"
+
+msgid "Updating the branch of #{prNumber}"
+msgstr "正在更新 #{prNumber} 的分支"
 
 #. placeholder {0}: update.progress.target
 msgid "Updating to {0}"
@@ -21521,6 +21575,9 @@ msgstr "你自己的帳戶。組織的整合讓 Superset 存取其工具；連�
 
 msgid "Your PRs blocked on you: changes requested, then CI, then conflicts"
 msgstr "卡在你這裡的 PR：先需修改，再 CI，再衝突"
+
+msgid "Your PRs nobody was asked to review"
+msgstr "還沒請任何人審查的 PR"
 
 msgid "Your rank"
 msgstr "你的排名"

@@ -35,6 +35,10 @@ export function actionLabels(): Record<
 			title: i18n._(msg`Merge`),
 			hint: i18n._(msg`Approved and green, oldest first`),
 		},
+		ask: {
+			title: i18n._(msg`Ask for a review`),
+			hint: i18n._(msg`Your PRs nobody was asked to review`),
+		},
 		finish: { title: i18n._(msg`Finish`), hint: i18n._(msg`Your drafts`) },
 		wait: {
 			title: i18n._(msg`Waiting on others`),
@@ -88,6 +92,12 @@ export function whyLabel(why: MyPullRequestWhy): string {
 			const author = why.author ? `@${why.author}` : i18n._(msg`The author`);
 			return i18n._(msg`${author} waits for your review`);
 		}
+		case "re-review": {
+			const author = why.author ? `@${why.author}` : i18n._(msg`The author`);
+			return why.onHead
+				? i18n._(msg`${author} answered since your review`)
+				: i18n._(msg`${author} pushed since your review`);
+		}
 		case "changes-requested": {
 			if (why.by.length === 0) return i18n._(msg`Changes requested`);
 			const by = names(why.by);
@@ -99,8 +109,15 @@ export function whyLabel(why: MyPullRequestWhy): string {
 		}
 		case "conflicts":
 			return i18n._(msg`Conflicts with the base branch`);
-		case "ready":
-			return i18n._(msg`Approved and green`);
+		case "ready": {
+			if (why.behind === null) return i18n._(msg`Approved and green`);
+			const base = why.behind;
+			return base
+				? i18n._(msg`Approved and green, behind ${base}`)
+				: i18n._(msg`Approved and green, behind its base`);
+		}
+		case "no-reviewer":
+			return i18n._(msg`No reviewer requested`);
 		case "draft":
 			return i18n._(msg`Draft`);
 		case "waiting-review": {

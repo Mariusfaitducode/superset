@@ -59,6 +59,8 @@ const AMBER_TEXT_CLASS_NAME = "text-amber-700 [.dark_&]:text-amber-300";
 
 const WHY_TONE: Record<MyPullRequestWhy["kind"], string> = {
 	review: AMBER_TEXT_CLASS_NAME,
+	"re-review": AMBER_TEXT_CLASS_NAME,
+	"no-reviewer": AMBER_TEXT_CLASS_NAME,
 	"changes-requested": PR_RED_TEXT_CLASS_NAME,
 	"ci-failing": PR_RED_TEXT_CLASS_NAME,
 	conflicts: PR_RED_TEXT_CLASS_NAME,
@@ -103,6 +105,7 @@ function counterpart({ why, pr }: PrioritizedPullRequest): string | null {
 		case "waiting-review":
 			return why.reviewers[0] ?? null;
 		case "review":
+		case "re-review":
 		case "following":
 		case "unknown":
 			return pr.authorLogin;

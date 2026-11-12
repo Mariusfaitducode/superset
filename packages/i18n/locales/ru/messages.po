@@ -80,6 +80,9 @@ msgstr "«{title}» завершил задачу"
 msgid "\"{title}\" is waiting for your reply"
 msgstr "«{title}» ждёт вашего ответа"
 
+msgid "\"{title}\" will be squashed and merged on GitHub. This can't be undone from here."
+msgstr "«{title}» будет слит через squash на GitHub. Отменить это отсюда нельзя."
+
 msgid "({aliveCount} running)"
 msgstr "(работает: {aliveCount})"
 
@@ -820,6 +823,12 @@ msgstr "{agents, plural, one {# агент} few {# агента} many {# аге�
 
 msgid "{agents} sessions resume when you open their workspace."
 msgstr "Сеансы {agents} возобновятся, когда вы откроете их рабочее пространство."
+
+msgid "{author} answered since your review"
+msgstr "{author} ответил(а) после вашего ревью"
+
+msgid "{author} pushed since your review"
+msgstr "{author} запушил(а) после вашего ревью"
 
 msgid "{author} waits for your review"
 msgstr "{author} ждёт вашего ревью"
@@ -2835,6 +2844,12 @@ msgstr "Одобрено"
 msgid "Approved and green"
 msgstr "Одобрено, всё зелёное"
 
+msgid "Approved and green, behind {base}"
+msgstr "Одобрено, всё зелёное, отстаёт от {base}"
+
+msgid "Approved and green, behind its base"
+msgstr "Одобрено, всё зелёное, отстаёт от базовой ветки"
+
 msgid "Approved and green, oldest first"
 msgstr "Одобрено и зелёное, сначала старые"
 
@@ -2918,6 +2933,9 @@ msgstr "Попросите агента подготовить дизайн-до
 
 msgid "Ask an agent to publish one from the desktop app."
 msgstr "Попросите агента опубликовать её из десктопного приложения."
+
+msgid "Ask for a review"
+msgstr "Запросить ревью"
 
 msgid "Ask for approval"
 msgstr "Запрашивать одобрение"
@@ -4141,6 +4159,9 @@ msgstr "CI выполняется"
 #. placeholder {1}: checks.total
 msgid "CI running: {0} of {1} checks"
 msgstr "CI идёт: {0} из {1} проверок"
+
+msgid "CI runs again on the new commit."
+msgstr "CI снова запустится на новом коммите."
 
 msgid "Clarify this"
 msgstr "Уточнить это"
@@ -5899,6 +5920,9 @@ msgstr "Не удалось снять индексацию с файла"
 
 msgid "Couldn't update pull request"
 msgstr "Не удалось обновить пул-реквест"
+
+msgid "Couldn't update the branch"
+msgstr "Не удалось обновить ветку"
 
 msgid "Couldn't update the queue"
 msgstr "Не удалось обновить очередь"
@@ -8427,6 +8451,9 @@ msgstr "Исправить замечания"
 
 msgid "Fix the flaky test"
 msgstr "Починить нестабильный тест"
+
+msgid "Fix with agent"
+msgstr "Исправить с агентом"
 
 msgid "fix-auth-redirect"
 msgstr "fix-auth-redirect"
@@ -11097,12 +11124,18 @@ msgstr "Статус слияния"
 msgid "Merge status unknown"
 msgstr "Статус слияния неизвестен"
 
+msgid "Merge, then reviews, then your blocked PRs"
+msgstr "Сначала слить, потом ревью, потом ваши заблокированные PR"
+
 msgid "Merged"
 msgstr "Объединён"
 
 msgctxt "pull request state"
 msgid "Merged"
 msgstr "Объединено"
+
+msgid "Merged #{prNumber}"
+msgstr "#{prNumber} слит"
 
 msgid "Merged after {base}, not released yet"
 msgstr "Слито после {base}, ещё не выпущено"
@@ -12583,6 +12616,9 @@ msgstr "Не настроен на этом хосте"
 
 msgid "not sorted"
 msgstr "без сортировки"
+
+msgid "Not today: move it to Later"
+msgstr "Не сегодня: перенести в «Позже»"
 
 msgctxt "agent status"
 msgid "Not updating"
@@ -14789,6 +14825,9 @@ msgstr "Превышен лимит запросов."
 msgid "Rate Superset"
 msgstr "Оценить Superset"
 
+msgid "Re-review"
+msgstr "Повторное ревью"
+
 msgid "Reach this Mac from anywhere via the Superset relay, or spin up cloud workspaces. Connect from any client."
 msgstr "Достучитесь до этого Mac откуда угодно через реле Superset или поднимите облачные рабочие области. Подключайтесь с любого клиента."
 
@@ -15434,6 +15473,9 @@ msgstr "Запросить пробный период"
 
 msgid "Request Body"
 msgstr "Тело запроса"
+
+msgid "Request reviewers on GitHub"
+msgstr "Запросить ревьюеров на GitHub"
 
 msgid "requested changes"
 msgstr "запросил(а) изменения"
@@ -17637,6 +17679,9 @@ msgstr "Сжать и объединить"
 msgid "Squash and merge"
 msgstr "Сжать и объединить"
 
+msgid "Squash and merge #{prNumber}?"
+msgstr "Слить #{prNumber} через squash?"
+
 msgid "SS"
 msgstr "SS"
 
@@ -17654,6 +17699,9 @@ msgstr "Улучшения стабильности"
 
 msgid "Stacked"
 msgstr "Стопкой"
+
+msgid "stacked on #{stackedOn}"
+msgstr "поверх #{stackedOn}"
 
 msgid "Staff Software Engineer, Vori"
 msgstr "Стафф-инженер-программист, Vori"
@@ -20189,6 +20237,9 @@ msgstr "Обновить"
 msgid "Update available"
 msgstr "Доступно обновление"
 
+msgid "Update branch"
+msgstr "Обновить ветку"
+
 msgid "Update Branch"
 msgstr "Обновить ветку"
 
@@ -20257,6 +20308,9 @@ msgstr "Только что обновлено с {0}."
 
 msgid "Updates"
 msgstr "Обновления"
+
+msgid "Updating the branch of #{prNumber}"
+msgstr "Обновляется ветка #{prNumber}"
 
 #. placeholder {0}: update.progress.target
 msgid "Updating to {0}"
@@ -21521,6 +21575,9 @@ msgstr "Ваши собственные учётные записи. Интег�
 
 msgid "Your PRs blocked on you: changes requested, then CI, then conflicts"
 msgstr "Ваши PR, блокируемые вами: запрошенные изменения, затем CI, затем конфликты"
+
+msgid "Your PRs nobody was asked to review"
+msgstr "Ваши PR, на ревью которых никого не позвали"
 
 msgid "Your rank"
 msgstr "Ваше место"

@@ -5,6 +5,7 @@ export {
 	type MyPullRequestOverrides,
 	type MyPullRequestWhy,
 	myPullRequestKey,
+	naturalAction,
 	type PrioritizedPullRequest,
 	prioritizeMyPullRequests,
 } from "./prioritizeMyPullRequests";
