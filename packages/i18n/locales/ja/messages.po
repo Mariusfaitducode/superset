@@ -80,6 +80,9 @@ msgstr "「{title}」がタスクを完了しました"
 msgid "\"{title}\" is waiting for your reply"
 msgstr "「{title}」が返信を待っています"
 
+msgid "\"{title}\" will be squashed and merged on GitHub. This can't be undone from here."
+msgstr "「{title}」は GitHub でスカッシュマージされます。ここからは元に戻せません。"
+
 msgid "({aliveCount} running)"
 msgstr "({aliveCount}件実行中)"
 
@@ -820,6 +823,12 @@ msgstr "{agents, plural, other {エージェント # 件}}"
 
 msgid "{agents} sessions resume when you open their workspace."
 msgstr "{agents} のセッションは、そのワークスペースを開くと再開されます。"
+
+msgid "{author} answered since your review"
+msgstr "{author} があなたのレビュー後に返信しました"
+
+msgid "{author} pushed since your review"
+msgstr "{author} があなたのレビュー後にプッシュしました"
 
 msgid "{author} waits for your review"
 msgstr "{author} があなたのレビューを待っています"
@@ -2835,6 +2844,12 @@ msgstr "承認"
 msgid "Approved and green"
 msgstr "承認済みでグリーン"
 
+msgid "Approved and green, behind {base}"
+msgstr "承認済み・グリーン、{base} より遅れ"
+
+msgid "Approved and green, behind its base"
+msgstr "承認済み・グリーン、ベースより遅れ"
+
 msgid "Approved and green, oldest first"
 msgstr "承認済みでグリーン、古い順"
 
@@ -2918,6 +2933,9 @@ msgstr "エージェントにデザインドキュメントやレポートを頼
 
 msgid "Ask an agent to publish one from the desktop app."
 msgstr "デスクトップアプリからエージェントに公開してもらいましょう。"
+
+msgid "Ask for a review"
+msgstr "レビューを依頼"
 
 msgid "Ask for approval"
 msgstr "承認を求める"
@@ -4141,6 +4159,9 @@ msgstr "CI 実行中"
 #. placeholder {1}: checks.total
 msgid "CI running: {0} of {1} checks"
 msgstr "CI 実行中: {1} 件中 {0} 件"
+
+msgid "CI runs again on the new commit."
+msgstr "新しいコミットで CI が再実行されます。"
 
 msgid "Clarify this"
 msgstr "これを明確にして"
@@ -5899,6 +5920,9 @@ msgstr "ファイルをステージ解除できませんでした"
 
 msgid "Couldn't update pull request"
 msgstr "プルリクエストを更新できませんでした"
+
+msgid "Couldn't update the branch"
+msgstr "ブランチを更新できませんでした"
 
 msgid "Couldn't update the queue"
 msgstr "キューを更新できませんでした"
@@ -8427,6 +8451,9 @@ msgstr "指摘を修正"
 
 msgid "Fix the flaky test"
 msgstr "不安定なテストを直す"
+
+msgid "Fix with agent"
+msgstr "エージェントで修正"
 
 msgid "fix-auth-redirect"
 msgstr "fix-auth-redirect"
@@ -11097,12 +11124,18 @@ msgstr "マージ状態"
 msgid "Merge status unknown"
 msgstr "マージ状態は不明です"
 
+msgid "Merge, then reviews, then your blocked PRs"
+msgstr "まずマージ、次にレビュー、次にブロックされた自分の PR"
+
 msgid "Merged"
 msgstr "マージ済み"
 
 msgctxt "pull request state"
 msgid "Merged"
 msgstr "マージ済み"
+
+msgid "Merged #{prNumber}"
+msgstr "#{prNumber} をマージしました"
 
 msgid "Merged after {base}, not released yet"
 msgstr "{base} の後にマージ済み、未リリース"
@@ -12583,6 +12616,9 @@ msgstr "このホストではセットアップされていません"
 
 msgid "not sorted"
 msgstr "並べ替えなし"
+
+msgid "Not today: move it to Later"
+msgstr "今日はしない：後で に移動"
 
 msgctxt "agent status"
 msgid "Not updating"
@@ -14789,6 +14825,9 @@ msgstr "レート制限を超えました。"
 msgid "Rate Superset"
 msgstr "Supersetを評価"
 
+msgid "Re-review"
+msgstr "再レビュー"
+
 msgid "Reach this Mac from anywhere via the Superset relay, or spin up cloud workspaces. Connect from any client."
 msgstr "Supersetリレー経由でどこからでもこのMacに接続でき、クラウドワークスペースも起動できます。どのクライアントからでも接続できます。"
 
@@ -15434,6 +15473,9 @@ msgstr "トライアルを申し込む"
 
 msgid "Request Body"
 msgstr "リクエストボディ"
+
+msgid "Request reviewers on GitHub"
+msgstr "GitHub でレビュアーを依頼"
 
 msgid "requested changes"
 msgstr "が変更をリクエストしました"
@@ -17637,6 +17679,9 @@ msgstr "スカッシュしてマージ"
 msgid "Squash and merge"
 msgstr "スカッシュしてマージ"
 
+msgid "Squash and merge #{prNumber}?"
+msgstr "#{prNumber} をスカッシュマージしますか？"
+
 msgid "SS"
 msgstr "SS"
 
@@ -17654,6 +17699,9 @@ msgstr "安定性の改善"
 
 msgid "Stacked"
 msgstr "積み重ね"
+
+msgid "stacked on #{stackedOn}"
+msgstr "#{stackedOn} の上に積み重ね"
 
 msgid "Staff Software Engineer, Vori"
 msgstr "スタッフソフトウェアエンジニア、Vori"
@@ -20189,6 +20237,9 @@ msgstr "更新"
 msgid "Update available"
 msgstr "アップデートあり"
 
+msgid "Update branch"
+msgstr "ブランチを更新"
+
 msgid "Update Branch"
 msgstr "ブランチを更新"
 
@@ -20257,6 +20308,9 @@ msgstr "{0}からたった今更新しました。"
 
 msgid "Updates"
 msgstr "アップデート"
+
+msgid "Updating the branch of #{prNumber}"
+msgstr "#{prNumber} のブランチを更新中"
 
 #. placeholder {0}: update.progress.target
 msgid "Updating to {0}"
@@ -21521,6 +21575,9 @@ msgstr "あなた自身のアカウントです。組織の連携は Superset �
 
 msgid "Your PRs blocked on you: changes requested, then CI, then conflicts"
 msgstr "あなた次第の PR: 変更要求、CI、コンフリクトの順"
+
+msgid "Your PRs nobody was asked to review"
+msgstr "誰にもレビューを依頼していない自分の PR"
 
 msgid "Your rank"
 msgstr "あなたのランク"

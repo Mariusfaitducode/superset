@@ -7,6 +7,8 @@ export type MyPullRequestReason =
 	| "ready-to-merge"
 	| "ci-running"
 	| "awaiting-review"
+	| "no-reviewer"
+	| "re-review"
 	| "following";
 
 const REASONS_ON_VIEWER = new Set<MyPullRequestReason>([
@@ -16,6 +18,8 @@ const REASONS_ON_VIEWER = new Set<MyPullRequestReason>([
 	"changes-requested",
 	"draft",
 	"ready-to-merge",
+	"no-reviewer",
+	"re-review",
 ]);
 
 export function isReasonOnViewer(reason: MyPullRequestReason): boolean {
@@ -48,6 +52,14 @@ export interface MyPullRequestDetails {
 	reviews: { login: string; state: MyPullRequestReviewState }[];
 	viewerReview: MyPullRequestReviewState | null;
 	/** Optional: hosts older than this field do not send them. */
+	baseRefName?: string | null;
+	behindBase?: boolean;
+	viewerLastReview?: {
+		state: MyPullRequestReviewState;
+		submittedAt: string;
+		onHead: boolean;
+	} | null;
+	authorActiveSinceViewerReview?: boolean;
 	commitCount?: number | null;
 	lastCommitAt?: string | null;
 	closingIssues?: MyPullRequestIssue[];
@@ -112,12 +124,17 @@ export function describeMyPullRequest(
 			} else {
 				if (checks === "pending") reasons.push("ci-running");
 				if (details.reviewDecision !== "APPROVED") {
-					reasons.push("awaiting-review");
+					const nobodyAsked =
+						details.pendingReviewers.length === 0 &&
+						details.reviews.length === 0;
+					reasons.push(nobodyAsked ? "no-reviewer" : "awaiting-review");
 				}
 			}
 		}
 	} else if (details?.reviewRequestedFromViewer && !pr.isDraft) {
 		reasons.push("review-requested");
+	} else if (details?.authorActiveSinceViewerReview && !pr.isDraft) {
+		reasons.push("re-review");
 	} else {
 		reasons.push("following");
 	}

@@ -80,6 +80,9 @@ msgstr "\"{title}\" görevini tamamladı"
 msgid "\"{title}\" is waiting for your reply"
 msgstr "\"{title}\" yanıtınızı bekliyor"
 
+msgid "\"{title}\" will be squashed and merged on GitHub. This can't be undone from here."
+msgstr "\"{title}\" GitHub'da squash ile birleştirilecek. Bu işlem buradan geri alınamaz."
+
 msgid "({aliveCount} running)"
 msgstr "({aliveCount} çalışıyor)"
 
@@ -820,6 +823,12 @@ msgstr "{agents, plural, one {# ajan} other {# ajan}}"
 
 msgid "{agents} sessions resume when you open their workspace."
 msgstr "{agents} oturumları, çalışma alanlarını açtığınızda devam eder."
+
+msgid "{author} answered since your review"
+msgstr "{author} incelemenizden sonra yanıt verdi"
+
+msgid "{author} pushed since your review"
+msgstr "{author} incelemenizden sonra push yaptı"
 
 msgid "{author} waits for your review"
 msgstr "{author} incelemenizi bekliyor"
@@ -2835,6 +2844,12 @@ msgstr "Onaylandı"
 msgid "Approved and green"
 msgstr "Onaylı ve yeşil"
 
+msgid "Approved and green, behind {base}"
+msgstr "Onaylandı ve yeşil, {base} dalının gerisinde"
+
+msgid "Approved and green, behind its base"
+msgstr "Onaylandı ve yeşil, temel dalın gerisinde"
+
 msgid "Approved and green, oldest first"
 msgstr "Onaylı ve yeşil, en eski önce"
 
@@ -2918,6 +2933,9 @@ msgstr "Bir ajandan tasarım belgesi veya rapor isteyin. Sayfayı oluşturup yay
 
 msgid "Ask an agent to publish one from the desktop app."
 msgstr "Bir ajandan masaüstü uygulamasından bir tane yayımlamasını isteyin."
+
+msgid "Ask for a review"
+msgstr "İnceleme iste"
 
 msgid "Ask for approval"
 msgstr "Onay iste"
@@ -4141,6 +4159,9 @@ msgstr "CI çalışıyor"
 #. placeholder {1}: checks.total
 msgid "CI running: {0} of {1} checks"
 msgstr "CI çalışıyor: {1} kontrolden {0}"
+
+msgid "CI runs again on the new commit."
+msgstr "CI yeni commit üzerinde yeniden çalışır."
 
 msgid "Clarify this"
 msgstr "Bunu netleştir"
@@ -5899,6 +5920,9 @@ msgstr "Dosya hazırlıktan çıkarılamadı"
 
 msgid "Couldn't update pull request"
 msgstr "Pull request güncellenemedi"
+
+msgid "Couldn't update the branch"
+msgstr "Dal güncellenemedi"
 
 msgid "Couldn't update the queue"
 msgstr "Kuyruk güncellenemedi"
@@ -8427,6 +8451,9 @@ msgstr "Bulguları düzelt"
 
 msgid "Fix the flaky test"
 msgstr "Kararsız testi düzelt"
+
+msgid "Fix with agent"
+msgstr "Ajanla düzelt"
 
 msgid "fix-auth-redirect"
 msgstr "fix-auth-redirect"
@@ -11097,12 +11124,18 @@ msgstr "Birleştirme durumu"
 msgid "Merge status unknown"
 msgstr "Birleştirme durumu bilinmiyor"
 
+msgid "Merge, then reviews, then your blocked PRs"
+msgstr "Önce birleştir, sonra incelemeler, sonra engellenen PR'ların"
+
 msgid "Merged"
 msgstr "Birleştirildi"
 
 msgctxt "pull request state"
 msgid "Merged"
 msgstr "Birleştirildi"
+
+msgid "Merged #{prNumber}"
+msgstr "#{prNumber} birleştirildi"
 
 msgid "Merged after {base}, not released yet"
 msgstr "{base} sonrasında birleştirildi, henüz yayınlanmadı"
@@ -12583,6 +12616,9 @@ msgstr "Bu host'ta kurulu değil"
 
 msgid "not sorted"
 msgstr "sıralanmamış"
+
+msgid "Not today: move it to Later"
+msgstr "Bugün değil: Sonra'ya taşı"
 
 msgctxt "agent status"
 msgid "Not updating"
@@ -14789,6 +14825,9 @@ msgstr "Hız sınırı aşıldı."
 msgid "Rate Superset"
 msgstr "Superset'i puanla"
 
+msgid "Re-review"
+msgstr "Yeniden incele"
+
 msgid "Reach this Mac from anywhere via the Superset relay, or spin up cloud workspaces. Connect from any client."
 msgstr "Superset rölesi üzerinden bu Mac'e her yerden erişin veya bulut çalışma alanları başlatın. Herhangi bir istemciden bağlanın."
 
@@ -15434,6 +15473,9 @@ msgstr "Deneme talep et"
 
 msgid "Request Body"
 msgstr "İstek gövdesi"
+
+msgid "Request reviewers on GitHub"
+msgstr "GitHub'da inceleyici iste"
 
 msgid "requested changes"
 msgstr "değişiklik istedi"
@@ -17637,6 +17679,9 @@ msgstr "Squash ve birleştir"
 msgid "Squash and merge"
 msgstr "Squash ve birleştir"
 
+msgid "Squash and merge #{prNumber}?"
+msgstr "#{prNumber} squash ile birleştirilsin mi?"
+
 msgid "SS"
 msgstr "SS"
 
@@ -17654,6 +17699,9 @@ msgstr "Kararlılık iyileştirmeleri"
 
 msgid "Stacked"
 msgstr "Üst üste"
+
+msgid "stacked on #{stackedOn}"
+msgstr "#{stackedOn} üzerine yığılı"
 
 msgid "Staff Software Engineer, Vori"
 msgstr "Staff Yazılım Mühendisi, Vori"
@@ -20189,6 +20237,9 @@ msgstr "Güncelle"
 msgid "Update available"
 msgstr "Güncelleme mevcut"
 
+msgid "Update branch"
+msgstr "Dalı güncelle"
+
 msgid "Update Branch"
 msgstr "Dalı güncelle"
 
@@ -20257,6 +20308,9 @@ msgstr "Az önce {0} sürümünden güncellendi."
 
 msgid "Updates"
 msgstr "Güncellemeler"
+
+msgid "Updating the branch of #{prNumber}"
+msgstr "#{prNumber} dalı güncelleniyor"
 
 #. placeholder {0}: update.progress.target
 msgid "Updating to {0}"
@@ -21521,6 +21575,9 @@ msgstr "Kendi hesapların. Organizasyonunun entegrasyonları Superset'in araçla
 
 msgid "Your PRs blocked on you: changes requested, then CI, then conflicts"
 msgstr "Sizde bekleyen PR'larınız: istenen değişiklikler, sonra CI, sonra çakışmalar"
+
+msgid "Your PRs nobody was asked to review"
+msgstr "Kimseden inceleme istenmemiş PR'ların"
 
 msgid "Your rank"
 msgstr "Sıralamanız"

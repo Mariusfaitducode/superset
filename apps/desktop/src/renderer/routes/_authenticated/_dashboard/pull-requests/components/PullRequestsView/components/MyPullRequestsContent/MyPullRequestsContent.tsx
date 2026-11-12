@@ -1,7 +1,7 @@
 import { Trans, useLingui } from "@lingui/react/macro";
 import { Button } from "@superset/ui/button";
 import { cn } from "@superset/ui/utils";
-import { useQueries } from "@tanstack/react-query";
+import { useQueries, useQueryClient } from "@tanstack/react-query";
 import { useNavigate } from "@tanstack/react-router";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { GoGitPullRequest } from "react-icons/go";
@@ -39,6 +39,7 @@ import {
 	indexWorkspacesByBranch,
 	pickWorkspaceConversation,
 } from "renderer/routes/_authenticated/_dashboard/pull-requests/utils/matchPullRequestWorkspace";
+import { pickTodayPullRequests } from "renderer/routes/_authenticated/_dashboard/pull-requests/utils/pickTodayPullRequests";
 import {
 	type PrioritizedPullRequest,
 	prioritizeMyPullRequests,
@@ -53,6 +54,7 @@ import {
 } from "./components/MyPullRequestRow";
 import { MyPullRequestStatusLine } from "./components/MyPullRequestStatusLine";
 import { MyPullRequestsFilterBar } from "./components/MyPullRequestsFilterBar";
+import { MyPullRequestsToday } from "./components/MyPullRequestsToday";
 import { actionLabels } from "./utils/myPullRequestLabels";
 
 interface MyPullRequestsContentProps {
@@ -109,6 +111,23 @@ export function MyPullRequestsContent({
 		[projectTargets],
 	);
 	const openUrl = electronTrpc.external.openUrl.useMutation();
+	const queryClient = useQueryClient();
+	const hostByProject = useMemo(
+		() =>
+			new Map(
+				projectTargets.flatMap((target) =>
+					target.hostId && target.hostUrl
+						? [
+								[
+									target.projectId,
+									{ hostId: target.hostId, hostUrl: target.hostUrl },
+								] as const,
+							]
+						: [],
+				),
+			),
+		[projectTargets],
+	);
 
 	// The host keeps its last answer, on disk too: show it at once, then let
 	// the GitHub round trip (4-6 s for ~50 PRs) replace it.
@@ -253,6 +272,10 @@ export function MyPullRequestsContent({
 		() => prioritizeMyPullRequests(visible, { pinned, later }),
 		[visible, pinned, later],
 	);
+	const todayItems = useMemo(
+		() => (debouncedQuery.trim() ? [] : pickTodayPullRequests(groups)),
+		[groups, debouncedQuery],
+	);
 	const projectGroups = useMemo(
 		() =>
 			byProject || isEditingProjects
@@ -322,6 +345,10 @@ export function MyPullRequestsContent({
 		});
 	};
 
+	const isSelectedPullRequest = (pr: MyPullRequestItem) =>
+		selectedPrNumber === pr.prNumber &&
+		(selectedPrProjectId == null || selectedPrProjectId === pr.projectId);
+
 	const renderRow = (row: PrioritizedPullRequest) => {
 		const { pr } = row;
 		const headRefName = pr.details?.headRefName;
@@ -335,10 +362,7 @@ export function MyPullRequestsContent({
 			<MyPullRequestRow
 				key={row.key}
 				row={row}
-				isSelected={
-					selectedPrNumber === pr.prNumber &&
-					(selectedPrProjectId == null || selectedPrProjectId === pr.projectId)
-				}
+				isSelected={isSelectedPullRequest(pr)}
 				isPinned={pinned.includes(row.key)}
 				isLater={later.includes(row.key)}
 				workspace={workspace}
@@ -525,6 +549,21 @@ export function MyPullRequestsContent({
 									<Trans>Retry</Trans>
 								</Button>
 							</div>
+						)}
+						{todayItems.length > 0 && (
+							<MyPullRequestsToday
+								items={todayItems}
+								hostByProject={hostByProject}
+								isSelected={isSelectedPullRequest}
+								onOpen={handleOpenPreview}
+								onOpenOnGitHub={(pr) => openUrl.mutate(pr.url)}
+								onNotToday={toggleLater}
+								onChanged={() =>
+									void queryClient.invalidateQueries({
+										queryKey: ["pullRequests", "mine"],
+									})
+								}
+							/>
 						)}
 						<div className="sticky top-0 z-10 flex h-6 items-center gap-2 border-b bg-background px-4 text-[10px] text-muted-foreground uppercase tracking-wide">
 							<span className="w-4 shrink-0" />

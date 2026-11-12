@@ -47,7 +47,11 @@ const AGE_MS: Record<MyPullRequestAgeFilter, number> = {
 
 export function roleOf(pr: MyPullRequestItem): MyPullRequestRole {
 	if (pr.details?.viewerIsAuthor) return "author";
-	if (pr.details?.reviewRequestedFromViewer || pr.details?.viewerReview) {
+	if (
+		pr.details?.reviewRequestedFromViewer ||
+		pr.details?.viewerReview ||
+		pr.details?.viewerLastReview
+	) {
 		return "reviewer";
 	}
 	return "involved";

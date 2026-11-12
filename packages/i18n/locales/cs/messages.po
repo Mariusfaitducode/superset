@@ -80,6 +80,9 @@ msgstr "„{title}“ dokončil svůj úkol"
 msgid "\"{title}\" is waiting for your reply"
 msgstr "„{title}“ čeká na vaši odpověď"
 
+msgid "\"{title}\" will be squashed and merged on GitHub. This can't be undone from here."
+msgstr "„{title}“ bude na GitHubu sloučen metodou squash. Odsud to nelze vrátit."
+
 msgid "({aliveCount} running)"
 msgstr "(běží {aliveCount})"
 
@@ -820,6 +823,12 @@ msgstr "{agents, plural, one {# agent} few {# agenti} many {# agenta} other {# a
 
 msgid "{agents} sessions resume when you open their workspace."
 msgstr "Relace {agents} se obnoví, když otevřete jejich pracovní prostor."
+
+msgid "{author} answered since your review"
+msgstr "{author} odpověděl(a) od vaší revize"
+
+msgid "{author} pushed since your review"
+msgstr "{author} pushnul(a) od vaší revize"
 
 msgid "{author} waits for your review"
 msgstr "{author} čeká na vaši revizi"
@@ -2835,6 +2844,12 @@ msgstr "Schváleno"
 msgid "Approved and green"
 msgstr "Schváleno a zelené"
 
+msgid "Approved and green, behind {base}"
+msgstr "Schváleno a zelené, za {base}"
+
+msgid "Approved and green, behind its base"
+msgstr "Schváleno a zelené, za základní větví"
+
 msgid "Approved and green, oldest first"
 msgstr "Schváleno a zelené, nejstarší první"
 
@@ -2918,6 +2933,9 @@ msgstr "Požádejte agenta o designový dokument nebo report. Vytvoří stránku
 
 msgid "Ask an agent to publish one from the desktop app."
 msgstr "Požádejte agenta, aby nějakou publikoval z desktopové aplikace."
+
+msgid "Ask for a review"
+msgstr "Požádat o revizi"
 
 msgid "Ask for approval"
 msgstr "Žádat o schválení"
@@ -4141,6 +4159,9 @@ msgstr "CI běží"
 #. placeholder {1}: checks.total
 msgid "CI running: {0} of {1} checks"
 msgstr "CI běží: {0} z {1} kontrol"
+
+msgid "CI runs again on the new commit."
+msgstr "CI se znovu spustí na novém commitu."
 
 msgid "Clarify this"
 msgstr "Vyjasni to"
@@ -5899,6 +5920,9 @@ msgstr "Nepodařilo se zrušit přípravu souboru"
 
 msgid "Couldn't update pull request"
 msgstr "Pull request se nepodařilo aktualizovat"
+
+msgid "Couldn't update the branch"
+msgstr "Větev se nepodařilo aktualizovat"
 
 msgid "Couldn't update the queue"
 msgstr "Frontu se nepodařilo aktualizovat"
@@ -8427,6 +8451,9 @@ msgstr "Opravit nálezy"
 
 msgid "Fix the flaky test"
 msgstr "Opravit nestabilní test"
+
+msgid "Fix with agent"
+msgstr "Opravit s agentem"
 
 msgid "fix-auth-redirect"
 msgstr "fix-auth-redirect"
@@ -11097,12 +11124,18 @@ msgstr "Stav sloučení"
 msgid "Merge status unknown"
 msgstr "Stav sloučení neznámý"
 
+msgid "Merge, then reviews, then your blocked PRs"
+msgstr "Nejdřív sloučit, pak revize, pak vaše zablokované PR"
+
 msgid "Merged"
 msgstr "Sloučený"
 
 msgctxt "pull request state"
 msgid "Merged"
 msgstr "Sloučeno"
+
+msgid "Merged #{prNumber}"
+msgstr "#{prNumber} sloučeno"
 
 msgid "Merged after {base}, not released yet"
 msgstr "Sloučeno po {base}, zatím nevydáno"
@@ -12583,6 +12616,9 @@ msgstr "Na tomto hostu není nastaveno"
 
 msgid "not sorted"
 msgstr "neseřazeno"
+
+msgid "Not today: move it to Later"
+msgstr "Dnes ne: přesunout do Později"
 
 msgctxt "agent status"
 msgid "Not updating"
@@ -14789,6 +14825,9 @@ msgstr "Překročen limit požadavků."
 msgid "Rate Superset"
 msgstr "Ohodnotit Superset"
 
+msgid "Re-review"
+msgstr "Znovu zrevidovat"
+
 msgid "Reach this Mac from anywhere via the Superset relay, or spin up cloud workspaces. Connect from any client."
 msgstr "Dosáhněte na tento Mac odkudkoli přes Superset relay nebo spusťte cloudové pracovní prostory. Připojte se z libovolného klienta."
 
@@ -15434,6 +15473,9 @@ msgstr "Požádat o zkušební verzi"
 
 msgid "Request Body"
 msgstr "Tělo požadavku"
+
+msgid "Request reviewers on GitHub"
+msgstr "Požádat o revizory na GitHubu"
 
 msgid "requested changes"
 msgstr "požádal(a) o změny"
@@ -17637,6 +17679,9 @@ msgstr "Squash a sloučit"
 msgid "Squash and merge"
 msgstr "Squash a sloučit"
 
+msgid "Squash and merge #{prNumber}?"
+msgstr "Sloučit #{prNumber} metodou squash?"
+
 msgid "SS"
 msgstr "SS"
 
@@ -17654,6 +17699,9 @@ msgstr "Vylepšení stability"
 
 msgid "Stacked"
 msgstr "Nad sebou"
+
+msgid "stacked on #{stackedOn}"
+msgstr "navazuje na #{stackedOn}"
 
 msgid "Staff Software Engineer, Vori"
 msgstr "Softwarový inženýr na úrovni Staff, Vori"
@@ -20189,6 +20237,9 @@ msgstr "Aktualizovat"
 msgid "Update available"
 msgstr "Dostupná aktualizace"
 
+msgid "Update branch"
+msgstr "Aktualizovat větev"
+
 msgid "Update Branch"
 msgstr "Aktualizovat větev"
 
@@ -20257,6 +20308,9 @@ msgstr "Právě aktualizováno z {0}."
 
 msgid "Updates"
 msgstr "Aktualizace"
+
+msgid "Updating the branch of #{prNumber}"
+msgstr "Aktualizuje se větev #{prNumber}"
 
 #. placeholder {0}: update.progress.target
 msgid "Updating to {0}"
@@ -21521,6 +21575,9 @@ msgstr "Vaše vlastní účty. Integrace vaší organizace umožňují Supersetu
 
 msgid "Your PRs blocked on you: changes requested, then CI, then conflicts"
 msgstr "Vaše PR blokované vámi: požadované změny, pak CI, pak konflikty"
+
+msgid "Your PRs nobody was asked to review"
+msgstr "Vaše PR, ke kterým nikdo nebyl požádán o revizi"
 
 msgid "Your rank"
 msgstr "Vaše pozice"

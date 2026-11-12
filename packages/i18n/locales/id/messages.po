@@ -80,6 +80,9 @@ msgstr "\"{title}\" telah menyelesaikan tugasnya"
 msgid "\"{title}\" is waiting for your reply"
 msgstr "\"{title}\" sedang menunggu balasan Anda"
 
+msgid "\"{title}\" will be squashed and merged on GitHub. This can't be undone from here."
+msgstr "\"{title}\" akan di-squash dan digabungkan di GitHub. Ini tidak bisa dibatalkan dari sini."
+
 msgid "({aliveCount} running)"
 msgstr "({aliveCount} berjalan)"
 
@@ -820,6 +823,12 @@ msgstr "{agents, plural, other {# agen}}"
 
 msgid "{agents} sessions resume when you open their workspace."
 msgstr "Sesi {agents} dilanjutkan saat Anda membuka workspace-nya."
+
+msgid "{author} answered since your review"
+msgstr "{author} membalas sejak review Anda"
+
+msgid "{author} pushed since your review"
+msgstr "{author} melakukan push sejak review Anda"
 
 msgid "{author} waits for your review"
 msgstr "{author} menunggu review Anda"
@@ -2835,6 +2844,12 @@ msgstr "Disetujui"
 msgid "Approved and green"
 msgstr "Disetujui dan hijau"
 
+msgid "Approved and green, behind {base}"
+msgstr "Disetujui dan hijau, tertinggal dari {base}"
+
+msgid "Approved and green, behind its base"
+msgstr "Disetujui dan hijau, tertinggal dari base-nya"
+
 msgid "Approved and green, oldest first"
 msgstr "Disetujui dan hijau, terlama dulu"
 
@@ -2918,6 +2933,9 @@ msgstr "Minta agen membuat dokumen desain atau laporan. Agen membuat halamannya 
 
 msgid "Ask an agent to publish one from the desktop app."
 msgstr "Minta agen untuk memublikasikan satu dari aplikasi desktop."
+
+msgid "Ask for a review"
+msgstr "Minta review"
 
 msgid "Ask for approval"
 msgstr "Minta persetujuan"
@@ -4141,6 +4159,9 @@ msgstr "CI berjalan"
 #. placeholder {1}: checks.total
 msgid "CI running: {0} of {1} checks"
 msgstr "CI berjalan: {0} dari {1} pemeriksaan"
+
+msgid "CI runs again on the new commit."
+msgstr "CI berjalan lagi pada commit baru."
 
 msgid "Clarify this"
 msgstr "Perjelas ini"
@@ -5899,6 +5920,9 @@ msgstr "Tidak bisa meng-unstage file"
 
 msgid "Couldn't update pull request"
 msgstr "Tidak bisa memperbarui pull request"
+
+msgid "Couldn't update the branch"
+msgstr "Tidak dapat memperbarui branch"
 
 msgid "Couldn't update the queue"
 msgstr "Tidak dapat memperbarui antrean"
@@ -8427,6 +8451,9 @@ msgstr "Perbaiki temuan"
 
 msgid "Fix the flaky test"
 msgstr "Perbaiki tes yang tidak stabil"
+
+msgid "Fix with agent"
+msgstr "Perbaiki dengan agen"
 
 msgid "fix-auth-redirect"
 msgstr "fix-auth-redirect"
@@ -11097,12 +11124,18 @@ msgstr "Status merge"
 msgid "Merge status unknown"
 msgstr "Status merge tidak diketahui"
 
+msgid "Merge, then reviews, then your blocked PRs"
+msgstr "Gabungkan dulu, lalu review, lalu PR Anda yang terblokir"
+
 msgid "Merged"
 msgstr "Di-merge"
 
 msgctxt "pull request state"
 msgid "Merged"
 msgstr "Di-merge"
+
+msgid "Merged #{prNumber}"
+msgstr "#{prNumber} digabungkan"
 
 msgid "Merged after {base}, not released yet"
 msgstr "Digabung setelah {base}, belum dirilis"
@@ -12583,6 +12616,9 @@ msgstr "Belum disiapkan di host ini"
 
 msgid "not sorted"
 msgstr "tidak diurutkan"
+
+msgid "Not today: move it to Later"
+msgstr "Jangan hari ini: pindahkan ke Nanti"
 
 msgctxt "agent status"
 msgid "Not updating"
@@ -14789,6 +14825,9 @@ msgstr "Batas laju terlampaui."
 msgid "Rate Superset"
 msgstr "Beri Nilai Superset"
 
+msgid "Re-review"
+msgstr "Review ulang"
+
 msgid "Reach this Mac from anywhere via the Superset relay, or spin up cloud workspaces. Connect from any client."
 msgstr "Jangkau Mac ini dari mana saja lewat relay Superset, atau jalankan workspace cloud. Hubungkan dari klien mana pun."
 
@@ -15434,6 +15473,9 @@ msgstr "Minta uji coba"
 
 msgid "Request Body"
 msgstr "Body Permintaan"
+
+msgid "Request reviewers on GitHub"
+msgstr "Minta reviewer di GitHub"
 
 msgid "requested changes"
 msgstr "meminta perubahan"
@@ -17637,6 +17679,9 @@ msgstr "Squash & Merge"
 msgid "Squash and merge"
 msgstr "Squash dan merge"
 
+msgid "Squash and merge #{prNumber}?"
+msgstr "Squash dan gabungkan #{prNumber}?"
+
 msgid "SS"
 msgstr "SS"
 
@@ -17654,6 +17699,9 @@ msgstr "Peningkatan stabilitas"
 
 msgid "Stacked"
 msgstr "Bertumpuk"
+
+msgid "stacked on #{stackedOn}"
+msgstr "bertumpu pada #{stackedOn}"
 
 msgid "Staff Software Engineer, Vori"
 msgstr "Staff Software Engineer, Vori"
@@ -20189,6 +20237,9 @@ msgstr "Perbarui"
 msgid "Update available"
 msgstr "Pembaruan tersedia"
 
+msgid "Update branch"
+msgstr "Perbarui branch"
+
 msgid "Update Branch"
 msgstr "Perbarui Branch"
 
@@ -20257,6 +20308,9 @@ msgstr "Baru saja diperbarui dari {0}."
 
 msgid "Updates"
 msgstr "Pembaruan"
+
+msgid "Updating the branch of #{prNumber}"
+msgstr "Memperbarui branch #{prNumber}"
 
 #. placeholder {0}: update.progress.target
 msgid "Updating to {0}"
@@ -21521,6 +21575,9 @@ msgstr "Akun milik Anda sendiri. Integrasi organisasi memungkinkan Superset menj
 
 msgid "Your PRs blocked on you: changes requested, then CI, then conflicts"
 msgstr "PR Anda yang terhambat oleh Anda: perubahan diminta, lalu CI, lalu konflik"
+
+msgid "Your PRs nobody was asked to review"
+msgstr "PR Anda yang belum diminta untuk di-review siapa pun"
 
 msgid "Your rank"
 msgstr "Peringkat Anda"
