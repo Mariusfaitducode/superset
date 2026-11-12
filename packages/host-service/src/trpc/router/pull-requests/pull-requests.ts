@@ -13,6 +13,7 @@ import { replyToThread } from "./procedures/reply-to-thread";
 import { setDraft } from "./procedures/set-draft";
 import { setState } from "./procedures/set-state";
 import { setThreadResolution } from "./procedures/set-thread-resolution";
+import { updateBranch } from "./procedures/update-branch";
 
 export const pullRequestsRouter = router({
 	getByWorkspaces: protectedProcedure
@@ -87,4 +88,5 @@ export const pullRequestsRouter = router({
 	setThreadResolution,
 	replyToThread,
 	mergePR,
+	updateBranch,
 });
