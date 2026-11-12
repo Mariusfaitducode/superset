@@ -15,12 +15,21 @@ import { createPortal } from "react-dom";
 import { LuBot, LuFlag, LuGitBranch, LuListChecks } from "react-icons/lu";
 import { usePresetIcon } from "renderer/assets/app-icons/preset-icons";
 import {
+	FOCUS_BORDER_CLASS,
+	WorkspaceFocusMark,
+} from "renderer/components/WorkspaceFocus";
+import {
 	type AgentConversation,
 	useAgentConversations,
 } from "renderer/hooks/useAgentConversations";
 import { useHotkey } from "renderer/hotkeys";
 import { navigateToV2Workspace } from "renderer/routes/_authenticated/_dashboard/utils/workspace-navigation";
 import { StatusIndicator } from "renderer/screens/main/components/StatusIndicator";
+import {
+	useIsWorkspaceFocused,
+	useWorkspaceFocus,
+	useWorkspaceFocusStore,
+} from "renderer/stores/workspace-focus";
 import {
 	orderByRecency,
 	useWorkspaceRecencyStore,
@@ -70,7 +79,9 @@ function useViewportWidth(enabled: boolean): number {
  * workspace, most recently used first, each Tab steps one card, and releasing
  * Ctrl opens the selected workspace as it was left, so a quick Ctrl+Tab flips
  * back to the previous one. When the cards don't fit the window, a window of
- * them follows the selection, with "+N" at the ends.
+ * them follows the selection, with "+N" at the ends. With "Focus only" on,
+ * the cards are the focused workspaces (and the current one); F toggles the
+ * selected card's focus.
  */
 export function DashboardSidebarRecentWorkspaceSwitcher({
 	workspaces,
@@ -82,6 +93,7 @@ export function DashboardSidebarRecentWorkspaceSwitcher({
 	const recent = useWorkspaceRecencyStore((state) => state.recent);
 	const touch = useWorkspaceRecencyStore((state) => state.touch);
 	const conversations = useAgentConversations();
+	const { focused, filterOn: focusFilterOn } = useWorkspaceFocus();
 	const [session, setSession] = useState<SwitcherSession | null>(null);
 	const sessionRef = useRef<SwitcherSession | null>(null);
 	const viewportWidth = useViewportWidth(session !== null);
@@ -125,7 +137,13 @@ export function DashboardSidebarRecentWorkspaceSwitcher({
 
 	const open = (e: KeyboardEvent, backwards: boolean) => {
 		if (sessionRef.current) return;
-		const items = orderByRecency(workspaces, [
+		const candidates = focusFilterOn
+			? workspaces.filter(
+					(workspace) =>
+						focused.has(workspace.id) || workspace.id === activeWorkspaceId,
+				)
+			: workspaces;
+		const items = orderByRecency(candidates, [
 			...(activeWorkspaceId ? [activeWorkspaceId] : []),
 			...recent,
 		]);
@@ -179,7 +197,11 @@ export function DashboardSidebarRecentWorkspaceSwitcher({
 			else if (e.key === "ArrowRight") stepWorkspace(1);
 			else if (e.key === "ArrowLeft") stepWorkspace(-1);
 			else if (e.key === "Enter") commit();
-			else if (e.key === "Escape") close();
+			else if (e.code === "KeyF") {
+				const current = sessionRef.current;
+				const workspace = current?.items[current.index];
+				if (workspace) useWorkspaceFocusStore.getState().toggle(workspace.id);
+			} else if (e.key === "Escape") close();
 		};
 		const onKeyUp = (e: KeyboardEvent) => {
 			const current = sessionRef.current;
@@ -225,7 +247,7 @@ export function DashboardSidebarRecentWorkspaceSwitcher({
 	};
 
 	return createPortal(
-		<div className="pointer-events-none fixed inset-0 z-50 flex items-center justify-center px-4">
+		<div className="pointer-events-none fixed inset-0 z-50 flex flex-col items-center justify-center gap-2 px-4">
 			<div
 				ref={listboxRef}
 				role="listbox"
@@ -256,6 +278,15 @@ export function DashboardSidebarRecentWorkspaceSwitcher({
 					})}
 				{isWindowed && <MoreHint count={hiddenAfter} />}
 			</div>
+			<p className="rounded-md bg-popover/90 px-2 py-0.5 text-[11px] text-muted-foreground shadow-sm">
+				{focusFilterOn
+					? t({
+							message: "Focus only · F adds or removes the selected workspace",
+						})
+					: t({
+							message: "F adds or removes the selected workspace from focus",
+						})}
+			</p>
 		</div>,
 		document.body,
 	);
@@ -306,6 +337,7 @@ function WorkspaceCard({
 	const extraAgents = conversations.length - MAX_CARD_AGENTS;
 	const groupColor = item.section?.color ?? item.project?.color ?? null;
 	const { pullRequest, todos } = item;
+	const isInFocus = useIsWorkspaceFocused(item.id);
 	return (
 		<div
 			id={id}
@@ -314,6 +346,7 @@ function WorkspaceCard({
 			aria-selected={isSelected}
 			className={cn(
 				"flex h-[176px] w-60 min-w-44 shrink cursor-default flex-col gap-1.5 overflow-hidden rounded-xl border border-border/60 bg-muted/40 px-3 py-2.5 text-left transition-colors",
+				isInFocus && FOCUS_BORDER_CLASS,
 				isSelected &&
 					"border-ring bg-accent text-accent-foreground shadow-md ring-1 ring-ring",
 			)}
@@ -337,11 +370,14 @@ function WorkspaceCard({
 						</span>
 					</>
 				)}
-				{isCurrent && (
-					<span className="ml-auto shrink-0 rounded bg-foreground/10 px-1 text-[10px] text-foreground/80">
-						{t({ message: "Current" })}
-					</span>
-				)}
+				<span className="ml-auto flex shrink-0 items-center gap-1">
+					<WorkspaceFocusMark workspaceId={item.id} className="size-3" />
+					{isCurrent && (
+						<span className="rounded bg-foreground/10 px-1 text-[10px] text-foreground/80">
+							{t({ message: "Current" })}
+						</span>
+					)}
+				</span>
 			</div>
 			<div className="flex h-[42px] min-w-0 shrink-0 items-start gap-1.5">
 				{status && <StatusIndicator status={status} className="mt-2" />}

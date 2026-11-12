@@ -7,6 +7,7 @@ import {
 import { useEffect, useMemo, useState } from "react";
 import { CommandPaletteHost } from "renderer/commandPalette";
 import { Redirect } from "renderer/components/Redirect";
+import { usePruneWorkspaceFocus } from "renderer/components/WorkspaceFocus";
 import { useWorkspaceNamingFailedToast } from "renderer/hooks/host-service/useWorkspaceNamingFailedToast";
 import { useIsV2CloudEnabled } from "renderer/hooks/useIsV2CloudEnabled";
 import { useOpenNewWorkspace } from "renderer/hooks/useOpenNewWorkspace";
@@ -32,6 +33,7 @@ import { usePortsDisplayMode } from "renderer/stores/inline-workspace-ports";
 import { useSidebarSectionsCollapseStore } from "renderer/stores/sidebar-sections-collapse";
 import { syncPersistedStoreAcrossWindows } from "renderer/stores/syncPersistedStoreAcrossWindows";
 import { useV2NotificationStore } from "renderer/stores/v2-notifications";
+import { useWorkspaceFocusStore } from "renderer/stores/workspace-focus";
 import {
 	COLLAPSED_WORKSPACE_SIDEBAR_WIDTH,
 	DEFAULT_WORKSPACE_SIDEBAR_WIDTH,
@@ -84,6 +86,9 @@ function DashboardLayout() {
 		const stopAutomationFailuresSync = syncPersistedStoreAcrossWindows(
 			useAutomationFailuresStore,
 		);
+		const stopWorkspaceFocusSync = syncPersistedStoreAcrossWindows(
+			useWorkspaceFocusStore,
+		);
 
 		return () => {
 			stopWorkspaceSidebarSync();
@@ -91,6 +96,7 @@ function DashboardLayout() {
 			stopAgentStateSync();
 			stopCloudSidebarSync();
 			stopAutomationFailuresSync();
+			stopWorkspaceFocusSync();
 		};
 	}, []);
 	// Get current workspace from route to pre-select project in new workspace modal
@@ -169,6 +175,17 @@ function DashboardLayout() {
 		"QUICK_CREATE_WORKSPACE",
 		() => quickCreateWorkspace(currentV2Workspace?.projectId ?? null),
 		{ enabled: isV2CloudEnabled },
+	);
+
+	usePruneWorkspaceFocus();
+	useHotkey(
+		"TOGGLE_WORKSPACE_FOCUS",
+		() => {
+			if (currentV2WorkspaceId) {
+				useWorkspaceFocusStore.getState().toggle(currentV2WorkspaceId);
+			}
+		},
+		{ enabled: !!currentV2WorkspaceId },
 	);
 
 	const [deleteTarget, setDeleteTarget] = useState<DeleteTarget | null>(null);

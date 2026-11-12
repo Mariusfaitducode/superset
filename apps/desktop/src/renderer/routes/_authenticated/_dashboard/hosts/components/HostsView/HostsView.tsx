@@ -2,6 +2,7 @@ import { Trans, useLingui } from "@lingui/react/macro";
 import { Button } from "@superset/ui/button";
 import { useState } from "react";
 import { LuMonitor, LuPlus, LuServer } from "react-icons/lu";
+import { WorkspaceFocusFilterChip } from "renderer/components/WorkspaceFocus";
 import { HostChip } from "renderer/routes/_authenticated/_dashboard/components/HostChip";
 import { PageBody } from "renderer/routes/_authenticated/_dashboard/components/PageBody";
 import { PageHeader } from "renderer/routes/_authenticated/_dashboard/components/PageHeader";
@@ -38,15 +39,18 @@ export function HostsView({ selectedMachineId, onSelect }: HostsViewProps) {
 						<h1 className="font-semibold text-xl tracking-tight">
 							<Trans>Hosts</Trans>
 						</h1>
-						<Button
-							size="sm"
-							variant="outline"
-							className="gap-1.5"
-							onClick={() => setSshDialogOpen(true)}
-						>
-							<LuPlus className="size-3.5" />
-							<Trans>Set up a host over SSH</Trans>
-						</Button>
+						<div className="flex items-center gap-1.5">
+							<WorkspaceFocusFilterChip size="md" className="h-8" />
+							<Button
+								size="sm"
+								variant="outline"
+								className="gap-1.5"
+								onClick={() => setSshDialogOpen(true)}
+							>
+								<LuPlus className="size-3.5" />
+								<Trans>Set up a host over SSH</Trans>
+							</Button>
+						</div>
 					</div>
 					<p className="mt-1 text-muted-foreground text-sm">
 						<Trans>

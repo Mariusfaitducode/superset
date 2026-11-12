@@ -17,6 +17,7 @@ interface DashboardSidebarCollapsedWorkspaceButtonProps
 	workspaceStatus?: ActivePaneStatus | null;
 	isCreatePending: boolean;
 	pullRequestState?: DashboardSidebarWorkspacePullRequest["state"] | null;
+	isInFocus?: boolean;
 }
 
 export const DashboardSidebarCollapsedWorkspaceButton = forwardRef<
@@ -32,6 +33,7 @@ export const DashboardSidebarCollapsedWorkspaceButton = forwardRef<
 			workspaceStatus = null,
 			isCreatePending,
 			pullRequestState = null,
+			isInFocus = false,
 			className,
 			...props
 		},
@@ -61,6 +63,9 @@ export const DashboardSidebarCollapsedWorkspaceButton = forwardRef<
 					isCreatePending={isCreatePending}
 					pullRequestState={pullRequestState}
 				/>
+				{isInFocus && (
+					<span className="absolute top-0.5 left-0.5 size-1.5 rounded-full bg-[color:var(--focus-mark)]" />
+				)}
 			</button>
 		);
 	},

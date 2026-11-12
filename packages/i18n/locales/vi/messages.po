@@ -37,6 +37,9 @@ msgstr ".sh"
 msgid "· none right now"
 msgstr "· hiện không có"
 
+msgid "· The target on a name plate puts it in focus"
+msgstr "· Biểu tượng mục tiêu trên bảng tên đưa nó vào tiêu điểm"
+
 msgid "· updated {updatedAgo}"
 msgstr "· cập nhật {updatedAgo}"
 
@@ -1039,6 +1042,9 @@ msgstr "{hidden, plural, one {Hiển thị # phản hồi} other {Hiển thị #
 msgid "{hidden, plural, one {View # more reply} other {View # more replies}}"
 msgstr "{hidden, plural, other {Xem thêm # phản hồi}}"
 
+msgid "{hiddenByFocus} more outside your focus. Turn off Focus to see them."
+msgstr "Còn {hiddenByFocus} mục ngoài tiêu điểm. Tắt Tiêu điểm để xem."
+
 msgid "{hiddenCount, plural, one {Show # more frame} other {Show # more frames}}"
 msgstr "{hiddenCount, plural, one {Hiện thêm # frame} other {Hiện thêm # frame}}"
 
@@ -1896,6 +1902,9 @@ msgstr "Thêm tài khoản {0}"
 msgid "Add {0} to workspace"
 msgstr "Thêm {0} vào workspace"
 
+msgid "Add {count} to focus"
+msgstr "Thêm {count} vào tiêu điểm"
+
 msgid "Add a comment…"
 msgstr "Thêm bình luận…"
 
@@ -2053,6 +2062,9 @@ msgstr "Thêm test cho phần code rủi ro nhất chưa được test…"
 msgid "Add tests where they're missing"
 msgstr "Thêm test ở những chỗ còn thiếu"
 
+msgid "Add the current workspace to the ones you are working on, or take it out"
+msgstr "Thêm workspace hiện tại vào danh sách đang làm, hoặc bỏ ra"
+
 msgid "Add this label"
 msgstr "Thêm nhãn này"
 
@@ -2061,6 +2073,12 @@ msgstr "Thêm vào từ điển"
 
 msgid "Add to favorites"
 msgstr "Thêm vào mục yêu thích"
+
+msgid "Add to focus"
+msgstr "Thêm vào tiêu điểm"
+
+msgid "Add to focus or remove from it"
+msgstr "Thêm vào hoặc bỏ khỏi tiêu điểm"
 
 msgid "Add to project"
 msgstr "Thêm vào dự án"
@@ -7663,6 +7681,9 @@ msgstr "Rất cao"
 msgid "Extra small"
 msgstr "Rất nhỏ"
 
+msgid "F adds or removes the selected workspace from focus"
+msgstr "F thêm hoặc bỏ workspace đang chọn khỏi tiêu điểm"
+
 msgid "F4 gate · {F4_GATE_SHARE}%"
 msgstr "Cổng F4 · {F4_GATE_SHARE}%"
 
@@ -8443,8 +8464,15 @@ msgstr "Ngọn lửa"
 msgid "Fleets of agents plan, implement, review, and test each other's work. Humans set direction, arbitrate exceptions, and own taste. The unit of human attention is no longer the pull request. It is the decision."
 msgstr "Các đội agent lên kế hoạch, triển khai, review và kiểm thử công việc của nhau. Con người định hướng, phân xử ngoại lệ và giữ gu thẩm mỹ. Đơn vị chú ý của con người không còn là pull request. Đó là quyết định."
 
+msgctxt "workspace focus filter"
+msgid "Focus"
+msgstr "Tiêu điểm"
+
 msgid "Focus Chat Input"
 msgstr "Focus ô nhập chat"
+
+msgid "Focus only · F adds or removes the selected workspace"
+msgstr "Chỉ tiêu điểm · F thêm hoặc bỏ mục đang chọn"
 
 msgid "Focus Pane Down"
 msgstr "Focus khung dưới"
@@ -9556,6 +9584,9 @@ msgstr "trong một terminal trên host này."
 
 msgid "In all projects"
 msgstr "Trong tất cả dự án"
+
+msgid "In focus"
+msgstr "Đang tiêu điểm"
 
 msgid "In just a few months, <0>tens of thousands of engineers</0> run Superset as their primary IDE, at companies like Wix, DoorDash, and Netflix."
 msgstr "Chỉ trong vài tháng, <0>hàng chục nghìn kỹ sư</0> dùng Superset làm IDE chính, tại các công ty như Wix, DoorDash và Netflix."
@@ -12425,6 +12456,18 @@ msgstr "Chưa có phiên bản nào."
 msgid "No workspace has these labels"
 msgstr "Không có workspace nào có các nhãn này"
 
+msgid "No workspace in focus here"
+msgstr "Không có workspace nào trong tiêu điểm ở đây"
+
+msgid "No workspace in focus here."
+msgstr "Không có workspace nào trong tiêu điểm ở đây."
+
+msgid "No workspace in focus on this host."
+msgstr "Không có workspace nào trong tiêu điểm trên máy này."
+
+msgid "No workspace in focus yet: click the target on a workspace to add it"
+msgstr "Chưa có workspace nào trong tiêu điểm: bấm biểu tượng mục tiêu để thêm"
+
 msgid "No workspace on this host yet."
 msgstr "Chưa có workspace nào trên máy chủ này."
 
@@ -12605,6 +12648,9 @@ msgstr "Chưa có gì ở đây."
 
 msgid "Nothing here."
 msgstr "Không có gì ở đây."
+
+msgid "Nothing in focus waits on you."
+msgstr "Không có gì trong tiêu điểm đang chờ bạn."
 
 msgid "Nothing is being tracked"
 msgstr "Không có gì đang được theo dõi"
@@ -15156,6 +15202,9 @@ msgstr "Gỡ"
 msgid "Remove {0}"
 msgstr "Gỡ {0}"
 
+msgid "Remove {count} from focus"
+msgstr "Bỏ {count} khỏi tiêu điểm"
+
 msgid "Remove {label}"
 msgstr "Gỡ {label}"
 
@@ -15170,6 +15219,9 @@ msgstr "Xóa tệp đính kèm"
 
 msgid "Remove from favorites"
 msgstr "Xóa khỏi mục yêu thích"
+
+msgid "Remove from focus"
+msgstr "Bỏ khỏi tiêu điểm"
 
 msgid "Remove from Queue"
 msgstr "Bỏ khỏi hàng đợi"
@@ -17106,6 +17158,12 @@ msgstr "Hiển thị trên thanh bên"
 msgid "Show only {0}"
 msgstr "Chỉ hiện {0}"
 
+msgid "Show only the workspaces in focus"
+msgstr "Chỉ hiện workspace trong tiêu điểm"
+
+msgid "Show only workspaces in focus (toggle)"
+msgstr "Chỉ hiện workspace trong tiêu điểm (bật/tắt)"
+
 msgid "Show open items"
 msgstr "Chỉ hiện mục đang mở"
 
@@ -17168,6 +17226,9 @@ msgstr "Hiển thị thẻ mức sử dụng trên thanh bên"
 
 msgid "showArrow opt-in"
 msgstr "bật showArrow"
+
+msgid "Showing only the workspaces in focus. Click to show all."
+msgstr "Đang chỉ hiện workspace trong tiêu điểm. Bấm để hiện tất cả."
 
 msgid "Showing the latest {MAX_COMMITS} commits. Filter by branch to go further back."
 msgstr "Đang hiện {MAX_COMMITS} commit mới nhất. Lọc theo nhánh để xem xa hơn."
@@ -19652,6 +19713,9 @@ msgstr "Đổi chủ đề"
 
 msgid "Toggle value visibility"
 msgstr "Ẩn/hiện giá trị"
+
+msgid "Toggle Workspace Focus"
+msgstr "Bật/tắt tiêu điểm workspace"
 
 msgid "Toggle Workspaces Sidebar"
 msgstr "Bật/tắt thanh bên workspace"

@@ -20,6 +20,7 @@ import {
 	LuSend,
 	LuX,
 } from "react-icons/lu";
+import { WorkspaceFocusMark } from "renderer/components/WorkspaceFocus";
 import { useNow } from "renderer/hooks/useNow";
 import {
 	dueState,
@@ -289,6 +290,9 @@ export function DeskCard({
 								className="size-3 shrink-0"
 								aria-label={t`Has a draft`}
 							/>
+						)}
+						{item.source !== "pr" && (
+							<WorkspaceFocusMark workspaceId={item.workspaceId} />
 						)}
 						<span className="min-w-0 truncate">
 							{origin.filter(Boolean).join(" · ")}

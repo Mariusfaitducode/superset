@@ -37,6 +37,9 @@ msgstr ".sh"
 msgid "· none right now"
 msgstr "· momentálně žádné"
 
+msgid "· The target on a name plate puts it in focus"
+msgstr "· Terč na jmenovce ji přidá do fokusu"
+
 msgid "· updated {updatedAgo}"
 msgstr "· aktualizováno {updatedAgo}"
 
@@ -1039,6 +1042,9 @@ msgstr "{hidden, plural, one {Zobrazit # odpověď} few {Zobrazit # odpovědi} m
 msgid "{hidden, plural, one {View # more reply} other {View # more replies}}"
 msgstr "{hidden, plural, one {Zobrazit # další odpověď} few {Zobrazit # další odpovědi} many {Zobrazit # další odpovědi} other {Zobrazit # dalších odpovědí}}"
 
+msgid "{hiddenByFocus} more outside your focus. Turn off Focus to see them."
+msgstr "Dalších {hiddenByFocus} mimo fokus. Vypněte Fokus, abyste je viděli."
+
 msgid "{hiddenCount, plural, one {Show # more frame} other {Show # more frames}}"
 msgstr "{hiddenCount, plural, one {Zobrazit ještě # rámec} few {Zobrazit ještě # rámce} many {Zobrazit ještě # rámce} other {Zobrazit ještě # rámců}}"
 
@@ -1896,6 +1902,9 @@ msgstr "Přidat účet {0}"
 msgid "Add {0} to workspace"
 msgstr "Přidat {0} do pracovního prostoru"
 
+msgid "Add {count} to focus"
+msgstr "Přidat {count} do fokusu"
+
 msgid "Add a comment…"
 msgstr "Přidat komentář…"
 
@@ -2053,6 +2062,9 @@ msgstr "Doplň testy pro nejrizikovější netestovaný kód…"
 msgid "Add tests where they're missing"
 msgstr "Doplnit testy tam, kde chybí"
 
+msgid "Add the current workspace to the ones you are working on, or take it out"
+msgstr "Přidá aktuální pracovní prostor k těm, na kterých pracujete, nebo jej odebere"
+
 msgid "Add this label"
 msgstr "Přidat tento štítek"
 
@@ -2061,6 +2073,12 @@ msgstr "Přidat do slovníku"
 
 msgid "Add to favorites"
 msgstr "Přidat do oblíbených"
+
+msgid "Add to focus"
+msgstr "Přidat do fokusu"
+
+msgid "Add to focus or remove from it"
+msgstr "Přidat do fokusu nebo odebrat"
 
 msgid "Add to project"
 msgstr "Přidat do projektu"
@@ -7663,6 +7681,9 @@ msgstr "Velmi vysoké"
 msgid "Extra small"
 msgstr "Velmi malé"
 
+msgid "F adds or removes the selected workspace from focus"
+msgstr "F přidá nebo odebere vybraný prostor z fokusu"
+
 msgid "F4 gate · {F4_GATE_SHARE}%"
 msgstr "Brána F4 · {F4_GATE_SHARE} %"
 
@@ -8443,8 +8464,15 @@ msgstr "Plamen"
 msgid "Fleets of agents plan, implement, review, and test each other's work. Humans set direction, arbitrate exceptions, and own taste. The unit of human attention is no longer the pull request. It is the decision."
 msgstr "Flotily agentů plánují, implementují, revidují a testují práci jeden druhého. Lidé určují směr, rozsuzují výjimky a vlastní vkus. Jednotkou lidské pozornosti už není pull request. Je jí rozhodnutí."
 
+msgctxt "workspace focus filter"
+msgid "Focus"
+msgstr "Fokus"
+
 msgid "Focus Chat Input"
 msgstr "Zaměřit vstup chatu"
+
+msgid "Focus only · F adds or removes the selected workspace"
+msgstr "Jen fokus · F přidá nebo odebere vybraný prostor"
 
 msgid "Focus Pane Down"
 msgstr "Zaměřit panel dole"
@@ -9556,6 +9584,9 @@ msgstr "v terminálu na tomto hostu."
 
 msgid "In all projects"
 msgstr "Ve všech projektech"
+
+msgid "In focus"
+msgstr "Ve fokusu"
 
 msgid "In just a few months, <0>tens of thousands of engineers</0> run Superset as their primary IDE, at companies like Wix, DoorDash, and Netflix."
 msgstr "Za pouhých pár měsíců používají Superset jako hlavní IDE <0>desítky tisíc inženýrů</0>, ve firmách jako Wix, DoorDash nebo Netflix."
@@ -12425,6 +12456,18 @@ msgstr "Zatím žádné verze."
 msgid "No workspace has these labels"
 msgstr "Žádný pracovní prostor nemá tyto štítky"
 
+msgid "No workspace in focus here"
+msgstr "Zde není žádný prostor ve fokusu"
+
+msgid "No workspace in focus here."
+msgstr "Zde není žádný prostor ve fokusu."
+
+msgid "No workspace in focus on this host."
+msgstr "Na tomto hostiteli není žádný prostor ve fokusu."
+
+msgid "No workspace in focus yet: click the target on a workspace to add it"
+msgstr "Zatím žádný prostor ve fokusu: klikněte na terč u prostoru"
+
 msgid "No workspace on this host yet."
 msgstr "Na tomto hostiteli zatím není žádný pracovní prostor."
 
@@ -12605,6 +12648,9 @@ msgstr "Zatím tu nic není."
 
 msgid "Nothing here."
 msgstr "Nic tu není."
+
+msgid "Nothing in focus waits on you."
+msgstr "Nic ve fokusu na vás nečeká."
 
 msgid "Nothing is being tracked"
 msgstr "Nic se nesleduje"
@@ -15156,6 +15202,9 @@ msgstr "Odebrat"
 msgid "Remove {0}"
 msgstr "Odebrat {0}"
 
+msgid "Remove {count} from focus"
+msgstr "Odebrat {count} z fokusu"
+
 msgid "Remove {label}"
 msgstr "Odebrat {label}"
 
@@ -15170,6 +15219,9 @@ msgstr "Odebrat přílohu"
 
 msgid "Remove from favorites"
 msgstr "Odebrat z oblíbených"
+
+msgid "Remove from focus"
+msgstr "Odebrat z fokusu"
 
 msgid "Remove from Queue"
 msgstr "Odebrat z fronty"
@@ -17106,6 +17158,12 @@ msgstr "Zobrazit na postranním panelu"
 msgid "Show only {0}"
 msgstr "Zobrazit jen {0}"
 
+msgid "Show only the workspaces in focus"
+msgstr "Zobrazit jen prostory ve fokusu"
+
+msgid "Show only workspaces in focus (toggle)"
+msgstr "Zobrazit jen prostory ve fokusu (přepnout)"
+
 msgid "Show open items"
 msgstr "Zobrazit otevřené položky"
 
@@ -17168,6 +17226,9 @@ msgstr "Zobrazit kartu využití v postranním panelu"
 
 msgid "showArrow opt-in"
 msgstr "showArrow zapnuto"
+
+msgid "Showing only the workspaces in focus. Click to show all."
+msgstr "Zobrazeny jen prostory ve fokusu. Kliknutím zobrazíte vše."
 
 msgid "Showing the latest {MAX_COMMITS} commits. Filter by branch to go further back."
 msgstr "Zobrazeno posledních {MAX_COMMITS} commitů. Pro starší filtrujte podle větve."
@@ -19652,6 +19713,9 @@ msgstr "Přepnout motiv"
 
 msgid "Toggle value visibility"
 msgstr "Přepnout zobrazení hodnoty"
+
+msgid "Toggle Workspace Focus"
+msgstr "Přepnout fokus prostoru"
 
 msgid "Toggle Workspaces Sidebar"
 msgstr "Přepnout panel pracovních prostorů"

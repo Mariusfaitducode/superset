@@ -5,6 +5,10 @@ import { cn } from "@superset/ui/utils";
 import { memo } from "react";
 import { CgLaptop } from "react-icons/cg";
 import { LuGitBranch, LuMonitor } from "react-icons/lu";
+import {
+	FOCUS_BORDER_CLASS,
+	WorkspaceFocusToggle,
+} from "renderer/components/WorkspaceFocus";
 import { V2WorkspaceContextMenu } from "renderer/routes/_authenticated/_dashboard/v2-workspaces/components/V2WorkspaceContextMenu";
 import { WorkspaceChecksDot } from "renderer/routes/_authenticated/_dashboard/v2-workspaces/components/WorkspaceChecksDot";
 import { WorkspaceStateGlyph } from "renderer/routes/_authenticated/_dashboard/v2-workspaces/components/WorkspaceStateGlyph";
@@ -12,6 +16,7 @@ import type { AccessibleV2Workspace } from "renderer/routes/_authenticated/_dash
 import { workspaceActivityAt } from "renderer/routes/_authenticated/_dashboard/v2-workspaces/utils/sortWorkspaces";
 import { PRIcon } from "renderer/screens/main/components/PRIcon/PRIcon";
 import { getRelativeTime } from "renderer/screens/main/components/WorkspacesListView/utils";
+import { useIsWorkspaceFocused } from "renderer/stores/workspace-focus";
 import { V2WorkspaceProjectIcon } from "../../../V2WorkspaceProjectIcon";
 import { WorkspaceInsights } from "../../../WorkspaceInsights";
 
@@ -72,129 +77,142 @@ function BoardCardBody({
 		workspace.archivedAt ?? workspaceActivityAt(workspace),
 		{ format: "compact" },
 	);
+	const isInFocus = useIsWorkspaceFocused(workspace.id);
 
 	return (
-		<button
-			{...triggerProps}
-			type="button"
-			onClick={onOpen}
-			// Not `disabled`: React drops mouse events on disabled buttons, so
-			// right-click would never open the Restore menu.
-			aria-disabled={isArchived}
-			className={cn(
-				"w-full rounded-lg border border-border/50 bg-card px-3.5 py-3 text-left shadow-xs transition-colors",
-				isArchived
-					? "cursor-default opacity-60"
-					: "cursor-pointer hover:border-border hover:bg-accent/30",
-			)}
-		>
-			<div className="mb-1.5 flex items-center gap-1.5 text-[11px] text-muted-foreground">
-				<V2WorkspaceProjectIcon
-					projectName={
-						workspace.projectName ??
-						t({
-							message: "Session",
-						})
-					}
-					iconUrl={workspace.projectIconUrl}
-					size="sm"
-					className="size-4 rounded-sm text-[9px]"
-				/>
-				<span className="min-w-0 truncate">
-					{workspace.projectName ?? <Trans>Session</Trans>}
-				</span>
-				{isLocalWorkspace ? (
-					<Tooltip delayDuration={300}>
-						<TooltipTrigger asChild>
-							<span className="flex shrink-0 items-center">
-								<CgLaptop
-									className="size-3.5"
-									aria-label={t({
-										message: "Local workspace",
-									})}
-								/>
-							</span>
-						</TooltipTrigger>
-						<TooltipContent side="top">
-							<Trans>Local workspace</Trans>
-						</TooltipContent>
-					</Tooltip>
-				) : null}
-				{workspace.hostType !== "local-device" ? (
-					<span className="flex min-w-0 shrink items-center gap-1">
-						<LuMonitor className="size-3 shrink-0" />
-						<span className="truncate">{workspace.hostName}</span>
-					</span>
-				) : null}
-				<span className="ml-auto whitespace-nowrap tabular-nums">
-					{timeLabel}
-				</span>
-			</div>
-
-			<p
+		<div className="group/card relative">
+			<button
+				{...triggerProps}
+				type="button"
+				onClick={onOpen}
+				// Not `disabled`: React drops mouse events on disabled buttons, so
+				// right-click would never open the Restore menu.
+				aria-disabled={isArchived}
 				className={cn(
-					"line-clamp-2 min-w-0 text-[13px] font-medium leading-[18px]",
-					// Done states recede so live work owns the contrast.
-					isDone ? "text-muted-foreground" : "text-foreground",
+					"w-full rounded-lg border border-border/50 bg-card px-3.5 py-3 text-left shadow-xs transition-colors",
+					isArchived
+						? "cursor-default opacity-60"
+						: "cursor-pointer hover:border-border hover:bg-accent/30",
+					isInFocus && !isArchived && FOCUS_BORDER_CLASS,
 				)}
 			>
-				{workspace.name || workspace.branch}
-			</p>
-
-			{showBranch ? (
-				<div className="mt-1 flex items-center gap-1 text-[11px] text-muted-foreground">
-					<LuGitBranch className="size-3 shrink-0" />
-					<code className="min-w-0 truncate font-mono">{workspace.branch}</code>
+				<div className="mb-1.5 flex items-center gap-1.5 pr-5 text-[11px] text-muted-foreground">
+					<V2WorkspaceProjectIcon
+						projectName={
+							workspace.projectName ??
+							t({
+								message: "Session",
+							})
+						}
+						iconUrl={workspace.projectIconUrl}
+						size="sm"
+						className="size-4 rounded-sm text-[9px]"
+					/>
+					<span className="min-w-0 truncate">
+						{workspace.projectName ?? <Trans>Session</Trans>}
+					</span>
+					{isLocalWorkspace ? (
+						<Tooltip delayDuration={300}>
+							<TooltipTrigger asChild>
+								<span className="flex shrink-0 items-center">
+									<CgLaptop
+										className="size-3.5"
+										aria-label={t({
+											message: "Local workspace",
+										})}
+									/>
+								</span>
+							</TooltipTrigger>
+							<TooltipContent side="top">
+								<Trans>Local workspace</Trans>
+							</TooltipContent>
+						</Tooltip>
+					) : null}
+					{workspace.hostType !== "local-device" ? (
+						<span className="flex min-w-0 shrink items-center gap-1">
+							<LuMonitor className="size-3 shrink-0" />
+							<span className="truncate">{workspace.hostName}</span>
+						</span>
+					) : null}
+					<span className="ml-auto whitespace-nowrap tabular-nums">
+						{timeLabel}
+					</span>
 				</div>
-			) : null}
 
-			<div className="mt-2 flex items-center gap-1.5">
-				{workspace.pr ? (
-					<span className={PILL_CLASS}>
-						<PRIcon state={workspace.pr.state} className="size-3" />#
-						{workspace.pr.prNumber}
-						<WorkspaceChecksDot
-							status={workspace.pr.checksStatus}
-							checks={workspace.pr.checks}
-						/>
-					</span>
+				<p
+					className={cn(
+						"line-clamp-2 min-w-0 text-[13px] font-medium leading-[18px]",
+						// Done states recede so live work owns the contrast.
+						isDone ? "text-muted-foreground" : "text-foreground",
+					)}
+				>
+					{workspace.name || workspace.branch}
+				</p>
+
+				{showBranch ? (
+					<div className="mt-1 flex items-center gap-1 text-[11px] text-muted-foreground">
+						<LuGitBranch className="size-3 shrink-0" />
+						<code className="min-w-0 truncate font-mono">
+							{workspace.branch}
+						</code>
+					</div>
 				) : null}
-				{hasDiff && workspace.diffStats ? (
-					<span
-						className={cn(PILL_CLASS, "font-mono")}
-						title={t({
-							message: plural(workspace.diffStats.fileCount, {
-								one: "# changed file",
-								other: "# changed files",
-							}),
-						})}
-					>
-						<span className="text-emerald-600/80 dark:text-emerald-400/70">
-							+{formatCount(workspace.diffStats.additions)}
+
+				<div className="mt-2 flex items-center gap-1.5">
+					{workspace.pr ? (
+						<span className={PILL_CLASS}>
+							<PRIcon state={workspace.pr.state} className="size-3" />#
+							{workspace.pr.prNumber}
+							<WorkspaceChecksDot
+								status={workspace.pr.checksStatus}
+								checks={workspace.pr.checks}
+							/>
 						</span>
-						<span className="text-red-600/80 dark:text-red-400/70">
-							−{formatCount(workspace.diffStats.deletions)}
+					) : null}
+					{hasDiff && workspace.diffStats ? (
+						<span
+							className={cn(PILL_CLASS, "font-mono")}
+							title={t({
+								message: plural(workspace.diffStats.fileCount, {
+									one: "# changed file",
+									other: "# changed files",
+								}),
+							})}
+						>
+							<span className="text-emerald-600/80 dark:text-emerald-400/70">
+								+{formatCount(workspace.diffStats.additions)}
+							</span>
+							<span className="text-red-600/80 dark:text-red-400/70">
+								−{formatCount(workspace.diffStats.deletions)}
+							</span>
 						</span>
+					) : null}
+					{isArchived ? (
+						<span className={PILL_CLASS}>
+							{workspace.archiveReason === "merged" ? (
+								<Trans>Merged</Trans>
+							) : (
+								<Trans>Deleted</Trans>
+							)}
+						</span>
+					) : null}
+					<span className="ml-auto flex shrink-0 items-center">
+						<WorkspaceStateGlyph workspace={workspace} />
 					</span>
-				) : null}
-				{isArchived ? (
-					<span className={PILL_CLASS}>
-						{workspace.archiveReason === "merged" ? (
-							<Trans>Merged</Trans>
-						) : (
-							<Trans>Deleted</Trans>
-						)}
-					</span>
-				) : null}
-				<span className="ml-auto flex shrink-0 items-center">
-					<WorkspaceStateGlyph workspace={workspace} />
-				</span>
-			</div>
-			<WorkspaceInsights
-				workspaceId={workspace.id}
-				hostId={workspace.hostId}
-				className="mt-2 empty:hidden"
-			/>
-		</button>
+				</div>
+				<WorkspaceInsights
+					workspaceId={workspace.id}
+					hostId={workspace.hostId}
+					className="mt-2 empty:hidden"
+				/>
+			</button>
+			{!isArchived && (
+				<WorkspaceFocusToggle
+					workspaceId={workspace.id}
+					className="absolute top-2 right-2"
+					idleClassName="invisible group-hover/card:visible group-focus-within/card:visible"
+				/>
+			)}
+		</div>
 	);
 }

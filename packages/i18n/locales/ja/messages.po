@@ -37,6 +37,9 @@ msgstr ".sh"
 msgid "· none right now"
 msgstr "· 現在なし"
 
+msgid "· The target on a name plate puts it in focus"
+msgstr "· 名札のターゲットでフォーカスに追加"
+
 msgid "· updated {updatedAgo}"
 msgstr "· {updatedAgo}に更新"
 
@@ -1039,6 +1042,9 @@ msgstr "{hidden, plural, one {#件の返信を表示} other {#件の返信を表
 msgid "{hidden, plural, one {View # more reply} other {View # more replies}}"
 msgstr "{hidden, plural, other {他 # 件の返信を表示}}"
 
+msgid "{hiddenByFocus} more outside your focus. Turn off Focus to see them."
+msgstr "フォーカス外にあと {hiddenByFocus} 件。表示するにはフォーカスをオフにしてください。"
+
 msgid "{hiddenCount, plural, one {Show # more frame} other {Show # more frames}}"
 msgstr "{hiddenCount, plural, one {さらに#件のフレームを表示} other {さらに#件のフレームを表示}}"
 
@@ -1896,6 +1902,9 @@ msgstr "{0}アカウントを追加"
 msgid "Add {0} to workspace"
 msgstr "{0} をワークスペースに追加"
 
+msgid "Add {count} to focus"
+msgstr "{count} 件をフォーカスに追加"
+
 msgid "Add a comment…"
 msgstr "コメントを追加…"
 
@@ -2053,6 +2062,9 @@ msgstr "テストのない危険なコードにテストを追加…"
 msgid "Add tests where they're missing"
 msgstr "テストが不足している箇所に追加"
 
+msgid "Add the current workspace to the ones you are working on, or take it out"
+msgstr "現在のワークスペースを作業中のものに追加、または外します"
+
 msgid "Add this label"
 msgstr "このラベルを追加"
 
@@ -2061,6 +2073,12 @@ msgstr "辞書に追加"
 
 msgid "Add to favorites"
 msgstr "お気に入りに追加"
+
+msgid "Add to focus"
+msgstr "フォーカスに追加"
+
+msgid "Add to focus or remove from it"
+msgstr "フォーカスに追加または解除"
 
 msgid "Add to project"
 msgstr "プロジェクトに追加"
@@ -7663,6 +7681,9 @@ msgstr "最高"
 msgid "Extra small"
 msgstr "極小"
 
+msgid "F adds or removes the selected workspace from focus"
+msgstr "F で選択中のワークスペースをフォーカスに追加・解除"
+
 msgid "F4 gate · {F4_GATE_SHARE}%"
 msgstr "F4ゲート · {F4_GATE_SHARE}%"
 
@@ -8443,8 +8464,15 @@ msgstr "炎"
 msgid "Fleets of agents plan, implement, review, and test each other's work. Humans set direction, arbitrate exceptions, and own taste. The unit of human attention is no longer the pull request. It is the decision."
 msgstr "エージェントのフリートが計画し、実装し、互いの仕事をレビューしテストします。人間は方向を定め、例外を裁定し、審美眼を担います。人間の注意の単位はもうプルリクエストではありません。意思決定です。"
 
+msgctxt "workspace focus filter"
+msgid "Focus"
+msgstr "フォーカス"
+
 msgid "Focus Chat Input"
 msgstr "チャット入力にフォーカス"
+
+msgid "Focus only · F adds or removes the selected workspace"
+msgstr "フォーカスのみ · F で選択中を追加・解除"
 
 msgid "Focus Pane Down"
 msgstr "下のペインにフォーカス"
@@ -9556,6 +9584,9 @@ msgstr "このホストのターミナルで実行してください。"
 
 msgid "In all projects"
 msgstr "すべてのプロジェクト"
+
+msgid "In focus"
+msgstr "フォーカス中"
 
 msgid "In just a few months, <0>tens of thousands of engineers</0> run Superset as their primary IDE, at companies like Wix, DoorDash, and Netflix."
 msgstr "わずか数か月で、Wix、DoorDash、Netflixといった企業を含め<0>数万人のエンジニア</0>がSupersetを主要なIDEとして使っています。"
@@ -12425,6 +12456,18 @@ msgstr "バージョンはまだありません。"
 msgid "No workspace has these labels"
 msgstr "これらのラベルを持つワークスペースはありません"
 
+msgid "No workspace in focus here"
+msgstr "ここにフォーカス中のワークスペースはありません"
+
+msgid "No workspace in focus here."
+msgstr "ここにフォーカス中のワークスペースはありません。"
+
+msgid "No workspace in focus on this host."
+msgstr "このホストにフォーカス中のワークスペースはありません。"
+
+msgid "No workspace in focus yet: click the target on a workspace to add it"
+msgstr "フォーカス中のワークスペースはまだありません：ワークスペースのターゲットをクリックして追加"
+
 msgid "No workspace on this host yet."
 msgstr "このホストにはまだワークスペースがありません。"
 
@@ -12605,6 +12648,9 @@ msgstr "まだ何もありません。"
 
 msgid "Nothing here."
 msgstr "何もありません。"
+
+msgid "Nothing in focus waits on you."
+msgstr "フォーカス中にあなたを待つものはありません。"
 
 msgid "Nothing is being tracked"
 msgstr "追跡中のものはありません"
@@ -15156,6 +15202,9 @@ msgstr "削除"
 msgid "Remove {0}"
 msgstr "{0}を削除"
 
+msgid "Remove {count} from focus"
+msgstr "{count} 件をフォーカスから外す"
+
 msgid "Remove {label}"
 msgstr "{label}を削除"
 
@@ -15170,6 +15219,9 @@ msgstr "添付ファイルを削除"
 
 msgid "Remove from favorites"
 msgstr "お気に入りから削除"
+
+msgid "Remove from focus"
+msgstr "フォーカスから外す"
 
 msgid "Remove from Queue"
 msgstr "キューから削除"
@@ -17106,6 +17158,12 @@ msgstr "サイドバーに表示"
 msgid "Show only {0}"
 msgstr "{0} のみ表示"
 
+msgid "Show only the workspaces in focus"
+msgstr "フォーカス中のワークスペースのみ表示"
+
+msgid "Show only workspaces in focus (toggle)"
+msgstr "フォーカス中のワークスペースのみ表示（切り替え）"
+
 msgid "Show open items"
 msgstr "オープンな項目を表示"
 
@@ -17168,6 +17226,9 @@ msgstr "サイドバーに使用状況タブを表示"
 
 msgid "showArrow opt-in"
 msgstr "showArrowで有効化"
+
+msgid "Showing only the workspaces in focus. Click to show all."
+msgstr "フォーカス中のワークスペースのみ表示中。クリックですべて表示。"
 
 msgid "Showing the latest {MAX_COMMITS} commits. Filter by branch to go further back."
 msgstr "最新 {MAX_COMMITS} 件のコミットを表示中。さらに遡るにはブランチで絞り込んでください。"
@@ -19652,6 +19713,9 @@ msgstr "テーマを切り替え"
 
 msgid "Toggle value visibility"
 msgstr "値の表示を切り替え"
+
+msgid "Toggle Workspace Focus"
+msgstr "ワークスペースのフォーカスを切り替え"
 
 msgid "Toggle Workspaces Sidebar"
 msgstr "ワークスペースサイドバーを切り替え"

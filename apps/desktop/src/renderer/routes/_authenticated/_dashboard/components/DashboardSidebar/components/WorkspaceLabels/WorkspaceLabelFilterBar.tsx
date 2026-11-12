@@ -1,12 +1,14 @@
 import { useLingui } from "@lingui/react/macro";
 import { cn } from "@superset/ui/utils";
 import { LuX } from "react-icons/lu";
+import { WorkspaceFocusFilterChip } from "renderer/components/WorkspaceFocus";
 import { useWorkspaceLabelFilterStore } from "renderer/stores/workspace-label-filter";
 import { LABEL_DOT_CLASS, type WorkspaceLabel } from "./labels";
 
 /**
- * Click labels to keep only the workspaces that have all of them. Shows the
- * labels of every host in view, merged by name.
+ * "Focus" keeps only the workspaces in focus; click labels to keep only the
+ * workspaces that have all of them. Shows the labels of every host in view,
+ * merged by name.
  */
 export function WorkspaceLabelFilterBar({
 	labels,
@@ -17,12 +19,12 @@ export function WorkspaceLabelFilterBar({
 	const selected = useWorkspaceLabelFilterStore((state) => state.selected);
 	const toggle = useWorkspaceLabelFilterStore((state) => state.toggle);
 	const clear = useWorkspaceLabelFilterStore((state) => state.clear);
-	if (labels.length === 0) return null;
 	const isOn = (label: WorkspaceLabel) =>
 		selected.some((name) => name.toLowerCase() === label.name.toLowerCase());
 
 	return (
 		<div className="flex flex-wrap items-center gap-1 px-3 pb-1.5">
+			<WorkspaceFocusFilterChip />
 			{labels.map((label) => (
 				<button
 					key={label.name.toLowerCase()}

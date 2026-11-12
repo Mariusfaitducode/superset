@@ -101,13 +101,13 @@ export function orderIslands<T extends RankableIsland>(islands: readonly T[]) {
 }
 
 /** Everyone, the islands where an agent is not resting, or where one needs you. */
-export type OfficeShow = "all" | "active" | "needsMe";
+export type OfficeShow = "all" | "working" | "needsMe";
 
 export function visibleIslands<T extends RankableIsland>(
 	islands: readonly T[],
 	show: OfficeShow,
 ): T[] {
-	if (show === "active") {
+	if (show === "working") {
 		return islands.filter((island) =>
 			island.tones.some((tone) => tone !== "idle"),
 		);

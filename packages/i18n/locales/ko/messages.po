@@ -37,6 +37,9 @@ msgstr ".sh"
 msgid "· none right now"
 msgstr "· 현재 없음"
 
+msgid "· The target on a name plate puts it in focus"
+msgstr "· 명패의 과녁을 누르면 포커스에 추가됩니다"
+
 msgid "· updated {updatedAgo}"
 msgstr "· {updatedAgo}에 업데이트"
 
@@ -1039,6 +1042,9 @@ msgstr "{hidden, plural, one {답글 #개 표시} other {답글 #개 표시}}"
 msgid "{hidden, plural, one {View # more reply} other {View # more replies}}"
 msgstr "{hidden, plural, other {답글 #개 더 보기}}"
 
+msgid "{hiddenByFocus} more outside your focus. Turn off Focus to see them."
+msgstr "포커스 밖에 {hiddenByFocus}개가 더 있습니다. 보려면 포커스를 끄세요."
+
 msgid "{hiddenCount, plural, one {Show # more frame} other {Show # more frames}}"
 msgstr "{hiddenCount, plural, one {프레임 #개 더 보기} other {프레임 #개 더 보기}}"
 
@@ -1896,6 +1902,9 @@ msgstr "{0} 계정 추가"
 msgid "Add {0} to workspace"
 msgstr "{0}을(를) 워크스페이스에 추가"
 
+msgid "Add {count} to focus"
+msgstr "{count}개를 포커스에 추가"
+
 msgid "Add a comment…"
 msgstr "댓글 추가…"
 
@@ -2053,6 +2062,9 @@ msgstr "테스트가 없는 가장 위험한 코드에 테스트 추가…"
 msgid "Add tests where they're missing"
 msgstr "빠진 테스트 추가하기"
 
+msgid "Add the current workspace to the ones you are working on, or take it out"
+msgstr "현재 워크스페이스를 작업 중인 목록에 추가하거나 뺍니다"
+
 msgid "Add this label"
 msgstr "이 라벨 추가"
 
@@ -2061,6 +2073,12 @@ msgstr "사전에 추가"
 
 msgid "Add to favorites"
 msgstr "즐겨찾기에 추가"
+
+msgid "Add to focus"
+msgstr "포커스에 추가"
+
+msgid "Add to focus or remove from it"
+msgstr "포커스에 추가 또는 제거"
 
 msgid "Add to project"
 msgstr "프로젝트에 추가"
@@ -7663,6 +7681,9 @@ msgstr "매우 높음"
 msgid "Extra small"
 msgstr "아주 작음"
 
+msgid "F adds or removes the selected workspace from focus"
+msgstr "F로 선택한 워크스페이스를 포커스에 추가/제거"
+
 msgid "F4 gate · {F4_GATE_SHARE}%"
 msgstr "F4 관문 · {F4_GATE_SHARE}%"
 
@@ -8443,8 +8464,15 @@ msgstr "불꽃"
 msgid "Fleets of agents plan, implement, review, and test each other's work. Humans set direction, arbitrate exceptions, and own taste. The unit of human attention is no longer the pull request. It is the decision."
 msgstr "에이전트 플릿이 서로의 작업을 계획하고, 구현하고, 리뷰하고, 테스트합니다. 사람은 방향을 정하고, 예외를 중재하고, 안목을 책임집니다. 사람이 주의를 기울이는 단위는 더 이상 풀 리퀘스트가 아니라 의사 결정입니다."
 
+msgctxt "workspace focus filter"
+msgid "Focus"
+msgstr "포커스"
+
 msgid "Focus Chat Input"
 msgstr "채팅 입력창 포커스"
+
+msgid "Focus only · F adds or removes the selected workspace"
+msgstr "포커스만 · F로 선택 항목 추가/제거"
 
 msgid "Focus Pane Down"
 msgstr "아래 패널 포커스"
@@ -9556,6 +9584,9 @@ msgstr "(이 호스트의 터미널에서)"
 
 msgid "In all projects"
 msgstr "모든 프로젝트"
+
+msgid "In focus"
+msgstr "포커스 중"
 
 msgid "In just a few months, <0>tens of thousands of engineers</0> run Superset as their primary IDE, at companies like Wix, DoorDash, and Netflix."
 msgstr "몇 달 만에 <0>수만 명의 엔지니어</0>가 Wix, DoorDash, Netflix 같은 회사에서 Superset을 주력 IDE로 사용하고 있습니다."
@@ -12425,6 +12456,18 @@ msgstr "아직 버전이 없습니다."
 msgid "No workspace has these labels"
 msgstr "이 라벨이 있는 워크스페이스가 없습니다"
 
+msgid "No workspace in focus here"
+msgstr "여기에 포커스 중인 워크스페이스가 없습니다"
+
+msgid "No workspace in focus here."
+msgstr "여기에 포커스 중인 워크스페이스가 없습니다."
+
+msgid "No workspace in focus on this host."
+msgstr "이 호스트에 포커스 중인 워크스페이스가 없습니다."
+
+msgid "No workspace in focus yet: click the target on a workspace to add it"
+msgstr "아직 포커스 중인 워크스페이스가 없습니다: 워크스페이스의 과녁을 눌러 추가하세요"
+
 msgid "No workspace on this host yet."
 msgstr "이 호스트에 아직 워크스페이스가 없습니다."
 
@@ -12605,6 +12648,9 @@ msgstr "아직 아무것도 없습니다."
 
 msgid "Nothing here."
 msgstr "아무것도 없습니다."
+
+msgid "Nothing in focus waits on you."
+msgstr "포커스 중에 기다리는 항목이 없습니다."
 
 msgid "Nothing is being tracked"
 msgstr "추적 중인 항목이 없습니다"
@@ -15156,6 +15202,9 @@ msgstr "제거"
 msgid "Remove {0}"
 msgstr "{0} 제거"
 
+msgid "Remove {count} from focus"
+msgstr "{count}개를 포커스에서 제거"
+
 msgid "Remove {label}"
 msgstr "{label} 제거"
 
@@ -15170,6 +15219,9 @@ msgstr "첨부 파일 제거"
 
 msgid "Remove from favorites"
 msgstr "즐겨찾기에서 제거"
+
+msgid "Remove from focus"
+msgstr "포커스에서 제거"
 
 msgid "Remove from Queue"
 msgstr "대기열에서 제거"
@@ -17106,6 +17158,12 @@ msgstr "사이드바에 표시"
 msgid "Show only {0}"
 msgstr "{0}만 표시"
 
+msgid "Show only the workspaces in focus"
+msgstr "포커스 중인 워크스페이스만 표시"
+
+msgid "Show only workspaces in focus (toggle)"
+msgstr "포커스 중인 워크스페이스만 표시 (전환)"
+
 msgid "Show open items"
 msgstr "열린 항목 표시"
 
@@ -17168,6 +17226,9 @@ msgstr "사이드바에 사용량 탭 표시"
 
 msgid "showArrow opt-in"
 msgstr "showArrow 선택 사용"
+
+msgid "Showing only the workspaces in focus. Click to show all."
+msgstr "포커스 중인 워크스페이스만 표시 중입니다. 클릭하면 모두 표시합니다."
 
 msgid "Showing the latest {MAX_COMMITS} commits. Filter by branch to go further back."
 msgstr "최근 커밋 {MAX_COMMITS}개 표시 중. 더 이전은 브랜치로 필터링하세요."
@@ -19652,6 +19713,9 @@ msgstr "테마 토글"
 
 msgid "Toggle value visibility"
 msgstr "값 표시 전환"
+
+msgid "Toggle Workspace Focus"
+msgstr "워크스페이스 포커스 전환"
 
 msgid "Toggle Workspaces Sidebar"
 msgstr "워크스페이스 사이드바 전환"

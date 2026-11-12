@@ -4,6 +4,7 @@ import {
 	FileIcon,
 	LinkIcon,
 	PlusIcon,
+	TargetIcon,
 	Trash2Icon,
 	ZapIcon,
 } from "lucide-react";
@@ -11,6 +12,7 @@ import { useQuickOpenStore } from "renderer/commandPalette/ui/QuickOpen/quickOpe
 import { useDeleteWorkspaceIntent } from "renderer/stores/delete-workspace-intent";
 import { useQuickCreateWorkspaceIntent } from "renderer/stores/quick-create-workspace-intent";
 import { useRemoveFromSidebarIntent } from "renderer/stores/remove-workspace-from-sidebar-intent";
+import { useWorkspaceFocusStore } from "renderer/stores/workspace-focus";
 import type { Command, CommandProvider } from "../../core/types";
 import { LinkTaskFrame } from "../../ui/LinkTask/LinkTaskFrame";
 
@@ -35,7 +37,21 @@ export const workspaceProvider: CommandProvider = {
 					.request(ctx.workspace?.projectId ?? null),
 		};
 
-		if (!context.workspace) return [quickCreate];
+		const focusFilter: Command = {
+			id: "workspace.focusFilter",
+			title: msg({
+				message: "Show only workspaces in focus (toggle)",
+			}),
+			section: "workspace",
+			icon: TargetIcon,
+			keywords: ["focus", "active", "filter"],
+			run: () => {
+				const { focusOnly, setFocusOnly } = useWorkspaceFocusStore.getState();
+				setFocusOnly(!focusOnly);
+			},
+		};
+
+		if (!context.workspace) return [quickCreate, focusFilter];
 		const workspace = context.workspace;
 		const commands: Command[] = [
 			{
@@ -73,6 +89,18 @@ export const workspaceProvider: CommandProvider = {
 				keywords: ["issue", "linear"],
 				renderFrame: () => <LinkTaskFrame workspaceId={workspace.id} />,
 			},
+			{
+				id: `workspace.toggleFocus:${workspace.id}`,
+				title: msg({
+					message: "Add to focus or remove from it",
+				}),
+				section: "workspace",
+				icon: TargetIcon,
+				keywords: ["focus", "active", "working on"],
+				hotkeyId: "TOGGLE_WORKSPACE_FOCUS",
+				run: () => useWorkspaceFocusStore.getState().toggle(workspace.id),
+			},
+			focusFilter,
 		];
 
 		if (workspace.projectId) {

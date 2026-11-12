@@ -19,6 +19,7 @@ import {
 	LuTrash2,
 } from "react-icons/lu";
 import { GATED_FEATURES, usePaywall } from "renderer/components/Paywall";
+import { WorkspaceFocusContextMenuItem } from "renderer/components/WorkspaceFocus";
 import { useHostUrl } from "renderer/hooks/host-service/useHostTargetUrl";
 import { useCopyToClipboard } from "renderer/hooks/useCopyToClipboard";
 import { getHostServiceClientByUrl } from "renderer/lib/host-service-client";
@@ -200,6 +201,11 @@ export function V2WorkspaceContextMenu({
 				{isArchived ? null : (
 					<>
 						<ContextMenuSeparator />
+						<WorkspaceFocusContextMenuItem
+							workspaceId={workspace.id}
+							showHotkey={isCurrentRoute}
+							iconClassName="size-4"
+						/>
 						{workspace.isInSidebar ? (
 							<ContextMenuItem
 								onSelect={removeFromSidebar}

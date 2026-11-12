@@ -7,6 +7,22 @@ interface OfficeFilterState {
 	setShow: (show: OfficeShow) => void;
 }
 
+/** v0 had an on/off `onlyNeedsMe`; v1 called "working" "active". */
+export function migrateOfficeFilter(
+	persisted: unknown,
+	version: number,
+): { show: OfficeShow } {
+	const stored = (persisted ?? {}) as { onlyNeedsMe?: boolean; show?: string };
+	if (version === 0) return { show: stored.onlyNeedsMe ? "needsMe" : "all" };
+	if (stored.show === "active") return { show: "working" };
+	return {
+		show:
+			stored.show === "working" || stored.show === "needsMe"
+				? stored.show
+				: "all",
+	};
+}
+
 export const useOfficeFilterStore = create<OfficeFilterState>()(
 	persist(
 		(set) => ({
@@ -15,15 +31,9 @@ export const useOfficeFilterStore = create<OfficeFilterState>()(
 		}),
 		{
 			name: "office-filter",
-			version: 1,
-			// v0 had an on/off `onlyNeedsMe`.
-			migrate: (persisted, version) => {
-				if (version === 0 && persisted && typeof persisted === "object") {
-					const { onlyNeedsMe } = persisted as { onlyNeedsMe?: boolean };
-					return { show: onlyNeedsMe ? "needsMe" : "all" } as OfficeFilterState;
-				}
-				return persisted as OfficeFilterState;
-			},
+			version: 2,
+			migrate: (persisted, version) =>
+				migrateOfficeFilter(persisted, version) as OfficeFilterState,
 			partialize: ({ show }) => ({ show }),
 		},
 	),

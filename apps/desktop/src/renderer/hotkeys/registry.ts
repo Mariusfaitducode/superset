@@ -302,6 +302,21 @@ export const HOTKEYS_REGISTRY = {
 			message: "Quickly create a workspace in the current project",
 		}),
 	},
+	TOGGLE_WORKSPACE_FOCUS: {
+		key: {
+			mac: L("meta+shift+f"),
+			windows: L("ctrl+alt+f"),
+			linux: L("ctrl+alt+f"),
+		},
+		label: msg({
+			message: "Toggle Workspace Focus",
+		}),
+		category: "Workspace",
+		description: msg({
+			message:
+				"Add the current workspace to the ones you are working on, or take it out",
+		}),
+	},
 	RUN_WORKSPACE_COMMAND: {
 		key: {
 			mac: L("meta+g"),

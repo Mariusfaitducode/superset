@@ -1,8 +1,9 @@
 import { useLingui } from "@lingui/react/macro";
 import { Kbd } from "@superset/ui/kbd";
 import { cn } from "@superset/ui/utils";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { LuInbox } from "react-icons/lu";
+import { WorkspaceFocusFilterChip } from "renderer/components/WorkspaceFocus";
 import { PAGE_WIDTH } from "renderer/routes/_authenticated/_dashboard/components/PageBody";
 import { PageHeader } from "renderer/routes/_authenticated/_dashboard/components/PageHeader";
 import {
@@ -10,6 +11,10 @@ import {
 	type DeskSection,
 	useDeskQueue,
 } from "renderer/routes/_authenticated/_dashboard/hooks/useDeskQueue";
+import {
+	keepFocused,
+	useWorkspaceFocus,
+} from "renderer/stores/workspace-focus";
 import { DeskCard, type DeskCardHandle } from "./components/DeskCard";
 import { useConversationTitles } from "./hooks/useConversationTitles";
 import { useDeskActions } from "./hooks/useDeskActions";
@@ -26,11 +31,24 @@ function isTyping(target: EventTarget | null): boolean {
  * Needs you: everything waiting on the user, in one list sorted by urgency
  * (agents stopped on them, reports, to-dos, PRs to review), cleared from the
  * keyboard: j/k to move, 1-9 to pick an option, r to answer, a for the
- * row's main action, x to dismiss, Enter to open.
+ * row's main action, x to dismiss, Enter to open. "Focus" keeps only what
+ * comes from the workspaces in focus.
  */
 export function DeskView() {
 	const { t } = useLingui();
-	const items = useDeskQueue();
+	const allItems = useDeskQueue();
+	const { focused, filterOn: focusFilterOn } = useWorkspaceFocus();
+	const items = useMemo(
+		() =>
+			keepFocused(
+				allItems,
+				(item) => (item.source === "pr" ? null : item.workspaceId),
+				focused,
+				focusFilterOn,
+			),
+		[allItems, focused, focusFilterOn],
+	);
+	const hiddenByFocus = allItems.length - items.length;
 	const titles = useConversationTitles(items);
 	const actions = useDeskActions();
 	const [selectedKey, setSelectedKey] = useState<string | null>(null);
@@ -90,20 +108,23 @@ export function DeskView() {
 					</h1>
 				}
 				end={
-					<span className="hidden items-center gap-1 text-xs text-muted-foreground md:flex">
-						<Kbd>J</Kbd>
-						<Kbd>K</Kbd>
-						{t`move`}
-						<Kbd>A</Kbd>
-						{t`act`}
-						<Kbd>R</Kbd>
-						{t`answer`}
-						<Kbd>1-9</Kbd>
-						{t`option`}
-						<Kbd>X</Kbd>
-						{t`dismiss`}
-						<Kbd>↵</Kbd>
-						{t`open`}
+					<span className="flex items-center gap-3">
+						<WorkspaceFocusFilterChip />
+						<span className="hidden items-center gap-1 text-xs text-muted-foreground md:flex">
+							<Kbd>J</Kbd>
+							<Kbd>K</Kbd>
+							{t`move`}
+							<Kbd>A</Kbd>
+							{t`act`}
+							<Kbd>R</Kbd>
+							{t`answer`}
+							<Kbd>1-9</Kbd>
+							{t`option`}
+							<Kbd>X</Kbd>
+							{t`dismiss`}
+							<Kbd>↵</Kbd>
+							{t`open`}
+						</span>
 					</span>
 				}
 			/>
@@ -111,10 +132,21 @@ export function DeskView() {
 				{items.length === 0 ? (
 					<div className="flex h-full flex-col items-center justify-center gap-2 text-muted-foreground">
 						<LuInbox className="size-8" />
-						<p className="text-sm">{t`Nothing waits on you.`}</p>
-						<p className="max-w-sm text-center text-xs">
-							{t`Agents stopped on a question, their hand-overs (superset report), your to-dos and the PRs you were asked to review all land here.`}
-						</p>
+						{hiddenByFocus > 0 ? (
+							<>
+								<p className="text-sm">{t`Nothing in focus waits on you.`}</p>
+								<p className="max-w-sm text-center text-xs">
+									{t`${hiddenByFocus} more outside your focus. Turn off Focus to see them.`}
+								</p>
+							</>
+						) : (
+							<>
+								<p className="text-sm">{t`Nothing waits on you.`}</p>
+								<p className="max-w-sm text-center text-xs">
+									{t`Agents stopped on a question, their hand-overs (superset report), your to-dos and the PRs you were asked to review all land here.`}
+								</p>
+							</>
+						)}
 					</div>
 				) : (
 					<div

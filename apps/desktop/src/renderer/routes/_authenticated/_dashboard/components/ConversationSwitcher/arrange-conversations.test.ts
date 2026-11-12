@@ -86,4 +86,40 @@ describe("arrangeConversations", () => {
 			}),
 		).toEqual([]);
 	});
+
+	test("keeps only focused workspaces below the recent ones, but searches them all", () => {
+		const spread = [
+			conversation("previous", { workspaceId: "ws-out" }),
+			conversation("in-focus", { workspaceId: "ws-in", state: "request" }),
+			conversation("out-of-focus", { workspaceId: "ws-out", state: "request" }),
+			conversation("in-focus-idle", { workspaceId: "ws-in", state: "idle" }),
+		];
+		const focusedWorkspaces = new Set(["ws-in"]);
+		expect(
+			ids(
+				arrangeConversations({
+					conversations: spread,
+					recent: ["previous"],
+					currentTerminalId: null,
+					query: "",
+					focusedWorkspaces,
+				}),
+			),
+		).toEqual([
+			["recent", ["previous"]],
+			["needsYou", ["in-focus"]],
+			["others", ["in-focus-idle"]],
+		]);
+		expect(
+			ids(
+				arrangeConversations({
+					conversations: spread,
+					recent: [],
+					currentTerminalId: null,
+					query: "out-of",
+					focusedWorkspaces,
+				}),
+			),
+		).toEqual([["results", ["out-of-focus"]]]);
+	});
 });

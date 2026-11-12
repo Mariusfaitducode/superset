@@ -23,6 +23,10 @@ import {
 } from "renderer/routes/_authenticated/_dashboard/hosts/hooks/useHostsAgents";
 import { groupHostAgents } from "renderer/routes/_authenticated/_dashboard/hosts/utils/groupHostAgents";
 import type { HostSummary } from "renderer/routes/_authenticated/_dashboard/utils/summarizeHosts";
+import {
+	keepFocused,
+	useWorkspaceFocus,
+} from "renderer/stores/workspace-focus";
 import { WakeHostDialog } from "./components/WakeHostDialog";
 import { WorkspaceAgents } from "./components/WorkspaceAgents";
 
@@ -65,7 +69,18 @@ export function HostPanel({ host, data }: HostPanelProps) {
 	);
 	const { data: agentConfigs = [] } = useV2AgentConfigs(hostUrl);
 	const titles = useHostTerminalTitles(hostUrl);
-	const workspaces = data.workspacesOf(host.machineId);
+	const hostWorkspaces = data.workspacesOf(host.machineId);
+	const { focused, filterOn: focusFilterOn } = useWorkspaceFocus();
+	const workspaces = useMemo(
+		() =>
+			keepFocused(
+				hostWorkspaces,
+				(workspace) => workspace.id,
+				focused,
+				focusFilterOn,
+			),
+		[hostWorkspaces, focused, focusFilterOn],
+	);
 
 	const { withAgents, withoutAgents } = useMemo(
 		() =>
@@ -135,7 +150,11 @@ export function HostPanel({ host, data }: HostPanelProps) {
 				</div>
 			)}
 
-			{workspaces.length === 0 ? (
+			{workspaces.length === 0 && hostWorkspaces.length > 0 ? (
+				<p className="py-8 text-center text-muted-foreground text-sm">
+					<Trans>No workspace in focus on this host.</Trans>
+				</p>
+			) : workspaces.length === 0 ? (
 				<div className="flex flex-col items-center gap-3 py-8 text-center">
 					<p className="text-muted-foreground text-sm">
 						{canAct ? (
