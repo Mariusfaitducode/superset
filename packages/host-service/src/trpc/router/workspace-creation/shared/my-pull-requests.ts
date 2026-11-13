@@ -18,12 +18,22 @@ export interface MyPullRequestReview {
 	state: "APPROVED" | "CHANGES_REQUESTED" | "COMMENTED" | "DISMISSED";
 }
 
+export interface MyPullRequestViewerReview {
+	state: MyPullRequestReview["state"];
+	submittedAt: string;
+	/** false once commits land after it: the review is on an old version. */
+	onHead: boolean;
+}
+
 /** What the Mine view needs per PR: no check list, only its counts. */
 export interface MyPullRequestDetails {
 	createdAt: string | null;
 	additions: number | null;
 	deletions: number | null;
 	headRefName: string | null;
+	baseRefName: string | null;
+	/** The base moved on since the branch: it needs an update to merge. */
+	behindBase: boolean;
 	reviewDecision: "APPROVED" | "CHANGES_REQUESTED" | "REVIEW_REQUIRED" | null;
 	mergeable: "MERGEABLE" | "CONFLICTING" | "UNKNOWN" | null;
 	checks: MyPullRequestChecks | null;
@@ -35,6 +45,9 @@ export interface MyPullRequestDetails {
 	pendingReviewers: string[];
 	reviews: MyPullRequestReview[];
 	viewerReview: MyPullRequestReview["state"] | null;
+	viewerLastReview: MyPullRequestViewerReview | null;
+	/** The author pushed, reviewed or commented after my last review. */
+	authorActiveSinceViewerReview: boolean;
 	commitCount: number | null;
 	lastCommitAt: string | null;
 	/** Issues the PR closes when merged ("Closes #12"), the usual ticket on GitHub. */
@@ -66,14 +79,23 @@ const PULL_REQUEST_SELECTION = `
 	additions
 	deletions
 	headRefName
+	baseRefName
+	headRefOid
 	reviewDecision
 	mergeable
+	mergeStateStatus
 	author { login }
 	reviewRequests(first: 20) {
 		nodes { requestedReviewer { ... on User { login } ... on Team { slug } } }
 	}
 	latestOpinionatedReviews(first: 20) {
 		nodes { author { login } state }
+	}
+	reviews(last: 30) {
+		nodes { author { login } state submittedAt commit { oid } }
+	}
+	comments(last: 10) {
+		nodes { author { login } createdAt }
 	}
 	timelineItems(last: 10, itemTypes: [REVIEW_REQUESTED_EVENT]) {
 		nodes { ... on ReviewRequestedEvent { createdAt requestedReviewer { ... on User { login } } } }
@@ -116,8 +138,11 @@ const detailsNodeSchema = z.object({
 	additions: z.number().nullable().optional(),
 	deletions: z.number().nullable().optional(),
 	headRefName: z.string().nullable().optional(),
+	baseRefName: z.string().nullable().optional(),
+	headRefOid: z.string().nullable().optional(),
 	reviewDecision: z.string().nullable().optional(),
 	mergeable: z.string().nullable().optional(),
+	mergeStateStatus: z.string().nullable().optional(),
 	author: z.object({ login: z.string() }).nullable().optional(),
 	reviewRequests: z
 		.object({
@@ -144,6 +169,34 @@ const detailsNodeSchema = z.object({
 					.object({
 						author: z.object({ login: z.string() }).nullable().optional(),
 						state: z.string(),
+					})
+					.nullable(),
+			),
+		})
+		.nullable()
+		.optional(),
+	reviews: z
+		.object({
+			nodes: z.array(
+				z
+					.object({
+						author: z.object({ login: z.string() }).nullable().optional(),
+						state: z.string(),
+						submittedAt: z.string().nullable().optional(),
+						commit: z.object({ oid: z.string() }).nullable().optional(),
+					})
+					.nullable(),
+			),
+		})
+		.nullable()
+		.optional(),
+	comments: z
+		.object({
+			nodes: z.array(
+				z
+					.object({
+						author: z.object({ login: z.string() }).nullable().optional(),
+						createdAt: z.string(),
 					})
 					.nullable(),
 			),
@@ -276,6 +329,52 @@ const REVIEW_STATES = new Set([
 	"DISMISSED",
 ]);
 
+type DetailsNode = z.infer<typeof detailsNodeSchema>;
+
+function isLogin(login: string | undefined, other: string | null): boolean {
+	return !!login && !!other && login.toLowerCase() === other;
+}
+
+function findViewerLastReview(
+	node: DetailsNode,
+	viewerLogin: string | null,
+): MyPullRequestViewerReview | null {
+	const review = (node.reviews?.nodes ?? [])
+		.filter(
+			(entry) =>
+				isLogin(entry?.author?.login, viewerLogin) &&
+				REVIEW_STATES.has(entry?.state ?? "") &&
+				!!entry?.submittedAt,
+		)
+		.at(-1);
+	if (!review?.submittedAt) return null;
+	return {
+		state: review.state as MyPullRequestReview["state"],
+		submittedAt: review.submittedAt,
+		onHead: !!node.headRefOid && review.commit?.oid === node.headRefOid,
+	};
+}
+
+function authorActiveSince(
+	node: DetailsNode,
+	lastCommitAt: string | null,
+	since: string,
+): boolean {
+	const author = node.author?.login.toLowerCase() ?? null;
+	if (lastCommitAt && lastCommitAt > since) return true;
+	const reviewedAfter = (node.reviews?.nodes ?? []).some(
+		(review) =>
+			isLogin(review?.author?.login, author) &&
+			(review?.submittedAt ?? "") > since,
+	);
+	const commentedAfter = (node.comments?.nodes ?? []).some(
+		(comment) =>
+			isLogin(comment?.author?.login, author) &&
+			(comment?.createdAt ?? "") > since,
+	);
+	return reviewedAfter || commentedAfter;
+}
+
 /**
  * Map a details batch, keyed by PR number. `gh api graphql` returns the
  * `{ data }` envelope; octokit.graphql resolves to the inner object.
@@ -316,11 +415,22 @@ export function parseDetailsResponse(
 					]
 				: [],
 		);
+		const lastCommitAt =
+			node.lastCommit?.nodes?.at(-1)?.commit.committedDate ?? null;
+		const viewerIsAuthor =
+			viewerLogin && node.author
+				? node.author.login.toLowerCase() === viewerLogin
+				: null;
+		const viewerLastReview = viewerIsAuthor
+			? null
+			: findViewerLastReview(node, viewerLogin);
 		details.set(node.number, {
 			createdAt: node.createdAt ?? null,
 			additions: node.additions ?? null,
 			deletions: node.deletions ?? null,
 			headRefName: node.headRefName ?? null,
+			baseRefName: node.baseRefName ?? null,
+			behindBase: node.mergeStateStatus === "BEHIND",
 			reviewDecision: REVIEW_DECISIONS.has(node.reviewDecision ?? "")
 				? (node.reviewDecision as MyPullRequestDetails["reviewDecision"])
 				: null,
@@ -328,10 +438,7 @@ export function parseDetailsResponse(
 				? (node.mergeable as MyPullRequestDetails["mergeable"])
 				: null,
 			checks: toChecks(node.statusCheckRollup),
-			viewerIsAuthor:
-				viewerLogin && node.author
-					? node.author.login.toLowerCase() === viewerLogin
-					: null,
+			viewerIsAuthor,
 			reviewRequestedFromViewer: viewerLogin
 				? pendingReviewers.some((name) => name.toLowerCase() === viewerLogin)
 				: null,
@@ -341,9 +448,12 @@ export function parseDetailsResponse(
 			viewerReview:
 				reviews.find((review) => review.login.toLowerCase() === viewerLogin)
 					?.state ?? null,
+			viewerLastReview,
+			authorActiveSinceViewerReview: viewerLastReview
+				? authorActiveSince(node, lastCommitAt, viewerLastReview.submittedAt)
+				: false,
 			commitCount: node.lastCommit?.totalCount ?? null,
-			lastCommitAt:
-				node.lastCommit?.nodes?.at(-1)?.commit.committedDate ?? null,
+			lastCommitAt,
 			closingIssues: (node.closingIssuesReferences?.nodes ?? []).flatMap(
 				(issue) =>
 					issue

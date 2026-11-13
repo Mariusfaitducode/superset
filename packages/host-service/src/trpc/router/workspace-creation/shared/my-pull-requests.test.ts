@@ -96,6 +96,8 @@ describe("parseDetailsResponse", () => {
 			additions: 10,
 			deletions: 2,
 			headRefName: "feature/x",
+			baseRefName: null,
+			behindBase: false,
 			reviewDecision: "REVIEW_REQUIRED",
 			mergeable: "CONFLICTING",
 			checks: { status: "failure", failed: 2, pending: 2, total: 9 },
@@ -105,6 +107,8 @@ describe("parseDetailsResponse", () => {
 			pendingReviewers: ["Me-User", "core"],
 			reviews: [{ login: "bob", state: "CHANGES_REQUESTED" }],
 			viewerReview: null,
+			viewerLastReview: null,
+			authorActiveSinceViewerReview: false,
 			commitCount: 4,
 			lastCommitAt: "2026-10-21T08:00:00Z",
 			closingIssues: [
@@ -142,6 +146,99 @@ describe("parseDetailsResponse", () => {
 			commitCount: null,
 			lastCommitAt: null,
 			closingIssues: [],
+		});
+	});
+
+	describe("my last review", () => {
+		const reviewed = {
+			...node,
+			baseRefName: "develop",
+			headRefOid: "head2",
+			mergeStateStatus: "BEHIND",
+			reviews: {
+				nodes: [
+					{
+						author: { login: "me-user" },
+						state: "CHANGES_REQUESTED",
+						submittedAt: "2026-10-21T10:00:00Z",
+						commit: { oid: "head1" },
+					},
+				],
+			},
+			comments: { nodes: [] },
+			lastCommit: {
+				totalCount: 4,
+				nodes: [{ commit: { committedDate: "2026-10-21T08:00:00Z" } }],
+			},
+		};
+		const parse = (pr: Record<string, unknown>) =>
+			parseDetailsResponse({
+				viewer: { login: "me-user" },
+				repository: { pr7: pr },
+			}).get(7);
+
+		test("flags a review on an old version and a branch behind its base", () => {
+			expect(parse(reviewed)).toMatchObject({
+				baseRefName: "develop",
+				behindBase: true,
+				viewerLastReview: {
+					state: "CHANGES_REQUESTED",
+					submittedAt: "2026-10-21T10:00:00Z",
+					onHead: false,
+				},
+				authorActiveSinceViewerReview: false,
+			});
+		});
+
+		test("sees the author push, reply or comment after it", () => {
+			const pushed = {
+				...reviewed,
+				lastCommit: {
+					totalCount: 5,
+					nodes: [{ commit: { committedDate: "2026-10-22T08:00:00Z" } }],
+				},
+			};
+			const replied = {
+				...reviewed,
+				reviews: {
+					nodes: [
+						...reviewed.reviews.nodes,
+						{
+							author: { login: "alice" },
+							state: "COMMENTED",
+							submittedAt: "2026-10-22T09:00:00Z",
+							commit: { oid: "head1" },
+						},
+					],
+				},
+			};
+			const commented = {
+				...reviewed,
+				comments: {
+					nodes: [
+						{ author: { login: "bob" }, createdAt: "2026-10-22T09:00:00Z" },
+						{ author: { login: "Alice" }, createdAt: "2026-10-22T10:00:00Z" },
+					],
+				},
+			};
+			const someoneElse = {
+				...reviewed,
+				comments: {
+					nodes: [
+						{ author: { login: "bob" }, createdAt: "2026-10-22T09:00:00Z" },
+					],
+				},
+			};
+			expect(parse(pushed)?.authorActiveSinceViewerReview).toBe(true);
+			expect(parse(replied)?.authorActiveSinceViewerReview).toBe(true);
+			expect(parse(commented)?.authorActiveSinceViewerReview).toBe(true);
+			expect(parse(someoneElse)?.authorActiveSinceViewerReview).toBe(false);
+		});
+
+		test("keeps no review of my own PR", () => {
+			expect(
+				parse({ ...reviewed, author: { login: "me-user" } })?.viewerLastReview,
+			).toBeNull();
 		});
 	});
 });

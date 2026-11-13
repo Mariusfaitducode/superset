@@ -83,6 +83,9 @@ msgstr "\"{title}\" ha terminado su tarea"
 msgid "\"{title}\" is waiting for your reply"
 msgstr "\"{title}\" está esperando tu respuesta"
 
+msgid "\"{title}\" will be squashed and merged on GitHub. This can't be undone from here."
+msgstr "«{title}» se fusionará con squash en GitHub. No se puede deshacer desde aquí."
+
 msgid "({aliveCount} running)"
 msgstr "({aliveCount} en marcha)"
 
@@ -823,6 +826,12 @@ msgstr "{agents, plural, one {# agente} other {# agentes}}"
 
 msgid "{agents} sessions resume when you open their workspace."
 msgstr "Las sesiones de {agents} se reanudan cuando abres su espacio de trabajo."
+
+msgid "{author} answered since your review"
+msgstr "{author} respondió desde tu revisión"
+
+msgid "{author} pushed since your review"
+msgstr "{author} hizo push desde tu revisión"
 
 msgid "{author} waits for your review"
 msgstr "{author} espera tu revisión"
@@ -2853,6 +2862,12 @@ msgstr "Aprobada"
 msgid "Approved and green"
 msgstr "Aprobado y en verde"
 
+msgid "Approved and green, behind {base}"
+msgstr "Aprobado y en verde, por detrás de {base}"
+
+msgid "Approved and green, behind its base"
+msgstr "Aprobado y en verde, por detrás de su base"
+
 msgid "Approved and green, oldest first"
 msgstr "Aprobados y en verde, los más antiguos primero"
 
@@ -2936,6 +2951,9 @@ msgstr "Pide a un agente un documento de diseño o un informe. Crea la página y
 
 msgid "Ask an agent to publish one from the desktop app."
 msgstr "Pide a un agente que publique una desde la aplicación de escritorio."
+
+msgid "Ask for a review"
+msgstr "Pedir una revisión"
 
 msgid "Ask for approval"
 msgstr "Pedir aprobación"
@@ -4159,6 +4177,9 @@ msgstr "CI en curso"
 #. placeholder {1}: checks.total
 msgid "CI running: {0} of {1} checks"
 msgstr "CI en curso: {0} de {1} comprobaciones"
+
+msgid "CI runs again on the new commit."
+msgstr "La CI se vuelve a ejecutar en el nuevo commit."
 
 msgid "Clarify this"
 msgstr "Aclara esto"
@@ -5917,6 +5938,9 @@ msgstr "No se pudo quitar el archivo de preparados"
 
 msgid "Couldn't update pull request"
 msgstr "No se pudo actualizar la pull request"
+
+msgid "Couldn't update the branch"
+msgstr "No se pudo actualizar la rama"
 
 msgid "Couldn't update the queue"
 msgstr "No se pudo actualizar la cola"
@@ -8448,6 +8472,9 @@ msgstr "Corregir hallazgos"
 
 msgid "Fix the flaky test"
 msgstr "Arreglar el test inestable"
+
+msgid "Fix with agent"
+msgstr "Corregir con el agente"
 
 msgid "fix-auth-redirect"
 msgstr "fix-auth-redirect"
@@ -11128,12 +11155,18 @@ msgstr "Estado de fusión"
 msgid "Merge status unknown"
 msgstr "Estado de fusión desconocido"
 
+msgid "Merge, then reviews, then your blocked PRs"
+msgstr "Primero fusionar, luego revisiones, luego tus PR bloqueadas"
+
 msgid "Merged"
 msgstr "Fusionada"
 
 msgctxt "pull request state"
 msgid "Merged"
 msgstr "Fusionado"
+
+msgid "Merged #{prNumber}"
+msgstr "#{prNumber} fusionada"
 
 msgid "Merged after {base}, not released yet"
 msgstr "Fusionado después de {base}, aún sin publicar"
@@ -12626,6 +12659,9 @@ msgstr "No configurado en este host"
 
 msgid "not sorted"
 msgstr "sin ordenar"
+
+msgid "Not today: move it to Later"
+msgstr "Hoy no: moverla a Más tarde"
 
 msgctxt "agent status"
 msgid "Not updating"
@@ -14835,6 +14871,9 @@ msgstr "Se superó el límite de peticiones."
 msgid "Rate Superset"
 msgstr "Valorar Superset"
 
+msgid "Re-review"
+msgstr "Revisar de nuevo"
+
 msgid "Reach this Mac from anywhere via the Superset relay, or spin up cloud workspaces. Connect from any client."
 msgstr "Llegar a este Mac desde cualquier lugar a través del relay de Superset, o crear espacios de trabajo en la nube. Conectarse desde cualquier cliente."
 
@@ -15486,6 +15525,9 @@ msgstr "Solicitar una prueba"
 
 msgid "Request Body"
 msgstr "Cuerpo de la solicitud"
+
+msgid "Request reviewers on GitHub"
+msgstr "Pedir revisores en GitHub"
 
 msgid "requested changes"
 msgstr "solicitó cambios"
@@ -17698,6 +17740,9 @@ msgstr "Squash y fusionar"
 msgid "Squash and merge"
 msgstr "Squash y fusión"
 
+msgid "Squash and merge #{prNumber}?"
+msgstr "¿Fusionar #{prNumber} con squash?"
+
 msgid "SS"
 msgstr "SS"
 
@@ -17715,6 +17760,9 @@ msgstr "Mejoras de estabilidad"
 
 msgid "Stacked"
 msgstr "Apilado"
+
+msgid "stacked on #{stackedOn}"
+msgstr "apilada sobre #{stackedOn}"
 
 msgid "Staff Software Engineer, Vori"
 msgstr "Ingeniero de software Staff, Vori"
@@ -20253,6 +20301,9 @@ msgstr "Actualizar"
 msgid "Update available"
 msgstr "Actualización disponible"
 
+msgid "Update branch"
+msgstr "Actualizar rama"
+
 msgid "Update Branch"
 msgstr "Actualizar rama"
 
@@ -20321,6 +20372,9 @@ msgstr "Actualizado ahora mismo desde {0}."
 
 msgid "Updates"
 msgstr "Actualizaciones"
+
+msgid "Updating the branch of #{prNumber}"
+msgstr "Actualizando la rama de #{prNumber}"
 
 #. placeholder {0}: update.progress.target
 msgid "Updating to {0}"
@@ -21585,6 +21639,9 @@ msgstr "Tus propias cuentas. Las integraciones de tu organización permiten a Su
 
 msgid "Your PRs blocked on you: changes requested, then CI, then conflicts"
 msgstr "Tus PRs bloqueados por ti: cambios solicitados, luego CI, luego conflictos"
+
+msgid "Your PRs nobody was asked to review"
+msgstr "Tus PR sin nadie asignado para revisar"
 
 msgid "Your rank"
 msgstr "Tu puesto"

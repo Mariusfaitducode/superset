@@ -61,15 +61,26 @@ describe("describeMyPullRequest", () => {
 	it("waits on others while CI runs or nobody approved", () => {
 		expect(
 			describeMyPullRequest(
-				pr({ checks: check("pending"), reviewDecision: "REVIEW_REQUIRED" }),
+				pr({
+					checks: check("pending"),
+					reviewDecision: "REVIEW_REQUIRED",
+					pendingReviewers: ["bob"],
+				}),
 			),
 		).toEqual({
 			waitingOnViewer: false,
 			reasons: ["ci-running", "awaiting-review"],
 		});
-		expect(describeMyPullRequest(pr({}))).toEqual({
+		expect(describeMyPullRequest(pr({ pendingReviewers: ["bob"] }))).toEqual({
 			waitingOnViewer: false,
 			reasons: ["awaiting-review"],
+		});
+	});
+
+	it("puts my PR on me when nobody was asked to review it", () => {
+		expect(describeMyPullRequest(pr({}))).toEqual({
+			waitingOnViewer: true,
+			reasons: ["no-reviewer"],
 		});
 	});
 
@@ -104,5 +115,26 @@ describe("describeMyPullRequest", () => {
 			waitingOnViewer: false,
 			reasons: ["following"],
 		});
+	});
+
+	it("puts someone else's PR back on me when its author moved since my review", () => {
+		const reviewed = {
+			viewerIsAuthor: false,
+			viewerLastReview: {
+				state: "COMMENTED" as const,
+				submittedAt: "2026-11-03T14:41:12Z",
+				onHead: false,
+			},
+		};
+		expect(
+			describeMyPullRequest(
+				pr({ ...reviewed, authorActiveSinceViewerReview: true }),
+			),
+		).toEqual({ waitingOnViewer: true, reasons: ["re-review"] });
+		expect(
+			describeMyPullRequest(
+				pr({ ...reviewed, authorActiveSinceViewerReview: false }),
+			),
+		).toEqual({ waitingOnViewer: false, reasons: ["following"] });
 	});
 });

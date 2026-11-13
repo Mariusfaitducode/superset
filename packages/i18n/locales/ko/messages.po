@@ -83,6 +83,9 @@ msgstr "\"{title}\"이(가) 작업을 완료했습니다"
 msgid "\"{title}\" is waiting for your reply"
 msgstr "\"{title}\"이(가) 답변을 기다리고 있습니다"
 
+msgid "\"{title}\" will be squashed and merged on GitHub. This can't be undone from here."
+msgstr "\"{title}\"이(가) GitHub에서 스쿼시 병합됩니다. 여기서는 되돌릴 수 없습니다."
+
 msgid "({aliveCount} running)"
 msgstr "({aliveCount}개 실행 중)"
 
@@ -823,6 +826,12 @@ msgstr "{agents, plural, other {에이전트 #개}}"
 
 msgid "{agents} sessions resume when you open their workspace."
 msgstr "{agents} 세션은 해당 워크스페이스를 열면 재개됩니다."
+
+msgid "{author} answered since your review"
+msgstr "{author}님이 리뷰 이후 답변했습니다"
+
+msgid "{author} pushed since your review"
+msgstr "{author}님이 리뷰 이후 푸시했습니다"
 
 msgid "{author} waits for your review"
 msgstr "{author}님이 리뷰를 기다리고 있습니다"
@@ -2853,6 +2862,12 @@ msgstr "승인됨"
 msgid "Approved and green"
 msgstr "승인됨, 통과"
 
+msgid "Approved and green, behind {base}"
+msgstr "승인됨, 통과, {base}보다 뒤처짐"
+
+msgid "Approved and green, behind its base"
+msgstr "승인됨, 통과, 기준 브랜치보다 뒤처짐"
+
 msgid "Approved and green, oldest first"
 msgstr "승인됨, 통과, 오래된 순"
 
@@ -2936,6 +2951,9 @@ msgstr "에이전트에게 디자인 문서나 보고서를 요청하세요. 페
 
 msgid "Ask an agent to publish one from the desktop app."
 msgstr "데스크톱 앱에서 에이전트에게 게시를 요청하세요."
+
+msgid "Ask for a review"
+msgstr "리뷰 요청"
 
 msgid "Ask for approval"
 msgstr "승인 요청"
@@ -4159,6 +4177,9 @@ msgstr "CI 실행 중"
 #. placeholder {1}: checks.total
 msgid "CI running: {0} of {1} checks"
 msgstr "CI 실행 중: {1}개 중 {0}개"
+
+msgid "CI runs again on the new commit."
+msgstr "새 커밋에서 CI가 다시 실행됩니다."
 
 msgid "Clarify this"
 msgstr "이것을 명확히 해 주세요"
@@ -5917,6 +5938,9 @@ msgstr "파일 스테이징을 해제하지 못했습니다"
 
 msgid "Couldn't update pull request"
 msgstr "풀 리퀘스트를 업데이트하지 못했습니다"
+
+msgid "Couldn't update the branch"
+msgstr "브랜치를 업데이트할 수 없습니다"
 
 msgid "Couldn't update the queue"
 msgstr "대기열을 업데이트할 수 없습니다"
@@ -8448,6 +8472,9 @@ msgstr "지적 사항 수정"
 
 msgid "Fix the flaky test"
 msgstr "불안정한 테스트 고치기"
+
+msgid "Fix with agent"
+msgstr "에이전트로 수정"
 
 msgid "fix-auth-redirect"
 msgstr "fix-auth-redirect"
@@ -11128,12 +11155,18 @@ msgstr "머지 상태"
 msgid "Merge status unknown"
 msgstr "머지 상태 알 수 없음"
 
+msgid "Merge, then reviews, then your blocked PRs"
+msgstr "먼저 병합, 다음 리뷰, 그다음 막힌 내 PR"
+
 msgid "Merged"
 msgstr "머지됨"
 
 msgctxt "pull request state"
 msgid "Merged"
 msgstr "머지됨"
+
+msgid "Merged #{prNumber}"
+msgstr "#{prNumber} 병합됨"
 
 msgid "Merged after {base}, not released yet"
 msgstr "{base} 이후 병합됨, 아직 릴리스 안 됨"
@@ -12626,6 +12659,9 @@ msgstr "이 호스트에 설정되지 않음"
 
 msgid "not sorted"
 msgstr "정렬 안 됨"
+
+msgid "Not today: move it to Later"
+msgstr "오늘은 안 함: 나중에로 이동"
 
 msgctxt "agent status"
 msgid "Not updating"
@@ -14835,6 +14871,9 @@ msgstr "요청 한도를 초과했습니다."
 msgid "Rate Superset"
 msgstr "Superset 평가하기"
 
+msgid "Re-review"
+msgstr "다시 리뷰"
+
 msgid "Reach this Mac from anywhere via the Superset relay, or spin up cloud workspaces. Connect from any client."
 msgstr "Superset 릴레이를 통해 어디서든 이 Mac에 접속하거나 클라우드 워크스페이스를 띄우세요. 어떤 클라이언트에서도 연결할 수 있습니다."
 
@@ -15486,6 +15525,9 @@ msgstr "체험판 요청"
 
 msgid "Request Body"
 msgstr "요청 본문"
+
+msgid "Request reviewers on GitHub"
+msgstr "GitHub에서 리뷰어 요청"
 
 msgid "requested changes"
 msgstr "변경 요청함"
@@ -17698,6 +17740,9 @@ msgstr "스쿼시 후 머지"
 msgid "Squash and merge"
 msgstr "스쿼시 후 머지"
 
+msgid "Squash and merge #{prNumber}?"
+msgstr "#{prNumber}을(를) 스쿼시 병합할까요?"
+
 msgid "SS"
 msgstr "SS"
 
@@ -17715,6 +17760,9 @@ msgstr "안정성 개선"
 
 msgid "Stacked"
 msgstr "스택"
+
+msgid "stacked on #{stackedOn}"
+msgstr "#{stackedOn} 위에 쌓임"
 
 msgid "Staff Software Engineer, Vori"
 msgstr "스태프 소프트웨어 엔지니어, Vori"
@@ -20253,6 +20301,9 @@ msgstr "업데이트"
 msgid "Update available"
 msgstr "업데이트 있음"
 
+msgid "Update branch"
+msgstr "브랜치 업데이트"
+
 msgid "Update Branch"
 msgstr "브랜치 업데이트"
 
@@ -20321,6 +20372,9 @@ msgstr "방금 {0}에서 업데이트되었습니다."
 
 msgid "Updates"
 msgstr "업데이트"
+
+msgid "Updating the branch of #{prNumber}"
+msgstr "#{prNumber}의 브랜치 업데이트 중"
 
 #. placeholder {0}: update.progress.target
 msgid "Updating to {0}"
@@ -21585,6 +21639,9 @@ msgstr "본인의 계정입니다. 조직의 통합은 Superset이 해당 도구
 
 msgid "Your PRs blocked on you: changes requested, then CI, then conflicts"
 msgstr "내가 막고 있는 내 PR: 변경 요청, CI, 충돌 순"
+
+msgid "Your PRs nobody was asked to review"
+msgstr "아무에게도 리뷰를 요청하지 않은 내 PR"
 
 msgid "Your rank"
 msgstr "내 순위"

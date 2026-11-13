@@ -83,6 +83,9 @@ msgstr "\"{title}\" is klaar met de taak"
 msgid "\"{title}\" is waiting for your reply"
 msgstr "\"{title}\" wacht op je antwoord"
 
+msgid "\"{title}\" will be squashed and merged on GitHub. This can't be undone from here."
+msgstr "\"{title}\" wordt op GitHub gesquasht en samengevoegd. Dit kan hier niet ongedaan worden gemaakt."
+
 msgid "({aliveCount} running)"
 msgstr "({aliveCount} actief)"
 
@@ -823,6 +826,12 @@ msgstr "{agents, plural, one {# agent} other {# agents}}"
 
 msgid "{agents} sessions resume when you open their workspace."
 msgstr "{agents}-sessies worden hervat wanneer je hun workspace opent."
+
+msgid "{author} answered since your review"
+msgstr "{author} heeft gereageerd sinds je review"
+
+msgid "{author} pushed since your review"
+msgstr "{author} heeft gepusht sinds je review"
 
 msgid "{author} waits for your review"
 msgstr "{author} wacht op je review"
@@ -2853,6 +2862,12 @@ msgstr "Goedgekeurd"
 msgid "Approved and green"
 msgstr "Goedgekeurd en groen"
 
+msgid "Approved and green, behind {base}"
+msgstr "Goedgekeurd en groen, achter op {base}"
+
+msgid "Approved and green, behind its base"
+msgstr "Goedgekeurd en groen, achter op de basis"
+
 msgid "Approved and green, oldest first"
 msgstr "Goedgekeurd en groen, oudste eerst"
 
@@ -2936,6 +2951,9 @@ msgstr "Vraag een agent om een ontwerpdocument of rapport. Hij maakt de pagina e
 
 msgid "Ask an agent to publish one from the desktop app."
 msgstr "Vraag een agent om er een te publiceren vanuit de desktop-app."
+
+msgid "Ask for a review"
+msgstr "Om een review vragen"
 
 msgid "Ask for approval"
 msgstr "Om goedkeuring vragen"
@@ -4159,6 +4177,9 @@ msgstr "CI draait"
 #. placeholder {1}: checks.total
 msgid "CI running: {0} of {1} checks"
 msgstr "CI loopt: {0} van {1} checks"
+
+msgid "CI runs again on the new commit."
+msgstr "CI draait opnieuw op de nieuwe commit."
 
 msgid "Clarify this"
 msgstr "Verduidelijk dit"
@@ -5917,6 +5938,9 @@ msgstr "Kan bestand niet unstagen"
 
 msgid "Couldn't update pull request"
 msgstr "Kan pull request niet bijwerken"
+
+msgid "Couldn't update the branch"
+msgstr "Kan de branch niet bijwerken"
 
 msgid "Couldn't update the queue"
 msgstr "Kan de wachtrij niet bijwerken"
@@ -8448,6 +8472,9 @@ msgstr "Bevindingen oplossen"
 
 msgid "Fix the flaky test"
 msgstr "De wankele test repareren"
+
+msgid "Fix with agent"
+msgstr "Oplossen met agent"
 
 msgid "fix-auth-redirect"
 msgstr "fix-auth-redirect"
@@ -11128,12 +11155,18 @@ msgstr "Mergestatus"
 msgid "Merge status unknown"
 msgstr "Mergestatus onbekend"
 
+msgid "Merge, then reviews, then your blocked PRs"
+msgstr "Eerst mergen, dan reviews, dan je geblokkeerde PR's"
+
 msgid "Merged"
 msgstr "Gemerged"
 
 msgctxt "pull request state"
 msgid "Merged"
 msgstr "Gemerged"
+
+msgid "Merged #{prNumber}"
+msgstr "#{prNumber} gemerged"
 
 msgid "Merged after {base}, not released yet"
 msgstr "Gemerged na {base}, nog niet uitgebracht"
@@ -12626,6 +12659,9 @@ msgstr "Niet ingesteld op deze host"
 
 msgid "not sorted"
 msgstr "niet gesorteerd"
+
+msgid "Not today: move it to Later"
+msgstr "Niet vandaag: naar Later verplaatsen"
 
 msgctxt "agent status"
 msgid "Not updating"
@@ -14835,6 +14871,9 @@ msgstr "Limiet overschreden."
 msgid "Rate Superset"
 msgstr "Superset beoordelen"
 
+msgid "Re-review"
+msgstr "Opnieuw reviewen"
+
 msgid "Reach this Mac from anywhere via the Superset relay, or spin up cloud workspaces. Connect from any client."
 msgstr "Bereik deze Mac van overal via de Superset-relay, of start cloudwerkruimtes. Verbind vanaf elke client."
 
@@ -15486,6 +15525,9 @@ msgstr "Proefperiode aanvragen"
 
 msgid "Request Body"
 msgstr "Request body"
+
+msgid "Request reviewers on GitHub"
+msgstr "Reviewers aanvragen op GitHub"
 
 msgid "requested changes"
 msgstr "heeft wijzigingen aangevraagd"
@@ -17698,6 +17740,9 @@ msgstr "Squashen en mergen"
 msgid "Squash and merge"
 msgstr "Squashen en mergen"
 
+msgid "Squash and merge #{prNumber}?"
+msgstr "#{prNumber} squashen en mergen?"
+
 msgid "SS"
 msgstr "SS"
 
@@ -17715,6 +17760,9 @@ msgstr "Stabiliteitsverbeteringen"
 
 msgid "Stacked"
 msgstr "Gestapeld"
+
+msgid "stacked on #{stackedOn}"
+msgstr "gestapeld op #{stackedOn}"
 
 msgid "Staff Software Engineer, Vori"
 msgstr "Staff-software-engineer, Vori"
@@ -20253,6 +20301,9 @@ msgstr "Bijwerken"
 msgid "Update available"
 msgstr "Update beschikbaar"
 
+msgid "Update branch"
+msgstr "Branch bijwerken"
+
 msgid "Update Branch"
 msgstr "Branch bijwerken"
 
@@ -20321,6 +20372,9 @@ msgstr "Zojuist bijgewerkt vanaf {0}."
 
 msgid "Updates"
 msgstr "Updates"
+
+msgid "Updating the branch of #{prNumber}"
+msgstr "Branch van #{prNumber} wordt bijgewerkt"
 
 #. placeholder {0}: update.progress.target
 msgid "Updating to {0}"
@@ -21585,6 +21639,9 @@ msgstr "Je eigen accounts. De integraties van je organisatie geven Superset toeg
 
 msgid "Your PRs blocked on you: changes requested, then CI, then conflicts"
 msgstr "Je PR's die op jou wachten: gevraagde wijzigingen, dan CI, dan conflicten"
+
+msgid "Your PRs nobody was asked to review"
+msgstr "Je PR's waarvoor niemand om een review is gevraagd"
 
 msgid "Your rank"
 msgstr "Je positie"

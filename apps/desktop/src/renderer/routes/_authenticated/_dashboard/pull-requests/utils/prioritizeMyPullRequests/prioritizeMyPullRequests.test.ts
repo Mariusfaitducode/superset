@@ -81,4 +81,52 @@ describe("prioritizeMyPullRequests", () => {
 		expect(groups.at(-1)?.action).toBe("later");
 		expect(groups.at(-1)?.rows.map((row) => row.pr.prNumber)).toEqual([4]);
 	});
+
+	it("ranks a re-review with requested reviews, asks for a reviewer, and finds stacks", () => {
+		const rows = prioritizeMyPullRequests(
+			[
+				makeMyPullRequest(10, {
+					baseRefName: "develop",
+					headRefName: "feature/api",
+				}),
+				makeMyPullRequest(
+					11,
+					{
+						viewerIsAuthor: false,
+						baseRefName: "feature/api",
+						headRefName: "feature/ui",
+						authorActiveSinceViewerReview: true,
+						viewerLastReview: {
+							state: "COMMENTED",
+							submittedAt: "2026-10-15T00:00:00Z",
+							onHead: false,
+						},
+					},
+					{ authorLogin: "pb" },
+				),
+				makeMyPullRequest(12, {
+					reviewDecision: "APPROVED",
+					behindBase: true,
+					baseRefName: "develop",
+				}),
+			],
+			{ pinned: [], later: [] },
+		).flatMap((group) => group.rows);
+		const row = (prNumber: number) =>
+			rows.find((entry) => entry.pr.prNumber === prNumber);
+		expect(rows.map((entry) => [entry.pr.prNumber, entry.action])).toEqual([
+			[11, "review"],
+			[12, "merge"],
+			[10, "ask"],
+		]);
+		expect(row(11)?.why).toEqual({
+			kind: "re-review",
+			author: "pb",
+			since: "2026-10-15T00:00:00Z",
+			onHead: false,
+		});
+		expect(row(11)?.stackedOn).toBe(10);
+		expect(row(10)?.stackedOn).toBeNull();
+		expect(row(12)?.why).toEqual({ kind: "ready", behind: "develop" });
+	});
 });
