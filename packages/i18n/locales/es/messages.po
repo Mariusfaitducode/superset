@@ -1905,6 +1905,9 @@ msgstr "Añadir {0} al espacio de trabajo"
 msgid "Add {count} to focus"
 msgstr "Añadir {count} al foco"
 
+msgid "Add a Claude agent in Settings → Agents to run it."
+msgstr "Añade un agente Claude en Ajustes → Agentes para ejecutarlo."
+
 msgid "Add a comment…"
 msgstr "Añade un comentario…"
 
@@ -7305,6 +7308,9 @@ msgstr "Editor y flujo de trabajo"
 msgid "Editor typography"
 msgstr "Tipografía del editor"
 
+msgid "Efficiency"
+msgstr "Eficiencia"
+
 msgid "Efficient"
 msgstr "Eficiente"
 
@@ -8579,6 +8585,9 @@ msgstr "Si tienes dudas sobre la facturación, <0>contáctanos</0>."
 msgid "For teams that need more power"
 msgstr "Para equipos que necesitan más potencia"
 
+msgid "For today"
+msgstr "Para hoy"
+
 msgid "Force merge"
 msgstr "Forzar la fusión"
 
@@ -8713,6 +8722,9 @@ msgstr "Autonomía total"
 
 msgid "Full source available on GitHub under Elastic License 2.0 (ELv2). Inspect, audit, and contribute to the code. No black boxes, no hidden functionality."
 msgstr "Código fuente completo disponible en GitHub bajo la Elastic License 2.0 (ELv2). Inspecciónalo, audítalo y contribuye. Sin cajas negras ni funciones ocultas."
+
+msgid "Full synthesis"
+msgstr "Síntesis completa"
 
 msgid "Full: close agents before starting another"
 msgstr "Lleno: cierra agentes antes de iniciar otro"
@@ -9983,6 +9995,9 @@ msgstr "Puede que esté en reposo"
 msgid "It may have been deleted, or it belongs to another organization."
 msgstr "Puede que se haya eliminado o que pertenezca a otra organización."
 
+msgid "It only reads. Anything to send in your name comes back as a draft on your Desk."
+msgstr "Solo lee. Todo lo que haya que enviar en tu nombre vuelve como borrador a tu Desk."
+
 msgid "It will open once the connection is back."
 msgstr "Se abrirá cuando vuelva la conexión."
 
@@ -10245,6 +10260,9 @@ msgstr "El último día de cada mes a las {time}"
 
 msgid "Last run"
 msgstr "Última ejecución"
+
+msgid "Last run {ago} ago"
+msgstr "Última ejecución hace {ago}"
 
 msgid "Last seen"
 msgstr "Visto por última vez"
@@ -11578,6 +11596,9 @@ msgstr "Nunca"
 msgid "Never asks before acting"
 msgstr "Nunca pregunta antes de actuar"
 
+msgid "Never run"
+msgstr "Nunca ejecutado"
+
 msgid "New"
 msgstr "Nuevo"
 
@@ -12673,6 +12694,9 @@ msgstr "Aún no has publicado nada en los últimos 30 días. Tu puesto aparecer�
 msgid "Nothing running"
 msgstr "No hay nada en ejecución"
 
+msgid "Nothing to flag."
+msgstr "Nada que señalar."
+
 msgid "Nothing waits on you."
 msgstr "Nada te espera."
 
@@ -12731,6 +12755,12 @@ msgstr "OAuth 2.0"
 
 msgid "OAuth by default, API keys for CI"
 msgstr "OAuth por defecto, claves de API para CI"
+
+msgid "Observer"
+msgstr "Observador"
+
+msgid "Observing, started {ago} ago"
+msgstr "Observando, iniciado hace {ago}"
 
 #. placeholder {0}: formatNumber(participants)
 msgid "of {0}"
@@ -16112,6 +16142,9 @@ msgstr "En ejecución en este dispositivo"
 msgid "Running terminal processes continue, but older output may no longer be available after restarting the app."
 msgstr "Los procesos de terminal en marcha continúan, pero puede que la salida más antigua deje de estar disponible al reiniciar la app."
 
+msgid "Running…"
+msgstr "En curso…"
+
 msgid "Runs a local command on your machine"
 msgstr "Ejecuta un comando local en tu equipo"
 
@@ -16138,6 +16171,9 @@ msgstr "Se ejecuta al crear un espacio de trabajo."
 
 msgid "Runs when a workspace is deleted."
 msgstr "Se ejecuta al eliminar un espacio de trabajo."
+
+msgid "Runs with"
+msgstr "Se ejecuta con"
 
 msgid "Same name in sidebar and tabs"
 msgstr "Mismo nombre en la barra lateral y las pestañas"
@@ -16235,6 +16271,9 @@ msgstr "Programación"
 
 msgid "Schedule a daily automation that triages new Linear issues at 9am"
 msgstr "Programa una automatización diaria que haga triaje de los issues nuevos de Linear a las 9:00"
+
+msgid "Schedule it in My automations"
+msgstr "Prográmalo en Mis automatizaciones"
 
 msgid "Schedule meetings"
 msgstr "Programar reuniones"
@@ -17846,6 +17885,9 @@ msgstr "Inicia espacios de trabajo directamente desde issues de Linear o GitHub 
 msgid "Started"
 msgstr "Iniciada"
 
+msgid "Started {ago} ago, never published"
+msgstr "Iniciado hace {ago}, nunca publicó"
+
 msgid "starting"
 msgstr "iniciando"
 
@@ -19030,6 +19072,9 @@ msgstr "El nombre de la organización o equipo"
 msgid "The network connection changed"
 msgstr "Cambió la conexión de red"
 
+msgid "The observer reads every agent of this Mac (states, to-dos, reports, notes, Superset ideas, your PRs and messages) and hands you one synthesis: what to improve in Superset, what waits on you, and how to make your agents cheaper and faster."
+msgstr "El observador lee todos los agentes de este Mac (estados, tareas, informes, notas, ideas para Superset, tus PR y mensajes) y te entrega una síntesis: qué mejorar en Superset, qué te espera y cómo hacer tus agentes más baratos y rápidos."
+
 msgid "The overnight shift"
 msgstr "El turno de noche"
 
@@ -19329,6 +19374,9 @@ msgstr "Este host está desconectado, así que sus agentes no se pueden leer ni 
 
 msgid "This host is too old to keep to-dos."
 msgstr "Este host es demasiado antiguo para guardar tareas pendientes."
+
+msgid "This host is too old to run the observer."
+msgstr "Este host es demasiado antiguo para ejecutar el observador."
 
 msgid "This host needs an update"
 msgstr "Este host necesita una actualización"
@@ -20749,6 +20797,9 @@ msgstr "Mira cómo una revisión de diseño pasa de un comentario a una nueva ve
 msgid "Watch the Superset Automations video on YouTube"
 msgstr "Mira el vídeo de Superset Automations en YouTube"
 
+msgid "Watches every agent and tells you what to improve and what waits on you."
+msgstr "Observa todos los agentes y te dice qué mejorar y qué te espera."
+
 msgid "Wayfinding and disclosure"
 msgstr "Orientación y despliegue de contenido"
 
@@ -21638,6 +21689,9 @@ msgstr "Tus proyectos y espacios de trabajo de v1 se están pasando al nuevo Sup
 
 msgid "Your version: {currentVersion}"
 msgstr "Tu versión: {currentVersion}"
+
+msgid "Your work"
+msgstr "Tu trabajo"
 
 msgid "Zap"
 msgstr "Rayo"

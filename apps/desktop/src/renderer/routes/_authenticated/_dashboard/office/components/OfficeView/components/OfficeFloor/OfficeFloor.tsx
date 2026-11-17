@@ -30,6 +30,7 @@ import { PageHeader } from "renderer/routes/_authenticated/_dashboard/components
 import { useConversationStateLabels } from "renderer/routes/_authenticated/_dashboard/office/hooks/useConversationStateLabels";
 import { useOfficeCamera } from "renderer/routes/_authenticated/_dashboard/office/hooks/useOfficeCamera";
 import { useOfficeGroups } from "renderer/routes/_authenticated/_dashboard/office/hooks/useOfficeGroups";
+import type { useOfficeObserver } from "renderer/routes/_authenticated/_dashboard/office/hooks/useOfficeObserver";
 import { useOfficeToneLabels } from "renderer/routes/_authenticated/_dashboard/office/hooks/useOfficeToneLabels";
 import { usePrefersReducedMotion } from "renderer/routes/_authenticated/_dashboard/office/hooks/usePrefersReducedMotion";
 import { useOfficeFilterStore } from "renderer/routes/_authenticated/_dashboard/office/stores/office-filter";
@@ -77,6 +78,8 @@ import { OfficeCameraControls } from "./components/OfficeCameraControls";
 import { OfficeCanvas } from "./components/OfficeCanvas";
 import { OfficeDeskPlate } from "./components/OfficeDeskPlate";
 import { OfficeHelperButton } from "./components/OfficeHelperButton";
+import { OfficeObserverDesk } from "./components/OfficeObserverDesk";
+import { OfficeObserverPanel } from "./components/OfficeObserverPanel";
 import { OfficeRoomHeader } from "./components/OfficeRoomHeader";
 import { OfficeSeatButton } from "./components/OfficeSeatButton";
 import { OfficeWorkflowLabel } from "./components/OfficeWorkflowLabel";
@@ -152,8 +155,10 @@ interface RoomUnit {
 
 export function OfficeFloor({
 	workspaces,
+	observer,
 }: {
 	workspaces: HostWorkspaceItem[];
+	observer: ReturnType<typeof useOfficeObserver>;
 }) {
 	const { t } = useLingui();
 	const navigate = useNavigate();
@@ -213,7 +218,13 @@ export function OfficeFloor({
 		[integrations],
 	);
 
-	const [selection, setSelection] = useState<Selection | null>(null);
+	const [selection, setSelectionState] = useState<Selection | null>(null);
+	const [observerOpen, setObserverOpen] = useState(false);
+	// One side panel at a time: an agent's or the observer's.
+	const setSelection = useCallback((next: Selection | null) => {
+		setSelectionState(next);
+		if (next) setObserverOpen(false);
+	}, []);
 
 	const { allRooms, shownRooms } = useMemo(() => {
 		const byKey = new Map<string, RoomUnit>();
@@ -802,6 +813,15 @@ export function OfficeFloor({
 							)}
 						</div>
 					)}
+					<OfficeObserverDesk
+						status={observer.status}
+						synthesis={observer.synthesis}
+						selected={observerOpen}
+						onOpen={() => {
+							setSelectionState(null);
+							setObserverOpen((open) => !open);
+						}}
+					/>
 					<OfficeCameraControls
 						zoom={camera.camera.zoom}
 						onZoomIn={() => zoomBy(1.25)}
@@ -820,6 +840,12 @@ export function OfficeFloor({
 					</span>
 				</footer>
 			</div>
+			{observerOpen && (
+				<OfficeObserverPanel
+					observer={observer}
+					onClose={() => setObserverOpen(false)}
+				/>
+			)}
 			{selected && selectedWorkspace && (
 				<OfficeAgentPanel
 					workspace={selectedWorkspace}

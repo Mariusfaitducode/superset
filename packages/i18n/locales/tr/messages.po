@@ -1905,6 +1905,9 @@ msgstr "{0} öğesini çalışma alanına ekle"
 msgid "Add {count} to focus"
 msgstr "{count} öğeyi odağa ekle"
 
+msgid "Add a Claude agent in Settings → Agents to run it."
+msgstr "Çalıştırmak için Ayarlar → Ajanlar'dan bir Claude ajanı ekleyin."
+
 msgid "Add a comment…"
 msgstr "Yorum ekle…"
 
@@ -7305,6 +7308,9 @@ msgstr "Düzenleyici ve iş akışı"
 msgid "Editor typography"
 msgstr "Düzenleyici tipografisi"
 
+msgid "Efficiency"
+msgstr "Verimlilik"
+
 msgid "Efficient"
 msgstr "Verimli"
 
@@ -8579,6 +8585,9 @@ msgstr "Faturalandırmayla ilgili sorularınız için <0>bize ulaşın</0>."
 msgid "For teams that need more power"
 msgstr "Daha fazla güce ihtiyaç duyan takımlar için"
 
+msgid "For today"
+msgstr "Bugün için"
+
 msgid "Force merge"
 msgstr "Zorla birleştir"
 
@@ -8713,6 +8722,9 @@ msgstr "Tam otonomi"
 
 msgid "Full source available on GitHub under Elastic License 2.0 (ELv2). Inspect, audit, and contribute to the code. No black boxes, no hidden functionality."
 msgstr "Tüm kaynak kodu GitHub'da Elastic License 2.0 (ELv2) altında mevcuttur. Kodu inceleyin, denetleyin ve katkıda bulunun. Kara kutu yok, gizli işlev yok."
+
+msgid "Full synthesis"
+msgstr "Tam özet"
 
 msgid "Full: close agents before starting another"
 msgstr "Dolu: başka bir ajan başlatmadan önce ajanları kapatın"
@@ -9983,6 +9995,9 @@ msgstr "Uykuda olabilir"
 msgid "It may have been deleted, or it belongs to another organization."
 msgstr "Silinmiş olabilir veya başka bir kuruluşa ait olabilir."
 
+msgid "It only reads. Anything to send in your name comes back as a draft on your Desk."
+msgstr "Yalnızca okur. Senin adına gönderilecek her şey Desk'ine taslak olarak döner."
+
 msgid "It will open once the connection is back."
 msgstr "Bağlantı geri geldiğinde açılacak."
 
@@ -10245,6 +10260,9 @@ msgstr "Her ayın son günü saat {time}"
 
 msgid "Last run"
 msgstr "Son çalıştırma"
+
+msgid "Last run {ago} ago"
+msgstr "Son çalışma {ago} önce"
 
 msgid "Last seen"
 msgstr "Son görülme"
@@ -11578,6 +11596,9 @@ msgstr "Hiç"
 msgid "Never asks before acting"
 msgstr "Hiç sormadan çalışır"
 
+msgid "Never run"
+msgstr "Hiç çalıştırılmadı"
+
 msgid "New"
 msgstr "Yeni"
 
@@ -12673,6 +12694,9 @@ msgstr "Son 30 günde henüz hiçbir şey yayınlanmadı. Bu makinedeki kullanı
 msgid "Nothing running"
 msgstr "Çalışan bir şey yok"
 
+msgid "Nothing to flag."
+msgstr "Bildirilecek bir şey yok."
+
 msgid "Nothing waits on you."
 msgstr "Sizi bekleyen bir şey yok."
 
@@ -12731,6 +12755,12 @@ msgstr "OAuth 2.0"
 
 msgid "OAuth by default, API keys for CI"
 msgstr "Varsayılan OAuth, CI için API anahtarları"
+
+msgid "Observer"
+msgstr "Gözlemci"
+
+msgid "Observing, started {ago} ago"
+msgstr "Gözlemliyor, {ago} önce başladı"
 
 #. placeholder {0}: formatNumber(participants)
 msgid "of {0}"
@@ -16112,6 +16142,9 @@ msgstr "Bu cihazda çalışıyor"
 msgid "Running terminal processes continue, but older output may no longer be available after restarting the app."
 msgstr "Çalışan terminal süreçleri devam eder, ancak uygulama yeniden başlatıldıktan sonra eski çıktı artık kullanılamayabilir."
 
+msgid "Running…"
+msgstr "Çalışıyor…"
+
 msgid "Runs a local command on your machine"
 msgstr "Makinenizde yerel bir komut çalıştırır"
 
@@ -16138,6 +16171,9 @@ msgstr "Yeni bir çalışma alanı oluşturulduğunda çalışır."
 
 msgid "Runs when a workspace is deleted."
 msgstr "Bir çalışma alanı silindiğinde çalışır."
+
+msgid "Runs with"
+msgstr "Şununla çalışır"
 
 msgid "Same name in sidebar and tabs"
 msgstr "Kenar çubuğunda ve sekmelerde aynı ad"
@@ -16235,6 +16271,9 @@ msgstr "Zamanlama"
 
 msgid "Schedule a daily automation that triages new Linear issues at 9am"
 msgstr "Her gün 09.00'da yeni Linear issue'larını sınıflandıran bir otomasyon zamanla"
+
+msgid "Schedule it in My automations"
+msgstr "Otomasyonlarım'da zamanla"
 
 msgid "Schedule meetings"
 msgstr "Toplantı planlayın"
@@ -17846,6 +17885,9 @@ msgstr "Görevler görünümünde Linear veya GitHub issue'larından doğrudan �
 msgid "Started"
 msgstr "Başladı"
 
+msgid "Started {ago} ago, never published"
+msgstr "{ago} önce başladı, hiç yayımlamadı"
+
 msgid "starting"
 msgstr "başlatılıyor"
 
@@ -19030,6 +19072,9 @@ msgstr "Kuruluşunuzun veya takımınızın adı"
 msgid "The network connection changed"
 msgstr "Ağ bağlantısı değişti"
 
+msgid "The observer reads every agent of this Mac (states, to-dos, reports, notes, Superset ideas, your PRs and messages) and hands you one synthesis: what to improve in Superset, what waits on you, and how to make your agents cheaper and faster."
+msgstr "Gözlemci bu Mac'teki tüm ajanları okur (durumlar, yapılacaklar, raporlar, notlar, Superset fikirleri, PR'ların ve mesajların) ve sana tek bir özet verir: Superset'te neyin iyileştirilebileceği, seni neyin beklediği ve ajanlarını nasıl daha ucuz ve hızlı hale getirebileceğin."
+
 msgid "The overnight shift"
 msgstr "Gece vardiyası"
 
@@ -19329,6 +19374,9 @@ msgstr "Bu ana bilgisayar çevrimdışı, bu yüzden ajanları okunamaz veya ba�
 
 msgid "This host is too old to keep to-dos."
 msgstr "Bu ana bilgisayar yapılacakları saklamak için çok eski."
+
+msgid "This host is too old to run the observer."
+msgstr "Bu ana makine gözlemciyi çalıştırmak için çok eski."
 
 msgid "This host needs an update"
 msgstr "Bu host'un güncellenmesi gerekiyor"
@@ -20749,6 +20797,9 @@ msgstr "Bir tasarım incelemesinin yorumdan yeni sürüme nasıl geçtiğini izl
 msgid "Watch the Superset Automations video on YouTube"
 msgstr "YouTube'da Superset Otomasyonlar videosunu izleyin"
 
+msgid "Watches every agent and tells you what to improve and what waits on you."
+msgstr "Tüm ajanları izler, neyin iyileştirileceğini ve seni neyin beklediğini söyler."
+
 msgid "Wayfinding and disclosure"
 msgstr "Yönlendirme ve açma-kapama"
 
@@ -21638,6 +21689,9 @@ msgstr "v1 projeleriniz ve çalışma alanlarınız yeni Superset'e aktarılıyo
 
 msgid "Your version: {currentVersion}"
 msgstr "Sürümünüz: {currentVersion}"
+
+msgid "Your work"
+msgstr "İşin"
 
 msgid "Zap"
 msgstr "Şimşek"

@@ -1905,6 +1905,9 @@ msgstr "{0} toevoegen aan werkruimte"
 msgid "Add {count} to focus"
 msgstr "{count} aan focus toevoegen"
 
+msgid "Add a Claude agent in Settings → Agents to run it."
+msgstr "Voeg een Claude-agent toe in Instellingen → Agents om hem uit te voeren."
+
 msgid "Add a comment…"
 msgstr "Voeg een reactie toe…"
 
@@ -7305,6 +7308,9 @@ msgstr "Editor en workflow"
 msgid "Editor typography"
 msgstr "Editortypografie"
 
+msgid "Efficiency"
+msgstr "Efficiëntie"
+
 msgid "Efficient"
 msgstr "Efficiënt"
 
@@ -8579,6 +8585,9 @@ msgstr "Voor vragen over facturering, <0>neem contact op</0>."
 msgid "For teams that need more power"
 msgstr "Voor teams die meer nodig hebben"
 
+msgid "For today"
+msgstr "Voor vandaag"
+
 msgid "Force merge"
 msgstr "Geforceerd mergen"
 
@@ -8713,6 +8722,9 @@ msgstr "Volledig zelfrijdend"
 
 msgid "Full source available on GitHub under Elastic License 2.0 (ELv2). Inspect, audit, and contribute to the code. No black boxes, no hidden functionality."
 msgstr "Volledige broncode beschikbaar op GitHub onder Elastic License 2.0 (ELv2). Bekijk, audit en draag bij aan de code. Geen black boxes, geen verborgen functionaliteit."
+
+msgid "Full synthesis"
+msgstr "Volledige samenvatting"
 
 msgid "Full: close agents before starting another"
 msgstr "Vol: sluit agents voordat je een nieuwe start"
@@ -9983,6 +9995,9 @@ msgstr "Hij staat mogelijk in sluimerstand"
 msgid "It may have been deleted, or it belongs to another organization."
 msgstr "Mogelijk is die verwijderd, of hoort die bij een andere organisatie."
 
+msgid "It only reads. Anything to send in your name comes back as a draft on your Desk."
+msgstr "Hij leest alleen. Alles wat in jouw naam verstuurd moet worden, komt als concept op je Desk."
+
 msgid "It will open once the connection is back."
 msgstr "De pagina opent zodra de verbinding terug is."
 
@@ -10245,6 +10260,9 @@ msgstr "Laatste dag van elke maand om {time}"
 
 msgid "Last run"
 msgstr "Laatste run"
+
+msgid "Last run {ago} ago"
+msgstr "Laatste run {ago} geleden"
 
 msgid "Last seen"
 msgstr "Laatst gezien"
@@ -11578,6 +11596,9 @@ msgstr "Nooit"
 msgid "Never asks before acting"
 msgstr "Vraagt nooit vooraf"
 
+msgid "Never run"
+msgstr "Nog nooit uitgevoerd"
+
 msgid "New"
 msgstr "Nieuw"
 
@@ -12673,6 +12694,9 @@ msgstr "Nog niets gepubliceerd in de laatste 30 dagen. Je positie verschijnt zod
 msgid "Nothing running"
 msgstr "Er draait niets"
 
+msgid "Nothing to flag."
+msgstr "Niets te melden."
+
 msgid "Nothing waits on you."
 msgstr "Niets wacht op jou."
 
@@ -12731,6 +12755,12 @@ msgstr "OAuth 2.0"
 
 msgid "OAuth by default, API keys for CI"
 msgstr "OAuth standaard, API-sleutels voor CI"
+
+msgid "Observer"
+msgstr "Observator"
+
+msgid "Observing, started {ago} ago"
+msgstr "Observeert, gestart {ago} geleden"
 
 #. placeholder {0}: formatNumber(participants)
 msgid "of {0}"
@@ -16112,6 +16142,9 @@ msgstr "Draait op dit apparaat"
 msgid "Running terminal processes continue, but older output may no longer be available after restarting the app."
 msgstr "Draaiende terminalprocessen gaan door, maar oudere uitvoer is na het herstarten van de app mogelijk niet meer beschikbaar."
 
+msgid "Running…"
+msgstr "Bezig…"
+
 msgid "Runs a local command on your machine"
 msgstr "Voert een lokaal commando uit op je machine"
 
@@ -16138,6 +16171,9 @@ msgstr "Wordt uitgevoerd bij het aanmaken van een werkruimte."
 
 msgid "Runs when a workspace is deleted."
 msgstr "Wordt uitgevoerd bij het verwijderen van een werkruimte."
+
+msgid "Runs with"
+msgstr "Draait met"
 
 msgid "Same name in sidebar and tabs"
 msgstr "Zelfde naam in zijbalk en tabbladen"
@@ -16235,6 +16271,9 @@ msgstr "Schema"
 
 msgid "Schedule a daily automation that triages new Linear issues at 9am"
 msgstr "Plan een dagelijkse automatisering die om 9 uur nieuwe Linear-issues triageert"
+
+msgid "Schedule it in My automations"
+msgstr "Plan het in Mijn automatiseringen"
 
 msgid "Schedule meetings"
 msgstr "Vergaderingen plannen"
@@ -17846,6 +17885,9 @@ msgstr "Start werkruimtes direct vanuit Linear- of GitHub-issues in de weergave 
 msgid "Started"
 msgstr "Gestart"
 
+msgid "Started {ago} ago, never published"
+msgstr "{ago} geleden gestart, nooit gepubliceerd"
+
 msgid "starting"
 msgstr "starten"
 
@@ -19030,6 +19072,9 @@ msgstr "De naam van je organisatie of team"
 msgid "The network connection changed"
 msgstr "De netwerkverbinding is gewijzigd"
 
+msgid "The observer reads every agent of this Mac (states, to-dos, reports, notes, Superset ideas, your PRs and messages) and hands you one synthesis: what to improve in Superset, what waits on you, and how to make your agents cheaper and faster."
+msgstr "De observator leest alle agents van deze Mac (statussen, to-do's, rapporten, notities, Superset-ideeën, je PR's en berichten) en geeft je één samenvatting: wat er beter kan in Superset, wat op je wacht en hoe je agents goedkoper en sneller worden."
+
 msgid "The overnight shift"
 msgstr "De nachtploeg"
 
@@ -19329,6 +19374,9 @@ msgstr "Deze host is offline, dus de agents kunnen niet worden gelezen of gestar
 
 msgid "This host is too old to keep to-dos."
 msgstr "Deze host is te oud om to-do's te bewaren."
+
+msgid "This host is too old to run the observer."
+msgstr "Deze host is te oud om de observator uit te voeren."
 
 msgid "This host needs an update"
 msgstr "Deze host heeft een update nodig"
@@ -20749,6 +20797,9 @@ msgstr "Bekijk hoe een designreview van opmerking naar nieuwe versie gaat."
 msgid "Watch the Superset Automations video on YouTube"
 msgstr "Bekijk de Superset Automations-video op YouTube"
 
+msgid "Watches every agent and tells you what to improve and what waits on you."
+msgstr "Houdt alle agents in de gaten en vertelt je wat beter kan en wat op je wacht."
+
 msgid "Wayfinding and disclosure"
 msgstr "Wegwijs worden en informatie ontvouwen"
 
@@ -21638,6 +21689,9 @@ msgstr "Je v1-projecten en -workspaces worden overgezet naar het nieuwe Superset
 
 msgid "Your version: {currentVersion}"
 msgstr "Jouw versie: {currentVersion}"
+
+msgid "Your work"
+msgstr "Jouw werk"
 
 msgid "Zap"
 msgstr "Bliksem"

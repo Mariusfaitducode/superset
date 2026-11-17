@@ -1905,6 +1905,9 @@ msgstr "Ajouter {0} à un espace de travail"
 msgid "Add {count} to focus"
 msgstr "Ajouter {count} au focus"
 
+msgid "Add a Claude agent in Settings → Agents to run it."
+msgstr "Ajoute un agent Claude dans Réglages → Agents pour le lancer."
+
 msgid "Add a comment…"
 msgstr "Ajouter un commentaire…"
 
@@ -7305,6 +7308,9 @@ msgstr "Éditeur et flux de travail"
 msgid "Editor typography"
 msgstr "Typographie de l'éditeur"
 
+msgid "Efficiency"
+msgstr "Efficacité"
+
 msgid "Efficient"
 msgstr "Efficace"
 
@@ -8579,6 +8585,9 @@ msgstr "Pour toute question sur la facturation, <0>contactez-nous</0>."
 msgid "For teams that need more power"
 msgstr "Pour les équipes qui ont besoin de plus de puissance"
 
+msgid "For today"
+msgstr "Pour aujourd'hui"
+
 msgid "Force merge"
 msgstr "Forcer la fusion"
 
@@ -8713,6 +8722,9 @@ msgstr "Autonomie complète"
 
 msgid "Full source available on GitHub under Elastic License 2.0 (ELv2). Inspect, audit, and contribute to the code. No black boxes, no hidden functionality."
 msgstr "Code source complet disponible sur GitHub sous Elastic License 2.0 (ELv2). Inspectez, auditez et contribuez au code. Aucune boîte noire, aucune fonctionnalité cachée."
+
+msgid "Full synthesis"
+msgstr "Synthèse complète"
 
 msgid "Full: close agents before starting another"
 msgstr "Plein : fermez des agents avant d’en lancer un autre"
@@ -9983,6 +9995,9 @@ msgstr "Il est peut-être en veille"
 msgid "It may have been deleted, or it belongs to another organization."
 msgstr "Elle a peut-être été supprimée, ou elle appartient à une autre organisation."
 
+msgid "It only reads. Anything to send in your name comes back as a draft on your Desk."
+msgstr "Il ne fait que lire. Tout ce qui doit partir en ton nom revient en brouillon sur ton Desk."
+
 msgid "It will open once the connection is back."
 msgstr "La page s'ouvrira au retour de la connexion."
 
@@ -10245,6 +10260,9 @@ msgstr "Dernier jour de chaque mois à {time}"
 
 msgid "Last run"
 msgstr "Dernière exécution"
+
+msgid "Last run {ago} ago"
+msgstr "Dernier passage il y a {ago}"
 
 msgid "Last seen"
 msgstr "Vu pour la dernière fois"
@@ -11578,6 +11596,9 @@ msgstr "Jamais"
 msgid "Never asks before acting"
 msgstr "Ne demande jamais avant d'agir"
 
+msgid "Never run"
+msgstr "Jamais lancé"
+
 msgid "New"
 msgstr "Nouveau"
 
@@ -12673,6 +12694,9 @@ msgstr "Rien de publié sur les 30 derniers jours pour l'instant. Votre rang app
 msgid "Nothing running"
 msgstr "Rien en cours d'exécution"
 
+msgid "Nothing to flag."
+msgstr "Rien à signaler."
+
 msgid "Nothing waits on you."
 msgstr "Rien ne vous attend."
 
@@ -12731,6 +12755,12 @@ msgstr "OAuth 2.0"
 
 msgid "OAuth by default, API keys for CI"
 msgstr "OAuth par défaut, clés d'API pour la CI"
+
+msgid "Observer"
+msgstr "Observateur"
+
+msgid "Observing, started {ago} ago"
+msgstr "Observe, lancé il y a {ago}"
 
 #. placeholder {0}: formatNumber(participants)
 msgid "of {0}"
@@ -16112,6 +16142,9 @@ msgstr "S'exécute sur cet appareil"
 msgid "Running terminal processes continue, but older output may no longer be available after restarting the app."
 msgstr "Les processus de terminal en cours continuent, mais les sorties plus anciennes pourraient ne plus être disponibles après un redémarrage de l'application."
 
+msgid "Running…"
+msgstr "En cours…"
+
 msgid "Runs a local command on your machine"
 msgstr "Exécute une commande locale sur votre machine"
 
@@ -16138,6 +16171,9 @@ msgstr "S’exécute à la création d’un espace de travail."
 
 msgid "Runs when a workspace is deleted."
 msgstr "S’exécute à la suppression d’un espace de travail."
+
+msgid "Runs with"
+msgstr "Lancé avec"
 
 msgid "Same name in sidebar and tabs"
 msgstr "Même nom dans la barre latérale et les onglets"
@@ -16235,6 +16271,9 @@ msgstr "Planification"
 
 msgid "Schedule a daily automation that triages new Linear issues at 9am"
 msgstr "Planifie une automatisation quotidienne qui trie les nouvelles issues Linear à 9 h"
+
+msgid "Schedule it in My automations"
+msgstr "Le programmer dans Mes automatisations"
 
 msgid "Schedule meetings"
 msgstr "Planifier des réunions"
@@ -17846,6 +17885,9 @@ msgstr "Lancez des espaces de travail directement depuis des issues Linear ou Gi
 msgid "Started"
 msgstr "Démarrée"
 
+msgid "Started {ago} ago, never published"
+msgstr "Lancé il y a {ago}, n'a rien publié"
+
 msgid "starting"
 msgstr "démarrage"
 
@@ -19030,6 +19072,9 @@ msgstr "Le nom de votre organisation ou équipe"
 msgid "The network connection changed"
 msgstr "La connexion réseau a changé"
 
+msgid "The observer reads every agent of this Mac (states, to-dos, reports, notes, Superset ideas, your PRs and messages) and hands you one synthesis: what to improve in Superset, what waits on you, and how to make your agents cheaper and faster."
+msgstr "L'observateur lit tous les agents de ce Mac (états, to-dos, rapports, notes, idées pour Superset, tes PR et messages) et te remet une synthèse : ce qu'on peut améliorer dans Superset, ce qui t'attend, et comment rendre tes agents moins chers et plus rapides."
+
 msgid "The overnight shift"
 msgstr "L'équipe de nuit"
 
@@ -19329,6 +19374,9 @@ msgstr "Cet hôte est hors ligne : ses agents ne peuvent être ni lus ni lancés
 
 msgid "This host is too old to keep to-dos."
 msgstr "Cet hôte est trop ancien pour garder des to-dos."
+
+msgid "This host is too old to run the observer."
+msgstr "Cet hôte est trop ancien pour lancer l'observateur."
 
 msgid "This host needs an update"
 msgstr "Cet hôte doit être mis à jour"
@@ -20749,6 +20797,9 @@ msgstr "Regardez une revue de design passer d'un commentaire à une nouvelle ver
 msgid "Watch the Superset Automations video on YouTube"
 msgstr "Regarder la vidéo Superset Automations sur YouTube"
 
+msgid "Watches every agent and tells you what to improve and what waits on you."
+msgstr "Observe tous les agents et te dit quoi améliorer et ce qui t'attend."
+
 msgid "Wayfinding and disclosure"
 msgstr "Repérage et divulgation progressive"
 
@@ -21638,6 +21689,9 @@ msgstr "Vos projets et espaces de travail v1 sont transférés vers le nouveau S
 
 msgid "Your version: {currentVersion}"
 msgstr "Votre version : {currentVersion}"
+
+msgid "Your work"
+msgstr "Ton travail"
 
 msgid "Zap"
 msgstr "Éclair"

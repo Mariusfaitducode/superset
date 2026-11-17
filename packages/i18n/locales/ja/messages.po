@@ -1905,6 +1905,9 @@ msgstr "{0} をワークスペースに追加"
 msgid "Add {count} to focus"
 msgstr "{count} 件をフォーカスに追加"
 
+msgid "Add a Claude agent in Settings → Agents to run it."
+msgstr "実行するには、設定 → エージェントで Claude エージェントを追加してください。"
+
 msgid "Add a comment…"
 msgstr "コメントを追加…"
 
@@ -7305,6 +7308,9 @@ msgstr "エディタとワークフロー"
 msgid "Editor typography"
 msgstr "エディタのタイポグラフィ"
 
+msgid "Efficiency"
+msgstr "効率"
+
 msgid "Efficient"
 msgstr "効率"
 
@@ -8579,6 +8585,9 @@ msgstr "請求に関するご質問は<0>お問い合わせ</0>ください。"
 msgid "For teams that need more power"
 msgstr "もっと力が必要なチーム向け"
 
+msgid "For today"
+msgstr "今日中に"
+
 msgid "Force merge"
 msgstr "強制マージ"
 
@@ -8713,6 +8722,9 @@ msgstr "完全自動運転"
 
 msgid "Full source available on GitHub under Elastic License 2.0 (ELv2). Inspect, audit, and contribute to the code. No black boxes, no hidden functionality."
 msgstr "全ソースがElastic License 2.0(ELv2)のもとGitHubで公開されています。コードを確認し、監査し、貢献できます。ブラックボックスも隠し機能もありません。"
+
+msgid "Full synthesis"
+msgstr "全文のまとめ"
 
 msgid "Full: close agents before starting another"
 msgstr "満杯: 次を起動する前にエージェントを閉じてください"
@@ -9983,6 +9995,9 @@ msgstr "スリープ中かもしれません"
 msgid "It may have been deleted, or it belongs to another organization."
 msgstr "削除されたか、別の組織に属している可能性があります。"
 
+msgid "It only reads. Anything to send in your name comes back as a draft on your Desk."
+msgstr "読むだけです。あなたの名前で送るものは、下書きとして Desk に届きます。"
+
 msgid "It will open once the connection is back."
 msgstr "接続が戻ると開きます。"
 
@@ -10245,6 +10260,9 @@ msgstr "毎月末日 {time}"
 
 msgid "Last run"
 msgstr "最終実行"
+
+msgid "Last run {ago} ago"
+msgstr "最終実行：{ago} 前"
 
 msgid "Last seen"
 msgstr "最終確認"
@@ -11578,6 +11596,9 @@ msgstr "未使用"
 msgid "Never asks before acting"
 msgstr "確認なしで実行"
 
+msgid "Never run"
+msgstr "未実行"
+
 msgid "New"
 msgstr "新着"
 
@@ -12673,6 +12694,9 @@ msgstr "直近30日に公開された実績はまだありません。このマ�
 msgid "Nothing running"
 msgstr "実行中のものはありません"
 
+msgid "Nothing to flag."
+msgstr "特に報告することはありません。"
+
 msgid "Nothing waits on you."
 msgstr "あなた待ちのものはありません。"
 
@@ -12731,6 +12755,12 @@ msgstr "OAuth 2.0"
 
 msgid "OAuth by default, API keys for CI"
 msgstr "既定はOAuth、CIにはAPIキー"
+
+msgid "Observer"
+msgstr "オブザーバー"
+
+msgid "Observing, started {ago} ago"
+msgstr "観察中、{ago} 前に開始"
 
 #. placeholder {0}: formatNumber(participants)
 msgid "of {0}"
@@ -16112,6 +16142,9 @@ msgstr "このデバイスで実行中"
 msgid "Running terminal processes continue, but older output may no longer be available after restarting the app."
 msgstr "実行中のターミナルプロセスは継続しますが、アプリ再起動後に古い出力が利用できなくなる場合があります。"
 
+msgid "Running…"
+msgstr "実行中…"
+
 msgid "Runs a local command on your machine"
 msgstr "マシン上でローカルコマンドを実行します"
 
@@ -16138,6 +16171,9 @@ msgstr "新しいワークスペースの作成時に実行します。"
 
 msgid "Runs when a workspace is deleted."
 msgstr "ワークスペースの削除時に実行します。"
+
+msgid "Runs with"
+msgstr "実行エージェント"
 
 msgid "Same name in sidebar and tabs"
 msgstr "サイドバーとタブで同じ名前"
@@ -16235,6 +16271,9 @@ msgstr "スケジュール"
 
 msgid "Schedule a daily automation that triages new Linear issues at 9am"
 msgstr "毎朝9時に新しいLinearのissueをトリアージするオートメーションを設定して"
+
+msgid "Schedule it in My automations"
+msgstr "マイ自動化でスケジュール設定"
 
 msgid "Schedule meetings"
 msgstr "会議のスケジュール調整"
@@ -17846,6 +17885,9 @@ msgstr "タスクビューでLinearやGitHubのIssueから直接ワークスペ�
 msgid "Started"
 msgstr "開始"
 
+msgid "Started {ago} ago, never published"
+msgstr "{ago} 前に開始、公開されず"
+
 msgid "starting"
 msgstr "起動中"
 
@@ -19030,6 +19072,9 @@ msgstr "組織またはチームの名前"
 msgid "The network connection changed"
 msgstr "ネットワーク接続が変更されました"
 
+msgid "The observer reads every agent of this Mac (states, to-dos, reports, notes, Superset ideas, your PRs and messages) and hands you one synthesis: what to improve in Superset, what waits on you, and how to make your agents cheaper and faster."
+msgstr "オブザーバーはこの Mac のすべてのエージェント（状態、To-do、レポート、メモ、Superset のアイデア、あなたの PR とメッセージ）を読み、1 つのまとめを渡します：Superset で改善できること、あなたを待っていること、エージェントをより安く速くする方法。"
+
 msgid "The overnight shift"
 msgstr "夜間シフト"
 
@@ -19329,6 +19374,9 @@ msgstr "このホストはオフラインのため、エージェントを読み
 
 msgid "This host is too old to keep to-dos."
 msgstr "このホストは古すぎて ToDo を保存できません。"
+
+msgid "This host is too old to run the observer."
+msgstr "このホストは古すぎてオブザーバーを実行できません。"
 
 msgid "This host needs an update"
 msgstr "このホストは更新が必要です"
@@ -20749,6 +20797,9 @@ msgstr "デザインレビューがコメントから新しいバージョンに
 msgid "Watch the Superset Automations video on YouTube"
 msgstr "YouTubeでSuperset オートメーションの動画を見る"
 
+msgid "Watches every agent and tells you what to improve and what waits on you."
+msgstr "すべてのエージェントを見守り、改善点とあなたを待っていることを伝えます。"
+
 msgid "Wayfinding and disclosure"
 msgstr "案内と情報の開示"
 
@@ -21638,6 +21689,9 @@ msgstr "v1 のプロジェクトとワークスペースを新しい Superset �
 
 msgid "Your version: {currentVersion}"
 msgstr "現在のバージョン: {currentVersion}"
+
+msgid "Your work"
+msgstr "あなたの仕事"
 
 msgid "Zap"
 msgstr "稲妻"

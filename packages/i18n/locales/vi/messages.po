@@ -1905,6 +1905,9 @@ msgstr "Thêm {0} vào workspace"
 msgid "Add {count} to focus"
 msgstr "Thêm {count} vào tiêu điểm"
 
+msgid "Add a Claude agent in Settings → Agents to run it."
+msgstr "Thêm một agent Claude trong Cài đặt → Agent để chạy nó."
+
 msgid "Add a comment…"
 msgstr "Thêm bình luận…"
 
@@ -7305,6 +7308,9 @@ msgstr "Trình soạn thảo & Quy trình"
 msgid "Editor typography"
 msgstr "Kiểu chữ trình soạn thảo"
 
+msgid "Efficiency"
+msgstr "Hiệu quả"
+
 msgid "Efficient"
 msgstr "Hiệu quả"
 
@@ -8579,6 +8585,9 @@ msgstr "Nếu có thắc mắc về thanh toán, hãy <0>liên hệ với chúng
 msgid "For teams that need more power"
 msgstr "Dành cho đội cần nhiều sức mạnh hơn"
 
+msgid "For today"
+msgstr "Cho hôm nay"
+
 msgid "Force merge"
 msgstr "Merge cưỡng bức"
 
@@ -8713,6 +8722,9 @@ msgstr "Tự vận hành hoàn toàn"
 
 msgid "Full source available on GitHub under Elastic License 2.0 (ELv2). Inspect, audit, and contribute to the code. No black boxes, no hidden functionality."
 msgstr "Toàn bộ mã nguồn có trên GitHub theo Elastic License 2.0 (ELv2). Xem, kiểm tra và đóng góp cho mã nguồn. Không hộp đen, không chức năng ẩn."
+
+msgid "Full synthesis"
+msgstr "Bản tổng hợp đầy đủ"
 
 msgid "Full: close agents before starting another"
 msgstr "Đầy: đóng bớt agent trước khi khởi động agent khác"
@@ -9983,6 +9995,9 @@ msgstr "Máy có thể đang ngủ"
 msgid "It may have been deleted, or it belongs to another organization."
 msgstr "Có thể nó đã bị xóa, hoặc thuộc về một tổ chức khác."
 
+msgid "It only reads. Anything to send in your name comes back as a draft on your Desk."
+msgstr "Nó chỉ đọc. Mọi thứ cần gửi dưới tên bạn sẽ quay về Desk dưới dạng bản nháp."
+
 msgid "It will open once the connection is back."
 msgstr "Trang sẽ mở khi có kết nối trở lại."
 
@@ -10245,6 +10260,9 @@ msgstr "Ngày cuối mỗi tháng lúc {time}"
 
 msgid "Last run"
 msgstr "Chạy lần cuối"
+
+msgid "Last run {ago} ago"
+msgstr "Lần chạy cuối {ago} trước"
 
 msgid "Last seen"
 msgstr "Lần cuối trực tuyến"
@@ -11578,6 +11596,9 @@ msgstr "Chưa bao giờ"
 msgid "Never asks before acting"
 msgstr "Không bao giờ hỏi trước"
 
+msgid "Never run"
+msgstr "Chưa từng chạy"
+
 msgid "New"
 msgstr "Mới"
 
@@ -12673,6 +12694,9 @@ msgstr "Chưa có gì được công khai trong 30 ngày qua. Thứ hạng của
 msgid "Nothing running"
 msgstr "Không có gì đang chạy"
 
+msgid "Nothing to flag."
+msgstr "Không có gì cần lưu ý."
+
 msgid "Nothing waits on you."
 msgstr "Không có gì đang chờ bạn."
 
@@ -12731,6 +12755,12 @@ msgstr "OAuth 2.0"
 
 msgid "OAuth by default, API keys for CI"
 msgstr "Mặc định là OAuth, khóa API cho CI"
+
+msgid "Observer"
+msgstr "Người quan sát"
+
+msgid "Observing, started {ago} ago"
+msgstr "Đang quan sát, bắt đầu {ago} trước"
 
 #. placeholder {0}: formatNumber(participants)
 msgid "of {0}"
@@ -16112,6 +16142,9 @@ msgstr "Đang chạy trên thiết bị này"
 msgid "Running terminal processes continue, but older output may no longer be available after restarting the app."
 msgstr "Các tiến trình terminal đang chạy vẫn tiếp tục, nhưng kết quả cũ có thể không còn sau khi khởi động lại ứng dụng."
 
+msgid "Running…"
+msgstr "Đang chạy…"
+
 msgid "Runs a local command on your machine"
 msgstr "Chạy một lệnh cục bộ trên máy bạn"
 
@@ -16138,6 +16171,9 @@ msgstr "Chạy khi tạo không gian làm việc mới."
 
 msgid "Runs when a workspace is deleted."
 msgstr "Chạy khi xóa không gian làm việc."
+
+msgid "Runs with"
+msgstr "Chạy bằng"
 
 msgid "Same name in sidebar and tabs"
 msgstr "Cùng tên ở thanh bên và các tab"
@@ -16235,6 +16271,9 @@ msgstr "Lịch"
 
 msgid "Schedule a daily automation that triages new Linear issues at 9am"
 msgstr "Lên lịch một tự động hóa hằng ngày phân loại issue Linear mới lúc 9h sáng"
+
+msgid "Schedule it in My automations"
+msgstr "Lên lịch trong Tự động hóa của tôi"
 
 msgid "Schedule meetings"
 msgstr "Lên lịch cuộc họp"
@@ -17846,6 +17885,9 @@ msgstr "Bắt đầu workspace ngay từ issue Linear hoặc GitHub trong chế 
 msgid "Started"
 msgstr "Bắt đầu"
 
+msgid "Started {ago} ago, never published"
+msgstr "Bắt đầu {ago} trước, chưa từng xuất bản"
+
 msgid "starting"
 msgstr "đang khởi động"
 
@@ -19030,6 +19072,9 @@ msgstr "Tên tổ chức hoặc nhóm của bạn"
 msgid "The network connection changed"
 msgstr "Kết nối mạng đã thay đổi"
 
+msgid "The observer reads every agent of this Mac (states, to-dos, reports, notes, Superset ideas, your PRs and messages) and hands you one synthesis: what to improve in Superset, what waits on you, and how to make your agents cheaper and faster."
+msgstr "Người quan sát đọc mọi agent trên máy Mac này (trạng thái, việc cần làm, báo cáo, ghi chú, ý tưởng cho Superset, PR và tin nhắn của bạn) rồi đưa bạn một bản tổng hợp: cần cải thiện gì trong Superset, việc gì đang chờ bạn, và cách làm agent rẻ hơn, nhanh hơn."
+
 msgid "The overnight shift"
 msgstr "Ca đêm"
 
@@ -19329,6 +19374,9 @@ msgstr "Máy chủ này đang ngoại tuyến nên không thể đọc hay khở
 
 msgid "This host is too old to keep to-dos."
 msgstr "Máy chủ này quá cũ để lưu việc cần làm."
+
+msgid "This host is too old to run the observer."
+msgstr "Máy chủ này quá cũ để chạy người quan sát."
 
 msgid "This host needs an update"
 msgstr "Host này cần được cập nhật"
@@ -20749,6 +20797,9 @@ msgstr "Xem một buổi duyệt thiết kế đi từ bình luận đến phiê
 msgid "Watch the Superset Automations video on YouTube"
 msgstr "Xem video Tự động hóa Superset trên YouTube"
 
+msgid "Watches every agent and tells you what to improve and what waits on you."
+msgstr "Theo dõi mọi agent và cho bạn biết cần cải thiện gì và việc gì đang chờ bạn."
+
 msgid "Wayfinding and disclosure"
 msgstr "Định hướng và mở rộng nội dung"
 
@@ -21638,6 +21689,9 @@ msgstr "Các dự án và workspace v1 của bạn đang được chuyển sang 
 
 msgid "Your version: {currentVersion}"
 msgstr "Phiên bản của bạn: {currentVersion}"
+
+msgid "Your work"
+msgstr "Công việc của bạn"
 
 msgid "Zap"
 msgstr "Tia chớp"

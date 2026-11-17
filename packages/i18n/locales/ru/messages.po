@@ -1905,6 +1905,9 @@ msgstr "Добавить {0} в рабочую область"
 msgid "Add {count} to focus"
 msgstr "Добавить {count} в фокус"
 
+msgid "Add a Claude agent in Settings → Agents to run it."
+msgstr "Добавьте агента Claude в Настройки → Агенты, чтобы запустить его."
+
 msgid "Add a comment…"
 msgstr "Добавьте комментарий…"
 
@@ -7305,6 +7308,9 @@ msgstr "Редактор и процесс"
 msgid "Editor typography"
 msgstr "Типографика редактора"
 
+msgid "Efficiency"
+msgstr "Эффективность"
+
 msgid "Efficient"
 msgstr "Эффективность"
 
@@ -8579,6 +8585,9 @@ msgstr "По вопросам оплаты <0>напишите нам</0>."
 msgid "For teams that need more power"
 msgstr "Для команд, которым нужно больше"
 
+msgid "For today"
+msgstr "На сегодня"
+
 msgid "Force merge"
 msgstr "Принудительное слияние"
 
@@ -8713,6 +8722,9 @@ msgstr "Полная автономность"
 
 msgid "Full source available on GitHub under Elastic License 2.0 (ELv2). Inspect, audit, and contribute to the code. No black boxes, no hidden functionality."
 msgstr "Полный исходный код доступен на GitHub под Elastic License 2.0 (ELv2). Изучайте, проверяйте и вносите вклад. Никаких чёрных ящиков и скрытой функциональности."
+
+msgid "Full synthesis"
+msgstr "Полная сводка"
 
 msgid "Full: close agents before starting another"
 msgstr "Заполнено: закройте агентов, прежде чем запускать нового"
@@ -9983,6 +9995,9 @@ msgstr "Возможно, компьютер в режиме сна"
 msgid "It may have been deleted, or it belongs to another organization."
 msgstr "Возможно, она удалена или принадлежит другой организации."
 
+msgid "It only reads. Anything to send in your name comes back as a draft on your Desk."
+msgstr "Он только читает. Всё, что нужно отправить от вашего имени, возвращается черновиком на ваш Desk."
+
 msgid "It will open once the connection is back."
 msgstr "Страница откроется, когда связь вернётся."
 
@@ -10245,6 +10260,9 @@ msgstr "В последний день каждого месяца в {time}"
 
 msgid "Last run"
 msgstr "Последний запуск"
+
+msgid "Last run {ago} ago"
+msgstr "Последний запуск {ago} назад"
 
 msgid "Last seen"
 msgstr "Последний раз в сети"
@@ -11578,6 +11596,9 @@ msgstr "Никогда"
 msgid "Never asks before acting"
 msgstr "Никогда не спрашивает"
 
+msgid "Never run"
+msgstr "Ещё не запускался"
+
 msgid "New"
 msgstr "Новое"
 
@@ -12673,6 +12694,9 @@ msgstr "За последние 30 дней ещё ничего не опубл�
 msgid "Nothing running"
 msgstr "Ничего не запущено"
 
+msgid "Nothing to flag."
+msgstr "Ничего примечательного."
+
 msgid "Nothing waits on you."
 msgstr "Ничего вас не ждёт."
 
@@ -12731,6 +12755,12 @@ msgstr "OAuth 2.0"
 
 msgid "OAuth by default, API keys for CI"
 msgstr "OAuth по умолчанию, ключи API для CI"
+
+msgid "Observer"
+msgstr "Наблюдатель"
+
+msgid "Observing, started {ago} ago"
+msgstr "Наблюдает, запущен {ago} назад"
 
 #. placeholder {0}: formatNumber(participants)
 msgid "of {0}"
@@ -16112,6 +16142,9 @@ msgstr "Работает на этом устройстве"
 msgid "Running terminal processes continue, but older output may no longer be available after restarting the app."
 msgstr "Работающие процессы терминала продолжат работу, но более старый вывод может стать недоступен после перезапуска приложения."
 
+msgid "Running…"
+msgstr "Выполняется…"
+
 msgid "Runs a local command on your machine"
 msgstr "Запускает локальную команду на вашей машине"
 
@@ -16138,6 +16171,9 @@ msgstr "Выполняется при создании рабочего прос
 
 msgid "Runs when a workspace is deleted."
 msgstr "Выполняется при удалении рабочего пространства."
+
+msgid "Runs with"
+msgstr "Запускается с"
 
 msgid "Same name in sidebar and tabs"
 msgstr "Одно имя в боковой панели и на вкладках"
@@ -16235,6 +16271,9 @@ msgstr "Расписание"
 
 msgid "Schedule a daily automation that triages new Linear issues at 9am"
 msgstr "Поставь ежедневную автоматизацию, которая разбирает новые задачи Linear в 9:00"
+
+msgid "Schedule it in My automations"
+msgstr "Запланировать в «Мои автоматизации»"
 
 msgid "Schedule meetings"
 msgstr "Планирование встреч"
@@ -17846,6 +17885,9 @@ msgstr "Запускайте рабочие области прямо из за�
 msgid "Started"
 msgstr "Начато"
 
+msgid "Started {ago} ago, never published"
+msgstr "Запущен {ago} назад, ничего не опубликовал"
+
 msgid "starting"
 msgstr "запускается"
 
@@ -19030,6 +19072,9 @@ msgstr "Название организации или команды"
 msgid "The network connection changed"
 msgstr "Сетевое соединение изменилось"
 
+msgid "The observer reads every agent of this Mac (states, to-dos, reports, notes, Superset ideas, your PRs and messages) and hands you one synthesis: what to improve in Superset, what waits on you, and how to make your agents cheaper and faster."
+msgstr "Наблюдатель читает всех агентов этого Mac (состояния, задачи, отчёты, заметки, идеи для Superset, ваши PR и сообщения) и выдаёт одну сводку: что улучшить в Superset, что ждёт вас и как сделать агентов дешевле и быстрее."
+
 msgid "The overnight shift"
 msgstr "Ночная смена"
 
@@ -19329,6 +19374,9 @@ msgstr "Этот хост не в сети, поэтому его агентов
 
 msgid "This host is too old to keep to-dos."
 msgstr "Этот хост слишком старый, чтобы хранить задачи."
+
+msgid "This host is too old to run the observer."
+msgstr "Этот хост слишком старый для запуска наблюдателя."
 
 msgid "This host needs an update"
 msgstr "Этому хосту нужно обновление"
@@ -20749,6 +20797,9 @@ msgstr "Посмотрите, как дизайн-ревью проходит п
 msgid "Watch the Superset Automations video on YouTube"
 msgstr "Посмотрите видео про Superset Автоматизации на YouTube"
 
+msgid "Watches every agent and tells you what to improve and what waits on you."
+msgstr "Следит за всеми агентами и подсказывает, что улучшить и что ждёт вас."
+
 msgid "Wayfinding and disclosure"
 msgstr "Навигация и раскрытие"
 
@@ -21638,6 +21689,9 @@ msgstr "Ваши проекты и рабочие пространства из 
 
 msgid "Your version: {currentVersion}"
 msgstr "Ваша версия: {currentVersion}"
+
+msgid "Your work"
+msgstr "Ваша работа"
 
 msgid "Zap"
 msgstr "Молния"

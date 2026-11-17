@@ -1905,6 +1905,9 @@ msgstr "Přidat {0} do pracovního prostoru"
 msgid "Add {count} to focus"
 msgstr "Přidat {count} do fokusu"
 
+msgid "Add a Claude agent in Settings → Agents to run it."
+msgstr "Chcete-li jej spustit, přidejte agenta Claude v Nastavení → Agenti."
+
 msgid "Add a comment…"
 msgstr "Přidat komentář…"
 
@@ -7305,6 +7308,9 @@ msgstr "Editor a workflow"
 msgid "Editor typography"
 msgstr "Typografie editoru"
 
+msgid "Efficiency"
+msgstr "Efektivita"
+
 msgid "Efficient"
 msgstr "Efektivní"
 
@@ -8579,6 +8585,9 @@ msgstr "S dotazy k fakturaci se <0>ozvěte nám</0>."
 msgid "For teams that need more power"
 msgstr "Pro týmy, které potřebují víc"
 
+msgid "For today"
+msgstr "Na dnešek"
+
 msgid "Force merge"
 msgstr "Vynutit sloučení"
 
@@ -8713,6 +8722,9 @@ msgstr "Plná autonomie"
 
 msgid "Full source available on GitHub under Elastic License 2.0 (ELv2). Inspect, audit, and contribute to the code. No black boxes, no hidden functionality."
 msgstr "Kompletní zdrojový kód je na GitHubu pod licencí Elastic License 2.0 (ELv2). Prohlédněte si ho, zauditujte ho a přispějte. Žádné černé skříňky, žádné skryté funkce."
+
+msgid "Full synthesis"
+msgstr "Celá syntéza"
 
 msgid "Full: close agents before starting another"
 msgstr "Plno: před spuštěním dalšího zavřete agenty"
@@ -9983,6 +9995,9 @@ msgstr "Možná je uspaný"
 msgid "It may have been deleted, or it belongs to another organization."
 msgstr "Mohla být smazána nebo patří jiné organizaci."
 
+msgid "It only reads. Anything to send in your name comes back as a draft on your Desk."
+msgstr "Pouze čte. Cokoli k odeslání vaším jménem se vrátí jako koncept na váš Desk."
+
 msgid "It will open once the connection is back."
 msgstr "Otevře se, jakmile se připojení vrátí."
 
@@ -10245,6 +10260,9 @@ msgstr "Poslední den v měsíci v {time}"
 
 msgid "Last run"
 msgstr "Poslední běh"
+
+msgid "Last run {ago} ago"
+msgstr "Poslední běh před {ago}"
 
 msgid "Last seen"
 msgstr "Naposledy viděn"
@@ -11578,6 +11596,9 @@ msgstr "Nikdy"
 msgid "Never asks before acting"
 msgstr "Nikdy se neptá"
 
+msgid "Never run"
+msgstr "Zatím nespuštěno"
+
 msgid "New"
 msgstr "Novinka"
 
@@ -12673,6 +12694,9 @@ msgstr "Za posledních 30 dní zatím nebylo nic publikováno. Vaše pozice se o
 msgid "Nothing running"
 msgstr "Nic neběží"
 
+msgid "Nothing to flag."
+msgstr "Nic k nahlášení."
+
 msgid "Nothing waits on you."
 msgstr "Nic na vás nečeká."
 
@@ -12731,6 +12755,12 @@ msgstr "OAuth 2.0"
 
 msgid "OAuth by default, API keys for CI"
 msgstr "Ve výchozím stavu OAuth, pro CI API klíče"
+
+msgid "Observer"
+msgstr "Pozorovatel"
+
+msgid "Observing, started {ago} ago"
+msgstr "Pozoruje, spuštěno před {ago}"
 
 #. placeholder {0}: formatNumber(participants)
 msgid "of {0}"
@@ -16112,6 +16142,9 @@ msgstr "Běží na tomto zařízení"
 msgid "Running terminal processes continue, but older output may no longer be available after restarting the app."
 msgstr "Běžící procesy v terminálu poběží dál, ale starší výstup po restartu aplikace už nemusí být k dispozici."
 
+msgid "Running…"
+msgstr "Běží…"
+
 msgid "Runs a local command on your machine"
 msgstr "Spouští lokální příkaz na vašem počítači"
 
@@ -16138,6 +16171,9 @@ msgstr "Spouští se při vytvoření pracovního prostoru."
 
 msgid "Runs when a workspace is deleted."
 msgstr "Spouští se při smazání pracovního prostoru."
+
+msgid "Runs with"
+msgstr "Spouští se s"
 
 msgid "Same name in sidebar and tabs"
 msgstr "Stejný název v postranním panelu a na kartách"
@@ -16235,6 +16271,9 @@ msgstr "Plán"
 
 msgid "Schedule a daily automation that triages new Linear issues at 9am"
 msgstr "Naplánuj denní automatizaci, která v 9:00 roztřídí nové issues v Linearu"
+
+msgid "Schedule it in My automations"
+msgstr "Naplánujte jej v Mých automatizacích"
 
 msgid "Schedule meetings"
 msgstr "Plánování schůzek"
@@ -17846,6 +17885,9 @@ msgstr "Spouštějte pracovní prostory přímo z issues v Linear nebo GitHub v 
 msgid "Started"
 msgstr "Zahájeno"
 
+msgid "Started {ago} ago, never published"
+msgstr "Spuštěno před {ago}, nic nezveřejnilo"
+
 msgid "starting"
 msgstr "spouští se"
 
@@ -19030,6 +19072,9 @@ msgstr "Název vaší organizace nebo týmu"
 msgid "The network connection changed"
 msgstr "Síťové připojení se změnilo"
 
+msgid "The observer reads every agent of this Mac (states, to-dos, reports, notes, Superset ideas, your PRs and messages) and hands you one synthesis: what to improve in Superset, what waits on you, and how to make your agents cheaper and faster."
+msgstr "Pozorovatel čte všechny agenty tohoto Macu (stavy, úkoly, reporty, poznámky, nápady pro Superset, vaše PR a zprávy) a předá vám jednu syntézu: co zlepšit v Supersetu, co čeká na vás a jak udělat agenty levnější a rychlejší."
+
 msgid "The overnight shift"
 msgstr "Noční směna"
 
@@ -19329,6 +19374,9 @@ msgstr "Tento hostitel je offline, takže jeho agenty nelze číst ani spouště
 
 msgid "This host is too old to keep to-dos."
 msgstr "Tento hostitel je příliš starý na ukládání úkolů."
+
+msgid "This host is too old to run the observer."
+msgstr "Tento hostitel je příliš starý na spuštění pozorovatele."
 
 msgid "This host needs an update"
 msgstr "Tento host potřebuje aktualizaci"
@@ -20749,6 +20797,9 @@ msgstr "Podívejte se, jak se design review dostane od komentáře k nové verzi
 msgid "Watch the Superset Automations video on YouTube"
 msgstr "Podívejte se na video o Automatizacích Superset na YouTube"
 
+msgid "Watches every agent and tells you what to improve and what waits on you."
+msgstr "Sleduje všechny agenty a říká vám, co zlepšit a co na vás čeká."
+
 msgid "Wayfinding and disclosure"
 msgstr "Orientace a postupné odkrývání"
 
@@ -21638,6 +21689,9 @@ msgstr "Vaše projekty a pracovní prostory z v1 se přenášejí do nového Sup
 
 msgid "Your version: {currentVersion}"
 msgstr "Vaše verze: {currentVersion}"
+
+msgid "Your work"
+msgstr "Vaše práce"
 
 msgid "Zap"
 msgstr "Blesk"
