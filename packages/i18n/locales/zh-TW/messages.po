@@ -593,6 +593,12 @@ msgstr "{0}項執行中"
 msgid "{0} sessions terminated"
 msgstr "已終止{0}個會話"
 
+#. placeholder {0}: stats.subagents
+#. placeholder {1}: stats.workflowAgents
+#. placeholder {2}: stats.withChildren
+msgid "{0} subagents and {1} workflow agents, run by {2} open agents. Click to show only those agents."
+msgstr "{0} 個子代理與 {1} 個工作流程代理,由 {2} 個開啟的代理執行。點擊只顯示這些代理。"
+
 #. placeholder {0}: result.killedCount
 #. placeholder {1}: result.remainingCount
 msgid "{0} terminated, {1} remaining"
@@ -647,7 +653,6 @@ msgid "{0} vs {1}"
 msgstr "{0} 對戰 {1}"
 
 #. placeholder {0}: project.onViewer
-#. placeholder {0}: totals.needYou
 msgid "{0} waiting on you"
 msgstr "{0} 個等你處理"
 
@@ -671,14 +676,25 @@ msgstr "{1} 回合結束，{0} 以傷害判定獲勝"
 
 #. placeholder {0}: counts.working
 #. placeholder {0}: summary.working
-#. placeholder {0}: totals.working
 msgid "{0} working"
 msgstr "{0} 個執行中"
+
+#. placeholder {0}: host.working
+#. placeholder {1}: host.waiting
+msgid "{0} working, {1} waiting for you"
+msgstr "{0} 個工作中,{1} 個等你"
 
 #. placeholder {0}: check.name
 #. placeholder {1}: took ? `, ${took}` : ""
 msgid "{0}, {outcome}{1}"
 msgstr "{0}，{outcome}{1}"
+
+#. placeholder {0}: words.label.todos
+#. placeholder {1}: stats.byState.todos
+#. placeholder {2}: words.label.resume
+#. placeholder {3}: stats.byState.resume
+msgid "{0}: {1} · {2}: {3}"
+msgstr "{0}:{1} · {2}:{3}"
 
 #. placeholder {0}: String(met)
 #. placeholder {1}: String(gaps.length)
@@ -1314,9 +1330,6 @@ msgstr "{stepCount} 個步驟，見選單"
 
 msgid "{subagentCount, plural, one {# subagent running} other {# subagents running}}"
 msgstr "{subagentCount, plural, other {# 個子代理程式執行中}}"
-
-msgid "{subagentCount} subagents"
-msgstr "{subagentCount} 個子代理"
 
 msgid "{successCount, plural, one {Created # workspace, {failCount} failed} other {Created # workspaces, {failCount} failed}}"
 msgstr "{successCount, plural, one {已建立#個工作區，{failCount}個失敗} other {已建立#個工作區，{failCount}個失敗}}"
@@ -4367,6 +4380,9 @@ msgstr "點擊一個元素。"
 msgid "Click any element to send it to an agent."
 msgstr "點擊任意元素，即可傳送給代理程式。"
 
+msgid "Click for usage by day and model."
+msgstr "點擊查看依日期與模型的用量。"
+
 msgid "Click here if not redirected"
 msgstr "如果沒有自動跳轉，請點選這裡"
 
@@ -5456,6 +5472,9 @@ msgstr "費用"
 
 msgid "Cost · $ per merged PR"
 msgstr "成本 · 每個已合併 PR 的美元費用"
+
+msgid "Cost is an estimate at API list rates, not money spent."
+msgstr "費用是依 API 定價的估算,不是實際花費。"
 
 msgid "Cost per merged PR"
 msgstr "每個合併 PR 的費用"
@@ -7607,6 +7626,9 @@ msgstr "每週一上午 8:00"
 msgid "Every objective is carrying its weight for the next rung. Measured over the trailing 30 days."
 msgstr "所有目標都在為下一階發力。以最近 30 天計算。"
 
+msgid "Every open agent. Click to show every state again."
+msgstr "所有開啟的代理。點擊重新顯示所有狀態。"
+
 msgid "Every publish is a version"
 msgstr "每次發佈都是一個版本"
 
@@ -9200,6 +9222,9 @@ msgstr "幫助"
 msgid "Help & Docs"
 msgstr "幫助與文件"
 
+msgid "Helpers"
+msgstr "助手"
+
 msgid "Henry Ford"
 msgstr "Henry Ford"
 
@@ -9810,6 +9835,12 @@ msgstr "行內程式碼"
 
 msgid "Input"
 msgstr "輸入"
+
+#. placeholder {0}: formatNumber(stats.usage.inputTokens)
+#. placeholder {1}: formatNumber(stats.usage.cachedInputTokens)
+#. placeholder {2}: formatNumber(stats.usage.outputTokens)
+msgid "Input {0}, cached {1}, output {2}."
+msgstr "輸入 {0},快取 {1},輸出 {2}。"
 
 msgid "Input Group"
 msgstr "輸入框組"
@@ -12016,6 +12047,9 @@ msgstr "暫無代理程式"
 msgid "No agents yet."
 msgstr "暫無代理程式。"
 
+msgid "No answer in its transcript yet, an agent that keeps none, or a host too old to tell."
+msgstr "記錄中尚無回答、代理不保留記錄,或主機太舊無法判斷。"
+
 msgid "No API keys yet."
 msgstr "暫無API金鑰。"
 
@@ -12688,9 +12722,6 @@ msgstr "沒有人因此改變審查方式。"
 msgid "nobody waiting"
 msgstr "無人等待"
 
-msgid "Nobody waiting on you"
-msgstr "沒有人在等你"
-
 msgid "None"
 msgstr "無"
 
@@ -13211,6 +13242,11 @@ msgstr "建立拉取請求後即可檢視評審狀態、檢查和評論。"
 
 msgid "Open actions menu"
 msgstr "開啟操作選單"
+
+#. placeholder {0}: model.model
+#. placeholder {1}: model.working
+msgid "Open agents whose latest answer came from {0}: {1} working"
+msgstr "最新回答來自 {0} 的開啟代理:{1} 個工作中"
 
 msgid "Open anyway"
 msgstr "仍然開啟"
@@ -17656,6 +17692,11 @@ msgstr "模擬器"
 msgid "Since 2025"
 msgstr "自2025年起"
 
+#. placeholder {0}: stats.usage.agents
+#. placeholder {1}: stats.open
+msgid "Since they started, for {0} of {1} open agents"
+msgstr "自啟動以來,{1} 個開啟代理中的 {0} 個"
+
 msgid "Single sign-on for organizations, self-serve configurable."
 msgstr "適用於組織的單一登入，可自助設定。"
 
@@ -19921,6 +19962,12 @@ msgctxt "work state chip"
 msgid "To check"
 msgstr "待檢查"
 
+msgid "To close"
+msgstr "待關閉"
+
+msgid "To resume"
+msgstr "待繼續"
+
 msgid "To resume an agent conversation, run this in its folder:"
 msgstr "若要恢復與代理的對話，請在其資料夾中執行："
 
@@ -20023,6 +20070,9 @@ msgstr "token預算指示器——懸停檢視百分比"
 
 msgid "Token usage"
 msgstr "Token用量"
+
+msgid "tokens"
+msgstr "tokens"
 
 msgid "Tokens"
 msgstr "Token"
@@ -20341,6 +20391,9 @@ msgstr "無人值守執行8小時以上，在多數常規工單上無需人工�
 
 msgid "Unavailable"
 msgstr "不可用"
+
+msgid "Unavailable on these hosts"
+msgstr "在這些主機上無法使用"
 
 msgid "Uncached input"
 msgstr "未快取輸入"

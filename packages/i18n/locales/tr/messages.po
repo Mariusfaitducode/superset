@@ -593,6 +593,12 @@ msgstr "{0} çalışıyor"
 msgid "{0} sessions terminated"
 msgstr "{0} oturum sonlandırıldı"
 
+#. placeholder {0}: stats.subagents
+#. placeholder {1}: stats.workflowAgents
+#. placeholder {2}: stats.withChildren
+msgid "{0} subagents and {1} workflow agents, run by {2} open agents. Click to show only those agents."
+msgstr "{0} alt ajan ve {1} iş akışı ajanı, {2} açık ajan tarafından çalıştırılıyor. Yalnızca bu ajanları göstermek için tıklayın."
+
 #. placeholder {0}: result.killedCount
 #. placeholder {1}: result.remainingCount
 msgid "{0} terminated, {1} remaining"
@@ -647,7 +653,6 @@ msgid "{0} vs {1}"
 msgstr "{0} - {1}"
 
 #. placeholder {0}: project.onViewer
-#. placeholder {0}: totals.needYou
 msgid "{0} waiting on you"
 msgstr "{0} sizi bekliyor"
 
@@ -671,14 +676,25 @@ msgstr "{1} turun ardından {0} hasar üstünlüğüyle kazanıyor"
 
 #. placeholder {0}: counts.working
 #. placeholder {0}: summary.working
-#. placeholder {0}: totals.working
 msgid "{0} working"
 msgstr "{0} çalışıyor"
+
+#. placeholder {0}: host.working
+#. placeholder {1}: host.waiting
+msgid "{0} working, {1} waiting for you"
+msgstr "{0} çalışıyor, {1} sizi bekliyor"
 
 #. placeholder {0}: check.name
 #. placeholder {1}: took ? `, ${took}` : ""
 msgid "{0}, {outcome}{1}"
 msgstr "{0}, {outcome}{1}"
+
+#. placeholder {0}: words.label.todos
+#. placeholder {1}: stats.byState.todos
+#. placeholder {2}: words.label.resume
+#. placeholder {3}: stats.byState.resume
+msgid "{0}: {1} · {2}: {3}"
+msgstr "{0}: {1} · {2}: {3}"
 
 #. placeholder {0}: String(met)
 #. placeholder {1}: String(gaps.length)
@@ -1314,9 +1330,6 @@ msgstr "{stepCount} adım, menüde"
 
 msgid "{subagentCount, plural, one {# subagent running} other {# subagents running}}"
 msgstr "{subagentCount, plural, one {# alt ajan çalışıyor} other {# alt ajan çalışıyor}}"
-
-msgid "{subagentCount} subagents"
-msgstr "{subagentCount} alt ajan"
 
 msgid "{successCount, plural, one {Created # workspace, {failCount} failed} other {Created # workspaces, {failCount} failed}}"
 msgstr "{successCount, plural, one {# çalışma alanı oluşturuldu, {failCount} başarısız} other {# çalışma alanı oluşturuldu, {failCount} başarısız}}"
@@ -4367,6 +4380,9 @@ msgstr "Bir öğeye tıklayın."
 msgid "Click any element to send it to an agent."
 msgstr "Herhangi bir öğeye tıklayıp bir ajana gönderin."
 
+msgid "Click for usage by day and model."
+msgstr "Gün ve modele göre kullanım için tıklayın."
+
 msgid "Click here if not redirected"
 msgstr "Yönlendirilmediyseniz buraya tıklayın"
 
@@ -5456,6 +5472,9 @@ msgstr "Maliyet"
 
 msgid "Cost · $ per merged PR"
 msgstr "Maliyet · birleştirilen PR başına $"
+
+msgid "Cost is an estimate at API list rates, not money spent."
+msgstr "Maliyet, API liste fiyatlarıyla bir tahmindir, harcanan para değildir."
 
 msgid "Cost per merged PR"
 msgstr "Birleştirilen PR başına maliyet"
@@ -7607,6 +7626,9 @@ msgstr "Her pazartesi 08:00'de"
 msgid "Every objective is carrying its weight for the next rung. Measured over the trailing 30 days."
 msgstr "Tüm hedefler bir sonraki basamak için üzerine düşeni yapıyor. Son 30 gün üzerinden ölçülür."
 
+msgid "Every open agent. Click to show every state again."
+msgstr "Tüm açık ajanlar. Tüm durumları yeniden göstermek için tıklayın."
+
 msgid "Every publish is a version"
 msgstr "Her yayın bir sürümdür"
 
@@ -9200,6 +9222,9 @@ msgstr "Yardım"
 msgid "Help & Docs"
 msgstr "Yardım ve belgeler"
 
+msgid "Helpers"
+msgstr "Yardımcılar"
+
 msgid "Henry Ford"
 msgstr "Henry Ford"
 
@@ -9810,6 +9835,12 @@ msgstr "Satır içi kod"
 
 msgid "Input"
 msgstr "Girdi"
+
+#. placeholder {0}: formatNumber(stats.usage.inputTokens)
+#. placeholder {1}: formatNumber(stats.usage.cachedInputTokens)
+#. placeholder {2}: formatNumber(stats.usage.outputTokens)
+msgid "Input {0}, cached {1}, output {2}."
+msgstr "Girdi {0}, önbellekten {1}, çıktı {2}."
 
 msgid "Input Group"
 msgstr "Giriş grubu"
@@ -12016,6 +12047,9 @@ msgstr "Henüz ajan yok"
 msgid "No agents yet."
 msgstr "Henüz ajan yok."
 
+msgid "No answer in its transcript yet, an agent that keeps none, or a host too old to tell."
+msgstr "Dökümünde henüz yanıt yok, döküm tutmayan bir ajan ya da bunu söyleyemeyecek kadar eski bir ana makine."
+
 msgid "No API keys yet."
 msgstr "Henüz API anahtarı yok."
 
@@ -12688,9 +12722,6 @@ msgstr "Kimse bu yüzden farklı inceleme yapmaz."
 msgid "nobody waiting"
 msgstr "bekleyen yok"
 
-msgid "Nobody waiting on you"
-msgstr "Seni bekleyen yok"
-
 msgid "None"
 msgstr "Yok"
 
@@ -13211,6 +13242,11 @@ msgstr "İnceleme durumunu, kontrolleri ve yorumları görmek için bir pull req
 
 msgid "Open actions menu"
 msgstr "Eylemler menüsünü aç"
+
+#. placeholder {0}: model.model
+#. placeholder {1}: model.working
+msgid "Open agents whose latest answer came from {0}: {1} working"
+msgstr "Son yanıtı {0} modelinden gelen açık ajanlar: {1} çalışıyor"
 
 msgid "Open anyway"
 msgstr "Yine de aç"
@@ -17656,6 +17692,11 @@ msgstr "Simülatör"
 msgid "Since 2025"
 msgstr "2025'ten beri"
 
+#. placeholder {0}: stats.usage.agents
+#. placeholder {1}: stats.open
+msgid "Since they started, for {0} of {1} open agents"
+msgstr "Başladıklarından beri, {1} açık ajandan {0} tanesi için"
+
 msgid "Single sign-on for organizations, self-serve configurable."
 msgstr "Kuruluşlar için çoklu oturum açma, kendi kendinize yapılandırabilirsiniz."
 
@@ -19921,6 +19962,12 @@ msgctxt "work state chip"
 msgid "To check"
 msgstr "Kontrol edilmeli"
 
+msgid "To close"
+msgstr "Kapatılacak"
+
+msgid "To resume"
+msgstr "Devam edilecek"
+
 msgid "To resume an agent conversation, run this in its folder:"
 msgstr "Bir ajan konuşmasını sürdürmek için klasöründe şunu çalıştırın:"
 
@@ -20023,6 +20070,9 @@ msgstr "Token bütçesi göstergesi — yüzdenin üzerine gelin"
 
 msgid "Token usage"
 msgstr "Token kullanımı"
+
+msgid "tokens"
+msgstr "token"
 
 msgid "Tokens"
 msgstr "Token"
@@ -20341,6 +20391,9 @@ msgstr "8 saat ve üzeri gözetimsiz çalıştırmalar, bir insanın engel kald�
 
 msgid "Unavailable"
 msgstr "Kullanılamıyor"
+
+msgid "Unavailable on these hosts"
+msgstr "Bu ana makinelerde kullanılamıyor"
 
 msgid "Uncached input"
 msgstr "Önbelleksiz girdi"

@@ -593,6 +593,12 @@ msgstr "{0} bezig"
 msgid "{0} sessions terminated"
 msgstr "{0} sessies beëindigd"
 
+#. placeholder {0}: stats.subagents
+#. placeholder {1}: stats.workflowAgents
+#. placeholder {2}: stats.withChildren
+msgid "{0} subagents and {1} workflow agents, run by {2} open agents. Click to show only those agents."
+msgstr "{0} subagents en {1} workflow-agents, gestart door {2} open agents. Klik om alleen die agents te tonen."
+
 #. placeholder {0}: result.killedCount
 #. placeholder {1}: result.remainingCount
 msgid "{0} terminated, {1} remaining"
@@ -647,7 +653,6 @@ msgid "{0} vs {1}"
 msgstr "{0} tegen {1}"
 
 #. placeholder {0}: project.onViewer
-#. placeholder {0}: totals.needYou
 msgid "{0} waiting on you"
 msgstr "{0} wachten op jou"
 
@@ -671,14 +676,25 @@ msgstr "{0} wint op schade na {1} beurten"
 
 #. placeholder {0}: counts.working
 #. placeholder {0}: summary.working
-#. placeholder {0}: totals.working
 msgid "{0} working"
 msgstr "{0} bezig"
+
+#. placeholder {0}: host.working
+#. placeholder {1}: host.waiting
+msgid "{0} working, {1} waiting for you"
+msgstr "{0} bezig, {1} wachten op jou"
 
 #. placeholder {0}: check.name
 #. placeholder {1}: took ? `, ${took}` : ""
 msgid "{0}, {outcome}{1}"
 msgstr "{0}, {outcome}{1}"
+
+#. placeholder {0}: words.label.todos
+#. placeholder {1}: stats.byState.todos
+#. placeholder {2}: words.label.resume
+#. placeholder {3}: stats.byState.resume
+msgid "{0}: {1} · {2}: {3}"
+msgstr "{0}: {1} · {2}: {3}"
 
 #. placeholder {0}: String(met)
 #. placeholder {1}: String(gaps.length)
@@ -1314,9 +1330,6 @@ msgstr "{stepCount} stappen, in het menu"
 
 msgid "{subagentCount, plural, one {# subagent running} other {# subagents running}}"
 msgstr "{subagentCount, plural, one {# subagent actief} other {# subagents actief}}"
-
-msgid "{subagentCount} subagents"
-msgstr "{subagentCount} subagents"
 
 msgid "{successCount, plural, one {Created # workspace, {failCount} failed} other {Created # workspaces, {failCount} failed}}"
 msgstr "{successCount, plural, one {# werkruimte aangemaakt, {failCount} mislukt} other {# werkruimtes aangemaakt, {failCount} mislukt}}"
@@ -4367,6 +4380,9 @@ msgstr "Klik op een element."
 msgid "Click any element to send it to an agent."
 msgstr "Klik op een element om het naar een agent te sturen."
 
+msgid "Click for usage by day and model."
+msgstr "Klik voor gebruik per dag en model."
+
 msgid "Click here if not redirected"
 msgstr "Klik hier als je niet wordt doorgestuurd"
 
@@ -5456,6 +5472,9 @@ msgstr "Kosten"
 
 msgid "Cost · $ per merged PR"
 msgstr "Kosten · $ per samengevoegde PR"
+
+msgid "Cost is an estimate at API list rates, not money spent."
+msgstr "De kosten zijn een schatting tegen API-catalogusprijzen, geen uitgegeven geld."
 
 msgid "Cost per merged PR"
 msgstr "Kosten per gemergede PR"
@@ -7607,6 +7626,9 @@ msgstr "Elke maandag om 08:00"
 msgid "Every objective is carrying its weight for the next rung. Measured over the trailing 30 days."
 msgstr "Alle doelen dragen bij aan de volgende trede. Gemeten over de laatste 30 dagen."
 
+msgid "Every open agent. Click to show every state again."
+msgstr "Alle open agents. Klik om weer alle statussen te tonen."
+
 msgid "Every publish is a version"
 msgstr "Elke publicatie is een versie"
 
@@ -9200,6 +9222,9 @@ msgstr "Help"
 msgid "Help & Docs"
 msgstr "Help en docs"
 
+msgid "Helpers"
+msgstr "Helpers"
+
 msgid "Henry Ford"
 msgstr "Henry Ford"
 
@@ -9810,6 +9835,12 @@ msgstr "Inline code"
 
 msgid "Input"
 msgstr "Input"
+
+#. placeholder {0}: formatNumber(stats.usage.inputTokens)
+#. placeholder {1}: formatNumber(stats.usage.cachedInputTokens)
+#. placeholder {2}: formatNumber(stats.usage.outputTokens)
+msgid "Input {0}, cached {1}, output {2}."
+msgstr "Invoer {0}, uit cache {1}, uitvoer {2}."
 
 msgid "Input Group"
 msgstr "Input Group"
@@ -12016,6 +12047,9 @@ msgstr "Nog geen agents"
 msgid "No agents yet."
 msgstr "Nog geen agents."
 
+msgid "No answer in its transcript yet, an agent that keeps none, or a host too old to tell."
+msgstr "Nog geen antwoord in het transcript, een agent die er geen bijhoudt, of een host die te oud is om het te weten."
+
 msgid "No API keys yet."
 msgstr "Nog geen API-sleutels."
 
@@ -12688,9 +12722,6 @@ msgstr "Niemand reviewt er anders door."
 msgid "nobody waiting"
 msgstr "niemand wacht"
 
-msgid "Nobody waiting on you"
-msgstr "Niemand wacht op je"
-
 msgid "None"
 msgstr "Geen"
 
@@ -13211,6 +13242,11 @@ msgstr "Open een pull request om reviewstatus, checks en opmerkingen te zien."
 
 msgid "Open actions menu"
 msgstr "Actiemenu openen"
+
+#. placeholder {0}: model.model
+#. placeholder {1}: model.working
+msgid "Open agents whose latest answer came from {0}: {1} working"
+msgstr "Open agents waarvan het laatste antwoord van {0} kwam: {1} bezig"
 
 msgid "Open anyway"
 msgstr "Toch openen"
@@ -17656,6 +17692,11 @@ msgstr "Simulator"
 msgid "Since 2025"
 msgstr "Sinds 2025"
 
+#. placeholder {0}: stats.usage.agents
+#. placeholder {1}: stats.open
+msgid "Since they started, for {0} of {1} open agents"
+msgstr "Sinds hun start, voor {0} van {1} open agents"
+
 msgid "Single sign-on for organizations, self-serve configurable."
 msgstr "Single sign-on voor organisaties, zelf te configureren."
 
@@ -19921,6 +19962,12 @@ msgctxt "work state chip"
 msgid "To check"
 msgstr "Te controleren"
 
+msgid "To close"
+msgstr "Te sluiten"
+
+msgid "To resume"
+msgstr "Te hervatten"
+
 msgid "To resume an agent conversation, run this in its folder:"
 msgstr "Voer dit uit in de map om een agentgesprek te hervatten:"
 
@@ -20023,6 +20070,9 @@ msgstr "Indicator voor tokenbudget — beweeg over het percentage"
 
 msgid "Token usage"
 msgstr "Tokengebruik"
+
+msgid "tokens"
+msgstr "tokens"
 
 msgid "Tokens"
 msgstr "Tokens"
@@ -20341,6 +20391,9 @@ msgstr "Onbewaakte runs van 8 uur of langer slagen bij een meerderheid van de ro
 
 msgid "Unavailable"
 msgstr "Niet beschikbaar"
+
+msgid "Unavailable on these hosts"
+msgstr "Niet beschikbaar op deze hosts"
 
 msgid "Uncached input"
 msgstr "Niet-gecachete input"

@@ -1,60 +1,10 @@
-/**
- * A conversation's state as the sidebar shows it. Unlike the workspace status
- * (`deriveTerminalAgentStatus`), a finished turn does not fall back to idle once
- * seen: it becomes `seen` and stays that way until the user starts a new turn.
- */
-export const CONVERSATION_STATES = [
-	"working",
-	"request",
-	"failed",
-	"unseen",
-	"seen",
-	"idle",
-] as const;
-export type ConversationState = (typeof CONVERSATION_STATES)[number];
+import type { ConversationState } from "@superset/shared/work-state";
 
-export function deriveConversationState({
-	lastEventType,
-	lastEventAt,
-	lastSeenAt,
-	liveChildren = 0,
-}: {
-	lastEventType: string;
-	lastEventAt: number;
-	/** Host-clock mark from the notification store, like `lastEventAt`. */
-	lastSeenAt: number | undefined;
-	/** Subagents and workflow agents still running (`countLiveChildren`). */
-	liveChildren?: number;
-}): ConversationState {
-	const state = parentState(lastEventType, lastEventAt, lastSeenAt);
-	// A finished or quiet parent whose children still run is not done yet.
-	if (
-		liveChildren > 0 &&
-		(state === "unseen" || state === "seen" || state === "idle")
-	) {
-		return "working";
-	}
-	return state;
-}
-
-function parentState(
-	lastEventType: string,
-	lastEventAt: number,
-	lastSeenAt: number | undefined,
-): ConversationState {
-	switch (lastEventType) {
-		case "Start":
-			return "working";
-		case "PermissionRequest":
-			return "request";
-		case "Failed":
-			return "failed";
-		case "Stop":
-			return lastEventAt > (lastSeenAt ?? 0) ? "unseen" : "seen";
-		default:
-			return "idle";
-	}
-}
+export {
+	CONVERSATION_STATES,
+	type ConversationState,
+	deriveConversationState,
+} from "@superset/shared/work-state";
 
 export function isWaitingOnUser(state: ConversationState): boolean {
 	return (

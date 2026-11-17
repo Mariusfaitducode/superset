@@ -25,6 +25,8 @@ import {
 	readHarnessSessionStatsOffLoop,
 	readHarnessTranscriptOffLoop,
 } from "../../../terminal-agents/harness-sessions/read-off-loop";
+import type { SessionStats } from "../../../terminal-agents/harness-sessions/stats";
+import type { HarnessSessionRef } from "../../../terminal-agents/harness-sessions/types";
 import {
 	claimResumeCandidateBinding,
 	findResumeCandidateBinding,
@@ -387,6 +389,36 @@ const agentDefinitionIdSchema = z.union([
 	z.string().regex(/^custom:.+$/, "must be a builtin id or `custom:<name>`"),
 ]) as z.ZodType<AgentDefinitionId>;
 
+export interface LiveSessionStats {
+	terminalId: string;
+	workspaceId: string;
+	stats: SessionStats | null;
+}
+
+/** See `liveSessionStats`; the reads run side by side on host workers. */
+export async function listLiveSessionStats({
+	bindings,
+	harnessSession,
+	readStats,
+}: {
+	bindings: readonly TerminalAgentBinding[];
+	harnessSession: (terminalId: string) => HarnessSessionRef | null;
+	readStats: (ref: HarnessSessionRef) => Promise<SessionStats | null>;
+}): Promise<LiveSessionStats[]> {
+	return Promise.all(
+		bindings
+			.filter((binding) => binding.endedAt == null)
+			.map(async (binding) => {
+				const ref = harnessSession(binding.terminalId);
+				return {
+					terminalId: binding.terminalId,
+					workspaceId: binding.workspaceId,
+					stats: ref ? await readStats(ref) : null,
+				};
+			}),
+	);
+}
+
 const GET_OR_CREATE_TIMEOUT_MS = 10_000;
 
 const MAX_AGENT_TRANSCRIPT_CHARS = 400_000;
@@ -520,6 +552,20 @@ export const terminalAgentsRouter = router({
 			const bound = terminalHarnessSession(ctx.db, input.terminalId);
 			return bound ? readHarnessSessionStatsOffLoop(bound.ref) : null;
 		}),
+
+	/**
+	 * `sessionStats` of every live agent of the host in one call, for the
+	 * Office's model and token counts. An agent whose stats cannot be read
+	 * comes back with null stats rather than missing.
+	 */
+	liveSessionStats: protectedProcedure.query(({ ctx }) =>
+		listLiveSessionStats({
+			bindings: ctx.terminalAgentStore.list(),
+			harnessSession: (terminalId) =>
+				terminalHarnessSession(ctx.db, terminalId)?.ref ?? null,
+			readStats: readHarnessSessionStatsOffLoop,
+		}),
+	),
 
 	/**
 	 * The terminal's agent binding, ended ones included, so a caller can tell

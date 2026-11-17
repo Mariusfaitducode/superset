@@ -593,6 +593,12 @@ msgstr "{0}件実行中"
 msgid "{0} sessions terminated"
 msgstr "{0}件のセッションを終了しました"
 
+#. placeholder {0}: stats.subagents
+#. placeholder {1}: stats.workflowAgents
+#. placeholder {2}: stats.withChildren
+msgid "{0} subagents and {1} workflow agents, run by {2} open agents. Click to show only those agents."
+msgstr "サブエージェント {0} 件とワークフローエージェント {1} 件(開いているエージェント {2} 件が実行中)。クリックでそのエージェントだけを表示します。"
+
 #. placeholder {0}: result.killedCount
 #. placeholder {1}: result.remainingCount
 msgid "{0} terminated, {1} remaining"
@@ -647,7 +653,6 @@ msgid "{0} vs {1}"
 msgstr "{0} 対 {1}"
 
 #. placeholder {0}: project.onViewer
-#. placeholder {0}: totals.needYou
 msgid "{0} waiting on you"
 msgstr "{0} 件があなた待ち"
 
@@ -671,14 +676,25 @@ msgstr "{1}ターン終了、{0}がダメージ判定で勝利"
 
 #. placeholder {0}: counts.working
 #. placeholder {0}: summary.working
-#. placeholder {0}: totals.working
 msgid "{0} working"
 msgstr "{0} 件作業中"
+
+#. placeholder {0}: host.working
+#. placeholder {1}: host.waiting
+msgid "{0} working, {1} waiting for you"
+msgstr "作業中 {0} 件、あなた待ち {1} 件"
 
 #. placeholder {0}: check.name
 #. placeholder {1}: took ? `, ${took}` : ""
 msgid "{0}, {outcome}{1}"
 msgstr "{0}、{outcome}{1}"
+
+#. placeholder {0}: words.label.todos
+#. placeholder {1}: stats.byState.todos
+#. placeholder {2}: words.label.resume
+#. placeholder {3}: stats.byState.resume
+msgid "{0}: {1} · {2}: {3}"
+msgstr "{0}: {1} · {2}: {3}"
 
 #. placeholder {0}: String(met)
 #. placeholder {1}: String(gaps.length)
@@ -1314,9 +1330,6 @@ msgstr "{stepCount} 個のステップ（メニュー内）"
 
 msgid "{subagentCount, plural, one {# subagent running} other {# subagents running}}"
 msgstr "{subagentCount, plural, other {# 件のサブエージェントが実行中}}"
-
-msgid "{subagentCount} subagents"
-msgstr "サブエージェント {subagentCount} 件"
 
 msgid "{successCount, plural, one {Created # workspace, {failCount} failed} other {Created # workspaces, {failCount} failed}}"
 msgstr "{successCount, plural, one {#件のワークスペースを作成、{failCount}件失敗} other {#件のワークスペースを作成、{failCount}件失敗}}"
@@ -4367,6 +4380,9 @@ msgstr "要素をクリックします。"
 msgid "Click any element to send it to an agent."
 msgstr "要素をクリックすると、エージェントに送られます。"
 
+msgid "Click for usage by day and model."
+msgstr "クリックで日別・モデル別の使用量を表示します。"
+
 msgid "Click here if not redirected"
 msgstr "リダイレクトされない場合はこちらをクリック"
 
@@ -5456,6 +5472,9 @@ msgstr "コスト"
 
 msgid "Cost · $ per merged PR"
 msgstr "コスト · マージされたPRあたりのドル額"
+
+msgid "Cost is an estimate at API list rates, not money spent."
+msgstr "費用は API 定価での概算で、実際の支出ではありません。"
 
 msgid "Cost per merged PR"
 msgstr "マージされたPRあたりのコスト"
@@ -7607,6 +7626,9 @@ msgstr "毎週月曜 午前8:00"
 msgid "Every objective is carrying its weight for the next rung. Measured over the trailing 30 days."
 msgstr "すべての目標が次の段に向けて力を発揮しています。直近30日間で計測。"
 
+msgid "Every open agent. Click to show every state again."
+msgstr "開いているすべてのエージェント。クリックですべての状態を再表示します。"
+
 msgid "Every publish is a version"
 msgstr "公開するたびにバージョンが残る"
 
@@ -9200,6 +9222,9 @@ msgstr "ヘルプ"
 msgid "Help & Docs"
 msgstr "ヘルプとドキュメント"
 
+msgid "Helpers"
+msgstr "ヘルパー"
+
 msgid "Henry Ford"
 msgstr "Henry Ford"
 
@@ -9810,6 +9835,12 @@ msgstr "インラインコード"
 
 msgid "Input"
 msgstr "入力"
+
+#. placeholder {0}: formatNumber(stats.usage.inputTokens)
+#. placeholder {1}: formatNumber(stats.usage.cachedInputTokens)
+#. placeholder {2}: formatNumber(stats.usage.outputTokens)
+msgid "Input {0}, cached {1}, output {2}."
+msgstr "入力 {0}、キャッシュ {1}、出力 {2}。"
 
 msgid "Input Group"
 msgstr "Input Group"
@@ -12016,6 +12047,9 @@ msgstr "エージェントはまだありません"
 msgid "No agents yet."
 msgstr "エージェントはまだありません。"
 
+msgid "No answer in its transcript yet, an agent that keeps none, or a host too old to tell."
+msgstr "トランスクリプトにまだ回答がない、記録を残さないエージェント、または判別できない古いホストです。"
+
 msgid "No API keys yet."
 msgstr "APIキーはまだありません。"
 
@@ -12688,9 +12722,6 @@ msgstr "それによってレビューのやり方が変わることはない。
 msgid "nobody waiting"
 msgstr "待ちなし"
 
-msgid "Nobody waiting on you"
-msgstr "待っている人はいません"
-
 msgid "None"
 msgstr "なし"
 
@@ -13211,6 +13242,11 @@ msgstr "プルリクエストを開くと、レビュー状態、チェック、
 
 msgid "Open actions menu"
 msgstr "アクションメニューを開く"
+
+#. placeholder {0}: model.model
+#. placeholder {1}: model.working
+msgid "Open agents whose latest answer came from {0}: {1} working"
+msgstr "最新の回答が {0} の開いているエージェント:作業中 {1} 件"
 
 msgid "Open anyway"
 msgstr "それでも開く"
@@ -17656,6 +17692,11 @@ msgstr "シミュレータ"
 msgid "Since 2025"
 msgstr "2025年から"
 
+#. placeholder {0}: stats.usage.agents
+#. placeholder {1}: stats.open
+msgid "Since they started, for {0} of {1} open agents"
+msgstr "開始以降、開いているエージェント {1} 件中 {0} 件分"
+
 msgid "Single sign-on for organizations, self-serve configurable."
 msgstr "組織向けのシングルサインオン。セルフサービスで設定できます。"
 
@@ -19921,6 +19962,12 @@ msgctxt "work state chip"
 msgid "To check"
 msgstr "要確認"
 
+msgid "To close"
+msgstr "閉じてよい"
+
+msgid "To resume"
+msgstr "再開待ち"
+
 msgid "To resume an agent conversation, run this in its folder:"
 msgstr "エージェントとの会話を再開するには、そのフォルダで次を実行します:"
 
@@ -20023,6 +20070,9 @@ msgstr "トークン残量インジケーター — パーセンテージにホ�
 
 msgid "Token usage"
 msgstr "トークン使用量"
+
+msgid "tokens"
+msgstr "トークン"
 
 msgid "Tokens"
 msgstr "トークン"
@@ -20341,6 +20391,9 @@ msgstr "8時間以上の無人実行が、人間の介入なしに定型チケ�
 
 msgid "Unavailable"
 msgstr "利用不可"
+
+msgid "Unavailable on these hosts"
+msgstr "これらのホストでは利用できません"
 
 msgid "Uncached input"
 msgstr "未キャッシュ入力"

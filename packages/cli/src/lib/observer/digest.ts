@@ -1,7 +1,22 @@
 import {
+	type FleetAgent,
+	type FleetStats,
+	modelLabel,
+	summarizeFleet,
+} from "@superset/shared/agent-fleet-stats";
+import {
 	type AgentRunState,
 	agentRunState,
 } from "@superset/shared/agent-status";
+import {
+	countLiveChildren,
+	deriveConversationState,
+	deriveWorkState,
+	type PinnableWorkState,
+	type WorkState,
+	type WorkStateCause,
+	type WorkStateReport,
+} from "@superset/shared/work-state";
 
 interface WorkspaceRow {
 	id: string;
@@ -24,7 +39,8 @@ interface AgentRow {
 	lastEventAt: number;
 	startedAt: number;
 	endedAt?: number | null;
-	subagents?: unknown[];
+	subagents?: { lastEventAt?: number; workflow?: unknown }[];
+	backgroundTasks?: { kind: string }[];
 }
 
 interface TodoRow {
@@ -68,6 +84,24 @@ interface TaskRow {
 	link: string | null;
 }
 
+interface MarkRow {
+	terminalId: string;
+	state: PinnableWorkState;
+	setBy: "user" | "agent";
+	setAt: number;
+}
+
+interface SessionStatsRow {
+	terminalId: string;
+	stats: {
+		model: string | null;
+		inputTokens: number;
+		cachedInputTokens: number;
+		outputTokens: number;
+		costUsd: number | null;
+	} | null;
+}
+
 interface LabelsRow {
 	labels: { id: string; name: string }[];
 	assignments: Record<string, string[]>;
@@ -79,7 +113,14 @@ export interface DigestInput {
 	terminals: TerminalRow[];
 	agents: AgentRow[];
 	todos: TodoRow[] | null;
+	/** Every status: a DONE the user acknowledged still says "done". */
 	reports: ReportRow[] | null;
+	/** States pinned on conversations; null on hosts too old to keep them. */
+	marks: MarkRow[] | null;
+	/** Models and tokens of live agents; null on hosts too old to give them. */
+	sessionStats: SessionStatsRow[] | null;
+	/** The host read, for the per-host count. */
+	hostId: string;
 	notes: NoteRow[] | null;
 	tasks: TaskRow[] | null;
 	labels: LabelsRow | null;
@@ -89,11 +130,29 @@ export interface DigestInput {
 	ignoreWorkspaceIds?: ReadonlySet<string>;
 }
 
+/**
+ * The Office's work state, from the same derivation and sources (lifecycle,
+ * reports, to-dos, pins). The one thing the CLI cannot see is whether the
+ * user has read an agent's last reply: that stays in the app. A stopped
+ * agent is taken as read, and `ifUnread` gives what the Office shows instead
+ * while the reply is unread there.
+ */
+export interface DigestWork {
+	state: WorkState;
+	cause: WorkStateCause;
+	pinned: boolean;
+	ifUnread: WorkState | null;
+}
+
 export interface DigestConversation {
 	terminalId: string;
 	title: string | null;
 	agent: string | null;
+	/** Hook-level run state; `work` is what the Office shows. */
 	state: AgentRunState | "no-agent";
+	work: DigestWork | null;
+	/** `modelLabel` of its latest answer; null when unknown. */
+	model: string | null;
 	/** Minutes since the agent's last hook event. */
 	quietMinutes: number | null;
 	ageHours: number | null;
@@ -124,8 +183,20 @@ export interface DigestWorkspace {
 	notes: { text: string; kind: string; status: string; by: string }[];
 }
 
+export interface DigestFleet extends FleetStats {
+	/** Stopped agents taken as read; any of them may be "waiting" in the app. */
+	readUnknown: number;
+	/** Whether models and tokens could be read on this host. */
+	modelsAvailable: boolean;
+}
+
 export interface Digest {
 	generatedAt: string;
+	/**
+	 * The Office's global numbers for every live agent of the host, the
+	 * observer's own sessions included, as the Office counts them.
+	 */
+	fleet: DigestFleet;
 	totals: {
 		workspaces: number;
 		conversations: number;
@@ -144,6 +215,132 @@ export interface Digest {
 }
 
 const SUPERSET_IDEA = /^superset idea\s*:/i;
+
+interface WorkSources {
+	now: number;
+	openTodos: readonly TodoRow[];
+	reports: readonly ReportRow[];
+	marks: ReadonlyMap<string, MarkRow>;
+}
+
+const REPORT_KINDS = new Set([
+	"done",
+	"decision",
+	"draft",
+	"blocked",
+	"progress",
+]);
+const REPORT_STATUSES = new Set(["open", "answered", "dismissed"]);
+
+function asWorkReport(report: ReportRow): WorkStateReport | null {
+	if (!REPORT_KINDS.has(report.kind) || !REPORT_STATUSES.has(report.status)) {
+		return null;
+	}
+	return report as unknown as WorkStateReport;
+}
+
+function workSources(input: DigestInput): WorkSources {
+	return {
+		now: input.now,
+		openTodos: (input.todos ?? []).filter((todo) => !todo.done),
+		reports: input.reports ?? [],
+		marks: new Map((input.marks ?? []).map((mark) => [mark.terminalId, mark])),
+	};
+}
+
+function sessionStatsByTerminal(input: DigestInput) {
+	return new Map(
+		(input.sessionStats ?? []).map((row) => [row.terminalId, row.stats]),
+	);
+}
+
+export interface FleetMember extends FleetAgent {
+	readUnknown: boolean;
+}
+
+/** Every live agent of the host, as the Office strip counts it. */
+export function fleetMembers(input: DigestInput): FleetMember[] {
+	const sources = workSources(input);
+	const statsByTerminal = sessionStatsByTerminal(input);
+	return input.agents
+		.filter((agent) => agent.endedAt == null)
+		.map((agent) => {
+			const work = digestWork(agent, sources);
+			const stats = statsByTerminal.get(agent.terminalId) ?? null;
+			const workflowAgents =
+				agent.subagents?.filter((subagent) => subagent.workflow).length ?? 0;
+			return {
+				state: work.state,
+				hostId: input.hostId,
+				model: stats?.model ?? null,
+				subagents: (agent.subagents?.length ?? 0) - workflowAgents,
+				workflowAgents,
+				usage: stats
+					? {
+							inputTokens: stats.inputTokens,
+							cachedInputTokens: stats.cachedInputTokens,
+							outputTokens: stats.outputTokens,
+							costUsd: stats.costUsd,
+						}
+					: null,
+				readUnknown: work.ifUnread !== null,
+			};
+		});
+}
+
+/** One fleet over one or several hosts' members. */
+export function summarizeHosts(
+	hosts: readonly { members: FleetMember[]; modelsAvailable: boolean }[],
+): DigestFleet {
+	const members = hosts.flatMap((host) => host.members);
+	return {
+		...summarizeFleet(members),
+		readUnknown: members.filter((member) => member.readUnknown).length,
+		modelsAvailable: hosts.some((host) => host.modelsAvailable),
+	};
+}
+
+/** `deriveWorkState` as the Office runs it, read and unread. */
+export function digestWork(agent: AgentRow, sources: WorkSources): DigestWork {
+	const liveChildren = countLiveChildren(agent);
+	const mark = sources.marks.get(agent.terminalId);
+	const base = {
+		since: agent.lastEventAt,
+		openTodos: sources.openTodos.filter(
+			(todo) => todo.terminalId === agent.terminalId,
+		).length,
+		reports: sources.reports
+			.filter((report) => report.terminalId === agent.terminalId)
+			.map(asWorkReport)
+			.filter((report): report is WorkStateReport => report !== null),
+		mark: mark
+			? { state: mark.state, setBy: mark.setBy, setAt: mark.setAt }
+			: null,
+		hasChildren: (agent.subagents?.length ?? 0) > 0,
+		now: sources.now,
+	};
+	const conversation = (lastSeenAt: number | undefined) =>
+		deriveConversationState({
+			lastEventType: agent.lastEventType,
+			lastEventAt: agent.lastEventAt,
+			lastSeenAt,
+			liveChildren,
+		});
+	const read = deriveWorkState({
+		...base,
+		conversation: conversation(agent.lastEventAt),
+	});
+	const unread = deriveWorkState({
+		...base,
+		conversation: conversation(undefined),
+	});
+	return {
+		state: read.state,
+		cause: read.cause,
+		pinned: read.mark !== null,
+		ifUnread: unread.state === read.state ? null : unread.state,
+	};
+}
 const MINUTE = 60_000;
 const HOUR = 60 * MINUTE;
 
@@ -172,6 +369,12 @@ export function buildDigest(input: DigestInput): Digest {
 	const runningTasks = (input.tasks ?? []).filter(
 		(task) => task.status === "running",
 	);
+	const sources = workSources(input);
+	const statsByTerminal = sessionStatsByTerminal(input);
+	const modelOf = (terminalId: string) => {
+		const model = statsByTerminal.get(terminalId)?.model;
+		return model ? modelLabel(model) : null;
+	};
 
 	const workspaces: DigestWorkspace[] = [];
 	for (const workspace of input.workspaces) {
@@ -199,6 +402,8 @@ export function buildDigest(input: DigestInput): Digest {
 				title: terminal?.title ?? null,
 				agent: agent?.agentId ?? null,
 				state: agent ? agentRunState(agent.lastEventType) : "no-agent",
+				work: agent ? digestWork(agent, sources) : null,
+				model: agent ? modelOf(terminalId) : null,
 				quietMinutes: agent
 					? Math.max(0, Math.round((input.now - agent.lastEventAt) / MINUTE))
 					: null,
@@ -268,6 +473,12 @@ export function buildDigest(input: DigestInput): Digest {
 
 	return {
 		generatedAt: new Date(input.now).toISOString(),
+		fleet: summarizeHosts([
+			{
+				members: fleetMembers(input),
+				modelsAvailable: input.sessionStats !== null,
+			},
+		]),
 		totals: {
 			workspaces: workspaces.length,
 			conversations: conversations.length,
@@ -306,7 +517,8 @@ export function buildDigest(input: DigestInput): Digest {
 export function formatDigest(digest: Digest): string {
 	const { totals } = digest;
 	const lines = [
-		`${totals.conversations} conversations in ${totals.workspaces} workspaces: ${totals.working} working, ${totals.blocked} blocked, ${totals.idle} idle (${totals.idleOverADay} for over a day). ${totals.openReports} open reports, ${totals.openUserTodos} open user to-dos.`,
+		...formatFleet(digest.fleet),
+		`${totals.conversations} conversations in ${totals.workspaces} workspaces. ${totals.openReports} open reports, ${totals.openUserTodos} open user to-dos.`,
 	];
 	for (const workspace of digest.workspaces) {
 		const where = [workspace.project, workspace.name]
@@ -321,8 +533,9 @@ export function formatDigest(digest: Digest): string {
 				conversation.quietMinutes === null
 					? ""
 					: ` · quiet ${conversation.quietMinutes} min`;
+			const model = conversation.model ? ` · ${conversation.model}` : "";
 			lines.push(
-				`  ${conversation.state}${quiet} · ${conversation.title ?? conversation.terminalId}`,
+				`  ${describeState(conversation)}${quiet}${model} · ${conversation.title ?? conversation.terminalId}`,
 			);
 			for (const report of conversation.openReports) {
 				lines.push(`    report ${report.kind}: ${report.summary}`);
@@ -343,4 +556,43 @@ export function formatDigest(digest: Digest): string {
 		);
 	}
 	return lines.join("\n");
+}
+
+function describeState(conversation: DigestConversation): string {
+	const { work } = conversation;
+	if (!work) return conversation.state;
+	const pinned = work.pinned ? " (pinned)" : "";
+	const unread = work.ifUnread ? ` (${work.ifUnread} if unread)` : "";
+	return `${work.state}${pinned}${unread}`;
+}
+
+/** The Office strip's numbers, for a person at a shell. */
+export function formatFleet(fleet: DigestFleet): string[] {
+	const { groups } = fleet;
+	const lines = [
+		`${fleet.open} open agents: ${groups.working} working, ${groups.waiting} waiting for you, ${groups.toResume} to resume (${fleet.byState.todos} with to-dos, ${fleet.byState.resume} later), ${groups.toCheck} to check, ${groups.toClose} to close. ${fleet.subagents} subagents and ${fleet.workflowAgents} workflow agents under ${fleet.withChildren} of them.`,
+	];
+	if (fleet.readUnknown > 0) {
+		lines.push(
+			`${fleet.readUnknown} stopped agents are counted as read; the app shows any whose last reply is unread as waiting for you.`,
+		);
+	}
+	if (!fleet.modelsAvailable) {
+		lines.push("Models and tokens: unavailable on this host.");
+		return lines;
+	}
+	const models = fleet.models.map((model) => `${model.model} ${model.open}`);
+	if (fleet.unknownModel > 0) models.push(`unknown ${fleet.unknownModel}`);
+	const tokens =
+		fleet.usage.inputTokens +
+		fleet.usage.cachedInputTokens +
+		fleet.usage.outputTokens;
+	const cost =
+		fleet.usage.costUsd === null
+			? ""
+			: `, about $${fleet.usage.costUsd.toFixed(2)} at API list rates`;
+	lines.push(
+		`Models: ${models.join(", ") || "none"}. Tokens since they started: ${tokens} for ${fleet.usage.agents} agents${cost}.`,
+	);
+	return lines;
 }

@@ -593,6 +593,12 @@ msgstr "{0} đang chạy"
 msgid "{0} sessions terminated"
 msgstr "Đã kết thúc {0} phiên"
 
+#. placeholder {0}: stats.subagents
+#. placeholder {1}: stats.workflowAgents
+#. placeholder {2}: stats.withChildren
+msgid "{0} subagents and {1} workflow agents, run by {2} open agents. Click to show only those agents."
+msgstr "{0} tác tử con và {1} tác tử quy trình, do {2} tác tử đang mở chạy. Nhấp để chỉ hiện các tác tử đó."
+
 #. placeholder {0}: result.killedCount
 #. placeholder {1}: result.remainingCount
 msgid "{0} terminated, {1} remaining"
@@ -647,7 +653,6 @@ msgid "{0} vs {1}"
 msgstr "{0} đấu {1}"
 
 #. placeholder {0}: project.onViewer
-#. placeholder {0}: totals.needYou
 msgid "{0} waiting on you"
 msgstr "{0} đang chờ bạn"
 
@@ -671,14 +676,25 @@ msgstr "{0} thắng nhờ sát thương sau {1} lượt"
 
 #. placeholder {0}: counts.working
 #. placeholder {0}: summary.working
-#. placeholder {0}: totals.working
 msgid "{0} working"
 msgstr "{0} đang chạy"
+
+#. placeholder {0}: host.working
+#. placeholder {1}: host.waiting
+msgid "{0} working, {1} waiting for you"
+msgstr "{0} đang làm, {1} đang chờ bạn"
 
 #. placeholder {0}: check.name
 #. placeholder {1}: took ? `, ${took}` : ""
 msgid "{0}, {outcome}{1}"
 msgstr "{0}, {outcome}{1}"
+
+#. placeholder {0}: words.label.todos
+#. placeholder {1}: stats.byState.todos
+#. placeholder {2}: words.label.resume
+#. placeholder {3}: stats.byState.resume
+msgid "{0}: {1} · {2}: {3}"
+msgstr "{0}: {1} · {2}: {3}"
 
 #. placeholder {0}: String(met)
 #. placeholder {1}: String(gaps.length)
@@ -1314,9 +1330,6 @@ msgstr "{stepCount} bước, trong menu"
 
 msgid "{subagentCount, plural, one {# subagent running} other {# subagents running}}"
 msgstr "{subagentCount, plural, other {# agent con đang chạy}}"
-
-msgid "{subagentCount} subagents"
-msgstr "{subagentCount} agent con"
 
 msgid "{successCount, plural, one {Created # workspace, {failCount} failed} other {Created # workspaces, {failCount} failed}}"
 msgstr "{successCount, plural, one {Đã tạo # workspace, {failCount} thất bại} other {Đã tạo # workspace, {failCount} thất bại}}"
@@ -4367,6 +4380,9 @@ msgstr "Nhấp vào một phần tử."
 msgid "Click any element to send it to an agent."
 msgstr "Nhấp vào bất kỳ phần tử nào để gửi cho agent."
 
+msgid "Click for usage by day and model."
+msgstr "Nhấp để xem mức dùng theo ngày và mô hình."
+
 msgid "Click here if not redirected"
 msgstr "Nhấp vào đây nếu không được chuyển hướng"
 
@@ -5456,6 +5472,9 @@ msgstr "Chi phí"
 
 msgid "Cost · $ per merged PR"
 msgstr "Chi phí · $ trên mỗi PR đã hợp nhất"
+
+msgid "Cost is an estimate at API list rates, not money spent."
+msgstr "Chi phí là ước tính theo giá niêm yết API, không phải tiền đã chi."
 
 msgid "Cost per merged PR"
 msgstr "Chi phí mỗi PR được merge"
@@ -7607,6 +7626,9 @@ msgstr "Mỗi thứ Hai lúc 8:00 sáng"
 msgid "Every objective is carrying its weight for the next rung. Measured over the trailing 30 days."
 msgstr "Mọi mục tiêu đều đang đóng góp cho bậc kế tiếp. Đo trong 30 ngày gần nhất."
 
+msgid "Every open agent. Click to show every state again."
+msgstr "Mọi tác tử đang mở. Nhấp để hiện lại mọi trạng thái."
+
 msgid "Every publish is a version"
 msgstr "Mỗi lần xuất bản là một phiên bản"
 
@@ -9200,6 +9222,9 @@ msgstr "Trợ giúp"
 msgid "Help & Docs"
 msgstr "Trợ giúp & Tài liệu"
 
+msgid "Helpers"
+msgstr "Trợ thủ"
+
 msgid "Henry Ford"
 msgstr "Henry Ford"
 
@@ -9810,6 +9835,12 @@ msgstr "Mã nội dòng"
 
 msgid "Input"
 msgstr "Đầu vào"
+
+#. placeholder {0}: formatNumber(stats.usage.inputTokens)
+#. placeholder {1}: formatNumber(stats.usage.cachedInputTokens)
+#. placeholder {2}: formatNumber(stats.usage.outputTokens)
+msgid "Input {0}, cached {1}, output {2}."
+msgstr "Đầu vào {0}, từ bộ nhớ đệm {1}, đầu ra {2}."
 
 msgid "Input Group"
 msgstr "Input Group"
@@ -12016,6 +12047,9 @@ msgstr "Chưa có agent nào"
 msgid "No agents yet."
 msgstr "Chưa có agent nào."
 
+msgid "No answer in its transcript yet, an agent that keeps none, or a host too old to tell."
+msgstr "Chưa có câu trả lời trong bản ghi, tác tử không lưu bản ghi, hoặc máy chủ quá cũ để biết."
+
 msgid "No API keys yet."
 msgstr "Chưa có khóa API nào."
 
@@ -12688,9 +12722,6 @@ msgstr "Không ai review khác đi vì điều đó."
 msgid "nobody waiting"
 msgstr "không ai chờ"
 
-msgid "Nobody waiting on you"
-msgstr "Không ai đang chờ bạn"
-
 msgid "None"
 msgstr "Không có"
 
@@ -13211,6 +13242,11 @@ msgstr "Hãy mở một pull request để xem trạng thái review, check và b
 
 msgid "Open actions menu"
 msgstr "Mở menu hành động"
+
+#. placeholder {0}: model.model
+#. placeholder {1}: model.working
+msgid "Open agents whose latest answer came from {0}: {1} working"
+msgstr "Tác tử đang mở có câu trả lời mới nhất từ {0}: {1} đang làm"
 
 msgid "Open anyway"
 msgstr "Vẫn mở"
@@ -17656,6 +17692,11 @@ msgstr "Trình mô phỏng"
 msgid "Since 2025"
 msgstr "Từ 2025"
 
+#. placeholder {0}: stats.usage.agents
+#. placeholder {1}: stats.open
+msgid "Since they started, for {0} of {1} open agents"
+msgstr "Từ khi bắt đầu, cho {0} trên {1} tác tử đang mở"
+
 msgid "Single sign-on for organizations, self-serve configurable."
 msgstr "Đăng nhập một lần cho tổ chức, tự cấu hình được."
 
@@ -19921,6 +19962,12 @@ msgctxt "work state chip"
 msgid "To check"
 msgstr "Cần kiểm tra"
 
+msgid "To close"
+msgstr "Cần đóng"
+
+msgid "To resume"
+msgstr "Cần tiếp tục"
+
 msgid "To resume an agent conversation, run this in its folder:"
 msgstr "Để tiếp tục một cuộc trò chuyện với agent, hãy chạy lệnh này trong thư mục của nó:"
 
@@ -20023,6 +20070,9 @@ msgstr "Chỉ báo hạn mức token — di chuột lên phần trăm"
 
 msgid "Token usage"
 msgstr "Mức dùng token"
+
+msgid "tokens"
+msgstr "token"
 
 msgid "Tokens"
 msgstr "Token"
@@ -20341,6 +20391,9 @@ msgstr "Các lần chạy không giám sát từ 8 giờ trở lên thành công
 
 msgid "Unavailable"
 msgstr "Không khả dụng"
+
+msgid "Unavailable on these hosts"
+msgstr "Không khả dụng trên các máy chủ này"
 
 msgid "Uncached input"
 msgstr "Đầu vào chưa cache"

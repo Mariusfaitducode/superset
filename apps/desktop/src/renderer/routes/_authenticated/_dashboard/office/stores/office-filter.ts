@@ -12,10 +12,25 @@ interface PersistedOfficeFilter {
 	rooms: OfficeRooms;
 }
 
-interface OfficeFilterState extends PersistedOfficeFilter {
+/** Set from the stats strip for the moment, never persisted. */
+interface TransientOfficeFilter {
+	hosts: string[];
+	models: string[];
+	withChildren: boolean;
+}
+
+interface OfficeFilterState
+	extends PersistedOfficeFilter,
+		TransientOfficeFilter {
 	toggleState: (state: WorkState) => void;
 	/** Shows only this state, or every state when it is the only one shown. */
 	soloState: (state: WorkState) => void;
+	/** Shows only these states, or every state when exactly these are shown. */
+	soloStates: (states: readonly WorkState[]) => void;
+	/** Shows one host only, or every host when it is the one shown. */
+	soloHost: (hostId: string) => void;
+	soloModel: (model: string) => void;
+	toggleWithChildren: () => void;
 	toggleProject: (projectId: string) => void;
 	toggleProjectStatus: (status: string) => void;
 	setRooms: (rooms: OfficeRooms) => void;
@@ -26,6 +41,17 @@ function toggle<T>(list: readonly T[], value: T): T[] {
 	return list.includes(value)
 		? list.filter((item) => item !== value)
 		: [...list, value];
+}
+
+function isOnly<T>(list: readonly T[], values: readonly T[]): boolean {
+	return (
+		list.length === values.length &&
+		values.every((value) => list.includes(value))
+	);
+}
+
+function solo<T>(list: readonly T[], value: T): T[] {
+	return isOnly(list, [value]) ? [] : [value];
 }
 
 function strings(value: unknown): string[] {
@@ -79,6 +105,9 @@ export const useOfficeFilterStore = create<OfficeFilterState>()(
 			projects: [],
 			projectStatuses: [],
 			rooms: "folders",
+			hosts: [],
+			models: [],
+			withChildren: false,
 			toggleState: (state) =>
 				set((current) => ({ states: toggle(current.states, state) })),
 			soloState: (state) =>
@@ -88,6 +117,16 @@ export const useOfficeFilterStore = create<OfficeFilterState>()(
 							? []
 							: [state],
 				})),
+			soloStates: (states) =>
+				set((current) => ({
+					states: isOnly(current.states, states) ? [] : [...states],
+				})),
+			soloHost: (hostId) =>
+				set((current) => ({ hosts: solo(current.hosts, hostId) })),
+			soloModel: (model) =>
+				set((current) => ({ models: solo(current.models, model) })),
+			toggleWithChildren: () =>
+				set((current) => ({ withChildren: !current.withChildren })),
 			toggleProject: (projectId) =>
 				set((current) => ({ projects: toggle(current.projects, projectId) })),
 			toggleProjectStatus: (status) =>
@@ -95,7 +134,15 @@ export const useOfficeFilterStore = create<OfficeFilterState>()(
 					projectStatuses: toggle(current.projectStatuses, status),
 				})),
 			setRooms: (rooms) => set({ rooms }),
-			clear: () => set({ states: [], projects: [], projectStatuses: [] }),
+			clear: () =>
+				set({
+					states: [],
+					projects: [],
+					projectStatuses: [],
+					hosts: [],
+					models: [],
+					withChildren: false,
+				}),
 		}),
 		{
 			name: "office-filter",

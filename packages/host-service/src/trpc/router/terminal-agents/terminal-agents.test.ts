@@ -24,6 +24,7 @@ import type { AgentRunResult } from "../agents/agents";
 import {
 	findResumedSuccessor,
 	listAccountRestartCandidates,
+	listLiveSessionStats,
 	type ResumeSessionDeps,
 	restartAccountSessions,
 	resumeTerminalAgentSession,
@@ -688,5 +689,44 @@ describe("restartAccountSessions", () => {
 		expect(disposedTerminals).toEqual(["t1"]);
 		expect(broadcasts).toEqual([]);
 		expect(findResumeCandidateBinding(db, "ws-1", "t1")).toBeDefined();
+	});
+});
+
+describe("listLiveSessionStats", () => {
+	const binding = (terminalId: string, endedAt?: number) =>
+		({
+			terminalId,
+			workspaceId: "ws-1",
+			agentId: "claude",
+			lastEventType: "Stop",
+			lastEventAt: 2,
+			startedAt: 1,
+			...(endedAt ? { endedAt } : {}),
+		}) as unknown as Parameters<
+			typeof listLiveSessionStats
+		>[0]["bindings"][number];
+
+	it("reads every live agent once and answers null where stats are unknown", async () => {
+		const read: string[] = [];
+		const result = await listLiveSessionStats({
+			bindings: [binding("t1"), binding("t2"), binding("t3", 5)],
+			harnessSession: (terminalId) =>
+				terminalId === "t2"
+					? null
+					: ({ agentId: "claude", sessionId: terminalId } as never),
+			readStats: async (ref) => {
+				read.push(ref.sessionId);
+				return { model: "claude-opus-5-5" } as never;
+			},
+		});
+		expect(read).toEqual(["t1"]);
+		expect(result).toEqual([
+			{
+				terminalId: "t1",
+				workspaceId: "ws-1",
+				stats: { model: "claude-opus-5-5" } as never,
+			},
+			{ terminalId: "t2", workspaceId: "ws-1", stats: null },
+		]);
 	});
 });

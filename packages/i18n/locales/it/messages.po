@@ -593,6 +593,12 @@ msgstr "{0} in esecuzione"
 msgid "{0} sessions terminated"
 msgstr "{0} sessioni terminate"
 
+#. placeholder {0}: stats.subagents
+#. placeholder {1}: stats.workflowAgents
+#. placeholder {2}: stats.withChildren
+msgid "{0} subagents and {1} workflow agents, run by {2} open agents. Click to show only those agents."
+msgstr "{0} subagenti e {1} agenti di workflow, avviati da {2} agenti aperti. Fai clic per mostrare solo quegli agenti."
+
 #. placeholder {0}: result.killedCount
 #. placeholder {1}: result.remainingCount
 msgid "{0} terminated, {1} remaining"
@@ -647,7 +653,6 @@ msgid "{0} vs {1}"
 msgstr "{0} contro {1}"
 
 #. placeholder {0}: project.onViewer
-#. placeholder {0}: totals.needYou
 msgid "{0} waiting on you"
 msgstr "{0} ti aspettano"
 
@@ -671,14 +676,25 @@ msgstr "{0} vince ai danni dopo {1} turni"
 
 #. placeholder {0}: counts.working
 #. placeholder {0}: summary.working
-#. placeholder {0}: totals.working
 msgid "{0} working"
 msgstr "{0} al lavoro"
+
+#. placeholder {0}: host.working
+#. placeholder {1}: host.waiting
+msgid "{0} working, {1} waiting for you"
+msgstr "{0} al lavoro, {1} ti aspettano"
 
 #. placeholder {0}: check.name
 #. placeholder {1}: took ? `, ${took}` : ""
 msgid "{0}, {outcome}{1}"
 msgstr "{0}, {outcome}{1}"
+
+#. placeholder {0}: words.label.todos
+#. placeholder {1}: stats.byState.todos
+#. placeholder {2}: words.label.resume
+#. placeholder {3}: stats.byState.resume
+msgid "{0}: {1} · {2}: {3}"
+msgstr "{0}: {1} · {2}: {3}"
 
 #. placeholder {0}: String(met)
 #. placeholder {1}: String(gaps.length)
@@ -1314,9 +1330,6 @@ msgstr "{stepCount} passaggi, nel menu"
 
 msgid "{subagentCount, plural, one {# subagent running} other {# subagents running}}"
 msgstr "{subagentCount, plural, one {# sottoagente in esecuzione} other {# sottoagenti in esecuzione}}"
-
-msgid "{subagentCount} subagents"
-msgstr "{subagentCount} subagenti"
 
 msgid "{successCount, plural, one {Created # workspace, {failCount} failed} other {Created # workspaces, {failCount} failed}}"
 msgstr "{successCount, plural, one {Creato # workspace, {failCount} non riusciti} other {Creati # workspace, {failCount} non riusciti}}"
@@ -4367,6 +4380,9 @@ msgstr "Clicca su un elemento."
 msgid "Click any element to send it to an agent."
 msgstr "Clicca su qualsiasi elemento per inviarlo a un agente."
 
+msgid "Click for usage by day and model."
+msgstr "Fai clic per l'uso per giorno e modello."
+
 msgid "Click here if not redirected"
 msgstr "Clicca qui se non vieni reindirizzato"
 
@@ -5456,6 +5472,9 @@ msgstr "Costo"
 
 msgid "Cost · $ per merged PR"
 msgstr "Costo · $ per PR unita"
+
+msgid "Cost is an estimate at API list rates, not money spent."
+msgstr "Il costo è una stima a prezzi di listino API, non denaro speso."
 
 msgid "Cost per merged PR"
 msgstr "Costo per PR unita"
@@ -7607,6 +7626,9 @@ msgstr "Ogni lunedì alle 8:00"
 msgid "Every objective is carrying its weight for the next rung. Measured over the trailing 30 days."
 msgstr "Tutti gli obiettivi stanno facendo la loro parte per il gradino successivo. Misurato sugli ultimi 30 giorni."
 
+msgid "Every open agent. Click to show every state again."
+msgstr "Tutti gli agenti aperti. Fai clic per mostrare di nuovo tutti gli stati."
+
 msgid "Every publish is a version"
 msgstr "Ogni pubblicazione è una versione"
 
@@ -9200,6 +9222,9 @@ msgstr "Aiuto"
 msgid "Help & Docs"
 msgstr "Aiuto e documentazione"
 
+msgid "Helpers"
+msgstr "Aiutanti"
+
 msgid "Henry Ford"
 msgstr "Henry Ford"
 
@@ -9810,6 +9835,12 @@ msgstr "Codice inline"
 
 msgid "Input"
 msgstr "Input"
+
+#. placeholder {0}: formatNumber(stats.usage.inputTokens)
+#. placeholder {1}: formatNumber(stats.usage.cachedInputTokens)
+#. placeholder {2}: formatNumber(stats.usage.outputTokens)
+msgid "Input {0}, cached {1}, output {2}."
+msgstr "Input {0}, in cache {1}, output {2}."
 
 msgid "Input Group"
 msgstr "Input Group"
@@ -12016,6 +12047,9 @@ msgstr "Ancora nessun agente"
 msgid "No agents yet."
 msgstr "Ancora nessun agente."
 
+msgid "No answer in its transcript yet, an agent that keeps none, or a host too old to tell."
+msgstr "Ancora nessuna risposta nella trascrizione, un agente che non ne tiene, o un host troppo vecchio per dirlo."
+
 msgid "No API keys yet."
 msgstr "Ancora nessuna chiave API."
 
@@ -12688,9 +12722,6 @@ msgstr "Nessuno rivede in modo diverso per questo."
 msgid "nobody waiting"
 msgstr "nessuno in attesa"
 
-msgid "Nobody waiting on you"
-msgstr "Nessuno ti aspetta"
-
 msgid "None"
 msgstr "Nessuno"
 
@@ -13211,6 +13242,11 @@ msgstr "Apri una pull request per vedere lo stato della revisione, i controlli e
 
 msgid "Open actions menu"
 msgstr "Apri il menu delle azioni"
+
+#. placeholder {0}: model.model
+#. placeholder {1}: model.working
+msgid "Open agents whose latest answer came from {0}: {1} working"
+msgstr "Agenti aperti la cui ultima risposta viene da {0}: {1} al lavoro"
 
 msgid "Open anyway"
 msgstr "Apri comunque"
@@ -17656,6 +17692,11 @@ msgstr "Simulatore"
 msgid "Since 2025"
 msgstr "Dal 2025"
 
+#. placeholder {0}: stats.usage.agents
+#. placeholder {1}: stats.open
+msgid "Since they started, for {0} of {1} open agents"
+msgstr "Da quando sono partiti, per {0} di {1} agenti aperti"
+
 msgid "Single sign-on for organizations, self-serve configurable."
 msgstr "Single sign-on per le organizzazioni, configurabile in autonomia."
 
@@ -19921,6 +19962,12 @@ msgctxt "work state chip"
 msgid "To check"
 msgstr "Da verificare"
 
+msgid "To close"
+msgstr "Da chiudere"
+
+msgid "To resume"
+msgstr "Da riprendere"
+
 msgid "To resume an agent conversation, run this in its folder:"
 msgstr "Per riprendere una conversazione con un agente, esegui questo nella sua cartella:"
 
@@ -20023,6 +20070,9 @@ msgstr "Indicatore del budget di token — passa il mouse sulla percentuale"
 
 msgid "Token usage"
 msgstr "Utilizzo dei token"
+
+msgid "tokens"
+msgstr "token"
 
 msgid "Tokens"
 msgstr "Token"
@@ -20341,6 +20391,9 @@ msgstr "Esecuzioni non presidiate di 8 ore o più riescono sulla maggior parte d
 
 msgid "Unavailable"
 msgstr "Non disponibile"
+
+msgid "Unavailable on these hosts"
+msgstr "Non disponibile su questi host"
 
 msgid "Uncached input"
 msgstr "Input senza cache"

@@ -11,13 +11,27 @@ export interface OfficeFilter {
 	/** Project statuses, or NO_STATUS; empty keeps every status. */
 	projectStatuses: readonly string[];
 	focusOnly: boolean;
+	/** Host machine ids; empty keeps every host. */
+	hosts: readonly string[];
+	/** Model labels, or UNKNOWN_MODEL; empty keeps every model. */
+	models: readonly string[];
+	/** Only agents running subagents or workflow agents. */
+	withChildren: boolean;
 }
+
+/** An agent whose model its host cannot tell yet. */
+export const UNKNOWN_MODEL = "unknown";
 
 export interface FilterableAgent {
 	state: WorkState;
 	projectId: string;
 	projectStatus: string;
 	focused: boolean;
+	hostId: string;
+	/** `modelLabel` of its model, or UNKNOWN_MODEL. */
+	model: string;
+	/** Subagents and workflow agents run under it. */
+	children: number;
 }
 
 type Facet = "states" | "projects" | "projectStatuses";
@@ -28,6 +42,13 @@ function passes(
 	skip?: Facet,
 ): boolean {
 	if (filter.focusOnly && !agent.focused) return false;
+	if (filter.withChildren && agent.children === 0) return false;
+	if (filter.hosts.length > 0 && !filter.hosts.includes(agent.hostId)) {
+		return false;
+	}
+	if (filter.models.length > 0 && !filter.models.includes(agent.model)) {
+		return false;
+	}
 	if (
 		skip !== "states" &&
 		filter.states.length > 0 &&
@@ -99,6 +120,9 @@ export function isFiltering(filter: OfficeFilter): boolean {
 		filter.states.length > 0 ||
 		filter.projects.length > 0 ||
 		filter.projectStatuses.length > 0 ||
-		filter.focusOnly
+		filter.focusOnly ||
+		filter.hosts.length > 0 ||
+		filter.models.length > 0 ||
+		filter.withChildren
 	);
 }

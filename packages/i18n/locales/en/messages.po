@@ -593,6 +593,12 @@ msgstr "{0} Running"
 msgid "{0} sessions terminated"
 msgstr "{0} sessions terminated"
 
+#. placeholder {0}: stats.subagents
+#. placeholder {1}: stats.workflowAgents
+#. placeholder {2}: stats.withChildren
+msgid "{0} subagents and {1} workflow agents, run by {2} open agents. Click to show only those agents."
+msgstr "{0} subagents and {1} workflow agents, run by {2} open agents. Click to show only those agents."
+
 #. placeholder {0}: result.killedCount
 #. placeholder {1}: result.remainingCount
 msgid "{0} terminated, {1} remaining"
@@ -647,7 +653,6 @@ msgid "{0} vs {1}"
 msgstr "{0} vs {1}"
 
 #. placeholder {0}: project.onViewer
-#. placeholder {0}: totals.needYou
 msgid "{0} waiting on you"
 msgstr "{0} waiting on you"
 
@@ -671,14 +676,25 @@ msgstr "{0} wins on damage after {1} turns"
 
 #. placeholder {0}: counts.working
 #. placeholder {0}: summary.working
-#. placeholder {0}: totals.working
 msgid "{0} working"
 msgstr "{0} working"
+
+#. placeholder {0}: host.working
+#. placeholder {1}: host.waiting
+msgid "{0} working, {1} waiting for you"
+msgstr "{0} working, {1} waiting for you"
 
 #. placeholder {0}: check.name
 #. placeholder {1}: took ? `, ${took}` : ""
 msgid "{0}, {outcome}{1}"
 msgstr "{0}, {outcome}{1}"
+
+#. placeholder {0}: words.label.todos
+#. placeholder {1}: stats.byState.todos
+#. placeholder {2}: words.label.resume
+#. placeholder {3}: stats.byState.resume
+msgid "{0}: {1} · {2}: {3}"
+msgstr "{0}: {1} · {2}: {3}"
 
 #. placeholder {0}: String(met)
 #. placeholder {1}: String(gaps.length)
@@ -1314,9 +1330,6 @@ msgstr "{stepCount} steps, in the menu"
 
 msgid "{subagentCount, plural, one {# subagent running} other {# subagents running}}"
 msgstr "{subagentCount, plural, one {# subagent running} other {# subagents running}}"
-
-msgid "{subagentCount} subagents"
-msgstr "{subagentCount} subagents"
 
 msgid "{successCount, plural, one {Created # workspace, {failCount} failed} other {Created # workspaces, {failCount} failed}}"
 msgstr "{successCount, plural, one {Created # workspace, {failCount} failed} other {Created # workspaces, {failCount} failed}}"
@@ -4367,6 +4380,9 @@ msgstr "Click an element."
 msgid "Click any element to send it to an agent."
 msgstr "Click any element to send it to an agent."
 
+msgid "Click for usage by day and model."
+msgstr "Click for usage by day and model."
+
 msgid "Click here if not redirected"
 msgstr "Click here if not redirected"
 
@@ -5456,6 +5472,9 @@ msgstr "Cost"
 
 msgid "Cost · $ per merged PR"
 msgstr "Cost · $ per merged PR"
+
+msgid "Cost is an estimate at API list rates, not money spent."
+msgstr "Cost is an estimate at API list rates, not money spent."
 
 msgid "Cost per merged PR"
 msgstr "Cost per merged PR"
@@ -7607,6 +7626,9 @@ msgstr "Every Monday at 8:00 AM"
 msgid "Every objective is carrying its weight for the next rung. Measured over the trailing 30 days."
 msgstr "Every objective is carrying its weight for the next rung. Measured over the trailing 30 days."
 
+msgid "Every open agent. Click to show every state again."
+msgstr "Every open agent. Click to show every state again."
+
 msgid "Every publish is a version"
 msgstr "Every publish is a version"
 
@@ -9200,6 +9222,9 @@ msgstr "Help"
 msgid "Help & Docs"
 msgstr "Help & Docs"
 
+msgid "Helpers"
+msgstr "Helpers"
+
 msgid "Henry Ford"
 msgstr "Henry Ford"
 
@@ -9810,6 +9835,12 @@ msgstr "Inline code"
 
 msgid "Input"
 msgstr "Input"
+
+#. placeholder {0}: formatNumber(stats.usage.inputTokens)
+#. placeholder {1}: formatNumber(stats.usage.cachedInputTokens)
+#. placeholder {2}: formatNumber(stats.usage.outputTokens)
+msgid "Input {0}, cached {1}, output {2}."
+msgstr "Input {0}, cached {1}, output {2}."
 
 msgid "Input Group"
 msgstr "Input Group"
@@ -12016,6 +12047,9 @@ msgstr "No agents yet"
 msgid "No agents yet."
 msgstr "No agents yet."
 
+msgid "No answer in its transcript yet, an agent that keeps none, or a host too old to tell."
+msgstr "No answer in its transcript yet, an agent that keeps none, or a host too old to tell."
+
 msgid "No API keys yet."
 msgstr "No API keys yet."
 
@@ -12688,9 +12722,6 @@ msgstr "Nobody reviews differently because of it."
 msgid "nobody waiting"
 msgstr "nobody waiting"
 
-msgid "Nobody waiting on you"
-msgstr "Nobody waiting on you"
-
 msgid "None"
 msgstr "None"
 
@@ -13211,6 +13242,11 @@ msgstr "Open a pull request to view review status, checks, and comments."
 
 msgid "Open actions menu"
 msgstr "Open actions menu"
+
+#. placeholder {0}: model.model
+#. placeholder {1}: model.working
+msgid "Open agents whose latest answer came from {0}: {1} working"
+msgstr "Open agents whose latest answer came from {0}: {1} working"
 
 msgid "Open anyway"
 msgstr "Open anyway"
@@ -17656,6 +17692,11 @@ msgstr "Simulator"
 msgid "Since 2025"
 msgstr "Since 2025"
 
+#. placeholder {0}: stats.usage.agents
+#. placeholder {1}: stats.open
+msgid "Since they started, for {0} of {1} open agents"
+msgstr "Since they started, for {0} of {1} open agents"
+
 msgid "Single sign-on for organizations, self-serve configurable."
 msgstr "Single sign-on for organizations, self-serve configurable."
 
@@ -19921,6 +19962,12 @@ msgctxt "work state chip"
 msgid "To check"
 msgstr "To check"
 
+msgid "To close"
+msgstr "To close"
+
+msgid "To resume"
+msgstr "To resume"
+
 msgid "To resume an agent conversation, run this in its folder:"
 msgstr "To resume an agent conversation, run this in its folder:"
 
@@ -20023,6 +20070,9 @@ msgstr "Token budget indicator — hover the percentage"
 
 msgid "Token usage"
 msgstr "Token usage"
+
+msgid "tokens"
+msgstr "tokens"
 
 msgid "Tokens"
 msgstr "Tokens"
@@ -20341,6 +20391,9 @@ msgstr "Unattended runs of 8 hours or more succeed on a majority of routine tick
 
 msgid "Unavailable"
 msgstr "Unavailable"
+
+msgid "Unavailable on these hosts"
+msgstr "Unavailable on these hosts"
 
 msgid "Uncached input"
 msgstr "Uncached input"

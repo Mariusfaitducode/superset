@@ -1,5 +1,11 @@
 import { describe, expect, test } from "bun:test";
-import { buildDigest, type DigestInput } from "./digest";
+import {
+	buildDigest,
+	type DigestInput,
+	fleetMembers,
+	formatFleet,
+	summarizeHosts,
+} from "./digest";
 import { readSynthesis } from "./synthesis";
 
 const HOUR = 3_600_000;
@@ -8,6 +14,9 @@ const now = 100 * HOUR;
 function input(overrides: Partial<DigestInput> = {}): DigestInput {
 	return {
 		now,
+		hostId: "mac",
+		marks: [],
+		sessionStats: [],
 		workspaces: [
 			{
 				id: "ws-hub",
@@ -216,6 +225,164 @@ describe("buildDigest", () => {
 		expect(digest.unavailable).toEqual(["todos", "notes"]);
 		expect(digest.supersetIdeas).toEqual([]);
 		expect(digest.totals.openUserTodos).toBe(0);
+	});
+});
+
+describe("work states and global numbers", () => {
+	const MINUTE = 60_000;
+	const agent = (
+		terminalId: string,
+		lastEventType: string,
+		ago: number,
+		extra: Partial<DigestInput["agents"][number]> = {},
+	): DigestInput["agents"][number] => ({
+		terminalId,
+		workspaceId: "ws-a",
+		agentId: "claude",
+		lastEventType,
+		lastEventAt: now - ago,
+		startedAt: now - 5 * HOUR,
+		...extra,
+	});
+	const usage = {
+		inputTokens: 100,
+		cachedInputTokens: 1_000,
+		outputTokens: 50,
+	};
+	const states = (): DigestInput =>
+		input({
+			workspaces: [{ id: "ws-a", name: "a", branch: null, projectName: null }],
+			terminals: [],
+			agents: [
+				agent("todos", "Stop", 2 * HOUR),
+				agent("done", "Stop", HOUR),
+				agent("pinned", "Stop", HOUR),
+				agent("silent", "Start", 2 * HOUR),
+				agent("asks", "PermissionRequest", MINUTE),
+				agent("busy", "Start", MINUTE, {
+					subagents: [{ workflow: { runId: "r" } }, {}],
+				}),
+				agent("closed", "Stop", HOUR, { endedAt: now }),
+			],
+			todos: [
+				{
+					workspaceId: "ws-a",
+					terminalId: "todos",
+					text: "Pick up",
+					done: false,
+					author: "agent",
+					priority: "normal",
+					kind: "task",
+					dueOn: null,
+				},
+			],
+			reports: [
+				{
+					workspaceId: "ws-a",
+					terminalId: "done",
+					kind: "done",
+					summary: "Shipped",
+					status: "answered",
+					createdAt: now - HOUR - MINUTE,
+				},
+			],
+			marks: [
+				{ terminalId: "pinned", state: "resume", setBy: "user", setAt: now },
+			],
+			sessionStats: [
+				{
+					terminalId: "busy",
+					stats: { model: "claude-opus-5-5", ...usage, costUsd: 2 },
+				},
+				{
+					terminalId: "todos",
+					stats: { model: "claude-sonnet-4-5", ...usage, costUsd: null },
+				},
+				{ terminalId: "asks", stats: null },
+			],
+			notes: [],
+			tasks: [],
+			ignoreWorkspaceIds: new Set(),
+		});
+
+	test("derives each conversation's state like the Office, read or unread", () => {
+		const digest = buildDigest(states());
+		const work = new Map(
+			digest.workspaces[0]?.conversations.map((conversation) => [
+				conversation.terminalId,
+				conversation.work,
+			]),
+		);
+		expect(work.get("todos")).toEqual({
+			state: "todos",
+			cause: "todos",
+			pinned: false,
+			ifUnread: "waiting",
+		});
+		expect(work.get("done")).toMatchObject({
+			state: "done",
+			ifUnread: "waiting",
+		});
+		// A pin holds whether the reply was read or not.
+		expect(work.get("pinned")).toEqual({
+			state: "resume",
+			cause: "pinned",
+			pinned: true,
+			ifUnread: null,
+		});
+		expect(work.get("silent")).toMatchObject({ state: "check" });
+		expect(work.get("asks")).toMatchObject({ state: "waiting" });
+		expect(work.get("busy")).toMatchObject({ state: "working" });
+	});
+
+	test("gives the Office strip's numbers", () => {
+		const { fleet } = buildDigest(states());
+		expect(fleet.open).toBe(6);
+		expect(fleet.groups).toEqual({
+			working: 1,
+			waiting: 1,
+			toResume: 2,
+			toCheck: 1,
+			toClose: 1,
+		});
+		expect(fleet.readUnknown).toBe(2);
+		expect(fleet.subagents).toBe(1);
+		expect(fleet.workflowAgents).toBe(1);
+		expect(fleet.models.map((model) => model.model)).toEqual([
+			"Opus 5.5",
+			"Sonnet 4.5",
+		]);
+		expect(fleet.unknownModel).toBe(4);
+		expect(fleet.usage).toMatchObject({ agents: 2, costUsd: 2, unpriced: 1 });
+		expect(fleet.hosts).toEqual([
+			{ hostId: "mac", open: 6, working: 1, waiting: 1 },
+		]);
+		expect(formatFleet(fleet)[0]).toContain("6 open agents: 1 working");
+	});
+
+	test("says models are unavailable on a host too old to give them", () => {
+		const { fleet } = buildDigest({ ...states(), sessionStats: null });
+		expect(fleet.modelsAvailable).toBe(false);
+		expect(formatFleet(fleet).at(-1)).toBe(
+			"Models and tokens: unavailable on this host.",
+		);
+	});
+
+	test("adds hosts up into one set of numbers", () => {
+		const mac = states();
+		const tour = { ...states(), hostId: "tour", sessionStats: null };
+		const fleet = summarizeHosts(
+			[mac, tour].map((host) => ({
+				members: fleetMembers(host),
+				modelsAvailable: host.sessionStats !== null,
+			})),
+		);
+		expect(fleet.open).toBe(12);
+		expect(fleet.hosts.map((host) => [host.hostId, host.open])).toEqual([
+			["mac", 6],
+			["tour", 6],
+		]);
+		expect(fleet.modelsAvailable).toBe(true);
 	});
 });
 

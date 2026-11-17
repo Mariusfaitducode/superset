@@ -109,6 +109,14 @@
 			"types": "./src/agent-status.ts",
 			"default": "./src/agent-status.ts"
 		},
+		"./work-state": {
+			"types": "./src/work-state.ts",
+			"default": "./src/work-state.ts"
+		},
+		"./agent-fleet-stats": {
+			"types": "./src/agent-fleet-stats.ts",
+			"default": "./src/agent-fleet-stats.ts"
+		},
 		"./constants": {
 			"types": "./src/constants.ts",
 			"default": "./src/constants.ts"

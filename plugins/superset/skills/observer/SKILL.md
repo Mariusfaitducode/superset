@@ -48,13 +48,23 @@ other workspace.
 ### 2. Gather
 
 ```bash
-superset observer snapshot --insights   # every agent: state, quiet time, to-dos, reports, tasks, labels, notes, Superset ideas
-superset hosts list                     # other hosts; for each online one:
-superset observer snapshot --host <id>
+superset observer snapshot --all-hosts --insights   # every agent of every online host, see below
 superset todos list --all --open        # the user's own list (read only)
 superset reports list --all --open      # what already waits on the Desk
 memory_pressure | tail -1
 ```
+
+The snapshot gives the numbers the user sees on the Office strip (`fleet`:
+open agents, working, waiting for them, to resume, to check, to close,
+subagents, per host, per model, tokens and an API-rate cost estimate), then
+per conversation its Office work state (`work`), model, quiet time, to-dos,
+reports, tracked tasks, labels, notes and Superset ideas. Quote these numbers
+as they are rather than recounting. Two limits to keep in mind: the CLI cannot
+know whether the user has read an agent's last reply, so a stopped agent is
+counted as read and `work.ifUnread` (and `fleet.readUnknown`) says what the
+Office shows instead while it is unread; and models and tokens come from the
+agents' transcripts on their own host, "unavailable" on hosts too old to give
+them.
 
 Then, as far as each is available (skip what is missing and say so):
 

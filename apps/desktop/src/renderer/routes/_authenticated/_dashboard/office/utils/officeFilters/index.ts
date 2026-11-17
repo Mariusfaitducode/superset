@@ -6,4 +6,5 @@ export {
 	matchesOfficeFilter,
 	NO_STATUS,
 	type OfficeFilter,
+	UNKNOWN_MODEL,
 } from "./officeFilters";

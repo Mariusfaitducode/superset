@@ -593,6 +593,12 @@ msgstr "Běží {0}"
 msgid "{0} sessions terminated"
 msgstr "Ukončeno relací: {0}"
 
+#. placeholder {0}: stats.subagents
+#. placeholder {1}: stats.workflowAgents
+#. placeholder {2}: stats.withChildren
+msgid "{0} subagents and {1} workflow agents, run by {2} open agents. Click to show only those agents."
+msgstr "{0} subagentů a {1} agentů workflow, spuštěných {2} otevřenými agenty. Kliknutím zobrazíte jen tyto agenty."
+
 #. placeholder {0}: result.killedCount
 #. placeholder {1}: result.remainingCount
 msgid "{0} terminated, {1} remaining"
@@ -647,7 +653,6 @@ msgid "{0} vs {1}"
 msgstr "{0} proti {1}"
 
 #. placeholder {0}: project.onViewer
-#. placeholder {0}: totals.needYou
 msgid "{0} waiting on you"
 msgstr "{0} čeká na vás"
 
@@ -671,14 +676,25 @@ msgstr "{0} vítězí na poškození po {1} kolech"
 
 #. placeholder {0}: counts.working
 #. placeholder {0}: summary.working
-#. placeholder {0}: totals.working
 msgid "{0} working"
 msgstr "{0} pracuje"
+
+#. placeholder {0}: host.working
+#. placeholder {1}: host.waiting
+msgid "{0} working, {1} waiting for you"
+msgstr "{0} pracuje, {1} čeká na vás"
 
 #. placeholder {0}: check.name
 #. placeholder {1}: took ? `, ${took}` : ""
 msgid "{0}, {outcome}{1}"
 msgstr "{0}, {outcome}{1}"
+
+#. placeholder {0}: words.label.todos
+#. placeholder {1}: stats.byState.todos
+#. placeholder {2}: words.label.resume
+#. placeholder {3}: stats.byState.resume
+msgid "{0}: {1} · {2}: {3}"
+msgstr "{0}: {1} · {2}: {3}"
 
 #. placeholder {0}: String(met)
 #. placeholder {1}: String(gaps.length)
@@ -1314,9 +1330,6 @@ msgstr "{stepCount} kroků, v nabídce"
 
 msgid "{subagentCount, plural, one {# subagent running} other {# subagents running}}"
 msgstr "{subagentCount, plural, one {# subagent běží} few {# subagenti běží} many {# subagenta běží} other {# subagentů běží}}"
-
-msgid "{subagentCount} subagents"
-msgstr "{subagentCount} podagentů"
 
 msgid "{successCount, plural, one {Created # workspace, {failCount} failed} other {Created # workspaces, {failCount} failed}}"
 msgstr "{successCount, plural, one {Vytvořen # pracovní prostor, {failCount} selhalo} few {Vytvořeny # pracovní prostory, {failCount} selhalo} many {Vytvořeno # pracovního prostoru, {failCount} selhalo} other {Vytvořeno # pracovních prostorů, {failCount} selhalo}}"
@@ -4367,6 +4380,9 @@ msgstr "Klikněte na prvek."
 msgid "Click any element to send it to an agent."
 msgstr "Kliknutím na libovolný prvek ho pošlete agentovi."
 
+msgid "Click for usage by day and model."
+msgstr "Kliknutím zobrazíte využití podle dne a modelu."
+
 msgid "Click here if not redirected"
 msgstr "Pokud nedojde k přesměrování, klikněte sem"
 
@@ -5456,6 +5472,9 @@ msgstr "Náklady"
 
 msgid "Cost · $ per merged PR"
 msgstr "Náklady · $ za sloučený PR"
+
+msgid "Cost is an estimate at API list rates, not money spent."
+msgstr "Cena je odhad podle ceníku API, ne skutečně utracené peníze."
 
 msgid "Cost per merged PR"
 msgstr "Náklady na sloučený PR"
@@ -7607,6 +7626,9 @@ msgstr "Každé pondělí v 8:00"
 msgid "Every objective is carrying its weight for the next rung. Measured over the trailing 30 days."
 msgstr "Všechny cíle táhnou k dalšímu stupni. Měřeno za posledních 30 dní."
 
+msgid "Every open agent. Click to show every state again."
+msgstr "Všichni otevření agenti. Kliknutím znovu zobrazíte všechny stavy."
+
 msgid "Every publish is a version"
 msgstr "Každé zveřejnění je verze"
 
@@ -9200,6 +9222,9 @@ msgstr "Nápověda"
 msgid "Help & Docs"
 msgstr "Nápověda a dokumentace"
 
+msgid "Helpers"
+msgstr "Pomocníci"
+
 msgid "Henry Ford"
 msgstr "Henry Ford"
 
@@ -9810,6 +9835,12 @@ msgstr "Kód v textu"
 
 msgid "Input"
 msgstr "Vstup"
+
+#. placeholder {0}: formatNumber(stats.usage.inputTokens)
+#. placeholder {1}: formatNumber(stats.usage.cachedInputTokens)
+#. placeholder {2}: formatNumber(stats.usage.outputTokens)
+msgid "Input {0}, cached {1}, output {2}."
+msgstr "Vstup {0}, z mezipaměti {1}, výstup {2}."
 
 msgid "Input Group"
 msgstr "Skupina vstupů"
@@ -12016,6 +12047,9 @@ msgstr "Zatím žádní agenti"
 msgid "No agents yet."
 msgstr "Zatím žádní agenti."
 
+msgid "No answer in its transcript yet, an agent that keeps none, or a host too old to tell."
+msgstr "Zatím žádná odpověď v přepisu, agent bez přepisu nebo hostitel příliš starý na to, aby to věděl."
+
 msgid "No API keys yet."
 msgstr "Zatím žádné API klíče."
 
@@ -12688,9 +12722,6 @@ msgstr "Nikdo kvůli tomu nereviduje jinak."
 msgid "nobody waiting"
 msgstr "nikdo nečeká"
 
-msgid "Nobody waiting on you"
-msgstr "Nikdo na tebe nečeká"
-
 msgid "None"
 msgstr "Žádný"
 
@@ -13211,6 +13242,11 @@ msgstr "Otevřete pull request a uvidíte stav revize, kontroly a komentáře."
 
 msgid "Open actions menu"
 msgstr "Otevřít nabídku akcí"
+
+#. placeholder {0}: model.model
+#. placeholder {1}: model.working
+msgid "Open agents whose latest answer came from {0}: {1} working"
+msgstr "Otevření agenti, jejichž poslední odpověď pochází z {0}: {1} pracuje"
 
 msgid "Open anyway"
 msgstr "Přesto otevřít"
@@ -17656,6 +17692,11 @@ msgstr "Simulátor"
 msgid "Since 2025"
 msgstr "Od roku 2025"
 
+#. placeholder {0}: stats.usage.agents
+#. placeholder {1}: stats.open
+msgid "Since they started, for {0} of {1} open agents"
+msgstr "Od jejich spuštění, pro {0} z {1} otevřených agentů"
+
 msgid "Single sign-on for organizations, self-serve configurable."
 msgstr "Jednotné přihlašování (SSO) pro organizace, které si nastavíte sami."
 
@@ -19921,6 +19962,12 @@ msgctxt "work state chip"
 msgid "To check"
 msgstr "Ke kontrole"
 
+msgid "To close"
+msgstr "K zavření"
+
+msgid "To resume"
+msgstr "K obnovení"
+
 msgid "To resume an agent conversation, run this in its folder:"
 msgstr "Chcete-li obnovit konverzaci s agentem, spusťte toto v její složce:"
 
@@ -20023,6 +20070,9 @@ msgstr "Ukazatel rozpočtu tokenů — najeďte myší na procenta"
 
 msgid "Token usage"
 msgstr "Využití tokenů"
+
+msgid "tokens"
+msgstr "tokenů"
 
 msgid "Tokens"
 msgstr "Tokeny"
@@ -20341,6 +20391,9 @@ msgstr "Běhy bez dozoru trvající 8 hodin a víc uspějí u většiny rutinní
 
 msgid "Unavailable"
 msgstr "Nedostupné"
+
+msgid "Unavailable on these hosts"
+msgstr "Na těchto hostitelích nedostupné"
 
 msgid "Uncached input"
 msgstr "Vstup mimo cache"

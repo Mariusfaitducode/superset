@@ -593,6 +593,12 @@ msgstr "Выполняется: {0}"
 msgid "{0} sessions terminated"
 msgstr "Завершено сессий: {0}"
 
+#. placeholder {0}: stats.subagents
+#. placeholder {1}: stats.workflowAgents
+#. placeholder {2}: stats.withChildren
+msgid "{0} subagents and {1} workflow agents, run by {2} open agents. Click to show only those agents."
+msgstr "{0} субагентов и {1} агентов процессов, запущенных {2} открытыми агентами. Нажмите, чтобы показать только этих агентов."
+
 #. placeholder {0}: result.killedCount
 #. placeholder {1}: result.remainingCount
 msgid "{0} terminated, {1} remaining"
@@ -647,7 +653,6 @@ msgid "{0} vs {1}"
 msgstr "{0} против {1}"
 
 #. placeholder {0}: project.onViewer
-#. placeholder {0}: totals.needYou
 msgid "{0} waiting on you"
 msgstr "{0} ждут вас"
 
@@ -671,14 +676,25 @@ msgstr "{0} побеждает по урону после {1} ходов"
 
 #. placeholder {0}: counts.working
 #. placeholder {0}: summary.working
-#. placeholder {0}: totals.working
 msgid "{0} working"
 msgstr "{0} работают"
+
+#. placeholder {0}: host.working
+#. placeholder {1}: host.waiting
+msgid "{0} working, {1} waiting for you"
+msgstr "{0} работают, {1} ждут вас"
 
 #. placeholder {0}: check.name
 #. placeholder {1}: took ? `, ${took}` : ""
 msgid "{0}, {outcome}{1}"
 msgstr "{0}, {outcome}{1}"
+
+#. placeholder {0}: words.label.todos
+#. placeholder {1}: stats.byState.todos
+#. placeholder {2}: words.label.resume
+#. placeholder {3}: stats.byState.resume
+msgid "{0}: {1} · {2}: {3}"
+msgstr "{0}: {1} · {2}: {3}"
 
 #. placeholder {0}: String(met)
 #. placeholder {1}: String(gaps.length)
@@ -1314,9 +1330,6 @@ msgstr "{stepCount} шагов, в меню"
 
 msgid "{subagentCount, plural, one {# subagent running} other {# subagents running}}"
 msgstr "{subagentCount, plural, one {# субагент выполняется} few {# субагента выполняются} many {# субагентов выполняются} other {# субагента выполняются}}"
-
-msgid "{subagentCount} subagents"
-msgstr "Субагентов: {subagentCount}"
 
 msgid "{successCount, plural, one {Created # workspace, {failCount} failed} other {Created # workspaces, {failCount} failed}}"
 msgstr "{successCount, plural, one {Создана # рабочая область, {failCount} с ошибкой} few {Создано # рабочие области, {failCount} с ошибкой} many {Создано # рабочих областей, {failCount} с ошибкой} other {Создано # рабочей области, {failCount} с ошибкой}}"
@@ -4367,6 +4380,9 @@ msgstr "Нажмите на элемент."
 msgid "Click any element to send it to an agent."
 msgstr "Нажмите на любой элемент, чтобы отправить его агенту."
 
+msgid "Click for usage by day and model."
+msgstr "Нажмите, чтобы увидеть использование по дням и моделям."
+
 msgid "Click here if not redirected"
 msgstr "Нажмите здесь, если переход не произошёл"
 
@@ -5456,6 +5472,9 @@ msgstr "Стоимость"
 
 msgid "Cost · $ per merged PR"
 msgstr "Стоимость · $ за объединённый PR"
+
+msgid "Cost is an estimate at API list rates, not money spent."
+msgstr "Стоимость — оценка по прейскуранту API, а не потраченные деньги."
 
 msgid "Cost per merged PR"
 msgstr "Стоимость за смерженный PR"
@@ -7607,6 +7626,9 @@ msgstr "Каждый понедельник в 8:00"
 msgid "Every objective is carrying its weight for the next rung. Measured over the trailing 30 days."
 msgstr "Все цели работают на следующую ступень. Измерено за последние 30 дней."
 
+msgid "Every open agent. Click to show every state again."
+msgstr "Все открытые агенты. Нажмите, чтобы снова показать все состояния."
+
 msgid "Every publish is a version"
 msgstr "Каждая публикация становится версией"
 
@@ -9200,6 +9222,9 @@ msgstr "Помощь"
 msgid "Help & Docs"
 msgstr "Помощь и документация"
 
+msgid "Helpers"
+msgstr "Помощники"
+
 msgid "Henry Ford"
 msgstr "Генри Форд"
 
@@ -9810,6 +9835,12 @@ msgstr "Код в строке"
 
 msgid "Input"
 msgstr "Ввод"
+
+#. placeholder {0}: formatNumber(stats.usage.inputTokens)
+#. placeholder {1}: formatNumber(stats.usage.cachedInputTokens)
+#. placeholder {2}: formatNumber(stats.usage.outputTokens)
+msgid "Input {0}, cached {1}, output {2}."
+msgstr "Ввод {0}, из кэша {1}, вывод {2}."
 
 msgid "Input Group"
 msgstr "Группа полей"
@@ -12016,6 +12047,9 @@ msgstr "Агентов пока нет"
 msgid "No agents yet."
 msgstr "Агентов пока нет."
 
+msgid "No answer in its transcript yet, an agent that keeps none, or a host too old to tell."
+msgstr "В расшифровке ещё нет ответа, агент её не ведёт или хост слишком старый, чтобы это сообщить."
+
 msgid "No API keys yet."
 msgstr "Ключей API пока нет."
 
@@ -12688,9 +12722,6 @@ msgstr "Из-за этого никто не проверяет код инач�
 msgid "nobody waiting"
 msgstr "никто не ждёт"
 
-msgid "Nobody waiting on you"
-msgstr "Никто тебя не ждёт"
-
 msgid "None"
 msgstr "Нет"
 
@@ -13211,6 +13242,11 @@ msgstr "Откройте пул-реквест, чтобы видеть стат
 
 msgid "Open actions menu"
 msgstr "Открыть меню действий"
+
+#. placeholder {0}: model.model
+#. placeholder {1}: model.working
+msgid "Open agents whose latest answer came from {0}: {1} working"
+msgstr "Открытые агенты, последний ответ которых дал {0}: {1} работают"
 
 msgid "Open anyway"
 msgstr "Всё равно открыть"
@@ -17656,6 +17692,11 @@ msgstr "Симулятор"
 msgid "Since 2025"
 msgstr "С 2025 года"
 
+#. placeholder {0}: stats.usage.agents
+#. placeholder {1}: stats.open
+msgid "Since they started, for {0} of {1} open agents"
+msgstr "С момента запуска, для {0} из {1} открытых агентов"
+
 msgid "Single sign-on for organizations, self-serve configurable."
 msgstr "Единый вход (SSO) для организаций, настраивается самостоятельно."
 
@@ -19921,6 +19962,12 @@ msgctxt "work state chip"
 msgid "To check"
 msgstr "Проверить"
 
+msgid "To close"
+msgstr "Закрыть"
+
+msgid "To resume"
+msgstr "Возобновить"
+
 msgid "To resume an agent conversation, run this in its folder:"
 msgstr "Чтобы возобновить разговор с агентом, выполните это в его папке:"
 
@@ -20023,6 +20070,9 @@ msgstr "Индикатор бюджета токенов — наведите н
 
 msgid "Token usage"
 msgstr "Использование токенов"
+
+msgid "tokens"
+msgstr "токенов"
 
 msgid "Tokens"
 msgstr "Токены"
@@ -20341,6 +20391,9 @@ msgstr "Автономные прогоны от 8 часов и дольше у
 
 msgid "Unavailable"
 msgstr "Недоступно"
+
+msgid "Unavailable on these hosts"
+msgstr "Недоступно на этих хостах"
 
 msgid "Uncached input"
 msgstr "Некешированный ввод"

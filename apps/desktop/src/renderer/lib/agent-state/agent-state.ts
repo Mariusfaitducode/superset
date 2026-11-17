@@ -1,4 +1,7 @@
+import type { ConversationState } from "@superset/shared/work-state";
 import type { ActivePaneStatus } from "shared/tabs-types";
+
+export { countLiveChildren } from "@superset/shared/work-state";
 
 /**
  * The five states every agent surface shows, most urgent first. One color
@@ -15,13 +18,7 @@ export const AGENT_STATES = [
 export type AgentState = (typeof AGENT_STATES)[number];
 
 /** The conversation states `deriveConversationState` returns. */
-export type ConversationStateInput =
-	| "working"
-	| "request"
-	| "failed"
-	| "unseen"
-	| "seen"
-	| "idle";
+export type ConversationStateInput = ConversationState;
 
 const FROM_CONVERSATION: Record<ConversationStateInput, AgentState> = {
 	working: "working",
@@ -62,31 +59,6 @@ export function mostUrgentAgentState(
 		if (rank < best) best = rank;
 	}
 	return AGENT_STATES[best];
-}
-
-/** A child quiet since before its parent's last event outlived an interrupt. */
-const CHILD_GRACE_MS = 5_000;
-
-/**
- * Subagents and workflow agents still running under an agent. A parent that
- * handed its turn back while they run is still at work. Only children heard
- * from since the parent's last event count, so one left over by an interrupt
- * (its stop never arrives) does not keep a stopped parent at work.
- */
-export function countLiveChildren(binding: {
-	lastEventAt: number;
-	subagents?: readonly { lastEventAt?: number }[];
-	backgroundTasks?: readonly { kind: string }[];
-}): number {
-	const since = binding.lastEventAt - CHILD_GRACE_MS;
-	return (
-		(binding.subagents?.filter(
-			(subagent) =>
-				subagent.lastEventAt === undefined || subagent.lastEventAt >= since,
-		).length ?? 0) +
-		(binding.backgroundTasks?.filter((task) => task.kind === "subagent")
-			.length ?? 0)
-	);
 }
 
 /** Counted in "Needs you": the agent cannot go on without the user. */

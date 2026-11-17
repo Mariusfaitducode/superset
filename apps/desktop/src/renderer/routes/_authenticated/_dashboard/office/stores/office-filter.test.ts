@@ -45,3 +45,36 @@ describe("state chips", () => {
 		expect(useOfficeFilterStore.getState().states).toEqual([]);
 	});
 });
+
+describe("stats strip", () => {
+	test("a group shows its states, and a second click shows them all again", () => {
+		const store = useOfficeFilterStore.getState();
+		store.soloStates(["todos", "resume"]);
+		expect(useOfficeFilterStore.getState().states).toEqual(["todos", "resume"]);
+		store.soloStates(["resume", "todos"]);
+		expect(useOfficeFilterStore.getState().states).toEqual([]);
+	});
+
+	test("hosts and models solo, clear resets them, and they are not persisted", () => {
+		const store = useOfficeFilterStore.getState();
+		store.soloHost("tour");
+		store.soloModel("Opus 5.5");
+		store.toggleWithChildren();
+		expect(useOfficeFilterStore.getState()).toMatchObject({
+			hosts: ["tour"],
+			models: ["Opus 5.5"],
+			withChildren: true,
+		});
+		const persisted = useOfficeFilterStore.persist
+			.getOptions()
+			.partialize?.(useOfficeFilterStore.getState());
+		expect(persisted).not.toHaveProperty("hosts");
+		store.soloHost("tour");
+		expect(useOfficeFilterStore.getState().hosts).toEqual([]);
+		store.clear();
+		expect(useOfficeFilterStore.getState()).toMatchObject({
+			models: [],
+			withChildren: false,
+		});
+	});
+});

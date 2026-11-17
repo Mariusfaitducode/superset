@@ -1,4 +1,9 @@
 import { Trans, useLingui } from "@lingui/react/macro";
+import {
+	type FleetAgent,
+	modelLabel,
+	summarizeFleet,
+} from "@superset/shared/agent-fleet-stats";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@superset/ui/tooltip";
 import { useNavigate } from "@tanstack/react-router";
 import {
@@ -12,6 +17,7 @@ import {
 import { LuBuilding2 } from "react-icons/lu";
 import { useWorkStateLabels } from "renderer/components/WorkState";
 import type { HostWorkspaceItem } from "renderer/hooks/host-workspaces/useHostWorkspaces";
+import { useKnownHosts } from "renderer/hooks/known-hosts/useKnownHosts";
 import { useActiveOrganizationId } from "renderer/hooks/useActiveOrganizationId";
 import {
 	deriveWorkState,
@@ -34,6 +40,7 @@ import { useCachedMyPullRequests } from "renderer/routes/_authenticated/_dashboa
 import { useOfficeCamera } from "renderer/routes/_authenticated/_dashboard/office/hooks/useOfficeCamera";
 import { useOfficeGroups } from "renderer/routes/_authenticated/_dashboard/office/hooks/useOfficeGroups";
 import type { useOfficeObserver } from "renderer/routes/_authenticated/_dashboard/office/hooks/useOfficeObserver";
+import { useOfficeSessionStats } from "renderer/routes/_authenticated/_dashboard/office/hooks/useOfficeSessionStats";
 import { useOfficeToneLabels } from "renderer/routes/_authenticated/_dashboard/office/hooks/useOfficeToneLabels";
 import { usePrefersReducedMotion } from "renderer/routes/_authenticated/_dashboard/office/hooks/usePrefersReducedMotion";
 import {
@@ -56,6 +63,7 @@ import {
 	matchesOfficeFilter,
 	NO_STATUS,
 	type OfficeFilter,
+	UNKNOWN_MODEL,
 } from "renderer/routes/_authenticated/_dashboard/office/utils/officeFilters";
 import {
 	HEADER_HEIGHT,
@@ -96,6 +104,7 @@ import {
 	buildSubagentSearch,
 	navigateToV2Workspace,
 } from "renderer/routes/_authenticated/_dashboard/utils/workspace-navigation";
+import { useLocalHostService } from "renderer/routes/_authenticated/providers/LocalHostServiceProvider";
 import { useSidebarPreference } from "renderer/stores/sidebar-preferences";
 import { useWorkspaceFocus } from "renderer/stores/workspace-focus";
 import { getV2WorkspaceDisplayName } from "renderer/utils/getV2WorkspaceDisplayName";
@@ -110,6 +119,7 @@ import { OfficeObserverPanel } from "./components/OfficeObserverPanel";
 import { OfficeProjectPanel } from "./components/OfficeProjectPanel";
 import { OfficeRoomHeader } from "./components/OfficeRoomHeader";
 import { OfficeSeatButton } from "./components/OfficeSeatButton";
+import { OfficeStatsStrip } from "./components/OfficeStatsStrip";
 import { OfficeWorkflowLabel } from "./components/OfficeWorkflowLabel";
 import {
 	type OfficeWorkspaceReport,
@@ -201,6 +211,11 @@ export function OfficeFloor({
 	const filterProjectStatuses = useOfficeFilterStore(
 		(state) => state.projectStatuses,
 	);
+	const filterHosts = useOfficeFilterStore((state) => state.hosts);
+	const filterModels = useOfficeFilterStore((state) => state.models);
+	const filterWithChildren = useOfficeFilterStore(
+		(state) => state.withChildren,
+	);
 	const roomsBy = useOfficeFilterStore((state) => state.rooms);
 	const clearFilters = useOfficeFilterStore((state) => state.clear);
 	const { focused, filterOn: focusFilterOn } = useWorkspaceFocus();
@@ -210,8 +225,19 @@ export function OfficeFloor({
 			projects: filterProjects,
 			projectStatuses: filterProjectStatuses,
 			focusOnly: focusFilterOn,
+			hosts: filterHosts,
+			models: filterModels,
+			withChildren: filterWithChildren,
 		}),
-		[filterStates, filterProjects, filterProjectStatuses, focusFilterOn],
+		[
+			filterStates,
+			filterProjects,
+			filterProjectStatuses,
+			focusFilterOn,
+			filterHosts,
+			filterModels,
+			filterWithChildren,
+		],
 	);
 	const projects = useMyPullRequestsStore((state) => state.projects);
 	const pullRequestMoves = useMyPullRequestsStore(
@@ -246,6 +272,26 @@ export function OfficeFloor({
 		[workspaces, statuses],
 	);
 	const groups = useOfficeGroups(workspaces);
+	const staffedHostIds = useMemo(
+		() => staffed.map((workspace) => workspace.hostId),
+		[staffed],
+	);
+	const sessionStats = useOfficeSessionStats(
+		staffedHostIds,
+		staffed.length > 0,
+	);
+	const { hosts: knownHosts } = useKnownHosts();
+	const { machineId: localMachineId } = useLocalHostService();
+	const hostNames = useMemo(
+		() =>
+			new Map(
+				knownHosts.map((host) => [
+					host.machineId,
+					{ name: host.name, isLocal: host.machineId === localMachineId },
+				]),
+			),
+		[knownHosts, localMachineId],
+	);
 
 	const [reports, setReports] = useState<
 		ReadonlyMap<string, OfficeWorkspaceReport>
@@ -303,12 +349,13 @@ export function OfficeFloor({
 		}
 	}, []);
 
-	const { allRooms, shownRooms, agents, everyone, projectOf } = useMemo(() => {
+	const { shownRooms, agents, fleet, everyone, projectOf } = useMemo(() => {
 		const projectsById = new Map(
 			projects.map((project) => [project.id, project]),
 		);
 		const byKey = new Map<string, RoomUnit>();
 		const agents: FilterableAgent[] = [];
+		const fleet: FleetAgent[] = [];
 		// Every open agent, filtered or not, for the project panel.
 		const everyone: {
 			workspace: HostWorkspaceItem;
@@ -385,13 +432,36 @@ export function OfficeFloor({
 						hasChildren: conversation.subagents.length > 0,
 						now: Date.now(),
 					});
+				const stats = sessionStats.byTerminal.get(conversation.terminalId);
+				const workflowAgents = conversation.subagents.filter(
+					(subagent) => subagent.workflow,
+				).length;
+				const subagents = conversation.subagents.length - workflowAgents;
 				const agent: FilterableAgent = {
 					state: work.state,
 					projectId: assigned.projectId,
 					projectStatus,
 					focused: focused.has(workspace.id),
+					hostId: workspace.hostId,
+					model: stats?.model ? modelLabel(stats.model) : UNKNOWN_MODEL,
+					children: conversation.subagents.length,
 				};
 				agents.push(agent);
+				fleet.push({
+					state: work.state,
+					hostId: workspace.hostId,
+					model: stats?.model ?? null,
+					subagents,
+					workflowAgents,
+					usage: stats
+						? {
+								inputTokens: stats.inputTokens,
+								cachedInputTokens: stats.cachedInputTokens,
+								outputTokens: stats.outputTokens,
+								costUsd: stats.costUsd,
+							}
+						: null,
+				});
 				everyone.push({
 					workspace,
 					conversation,
@@ -445,7 +515,7 @@ export function OfficeFloor({
 			...room,
 			desks: orderIslands(room.desks),
 		}));
-		return { allRooms: shownRooms, shownRooms, agents, everyone, projectOf };
+		return { shownRooms, agents, fleet, everyone, projectOf };
 	}, [
 		staffed,
 		groups,
@@ -460,6 +530,7 @@ export function OfficeFloor({
 		manualProjects,
 		pullRequestIndex,
 		noProjectName,
+		sessionStats,
 	]);
 	const facets = useMemo(() => facetCounts(agents, filter), [agents, filter]);
 	const filtering = isFiltering(filter);
@@ -631,19 +702,11 @@ export function OfficeFloor({
 		[navigate],
 	);
 
-	const subagentCount = useMemo(
-		() =>
-			allRooms
-				.flatMap((room) => room.desks)
-				.flatMap((desk) => desk.members)
-				.reduce((sum, member) => sum + member.conversation.subagents.length, 0),
-		[allRooms],
-	);
-	// The header counts every open agent, whatever the filters hide.
-	const totals = useMemo(
-		() => countTones(agents.map((agent) => agent.state)),
-		[agents],
-	);
+	// The strip counts every open agent, whatever the filters hide.
+	const fleetStats = useMemo(() => summarizeFleet(fleet), [fleet]);
+	const modelsUnavailable =
+		staffedHostIds.length > 0 &&
+		staffedHostIds.every((hostId) => sessionStats.unavailableHosts.has(hostId));
 
 	const openConversation = useCallback(
 		(workspaceId: string, terminalId: string) => {
@@ -717,25 +780,13 @@ export function OfficeFloor({
 							<h1 className="text-sm font-medium">
 								<Trans>Office</Trans>
 							</h1>
-							<span className="text-xs text-muted-foreground">
-								{totals.needYou > 0 ? (
-									<span className="font-medium text-amber-500">
-										<Trans>{totals.needYou} waiting on you</Trans>
-									</span>
-								) : (
-									<Trans>Nobody waiting on you</Trans>
-								)}
-								{" · "}
-								<Trans>{totals.working} working</Trans>
-								{subagentCount > 0 && (
-									<>
-										{" · "}
-										<Trans>{subagentCount} subagents</Trans>
-									</>
-								)}
-							</span>
 						</>
 					}
+				/>
+				<OfficeStatsStrip
+					stats={fleetStats}
+					hosts={hostNames}
+					modelsUnavailable={modelsUnavailable}
 				/>
 				<OfficeFilterBar
 					counts={facets}
@@ -978,7 +1029,10 @@ export function OfficeFloor({
 											<Trans>No open agent matches these filters.</Trans>{" "}
 											{(filterStates.length > 0 ||
 												filterProjects.length > 0 ||
-												filterProjectStatuses.length > 0) && (
+												filterProjectStatuses.length > 0 ||
+												filterHosts.length > 0 ||
+												filterModels.length > 0 ||
+												filterWithChildren) && (
 												<button
 													type="button"
 													onClick={clearFilters}
