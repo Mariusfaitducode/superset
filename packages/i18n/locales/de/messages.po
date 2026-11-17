@@ -416,6 +416,11 @@ msgstr "Aktionen für {0}"
 msgid "{0} agents"
 msgstr "{0} Agenten"
 
+#. placeholder {0}: agents.length
+#. placeholder {1}: pullRequests.length
+msgid "{0} agents · {1} open PRs"
+msgstr "{0} Agenten · {1} offene PRs"
+
 #. placeholder {0}: states.length
 msgid "{0} agents · {waiting} waiting for you"
 msgstr "{0} Agenten · {waiting} warten auf dich"
@@ -563,6 +568,7 @@ msgstr "Optionen für {0}"
 msgid "{0} plan"
 msgstr "Tarif {0}"
 
+#. placeholder {0}: filter.projects.length
 #. placeholder {0}: normalizedProjectIds.length
 msgid "{0} projects"
 msgstr "{0} Projekte"
@@ -1513,6 +1519,9 @@ msgstr "⌘⇧ Klick"
 msgid "⌘K ↵ goes back to the previous conversation"
 msgstr "⌘K ↵ springt zur vorherigen Unterhaltung zurück"
 
+msgid "⌥-click to show only this state"
+msgstr "⌥-Klick zeigt nur diesen Status"
+
 msgid "● Online"
 msgstr "● Online"
 
@@ -1542,6 +1551,9 @@ msgstr "1 Cookie — diese Website vergessen"
 
 msgid "1 hr"
 msgstr "1 Std."
+
+msgid "1 project"
+msgstr "1 Projekt"
 
 msgid "1 to-do:"
 msgstr "1 To-do:"
@@ -2706,6 +2718,9 @@ msgstr "Beliebige Seite"
 msgid "Any project"
 msgstr "Beliebiges Projekt"
 
+msgid "Any project status"
+msgstr "Beliebiger Projektstatus"
+
 msgid "any recipient"
 msgstr "beliebiger Empfänger"
 
@@ -2985,6 +3000,9 @@ msgstr "Frag, was deine Agenten gerade tun, oder sag einem, was er als Nächstes
 msgid "Asks before edits and commands"
 msgstr "Fragt vor Änderungen und Befehlen"
 
+msgid "Asks for your approval"
+msgstr "Bittet um deine Freigabe"
+
 msgid "Asks only for risky actions"
 msgstr "Fragt nur bei riskanten Aktionen"
 
@@ -3171,6 +3189,21 @@ msgstr "Aufgaben automatisieren"
 msgid "Automate workspace setup for {projectName}"
 msgstr "Arbeitsbereich-Setup für {projectName} automatisieren"
 
+msgid "Automatic"
+msgstr "Automatisch"
+
+#. placeholder {0}: words.label[info.inferred.state]
+msgid "Automatic would say: {0}"
+msgstr "Automatisch wäre: {0}"
+
+#. placeholder {0}: project.name
+#. placeholder {1}: viaLabel[project.via]
+msgid "Automatic: {0} ({1})"
+msgstr "Automatisch: {0} ({1})"
+
+msgid "Automatic: no project found"
+msgstr "Automatisch: kein Projekt gefunden"
+
 msgid "Automation"
 msgstr "Automatisierung"
 
@@ -3305,6 +3338,10 @@ msgstr "Speicher für Hintergrund-Terminals"
 msgid "Background work and pages"
 msgstr "Hintergrundarbeit und Seiten"
 
+msgid "Backlog"
+msgstr "Backlog"
+
+msgctxt "project status"
 msgid "Backlog"
 msgstr "Backlog"
 
@@ -3804,6 +3841,10 @@ msgctxt "project state"
 msgid "Canceled"
 msgstr "Abgebrochen"
 
+msgctxt "project status"
+msgid "Canceled"
+msgstr "Abgebrochen"
+
 msgid "Canceling..."
 msgstr "Wird gekündigt..."
 
@@ -4269,6 +4310,9 @@ msgstr "Terminal-Verlauf löschen?"
 msgid "Clear the filter to rearrange the sidebar"
 msgstr "Setze den Filter zurück, um die Seitenleiste neu anzuordnen"
 
+msgid "Clear them"
+msgstr "Zurücksetzen"
+
 msgid "Clear workspace selection"
 msgstr "Arbeitsbereich-Auswahl aufheben"
 
@@ -4307,6 +4351,12 @@ msgstr "Klicke auf <0>Theme importieren</0> und wähle die heruntergeladene Date
 
 msgid "Click a terminal script to edit its details."
 msgstr "Klicke ein Terminal-Skript an, um seine Details zu bearbeiten."
+
+msgid "Click again to close the agent"
+msgstr "Erneut klicken, um den Agenten zu schließen"
+
+msgid "Click again to go back to automatic."
+msgstr "Erneut klicken, um zu automatisch zurückzukehren."
 
 msgid "Click an element."
 msgstr "Klicke auf ein Element."
@@ -4504,6 +4554,9 @@ msgstr "Terminal schließen"
 
 msgid "Close Terminal"
 msgstr "Terminal schließen"
+
+msgid "Close the agent"
+msgstr "Agenten schließen"
 
 msgid "Close the current pane"
 msgstr "Den aktuellen Bereich schließen"
@@ -5185,6 +5238,9 @@ msgstr "Unterhaltung"
 msgid "Conversation · Message"
 msgstr "Unterhaltung · Nachricht"
 
+msgid "Conversation state"
+msgstr "Status der Unterhaltung"
+
 msgid "Conversation stats"
 msgstr "Unterhaltungsstatistiken"
 
@@ -5711,6 +5767,9 @@ msgstr "Verzweigen in einen neuen Worktree fehlgeschlagen"
 
 msgid "Couldn't branch the conversation"
 msgstr "Unterhaltung konnte nicht verzweigt werden"
+
+msgid "Couldn't change the state"
+msgstr "Status konnte nicht geändert werden"
 
 msgid "Couldn't check what removing this member affects"
 msgstr "Die Auswirkungen der Entfernung dieses Mitglieds konnten nicht geprüft werden"
@@ -7018,14 +7077,22 @@ msgstr "Nicht speichern"
 msgid "Done"
 msgstr "Erledigt"
 
+msgctxt "project status"
+msgid "Done"
+msgstr "Fertig"
+
+msgctxt "work state chip"
+msgid "Done"
+msgstr "Fertig"
+
 msgid "Done — the bordered chip style used by the presets bar is now the default for every tooltip, and the copy-pasted overrides are removed (net −90 lines)."
 msgstr "Fertig — der umrandete Chip-Stil aus der Presets-Leiste ist jetzt Standard für jeden Tooltip, und die kopierten Überschreibungen sind entfernt (netto −90 Zeilen)."
 
 msgid "Done (isShimmering=false)"
 msgstr "Fertig (isShimmering=false)"
 
-msgid "Done, not seen"
-msgstr "Fertig, ungesehen"
+msgid "Done, can be closed"
+msgstr "Fertig, kann geschlossen werden"
 
 msgid "Done, not seen yet"
 msgstr "Fertig, noch nicht angesehen"
@@ -7126,8 +7193,8 @@ msgstr "Entwurf wartet auf deine Freigabe"
 msgid "drafted 3 support replies"
 msgstr "3 Support-Antworten entworfen"
 
-msgid "Drag or scroll to move, pinch or ⌘-scroll to zoom, click a room's name to zoom on it · Click an agent to open its conversation, a small one for its subagent · ⌥-click or I for details"
-msgstr "Ziehen oder scrollen zum Bewegen, Zwei-Finger-Zoom oder ⌘-Scrollen zum Zoomen, Klick auf einen Raumnamen zoomt hinein · Klick auf einen Agenten öffnet seine Unterhaltung, ein kleiner seinen Subagenten · ⌥-Klick oder I für Details"
+msgid "Drag or scroll to move, pinch or ⌘-scroll to zoom, click a room's name to zoom on it · Click an agent to open its conversation, a small one for its subagent · Right-click, ⌥-click or I to set its state"
+msgstr "Ziehen oder scrollen zum Bewegen, kneifen oder ⌘-scrollen zum Zoomen, auf einen Raumnamen klicken, um ihn heranzuzoomen · Einen Agenten anklicken, um seine Unterhaltung zu öffnen, einen kleinen für seinen Subagenten · Rechtsklick, ⌥-Klick oder I, um seinen Status zu setzen"
 
 msgid "Drag to reorder"
 msgstr "Zum Umsortieren ziehen"
@@ -7551,9 +7618,6 @@ msgstr "Jeden Mittwoch um 9 Uhr die diese Woche gemergten PRs durchsehen und die
 
 msgid "Every weekday at 9am, read new GitHub issues, apply labels, and draft a first reply for my review."
 msgstr "Jeden Werktag um 9 Uhr neue GitHub-Issues lesen, Labels vergeben und eine erste Antwort für mein Review entwerfen."
-
-msgid "Everyone"
-msgstr "Alle"
 
 msgid "Everyone argues about whether this generalizes. That argument is the sign the level was reached."
 msgstr "Alle streiten darüber, ob sich das verallgemeinern lässt. Genau dieser Streit ist das Zeichen, dass die Stufe erreicht wurde."
@@ -8443,6 +8507,9 @@ msgstr "Fertig — noch nicht geöffnet"
 msgid "finished · worked for 7s"
 msgstr "fertig · 7 s gearbeitet"
 
+msgid "Finished with nothing left: you can close it."
+msgstr "Fertig, nichts mehr offen: du kannst ihn schließen."
+
 msgid "First repository by name"
 msgstr "Erstes Repository nach Name"
 
@@ -8551,6 +8618,9 @@ msgstr "Ordner-Links"
 
 msgid "Folder view"
 msgstr "Ordneransicht"
+
+msgid "Folders"
+msgstr "Ordner"
 
 msgid "Folders to check out into new worktrees, one per line, relative to the repo root. Files at the root are always included. Empty checks out everything."
 msgstr "Ordner, die in neue Worktrees ausgecheckt werden, einer pro Zeile, relativ zur Repo-Wurzel. Dateien im Wurzelverzeichnis sind immer dabei. Leer checkt alles aus."
@@ -8708,8 +8778,17 @@ msgstr "ab {price}/Nutzer/Mon."
 msgid "From a hackathon project to the workspace for parallel coding agents."
 msgstr "Vom Hackathon-Projekt zum Workspace für parallele Coding-Agents."
 
+msgid "from a label"
+msgstr "aus einem Label"
+
 msgid "From GitHub"
 msgstr "Von GitHub"
+
+msgid "from its name"
+msgstr "aus seinem Namen"
+
+msgid "from its PR"
+msgstr "aus seinem PR"
 
 msgid "From your Claude Code transcripts on this machine. Automations and prompts written by agents are left out."
 msgstr "Aus deinen Claude-Code-Transkripten auf diesem Rechner. Automatisierungen und von Agenten geschriebene Prompts zählen nicht."
@@ -9069,6 +9148,9 @@ msgstr "Hat Konflikte"
 
 msgid "Has details"
 msgstr "Hat Details"
+
+msgid "Has open to-dos"
+msgstr "Hat offene To-dos"
 
 msgid "Has uncommitted changes"
 msgstr "Hat nicht committete Änderungen"
@@ -9440,9 +9522,6 @@ msgstr "IDE"
 msgid "Identity"
 msgstr "Identität"
 
-msgid "idle"
-msgstr "untätig"
-
 msgid "Idle"
 msgstr "Inaktiv"
 
@@ -9625,6 +9704,10 @@ msgid "In progress"
 msgstr "In Arbeit"
 
 msgctxt "project state"
+msgid "In progress"
+msgstr "In Arbeit"
+
+msgctxt "project status"
 msgid "In progress"
 msgstr "In Arbeit"
 
@@ -9998,6 +10081,9 @@ msgstr "Die Issue-URL muss zu {repoMismatch} passen."
 msgid "Issue…"
 msgstr "Issue…"
 
+msgid "It asked you something or handed work over: it is your turn."
+msgstr "Er hat dich etwas gefragt oder Arbeit übergeben: du bist dran."
+
 msgid "It can't be brought back."
 msgstr "Er lässt sich nicht wiederherstellen."
 
@@ -10033,6 +10119,9 @@ msgstr "Eigener Branch und eigene Kopie der Dateien"
 
 msgid "Its replies go with it."
 msgstr "Die Antworten werden mitgelöscht."
+
+msgid "Its signals do not add up: look at it before trusting a state."
+msgstr "Seine Signale passen nicht zusammen: sieh nach, bevor du einem Status traust."
 
 msgid "Its whole process tree gets SIGTERM, then SIGKILL after 3 seconds."
 msgstr "Sein gesamter Prozessbaum erhält SIGTERM, nach 3 Sekunden dann SIGKILL."
@@ -10127,6 +10216,9 @@ msgstr "Doku aktuell halten"
 msgid "Keep editing"
 msgstr "Weiter bearbeiten"
 
+msgid "Keep it as in Notion's Projects board; the Office filters on it."
+msgstr "Halte ihn wie im Projects-Board in Notion; das Office filtert danach."
+
 msgid "Keep typing an email to invite"
 msgstr "Gib weiter eine E-Mail-Adresse ein, um einzuladen"
 
@@ -10144,6 +10236,9 @@ msgstr "Neue Datei behalten — sie hat sich nach dem Erstellen geändert"
 
 msgid "Kept the new folder — it is no longer empty"
 msgstr "Neuen Ordner behalten — er ist nicht mehr leer"
+
+msgid "Kept until you prompt the agent again."
+msgstr "Bleibt, bis du dem Agenten wieder schreibst."
 
 msgid "Key name"
 msgstr "Schlüsselname"
@@ -10304,6 +10399,10 @@ msgstr "Latenz"
 msgid "Later"
 msgstr "Später"
 
+msgctxt "work state chip"
+msgid "Later"
+msgstr "Später"
+
 msgid "Latest"
 msgstr "Neueste"
 
@@ -10423,6 +10522,9 @@ msgstr "vor weniger als einer Minute"
 
 msgid "Let the agent drive."
 msgstr "Lass den Agenten steuern."
+
+msgid "Let the app infer the state again"
+msgstr "Status wieder von der App ableiten lassen"
 
 msgid "Letter spacing (px)"
 msgstr "Zeichenabstand (px)"
@@ -11558,9 +11660,6 @@ msgstr "Braucht Aufmerksamkeit"
 msgid "Needs input"
 msgstr "Braucht Eingabe"
 
-msgid "Needs me"
-msgstr "Brauchen mich"
-
 msgid "Needs permission"
 msgstr "Braucht Berechtigung"
 
@@ -11871,8 +11970,8 @@ msgstr "Auf diesem Host ist kein Agent konfiguriert"
 msgid "No agent is running on this host."
 msgstr "Auf diesem Host läuft kein Agent."
 
-msgid "No agent is working right now."
-msgstr "Gerade arbeitet kein Agent."
+msgid "No agent open right now. Start one in a workspace and it gets a desk here."
+msgstr "Gerade ist kein Agent offen. Starte einen in einem Workspace und er bekommt hier einen Schreibtisch."
 
 msgid "No agent running"
 msgstr "Kein Agent aktiv"
@@ -12209,11 +12308,17 @@ msgstr "Noch keine Notizen. Füge sie über die Notiz-Schaltfläche eines Worksp
 msgid "No one in {organizationName} matches. Type a full email to invite someone new."
 msgstr "Niemand in {organizationName} passt. Gib eine vollständige E-Mail-Adresse ein, um jemand Neues einzuladen."
 
+msgid "No open agent matches these filters."
+msgstr "Kein offener Agent passt zu diesen Filtern."
+
 msgid "No open issues found."
 msgstr "Keine offenen Issues gefunden."
 
 msgid "No open issues."
 msgstr "Keine offenen Issues."
+
+msgid "No open PR known. PRs show once the Pull Requests page has loaded."
+msgstr "Kein offener PR bekannt. PRs erscheinen, sobald die Pull-Requests-Seite geladen wurde."
 
 msgid "No open pull requests found."
 msgstr "Keine offenen Pull Requests gefunden."
@@ -12318,6 +12423,9 @@ msgstr "In den letzten 30 Tagen wurden keine Projekte gelöscht."
 msgid "No projects yet."
 msgstr "Noch keine Projekte."
 
+msgid "No prompt yet"
+msgstr "Noch kein Prompt"
+
 msgid "No prompt-capable command configured."
 msgstr "Kein prompt-fähiger Befehl konfiguriert."
 
@@ -12390,6 +12498,9 @@ msgstr "Noch keine Sitzungen"
 msgid "No shortcuts found matching \"{searchQuery}\""
 msgstr "Keine Kürzel gefunden für \"{searchQuery}\""
 
+msgid "No sign of life for over an hour"
+msgstr "Seit über einer Stunde kein Lebenszeichen"
+
 msgid "No simulator is running."
 msgstr "Kein Simulator läuft."
 
@@ -12401,6 +12512,10 @@ msgstr "Keine Stack-Frames"
 
 msgid "No stars in this range."
 msgstr "Keine Stars in diesem Zeitraum."
+
+msgctxt "project status"
+msgid "No status"
+msgstr "Kein Status"
 
 msgid "No Stripe customer found"
 msgstr "Kein Stripe-Kunde gefunden"
@@ -12492,9 +12607,6 @@ msgstr "Kein Workspace hat diese Labels"
 msgid "No workspace in focus here"
 msgstr "Hier ist kein Workspace im Fokus"
 
-msgid "No workspace in focus here."
-msgstr "Hier ist kein Workspace im Fokus."
-
 msgid "No workspace in focus on this host."
 msgstr "Auf diesem Host ist kein Workspace im Fokus."
 
@@ -12509,9 +12621,6 @@ msgstr "Noch kein Arbeitsbereich auf diesem Host. Starte eine Sitzung, um hier e
 
 msgid "No workspace run command configured"
 msgstr "Kein Run-Befehl für den Arbeitsbereich konfiguriert"
-
-msgid "No workspace yet. Create one and it gets a desk here."
-msgstr "Noch kein Workspace. Lege einen an, dann bekommt er hier einen Schreibtisch."
 
 msgid "No workspaces found."
 msgstr "Keine Arbeitsbereiche gefunden."
@@ -12549,14 +12658,14 @@ msgstr "Noch ist niemand dem Board beigetreten."
 msgid "Nobody here by that name."
 msgstr "Niemand hier trägt diesen Namen."
 
-msgid "Nobody needs you right now."
-msgstr "Gerade braucht dich niemand."
-
 msgid "Nobody on your team has shared automations yet."
 msgstr "Noch niemand in deinem Team hat Automatisierungen geteilt."
 
 msgid "Nobody reviews differently because of it."
 msgstr "Niemand reviewt deswegen anders."
+
+msgid "nobody waiting"
+msgstr "niemand wartet"
 
 msgid "Nobody waiting on you"
 msgstr "Niemand wartet auf dich"
@@ -12566,6 +12675,9 @@ msgstr "Keine"
 
 msgid "none (session)"
 msgstr "keins (Sitzung)"
+
+msgid "None of its PRs links a Notion page."
+msgstr "Keiner seiner PRs verlinkt eine Notion-Seite."
 
 msgid "None. This is the floor."
 msgstr "Keine. Das ist der Boden."
@@ -12727,11 +12839,17 @@ msgstr "Benachrichtigungstöne"
 msgid "Notifications"
 msgstr "Benachrichtigungen"
 
+msgid "Notion"
+msgstr "Notion"
+
 msgid "Notion is not configured for this environment."
 msgstr "Notion ist für diese Umgebung nicht konfiguriert."
 
 msgid "Notion page"
 msgstr "Notion-Seite"
+
+msgid "Notion page URL"
+msgstr "URL der Notion-Seite"
 
 msgid "now"
 msgstr "jetzt"
@@ -13245,6 +13363,9 @@ msgstr "In neuem Tab öffnen"
 
 msgid "Open in New Tab"
 msgstr "In neuem Tab öffnen"
+
+msgid "Open in Notion"
+msgstr "In Notion öffnen"
 
 msgid "Open in Pull Requests"
 msgstr "In Pull Requests öffnen"
@@ -13889,6 +14010,9 @@ msgstr "Übergeordnetes Verzeichnis auf {hostName}"
 msgid "Parents"
 msgstr "Eltern"
 
+msgid "Parked: unfinished, nothing asked of you."
+msgstr "Geparkt: unfertig, nichts von dir verlangt."
+
 msgid "Part of Superset Pro"
 msgstr "Teil von Superset Pro"
 
@@ -13921,6 +14045,9 @@ msgstr "Letzte Woche"
 
 msgid "Paste"
 msgstr "Einfügen"
+
+msgid "Paste a notion.so or notion.com page link."
+msgstr "Füge einen Link zu einer notion.so- oder notion.com-Seite ein."
 
 msgid "Paste this into Superset CLI:"
 msgstr "Füge das in die Superset-CLI ein:"
@@ -13956,6 +14083,10 @@ msgid "Paused"
 msgstr "Pausiert"
 
 msgctxt "project state"
+msgid "Paused"
+msgstr "Pausiert"
+
+msgctxt "project status"
 msgid "Paused"
 msgstr "Pausiert"
 
@@ -14116,6 +14247,9 @@ msgstr "Wähle den Worktree-Ordner auf {hostName}."
 msgid "Pick your agent for a one-line install, or copy the config by hand. Every client, including OAuth and API key setup, is covered in the <0>full MCP server docs</0>."
 msgstr "Wähle deinen Agenten für eine Installation in einer Zeile oder kopiere die Konfiguration von Hand. Jeder Client, inklusive OAuth- und API-Schlüssel-Setup, ist in der <0>vollständigen MCP-Server-Doku</0> beschrieben."
 
+msgid "picked by you"
+msgstr "von dir gewählt"
+
 msgid "PID"
 msgstr "PID"
 
@@ -14165,6 +14299,10 @@ msgstr "Plan aktualisiert"
 msgctxt "project state"
 msgid "Planned"
 msgstr "Geplant"
+
+msgctxt "project status"
+msgid "Planning"
+msgstr "Planung"
 
 msgid "Planning the tooltip refactor"
 msgstr "Das Tooltip-Refactoring planen"
@@ -14530,6 +14668,9 @@ msgstr "Projekt"
 msgid "Project created."
 msgstr "Projekt erstellt."
 
+msgid "Project details: PRs, Notion page and specs"
+msgstr "Projektdetails: PRs, Notion-Seite und Specs"
+
 msgid "Project folder is not on this machine"
 msgstr "Der Projektordner liegt nicht auf diesem Rechner"
 
@@ -14571,6 +14712,9 @@ msgstr "Projekt unter {0} eingerichtet"
 msgid "Project Settings"
 msgstr "Projekteinstellungen"
 
+msgid "Project status, as in Notion"
+msgstr "Projektstatus, wie in Notion"
+
 msgid "Project worktree location reset"
 msgstr "Worktree-Speicherort des Projekts zurückgesetzt"
 
@@ -14593,6 +14737,9 @@ msgstr "Host des Projekts nicht erreichbar — Umbenennen gerade nicht möglich"
 
 msgid "Projects"
 msgstr "Projekte"
+
+msgid "Projects (from the Pull Requests page)"
+msgstr "Projekte (von der Pull-Requests-Seite)"
 
 msgid "Promoted from a workspace, so its repositories and region are fixed. Promote a workspace again to change them."
 msgstr "Aus einem Workspace befördert, daher sind Repositorys und Region fest. Befördere erneut einen Workspace, um sie zu ändern."
@@ -15454,8 +15601,14 @@ msgstr "{replaced} Dateien in {where} ersetzt"
 msgid "Replaced 1 file in {where}"
 msgstr "1 Datei in {where} ersetzt"
 
+msgid "Replied, not read yet"
+msgstr "Geantwortet, noch nicht gelesen"
+
 msgid "Reply"
 msgstr "Antworten"
+
+msgid "Reply read, nothing asked"
+msgstr "Antwort gelesen, keine Frage offen"
 
 msgid "Reply to review bots"
 msgstr "Review-Bots antworten"
@@ -15486,6 +15639,9 @@ msgstr "Meldung nicht gefunden"
 
 msgid "Report this page"
 msgstr "Diese Seite melden"
+
+msgid "Reported done"
+msgstr "Als fertig gemeldet"
 
 msgid "Reporting is briefly unavailable. Try again shortly."
 msgstr "Das Melden ist kurzzeitig nicht verfügbar. Bitte versuche es gleich erneut."
@@ -15789,11 +15945,17 @@ msgstr "Resume-Argumente"
 msgid "Resume automation"
 msgstr "Automatisierung fortsetzen"
 
+msgid "Resume later"
+msgstr "Später fortsetzen"
+
 msgid "Resume reopens the conversation where it stopped"
 msgstr "Fortsetzen öffnet die Unterhaltung dort, wo sie aufgehört hat"
 
 msgid "Resume them from “Recently closed”"
 msgstr "Setze sie unter „Kürzlich geschlossen“ fort"
+
+msgid "Resume with its to-dos"
+msgstr "Mit seinen To-dos fortsetzen"
 
 #. placeholder {0}: candidate.agentLabel
 msgid "Resuming {0}…"
@@ -15989,6 +16151,9 @@ msgstr "Eine Agenten-Sitzung auf jeden Checkpoint zurücksetzen — Unterhaltung
 msgid "Room for another agent"
 msgstr "Platz für einen weiteren Agenten"
 
+msgid "Rooms"
+msgstr "Räume"
+
 msgid "Rotate"
 msgstr "Drehen"
 
@@ -16150,6 +16315,9 @@ msgstr "Läuft auf einem gekoppelten Gerät"
 
 msgid "Running on this device"
 msgstr "Läuft auf diesem Gerät"
+
+msgid "Running right now."
+msgstr "Läuft gerade."
 
 msgid "Running terminal processes continue, but older output may no longer be available after restarting the app."
 msgstr "Laufende Terminal-Prozesse laufen weiter, ältere Ausgaben sind nach einem Neustart der App aber möglicherweise nicht mehr verfügbar."
@@ -16901,6 +17069,17 @@ msgstr "Sitzungen · Top {0} nach Kosten"
 msgid "Sessions / day"
 msgstr "Sitzungen / Tag"
 
+msgid "Set by hand"
+msgstr "Von Hand gesetzt"
+
+#. placeholder {0}: formatCompactRelativeTime(Math.min(pinned.setAt, now), now)
+msgid "Set by the agent · {0}"
+msgstr "Vom Agenten gesetzt · {0}"
+
+#. placeholder {0}: formatCompactRelativeTime(Math.min(pinned.setAt, now), now)
+msgid "Set by you · {0}"
+msgstr "Von dir gesetzt · {0}"
+
 #. placeholder {0}: color.name
 msgid "Set color to {0}"
 msgstr "Farbe auf {0} setzen"
@@ -16920,6 +17099,9 @@ msgstr "Projekt festlegen…"
 
 msgid "Set Run"
 msgstr "Run festlegen"
+
+msgid "Set the state"
+msgstr "Status setzen"
 
 msgid "Set this project"
 msgstr "Dieses Projekt festlegen"
@@ -17658,6 +17840,9 @@ msgstr "Spricht"
 
 msgid "Specific"
 msgstr "Bestimmte"
+
+msgid "Specs linked from its PRs"
+msgstr "In seinen PRs verlinkte Specs"
 
 msgid "Speed"
 msgstr "Geschwindigkeit"
@@ -19681,6 +19866,13 @@ msgstr "Titel"
 msgid "To"
 msgstr "Nach"
 
+msgid "To check"
+msgstr "Zu prüfen"
+
+msgctxt "work state chip"
+msgid "To check"
+msgstr "Zu prüfen"
+
 msgid "To resume an agent conversation, run this in its folder:"
 msgstr "Um eine Agent-Unterhaltung fortzusetzen, führe dies in ihrem Ordner aus:"
 
@@ -19696,6 +19888,10 @@ msgstr "To-do"
 msgid "To-do details"
 msgstr "To-do-Details"
 
+msgid "To-dos"
+msgstr "To-dos"
+
+msgctxt "work state chip"
 msgid "To-dos"
 msgstr "To-dos"
 
@@ -20134,6 +20330,9 @@ msgstr "Rückgängig"
 msgid "Undo the last archived workspace or closed chats"
 msgstr "Letzte Archivierung eines Arbeitsbereichs oder geschlossene Chats rückgängig machen"
 
+msgid "Unfinished, with a to-do list to pick up."
+msgstr "Unfertig, mit einer To-do-Liste zum Weitermachen."
+
 msgid "Ungroup"
 msgstr "Gruppierung aufheben"
 
@@ -20349,6 +20548,9 @@ msgstr "Aktualisiere Superset auf diesem Rechner, um Dateien anzuhängen"
 
 msgid "update the branch prefix"
 msgstr "das Branch-Präfix aktualisieren"
+
+msgid "Update this host to set the state by hand."
+msgstr "Aktualisiere diesen Host, um den Status von Hand zu setzen."
 
 msgid "Updated"
 msgstr "Aktualisiert"
@@ -20723,6 +20925,10 @@ msgstr "Auf das Arbeitsbereich-Setup warten, bevor Agenten starten"
 msgid "Waiting"
 msgstr "Wartend"
 
+msgctxt "work state chip"
+msgid "Waiting"
+msgstr "Wartet"
+
 #. placeholder {0}: names.a
 #. placeholder {1}: names.b
 msgid "waiting for {0} and {1}…"
@@ -20751,6 +20957,9 @@ msgstr "Wartet auf dich"
 
 msgid "Waiting for you · {waitingFor}"
 msgstr "Wartet auf dich · {waitingFor}"
+
+msgid "Waiting for your answer"
+msgstr "Wartet auf deine Antwort"
 
 msgid "Waiting for your input"
 msgstr "Wartet auf deine Eingabe"
@@ -20977,6 +21186,9 @@ msgstr "Auf welchen Plattformen läuft Superset?"
 msgid "What problem are you trying to solve?"
 msgstr "Welches Problem willst du lösen?"
 
+msgid "What rooms stand for"
+msgstr "Wofür Räume stehen"
+
 msgid "What shipped"
 msgstr "Was ausgeliefert wurde"
 
@@ -21066,9 +21278,6 @@ msgstr "Wer"
 
 msgid "Who can open it"
 msgstr "Wer es öffnen kann"
-
-msgid "Who to show"
-msgstr "Wer angezeigt wird"
 
 msgid "Who waits on you, or whom you wait on"
 msgstr "Wer auf dich wartet oder auf wen du wartest"
@@ -21160,6 +21369,10 @@ msgid "Working"
 msgstr "Arbeitet"
 
 msgctxt "agent status"
+msgid "Working"
+msgstr "Arbeitet"
+
+msgctxt "work state chip"
 msgid "Working"
 msgstr "Arbeitet"
 

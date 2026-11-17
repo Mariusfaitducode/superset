@@ -14,12 +14,52 @@ export interface PullRequestProject {
 	keywords: string[];
 	/** `owner/repo#123`, or `#123` / `123` in any repo. */
 	pullRequests: string[];
+	/** The project's page in Notion, where its spec and milestones live. */
+	notionUrl?: string | null;
+	/** Mirrors the Notion project's Status; the user keeps it in step. */
+	status?: ProjectStatus | null;
+}
+
+/** The statuses of the Notion "Projects" database, in its order. */
+export const PROJECT_STATUSES = [
+	"inProgress",
+	"planning",
+	"paused",
+	"backlog",
+	"done",
+	"canceled",
+] as const;
+export type ProjectStatus = (typeof PROJECT_STATUSES)[number];
+
+export function isProjectStatus(value: unknown): value is ProjectStatus {
+	return PROJECT_STATUSES.includes(value as ProjectStatus);
+}
+
+/** A Notion page URL, or null for anything else. */
+export function normalizeNotionUrl(text: string): string | null {
+	const trimmed = text.trim();
+	if (!trimmed) return null;
+	try {
+		const url = new URL(trimmed);
+		if (url.protocol !== "https:") return null;
+		const host = url.hostname;
+		const notion =
+			host === "notion.so" ||
+			host.endsWith(".notion.so") ||
+			host === "notion.com" ||
+			host.endsWith(".notion.com") ||
+			host.endsWith(".notion.site");
+		return notion ? url.toString() : null;
+	} catch {
+		return null;
+	}
 }
 
 export const OTHER_PROJECT_ID = "other";
 
 // Guesses from the open PRs and workspace names of the first user, who can
 // edit or delete them; they only seed a profile that has no projects yet.
+// Notion links and statuses come from the Software "Projects" database.
 export const DEFAULT_PULL_REQUEST_PROJECTS: PullRequestProject[] = [
 	{
 		id: "pipeline-registry",
@@ -27,6 +67,8 @@ export const DEFAULT_PULL_REQUEST_PROJECTS: PullRequestProject[] = [
 		labels: [],
 		keywords: ["pipeline registry", "pipelines registry"],
 		pullRequests: [],
+		notionUrl: "https://www.notion.so/335931da8c0980539643d4f04864fd8c",
+		status: "inProgress",
 	},
 	{
 		id: "calib-tracability",
@@ -40,6 +82,8 @@ export const DEFAULT_PULL_REQUEST_PROJECTS: PullRequestProject[] = [
 			"traceability",
 		],
 		pullRequests: [],
+		notionUrl: "https://www.notion.so/3f9931da8c09808f8c15fbd77c414e60",
+		status: "done",
 	},
 	{
 		id: "scientific-results",
@@ -47,6 +91,8 @@ export const DEFAULT_PULL_REQUEST_PROJECTS: PullRequestProject[] = [
 		labels: ["scientific-results-M0", "scientific-results-enforcement"],
 		keywords: ["scientific results", "sampling point", "compliance"],
 		pullRequests: [],
+		notionUrl: "https://www.notion.so/3ed931da8c09808faee5e48cb478fd00",
+		status: "done",
 	},
 	{
 		id: "calibration-acquisition",
@@ -54,6 +100,8 @@ export const DEFAULT_PULL_REQUEST_PROJECTS: PullRequestProject[] = [
 		labels: [],
 		keywords: ["calibration acquisition", "calibrationacquisition", "pivot"],
 		pullRequests: [],
+		notionUrl: "https://www.notion.so/3a0931da8c0980109671ecbf1a608b8f",
+		status: "inProgress",
 	},
 	{
 		id: "dg-automation",
@@ -61,6 +109,8 @@ export const DEFAULT_PULL_REQUEST_PROJECTS: PullRequestProject[] = [
 		labels: [],
 		keywords: ["datagen", "dg automation", "prefill"],
 		pullRequests: [],
+		notionUrl: "https://www.notion.so/32e931da8c0980bea35bf69a7641955b",
+		status: "inProgress",
 	},
 	{
 		id: "21-cfr-pt-11",
@@ -78,6 +128,8 @@ export const DEFAULT_PULL_REQUEST_PROJECTS: PullRequestProject[] = [
 			"archive instead of delete",
 		],
 		pullRequests: [],
+		notionUrl: "https://www.notion.so/2c7931da8c0980798058ea02416da48e",
+		status: "inProgress",
 	},
 	{
 		id: "spore-app-redesign",
@@ -85,6 +137,8 @@ export const DEFAULT_PULL_REQUEST_PROJECTS: PullRequestProject[] = [
 		labels: ["spore-app-redesign"],
 		keywords: ["spore app/redesign"],
 		pullRequests: [],
+		notionUrl: "https://www.notion.so/3f4931da8c0980da934cfbfec975245f",
+		status: "inProgress",
 	},
 ];
 

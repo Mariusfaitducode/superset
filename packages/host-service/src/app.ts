@@ -23,6 +23,10 @@ import {
 	registerChatV3Routes,
 } from "./chat-v3";
 import {
+	getConversationMarkStore,
+	watchConversationTurns,
+} from "./conversation-states";
+import {
 	getConversationTodoStore,
 	watchAgentConversations,
 } from "./conversation-todos";
@@ -246,6 +250,11 @@ export function createApp(options: CreateAppOptions): CreateAppResult {
 		agentStore: terminalAgentStore,
 		todoStore: getConversationTodoStore(),
 		onMoved: () => eventBus.broadcastHostStoreChanged("conversation-todos"),
+	});
+	watchConversationTurns({
+		agentStore: terminalAgentStore,
+		marks: getConversationMarkStore(),
+		onChanged: () => eventBus.broadcastHostStoreChanged("conversation-states"),
 	});
 	startTrackedTaskCiWatcher(() =>
 		eventBus.broadcastHostStoreChanged("tracked-tasks"),

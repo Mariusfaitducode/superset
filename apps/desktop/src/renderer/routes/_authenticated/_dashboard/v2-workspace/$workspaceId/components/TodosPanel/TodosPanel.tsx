@@ -2,7 +2,13 @@ import { Trans } from "@lingui/react/macro";
 import { cn } from "@superset/ui/utils";
 import { useNavigate } from "@tanstack/react-router";
 import { type ReactNode, useEffect, useMemo } from "react";
+import {
+	ConversationStatePicker,
+	useWorkStateLabels,
+	WorkStateIcon,
+} from "renderer/components/WorkState";
 import { ConversationTodos } from "renderer/routes/_authenticated/_dashboard/components/DashboardSidebar/components/DashboardSidebarWorkspaceItem/components/DashboardSidebarExpandedWorkspaceRow/components/DashboardSidebarConversationList/components/ConversationTodos";
+import { useConversationWorkStates } from "renderer/routes/_authenticated/_dashboard/components/DashboardSidebar/components/DashboardSidebarWorkspaceItem/components/DashboardSidebarExpandedWorkspaceRow/components/DashboardSidebarConversationList/hooks/useConversationWorkStates";
 import { useWorkspaceConversations } from "renderer/routes/_authenticated/_dashboard/components/DashboardSidebar/components/DashboardSidebarWorkspaceItem/components/DashboardSidebarExpandedWorkspaceRow/components/DashboardSidebarConversationList/hooks/useWorkspaceConversations";
 import { useWorkspaceTodos } from "renderer/routes/_authenticated/_dashboard/components/DashboardSidebar/components/DashboardSidebarWorkspaceItem/components/DashboardSidebarExpandedWorkspaceRow/components/DashboardSidebarConversationList/hooks/useWorkspaceTodos";
 import { DashboardSidebarWorkspaceStatusProvider } from "renderer/routes/_authenticated/_dashboard/components/DashboardSidebar/providers/DashboardSidebarWorkspaceStatusProvider";
@@ -35,6 +41,12 @@ function TodosPanelContent({
 		terminalIds: conversations.map((conversation) => conversation.terminalId),
 		enabled: showTodos,
 	});
+	const workStates = useConversationWorkStates({
+		hostId,
+		conversations,
+		todosByTerminal: todos.available ? todos.byTerminal : null,
+	});
+	const workWords = useWorkStateLabels();
 	const centerTerminalId = useVisibleTerminalsStore(
 		(state) => state.terminalIdBySlot.center ?? null,
 	);
@@ -102,6 +114,7 @@ function TodosPanelContent({
 			<ul className="flex flex-col gap-4">
 				{sections.map(({ conversation, todos: list, focused }) => {
 					const open = list.filter((todo) => !todo.done).length;
+					const work = workStates.byTerminal.get(conversation.terminalId);
 					return (
 						<li
 							key={conversation.terminalId}
@@ -122,6 +135,18 @@ function TodosPanelContent({
 										: "text-muted-foreground",
 								)}
 							>
+								{work && (
+									<span
+										className="self-center"
+										title={workWords.label[work.state]}
+									>
+										<WorkStateIcon
+											state={work.state}
+											cause={work.cause}
+											className="size-3"
+										/>
+									</span>
+								)}
 								<span className="min-w-0 flex-1 truncate">
 									{conversation.title}
 								</span>
@@ -131,6 +156,15 @@ function TodosPanelContent({
 									</span>
 								)}
 							</button>
+							{focused && (
+								<ConversationStatePicker
+									workspaceId={workspaceId}
+									hostId={hostId}
+									terminalId={conversation.terminalId}
+									workStates={workStates}
+									className="mt-1 mb-2"
+								/>
+							)}
 							<ConversationTodos
 								// A new focus remounts the list so its field takes the cursor.
 								key={focused ? "focused" : "other"}

@@ -1,42 +1,18 @@
-import type { ConversationState } from "renderer/routes/_authenticated/_dashboard/components/DashboardSidebar/components/DashboardSidebarWorkspaceItem/components/DashboardSidebarExpandedWorkspaceRow/components/DashboardSidebarConversationList/utils/conversation-state";
+import { WORK_STATES, type WorkState } from "renderer/lib/agent-state";
 
 /**
- * One color language for the office: amber needs you, yellow works, green
- * finished unseen, red failed, grey rests.
+ * The office speaks the shared work-state language: waiting on you, working,
+ * to resume with its to-dos, parked for later, done and closable.
  */
-export type OfficeTone = "need" | "working" | "done" | "failed" | "idle";
+export type OfficeTone = WorkState;
 
-export const TONE_RANK: Record<OfficeTone, number> = {
-	need: 0,
-	failed: 1,
-	done: 2,
-	working: 3,
-	idle: 4,
-};
+export const TONE_RANK = Object.fromEntries(
+	WORK_STATES.map((state, index) => [state, index]),
+) as Record<OfficeTone, number>;
 
-/**
- * A finished turn already looked at (`seen`) rests: it stays that way until
- * the next prompt, so counting it as "needs you" would keep every agent
- * amber.
- */
-export function toneFor(state: ConversationState): OfficeTone {
-	switch (state) {
-		case "request":
-			return "need";
-		case "failed":
-			return "failed";
-		case "unseen":
-			return "done";
-		case "working":
-			return "working";
-		default:
-			return "idle";
-	}
-}
-
-/** Something to answer, unblock or look at. */
+/** The ball is in the user's court. */
 export function needsYou(tone: OfficeTone): boolean {
-	return tone === "need" || tone === "failed" || tone === "done";
+	return tone === "waiting";
 }
 
 export interface IslandCounts {
@@ -78,8 +54,8 @@ export function deskTone(tones: readonly OfficeTone[]): OfficeTone | null {
 }
 
 /**
- * Rooms or desks with someone waiting on you first (a question beats an
- * error beats an unseen result), then the busiest, then by name; empty
+ * Rooms or desks with someone waiting on you first, then one to check, then
+ * the busiest, then the ones with to-dos to pick up, then by name; empty
  * ones last.
  */
 export function orderIslands<T extends RankableIsland>(islands: readonly T[]) {
@@ -98,24 +74,6 @@ export function orderIslands<T extends RankableIsland>(islands: readonly T[]) {
 		return a.island.name.localeCompare(b.island.name);
 	});
 	return keyed.map(({ island }) => island);
-}
-
-/** Everyone, the islands where an agent is not resting, or where one needs you. */
-export type OfficeShow = "all" | "working" | "needsMe";
-
-export function visibleIslands<T extends RankableIsland>(
-	islands: readonly T[],
-	show: OfficeShow,
-): T[] {
-	if (show === "working") {
-		return islands.filter((island) =>
-			island.tones.some((tone) => tone !== "idle"),
-		);
-	}
-	if (show === "needsMe") {
-		return islands.filter((island) => island.tones.some(needsYou));
-	}
-	return [...islands];
 }
 
 export type ArrowKey = "ArrowLeft" | "ArrowRight" | "ArrowUp" | "ArrowDown";

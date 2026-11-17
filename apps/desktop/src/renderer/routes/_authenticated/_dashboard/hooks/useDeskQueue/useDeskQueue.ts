@@ -12,12 +12,11 @@ import {
 import { holdHostStoreRefresh } from "renderer/hooks/host-service/useHostStoreRefresh";
 import { useAgentConversations } from "renderer/hooks/useAgentConversations";
 import { useNow } from "renderer/hooks/useNow";
-import { getHostServiceClientByUrl } from "renderer/lib/host-service-client";
 import { localDay } from "renderer/routes/_authenticated/_dashboard/components/DashboardSidebar/components/DashboardSidebarWorkspaceItem/components/DashboardSidebarExpandedWorkspaceRow/components/DashboardSidebarConversationList/utils/todo-order";
 import {
-	groupProjectTargetsByHost,
-	useProjectQueryTargets,
-} from "renderer/routes/_authenticated/_dashboard/hooks/useProjectQueryTargets";
+	cachedMyPullRequestsQuery,
+	useCachedPullRequestTargets,
+} from "renderer/routes/_authenticated/_dashboard/hooks/useCachedMyPullRequests";
 import type { MyPullRequestItem } from "renderer/routes/_authenticated/_dashboard/pull-requests/utils/describeMyPullRequest";
 import { useHostWorkspaces } from "renderer/routes/_authenticated/providers/HostWorkspacesProvider";
 import { getV2WorkspaceDisplayName } from "renderer/utils/getV2WorkspaceDisplayName";
@@ -34,8 +33,6 @@ const pickData = <T>(results: { data?: T | null }[]) =>
 const pickPullRequests = (
 	results: { data?: { pullRequests: MyPullRequestItem[] } | null }[],
 ) => results.map((result) => result.data?.pullRequests ?? null);
-
-const NO_PROJECT_FILTER: string[] = [];
 
 /**
  * Everything waiting on the user, read with the queries the rest of the app
@@ -126,28 +123,9 @@ export function useDeskQueue(): DeskItem[] {
 	});
 
 	// Same key as the Pull Requests page's cached read, so both share it.
-	const { targets } = useProjectQueryTargets(NO_PROJECT_FILTER);
-	const prTargets = useMemo(
-		() =>
-			groupProjectTargetsByHost(targets).filter(
-				(target) => target.hostUrl && target.projects.length > 0,
-			),
-		[targets],
-	);
+	const prTargets = useCachedPullRequestTargets();
 	const pullRequests = useQueries({
-		queries: prTargets.map((target) => ({
-			queryKey: ["pullRequests", "mine", "cached", target.key, target.hostUrl],
-			queryFn: () =>
-				getHostServiceClientByUrl(
-					target.hostUrl as string,
-				).workspaceCreation.listMyPullRequests.query({
-					projectIds: target.projects.map((project) => project.projectId),
-					cachedOnly: true,
-				}),
-			staleTime: 60_000,
-			refetchInterval: 2 * 60_000,
-			gcTime: 10 * 60_000,
-		})),
+		queries: prTargets.map(cachedMyPullRequestsQuery),
 		combine: pickPullRequests,
 	});
 

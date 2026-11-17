@@ -48,6 +48,28 @@ describe("migrateMyPullRequestsState", () => {
 		});
 	});
 
+	it("fills a seeded project's Notion link once, and keeps the user's own", () => {
+		const [migrated, own, unlinked] = migrateMyPullRequestsState({
+			projects: [
+				{ id: "dg-automation", name: "DG" },
+				{
+					id: "pipeline-registry",
+					name: "PR",
+					notionUrl: "https://www.notion.so/abc",
+					status: "paused",
+				},
+				{ id: "21-cfr-pt-11", name: "CFR", notionUrl: null, status: null },
+			],
+		}).projects;
+		expect(migrated?.notionUrl).toContain("notion.so/32e931da");
+		expect(migrated?.status).toBe("inProgress");
+		expect(own).toMatchObject({
+			notionUrl: "https://www.notion.so/abc",
+			status: "paused",
+		});
+		expect(unlinked).toMatchObject({ notionUrl: null, status: null });
+	});
+
 	it("keeps the project grouping", () => {
 		expect(migrateMyPullRequestsState({ groupBy: "project" }).groupBy).toBe(
 			"project",
@@ -58,6 +80,23 @@ describe("migrateMyPullRequestsState", () => {
 describe("projects", () => {
 	beforeEach(() => {
 		useMyPullRequestsStore.setState({ projects: [], projectMoves: {} });
+	});
+
+	it("links a project to Notion pages only, and sets its status", () => {
+		const store = useMyPullRequestsStore.getState();
+		store.addProject("Alpha");
+		store.setProjectNotionUrl("alpha", "https://evil.example.com/x");
+		expect(useMyPullRequestsStore.getState().projects[0]?.notionUrl).toBe(
+			undefined,
+		);
+		store.setProjectNotionUrl("alpha", " https://app.notion.com/p/123 ");
+		store.setProjectStatus("alpha", "planning");
+		expect(useMyPullRequestsStore.getState().projects[0]).toMatchObject({
+			notionUrl: "https://app.notion.com/p/123",
+			status: "planning",
+		});
+		store.setProjectNotionUrl("alpha", "");
+		expect(useMyPullRequestsStore.getState().projects[0]?.notionUrl).toBe(null);
 	});
 
 	it("adds projects with unique ids and reorders them", () => {

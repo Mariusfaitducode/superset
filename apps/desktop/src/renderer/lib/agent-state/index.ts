@@ -9,3 +9,21 @@ export {
 	isBlockedOnUser,
 	mostUrgentAgentState,
 } from "./agent-state";
+export {
+	countWorkStates,
+	deriveWorkState,
+	PINNABLE_WORK_STATES,
+	type PinnableWorkState,
+	REPORT_TURN_WINDOW_MS,
+	SILENT_TURN_MS,
+	WORK_STATE_COLOR_VAR,
+	WORK_STATES,
+	type WorkState,
+	type WorkStateCause,
+	type WorkStateInfo,
+	type WorkStateInput,
+	type WorkStateMark,
+	type WorkStateReport,
+	workStateColorVar,
+	workStateRank,
+} from "./work-state";

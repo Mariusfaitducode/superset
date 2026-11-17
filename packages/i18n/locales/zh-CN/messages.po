@@ -416,6 +416,11 @@ msgstr "{0}的操作"
 msgid "{0} agents"
 msgstr "{0} 个智能体"
 
+#. placeholder {0}: agents.length
+#. placeholder {1}: pullRequests.length
+msgid "{0} agents · {1} open PRs"
+msgstr "{0} 个智能体 · {1} 个打开的 PR"
+
 #. placeholder {0}: states.length
 msgid "{0} agents · {waiting} waiting for you"
 msgstr "{0} 个智能体 · {waiting} 个在等你"
@@ -563,6 +568,7 @@ msgstr "{0}选项"
 msgid "{0} plan"
 msgstr "{0}方案"
 
+#. placeholder {0}: filter.projects.length
 #. placeholder {0}: normalizedProjectIds.length
 msgid "{0} projects"
 msgstr "{0}个项目"
@@ -1513,6 +1519,9 @@ msgstr "⌘⇧点击"
 msgid "⌘K ↵ goes back to the previous conversation"
 msgstr "⌘K ↵ 返回上一个对话"
 
+msgid "⌥-click to show only this state"
+msgstr "⌥-点击仅显示此状态"
+
 msgid "● Online"
 msgstr "● 在线"
 
@@ -1542,6 +1551,9 @@ msgstr "1个cookie——忘记此站点"
 
 msgid "1 hr"
 msgstr "1 小时"
+
+msgid "1 project"
+msgstr "1 个项目"
 
 msgid "1 to-do:"
 msgstr "1 个待办:"
@@ -2706,6 +2718,9 @@ msgstr "任意页面"
 msgid "Any project"
 msgstr "任意项目"
 
+msgid "Any project status"
+msgstr "任意项目状态"
+
 msgid "any recipient"
 msgstr "任意收件人"
 
@@ -2985,6 +3000,9 @@ msgstr "问问智能体在做什么，或者告诉它下一步该做什么。"
 msgid "Asks before edits and commands"
 msgstr "编辑和运行命令前询问"
 
+msgid "Asks for your approval"
+msgstr "请求你的批准"
+
 msgid "Asks only for risky actions"
 msgstr "仅在有风险时询问"
 
@@ -3171,6 +3189,21 @@ msgstr "自动化任务"
 msgid "Automate workspace setup for {projectName}"
 msgstr "为{projectName}自动化工作区初始化"
 
+msgid "Automatic"
+msgstr "自动"
+
+#. placeholder {0}: words.label[info.inferred.state]
+msgid "Automatic would say: {0}"
+msgstr "自动判断为：{0}"
+
+#. placeholder {0}: project.name
+#. placeholder {1}: viaLabel[project.via]
+msgid "Automatic: {0} ({1})"
+msgstr "自动：{0}（{1}）"
+
+msgid "Automatic: no project found"
+msgstr "自动：未找到项目"
+
 msgid "Automation"
 msgstr "自动化"
 
@@ -3307,6 +3340,10 @@ msgstr "后台工作和页面"
 
 msgid "Backlog"
 msgstr "待规划"
+
+msgctxt "project status"
+msgid "Backlog"
+msgstr "待办池"
 
 msgid "Badge"
 msgstr "徽章"
@@ -3804,6 +3841,10 @@ msgctxt "project state"
 msgid "Canceled"
 msgstr "已取消"
 
+msgctxt "project status"
+msgid "Canceled"
+msgstr "已取消"
+
 msgid "Canceling..."
 msgstr "正在取消..."
 
@@ -4269,6 +4310,9 @@ msgstr "清除终端历史？"
 msgid "Clear the filter to rearrange the sidebar"
 msgstr "清除筛选即可重新排列侧边栏"
 
+msgid "Clear them"
+msgstr "清除筛选"
+
 msgid "Clear workspace selection"
 msgstr "清除工作区选择"
 
@@ -4307,6 +4351,12 @@ msgstr "点击<0>导入主题</0>，选择下载好的文件。"
 
 msgid "Click a terminal script to edit its details."
 msgstr "点击终端脚本以编辑其详情。"
+
+msgid "Click again to close the agent"
+msgstr "再次点击以关闭智能体"
+
+msgid "Click again to go back to automatic."
+msgstr "再次点击以恢复自动。"
 
 msgid "Click an element."
 msgstr "点击一个元素。"
@@ -4504,6 +4554,9 @@ msgstr "关闭终端"
 
 msgid "Close Terminal"
 msgstr "关闭终端"
+
+msgid "Close the agent"
+msgstr "关闭智能体"
 
 msgid "Close the current pane"
 msgstr "关闭当前窗格"
@@ -5185,6 +5238,9 @@ msgstr "对话"
 msgid "Conversation · Message"
 msgstr "对话 · 消息"
 
+msgid "Conversation state"
+msgstr "对话状态"
+
 msgid "Conversation stats"
 msgstr "会话统计"
 
@@ -5711,6 +5767,9 @@ msgstr "无法分叉到新的 worktree"
 
 msgid "Couldn't branch the conversation"
 msgstr "无法分叉对话"
+
+msgid "Couldn't change the state"
+msgstr "无法更改状态"
 
 msgid "Couldn't check what removing this member affects"
 msgstr "无法检查移除此成员会影响哪些内容"
@@ -7018,14 +7077,22 @@ msgstr "不保存"
 msgid "Done"
 msgstr "完成"
 
+msgctxt "project status"
+msgid "Done"
+msgstr "完成"
+
+msgctxt "work state chip"
+msgid "Done"
+msgstr "完成"
+
 msgid "Done — the bordered chip style used by the presets bar is now the default for every tooltip, and the copy-pasted overrides are removed (net −90 lines)."
 msgstr "完成——预设栏使用的带边框chip样式现在是所有tooltip的默认样式，复制粘贴出来的样式覆盖也都移除了（净减90行）。"
 
 msgid "Done (isShimmering=false)"
 msgstr "完成（isShimmering=false）"
 
-msgid "Done, not seen"
-msgstr "已完成，未查看"
+msgid "Done, can be closed"
+msgstr "已完成，可关闭"
 
 msgid "Done, not seen yet"
 msgstr "已完成，尚未查看"
@@ -7126,8 +7193,8 @@ msgstr "草稿等待你批准"
 msgid "drafted 3 support replies"
 msgstr "起草了3条支持回复"
 
-msgid "Drag or scroll to move, pinch or ⌘-scroll to zoom, click a room's name to zoom on it · Click an agent to open its conversation, a small one for its subagent · ⌥-click or I for details"
-msgstr "拖动或滚动来移动，捏合或 ⌘+滚动来缩放，点击房间名称放大该房间 · 点击代理打开其对话，点击小代理打开其子代理 · ⌥-点击或按 I 查看详情"
+msgid "Drag or scroll to move, pinch or ⌘-scroll to zoom, click a room's name to zoom on it · Click an agent to open its conversation, a small one for its subagent · Right-click, ⌥-click or I to set its state"
+msgstr "拖动或滚动以移动，捏合或 ⌘-滚动以缩放，点击房间名称以放大该房间 · 点击智能体打开其对话，点击小的打开其子智能体 · 右键、⌥-点击或按 I 设置其状态"
 
 msgid "Drag to reorder"
 msgstr "拖动以重新排序"
@@ -7551,9 +7618,6 @@ msgstr "每周三上午9点，回顾本周合并的PR，更新被它们改过时
 
 msgid "Every weekday at 9am, read new GitHub issues, apply labels, and draft a first reply for my review."
 msgstr "每个工作日上午9点，阅读新的GitHub议题，打上标签，并起草初步回复供我审阅。"
-
-msgid "Everyone"
-msgstr "所有人"
 
 msgid "Everyone argues about whether this generalizes. That argument is the sign the level was reached."
 msgstr "所有人都在争论这能否推广。这场争论本身就说明这一级别已经达到了。"
@@ -8443,6 +8507,9 @@ msgstr "已完成 — 尚未打开"
 msgid "finished · worked for 7s"
 msgstr "已完成 · 用时7秒"
 
+msgid "Finished with nothing left: you can close it."
+msgstr "已完成且无剩余工作：可以关闭。"
+
 msgid "First repository by name"
 msgstr "按名称排序的第一个仓库"
 
@@ -8551,6 +8618,9 @@ msgstr "文件夹链接"
 
 msgid "Folder view"
 msgstr "文件夹视图"
+
+msgid "Folders"
+msgstr "文件夹"
 
 msgid "Folders to check out into new worktrees, one per line, relative to the repo root. Files at the root are always included. Empty checks out everything."
 msgstr "要检出到新worktree的文件夹，每行一个，相对于仓库根目录。根目录下的文件始终包含在内。留空则检出全部。"
@@ -8708,8 +8778,17 @@ msgstr "{price}/用户/月起"
 msgid "From a hackathon project to the workspace for parallel coding agents."
 msgstr "从一个黑客松项目，到并行编程智能体的工作空间。"
 
+msgid "from a label"
+msgstr "来自标签"
+
 msgid "From GitHub"
 msgstr "来自 GitHub"
+
+msgid "from its name"
+msgstr "来自名称"
+
+msgid "from its PR"
+msgstr "来自其 PR"
 
 msgid "From your Claude Code transcripts on this machine. Automations and prompts written by agents are left out."
 msgstr "来自本机上的 Claude Code 对话记录。不含自动化任务和智能体编写的提示。"
@@ -9069,6 +9148,9 @@ msgstr "存在冲突"
 
 msgid "Has details"
 msgstr "有详细信息"
+
+msgid "Has open to-dos"
+msgstr "有未完成的待办"
 
 msgid "Has uncommitted changes"
 msgstr "有未提交的改动"
@@ -9440,9 +9522,6 @@ msgstr "IDE"
 msgid "Identity"
 msgstr "身份"
 
-msgid "idle"
-msgstr "空闲"
-
 msgid "Idle"
 msgstr "空闲"
 
@@ -9625,6 +9704,10 @@ msgid "In progress"
 msgstr "进行中"
 
 msgctxt "project state"
+msgid "In progress"
+msgstr "进行中"
+
+msgctxt "project status"
 msgid "In progress"
 msgstr "进行中"
 
@@ -9998,6 +10081,9 @@ msgstr "议题URL必须匹配{repoMismatch}。"
 msgid "Issue…"
 msgstr "议题…"
 
+msgid "It asked you something or handed work over: it is your turn."
+msgstr "它向你提问或交付了工作：轮到你了。"
+
 msgid "It can't be brought back."
 msgstr "删除后无法恢复。"
 
@@ -10033,6 +10119,9 @@ msgstr "独立的分支和文件副本"
 
 msgid "Its replies go with it."
 msgstr "其回复也会一并删除。"
+
+msgid "Its signals do not add up: look at it before trusting a state."
+msgstr "信号互相矛盾：请先查看再相信状态。"
 
 msgid "Its whole process tree gets SIGTERM, then SIGKILL after 3 seconds."
 msgstr "其整个进程树会收到 SIGTERM，3 秒后再收到 SIGKILL。"
@@ -10127,6 +10216,9 @@ msgstr "让文档保持最新"
 msgid "Keep editing"
 msgstr "继续编辑"
 
+msgid "Keep it as in Notion's Projects board; the Office filters on it."
+msgstr "请与 Notion 的 Projects 看板保持一致；办公室按此筛选。"
+
 msgid "Keep typing an email to invite"
 msgstr "继续输入邮箱以邀请"
 
@@ -10144,6 +10236,9 @@ msgstr "已保留新文件 — 它在创建后发生了更改"
 
 msgid "Kept the new folder — it is no longer empty"
 msgstr "已保留新文件夹 — 它已不再为空"
+
+msgid "Kept until you prompt the agent again."
+msgstr "保持到你再次向智能体发送提示。"
 
 msgid "Key name"
 msgstr "密钥名称"
@@ -10304,6 +10399,10 @@ msgstr "延迟"
 msgid "Later"
 msgstr "稍后"
 
+msgctxt "work state chip"
+msgid "Later"
+msgstr "稍后"
+
 msgid "Latest"
 msgstr "最新"
 
@@ -10423,6 +10522,9 @@ msgstr "不到一分钟前"
 
 msgid "Let the agent drive."
 msgstr "让智能体来操作。"
+
+msgid "Let the app infer the state again"
+msgstr "让应用重新推断状态"
 
 msgid "Letter spacing (px)"
 msgstr "字间距（px）"
@@ -11558,9 +11660,6 @@ msgstr "需要处理"
 msgid "Needs input"
 msgstr "需要输入"
 
-msgid "Needs me"
-msgstr "需要我"
-
 msgid "Needs permission"
 msgstr "需要授权"
 
@@ -11871,8 +11970,8 @@ msgstr "此主机上未配置任何智能体"
 msgid "No agent is running on this host."
 msgstr "此主机上没有正在运行的代理。"
 
-msgid "No agent is working right now."
-msgstr "目前没有代理在工作。"
+msgid "No agent open right now. Start one in a workspace and it gets a desk here."
+msgstr "当前没有打开的智能体。在工作区启动一个，它会在这里有张桌子。"
 
 msgid "No agent running"
 msgstr "没有正在运行的智能体"
@@ -12209,11 +12308,17 @@ msgstr "还没有笔记。可从侧边栏中工作区的笔记按钮添加，或
 msgid "No one in {organizationName} matches. Type a full email to invite someone new."
 msgstr "{organizationName} 中没有匹配的人。输入完整邮箱地址即可邀请新成员。"
 
+msgid "No open agent matches these filters."
+msgstr "没有符合这些筛选条件的打开的智能体。"
+
 msgid "No open issues found."
 msgstr "未找到打开的议题。"
 
 msgid "No open issues."
 msgstr "没有开启的议题。"
+
+msgid "No open PR known. PRs show once the Pull Requests page has loaded."
+msgstr "没有已知的打开的 PR。Pull Requests 页面加载后才会显示。"
 
 msgid "No open pull requests found."
 msgstr "未找到打开的拉取请求。"
@@ -12318,6 +12423,9 @@ msgstr "过去 30 天内没有删除任何项目。"
 msgid "No projects yet."
 msgstr "暂无项目。"
 
+msgid "No prompt yet"
+msgstr "尚无提示"
+
 msgid "No prompt-capable command configured."
 msgstr "未配置支持提示词的命令。"
 
@@ -12390,6 +12498,9 @@ msgstr "还没有会话"
 msgid "No shortcuts found matching \"{searchQuery}\""
 msgstr "没有找到与“{searchQuery}”匹配的快捷键"
 
+msgid "No sign of life for over an hour"
+msgstr "超过一小时没有动静"
+
 msgid "No simulator is running."
 msgstr "没有正在运行的模拟器。"
 
@@ -12401,6 +12512,10 @@ msgstr "没有栈帧"
 
 msgid "No stars in this range."
 msgstr "此区间内没有星标。"
+
+msgctxt "project status"
+msgid "No status"
+msgstr "无状态"
 
 msgid "No Stripe customer found"
 msgstr "未找到Stripe客户"
@@ -12492,9 +12607,6 @@ msgstr "没有工作区带有这些标签"
 msgid "No workspace in focus here"
 msgstr "此处没有专注中的工作区"
 
-msgid "No workspace in focus here."
-msgstr "此处没有专注中的工作区。"
-
 msgid "No workspace in focus on this host."
 msgstr "此主机上没有专注中的工作区。"
 
@@ -12509,9 +12621,6 @@ msgstr "此主机上还没有工作区。开始一个会话即可在这里运行
 
 msgid "No workspace run command configured"
 msgstr "未配置工作区运行命令"
-
-msgid "No workspace yet. Create one and it gets a desk here."
-msgstr "还没有工作区。创建一个，它就会在这里有张桌子。"
 
 msgid "No workspaces found."
 msgstr "未找到工作区。"
@@ -12549,14 +12658,14 @@ msgstr "还没有人加入榜单。"
 msgid "Nobody here by that name."
 msgstr "没有找到这个名字的人。"
 
-msgid "Nobody needs you right now."
-msgstr "现在没有人需要你。"
-
 msgid "Nobody on your team has shared automations yet."
 msgstr "团队里还没有人共享自动化。"
 
 msgid "Nobody reviews differently because of it."
 msgstr "没有人因此改变审查方式。"
+
+msgid "nobody waiting"
+msgstr "无人等待"
 
 msgid "Nobody waiting on you"
 msgstr "没有人在等你"
@@ -12566,6 +12675,9 @@ msgstr "无"
 
 msgid "none (session)"
 msgstr "无（会话）"
+
+msgid "None of its PRs links a Notion page."
+msgstr "它的 PR 都没有链接 Notion 页面。"
 
 msgid "None. This is the floor."
 msgstr "没有。这是起点。"
@@ -12727,11 +12839,17 @@ msgstr "通知声音"
 msgid "Notifications"
 msgstr "通知"
 
+msgid "Notion"
+msgstr "Notion"
+
 msgid "Notion is not configured for this environment."
 msgstr "当前环境未配置Notion。"
 
 msgid "Notion page"
 msgstr "Notion 页面"
+
+msgid "Notion page URL"
+msgstr "Notion 页面 URL"
 
 msgid "now"
 msgstr "刚刚"
@@ -13245,6 +13363,9 @@ msgstr "在新标签页打开"
 
 msgid "Open in New Tab"
 msgstr "在新标签页中打开"
+
+msgid "Open in Notion"
+msgstr "在 Notion 中打开"
 
 msgid "Open in Pull Requests"
 msgstr "在拉取请求中打开"
@@ -13889,6 +14010,9 @@ msgstr "{hostName}上的父目录"
 msgid "Parents"
 msgstr "父提交"
 
+msgid "Parked: unfinished, nothing asked of you."
+msgstr "已搁置：未完成，没有向你提问。"
+
 msgid "Part of Superset Pro"
 msgstr "包含在 Superset 专业版中"
 
@@ -13921,6 +14045,9 @@ msgstr "过去一周"
 
 msgid "Paste"
 msgstr "粘贴"
+
+msgid "Paste a notion.so or notion.com page link."
+msgstr "粘贴 notion.so 或 notion.com 页面链接。"
 
 msgid "Paste this into Superset CLI:"
 msgstr "把它粘贴到Superset CLI："
@@ -13956,6 +14083,10 @@ msgid "Paused"
 msgstr "已暂停"
 
 msgctxt "project state"
+msgid "Paused"
+msgstr "已暂停"
+
+msgctxt "project status"
 msgid "Paused"
 msgstr "已暂停"
 
@@ -14116,6 +14247,9 @@ msgstr "在{hostName}上选择worktree文件夹。"
 msgid "Pick your agent for a one-line install, or copy the config by hand. Every client, including OAuth and API key setup, is covered in the <0>full MCP server docs</0>."
 msgstr "选择你的智能体获取一行安装命令，或者手动复制配置。所有客户端（含OAuth和API密钥设置）都在<0>完整的MCP服务器文档</0>里。"
 
+msgid "picked by you"
+msgstr "由你选择"
+
 msgid "PID"
 msgstr "PID"
 
@@ -14165,6 +14299,10 @@ msgstr "方案已更新"
 msgctxt "project state"
 msgid "Planned"
 msgstr "已计划"
+
+msgctxt "project status"
+msgid "Planning"
+msgstr "规划中"
 
 msgid "Planning the tooltip refactor"
 msgstr "正在规划tooltip重构"
@@ -14530,6 +14668,9 @@ msgstr "项目"
 msgid "Project created."
 msgstr "项目已创建。"
 
+msgid "Project details: PRs, Notion page and specs"
+msgstr "项目详情：PR、Notion 页面和规格"
+
 msgid "Project folder is not on this machine"
 msgstr "项目文件夹不在此设备上"
 
@@ -14571,6 +14712,9 @@ msgstr "项目已设置在{0}"
 msgid "Project Settings"
 msgstr "项目设置"
 
+msgid "Project status, as in Notion"
+msgstr "项目状态（同 Notion）"
+
 msgid "Project worktree location reset"
 msgstr "已重置项目worktree位置"
 
@@ -14593,6 +14737,9 @@ msgstr "项目所在主机不可达，暂时无法重命名"
 
 msgid "Projects"
 msgstr "项目"
+
+msgid "Projects (from the Pull Requests page)"
+msgstr "项目（来自 Pull Requests 页面）"
 
 msgid "Promoted from a workspace, so its repositories and region are fixed. Promote a workspace again to change them."
 msgstr "由工作区提升而来，因此仓库和区域固定。再次提升一个工作区即可更改。"
@@ -15454,8 +15601,14 @@ msgstr "已替换{where}中的{replaced}个文件"
 msgid "Replaced 1 file in {where}"
 msgstr "已替换{where}中的1个文件"
 
+msgid "Replied, not read yet"
+msgstr "已回复，尚未阅读"
+
 msgid "Reply"
 msgstr "回复"
+
+msgid "Reply read, nothing asked"
+msgstr "回复已读，没有提问"
 
 msgid "Reply to review bots"
 msgstr "回复审查机器人"
@@ -15486,6 +15639,9 @@ msgstr "未找到举报"
 
 msgid "Report this page"
 msgstr "举报此页面"
+
+msgid "Reported done"
+msgstr "已报告完成"
 
 msgid "Reporting is briefly unavailable. Try again shortly."
 msgstr "举报功能暂时不可用，请稍后再试。"
@@ -15789,11 +15945,17 @@ msgstr "恢复参数"
 msgid "Resume automation"
 msgstr "恢复自动化"
 
+msgid "Resume later"
+msgstr "稍后继续"
+
 msgid "Resume reopens the conversation where it stopped"
 msgstr "恢复会从中断处重新打开对话"
 
 msgid "Resume them from “Recently closed”"
 msgstr "可从“最近关闭”中恢复它们"
+
+msgid "Resume with its to-dos"
+msgstr "按待办继续"
 
 #. placeholder {0}: candidate.agentLabel
 msgid "Resuming {0}…"
@@ -15989,6 +16151,9 @@ msgstr "把智能体会话回滚到任意检查点，对话和文件改动一起
 msgid "Room for another agent"
 msgstr "还可以再启动一个智能体"
 
+msgid "Rooms"
+msgstr "房间"
+
 msgid "Rotate"
 msgstr "旋转"
 
@@ -16150,6 +16315,9 @@ msgstr "在已配对的设备上运行"
 
 msgid "Running on this device"
 msgstr "在此设备上运行"
+
+msgid "Running right now."
+msgstr "正在运行。"
 
 msgid "Running terminal processes continue, but older output may no longer be available after restarting the app."
 msgstr "运行中的终端进程会继续，但重启应用后可能无法再看到较早的输出。"
@@ -16901,6 +17069,17 @@ msgstr "会话 · 按费用排名前{0}"
 msgid "Sessions / day"
 msgstr "会话 / 天"
 
+msgid "Set by hand"
+msgstr "手动设置"
+
+#. placeholder {0}: formatCompactRelativeTime(Math.min(pinned.setAt, now), now)
+msgid "Set by the agent · {0}"
+msgstr "由智能体设置 · {0}"
+
+#. placeholder {0}: formatCompactRelativeTime(Math.min(pinned.setAt, now), now)
+msgid "Set by you · {0}"
+msgstr "由你设置 · {0}"
+
 #. placeholder {0}: color.name
 msgid "Set color to {0}"
 msgstr "将颜色设为{0}"
@@ -16920,6 +17099,9 @@ msgstr "设置项目…"
 
 msgid "Set Run"
 msgstr "设置运行命令"
+
+msgid "Set the state"
+msgstr "设置状态"
 
 msgid "Set this project"
 msgstr "设为此项目"
@@ -17658,6 +17840,9 @@ msgstr "正在说话"
 
 msgid "Specific"
 msgstr "指定"
+
+msgid "Specs linked from its PRs"
+msgstr "其 PR 链接的规格"
 
 msgid "Speed"
 msgstr "速度"
@@ -19681,6 +19866,13 @@ msgstr "标题"
 msgid "To"
 msgstr "到"
 
+msgid "To check"
+msgstr "待检查"
+
+msgctxt "work state chip"
+msgid "To check"
+msgstr "待检查"
+
 msgid "To resume an agent conversation, run this in its folder:"
 msgstr "要恢复与智能体的对话，请在其文件夹中运行："
 
@@ -19696,6 +19888,10 @@ msgstr "待办"
 msgid "To-do details"
 msgstr "待办详情"
 
+msgid "To-dos"
+msgstr "待办"
+
+msgctxt "work state chip"
 msgid "To-dos"
 msgstr "待办"
 
@@ -20134,6 +20330,9 @@ msgstr "撤销"
 msgid "Undo the last archived workspace or closed chats"
 msgstr "撤销上次归档的工作区或关闭的聊天"
 
+msgid "Unfinished, with a to-do list to pick up."
+msgstr "未完成，有待办清单可接着做。"
+
 msgid "Ungroup"
 msgstr "取消分组"
 
@@ -20349,6 +20548,9 @@ msgstr "请在这台机器上更新Superset以附加文件"
 
 msgid "update the branch prefix"
 msgstr "更新分支前缀"
+
+msgid "Update this host to set the state by hand."
+msgstr "更新此主机后才能手动设置状态。"
 
 msgid "Updated"
 msgstr "已更新"
@@ -20723,6 +20925,10 @@ msgstr "启动智能体前等待工作区设置完成"
 msgid "Waiting"
 msgstr "等待中"
 
+msgctxt "work state chip"
+msgid "Waiting"
+msgstr "等待中"
+
 #. placeholder {0}: names.a
 #. placeholder {1}: names.b
 msgid "waiting for {0} and {1}…"
@@ -20751,6 +20957,9 @@ msgstr "等待你回复"
 
 msgid "Waiting for you · {waitingFor}"
 msgstr "等待你回复 · {waitingFor}"
+
+msgid "Waiting for your answer"
+msgstr "等待你的回答"
 
 msgid "Waiting for your input"
 msgstr "等待你的输入"
@@ -20977,6 +21186,9 @@ msgstr "Superset支持哪些平台？"
 msgid "What problem are you trying to solve?"
 msgstr "你想解决什么问题？"
 
+msgid "What rooms stand for"
+msgstr "房间代表什么"
+
 msgid "What shipped"
 msgstr "已发布内容"
 
@@ -21066,9 +21278,6 @@ msgstr "谁"
 
 msgid "Who can open it"
 msgstr "谁可以打开"
-
-msgid "Who to show"
-msgstr "显示谁"
 
 msgid "Who waits on you, or whom you wait on"
 msgstr "谁在等你，或你在等谁"
@@ -21162,6 +21371,10 @@ msgstr "工作中"
 msgctxt "agent status"
 msgid "Working"
 msgstr "运行中"
+
+msgctxt "work state chip"
+msgid "Working"
+msgstr "工作中"
 
 #. placeholder {0}: Math.floor(seconds / 60)
 #. placeholder {1}: seconds % 60

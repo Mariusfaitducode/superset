@@ -416,6 +416,11 @@ msgstr "Akce {0}"
 msgid "{0} agents"
 msgstr "Agenti: {0}"
 
+#. placeholder {0}: agents.length
+#. placeholder {1}: pullRequests.length
+msgid "{0} agents · {1} open PRs"
+msgstr "{0} agentů · {1} otevřených PR"
+
 #. placeholder {0}: states.length
 msgid "{0} agents · {waiting} waiting for you"
 msgstr "Agenti: {0} · čeká na vás: {waiting}"
@@ -563,6 +568,7 @@ msgstr "Možnosti {0}"
 msgid "{0} plan"
 msgstr "Tarif {0}"
 
+#. placeholder {0}: filter.projects.length
 #. placeholder {0}: normalizedProjectIds.length
 msgid "{0} projects"
 msgstr "{0} projektů"
@@ -1513,6 +1519,9 @@ msgstr "⌘⇧ kliknutí"
 msgid "⌘K ↵ goes back to the previous conversation"
 msgstr "⌘K ↵ vrátí na předchozí konverzaci"
 
+msgid "⌥-click to show only this state"
+msgstr "⌥-klik zobrazí jen tento stav"
+
 msgid "● Online"
 msgstr "● Online"
 
@@ -1542,6 +1551,9 @@ msgstr "1 cookie — zapomenout tento web"
 
 msgid "1 hr"
 msgstr "1 h"
+
+msgid "1 project"
+msgstr "1 projekt"
 
 msgid "1 to-do:"
 msgstr "1 úkol:"
@@ -2706,6 +2718,9 @@ msgstr "Jakákoli stránka"
 msgid "Any project"
 msgstr "Jakýkoli projekt"
 
+msgid "Any project status"
+msgstr "Libovolný stav projektu"
+
 msgid "any recipient"
 msgstr "jakýkoli příjemce"
 
@@ -2985,6 +3000,9 @@ msgstr "Zeptej se, co dělají tvoji agenti, nebo jednomu řekni, co má dělat 
 msgid "Asks before edits and commands"
 msgstr "Ptá se před úpravami a příkazy"
 
+msgid "Asks for your approval"
+msgstr "Žádá o vaše schválení"
+
 msgid "Asks only for risky actions"
 msgstr "Ptá se jen u rizikových akcí"
 
@@ -3171,6 +3189,21 @@ msgstr "Automatizujte úkoly"
 msgid "Automate workspace setup for {projectName}"
 msgstr "Zautomatizujte nastavení pracovního prostoru pro {projectName}"
 
+msgid "Automatic"
+msgstr "Automaticky"
+
+#. placeholder {0}: words.label[info.inferred.state]
+msgid "Automatic would say: {0}"
+msgstr "Automaticky by bylo: {0}"
+
+#. placeholder {0}: project.name
+#. placeholder {1}: viaLabel[project.via]
+msgid "Automatic: {0} ({1})"
+msgstr "Automaticky: {0} ({1})"
+
+msgid "Automatic: no project found"
+msgstr "Automaticky: projekt nenalezen"
+
 msgid "Automation"
 msgstr "Automatizace"
 
@@ -3305,6 +3338,10 @@ msgstr "Paměť terminálů na pozadí"
 msgid "Background work and pages"
 msgstr "Práce na pozadí a stránky"
 
+msgid "Backlog"
+msgstr "Backlog"
+
+msgctxt "project status"
 msgid "Backlog"
 msgstr "Backlog"
 
@@ -3804,6 +3841,10 @@ msgctxt "project state"
 msgid "Canceled"
 msgstr "Zrušeno"
 
+msgctxt "project status"
+msgid "Canceled"
+msgstr "Zrušeno"
+
 msgid "Canceling..."
 msgstr "Ruším..."
 
@@ -4269,6 +4310,9 @@ msgstr "Vymazat historii terminálu?"
 msgid "Clear the filter to rearrange the sidebar"
 msgstr "Chcete-li postranní panel přeuspořádat, zrušte filtr"
 
+msgid "Clear them"
+msgstr "Zrušit je"
+
 msgid "Clear workspace selection"
 msgstr "Zrušit výběr pracovních prostorů"
 
@@ -4307,6 +4351,12 @@ msgstr "Klikněte na <0>Importovat motiv</0> a vyberte stažený soubor."
 
 msgid "Click a terminal script to edit its details."
 msgstr "Kliknutím na terminálový skript upravíte jeho podrobnosti."
+
+msgid "Click again to close the agent"
+msgstr "Kliknutím znovu agenta zavřete"
+
+msgid "Click again to go back to automatic."
+msgstr "Opětovným kliknutím se vrátíte k automatice."
 
 msgid "Click an element."
 msgstr "Klikněte na prvek."
@@ -4504,6 +4554,9 @@ msgstr "Zavřít terminál"
 
 msgid "Close Terminal"
 msgstr "Zavřít terminál"
+
+msgid "Close the agent"
+msgstr "Zavřít agenta"
 
 msgid "Close the current pane"
 msgstr "Zavřít aktuální panel"
@@ -5185,6 +5238,9 @@ msgstr "Konverzace"
 msgid "Conversation · Message"
 msgstr "Konverzace · Zpráva"
 
+msgid "Conversation state"
+msgstr "Stav konverzace"
+
 msgid "Conversation stats"
 msgstr "Statistiky konverzací"
 
@@ -5711,6 +5767,9 @@ msgstr "Nepodařilo se rozvětvit do nového worktree"
 
 msgid "Couldn't branch the conversation"
 msgstr "Konverzaci se nepodařilo rozvětvit"
+
+msgid "Couldn't change the state"
+msgstr "Stav se nepodařilo změnit"
 
 msgid "Couldn't check what removing this member affects"
 msgstr "Nepodařilo se zjistit, čeho se odebrání tohoto člena dotkne"
@@ -7018,14 +7077,22 @@ msgstr "Neukládat"
 msgid "Done"
 msgstr "Hotovo"
 
+msgctxt "project status"
+msgid "Done"
+msgstr "Hotovo"
+
+msgctxt "work state chip"
+msgid "Done"
+msgstr "Hotovo"
+
 msgid "Done — the bordered chip style used by the presets bar is now the default for every tooltip, and the copy-pasted overrides are removed (net −90 lines)."
 msgstr "Hotovo — orámovaný styl čipu z lišty přednastavení je teď výchozí pro každý tooltip a zkopírované přepisy jsou pryč (čistě −90 řádků)."
 
 msgid "Done (isShimmering=false)"
 msgstr "Hotovo (isShimmering=false)"
 
-msgid "Done, not seen"
-msgstr "Hotovo, neviděno"
+msgid "Done, can be closed"
+msgstr "Hotovo, lze zavřít"
 
 msgid "Done, not seen yet"
 msgstr "Hotovo, ještě nezobrazeno"
@@ -7126,8 +7193,8 @@ msgstr "Koncept čeká na vaše schválení"
 msgid "drafted 3 support replies"
 msgstr "připravil 3 odpovědi podpoře"
 
-msgid "Drag or scroll to move, pinch or ⌘-scroll to zoom, click a room's name to zoom on it · Click an agent to open its conversation, a small one for its subagent · ⌥-click or I for details"
-msgstr "Pohyb tažením nebo posouváním, přiblížení sevřením nebo ⌘ a posouváním, kliknutím na název místnosti ji přiblížíte · Kliknutím na agenta otevřete jeho konverzaci, na malého jeho podagenta · ⌥-klik nebo I pro podrobnosti"
+msgid "Drag or scroll to move, pinch or ⌘-scroll to zoom, click a room's name to zoom on it · Click an agent to open its conversation, a small one for its subagent · Right-click, ⌥-click or I to set its state"
+msgstr "Táhněte nebo posuňte pro pohyb, sevřete nebo ⌘-posuňte pro přiblížení, kliknutím na název místnosti ji přiblížíte · Kliknutím na agenta otevřete jeho konverzaci, na malého jeho subagenta · Pravý klik, ⌥-klik nebo I nastaví jeho stav"
 
 msgid "Drag to reorder"
 msgstr "Přetažením změníte pořadí"
@@ -7551,9 +7618,6 @@ msgstr "Každou středu v 9:00 projdi sloučené PR za tento týden a aktualizuj
 
 msgid "Every weekday at 9am, read new GitHub issues, apply labels, and draft a first reply for my review."
 msgstr "Každý všední den v 9:00 přečti nové GitHub issues, přiřaď štítky a připrav první odpověď ke kontrole."
-
-msgid "Everyone"
-msgstr "Všichni"
 
 msgid "Everyone argues about whether this generalizes. That argument is the sign the level was reached."
 msgstr "Všichni se dohadují, jestli se to dá zobecnit. Právě ten spor je známkou toho, že úroveň byla dosažena."
@@ -8443,6 +8507,9 @@ msgstr "Hotovo — zatím neotevřeno"
 msgid "finished · worked for 7s"
 msgstr "hotovo · pracoval 7 s"
 
+msgid "Finished with nothing left: you can close it."
+msgstr "Hotovo, nic nezbývá: můžete jej zavřít."
+
 msgid "First repository by name"
 msgstr "První repozitář podle názvu"
 
@@ -8551,6 +8618,9 @@ msgstr "Odkazy na složky"
 
 msgid "Folder view"
 msgstr "Zobrazení složek"
+
+msgid "Folders"
+msgstr "Složky"
 
 msgid "Folders to check out into new worktrees, one per line, relative to the repo root. Files at the root are always included. Empty checks out everything."
 msgstr "Složky, které se mají vytáhnout do nových worktree, jedna na řádek, relativně ke kořeni repozitáře. Soubory v kořeni jsou vždy zahrnuty. Prázdné vytáhne vše."
@@ -8708,8 +8778,17 @@ msgstr "od {price}/uživatele/měs."
 msgid "From a hackathon project to the workspace for parallel coding agents."
 msgstr "Od projektu z hackathonu k pracovnímu prostoru pro paralelní kódovací agenty."
 
+msgid "from a label"
+msgstr "podle štítku"
+
 msgid "From GitHub"
 msgstr "Z GitHubu"
+
+msgid "from its name"
+msgstr "podle názvu"
+
+msgid "from its PR"
+msgstr "podle jeho PR"
 
 msgid "From your Claude Code transcripts on this machine. Automations and prompts written by agents are left out."
 msgstr "Z vašich přepisů Claude Code na tomto počítači. Automatizace a výzvy napsané agenty se nepočítají."
@@ -9069,6 +9148,9 @@ msgstr "Má konflikty"
 
 msgid "Has details"
 msgstr "Obsahuje podrobnosti"
+
+msgid "Has open to-dos"
+msgstr "Má otevřené úkoly"
 
 msgid "Has uncommitted changes"
 msgstr "Obsahuje necommitnuté změny"
@@ -9440,9 +9522,6 @@ msgstr "IDE"
 msgid "Identity"
 msgstr "Identita"
 
-msgid "idle"
-msgstr "nečinný"
-
 msgid "Idle"
 msgstr "Nečinný"
 
@@ -9625,6 +9704,10 @@ msgid "In progress"
 msgstr "Probíhá"
 
 msgctxt "project state"
+msgid "In progress"
+msgstr "Probíhá"
+
+msgctxt "project status"
 msgid "In progress"
 msgstr "Probíhá"
 
@@ -9998,6 +10081,9 @@ msgstr "URL issue musí odpovídat {repoMismatch}."
 msgid "Issue…"
 msgstr "Issue…"
 
+msgid "It asked you something or handed work over: it is your turn."
+msgstr "Na něco se vás zeptal nebo předal práci: jste na řadě vy."
+
 msgid "It can't be brought back."
 msgstr "Nepůjde ho obnovit."
 
@@ -10033,6 +10119,9 @@ msgstr "Vlastní větev a vlastní kopie souborů"
 
 msgid "Its replies go with it."
 msgstr "Smažou se i odpovědi."
+
+msgid "Its signals do not add up: look at it before trusting a state."
+msgstr "Jeho signály si odporují: než stavu uvěříte, podívejte se na něj."
 
 msgid "Its whole process tree gets SIGTERM, then SIGKILL after 3 seconds."
 msgstr "Celý jeho strom procesů dostane SIGTERM a po 3 sekundách SIGKILL."
@@ -10127,6 +10216,9 @@ msgstr "Udržovat dokumentaci aktuální"
 msgid "Keep editing"
 msgstr "Pokračovat v úpravách"
 
+msgid "Keep it as in Notion's Projects board; the Office filters on it."
+msgstr "Udržujte jej jako na nástěnce Projects v Notionu; Office podle něj filtruje."
+
 msgid "Keep typing an email to invite"
 msgstr "Pokračujte v psaní e-mailu pro pozvání"
 
@@ -10144,6 +10236,9 @@ msgstr "Nový soubor byl zachován — po vytvoření se změnil"
 
 msgid "Kept the new folder — it is no longer empty"
 msgstr "Nová složka byla zachována — už není prázdná"
+
+msgid "Kept until you prompt the agent again."
+msgstr "Platí, dokud agentovi znovu nenapíšete."
 
 msgid "Key name"
 msgstr "Název klíče"
@@ -10304,6 +10399,10 @@ msgstr "Latence"
 msgid "Later"
 msgstr "Později"
 
+msgctxt "work state chip"
+msgid "Later"
+msgstr "Později"
+
 msgid "Latest"
 msgstr "Nejnovější"
 
@@ -10423,6 +10522,9 @@ msgstr "před méně než minutou"
 
 msgid "Let the agent drive."
 msgstr "Nechte agenta řídit."
+
+msgid "Let the app infer the state again"
+msgstr "Nechat aplikaci znovu odvodit stav"
 
 msgid "Letter spacing (px)"
 msgstr "Rozestup písmen (px)"
@@ -11558,9 +11660,6 @@ msgstr "Vyžaduje pozornost"
 msgid "Needs input"
 msgstr "Čeká na vstup"
 
-msgid "Needs me"
-msgstr "Potřebují mě"
-
 msgid "Needs permission"
 msgstr "Vyžaduje oprávnění"
 
@@ -11871,8 +11970,8 @@ msgstr "Na tomto hostiteli není nakonfigurován žádný agent"
 msgid "No agent is running on this host."
 msgstr "Na tomto hostiteli neběží žádný agent."
 
-msgid "No agent is working right now."
-msgstr "Právě teď nepracuje žádný agent."
+msgid "No agent open right now. Start one in a workspace and it gets a desk here."
+msgstr "Momentálně není otevřen žádný agent. Spusťte ho ve workspace a dostane zde stůl."
 
 msgid "No agent running"
 msgstr "Neběží žádný agent"
@@ -12209,11 +12308,17 @@ msgstr "Zatím žádné poznámky. Přidejte je tlačítkem poznámek u pracovn�
 msgid "No one in {organizationName} matches. Type a full email to invite someone new."
 msgstr "V {organizationName} nikdo neodpovídá. Zadejte celou e-mailovou adresu a pozvěte někoho nového."
 
+msgid "No open agent matches these filters."
+msgstr "Těmto filtrům neodpovídá žádný otevřený agent."
+
 msgid "No open issues found."
 msgstr "Nenalezeny žádné otevřené issues."
 
 msgid "No open issues."
 msgstr "Žádné otevřené issues."
+
+msgid "No open PR known. PRs show once the Pull Requests page has loaded."
+msgstr "Není známo žádné otevřené PR. PR se zobrazí po načtení stránky Pull Requests."
 
 msgid "No open pull requests found."
 msgstr "Nenalezeny žádné otevřené pull requesty."
@@ -12318,6 +12423,9 @@ msgstr "Za posledních 30 dní nebyly smazány žádné projekty."
 msgid "No projects yet."
 msgstr "Zatím žádné projekty."
 
+msgid "No prompt yet"
+msgstr "Zatím bez zadání"
+
 msgid "No prompt-capable command configured."
 msgstr "Není nastavený žádný příkaz podporující prompt."
 
@@ -12390,6 +12498,9 @@ msgstr "Zatím žádné relace"
 msgid "No shortcuts found matching \"{searchQuery}\""
 msgstr "Hledání „{searchQuery}“ neodpovídají žádné zkratky"
 
+msgid "No sign of life for over an hour"
+msgstr "Přes hodinu bez známek života"
+
 msgid "No simulator is running."
 msgstr "Žádný simulátor neběží."
 
@@ -12401,6 +12512,10 @@ msgstr "Žádné rámce zásobníku"
 
 msgid "No stars in this range."
 msgstr "V tomto období žádné hvězdy."
+
+msgctxt "project status"
+msgid "No status"
+msgstr "Bez stavu"
 
 msgid "No Stripe customer found"
 msgstr "Nenalezen žádný zákazník ve Stripe"
@@ -12492,9 +12607,6 @@ msgstr "Žádný pracovní prostor nemá tyto štítky"
 msgid "No workspace in focus here"
 msgstr "Zde není žádný prostor ve fokusu"
 
-msgid "No workspace in focus here."
-msgstr "Zde není žádný prostor ve fokusu."
-
 msgid "No workspace in focus on this host."
 msgstr "Na tomto hostiteli není žádný prostor ve fokusu."
 
@@ -12509,9 +12621,6 @@ msgstr "Na tomto hostiteli zatím není žádný pracovní prostor. Spusťte rel
 
 msgid "No workspace run command configured"
 msgstr "Není nastavený žádný spouštěcí příkaz pracovního prostoru"
-
-msgid "No workspace yet. Create one and it gets a desk here."
-msgstr "Zatím žádný workspace. Vytvoř ho a dostane tu stůl."
 
 msgid "No workspaces found."
 msgstr "Nenalezeny žádné pracovní prostory."
@@ -12549,14 +12658,14 @@ msgstr "Do žebříčku se zatím nikdo nezapojil."
 msgid "Nobody here by that name."
 msgstr "Nikdo takový tu není."
 
-msgid "Nobody needs you right now."
-msgstr "Teď tě nikdo nepotřebuje."
-
 msgid "Nobody on your team has shared automations yet."
 msgstr "Nikdo z vašeho týmu zatím nesdílel automatizace."
 
 msgid "Nobody reviews differently because of it."
 msgstr "Nikdo kvůli tomu nereviduje jinak."
+
+msgid "nobody waiting"
+msgstr "nikdo nečeká"
 
 msgid "Nobody waiting on you"
 msgstr "Nikdo na tebe nečeká"
@@ -12566,6 +12675,9 @@ msgstr "Žádný"
 
 msgid "none (session)"
 msgstr "žádný (relace)"
+
+msgid "None of its PRs links a Notion page."
+msgstr "Žádné z jeho PR neodkazuje na stránku v Notionu."
 
 msgid "None. This is the floor."
 msgstr "Žádná. Tohle je základ."
@@ -12727,11 +12839,17 @@ msgstr "Zvuky oznámení"
 msgid "Notifications"
 msgstr "Oznámení"
 
+msgid "Notion"
+msgstr "Notion"
+
 msgid "Notion is not configured for this environment."
 msgstr "Notion není pro toto prostředí nastavený."
 
 msgid "Notion page"
 msgstr "Stránka Notion"
+
+msgid "Notion page URL"
+msgstr "URL stránky v Notionu"
 
 msgid "now"
 msgstr "teď"
@@ -13245,6 +13363,9 @@ msgstr "Otevřít na nové kartě"
 
 msgid "Open in New Tab"
 msgstr "Otevřít na nové kartě"
+
+msgid "Open in Notion"
+msgstr "Otevřít v Notionu"
 
 msgid "Open in Pull Requests"
 msgstr "Otevřít v Pull requestech"
@@ -13889,6 +14010,9 @@ msgstr "Nadřazený adresář na {hostName}"
 msgid "Parents"
 msgstr "Rodiče"
 
+msgid "Parked: unfinished, nothing asked of you."
+msgstr "Odloženo: nedokončeno, nic od vás nechce."
+
 msgid "Part of Superset Pro"
 msgstr "Součást Superset Pro"
 
@@ -13921,6 +14045,9 @@ msgstr "Poslední týden"
 
 msgid "Paste"
 msgstr "Vložit"
+
+msgid "Paste a notion.so or notion.com page link."
+msgstr "Vložte odkaz na stránku notion.so nebo notion.com."
 
 msgid "Paste this into Superset CLI:"
 msgstr "Vložte to do Superset CLI:"
@@ -13956,6 +14083,10 @@ msgid "Paused"
 msgstr "Pozastaveno"
 
 msgctxt "project state"
+msgid "Paused"
+msgstr "Pozastaveno"
+
+msgctxt "project status"
 msgid "Paused"
 msgstr "Pozastaveno"
 
@@ -14116,6 +14247,9 @@ msgstr "Vyberte složku pro worktree na {hostName}."
 msgid "Pick your agent for a one-line install, or copy the config by hand. Every client, including OAuth and API key setup, is covered in the <0>full MCP server docs</0>."
 msgstr "Vyberte svého agenta pro instalaci na jeden řádek, nebo konfiguraci zkopírujte ručně. Všechny klienty, včetně nastavení OAuth a API klíčů, pokrývá <0>kompletní dokumentace MCP serveru</0>."
 
+msgid "picked by you"
+msgstr "vybráno vámi"
+
 msgid "PID"
 msgstr "PID"
 
@@ -14165,6 +14299,10 @@ msgstr "Tarif byl aktualizován"
 msgctxt "project state"
 msgid "Planned"
 msgstr "Plánováno"
+
+msgctxt "project status"
+msgid "Planning"
+msgstr "Plánování"
 
 msgid "Planning the tooltip refactor"
 msgstr "Plánuji refaktor tooltipů"
@@ -14530,6 +14668,9 @@ msgstr "Projekt"
 msgid "Project created."
 msgstr "Projekt vytvořen."
 
+msgid "Project details: PRs, Notion page and specs"
+msgstr "Detaily projektu: PR, stránka v Notionu a specifikace"
+
 msgid "Project folder is not on this machine"
 msgstr "Složka projektu na tomto počítači není"
 
@@ -14571,6 +14712,9 @@ msgstr "Projekt nastaven v {0}"
 msgid "Project Settings"
 msgstr "Nastavení projektu"
 
+msgid "Project status, as in Notion"
+msgstr "Stav projektu, jako v Notionu"
+
 msgid "Project worktree location reset"
 msgstr "Umístění worktree projektu obnoveno"
 
@@ -14593,6 +14737,9 @@ msgstr "Host projektu není dostupný — teď nelze přejmenovat"
 
 msgid "Projects"
 msgstr "Projekty"
+
+msgid "Projects (from the Pull Requests page)"
+msgstr "Projekty (ze stránky Pull Requests)"
 
 msgid "Promoted from a workspace, so its repositories and region are fixed. Promote a workspace again to change them."
 msgstr "Povýšeno z pracovního prostoru, takže repozitáře a region jsou pevné. Pro změnu znovu povyšte pracovní prostor."
@@ -15454,8 +15601,14 @@ msgstr "Nahrazeno {replaced} souborů v {where}"
 msgid "Replaced 1 file in {where}"
 msgstr "Nahrazen 1 soubor v {where}"
 
+msgid "Replied, not read yet"
+msgstr "Odpověděl, zatím nepřečteno"
+
 msgid "Reply"
 msgstr "Odpovědět"
+
+msgid "Reply read, nothing asked"
+msgstr "Odpověď přečtena, nic se neptá"
 
 msgid "Reply to review bots"
 msgstr "Odpovídat review botům"
@@ -15486,6 +15639,9 @@ msgstr "Hlášení nenalezeno"
 
 msgid "Report this page"
 msgstr "Nahlásit tuto stránku"
+
+msgid "Reported done"
+msgstr "Nahlášeno jako hotové"
 
 msgid "Reporting is briefly unavailable. Try again shortly."
 msgstr "Nahlašování je na chvíli nedostupné. Zkuste to prosím za okamžik."
@@ -15789,11 +15945,17 @@ msgstr "Argumenty pro pokračování"
 msgid "Resume automation"
 msgstr "Pokračovat v automatizaci"
 
+msgid "Resume later"
+msgstr "Pokračovat později"
+
 msgid "Resume reopens the conversation where it stopped"
 msgstr "Pokračovat znovu otevře konverzaci tam, kde skončila"
 
 msgid "Resume them from “Recently closed”"
 msgstr "Obnovte je ze sekce „Nedávno zavřené“"
+
+msgid "Resume with its to-dos"
+msgstr "Pokračovat podle úkolů"
 
 #. placeholder {0}: candidate.agentLabel
 msgid "Resuming {0}…"
@@ -15989,6 +16151,9 @@ msgstr "Vraťte relaci agenta k libovolnému kontrolnímu bodu, konverzaci i zm�
 msgid "Room for another agent"
 msgstr "Je místo pro dalšího agenta"
 
+msgid "Rooms"
+msgstr "Místnosti"
+
 msgid "Rotate"
 msgstr "Otočit"
 
@@ -16150,6 +16315,9 @@ msgstr "Běží na spárovaném zařízení"
 
 msgid "Running on this device"
 msgstr "Běží na tomto zařízení"
+
+msgid "Running right now."
+msgstr "Právě běží."
 
 msgid "Running terminal processes continue, but older output may no longer be available after restarting the app."
 msgstr "Běžící procesy v terminálu poběží dál, ale starší výstup po restartu aplikace už nemusí být k dispozici."
@@ -16901,6 +17069,17 @@ msgstr "Relace · top {0} podle nákladů"
 msgid "Sessions / day"
 msgstr "Relace / den"
 
+msgid "Set by hand"
+msgstr "Nastaveno ručně"
+
+#. placeholder {0}: formatCompactRelativeTime(Math.min(pinned.setAt, now), now)
+msgid "Set by the agent · {0}"
+msgstr "Nastavil agent · {0}"
+
+#. placeholder {0}: formatCompactRelativeTime(Math.min(pinned.setAt, now), now)
+msgid "Set by you · {0}"
+msgstr "Nastaveno vámi · {0}"
+
 #. placeholder {0}: color.name
 msgid "Set color to {0}"
 msgstr "Nastavit barvu na {0}"
@@ -16920,6 +17099,9 @@ msgstr "Nastavit projekt…"
 
 msgid "Set Run"
 msgstr "Nastavit spuštění"
+
+msgid "Set the state"
+msgstr "Nastavit stav"
 
 msgid "Set this project"
 msgstr "Nastavit tento projekt"
@@ -17658,6 +17840,9 @@ msgstr "Mluvím"
 
 msgid "Specific"
 msgstr "Konkrétní"
+
+msgid "Specs linked from its PRs"
+msgstr "Specifikace odkazované z jeho PR"
 
 msgid "Speed"
 msgstr "Rychlost"
@@ -19681,6 +19866,13 @@ msgstr "Název"
 msgid "To"
 msgstr "Do"
 
+msgid "To check"
+msgstr "Ke kontrole"
+
+msgctxt "work state chip"
+msgid "To check"
+msgstr "Ke kontrole"
+
 msgid "To resume an agent conversation, run this in its folder:"
 msgstr "Chcete-li obnovit konverzaci s agentem, spusťte toto v její složce:"
 
@@ -19696,6 +19888,10 @@ msgstr "Úkol"
 msgid "To-do details"
 msgstr "Podrobnosti úkolu"
 
+msgid "To-dos"
+msgstr "Úkoly"
+
+msgctxt "work state chip"
 msgid "To-dos"
 msgstr "Úkoly"
 
@@ -20134,6 +20330,9 @@ msgstr "Zpět"
 msgid "Undo the last archived workspace or closed chats"
 msgstr "Vrátit poslední archivaci pracovního prostoru nebo zavření chatů"
 
+msgid "Unfinished, with a to-do list to pick up."
+msgstr "Nedokončeno, s úkoly k převzetí."
+
 msgid "Ungroup"
 msgstr "Zrušit skupinu"
 
@@ -20349,6 +20548,9 @@ msgstr "Aktualizujte na tomto počítači Superset, abyste mohli přikládat sou
 
 msgid "update the branch prefix"
 msgstr "aktualizovat prefix větve"
+
+msgid "Update this host to set the state by hand."
+msgstr "Pro ruční nastavení stavu aktualizujte tohoto hostitele."
 
 msgid "Updated"
 msgstr "Aktualizováno"
@@ -20723,6 +20925,10 @@ msgstr "Před spuštěním agentů počkat na setup pracovního prostoru"
 msgid "Waiting"
 msgstr "Čekají"
 
+msgctxt "work state chip"
+msgid "Waiting"
+msgstr "Čeká"
+
 #. placeholder {0}: names.a
 #. placeholder {1}: names.b
 msgid "waiting for {0} and {1}…"
@@ -20751,6 +20957,9 @@ msgstr "Čeká na vás"
 
 msgid "Waiting for you · {waitingFor}"
 msgstr "Čeká na vás · {waitingFor}"
+
+msgid "Waiting for your answer"
+msgstr "Čeká na vaši odpověď"
 
 msgid "Waiting for your input"
 msgstr "Čeká na váš vstup"
@@ -20977,6 +21186,9 @@ msgstr "Na jakých platformách Superset běží?"
 msgid "What problem are you trying to solve?"
 msgstr "Jaký problém chcete vyřešit?"
 
+msgid "What rooms stand for"
+msgstr "Co představují místnosti"
+
 msgid "What shipped"
 msgstr "Co bylo vydáno"
 
@@ -21066,9 +21278,6 @@ msgstr "Kdo"
 
 msgid "Who can open it"
 msgstr "Kdo to může otevřít"
-
-msgid "Who to show"
-msgstr "Koho zobrazit"
 
 msgid "Who waits on you, or whom you wait on"
 msgstr "Kdo čeká na vás, nebo na koho čekáte vy"
@@ -21160,6 +21369,10 @@ msgid "Working"
 msgstr "Pracuje"
 
 msgctxt "agent status"
+msgid "Working"
+msgstr "Pracuje"
+
+msgctxt "work state chip"
 msgid "Working"
 msgstr "Pracuje"
 

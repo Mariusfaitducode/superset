@@ -93,6 +93,10 @@ export const PERSISTED_KEY_REGISTRY: ReadonlyArray<
 		["office-filter"],
 	],
 	[
+		"src/renderer/routes/_authenticated/_dashboard/office/stores/office-projects.ts",
+		["office-projects-v1"],
+	],
+	[
 		"src/renderer/stores/workspace-sidebar-state.ts",
 		["workspace-sidebar-store"],
 	],

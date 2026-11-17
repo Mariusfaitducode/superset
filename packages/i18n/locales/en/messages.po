@@ -416,6 +416,11 @@ msgstr "{0} actions"
 msgid "{0} agents"
 msgstr "{0} agents"
 
+#. placeholder {0}: agents.length
+#. placeholder {1}: pullRequests.length
+msgid "{0} agents · {1} open PRs"
+msgstr "{0} agents · {1} open PRs"
+
 #. placeholder {0}: states.length
 msgid "{0} agents · {waiting} waiting for you"
 msgstr "{0} agents · {waiting} waiting for you"
@@ -563,6 +568,7 @@ msgstr "{0} options"
 msgid "{0} plan"
 msgstr "{0} plan"
 
+#. placeholder {0}: filter.projects.length
 #. placeholder {0}: normalizedProjectIds.length
 msgid "{0} projects"
 msgstr "{0} projects"
@@ -1513,6 +1519,9 @@ msgstr "⌘⇧ click"
 msgid "⌘K ↵ goes back to the previous conversation"
 msgstr "⌘K ↵ goes back to the previous conversation"
 
+msgid "⌥-click to show only this state"
+msgstr "⌥-click to show only this state"
+
 msgid "● Online"
 msgstr "● Online"
 
@@ -1542,6 +1551,9 @@ msgstr "1 cookie — forget this site"
 
 msgid "1 hr"
 msgstr "1 hr"
+
+msgid "1 project"
+msgstr "1 project"
 
 msgid "1 to-do:"
 msgstr "1 to-do:"
@@ -2706,6 +2718,9 @@ msgstr "Any page"
 msgid "Any project"
 msgstr "Any project"
 
+msgid "Any project status"
+msgstr "Any project status"
+
 msgid "any recipient"
 msgstr "any recipient"
 
@@ -2985,6 +3000,9 @@ msgstr "Ask what your agents are up to, or tell one what to do next."
 msgid "Asks before edits and commands"
 msgstr "Asks before edits and commands"
 
+msgid "Asks for your approval"
+msgstr "Asks for your approval"
+
 msgid "Asks only for risky actions"
 msgstr "Asks only for risky actions"
 
@@ -3171,6 +3189,21 @@ msgstr "Automate Tasks"
 msgid "Automate workspace setup for {projectName}"
 msgstr "Automate workspace setup for {projectName}"
 
+msgid "Automatic"
+msgstr "Automatic"
+
+#. placeholder {0}: words.label[info.inferred.state]
+msgid "Automatic would say: {0}"
+msgstr "Automatic would say: {0}"
+
+#. placeholder {0}: project.name
+#. placeholder {1}: viaLabel[project.via]
+msgid "Automatic: {0} ({1})"
+msgstr "Automatic: {0} ({1})"
+
+msgid "Automatic: no project found"
+msgstr "Automatic: no project found"
+
 msgid "Automation"
 msgstr "Automation"
 
@@ -3305,6 +3338,10 @@ msgstr "Background terminal memory"
 msgid "Background work and pages"
 msgstr "Background work and pages"
 
+msgid "Backlog"
+msgstr "Backlog"
+
+msgctxt "project status"
 msgid "Backlog"
 msgstr "Backlog"
 
@@ -3804,6 +3841,10 @@ msgctxt "project state"
 msgid "Canceled"
 msgstr "Canceled"
 
+msgctxt "project status"
+msgid "Canceled"
+msgstr "Canceled"
+
 msgid "Canceling..."
 msgstr "Canceling..."
 
@@ -4269,6 +4310,9 @@ msgstr "Clear terminal history?"
 msgid "Clear the filter to rearrange the sidebar"
 msgstr "Clear the filter to rearrange the sidebar"
 
+msgid "Clear them"
+msgstr "Clear them"
+
 msgid "Clear workspace selection"
 msgstr "Clear workspace selection"
 
@@ -4307,6 +4351,12 @@ msgstr "Click <0>Import Theme</0> and select the downloaded file."
 
 msgid "Click a terminal script to edit its details."
 msgstr "Click a terminal script to edit its details."
+
+msgid "Click again to close the agent"
+msgstr "Click again to close the agent"
+
+msgid "Click again to go back to automatic."
+msgstr "Click again to go back to automatic."
 
 msgid "Click an element."
 msgstr "Click an element."
@@ -4504,6 +4554,9 @@ msgstr "Close terminal"
 
 msgid "Close Terminal"
 msgstr "Close Terminal"
+
+msgid "Close the agent"
+msgstr "Close the agent"
 
 msgid "Close the current pane"
 msgstr "Close the current pane"
@@ -5185,6 +5238,9 @@ msgstr "Conversation"
 msgid "Conversation · Message"
 msgstr "Conversation · Message"
 
+msgid "Conversation state"
+msgstr "Conversation state"
+
 msgid "Conversation stats"
 msgstr "Conversation stats"
 
@@ -5711,6 +5767,9 @@ msgstr "Couldn't branch into a new worktree"
 
 msgid "Couldn't branch the conversation"
 msgstr "Couldn't branch the conversation"
+
+msgid "Couldn't change the state"
+msgstr "Couldn't change the state"
 
 msgid "Couldn't check what removing this member affects"
 msgstr "Couldn't check what removing this member affects"
@@ -7018,14 +7077,22 @@ msgstr "Don't Save"
 msgid "Done"
 msgstr "Done"
 
+msgctxt "project status"
+msgid "Done"
+msgstr "Done"
+
+msgctxt "work state chip"
+msgid "Done"
+msgstr "Done"
+
 msgid "Done — the bordered chip style used by the presets bar is now the default for every tooltip, and the copy-pasted overrides are removed (net −90 lines)."
 msgstr "Done — the bordered chip style used by the presets bar is now the default for every tooltip, and the copy-pasted overrides are removed (net −90 lines)."
 
 msgid "Done (isShimmering=false)"
 msgstr "Done (isShimmering=false)"
 
-msgid "Done, not seen"
-msgstr "Done, not seen"
+msgid "Done, can be closed"
+msgstr "Done, can be closed"
 
 msgid "Done, not seen yet"
 msgstr "Done, not seen yet"
@@ -7126,8 +7193,8 @@ msgstr "Draft waiting for your approval"
 msgid "drafted 3 support replies"
 msgstr "drafted 3 support replies"
 
-msgid "Drag or scroll to move, pinch or ⌘-scroll to zoom, click a room's name to zoom on it · Click an agent to open its conversation, a small one for its subagent · ⌥-click or I for details"
-msgstr "Drag or scroll to move, pinch or ⌘-scroll to zoom, click a room's name to zoom on it · Click an agent to open its conversation, a small one for its subagent · ⌥-click or I for details"
+msgid "Drag or scroll to move, pinch or ⌘-scroll to zoom, click a room's name to zoom on it · Click an agent to open its conversation, a small one for its subagent · Right-click, ⌥-click or I to set its state"
+msgstr "Drag or scroll to move, pinch or ⌘-scroll to zoom, click a room's name to zoom on it · Click an agent to open its conversation, a small one for its subagent · Right-click, ⌥-click or I to set its state"
 
 msgid "Drag to reorder"
 msgstr "Drag to reorder"
@@ -7551,9 +7618,6 @@ msgstr "Every Wednesday at 9am, review this week's merged PRs and update any doc
 
 msgid "Every weekday at 9am, read new GitHub issues, apply labels, and draft a first reply for my review."
 msgstr "Every weekday at 9am, read new GitHub issues, apply labels, and draft a first reply for my review."
-
-msgid "Everyone"
-msgstr "Everyone"
 
 msgid "Everyone argues about whether this generalizes. That argument is the sign the level was reached."
 msgstr "Everyone argues about whether this generalizes. That argument is the sign the level was reached."
@@ -8443,6 +8507,9 @@ msgstr "Finished — not opened yet"
 msgid "finished · worked for 7s"
 msgstr "finished · worked for 7s"
 
+msgid "Finished with nothing left: you can close it."
+msgstr "Finished with nothing left: you can close it."
+
 msgid "First repository by name"
 msgstr "First repository by name"
 
@@ -8551,6 +8618,9 @@ msgstr "Folder links"
 
 msgid "Folder view"
 msgstr "Folder view"
+
+msgid "Folders"
+msgstr "Folders"
 
 msgid "Folders to check out into new worktrees, one per line, relative to the repo root. Files at the root are always included. Empty checks out everything."
 msgstr "Folders to check out into new worktrees, one per line, relative to the repo root. Files at the root are always included. Empty checks out everything."
@@ -8708,8 +8778,17 @@ msgstr "from {price}/user/mo"
 msgid "From a hackathon project to the workspace for parallel coding agents."
 msgstr "From a hackathon project to the workspace for parallel coding agents."
 
+msgid "from a label"
+msgstr "from a label"
+
 msgid "From GitHub"
 msgstr "From GitHub"
+
+msgid "from its name"
+msgstr "from its name"
+
+msgid "from its PR"
+msgstr "from its PR"
 
 msgid "From your Claude Code transcripts on this machine. Automations and prompts written by agents are left out."
 msgstr "From your Claude Code transcripts on this machine. Automations and prompts written by agents are left out."
@@ -9069,6 +9148,9 @@ msgstr "Has conflicts"
 
 msgid "Has details"
 msgstr "Has details"
+
+msgid "Has open to-dos"
+msgstr "Has open to-dos"
 
 msgid "Has uncommitted changes"
 msgstr "Has uncommitted changes"
@@ -9440,9 +9522,6 @@ msgstr "IDE"
 msgid "Identity"
 msgstr "Identity"
 
-msgid "idle"
-msgstr "idle"
-
 msgid "Idle"
 msgstr "Idle"
 
@@ -9625,6 +9704,10 @@ msgid "In progress"
 msgstr "In progress"
 
 msgctxt "project state"
+msgid "In progress"
+msgstr "In progress"
+
+msgctxt "project status"
 msgid "In progress"
 msgstr "In progress"
 
@@ -9998,6 +10081,9 @@ msgstr "Issue URL must match {repoMismatch}."
 msgid "Issue…"
 msgstr "Issue…"
 
+msgid "It asked you something or handed work over: it is your turn."
+msgstr "It asked you something or handed work over: it is your turn."
+
 msgid "It can't be brought back."
 msgstr "It can't be brought back."
 
@@ -10033,6 +10119,9 @@ msgstr "Its own branch and copy of the files"
 
 msgid "Its replies go with it."
 msgstr "Its replies go with it."
+
+msgid "Its signals do not add up: look at it before trusting a state."
+msgstr "Its signals do not add up: look at it before trusting a state."
 
 msgid "Its whole process tree gets SIGTERM, then SIGKILL after 3 seconds."
 msgstr "Its whole process tree gets SIGTERM, then SIGKILL after 3 seconds."
@@ -10127,6 +10216,9 @@ msgstr "Keep docs fresh"
 msgid "Keep editing"
 msgstr "Keep editing"
 
+msgid "Keep it as in Notion's Projects board; the Office filters on it."
+msgstr "Keep it as in Notion's Projects board; the Office filters on it."
+
 msgid "Keep typing an email to invite"
 msgstr "Keep typing an email to invite"
 
@@ -10144,6 +10236,9 @@ msgstr "Kept the new file — it changed after it was created"
 
 msgid "Kept the new folder — it is no longer empty"
 msgstr "Kept the new folder — it is no longer empty"
+
+msgid "Kept until you prompt the agent again."
+msgstr "Kept until you prompt the agent again."
 
 msgid "Key name"
 msgstr "Key name"
@@ -10304,6 +10399,10 @@ msgstr "Latency"
 msgid "Later"
 msgstr "Later"
 
+msgctxt "work state chip"
+msgid "Later"
+msgstr "Later"
+
 msgid "Latest"
 msgstr "Latest"
 
@@ -10423,6 +10522,9 @@ msgstr "less than a minute ago"
 
 msgid "Let the agent drive."
 msgstr "Let the agent drive."
+
+msgid "Let the app infer the state again"
+msgstr "Let the app infer the state again"
 
 msgid "Letter spacing (px)"
 msgstr "Letter spacing (px)"
@@ -11558,9 +11660,6 @@ msgstr "Needs attention"
 msgid "Needs input"
 msgstr "Needs input"
 
-msgid "Needs me"
-msgstr "Needs me"
-
 msgid "Needs permission"
 msgstr "Needs permission"
 
@@ -11871,8 +11970,8 @@ msgstr "No agent is configured on this host"
 msgid "No agent is running on this host."
 msgstr "No agent is running on this host."
 
-msgid "No agent is working right now."
-msgstr "No agent is working right now."
+msgid "No agent open right now. Start one in a workspace and it gets a desk here."
+msgstr "No agent open right now. Start one in a workspace and it gets a desk here."
 
 msgid "No agent running"
 msgstr "No agent running"
@@ -12209,11 +12308,17 @@ msgstr "No notes yet. Add them from the note button on a workspace in the sideba
 msgid "No one in {organizationName} matches. Type a full email to invite someone new."
 msgstr "No one in {organizationName} matches. Type a full email to invite someone new."
 
+msgid "No open agent matches these filters."
+msgstr "No open agent matches these filters."
+
 msgid "No open issues found."
 msgstr "No open issues found."
 
 msgid "No open issues."
 msgstr "No open issues."
+
+msgid "No open PR known. PRs show once the Pull Requests page has loaded."
+msgstr "No open PR known. PRs show once the Pull Requests page has loaded."
 
 msgid "No open pull requests found."
 msgstr "No open pull requests found."
@@ -12318,6 +12423,9 @@ msgstr "No projects were deleted in the last 30 days."
 msgid "No projects yet."
 msgstr "No projects yet."
 
+msgid "No prompt yet"
+msgstr "No prompt yet"
+
 msgid "No prompt-capable command configured."
 msgstr "No prompt-capable command configured."
 
@@ -12390,6 +12498,9 @@ msgstr "No sessions yet"
 msgid "No shortcuts found matching \"{searchQuery}\""
 msgstr "No shortcuts found matching \"{searchQuery}\""
 
+msgid "No sign of life for over an hour"
+msgstr "No sign of life for over an hour"
+
 msgid "No simulator is running."
 msgstr "No simulator is running."
 
@@ -12401,6 +12512,10 @@ msgstr "No stack frames"
 
 msgid "No stars in this range."
 msgstr "No stars in this range."
+
+msgctxt "project status"
+msgid "No status"
+msgstr "No status"
 
 msgid "No Stripe customer found"
 msgstr "No Stripe customer found"
@@ -12492,9 +12607,6 @@ msgstr "No workspace has these labels"
 msgid "No workspace in focus here"
 msgstr "No workspace in focus here"
 
-msgid "No workspace in focus here."
-msgstr "No workspace in focus here."
-
 msgid "No workspace in focus on this host."
 msgstr "No workspace in focus on this host."
 
@@ -12509,9 +12621,6 @@ msgstr "No workspace on this host yet. Start a session to run an agent here, or 
 
 msgid "No workspace run command configured"
 msgstr "No workspace run command configured"
-
-msgid "No workspace yet. Create one and it gets a desk here."
-msgstr "No workspace yet. Create one and it gets a desk here."
 
 msgid "No workspaces found."
 msgstr "No workspaces found."
@@ -12549,14 +12658,14 @@ msgstr "Nobody has joined the board yet."
 msgid "Nobody here by that name."
 msgstr "Nobody here by that name."
 
-msgid "Nobody needs you right now."
-msgstr "Nobody needs you right now."
-
 msgid "Nobody on your team has shared automations yet."
 msgstr "Nobody on your team has shared automations yet."
 
 msgid "Nobody reviews differently because of it."
 msgstr "Nobody reviews differently because of it."
+
+msgid "nobody waiting"
+msgstr "nobody waiting"
 
 msgid "Nobody waiting on you"
 msgstr "Nobody waiting on you"
@@ -12566,6 +12675,9 @@ msgstr "None"
 
 msgid "none (session)"
 msgstr "none (session)"
+
+msgid "None of its PRs links a Notion page."
+msgstr "None of its PRs links a Notion page."
 
 msgid "None. This is the floor."
 msgstr "None. This is the floor."
@@ -12727,11 +12839,17 @@ msgstr "Notification sounds"
 msgid "Notifications"
 msgstr "Notifications"
 
+msgid "Notion"
+msgstr "Notion"
+
 msgid "Notion is not configured for this environment."
 msgstr "Notion is not configured for this environment."
 
 msgid "Notion page"
 msgstr "Notion page"
+
+msgid "Notion page URL"
+msgstr "Notion page URL"
 
 msgid "now"
 msgstr "now"
@@ -13245,6 +13363,9 @@ msgstr "Open in new tab"
 
 msgid "Open in New Tab"
 msgstr "Open in New Tab"
+
+msgid "Open in Notion"
+msgstr "Open in Notion"
 
 msgid "Open in Pull Requests"
 msgstr "Open in Pull Requests"
@@ -13889,6 +14010,9 @@ msgstr "Parent directory on {hostName}"
 msgid "Parents"
 msgstr "Parents"
 
+msgid "Parked: unfinished, nothing asked of you."
+msgstr "Parked: unfinished, nothing asked of you."
+
 msgid "Part of Superset Pro"
 msgstr "Part of Superset Pro"
 
@@ -13921,6 +14045,9 @@ msgstr "Past week"
 
 msgid "Paste"
 msgstr "Paste"
+
+msgid "Paste a notion.so or notion.com page link."
+msgstr "Paste a notion.so or notion.com page link."
 
 msgid "Paste this into Superset CLI:"
 msgstr "Paste this into Superset CLI:"
@@ -13956,6 +14083,10 @@ msgid "Paused"
 msgstr "Paused"
 
 msgctxt "project state"
+msgid "Paused"
+msgstr "Paused"
+
+msgctxt "project status"
 msgid "Paused"
 msgstr "Paused"
 
@@ -14116,6 +14247,9 @@ msgstr "Pick the worktree folder on {hostName}."
 msgid "Pick your agent for a one-line install, or copy the config by hand. Every client, including OAuth and API key setup, is covered in the <0>full MCP server docs</0>."
 msgstr "Pick your agent for a one-line install, or copy the config by hand. Every client, including OAuth and API key setup, is covered in the <0>full MCP server docs</0>."
 
+msgid "picked by you"
+msgstr "picked by you"
+
 msgid "PID"
 msgstr "PID"
 
@@ -14165,6 +14299,10 @@ msgstr "Plan updated"
 msgctxt "project state"
 msgid "Planned"
 msgstr "Planned"
+
+msgctxt "project status"
+msgid "Planning"
+msgstr "Planning"
 
 msgid "Planning the tooltip refactor"
 msgstr "Planning the tooltip refactor"
@@ -14530,6 +14668,9 @@ msgstr "Project"
 msgid "Project created."
 msgstr "Project created."
 
+msgid "Project details: PRs, Notion page and specs"
+msgstr "Project details: PRs, Notion page and specs"
+
 msgid "Project folder is not on this machine"
 msgstr "Project folder is not on this machine"
 
@@ -14571,6 +14712,9 @@ msgstr "Project set up at {0}"
 msgid "Project Settings"
 msgstr "Project Settings"
 
+msgid "Project status, as in Notion"
+msgstr "Project status, as in Notion"
+
 msgid "Project worktree location reset"
 msgstr "Project worktree location reset"
 
@@ -14593,6 +14737,9 @@ msgstr "Project's host is unreachable — cannot rename right now"
 
 msgid "Projects"
 msgstr "Projects"
+
+msgid "Projects (from the Pull Requests page)"
+msgstr "Projects (from the Pull Requests page)"
 
 msgid "Promoted from a workspace, so its repositories and region are fixed. Promote a workspace again to change them."
 msgstr "Promoted from a workspace, so its repositories and region are fixed. Promote a workspace again to change them."
@@ -15454,8 +15601,14 @@ msgstr "Replaced {replaced} files in {where}"
 msgid "Replaced 1 file in {where}"
 msgstr "Replaced 1 file in {where}"
 
+msgid "Replied, not read yet"
+msgstr "Replied, not read yet"
+
 msgid "Reply"
 msgstr "Reply"
+
+msgid "Reply read, nothing asked"
+msgstr "Reply read, nothing asked"
 
 msgid "Reply to review bots"
 msgstr "Reply to review bots"
@@ -15486,6 +15639,9 @@ msgstr "Report not found"
 
 msgid "Report this page"
 msgstr "Report this page"
+
+msgid "Reported done"
+msgstr "Reported done"
 
 msgid "Reporting is briefly unavailable. Try again shortly."
 msgstr "Reporting is briefly unavailable. Try again shortly."
@@ -15789,11 +15945,17 @@ msgstr "Resume args"
 msgid "Resume automation"
 msgstr "Resume automation"
 
+msgid "Resume later"
+msgstr "Resume later"
+
 msgid "Resume reopens the conversation where it stopped"
 msgstr "Resume reopens the conversation where it stopped"
 
 msgid "Resume them from “Recently closed”"
 msgstr "Resume them from “Recently closed”"
+
+msgid "Resume with its to-dos"
+msgstr "Resume with its to-dos"
 
 #. placeholder {0}: candidate.agentLabel
 msgid "Resuming {0}…"
@@ -15989,6 +16151,9 @@ msgstr "Roll back an agent session to any checkpoint, conversation and file chan
 msgid "Room for another agent"
 msgstr "Room for another agent"
 
+msgid "Rooms"
+msgstr "Rooms"
+
 msgid "Rotate"
 msgstr "Rotate"
 
@@ -16150,6 +16315,9 @@ msgstr "Running on a paired device"
 
 msgid "Running on this device"
 msgstr "Running on this device"
+
+msgid "Running right now."
+msgstr "Running right now."
 
 msgid "Running terminal processes continue, but older output may no longer be available after restarting the app."
 msgstr "Running terminal processes continue, but older output may no longer be available after restarting the app."
@@ -16901,6 +17069,17 @@ msgstr "Sessions · top {0} by cost"
 msgid "Sessions / day"
 msgstr "Sessions / day"
 
+msgid "Set by hand"
+msgstr "Set by hand"
+
+#. placeholder {0}: formatCompactRelativeTime(Math.min(pinned.setAt, now), now)
+msgid "Set by the agent · {0}"
+msgstr "Set by the agent · {0}"
+
+#. placeholder {0}: formatCompactRelativeTime(Math.min(pinned.setAt, now), now)
+msgid "Set by you · {0}"
+msgstr "Set by you · {0}"
+
 #. placeholder {0}: color.name
 msgid "Set color to {0}"
 msgstr "Set color to {0}"
@@ -16920,6 +17099,9 @@ msgstr "Set project…"
 
 msgid "Set Run"
 msgstr "Set Run"
+
+msgid "Set the state"
+msgstr "Set the state"
 
 msgid "Set this project"
 msgstr "Set this project"
@@ -17658,6 +17840,9 @@ msgstr "Speaking"
 
 msgid "Specific"
 msgstr "Specific"
+
+msgid "Specs linked from its PRs"
+msgstr "Specs linked from its PRs"
 
 msgid "Speed"
 msgstr "Speed"
@@ -19681,6 +19866,13 @@ msgstr "Title"
 msgid "To"
 msgstr "To"
 
+msgid "To check"
+msgstr "To check"
+
+msgctxt "work state chip"
+msgid "To check"
+msgstr "To check"
+
 msgid "To resume an agent conversation, run this in its folder:"
 msgstr "To resume an agent conversation, run this in its folder:"
 
@@ -19696,6 +19888,10 @@ msgstr "To-do"
 msgid "To-do details"
 msgstr "To-do details"
 
+msgid "To-dos"
+msgstr "To-dos"
+
+msgctxt "work state chip"
 msgid "To-dos"
 msgstr "To-dos"
 
@@ -20134,6 +20330,9 @@ msgstr "Undo"
 msgid "Undo the last archived workspace or closed chats"
 msgstr "Undo the last archived workspace or closed chats"
 
+msgid "Unfinished, with a to-do list to pick up."
+msgstr "Unfinished, with a to-do list to pick up."
+
 msgid "Ungroup"
 msgstr "Ungroup"
 
@@ -20349,6 +20548,9 @@ msgstr "Update Superset on this machine to attach files"
 
 msgid "update the branch prefix"
 msgstr "update the branch prefix"
+
+msgid "Update this host to set the state by hand."
+msgstr "Update this host to set the state by hand."
 
 msgid "Updated"
 msgstr "Updated"
@@ -20723,6 +20925,10 @@ msgstr "Wait for workspace setup before starting agents"
 msgid "Waiting"
 msgstr "Waiting"
 
+msgctxt "work state chip"
+msgid "Waiting"
+msgstr "Waiting"
+
 #. placeholder {0}: names.a
 #. placeholder {1}: names.b
 msgid "waiting for {0} and {1}…"
@@ -20751,6 +20957,9 @@ msgstr "Waiting for you"
 
 msgid "Waiting for you · {waitingFor}"
 msgstr "Waiting for you · {waitingFor}"
+
+msgid "Waiting for your answer"
+msgstr "Waiting for your answer"
 
 msgid "Waiting for your input"
 msgstr "Waiting for your input"
@@ -20977,6 +21186,9 @@ msgstr "What platforms does Superset run on?"
 msgid "What problem are you trying to solve?"
 msgstr "What problem are you trying to solve?"
 
+msgid "What rooms stand for"
+msgstr "What rooms stand for"
+
 msgid "What shipped"
 msgstr "What shipped"
 
@@ -21066,9 +21278,6 @@ msgstr "Who"
 
 msgid "Who can open it"
 msgstr "Who can open it"
-
-msgid "Who to show"
-msgstr "Who to show"
 
 msgid "Who waits on you, or whom you wait on"
 msgstr "Who waits on you, or whom you wait on"
@@ -21160,6 +21369,10 @@ msgid "Working"
 msgstr "Working"
 
 msgctxt "agent status"
+msgid "Working"
+msgstr "Working"
+
+msgctxt "work state chip"
 msgid "Working"
 msgstr "Working"
 
