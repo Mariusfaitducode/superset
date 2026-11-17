@@ -47,8 +47,8 @@ export default defineConfig({
 			},
 			{ title: "Tasks & automations", commands: ["tasks", "automations"] },
 			{
-				title: "Fork: to-dos, labels, notes, tracked waits",
-				commands: ["todos", "labels", "notes", "track", "tracks"],
+				title: "Fork: to-dos, labels, notes, tracked waits, observer",
+				commands: ["todos", "labels", "notes", "track", "tracks", "observer"],
 			},
 			{ title: "Pages", commands: ["pages"] },
 			{

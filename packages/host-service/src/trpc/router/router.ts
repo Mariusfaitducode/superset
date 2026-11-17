@@ -18,6 +18,7 @@ import { issuesRouter } from "./issues";
 import { linkPreviewRouter } from "./link-preview";
 import { mobileRouter } from "./mobile";
 import { notificationsRouter } from "./notifications";
+import { officeObserverRouter } from "./office-observer";
 import { pageWatchRouter } from "./page-watch";
 import { panesRouter } from "./panes";
 import { portsRouter } from "./ports";
@@ -59,6 +60,7 @@ export const appRouter = router({
 	linkPreview: linkPreviewRouter,
 	mobile: mobileRouter,
 	notifications: notificationsRouter,
+	officeObserver: officeObserverRouter,
 	pullRequests: pullRequestsRouter,
 	project: projectRouter,
 	tagFolders: tagFoldersRouter,

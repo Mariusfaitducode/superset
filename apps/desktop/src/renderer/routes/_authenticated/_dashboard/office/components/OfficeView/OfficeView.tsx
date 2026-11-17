@@ -3,6 +3,7 @@ import {
 	DashboardSidebarWorkspaceStatusProvider,
 	type SidebarStatusWorkspaceRef,
 } from "renderer/routes/_authenticated/_dashboard/components/DashboardSidebar/providers/DashboardSidebarWorkspaceStatusProvider";
+import { useOfficeObserver } from "renderer/routes/_authenticated/_dashboard/office/hooks/useOfficeObserver";
 import { useHostWorkspaces } from "renderer/routes/_authenticated/providers/HostWorkspacesProvider";
 import { OfficeFloor } from "./components/OfficeFloor";
 
@@ -12,10 +13,17 @@ import { OfficeFloor } from "./components/OfficeFloor";
  */
 export function OfficeView() {
 	const { workspaces } = useHostWorkspaces();
-	const live = useMemo(
-		() => workspaces.filter((workspace) => workspace.archivedAt == null),
-		[workspaces],
-	);
+	const observer = useOfficeObserver();
+	// The observer's own sessions sit in its booth, not at a desk.
+	const live = useMemo(() => {
+		const observerWorkspaces = new Set(
+			observer.runs.map((run) => run.workspaceId),
+		);
+		return workspaces.filter(
+			(workspace) =>
+				workspace.archivedAt == null && !observerWorkspaces.has(workspace.id),
+		);
+	}, [workspaces, observer.runs]);
 	const refs = useMemo<SidebarStatusWorkspaceRef[]>(
 		() =>
 			live.map((workspace) => ({ id: workspace.id, hostId: workspace.hostId })),
@@ -26,7 +34,7 @@ export function OfficeView() {
 			workspaces={refs}
 			activeWorkspaceId={null}
 		>
-			<OfficeFloor workspaces={live} />
+			<OfficeFloor workspaces={live} observer={observer} />
 		</DashboardSidebarWorkspaceStatusProvider>
 	);
 }

@@ -11,7 +11,8 @@ export type HostStore =
 	| "workspace-labels"
 	| "agent-reports"
 	| "tracked-tasks"
-	| "conversation-states";
+	| "conversation-states"
+	| "office-observer";
 
 const holds = new Map<string, { count: number; release: () => void }>();
 

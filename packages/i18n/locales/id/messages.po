@@ -1926,6 +1926,9 @@ msgstr "Tambahkan {0} ke workspace"
 msgid "Add {count} to focus"
 msgstr "Tambahkan {count} ke fokus"
 
+msgid "Add a Claude agent in Settings → Agents to run it."
+msgstr "Tambahkan agen Claude di Pengaturan → Agen untuk menjalankannya."
+
 msgid "Add a comment…"
 msgstr "Tambahkan komentar…"
 
@@ -7396,6 +7399,9 @@ msgstr "Editor & Alur Kerja"
 msgid "Editor typography"
 msgstr "Tipografi editor"
 
+msgid "Efficiency"
+msgstr "Efisiensi"
+
 msgid "Efficient"
 msgstr "Efisien"
 
@@ -8676,6 +8682,9 @@ msgstr "Untuk pertanyaan soal penagihan, <0>hubungi kami</0>."
 msgid "For teams that need more power"
 msgstr "Untuk tim yang butuh lebih banyak tenaga"
 
+msgid "For today"
+msgstr "Untuk hari ini"
+
 msgid "Force merge"
 msgstr "Paksa merge"
 
@@ -8819,6 +8828,9 @@ msgstr "Full self-driving"
 
 msgid "Full source available on GitHub under Elastic License 2.0 (ELv2). Inspect, audit, and contribute to the code. No black boxes, no hidden functionality."
 msgstr "Sumber lengkap tersedia di GitHub dengan Elastic License 2.0 (ELv2). Periksa, audit, dan berkontribusi ke kodenya. Tanpa kotak hitam, tanpa fungsi tersembunyi."
+
+msgid "Full synthesis"
+msgstr "Sintesis lengkap"
 
 msgid "Full: close agents before starting another"
 msgstr "Penuh: tutup agen sebelum memulai yang lain"
@@ -10096,6 +10108,9 @@ msgstr "Mungkin sedang tidur"
 msgid "It may have been deleted, or it belongs to another organization."
 msgstr "Mungkin sudah dihapus, atau milik organisasi lain."
 
+msgid "It only reads. Anything to send in your name comes back as a draft on your Desk."
+msgstr "Ia hanya membaca. Apa pun yang perlu dikirim atas namamu kembali sebagai draf di Desk-mu."
+
 msgid "It will open once the connection is back."
 msgstr "Akan terbuka saat koneksi kembali."
 
@@ -10367,6 +10382,9 @@ msgstr "Hari terakhir tiap bulan pukul {time}"
 
 msgid "Last run"
 msgstr "Run terakhir"
+
+msgid "Last run {ago} ago"
+msgstr "Terakhir dijalankan {ago} lalu"
 
 msgid "Last seen"
 msgstr "Terakhir terlihat"
@@ -11710,6 +11728,9 @@ msgstr "Tidak pernah"
 msgid "Never asks before acting"
 msgstr "Tidak pernah bertanya dulu"
 
+msgid "Never run"
+msgstr "Belum pernah dijalankan"
+
 msgid "New"
 msgstr "Baru"
 
@@ -12821,6 +12842,9 @@ msgstr "Belum ada yang dipublikasikan dalam 30 hari terakhir. Peringkat Anda mun
 msgid "Nothing running"
 msgstr "Tidak ada yang berjalan"
 
+msgid "Nothing to flag."
+msgstr "Tidak ada yang perlu ditandai."
+
 msgid "Nothing waits on you."
 msgstr "Tidak ada yang menunggu Anda."
 
@@ -12885,6 +12909,12 @@ msgstr "OAuth 2.0"
 
 msgid "OAuth by default, API keys for CI"
 msgstr "OAuth secara bawaan, kunci API untuk CI"
+
+msgid "Observer"
+msgstr "Pengamat"
+
+msgid "Observing, started {ago} ago"
+msgstr "Mengamati, dimulai {ago} lalu"
 
 #. placeholder {0}: formatNumber(participants)
 msgid "of {0}"
@@ -16322,6 +16352,9 @@ msgstr "Sedang berjalan sekarang."
 msgid "Running terminal processes continue, but older output may no longer be available after restarting the app."
 msgstr "Proses terminal yang berjalan tetap lanjut, tapi output lama mungkin tidak tersedia lagi setelah aplikasi dimulai ulang."
 
+msgid "Running…"
+msgstr "Berjalan…"
+
 msgid "Runs a local command on your machine"
 msgstr "Menjalankan perintah lokal di mesin Anda"
 
@@ -16348,6 +16381,9 @@ msgstr "Dijalankan saat ruang kerja baru dibuat."
 
 msgid "Runs when a workspace is deleted."
 msgstr "Dijalankan saat ruang kerja dihapus."
+
+msgid "Runs with"
+msgstr "Dijalankan dengan"
 
 msgid "Same name in sidebar and tabs"
 msgstr "Nama yang sama di bilah samping dan tab"
@@ -16445,6 +16481,9 @@ msgstr "Jadwal"
 
 msgid "Schedule a daily automation that triages new Linear issues at 9am"
 msgstr "Jadwalkan otomatisasi harian yang mentriase issue Linear baru jam 9 pagi"
+
+msgid "Schedule it in My automations"
+msgstr "Jadwalkan di Otomatisasi saya"
 
 msgid "Schedule meetings"
 msgstr "Jadwalkan rapat"
@@ -18079,6 +18118,9 @@ msgstr "Mulai workspace langsung dari issue Linear atau GitHub di tampilan Tugas
 msgid "Started"
 msgstr "Dimulai"
 
+msgid "Started {ago} ago, never published"
+msgstr "Dimulai {ago} lalu, tidak pernah menerbitkan"
+
 msgid "starting"
 msgstr "memulai"
 
@@ -19263,6 +19305,9 @@ msgstr "Nama organisasi atau tim Anda"
 msgid "The network connection changed"
 msgstr "Koneksi jaringan berubah"
 
+msgid "The observer reads every agent of this Mac (states, to-dos, reports, notes, Superset ideas, your PRs and messages) and hands you one synthesis: what to improve in Superset, what waits on you, and how to make your agents cheaper and faster."
+msgstr "Pengamat membaca semua agen di Mac ini (status, to-do, laporan, catatan, ide Superset, PR dan pesanmu) lalu memberimu satu sintesis: apa yang bisa diperbaiki di Superset, apa yang menunggumu, dan cara membuat agenmu lebih hemat dan cepat."
+
 msgid "The overnight shift"
 msgstr "Shift malam"
 
@@ -19562,6 +19607,9 @@ msgstr "Host ini offline, jadi agennya tidak dapat dibaca atau dimulai. Workspac
 
 msgid "This host is too old to keep to-dos."
 msgstr "Host ini terlalu lama untuk menyimpan daftar tugas."
+
+msgid "This host is too old to run the observer."
+msgstr "Host ini terlalu lama untuk menjalankan pengamat."
 
 msgid "This host needs an update"
 msgstr "Host ini perlu diperbarui"
@@ -21012,6 +21060,9 @@ msgstr "Lihat bagaimana tinjauan desain berubah dari komentar menjadi versi baru
 msgid "Watch the Superset Automations video on YouTube"
 msgstr "Tonton video Otomatisasi Superset di YouTube"
 
+msgid "Watches every agent and tells you what to improve and what waits on you."
+msgstr "Mengamati semua agen dan memberitahumu apa yang perlu diperbaiki dan apa yang menunggumu."
+
 msgid "Wayfinding and disclosure"
 msgstr "Penunjuk arah dan pengungkapan"
 
@@ -21908,6 +21959,9 @@ msgstr "Proyek dan workspace v1 Anda sedang dipindahkan ke Superset yang baru. S
 
 msgid "Your version: {currentVersion}"
 msgstr "Versi Anda: {currentVersion}"
+
+msgid "Your work"
+msgstr "Pekerjaanmu"
 
 msgid "Zap"
 msgstr "Petir"

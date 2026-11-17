@@ -1926,6 +1926,9 @@ msgstr "Dodaj {0} do obszaru roboczego"
 msgid "Add {count} to focus"
 msgstr "Dodaj {count} do fokusu"
 
+msgid "Add a Claude agent in Settings → Agents to run it."
+msgstr "Dodaj agenta Claude w Ustawienia → Agenci, aby go uruchomić."
+
 msgid "Add a comment…"
 msgstr "Dodaj komentarz…"
 
@@ -7396,6 +7399,9 @@ msgstr "Edytor i workflow"
 msgid "Editor typography"
 msgstr "Typografia edytora"
 
+msgid "Efficiency"
+msgstr "Wydajność"
+
 msgid "Efficient"
 msgstr "Wydajny"
 
@@ -8676,6 +8682,9 @@ msgstr "W sprawach rozliczeń <0>napisz do nas</0>."
 msgid "For teams that need more power"
 msgstr "Dla zespołów, które potrzebują więcej mocy"
 
+msgid "For today"
+msgstr "Na dziś"
+
 msgid "Force merge"
 msgstr "Wymuś scalenie"
 
@@ -8819,6 +8828,9 @@ msgstr "Pełna autonomia"
 
 msgid "Full source available on GitHub under Elastic License 2.0 (ELv2). Inspect, audit, and contribute to the code. No black boxes, no hidden functionality."
 msgstr "Pełny kod źródłowy dostępny na GitHub na licencji Elastic License 2.0 (ELv2). Przeglądaj, audytuj i współtwórz. Żadnych czarnych skrzynek ani ukrytych funkcji."
+
+msgid "Full synthesis"
+msgstr "Pełne podsumowanie"
 
 msgid "Full: close agents before starting another"
 msgstr "Pełno: zamknij agentów przed uruchomieniem kolejnego"
@@ -10096,6 +10108,9 @@ msgstr "Może być uśpiony"
 msgid "It may have been deleted, or it belongs to another organization."
 msgstr "Mogła zostać usunięta lub należy do innej organizacji."
 
+msgid "It only reads. Anything to send in your name comes back as a draft on your Desk."
+msgstr "Tylko czyta. Wszystko, co ma być wysłane w Twoim imieniu, wraca jako szkic na Twój Desk."
+
 msgid "It will open once the connection is back."
 msgstr "Otworzy się po powrocie połączenia."
 
@@ -10367,6 +10382,9 @@ msgstr "Ostatni dzień każdego miesiąca o {time}"
 
 msgid "Last run"
 msgstr "Ostatnie uruchomienie"
+
+msgid "Last run {ago} ago"
+msgstr "Ostatnie uruchomienie {ago} temu"
 
 msgid "Last seen"
 msgstr "Ostatnio widziany"
@@ -11710,6 +11728,9 @@ msgstr "Nigdy"
 msgid "Never asks before acting"
 msgstr "Nigdy nie pyta przed działaniem"
 
+msgid "Never run"
+msgstr "Nigdy nie uruchomiono"
+
 msgid "New"
 msgstr "Nowość"
 
@@ -12821,6 +12842,9 @@ msgstr "Nic jeszcze nie opublikowano w ciągu ostatnich 30 dni. Twoja pozycja po
 msgid "Nothing running"
 msgstr "Nic nie jest uruchomione"
 
+msgid "Nothing to flag."
+msgstr "Nic do zgłoszenia."
+
 msgid "Nothing waits on you."
 msgstr "Nic na ciebie nie czeka."
 
@@ -12885,6 +12909,12 @@ msgstr "OAuth 2.0"
 
 msgid "OAuth by default, API keys for CI"
 msgstr "OAuth domyślnie, klucze API dla CI"
+
+msgid "Observer"
+msgstr "Obserwator"
+
+msgid "Observing, started {ago} ago"
+msgstr "Obserwuje, uruchomiono {ago} temu"
 
 #. placeholder {0}: formatNumber(participants)
 msgid "of {0}"
@@ -16322,6 +16352,9 @@ msgstr "Działa w tej chwili."
 msgid "Running terminal processes continue, but older output may no longer be available after restarting the app."
 msgstr "Działające procesy terminala nie zostaną przerwane, ale starsze wyjście może być niedostępne po ponownym uruchomieniu aplikacji."
 
+msgid "Running…"
+msgstr "W toku…"
+
 msgid "Runs a local command on your machine"
 msgstr "Uruchamia lokalne polecenie na Twojej maszynie"
 
@@ -16348,6 +16381,9 @@ msgstr "Uruchamia się przy tworzeniu obszaru roboczego."
 
 msgid "Runs when a workspace is deleted."
 msgstr "Uruchamia się przy usuwaniu obszaru roboczego."
+
+msgid "Runs with"
+msgstr "Uruchamiany z"
 
 msgid "Same name in sidebar and tabs"
 msgstr "Ta sama nazwa na pasku bocznym i w kartach"
@@ -16445,6 +16481,9 @@ msgstr "Harmonogram"
 
 msgid "Schedule a daily automation that triages new Linear issues at 9am"
 msgstr "Zaplanuj codzienną automatyzację, która segreguje nowe zgłoszenia Linear o 9:00"
+
+msgid "Schedule it in My automations"
+msgstr "Zaplanuj w Moich automatyzacjach"
 
 msgid "Schedule meetings"
 msgstr "Planuj spotkania"
@@ -18079,6 +18118,9 @@ msgstr "Uruchamiaj obszary robocze prosto ze zgłoszeń w Linear lub GitHub w wi
 msgid "Started"
 msgstr "Rozpoczęto"
 
+msgid "Started {ago} ago, never published"
+msgstr "Uruchomiono {ago} temu, nic nie opublikowano"
+
 msgid "starting"
 msgstr "uruchamia się"
 
@@ -19263,6 +19305,9 @@ msgstr "Nazwa organizacji lub zespołu"
 msgid "The network connection changed"
 msgstr "Połączenie sieciowe się zmieniło"
 
+msgid "The observer reads every agent of this Mac (states, to-dos, reports, notes, Superset ideas, your PRs and messages) and hands you one synthesis: what to improve in Superset, what waits on you, and how to make your agents cheaper and faster."
+msgstr "Obserwator czyta wszystkich agentów tego Maca (stany, zadania, raporty, notatki, pomysły do Superset, Twoje PR i wiadomości) i przekazuje jedno podsumowanie: co poprawić w Superset, co na Ciebie czeka i jak sprawić, by agenci byli tańsi i szybsi."
+
 msgid "The overnight shift"
 msgstr "Nocna zmiana"
 
@@ -19562,6 +19607,9 @@ msgstr "Ten host jest offline, więc nie można odczytać ani uruchomić jego ag
 
 msgid "This host is too old to keep to-dos."
 msgstr "Ten host jest zbyt stary, aby przechowywać zadania."
+
+msgid "This host is too old to run the observer."
+msgstr "Ten host jest zbyt stary, aby uruchomić obserwatora."
 
 msgid "This host needs an update"
 msgstr "Ten host wymaga aktualizacji"
@@ -21012,6 +21060,9 @@ msgstr "Zobacz, jak przegląd projektu przechodzi od komentarza do nowej wersji.
 msgid "Watch the Superset Automations video on YouTube"
 msgstr "Obejrzyj film o Superset Automatyzacje na YouTube"
 
+msgid "Watches every agent and tells you what to improve and what waits on you."
+msgstr "Obserwuje wszystkich agentów i mówi, co poprawić i co na Ciebie czeka."
+
 msgid "Wayfinding and disclosure"
 msgstr "Orientacja i odsłanianie treści"
 
@@ -21908,6 +21959,9 @@ msgstr "Twoje projekty i obszary robocze z v1 są przenoszone do nowego Superset
 
 msgid "Your version: {currentVersion}"
 msgstr "Twoja wersja: {currentVersion}"
+
+msgid "Your work"
+msgstr "Twoja praca"
 
 msgid "Zap"
 msgstr "Błyskawica"

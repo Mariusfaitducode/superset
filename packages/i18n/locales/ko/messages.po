@@ -1926,6 +1926,9 @@ msgstr "{0}을(를) 워크스페이스에 추가"
 msgid "Add {count} to focus"
 msgstr "{count}개를 포커스에 추가"
 
+msgid "Add a Claude agent in Settings → Agents to run it."
+msgstr "실행하려면 설정 → 에이전트에서 Claude 에이전트를 추가하세요."
+
 msgid "Add a comment…"
 msgstr "댓글 추가…"
 
@@ -7396,6 +7399,9 @@ msgstr "편집기 및 워크플로"
 msgid "Editor typography"
 msgstr "편집기 타이포그래피"
 
+msgid "Efficiency"
+msgstr "효율"
+
 msgid "Efficient"
 msgstr "효율"
 
@@ -8676,6 +8682,9 @@ msgstr "결제에 대한 문의는 <0>여기로 연락해 주세요</0>."
 msgid "For teams that need more power"
 msgstr "더 큰 성능이 필요한 팀용"
 
+msgid "For today"
+msgstr "오늘 할 일"
+
 msgid "Force merge"
 msgstr "강제 머지"
 
@@ -8819,6 +8828,9 @@ msgstr "완전 자율 주행"
 
 msgid "Full source available on GitHub under Elastic License 2.0 (ELv2). Inspect, audit, and contribute to the code. No black boxes, no hidden functionality."
 msgstr "전체 소스가 Elastic License 2.0(ELv2)으로 GitHub에 공개되어 있습니다. 코드를 확인하고, 감사하고, 기여하세요. 블랙박스도, 숨겨진 기능도 없습니다."
+
+msgid "Full synthesis"
+msgstr "전체 요약"
 
 msgid "Full: close agents before starting another"
 msgstr "가득 참: 다른 에이전트를 시작하기 전에 에이전트를 닫으세요"
@@ -10096,6 +10108,9 @@ msgstr "절전 모드일 수 있습니다"
 msgid "It may have been deleted, or it belongs to another organization."
 msgstr "삭제되었거나 다른 조직에 속한 페이지일 수 있습니다."
 
+msgid "It only reads. Anything to send in your name comes back as a draft on your Desk."
+msgstr "읽기만 합니다. 당신 이름으로 보낼 내용은 Desk에 초안으로 돌아옵니다."
+
 msgid "It will open once the connection is back."
 msgstr "연결이 복구되면 열립니다."
 
@@ -10367,6 +10382,9 @@ msgstr "매월 마지막 날 {time}"
 
 msgid "Last run"
 msgstr "마지막 실행"
+
+msgid "Last run {ago} ago"
+msgstr "마지막 실행: {ago} 전"
 
 msgid "Last seen"
 msgstr "마지막 접속"
@@ -11710,6 +11728,9 @@ msgstr "없음"
 msgid "Never asks before acting"
 msgstr "묻지 않고 실행"
 
+msgid "Never run"
+msgstr "실행한 적 없음"
+
 msgid "New"
 msgstr "신규"
 
@@ -12821,6 +12842,9 @@ msgstr "최근 30일 동안 게시된 사용량이 아직 없습니다. 이 기�
 msgid "Nothing running"
 msgstr "실행 중인 항목 없음"
 
+msgid "Nothing to flag."
+msgstr "특별히 알릴 내용이 없습니다."
+
 msgid "Nothing waits on you."
 msgstr "대기 중인 항목이 없습니다."
 
@@ -12885,6 +12909,12 @@ msgstr "OAuth 2.0"
 
 msgid "OAuth by default, API keys for CI"
 msgstr "기본은 OAuth, CI에는 API 키"
+
+msgid "Observer"
+msgstr "관찰자"
+
+msgid "Observing, started {ago} ago"
+msgstr "관찰 중, {ago} 전에 시작"
 
 #. placeholder {0}: formatNumber(participants)
 msgid "of {0}"
@@ -16322,6 +16352,9 @@ msgstr "지금 실행 중입니다."
 msgid "Running terminal processes continue, but older output may no longer be available after restarting the app."
 msgstr "실행 중인 터미널 프로세스는 계속되지만, 앱을 다시 시작한 뒤에는 이전 출력을 볼 수 없을 수 있습니다."
 
+msgid "Running…"
+msgstr "실행 중…"
+
 msgid "Runs a local command on your machine"
 msgstr "내 컴퓨터에서 로컬 명령을 실행합니다"
 
@@ -16348,6 +16381,9 @@ msgstr "새 작업 공간을 만들 때 실행됩니다."
 
 msgid "Runs when a workspace is deleted."
 msgstr "작업 공간을 삭제할 때 실행됩니다."
+
+msgid "Runs with"
+msgstr "실행 에이전트"
 
 msgid "Same name in sidebar and tabs"
 msgstr "사이드바와 탭에서 같은 이름"
@@ -16445,6 +16481,9 @@ msgstr "일정"
 
 msgid "Schedule a daily automation that triages new Linear issues at 9am"
 msgstr "매일 오전 9시에 새 Linear 이슈를 분류하는 자동화를 예약해 줘"
+
+msgid "Schedule it in My automations"
+msgstr "내 자동화에서 일정 설정"
 
 msgid "Schedule meetings"
 msgstr "회의 일정 잡기"
@@ -18079,6 +18118,9 @@ msgstr "작업 보기에서 Linear 또는 GitHub 이슈로 바로 워크스페�
 msgid "Started"
 msgstr "시작"
 
+msgid "Started {ago} ago, never published"
+msgstr "{ago} 전에 시작, 게시되지 않음"
+
 msgid "starting"
 msgstr "시작 중"
 
@@ -19263,6 +19305,9 @@ msgstr "조직 또는 팀의 이름"
 msgid "The network connection changed"
 msgstr "네트워크 연결이 바뀌었습니다"
 
+msgid "The observer reads every agent of this Mac (states, to-dos, reports, notes, Superset ideas, your PRs and messages) and hands you one synthesis: what to improve in Superset, what waits on you, and how to make your agents cheaper and faster."
+msgstr "관찰자는 이 Mac의 모든 에이전트(상태, 할 일, 보고서, 메모, Superset 아이디어, 내 PR과 메시지)를 읽고 하나의 요약을 전달합니다: Superset에서 개선할 점, 나를 기다리는 일, 에이전트를 더 저렴하고 빠르게 만드는 방법."
+
 msgid "The overnight shift"
 msgstr "야간 근무"
 
@@ -19562,6 +19607,9 @@ msgstr "이 호스트는 오프라인이라 에이전트를 읽거나 시작할 
 
 msgid "This host is too old to keep to-dos."
 msgstr "이 호스트는 너무 오래되어 할 일을 저장할 수 없습니다."
+
+msgid "This host is too old to run the observer."
+msgstr "이 호스트는 너무 오래되어 관찰자를 실행할 수 없습니다."
 
 msgid "This host needs an update"
 msgstr "이 호스트에 업데이트가 필요합니다"
@@ -21012,6 +21060,9 @@ msgstr "디자인 리뷰가 댓글에서 새 버전으로 이어지는 과정을
 msgid "Watch the Superset Automations video on YouTube"
 msgstr "YouTube에서 Superset 자동화 영상 보기"
 
+msgid "Watches every agent and tells you what to improve and what waits on you."
+msgstr "모든 에이전트를 지켜보고 개선할 점과 나를 기다리는 일을 알려줍니다."
+
 msgid "Wayfinding and disclosure"
 msgstr "길 찾기와 정보 펼침"
 
@@ -21908,6 +21959,9 @@ msgstr "v1 프로젝트와 워크스페이스를 새 Superset으로 옮기는 �
 
 msgid "Your version: {currentVersion}"
 msgstr "현재 버전: {currentVersion}"
+
+msgid "Your work"
+msgstr "내 업무"
 
 msgid "Zap"
 msgstr "번개"

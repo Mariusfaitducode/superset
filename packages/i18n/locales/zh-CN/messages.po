@@ -1926,6 +1926,9 @@ msgstr "将{0}添加到工作区"
 msgid "Add {count} to focus"
 msgstr "将 {count} 个加入专注"
 
+msgid "Add a Claude agent in Settings → Agents to run it."
+msgstr "在 设置 → 智能体 中添加一个 Claude 智能体即可运行。"
+
 msgid "Add a comment…"
 msgstr "添加评论…"
 
@@ -7396,6 +7399,9 @@ msgstr "编辑器与工作流"
 msgid "Editor typography"
 msgstr "编辑器排版"
 
+msgid "Efficiency"
+msgstr "效率"
+
 msgid "Efficient"
 msgstr "高效"
 
@@ -8676,6 +8682,9 @@ msgstr "如有账单相关问题，请<0>联系我们</0>。"
 msgid "For teams that need more power"
 msgstr "面向需要更多能力的团队"
 
+msgid "For today"
+msgstr "今天处理"
+
 msgid "Force merge"
 msgstr "强制合并"
 
@@ -8819,6 +8828,9 @@ msgstr "完全自动驾驶"
 
 msgid "Full source available on GitHub under Elastic License 2.0 (ELv2). Inspect, audit, and contribute to the code. No black boxes, no hidden functionality."
 msgstr "完整源码在GitHub上以Elastic License 2.0（ELv2）提供。可查阅、审计并参与贡献。没有黑箱，没有隐藏功能。"
+
+msgid "Full synthesis"
+msgstr "完整总结"
 
 msgid "Full: close agents before starting another"
 msgstr "已满：启动新代理前请先关闭一些代理"
@@ -10096,6 +10108,9 @@ msgstr "设备可能处于睡眠状态"
 msgid "It may have been deleted, or it belongs to another organization."
 msgstr "它可能已被删除，或属于另一个组织。"
 
+msgid "It only reads. Anything to send in your name comes back as a draft on your Desk."
+msgstr "它只读取。任何需要以你的名义发送的内容都会作为草稿回到你的 Desk。"
+
 msgid "It will open once the connection is back."
 msgstr "网络恢复后会自动打开。"
 
@@ -10367,6 +10382,9 @@ msgstr "每月最后一天{time}"
 
 msgid "Last run"
 msgstr "上次运行"
+
+msgid "Last run {ago} ago"
+msgstr "上次运行于 {ago} 前"
 
 msgid "Last seen"
 msgstr "最后在线"
@@ -11710,6 +11728,9 @@ msgstr "从未"
 msgid "Never asks before acting"
 msgstr "执行前从不询问"
 
+msgid "Never run"
+msgstr "从未运行"
+
 msgid "New"
 msgstr "新功能"
 
@@ -12821,6 +12842,9 @@ msgstr "最近30天还没有已公开的数据。待本机用量同步后，你�
 msgid "Nothing running"
 msgstr "没有正在运行的内容"
 
+msgid "Nothing to flag."
+msgstr "没有需要提醒的内容。"
+
 msgid "Nothing waits on you."
 msgstr "没有等待你处理的事项。"
 
@@ -12885,6 +12909,12 @@ msgstr "OAuth 2.0"
 
 msgid "OAuth by default, API keys for CI"
 msgstr "默认用OAuth，CI用API密钥"
+
+msgid "Observer"
+msgstr "观察者"
+
+msgid "Observing, started {ago} ago"
+msgstr "观察中，{ago} 前开始"
 
 #. placeholder {0}: formatNumber(participants)
 msgid "of {0}"
@@ -16322,6 +16352,9 @@ msgstr "正在运行。"
 msgid "Running terminal processes continue, but older output may no longer be available after restarting the app."
 msgstr "运行中的终端进程会继续，但重启应用后可能无法再看到较早的输出。"
 
+msgid "Running…"
+msgstr "运行中…"
+
 msgid "Runs a local command on your machine"
 msgstr "在你的机器上运行本地命令"
 
@@ -16348,6 +16381,9 @@ msgstr "创建新工作区时运行。"
 
 msgid "Runs when a workspace is deleted."
 msgstr "删除工作区时运行。"
+
+msgid "Runs with"
+msgstr "运行方式"
 
 msgid "Same name in sidebar and tabs"
 msgstr "侧边栏和标签页使用相同名称"
@@ -16445,6 +16481,9 @@ msgstr "计划"
 
 msgid "Schedule a daily automation that triages new Linear issues at 9am"
 msgstr "安排一个每天上午9点分类新Linear议题的自动化"
+
+msgid "Schedule it in My automations"
+msgstr "在“我的自动化”中安排"
 
 msgid "Schedule meetings"
 msgstr "安排会议"
@@ -18079,6 +18118,9 @@ msgstr "在任务视图中直接从 Linear 或 GitHub 议题启动工作区，�
 msgid "Started"
 msgstr "开始时间"
 
+msgid "Started {ago} ago, never published"
+msgstr "{ago} 前开始，未发布"
+
 msgid "starting"
 msgstr "启动中"
 
@@ -19263,6 +19305,9 @@ msgstr "你的组织或团队的名称"
 msgid "The network connection changed"
 msgstr "网络连接已变更"
 
+msgid "The observer reads every agent of this Mac (states, to-dos, reports, notes, Superset ideas, your PRs and messages) and hands you one synthesis: what to improve in Superset, what waits on you, and how to make your agents cheaper and faster."
+msgstr "观察者会读取这台 Mac 上的所有智能体（状态、待办、报告、笔记、Superset 想法、你的 PR 和消息），并给你一份总结：Superset 可以改进什么、什么在等你处理，以及如何让智能体更省、更快。"
+
 msgid "The overnight shift"
 msgstr "夜班"
 
@@ -19562,6 +19607,9 @@ msgstr "此主机离线，无法读取或启动其代理。下方工作区是它
 
 msgid "This host is too old to keep to-dos."
 msgstr "此主机版本过旧，无法保存待办事项。"
+
+msgid "This host is too old to run the observer."
+msgstr "此主机版本过旧，无法运行观察者。"
 
 msgid "This host needs an update"
 msgstr "此主机需要更新"
@@ -21012,6 +21060,9 @@ msgstr "看一次设计评审如何从评论变成新版本。"
 msgid "Watch the Superset Automations video on YouTube"
 msgstr "在 YouTube 上观看 Superset 自动化视频"
 
+msgid "Watches every agent and tells you what to improve and what waits on you."
+msgstr "关注所有智能体，告诉你可以改进什么、什么在等你。"
+
 msgid "Wayfinding and disclosure"
 msgstr "导航定位与内容展开"
 
@@ -21908,6 +21959,9 @@ msgstr "你的 v1 项目和工作区正在迁移到新版 Superset。每一项�
 
 msgid "Your version: {currentVersion}"
 msgstr "你的版本：{currentVersion}"
+
+msgid "Your work"
+msgstr "你的工作"
 
 msgid "Zap"
 msgstr "闪电"
