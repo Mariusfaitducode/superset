@@ -715,7 +715,7 @@ describe("listLiveSessionStats", () => {
 					? null
 					: ({ agentId: "claude", sessionId: terminalId } as never),
 			readStats: async (ref) => {
-				read.push(ref.sessionId);
+				read.push(ref.sessionId ?? "");
 				return { model: "claude-opus-5-5" } as never;
 			},
 		});
