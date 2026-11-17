@@ -1,8 +1,8 @@
 import { useLingui } from "@lingui/react/macro";
 import { cn } from "@superset/ui/utils";
 import type { CSSProperties } from "react";
-import { LuUser } from "react-icons/lu";
 import { WorkspaceFocusToggle } from "renderer/components/WorkspaceFocus";
+import { WORK_STATES } from "renderer/lib/agent-state";
 import {
 	LABEL_DOT_CLASS,
 	type WorkspaceLabel,
@@ -18,18 +18,20 @@ import {
 const MAX_LABELS = 2;
 
 /**
- * A workspace's name plate on its cubicle: name, state of its most urgent
- * chat, branch and labels. Click opens the workspace; the target on its
- * corner puts it in focus.
+ * A workspace's name plate on its cubicle: name, how many of its chats are
+ * in each state (a workspace has no state of its own), branch and labels.
+ * Its edge takes the most urgent chat's color. Click opens the workspace;
+ * the target on its corner puts it in focus.
  */
 export function OfficeDeskPlate({
 	workspaceId,
 	name,
 	branch,
 	labels,
+	project,
 	tone,
 	toneLabel,
-	chats,
+	tones,
 	style,
 	onOpen,
 }: {
@@ -38,17 +40,22 @@ export function OfficeDeskPlate({
 	/** Shown under the name when it says something the name does not. */
 	branch: string | null;
 	labels: WorkspaceLabel[];
+	/** Its project's name, when rooms do not already say it. */
+	project: string | null;
 	/** Null when no chat runs here. */
 	tone: OfficeTone | null;
 	toneLabel: string;
-	chats: number;
+	/** The state of each chat at this desk. */
+	tones: readonly OfficeTone[];
 	style: CSSProperties;
 	onOpen: () => void;
 }) {
 	const { t } = useLingui();
 	const shown = labels.slice(0, MAX_LABELS);
 	const hidden = labels.length - shown.length;
-	const details = [name, branch, toneLabel].filter(Boolean).join(" · ");
+	const details = [name, project, branch, toneLabel]
+		.filter(Boolean)
+		.join(" · ");
 	const isInFocus = useIsWorkspaceFocused(workspaceId);
 
 	return (
@@ -67,27 +74,34 @@ export function OfficeDeskPlate({
 				)}
 			>
 				<span className="flex min-w-0 items-center gap-1">
-					{tone && (
-						<span
-							aria-hidden
-							className={cn(
-								"flex size-3 shrink-0 items-center justify-center text-[10px] font-bold",
-								TONE_GLYPH_CLASS[tone],
-							)}
-						>
-							{TONE_GLYPH[tone]}
-						</span>
-					)}
 					<span className="min-w-0 flex-1 truncate text-[11px] font-bold">
 						{name}
 					</span>
-					<span className="flex shrink-0 items-center text-[10px] opacity-70">
-						<LuUser aria-hidden className="size-2.5" />
-						{chats}
-					</span>
+					{WORK_STATES.map((state) => {
+						const count = tones.filter((entry) => entry === state).length;
+						if (count === 0) return null;
+						return (
+							<span
+								key={state}
+								aria-hidden
+								className={cn(
+									"flex h-3 shrink-0 items-center gap-px px-0.5 text-[9px] font-bold tabular-nums",
+									TONE_GLYPH_CLASS[state],
+								)}
+							>
+								{TONE_GLYPH[state]}
+								{count > 1 && count}
+							</span>
+						);
+					})}
 				</span>
-				{(branch || shown.length > 0) && (
+				{(branch || project || shown.length > 0) && (
 					<span className="flex min-w-0 items-center gap-1 text-[9px]">
+						{project && (
+							<span className="max-w-24 min-w-0 shrink-0 truncate font-bold">
+								{project}
+							</span>
+						)}
 						{branch && (
 							<span className="min-w-0 shrink truncate opacity-60">
 								{branch}

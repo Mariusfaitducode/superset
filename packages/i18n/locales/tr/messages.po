@@ -413,6 +413,11 @@ msgstr "{0} eylemleri"
 msgid "{0} agents"
 msgstr "{0} ajan"
 
+#. placeholder {0}: agents.length
+#. placeholder {1}: pullRequests.length
+msgid "{0} agents · {1} open PRs"
+msgstr "{0} ajan · {1} açık PR"
+
 #. placeholder {0}: states.length
 msgid "{0} agents · {waiting} waiting for you"
 msgstr "{0} ajan · {waiting} seni bekliyor"
@@ -560,6 +565,7 @@ msgstr "{0} seçenekleri"
 msgid "{0} plan"
 msgstr "{0} planı"
 
+#. placeholder {0}: filter.projects.length
 #. placeholder {0}: normalizedProjectIds.length
 msgid "{0} projects"
 msgstr "{0} proje"
@@ -1504,6 +1510,9 @@ msgstr "⌘⇧ tık"
 msgid "⌘K ↵ goes back to the previous conversation"
 msgstr "⌘K ↵ önceki konuşmaya döner"
 
+msgid "⌥-click to show only this state"
+msgstr "Yalnızca bu durumu göstermek için ⌥-tıklayın"
+
 msgid "● Online"
 msgstr "● Çevrimiçi"
 
@@ -1533,6 +1542,9 @@ msgstr "1 çerez — bu siteyi unut"
 
 msgid "1 hr"
 msgstr "1 sa"
+
+msgid "1 project"
+msgstr "1 proje"
 
 msgid "1 to-do:"
 msgstr "1 yapılacak:"
@@ -2697,6 +2709,9 @@ msgstr "Tüm sayfalar"
 msgid "Any project"
 msgstr "Tüm projeler"
 
+msgid "Any project status"
+msgstr "Herhangi bir proje durumu"
+
 msgid "any recipient"
 msgstr "tüm alıcılar"
 
@@ -2967,6 +2982,9 @@ msgstr "Ajanlarının ne yaptığını sor ya da birine sırada ne yapacağını
 msgid "Asks before edits and commands"
 msgstr "Düzenleme ve komutlardan önce sorar"
 
+msgid "Asks for your approval"
+msgstr "Onayınızı istiyor"
+
 msgid "Asks only for risky actions"
 msgstr "Yalnızca riskli işlemlerde sorar"
 
@@ -3153,6 +3171,21 @@ msgstr "Görevleri otomatikleştirin"
 msgid "Automate workspace setup for {projectName}"
 msgstr "{projectName} için çalışma alanı kurulumunu otomatikleştirin"
 
+msgid "Automatic"
+msgstr "Otomatik"
+
+#. placeholder {0}: words.label[info.inferred.state]
+msgid "Automatic would say: {0}"
+msgstr "Otomatik olsaydı: {0}"
+
+#. placeholder {0}: project.name
+#. placeholder {1}: viaLabel[project.via]
+msgid "Automatic: {0} ({1})"
+msgstr "Otomatik: {0} ({1})"
+
+msgid "Automatic: no project found"
+msgstr "Otomatik: proje bulunamadı"
+
 msgid "Automation"
 msgstr "Otomasyon"
 
@@ -3289,6 +3322,10 @@ msgstr "Arka plan işleri ve sayfalar"
 
 msgid "Backlog"
 msgstr "Bekleyen işler"
+
+msgctxt "project status"
+msgid "Backlog"
+msgstr "Birikim"
 
 msgid "Badge"
 msgstr "Rozet"
@@ -3786,6 +3823,10 @@ msgctxt "project state"
 msgid "Canceled"
 msgstr "İptal edildi"
 
+msgctxt "project status"
+msgid "Canceled"
+msgstr "İptal edildi"
+
 msgid "Canceling..."
 msgstr "İptal ediliyor..."
 
@@ -4248,6 +4289,9 @@ msgstr "Terminal geçmişi temizlensin mi?"
 msgid "Clear the filter to rearrange the sidebar"
 msgstr "Kenar çubuğunu yeniden düzenlemek için filtreyi temizleyin"
 
+msgid "Clear them"
+msgstr "Temizle"
+
 msgid "Clear workspace selection"
 msgstr "Çalışma alanı seçimini temizle"
 
@@ -4286,6 +4330,12 @@ msgstr "<0>Temayı İçe Aktar</0> seçeneğine tıklayın ve indirdiğiniz dosy
 
 msgid "Click a terminal script to edit its details."
 msgstr "Ayrıntılarını düzenlemek için bir terminal betiğine tıklayın."
+
+msgid "Click again to close the agent"
+msgstr "Ajanı kapatmak için tekrar tıklayın"
+
+msgid "Click again to go back to automatic."
+msgstr "Otomatiğe dönmek için tekrar tıklayın."
 
 msgid "Click an element."
 msgstr "Bir öğeye tıklayın."
@@ -4483,6 +4533,9 @@ msgstr "Terminali kapat"
 
 msgid "Close Terminal"
 msgstr "Terminali kapat"
+
+msgid "Close the agent"
+msgstr "Ajanı kapat"
 
 msgid "Close the current pane"
 msgstr "Geçerli bölmeyi kapat"
@@ -5164,6 +5217,9 @@ msgstr "Konuşma"
 msgid "Conversation · Message"
 msgstr "Konuşma · Mesaj"
 
+msgid "Conversation state"
+msgstr "Konuşma durumu"
+
 msgid "Conversation stats"
 msgstr "Konuşma istatistikleri"
 
@@ -5690,6 +5746,9 @@ msgstr "Yeni bir worktree'ye çatallanamadı"
 
 msgid "Couldn't branch the conversation"
 msgstr "Konuşma çatallanamadı"
+
+msgid "Couldn't change the state"
+msgstr "Durum değiştirilemedi"
 
 msgid "Couldn't check what removing this member affects"
 msgstr "Bu üyeyi kaldırmanın nelere etki edeceği kontrol edilemedi"
@@ -6994,14 +7053,22 @@ msgstr "Kaydetme"
 msgid "Done"
 msgstr "Tamamlandı"
 
+msgctxt "project status"
+msgid "Done"
+msgstr "Bitti"
+
+msgctxt "work state chip"
+msgid "Done"
+msgstr "Bitti"
+
 msgid "Done — the bordered chip style used by the presets bar is now the default for every tooltip, and the copy-pasted overrides are removed (net −90 lines)."
 msgstr "Tamam — hazır ayarlar çubuğunun kullandığı çerçeveli çip stili artık her tooltip için varsayılan ve kopyala-yapıştır geçersiz kılmalar kaldırıldı (net −90 satır)."
 
 msgid "Done (isShimmering=false)"
 msgstr "Bitti (isShimmering=false)"
 
-msgid "Done, not seen"
-msgstr "Bitti, görülmedi"
+msgid "Done, can be closed"
+msgstr "Bitti, kapatılabilir"
 
 msgid "Done, not seen yet"
 msgstr "Bitti, henüz görülmedi"
@@ -7102,8 +7169,8 @@ msgstr "Taslak onayını bekliyor"
 msgid "drafted 3 support replies"
 msgstr "3 destek yanıtı taslağı hazırladı"
 
-msgid "Drag or scroll to move, pinch or ⌘-scroll to zoom, click a room's name to zoom on it · Click an agent to open its conversation, a small one for its subagent · ⌥-click or I for details"
-msgstr "Hareket için sürükleyin veya kaydırın, yakınlaştırmak için sıkıştırın veya ⌘ ile kaydırın, bir odanın adına tıklayarak ona yakınlaşın · Bir ajana tıklayınca konuşması, küçük birine tıklayınca alt ajanı açılır · Ayrıntılar için ⌥-tık veya I"
+msgid "Drag or scroll to move, pinch or ⌘-scroll to zoom, click a room's name to zoom on it · Click an agent to open its conversation, a small one for its subagent · Right-click, ⌥-click or I to set its state"
+msgstr "Hareket için sürükleyin veya kaydırın, yakınlaştırmak için kıstırın veya ⌘-kaydırın, yakınlaşmak için oda adına tıklayın · Konuşmasını açmak için bir ajana, alt ajanı için küçük olana tıklayın · Durumunu ayarlamak için sağ tık, ⌥-tık veya I"
 
 msgid "Drag to reorder"
 msgstr "Sıralamak için sürükleyin"
@@ -7527,9 +7594,6 @@ msgstr "Her çarşamba 09.00'da bu haftanın birleştirilen PR'larını incele v
 
 msgid "Every weekday at 9am, read new GitHub issues, apply labels, and draft a first reply for my review."
 msgstr "Her hafta içi 09.00'da yeni GitHub issue'larını oku, etiket uygula ve incelemem için ilk yanıt taslağını hazırla."
-
-msgid "Everyone"
-msgstr "Herkes"
 
 msgid "Everyone argues about whether this generalizes. That argument is the sign the level was reached."
 msgstr "Herkes bunun genellenebilir olup olmadığını tartışır. Bu tartışma, düzeye ulaşıldığının işaretidir."
@@ -8419,6 +8483,9 @@ msgstr "Bitti — henüz açılmadı"
 msgid "finished · worked for 7s"
 msgstr "bitti · 7 sn çalıştı"
 
+msgid "Finished with nothing left: you can close it."
+msgstr "Bitti, yapılacak bir şey kalmadı: kapatabilirsiniz."
+
 msgid "First repository by name"
 msgstr "Ada göre ilk depo"
 
@@ -8524,6 +8591,9 @@ msgstr "Klasör bağlantıları"
 
 msgid "Folder view"
 msgstr "Klasör görünümü"
+
+msgid "Folders"
+msgstr "Klasörler"
 
 msgid "Folders to check out into new worktrees, one per line, relative to the repo root. Files at the root are always included. Empty checks out everything."
 msgstr "Yeni worktree'lere checkout edilecek klasörler; her satıra bir tane, depo köküne göre. Kökteki dosyalar her zaman dahildir. Boş bırakılırsa her şey checkout edilir."
@@ -8681,8 +8751,17 @@ msgstr "başlangıç: {price}/kullanıcı/ay"
 msgid "From a hackathon project to the workspace for parallel coding agents."
 msgstr "Bir hackathon projesinden paralel kodlama ajanları için çalışma alanına."
 
+msgid "from a label"
+msgstr "bir etiketten"
+
 msgid "From GitHub"
 msgstr "GitHub'dan"
+
+msgid "from its name"
+msgstr "adından"
+
+msgid "from its PR"
+msgstr "PR'ından"
 
 msgid "From your Claude Code transcripts on this machine. Automations and prompts written by agents are left out."
 msgstr "Bu makinedeki Claude Code dökümlerinden. Otomasyonlar ve ajanların yazdığı istemler hariç tutulur."
@@ -9042,6 +9121,9 @@ msgstr "Çakışma var"
 
 msgid "Has details"
 msgstr "Ayrıntı var"
+
+msgid "Has open to-dos"
+msgstr "Açık yapılacakları var"
 
 msgid "Has uncommitted changes"
 msgstr "Commit'lenmemiş değişiklikler var"
@@ -9413,9 +9495,6 @@ msgstr "IDE"
 msgid "Identity"
 msgstr "Kimlik"
 
-msgid "idle"
-msgstr "boşta"
-
 msgid "Idle"
 msgstr "Boşta"
 
@@ -9598,6 +9677,10 @@ msgid "In progress"
 msgstr "Devam ediyor"
 
 msgctxt "project state"
+msgid "In progress"
+msgstr "Devam ediyor"
+
+msgctxt "project status"
 msgid "In progress"
 msgstr "Devam ediyor"
 
@@ -9971,6 +10054,9 @@ msgstr "Issue URL'si {repoMismatch} ile eşleşmeli."
 msgid "Issue…"
 msgstr "Issue…"
 
+msgid "It asked you something or handed work over: it is your turn."
+msgstr "Size bir şey sordu veya işi teslim etti: sıra sizde."
+
 msgid "It can't be brought back."
 msgstr "Geri getirilemez."
 
@@ -10006,6 +10092,9 @@ msgstr "Kendi dalı ve dosyaların kendi kopyası"
 
 msgid "Its replies go with it."
 msgstr "Yanıtları da silinir."
+
+msgid "Its signals do not add up: look at it before trusting a state."
+msgstr "Sinyalleri tutarsız: bir duruma güvenmeden önce kontrol edin."
 
 msgid "Its whole process tree gets SIGTERM, then SIGKILL after 3 seconds."
 msgstr "Tüm süreç ağacına SIGTERM, 3 saniye sonra da SIGKILL gönderilir."
@@ -10100,6 +10189,9 @@ msgstr "Belgeleri güncel tut"
 msgid "Keep editing"
 msgstr "Düzenlemeye devam et"
 
+msgid "Keep it as in Notion's Projects board; the Office filters on it."
+msgstr "Notion'daki Projects panosuyla aynı tutun; Ofis buna göre filtreler."
+
 msgid "Keep typing an email to invite"
 msgstr "Davet etmek için e-postayı yazmaya devam edin"
 
@@ -10117,6 +10209,9 @@ msgstr "Yeni dosya korundu — oluşturulduktan sonra değişti"
 
 msgid "Kept the new folder — it is no longer empty"
 msgstr "Yeni klasör korundu — artık boş değil"
+
+msgid "Kept until you prompt the agent again."
+msgstr "Ajana yeniden yazana kadar korunur."
 
 msgid "Key name"
 msgstr "Anahtar adı"
@@ -10277,6 +10372,10 @@ msgstr "Gecikme"
 msgid "Later"
 msgstr "Daha sonra"
 
+msgctxt "work state chip"
+msgid "Later"
+msgstr "Sonra"
+
 msgid "Latest"
 msgstr "En son"
 
@@ -10396,6 +10495,9 @@ msgstr "bir dakikadan az önce"
 
 msgid "Let the agent drive."
 msgstr "Ajan kullansın."
+
+msgid "Let the app infer the state again"
+msgstr "Durumu yeniden uygulama çıkarsın"
 
 msgid "Letter spacing (px)"
 msgstr "Harf aralığı (px)"
@@ -11525,9 +11627,6 @@ msgstr "İlgi bekliyor"
 msgid "Needs input"
 msgstr "Giriş gerekiyor"
 
-msgid "Needs me"
-msgstr "Bana ihtiyaç var"
-
 msgid "Needs permission"
 msgstr "İzin gerekiyor"
 
@@ -11838,8 +11937,8 @@ msgstr "Bu ana makinede yapılandırılmış bir ajan yok"
 msgid "No agent is running on this host."
 msgstr "Bu ana bilgisayarda çalışan ajan yok."
 
-msgid "No agent is working right now."
-msgstr "Şu anda çalışan ajan yok."
+msgid "No agent open right now. Start one in a workspace and it gets a desk here."
+msgstr "Şu an açık ajan yok. Bir çalışma alanında başlatın, burada masası olsun."
 
 msgid "No agent running"
 msgstr "Çalışan ajan yok"
@@ -12176,11 +12275,17 @@ msgstr "Henüz not yok. Kenar çubuğundaki bir çalışma alanının not düğm
 msgid "No one in {organizationName} matches. Type a full email to invite someone new."
 msgstr "{organizationName} içinde eşleşen kimse yok. Yeni birini davet etmek için tam bir e-posta adresi yazın."
 
+msgid "No open agent matches these filters."
+msgstr "Bu filtrelere uyan açık ajan yok."
+
 msgid "No open issues found."
 msgstr "Açık issue bulunamadı."
 
 msgid "No open issues."
 msgstr "Açık issue yok."
+
+msgid "No open PR known. PRs show once the Pull Requests page has loaded."
+msgstr "Bilinen açık PR yok. PR'lar Pull Requests sayfası yüklendikten sonra görünür."
 
 msgid "No open pull requests found."
 msgstr "Açık pull request bulunamadı."
@@ -12285,6 +12390,9 @@ msgstr "Son 30 günde hiçbir proje silinmedi."
 msgid "No projects yet."
 msgstr "Henüz proje yok."
 
+msgid "No prompt yet"
+msgstr "Henüz istem yok"
+
 msgid "No prompt-capable command configured."
 msgstr "İstem destekleyen yapılandırılmış komut yok."
 
@@ -12357,6 +12465,9 @@ msgstr "Henüz oturum yok"
 msgid "No shortcuts found matching \"{searchQuery}\""
 msgstr "\"{searchQuery}\" ile eşleşen kısayol bulunamadı"
 
+msgid "No sign of life for over an hour"
+msgstr "Bir saatten uzun süredir hareket yok"
+
 msgid "No simulator is running."
 msgstr "Çalışan simülatör yok."
 
@@ -12368,6 +12479,10 @@ msgstr "Yığın çerçevesi yok"
 
 msgid "No stars in this range."
 msgstr "Bu aralıkta yıldız yok."
+
+msgctxt "project status"
+msgid "No status"
+msgstr "Durum yok"
 
 msgid "No Stripe customer found"
 msgstr "Stripe müşterisi bulunamadı"
@@ -12459,9 +12574,6 @@ msgstr "Bu etiketlere sahip çalışma alanı yok"
 msgid "No workspace in focus here"
 msgstr "Burada odakta çalışma alanı yok"
 
-msgid "No workspace in focus here."
-msgstr "Burada odakta çalışma alanı yok."
-
 msgid "No workspace in focus on this host."
 msgstr "Bu sunucuda odakta çalışma alanı yok."
 
@@ -12476,9 +12588,6 @@ msgstr "Bu ana bilgisayarda henüz çalışma alanı yok. Burada bir ajan çalı
 
 msgid "No workspace run command configured"
 msgstr "Yapılandırılmış çalışma alanı çalıştırma komutu yok"
-
-msgid "No workspace yet. Create one and it gets a desk here."
-msgstr "Henüz workspace yok. Bir tane oluştur, burada bir masası olsun."
 
 msgid "No workspaces found."
 msgstr "Çalışma alanı bulunamadı."
@@ -12516,14 +12625,14 @@ msgstr "Tabloya henüz kimse katılmadı."
 msgid "Nobody here by that name."
 msgstr "Bu isimde kimse yok."
 
-msgid "Nobody needs you right now."
-msgstr "Şu an kimsenin sana ihtiyacı yok."
-
 msgid "Nobody on your team has shared automations yet."
 msgstr "Takımınızdan henüz kimse otomasyon paylaşmadı."
 
 msgid "Nobody reviews differently because of it."
 msgstr "Kimse bu yüzden farklı inceleme yapmaz."
+
+msgid "nobody waiting"
+msgstr "bekleyen yok"
 
 msgid "Nobody waiting on you"
 msgstr "Seni bekleyen yok"
@@ -12533,6 +12642,9 @@ msgstr "Yok"
 
 msgid "none (session)"
 msgstr "yok (oturum)"
+
+msgid "None of its PRs links a Notion page."
+msgstr "PR'larının hiçbiri bir Notion sayfasına bağlanmıyor."
 
 msgid "None. This is the floor."
 msgstr "Yok. Bu, taban düzeydir."
@@ -12691,11 +12803,17 @@ msgstr "Bildirim sesleri"
 msgid "Notifications"
 msgstr "Bildirimler"
 
+msgid "Notion"
+msgstr "Notion"
+
 msgid "Notion is not configured for this environment."
 msgstr "Notion bu ortam için yapılandırılmamış."
 
 msgid "Notion page"
 msgstr "Notion sayfası"
+
+msgid "Notion page URL"
+msgstr "Notion sayfası URL'si"
 
 msgid "now"
 msgstr "şimdi"
@@ -13209,6 +13327,9 @@ msgstr "Yeni sekmede aç"
 
 msgid "Open in New Tab"
 msgstr "Yeni sekmede aç"
+
+msgid "Open in Notion"
+msgstr "Notion'da aç"
 
 msgid "Open in Pull Requests"
 msgstr "Pull request'lerde aç"
@@ -13853,6 +13974,9 @@ msgstr "{hostName} üzerindeki üst dizin"
 msgid "Parents"
 msgstr "Üst commitler"
 
+msgid "Parked: unfinished, nothing asked of you."
+msgstr "Beklemede: bitmedi, sizden bir şey istemiyor."
+
 msgid "Part of Superset Pro"
 msgstr "Superset Pro'nun parçası"
 
@@ -13885,6 +14009,9 @@ msgstr "Geçen hafta"
 
 msgid "Paste"
 msgstr "Yapıştır"
+
+msgid "Paste a notion.so or notion.com page link."
+msgstr "notion.so veya notion.com sayfa bağlantısı yapıştırın."
 
 msgid "Paste this into Superset CLI:"
 msgstr "Bunu Superset CLI'ye yapıştırın:"
@@ -13920,6 +14047,10 @@ msgid "Paused"
 msgstr "Duraklatıldı"
 
 msgctxt "project state"
+msgid "Paused"
+msgstr "Duraklatıldı"
+
+msgctxt "project status"
 msgid "Paused"
 msgstr "Duraklatıldı"
 
@@ -14080,6 +14211,9 @@ msgstr "{hostName} üzerindeki worktree klasörünü seçin."
 msgid "Pick your agent for a one-line install, or copy the config by hand. Every client, including OAuth and API key setup, is covered in the <0>full MCP server docs</0>."
 msgstr "Tek satırlık kurulum için ajanınızı seçin veya yapılandırmayı elle kopyalayın. OAuth ve API anahtarı kurulumu dahil her istemci, <0>tam MCP sunucusu belgelerinde</0> anlatılıyor."
 
+msgid "picked by you"
+msgstr "sizin seçiminiz"
+
 msgid "PID"
 msgstr "PID"
 
@@ -14129,6 +14263,10 @@ msgstr "Plan güncellendi"
 msgctxt "project state"
 msgid "Planned"
 msgstr "Planlandı"
+
+msgctxt "project status"
+msgid "Planning"
+msgstr "Planlama"
 
 msgid "Planning the tooltip refactor"
 msgstr "Tooltip yeniden düzenlemesi planlanıyor"
@@ -14494,6 +14632,9 @@ msgstr "Proje"
 msgid "Project created."
 msgstr "Proje oluşturuldu."
 
+msgid "Project details: PRs, Notion page and specs"
+msgstr "Proje ayrıntıları: PR'lar, Notion sayfası ve spesifikasyonlar"
+
 msgid "Project folder is not on this machine"
 msgstr "Proje klasörü bu makinede değil"
 
@@ -14535,6 +14676,9 @@ msgstr "Proje {0} konumunda kuruldu"
 msgid "Project Settings"
 msgstr "Proje ayarları"
 
+msgid "Project status, as in Notion"
+msgstr "Proje durumu, Notion'daki gibi"
+
 msgid "Project worktree location reset"
 msgstr "Proje worktree konumu sıfırlandı"
 
@@ -14557,6 +14701,9 @@ msgstr "Projenin host'una erişilemiyor — şu anda yeniden adlandırılamaz"
 
 msgid "Projects"
 msgstr "Projeler"
+
+msgid "Projects (from the Pull Requests page)"
+msgstr "Projeler (Pull Requests sayfasından)"
 
 msgid "Promoted from a workspace, so its repositories and region are fixed. Promote a workspace again to change them."
 msgstr "Bir çalışma alanından yükseltildi, bu yüzden depoları ve bölgesi sabit. Değiştirmek için bir çalışma alanını yeniden yükseltin."
@@ -15415,8 +15562,14 @@ msgstr "{where} konumunda {replaced} dosya değiştirildi"
 msgid "Replaced 1 file in {where}"
 msgstr "{where} konumunda 1 dosya değiştirildi"
 
+msgid "Replied, not read yet"
+msgstr "Yanıtladı, henüz okunmadı"
+
 msgid "Reply"
 msgstr "Yanıtla"
+
+msgid "Reply read, nothing asked"
+msgstr "Yanıt okundu, soru yok"
 
 msgid "Reply to review bots"
 msgstr "İnceleme botlarına yanıt vermek"
@@ -15447,6 +15600,9 @@ msgstr "Bildirim bulunamadı"
 
 msgid "Report this page"
 msgstr "Bu sayfayı bildir"
+
+msgid "Reported done"
+msgstr "Bitti olarak bildirildi"
 
 msgid "Reporting is briefly unavailable. Try again shortly."
 msgstr "Bildirim geçici olarak kullanılamıyor. Birazdan tekrar deneyin."
@@ -15747,11 +15903,17 @@ msgstr "Sürdürme argümanları"
 msgid "Resume automation"
 msgstr "Otomasyonu sürdür"
 
+msgid "Resume later"
+msgstr "Sonra devam et"
+
 msgid "Resume reopens the conversation where it stopped"
 msgstr "Sürdür, konuşmayı kaldığı yerden yeniden açar"
 
 msgid "Resume them from “Recently closed”"
 msgstr "Bunları “Son kapatılanlar” bölümünden sürdürün"
+
+msgid "Resume with its to-dos"
+msgstr "Yapılacaklarıyla devam et"
 
 #. placeholder {0}: candidate.agentLabel
 msgid "Resuming {0}…"
@@ -15947,6 +16109,9 @@ msgstr "Bir ajan oturumunu, konuşma ve dosya değişiklikleriyle birlikte herha
 msgid "Room for another agent"
 msgstr "Bir ajan için daha yer var"
 
+msgid "Rooms"
+msgstr "Odalar"
+
 msgid "Rotate"
 msgstr "Döndür"
 
@@ -16108,6 +16273,9 @@ msgstr "Eşleştirilmiş bir cihazda çalışıyor"
 
 msgid "Running on this device"
 msgstr "Bu cihazda çalışıyor"
+
+msgid "Running right now."
+msgstr "Şu anda çalışıyor."
 
 msgid "Running terminal processes continue, but older output may no longer be available after restarting the app."
 msgstr "Çalışan terminal süreçleri devam eder, ancak uygulama yeniden başlatıldıktan sonra eski çıktı artık kullanılamayabilir."
@@ -16859,6 +17027,17 @@ msgstr "Oturumlar · maliyete göre ilk {0}"
 msgid "Sessions / day"
 msgstr "Oturum / gün"
 
+msgid "Set by hand"
+msgstr "Elle ayarlandı"
+
+#. placeholder {0}: formatCompactRelativeTime(Math.min(pinned.setAt, now), now)
+msgid "Set by the agent · {0}"
+msgstr "Ajan ayarladı · {0}"
+
+#. placeholder {0}: formatCompactRelativeTime(Math.min(pinned.setAt, now), now)
+msgid "Set by you · {0}"
+msgstr "Sizin ayarınız · {0}"
+
 #. placeholder {0}: color.name
 msgid "Set color to {0}"
 msgstr "Rengi şuna ayarla: {0}"
@@ -16878,6 +17057,9 @@ msgstr "Projeyi ayarla…"
 
 msgid "Set Run"
 msgstr "Çalıştırmayı ayarla"
+
+msgid "Set the state"
+msgstr "Durumu ayarla"
 
 msgid "Set this project"
 msgstr "Bu projeyi ayarla"
@@ -17616,6 +17798,9 @@ msgstr "Konuşuyor"
 
 msgid "Specific"
 msgstr "Belirli"
+
+msgid "Specs linked from its PRs"
+msgstr "PR'larından bağlanan spesifikasyonlar"
 
 msgid "Speed"
 msgstr "Hız"
@@ -19633,6 +19818,13 @@ msgstr "Başlık"
 msgid "To"
 msgstr "Hedef"
 
+msgid "To check"
+msgstr "Kontrol edilmeli"
+
+msgctxt "work state chip"
+msgid "To check"
+msgstr "Kontrol edilmeli"
+
 msgid "To resume an agent conversation, run this in its folder:"
 msgstr "Bir ajan konuşmasını sürdürmek için klasöründe şunu çalıştırın:"
 
@@ -19648,6 +19840,10 @@ msgstr "Yapılacak"
 msgid "To-do details"
 msgstr "Yapılacak ayrıntıları"
 
+msgid "To-dos"
+msgstr "Yapılacaklar"
+
+msgctxt "work state chip"
 msgid "To-dos"
 msgstr "Yapılacaklar"
 
@@ -20086,6 +20282,9 @@ msgstr "Geri al"
 msgid "Undo the last archived workspace or closed chats"
 msgstr "Son arşivlenen çalışma alanını veya kapatılan sohbetleri geri al"
 
+msgid "Unfinished, with a to-do list to pick up."
+msgstr "Bitmedi, devam edilecek bir yapılacaklar listesi var."
+
 msgid "Ungroup"
 msgstr "Gruptan çıkar"
 
@@ -20298,6 +20497,9 @@ msgstr "Dosya eklemek için bu makinede Superset'i güncelleyin"
 
 msgid "update the branch prefix"
 msgstr "dal ön ekini güncelleme"
+
+msgid "Update this host to set the state by hand."
+msgstr "Durumu elle ayarlamak için bu ana bilgisayarı güncelleyin."
 
 msgid "Updated"
 msgstr "Güncellendi"
@@ -20669,6 +20871,10 @@ msgstr "Ajanları başlatmadan önce çalışma alanı kurulumunu bekle"
 msgid "Waiting"
 msgstr "Bekleyen"
 
+msgctxt "work state chip"
+msgid "Waiting"
+msgstr "Bekliyor"
+
 #. placeholder {0}: names.a
 #. placeholder {1}: names.b
 msgid "waiting for {0} and {1}…"
@@ -20697,6 +20903,9 @@ msgstr "Sizi bekliyor"
 
 msgid "Waiting for you · {waitingFor}"
 msgstr "Sizi bekliyor · {waitingFor}"
+
+msgid "Waiting for your answer"
+msgstr "Yanıtınızı bekliyor"
 
 msgid "Waiting for your input"
 msgstr "Girdinizi bekliyor"
@@ -20923,6 +21132,9 @@ msgstr "Superset hangi platformlarda çalışıyor?"
 msgid "What problem are you trying to solve?"
 msgstr "Hangi sorunu çözmeye çalışıyorsunuz?"
 
+msgid "What rooms stand for"
+msgstr "Odaların anlamı"
+
 msgid "What shipped"
 msgstr "Yayınlananlar"
 
@@ -21012,9 +21224,6 @@ msgstr "Kim"
 
 msgid "Who can open it"
 msgstr "Kimler açabilir"
-
-msgid "Who to show"
-msgstr "Kimler gösterilsin"
 
 msgid "Who waits on you, or whom you wait on"
 msgstr "Sizi bekleyen ya da beklediğiniz kişi"
@@ -21106,6 +21315,10 @@ msgid "Working"
 msgstr "Çalışıyor"
 
 msgctxt "agent status"
+msgid "Working"
+msgstr "Çalışıyor"
+
+msgctxt "work state chip"
 msgid "Working"
 msgstr "Çalışıyor"
 

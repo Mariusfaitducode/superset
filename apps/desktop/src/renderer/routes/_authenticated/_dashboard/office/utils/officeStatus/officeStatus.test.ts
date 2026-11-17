@@ -5,26 +5,13 @@ import {
 	moveFocus,
 	type OfficeTone,
 	orderIslands,
-	toneFor,
-	visibleIslands,
 } from "./officeStatus";
 
-describe("toneFor", () => {
-	test("maps every conversation state to one tone", () => {
-		expect(toneFor("request")).toBe("need");
-		expect(toneFor("failed")).toBe("failed");
-		expect(toneFor("unseen")).toBe("done");
-		expect(toneFor("working")).toBe("working");
-		expect(toneFor("seen")).toBe("idle");
-		expect(toneFor("idle")).toBe("idle");
-	});
-});
-
 describe("countTones", () => {
-	test("counts questions, errors and unseen results as needing you", () => {
+	test("counts the agents waiting on you and the ones at work", () => {
 		expect(
-			countTones(["need", "failed", "done", "working", "working", "idle"]),
-		).toEqual({ needYou: 3, working: 2 });
+			countTones(["waiting", "waiting", "working", "todos", "done", "resume"]),
+		).toEqual({ needYou: 2, working: 1 });
 		expect(countTones([])).toEqual({ needYou: 0, working: 0 });
 	});
 });
@@ -34,37 +21,37 @@ function island(name: string, tones: OfficeTone[]) {
 }
 
 describe("orderIslands", () => {
-	test("puts the island that needs you first, then the busiest", () => {
+	test("waiting first, then working, then to-dos to pick up", () => {
 		const ordered = orderIslands([
-			island("Alpha", ["idle"]),
+			island("Alpha", ["resume"]),
 			island("Bravo", ["working", "working"]),
-			island("Charlie", ["done"]),
-			island("Delta", ["working", "need"]),
-			island("Echo", ["failed"]),
+			island("Charlie", ["todos"]),
+			island("Delta", ["working", "waiting"]),
+			island("Echo", ["done"]),
 		]);
 		expect(ordered.map((entry) => entry.name)).toEqual([
 			"Delta",
-			"Echo",
-			"Charlie",
 			"Bravo",
+			"Charlie",
 			"Alpha",
+			"Echo",
 		]);
 	});
 
-	test("a workspace without chats goes after idle ones", () => {
+	test("a workspace without chats goes last", () => {
 		const ordered = orderIslands([
 			island("Alpha", []),
-			island("Bravo", ["idle"]),
+			island("Bravo", ["done"]),
 		]);
 		expect(ordered.map((entry) => entry.name)).toEqual(["Bravo", "Alpha"]);
 	});
 
 	test("more agents waiting ranks higher; ties fall back to the name", () => {
 		const ordered = orderIslands([
-			island("Zulu", ["need"]),
-			island("Yankee", ["need", "need"]),
-			island("Bravo", ["idle"]),
-			island("Alpha", ["idle"]),
+			island("Zulu", ["waiting"]),
+			island("Yankee", ["waiting", "waiting"]),
+			island("Bravo", ["resume"]),
+			island("Alpha", ["resume"]),
 		]);
 		expect(ordered.map((entry) => entry.name)).toEqual([
 			"Yankee",
@@ -77,39 +64,13 @@ describe("orderIslands", () => {
 
 describe("deskTone", () => {
 	test("is the most urgent tone among a workspace's chats", () => {
-		expect(deskTone(["idle", "working", "done"])).toBe("done");
-		expect(deskTone(["working", "need", "failed"])).toBe("need");
-		expect(deskTone(["idle"])).toBe("idle");
+		expect(deskTone(["resume", "working", "done"])).toBe("working");
+		expect(deskTone(["working", "waiting", "todos"])).toBe("waiting");
+		expect(deskTone(["done"])).toBe("done");
 	});
 
 	test("is null for a workspace without chats", () => {
 		expect(deskTone([])).toBeNull();
-	});
-});
-
-describe("visibleIslands", () => {
-	const islands = [
-		island("quiet", ["idle", "working"]),
-		island("asks", ["idle", "need"]),
-		island("done", ["done"]),
-		island("resting", ["idle"]),
-		island("empty", []),
-	];
-
-	test("keeps every island by default", () => {
-		expect(visibleIslands(islands, "all")).toHaveLength(5);
-	});
-
-	test("keeps only islands where an agent is not resting", () => {
-		expect(
-			visibleIslands(islands, "working").map((entry) => entry.name),
-		).toEqual(["quiet", "asks", "done"]);
-	});
-
-	test("keeps only islands where someone needs you", () => {
-		expect(
-			visibleIslands(islands, "needsMe").map((entry) => entry.name),
-		).toEqual(["asks", "done"]);
 	});
 });
 

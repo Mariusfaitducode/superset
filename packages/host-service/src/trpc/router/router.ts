@@ -5,6 +5,7 @@ import { agentsRouter } from "./agents";
 import { attachmentsRouter } from "./attachments";
 import { browserRouter } from "./browser/browser";
 import { configRouter } from "./config";
+import { conversationStatesRouter } from "./conversation-states";
 import { conversationTodosRouter } from "./conversation-todos";
 import { filesystemRouter } from "./filesystem";
 import { gitRouter } from "./git";
@@ -48,6 +49,7 @@ export const appRouter = router({
 	host: hostRouter,
 	insights: insightsRouter,
 	config: configRouter,
+	conversationStates: conversationStatesRouter,
 	conversationTodos: conversationTodosRouter,
 	filesystem: filesystemRouter,
 	git: gitRouter,

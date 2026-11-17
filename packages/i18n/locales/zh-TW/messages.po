@@ -413,6 +413,11 @@ msgstr "{0}的操作"
 msgid "{0} agents"
 msgstr "{0} 個代理"
 
+#. placeholder {0}: agents.length
+#. placeholder {1}: pullRequests.length
+msgid "{0} agents · {1} open PRs"
+msgstr "{0} 個代理 · {1} 個開啟的 PR"
+
 #. placeholder {0}: states.length
 msgid "{0} agents · {waiting} waiting for you"
 msgstr "{0} 個代理 · {waiting} 個在等你"
@@ -560,6 +565,7 @@ msgstr "{0}選項"
 msgid "{0} plan"
 msgstr "{0}方案"
 
+#. placeholder {0}: filter.projects.length
 #. placeholder {0}: normalizedProjectIds.length
 msgid "{0} projects"
 msgstr "{0}個專案"
@@ -1504,6 +1510,9 @@ msgstr "⌘⇧點選"
 msgid "⌘K ↵ goes back to the previous conversation"
 msgstr "⌘K ↵ 返回上一個對話"
 
+msgid "⌥-click to show only this state"
+msgstr "⌥-點擊僅顯示此狀態"
+
 msgid "● Online"
 msgstr "● 線上"
 
@@ -1533,6 +1542,9 @@ msgstr "1個cookie——忘記此站點"
 
 msgid "1 hr"
 msgstr "1 小時"
+
+msgid "1 project"
+msgstr "1 個專案"
 
 msgid "1 to-do:"
 msgstr "1 個待辦:"
@@ -2697,6 +2709,9 @@ msgstr "任意頁面"
 msgid "Any project"
 msgstr "任意專案"
 
+msgid "Any project status"
+msgstr "任意專案狀態"
+
 msgid "any recipient"
 msgstr "任意收件人"
 
@@ -2967,6 +2982,9 @@ msgstr "問問代理程式在做什麼，或告訴它下一步該做什麼。"
 msgid "Asks before edits and commands"
 msgstr "編輯和執行指令前詢問"
 
+msgid "Asks for your approval"
+msgstr "請求你的核准"
+
 msgid "Asks only for risky actions"
 msgstr "僅在有風險時詢問"
 
@@ -3153,6 +3171,21 @@ msgstr "自動化任務"
 msgid "Automate workspace setup for {projectName}"
 msgstr "為{projectName}自動化工作區初始化"
 
+msgid "Automatic"
+msgstr "自動"
+
+#. placeholder {0}: words.label[info.inferred.state]
+msgid "Automatic would say: {0}"
+msgstr "自動判斷為：{0}"
+
+#. placeholder {0}: project.name
+#. placeholder {1}: viaLabel[project.via]
+msgid "Automatic: {0} ({1})"
+msgstr "自動：{0}（{1}）"
+
+msgid "Automatic: no project found"
+msgstr "自動：找不到專案"
+
 msgid "Automation"
 msgstr "自動化"
 
@@ -3289,6 +3322,10 @@ msgstr "背景工作與頁面"
 
 msgid "Backlog"
 msgstr "待規劃"
+
+msgctxt "project status"
+msgid "Backlog"
+msgstr "待辦池"
 
 msgid "Badge"
 msgstr "徽章"
@@ -3786,6 +3823,10 @@ msgctxt "project state"
 msgid "Canceled"
 msgstr "已取消"
 
+msgctxt "project status"
+msgid "Canceled"
+msgstr "已取消"
+
 msgid "Canceling..."
 msgstr "正在取消..."
 
@@ -4248,6 +4289,9 @@ msgstr "清除終端歷史？"
 msgid "Clear the filter to rearrange the sidebar"
 msgstr "清除篩選即可重新排列側邊欄"
 
+msgid "Clear them"
+msgstr "清除篩選"
+
 msgid "Clear workspace selection"
 msgstr "清除工作區選擇"
 
@@ -4286,6 +4330,12 @@ msgstr "點選<0>匯入主題</0>，選擇下載好的檔案。"
 
 msgid "Click a terminal script to edit its details."
 msgstr "點選終端指令碼以編輯其詳情。"
+
+msgid "Click again to close the agent"
+msgstr "再按一次以關閉代理"
+
+msgid "Click again to go back to automatic."
+msgstr "再按一次以恢復自動。"
 
 msgid "Click an element."
 msgstr "點擊一個元素。"
@@ -4483,6 +4533,9 @@ msgstr "關閉終端"
 
 msgid "Close Terminal"
 msgstr "關閉終端"
+
+msgid "Close the agent"
+msgstr "關閉代理"
 
 msgid "Close the current pane"
 msgstr "關閉目前窗格"
@@ -5164,6 +5217,9 @@ msgstr "對話"
 msgid "Conversation · Message"
 msgstr "對話 · 訊息"
 
+msgid "Conversation state"
+msgstr "對話狀態"
+
 msgid "Conversation stats"
 msgstr "對話統計"
 
@@ -5690,6 +5746,9 @@ msgstr "無法分叉到新的 worktree"
 
 msgid "Couldn't branch the conversation"
 msgstr "無法分叉對話"
+
+msgid "Couldn't change the state"
+msgstr "無法變更狀態"
 
 msgid "Couldn't check what removing this member affects"
 msgstr "無法檢查移除此成員會影響哪些內容"
@@ -6994,14 +7053,22 @@ msgstr "不儲存"
 msgid "Done"
 msgstr "完成"
 
+msgctxt "project status"
+msgid "Done"
+msgstr "完成"
+
+msgctxt "work state chip"
+msgid "Done"
+msgstr "完成"
+
 msgid "Done — the bordered chip style used by the presets bar is now the default for every tooltip, and the copy-pasted overrides are removed (net −90 lines)."
 msgstr "完成——預設欄使用的帶邊框chip樣式現在是所有tooltip的預設樣式，複製貼上出來的樣式覆蓋也都移除了（淨減90行）。"
 
 msgid "Done (isShimmering=false)"
 msgstr "完成（isShimmering=false）"
 
-msgid "Done, not seen"
-msgstr "已完成，未查看"
+msgid "Done, can be closed"
+msgstr "已完成，可關閉"
 
 msgid "Done, not seen yet"
 msgstr "已完成，尚未查看"
@@ -7102,8 +7169,8 @@ msgstr "草稿等待你核准"
 msgid "drafted 3 support replies"
 msgstr "起草了3條支援回覆"
 
-msgid "Drag or scroll to move, pinch or ⌘-scroll to zoom, click a room's name to zoom on it · Click an agent to open its conversation, a small one for its subagent · ⌥-click or I for details"
-msgstr "拖曳或捲動來移動，捏合或 ⌘+捲動來縮放，點擊房間名稱放大該房間 · 點擊代理開啟其對話，點擊小代理開啟其子代理 · ⌥-點擊或按 I 查看詳情"
+msgid "Drag or scroll to move, pinch or ⌘-scroll to zoom, click a room's name to zoom on it · Click an agent to open its conversation, a small one for its subagent · Right-click, ⌥-click or I to set its state"
+msgstr "拖曳或捲動以移動，捏合或 ⌘-捲動以縮放，點擊房間名稱以放大該房間 · 點擊代理開啟其對話，點擊小的開啟其子代理 · 右鍵、⌥-點擊或按 I 設定其狀態"
 
 msgid "Drag to reorder"
 msgstr "拖曳以重新排序"
@@ -7527,9 +7594,6 @@ msgstr "每週三上午9點，回顧本週合併的PR，更新被它們改過時
 
 msgid "Every weekday at 9am, read new GitHub issues, apply labels, and draft a first reply for my review."
 msgstr "每個工作日上午9點，閱讀新的GitHub議題，打上標籤，並起草初步回覆供我審閱。"
-
-msgid "Everyone"
-msgstr "所有人"
 
 msgid "Everyone argues about whether this generalizes. That argument is the sign the level was reached."
 msgstr "所有人都在爭論這能否推廣。這場爭論本身就說明這一級別已經達到了。"
@@ -8419,6 +8483,9 @@ msgstr "已完成 — 尚未開啟"
 msgid "finished · worked for 7s"
 msgstr "已完成 · 用時7秒"
 
+msgid "Finished with nothing left: you can close it."
+msgstr "已完成且無剩餘工作：可以關閉。"
+
 msgid "First repository by name"
 msgstr "依名稱排序的第一個儲存庫"
 
@@ -8524,6 +8591,9 @@ msgstr "資料夾連結"
 
 msgid "Folder view"
 msgstr "資料夾檢視"
+
+msgid "Folders"
+msgstr "資料夾"
 
 msgid "Folders to check out into new worktrees, one per line, relative to the repo root. Files at the root are always included. Empty checks out everything."
 msgstr "要檢出到新worktree的資料夾，每行一個，相對於儲存庫根目錄。根目錄下的檔案始終包含在內。留空則檢出全部。"
@@ -8681,8 +8751,17 @@ msgstr "{price}/使用者/月起"
 msgid "From a hackathon project to the workspace for parallel coding agents."
 msgstr "從一個黑客松專案，到平行程式設計代理的工作空間。"
 
+msgid "from a label"
+msgstr "來自標籤"
+
 msgid "From GitHub"
 msgstr "來自 GitHub"
+
+msgid "from its name"
+msgstr "來自名稱"
+
+msgid "from its PR"
+msgstr "來自其 PR"
 
 msgid "From your Claude Code transcripts on this machine. Automations and prompts written by agents are left out."
 msgstr "來自本機上的 Claude Code 對話紀錄。不含自動化任務和代理撰寫的提示。"
@@ -9042,6 +9121,9 @@ msgstr "有衝突"
 
 msgid "Has details"
 msgstr "有詳細資訊"
+
+msgid "Has open to-dos"
+msgstr "有未完成的待辦"
 
 msgid "Has uncommitted changes"
 msgstr "有未提交的改動"
@@ -9413,9 +9495,6 @@ msgstr "IDE"
 msgid "Identity"
 msgstr "身份"
 
-msgid "idle"
-msgstr "閒置"
-
 msgid "Idle"
 msgstr "空閒"
 
@@ -9598,6 +9677,10 @@ msgid "In progress"
 msgstr "進行中"
 
 msgctxt "project state"
+msgid "In progress"
+msgstr "進行中"
+
+msgctxt "project status"
 msgid "In progress"
 msgstr "進行中"
 
@@ -9971,6 +10054,9 @@ msgstr "議題URL必須匹配{repoMismatch}。"
 msgid "Issue…"
 msgstr "議題…"
 
+msgid "It asked you something or handed work over: it is your turn."
+msgstr "它向你提問或交付了工作：輪到你了。"
+
 msgid "It can't be brought back."
 msgstr "刪除後無法復原。"
 
@@ -10006,6 +10092,9 @@ msgstr "獨立的分支和檔案副本"
 
 msgid "Its replies go with it."
 msgstr "其回覆也會一併刪除。"
+
+msgid "Its signals do not add up: look at it before trusting a state."
+msgstr "訊號互相矛盾：請先查看再相信狀態。"
 
 msgid "Its whole process tree gets SIGTERM, then SIGKILL after 3 seconds."
 msgstr "其整個處理程序樹會收到 SIGTERM，3 秒後再收到 SIGKILL。"
@@ -10100,6 +10189,9 @@ msgstr "讓文件保持最新"
 msgid "Keep editing"
 msgstr "繼續編輯"
 
+msgid "Keep it as in Notion's Projects board; the Office filters on it."
+msgstr "請與 Notion 的 Projects 看板保持一致；辦公室依此篩選。"
+
 msgid "Keep typing an email to invite"
 msgstr "繼續輸入電子郵件以邀請"
 
@@ -10117,6 +10209,9 @@ msgstr "已保留新檔案 — 它在建立後發生了更改"
 
 msgid "Kept the new folder — it is no longer empty"
 msgstr "已保留新資料夾 — 它已不再為空"
+
+msgid "Kept until you prompt the agent again."
+msgstr "保持到你再次向代理傳送提示。"
 
 msgid "Key name"
 msgstr "金鑰名稱"
@@ -10277,6 +10372,10 @@ msgstr "延遲"
 msgid "Later"
 msgstr "稍後"
 
+msgctxt "work state chip"
+msgid "Later"
+msgstr "稍後"
+
 msgid "Latest"
 msgstr "最新"
 
@@ -10396,6 +10495,9 @@ msgstr "不到一分鐘前"
 
 msgid "Let the agent drive."
 msgstr "讓代理程式來操作。"
+
+msgid "Let the app infer the state again"
+msgstr "讓應用程式重新推斷狀態"
 
 msgid "Letter spacing (px)"
 msgstr "字間距（px）"
@@ -11525,9 +11627,6 @@ msgstr "需要處理"
 msgid "Needs input"
 msgstr "需要輸入"
 
-msgid "Needs me"
-msgstr "需要我"
-
 msgid "Needs permission"
 msgstr "需要授權"
 
@@ -11838,8 +11937,8 @@ msgstr "此主機上未設定任何代理程式"
 msgid "No agent is running on this host."
 msgstr "此主機上沒有正在執行的代理。"
 
-msgid "No agent is working right now."
-msgstr "目前沒有代理在工作。"
+msgid "No agent open right now. Start one in a workspace and it gets a desk here."
+msgstr "目前沒有開啟的代理。在工作區啟動一個，它就會在這裡有張桌子。"
 
 msgid "No agent running"
 msgstr "沒有正在執行的代理程式"
@@ -12176,11 +12275,17 @@ msgstr "還沒有筆記。可從側邊欄中工作區的筆記按鈕新增，或
 msgid "No one in {organizationName} matches. Type a full email to invite someone new."
 msgstr "{organizationName} 中沒有相符的人。輸入完整電子郵件地址即可邀請新成員。"
 
+msgid "No open agent matches these filters."
+msgstr "沒有符合這些篩選條件的開啟代理。"
+
 msgid "No open issues found."
 msgstr "未找到開啟的議題。"
 
 msgid "No open issues."
 msgstr "沒有開啟的議題。"
+
+msgid "No open PR known. PRs show once the Pull Requests page has loaded."
+msgstr "沒有已知的開啟 PR。Pull Requests 頁面載入後才會顯示。"
 
 msgid "No open pull requests found."
 msgstr "未找到開啟的拉取請求。"
@@ -12285,6 +12390,9 @@ msgstr "過去 30 天內沒有刪除任何專案。"
 msgid "No projects yet."
 msgstr "暫無專案。"
 
+msgid "No prompt yet"
+msgstr "尚無提示"
+
 msgid "No prompt-capable command configured."
 msgstr "未配置支援提示詞的命令。"
 
@@ -12357,6 +12465,9 @@ msgstr "還沒有會話"
 msgid "No shortcuts found matching \"{searchQuery}\""
 msgstr "沒有找到與「{searchQuery}」匹配的快速鍵"
 
+msgid "No sign of life for over an hour"
+msgstr "超過一小時沒有動靜"
+
 msgid "No simulator is running."
 msgstr "沒有執行中的模擬器。"
 
@@ -12368,6 +12479,10 @@ msgstr "沒有堆疊框架"
 
 msgid "No stars in this range."
 msgstr "此區間內沒有星標。"
+
+msgctxt "project status"
+msgid "No status"
+msgstr "無狀態"
 
 msgid "No Stripe customer found"
 msgstr "未找到Stripe客戶"
@@ -12459,9 +12574,6 @@ msgstr "沒有工作區帶有這些標籤"
 msgid "No workspace in focus here"
 msgstr "此處沒有專注中的工作區"
 
-msgid "No workspace in focus here."
-msgstr "此處沒有專注中的工作區。"
-
 msgid "No workspace in focus on this host."
 msgstr "此主機上沒有專注中的工作區。"
 
@@ -12476,9 +12588,6 @@ msgstr "此主機上還沒有工作區。開始一個工作階段即可在這裡
 
 msgid "No workspace run command configured"
 msgstr "未配置工作區執行命令"
-
-msgid "No workspace yet. Create one and it gets a desk here."
-msgstr "還沒有工作區。建立一個，它就會在這裡有張桌子。"
 
 msgid "No workspaces found."
 msgstr "未找到工作區。"
@@ -12516,14 +12625,14 @@ msgstr "還沒有人加入榜單。"
 msgid "Nobody here by that name."
 msgstr "找不到這個名字的人。"
 
-msgid "Nobody needs you right now."
-msgstr "現在沒有人需要你。"
-
 msgid "Nobody on your team has shared automations yet."
 msgstr "團隊裡還沒有人共享自動化。"
 
 msgid "Nobody reviews differently because of it."
 msgstr "沒有人因此改變審查方式。"
+
+msgid "nobody waiting"
+msgstr "無人等待"
 
 msgid "Nobody waiting on you"
 msgstr "沒有人在等你"
@@ -12533,6 +12642,9 @@ msgstr "無"
 
 msgid "none (session)"
 msgstr "無（會話）"
+
+msgid "None of its PRs links a Notion page."
+msgstr "它的 PR 都沒有連結 Notion 頁面。"
 
 msgid "None. This is the floor."
 msgstr "沒有。這是起點。"
@@ -12691,11 +12803,17 @@ msgstr "通知聲音"
 msgid "Notifications"
 msgstr "通知"
 
+msgid "Notion"
+msgstr "Notion"
+
 msgid "Notion is not configured for this environment."
 msgstr "目前環境未配置Notion。"
 
 msgid "Notion page"
 msgstr "Notion 頁面"
+
+msgid "Notion page URL"
+msgstr "Notion 頁面 URL"
 
 msgid "now"
 msgstr "剛剛"
@@ -13209,6 +13327,9 @@ msgstr "在新分頁開啟"
 
 msgid "Open in New Tab"
 msgstr "在新分頁中開啟"
+
+msgid "Open in Notion"
+msgstr "在 Notion 中開啟"
 
 msgid "Open in Pull Requests"
 msgstr "在拉取請求中開啟"
@@ -13853,6 +13974,9 @@ msgstr "{hostName}上的父目錄"
 msgid "Parents"
 msgstr "父提交"
 
+msgid "Parked: unfinished, nothing asked of you."
+msgstr "已擱置：未完成，沒有向你提問。"
+
 msgid "Part of Superset Pro"
 msgstr "包含於 Superset 專業版中"
 
@@ -13885,6 +14009,9 @@ msgstr "過去一週"
 
 msgid "Paste"
 msgstr "貼上"
+
+msgid "Paste a notion.so or notion.com page link."
+msgstr "貼上 notion.so 或 notion.com 頁面連結。"
 
 msgid "Paste this into Superset CLI:"
 msgstr "把它貼上到Superset CLI："
@@ -13920,6 +14047,10 @@ msgid "Paused"
 msgstr "已暫停"
 
 msgctxt "project state"
+msgid "Paused"
+msgstr "已暫停"
+
+msgctxt "project status"
 msgid "Paused"
 msgstr "已暫停"
 
@@ -14080,6 +14211,9 @@ msgstr "在{hostName}上選擇worktree資料夾。"
 msgid "Pick your agent for a one-line install, or copy the config by hand. Every client, including OAuth and API key setup, is covered in the <0>full MCP server docs</0>."
 msgstr "選擇你的代理程式獲取一行安裝命令，或者手動複製配置。所有客戶端（含OAuth和API金鑰設定）都在<0>完整的MCP伺服器文件</0>裡。"
 
+msgid "picked by you"
+msgstr "由你選擇"
+
 msgid "PID"
 msgstr "PID"
 
@@ -14129,6 +14263,10 @@ msgstr "方案已更新"
 msgctxt "project state"
 msgid "Planned"
 msgstr "已規劃"
+
+msgctxt "project status"
+msgid "Planning"
+msgstr "規劃中"
 
 msgid "Planning the tooltip refactor"
 msgstr "正在規劃tooltip重構"
@@ -14494,6 +14632,9 @@ msgstr "專案"
 msgid "Project created."
 msgstr "專案已建立。"
 
+msgid "Project details: PRs, Notion page and specs"
+msgstr "專案詳情：PR、Notion 頁面與規格"
+
 msgid "Project folder is not on this machine"
 msgstr "專案資料夾不在此裝置上"
 
@@ -14535,6 +14676,9 @@ msgstr "專案已設定在{0}"
 msgid "Project Settings"
 msgstr "專案設定"
 
+msgid "Project status, as in Notion"
+msgstr "專案狀態（同 Notion）"
+
 msgid "Project worktree location reset"
 msgstr "已重置專案worktree位置"
 
@@ -14557,6 +14701,9 @@ msgstr "專案所在主機不可達，暫時無法重新命名"
 
 msgid "Projects"
 msgstr "專案"
+
+msgid "Projects (from the Pull Requests page)"
+msgstr "專案（來自 Pull Requests 頁面）"
 
 msgid "Promoted from a workspace, so its repositories and region are fixed. Promote a workspace again to change them."
 msgstr "由工作區提升而來，因此儲存庫和區域固定。再次提升一個工作區即可變更。"
@@ -15415,8 +15562,14 @@ msgstr "已替換{where}中的{replaced}個檔案"
 msgid "Replaced 1 file in {where}"
 msgstr "已替換{where}中的1個檔案"
 
+msgid "Replied, not read yet"
+msgstr "已回覆，尚未閱讀"
+
 msgid "Reply"
 msgstr "回覆"
+
+msgid "Reply read, nothing asked"
+msgstr "回覆已讀，沒有提問"
 
 msgid "Reply to review bots"
 msgstr "回覆審查機器人"
@@ -15447,6 +15600,9 @@ msgstr "找不到檢舉"
 
 msgid "Report this page"
 msgstr "檢舉此頁面"
+
+msgid "Reported done"
+msgstr "已回報完成"
 
 msgid "Reporting is briefly unavailable. Try again shortly."
 msgstr "檢舉功能暫時無法使用，請稍後再試。"
@@ -15747,11 +15903,17 @@ msgstr "恢復引數"
 msgid "Resume automation"
 msgstr "恢復自動化"
 
+msgid "Resume later"
+msgstr "稍後繼續"
+
 msgid "Resume reopens the conversation where it stopped"
 msgstr "恢復會從中斷處重新開啟對話"
 
 msgid "Resume them from “Recently closed”"
 msgstr "可從「最近關閉」中恢復它們"
+
+msgid "Resume with its to-dos"
+msgstr "依待辦繼續"
 
 #. placeholder {0}: candidate.agentLabel
 msgid "Resuming {0}…"
@@ -15947,6 +16109,9 @@ msgstr "把代理程式會話回滾到任意檢查點，對話和檔案改動一
 msgid "Room for another agent"
 msgstr "還可以再啟動一個代理程式"
 
+msgid "Rooms"
+msgstr "房間"
+
 msgid "Rotate"
 msgstr "旋轉"
 
@@ -16108,6 +16273,9 @@ msgstr "在已配對的裝置上執行"
 
 msgid "Running on this device"
 msgstr "在此裝置上執行"
+
+msgid "Running right now."
+msgstr "正在執行。"
 
 msgid "Running terminal processes continue, but older output may no longer be available after restarting the app."
 msgstr "執行中的終端處理程序會繼續，但重啟應用後可能無法再看到較早的輸出。"
@@ -16859,6 +17027,17 @@ msgstr "會話 · 按費用排名前{0}"
 msgid "Sessions / day"
 msgstr "工作階段 / 天"
 
+msgid "Set by hand"
+msgstr "手動設定"
+
+#. placeholder {0}: formatCompactRelativeTime(Math.min(pinned.setAt, now), now)
+msgid "Set by the agent · {0}"
+msgstr "由代理設定 · {0}"
+
+#. placeholder {0}: formatCompactRelativeTime(Math.min(pinned.setAt, now), now)
+msgid "Set by you · {0}"
+msgstr "由你設定 · {0}"
+
 #. placeholder {0}: color.name
 msgid "Set color to {0}"
 msgstr "將顏色設為{0}"
@@ -16878,6 +17057,9 @@ msgstr "設定專案…"
 
 msgid "Set Run"
 msgstr "設定執行命令"
+
+msgid "Set the state"
+msgstr "設定狀態"
 
 msgid "Set this project"
 msgstr "設為此專案"
@@ -17616,6 +17798,9 @@ msgstr "正在說話"
 
 msgid "Specific"
 msgstr "指定"
+
+msgid "Specs linked from its PRs"
+msgstr "其 PR 連結的規格"
 
 msgid "Speed"
 msgstr "速度"
@@ -19633,6 +19818,13 @@ msgstr "標題"
 msgid "To"
 msgstr "到"
 
+msgid "To check"
+msgstr "待檢查"
+
+msgctxt "work state chip"
+msgid "To check"
+msgstr "待檢查"
+
 msgid "To resume an agent conversation, run this in its folder:"
 msgstr "若要恢復與代理的對話，請在其資料夾中執行："
 
@@ -19648,6 +19840,10 @@ msgstr "待辦"
 msgid "To-do details"
 msgstr "待辦詳細資料"
 
+msgid "To-dos"
+msgstr "待辦"
+
+msgctxt "work state chip"
 msgid "To-dos"
 msgstr "待辦"
 
@@ -20086,6 +20282,9 @@ msgstr "撤銷"
 msgid "Undo the last archived workspace or closed chats"
 msgstr "復原上次歸檔的工作區或關閉的聊天"
 
+msgid "Unfinished, with a to-do list to pick up."
+msgstr "未完成，有待辦清單可接著做。"
+
 msgid "Ungroup"
 msgstr "取消群組"
 
@@ -20298,6 +20497,9 @@ msgstr "請在這臺機器上更新Superset以附加檔案"
 
 msgid "update the branch prefix"
 msgstr "更新分支字首"
+
+msgid "Update this host to set the state by hand."
+msgstr "更新此主機後才能手動設定狀態。"
 
 msgid "Updated"
 msgstr "已更新"
@@ -20669,6 +20871,10 @@ msgstr "啟動代理程式前等待工作區設定完成"
 msgid "Waiting"
 msgstr "等待中"
 
+msgctxt "work state chip"
+msgid "Waiting"
+msgstr "等待中"
+
 #. placeholder {0}: names.a
 #. placeholder {1}: names.b
 msgid "waiting for {0} and {1}…"
@@ -20697,6 +20903,9 @@ msgstr "等待你回覆"
 
 msgid "Waiting for you · {waitingFor}"
 msgstr "等待你回覆 · {waitingFor}"
+
+msgid "Waiting for your answer"
+msgstr "等待你的回答"
 
 msgid "Waiting for your input"
 msgstr "等待你的輸入"
@@ -20923,6 +21132,9 @@ msgstr "Superset支援哪些平臺？"
 msgid "What problem are you trying to solve?"
 msgstr "你想解決什麼問題？"
 
+msgid "What rooms stand for"
+msgstr "房間代表什麼"
+
 msgid "What shipped"
 msgstr "已發布內容"
 
@@ -21012,9 +21224,6 @@ msgstr "誰"
 
 msgid "Who can open it"
 msgstr "誰可以開啟"
-
-msgid "Who to show"
-msgstr "顯示誰"
 
 msgid "Who waits on you, or whom you wait on"
 msgstr "誰在等你，或你在等誰"
@@ -21108,6 +21317,10 @@ msgstr "工作中"
 msgctxt "agent status"
 msgid "Working"
 msgstr "執行中"
+
+msgctxt "work state chip"
+msgid "Working"
+msgstr "工作中"
 
 #. placeholder {0}: Math.floor(seconds / 60)
 #. placeholder {1}: seconds % 60

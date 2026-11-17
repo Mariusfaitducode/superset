@@ -12,11 +12,17 @@ import {
 } from "react";
 import { LuBot, LuListChecks, LuMessageSquarePlus } from "react-icons/lu";
 import { usePresetIcon } from "renderer/assets/app-icons/preset-icons";
+import {
+	ConversationStatePicker,
+	useWorkStateLabels,
+} from "renderer/components/WorkState";
 import { useHostAgentReports } from "renderer/hooks/host-service/useHostAgentReports";
 import { useNow } from "renderer/hooks/useNow";
 import {
 	AGENT_STATE_DOT_CLASS,
 	agentStateFromConversation,
+	type WorkStateInfo,
+	workStateColorVar,
 } from "renderer/lib/agent-state";
 import { ReportKindIcon } from "renderer/routes/_authenticated/_dashboard/components/ReportKindIcon";
 import {
@@ -45,6 +51,10 @@ import { useDashboardSidebarFolder } from "../../../../../../providers/Dashboard
 import type { DashboardSidebarWorkspaceIndentation } from "../../../../../../types";
 import { ConversationStats } from "./components/ConversationStats";
 import { ConversationTodos } from "./components/ConversationTodos";
+import {
+	type ConversationWorkStates,
+	useConversationWorkStates,
+} from "./hooks/useConversationWorkStates";
 import { useRenameConversation } from "./hooks/useRenameConversation";
 import {
 	type SidebarConversation,
@@ -118,9 +128,12 @@ function stopRowEvent(event: SyntheticEvent) {
 
 function AgentAvatar({
 	conversation,
+	work,
 	label,
 }: {
 	conversation: SidebarConversation;
+	/** The dot speaks the work state when it is known. */
+	work: WorkStateInfo | undefined;
 	label: string;
 }) {
 	const iconUrl = usePresetIcon(conversation.agentId);
@@ -136,8 +149,11 @@ function AgentAvatar({
 				aria-label={label}
 				className={cn(
 					"absolute -right-1 -bottom-0.5 size-2 rounded-full ring-2 ring-sidebar",
-					DOT_CLASS[conversation.state],
+					work
+						? work.state === "working" && "animate-pulse"
+						: DOT_CLASS[conversation.state],
 				)}
+				style={work ? { backgroundColor: workStateColorVar(work) } : undefined}
 			/>
 		</span>
 	);
@@ -149,6 +165,7 @@ function ConversationRow({
 	conversation,
 	todos,
 	todoActions,
+	workStates,
 	reportKind,
 	showSubagents,
 	folderColor,
@@ -156,6 +173,7 @@ function ConversationRow({
 	workspaceId: string;
 	hostId: string;
 	conversation: SidebarConversation;
+	workStates: ConversationWorkStates;
 	/** The most pressing open report of the conversation, if any. */
 	reportKind: ReportKind | null;
 	/** Null when the host is too old to keep to-dos, or hidden for this folder. */
@@ -166,6 +184,8 @@ function ConversationRow({
 	folderColor: string | null;
 }) {
 	const { t } = useLingui();
+	const workWords = useWorkStateLabels();
+	const work = workStates.byTerminal.get(conversation.terminalId);
 	// Minutes are the finest unit shown.
 	const now = useNow(30_000).getTime();
 	const navigate = useNavigate();
@@ -200,6 +220,9 @@ function ConversationRow({
 		idle: t`Idle`,
 	};
 
+	const avatarLabel = work
+		? `${workWords.label[work.state]} — ${work.mark ? workWords.cause.pinned : workWords.cause[work.cause]}`
+		: stateLabel[conversation.state];
 	const waiting = isWaitingOnUser(conversation.state);
 	const waitedMs = now - conversation.since;
 	const tint =
@@ -280,7 +303,8 @@ function ConversationRow({
 					<div className="flex min-w-0 flex-1 items-center gap-2">
 						<AgentAvatar
 							conversation={conversation}
-							label={stateLabel[conversation.state]}
+							work={work}
+							label={avatarLabel}
 						/>
 						<RenameInput
 							value={renameValue}
@@ -296,12 +320,13 @@ function ConversationRow({
 						onClick={open}
 						onDoubleClick={() => setRenameValue(conversation.title)}
 						aria-current={isVisible ? "true" : undefined}
-						title={`${stateLabel[conversation.state]} · ${conversation.title}`}
+						title={`${avatarLabel} · ${conversation.title}`}
 						className="flex min-w-0 flex-1 items-center gap-2 text-left focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
 					>
 						<AgentAvatar
 							conversation={conversation}
-							label={stateLabel[conversation.state]}
+							work={work}
+							label={avatarLabel}
 						/>
 						<span
 							className={cn(
@@ -383,6 +408,15 @@ function ConversationRow({
 								<p className="mb-1 truncate px-1 text-xs font-medium">
 									{conversation.title}
 								</p>
+								<ConversationStatePicker
+									workspaceId={workspaceId}
+									hostId={hostId}
+									terminalId={conversation.terminalId}
+									workStates={workStates}
+									compact
+									className="mb-2"
+									onClosed={() => setTodosOpen(false)}
+								/>
 								<ConversationTodos
 									terminalId={conversation.terminalId}
 									todos={todos ?? []}
@@ -424,12 +458,23 @@ function ConversationRow({
 				</ul>
 			)}
 			{showTodos && todosPlacement === "inline" && todosOpen && (
-				<ConversationTodos
-					terminalId={conversation.terminalId}
-					todos={todos ?? []}
-					actions={todoActions}
-					onClose={() => setTodosOpen(false)}
-				/>
+				<>
+					<ConversationStatePicker
+						workspaceId={workspaceId}
+						hostId={hostId}
+						terminalId={conversation.terminalId}
+						workStates={workStates}
+						compact
+						className="my-1"
+						onClosed={() => setTodosOpen(false)}
+					/>
+					<ConversationTodos
+						terminalId={conversation.terminalId}
+						todos={todos ?? []}
+						actions={todoActions}
+						onClose={() => setTodosOpen(false)}
+					/>
+				</>
 			)}
 		</li>
 	);
@@ -496,6 +541,13 @@ export function DashboardSidebarConversationList({
 			: list.filter((todo) => todo.author !== "agent");
 	};
 
+	const workStates = useConversationWorkStates({
+		hostId,
+		conversations: allConversations,
+		todosByTerminal: todos.available ? todos.byTerminal : null,
+		enabled: showConversations,
+	});
+
 	const { cache } = useHostWorkspaces();
 	const reports = useHostAgentReports(
 		cache.isSandboxHost(hostId) ? null : cache.resolveHostUrl(hostId),
@@ -554,6 +606,7 @@ export function DashboardSidebarConversationList({
 						conversation={conversation}
 						todos={todosFor(conversation.terminalId)}
 						todoActions={todos.actions}
+						workStates={workStates}
 						reportKind={reportKindFor(conversation.terminalId)}
 						showSubagents={showSubagents}
 						folderColor={folderColor}

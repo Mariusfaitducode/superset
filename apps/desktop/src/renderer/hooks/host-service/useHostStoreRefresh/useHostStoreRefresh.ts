@@ -10,7 +10,8 @@ export type HostStore =
 	| "conversation-todos"
 	| "workspace-labels"
 	| "agent-reports"
-	| "tracked-tasks";
+	| "tracked-tasks"
+	| "conversation-states";
 
 const holds = new Map<string, { count: number; release: () => void }>();
 

@@ -9,7 +9,10 @@ import {
 } from "renderer/routes/_authenticated/_dashboard/pull-requests/utils/filterMyPullRequests";
 import {
 	DEFAULT_PULL_REQUEST_PROJECTS,
+	isProjectStatus,
+	normalizeNotionUrl,
 	OTHER_PROJECT_ID,
+	type ProjectStatus,
 	type PullRequestProject,
 } from "renderer/routes/_authenticated/_dashboard/pull-requests/utils/pullRequestProjects";
 import { create } from "zustand";
@@ -54,6 +57,9 @@ interface MyPullRequestsState extends MyPullRequestFilters {
 	) => void;
 	moveProjectUp: (id: string) => void;
 	deleteProject: (id: string) => void;
+	/** Null or an empty text unlinks it; anything not a Notion URL is ignored. */
+	setProjectNotionUrl: (id: string, url: string | null) => void;
+	setProjectStatus: (id: string, status: ProjectStatus | null) => void;
 	/** null puts the PR back under its rules. */
 	movePullRequestToProject: (key: string, projectId: string | null) => void;
 }
@@ -109,12 +115,27 @@ function migrateProjects(value: unknown): PullRequestProject[] {
 		if (typeof raw.id !== "string" || typeof raw.name !== "string") continue;
 		if (raw.id === OTHER_PROJECT_ID || projects.some((p) => p.id === raw.id))
 			continue;
+		// Projects saved before Notion links take the seed's link and status.
+		const seed = DEFAULT_PULL_REQUEST_PROJECTS.find((p) => p.id === raw.id);
+		const notionUrl =
+			typeof raw.notionUrl === "string"
+				? normalizeNotionUrl(raw.notionUrl)
+				: raw.notionUrl === null
+					? null
+					: (seed?.notionUrl ?? null);
+		const status = isProjectStatus(raw.status)
+			? raw.status
+			: raw.status === null
+				? null
+				: (seed?.status ?? null);
 		projects.push({
 			id: raw.id,
 			name: raw.name,
 			labels: stringList(raw.labels).slice(0, MAX_RULES),
 			keywords: stringList(raw.keywords).slice(0, MAX_RULES),
 			pullRequests: stringList(raw.pullRequests).slice(0, MAX_RULES),
+			notionUrl,
+			status,
 		});
 	}
 	return projects;
@@ -243,6 +264,23 @@ export const useMyPullRequestsStore = create<MyPullRequestsState>()(
 						),
 					),
 				})),
+			setProjectNotionUrl: (id, url) =>
+				set((state) => {
+					const notionUrl = url === null ? null : normalizeNotionUrl(url);
+					if (url !== null && url.trim() !== "" && notionUrl === null)
+						return {};
+					return {
+						projects: state.projects.map((project) =>
+							project.id === id ? { ...project, notionUrl } : project,
+						),
+					};
+				}),
+			setProjectStatus: (id, status) =>
+				set((state) => ({
+					projects: state.projects.map((project) =>
+						project.id === id ? { ...project, status } : project,
+					),
+				})),
 			movePullRequestToProject: (key, projectId) =>
 				set((state) => {
 					const { [key]: _previous, ...rest } = state.projectMoves;
@@ -255,7 +293,7 @@ export const useMyPullRequestsStore = create<MyPullRequestsState>()(
 		}),
 		{
 			name: "my-pull-requests-state",
-			version: 3,
+			version: 4,
 			migrate: migrateMyPullRequestsState,
 			partialize: (state) => ({
 				repos: state.repos,
